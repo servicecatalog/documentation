@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Recurring charge for users"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="reference832"/>
+<meta name="DC.Language" content="en-us"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>Recurring charge for users</title>
+</head>
+<body id="reference832">
+
+
+    <h1 class="topictitle1"><span>Recurring charge for users</span></h1>
+
+    <div>
+        <div class="section">
+            <p id="reference832__For_every_user_assigned_to_a_reference_refbody_section_1">For the users assigned to a subscription, a charge can be defined that a customer has to pay on a recurring basis. Monthly, weekly, daily, or hourly periods are supported. The charge depends on the amount of time units one or more users are assigned to the subscription. This type of charge can only be defined for services with the login or user access type.</p>
+
+            <p id="reference832__The_recurring_charge_for_user_reference_refbody_section_1">The recurring charge for users is independent of the recurring charge per subscription or other usage data.</p>
+
+            <p>For this type of charge, stepped prices can be applied: Recurring charges can be defined that depend on the sum of the time units of all user assignments<span>. Click <a href="r_PriceModelDetails_stepped.htm">here</a> for more details.</span></p>
+
+            <p id="reference832__With_per_time_unit_calculatio_reference_refbody_section_1">With per time unit calculation, the costs for a time unit in which a user is assigned to a subscription are always fully charged. There is no difference in the costs between a user who is assigned from the start until the end of the time unit and a user who is assigned for a part of the time unit only. A time unit is charged only once if a user is deassigned from and re-assigned to a subscription within the same time unit. Yet, canceling an assignment, deleting the user, and then creating a new user with the same user ID is treated as if two different users are assigned to the subscription. The time unit is charged twice, accordingly.</p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">Example</h4>
+            
+            <p>3 users are assigned to a subscription. The price model specifies a recurring charge for users of 10.00 € per DAY. User A and User B use the service for 2.5 days, User C for 3.5 days. </p>
+
+            <p>The charges are calculated as follows: </p>
+
+            <div class="fignone">
+                <br/><img src="../_images/PriceModelSamples_RecChargeForUser.png" height="200" width="400"/><br/>
+            </div>
+
+            
+            <p>With pro rata calculation, the customer is charged 85 €. With per time unit calculation, the costs are 100 € because each day is fully charged.</p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle"><span>Example: Combination of price model elements</span></h4>
+            
+            <p>Below you find a price model that combines the elements "one-time fee", "recurring charge per subscription", and "recurring charge for users": </p>
+
+            <div class="p">
+                <ul>
+                    <li>Charges based on: MONTH</li>
+
+                    <li>One-time fee: 30.00 €</li>
+
+                    <li>Recurring charge per subscription: 10.00 € per MONTH</li>
+
+                    <li>Recurring charge for users: 20.00 € per MONTH</li>
+
+                </ul>
+
+            </div>
+
+            <p>The price model is applied to a service subscription that has 5 users assigned. 2 of them are assigned for half a month only. The other 3 users are assigned for the whole month. </p>
+
+            <p>With pro rata calculation, the costs for the first billing period of one month are calculated as follows: </p>
+
+            <div class="fignone">
+                <br/><img src="../_images/PriceModelSamples_Basic.png" height="150" width="400"/><br/>
+            </div>
+
+            
+            <p>With per time unit calculation, the costs for the first billing period of one month are calculated as follows: </p>
+
+            <div class="fignone">
+                <br/><img src="../_images/PriceModelSamples_Basic2.png" height="150" width="400"/><br/>
+            </div>
+
+            
+            <p>For subsequent billing periods, the charges are calculated without the one-time fee.</p>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>

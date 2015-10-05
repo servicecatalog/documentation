@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="de-de" lang="de-de">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Konfigurationseinstellungen"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="reference832"/>
+<meta name="DC.Language" content="de-de"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>Konfigurationseinstellungen</title>
+</head>
+<body id="reference832">
+
+
+        <h1 class="topictitle1">Konfigurationseinstellungen</h1>
+
+        <div>
+                <div class="section">
+                        <p>Die Datei <samp class="codeph">configsettings.properties</samp> im Verzeichnis <samp class="codeph">&lt;install_pack_dir&gt;/databases/bes_db</samp> enthält alle für die Plattform-Services erforderlichen Konfigurationseinstellungen. </p>
+
+                </div>
+
+                <div class="section"><h4 class="sectiontitle">AUDIT_LOG_ENABLED</h4>
+                        
+                        <p>Optional. Legt fest, ob Benutzeraktionen protokolliert und in der Datenbank gespeichert werden. Es können Aktionen protokolliert werden, die sich auf Abonnements, marktfähige Services und Preismodelle beziehen. Ist die Konfigurationseinstellung auf <samp class="codeph">true</samp> gesetzt, kann der Betreiber die Protokolldaten exportieren und so Informationen zu Benutzeraktionen abrufen. </p>
+
+                        <p>Erlaubte Werte: <samp class="codeph">true</samp>, <samp class="codeph">false</samp></p>
+
+                        <p>Voreinstellung: <samp class="codeph">false</samp></p>
+
+                </div>
+
+                <div class="section"><h4 class="sectiontitle">AUDIT_LOG_MAX_ENTRIES_RETRIEVED</h4>
+                        
+                        <p>Optional. Legt fest, wieviele Protokolleinträge bein einem Export der Protokolldaten abgerufen werden. Wird diese Anzahl überschritten, wird eine Warnung angezeigt und der Betreiber aufgefordert, seine Filterkriterien zu ändern und danach den Export nochmal zu starten. Diese Einstellung ist erforderlich, um die Anzahl von SQL-Anfragen an die Datenbank zu begrenzen. Zu viele Datenbankanfragen können die Leistung des Systems beeinträchtigen. </p>
+
+                        <p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">1</samp> und <samp class="codeph">1000</samp>
+                        </p>
+
+                        <p>Voreinstellung: <samp class="codeph">100</samp></p>
+
+                </div>
+
+                <div class="section"><h4 class="sectiontitle">AUTH_MODE</h4>
+                        
+                        <p>Obligatorisch. Legt fest, ob die Plattform zur Benutzerauthentifizierung verwendet wird oder ob die Plattform als SAML Service Provider verwendet wird. Diese Einstellung wird beim ersten Starten des Systems ausgewertet. Sie kann nach dem ersten Starten des Systems nicht mehr geändert werden. Die Einstellung läßt sich auch nicht durch eine Upgrade-Installation ändern.</p>
+
+                        <p>Erlaubte Werte: <samp class="codeph">INTERNAL</samp> für Plattform-Authentifizierung oder <samp class="codeph">SAML_SP</samp>, wenn die Plattform als SAML Service Provider verwendet werden soll.</p>
+
+                        <p>Voreinstellung: <samp class="codeph">INTERNAL</samp>
+                        </p>
+
+                </div>
+
+                <div class="section"><h4 class="sectiontitle">BASE_URL</h4>Optional. Diese URL führt zur Startseite der Plattform, falls die Kommunikation nicht über HTTPS erfolgt. Bleibt das Feld leer, wird der Wert von <samp class="codeph">BASE_URL_HTTPS</samp> verwendet. <p>Syntax: <samp class="codeph">http://&lt;host&gt;:&lt;port&gt;/&lt;context-root&gt;</samp></p>
+<p>Die Voreinstellung für <samp class="codeph">&lt;context-root&gt;</samp> ist <samp class="codeph">oscm-portal</samp>.</p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">BASE_URL_HTTPS</h4>Obligatorisch. Diese URL führt zur Startseite der Plattform und dient zum Erstellen der URL, um auf Services über HTTPS zuzugreifen. <p>Syntax: <samp class="codeph">https://&lt;host&gt;:&lt;port&gt;/&lt;context-root&gt;</samp></p>
+<p>Die Voreinstellung für <samp class="codeph">&lt;context-root&gt;</samp> ist <samp class="codeph">oscm-portal</samp>.</p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">CUSTOMER_SELF_REGISTRATION_ENABLED</h4>
+                        
+                        <p>Optional. Legt fest, ob sich Kunden auf einem Marktplatz selbst registrieren können. Ist der Wert auf <samp class="codeph">false</samp> gesetzt, muss entweder der Betreiber eine Organisation für den Kunden anlegen oder ein Anbieter (Serviceanbieter, Vermittler, Wiederverkäufer) muss den Kunden registrieren. </p>
+
+                        <p>Erlaubte Werte: <samp class="codeph">true</samp>, <samp class="codeph">false</samp></p>
+
+                        <p>Voreinstellung: <samp class="codeph">true</samp></p>
+
+                </div>
+
+                <div class="section"><h4 class="sectiontitle">DECIMAL_PLACES</h4>Optional. Legt die Anzahl der Nachkommastellen fest, die für die Berechnung der Nutzungsgebühren verwendet werden. Diese Einstellung wird nur ausgewertet, wenn Sie von Version 14.1 der Plattform auf eine höhere Version umstellen. <p>Erlaubte Werte: <samp class="codeph">2</samp>, <samp class="codeph">3</samp>, <samp class="codeph">4</samp>, <samp class="codeph">5</samp>, <samp class="codeph">6</samp></p>
+<p>Voreinstellung: <samp class="codeph">2</samp></p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">HIDDEN_UI_ELEMENTS</h4>Optional. Legt fest, welche Elemente der Benutzeroberfläche im Administrationsportal und auf Marktplätzen ausgeblendet werden. Sie können mit dieser Konfigurationseinstellung Elemente im Administrationsportal und gleichzeitig Elemente auf Marktplätzen ausblenden. <p><strong>Marktplätze</strong></p>
+<p>Geben Sie einen der folgenden Werte an, um eine Menüoption im Menü <span class="uicontrol">Benutzerkonto</span> auf Marktplätzen auszublenden: </p>
+<ul>
+                                <li><samp class="codeph">marketplace.navigation.Profile</samp>: Menü <span class="uicontrol">Profil</span>
+                                </li>
+
+                                <li><samp class="codeph">marketplace.navigation.Payment</samp>: Menü <span class="uicontrol">Bezahlung</span></li>
+
+                                <li><samp class="codeph">marketplace.navigation.Subscriptions</samp>: Menü <span class="uicontrol">Abonnements</span>
+                                </li>
+
+                        <li><samp class="codeph">marketplace.navigation.Users</samp>: Menü <span class="uicontrol">Benutzer &amp; Einheiten</span></li>
+
+                                <li><samp class="codeph">marketplace.navigation.Reports</samp>: Menü <span class="uicontrol">Berichte</span></li>
+
+                                <li><samp class="codeph">marketplace.navigation.Processes</samp>: Menü <span class="uicontrol">Prozesse</span></li>
+
+                                <li><samp class="codeph">marketplace.navigation.Operations</samp>: <strong>Operationen</strong> menu</li>
+
+                        </ul>
+<p>Um mehrere Optionen im Menü <span class="uicontrol">Benutzerkonto</span> auszublenden, trennen Sie die Einträge durch Komma.</p>
+<p><strong>Administrationsportal</strong></p>
+<p>Wenn Sie eine bestimmte Seite vom Administrationsportal ausblenden möchten, müssen Sie zunächst den Wert herausfinden, der zum Ausblenden der Seite angegeben werden muss. Gehen Sie dazu wie folgt vor:</p>
+<ol>
+                                <li>Öffnen Sie die entsprechende Seite der Administrationsportals.</li>
+
+                                <li>Zeigen Sie die Hilfe zu dieser Seite an. </li>
+
+                                <li>Sehen Sie sich den Namen der Hilfeseite an. Der Name ist Teil der URL.</li>
+
+                                <li>Lassen Sie die Dateierweiterung <samp class="codeph">.htm</samp> weg und ersetzen Sie den Unterstrich durch einen Punkt. </li>
+
+                        </ol>
+<p>Beispiel: </p>
+<p>Sie möchten die Seite <span class="uicontrol">Mehrwertsteuersätze bearbeiten</span> ausblenden. Der Name der Hilfeseite ist <samp class="codeph">organization_manageVats.htm</samp>. Dementsprechend heißt die zugehörige Seite des Administrationsportals <samp class="codeph">organization.manageVats</samp>. Die Konfigurationseinstellung muss wie folgt angegeben werden: </p>
+<p><samp class="codeph">HIDDEN_UI_ELEMENTS=organization.manageVats</samp></p>
+<p>Um mehrere Seiten vom Administrationsportal auszublenden, trennen Sie die Einträge durch Komma. </p>
+<p>Nachfolgend sehen Sie weitere Beispiele zum Ausblenden bestimmter Seiten. Die Liste ist nicht vollständig. </p>
+<div class="p">
+                                <ul>
+                                        <li><samp class="codeph">organization.edit</samp>: Seite <span class="uicontrol">Profile bearbeiten</span></li>
+
+                                        <li><samp class="codeph">shop.editSkin</samp>: Seite <span class="uicontrol">Layout anpassen</span>
+                                        </li>
+
+                                        <li><samp class="codeph">techService.edit</samp>: Seite <span class="uicontrol">Servicedefinition ändern</span>
+                                        </li>
+
+                                </ul>
+
+                        </div>
+<p>Geben Sie einen der folgenden Werte an, um ein ganzes Menü vom Administrationsportal auszublenden: </p>
+<ul>
+                                <li><samp class="codeph">navigation.myAccount</samp>: Menü <span class="uicontrol">Benutzerkonto</span></li>
+
+                                <li><samp class="codeph">navigation.customer</samp>: Menü <span class="uicontrol">Kunde</span></li>
+
+                                <li><samp class="codeph">navigation.operator</samp>: Menü <span class="uicontrol">Betrieb</span></li>
+
+                                <li><samp class="codeph">navigation.techService</samp>: Menü <span class="uicontrol">Technischer Service</span></li>
+
+                                <li><samp class="codeph">navigation.service</samp>: Menü <span class="uicontrol">Marktfähiger Service</span></li>
+
+                                <li><samp class="codeph">navigation.priceModel</samp>: Menü <span class="uicontrol">Preismodell</span></li>
+
+                                <li><samp class="codeph">navigation.marketplace</samp>: Menü <span class="uicontrol">Marktplatz</span></li>
+
+                        </ul>
+<div class="note"><span class="notetitle">Hinweis:</span> Die Seite <span class="uicontrol">Konfiguration aktualisieren</span> im Menü <span class="uicontrol">Betrieb</span> wird dem Betreiber standardmäßig angezeigt, wenn er sich anmeldet. Wenn Sie die Seite oder das ganze Menü ausblenden, wird Ihnen die Seite trotzdem nach der nächsten Anmeldung angezeigt. Sie können notwendige Änderungen vornehmen.</div>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">HTTP_PROXY</h4>Optional. Proxy für HTTP-Verbindungen zu einem PSP.<p>Beispiel: <samp class="codeph">proxy.domain</samp> oder die IP-Adresse des Proxy-Servers</p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">HTTP_PROXY_PORT</h4>Optional. Proxy-Port für HTTP-Verbindungen zu einem PSP. <p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">1</samp> und <samp class="codeph">65535</samp></p>
+<p>Voreinstellung: <samp class="codeph">1080</samp></p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">IDP_ASSERTION_EXPIRATION</h4>Obligatorisch, wenn für einen technischen Service als Zugriffsart Benutzerzugriff definiert ist und die Plattform als SAML 1.1 Identity Provider verwendet wird. Ausführliche Informationen zu Zugriffsarten finden Sie im <em>Technology Provider's Guide</em>.<p>Die Einstellung legt die Anzahl Millisekunden fest, die eine vom SAML Identity Provider generierte Anwort gültig ist. Dies ist die Differenz aus den Werten der Attribute <samp class="codeph">NotAfterOrOn</samp> und <samp class="codeph">IssueInstant</samp> der Antwort. </p>
+<p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">1</samp> und <samp class="codeph">9223372036854775807</samp></p>
+<p>Voreinstellung: <samp class="codeph">1800000</samp> Millisekunden (30 Minuten)</p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">IDP_ASSERTION_VALIDITY_TOLERANCE</h4>Obligatorisch, wenn für einen technischen Service als Zugriffsart Benutzerzugriff definiert ist und die Plattform als SAML 1.1 Identity Provider verwendet wird. Ausführliche Informationen zu Zugriffsarten finden Sie im <em>Technology Provider's Guide</em>.<p>Die Einstellung legt die Anzahl Millisekunden fest, die eine vom SAML Identity Provider generierte Anwort in der Vergangenheit gültig war. Durch die Einstellung sollen Synchronisationsproblemen zwischen Servern vermieden werden. Die Anzahl ist die Differenz aus den Werten der Attribute <samp class="codeph">IssueInstant</samp> und <samp class="codeph">NotBefore</samp> der Antwort. </p>
+<p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">1</samp> und <samp class="codeph">9223372036854775807</samp></p>
+<p>Voreinstellung: <samp class="codeph">600000</samp> Millisekunden (10 Minuten)</p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">IDP_PRIVATE_KEY_FILE_PATH</h4>Obligatorisch, wenn für einen technischen Service als Zugriffsart Benutzerzugriff definiert ist und die Plattform als SAML 1.1 Identity Provider verwendet wird. Ausführliche Informationen zu Zugriffsarten finden Sie im <em>Technology Provider's Guide</em>.<p>Die Einstellung legt die URL im Format Distinguished Encoding Rules (DER, Dateierweiterung<samp class="codeph">.der</samp>) fest, die auf den Private Key zeigt. Diese URL wird vom Identity Provider verwendet, um SAML-Meldungen zu signieren. </p>
+<p>Beispiel: <samp class="codeph">/opt/glassfish-3.1.2.2/glassfish/domains/bes-domain/config/cakey.der</samp></p>
+<p>Wenn Sie diese Einstellung ändern, müssen Sie die Plattform neu starten.</p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">IDP_PUBLIC_CERTIFICATE_FILE_PATH</h4>Obligatorisch, wenn für einen technischen Service als Zugriffsart Benutzerzugriff definiert ist und die Plattform als SAML 1.1 Identity Provider verwendet wird. Ausführliche Informationen zu Zugriffsarten finden Sie im <em>Technology Provider's Guide</em>.<p>Die Einstellung legt die URL im Format Distinguished Encoding Rules (DER, Dateierweiterung<samp class="codeph">.der</samp>) fest, die auf das Public Certificate zeigt. Die URL wird an die Signatur des Identity Providers von SAML-Meldungen angehängt, so dass die Anwendung die Signatur validieren kann. </p>
+<p>Beispiel: <samp class="codeph">/opt/glassfish-3.1.2.2/glassfish/domains/bes-domain/config/cacert.der</samp></p>
+<p>Wenn Sie diese Einstellung ändern, müssen Sie die Plattform neu starten.</p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">LDAP_SEARCH_LIMIT</h4>Optional. Maximale Anzahl Einträge, die eine LDAP-Suchanfrage zurückgibt, wenn eine Organisation ein externes LDAP-System zur Benutzerverwaltung verwendet. <p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">1</samp> und <samp class="codeph">9223372036854775807</samp></p>
+<p>Voreinstellung: <samp class="codeph">100</samp></p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">LOG_CONFIG_FILE</h4>Optional. Pfad zur Konfigurationsdatei für <samp class="codeph">log4j</samp> der Plattform.<p>Voreinstellung: <samp class="codeph">./log4j.properties</samp> im Verzeichnis <samp class="codeph">&lt;GLASSFISH_HOME&gt;/glassfish/domains/bes-domain/config</samp></p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">LOG_FILE_PATH</h4>Obligatorisch. Pfad zu den Logdateien der Plattform.<p>Voreinstellung: <samp class="codeph">../logs</samp>. Dies ist das Verzeichnis <samp class="codeph">&lt;GLASSFISH_HOME&gt;/glassfish/domains/bes-domain/logs</samp>.</p>
+<p>Wenn Sie diese Einstellung ändern, müssen Sie die Plattform neu starten.</p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">LOG_LEVEL</h4>Optional. Wichtigkeit für Meldungen, die von den Plattform-Services ausgegeben werden. Diese Einstellung ist für alle Klassen gültig, sofern sie nicht durch den Inhalt der Konfigurationsdatei <samp class="codeph">log4j.properties</samp> überschrieben wird. <p>Erlaubte Werte: <samp class="codeph">ERROR</samp>, <samp class="codeph">WARN</samp>, <samp class="codeph">INFO</samp>, <samp class="codeph">DEBUG</samp></p>
+<p>Voreinstellung: <samp class="codeph">INFO</samp></p>
+<p>Wenn Sie diese Einstellung ändern, müssen Sie die Plattform neu starten.</p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">MAIL_JA_CHARSET</h4>Optional. Zeichenkodierung für japanische E-Mail-Texte.<p>Voreinstellung: <samp class="codeph">UTF-8</samp></p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">MAX_NUMBER_ALLOWED_USERS</h4>Obligatorisch. Maximale Anzahl Benutzer, die für die Plattform registriert werden können.<p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">1</samp> und <samp class="codeph">9223372036854775807</samp></p>
+<p>Voreinstellung: <samp class="codeph">10</samp></p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">MAX_NUMBER_LOGIN_ATTEMPTS</h4>Optional. Maximale Anzahl erlaubter Versuche, sich bei der Plattform anzumelden. Wenn sich ein Benutzer nach dieser Anzahl von Versuchen nicht erfolgreich angemeldet hat, wird sein Benutzerkonto gesperrt. <p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">1</samp> und <samp class="codeph">9223372036854775807</samp></p>
+<p>Voreinstellung: <samp class="codeph">3</samp></p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">MP_ERROR_REDIRECT_HTTP</h4>Optional. Diese URL führt zur einer Webseite, die angezeigt wird, wenn HTTP verwendet wird und ein Kunde versucht, mit einer ungültigen ID auf einen Marktplatz zuzugreifen. Diese URL ersetzt die voreingestellte Fehlerseite.<p>Syntax: <samp class="codeph">http://&lt;Ihre Webseite&gt;</samp></p>
+<p>Stellen Sie sicher, dass Sie eine gültige URL angeben, die aus maximal 255 Zeichen besteht. </p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">MP_ERROR_REDIRECT_HTTPS</h4>Optional. Diese URL führt zur einer Webseite, die angezeigt wird, wenn HTTPS verwendet wird und ein Kunde versucht, mit einer ungültigen ID auf einen Marktplatz zuzugreifen. Diese URL ersetzt die voreingestellte Fehlerseite.<p>Syntax: <samp class="codeph">https://&lt;Ihre Webseite&gt;</samp></p>
+<p>Stellen Sie sicher, dass Sie eine gültige URL angeben, die aus maximal 255 Zeichen besteht. </p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">PERMITTED_PERIOD_INACTIVE_ON_BEHALF_USERS</h4>Optional. Zeit in Millisekunden, nach der ein Benutzer, der sich im Namen eines Kunden angemeldet und keine Aktion mehr ausgeführt hat, aus dem System gelöscht wird.<p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">1</samp> und <samp class="codeph">9223372036854775807</samp></p>
+<p>Voreinstellung: <samp class="codeph">604800000</samp> (7 Tage)</p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">PERMITTED_PERIOD_UNCONFIRMED_ORGANIZATIONS</h4>Optional. Maximale Zeitspanne in Millisekunden, innerhalb der das beim Anlegen einer Organisation eingerichtete Administratorkonto bestätigt werden muss. Nach Ablauf dieser Zeitspanne wird das Konto gelöscht.<p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">1</samp> und <samp class="codeph">9223372036854775807</samp></p>
+<p>Voreinstellung: <samp class="codeph">604800000</samp> (7 Tage)</p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">PSP_USAGE_ENABLED</h4>Obligatorisch. Definiert, ob in der aktuellen Umgebung ein Zahlungsdienstleister (Payment Service Provider - PSP) integriert ist und verwendet wird.<p>Erlaubte Werte: <samp class="codeph">true</samp>, <samp class="codeph">false</samp></p>
+<p>Voreinstellung: <samp class="codeph">false</samp></p>
+<p>Wenn Sie diese Einstellung ändern, müssen Sie die Plattform neu starten.</p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">REPORT_ENGINEURL</h4>Obligatorisch, wenn Sie Berichte verwenden möchten. Definiert das URL-Template der Report Engine. Wenn das Template nicht korrekt angegeben wird, kann die Plattform keine Berichte generieren, da der Report Web-Service nicht korrekt aufgerufen werden kann. <div class="p">Wenn HTTP-Zugriff für Ihre Installation konfiguriert ist, muss folgender Wert angegeben werden: <pre class="codeblock">http://&lt;host IP address&gt;:&lt;port&gt;/eclipse-birt-runtime/frameset?__report=$
+   {reportname}.rptdesign&amp;SessionId=$
+   {sessionid}&amp;__locale=$
+   {locale}&amp;WSDLURL=$
+   {wsdlurl}&amp;SOAPEndPoint=${soapendpoint}
+</pre>
+</div>
+<div class="p">Wenn HTTPS-Zugriff für Ihre Installation konfiguriert ist, muss folgender Wert angegeben werden: <pre class="codeblock">https://&lt;host IP address&gt;:&lt;port&gt;/eclipse-birt-runtime/frameset?__report=$
+   {reportname}.rptdesign&amp;SessionId=$
+   {sessionid}&amp;__locale=$
+   {locale}&amp;WSDLURL=$
+   {wsdlurl}&amp;SOAPEndPoint=${soapendpoint}&amp;wsname=ReportSecure&amp;wsport=ReportSecurePort</pre>
+</div>
+<div class="note"><span class="notetitle">Hinweis:</span> Der obige Wert muss wie angegeben verwendet werden. Nehmen Sie keine Änderung vor.</div>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">REPORT_SOAP_ENDPOINT</h4>Obligatorisch, wenn Sie Berichte verwenden möchten. Definiert den SOAP-Endpunkt des Report Web-Service. Alle Daten für einen Bericht werden über einen Aufruf des Report Web-Service zusammengestellt. Wenn Sie keinen korrekten Wert angeben, kann die Plattform keine Berichte generieren, da der Report Web-Service nicht korrekt aufgerufen werden kann. <p>Wenn HTTP-Zugriff für Ihre Installation konfiguriert ist, muss folgender Wert angegeben werden: </p>
+<p><samp class="codeph">http://&lt;host IP address&gt;:&lt;port&gt;/Report/ReportingServiceBean</samp></p>
+<p>Wenn HTTPS-Zugriff für Ihre Installation konfiguriert ist, muss folgender Wert angegeben werden:</p>
+<p><samp class="codeph">https://&lt;host IP address&gt;:&lt;port&gt;/ReportSecure/ReportingServiceSecureBean</samp>
+                        </p>
+<div class="p">
+                                <div class="note"><span class="notetitle">Hinweis:</span> Der obige Wert muss wie angegeben verwendet werden. Nehmen Sie keine Änderung vor.</div>
+
+                        </div>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">REPORT_WSDLURL</h4>Obligatorisch, wenn Sie Berichte verwenden möchten. Definiert die URL der WSDL-Datei des Report Web-Service. Alle Daten für einen Bericht werden über einen Aufruf des Report Web-Service zusammengestellt. Wenn Sie keinen korrekten Wert angeben, kann die Plattform keine Berichte generieren, da der Report Web-Service nicht korrekt aufgerufen werden kann.<p>Wenn HTTP-Zugriff für Ihre Installation konfiguriert ist, muss folgender Wert angegeben werden: </p>
+<p><samp class="codeph">http://&lt;host IP address&gt;:&lt;port&gt;/Report/ReportingServiceBean?wsdl</samp></p>
+<p>Wenn HTTPS-Zugriff für Ihre Installation konfiguriert ist, muss folgender Wert angegeben werden: </p>
+<p><samp class="codeph">https://&lt;host IP address&gt;:&lt;port&gt;/ReportSecure/ReportingServiceSecureBean?wsdl</samp></p>
+<div class="p">
+                                <div class="note"><span class="notetitle">Hinweis:</span> Der obige Wert muss wie angegeben verwendet werden. Nehmen Sie keine Änderung vor.</div>
+
+                        </div>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">SEARCH_INDEX_MASTER_FACTORY_NAME</h4>Obligatorisch. Name der JMS Connection Factory der Suchindex-Applikation. Verwenden Sie den Wert <samp class="codeph">jms/bss/masterIndexerQueueFactory</samp> und nehmen Sie keine Änderung vor.</div>
+
+                <div class="section"><h4 class="sectiontitle">SEARCH_INDEX_MASTER_QUEUE_NAME</h4>Obligatorisch. Name der JMS Queue der Suchindex-Applikation. Verwenden Sie den Wert <samp class="codeph">jms/bss/masterIndexerQueue</samp> und nehmen Sie keine Änderung vor. </div>
+
+                <div class="section"><h4 class="sectiontitle">SSO_IDP_AUTHENTICATION_REQUEST_HTTP_METHOD</h4>Obligatorisch, wenn die Plattform als SAML Service Provider installiert wird. Gibt die Methode an, die für HTTP-Requests zur Authentifizierung verwendet wird. Abhängig vom IdP-System (Identity Provider)können <samp class="codeph">GET</samp>- oder <samp class="codeph">POST</samp>-Requests verwendet werden. <p>Erforderlich für Web Browser Single Sign-On.</p>
+<p>Voreinstellung: <samp class="codeph">POST</samp></p>
+<p>Wenn Sie diese Einstellung ändern, müssen Sie die Plattform neu starten.</p>
+
+                </div>
+
+                <div class="section"><h4 class="sectiontitle">SSO_IDP_TRUSTSTORE</h4>Obligatorisch, wenn die Plattform als SAML Service Provider installiert wird. Gibt den Pfad und Namen der Truststore-Datei an, die das Public-Key-Zertifikat des IdP-Systems (Identity Provider) enthalten muss. <p>Erforderlich für Web Browser Single Sign-On.</p>
+<p>Voreinstellung: <samp class="codeph">&lt;path&gt;/cacerts.jks</samp></p>
+<p>Sobald ein anderes Identity Provider System wie beispielsweise OpenAM, Cloudminder oder Active Directory installiert und verwendet wird, müssen Sie diese Einstellung unter Umständen ändern. In diesem Fall müssen Sie die Plattform neu starten.</p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">SSO_IDP_TRUSTSTORE_PASSWORD</h4>Obligatorisch, wenn die Plattform als SAML Service Provider installiert wird. Gibt das Passwort des Truststore mit dem Public-Key-Zertifikat des IdP-Systems (Identity Provider) an. <p>Erforderlich für Web Browser Single Sign-On.</p>
+<p>Standard-Password von GlassFish: <samp class="codeph">changeit</samp></p>
+<p>Das Passwort unterscheidet Groß-/Kleinschreibung. Es muss mit dem Output des IdP-Systems übereinstimmen.</p>
+<p>Wenn Sie diese Einstellung ändern, müssen Sie die Plattform neu starten.</p>
+
+                </div>
+
+                <div class="section"><h4 class="sectiontitle">SSO_IDP_URL</h4>Obligatorisch, wenn die Plattform als SAML Service Provider installiert wird. Gibt die URL zum Service Endpoint des IdP-Systems (Identity Provider) an, das verwendet werden soll (SAML Redirect URL). <p>Erforderlich für Web Browser Single Sign-On.</p>
+<p>Aus Sicherheitsgründen wird empfohlen, das HTTPS-Protokoll zu verwenden. </p>
+<p>Syntax: <samp class="codeph">https://&lt;host&gt;:&lt;port&gt;/&lt;RedirectServiceEndpoint&gt;</samp></p>
+<p>Wenn Sie diese Einstellung ändern, müssen Sie die Plattform neu starten.</p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">SSO_ISSUER_ID</h4>Obligatorisch, wenn die Plattform als SAML Service Provider installiert wird. Gibt eine eindeutige ID für die Plattform an, anhand derer das IdP-System (Identity Provider) eingehende SAML-Authentifizierungs-Requests von der Plattform identifizieren kann. <p>Erforderlich für Web Browser Single Sign-On.</p>
+<p>Wenn Sie diese Einstellung nach dem ersten Datenaustausch zwischen der Plattform und dem IdP-System ändern müssen, müssen Sie sie sowohl in den Einstellung der Plattform als auch im IdP-System ändern. Eventuell müssen Sie dem IdP-Betreiber eine neue Metadata-Exchange-Datei schicken.</p>
+<p>Voreinstellung: <samp class="codeph">CT-MG</samp>
+                        </p>
+<p>Wenn Sie diese Einstellung ändern, müssen Sie die Plattform neu starten.</p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">SSO_STS_ENCKEY_LEN</h4>Obligatorisch, wenn die Plattform als SAML Service Provider installiert wird. Gibt die Länge des Encryption Key an, wie er von dem IdP-System (Identity Provider) verwendet wird.<p>Erforderlich für die STS-Kommunikation.</p>
+<p>Voreinstellung: <samp class="codeph">128</samp></p>
+<p>Diese Einstellung wird bei der Installation ausgewertet und kann im Administrationsportal nicht geändert werden. Gehen Sie wie folgt vor, wenn Sie die Einstelllung ändern müssen:</p>
+<div class="p">
+                                <ol>
+                                        <li>Stoppen Sie die Domäne <samp class="codeph">bes-domain</samp>.</li>
+
+                                        <li>Bearbeiten Sie die Datei <samp class="codeph">configsettings.properties</samp> und ändern Sie den Wert für die Einstellung <samp class="codeph">SSO_STS_ENCKEY_LEN</samp>.</li>
+
+                                        <li>Führen Sie die Datei <samp class="codeph">build-glassfish.xml</samp> im Verzeichnis <samp class="codeph">&lt;install_pack_dir&gt;/install</samp> wie folgt aus: <div class="p">
+                                                        <pre class="codeblock">&lt;ANT_HOME&gt;/bin/ant 
+   -DpatchProps.path=../domains/bes_domain/installer 
+   -f build-glassfish.xml patchAndRedeployApplication </pre>
+
+                                                </div>
+<p>Ersetzen Sie <samp class="codeph">&lt;ANT_HOME&gt;</samp> durch das Verzeichnis, in dem Apache Ant installiert ist.</p>
+<div class="p"><div class="note"><span class="notetitle">Hinweis:</span> Abhängig vom Betriebssystem müssen Sie den Ausdruck <samp class="codeph">-DpatchProps.path=&lt;Pfad&gt;</samp> in doppelte oder einfache Anführungszeichen setzen.  </div>
+Der geänderte Wert wird aus der Datei <samp class="codeph"><samp class="codeph">configsettings.properties</samp></samp> ausgelesen und in die WSIT-Dateien im Archiv <samp class="codeph">oscm.ear</samp> geschrieben. Das aktualisierte Archiv wird in <samp class="codeph">bes-domain</samp> neu installiert. </div>
+<p>Während der Ausführung des Befehls wird im Verzeichnis <samp class="codeph">&lt;install_pack_dir&gt;/domains/bes_domain</samp> ein Unterverzeichnis <samp class="codeph">/tmp</samp> angelegt, in dem das aktualisierte Archiv <samp class="codeph">oscm.ear</samp> gespeichert wird.</p>
+</li>
+
+                                        <li>Installieren Sie die Datei <samp class="codeph">oscm-portal.war</samp> in der Domäne <samp class="codeph">bes-domain</samp>.</li>
+
+                                        <li>Starten Sie die Domäne <samp class="codeph">bes-domain</samp> neu.</li>
+
+                                </ol>
+
+                        </div>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">SSO_STS_METADATA_URL</h4>Obligatorisch, wenn die Plattform als SAML Service Provider installiert wird. Gibt die URL der MEX-Adresse (Issuer Metadata Exchange) des STS (Security Token System) an. <p>Erforderlich für die STS-Kommunikation.</p>
+<p>Aus Sicherheitsgründen wird empfohlen, das HTTPS-Protokoll zu verwenden.</p>
+<p>Syntax: <samp class="codeph">https://&lt;host&gt;:&lt;port&gt;/&lt;MEXAddress&gt;</samp></p>
+<p>Diese Einstellung wird bei der Installation ausgewertet und kann im Administrationsportal nicht geändert werden. Gehen Sie wie folgt vor, wenn Sie die Einstelllung ändern müssen:</p>
+<div class="p">
+                                <ol>
+                                        <li>Stoppen Sie die Domäne <samp class="codeph">bes-domain</samp>.</li>
+
+                                        <li>Bearbeiten Sie die Datei <samp class="codeph">configsettings.properties</samp> und ändern Sie den Wert für die Einstellung <samp class="codeph">SSO_STS_METADATA_URL</samp>.</li>
+
+                                        <li>Führen Sie die Datei <samp class="codeph">build-glassfish.xml</samp> im Verzeichnis <samp class="codeph">&lt;install_pack_dir&gt;/install</samp> wie folgt aus: <div class="p">
+                                                        <pre class="codeblock">&lt;ANT_HOME&gt;/bin/ant 
+   -DpatchProps.path=../domains/bes_domain/installer 
+   -f build-glassfish.xml patchAndRedeployApplication</pre>
+
+                                                </div>
+<p>Ersetzen Sie <samp class="codeph">&lt;ANT_HOME&gt;</samp> durch das Verzeichnis, in dem Apache Ant installiert ist.</p>
+<div class="note"><span class="notetitle">Hinweis:</span> Abhängig vom Betriebssystem müssen Sie den Ausdruck <samp class="codeph">-DpatchProps.path=&lt;Pfad&gt;</samp> in doppelte oder einfache Anführungszeichen setzen.  </div>
+<p>Der geänderte Wert wird aus der Datei <samp class="codeph"><samp class="codeph">configsettings.properties</samp></samp> ausgelesen und in die WSIT-Dateien im Archiv <samp class="codeph">oscm.ear</samp> geschrieben. Das aktualisierte Archiv wird in <samp class="codeph">bes-domain</samp> neu installiert. </p>
+<p>Während der Ausführung des Befehls wird im Verzeichnis <samp class="codeph">&lt;install_pack_dir&gt;/domains/bes_domain</samp> ein Unterverzeichnis <samp class="codeph">/tmp</samp> angelegt, in dem das aktualisierte Archiv <samp class="codeph">oscm.ear</samp> gespeichert wird.</p>
+</li>
+
+                                        <li>Installieren Sie die Datei <samp class="codeph">oscm-portal.war</samp> in der Domäne <samp class="codeph">bes-domain</samp>.</li>
+
+                                        <li>Starten Sie die Domäne <samp class="codeph">bes-domain</samp> neu.</li>
+
+                                </ol>
+
+                        </div>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">SSO_STS_URL</h4>Obligatorisch, wenn die Plattform als SAML Service Provider installiert wird. Gibt die URL zum Service Endpoint des STS (Security Token System) an.<p>Erforderlich für die STS-Kommunikation.</p>
+<p>Aus Sicherheitsgründen wird empfohlen, das HTTPS-Protokoll zu verwenden.</p>
+<p>Syntax: <samp class="codeph">https://&lt;host&gt;:&lt;port&gt;/&lt;ServiceEndpoint&gt;</samp></p>
+<p>Diese Einstellung wird bei der Installation ausgewertet und kann im Administrationsportal nicht geändert werden. Gehen Sie wie folgt vor, wenn Sie die Einstelllung ändern müssen:</p>
+<div class="p">
+                                <ol>
+                                        <li>Stoppen Sie die Domäne <samp class="codeph">bes-domain</samp>.</li>
+
+                                        <li>Bearbeiten Sie die Datei <samp class="codeph">configsettings.properties</samp> und ändern Sie den Wert für die Einstellung <samp class="codeph">SSO_STS_URL</samp>.</li>
+
+                                        <li>Führen Sie die Datei <samp class="codeph">build-glassfish.xml</samp> im Verzeichnis <samp class="codeph">&lt;install_pack_dir&gt;/install</samp> wie folgt aus: <div class="p">
+                                                        <pre class="codeblock">&lt;ANT_HOME&gt;/bin/ant 
+   -DpatchProps.path=../domains/bes_domain/installer 
+   -f build-glassfish.xml patchAndRedeployApplication</pre>
+
+                                                </div>
+<p>Ersetzen Sie <samp class="codeph">&lt;ANT_HOME&gt;</samp> durch das Verzeichnis, in dem Apache Ant installiert ist.</p>
+<div class="note"><span class="notetitle">Hinweis:</span> Abhängig vom Betriebssystem müssen Sie den Ausdruck <samp class="codeph">-DpatchProps.path=&lt;Pfad&gt;</samp> in doppelte oder einfache Anführungszeichen setzen.  </div>
+<p>Der geänderte Wert wird aus der Datei <samp class="codeph"><samp class="codeph">configsettings.properties</samp></samp> ausgelesen und in die WSIT-Dateien im Archiv <samp class="codeph">oscm.ear</samp> geschrieben. Das aktualisierte Archiv wird in <samp class="codeph">bes-domain</samp> neu installiert. </p>
+<p>Während der Ausführung des Befehls wird im Verzeichnis <samp class="codeph">&lt;install_pack_dir&gt;/domains/bes_domain</samp> ein Unterverzeichnis <samp class="codeph">/tmp</samp> angelegt, in dem das aktualisierte Archiv <samp class="codeph">oscm.ear</samp> gespeichert wird.</p>
+</li>
+
+                                        <li>Installieren Sie die Datei <samp class="codeph">oscm-portal.war</samp> in der Domäne <samp class="codeph">bes-domain</samp>.</li>
+
+                                        <li>Starten Sie die Domäne <samp class="codeph">bes-domain</samp> neu.</li>
+
+                                </ol>
+
+                        </div>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">SUPPLIER_SETS_INVOICE_AS_DEFAULT</h4>Optional. Definiert, ob Zahlung auf Rechnung als Zahlungsart für alle Kunden voreingestellt sein soll. <p>Erlaubte Werte: <samp class="codeph">true</samp>, <samp class="codeph">false</samp></p>
+<p>Voreinstellung: <samp class="codeph">false</samp>
+                        </p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">TAGGING_MAX_TAGS</h4>Obligatorisch. Maximale Anzahl der Suchwörter, die für die Tag Cloud definiert werden dürfen. <p>Die Tag Cloud ist der Bereich eines Marktplatzes, in dem definierte Suchwörter angezeigt werden. Je öfter ein Suchwort für Services definiert ist, desto größer werden die Buchstaben des Suchworts angezeigt. Kunden können die Wörter nutzen, um Services zu suchen. Voraussetzung dafür ist, dass die Anzeige der Tag Cloud vom Marktplatzeigentümer eingeschaltet wurde.</p>
+<p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">0</samp> und <samp class="codeph">2147483647</samp></p>
+<p>Voreinstellung: <samp class="codeph">20</samp>
+                        </p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">TAGGING_MIN_SCORE</h4>Obligatorisch. Mindestanzahl, die ein Suchwort für Services angegeben werden muss, damit es in der Tag Cloud angezeigt werden.<p>Die Tag Cloud ist der Bereich eines Marktplatzes, in dem definierte Suchwörter angezeigt werden. Je öfter ein Suchwort für Services definiert ist, desto größer werden die Buchstaben des Suchworts angezeigt. Kunden können die Wörter nutzen, um Services zu suchen. Voraussetzung dafür ist, dass die Anzeige der Tag Cloud vom Marktplatzeigentümer eingeschaltet wurde.</p>
+<p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">1</samp> und <samp class="codeph">2147483647</samp></p>
+<p>Voreinstellung: <samp class="codeph">1</samp>. Dies bedeutet, dass ein Suchwort mindestens einmal für einen Service definiert worden sein muss, damit es in der Tag Cloud angezeigt wird.</p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">TIME_ZONE_ID</h4>Optional. Zeitzone für die Anzeige.<p>Erlaubte Werte: Alle von Java unterstützten Zeitzonen. Sie können eine Abkürzung angeben (z.B. <samp class="codeph">PST</samp>), einen vollständigen Namen (z.B. <samp class="codeph">America/Los_Angeles</samp>) oder eine ID (z.B. <samp class="codeph">GMT-8:00</samp>). Ausführliche Informationen erhalten Sie in der Java-Klasse <samp class="codeph">java.util.TimeZone</samp>.</p>
+<p>Voreinstellung: <samp class="codeph">GMT</samp></p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_BILLING_OFFSET</h4>Optional. Offset-Wert in Millisekunden für den Timer, der die Neuberechnung von Nutzungsgebühren (Kundenrechnungsdaten) und Umsatzbeteiligungen startet. Das Intervall für diesen Timer ist 1 Tag und kann nicht geändert werden. Wenn kein Offset-Wert definiert ist, wird der Standwert von 4 Tagen verwendet.<p>Die Kundenrechnungsdaten werden für einen Zeitraum von einem Monat berechnet (Abrechnungszeitraum). Serviceanbieter und Wiederverkäufer können festlegen, wann ihr Abrechnungszeitraum anfangen soll. Die Umsatzbeteiligungen werden immer für den vorangegangenen Kalendermonat am ersten Tag des darauffolgenden Monats berechnet.</p>
+<p>Der Offset-Wert für diesen Timer definiert folgendes:</p>
+<div class="p">
+                                <ul>
+                                        <li>Anzahl an Tagen, nach denen die Neuberechnung der Nutzungsgebühren und Umsatzbeteiligungen gestartet wird.</li>
+
+                                        <li>Uhrzeit, wann die Neuberechnung am aktuellen Tag ausgeführt wird.</li>
+
+                                </ul>
+
+                        </div>
+<p>Beispiel:</p>
+<p>Ein Serviceanbieter legt den 10. eines Monats als Startdatum für den Abrechnungszeitraum fest. Der Offset-Wert ist auf 4 Tage und 4 Stunden festgelegt. Die Neuberechnung der Kundenrechnungsdaten für den abgelaufenen Abrechnungszeitraum startet am 14. des Folgemonats um 04:00:00.000 Uhr. Die Umsatzbeteiligungen werden am 5. des Folgemonats um 04:00:00.000 Uhr neu berechnet. Ob das Ende eines Abrechnungszeitraums eines Serviceanbieters erreicht ist, wird täglich um 04:00:00.000 Uhr geprüft.</p>
+<p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">0</samp> und <samp class="codeph">2419200000</samp> (28 Tage)</p>
+<p>Voreinstellung: <samp class="codeph">345600000</samp> (4 Tage)</p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_DISCOUNT_END_NOTIFICATION_OFFSET</h4>Optional. Offset-Wert in Millisekunden für den Timer, der Rabatte aller Organisationen aufhebt. Der Wert des Timers ist ein Tag und kann nicht geändert werden.<p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">0</samp> und <samp class="codeph">9223372036854775807</samp></p>
+<p>Voreinstellung: <samp class="codeph">0</samp></p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_INACTIVE_ON_BEHALF_USERS</h4>Optional. Intervall in Millisekunden, in dem das System auf nicht mehr existierende Benutzer überprüft wird, die im Namen einer anderen Organisation handelten. Der Wert 0 bedeutet, dass der Timer nicht aktiv ist.<p>Für einen technischen Service kann definiert sein, dass eine Organisation im Namen einer anderen Organisation handeln darf (<samp class="codeph">allowingOnBehalfActing</samp>). Die Organisation muss Kunde der anderen Organisation sein. Diese Organisation muss wiederum sowohl die Rolle Hersteller als auch Serviceanbieter haben. Zusätzlich muss die Kundenorganisation der anderen Organisation die Berechtigung erteilt haben, sich in ihrem Namen am System anzumelden. Dies wird durch das Abonnieren eines Service erreicht, für den beim zugrunde liegenden technischen Service das Merkmal <samp class="codeph">allowingOnBehalfActing</samp> auf <samp class="codeph">true</samp> gesetzt ist.</p>
+<p>Wenn eine Organisation im Namen einer anderen Organisation handelt, wird ein künstlicher Benutzername erzeugt.</p>
+<p>Es kann erforderlich sein, die Plattform-Datenbank von Zeit zu Zeit zu bereinigen und Benutzer, die nicht mehr existieren, zu löschen. Es kann nicht sichergestellt werden, dass der technische Service selbst diese Benutzer löscht. </p>
+<p>Erlaubte Werte: <samp class="codeph">0</samp> sowie beliebiger Wert zwischen <samp class="codeph">10000</samp> (10 Sekunden) und <samp class="codeph">9223372036854775807</samp></p>
+<p>Voreinstellung: <samp class="codeph">0</samp></p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_INACTIVE_ON_BEHALF_USERS_OFFSET</h4>Optional. Offset-Wert in Millisekunden für den Timer, der inaktive Benutzer löscht, die im Namen einer anderen Organisation handelten.<p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">0</samp> und <samp class="codeph">9223372036854775807</samp></p>
+<p>Voreinstellung: <samp class="codeph">0</samp></p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_ORGANIZATION</h4>Optional. Intervall in Millisekunden, in dem organisationsbezogene Aufgaben gestartet werden. Der Wert 0 bedeutet, dass der Timer nicht aktiv ist. <p>Erlaubte Werte: <samp class="codeph">0</samp> sowie beliebiger Wert zwischen <samp class="codeph">10000</samp> (10 Sekunden) und <samp class="codeph">9223372036854775807</samp></p>
+<p>Voreinstellung: <samp class="codeph">0</samp></p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_ORGANIZATION_OFFSET</h4>Optional. Offset-Wert in Millisekunden für den Timer, der organisationsbezogene Aufgaben startet.<p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">0</samp> und <samp class="codeph">9223372036854775807</samp></p>
+<p>Voreinstellung: <samp class="codeph">0</samp></p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_SUBSCRIPTION_EXPIRATION</h4>Optional. Intervall in Millisekunden, in dem das System auf abgelaufene Abonnements überprüft wird. Der Timer kann nicht deaktiviert werden, d.h., der Wert kann nicht auf 0 gesetzt werden. <p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">10000</samp> (10 Sekunden) und <samp class="codeph">9223372036854775807</samp></p>
+<p>Voreinstellung: <samp class="codeph">86400000</samp> (1 Tag)</p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_SUBSCRIPTION_EXPIRATION_OFFSET</h4>Optional. Offset-Wert in Millisekunden für den Timer, der das System auf abgelaufene Abonnements überprüft.<p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">0</samp> und <samp class="codeph">9223372036854775807</samp></p>
+<p>Voreinstellung: <samp class="codeph">0</samp></p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_TENANT_PROVISIONING_TIMEOUT</h4>Optional. Intervall in Millisekunden, in dem das System auf Abonnements überprüft wird, die auf ihre Aktivierung warten. Der Wert 0 bedeutet, dass der Timer nicht aktiv ist. <p>Erlaubte Werte: <samp class="codeph">0</samp> sowie beliebiger Wert zwischen <samp class="codeph">10000</samp> (10 Sekunden) und <samp class="codeph">9223372036854775807</samp></p>
+<p>Voreinstellung: <samp class="codeph">0</samp></p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_TENANT_PROVISIONING_TIMEOUT_OFFSET</h4>Optional. Offset-Wert in Millisekunden für den Timer, der das System auf Abonnements überprüft, die auf ihre Aktivierung warten.<p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">0</samp> und <samp class="codeph">9223372036854775807</samp></p>
+<p>Voreinstellung: <samp class="codeph">0</samp></p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_USER_COUNT</h4>
+                        
+                        <p>Obligatorisch. Intervall in Millisekunden, in dem das System auf die Anzahl registrierter Benutzer überprüft wird. Der Timer kann nicht deaktiviert werden, d.h., der Wert kann nicht auf 0 gesetzt werden.</p>
+
+                        <p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">1</samp> und <samp class="codeph">9223372036854775807</samp></p>
+
+                        <p>Default: <samp class="codeph">43200000</samp> (12 Stunden)</p>
+
+                </div>
+
+                <div class="section"><h4 class="sectiontitle">WS_TIMEOUT</h4>Obligatorisch. Zeitspanne in Millisekunden, während der gewartet wird, dass Aufrufe eines Web-Service in einem externen System ausgeführt werden. Nach Ablauf dieser Zeitspanne gibt JAX-WS eine Timeout-Meldung aus. <p>Ein Aufruf eines Web-Service in einem externen System ist ein Aufruf durch die Plattform. Ein typisches Beispiel ist der Aufruf der Methode <samp class="codeph">createUsers</samp> im <samp class="codeph">ProvisioningService</samp> einer Anwendung. Wird der Timeout erreicht, bevor der Aufruf einen Rückgabewert liefert, wird die Operation abgebrochen und eine Exception ausgegeben. </p>
+<p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">1</samp> und <samp class="codeph">9223372036854775807</samp></p>
+<p>Voreinstellung: <samp class="codeph">30000</samp> (30 Sekunden)</p>
+<div class="p">
+                                <div class="note"><span class="notetitle">Hinweis:</span> Achten Sie darauf, dass die Timeout-Einstellungen im GlassFish Application Server nicht mit den Timeout-Einstellungen der Plattform in Konflikt stehen oder diese überschreiben. </div>
+
+                        </div>
+</div>
+
+        </div>
+
+
+</body>
+</html>

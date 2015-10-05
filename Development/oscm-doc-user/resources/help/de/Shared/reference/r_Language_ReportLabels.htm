@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="de-de" lang="de-de">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Texte in Berichten"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="reference832"/>
+<meta name="DC.Language" content="de-de"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>Texte in Berichten</title>
+</head>
+<body id="reference832">
+
+
+    <h1 class="topictitle1">Texte in Berichten</h1>
+
+    <div>
+        <div class="section">
+            <p>Berichte werden in der Sprache generiert, die der Benutzer in seinem Profil eingestellt hat. Die in den Berichten verwendeten Texte werden nach der Installation in Konfigurationsdateien bereitgestellt, die in einer separaten <samp class="codeph">.war</samp>-Datei im Installation Package (<samp class="codeph">oscm-install-pack.zip</samp>) enthalten sind:</p>
+
+            <p><samp class="codeph">&lt;install_pack_dir&gt;/domains/bes_domain/eclipse-birt-runtime.war</samp>. </p>
+
+            <p>Die Datei <samp class="codeph">eclipse-birt-runtime.war</samp> enthält die folgenden Konfigurationsdateien: </p>
+
+            <div class="p">
+                <ul>
+                    <li><samp class="codeph">reportLabels.properties</samp> (Standardsprache Englisch)</li>
+
+                    <li><samp class="codeph">reportLabels_de.properties</samp> (Deutsch)</li>
+
+                    <li><samp class="codeph">reportLabels_ja.properties</samp> (Japanisch)</li>
+
+                </ul>
+
+            </div>
+
+            <p>Sie können die englischen, deutschen und japanischen Texte bearbeiten, wenn Sie in diesen Sprachen Anpassungen der Berichte vornehmen möchten. </p>
+
+            <p>Gehen Sie wie folgt vor, um Berichte in einer anderen Sprache generieren zu lassen:</p>
+
+            <div class="p">
+                <ol>
+                    <li class="liexpand">Extrahieren Sie die Datei <samp class="codeph">eclipse-birt-runtime.war</samp> in ein lokales Verzeichnis. </li>
+
+                    <li class="liexpand">Wechseln Sie in das Unterverzeichnis <samp class="codeph">WEB-INF</samp>. </li>
+
+                    <li class="liexpand">Kopieren Sie die englische Konfigurationsdatei <samp class="codeph">reportLabels.properties</samp> und benennen Sie sie wie folgt um: <samp class="codeph">reportLabels_<em>&lt;ISO-Code&gt;</em>.properties</samp>.<p>Der ISO-Code benennt die Sprache, in der Sie Übersetzungen bereitstellen möchten. Legen Sie zum Beispiel im Unterverzeichnis <samp class="codeph">WEB-INF</samp> eine Datei <samp class="codeph">reportLabels_cs.properties</samp> an.</p>
+</li>
+
+                    <li class="liexpand">Öffnen Sie die neue Konfigurationsdatei in einem Texteditor.<p>Jede Zeile der Datei ist wie folgt aufgebaut:</p>
+<div class="p">
+                            <ul>
+                                <li class="liexpand">Schlüssel in Großbuchstaben.</li>
+
+                                <li class="liexpand">Gleichheitszeichen (=).</li>
+
+                                <li class="liexpand">Text in der Sprache, die durch den Sprachcode im Dateinamen festgelegt ist.</li>
+
+                            </ul>
+
+                        </div>
+<p>Übersetzen Sie die Texte nach den Gleichheitszeichen. Beachten Sie dabei folgendes:</p>
+<div class="p">
+                            <ul>
+                                <li>Lassen Sie die Schlüssel unverändert.</li>
+
+                                <li>Wenn Sie in eine Sprache mit Nicht-ASCII-Zeichen übersetzen:<p>Verwenden Sie für diese Zeichen Unicode-Kodierung und Backslashes als Escape-Zeichen.</p>
+<p>Beispiel für einen japanischen Text: <samp class="codeph">BASEPRICE=\u30B5\u30FC\u30D3\u30B9\u57FA\u672C\u6599\u91D1 </samp>
+                                    </p>
+<p>Beispiel für einen deutschen Umlaut: <samp class="codeph">INVALID=ung\u00FCltig</samp></p>
+</li>
+
+                                <li>Sonderzeichen wie Doppelpunkten muss ein Backslash als Escape-Zeichen (\) vorangestellt werden. Beispiel: <samp class="codeph">ROLESPERPRICEMODEL=Kosten pro Abonnement\:</samp></li>
+
+                                <li>Speichern Sie die Datei in UTF-8.</li>
+
+                            </ul>
+
+                        </div>
+</li>
+
+                    <li class="liexpand">Erstellen Sie eine neue WAR-Datei, <samp class="codeph">eclipse-birt-runtime.war</samp>, die die Konfigurationsdatei für die neue Sprache enthält.</li>
+
+                    <li class="liexpand">Deinstallieren Sie zunächst und installieren Sie anschließend die geänderte Datei <samp class="codeph">eclipse-birt-runtime.war</samp> in der Domäne <samp class="codeph">bes-domain</samp> auf Ihrem Application Server. Weitere Informationen finden Sie im <em>Installation Guide</em>. </li>
+
+                </ol>
+
+            </div>
+
+            <p>Durch Installieren der geänderten Datei werden bereits vorhandene Texte, die in Berichten ausgegeben werden, überschrieben.</p>
+
+            <div class="p">
+                <div class="note"><span class="notetitle">Hinweis:</span> Achten Sie darauf, dass die Verzeichnisstrukturen und Dateien konsistent bleiben!</div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>

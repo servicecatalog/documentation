@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="de-de" lang="de-de">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Details zum Preismodell"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="reference832"/>
+<meta name="DC.Language" content="de-de"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>Details zum Preismodell</title>
+</head>
+<body id="reference832">
+
+
+    <h1 class="topictitle1">Details zum Preismodell </h1>
+
+    <div>
+        <div class="section">
+            <p>Auf den Seiten <span class="uicontrol">Service anzeigen</span> und <span class="uicontrol">Service verwalten</span> können Sie folgende Details zu Abrechnungsbedingungen und Preisen sehen. Alle Preise werden ohne Mehrwertsteuer angegeben.</p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">Allgemeine Abrechnungsbedingungen</h4>
+            
+            <p>Die allgemeinen Abrechnungsbedingungen umfassen folgende Informationen:</p>
+
+            <ul>
+                <li class="liexpand">
+                    <div class="p"><strong>Abrechnungsart</strong>: <ul>
+                            <li><span class="uicontrol">Kostenlos</span>: Die Nutzung des Service ist kostenlos.</li>
+
+                            <li><span class="uicontrol">Abrechnung pro rata</span>: Die Nutzungsgebühren werden auf Grundlage der exakten Nutzungsdauer des Service in Millisekunden abgerechnet.</li>
+
+                            <li><span class="uicontrol">Abrechnung pro Zeiteinheit</span>: Die Nutzungsgebühren werden für angefangene Zeiteinheiten abgerechnet, beispielsweise für Tage oder Wochen. Die Zeiteinheit ist durch die <span class="uicontrol">Abrechnungseinheit</span> festgelegt.</li>
+
+                        </ul>
+</div>
+
+                </li>
+
+                <li class="liexpand"><strong>Kostenloser Nutzungszeitraum (in Tagen)</strong>: Anzahl der Tage, die der Service kostenlos genutzt werden kann. Nach diesem Zeitraum wird der Service automatisch zu einem kostenpflichtigen Service.</li>
+
+                <li class="liexpand"><strong>Währung</strong>, in der mit dem Kunden abgerechnet wird. Der Plattform-Betreiber legt die unterstützten Währungen fest. Die Währung kann für ein Abo-Preismodell nicht geändert werden.</li>
+
+                <li class="liexpand"><strong>Abrechnungseinheit</strong>: Zeitspanne, nach der die Nutzungsgebühren abgerechnet werden. Eine monatliche, wöchentliche, tägliche oder stundenweise Abrechnung ist möglich. Die <span class="uicontrol">Abrechnungseinheit</span> legt auch die Einheit fest, die bei <span class="uicontrol">Abrechnung pro Zeiteinheit</span> verwendet wird. Die Zeiteinheit kann für ein Abo-Preismodell nicht geändert werden.</li>
+
+                <li class="liexpand"><strong>Einmalige Gebühr</strong> bei Abschluss eines Abonnements. Diese Gebühr wird zu den Nutzungsgebühren für den ersten Abrechnungszeitraum hinzugerechnet. </li>
+
+                <li class="liexpand"><strong>Preis pro Abo</strong>: Gebühr, die für ein Abonnement so oft bezahlt werden muss, wie in der <span class="uicontrol">Abrechnungseinheit</span> angegeben. </li>
+
+                <li class="liexpand"><strong>Preis für Benutzer</strong>: <span>Gebühr, die pro Zeiteinheit, die Benutzer einem Abonnement zugeordnet sind, bezahlt werden muss. Die Zeiteinheit wird im Feld <span class="uicontrol">Abrechnungseinheit</span> angegeben. Diese Gebühr kann gestaffelt sein, um beispielsweise abhängig von der Zeit, die Benutzer mit einem Service arbeiten, Rabatte zu gewähren</span>.</li>
+
+            </ul>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">Preise für abrechenbare Ereignisse</h4>
+            
+            <p>Für einzelne <strong>Ereignisse</strong> können Preise festgelegt werden. <span>Ein Ereignis ist beispielsweise das An- oder Abmelden von der zugrunde liegenden Anwendung, das Beenden einer bestimmten Transaktion oder das Anlegen oder Löschen bestimmter Daten. Für welche Ereignisse Preise definiert werden können, hängt von der Implementierung der Anwendung und ihrer Integration ab.</span>
+            </p>
+
+            <p><span>Diese Gebühr kann gestaffelt sein, um beispielsweise abhängig von der Anzahl der Ereignisse, die während der Nutzung eines abonnierten Service auftreten, Rabatte zu gewähren</span></p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">Preise für Parameter</h4>
+            
+            <p>Ein Preismodell kann Preise für Parameter und Optionen enthalten. <span>Ob und welche Parameter und Optionen zur Auswahl stehen, ist abhängig von der Implementierung und Integration der zugrunde liegenden Anwendung.</span> Der Serviceanbieter kann für jeden Parameter und jede Option einen Preis festlegen, der jeweils für ein Abonnement als ganzes oder pro Benutzer berechnet werden kann. Numerische Parameter sind Multiplikatoren für den angegebenen Preis. Bei booleschen Parametern mit dem Wert <samp class="codeph">true</samp> ist der Multiplikator <samp class="codeph">1</samp>, ansonsten <samp class="codeph">0</samp>. In allen anderen Fällen ist der Multiplikator ebenfalls <samp class="codeph">0</samp>.</p>
+
+            <p><span>Bei numerischen Parametern ist eine Preisstaffelung pro Abonnement möglich: Abhängig von den Werten des Parameters können unterschiedliche Preise definiert werden.</span></p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">Rollenspezifische Preise</h4>
+            
+            <p>Ein Preismodell kann Preise für Servicerollen festlegen, die für die zugrunde liegende Anwendung definiert sind. In der Kostenberechnung für einen Abrechnungszeitraum wird dieser Preis zu dem Grundpreis pro Benutzer addiert.</p>
+
+            <p><span>Die Servicerollen werden bei der Definition des technischen Service festgelegt. In der Anwendung werden sie dann in die entsprechenden Privilegien umgesetzt.</span></p>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>

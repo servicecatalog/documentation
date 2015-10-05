@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="Defining featured services"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="task634"/>
+<meta name="DC.Language" content="en-us"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>Defining featured services</title>
+</head>
+<body id="task634">
+
+
+  <h1 class="topictitle1">Defining featured services</h1>
+
+  <div>
+    <div class="section">
+      <p>On the <span class="uicontrol">Define featured services</span> page, you can decide which services you want to highlight or promote on the marketplace home page. After selecting the desired marketplace from the <span class="uicontrol">Marketplace</span> list, you first define how the services are displayed on the marketplace home page:</p>
+
+      <ul>
+        <li class="liexpand"><strong>By selecting the featured services</strong>: By default, the marketplace home page displays the six services created most recently. The remaining services are displayed to marketplace visitors when they browse the service catalog. The home page allows the marketplace visitors to access any service that is offered on the marketplace.<p>Use the <strong>By selecting the featured services</strong> option to individually select the services that you want to promote on the marketplace home page. You can specify how many and which services are to be displayed. By defining the sequence of the services, you can also rank them, putting, for example, the most attractive offering to the very beginning of the home page.</p>
+<p>For a step-by-step description on how to select and rank the services, see below.</p>
+</li>
+
+        <li class="liexpand"><strong>By grouping services and subscriptions by category</strong>: You can choose to display services and subscriptions on the marketplace home page. This requires each home page visitor to log in to the marketplace with his personal login data. As soon as he is logged in, the available services and the existing subscriptions of his organization are displayed. <p>They are grouped by the first three categories that are defined for the marketplace and listed in the order in which they were created. The most recently created service comes first. The categories filter the services and subscriptions for the visitors of the marketplace. The tag cloud for filtering the services is not available.</p>
+<div class="p">
+            <div class="note"><span class="notetitle">Note:</span> You can choose to display services and subscriptions on your marketplace home page irrespective of whether categories are enabled or disabled for the marketplace. The <strong>By grouping services and subscriptions by category</strong> option overrides the <strong>Category</strong> feature that can be defined or updated when creating or updating a marketplace.<p>If you choose to display services and subscriptions on your home page, it is recommended that the URL of the remote interface of the applications underlying the services is specified in the technical service definition. In addition, it is recommended that a customer organization can subscribe only once to a service. For details on the corresponding attributes that can be defined in the technical service definition XML file, refer to the <em>Technology Provider's Guide</em>.</p>
+</div>
+
+          </div>
+</li>
+
+      </ul>
+
+      <p><strong>To select and rank services</strong>:</p>
+
+    </div>
+
+    <ol><li class="stepexpand">
+        <span>Select the number of featured services you want to display on the marketplace home page. By default, the number is set to 6.</span>
+      </li>
+<li class="stepexpand">
+        <span>Define the services that you want to display on the home page by moving them from the <span class="uicontrol">Available Services</span> list to the <span class="uicontrol">Featured Services</span> list, and vice versa.</span>
+         
+          <p>To move a service from one list to the other, click the service and click <span class="uicontrol">Add</span> or <span class="uicontrol">Remove</span>, respectively. To move all services from one list to the other, click <span class="uicontrol">Add All</span> or <span class="uicontrol">Remove All</span>, respectively.</p>
+
+          <p>Be aware of the following:</p>
+
+          <ul>
+            <li class="liexpand">In the <span class="uicontrol">Available Services</span> list, the services are sorted alphabetically from A - Z. In the <span class="uicontrol">Featured Services</span> list, they are sorted in the order you define (see the next step below).</li>
+
+            <li class="liexpand">The <span class="uicontrol">Available Services</span> list contains both activated services (green) and deactivated services (red). On the marketplace home page, visitors see only the activated services. Yet, a deactivated service may become activated at any time, for example because the supplier has finished updating its definition. As soon as it is activated, it becomes visible on the home page.</li>
+
+            <li class="liexpand">The <span class="uicontrol">Available Services</span> list does not contain services that you have explicitly suspended, for example in the case of an infringement of the terms and conditions by the respective supplier. After deactivating these services on the marketplace, you have to reactivate them to make them available in the <span class="uicontrol">Available Services</span> list.</li>
+
+            <li class="liexpand">The <span class="uicontrol">Available Services</span> list does not contain services with a customer-specific price model.</li>
+
+            <li class="liexpand">The <span class="uicontrol">Available Services</span> list contains public and non-public services. A public service is visible for anybody accessing the marketplace. A service that has not been marked as public is visible to registered customers only. Click <a href="service_publish.htm">here</a> for more details.</li>
+
+            <li class="liexpand">The <span class="uicontrol">Available Services</span> list contains services that have been explicitly removed from the service catalog by their respective supplier, broker, or reseller. On the marketplace home page, your customers can see only the services that are to be included in the catalog. Click <a href="service_activation.htm">here</a> for more details.</li>
+
+          </ul>
+
+        
+      </li>
+<li class="stepexpand">
+        <span>Define the sequence of the featured services in the <span class="uicontrol">Featured Services</span> list.</span>
+         
+          <p>Click the service you want to move to a different position in the list. To move a service one position up or down in the list, click <span class="uicontrol">Up</span> or <span class="uicontrol">Down</span>, respectively. To move a service to the beginning or end of the list, click <span class="uicontrol">Top</span> or <span class="uicontrol">Bottom</span>, respectively. </p>
+
+        
+      </li>
+<li class="stepexpand">
+        <span>Define how to fill the list of featured services on the marketplace. This is required in case the number of activated featured services is smaller than the number of featured services you have defined (see step 2 above). You can choose one of the following options:</span>
+         
+          <ul>
+            <li class="liexpand">
+              <p><span class="uicontrol">The most recently created services</span> to fill the list with services that have been defined most recently. This option is set by default.</p>
+
+            </li>
+
+            <li class="liexpand">
+              <p><span class="uicontrol">The services in alphabetical order (A-Z)</span> to fill the list with services in alphabetical order starting with A.</p>
+
+            </li>
+
+            <li class="liexpand">
+              <p><span class="uicontrol">The best rated services</span> to fill the list with services that have received the best ratings. This option is available only if the rating and review feature is switched on for the marketplace. If you choose this option and the rating and review feature is switched off later, the list is filled with the most recently created services.</p>
+
+            </li>
+
+            <li class="liexpand">
+              <p><span class="uicontrol">No other services</span> to leave the list of featured services smaller than you defined it in step 2 above. </p>
+
+            </li>
+
+          </ul>
+
+        
+      </li>
+<li class="stepexpand">
+        <span>To save your changes, click <span class="uicontrol">Save</span>. To clear the list of featured services and return to the default settings, you can click <span class="uicontrol">Reset</span>.</span>
+      </li>
+</ol>
+
+    <div class="section">
+      <p>Visitors of the marketplace will see the services in the defined sequence the next time they log in to the marketplace or refresh their Web browser.</p>
+
+    </div>
+
+  </div>
+
+
+</body>
+</html>

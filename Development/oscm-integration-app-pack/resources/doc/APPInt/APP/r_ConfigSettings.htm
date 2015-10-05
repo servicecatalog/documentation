@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="APP Configuration Settings"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="reference832"/>
+<meta name="DC.Language" content="en-us"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>APP Configuration Settings</title>
+</head>
+<body id="reference832">
+
+
+    <h1 class="topictitle1"><span>APP Configuration Settings</span></h1>
+
+    <div>
+        <div class="section">
+            <p>The <samp class="codeph">configsettings.properties</samp> file located in <samp class="codeph">&lt;install_pack_dir&gt;/databases/app_db</samp> contains the configuration settings for APP.</p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">APP_BASE_URL</h4>
+            
+            <p><samp class="codeph">APP_BASE_URL=http://&lt;server&gt;:&lt;port&gt;/oscm-app</samp></p>
+
+            <p>The URL used to access APP. </p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">APP_TIMER_INTERVAL</h4>
+            
+            <p><samp class="codeph">APP_TIMER_INTERVAL=15000</samp>
+            </p>
+
+            <p>The interval (in milliseconds) at which APP polls the status of instances. If you increase the value, provisioning takes longer. If you decrease it, more load is put on the system. We strongly recommend that you do not set a value of more than 180000 milliseconds (3 minutes), although the maximum value is much higher (922337203685477580).</p>
+
+            <p>If you do not specify this setting at all, the default value used is 15000.</p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">APP_MAIL_RESOURCE</h4>
+            
+            <p><samp class="codeph">APP_MAIL_RESOURCE=mail/APPMail</samp></p>
+
+            <p>The JNDI name of the GlassFish mail resource used to send emails. </p>
+
+            <p>The resource <samp class="codeph">mail/APPMail</samp> is created during setup with the parameters defined in the <samp class="codeph">glassfish.properties</samp> file. This setting needs to be changed only if you want to use a different mail resource. </p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">APP_ADMIN_MAIL_ADDRESS</h4>
+            
+            <p><samp class="codeph">APP_ADMIN_MAIL_ADDRESS=admin@example.com</samp>
+            </p>
+
+            <p>The email address to which email notifications are sent. </p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">APP_KEYSTORE_PASSWORD</h4>
+            
+            <p><samp class="codeph">APP_KEYSTORE_PASSWORD=changeit</samp></p>
+
+            <p>The password required to access the keystore of the domain used for APP in the application server. </p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">APP_TRUSTSTORE_PASSWORD</h4>
+            
+            <p><samp class="codeph">APP_TRUSTSTORE_PASSWORD=changeit</samp></p>
+
+            <p>The password required to access the truststore of the domain used for APP in the application server. </p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">BSS_AUTH_MODE</h4><p><samp class="codeph">BSS_AUTH_MODE=INTERNAL</samp>
+            </p>
+<p>Specifies whether <span>OSCM</span> is used for user authentication or whether it acts as a SAML service provider and allows for single sign-on. The setting must be identical to the <samp class="codeph">AUTH_MODE</samp> setting in <span>OSCM</span>.</p>
+Possible values: <samp class="codeph">INTERNAL</samp> (<span>OSCM</span> user authentication is used) or <samp class="codeph">SAML_SP</samp> (<span>OSCM</span> acts as a SAML service provider). <p>Contact the <span>OSCM</span> platform operator for details on which value to set.</p>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">BSS_USER_KEY</h4>
+            
+            <p><samp class="codeph">BSS_USER_KEY=&lt;userKey&gt;</samp>
+            </p>
+
+            <p>The user key for accessing <span>OSCM</span>. </p>
+
+            <p>Replace <samp class="codeph">&lt;userKey&gt;</samp> with the user key which you receive with the confirmation email for your user account. </p>
+
+            <p>The user specified here must have the administrator role for your organization in <span>OSCM</span>. The user account is used for carrying out actions on behalf of APP in <span>OSCM</span>. In addition, the user is allowed to register service controllers in APP.</p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">BSS_USER_ID</h4>
+            
+            <p><samp class="codeph">BSS_USER_ID=&lt;userId&gt;</samp>
+            </p>
+
+            <p>The identifier of the user specified in <samp class="codeph">BSS_USER_KEY</samp> for accessing <span>OSCM</span>.</p>
+
+            <p>Replace <samp class="codeph">&lt;userId&gt;</samp> with the user ID.</p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">BSS_USER_PWD</h4>
+            
+            <p><samp class="codeph">BSS_USER_PWD=_crypt:&lt;password&gt;</samp></p>
+
+            <p>The password of the user specified in <samp class="codeph">BSS_USER_KEY</samp> for accessing <span>OSCM</span>.</p>
+
+            <p>Replace <samp class="codeph">&lt;password&gt;</samp> with the plain text password. The password is encrypted when it is stored in the database. </p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">BSS_WEBSERVICE_URL</h4>
+            
+            <p><samp class="codeph">BSS_WEBSERVICE_URL=https://&lt;server&gt;:&lt;port&gt;/{SERVICE}/BASIC</samp>
+            </p>
+
+            <p>Mandatory when <samp class="codeph">BSS_AUTH_MODE</samp> is set to <samp class="codeph">INTERNAL</samp> and basic authentication is used. The endpoint of the <span>OSCM</span> Web services to be used. The <samp class="codeph">{SERVICE}</samp> placeholder must not be replaced.</p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">BSS_WEBSERVICE_WSDL_URL</h4>
+            
+            <p><samp class="codeph">BSS_WEBSERVICE_WSDL_URL=https://&lt;server&gt;:&lt;port&gt;/oscm/v1.7/{SERVICE}/BASIC?wsdl</samp>
+            </p>
+
+            <p>Mandatory when <samp class="codeph">BSS_AUTH_MODE</samp> is set to <samp class="codeph">INTERNAL</samp> and basic authentication is used. The URL specifying the version of the <span>OSCM</span> Web services to be used. The <samp class="codeph">{SERVICE}</samp> placeholder must not be replaced.</p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">BSS_STS_WEBSERVICE_URL</h4>
+            
+            <p><samp class="codeph">BSS_STS_WEBSERVICE_URL=https://&lt;server&gt;:&lt;port&gt;/{SERVICE}/STS</samp>
+            </p>
+
+            <p>Mandatory when <samp class="codeph">BSS_AUTH_MODE</samp> is set to <samp class="codeph">SAML_SP</samp> and security token based authentication is used. The endpoint of the <span>OSCM</span> Web services to be used. The <samp class="codeph">{SERVICE}</samp> placeholder must not be replaced.</p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">BSS_STS_WEBSERVICE_WSDL_URL</h4>
+            
+            <p><samp class="codeph">BSS_STS_WEBSERVICE_WSDL_URL=https://&lt;server&gt;:&lt;port&gt;/oscm/v1.7/{SERVICE}/STS?wsdl</samp>
+            </p>
+
+            <p>Mandatory when <samp class="codeph">BSS_AUTH_MODE</samp> is set to <samp class="codeph">SAML_SP</samp>. The URL specifying the version of the <span>OSCM</span> Web services to be used. The <samp class="codeph">{SERVICE}</samp> placeholder must not be replaced.</p>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>

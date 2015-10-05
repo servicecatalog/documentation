@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="User data file for multiple user import"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="reference832"/>
+<meta name="DC.Language" content="en-us"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>User data file for multiple user import</title>
+</head>
+<body id="reference832">
+
+
+    <h1 class="topictitle1"><span>User data file for multiple user import</span>
+    </h1>
+
+    <div>
+        <div class="section">
+            <p>An administrator can import multiple users of his organization and register them with the platform. A platform operator can import multiple users of his own organization as well as of any organization managed on his platform. </p>
+
+            <p>The user data must be provided in a file in <samp class="codeph">csv</samp> (comma-separated values) format. This file can then be imported into <span>the system</span>.</p>
+
+            <p>The following rules apply:</p>
+
+            <div class="p">
+                <ul>
+                    <li class="liexpand">The data for one user is provided in one line. Empty lines are ignored.</li>
+
+                    <li class="liexpand">
+                        <p>The user data file is saved in UTF-8 encoding. </p>
+
+                    </li>
+
+                    <li class="liexpand">The user data is provided in the following sequence: <div class="p">
+                            <ol>
+                                <li>User ID (mandatory) </li>
+
+                                <li>Email address (mandatory)</li>
+
+                                <li>Language (mandatory)</li>
+
+                                <li>Title (optional)</li>
+
+                                <li>First name (optional)</li>
+
+                                <li>Last name (optional)</li>
+
+                                <li>One or several user roles to be assigned to the imported user (mandatory if no marketplace is selected at the user interface)</li>
+
+                            </ol>
+
+                        </div>
+</li>
+
+                    <li class="liexpand">The user data fields are separated by a comma each. If an optional field does not contain any data, it must be empty and separated by a comma from the next field. </li>
+
+                </ul>
+
+            </div>
+
+            <p>The fields can take on the following values: </p>
+
+            <div class="p">
+                
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="border" border="1" rules="all">
+                        
+                        
+                        <thead align="left">
+                            <tr>
+                                <th class="cellrowborder" valign="top" width="20.161290322580648%" id="d17355e95">Field</th>
+
+                                <th class="cellrowborder" valign="top" width="79.83870967741935%" id="d17355e98">Value(s)</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td class="cellrowborder" valign="top" width="20.161290322580648%" headers="d17355e95 ">User ID</td>
+
+                                <td class="cellrowborder" valign="top" width="79.83870967741935%" headers="d17355e98 ">Mandatory. ID with which the user is to log in to the platform. <p>User IDs are restricted to 100 characters and must not contain any of the following characters:</p>
+<p><samp class="codeph">! " # $ % &amp; ' * + , / : ; &lt; = &gt; ? \ ^ `</samp>
+                                    </p>
+</td>
+
+                            </tr>
+
+                            <tr>
+                                <td class="cellrowborder" valign="top" width="20.161290322580648%" headers="d17355e95 ">Email address</td>
+
+                                <td class="cellrowborder" valign="top" width="79.83870967741935%" headers="d17355e98 ">Mandatory. Email address of the user. It is used for notifying the user about the registration.<p>The system checks whether the syntax of the given email address is valid, and whether the domain name corresponds to the standards as defined and maintained by the Internet Assigned Numbers Authority (IANA). </p>
+<p>Examples: <samp class="codeph">user.name@domain.arpa</samp>, <samp class="codeph">user.name@domain.org</samp>, <samp class="codeph">user@mycompany.lan.uk</samp></p>
+</td>
+
+                            </tr>
+
+                            <tr>
+                                <td class="cellrowborder" valign="top" width="20.161290322580648%" headers="d17355e95 ">Language</td>
+
+                                <td class="cellrowborder" valign="top" width="79.83870967741935%" headers="d17355e98 ">Mandatory. ISO code of the language in which the user will work by default, for example, <samp class="codeph">en</samp> (English). </td>
+
+                            </tr>
+
+                            <tr>
+                                <td class="cellrowborder" valign="top" width="20.161290322580648%" headers="d17355e95 ">Title</td>
+
+                                <td class="cellrowborder" valign="top" width="79.83870967741935%" headers="d17355e98 ">Optional. Salutation.<p>Allowed values: <samp class="codeph">MR</samp> or <samp class="codeph">MS</samp></p>
+<p>Observe that the value is case-sensitive and must be specified as indicated.</p>
+</td>
+
+                            </tr>
+
+                            <tr>
+                                <td class="cellrowborder" valign="top" width="20.161290322580648%" headers="d17355e95 ">First name</td>
+
+                                <td class="cellrowborder" valign="top" width="79.83870967741935%" headers="d17355e98 ">Optional. </td>
+
+                            </tr>
+
+                            <tr>
+                                <td class="cellrowborder" valign="top" width="20.161290322580648%" headers="d17355e95 ">Last name</td>
+
+                                <td class="cellrowborder" valign="top" width="79.83870967741935%" headers="d17355e98 ">Optional. </td>
+
+                            </tr>
+
+                            <tr>
+                                <td class="cellrowborder" valign="top" width="20.161290322580648%" headers="d17355e95 ">User role</td>
+
+                                <td class="cellrowborder" valign="top" width="79.83870967741935%" headers="d17355e98 ">Mandatory if no marketplace is selected at the user interface. If a marketplace is selected and no role is specified, a standard user without any privileges is registered.<p>The user roles that can be specified depend on the role of the organization for which the users are to be imported. Valid user roles are: </p>
+<p><samp class="codeph">ORGANIZATION_ADMIN</samp> (administrator) for organizations with any role.</p>
+<p><samp class="codeph">SUBSCRIPTION_MANAGER</samp> (subscription manager) for organizations with any role.</p>
+<p><samp class="codeph">PLATFORM_OPERATOR</samp> (operator) for platform operator organizations.</p>
+<p><samp class="codeph">MARKETPLACE_OWNER</samp> (marketplace manager) for marketplace owner organizations.</p>
+<p><samp class="codeph">SERVICE_MANAGER</samp> (service manager) for supplier organizations.</p>
+<p><samp class="codeph">TECHNOLOGY_MANAGER</samp> (technology manager) for technology provider organizations.</p>
+<p><samp class="codeph">BROKER_MANAGER</samp> (broker manager) for broker organizations.</p>
+<p><samp class="codeph">RESELLER_MANAGER</samp> (reseller manager) for reseller organizations.</p>
+<p><samp class="codeph">UNIT_ADMINISTRATOR</samp> (OU administrator) for OU administrators</p>
+<p>Observe the following: </p>
+<div class="p">
+                                        <ul>
+                                            <li class="liexpand">
+                                                <p>The role names are case-sensitive and must be specified as indicated above.</p>
+
+                                            </li>
+
+                                            <li class="liexpand">If several user roles are specified, they must be separated by a comma and enclosed in double quotes (Example: <samp class="codeph">"ORGANIZATION_ADMIN, RESELLER_MANAGER"</samp>). Blanks between role names and fields are ignored.</li>
+
+                                            <li class="liexpand">
+                                                <p>If one user role is specified that is not available for the organization for which to import users, it is ignored and the affected users are not registered. </p>
+
+                                            </li>
+
+                                            <li class="liexpand">
+                                                <p>If several roles are specified for a user, and at least one of these roles is valid for the organization, the user is imported and registered successfully, invalid roles are ignored.</p>
+
+                                            </li>
+
+                                        </ul>
+
+                                    </div>
+</td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+</div>
+
+            </div>
+
+            <p><strong>Sample user data file</strong>:</p>
+
+            <div class="p">
+                <pre class="codeblock">user1,user1@company.com,en,MS,Jane,Smith,ORGANIZATION_ADMIN
+user2,user2@company.com,de,MR,John F.,Cool,SUBSCRIPTION_MANAGER
+user3,user3@company.com,en,,,,ORGANIZATION_ADMIN
+user4,user4@company.com,en,,,Admin,"SERVICE_MANAGER,ORGANIZATION_ADMIN"
+user5,user5@company.com,en,MR,,Mueller-Siegel,SERVICE_MANAGER
+user6,user6@company.com,en,MR,Joe,StandardUser,</pre>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>

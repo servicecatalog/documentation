@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Updating Configuration Settings"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="concept_1BCF5C425D7D4627AB1C66A085CF6E11"/>
+<meta name="DC.Language" content="en-us"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>Updating Configuration Settings</title>
+</head>
+<body id="concept_1BCF5C425D7D4627AB1C66A085CF6E11">
+
+
+            <h1 class="topictitle1">Updating Configuration Settings</h1>
+
+            <div>
+                        <div class="section">
+                                    <p>The <span>APP</span> software and setup utilities require a number of settings. In the installation, you adapted the settings, in particular server names, ports, paths, and user IDs, to your environment.</p>
+
+                                    <p>The configuration settings are provided in the following subdirectories and files of <samp class="codeph">&lt;install_pack_dir&gt;</samp>:</p>
+
+            <div class="p">
+                <ul>
+                    <li>
+                        <p><samp class="codeph"><strong>databases/app_db</strong></samp></p>
+
+                        <div class="p">
+                            <ul>
+                                <li class="liexpand"><samp class="codeph">db.properties</samp>: Settings for the database setup and access.</li>
+
+                                <li class="liexpand"><samp class="codeph">configsettings.properties</samp>: Configuration settings for APP. <p>The initial installation stores these settings in the <samp class="codeph">bssapp</samp> database, where you can change them later, if required. An update installation overwrites the settings. If you don't want existing settings to be overwritten, delete them from the properties file. In case that mandatory settings are missing in the properties file and not yet stored in the database, an exception will occur. </p>
+</li>
+
+                                
+                                <li class="liexpand"><samp class="codeph">configsettings_controller.properties</samp>: Configuration settings for a service controller integrated with APP, if any.</li>
+
+                                
+                                
+                                
+                            </ul>
+
+                        </div>
+
+                    </li>
+
+                    <li>
+                        <p><samp class="codeph"><strong>domains/app_domain</strong></samp></p>
+
+                        <p>The configuration settings for setting up the application server domain to which APP is deployed are provided in the following file:</p>
+
+                        <p><samp class="codeph">glassfish.properties</samp></p>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+                                    <p>For details on the configuration settings, refer to <span><a href="../../Shared/Installation/r_ConfigSettings.htm">Configuration Settings</a></span>.</p>
+
+                                    <p>If you need to change the settings, proceed as described in the following sections.</p>
+
+                                    <div class="p"><strong>To update the configuration settings for database access:</strong>
+                                <ol>
+                                        <li class="liexpand">Log in to the administration console of the application server. </li>
+
+                                        <li class="liexpand">Adapt the settings as required. </li>
+
+                                </ol>
+</div>
+
+                                    <div class="p"><strong>To update the configuration settings for the application server:</strong>
+                                <ol>
+                                        <li class="liexpand">Open the <samp class="codeph">glassfish.properties</samp> file located in <samp class="codeph">&lt;install_pack_dir&gt;/domains/app_domain</samp> with an editor.</li>
+
+                                        <li class="liexpand">Check the settings in the file and adapt them to your environment if required.</li>
+
+                                        <li class="liexpand">Save the file to its original location in <span><samp class="codeph">&lt;install_pack_dir&gt;/domains/app_domain</samp></span>. </li>
+
+                                        <li class="liexpand">Update the settings and resources in the application server by executing the <samp class="codeph">build-glassfish.xml</samp> file in <samp class="codeph">&lt;install_pack_dir&gt;/install</samp> as follows:<div class="p">
+                            <pre class="codeblock">&lt;ANT_HOME&gt;/bin/ant -f build-glassfish.xml 
+   SETUP.configureDomains</pre>
+
+                        </div>
+</li>
+
+                                </ol>
+</div>
+
+                                    <div class="p"><strong>To update the configuration settings for APP:</strong>
+                                <ol>
+                                        <li class="liexpand">Edit the content of the <samp class="codeph">configsettings.properties</samp> file as required. </li>
+
+                                        <li class="liexpand">Execute the <samp class="codeph">build-db.xml</samp> file in <samp class="codeph">&lt;install_pack_dir&gt;/install</samp> as follows:<div class="p">
+                            <pre class="codeblock">&lt;ANT_HOME&gt;/bin/ant -f build-db.xml
+   UPDATE.configSettings</pre>
+
+                        </div>
+</li>
+
+                                </ol>
+</div>
+
+                                    <p><strong>To update the configuration settings for the  service controller:</strong></p>
+
+            <div class="p">
+                <ol>
+                                        <li class="liexpand">In a Web browser, access the URL of the  service controller, for example: .</li>
+
+                    <li class="liexpand">Log in with the ID and password of the user specified in the configuration settings for the  service controller (<samp class="codeph">BSS_USER_ID</samp> and <samp class="codeph">BSS_USER_PWD</samp>) or as another technology manager registered for the same organization.</li>
+
+                                        <li class="liexpand">Enter the required settings.</li>
+
+                    <li class="liexpand">Save the settings.</li>
+
+                                </ol>
+
+            </div>
+
+                                    <p>If you want to change the technology provider organization responsible for the  service controller, you can use the Web interface of APP: </p>
+
+                                    <ol>
+                                <li class="liexpand">In a Web browser, access the base URL of APP, for example: <samp class="codeph">http://127.0.0.1:8880/oscm-app</samp>
+                </li>
+
+                                <li class="liexpand">Log in with the ID and password of the user specified for <samp class="codeph">BSS_USER_KEY</samp> in the configuration settings for APP or as another administrator of the same organization. </li>
+
+                                <li class="liexpand">Specify the technology provider organization for the  service controller, .</li>
+
+                                <li class="liexpand">Save the settings.</li>
+
+                <li class="liexpand">Make sure that the configuration settings for the  service controller are updated. <p>Any technology manager registered for the technology provider organization you specified can log in to the graphical user interface for updating the controller configuration settings (see above). At least the ID and password of the user to be used for accessing <span>OSCM</span> must be changed in the controller configuration settings.</p>
+</li>
+
+                        </ol>
+
+                        </div>
+
+            </div>
+
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Handling Problems in the Provisioning Process"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="concept_1BCF5C425D7D4627AB1C66A085CF6E11"/>
+<meta name="DC.Language" content="en-us"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>Handling Problems in the Provisioning Process</title>
+</head>
+<body id="concept_1BCF5C425D7D4627AB1C66A085CF6E11">
+
+
+            <h1 class="topictitle1">Handling Problems in the Provisioning Process</h1>
+
+            <div>
+                        <div class="section">
+                                    <p>If the provisioning or modification of an application instance fails or if there are problems in the communication between the participating systems, the corresponding subscription in <span>OSCM</span> remains pending. </p>
+
+                                    <p>You can then take the appropriate actions to solve the problem in the application or in the communication. For example, you could remove an incomplete virtual platform or server, or you could restore a missing connection.</p>
+
+                                    <p>After solving the problem, APP and <span>OSCM</span> need to be synchronized accordingly. You do this by triggering a corresponding action in APP. Proceed as follows:</p>
+
+                                    <ol>
+                                                <li class="liexpand">Work as a technology manager of the technology provider organization which is responsible for the relevant service controller. </li>
+
+                                                <li class="liexpand">Invoke the instance status interface of APP for the service controller of the application by opening the following URL in a Web browser:<p><samp class="codeph">https://&lt;server&gt;:&lt;port&gt;/oscm-app/controller/?cid=&lt;controllerID&gt;</samp></p>
+<p>The Web page shows all subscriptions for the application, including detailed information such as the customer organization, the ID of the related application instance, and the provisioning status. </p>
+</li>
+
+                                                <li class="liexpand">Find the subscription for which you solved the problem in the most recent provisioning, modification, or deprovisioning operation. </li>
+
+                                                <li class="liexpand">In the <strong>Action</strong> column, select the action for APP to execute next. Possible actions are the following:<ul>
+                                                            <li class="liexpand"><samp class="codeph">RESUME</samp> - to resume the processing of a provisioning operation in APP which was suspended.</li>
+
+                                                            <li class="liexpand"><samp class="codeph">SUSPEND</samp> - to suspend the processing of a provisioning operation in APP, for example, when the application does not respond. </li>
+
+                                                            <li class="liexpand"><samp class="codeph">UNLOCK</samp> - to remove the lock for an application instance in APP.</li>
+
+                                                            <li class="liexpand"><samp class="codeph">DELETE</samp> - to terminate the subscription in <span>OSCM</span> and remove the instance in APP, but keep the actual application instance for later use. For this action, the service manager role is required in addition.</li>
+
+                                                            <li class="liexpand"><samp class="codeph">DEPROVISION</samp> - to terminate the subscription in <span>OSCM</span>, remove the instance in APP, and deprovision the application instance. For this action, the service manager role is required in addition.</li>
+
+                                                            <li class="liexpand"><samp class="codeph">ABORT_PENDING</samp> - to abort a pending provisioning or modification operation in <span>OSCM</span>. <span>OSCM</span> is notified to roll back the changes made for the subscription and return it to its previous state. In the application, no actions are carried out.</li>
+
+                                                            <li class="liexpand"><samp class="codeph">COMPLETE_PENDING</samp> - to complete a pending provisioning or modification operation in <span>OSCM</span>. <span>OSCM</span> is notified to complete the changes for the subscription and set the subscription status to <strong>ready</strong> (or <strong>suspended</strong> if it was suspended before). This is possible only if the operations of the service controller are already completed.</li>
+
+                                                            </ul>
+</li>
+
+                                                <li class="liexpand">Click <strong>Execute</strong> to invoke the selected action. </li>
+
+                                    </ol>
+
+                                    <p>The instance status interface provides the following additional functionality that is useful for problem-solving purposes:</p>
+
+                                    <ul>
+                                                <li>You can display service instance details for each subscription by clicking the corresponding entry in the table. This displays all subscription-related information that is stored in the <samp class="codeph">bssapp</samp> database.</li>
+
+                                                <li>The <strong>Run with timer</strong> column indicates whether the timer for the interval at which APP polls the status of instances is running. You can reset the timer, if required. For details on the timer setting, refer to <span><a href="../../Shared/Installation/r_ConfigSettings.htm">Configuration Settings</a></span>.</li>
+
+                                    </ul>
+
+                        </div>
+
+            </div>
+
+
+</body>
+</html>

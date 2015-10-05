@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="de-de" lang="de-de">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="Prozesse verwalten"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="task634"/>
+<meta name="DC.Language" content="de-de"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>Prozesse verwalten</title>
+</head>
+<body id="task634">
+
+
+  <h1 class="topictitle1">Prozesse verwalten</h1>
+
+  <div>
+    <div class="section">
+      <p>Bestimmte Aktionen von Organisationen können von einem externen Prozesssteuerungssystem gesteuert und überwacht werden.</p>
+
+      <p>Ist eine Genehmigung für eine Aktion erforderlich, wartet die Aktion mit ihrer Ausführung so lange, bis sie im Prozesssteuerungssystem genehmigt oder abgelehnt ist. Ist keine Genehmigung erforderlich, wird die Aktion sofort ausgeführt.</p>
+
+      <p>Voraussetzung für die Steuerung von Aktionen durch externe Prozesse ist ein Notification Service. Dieser Service bildet die Schnittstelle zwischen der Plattform und dem Prozesssteuerungssystem. Informationen zu diesem Service erhalten Sie von Ihrem Plattform-Betreiber.</p>
+
+      <p>Wenn eine von einem Prozesssteuerungssystem überwachte Aktion ausgeführt wird, wird auf der Seite <span class="uicontrol">Prozesse verwalten</span> der aktuelle Status der Aktion angezeigt. Folgende Werte sind möglich: </p>
+
+      <div class="p">
+        <ul>
+          <li><span class="uicontrol">Gestartet</span>: Die Aktion wurde auf der Plattform initialisiert.</li>
+
+          <li><span class="uicontrol">Wartet auf Antwort</span>: Die Aktion muss im Prozesssteuerungssystem genehmigt werden. Erst danach wird sie ausgeführt. </li>
+
+          <li><span class="uicontrol">Genehmigt</span>: Die Aktion wurde im Prozesssteuerungssystem genehmigt, und sie wurde ausgeführt. Wenn Sie beispielsweise einen Service abonnieren, wurde das Abonnement angelegt.</li>
+
+          <li><span class="uicontrol">Abgelehnt</span>: Die Aktion wurde im Prozesssteuerungssystem nicht genehmigt und wird daher nicht ausgeführt. </li>
+
+          <li><span class="uicontrol">Benachrichtigt</span>: Die Aktion wurde erfolgreich ausgeführt, und das Prozesssteuerungssystem wurde entsprechend benachrichtigt. </li>
+
+          <li><span class="uicontrol">Die Aktion wurde von dem externen System nicht angenommen</span>: Die Verbindung zum Prozesssteuerungssystem konnte nicht hergestellt werden. Die Aktion wird daher nicht ausgeführt.</li>
+
+          <li><span class="uicontrol">Die Aktion konnte nicht ausgeführt werden</span>: Bei der Ausführung der Aktion ist ein Fehler aufgetreten, nachdem sie im Prozesssteuerungssystem genehmigt wurde. Die Aktion wird nicht ausgeführt.</li>
+
+          <li><span class="uicontrol">Abgebrochen</span>: Die Aktion wurde abgebrochen. </li>
+
+        </ul>
+
+      </div>
+
+      <p><strong>So zeigen Sie Aktionen an</strong>:</p>
+
+      <div class="p">
+        <ul>
+          <li>Wenn Sie nicht als Administrator angemeldet sind, listet die Seite <span class="uicontrol">Prozesse verwalten</span> Ihre eigenen prozessgesteuerten Aktionen auf. Die Spalte <span class="uicontrol">Beschreibung</span> zeigt die Aktion. Die Spalte <span class="uicontrol">Status</span> zeigt den aktuellen Status der Aktion.</li>
+
+          <li>Wenn Sie als Administrator angemeldet sind, können Sie wählen, ob alle prozessgesteuerten Aktionen der Benutzer Ihrer Organisation oder nur Ihre eigenen aufgelistet werden sollen.</li>
+
+        </ul>
+
+      </div>
+
+      <p><strong>So brechen Sie Ausführung einer Aktion ab</strong>:</p>
+
+      <p>Markieren Sie die Aktion und klicken Sie <span class="uicontrol">Abbrechen</span>. Die Ausführung einer Aktion kann nur abgebrochen werden, wenn die Aktion im Status <strong>Wartet auf Antwort</strong> ist.</p>
+
+      <p>Der Status wechselt zu <strong>Abgebrochen</strong>. Die Aktion muss im Prozesssteuerungssystem nicht mehr genehmigt werden. Sie wird nicht ausgeführt und kann aus der Liste gelöscht werden. Das Prozesssteuerungssystem wird über den Abbruch informiert und kann die Bearbeitung der Genehmigungsanforderung einstellen.</p>
+
+      <p><strong>So löschen Sie eine Aktion aus der Liste</strong>: </p>
+
+      <p>Markieren Sie die Aktion und klicken Sie <span class="uicontrol">Löschen</span>. Sie können eine Aktion nur löschen, wenn sie sich nicht im Status <strong>Wartet auf Antwort</strong> befindet.</p>
+
+    </div>
+
+  </div>
+
+
+</body>
+</html>

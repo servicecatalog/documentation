@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="Configuring APP"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Configuring"/>
+<meta name="DC.Language" content="en-us"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>Configuring APP</title>
+</head>
+<body id="Configuring">
+
+
+    <h1 class="topictitle1">Configuring <span>APP</span></h1>
+
+    <div>
+        <div class="section">
+            <p>The <span>APP</span> software and setup utilities require a number of settings. These settings are provided in the following subdirectories and files of <samp class="codeph">&lt;install_pack_dir&gt;</samp>:</p>
+
+            <div class="p" id="Configuring__Cfg2">
+                <ul>
+                    <li class="liexpand">
+                        
+                        <p><samp class="codeph"><strong>databases/app_db</strong></samp></p>
+
+                        <div class="p">
+                            <ul>
+                                <li class="liexpand"><samp class="codeph">db.properties</samp>: Settings for the database setup and access. <span>For details, refer to <a href="../reference/r_ConfigSettings_db.htm">Database Configuration Settings</a>.</span></li>
+
+                                <li class="liexpand"><samp class="codeph">configsettings.properties</samp>: Configuration settings for the <span>APP</span> services. <span>For details, refer to <a href="../../APPInt/APP/r_ConfigSettings.htm">APP Configuration Settings</a>.</span>
+                                    <p>The initial installation stores these settings in the <span><samp class="codeph">bssapp</samp></span> database, where you can change them later, if required. An update installation only adds new settings to the database but does not overwrite existing ones.</p>
+</li>
+
+                                <li class="liexpand"><samp class="codeph">configsettings_controller.properties</samp>: In this file, you can specify settings for a service controller which you want to register when installing APP. <p>The initial installation stores these settings in the <samp class="codeph">bssapp</samp> database. You can change them later using a graphical user interface. </p>
+For details, refer to <a href="../../APPInt/APP/t_RegisterAPP.htm">Registering a Service Controller</a>. </li>
+
+                                
+                            </ul>
+
+                        </div>
+
+                    </li>
+
+                    
+                    
+                    <li class="liexpand">
+                        <p><samp class="codeph"><strong>domains/app_domain</strong></samp></p>
+
+                        <p>The configuration settings for setting up the application server domain to which APP will be deployed are provided in the following file:</p>
+
+                        <p><samp class="codeph">glassfish.properties</samp></p>
+
+                        <p><span>For details, refer to <a href="../reference/r_ConfigSettings_glassfish_BESDomain.htm">GlassFish Configuration Settings</a>.</span></p>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <p>Additional configuration files contained in other subdirectories are used internally and must not be changed.</p>
+
+            <p><span>You need to adapt the settings in the files above to your environment. In particular, server names, ports, paths, user IDs, and passwords require adaptation.</span>
+                </p>
+ 
+                <p>Proceed as follows to view and adjust the configuration settings:</p>
+
+            </div>
+
+        
+        <ol><li>
+                <span>Open each of the configuration files listed above with an editor. </span>
+            </li>
+<li>
+                <span>Check the settings in each file and adapt them to your environment.</span>
+                
+            </li>
+<li>
+                <span>Save the files to their original location in <samp class="codeph">&lt;install_pack_dir&gt;/&lt;subdirectory&gt;</samp>. For future reference, it is a good idea to create a backup of the files.</span>
+            </li>
+</ol>
+
+        
+        
+        <div class="section">
+            <p><strong>Observe the following configuration issues</strong>:</p>
+
+            
+                <ul>
+                <li class="liexpand">The specified ports are suggestions and work with the default settings used in the files. </li>
+
+                
+                <li class="liexpand">If you install everything on the local system, use either the server name or <samp class="codeph">localhost</samp> in all configuration files for all URLs that need to be resolved by APP. <p><strong>Do not mix the specification of server names and <samp class="codeph">localhost</samp>.</strong></p>
+<p>The <samp class="codeph">APP_BASE_URL</samp> setting in the <samp class="codeph">configsettings.properties</samp> file must be resolved by clients. They always require the specification of the server name. </p>
+<p>Specify the <samp class="codeph">APP_BASE_URL</samp> setting as follows:</p>
+<div class="p">
+                        <pre class="codeblock">APP_BASE_URL=http://&lt;host&gt;:&lt;port&gt;/oscm-app</pre>
+
+                    </div>
+<p>If you have changed the <samp class="codeph">glassfish.domain.portbase</samp> setting in the <samp class="codeph">glassfish.properties</samp> file, you must change the port here accordingly.</p>
+
+                </li>
+
+                
+                
+            </ul>
+
+
+
+    
+            <p><strong>Configuration for SAML_SP authentication mode</strong>:</p>
+
+            <p>If the <span>OSCM</span> installation you want to work with is configured for SAML_SP authentication mode, Web service calls to it are secured and authenticated by a Security Token Service (STS). This is a Web service that issues security tokens as defined in the WS-Security/WS-Trust specification. The STS is usually provided by the Identity Provider (IdP) system in use (for example, Active Directory Federation Service, Cloudminder, or OpenAM).</p>
+
+            <p>For using an STS for APP calls, you must perform the following steps before installing APP: </p>
+
+            <div class="p">
+                <ol>
+                    <li class="liexpand">From the IdP or <span>OSCM</span> operator, obtain a metadata exchange file in WSDL format generated with and for the IdP system in use. The metadata include namespace information required for connecting to the STS. </li>
+
+                    <li class="liexpand">Save the metadata exchange file to the following file, overwriting the existing empty file:<p><samp class="codeph">&lt;install_pack_dir&gt;/domains/app_domain/wsit/STSService.xml</samp></p>
+</li>
+
+                    <li class="liexpand">Open the <samp class="codeph">STSService.xml</samp> file and retrieve the value of <samp class="codeph">targetNamespace</samp>, for example:<p>
+                            <samp class="codeph">http://schemas.microsoft.com/ws/2008/06/identity/securitytokenservice</samp></p>
+</li>
+
+                    <li class="liexpand">Open the following file:<p><samp class="codeph">&lt;install_pack_dir&gt;/domains/app_domain/wsit/wsit-client.xml</samp></p>
+</li>
+
+                    <li class="liexpand">Replace the placeholder in the <samp class="codeph">namespace</samp> tag of the <samp class="codeph">wsit-client.xml</samp> file with the <samp class="codeph">targetNamespace</samp> value copied from the <samp class="codeph">STSService.xml</samp> file. </li>
+
+                    <li class="liexpand">Close and save the <samp class="codeph">wsit-client.xml</samp> file to its original location. <p>During the installation process, a <samp class="codeph">CT-MG-wsit.jar</samp> file is created containing your adapted <samp class="codeph">STSService.xml</samp> file as well as the <samp class="codeph">wsit-client.xml</samp> file; the <samp class="codeph">.jar</samp> file is then copied to <samp class="codeph">&lt;install_pack_dir&gt;/domains/app_domain/lib</samp>. </p>
+</li>
+
+                    <li class="liexpand">Make sure to enter correct values for the SAML_SP authentication mode in the <samp class="codeph">configsettings.properties</samp> file in <samp class="codeph">&lt;install_pack_dir&gt;/databases/app_db</samp>: <div class="p">
+                            <ul>
+                                <li><samp class="codeph">BSS_AUTH_MODE=SAML_SP</samp></li>
+
+                                <li><samp class="codeph">BSS_WEBSERVICE_URL_STS_PORT=https://<em>&lt;server&gt;</em>:<em>&lt;port&gt;</em>/{SERVICE}/v1.6/STS?wsdl</samp></li>
+
+                                <li><samp class="codeph">APP_KEYSTORE_PASSWORD=changeit</samp></li>
+
+                                <li><samp class="codeph">APP_TRUSTSTORE_PASSWORD=changeit</samp></li>
+
+                            </ul>
+
+                        </div>
+</li>
+
+                </ol>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>

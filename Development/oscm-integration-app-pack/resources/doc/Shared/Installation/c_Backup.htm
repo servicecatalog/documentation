@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Backup and Recovery"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="concept_3413BBD173324104B42FB714974CABE7"/>
+<meta name="DC.Language" content="en-us"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>Backup and Recovery</title>
+</head>
+<body id="concept_3413BBD173324104B42FB714974CABE7">
+
+
+    <h1 class="topictitle1">Backup and Recovery</h1>
+
+    <div>
+        <div class="section">
+            <p>The <span>APP</span> integration software does not offer integrated backup and recovery mechanisms. Use the standard file system, application server, and database mechanisms instead. </p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">Backup</h4>
+            
+            <p>It is recommended that you create a regular backup of the following data according to the general guidelines of your organization: </p>
+
+            <div class="p">
+                <ul>
+                    <li>Database (<samp class="codeph">bssapp</samp>). The frequency of database backups depends on the amount of changes and the availability of time slots with low load. PostgreSQL supports database backups without previous shutdown. For details, refer to the PostgreSQL documentation. </li>
+
+                    <li>Certificates contained in the truststore of the <samp class="codeph">app-domain</samp> domain (<samp class="codeph">cacerts.jks</samp> file). </li>
+
+                    <li>Configuration files. </li>
+
+                </ul>
+
+            </div>
+
+            <div class="p">
+                <div class="note"><span class="notetitle">Note:</span> When preparing for an update installation of the current <span>APP installation</span>, always create a backup of the data mentioned above. </div>
+
+            </div>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">Recovery</h4>
+            
+            <p>If you need to recover your <span>APP installation</span>, the recommended procedure is as follows: </p>
+
+            <div class="p">
+                <ol>
+                    <li>Restore the <samp class="codeph">bssapp</samp> database from the backup using the relevant PostgreSQL commands. </li>
+
+                    <li>Stop the <samp class="codeph">app-domain</samp> domain of the application server.</li>
+
+                    <li>Restore the certificate truststore of the <samp class="codeph">app-domain</samp> domain (<samp class="codeph">cacerts.jks</samp> file) from the backup.</li>
+
+                    <li>Start the <samp class="codeph">app-domain</samp> domain. </li>
+
+                </ol>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>

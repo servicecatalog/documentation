@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="de-de" lang="de-de">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="Trigger verwalten"/>
+<meta name="DC.Relation" scheme="URI" content="triggerProcess_list.htm"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="task634"/>
+<meta name="DC.Language" content="de-de"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>Trigger verwalten</title>
+</head>
+<body id="task634">
+
+
+  <h1 class="topictitle1">Trigger verwalten</h1>
+
+  <div>
+    <div class="section">
+      <p>Auf der Seite <span class="uicontrol">Trigger verwalten</span> können Sie einen neuen Trigger für Ihre Organisation definieren oder eine bestehende Triggerdefinition bearbeiten oder löschen.</p>
+
+      <p>Voraussetzung für die Steuerung von Aktionen durch externe Prozesse ist ein Notification Service. Dieser Service bildet die Schnittstelle zwischen der Plattform und dem Prozesssteuerungssystem. Informationen zu diesem Service erhalten Sie von Ihrem Plattform-Betreiber.</p>
+
+      <p><strong>So definieren Sie einen neuen Trigger</strong>: </p>
+
+    </div>
+
+    <ol><li class="stepexpand">
+        <span>Geben Sie im Feld <span class="uicontrol">Anzeigen als</span> einen Namen für den Trigger ein. Unter diesem Namen wird der Trigger auf der Seite <span class="uicontrol">Prozesse verwalten</span> angezeigt.</span>
+      </li>
+<li class="stepexpand">
+        <span>Wählen Sie in der Liste <span class="uicontrol">Typ</span> die Aktion, die prozessgesteuert ausgeführt werden soll.</span>
+         
+          <p>Die Liste enthält alle Aktionen, für die ein Trigger konfiguriert werden kann.</p>
+
+          <p>Für beliebige Organisationen:</p>
+
+          <ul>
+            <li>Ein Abonnement ändern, zum Beispiel den Namen des Abonnements (<samp class="codeph">Abo ändern</samp>). </li>
+
+            <li>Die Nutzungsgebühren eines Kunden wurden für einen Abrechnungszeitraum neu berechnet (<samp class="codeph">Nutzungsgebühren neu berechnet</samp>). </li>
+
+            <li>Einen Service abonnieren (<samp class="codeph">Service abonnieren</samp>). </li>
+
+            <li>Einen Benutzer einem Abonnement zuordnen oder eine existierende Zuordnung aufheben (<samp class="codeph">Benutzer dem Abo zuordnen</samp>).<p>Sofern ein Benutzer einem Abonnement automatisch zugeordnet werden soll, wenn er einen Dienst abonniert, kann dieser Trigger nicht konfiguriert werden. Der Trigger <samp class="codeph">Benutzer dem Abo zuordnen</samp> kann nur für Benutzer, die manuell einem Abonnement zugeordnet werden, definiert werden.</p>
+
+            </li>
+
+            <li>Ein Abonnement umstellen (<samp class="codeph">Abo umstellen</samp>). </li>
+
+            <li>Ein Abonnement beenden (<samp class="codeph">Abo beenden</samp>). </li>
+
+            <li>Einen Benutzer registrieren (<samp class="codeph">Benutzer registrieren</samp>).<p>Trigger können nur zur Registrierung einzelner Benutzer definiert werden. Das Importieren mehrere Benutzer aus einem externen LDAP-System oder einer Datei mit Benutzerdaten kann nicht durch externe Prozesse gesteuert werden.</p>
+</li>
+
+          </ul>
+
+          <p>Für <strong>Serviceanbieter</strong> können die folgenden zusätzlichen Trigger konfiguriert werden:</p>
+
+          <ul>
+            <li>Einen Kunden registrieren (<samp class="codeph">Kunden registrieren</samp>). </li>
+
+            <li>Die Zahlungsarten für einen Kunden ändern (<samp class="codeph">Zahlungsarten für Kunden verwalten</samp>). </li>
+
+            <li>Einen Service aktivieren (<samp class="codeph">Service aktivieren</samp>). </li>
+
+            <li>Einen Service deaktivieren (<samp class="codeph">Service deaktivieren</samp>). </li>
+
+            <li>Ein Benutzer abonniert einen Service des Serviceanbieters (<samp class="codeph">Service abonniert (beliebiger Benutzer)</samp>).</li>
+
+            <li>Ein Benutzer ändert ein Abonnement für einen Service des Serviceanbieters (<samp class="codeph">Abo geändert (beliebiger Benutzer)</samp>).</li>
+
+            <li>Ein Benutzer beendet ein Abonnement für einen Service des Serviceanbieters (<samp class="codeph">Abo beendet (beliebiger Benutzer)</samp>).</li>
+
+          </ul>
+
+        
+      </li>
+<li class="stepexpand">
+        <span>Lassen Sie im Feld <span class="uicontrol">Ziel-Typ</span> den Eintrag <span class="uicontrol">Web-Service</span> stehen. </span>
+         
+          <p>Dies ist derzeit der einzige unterstützte Ziel-Typ. </p>
+
+        
+      </li>
+<li class="stepexpand">
+        <span>Geben Sie im Feld <span class="uicontrol">Ziel-URL</span> die URL der WSDL-Datei des Notification Service Ihrer Organisation ein.</span>
+      </li>
+<li class="stepexpand">
+        <span>Geben Sie an, ob die Ausführung der Aktion ausgesetzt werden soll, bis sie im Prozesssteuerungssystem genehmigt oder abgelehnt ist.</span>
+         
+          <p>Wenn die Ausführung nicht ausgesetzt werden soll, wird die Aktion sofort ausgeführt. Das Prozesssteuerungssystem wird informiert, sobald die Aktion erfolgreich ausgeführt ist.</p>
+
+          <p>Beachten Sie, dass die folgenden Trigger für Serviceanbieter nicht ausgesetzt werden können: <samp class="codeph">Service abonniert (beliebiger Benutzer)</samp>, <samp class="codeph">Abo geändert (beliebiger Benutzer)</samp> und <samp class="codeph">Abo beendet (beliebiger Benutzer)</samp>.</p>
+
+        
+      </li>
+<li class="stepexpand">
+        <span>Schließen Sie Ihre Eingaben mit <span class="uicontrol">Speichern</span> ab.</span>
+         
+          <p>Die vorherige Seite zur Verwaltung von Triggern wird wieder angezeigt. Klicken Sie <span class="uicontrol">Hinzufügen</span>, um einen weiteren Trigger zu konfigurieren, oder klicken Sie einen Eintrag in der Liste der Trigger, um einen Trigger zu beabeiten oder zu löschen. </p>
+
+        
+      </li>
+</ol>
+
+    <div class="section"><strong>So aktualisieren Sie eine Triggerdefinition</strong>:<div class="p">
+        <ol>
+          <li>Geben Sie die erforderlichen Änderungen ein. Im Abschnitt oben finden Sie Informationen zu den einzelnen Feldern.<p>Wenn durch den zu aktualisierenden Trigger schon Prozesse im Prozesssteuerungssystem gestartet wurden, können Sie nur den Namen für den Trigger ändern. Sie müssen die Prozesse abbrechen, wenn Sie andere Elemente der Triggerdefinition ändern möchten.</p>
+</li>
+
+          <li>Schließen Sie Ihre Eingaben mit <span class="uicontrol">Speichern</span> ab.</li>
+
+        </ol>
+
+      </div>
+<p>Die vorherige Seite zur Verwaltung von Triggern wird wieder angezeigt. Klicken Sie <span class="uicontrol">Hinzufügen</span>, um einen weiteren Trigger zu konfigurieren, oder klicken Sie einen Eintrag in der Liste der Trigger, um einen Trigger zu beabeiten oder zu löschen. </p>
+<p><strong>So löschen Sie eine Triggerdefinition</strong>:</p>
+<div class="p">
+        <ol>
+          <li>Klicken Sie <span class="uicontrol">Löschen</span>.</li>
+
+          <li>Bestätigen Sie den Löschauftrag.</li>
+
+        </ol>
+
+      </div>
+<p>Die vorherige Seite zur Verwaltung von Triggern wird wieder angezeigt. Klicken Sie <span class="uicontrol">Hinzufügen</span>, um einen weiteren Trigger zu konfigurieren, oder klicken Sie einen Eintrag in der Liste der Trigger, um einen Trigger zu beabeiten oder zu löschen. </p>
+</div>
+
+  </div>
+
+  <div>
+<div class="linklist"><strong>Weitere Themen</strong><br/>
+
+<div><a href="triggerProcess_list.htm">Prozesse verwalten</a></div></div>
+</div>
+
+</body>
+</html>

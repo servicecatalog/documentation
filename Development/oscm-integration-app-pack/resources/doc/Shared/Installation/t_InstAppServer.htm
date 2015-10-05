@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="Setting up the Application Server Resources"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="AppServer"/>
+<meta name="DC.Language" content="en-us"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>Setting up the Application Server Resources</title>
+</head>
+<body id="AppServer">
+
+
+    <h1 class="topictitle1">Setting up the Application Server Resources</h1>
+
+    <div>
+        <div class="section">
+            
+            
+            <p><span>APP</span> requires specific settings and resources in the application server, such as mail settings or a data source.</p>
+
+            <div class="note"><span class="notetitle">Note:</span> When creating the application server resources, you can also deploy a service controller. For details, refer to <a href="../../APPInt/APP/t_DeployController.htm">Deploying a Service Controller</a>.</div>
+
+                
+            <p>Proceed as follows to create the resources and make the required settings in the application server:</p>
+
+        </div>
+
+        <ol><li class="stepexpand">
+                <span>Open the command prompt (Windows) or a terminal session (UNIX/Linux).</span>
+            </li>
+<li class="stepexpand">
+                <span>Execute the <samp class="codeph">build-glassfish.xml</samp> file in <samp class="codeph">&lt;install_pack_dir&gt;/install</samp> as follows: </span>
+                 
+                    <pre class="codeblock">&lt;ANT_HOME&gt;/bin/ant -f build-glassfish.xml SETUP</pre>
+
+                    <p>This has the following results: </p>
+
+                    <div class="p">
+                        <ul>
+                            <li>The <samp class="codeph">app-domain</samp> domain is created and started. </li>
+
+                            <li>The settings and resources for APP are created in the application server.</li>
+
+                            <li>APP (<samp class="codeph">oscm-app.ear</samp>) is deployed to the <samp class="codeph">app-domain</samp> domain.</li>
+
+                            
+                            
+                            
+                            
+                        </ul>
+
+                    </div>
+
+                
+            </li>
+<li class="stepexpand">
+                <span>Depending on your environment, it may be required to define a proxy server for the <samp class="codeph">app-domain</samp> domain in the <strong>JVM Options</strong> of the application server. <span>A service controller implemented such that it supports proxy communication</span> can address the corresponding system via the proxy server.</span>
+                 To define a proxy server, specify the following JVM options: <ul>
+                        <li><samp class="codeph">-Dhttps.proxyHost</samp></li>
+
+                        <li><samp class="codeph">-Dhttps.proxyPort</samp></li>
+
+                    </ul>
+<p>If authentication is required, specify the following additional settings:</p>
+<div class="p">
+                        <ul>
+                            <li><samp class="codeph">-Dhttps.proxyUser</samp></li>
+
+                            <li><samp class="codeph">-Dhttps.proxyPassword</samp></li>
+
+                        </ul>
+
+                    </div>
+<div class="p">For all direct communication, you need to bypass the proxy server. Specify the hosts which are to be addressed directly and not through the proxy server in the following setting: <ul>
+                            <li><samp class="codeph">-Dhttp.nonProxyHosts</samp></li>
+
+                        </ul>
+For example, APP must not use the configured proxy for Web service calls to <span>OSCM</span>: </div>
+<p><samp class="codeph">-Dhttp.nonProxyHosts=localhost|127.0.0.1|myServer*</samp></p>
+<p>where <samp class="codeph">myServer</samp> is the host on which <span>OSCM</span> is running.</p>
+<p>In case several service controllers are to run in the same APP domain, and only one of them is to communicate via a proxy server, you need to exclude the target systems of the other service controllers, for example, as follows: </p>
+<samp class="codeph">-Dhttps.proxyHost=proxy.intern.myserver.com</samp><p><samp class="codeph">-Dhttps.proxyPort=8081</samp></p>
+<p><samp class="codeph">-Dhttp.nonProxyHosts=myServer.com|localhost|127.0.0.1|</samp></p>
+<p><samp class="codeph">http://10.140.18.112*|http://myServer.com:8880/templates/*|</samp></p>
+<p><samp class="codeph">https://ror-demo.myServer.com:8014/cfmgapi/endpoint* </samp></p>
+<p>After having configured the proxy server, restart the <samp class="codeph">app-domain</samp>.</p>
+
+            </li>
+</ol>
+
+        <div class="section">
+            <p><strong>If the setup of the application server domain fails with errors, proceed as follows:</strong></p>
+
+           <div class="p">
+                <ol>
+                    <li>Stop the <samp class="codeph">app-domain</samp> domain. </li>
+
+                    <li>Delete the <samp class="codeph">app-domain</samp> domain. </li>
+
+                    <li>Repeat the setup.</li>
+
+                </ol>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>

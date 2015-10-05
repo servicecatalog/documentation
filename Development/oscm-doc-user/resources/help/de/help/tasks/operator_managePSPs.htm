@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="de-de" lang="de-de">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="Zahlungsdienstleister verwalten"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="task634"/>
+<meta name="DC.Language" content="de-de"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>Zahlungsdienstleister verwalten</title>
+</head>
+<body id="task634">
+
+
+  <h1 class="topictitle1">Zahlungsdienstleister verwalten</h1>
+
+  <div>
+    <div class="section">
+      <p>Auf der Seite <span class="uicontrol">Zahlungsdienstleister verwalten</span> können Sie die Kommunikation mit einem Zahlungsdienstleister konfigurieren sowie die Zahlungsarten definieren, die von dem Zahlungsdiensleister angeboten werden. </p>
+
+      <p>Folgende Voraussetzungen müssen erfüllt sein, um einen Zahlungsdienstleister erfolgreich zu integrieren: </p>
+
+      <div class="p">
+        <ul>
+          <li class="liexpand">
+            <p id="task634__psp2">Ihre Organisation, d.h. die Betreiberorganisation, muss beim Zahlungsdienstleister (im PSP-System) registriert sein.</p>
+
+          </li>
+
+          <li class="liexpand">
+            <p id="task634__psp3">Serviceanbieter und Wiederverkäufer, die den Zahlungsdienstleister nutzen möchten, müssen einen Vertrag mit dem Zahlungsdienstleister abgeschlossen haben und beim Zahlungsdienstleister registriert sein. </p>
+
+          </li>
+
+          <li class="liexpand">
+            <p id="task634__psp3a">Der Zahlungsdienstleister muss jedem Serviceanbieter und Wiederverkäufer eine eindeutige ID zugewiesen haben (PSP-ID). Über diese ID können Zahlungen dem Konto des Serviceanbieters bzw. Wiederverkäufers zugeordnet werden.</p>
+
+          </li>
+
+          <li class="liexpand">
+            <p id="task634__psp4">Zwischen Ihrer Organisation und der Organisation des Zahlungsdienstleisters müssen Zertifikate ausgetauscht worden sein, um eine vertrauenswürdige und sichere Kommunikation sicherzustellen.</p>
+
+            <p>Detaillierte Informationen zur Verwendung von Zertifikaten finden Sie im <em>Operator's Guide</em>.</p>
+
+          </li>
+
+          <li class="liexpand">
+            <p id="task634__psp5">Ein Adapter zur Integration des Zahlungsdienstleisters muss als Web-Service implementiert und auf einem Application Server installiert sein. Sie benötigen die URL, die auf die WSDL-Datei dieses Web-Service zeigt. </p>
+
+            <p>Detaillierte Informationen zur Implementierung eines Adapters zur Integration eines Zahlungsdienstleisters finden Sie in der Dokumentation, die mit der Datei <samp class="codeph">oscm-integration-psp-pack.zip</samp> ausgeliefert wird.</p>
+
+          </li>
+
+          <li class="liexpand">
+            <p id="task634__psp6">Zusätzlich benötigen Sie vom Zahlungsdienstleister die Information, welche Zahlungsarten er anbietet und welche Konfigurationseinstellungen hierzu erforderlich sind.</p>
+
+          </li>
+
+          <li class="liexpand">
+            <p id="task634__psp7">Die folgende Plattform-Konfigurationseinstellung muss festgelegt sein: </p>
+
+            <p id="task634__psp8"><samp class="codeph">PSP_USAGE_ENABLED</samp>. Damit Rechnungsdaten von einem Zahlungsdienstleister weiterverarbeitet werden, müssen Sie den Wert dieses Konfigurationsparameters auf <samp class="codeph">true</samp> setzen (Voreinstellung: <samp class="codeph">false</samp>).</p>
+
+            <p>Informationen zum Ändern von Konfigurationseinstellungen erhalten Sie <a href="operator_manageConfiguration.htm">hier</a>.</p>
+
+          </li>
+
+        </ul>
+
+      </div>
+
+      <p><strong>So konfigurieren Sie einen Zahlungsdienstleister</strong>:</p>
+
+    </div>
+
+    <ol><li class="stepexpand">
+        <span>Wählen Sie in der Liste <span class="uicontrol">Zahlungsdienstleister</span> denjenigen, den Sie konfigurieren möchten. </span>
+         
+          <p>Die Liste enthält alle Zahlungsdienstleister, die auf der Plattform registriert sind. </p>
+
+          
+        
+      </li>
+<li class="stepexpand">
+        <span>Legen Sie die Konfigurationseinstellungen fest, die für die Kommunikation mit dem Zahlungsdienstleister erforderlich sind: Klicken Sie <strong>Hinzufügen</strong>, um eine weitere Einstellung hinzuzufügen.</span>
+         
+          <p>Die erforderlichen Konfigurationseinstellungen sind abhängig von der Implementierung des Adapters und zur Integration des Zahlungsdienstleisters. Der Zahlungsdienstleister muss Sie über die erforderlichen Einstellungen informieren. </p>
+
+        
+      </li>
+<li class="stepexpand">
+        <span>Definieren Sie die Zahlungsarten, die der Zahlungsdienstleister anbietet: Klicken Sie <strong>Hinzufügen</strong> und fahren Sie auf der Seite <span class="uicontrol">Neue Zahlungsart</span> fort. </span>
+         Sie können Zahlungsarten hinzufügen, aber nicht eine bereits für einen Zahlungsdienstleister definierte Zahlungsart löschen. Sie können einen beliebigen Namen für eine Zahlungsart vergeben. Die Zahlungsarten selbst müssen vom Zahlungsdienstleister definiert werden. Wenn zum Beispiel Heidelpay als Zahlungsdienstleister integriert wurde, sind die Zahlungsarten <samp class="codeph">CREDIT_CARD</samp> und <samp class="codeph">DIRECT_DEBIT</samp> vordefiniert.
+      </li>
+<li class="stepexpand">
+        <span>Schließen Sie Ihre Eingaben mit <span class="uicontrol">Speichern</span> ab.</span>
+      </li>
+</ol>
+
+  </div>
+
+
+</body>
+</html>

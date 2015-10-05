@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="de-de" lang="de-de">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Aktionsprotokoll"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="reference832"/>
+<meta name="DC.Language" content="de-de"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>Aktionsprotokoll</title>
+</head>
+<body id="reference832">
+
+
+    <h1 class="topictitle1">Aktionsprotokoll</h1>
+
+    <div>
+        <div class="section">
+            <p>Im Aktionsprotokoll werden alle Aktionen gespeichert, die Benutzer im Zusammenhang mit Abonnements, marktfähigen Services und Preismodellen ausführen. Die Daten können hilfreich sein, wenn Sie beispielsweise überprüfen möchten, wann und von wem ein Preismodell geändert oder wann ein Abonnement abgeschlossen wurde. </p>
+
+            <p>Ein Eintrag im Aktionsprotokoll setzt sich aus einem <strong>Header</strong> und einer <strong>Meldung</strong> zusammen. Beide Elemente sind durch Komma voneinander getrennt. </p>
+
+            <p>Der Header besteht aus folgenden, durch Leerzeichen getrennten Elementen: </p>
+
+            <ul>
+                <li>
+                    <p><samp class="codeph">MM/TT/JJJJ_HH:MM:SS.FFF</samp>: Datum und Uhrzeit des Servers.</p>
+
+                </li>
+
+                <li>
+                    <p><samp class="codeph">FSP_SW/CT-MG_CTMG-BSS</samp>: Voreingestelltes Log-Label für Einträge, die aufgrund von Benutzeraktionen auf der Plattform in die Protokolldatei geschrieben wurden. Das Label kann nicht geändert werden.</p>
+
+                </li>
+
+                <li>
+                    <p><samp class="codeph">INFO</samp>: Voreingestellte Stufe für die Wichtigkeit einer Meldung. Diese Voreinstellung kann nicht geändert werden.</p>
+
+                </li>
+
+                <li>
+                    <p><samp class="codeph">3&lt;<em>nnnn</em>&gt;</samp>: ID der Meldung - eine Zahl zwischen 30001 und 39999. Die ID ist für jeden Meldungstyp eindeutig. Zum Beispiel hat der Meldungstyp <samp class="codeph">Define service</samp> (Service definieren) die ID 30090 oder <samp class="codeph">Subscribe to service</samp> (Service abonnieren) die ID 30000. </p>
+
+                </li>
+
+                <li>
+                    <p><samp class="codeph">&lt;<em>Aktion</em>&gt;</samp>: Die protokollierte Benutzeraktion, zum Beispiel <samp class="codeph">Define service</samp> (Service definieren). </p>
+
+                </li>
+
+            </ul>
+
+            <p>Auf den Header folgt die eigentliche Meldung. Diese besteht aus Paaren von Namen und Werten, die durch einen senkrechten Strich (|) voneinander getrennt sind. </p>
+
+            <p>Jede Meldung beginnt mit den folgenden Name/Wert-Paaren:</p>
+
+            <ul>
+                <li>
+                    <p><samp class="codeph">userId=&lt;<em>Benutzername</em>&gt;</samp>: Name des Benutzers, der die Aktion ausführte. </p>
+
+                </li>
+
+                <li>
+                    <p><samp class="codeph">orgId=&lt;<em>Organisations-ID</em>&gt;</samp>: ID der Organisation, zu der der Benutzer gehört.</p>
+
+                </li>
+
+                <li>
+                    <p><samp class="codeph">orgName=&lt;<em>Organisationsname</em>&gt;</samp>: Name der Organisation, zu der der Benutzer gehört.</p>
+
+                </li>
+
+                <li>
+                    <p><samp class="codeph">&lt;<em>Weitere Name/Wert-Paare</em>&gt;</samp>: Weitere durch senkrechten Strich voneinander getrennte Name/Wert-Paare, die abhängig vom Meldungstyp sind. </p>
+
+                </li>
+
+            </ul>
+
+            <p>Die Einträge in der Protokolldatei sind nach Benutzerrollen kategorisiert: </p>
+
+            <div class="p">
+                <ul>
+                    <li><a href="r_Audit_log_User.htm">Aktionen von Standardbenutzern</a></li>
+
+                    <li><a href="r_Audit_log_Admin.htm">Aktionen von Administratoren</a></li>
+
+                    <li><a href="r_Audit_log_Supplier.htm">Aktionen von Service-Managern</a></li>
+
+                </ul>
+
+            </div>
+
+            <p>Die Einträge in der Protokolldatei zeigen die Daten, wie sie in der Datenbank gespeichert sind. Wurden Werte aktualisiert, wird nur der neue Wert ausgegeben. </p>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>

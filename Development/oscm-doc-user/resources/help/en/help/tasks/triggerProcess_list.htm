@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="Managing processes"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="task634"/>
+<meta name="DC.Language" content="en-us"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>Managing processes</title>
+</head>
+<body id="task634">
+
+
+  <h1 class="topictitle1">Managing processes</h1>
+
+  <div>
+    <div class="section">
+      <p>Certain actions of organizations can be carried out under the control of an external process control system. </p>
+
+      <p>If approval for an action is required, the action is suspended until it is approved or rejected in the process control system. If no approval is required, the action is instantly executed. </p>
+
+      <p>As a prerequisite for controlling actions by processes, a notification service must exist and be deployed. This service forms the interface between the platform and the process control system. For details on implementing such a service, contact the platform operator.</p>
+
+      <p>When an action that is subject to process control is executed, its status is displayed on the <span class="uicontrol">Manage processes</span> page. The following statuses are possible: </p>
+
+      <div class="p">
+        <ul>
+          <li class="liexpand"><span class="uicontrol">Started</span>: The action was initialized on the platform.</li>
+
+          <li class="liexpand"><span class="uicontrol">Waiting for reply</span>: The action has to be approved in the process control system before it is executed. </li>
+
+          <li class="liexpand"><span class="uicontrol">Approved</span>: The action has been approved in the process control system, and it has been executed. For example, if you requested to subscribe to a service, the subscription has been created.</li>
+
+          <li class="liexpand"><span class="uicontrol">Rejected</span>: The action has not been approved in the process control system; it will not be executed. </li>
+
+          <li class="liexpand"><span class="uicontrol">Notified</span>: The action has been executed successfully, and the process control system has been informed about its execution. </li>
+
+          <li class="liexpand"><span class="uicontrol">The external system did not accept the action</span>: The communication with the process control system failed; the action is not executed.</li>
+
+          <li class="liexpand"><span class="uicontrol">The platform could not execute the action</span>: An error occurred in the execution of the action after the action had been approved in the process control system. The action is not executed. </li>
+
+          <li class="liexpand"><span class="uicontrol">Aborted</span>: The action has been aborted. </li>
+
+        </ul>
+
+      </div>
+
+      <p><strong>To view actions</strong>:</p>
+
+      <div class="p">
+        <ul>
+          <li>If you are not logged in as an administrator, the <span class="uicontrol">Manage processes</span> page displays all your own actions which are subject to process control. The <span class="uicontrol">Description</span> column displays the action that was requested. The <span class="uicontrol">Status</span> column shows its current status. </li>
+
+          <li>If you are logged in as an administrator, choose whether all actions of your organization's users which have triggered a process are to be listed, or only your own actions. </li>
+
+        </ul>
+
+      </div>
+
+      <p><strong>To abort the execution of an action</strong>:</p>
+
+      <p>Select the check box next to it and click <span class="uicontrol">Abort</span>. Only actions in the <strong>Waiting for reply</strong> status can be aborted. </p>
+
+      <p>The status is changed to <strong>Aborted</strong>. The action no longer waits for approval in the process control system. It is not executed and can be deleted from the list. The process control system is informed about the abortion of the action and can stop processing the request for approval. </p>
+
+      <p><strong>To delete an action from the list</strong>: </p>
+
+      <p>Select the check box next to it and click <span class="uicontrol">Delete</span>. Only actions that are not in the <strong>Waiting for reply</strong> status can be deleted.</p>
+
+    </div>
+
+  </div>
+
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="de-de" lang="de-de">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="Zahlungsdienstleister anlegen"/>
+<meta name="DC.Relation" scheme="URI" content="operator_managePSPs.htm"/>
+<meta name="DC.Relation" scheme="URI" content="operator_manageOrganizations.htm"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="task634"/>
+<meta name="DC.Language" content="de-de"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>Zahlungsdienstleister anlegen</title>
+</head>
+<body id="task634">
+
+
+  <h1 class="topictitle1">Zahlungsdienstleister anlegen</h1>
+
+  <div>
+    <div class="section">
+      <p>Auf der Seite <span class="uicontrol">Zahlungsdienstleister anlegen</span> können Sie einen Zahlungsdienstleister (Payment Service Provider - PSP) registrieren. Serviceanbieter und Wiederverkäufer können die Dienste eines Zahlungsdienstleisters zur Rechnungsstellung und Zahlungsabwicklung in Anspruch nehmen. Serviceanbieter, Wiederverkäufer sowie Plattform-Betreiber müssen hierzu einen entsprechenden Vertrag mit dem Zahlungsdienstleister abgeschlossen haben.</p>
+
+      <p>Erst wenn ein Zahlungsdienstleister im System registriert ist, kann die Kommunikation mit ihm konfiguriert werden und die Integration in das System erfolgen. </p>
+
+      <p><strong>So legen Sie einen Zahlungsdienstleister an</strong>:</p>
+
+    </div>
+
+    <ol><li class="stepexpand">
+        <span>Geben Sie eine <strong>ID</strong> für den Zahlungsdienstleister ein. </span>
+         Die ID identifiziert den Zahlungsdienstleister eindeutig. Sie ist nur für den Betreiber sichtbar. <p>IDs dürfen aus maximal 40 Zeichen bestehen. Folgende Zeichen sind nicht zulässig: </p>
+<p><samp class="codeph">! " # $ % &amp; ' * + , / : ; &lt; = &gt; ? \ ^ `</samp>
+          </p>
+
+      </li>
+<li class="stepexpand">
+        <span>Geben Sie die <strong>WSDL-URL</strong> ein.</span>
+         Diese URL muss auf die WSDL-Datei zeigen, die die Definition des Web-Service zur Integration des Zahlungsdienstleisters enthält. Detaillierte Informationen zur Implementierung eines Adapters zur Integration eines Zahlungsdienstleisters finden Sie in der Dokumentation, die mit der Datei <samp class="codeph">oscm-psp-pack.zip</samp> ausgeliefert wird.
+      </li>
+<li class="stepexpand">
+        <span>Geben Sie den <strong>Distinguished Name</strong> aus dem Zertifikat des Web-Servers an, auf dem der Adapter zur Integration des Zahlungsdienstleisters installiert ist.</span>
+         Die Integration eines Zahlungsdienstleisters setzt die Verwendung von Zertifikaten voraus, die die vertrauenswürdige Kommunikation zwischen der Betreiberorganisation und der Zahlungsdienstleister-Organisation sicherstellt. Daher muss der Distinguished Name immer angegeben werden.<p>Die Plattform überprüft den Distinguished Name im Zertifikat des PSP. Falls er mit dem hier angegebenen Zertifikat übereinstimmt, ist der Aufrufer berechtigt, eine Verbindung zur Plattform herzustellen. </p>
+<p>Den Distinguished Name einer Organisation können Sie aus ihrem Zertifikat mit folgendem Aufruf in Ihrer Java-Laufzeitumgebung ermitteln: </p>
+<div class="p">
+            <pre class="codeblock">&lt;IhrJRE&gt;/bin/keytool -printcert -file &lt;Dateiname.crt&gt;</pre>
+
+          </div>
+<p>Der Distinguished Name ist im Zertifikat der Organisation definiert und besteht aus folgenden Elementen: </p>
+<ul>
+            <li>CN - Common Name</li>
+
+            <li>OU - Organizational Unit</li>
+
+            <li>O - Organization</li>
+
+            <li>L - Location</li>
+
+            <li>ST - State</li>
+
+            <li>C - Country</li>
+
+          </ul>
+<p>Die einzelnen Elemente müssen durch Komma getrennt werden. </p>
+<p>Detaillierte Informationen zur Verwendung von Zertifikaten finden Sie im <em>Operator's Guide</em>.</p>
+
+      </li>
+<li class="stepexpand">
+        <span>Schließen Sie Ihre Eingaben mit <span class="uicontrol">Speichern</span> ab.</span>
+      </li>
+</ol>
+
+    <div class="section">
+      <p>Der Zahlungsdienstleister wird angelegt. Sie können nun mit folgenden Schritten fortfahren: </p>
+
+      <div class="p">
+        <ul>
+          <li>Konfigurieren Sie die Kommunikation mit dem Zahlungsdienstleister. </li>
+
+          <li>Definieren Sie die Zahlungsarten, die der Zahlungsdienstleister Serviceanbietern und Wiederverkäufern zur Verfügung stellt. </li>
+
+          <li>Weisen Sie Serviceanbietern und Wiederverkäufern die Zahlungsarten zu. Die Serviceanbieter und Wiederverkäufer können dann festlegen, welche Zahlungsarten sie ihren Kunden anbieten. </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div>
+<div class="linklist"><strong>Weitere Themen</strong><br/>
+
+<div><a href="operator_managePSPs.htm">Zahlungsdienstleister verwalten</a></div>
+<div><a href="operator_manageOrganizations.htm">Organisation verwalten</a></div></div>
+</div>
+
+</body>
+</html>

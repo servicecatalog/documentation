@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="ja-jp" lang="ja-jp">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="サービス利用部門の登録"/>
+<meta name="DC.Relation" scheme="URI" content="organization_managePaymentEnablement.htm"/>
+<meta name="DC.Relation" scheme="URI" content="../../Shared/reference/r_LDAP_SettingTypes.htm"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="task634"/>
+<meta name="DC.Language" content="ja-jp"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>サービス利用部門の登録</title>
+</head>
+<body id="task634">
+
+
+  <h1 class="topictitle1">サービス利用部門の登録</h1>
+
+  <div>
+    <div class="section">
+      <p><span class="uicontrol">サービス利用部門の登録</span>ページでサービス利用部門の情報を登録しておけば、サービス利用部門は自分の組織の登録操作を省略できます。</p>
+
+      <p>サービス利用部門を登録すると、新しい組織と最初の管理者アカウントが作成されます。すべてのログイン情報がこの管理者に自動的にメールで送信されます。
+          組織のデフォルトユニットも同時に作成されます。管理者は、デフォルトユニットの最初のメンバーになります。 
+          組織に登録される利用者はすべてデフォルトユニットに自動的に追加されます。組織の管理者は追加のユニットを作成することができます。</p>
+
+      <p>サービス利用部門を登録するには、サービス利用部門を管理するサービスポータルが存在する必要があります。</p>
+
+      <p><strong>サービス利用部門を登録するには</strong>：</p>
+
+    </div>
+
+    <ol><li class="stepexpand">
+        <span>新しいサービス利用部門の最初の管理者情報として以下の利用者データを入力します。</span>
+         
+          <ul>
+            <li class="liexpand"><span class="uicontrol">性別</span>: <samp class="codeph">男性</samp>または<samp class="codeph">女性</samp>が設定できます。</li>
+
+            <li class="liexpand"><span class="uicontrol">性</span>: 組織の管理者の姓。</li>
+
+            <li class="liexpand"><span class="uicontrol">名</span>: 組織の管理者の名。</li>
+
+            <li class="liexpand"><span class="uicontrol">メールアドレス</span>: 組織の管理者のメールアドレス。アカウントおよびアクセス情報の作成についての通知がこのメールアドレスに送信されます。
+                <p>指定されたメールアドレスの書式が有効な構文か確認され、ドメイン名がIANA（Internet Assigned Numbers Authority）によって定義、管理されている標準に適合しているか確認されます。</p>
+
+                <p>例: <samp class="codeph">user.name@domain.arpa</samp>, <samp class="codeph">user.name@domain.org</samp>, <samp class="codeph">user@mycompany.lan.uk</samp></p>
+</li>
+
+            <li class="liexpand"><span class="uicontrol">希望する利用者ID</span>：組織の管理者の利用者ID。利用者IDは100文字以内で以下の文字を含めることはできません。<p><samp class="codeph">!" # $ % &amp; ' * + , / :; &lt; = &gt; ?\ ^ `</samp></p>
+<div class="p">
+                <div class="note"><span class="notetitle">注:</span> 利用者の認証に利用部門の組織では外部システムを利用する場合、登録する利用者IDは外部システムの既存のIDに一致させる必要があります。</div>
+
+              </div>
+</li>
+
+            <li class="liexpand"><span class="uicontrol">言語</span>：デフォルトで管理者が使用する言語。
+              管理者に提供されるユーザーインターフェースや参考ドキュメント、メールなどは、ここで指定した言語で表示されます。
+              組織の管理者は後で言語を変更することが可能です。
+              利用可能な言語は、システム運用管理部門が定義するサポート言語に依存します。</li>
+
+          </ul>
+
+        
+      </li>
+<li class="stepexpand">
+        <span>新しいサービス利用部門に以下のデータを指定します。サービス利用部門を登録すると、そのデータを編集できるのは新しい組織の管理者のみになります。組織のデータを更新する場合、その組織の管理者として登録されている必要があります。</span>
+         
+          <div class="p">
+            <ul>
+              <li class="liexpand"><span class="uicontrol">組織名</span>：会社名などの組織の名称。</li>
+
+              <li class="liexpand"><span class="uicontrol">代表メールアドレス</span>：組織の窓口となるメールアドレス。請求書送付用の別のメールアドレスを後で指定することができます。
+                  <p>指定されたメールアドレスの書式が有効な構文か確認され、ドメイン名がIANA（Internet Assigned Numbers Authority）によって定義、管理されている標準に適合しているか確認されます。</p>
+
+                  <p>例: <samp class="codeph">user.name@domain.arpa</samp>, <samp class="codeph">user.name@domain.org</samp>, <samp class="codeph">user@mycompany.lan.uk</samp></p>
+</li>
+
+              <li class="liexpand"><span class="uicontrol">電話番号</span>：組織の電話番号。</li>
+
+              <li class="liexpand"><span class="uicontrol">Webサイト</span>：組織のホームページのURL。</li>
+
+              <li class="liexpand"><span class="uicontrol">所在地</span>：組織の所在地。</li>
+
+              <li class="liexpand"><span class="uicontrol">国</span>：組織が所在する国名。<p><span id="task634__The_country_determines_the_VA_task_taskbody_steps_step_2">国別付加価値税率が定義されている場合、ここで指定した国名によってサービス利用部門向けの請求データの計算に使用される付加価値税率が決定されます。</span></p>
+</li>
+
+              <li class="liexpand"><span class="uicontrol">説明</span>：組織の説明。会社のプロフィールからの情報などを示します。<p>入力したテキストは、利用者のプロフィールで設定した言語で保存されます。テキストをローカライズするには、利用者のプロフィールの言語を変更し、該当する翻訳を入力します。</p>
+<div class="p">
+                  <div class="note"><span class="notetitle">注:</span> <span>書式を変更する際は、エディタが提供するコントロールのみを使用してください。手作業でHTMLタグを入力したり外部のスタイルシートやコンテンツを参照すると、ページレイアウトがエラーになる場合があります。</span></div>
+
+                </div>
+</li>
+
+            </ul>
+
+          </div>
+
+        
+      </li>
+<li class="stepexpand">
+        <span>サービス利用部門のLDAPシステムによる認証を使用するには、<span class="uicontrol">LDAPを用いた認証を使用する</span>チェックボックスを選択します。</span>
+         
+          <div class="p">
+            <div class="note"><span class="notetitle">注:</span> 利用者の認証がSAML 2.0 アイデンティティプロバイダー(IdP)で行われている場合、このオプションは利用できません。</div>
+
+          </div>
+
+          <p>LDAP設定ファイルを作成し、このファイルでLDAP接続設定を定義します。設定ファイルを読み込むには、<span class="uicontrol">LDAP設定</span>入力フィールド または<span class="uicontrol">参照</span>をクリックし、その設定が含まれるファイルを選択します。組織固有の設定ファイルを指定しない場合、プラットフォームのLDAP接続設定が使用されます。</p>
+
+          <p>外部のLDAPシステムを使用する場合、サービス利用部門は手動で利用者を登録する必要はありません。サービス利用部門の登録者はLDAPシステムから利用者をインポートすることができ、利用者の基本情報を自動的に登録することができます。</p>
+
+          <p>設定ファイルのサンプルは以下の通りです: </p>
+
+          <div class="p">
+            <pre class="codeblock">LDAP_BASE_DN=ou\=people,dc\=est,dc\=mycompany,dc\=de
+LDAP_CONTEXT_FACTORY=com.sun.jndi.ldap.LdapCtxFactory
+LDAP_URL=ldap://myldapserver.lan.est.company.de:389
+LDAP_ATTR_UID=uid
+LDAP_ATTR_LAST_NAME=sn
+LDAP_ATTR_FIRST_NAME=givenName
+LDAP_ATTR_EMAIL=scalixEmailAddress
+LDAP_ATTR_REFERRAL=ignore</pre>
+
+          </div>
+
+          <p>サンプルで示されているデフォルトの値は、<samp class="codeph">LDAP_CONTEXT_FACTORY</samp>および<samp class="codeph">LDAP_ATTR_UID</samp>用に定義されています。値が設定されていない場合, プラットフォームのデフォルトのLDAP設定で異なる値が定義されない限りは、組織を作成する際にこの値が適用されます。</p>
+
+        
+      </li>
+<li class="stepexpand">
+        <span><span class="uicontrol">サービスポータル</span> リストから、サービス利用部門が使用するサービスポータルを選択します。 </span>
+         リストにはサービス提供部門またはサービス提供代行者としてアクセス可能なサービスポータルが表示されます。
+      </li>
+<li class="stepexpand">
+        <span>入力内容を保存するには、<span class="uicontrol">保存</span>をクリックします。</span>
+      </li>
+</ol>
+
+    <div class="section">
+      <p>サービス利用部門の登録が完了すると、ログインデータや初回ログインで使用する初期パスワードが新しいサービス利用部門の管理者にメールで送信されます。</p>
+
+      <p>組織が外部認証システムを利用する場合：</p>
+
+      <div class="p">
+        <ul>
+          <li>そのシステムでは、パスワードが管理されます。 そのため、パスワードの記載が無いメールが管理者に送信されます。外部認証システムに登録されているパスワードはログインのために利用する必要があります。</li>
+
+          <li>管理者の利用者IDはすでにプラットフォームで存在した場合、その管理者のメールアドレス（例：<samp class="codeph">userSmith@organization.com&gt;</samp>） はシステムへログインするために利用されます。さらにもう一つのサービス利用部門組織が作成され、管理者の利用者IDは同一である場合、新規利用者IDは既存のIDの後ろにアットマーク（@）とサービス利用部門組織のID（例：<samp class="codeph">userSmith@abcdefg</samp>）で構成されます。管理者には該当利用者IDが記載されたメールが送信されます。</li>
+
+        </ul>
+
+      </div>
+
+      <p>サービス提供部門またはサービス提供代行部門はサービス利用部門が利用する購入済サービスの支払種別を選べるよう支払種別の指定を行う必要があります。</p>
+
+    </div>
+
+  </div>
+
+  <div>
+<div class="linklist"><strong>関連情報</strong><br/>
+
+<div><a href="organization_managePaymentEnablement.htm">支払種別の管理</a></div>
+<div><a href="../../Shared/reference/r_LDAP_SettingTypes.htm">LDAPキー</a></div></div>
+</div>
+
+</body>
+</html>

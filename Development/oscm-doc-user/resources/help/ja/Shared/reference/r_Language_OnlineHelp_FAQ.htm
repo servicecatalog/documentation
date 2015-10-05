@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="ja-jp" lang="ja-jp">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="オンラインヘルプとFAQ"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="reference832"/>
+<meta name="DC.Language" content="ja-jp"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>オンラインヘルプとFAQ</title>
+</head>
+<body id="reference832">
+
+
+    <h1 class="topictitle1"><span>オンラインヘルプとFAQ</span>
+    </h1>
+
+    <div>
+        <div class="section">
+            <p>管理ポータルでは、利用者がプロフィールで設定した言語でオンラインヘルプが表示されます。サービスポータルから参照可能なFAQについても同様です。</p>
+
+            <p>オンラインヘルプとFAQのファイルは、プログラムとは別の<samp class="codeph">.war</samp>ファイル oscm-portal-help.war に格納されており、インストール時に配備されます。このwarファイルはファイル<samp class="codeph">oscm-install-pack.zip</samp>に格納されています。 既存のオンラインヘルプおよびFAQのファイルを更新したり、別の言語でこれらのファイルを提供することができます:</p>
+
+            <div class="p">
+                <ol>
+                    <li class="liexpand">ファイル <samp class="codeph">oscm-portal-help.war</samp> の内容をファイルシステム上の作業用フォルダに展開します。 <p>以下のようなフォルダ構成になっています: </p>
+<p><img src="../_images/HelpFAQ.png" width="415" height="372" alt="HelpFAQ.png"/><br/></p>
+<p>インストール時に提供されている言語は英語(en)、日本語(ja)、そしてドイツ語(de)です。  それぞれのディレクトリに格納されているテキストを更新することができます。 異なる言語向けにテキストを提供する場合も手順（以下参照）は同じです。</p>
+</li>
+
+                    <li class="liexpand">フォルダ <samp class="codeph">help/en</samp> をコピーし、フォルダ名を <samp class="codeph">help/<em>&lt;ISO code&gt;</em></samp> に変更します。 <p>フォルダ <samp class="codeph">faq/en</samp> をコピーし、フォルダ名を <samp class="codeph">faq/<em>&lt;ISO code&gt;</em></samp> に変更します。 </p>
+
+                        <p><samp class="codeph"><em>&lt;ISO code&gt;</em></samp>には、翻訳を提供する言語のコードを指定します。 例えば、チェコ語のリソースを追加する場合、フォルダ <samp class="codeph">cs</samp> をフォルダ <samp class="codeph">help</samp> とフォルダ <samp class="codeph">faq</samp> に追加します。 <span>サポートしている言語コードの一覧については、<a href="../../Shared/reference/r_Language_Codes.htm">ここ</a>をクリックしてください。</span></p>
+
+                        <p>フォルダ構成は以下のようになります: </p>
+
+                        <p><img src="../_images/HelpFAQ_sample.png" width="415" height="381" alt="HelpFAQ_sample.png"/><br/></p>
+
+                    </li>
+
+                    <li class="liexpand">HTMLファイルを翻訳します。<p>以下のことに注意してください: </p>
+<div class="p">
+                            <ul>
+                                <li class="liexpand">スタイルシートおよびアイコンを一切変更していないことを確認してください。 </li>
+
+                                <li class="liexpand">翻訳しないファイルを削除しないでください。 </li>
+
+                                <li class="liexpand">HTMLファイルでは、ページレイアウトに影響を与えるようなタグや不正なHTMLコードを入力していないことを確認してください。</li>
+
+                                <li class="liexpand">翻訳を確認する環境は、別個に用意してください。</li>
+
+                                <li class="liexpand">オンラインヘルプのトピックで使われているイメージは、以下のようにして翻訳版を作成できます: <div class="p">
+                                        <ol type="a">
+                                            <li>描画ツールにてイメージを作成します。</li>
+
+                                            <li>関連するHTMLファイルから参照されるファイル名で、ディレクトリ <samp class="codeph">Shared/_images</samp> に保存します。 </li>
+
+                                            <li>必要ならば、HTMLトピックのイメージサイズを確認し、適用します。 </li>
+
+                                        </ol>
+
+                                    </div>
+</li>
+
+                            </ul>
+
+                        </div>
+</li>
+
+                    <li class="liexpand">追加した言語のサブディレクトリも含むように新規にwarファイル <samp class="codeph">oscm-portal-help.war</samp> を作成します。</li>
+
+                    <li class="liexpand">カスタマイズしたファイル <samp class="codeph">oscm-portal-help.war</samp> をアプリケーションサーバー上のドメイン<samp class="codeph">bes-domain</samp>に配備解除して配備するか、もしくは再配備します。詳細については、<em>運用ガイド（システム運用管理者編）</em>を参照ください。 <p>ファイルを配備すると、既存のHTMLファイルは上書きされます。</p>
+</li>
+
+                </ol>
+
+            </div>
+
+            <div class="p">
+                <div class="note"><span class="notetitle">注:</span> ディレクトリ構成は変更しないでください。また、ファイルの妥当性は維持してください。</div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>

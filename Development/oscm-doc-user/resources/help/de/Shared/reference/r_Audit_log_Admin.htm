@@ -1,0 +1,816 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="de-de" lang="de-de">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Aktionen von Administratoren"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="reference832"/>
+<meta name="DC.Language" content="de-de"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>Aktionen von Administratoren</title>
+</head>
+<body id="reference832">
+
+
+    <h1 class="topictitle1">Aktionen von Administratoren</h1>
+
+    <div>
+        <div class="section">
+            <p>Im folgenden werden Meldungen erläutert, die in das Aktionsprotokoll geschrieben werden, wenn Administratoren von Organisationen mit einer beliebigen Rolle Aktionen auf einem Marktplatz ausführen. Die meisten der Aktionen können auch von OE-Administratoren und Abo-Managern ausgeführt werden. </p>
+
+            <p>Weitere <samp class="codeph">&lt;<em>Name/Wert-Paare</em>&gt;</samp> werden abhängig von der Aktion im Anschluss an den Header ausgegeben. </p>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Assign service role</strong></p>
+
+                                <p>Beschreibung: Ein Administrator, OE-Administrator, oder Abo-Manager legte für einen Benutzer, der einem Abonnement zugeordnet ist, eine Servicerolle fest oder änderte die Servicerolle. </p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li>
+                                            <p><samp class="codeph">serviceId=<em>&lt;Service-ID&gt;</em></samp>: ID des marktfähigen Service, wie sie beim Anlegen angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li>
+                                            <p><samp class="codeph">serviceName=<em>&lt;Name&gt;</em></samp>: Servicename für Kunden des marktfähigen Service, wie er beim Anlegen angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li>
+                                            <p><samp class="codeph">subscriptionName=<em>&lt;Abo-Name&gt;</em></samp>: Name des Abonnements, wie er beim Abonnieren angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li><samp class="codeph">user=<em>&lt;Benutzername&gt;</em></samp>: Name des Benutzers, dem die Servicerolle zugewiesen wurde. </li>
+
+                                        <li><samp class="codeph">userRole=<em>&lt;Servicerolle&gt;</em></samp>: Name der Servicerolle, wie er im zugrunde liegenden technischen Service definiert ist.</li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Assign user to unit</strong></p>
+
+                                <p>Beschreibung: Ein Administrator oder OE-Administrator fügte einer Organisationseinheit einen Benutzer hinzu. </p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li><samp class="codeph">user=<em>&lt;Benutzername&gt;</em></samp>: Name des Benutzers, der der Organisationseinheit hinzugefügt wurde. Wurden mehrere Benutzer hinzugefügt, sind die Listeneinträge durch Kommas getrennt. </li>
+
+                                        <li><samp class="codeph">unit=<em>&lt;Organisationseinheit&gt;</em></samp>: Name der Organisationseinheit, zu der der Benutzer hinzugefügt wurde. </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Assign user to subscription</strong></p>
+
+                                <p>Beschreibung: Ein Administrator, OE-Administrator, oder Abo-Manager ordnete einem Abonnement einen Benutzer zu. </p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li>
+                                            <p><samp class="codeph">serviceId=<em>&lt;Service-ID&gt;</em></samp>: ID des marktfähigen Service, wie sie beim Anlegen angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li>
+                                            <p><samp class="codeph">serviceName=<em>&lt;Name&gt;</em></samp>: Servicename für Kunden des marktfähigen Service, wie er beim Anlegen angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li>
+                                            <p><samp class="codeph">subscriptionName=<em>&lt;Abo-Name&gt;</em></samp>: Name des Abonnements, wie er beim Abonnieren angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li>
+                                            <p><samp class="codeph">user=<em>&lt;Benutzername&gt;</em></samp>: Name des Benutzers, der dem Abonnement zugeordnet wurde.</p>
+
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Deassign service role</strong></p>
+
+                                <p>Beschreibung: Ein Administrator, OE-Administrator, oder Abo-Manager entzog einem Benutzer, der einem Abonnement zugeordnet ist, eine Servicerolle. </p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li>
+                                            <p><samp class="codeph">serviceId=<em>&lt;Service-ID&gt;</em></samp>: ID des marktfähigen Service, wie sie beim Anlegen angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li>
+                                            <p><samp class="codeph">serviceName=<em>&lt;Name&gt;</em></samp>: Servicename für Kunden des marktfähigen Service, wie er beim Anlegen angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li>
+                                            <p><samp class="codeph">subscriptionName=<em>&lt;Abo-Name&gt;</em></samp>: Name des Abonnements, wie er beim Abonnieren angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li><samp class="codeph">user=<em>&lt;Benutzername&gt;</em></samp>: Name des Benutzers, dem die Servicerolle entzogen wurde. </li>
+
+                                        <li><samp class="codeph">userRole=<em>&lt;Servicerolle&gt;</em></samp>: Name der Servicerolle, wie er im im zugrunde liegenden technischen Service definiert ist.</li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Deassign user from subscription</strong></p>
+
+                                <p>Beschreibung: Ein Administrator, OE-Administrator, oder Abo-Manager hob die Zuordnung eines Benutzers zu einem Abonnement auf. </p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li>
+                                            <p><samp class="codeph">serviceId=<em>&lt;Service-ID&gt;</em></samp>: ID des marktfähigen Service, wie sie beim Anlegen angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li>
+                                            <p><samp class="codeph">serviceName=<em>&lt;Name&gt;</em></samp>: Servicename für Kunden des marktfähigen Service, wie er beim Anlegen angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li>
+                                            <p><samp class="codeph">subscriptionName=<em>&lt;Abo-Name&gt;</em></samp>: Name des Abonnements, wie er beim Abonnieren angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li>
+                                            <p><samp class="codeph">user=<em>&lt;Benutzername&gt;</em></samp>: Name des Benutzers, der dem Abonnement nicht mehr zugeordnet ist.</p>
+
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Disable access to services</strong></p>
+
+                                <p>Beschreibung: Ein Administrator oder OE-Administrator legte die Services fest, auf die die Mitglieder einer Organisationseinheit keinen Zugriff mehr haben. Für jeden Service wird eine separate Meldung im Aktionsprotokoll ausgegeben.</p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li><samp class="codeph">unit=<em>&lt;Organisationseinheit&gt;</em></samp>: Name der Organisationseinheit, deren Mitglieder auf den zugeordneten Service nicht mehr zugreifen können.</li>
+
+                                        <li><samp class="codeph">marketplaceId=<em>&lt;Marktplatz-ID&gt;</em></samp>: ID des Marktplatzes, auf dem der Service veröffentlicht ist.</li>
+
+                                        <li><samp class="codeph">marketplaceName=<em>&lt;Marktplatzname&gt;</em></samp>: Name des Marktplatzes, auf dem der Service veröffentlicht ist. </li>
+
+                                        <li>
+                                            <p><samp class="codeph">serviceId=<em>&lt;Service-ID&gt;</em></samp>: ID des marktfähigen Service, wie sie beim Anlegen angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li>
+                                            <p><samp class="codeph">serviceName=<em>&lt;Name&gt;</em></samp>: Servicename für Kunden, wie er beim Anlegen für den marktfähigen Service angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li><samp class="codeph">sellerID=<em>&lt;Verkäufer-ID&gt;</em></samp>: ID der Organisation des Serviceanbieters, Vermittlers bzw. Wiederverkäufers, der den Service anbietet.</li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Edit customer attribute by customer</strong></p>
+
+                                <p>Beschreibung: Ein Administrator, OE-Administrator, oder Abo-Manager definierte oder änderte den Wert eines eigenen Attributs für Kunden. Für jeden Wert wird eine separate Meldung im Aktionsprotokoll ausgegeben. </p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li><samp class="codeph">customerKey=<em>&lt;Organisations-ID&gt;</em></samp>: ID der Kundenorganisation. </li>
+
+                                        <li><samp class="codeph">customerName=<em>&lt;Organisationsname&gt;</em></samp>: Name der Kundenorganisation. </li>
+
+                                        <li><samp class="codeph">attributeName=<em>&lt;Attributname&gt;</em></samp>: Name des eigenen Attributs. </li>
+
+                                        <li><samp class="codeph">attributeValue=<em>&lt;Attributwert&gt;</em></samp>: Wert des eigenen Attributs. </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Edit subscription attribute by customer</strong></p>
+
+                                <p>Beschreibung: Ein Administrator, OE-Administrator, oder Abo-Manager definierte oder änderte den Wert eines eigenen Attributs für Abonnements. Für jeden Wert wird eine separate Meldung im Aktionsprotokoll ausgegeben. </p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li>
+                                            <p><samp class="codeph">serviceId=<em>&lt;Service-ID&gt;</em></samp>: ID des marktfähigen Service, wie sie beim Anlegen angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li>
+                                            <p><samp class="codeph">serviceName=<em>&lt;Name&gt;</em></samp>: Servicename für Kunden des marktfähigen Service, wie er beim Anlegen angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li>
+                                            <p><samp class="codeph">subscriptionName=<em>&lt;Abo-Name&gt;</em></samp>: Name des Abonnements, wie er beim Abonnieren angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li><samp class="codeph">attributeName=<em>&lt;Attributname&gt;</em></samp>: Name des eigenen Attributs. </li>
+
+                                        <li><samp class="codeph">attributeValue=<em>&lt;Attributwert&gt;</em></samp>: Wert des eigenen Attributs. </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Edit subscription owner</strong></p>
+
+                                <p>Beschreibung: Ein Administrator oder OE-Administrator definierte oder änderte den Eigentümer eines Abonnements. </p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li>
+                                            <p><samp class="codeph">serviceId=<em>&lt;Service-ID&gt;</em></samp>: ID des marktfähigen Service, wie sie beim Anlegen angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li>
+                                            <p><samp class="codeph">serviceName=<em>&lt;Name&gt;</em></samp>: Servicename für Kunden des marktfähigen Service, wie er beim Anlegen angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li>
+                                            <p><samp class="codeph">subscriptionName=<em>&lt;Abo-Name&gt;</em></samp>: Name des Abonnements, wie er beim Abonnieren angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li>
+                                            <p><samp class="codeph">subscriptionOwner=<em>&lt;Benutzername&gt;</em></samp>: Benutzername des Administrators, OE-Administrators, oder Abo-Managers, der als neuer Eigentümer des Abonnements festgelegt wurde.</p>
+
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Edit subscription parameter configuration</strong></p>
+
+                                <p>Beschreibung: Ein Administrator, OE-Administrator, oder Abo-Manager änderte Parameteroptionen eines Abonnements. Für jede geänderte Option wird eine separate Meldung im Aktionsprotokoll ausgegeben</p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li>
+                                            <p><samp class="codeph">serviceId=<em>&lt;Service-ID&gt;</em></samp>: ID des marktfähigen Service, wie sie beim Anlegen angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li>
+                                            <p><samp class="codeph">serviceName=<em>&lt;Name&gt;</em></samp>: Servicename für Kunden des marktfähigen Service, wie er beim Anlegen angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li>
+                                            <p><samp class="codeph">subscriptionName=<em>&lt;Abo-Name&gt;</em></samp>: Name des Abonnements, wie er beim Abonnieren angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li><samp class="codeph">parameterName=<em>&lt;Name&gt;</em></samp>: Name der Option.</li>
+
+                                        <li><samp class="codeph">parameterValue=<em>&lt;Wert&gt;</em></samp>: Neuer Wert der Option. Bei booleschen Parametern <samp class="codeph">ON</samp> oder <samp class="codeph">OFF</samp> (<samp class="codeph">ON</samp>, wenn die Option ausgewählt wurde, und <samp class="codeph">OFF</samp>, wenn die Option nicht ausgewählt wurde), bei anderen Parametern der eingegebene Wert. </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Enable access to services</strong></p>
+
+                                <p>Beschreibung: Ein Administrator oder OE-Administrator legte die Services fest, auf die die Mitglieder einer Organisationseinheit Zugriff haben. Für jeden Service wird eine separate Meldung im Aktionsprotokoll ausgegeben.</p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li><samp class="codeph">unit=<em>&lt;Organisationseinheit&gt;</em></samp>: Name der Organisationseinheit, deren Mitglieder auf den zugeordneten Service zugreifen können.</li>
+
+                                        <li><samp class="codeph">marketplaceId=<em>&lt;Marktplatz-ID&gt;</em></samp>: ID des Marktplatzes, über den die Mitglieder der Organisationseinheit auf den Service zugreifen können. </li>
+
+                                        <li><samp class="codeph">marketplaceName=<em>&lt;Marktplatzname&gt;</em></samp>: Name des Marktplatzes, auf dem der Service veröffentlicht ist. </li>
+
+                                        <li>
+                                            <p><samp class="codeph">serviceId=<em>&lt;Service-ID&gt;</em></samp>: ID des marktfähigen Service, wie sie beim Anlegen angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li>
+                                            <p><samp class="codeph">serviceName=<em>&lt;Name&gt;</em></samp>: Servicename für Kunden, wie er beim Anlegen des marktfähigen Service angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li><samp class="codeph">sellerID=<em>&lt;Verkäufer-ID&gt;</em></samp>: ID der Organisation des Serviceanbieters, Vermittlers bzw. Wiederverkäufers, der den Service anbietet.</li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Remove user from unit</strong></p>
+
+                                <p>Beschreibung: Ein Administrator oder OE-Administrator entfernte einen Benutzer aus einer Organisationseinheit.</p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li><samp class="codeph">user=<em>&lt;Benutzername&gt;</em></samp>: Name des Benutzers, der aus der Organisationseinheit enfernt wurde. Wurden mehrere Benutzer entfernt, sind die Listeneinträge durch Kommas getrennt. </li>
+
+                                        <li><samp class="codeph">unit=<em>&lt;Organisationseinheit&gt;</em></samp>: Name der Organisationseinheit, aus der der Benutzer entfernt wurde. </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Report issue</strong></p>
+
+                                <p>Beschreibung: Ein Administrator, OE-Administrator, oder Abo-Manager meldete dem zuständigen Serviceanbieter oder Wiederverkäufer ein Anliegen zu einem Abonnement.</p>
+
+                                <p>Weiteres Name/Wert-Paar: </p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li>
+                                            <p><samp class="codeph">serviceId=<em>&lt;Service-ID&gt;</em></samp>: ID des marktfähigen Service, wie sie beim Anlegen angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li>
+                                            <p><samp class="codeph">serviceName=<em>&lt;Name&gt;</em></samp>: Servicename für Kunden des marktfähigen Service, wie er beim Anlegen angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li>
+                                            <p><samp class="codeph">subscriptionName=<em>&lt;Abo-Name&gt;</em></samp>: Name des Abonnements, wie er beim Abonnieren angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li>
+                                            <p><samp class="codeph">issue=<em>&lt;Betreff&gt;</em></samp>: Betreff des Anliegens, wie er vom Administrator, OE-Administrator, oder Abo-Manager eingegeben wurde. </p>
+
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Set subscription billing address</strong></p>
+
+                                <p>Beschreibung: Ein Administrator, OE-Administrator, oder Abo-Manager definierte oder änderte die Rechnungsanschrift für ein Abonnement. </p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li>
+                                            <p><samp class="codeph">serviceId=<em>&lt;Service-ID&gt;</em></samp>: ID des marktfähigen Service, wie sie beim Anlegen angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li>
+                                            <p><samp class="codeph">serviceName=<em>&lt;Name&gt;</em></samp>: Servicename für Kunden des marktfähigen Service, wie er beim Anlegen angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li>
+                                            <p><samp class="codeph">subscriptionName=<em>&lt;Abo-Name&gt;</em></samp>: Name des Abonnements, wie er beim Abonnieren angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li><samp class="codeph">address=<em>&lt;Name&gt;</em></samp>: Name der Rechnungsanschrift, wie sie Benutzern zur Auswahl angezeigt wird. </li>
+
+                                        <li><samp class="codeph">addressDetails=<em>&lt;Anschrift&gt;</em></samp>: Name der Organisation, E-Mail-Adresse und Postanschrift, an die Rechnungen geschickt werden sollen. </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Set subscription payment type</strong></p>
+
+                                <p>Beschreibung: Ein Administrator, OE-Administrator, oder Abo-Manager definierte oder änderte die Zahlungsart für ein Abonnement. </p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li>
+                                            <p><samp class="codeph">serviceId=<em>&lt;Service-ID&gt;</em></samp>: ID des marktfähigen Service, wie sie beim Anlegen angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li>
+                                            <p><samp class="codeph">serviceName=<em>&lt;Name&gt;</em></samp>: Servicename für Kunden des marktfähigen Service, wie er beim Anlegen angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li>
+                                            <p><samp class="codeph">subscriptionName=<em>&lt;Abo-Name&gt;</em></samp>: Name des Abonnements, wie er beim Abonnieren angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li><samp class="codeph">paymentName=<em>&lt;Name&gt;</em></samp>: Name der Zahlungsart, wie sie Benutzern zur Auswahl angezeigt wird. </li>
+
+                                        <li><samp class="codeph">paymentType=<em>&lt;Zahlungsart&gt;</em></samp>: Name der Zahlungsart, wie sie von einem Serviceanbieter oder Payment Service Provider zur Verfügung gestellt wird. </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Subscribe to service</strong></p>
+
+                                <p>Beschreibung: Ein Administrator, OE-Administrator, oder Abo-Manager abonnierte einen marktfähigen Service, der auf einem Marktplatz angeboten wird. </p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li>
+                                            <p><samp class="codeph">serviceId=<em>&lt;Service-ID&gt;</em></samp>: ID des marktfähigen Service, wie sie beim Anlegen angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li>
+                                            <p><samp class="codeph">serviceName=<em>&lt;Name&gt;</em></samp>: Servicename für Kunden des marktfähigen Service, wie er beim Anlegen angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li>
+                                            <p><samp class="codeph">subscriptionName=<em>&lt;Abo-Name&gt;</em></samp>: Name des Abonnements, wie er beim Abonnieren angegeben wurde. </p>
+
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Unsubscribe from service</strong></p>
+
+                                <p>Beschreibung: Ein Administrator, OE-Administrator, oder Abo-Manager beendete ein Abonnement.</p>
+
+                                <p>Weiteren Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li>
+                                            <p><samp class="codeph">serviceId=<em>&lt;Service-ID&gt;</em></samp>: ID des marktfähigen Service, wie sie beim Anlegen angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li>
+                                            <p><samp class="codeph">serviceName=<em>&lt;Name&gt;</em></samp>: Servicename für Kunden des marktfähigen Service, wie er beim Anlegen angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li>
+                                            <p><samp class="codeph">subscriptionName=<em>&lt;Abo-Name&gt;</em></samp>: Name des Abonnements, wie er beim Abonnieren angegeben wurde. </p>
+
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Up/downgrade subscription</strong></p>
+
+                                <p>Beschreibung: Ein Administrator, OE-Administrator, oder Abo-Manager stellte ein Abonnement auf einen anderen Service um. </p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li>
+                                            <p><samp class="codeph">serviceId=<em>&lt;Service-ID&gt;</em></samp>: ID des marktfähigen Service, wie sie beim Anlegen angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li>
+                                            <p><samp class="codeph">serviceName=<em>&lt;Name&gt;</em></samp>: Servicename für Kunden des marktfähigen Service, wie er beim Anlegen angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li>
+                                            <p><samp class="codeph">subscriptionName=<em>&lt;Abo-Name&gt;</em></samp>: Name des Abonnements, wie er beim Abonnieren angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li><samp class="codeph">newServiceId=<em>&lt;Service-ID&gt;</em></samp>: ID des marktfähigen Service, auf den das Abonnement umgestellt wurde. </li>
+
+                                        <li><samp class="codeph">newServiceName=<em>&lt;Servicename&gt;</em></samp>: Servicename für Kunden des Service, auf den das Abonnement umgestellt wurde. </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>

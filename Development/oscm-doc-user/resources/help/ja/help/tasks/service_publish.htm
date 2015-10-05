@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="ja-jp" lang="ja-jp">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="サービスの公開設定"/>
+<meta name="DC.Relation" scheme="URI" content="service_activation.htm"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="task634"/>
+<meta name="DC.Language" content="ja-jp"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>サービスの公開設定</title>
+</head>
+<body id="task634">
+
+
+  <h1 class="topictitle1">サービスの公開設定</h1>
+
+  <div>
+    <div class="section">
+      <p><span class="uicontrol">サービスの公開設定</span>ページでは、以下の作業がおこなえます。: </p>
+
+      <div class="p">
+        <ul>
+          <li class="liexpand">サービスを公開するサービスポータルを設定または変更できます。サービスを有効化するにはサービスポータルが設定されている必要があります。<p>サービスポータルを変更するには有効化されていない状態でなければなりません。サービス利用部門の既存の購入済サービスにはこの変更は反映されません。</p>
+</li>
+
+          <li class="liexpand">サービス仲介部門またはサービス提供代行部門に対するサービスの再提供設定を付与または除去できます。サービス提供部門のみこの操作をおこなえます。<p>サービス仲介部門またはサービス提供代行部門に再提供設定を与えるには、料金設定およびサービスポータルが設定されている必要があります。</p>
+<p>サービス仲介部門またはサービス提供代行部門にサービスの再提供設定を付与した場合、サービス仲介部門またはサービス提供代行部門はサービスポータルにそのサービスを公開できます。サービス仲介部門またはサービス提供代行部門からサービスの再提供設定を除去した場合、サービス仲介部門またはサービス提供代行部門によって公開されているそのサービスはすぐにサービスポータルから撤去され、それ以降サービス利用部門はそのサービスを購入することはできません。一方、サービス仲介部門またはサービス提供代行部門からサービス利用部門が購入した既存のサービスは継続して使用できます。</p>
+</li>
+
+        </ul>
+
+      </div>
+
+      <p><strong>サービスのサービスポータルを設定または変更するには</strong>:</p>
+
+    </div>
+
+    <ol><li class="stepexpand">
+        <span><span class="uicontrol">サービスID</span>一覧からサービスポータルを設定または変更するサービスを選択します。</span>
+         
+          <p>ログインしている利用者がサービス提供部門の利用者の場合、一覧にはそのサービス提供部門が登録したすべてのサービスが含まれます。加えて、システム運用管理部門との間で合意されたシステム運用管理部門の売上配分率が表示されます。この値はサービス提供部門、サービス仲介部門またはサービス提供代行部門がそのサービスを提供した際に使用されます。</p>
+
+          <p>ログインしている利用者がサービス仲介部門またはサービス提供代行部門の利用者の場合、一覧には組織が再提供設定を与えられたすべてのサービスが含まれます。</p>
+
+        
+      </li>
+<li class="stepexpand">
+        <span>以下のサービスポータルの情報を設定します。:</span>
+         
+          <ul>
+            <li class="liexpand">サービスを一般に公開するかどうかを設定します。デフォルトで<span class="uicontrol">一般サービス</span>チェックボックスはチェックされています。<p><span id="task634__A_public_service_is_visible_i_task_taskbody_steps_step_2">一般サービスはサービスポータルにアクセスしたすべての利用者に表示されます。一般として設定されていないサービスはサービス利用部門のみが購入できます。</span></p>
+</li>
+
+            <li class="liexpand"><span class="uicontrol">サービスポータル</span>一覧から、サービスを公開するサービスポータルを選択します。サービスポータルの運用管理部門によって公開が許可されているサービスポータルにサービスを公開することができます。<p>サービス仲介部門またはサービス提供代行部門でログインしている場合、組織に適用される売上配分が表示されます。サービス提供部門がとしてログインしている場合、サービスポータルを選択するとサービスポータルで定義されている売上配分設定(システム運用管理部門向け、サービスポータル運用部門向け、サービスポータル仲介部門向け、サービスポータル提供代行部門向け)が表示されます。</p>
+<p><span id="task634__Provided_that_categories_are_task_taskbody_steps_step_2">選択したサービスポータルにカテゴリが設定されている場合、サービスにカテゴリを割り当てることができます。
+                  選択対象であるカテゴリはサービスポータル運用部門によって作成されます。
+                  カテゴリを使用することで、サービス利用部門はサービスカタログを閲覧しサービスポータル上でサービスのフィルタリングをおこなうことができます。
+                  サービスポータル運用者は、サービスをカテゴリ毎にグルーピングしてサービスポータルのホームページに表示するように設定することもできます。</span></p>
+</li>
+
+          </ul>
+
+        
+      </li>
+<li class="stepexpand">
+        <span><span class="uicontrol">保存</span>をクリックして変更内容を保存します。</span>
+      </li>
+</ol>
+
+    <div class="section">
+      <p>変更した内容はすぐに適用され、そのサービスは有効化することが可能となります。また、有効化することによってサービス利用部門がサービスを購入できるようになります。</p>
+
+      <p><strong>サービスの再提供設定を付与または除去するには</strong> (サービス提供部門のみ):</p>
+
+      <div class="p">
+        <ol>
+          <li class="liexpand"><span class="uicontrol">サービスID</span>一覧からサービス仲介部門またはサービス提供代行部門に再提供設定を付与するサービスを選択します。<p>一覧にはログインしている利用者の所属擦る組織が登録したすべてのサービスが含まれます。</p>
+</li>
+
+          <li class="liexpand"><span class="uicontrol">サービスポータル</span>一覧から、システム運用管理部門、サービス運用管理部門、サービス提供代行部門およびサービス仲介部門との間で合意がとれている適切な売上配分を設定済みのサービスポータルを選択します。この時、選択したサービスポータルのデフォルトの売上配分が表示されます。<p>これらのデフォルトの値は、サービス固有または組織固有の売上配分が設定されていない場合に、再提供設定を付与したサービス仲介部門およびサービス提供代行部門に、そのサービス仲介部門またはサービス提供代行部門がサービスを公開する・しないに関わらず適用されます。</p>
+<p>デフォルトの売上配分の下に、プラットフォームに存在するすべてのサービス仲介部門およびサービス提供代行部門が売上配分設定とともに表示されます。</p>
+</li>
+
+          <li class="liexpand"><span class="uicontrol">サービス提供代行部門およびサービス仲介部門の選択</span>欄で、サービスの再提供設定を付与または除去したいサービス仲介部門またはサービス提供代行部門の1列目のチェックボックスを選択または除去します。</li>
+
+          <li class="liexpand"><span class="uicontrol">保存</span>をクリックして変更内容を保存します。</li>
+
+        </ol>
+
+      </div>
+
+      <p>再提供設定はただちに付与または除去されます。</p>
+
+    </div>
+
+  </div>
+
+  <div>
+<div class="linklist"><strong>関連情報</strong><br/>
+
+<div><a href="service_activation.htm">サービスの有効化および無効化</a></div></div>
+</div>
+
+</body>
+</html>

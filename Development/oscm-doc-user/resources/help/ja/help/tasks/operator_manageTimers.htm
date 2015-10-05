@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="ja-jp" lang="ja-jp">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="タイマーの管理"/>
+<meta name="DC.Relation" scheme="URI" content="operator_manageConfiguration.htm"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="concept_B32294CC9FA643A2A14A74B1DAA49C95"/>
+<meta name="DC.Language" content="ja-jp"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>タイマーの管理</title>
+</head>
+<body id="concept_B32294CC9FA643A2A14A74B1DAA49C95">
+
+
+    <h1 class="topictitle1">タイマーの管理</h1>
+
+    <div>
+        <p id="concept_B32294CC9FA643A2A14A74B1DAA49C95__concept_Timers">期限切れの購入済サービスを確認して削除するなどの背後で動作する処理を実行するためにタイマーを使用します。各タイマーには定期的に処理を実行する時間の間隔をミリ秒単位で設定します。</p>
+
+        <p id="concept_B32294CC9FA643A2A14A74B1DAA49C95__concept_Timers1">
+                タイマーの間隔時間は<span>プラットフォーム</span>のシステム設定で定義および変更ができます。</p>
+
+        <div class="p" id="concept_B32294CC9FA643A2A14A74B1DAA49C95__concept_Timer2"> 
+            <div class="note"><span class="notetitle">注:</span> タイマーを無効にしている場合、<span>プラットフォーム</span>の一部の機能は動作しないことに注意してください。例えば、サービス利用部門が10日で期限切れとなる購入済サービスを指定し、タイマー<samp class="codeph">RESTRICTED_SUBSCRIPTION_USAGE_PERIOD</samp>を設定しなかった場合、購入済サービスは10日後も期限切れになりません。</div>
+
+        </div>
+
+        <p id="concept_B32294CC9FA643A2A14A74B1DAA49C95__concept_Timers3">タイマーによる処理の最初の実行時間は、現在の年の1月1日0時0分0秒を開始として計算されます。例えば1月5日14時30分に、タイマーの間隔時間を1週間に設定した場合、処理はまず1月8日0時0分に実行されます。それ以降は、15日、22日のようになります。また8月4日17時0分に、間隔時間を1ヶ月に設定した場合、最初に実行されるのは9月1日0時0分0秒となり、それ以降は10月1日、11月1日となります。同じ時間にいくつもの処理が同時に実行され、システムに高負荷をかけるといったことを避けるため、各タイマーには個別の<strong>オフセット値</strong>を設定できます。タイマーの間隔時間から計算された時間にこのオフセットが加算された時間に処理が実行されます。 </p>
+
+        <p>利用できるタイマーの詳細な説明については、<em>運用ガイド（システム運用管理者編）</em>を参照してください。 </p>
+
+        <p><span class="uicontrol">タイマーの管理</span>ページでは、現在登録されているタイマーの有効期限を確認できます。新しいタイマーを定義するか、タイマーの設定を更新した場合、タイマーを起動するためにはタイマーを再初期化する必要があります。 </p>
+
+        <p><strong>新しいタイマーを設定する、または既存のタイマーを更新するには</strong>:</p>
+
+        <div class="p">
+            <ol>
+                <li><span class="uicontrol">システム設定の変更</span>ページでタイマーに設定を追加または変更します。 </li>
+
+                <li><span class="uicontrol">タイマーの管理</span>ページで<span class="uicontrol">タイマーの再初期化</span>をクリックします。 </li>
+
+            </ol>
+
+        </div>
+
+    </div>
+
+    <div>
+<div class="linklist"><strong>関連情報</strong><br/>
+
+<div><a href="operator_manageConfiguration.htm">システム設定の変更</a></div></div>
+</div>
+
+</body>
+</html>

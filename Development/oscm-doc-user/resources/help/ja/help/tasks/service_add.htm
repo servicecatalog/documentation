@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="ja-jp" lang="ja-jp">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="サービスの登録"/>
+<meta name="DC.Relation" scheme="URI" content="priceModel_service.htm"/>
+<meta name="DC.Relation" scheme="URI" content="service_publish.htm"/>
+<meta name="DC.Relation" scheme="URI" content="service_activation.htm"/>
+<meta name="DC.Relation" scheme="URI" content="service_edit.htm"/>
+<meta name="DC.Relation" scheme="URI" content="service_copy.htm"/>
+<meta name="DC.Relation" scheme="URI" content="service_delete.htm"/>
+<meta name="DC.Relation" scheme="URI" content="service_upgradeOptions.htm"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="task634"/>
+<meta name="DC.Language" content="ja-jp"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>サービスの登録</title>
+</head>
+<body id="task634">
+
+
+  <h1 class="topictitle1">サービスの登録</h1>
+
+  <div>
+    <div class="section">
+      <p><span class="uicontrol">サービスの登録</span>ページでは、サービス利用部門に提供するための、サービスポータルへ公開するサービスを登録できます。サービスは直接、またはサービスの再提供設定を与えたサービス仲介部門およびサービス提供代行部門を介してサービス利用部門に提供できます。</p>
+
+      <p>サービスの登録とは、サービスのパラメーター、利用条件、制限事項を指定することです。 </p>
+
+      <p><strong>サービスを登録するには</strong>：</p>
+
+    </div>
+
+    <ol><li class="stepexpand">
+        <span>新しいサービスポータルへ登録済のサービスが準拠している技術サービスを選択します。</span>
+         
+          <p>技術サービスの説明が表示されます。 </p>
+
+        
+      </li>
+<li class="stepexpand">
+        <span>新しいサービスに以下の要素を指定します。</span>
+         
+          <ul>
+            <li class="liexpand"><span class="uicontrol">サービスID</span>：サービスの識別子です。所属組織のサービスポータルへ登録済のサービス内で一意である必要があります。<p><span id="task634__This_field_is_mandatory._The_task_taskbody_steps_step_2">サービスIDは40文字以内で以下の文字を含めることはできません。</span></p>
+<p><span id="task634__3"><samp class="codeph">!" # $ % &amp; ' * + , / :; &lt; = &gt; ?\ ^ `</samp></span></p>
+<p><span id="task634__2">このサービスIDは、サービスを更新または削除するとき、あるいはオプションのアップグレード／ダウングレードや料金設定を指定するときなどに選択できます。</span></p>
+</li>
+
+            <li class="liexpand"><span class="uicontrol">サービス画像</span>：サービスを特定するイメージファイルです。 <p><span id="task634__either_the_task_taskbody_steps_step_2"><span class="uicontrol">画像のアップロード</span>フィールドまたは<span class="uicontrol">参照</span>をクリックし、そのイメージを含むファイルを選択します。サポートされるファイル形式はGIF、JPG、PNGです。サービス画像のサイズは80x80ピクセルでなければなりません。</span></p>
+<p><span id="task634__The_service_image_is_shown_in_task_taskbody_steps_step_2">サービスを公開するとサービスポータルのサービスタカログにサービス画像が表示されます。イメージを利用すると、サービス利用部門がサービスを識別しやすくなります。</span></p>
+</li>
+
+            <li class="liexpand"><span class="uicontrol">利用者向けサービス名</span>：サービスの有意な名前です。サービス利用部門にとって認知しやすい値にする必要があります。このフィールドには、サービスポータルへ登録済のサービスが準拠する技術サービス名が事前に設定されています。これは必要に応じて更新できます。 <p><span id="task634__The_service_name_for_customer_task_taskbody_steps_step_2">サービスを公開するとサービスポータルのサービスタカログにサービス利用部門向けのサービス名が表示されます。指定しない場合、代わりにサービス名が設定されていない旨のメッセージが表示されます。</span></p>
+<p>サービスを更新することによって、後で他の言語でカスタム組織向けサービス名を指定することもできます。</p>
+</li>
+
+            <li class="liexpand"><span class="uicontrol">概要</span>：サービスの簡単な説明です。<span id="task634__The_length_of_the_short_descr_task_taskbody_steps_step_2">簡単な説明の長さは256文字までに制限されています。 </span><p><span id="task634__The_short_description_is_show_task_taskbody_steps_step_2">サービスを公開するとサービスポータルのサービスタカログに簡単な説明が表示されます。通常、この説明には、そのサービスが提供する機能の概要が含まれます。</span></p>
+<p>サービスを更新することによって、後で他の言語で簡単な説明を追加できます。</p>
+</li>
+
+            <li class="liexpand"><span class="uicontrol">説明</span>：新しいサービスによって提供される機能の詳細な説明です。このフィールドには、サービスポータルへ登録済のサービスが準拠する技術サービスの説明が事前に設定されています。これは必要に応じて更新できます。 <p>サービス利用部門がサービスの詳細を要求すると、サービスポータルにサービスの詳細説明が表示されます。 </p>
+<p>サービスを更新することによって、後で他の言語で説明を指定できます。</p>
+<div class="p">
+                <div class="note"><span class="notetitle">注:</span> <span id="task634__Make_sure_to_use_only_the_con_task_taskbody_steps_step_2">書式を変更する際は、エディタが提供するコントロールのみを使用してください。手作業でHTMLタグを入力したり外部のスタイルシートやコンテンツを参照すると、ページレイアウトがエラーになる場合があります。</span></div>
+
+              </div>
+</li>
+
+          </ul>
+
+        
+      </li>
+<li class="stepexpand">
+        <span>購入手続きが完了したときにサービスを購入した利用者が自動的に購入済サービスに割り当てられるようにする場合、<span class="uicontrol">自動的に利用者を割り当てる</span>チェックボックスを選択します。</span>
+         デフォルトでは、サービスを購入する利用者を含めてすべての利用者は、サービスを利用する前に明示的に購入済サービスに割り当てる必要があります。
+      </li>
+<li class="stepexpand">
+        <span>購入済サービスおよび使用に関連するパラメーターの値を<span class="uicontrol">サービスパラメーター</span>表で入力します。</span>
+         
+          <ul>
+            <li class="liexpand"><span id="task634__Subscription_parameters_inclu_task_taskbody_steps_step_3">購入済サービスのパラメーターには、購入済サービス当たりの利用者数の上限や、購入済サービスの最長期間などがあります。利用できる購入済サービスのパラメーターは、サービスの基盤となる技術サービスによって異なります。 </span>
+              <span id="task634__Usage_parameters_include_for_task_taskbody_steps_step_3">使用法パラメーターには、基盤となるアプリケーションの特定機能の有効化または無効化、作成可能なフォルダ、ファイル、オブジェクトの上限数などが含まれます。基盤となる技術サービスによって使用法パラメーターが定義・提供されます。</span></li>
+
+            <li class="liexpand">表の<span class="uicontrol">説明</span>欄で、各パラメーターの簡単な説明を参照できます。この説明は技術サービス開発部門が提供します。 </li>
+
+            <li class="liexpand">パラメーターに<span class="uicontrol">利用者による設定</span>のチェックボックスを選択することによって、サービスを契約するサービス利用部門にオプションとして提供されるかどうかを指定できます。</li>
+
+            <li class="liexpand">表の<span class="uicontrol">値</span>欄で、各パラメーターの値を定義できます。値は、技術サービスに対して定義された範囲内でなければなりません。 </li>
+
+          </ul>
+
+        
+      </li>
+<li class="stepexpand">
+        <span>必要に応じて、<strong>パラメーター設定ツールのURL</strong> を指定します。 
+            この項目を指定することで、希望の外部ツールにリンクすることができます。
+            利用者は、サービスを購入する際にこの外部ツールを使って購入済サービスやパラメーターを構成できるようになります。</span>
+         
+          <div class="p">外部ツールを使用する場合、パラメーターを設定するための表 <span class="uicontrol">サービスのパラメーター</span> は、サービス購入処理中は外部ツールのインターフェースに置き換わります。
+              <div class="note"><span class="notetitle">注:</span> パラメーター設定ツールのURLは、セキュアである必要があります。
+                  指定されたURLについて、プラットフォームは構文もセマンティックも検証しません。</div>
+</div>
+
+        
+      </li>
+<li class="stepexpand">
+        <span><span class="uicontrol">保存</span>をクリックしてサービスを登録します。</span>
+      </li>
+</ol>
+
+    <div class="section">
+      <p>サービスが登録され、その後の操作がおこなえるようになります。まず、料金設定を設定し、公開するサービスポータルを選択する必要があります。その後、サービスを有効化することでサービス利用部門はそのサービスを購入できるようになります。</p>
+
+      <p>任意の操作として、サービスのアップグレード／ダウングレードオプション用の定義やサービス仲介部門およびサービス提供代行部門への再提供設定の付与なとがおこなえます。</p>
+
+    </div>
+
+  </div>
+
+  <div>
+<div class="linklist"><strong>関連情報</strong><br/>
+
+<div><a href="priceModel_service.htm">サービスの料金設定</a></div>
+<div><a href="service_publish.htm">サービスの公開設定</a></div>
+<div><a href="service_activation.htm">サービスの有効化および無効化</a></div>
+<div><a href="service_edit.htm">サービスの管理</a></div>
+<div><a href="service_copy.htm">サービスのコピー</a></div>
+<div><a href="service_delete.htm">サービスの削除</a></div>
+<div><a href="service_upgradeOptions.htm">グレードオプションの設定</a></div></div>
+</div>
+
+</body>
+</html>

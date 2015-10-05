@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="de-de" lang="de-de">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="Benutzer importieren"/>
+<meta name="DC.Relation" scheme="URI" content="organization_addCustomer.htm"/>
+<meta name="DC.Relation" scheme="URI" content="user_add.htm"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="task634"/>
+<meta name="DC.Language" content="de-de"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>Benutzer importieren</title>
+</head>
+<body id="task634">
+
+
+    <h1 class="topictitle1">Benutzer importieren</h1>
+
+    <div>
+        <div class="section">
+            <p>Auf der Seite <span class="uicontrol">Benutzer importieren</span> können Sie Benutzer aus einem externen LDAP-System importieren und somit registrieren. Zusätzlich können Sie deren Benutzerrolle festlegen. Das LDAP-System dient der Authentifizierung der Benutzer bei der Anmeldung. </p>
+
+            <p>Voraussetzung für das Importieren von Benutzern ist, dass beim Anlegen Ihrer Organisation die Benutzerauthentifizierung gegen ein LDAP-System eingeschaltet wurde und die LDAP-Einstellungen definiert sind. </p>
+
+            <p>Die Rolle Ihrer Organisation bestimmt, welche Rollen Sie den neuen Benutzern zuordnen können. Die Benutzerrollen steuern, welche Optionen einem Benutzer an der Benutzeroberfläche zur Verfügung stehen:</p>
+
+            <ul>
+                <li class="liexpand"><span><strong>Standardbenutzer</strong>: Benutzer mit dieser Rolle können mit Services arbeiten, die ihre Organisation abonniert hat.</span> Jeder registrierte Benutzer ist automatisch ein Standardbenutzer. <span>Weitere Benutzerrollen müssen explizit vom Administrator zugeordnet werden.</span></li>
+
+                <li class="liexpand"><span><strong>Administrator</strong>: Jede Organisation muss mindestens einen Benutzer haben, dem die Administratorrolle zugeordnet ist. <span id="task634__d1678e79">Ein Administrator kann das Konto seiner Organisation verwalten sowie die Abonnements, Benutzer und Benutzerrollen. Der erste Administrator wird beim Anlegen der Organisation festgelegt.</span></span></li>
+
+                <li class="liexpand"><span><strong>OE-Administrator</strong>: Die Benutzer einer Organisation können in Organisationseinheiten (OE) gruppiert werden. Benutzer mit der Rolle OE-Administrator können Organisationseinheiten verwalten, für die sie als Administrator eingesetzt wurden, sowie Abonnements für diese Einheiten anlegen, ändern und beenden. Die Rolle wird Benutzern, die als Administratoren für Organisationseinheiten eingesetzt werden, automatisch zugeordnet.</span></li>
+
+                <li class="liexpand"><span><strong>Abo-Manager</strong>: Benutzer mit dieser Rolle können Services abonnieren und ihre eigenen Abonnements verwalten. Im Gegensatz zu Administratoren dürfen Abo-Manager nicht die Abonnements anderer Benutzer bearbeiten. Darüber hinaus dürfen sie keine Zahlungsinformationen ändern.</span></li>
+
+                <li class="liexpand"><span><strong>Technologie-Manager</strong>: Benutzer mit dieser Rolle können technische Services definieren. Die Rolle kann Benutzern in Organisationen mit der Rolle Hersteller zugewiesen werden.</span></li>
+
+                <li class="liexpand"><span><strong>Service-Manager</strong>: Benutzer mit dieser Rolle können marktfähige Services und Preismodelle definieren sowie marktfähige Services veröffentlichen. Die Rolle kann Benutzern in Organisationen mit der Rolle Serviceanbieter zugewiesen werden.</span></li>
+
+                <li class="liexpand"><span><strong>Wiederverkäufer</strong>: Benutzer mit dieser Rolle können marktfähige Services eines Serviceanbieters unter ihren eigenen allgemeinen Geschäftsbedingungen veröffentlichen. Die Rolle kann Benutzern in Organisationen mit der Rolle Wiederverkäufer zugewiesen werden.</span></li>
+
+                <li class="liexpand"><span><strong>Vermittler</strong>: Benutzer mit dieser Rolle können marktfähige Services eines Serviceanbieters veröffentlichen, es gelten aber die allgemeinen Geschäftsbedingungen des Serviceanbieters. Die Rolle kann Benutzern in Organisationen mit der Rolle Vermittler zugewiesen werden.</span></li>
+
+                <li class="liexpand"><span><strong>Marktplatz-Manager</strong>: Benutzer mit dieser Rolle können festlegen, welche Organisationen auf einem Marktplatz Services veröffentlichen dürfen. Sie können darüber hinaus die Eigenschaften eines Marktplatzes ändern und Anpassungen des Marktplatzes an die individuellen Vorgaben Ihrer Organisation vornehmen. Die Rolle kann Benutzern in Organisationen zugewiesen werden, die Marktplatzeigentümer sind. Beim Anlegen des Marktplatzes wird sie automatisch allen Administratoren des Marktplatzeigentümers zugewiesen.</span></li>
+
+            </ul>
+
+            <p><strong>So importieren Sie Benutzer aus einem externen LDAP-System</strong>:</p>
+
+        </div>
+
+        <ol><li class="stepexpand">
+                <span>Legen Sie die Benutzer fest, die Sie importieren möchten. </span>
+                 Sie können folgende Filter verwenden: <div class="p">
+                        <ul>
+                            <li class="liexpand">Wildcard (*): Es werden alle Benutzer aus dem LDAP-System angezeigt. Beachten Sie, dass maximal 100 Benutzer aufgelistet werden können. Verwenden Sie bei Bedarf spezifischere Filter, zum Beispiel den Anfangsbuchstaben des Benutzernamens in Kombination mit einer Wildcard.</li>
+
+                            <li class="liexpand">Buchstaben und Wildcards (*): Es werden alle Benutzer angezeigt, deren Benutzername die eingegebenen Buchstaben enthält. Zum Beispiel listet <samp class="codeph">*o*</samp> alle Benutzer auf, deren Benutzername den Buchstaben <samp class="codeph">o</samp> enthält.</li>
+
+                            <li class="liexpand">Benutzername: Um einen bestimmten Benutzer zu importieren, können Sie seinen Benutzernamen direkt eingeben.</li>
+
+                        </ul>
+
+                    </div>
+<p>Mit <span class="uicontrol">Suchen</span> werden die Benutzer aufgelistet, die den verwendeten Filtern entsprechen.</p>
+
+            </li>
+<li class="stepexpand">
+                <span>Markieren Sie die Benutzer, die Sie importieren möchten.</span>
+                 Wenn das LDAP-Attribut für die Email-Adresse eines Benutzer nicht auf einen entsprechenden Wert abgebildet wurde, müssen Sie die Email-Adressen der jeweiligen Benutzer manuell eingeben.
+            </li>
+<li class="stepexpand">
+                <span>Um einem Benutzer besondere Rechte innerhalb Ihrer Organisation zuzuweisen, markieren Sie nach Bedarf die entsprechenden Benutzerrollen.</span>
+                 
+                    <p>Die zur Auswahl stehenden Benutzerrollen hängen von der Rolle Ihrer Organisation ab. Wenn Sie einem Benutzer keine Rolle zuweisen, wird er automatisch als Standardbenutzer registriert.</p>
+
+                
+            </li>
+<li class="stepexpand">
+                <span>Starten Sie den Import mit <span class="uicontrol">Importieren</span>.</span>
+            </li>
+</ol>
+
+        <div class="section">
+            <p>Die ausgewählten Benutzer werden importiert und registriert. Nach einem erfolgreichen Import erhält jeder Benutzer per E-Mail eine URL für den Zugriff auf das System. Die Benutzer werden automatisch zur Standard-Organisationseinheit Ihrer Organisation hinzugefügt. Dieser Einheit sind alle Benutzer zugeordnet, die aktuell für Ihre Organisation registriert sind.</p>
+
+            <p>Existiert der Benutzername des zu importierenden Benutzers bereits im System, wird seine E-Mail-Adresse (z.B. <samp class="codeph">Schmitt@organisation.com</samp>) als Benutzername verwendet, um sich am System anzumelden. Wird ein weiterer Benutzer mit demselben Namen importiert und der Benutzername ist wiederum identisch, wird der neue Benutzername aus dem Benutzernamen, gefolgt vom "AT"-Zeichen (@) und der ID seiner Organisation (z.B. <samp class="codeph">Schmitt@abcdefg</samp>) zusammengesetzt. Der Benutzer erhält eine E-Mail mit dem entsprechenden Benutzernamen.</p>
+
+            <p>Benutzerdaten, die im LDAP-System gepflegt werden, zum Beispiel Passwort, Vorname oder Nachname, können nur im LDAP-System geändert werden. Wenn sich Daten ändern, werden sie automatisch mit der Plattform synchronisiert. Im Falle einer Änderung des Benutzernamens ist jedoch eine automatische Synchronisierung nicht möglich. In diesem Fall müssen Sie den Benutzer erneut importieren.</p>
+
+        </div>
+
+    </div>
+
+    <div>
+<div class="linklist"><strong>Weitere Themen</strong><br/>
+
+<div><a href="organization_addCustomer.htm">Kunden registrieren</a></div>
+<div><a href="user_add.htm">Benutzer registrieren</a></div></div>
+</div>
+
+</body>
+</html>

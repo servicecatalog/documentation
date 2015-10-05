@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="Defining up/downgrade options for a service"/>
+<meta name="DC.Relation" scheme="URI" content="service_publish.htm"/>
+<meta name="DC.Relation" scheme="URI" content="service_activation.htm"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="task634"/>
+<meta name="DC.Language" content="en-us"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>Defining up/downgrade options for a service</title>
+</head>
+<body id="task634">
+
+
+  <h1 class="topictitle1">Defining up/downgrade options for a service</h1>
+
+  <div>
+    <div class="section">
+      <p>On the <span class="uicontrol">Define up/downgrade options</span> page, you can select the services which you want to provide to your customers for upgrading or downgrading a subscription.</p>
+
+      <p><span id="task634__Upgrade_and_downgrade_options_task_taskbody_context_p_2_ph">Upgrade and downgrade options allow customers to migrate between marketable services. They enable you to flexibly meet the changing needs of your customers. A subscription for a marketable service defining a trial edition could be upgraded, for example, to a marketable service defining a standard or enterprise edition. A subscription for a marketable service with an unlimited number of users could be downgraded to a marketable service with a limited number of users.</span></p>
+
+      <p><span id="task634__You_can_specify_any_number_of_task_taskbody_context_p_3_ph">You can specify any number of upgrade and downgrade options for a marketable service. The options must all be based on the same technical service and be published to the same marketplace. If customers are charged for using the marketable service, the price models of the upgrade and downgrade options must use the same currency. </span></p>
+
+      <p>To specify upgrade or downgrade options for a marketable service, it must be deactivated.</p>
+
+      <p>The upgrade and downgrade options are not available to customers of brokers or resellers when you grant them the permission to sell a service.</p>
+
+      <p id="task634__When_a_customer_upgrades_or_d_task_taskbody_context_p_7">When a customer upgrades or downgrades a subscription, the price model of the new service is instantly applied for calculating the charges. Users assigned to the subscription, service roles assigned to the users, or application data already stored for the old service are retained. All parameters and their options as well as the payment information are automatically applied to the new service, unless explicitly changed during the upgrade or downgrade.</p>
+
+      <p id="task634__When_a_customer_upgrades_or_d_task_taskbody_context_p_4">Be aware of the effects of up/downgrade options on the price model elements that determine how the charges for a customer are calculated <span>(click <a href="../../Shared/reference/r_PriceModelDetails.htm">here</a> for more details)</span>:</p>
+
+      <div class="p" id="task634__The_prices_for_using_a_servic_task_taskbody_context_p_9">
+        <ul>
+          <li class="liexpand">The prices for using a service may be calculated and charged based on time units. When a customer upgrades or downgrades a subscription with a price calculation based on time units, the costs for the unit in which the subscription is upgraded or downgraded are charged twice.</li>
+
+          <li class="liexpand">A one-time fee that is defined for a service you provide as an upgrade or downgrade option is added to the total charges for the customer, even if the service from which the customer migrates also defines a one-time fee. </li>
+
+          <li class="liexpand">A free trial period that is defined for a service you provide as an upgrade or downgrade option starts immediately after the customer's upgrade or downgrade. It is independent of whether the service from which the customer migrates also defines a free trial period. </li>
+
+        </ul>
+
+      </div>
+
+      <p><strong>To define up/downgrade options</strong>:</p>
+
+    </div>
+
+    <ol><li class="stepexpand">
+        <span>From the <span class="uicontrol">Service ID</span> list, select the marketable service for which to define upgrade or downgrade options.</span>
+         
+      </li>
+<li class="stepexpand">
+        <span>From the table, choose the services a customer should be able to upgrade or downgrade to by selecting or clearing the corresponding check boxes. The table lists all marketable services that are based on the same technical service as the selected marketable service.</span>
+      </li>
+<li class="stepexpand">
+        <span>To save your changes, click <span class="uicontrol">Save</span>.</span>
+      </li>
+</ol>
+
+    <div class="section">After saving the marketable service and activating it again, the upgrade or downgrade options are available to your customers.</div>
+
+  </div>
+
+  <div>
+<div class="linklist"><strong>Related topics</strong><br/>
+
+<div><a href="service_publish.htm">Defining publishing options</a></div>
+<div><a href="service_activation.htm">Activating or deactivating services</a></div></div>
+</div>
+
+</body>
+</html>

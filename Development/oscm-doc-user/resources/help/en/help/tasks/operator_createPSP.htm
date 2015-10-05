@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="Creating a payment service provider"/>
+<meta name="DC.Relation" scheme="URI" content="operator_managePSPs.htm"/>
+<meta name="DC.Relation" scheme="URI" content="operator_manageOrganizations.htm"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="task634"/>
+<meta name="DC.Language" content="en-us"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>Creating a payment service provider</title>
+</head>
+<body id="task634">
+
+
+  <h1 class="topictitle1">Creating a payment service provider</h1>
+
+  <div>
+    <div class="section">
+      <p>On the <span class="uicontrol">Create payment service provider</span> page, you can register a payment service provider (PSP). A payment service provider can be used by supplier or reseller organizations for invoicing and payment collection. The supplier or reseller organization as well as the platform operator organization must have a contractual relationship with the PSP. </p>
+
+      <p>Registering a PSP is the prerequisite for configuring the communication with the PSP and thus integrating the PSP with the platform. </p>
+
+      <p><strong>To create a payment service provider</strong>:</p>
+
+    </div>
+
+    <ol><li class="stepexpand">
+        <span>Enter the <span class="uicontrol">Identifier</span> of the PSP. </span>
+         This ID uniquely identifies the PSP in the platform and is visible to the operator only. <p>IDs are restricted to 40 characters and must not contain any of the following characters:</p>
+<p><samp class="codeph">! " # $ % &amp; ' * + , / : ; &lt; = &gt; ? \ ^ `</samp>
+          </p>
+
+      </li>
+<li class="stepexpand">
+        <span>Enter the <strong>WSDL URL</strong>.</span>
+         This URL must be a link to the WSDL file containing the definition of the Web service which provides methods for integrating the PSP with the platform. For details on implementing the PSP integration adapter, refer to the documentation shipped with the <samp class="codeph">oscm-psp-pack.zip</samp> file. 
+      </li>
+<li class="stepexpand">
+        <span>Enter the <strong>Distinguished name</strong> retrieved from the certificate of the Web server where the PSP integration adapter is deployed. </span>
+         The integration of a PSP requires the usage of certificates for trusted communication between the platform operator organization and the PSP organization. For this purpose, the distinguished name must always be set. <p>The platform checks the distinguished name in the PSP's certificate. If it matches the one specified here, the caller is assumed to be authorized to connect to the platform. </p>
+<p>You can retrieve the distinguished name of an organization from its certificate with the following call in your Java runtime environment: </p>
+<div class="p">
+            <pre class="codeblock">&lt;YourJRE&gt;/bin/keytool -printcert -file &lt;filename.crt&gt;</pre>
+
+          </div>
+<p>The distinguished name is composed of the following elements:</p>
+<ul>
+            <li>CN (common name)</li>
+
+            <li>OU (organizational unit)</li>
+
+            <li>O (organization)</li>
+
+            <li>L (location)</li>
+
+            <li>ST (state)</li>
+
+            <li>C (country)</li>
+
+          </ul>
+<p>Separate the individual elements of the DN with commas.</p>
+<p>The process of integrating certificates is described in detail in the <em>Operator's Guide</em>.</p>
+
+      </li>
+<li class="stepexpand">
+        <span>To create the PSP, click <span class="uicontrol">Save</span>.</span>
+      </li>
+</ol>
+
+    <div class="section">
+      <p>The payment service provider is created. You can now continue with the following steps: </p>
+
+      <div class="p">
+        <ul>
+          <li>Configure the communication with the PSP. </li>
+
+          <li>Define the payment types the PSP offers to suppliers and resellers.</li>
+
+          <li>Assign payment types to supplier and reseller organizations. The suppliers and resellers, in turn, can then define which types of payment they offer to their customers. </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div>
+<div class="linklist"><strong>Related topics</strong><br/>
+
+<div><a href="operator_managePSPs.htm">Managing payment service providers</a></div>
+<div><a href="operator_manageOrganizations.htm">Managing organizations</a></div></div>
+</div>
+
+</body>
+</html>

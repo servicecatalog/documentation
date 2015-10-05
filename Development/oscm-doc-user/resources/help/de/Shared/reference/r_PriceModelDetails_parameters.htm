@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="de-de" lang="de-de">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Preise für Parameter und Optionen"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="reference832"/>
+<meta name="DC.Language" content="de-de"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>Preise für Parameter und Optionen</title>
+</head>
+<body id="reference832">
+
+
+        <h1 class="topictitle1">Preise für Parameter und Optionen</h1>
+
+        <div>
+                <div class="section">
+                        <p id="reference832__Ein_Preismodell_kann_Preise_f_reference_refbody_section_1">Ein Preismodell kann Preise für Serviceparameter und deren Optionen definieren. <span id="reference832__Ob_und_welche_Parameter_und_O_reference_refbody_section_1">Ob und welche Parameter und Optionen zur Auswahl stehen, ist abhängig von der Implementierung und Integration der zugrunde liegenden Anwendung.</span>
+                        </p>
+
+                        <p><span id="reference832__Für_jeden_Parameter_und_jede_reference_refbody_section_1">Für jeden Parameter und jede Option kann ein Preis festgelegt werden, der jeweils für ein Abonnement als ganzes oder pro Benutzer berechnet werden kann. Numerische Parameter sind Multiplikatoren für den angegebenen Preis. Bei booleschen Parametern mit dem Wert <samp class="codeph">true</samp> ist der Multiplikator <samp class="codeph">1</samp>. In allen anderen Fällen ist der Multiplikator <samp class="codeph">0</samp>.</span></p>
+
+                        <p>Wenn die Nutzungsgebühren für ein Abonnement pro Zeiteinheit abgerechnet werden und ein Kunde einen Parameterwert innerhalb einer Zeiteinheit ändert, wird die betroffene Zeiteinheit pro rata abgerechnet. Das heißt, dass dem Kunden exakt die Zeit in Rechnung gestellt wird, in der der Parameterwert gültig war. </p>
+
+                        <p><span id="reference832__Bei_numerischen_Parametern_is_reference_refbody_section_1">Bei numerischen Parametern ist eine Preisstaffelung pro Abonnement möglich: Abhängig von den Werten des Parameters können unterschiedliche Preise definiert werden.</span> Weitere Informationen finden Sie <a href="r_PriceModelDetails_stepped.htm">hier</a>.</p>
+
+                        <p id="reference832__Die_Preise_für_Parameter_und_reference_refbody_section_1">Die Preise für Parameter und Optionen sind unabhängig von anderen Preismodellelementen.</p>
+
+                </div>
+
+                <div class="section"><h4 class="sectiontitle">Beispiel</h4>
+                        
+                        <p>Im nachfolgenden Beispiel ist der Preis für den Parameter "Anzahl neuer Ordner" auf 4,00 € pro Ordner pro Abonnement festgelegt worden. Das Umbenennen von Ordnern kostet 1,00 € pro Tag für jeden zugewiesenen Benutzer. Die Beispielrechnung geht von 2 Benutzern aus, die dem Abonnement für einen Tag zugeordnet sind. Dies entspricht der Laufzeit des Abonnements. Der Kunde hat die Anzahl Ordner, die erstellt werden dürfen, beim Anlegen des Abonnements auf 45 begrenzt. </p>
+
+                        <p>Die Gebühren errechnen sich bei Abrechnung pro rata und bei Abrechnung pro Zeiteinheit wie folgt:</p>
+
+                        <p>(45 * 4,00 €) + (2 * 1,00 €) = 182,00 € </p>
+
+                        <p><strong>Gesamt: 182,00 €</strong></p>
+
+                        <p>Wenn die Benutzer dem Abonnement nicht über die gesamte Laufzeit des Abonnements zugeordnet sind, sondern nur einige Stunden, werden die Kosten wie folgt berechnet: </p>
+
+                        <p>Angenommen, Benutzer A ist dem Abonnement für 2 Stunden zugeordnet, Benutzer B für 4 Stunden. Dies ergibt eine Summe von 6 Stunden, was 25 % der Laufzeit des Abonnements (1 Tag) entspricht. Damit errechnen sich die anteiligen Kosten wie folgt:</p>
+
+                        <p>(45 * 4,00 €) + (<strong>0,25</strong> * 1,00 €) = 180,25 € </p>
+
+                        <p><strong>Gesamt: 180,25 €</strong>
+                        </p>
+
+                        <p>Wenn pro Zeiteinheit abgerechnet wird, belaufen sich die Kosten wieder auf <strong>182.00 €</strong>, weil der Tag voll in Rechnung gestellt wird.</p>
+
+                </div>
+
+        </div>
+
+
+</body>
+</html>

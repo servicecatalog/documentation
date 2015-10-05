@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="de-de" lang="de-de">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="Servicedefinition importieren"/>
+<meta name="DC.Relation" scheme="URI" content="techService_export.htm"/>
+<meta name="DC.Relation" scheme="URI" content="organization_manageSuppliers.htm"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="task634"/>
+<meta name="DC.Language" content="de-de"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>Servicedefinition importieren</title>
+</head>
+<body id="task634">
+
+
+    <h1 class="topictitle1">Servicedefinition importieren</h1>
+
+    <div>
+        <div class="section">
+            <p>Auf der Seite <span class="uicontrol">Servicedefinition importieren</span> können Sie eine XML-Datei mit einer Definition eines technischen Service importieren. Dies ist ein notwendiger Schritt, um eine Anwendung in die Plattform zu integrieren. </p>
+
+            <p>Wenn Sie einen technischen Service aktualisieren möchten, können Sie auch eine geänderte Servicedefinition gleichen Namens (ID) importieren. </p>
+
+            <p>Beachten Sie dabei folgendes:</p>
+
+            <ul>
+                <li class="liexpand">Wenn noch kein marktfähiger Service auf Basis des technischen Service definiert wurde, können Sie alle Eigenschaften des Service ändern.</li>
+
+                <li class="liexpand">Wenn bereits ein marktfähiger Service auf Basis des technischen Service definiert wurde, sind die folgenden Aktionen nicht möglich:<div class="p">
+                        <ul>
+                            <li>Parameter und deren Optionen ändern</li>
+
+                            <li>Ereignistypen ändern</li>
+
+                            <li>Parameter, Optionen und Ereignistypen löschen</li>
+
+                            <li>Abrechnungssystem ändern</li>
+
+                        </ul>
+
+                    </div>
+</li>
+
+                <li class="liexpand">Servicerollen können nicht gelöscht werden, wenn bereits rollenspezifische Preise definiert sind oder Benutzer mit einer Servicerolle einem Abonnement zugeordnet sind.</li>
+
+                <li class="liexpand">Wenn Sie versuchen ein unvollständiges XML herunterzuladen, wird das System einen Standardwert benutzten, wenn wa verfügbar ist wo der XML unvollständig ist. Wenn es nicht möglich ist, die Fehlermeldung <span class="uicontrol">XML unvollständig</span> wird sich zeigen und der Service wird nicht importiert.</li>
+
+                <li class="liexpand">Wenn Sie einen technischen Service mit falschen Werten zu importieren versuchen, wird sich die Fehlermeldung <span class="uicontrol">Falsches Attribut</span> zeigen und der Service wird nicht importiert.</li>
+
+            </ul>
+
+            <p>Auf der Seite <span class="uicontrol">Servicedefinition importieren</span> können Sie darüber hinaus prüfen, welche technischen Services aktuell verfügbar sind und wie sie definiert sind. </p>
+
+            <p>Informationen zu den XML-Dateien mit Servicedefinitionen finden Sie im Handbuch <em>Technology Provider's Guide</em>.</p>
+
+            <p><strong>So importieren Sie einen technischen Service</strong>:</p>
+
+        </div>
+
+        <ol><li class="stepexpand">
+                <span>Klicken Sie das Eingabefeld oder <span class="uicontrol">Durchsuchen</span>, um die Datei mit der Definition des technischen Service in Ihrem Dateisystem auszuwählen. </span>
+                 
+            </li>
+<li class="stepexpand">
+                <span>Starten Sie den Import mit <span class="uicontrol">Importieren</span>.</span>
+            </li>
+</ol>
+
+        <div class="section">Der importierte Service wird in die Liste der zur Verfügung stehenden Services aufgenommen. Legen Sie anschließend einen oder mehrere Serviceanbieter fest, die auf Basis Ihres technischen Service marktfähige Services definieren. <p>Um die Eigenschaften eines existierenden technischen Service zu überprüfen, klicken Sie den Eintrag für den Service in der Liste. Die Seite <span class="uicontrol">Service</span> wird angezeigt mit dem Namen des technischen Service, der Adresse des Provisioning Service, der Beschreibung, den Parameter- und Ereignisdefinitionen, den Servicerollen und den möglichen Operationen. </p>
+<p>Welche Parameter- und Ereignisdefinitionen, Servicerollen und Operationen zur Verfügung stehen, ist abhängig von der Implementierung der zugrunde liegenden Anwendung und ihrer Integration.</p>
+</div>
+
+    </div>
+
+    <div>
+<div class="linklist"><strong>Weitere Themen</strong><br/>
+
+<div><a href="techService_export.htm">Servicedefinition exportieren</a></div>
+<div><a href="organization_manageSuppliers.htm">Serviceanbieter verwalten</a></div></div>
+</div>
+
+</body>
+</html>

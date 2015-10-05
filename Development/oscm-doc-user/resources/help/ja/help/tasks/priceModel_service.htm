@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="ja-jp" lang="ja-jp">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="サービスの料金設定"/>
+<meta name="DC.Relation" scheme="URI" content="priceModel_customer.htm"/>
+<meta name="DC.Relation" scheme="URI" content="priceModel_subscription.htm"/>
+<meta name="DC.Relation" scheme="URI" content="priceModel_localize.htm"/>
+<meta name="DC.Relation" scheme="URI" content="priceModel_roles.htm"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="task634"/>
+<meta name="DC.Language" content="ja-jp"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>サービスの料金設定</title>
+</head>
+<body id="task634">
+
+
+  <h1 class="topictitle1">サービスの料金設定</h1>
+
+  <div>
+    <div class="section">
+      <p><span class="uicontrol">サービスの料金設定</span>ページでは、選択したサービスの料金設定を設定または更新できます。 </p>
+
+      <p>料金設定では、あるサービスを申し込むサービス利用部門が課金されるかどうか、いくら課金されるのかを設定します。料金設定の基本的な情報については、<a href="../../Shared/reference/r_PriceModelDetails.htm">ここ</a>をクリックしてください。 </p>
+
+      <p>すべてのサービスに対して、サービスを有効化しサービス利用部門が購入できるようにするには、サービスの料金設定が定義されている必要があります。サービスに対して定義できる料金設定は1つだけです。ただし、サービス利用部門固有の料金設定または購入済サービス固有の料金設定を定義することもできます。 </p>
+
+      <p><span class="uicontrol">サービスの料金設定</span>ページでサービス料金設定を更新するには、対象となるサービスを無効化する必要があります。既存の料金設定を更新する場合、変更内容で現在の値が上書されます。更新しても既存の購入済サービスには影響しません。変更は、サービスが再度公開されると新しい購入済サービスに対して有効になります。 </p>
+
+      <p>サービス仲介部門またはサービス提供代行部門にサービスを再提供設定を付与するのに際して、サービスの料金設定が必要となります。サービス仲介部門およびサービス提供代行部門はサービス提供部門が登録した料金設定を変更できません。ただし、サービス提供代行部門はサービス利用規約のみ独自のものを提供することができます。</p>
+
+      <p id="task634__If_you_update_a_price_model_f_task_taskbody_context_p_7">再提供設定を既に与えているサービスの料金設定を更新する場合、サービス仲介部門、サービス提供代行部門およびそれらのサービス利用部門に対してはすぐに変更した新しい料金が表示されます。公開されているサービスはすぐに新しい料金で提供されます。購入済サービスには更新による影響はありません。いずれの変更もそれ以降の新しい購入済サービスにのみ反映されます。</p>
+
+      <div class="p">
+        <div class="note"><span class="notetitle">注:</span> アクセス種別がエクスターナルアクセスの技術サービスに準拠したサービスポータルへ登録済のサービスでは、料金設定を定義する必要はありません。エスクターナルアクセス型では、アプリケーションがサービスを利用するサービス利用部門への課金方法を管理します。</div>
+
+      </div>
+
+      <p><strong>サービス料金設定を定義するには</strong>：</p>
+
+    </div>
+
+    <ol><li class="stepexpand">
+        <span id="task634__d640e40">料金設定を定義する対象サービスを<span class="uicontrol">サービスID</span>一覧から選択します。</span>
+      </li>
+<li class="stepexpand">
+        <span id="task634__d640e49">料金設定の計算方法を選択します。</span>
+         
+          <ul id="task634__d640e54">
+            <li class="liexpand"><span class="uicontrol">無料</span>: サービスは無料で提供されます。</li>
+
+            <li class="liexpand"><span class="uicontrol">従量課金</span>: サービスの使用時間をミリ秒単位として料金が計算されます。</li>
+
+            <li class="liexpand"><span class="uicontrol">定額</span>: 日、週などの時間単位で料金が計算されます。計算に用いる単位は<span class="uicontrol">課金単位</span>で設定します。</li>
+
+          </ul>
+
+          <p>無料サービスの場合はステップ8に進んでください。有料の場合はステップ3に進んでください。 </p>
+
+        
+      </li>
+<li class="stepexpand">
+        <span><span class="uicontrol">説明</span>には、料金設定に関する詳細な説明を入力します。例えば、料金設定を構成する各要素の詳細を提供します。</span>
+         
+          <p>サービスカタログからサービスの詳細を要求すると、サービスポータルへ登録済のサービスについての説明がサービス利用部門に表示されます。</p>
+
+          <p>料金設定をローカライズすると、後で異なる言語による説明も追加できます。</p>
+
+          <div class="note"><span class="notetitle">注:</span> <span>書式を変更する際は、エディタが提供するコントロールのみを使用してください。手作業でHTMLタグを入力したり外部のスタイルシートやコンテンツを参照すると、ページレイアウトがエラーになる場合があります。</span></div>
+
+        
+      </li>
+<li class="stepexpand">
+        <span>サービスを一定期間無料で提供する場合、無料試用期間を定義します。<span id="task634__d640e104">この期間が経過すると、サービスは自動的に有料サービスとなります。</span></span>
+         
+          <p><span class="uicontrol">無料試用期間の設定</span>チェックボックスを選択し、無料試用期間の日数を整数で入力します。</p>
+
+        
+      </li>
+<li class="stepexpand">
+        <span><strong>課金条件</strong>を指定します。以下の情報が含まれます。 </span>
+         
+          <ul>
+            <li class="liexpand" id="task634__d640e127"><strong>通貨</strong>: サービス利用部門がサービスを利用した際に生じる課金の通貨です。システム運用管理者がサポートされる通貨を定義します。購入済サービスの料金設定を定義しているときは通貨を変更できません。</li>
+
+            <li class="liexpand" id="task634__d640e132"><strong>課金単位</strong>: 課金対象となる時間単位。月ごと、週ごと、日ごと、あるいは時間ごとに料金を設定できます。この設定は定額料金の計算にも使用されます。購入済サービスの料金設定を定義しているときは課金単位を変更できません。</li>
+
+            <li class="liexpand" id="task634__d640e137"><strong>初期費用</strong>: サービスを申し込むときに支払う初期費用です。この手数料は、最初の請求期間の利用料金に追加されます。 </li>
+
+            <li class="liexpand" id="task634__d640e142"><strong>サービス契約単価</strong>: <span class="uicontrol">課金単位</span>フィールドに示した周期ごとに生じる購入済サービスの料金です。 </li>
+
+            <li class="liexpand"><span id="task634__d640e151"><strong>利用者単価</strong>: 購入済サービスに割り当てられた1利用者の時間単位あたりの料金です。時間単位は<span class="uicontrol">課金単位</span>フィールドで定義されます。この料金タイプでは「段階的な料金」を指定でき、利用者が購入済サービスに割り当てられた合計時間単位数に応じた割引率の設定が可能です。</span>: <ul>
+                <li class="liexpand">料金を入力するにはフィールドをクリックします。右側にプラス記号が表示されます。 </li>
+
+                <li class="liexpand">プラス記号をクリックして、上限数とその時間単位数に対する利用者単価を入力します。ここで上限数には、設定された利用者単価を適用する利用者が購入済サービスに割り当てられた合計時間単位数の上限値を定義します。</li>
+
+                <li class="liexpand">段階的な利用者単価と上限数の定義を続けます。プラス記号で段階的な料金を追加し、マイナス記号を使用して段階的な料金を削除します。</li>
+
+                <li class="liexpand">最後の<span class="uicontrol">利用者単価</span>入力フィールドでは、<span class="uicontrol">範囲フィールド</span>フィールドで先に指定した合計時間単位数を超えたときに適用する料金を定義します。 </li>
+
+              </ul>
+詳細については、<a href="../../Shared/reference/r_PriceModelDetails_stepped.htm">ここ</a>をクリックしてください。</li>
+
+          </ul>
+
+        
+      </li>
+<li class="stepexpand">
+        <span>サービスで定義した請求対象<strong>イベント</strong>の料金を指定します。 </span>
+         
+          <p><span>例えば、サービスに対する利用者のログインやログアウト、特定のトランザクションの完了、特定のデータの作成・削除などが含まれます。サービスの実装や統合により、利用できるイベントが異なります。</span></p>
+
+          <p>表に利用可能なイベントを示します。<span class="uicontrol">説明</span>欄に簡単な説明を表示できます。</p>
+
+          <div class="p">この料金タイプでは段階的な料金を指定できます。例えば、サービス利用中に発生したイベントの数に応じた割引率の設定も可能です。 <ul>
+              <li class="liexpand">料金を入力するにはフィールドをクリックします。右側にプラス記号が表示されます。 </li>
+
+              <li class="liexpand">プラス記号をクリックして、上限とイベント単価を入力します。範囲で、このイベント単価を適用するイベント数の上限値を設定します。</li>
+
+              <li class="liexpand">イベント単価と上限数の定義を行います。プラス記号で段階的な料金を追加し、マイナス記号を使用して段階的な料金を削除します。</li>
+
+              <li class="liexpand">最後の<span class="uicontrol">料金</span>入力フィールドでは、最後の<span class="uicontrol">範囲</span>フィールドで指定した数を超えた選択タイプのすべてのイベントに適用される料金を定義します。 </li>
+
+            </ul>
+詳細については、<a href="../../Shared/reference/r_PriceModelDetails_stepped.htm">ここ</a>をクリックしてください。 </div>
+
+        
+      </li>
+<li class="stepexpand">
+        <span><strong>パラメーターとオプション</strong>の料金を指定します。 </span>
+         
+          <p><span>サービスの実装や統合により、利用できるパラメーターやオプション、またそれらを利用できるかどうかが決定されます。</span></p>
+
+          <p>表に利用可能なパラメーターとオプションを示します。<span class="uicontrol">説明</span>欄に簡単な説明を表示できます。</p>
+
+          <p><span>さらに、これらの料金が購入済サービスごとに課金されるのか、購入済サービスに割り当てられている利用者ごとに課金されるのかを指定できます。数値パラメーターは料金に対する乗数を指定できます。ブールパラメーターでは、値が<samp class="codeph">true</samp>の場合に乗数は<samp class="codeph">1</samp>となります。それ以外の場合は、乗数は<samp class="codeph">0</samp>となります。</span></p>
+
+          <div class="p">数値型のパラメーター（整数型や長整数型の値を持つパラメーター）として、例えば数量割引を設定するために購入済サービスに段階的な料金を指定できます。 <ul>
+              <li class="liexpand">料金を入力するにはフィールドをクリックします。右側にプラス記号が表示されます。 </li>
+
+              <li class="liexpand">プラス記号をクリックして、上限と料金を入力します。上限には、その料金を適用する値の上限値を定義します。</li>
+
+              <li class="liexpand">料金と上限値の定義を行います。プラス記号で段階的な料金を追加し、マイナス記号を使用して段階的な料金を削除します。 </li>
+
+              <li class="liexpand">最後の<span class="uicontrol">単価</span>入力フィールドでは、最後の<span class="uicontrol">範囲</span>フィールドで指定した数を超えるすべてのパラメーターに適用する料金を定義します。 </li>
+
+            </ul>
+詳細については、<a href="../../Shared/reference/r_PriceModelDetails_stepped.htm">ここ</a>をクリックしてください。</div>
+
+        
+      </li>
+<li class="stepexpand">
+        <span>必要に応じて、<strong>サービス利用規約</strong>を編集します。サービス利用部門はサービスを利用する際にサービス利用規約を読んで、同意する必要があります。</span>
+         
+          <p>デフォルトでは、技術サービス開発部門のサービス利用規約が使用されます。このサービス利用規約を使用するか、別の規約を指定するか選択できます。 </p>
+
+          <p>料金設定をローカライズすることによって、後で他の言語でサービス利用規約を指定することもできます。</p>
+
+          <p>サービス提供代行部門は独自のサービス利用規約を設定してサービスを提供することができます。サービス提供部門が設定したサービス利用規約を使用するか、サービス提供代行部門が設定した別の文を使用するかを選択します。サービス利用規約を変更しても、サービス提供代行部門のサービス利用規約は変更されません。</p>
+
+        
+      </li>
+<li class="stepexpand">
+        <span>料金設定を保存するには、<span class="uicontrol">保存</span>をクリックします。 </span>
+      </li>
+<li class="stepexpand">
+        <span>料金設定の説明とサービス利用規約を別の言語で提供するには、<span class="uicontrol">ローカライズ</span>をクリックします。</span>
+      </li>
+<li class="stepexpand">
+        <span>アプリケーションに定義されたロールに料金を指定するには、<span class="uicontrol">サービスロールに料金を定義</span>をクリックします。請求期間の料金計算の際に、利用者ごとの基本料金にサービスロールに定義する料金が加算されます。 </span>
+      </li>
+</ol>
+
+    <div class="section">
+      <p>このサービスを再度公開すると、サービス利用部門は料金設定を参照できるようになります。すべての購入済サービスで有効になります。</p>
+
+      <p>サービス仲介部門またはサービス提供代行部門およびそれらのサービス利用部門に対してはサービス提供部門が変更した新しい料金が表示されます。</p>
+
+    </div>
+
+  </div>
+
+  <div>
+<div class="linklist"><strong>関連情報</strong><br/>
+
+<div><a href="priceModel_customer.htm">サービス利用部門向け料金設定</a></div>
+<div><a href="priceModel_subscription.htm">購入済サービスの料金設定変更</a></div>
+<div><a href="priceModel_localize.htm">料金設定の説明のローカライズ</a></div>
+<div><a href="priceModel_roles.htm">ロールごとの料金の定義</a></div></div>
+</div>
+
+</body>
+</html>

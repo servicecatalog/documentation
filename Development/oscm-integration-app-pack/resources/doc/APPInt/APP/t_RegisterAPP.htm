@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="Registering a Service Controller"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="task_E68E2024B1F6403AAA1130A39B1D4DCD"/>
+<meta name="DC.Language" content="en-us"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>Registering a Service Controller</title>
+</head>
+<body id="task_E68E2024B1F6403AAA1130A39B1D4DCD">
+
+
+    <h1 class="topictitle1">Registering a Service Controller</h1>
+
+    <div>
+        <div class="section">
+            <p>Each service controller needs to be registered with APP. Registration means entering the controller with its ID and its responsible organization in the <samp class="codeph">configurationsetting</samp> table of the <samp class="codeph">bssapp</samp> database. </p>
+
+            <p>The organization responsible for a service controller is usually your own organization. However, it may also be another organization with the technology provider role registered with <span>OSCM</span>. In the controller registration, you specify the organization ID. </p>
+
+            <p>You can register a service controller in one of the following ways:</p>
+
+            <ul>
+                <li class="liexpand"><strong>Using the Web interface of APP</strong>: <div class="p">
+                        <ol>
+                            <li>In a Web browser, access the base URL of APP, for example, <samp class="codeph">http://127.0.0.1:8880/oscm-app</samp>.</li>
+
+                            <li>
+                                <p>Log in with the ID and password of the user you specified for <samp class="codeph">BSS_USER_KEY</samp> in the APP <a href="r_ConfigSettings.htm">configuration settings</a> or as another administrator of the same organization. </p>
+
+                            </li>
+
+                            <li>Specify the IDs of the service controller and of the responsible organization.</li>
+
+                            <li>Click <span class="uicontrol">Save Configuration</span> to save the settings.</li>
+
+                        </ol>
+
+                    </div>
+</li>
+
+                
+                <li class="liexpand"><strong>Using a standard table editor or SQL statements</strong>:<p>Connect to the database with the user ID and password specified for the database access in the <samp class="codeph">db.properties</samp> file when <a href="../../Shared/Installation/t_InstConfiguring.htm">configuring APP</a>. In the <samp class="codeph">configurationsetting</samp> table, create the corresponding entries. The SQL statement to do this would be:</p>
+<p><samp class="codeph">INSERT INTO configurationsetting (controllerid, settingkey, settingvalue) VALUES ('&lt;controllerID&gt;', 'BSS_ORGANIZATION_ID', '&lt;organizationID&gt;';</samp>
+                    </p>
+<p>Example:</p>
+<p><samp class="codeph">INSERT INTO configurationsetting (controllerid, settingkey, settingvalue) VALUES ('mycontroller', 'BSS_ORGANIZATION_ID', 'baaf0c7d';</samp></p>
+</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>

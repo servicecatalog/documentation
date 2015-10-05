@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="Creating an organization"/>
+<meta name="DC.Relation" scheme="URI" content="../../Shared/reference/r_LDAP_SettingTypes.htm"/>
+<meta name="DC.Relation" scheme="URI" content="operator_manageLdapSettings.htm"/>
+<meta name="DC.Relation" scheme="URI" content="operator_manageOperatorRevenueShare.htm"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="OrgCreate"/>
+<meta name="DC.Language" content="en-us"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>Creating an organization</title>
+</head>
+<body id="OrgCreate">
+
+
+  <h1 class="topictitle1">Creating an organization</h1>
+
+  <div>
+    <div class="section"><p id="OrgCreate__On_the_task_taskbody_context_p_1">On the <span class="uicontrol">Create organization</span> page, you can create an organization and specify its role (technology provider, supplier, reseller, broker, or - implicitly - customer only). For every new organization, you must define a user who is to become its first administrator. This user can later register new users and assign roles to them.</p>
+<p>Depending on the role of the organization to be created, different fields are mandatory. For example, if you create a customer organization by specifying no role at all, this organization must be assigned a marketplace. The marketplace must already exist. For organizations with other roles, no marketplace assignment is required. </p>
+<p><strong>User authentication and management</strong></p>
+The platform supports the following authentication modes:<ul>
+        <li><strong>INTERNAL</strong> mode - users are authenticated against the <strong>platform</strong>: User IDs and passwords of an organization are created and maintained in the platform or in an existing LDAP system of the organization. <p id="OrgCreate__UserMgmt2">When maintained in the platform, the user data is stored in the platform's database. An organization's administrator can register new users, and, if required, request passwords to be reset by the operator. </p>
+<p id="OrgCreate__UserMgmt3">When using an LDAP system, an organization does not need to register its users manually with the platform. The organization's administrator can import the users from the LDAP system, thus automatically registering them with the platform. The users are managed in the LDAP system. The platform continuously synchronizes its information on the users. Connection settings have to be defined in a configuration file so that the platform can connect to the LDAP system.</p>
+<p id="OrgCreate__UserMgmt4">A mixture of maintaining users in the platform and in the LDAP system is not supported. In addition, the type of user management can no longer be changed once an organization has been created.</p>
+<p id="OrgCreate__UserMgmt5">The operator organization cannot use an external LDAP system. So you can always log in to the platform and change connection settings, for example if the LDAP system of an organization is not available and thus authentication against it is not possible.</p>
+<p id="OrgCreate__UserMgmt6">You can define default LDAP configuration settings for the entire platform. The settings in an organization's LDAP configuration file complement or replace the default settings. </p>
+</li>
+
+        <li><strong>SAML_SP</strong> mode - users are authenticated against an <strong>external authentication system</strong> (SAML 2.0 IdP): User IDs and passwords of an organization are created and maintained in the IdP. The platform acts as SAML 2.0 service provider.<p>For enabling users to access the platform, they must exist in the IdP and be registered with the same user ID with the platform.</p>
+
+        </li>
+
+      </ul>
+<p><strong>To create a new organization</strong>:</p>
+</div>
+
+    <ol><li class="stepexpand">
+        <span>Enter the following user data for the first administrator of the new organization.</span>
+         
+          <ul>
+            <li class="liexpand"><span class="uicontrol">Title</span>: Salutation, such as <samp class="codeph">Mr.</samp> or <samp class="codeph">Ms.</samp>
+            </li>
+
+            <li class="liexpand"><span class="uicontrol">First name</span>: The administrator's first name.</li>
+
+            <li class="liexpand"><span class="uicontrol">Last name</span>: The administrator's last name.</li>
+
+            <li class="liexpand"><span class="uicontrol">Email</span>: Email address of the organization's administrator. Notifications about the creation of the account and access information will be sent to this address. <p>The system checks whether the syntax of the given email address is valid, and whether the domain name corresponds to the standards as defined and maintained by the Internet Assigned Numbers Authority (IANA). </p>
+<p>Examples: <samp class="codeph">user.name@domain.arpa</samp>, <samp class="codeph">user.name@domain.org</samp>, <samp class="codeph">user@mycompany.lan.uk</samp></p>
+</li>
+
+            <li class="liexpand"><span class="uicontrol">Desired user ID</span>: User ID of the organization's administrator. User IDs are restricted to 100 characters and must not contain any of the following characters:<p><samp class="codeph">! " # $ % &amp; ' * + , / : ; &lt; = &gt; ? \ ^ `</samp>
+              </p>
+</li>
+
+            <li class="liexpand"><span class="uicontrol">Language</span>: Language in which the administrator will work by default. The user interface, available documentation, and emails will be presented to the administrator in the language specified here. The list of available languages depends on the languages you registered and activated. Click <a href="operator_manageLanguages.htm">here</a> for details. </li>
+
+          </ul>
+
+          <div class="note"><span class="notetitle">Note:</span> If the platform is installed in INTERNAL authentication mode and you create an organization with LDAP-based user management, the user ID must match an existing ID in the external LDAP system. The organization's LDAP configuration determines which additional settings are required. All settings defined in the configuration must be mapped to corresponding values, for example first name, last name, email address, and language.<p>If the platform is installed in SAML_SP authentication mode, the user ID must match an existing ID in the IdP. </p>
+</div>
+
+        
+      </li>
+<li class="stepexpand">
+        <span>Decide which roles are to be assigned to the organization by selecting the corresponding check boxes in the <span class="uicontrol">Organization role</span> section. You can assign multiple roles to the organization. If you do not select any of the provided roles, the organization will receive the customer role. In this case, you must specify the marketplace to which the customer organization will be directed.</span>
+         The reseller and broker roles cannot be combined with each other or with the technology provider or supplier role. 
+      </li>
+<li class="stepexpand">
+        <span>Enter the organization's additional data. Depending on the role of the organization to be created, different fields are available, and different entries are mandatory. </span>
+         
+          <div class="p">
+            <ul>
+              <li class="liexpand"><span class="uicontrol">Organization</span>. Name of the organization, for example the company name.</li>
+
+              <li class="liexpand"><span class="uicontrol">Email</span>. Email address for general communication with the organization. The organization can later specify a separate email address to which invoices can be sent.<p>The system checks whether the syntax of the given email address is valid, and whether the domain name corresponds to the standards as defined and maintained by the Internet Assigned Numbers Authority (IANA). </p>
+<p>Examples: <samp class="codeph">user.name@domain.arpa</samp>, <samp class="codeph">user.name@domain.org</samp>, <samp class="codeph">user@mycompany.lan.uk</samp></p>
+</li>
+
+              <li class="liexpand"><span class="uicontrol">Phone</span>. Telephone or mobile number of a contact person in the organization.</li>
+
+              <li class="liexpand"><span class="uicontrol">Website</span>. URL of the organization's website. This website can be accessed by customers when displaying details of the organization that offers a service they want to subscribe to. </li>
+
+              <li class="liexpand"><span class="uicontrol">Language</span>: Default language used in the organization.</li>
+
+              <li class="liexpand"><span class="uicontrol">Address</span> of the organization. The organization's administrator can later specify a different address to be printed on invoices.</li>
+
+              <li class="liexpand"><span class="uicontrol">Country</span> where the organization is located. </li>
+
+              <li class="liexpand"><span class="uicontrol">Description</span>: Description of the organization, for example information from the company's profile. <div class="p">
+                  <div class="note"><span class="notetitle">Note:</span> Make sure to use only the controls provided in the editor for formatting your text. Manually entered HTML tags and references to external style sheets or content may result in errors in the page layout.</div>
+
+                </div>
+</li>
+
+              <li class="liexpand">For a customer organization: <span class="uicontrol">Marketplace</span> to which the customer is to be directed.</li>
+
+              <li class="liexpand">For a supplier organization: <strong>Default operator rev. share (%)</strong>. This is the revenue share agreed between the operator and the supplier, which the operator is to receive from the supplier for selling services on the marketplaces managed on the operator's platform. The default operator revenue share applies to all services offered by the supplier as long as you do not define a service-specific revenue share using the <strong>Manage operator revenue share</strong> menu option in the <strong>Operation</strong> menu. It also applies irrespective of whether the supplier sells his services himself, or uses brokers or resellers for selling them. Discounts granted by a supplier to his customers are deducted from the revenue share. </li>
+
+              <li class="liexpand">For a technology provider, supplier, reseller, and/or broker organization:<p><span class="uicontrol">Profile image</span>: Image used on a marketplace. The profile image is shown as soon as a customer requests details of a service provided by this organization. </p>
+<p>Click in the <span class="uicontrol">Upload image</span> field or click <span class="uicontrol">Browse</span>, and select the file containing the desired image. Supported file formats are GIF, JPG, and PNG. The maximum size of the profile image is 154 x 154 pixels. The recommended size is 154 x 60 pixels. </p>
+</li>
+
+            </ul>
+
+          </div>
+
+        
+      </li>
+<li class="stepexpand">
+        <span>Define if the organization is to use LDAP-based user management by selecting the corresponding checkbox. </span>
+         <div class="p">
+            <div class="note"><span class="notetitle">Note:</span> This option is not available if the platform is installed in SAML-SP authentication mode.</div>
+
+          </div>
+When enabled, a table with the LDAP settings defined for the platform is shown. You must then specify the LDAP configuration file containing the settings required for connecting with the organization's LDAP system:<p>Create an LDAP configuration file on your file system, and define the LDAP connection settings in the file. To load the configuration file, click the <span class="uicontrol">LDAP settings</span> entry field or <span class="uicontrol">Browse</span>, and select the file containing the settings. </p>
+<p>Here is a sample configuration file: </p>
+
+          <div class="p" id="OrgCreate__LDAPSample">
+            <pre class="codeblock">LDAP_BASE_DN=ou\=people,dc\=est,dc\=mycompany,dc\=de
+LDAP_CONTEXT_FACTORY=com.sun.jndi.ldap.LdapCtxFactory
+LDAP_URL=ldap://myldapserver.lan.est.company.de:389
+LDAP_ATTR_UID=uid
+LDAP_ATTR_LAST_NAME=sn
+LDAP_ATTR_FIRST_NAME=givenName
+LDAP_ATTR_EMAIL=scalixEmailAddress
+LDAP_ATTR_REFERRAL=ignore</pre>
+
+          </div>
+<p>The defaults shown in the sample are defined for <samp class="codeph">LDAP_CONTEXT_FACTORY</samp> and <samp class="codeph">LDAP_ATTR_UID</samp>, i.e. if you do not specify a value, this default applies when creating the organization unless you have defined different ones in the default LDAP settings for the platform (<span class="uicontrol">Manage LDAP settings</span> menu option). </p>
+
+      </li>
+<li class="stepexpand">
+        <span>To save your entries, click <span class="uicontrol">Save</span>.</span>
+      </li>
+</ol>
+
+    <div class="section">
+      <p id="OrgCreate__The_new_organization_is_creat_task_taskbody_result_p">The organization is created with the specified administrator account. The administrator is notified by email that his account has been created. The email contains the URL for accessing the platform or the marketplace, as well as a user ID and password for the first login. </p>
+
+      <p>If the administrator's organization uses an external authentication system:</p>
+
+      <div class="p">
+        <ul>
+          <li>Passwords are managed in this system. Therefore, the administrator is sent an email without a password. The password stored in the external authentication system must be used for logging in.</li>
+
+          <li>If the user ID of the administrator already exists in the platform, his email address (e.g. <samp class="codeph">userSmith@organization.com</samp>) is used as user ID for logging in to the system. If yet another organization is created and the user ID of the administrator is again identical, the new user ID is constructed using the existing ID followed by the "at" sign (@) and the ID of the administrator's  organization (e.g. <samp class="codeph">userSmith@abcdefg</samp>). The administrator is sent an email with the respective user ID.</li>
+
+        </ul>
+
+      </div>
+
+      <p>The default organizational unit of the organization is also created. The administrator is the first member of this default unit. Any user who will be registered for the organization is automatically added to the default unit. Additional units can be created by the administrators of the organization.</p>
+
+    </div>
+
+  </div>
+
+  <div>
+<div class="linklist"><strong>Related topics</strong><br/>
+
+<div><a href="../../Shared/reference/r_LDAP_SettingTypes.htm">LDAP keys</a></div>
+<div><a href="operator_manageLdapSettings.htm">Managing LDAP settings</a></div>
+<div><a href="operator_manageOperatorRevenueShare.htm">Managing operator revenue share</a></div></div>
+</div>
+
+</body>
+</html>

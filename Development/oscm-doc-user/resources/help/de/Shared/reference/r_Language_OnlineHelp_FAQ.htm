@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="de-de" lang="de-de">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Online-Hilfe und FAQs"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="reference832"/>
+<meta name="DC.Language" content="de-de"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>Online-Hilfe und FAQs</title>
+</head>
+<body id="reference832">
+
+
+    <h1 class="topictitle1">Online-Hilfe und FAQs</h1>
+
+    <div>
+        <div class="section">
+            <p>Im Administrationsportal steht Online-Hilfe zu den einzelnen Seiten in der Sprache zur Verfügung, die der jeweilige Benutzer in seinem Profil eingestellt hat. Dies gilt auch für die FAQ-Datei, die als Hilfe zum Marktplatz angezeigt werden kann.</p>
+
+            <p>Die Online-Hilfe und die FAQ-Datei stehen nach der Installation in einer separaten <samp class="codeph">.war</samp>-Datei im Installation Package (<samp class="codeph">oscm-install-pack.zip</samp>) zur Verfügung:</p>
+
+            <p><samp class="codeph">&lt;install_pack_dir&gt;/domains/bes_domain/oscm-portal-help.war</samp>. </p>
+
+            <p>Sie können die vorhandene Online-Hilfe und die FAQ-Datei ändern und die Dateien in einer weiteren Sprache zur Verfügung stellen: </p>
+
+            <div class="p">
+                <ol>
+                    <li class="liexpand">Extrahieren Sie den Inhalt der <samp class="codeph">oscm-portal-help.war</samp>-Datei in ein separates Verzeichnis in Ihrem Dateisystem.<p>Die Verzeichnisstruktur ist wie folgt: </p>
+<p><img src="../_images/HelpFAQ.png" width="415" height="372" alt="HelpFAQ.png"/><br/></p>
+<p>Durch die Installation sind standardmäßig folgende Sprachen vorhanden: Englisch (en), Deutsch (de) und Japanisch (ja). Sie können die Texte in den jeweiligen Unterverzeichnissen bearbeiten. Hierzu gehen Sie genauso vor, wie wenn Sie die Texte in einer neuen Sprache zur Verfügung stellen (siehe unten).</p>
+</li>
+
+                    <li class="liexpand">Kopieren Sie das Verzeichnis <samp class="codeph">help/en</samp> und legen Sie den Namen für die Kopie wie folgt fest: <samp class="codeph">help/<em>&lt;ISO code&gt;</em></samp>. <p>Kopieren Sie das Verzeichnis <samp class="codeph">faq/en</samp> und legen Sie den Namen für die Kopie wie folgt fest: <samp class="codeph">faq/<em>&lt;ISO code&gt;</em></samp>.</p>
+<p>Der ISO-Sprachcode gibt die Sprache an, in die Sie übersetzen wollen. Fügen Sie zum Beispiel den beiden Verzeichnissen <samp class="codeph">help</samp> und <samp class="codeph">faq</samp> jeweils ein Unterverzeichnis <samp class="codeph">cs</samp> (für Tschechisch) hinzu. Informationen zu den unterstützten Sprachcodes finden Sie <span><a href="../../Shared/reference/r_Language_Codes.htm">hier</a>.</span></p>
+<p>Die Verzeichnisstruktur sieht nun wie folgt aus: </p>
+<p><img src="../_images/HelpFAQ_sample.png" width="415" height="381" alt="HelpFAQ_sample.png"/><br/></p>
+
+                    </li>
+
+                    <li class="liexpand">Übersetzen Sie die HTML-Dateien. <p>Beachten Sie dabei folgendes:</p>
+<div class="p">
+                            <ul>
+                                <li class="liexpand">Ändern Sie nicht das Style Sheet oder Symbolbilder. </li>
+
+                                <li class="liexpand">Löschen Sie keine Dateien, auch wenn Sie sie nicht übersetzen. </li>
+
+                                <li class="liexpand">Stellen Sie sicher, dass die HTML-Dateien keine ungültigen Daten enthalten und sich keine Fehler im Seitenlayout ergeben.</li>
+
+                                <li class="liexpand">Verwenden Sie zum Testen der Übersetzungen eine separate Umgebung.</li>
+
+                                <li class="liexpand">Die in der Online-Hilfe verwendeten Bilder können Sie wie folgt übersetzen: <div class="p">
+                                        <ol type="a">
+                                            <li>Erstellen Sie das Bild mit einem Zeichenprogramm. </li>
+
+                                            <li>Speichern Sie das Bild unter dem Dateinamen, der auf der zugehörigen HTML-Seite referenziert wird, im Verzeichnis <samp class="codeph">Shared\_images</samp>. </li>
+
+                                            <li>Überprüfen Sie die Größe des Bildes in der HTML-Datei und passen Sie sie gegebenenfalls an. </li>
+
+                                        </ol>
+
+                                    </div>
+</li>
+
+                            </ul>
+
+                        </div>
+</li>
+
+                    <li class="liexpand">Erstellen Sie eine neue Datei <samp class="codeph">oscm-portal-help.war</samp>, die die zusätzlichen Verzeichnisse für die neue Sprache enthält. </li>
+
+                    <li class="liexpand">Deinstallieren Sie zunächst und installieren Sie anschließend die neue, geänderte Datei <samp class="codeph">oscm-portal-help.war</samp> in der Domäne <samp class="codeph">bes-domain</samp> auf dem Application Server. Weitere Informationen finden Sie im <em>Installation Guide</em>. <p>Durch die Installation der Datei werden existierende HTML-Dateien überschrieben.</p>
+</li>
+
+                </ol>
+
+            </div>
+
+            <div class="p">
+                <div class="note"><span class="notetitle">Hinweis:</span> Achten Sie darauf, dass die Verzeichnisstrukturen und Dateien konsistent bleiben!</div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>

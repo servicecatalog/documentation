@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Integrating a Payment Service Provider with OSCM"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="concept_1BCF5C425D7D4627AB1C66A085CF6E11"/>
+<meta name="DC.Language" content="en-us"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>Integrating a Payment Service Provider with OSCM</title>
+</head>
+<body id="concept_1BCF5C425D7D4627AB1C66A085CF6E11">
+
+
+    <h1 class="topictitle1">Integrating a Payment Service Provider with <span>OSCM</span></h1>
+
+    <div>
+        <div class="section">
+            <p><span>OSCM</span> provides a Web service interface (payment service) by which operator organizations can integrate payment service providers (PSP) with it. </p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">Communication Between <span>OSCM</span> and a PSP</h4>
+            
+            <p>The following figure illustrates the communication paths between <span>OSCM</span> and a PSP for the case that a customer needs to specify new payment information with the PSP:</p>
+
+            <div class="fignone">
+                <img src="../../Shared/_images/IntegrationPSP.png"/><br/>
+            </div>
+
+            <p>The sequence of request and response calls is as follows:</p>
+
+            <ol>
+                <li>A client accesses the page in <span>OSCM</span> where customers define their payment information.</li>
+
+                <li><span>OSCM</span> performs a synchronous request call to the PSP via the payment service and the PSP integration adapter. <span>OSCM</span> provides the required data and a URL which is used later in the response call.</li>
+
+                <li>The PSP creates a new session and returns the URL of its registration page. </li>
+
+                <li>The client is redirected to the registration page of the PSP. On this page, the user can enter the payment information. The PSP stores all data provided with the request call, so that they can be returned with the response call. The communication for registering with the PSP and providing the payment information is performed directly between the client and the PSP without involving <span>OSCM</span> or the PSP integration adapter. </li>
+
+                <li>The response call from the PSP to <span>OSCM</span> is carried out via the callback component which passes the PSP-specific data to <span>OSCM</span>. This call must be received on port 80 (HTTP) or 443 (HTTPS). The call may include parameters which are not interpreted by the PSP, for example, the customer organization ID. These parameters are provided by <span>OSCM</span> with the request call.</li>
+
+                <li><span>OSCM</span> evaluates the result of the registration and returns a URL to the PSP for redirecting the client to a success or a failure page. </li>
+
+                <li>The PSP passes this URL to the client and redirects the client to the page. The page only displays a message indicating whether the operation succeeded or failed. This has no effects on current <span>OSCM</span> sessions. </li>
+
+            </ol>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">Overview of PSP Integration Tasks</h4>
+            
+            <p>Integrating a payment service provider with <span>OSCM</span> involves the following implementation tasks: </p>
+
+            <ul>
+                <li>Implement a PSP integration adapter </li>
+
+                <li>Implement a callback component</li>
+
+            </ul>
+
+            <p>These steps are described in detail in the following topics: </p>
+
+            <ul>
+                <li><a href="t_ImplPSP.htm">Implementing a PSP Integration Adapter</a></li>
+
+                <li><a href="t_ImplPSPServlet.htm">Implementing a Callback Component</a></li>
+
+            </ul>
+
+            <p>The integration of a PSP involves additional tasks which must be performed by an operator. For details, refer to the <em>Operator's Guide</em>.</p>
+
+        </div>
+
+    </div>
+
+<div>
+<hr align="left" width="100%"/>
+<p>Copyright FUJITSU LIMITED 2015</p>
+</div>
+</body>
+</html>

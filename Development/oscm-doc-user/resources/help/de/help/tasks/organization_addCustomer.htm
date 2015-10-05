@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="de-de" lang="de-de">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="Kunden registrieren"/>
+<meta name="DC.Relation" scheme="URI" content="../../Shared/reference/r_LDAP_SettingTypes.htm"/>
+<meta name="DC.Relation" scheme="URI" content="organization_managePaymentEnablement.htm"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="task634"/>
+<meta name="DC.Language" content="de-de"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>Kunden registrieren</title>
+</head>
+<body id="task634">
+
+
+    <h1 class="topictitle1">Kunden registrieren</h1>
+
+    <div>
+        <div class="section">
+            <p>Auf der Seite <span class="uicontrol">Kunden registrieren</span> können Sie Ihre Kunden registrieren, so dass diese sich nicht selbst registrieren müssen.</p>
+
+            <p>Durch die Registrierung eines Kunden wird eine neue Organisation und ein Benutzerkonto für den ersten Administrator des Kunden angelegt. Der Administrator erhält per E-Mail alle notwendigen Informationen zur Anmeldung. Zusätzlich wird die Standard-Organisationseinheit für die Organisation angelegt. Der Administrator ist der erste Benutzer, der dieser Einheit zugeordnet ist. Jeder weitere Benutzer, der für die Organisation registriert wird, wird ihr automatisch zugeordnet. Administratoren der Organisation können weitere Organisationseinheiten anlegen.</p>
+
+            <p>Voraussetzung für das Registrieren eines Kunden ist, dass der Marktplatz, den der Kunde besuchen soll, bereits angelegt ist.</p>
+
+            <p><strong>So registrieren Sie neue Kunden</strong>:</p>
+
+        </div>
+
+        <ol><li class="stepexpand">
+                <span>Geben Sie die folgenden Benutzerdaten für den ersten Administrator des Kunden ein. </span>
+                 
+                    <ul>
+                        <li class="liexpand"><span class="uicontrol">Anrede</span>: Anrede oder Titel, zum Beispiel <samp class="codeph">Herr</samp> oder <samp class="codeph">Frau</samp>.</li>
+
+                        <li class="liexpand"><span class="uicontrol">Vorname</span> des Administrators.</li>
+
+                        <li class="liexpand"><span class="uicontrol">Nachname</span> des Administrators.</li>
+
+                        <li class="liexpand"><span class="uicontrol">E-Mail</span>: E-Mail-Adresse des Administrators. Sie wird verwendet, um den Administrator über die erfolgreiche Registrierung zu informieren.<p>Das System validiert, ob die Syntax der E-Mail-Adresse gültig ist und ob der Domain-Name den Standards der Internet Assigned Numbers Authority (IANA) entspricht. </p>
+<p>Beispiele: <samp class="codeph">user.name@domain.arpa</samp>, <samp class="codeph">user.name@domain.org</samp>, <samp class="codeph">user@mycompany.lan.uk</samp></p>
+</li>
+
+                        <li class="liexpand"><span class="uicontrol">Gewünschter Benutzername</span>: Name, mit dem sich der Administrator an der Plattform anmeldet. Benutzernamen dürfen aus maximal 100 Zeichen bestehen. Die folgenden Zeichen sind nicht erlaubt:<p><samp class="codeph">! " # $ % &amp; ' * + , / : ; &lt; = &gt; ? \ ^ `</samp>
+                            </p>
+<div class="p">
+                                <div class="note"><span class="notetitle">Hinweis:</span> Wenn der Kunde ein externes System zur Benutzerauthentifizierung verwendet, muss der Benutzername mit einem Benutzernamen im externen System übereinstimmen.</div>
+
+                            </div>
+</li>
+
+                        <li class="liexpand"><span class="uicontrol">Sprache</span>: Sprache, in der der Administrator arbeitet. In dieser Sprache werden dem Administrator die Benutzeroberfläche, Dokumentation und E-Mails angezeigt. Der Administrator kann die Sprache später ändern. Der Plattform-Betreiber definiert, welche Sprachen unterstützt werden.</li>
+
+                    </ul>
+
+                
+            </li>
+<li class="stepexpand">
+                <span>Geben Sie die folgenden Daten für die Kundenorganisation ein. Sobald Sie den Kunden registriert haben, können die Daten nur noch von Administratoren der neuen Organisation bearbeitet werden. Sie müssen also als Administrator des Kunden registriert sein, wenn Sie die Daten in Zukunft bearbeiten möchten.</span>
+                 
+                    <ul>
+                        <li class="liexpand"><span class="uicontrol">Organisation</span>: Name der Organisation, zum Beispiel der Firmenname.</li>
+
+                        <li class="liexpand"><span class="uicontrol">E-Mail</span>: E-Mail-Adresse der Organisation für den allgemeinen E-Mail-Verkehr. Die Organisation kann später auch eine E-Mail-Adresse für Rechnungen hinterlegen. <p>Das System validiert, ob die Syntax der E-Mail-Adresse gültig ist und ob der Domain-Name den Standards der Internet Assigned Numbers Authority (IANA) entspricht. </p>
+<p>Beispiele: <samp class="codeph">user.name@domain.arpa</samp>, <samp class="codeph">user.name@domain.org</samp>, <samp class="codeph">user@mycompany.lan.uk</samp></p>
+</li>
+
+                        <li class="liexpand"><span class="uicontrol">Telefon</span>: Telefonnummer der Organisation.</li>
+
+                        <li class="liexpand"><span class="uicontrol">Webseite</span>: URL der Webseite der Organisation.</li>
+
+                        <li class="liexpand"><span class="uicontrol">Adresse</span> der Organisation.</li>
+
+                        <li class="liexpand"><span class="uicontrol">Land</span>, in dem die Organisation ansässig ist. <p>Das Land bestimmt den Mehrwertsteuersatz, auf dessen Grundlage die Rechnungsdaten für den Kunden berechnet werden, vorausgesetzt, es wurde ein länderspezifischer Mehrwertsteuersatz definiert.</p>
+</li>
+
+                        <li class="liexpand"><span class="uicontrol">Beschreibung</span> der Organisation. Die Beschreibung kann beispielsweise Informationen aus dem Unternehmensprofil bereitstellen.<p>Die Beschreibung wird in der in Ihrem Benutzerprofil eingestellten Sprache gespeichert. Um den Text in einer anderen Sprache zu hinterlegen, ändern Sie die Sprache in Ihrem Benutzerprofil und geben dann die entsprechende Übersetzung ein.</p>
+<div class="p">
+                                <div class="note"><span class="notetitle">Hinweis:</span> Verwenden Sie ausschließlich die Funktionen des Editors, um Textformatierungen vorzunehmen. Direkte HTML-Codierungen im Text sowie Verweise auf externe HTML-Stylesheets oder -Inhalte werden nicht ausgewertet und können zu Fehlern im Seitenlayout führen.</div>
+
+                            </div>
+</li>
+
+                    </ul>
+
+                
+            </li>
+<li class="stepexpand">
+                <span>Markieren Sie <span class="uicontrol">LDAP-basierte Nutzerverwaltung</span>, wenn der Kunde ein LDAP-System zur Benutzerauthentifizierung verwendet. </span>
+                 
+                    <div class="note"><span class="notetitle">Hinweis:</span> Wird ein SAML 2.0 Identity Provider verwendet, steht diese Option nicht zur Verfügung. </div>
+
+                    <p>Legen Sie eine LDAP-Konfigurationsdatei auf Ihrem Rechner an und definieren Sie die LDAP-Verbindungseinstellungen in dieser Datei. Um die Einstellungen zu laden, klicken Sie das Feld <span class="uicontrol">LDAP-Einstellungen</span> oder <span class="uicontrol">Durchsuchen</span> und wählen die Datei. Wenn Sie keine Konfigurationsdatei für den Kunden laden, werden die systemweiten LDAP-Konfigurationseinstellungen verwendet.</p>
+
+                    <p>Wenn ein LDAP-System verwendet wird, muss Ihr Kunde seine Benutzer nicht manuell auf der Plattform registrieren. Der Administrator des Kunden kann die Benutzer aus dem LDAP-System importieren und sie so automatisch auf der Plattform registrieren.</p>
+
+                    <p>Nachfolgend sehen Sie ein Beispiel für eine LDAP-Konfigurationsdatei:</p>
+
+                    <div class="p">
+                        <pre class="codeblock">LDAP_BASE_DN=ou\=people,dc\=est,dc\=mycompany,dc\=de
+LDAP_CONTEXT_FACTORY=com.sun.jndi.ldap.LdapCtxFactory
+LDAP_URL=ldap://myldapserver.lan.est.company.de:389
+LDAP_ATTR_UID=uid
+LDAP_ATTR_LAST_NAME=sn
+LDAP_ATTR_FIRST_NAME=givenName
+LDAP_ATTR_EMAIL=scalixEmailAddress
+LDAP_ATTR_REFERRAL=ignore</pre>
+
+                    </div>
+
+                    <p>Die im Beispiel gezeigten Werte für <samp class="codeph">LDAP_CONTEXT_FACTORY</samp> und <samp class="codeph">LDAP_ATTR_UID</samp> sind vordefinierte Standardwerte. Das bedeutet, wenn Sie hier keinen Wert angeben, wird dieser Standardwert beim Anlegen der Organisation verwendet, sofern der Plattform-Betreiber keine anderen, systemweit geltenden Werte definiert hat.</p>
+
+                
+            </li>
+<li class="stepexpand">
+                <span>Wählen Sie in der Liste <span class="uicontrol">Marktplatz</span> den Marktplatz, den der neue Kunde besuchen soll.</span>
+                 Die Liste stellt alle Marktplätze zur Auswahl, auf denen Sie als Serviceanbieter oder Wiederverkäufer Services veröffentlichen können.
+            </li>
+<li class="stepexpand">
+                <span>Schließen Sie die Registrierung mit <span class="uicontrol">Speichern</span> ab.</span>
+            </li>
+</ol>
+
+        <div class="section">
+            <p>Nach einer erfolgreichen Registrierung erhält der Administrator des Kunden eine E-Mail mit der Marktplatz-URL sowie seinen Anmeldedaten und einem Passwort für die erste Anmeldung. </p>
+
+            <p>Verwendet der Kunde ein externes Authentifizierungssystem, beachten Sie folgends: </p>
+
+            <div class="p">
+                <ul>
+                    <li>Passwörter werden in diesem System verwaltet. Daher enthält die E-Mail an den Administrator kein Passwort. Der Administrator muss für die Anmeldung das im externen System hinterlegte Passwort verwenden.</li>
+
+                    <li>Existiert der Benutzername des Administrators bereits im System, wird seine E-Mail-Adresse (z.B. <samp class="codeph">Schmitt@organisation.com</samp>) als Benutzername verwendet, um sich am System anzumelden. Wird eine weitere Kundenorganisation registriert und der Benutzername des Administrators ist wiederum identisch, wird der neue Benutzername aus dem Benutzernamen, gefolgt vom "AT"-Zeichen (@) und der ID der Kundenorganisation (z.B. <samp class="codeph">Schmitt@abcdefg</samp>)zusammengesetzt. Der Administrator erhält eine E-Mail mit dem entsprechenden Benutzernamen.</li>
+
+                </ul>
+
+            </div>
+
+            <p>Als Serviceanbieter oder Wiederverkäufer müssen Sie als nächstes die Zahlungsarten für den Kunden festlegen, damit er beim Abonnieren von Services eine Zahlungsart auswählen kann. </p>
+
+        </div>
+
+    </div>
+
+    <div>
+<div class="linklist"><strong>Weitere Themen</strong><br/>
+
+<div><a href="../../Shared/reference/r_LDAP_SettingTypes.htm">LDAP-Einstellungen</a></div>
+<div><a href="organization_managePaymentEnablement.htm">Zahlungsarten verwalten</a></div></div>
+</div>
+
+</body>
+</html>

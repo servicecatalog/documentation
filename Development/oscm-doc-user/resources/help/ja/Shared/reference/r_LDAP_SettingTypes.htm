@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="ja-jp" lang="ja-jp">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="LDAPキー"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="reference832"/>
+<meta name="DC.Language" content="ja-jp"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>LDAPキー</title>
+</head>
+<body id="reference832">
+
+
+    <h1 class="topictitle1"><span>LDAPキー</span></h1>
+
+    <div>
+        <div class="section">
+            <p>組織のLDAPシステムにアクセスするためには、設定ファイルで以下のキーを定義する必要があります。 </p>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="border" border="1" rules="all">
+                    
+                    
+                    <tbody>
+                        <tr valign="top">
+                            <td class="cellrowborder" align="left" valign="top" width="41.66666666666667%"><strong>キー</strong></td>
+
+                            <td class="cellrowborder" align="left" valign="top" width="58.333333333333336%"><strong>説明</strong></td>
+
+                        </tr>
+
+                        <tr>
+                            <td class="cellrowborder" align="left" valign="top" width="41.66666666666667%">LDAP_URL</td>
+
+                            <td class="cellrowborder" align="left" valign="top" width="58.333333333333336%">必須項目です。LDAPサーバのプロバイダURLです。このLDAPサーバは、利用者の認証に使用されます。<p>例:</p>
+<p><samp class="codeph">LDAP_URL=ldap://myldapserver.lan.est.company.de:389</samp></p>
+</td>
+
+                        </tr>
+
+                        <tr>
+                            <td class="cellrowborder" align="left" valign="top" width="41.66666666666667%">LDAP_BASE_DN</td>
+
+                            <td class="cellrowborder" valign="top" width="58.333333333333336%">必須項目です。利用者の検索を開始するLDAPディレクトリツリーの位置です。<p>例：<samp class="codeph">LDAP_BASE_DN=ou=people,dc=est,dc=mycompany,dc=de</samp></p>
+</td>
+
+                        </tr>
+
+                        <tr>
+                            <td class="cellrowborder" align="left" valign="top" width="41.66666666666667%">LDAP_PRINCIPAL</td>
+
+                            <td class="cellrowborder" align="left" valign="top" width="58.333333333333336%">オプション項目です。LDAPサーバに問い合わせできる利用者名です。 <p>例：<samp class="codeph">LDAP_PRINCIPAL=uid=admin,ou=system</samp></p>
+</td>
+
+                        </tr>
+
+                        <tr valign="top">
+                            <td class="cellrowborder" align="left" valign="top" width="41.66666666666667%">LDAP_CREDENTIALS</td>
+
+                            <td class="cellrowborder" align="left" valign="top" width="58.333333333333336%">オプション項目です。LDAPサーバに問い合わせできる利用者のパスワードです。 <p>例：<samp class="codeph">LDAP_CREDENTIALS=secret</samp></p>
+</td>
+
+                        </tr>
+
+                        <tr>
+                            <td class="cellrowborder" align="left" valign="top" width="41.66666666666667%">LDAP_ATTR_UID</td>
+
+                            <td class="cellrowborder" align="left" valign="top" width="58.333333333333336%">必須項目です。利用者IDを読み込むLDAP属性です。システム運用管理者がプラットフォームのデフォルトのLDAP設定に異なる値を設定していない場合、<samp class="codeph">uid</samp>が組織の登録時にデフォルトとして使用されます。<p>例：<samp class="codeph">LDAP_ATTR_UID=uid</samp></p>
+</td>
+
+                        </tr>
+
+                        <tr valign="top">
+                            <td class="cellrowborder" align="left" valign="top" width="41.66666666666667%">LDAP_ATTR_EMAIL</td>
+
+                            <td class="cellrowborder" align="left" valign="top" width="58.333333333333336%">オプション項目です。利用者のメールアドレスを読み込むLDAP属性です。 <p>例：<samp class="codeph">LDAP_ATTR_EMAIL=scalixEmailAddress</samp></p>
+</td>
+
+                        </tr>
+
+                        <tr valign="top">
+                            <td class="cellrowborder" align="left" valign="top" width="41.66666666666667%">LDAP_ATTR_FIRST_NAME</td>
+
+                            <td class="cellrowborder" align="left" valign="top" width="58.333333333333336%">オプション項目です。利用者の名を読み込むLDAP属性です。<p>例：<samp class="codeph">LDAP_ATTR_FIRST_NAME=givenName</samp></p>
+</td>
+
+                        </tr>
+
+                        <tr valign="top">
+                            <td class="cellrowborder" align="left" valign="top" width="41.66666666666667%">LDAP_ATTR_LAST_NAME</td>
+
+                            <td class="cellrowborder" align="left" valign="top" width="58.333333333333336%">オプション項目です。利用者の姓を読み込むLDAP属性です。<p>例：<samp class="codeph">LDAP_ATTR_LAST_NAME=sn</samp></p>
+</td>
+
+                        </tr>
+
+                        <tr valign="top">
+                            <td class="cellrowborder" align="left" valign="top" width="41.66666666666667%">LDAP_ATTR_LOCALE</td>
+
+                            <td class="cellrowborder" align="left" valign="top" width="58.333333333333336%">オプション項目です。利用者に保存されるデフォルトの言語を読み込むLDAP属性です。 <p>例：<samp class="codeph">LDAP_ATTR_LOCALE=locale</samp></p>
+</td>
+
+                        </tr>
+
+                        <tr>
+                            <td class="cellrowborder" align="left" valign="top" width="41.66666666666667%">LDAP_CONTEXT_FACTORY</td>
+
+                            <td class="cellrowborder" align="left" valign="top" width="58.333333333333336%">必須項目です。LDAPサーバに問い合わせをするAPIを提供するコンテキストファクトリです。システム運用管理者がプラットフォームのデフォルトのLDAP設定に異なる値を設定していない場合、<samp class="codeph">com.sun.jndi.ldap.LdapCtxFactory</samp>が組織の登録時にデフォルトとして使用されます。<p>例：<samp class="codeph">LDAP_CONTEXT_FACTORY=com.sun.jndi.ldap.LdapCtxFactory</samp></p>
+</td>
+
+                        </tr>
+
+                        <tr>
+                            <td class="cellrowborder" align="left" valign="top" width="41.66666666666667%">LDAP_ATTR_REFERRAL</td>
+
+                            <td class="cellrowborder" align="left" valign="top" width="58.333333333333336%">オプション項目です。LDAP紹介をどのように処理するかを定義する属性です。 <p>組織がサブドメインを持つActive Directoryを使い、サブドメインから利用者を<span>プラットフォーム</span>にインポートする場合、紹介としてサブドメインを使うことができます。 この意味では、紹介は他のディレクトリパーティションまたはサブドメインへの参照となります。デフォルトでは紹介からは利用者はインポートされません。</p>
+この属性には次の値を設定することができます: <p><samp class="codeph">follow</samp>: 紹介を行います。 利用者はすべての参照ディレクトリパーティションまたはサブドメインからインポートされます。</p>
+<p><samp class="codeph">ignore</samp>: 紹介を無視します(デフォルト)。ユーザーは現在のドメインのディレクトリからだけインポートされます。</p>
+<p>例: <samp class="codeph">LDAP_ATTR_REFERRAL=ignore</samp></p>
+</td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="de-de" lang="de-de">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Texte der Benutzeroberfläche"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="reference832"/>
+<meta name="DC.Language" content="de-de"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>Texte der Benutzeroberfläche</title>
+</head>
+<body id="reference832">
+
+
+    <h1 class="topictitle1">Texte der Benutzeroberfläche </h1>
+
+    <div>
+        <div class="section">
+            <p>Die Texte der Benutzeroberfläche werden in einer Microsoft Excel-Datei übersetzt oder aktualisiert. Sie erstellen solch eine Datei mit der Option <span class="uicontrol">Exportieren</span> auf der Seite <span class="uicontrol">Sprachen verwalten</span>. </p>
+
+            <p>Die exportierte Microsoft Excel-Datei enthält drei Arbeitsblätter: </p>
+
+            <div class="p">
+                <ul>
+                    <li class="liexpand"><span class="uicontrol">User interface</span>: Alle Texte und Meldungen, die auf der Benutzeroberfläche des Administrationsportals und der Marktplätze sichtbar sind.</li>
+
+                    <li class="liexpand"><span class="uicontrol">Email</span>: Betreff und Inhalt aller E-Mails, die von der Plattform automatisch generiert und verschickt werden.</li>
+
+                    <li class="liexpand"><span class="uicontrol">Platform objects</span>: Namen von Serviceparametern, Ereignissen, Berichten und Zahlungsarten, die von der Plattform bereitgestellt werden. Die Parameter- und Ereignisnamen sind für Serviceanbieter sichtbar, wenn Sie einen marktfähigen Service definieren, sowie für alle Benutzer, wenn sie einen Service abonnieren.</li>
+
+                </ul>
+
+            </div>
+
+            <p> </p>
+
+            <p>Jedes Arbeitsblatt enthält fünf Spalten:</p>
+
+            <div class="p">
+                <ul>
+                    <li class="liexpand"><span class="uicontrol">Key</span>: Schlüssel, über den die Plattform den zugehörigen Text eindeutig ausliest. Der Schlüssel darf nicht verändert werden.</li>
+
+                    <li class="liexpand"><strong>de system</strong>, <strong>en system</strong>, <strong>ja system</strong>: Die Standardsprachen der Plattform, die als Sprachpakete nach der Installation vorhanden sind (Deutsch, Englisch, Japanisch). Die Texte in den Standardsprachen können für die Übersetzung als Referenz verwendet werden. </li>
+
+                    <li class="liexpand"><strong>Add your language code here</strong> oder <strong><em>&lt;Language Code&gt;</em></strong>: In diese Spalte tragen Sie die Texte der neuen Sprache ein, die unterstützt werden soll.<p><strong>Add your language code here</strong> wird angezeigt, wenn Sie auf der Seite <strong>Sprachen verwalten</strong> beim Starten des Exports keine Sprache ausgewählt hatten, d.h. Sie wollen in der Regel eine neue Sprache bereitstellen. Die Spalte ist leer.</p>
+<p>Wenn Sie auf der Seite <strong>Sprachen verwalten</strong> eine Sprache ausgewählt haben, ist der Sprachcode für diese Sprache als Spaltenüberschrift eingetragen. In diesem Fall bearbeiten Sie die Texte der ausgewählten Sprache. Sie können auch eine Standardsprache auswählen (de, en oder jp) , wenn Sie die Standardtexte anpassen möchten.</p>
+<p>Die Texte können auch von Marktplatz-Managern bearbeitet werden. Marktplatz-Manager verwenden dazu die Menüoption <span class="uicontrol">Marktplatz</span> --&gt; <span class="uicontrol">Texte anpassen</span>. Solche Änderungen wirken sich auf alle Marktplätze aus, von denen die Organisation der Marktplatz-Manager Eigentümer ist.</p>
+</li>
+
+                </ul>
+
+            </div>
+
+            <p>Gehen Sie wie folgt vor, um die Datei zu übersetzen: </p>
+
+            <div class="p">
+                <ol>
+                    <li class="liexpand">Geben Sie <strong>auf allen drei Arbeitsblättern</strong> im Feld für die Überschrift der fünften Spalte den ISO-Sprachcode für die Sprache ein, die Sie bereitstellen möchten.</li>
+
+                    <li class="liexpand">Geben Sie für jeden Schlüssel in der fünften Spalte Ihre Übersetzung ein.<p>Wenn eine Übersetzung fehlt, wird der englische Text verwendet. Wenn auch der englische Text nicht definiert ist, wird der sprachunabhängige technische Schlüssel angezeigt.</p>
+<p>Beachten Sie folgendes: </p>
+<ul>
+                            <li class="liexpand">Alle beschreibenden Texte (gekennzeichnet durch einen auf <samp class="codeph">.description</samp> endenden Schlüssel) können Sie mit HTML-Tags formatieren. Zum Beispiel können Sie mit <samp class="codeph">&lt;b&gt;</samp> Text fett darstellen oder <samp class="codeph">&lt;br&gt;</samp> für Zeilenumbrüche verwenden.</li>
+
+                            <li class="liexpand">Sie können in den Texten alle Zeichen des Unicode-Zeichensatzes verwenden.</li>
+
+                            <li class="liexpand">Wenn Sie einen Text nicht ändern möchten, können Sie die entsprechenden Tabellenzellen löschen. Dies kann zum Nachvollziehen von Änderungen an der Benutzeroberfläche hilfreich sein.</li>
+
+                            <li class="liexpand">Stellen Sie sicher, dass die Felder keine ungültigen Daten enthalten und somit Fehler im Seitenlayout erzeugen können. Ein zu langer Text wird zum Beispiel an der Benutzeroberfläche auf mehrere Zeilen aufgeteilt. Verwenden Sie zum Testen der Übersetzungen eine separate Umgebung.</li>
+
+                        </ul>
+</li>
+
+                    <li class="liexpand">Speichern Sie die Microsoft Excel-Datei im Format <samp class="codeph">.xls</samp> .</li>
+
+                    <li class="liexpand">Importieren Sie die Datei auf der Seite <strong>Sprachen verwalten</strong>. <p>Durch den Import der Datei werden vorhandene Texte in der Sprache des in der fünften Spalte eingegebenen Sprachcodes überschrieben. Die Sprache kann verwendet werden, sobald sie aktiviert ist. Für Benutzer, die die Sprache in ihrem Profil eingestellt haben, sind Ihre Änderungen sofort sichtbar.</p>
+</li>
+
+                </ol>
+
+            </div>
+
+            <div class="p">
+                <div class="note"><span class="notetitle">Hinweis:</span> Vergewissern Sie sich, dass alle Zellen in allen Arbeitsblättern der Excel-Datei als Text formatiert sind.</div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>

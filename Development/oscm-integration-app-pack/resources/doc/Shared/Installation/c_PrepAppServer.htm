@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Application Server"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Application_Server_62"/>
+<meta name="DC.Language" content="en-us"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>Application Server</title>
+</head>
+<body id="Application_Server_62">
+
+
+    <h1 class="topictitle1">Application Server</h1>
+
+    <div>
+        <div class="section" id="Application_Server_62__must_be_deployed_on_an_appli_concept_conbody_section">
+            <p><span>APP</span>
+                <span id="Application_Server_62__must_be_deployed_on_an_applic_concept_conbody_section_p_1">must be deployed on an application server compatible with Java EE version 6. The following application server is supported:</span></p>
+
+            <p id="Application_Server_62__Oracle_GlassFish_Server_vers_concept_conbody_section_p_2">Oracle GlassFish Server, version 3.1.2.2.</p>
+
+            <p>You can deploy APP on the application server you use for <span>OSCM</span>. Alternatively, you can use a separate application server installation.</p>
+
+            
+            
+            
+            
+            <div class="note"><span class="notetitle">Note:</span> Before installing GlassFish, make sure that the <samp class="codeph">JAVA_HOME</samp> environment variable points to a Java Development Kit (JDK), version 7, 64 bit. </div>
+
+            <p>Proceed as follows: </p>
+
+            <ol>
+                <li class="liexpand">Install the application server as described in its documentation, and configure it as required by your environment. <div class="p">
+                        <div class="note"><span class="notetitle">Note:</span> Make sure that the path of the GlassFish installation directory does not contain blanks. </div>
+
+                    </div>
+</li>
+
+                <li class="liexpand">
+                    <p>After you have configured GlassFish, make a backup copy of the GlassFish installation. </p>
+
+                </li>
+
+                <li class="liexpand">
+                    <p>Make sure that GlassFish is running in a JDK 7 environment. Also, make sure that no other applications (e.g. Tomcat) are running on your GlassFish ports.</p>
+
+                </li>
+
+            </ol>
+
+            <p>The installation of APP creates the <samp class="codeph">app-domain</samp> in your application server. If required, you can change the domain name in the <samp class="codeph">glassfish.properties</samp> file before starting the installation.</p>
+
+            
+            
+            
+            
+            
+            
+            <p>In the subsequent sections, <samp class="codeph">&lt;GLASSFISH_HOME&gt;</samp> is the installation directory of GlassFish.</p>
+
+            <p>
+                
+            </p>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>

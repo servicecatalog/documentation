@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="Managing payment service providers"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="task634"/>
+<meta name="DC.Language" content="en-us"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>Managing payment service providers</title>
+</head>
+<body id="task634">
+
+
+  <h1 class="topictitle1">Managing payment service providers</h1>
+
+  <div>
+    <div class="section">
+      <p>On the <span class="uicontrol">Manage payment service provider</span> page, you can configure the communication with a payment service provider (PSP) and define the payment types made available by the PSP. </p>
+
+      <p>For successfully integrating a PSP, several prerequisites must be fulfilled: </p>
+
+      <div class="p">
+        <ul>
+          <li class="liexpand">
+            <p id="task634__psp2">Your organization, i.e. the operator organization, must be registered in the PSP system.</p>
+
+          </li>
+
+          <li class="liexpand">
+            <p id="task634__psp3">The suppliers or resellers who are to use the services of the PSP need to have a contractual relationship with the PSP. The supplier or reseller organizations must also be registered in the PSP system. </p>
+
+          </li>
+
+          <li class="liexpand">
+            <p id="task634__psp3a">The PSP issues an identifier for the supplier or reseller so that payments can be immediately linked to the supplier's or reseller's account.</p>
+
+          </li>
+
+          <li class="liexpand">
+            <p id="task634__psp4">Your own organization and the PSP organization must have exchanged certificates so that trusted and secure communication between <span>the platform</span> and the PSP system is ensured.</p>
+
+            <p>The usage and integration of certificates is described in detail in the <em>Operator's Guide</em>.</p>
+
+          </li>
+
+          <li class="liexpand">
+            <p id="task634__psp5">A PSP integration adapter must have been implemented as a Web service and deployed on an application server. This adapter is a Web service providing the methods for integrating the PSP with <span>the platform</span>. You need the URL pointing to the WSDL file of this service.</p>
+
+            <p>For details on implementing an integration adapter, refer to the documentation shipped with the <samp class="codeph">oscm-integration-psp-pack.zip</samp> file.</p>
+
+          </li>
+
+          <li class="liexpand">
+            <p id="task634__psp6">The PSP must have informed you about the types of payment he offers and which configuration values to set for using his services.</p>
+
+          </li>
+
+          <li class="liexpand">
+            <p id="task634__psp7">You need to make the following configuration setting for <span>OSCM</span>: </p>
+
+            <p id="task634__psp8"><samp class="codeph">PSP_USAGE_ENABLED</samp>: Set the value to <samp class="codeph">true</samp> in order to enable PSP integration (default: <samp class="codeph">false</samp>).</p>
+
+            <p>Click <a href="operator_manageConfiguration.htm">here</a> for details.</p>
+
+          </li>
+
+        </ul>
+
+      </div>
+
+      <p><strong>To configure a payment service provider</strong>:</p>
+
+    </div>
+
+    <ol><li class="stepexpand">
+        <span>From the <span class="uicontrol">Payment service provider</span> list, select the PSP to configure.</span>
+         
+          <p>The list contains all PSPs registered with your platform.</p>
+
+          
+        
+      </li>
+<li class="stepexpand">
+        <span>Specify the configuration keys and their values needed for communicating with the PSP: Click <strong>Add</strong> to enter a new key-value pair.</span>
+         
+          <p>The configuration settings depend on the implementation of the PSP integration adapter. You must be informed about the required settings by the PSP. </p>
+
+        
+      </li>
+<li class="stepexpand">
+        <span>Define the payment types that the PSP offers. Click <strong>Add</strong>, and proceed on the <span class="uicontrol">New payment type</span> page. </span>
+         You can add payment types, but not remove a type already defined for the PSP. The names of the payment types can be freely defined. The payment types themselves are provided by the PSP. For example, if an integration with Heidelpay has been implemented and selected, <samp class="codeph">CREDIT_CARD</samp> and <samp class="codeph">DIRECT_DEBIT</samp> are already present.
+      </li>
+<li class="stepexpand">
+        <span>To save your entries, click <span class="uicontrol">Save</span>.</span>
+      </li>
+</ol>
+
+    <div class="section"/>
+
+  </div>
+
+
+</body>
+</html>

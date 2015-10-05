@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="Managing organizations"/>
+<meta name="DC.Relation" scheme="URI" content="organization_managePaymentTypes.htm"/>
+<meta name="DC.Relation" scheme="URI" content="operator_managePSPs.htm"/>
+<meta name="DC.Relation" scheme="URI" content="operator_createPSP.htm"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="task634"/>
+<meta name="DC.Language" content="en-us"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>Managing organizations</title>
+</head>
+<body id="task634">
+
+
+  <h1 class="topictitle1">Managing organizations</h1>
+
+  <div>
+    <div class="section">
+      <p>On the <span class="uicontrol">Manage organization</span> page, you can perform the following tasks:</p>
+
+      <div class="p">
+        <ul>
+          <li class="liexpand">Add another <strong>role</strong> to the organization (technology provider, supplier, reseller, broker)</li>
+
+          <li class="liexpand"><strong>Update</strong> the address and contact <strong>data</strong> of the organization. </li>
+
+          <li class="liexpand">Set the <strong>Distinguished name</strong> for an organization.<p>This is required if the organization wants to use certificates for trusted communication between the organization itself and the platform operator organization.</p>
+<p>The platform checks the distinguished name in a client's certificate. If it matches the one specified here, the caller is assumed to be authorized to connect to the platform. </p>
+<p>You can retrieve the distinguished name of an organization from its certificate with the following call in your Java runtime environment: </p>
+<div class="p">
+              <pre class="codeblock">&lt;YourJRE&gt;/bin/keytool -printcert -file &lt;filename.crt&gt;</pre>
+
+            </div>
+<p>The process of integrating certificates is described in detail in the <em>Operator's Guide</em>.</p>
+</li>
+
+          <li class="liexpand">Define the <strong>payment types</strong> that a supplier or reseller organization may offer to its customers.<p>By default, suppliers and resellers can allow customers to pay on invoice so that they can subscribe to a service that is not free of charge. </p>
+<p id="task634__PayTypes2">If a supplier or reseller requests a payment type other than on invoice, he must use the services of a commercial PSP. </p>
+The process of integrating PSP support is described in detail in the <em>Operator's Guide</em>. </li>
+
+          
+        </ul>
+
+      </div>
+
+      <p><strong>To manage an organization</strong>:</p>
+
+    </div>
+
+    <ol><li class="stepexpand">
+        <span>From the <span class="uicontrol">Organization ID</span> list, select the organization whose data you want to edit. </span>
+         
+          <p>The list contains all organizations managed on your platform. </p>
+
+        
+      </li>
+<li class="stepexpand">
+        <span>Edit the data as required: </span>
+         
+          <div class="p">
+            <ul>
+              <li class="liexpand"><span class="uicontrol">Organization</span>. Name of the organization, for example the company name.</li>
+
+              <li class="liexpand"><span class="uicontrol">Email</span>. Email address for general communication with the organization. The organization can later specify a separate email address to which invoices can be sent.<p>The system checks whether the syntax of the given email address is valid, and whether the domain name corresponds to the standards as defined and maintained by the Internet Assigned Numbers Authority (IANA). </p>
+<p>Examples: <samp class="codeph">user.name@domain.arpa</samp>, <samp class="codeph">user.name@domain.org</samp>, <samp class="codeph">user@mycompany.lan.uk</samp></p>
+</li>
+
+              <li class="liexpand"><span class="uicontrol">Phone</span>. Telephone or mobile number of a contact person in the organization.</li>
+
+              <li class="liexpand"><span class="uicontrol">Website</span>. URL of the organization's website. This website can be accessed by customers when displaying details of the organization that offers a service they want to subscribe to. </li>
+
+              <li class="liexpand"><span class="uicontrol">Language</span>: Default language used in the organization.</li>
+
+              <li class="liexpand"><span class="uicontrol">Address</span> of the organization. The organization's administrator can later specify a different address to be printed on invoices.</li>
+
+              <li class="liexpand"><span class="uicontrol">Country</span> where the organization is located. </li>
+
+              <li class="liexpand"><span class="uicontrol">Description</span>: Description of the organization, for example information from the company's profile. <div class="p">
+                  <div class="note"><span class="notetitle">Note:</span> Make sure to use only the controls provided in the editor for formatting your text. Manually entered HTML tags and references to external style sheets or content may result in errors in the page layout.</div>
+
+                </div>
+</li>
+
+              <li class="liexpand">For a customer organization: <span class="uicontrol">Marketplace</span> to which the customer is to be directed.</li>
+
+              <li class="liexpand">For a supplier organization: <strong>Default operator rev. share (%)</strong>. This is the revenue share agreed between the operator and the supplier, which the operator is to receive from the supplier for selling services on the marketplaces managed on the operator's platform. The default operator revenue share applies to all services offered by the supplier as long as you do not define a service-specific revenue share using the <strong>Manage operator revenue share</strong> menu option in the <strong>Operation</strong> menu. It also applies irrespective of whether the supplier sells his services himself, or uses brokers or resellers for selling them. Discounts granted by a supplier to his customers are deducted from the revenue share. </li>
+
+              <li class="liexpand">For a technology provider, supplier, reseller, and/or broker organization:<p><span class="uicontrol">Profile image</span>: Image used on a marketplace. The profile image is shown as soon as a customer requests details of a service provided by this organization. </p>
+<p>Click in the <span class="uicontrol">Upload image</span> field or click <span class="uicontrol">Browse</span>, and select the file containing the desired image. Supported file formats are GIF, JPG, and PNG. The maximum size of the profile image is 154 x 154 pixels. The recommended size is 154 x 60 pixels. </p>
+</li>
+
+            </ul>
+
+          </div>
+
+        
+      </li>
+<li class="stepexpand">
+        <span>In the <span class="uicontrol">Organization role</span> section, select a new role for the organization, if required. </span>
+         The reseller and broker roles cannot be combined with each other or with the technology provider or supplier role.
+      </li>
+<li class="stepexpand">
+        <span>In the <span class="uicontrol">Distinguished name</span> field, enter the DN for the organization. </span>
+         The DN is defined in the organization's certificate and composed of the following elements: <ul id="task634__DN">
+            <li>CN (common name)</li>
+
+            <li>OU (organizational unit)</li>
+
+            <li>O (organization)</li>
+
+            <li>L (location)</li>
+
+            <li>ST (state)</li>
+
+            <li>C (country)</li>
+
+          </ul>
+<p>Separate the individual elements of the DN with commas.</p>
+
+      </li>
+<li class="stepexpand">
+        <span>Define the payment types that the organization can offer to its customers. Click <strong>Add</strong>, and proceed to the <span class="uicontrol">New payment type</span> page. </span>
+         Adding payment types is possible for supplier and reseller organizations only. <div class="p">
+            <div class="note"><span class="notetitle">Note:</span> You can no longer remove a payment type which has been assigned to a supplier or reseller organization.</div>
+
+          </div>
+
+      </li>
+<li class="stepexpand">
+        <span>To save your entries, click <span class="uicontrol">Save</span>.</span>
+      </li>
+</ol>
+
+    <div class="section">
+      <p>The organization's administrators are notified by email about any changes you made.</p>
+
+      
+    </div>
+
+  </div>
+
+  <div>
+<div class="linklist"><strong>Related topics</strong><br/>
+
+<div><a href="organization_managePaymentTypes.htm">Adding payment types</a></div>
+<div><a href="operator_managePSPs.htm">Managing payment service providers</a></div>
+<div><a href="operator_createPSP.htm">Creating a payment service provider</a></div></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="de-de" lang="de-de">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="Kunden verwalten"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="task634"/>
+<meta name="DC.Language" content="de-de"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>Kunden verwalten</title>
+</head>
+<body id="task634">
+
+
+    <h1 class="topictitle1">Kunden verwalten</h1>
+
+    <div>
+        <div class="section">
+            <p>Auf der Seite <span class="uicontrol">Kunden verwalten</span> können Sie die Organisationsdaten einsehen, die aktuell für Ihre Kunden definiert sind. Sie können Attributwerte für eigene Attribute eingeben, vorausgesetzt, es wurden eigene Attribute für Kunden definiert, und Sie können Kunden Rabatte gewähren.</p>
+
+            <p><strong>So verwalten Sie einen Kunden</strong>:</p>
+
+        </div>
+
+        <ol><li class="stepexpand">
+                <span>Wählen Sie im Feld <span class="uicontrol">Organisations-ID</span> den Kunden, dessen Daten Sie bearbeiten möchten.</span>
+                 
+                    <p>Die Liste enthält alle Kunden, die einen Ihrer Services abonniert haben oder die Sie als Serviceanbieter selbst registriert haben, unabhängig davon, ob bereits ein Service abonniert wurde. An den Namen der Kundenorganisation ist jeweils die ID der Organisation angehängt.</p>
+
+                
+            </li>
+<li class="stepexpand">
+                <span>Wenn eigene Attribute für Ihre Kunden und die Kunden Ihrer Vermittler definiert sind und Sie die erforderlichen Attributwerte festlegen dürfen, können Sie diese in der Tabelle <span class="uicontrol">Attribute</span> eingeben.</span>
+                 
+                    <p>Ein Attributwert darf maximal 255 Zeichen lang sein. Die Werte werden in die Rechnungsdaten für den Kunden übernommen, sobald die Daten neu generiert werden. Wenn Sie ein Feld für einen Attributwert leer lassen, wird der Attributname ohne einen Attributwert in die Rechnungsdaten übernommen.</p>
+
+                    <p>Die Tabelle <span class="uicontrol">Attribute</span> listet auch eigene Attribute auf, deren Werte vom Administrator oder Abo-Manager des Kunden beim Abonnieren eines Service eingegeben werden sollen. Sie können diese Werte nicht ändern. </p>
+
+                
+            </li>
+<li class="stepexpand">
+                <span>Um einem Kunden einen Preisnachlass zu gewähren, geben Sie die erforderlichen Daten im Abschnitt <span class="uicontrol">Legen Sie einen Rabatt für den Kunden fest:</span> ein.</span>
+                 
+                    <p><span>Einem Kunden kann ein Preisnachlass gewährt werden, der für alle seine Abonnements gilt. Der Rabatt kann ab sofort oder ab einem künftigen Monat gelten und auf einen bestimmten Zeitraum begrenzt werden. Vor Ablauf dieses Zeitraums wird der Kunde per E-Mail informiert, so dass er rechtzeitig reagieren und den Serviceanbieter kontaktieren kann.</span>
+                    </p>
+
+                    <p><span>Ein Rabatt wird als Prozentsatz definiert, der von den Gesamtkosten für ein Abonnement abgezogen wird. Er wird auf alle Kosten innerhalb eines Abrechnungszeitraums gewährt, in dem der Rabatt gilt, unabhängig davon, ob der Rabatt für den gesamten oder nur für einen Teil des Abrechnungszeitraums definiert wurde.</span> Wenn Sie einen Rabatt ändern, werden die Preisnachlässe berücksichtigt, sobald neue Rechnungsdaten generiert werden. Üblicherweise ändern Sie einen Rabatt nur in Absprache mit dem jeweiligen Kunden.</p>
+
+                    <p>Geben Sie die erforderlichen Informationen wie folgt ein:</p>
+
+                    <ul>
+                        <li class="liexpand">Legen Sie im Feld <span class="uicontrol">Prozent (%)</span> den Rabattsatz fest. Bestimmen Sie also, wieviel Prozent vom regulären Preis für ein Abonnement bei diesem Kunden abgezogen werden sollen. </li>
+
+                        <li class="liexpand">Soll der Rabatt ab dem aktuellen Monat gelten, lassen Sie das Feld <span class="uicontrol">Von</span> leer. Ansonsten geben Sie den Monat und das Jahr ein, ab dem der Rabatt gewährt werden soll. Das Format ist <samp class="codeph">MM/JJJJ</samp>, z.B. <samp class="codeph">11/2010</samp>. Ein in der Vergangenheit liegender Monat wird nicht ausgewertet. Rabatte werden immer ab dem aktuellen Abtrechnungszeitraum oder ab dem angegebenen Monat gewährt.</li>
+
+                        <li class="liexpand">Soll der Rabatt nur für eine bestimmte Anzahl von Monaten gelten, geben Sie im Feld <span class="uicontrol">Bis</span> den entsprechenden Monat und das Jahr ein. Das Format ist <samp class="codeph">MM/JJJJ</samp>, z.B. <samp class="codeph">11/2012</samp>. Wenn Sie dieses Feld leer lassen, gilt der Rabatt so lange, bis Sie Ihre Angaben ändern.</li>
+
+                    </ul>
+
+                    <p>Soll zum Beispiel ein Kunde ab sofort und für einen Zeitraum von einem Jahr von einem Rabatt profitieren, lassen Sie das Feld <span class="uicontrol">Von</span> leer und geben im Feld <span class="uicontrol">Bis</span> den vorangegangenen Monat und das nächste Jahr an.</p>
+
+                
+            </li>
+<li class="stepexpand">
+                <span>Schließen Sie Ihre Eingaben mit <span class="uicontrol">Speichern</span> ab.</span>
+            </li>
+</ol>
+
+        <div class="section">
+            <p>Die Administratoren des Kunden werden per E-Mail über Ihre Änderungen informiert. </p>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>

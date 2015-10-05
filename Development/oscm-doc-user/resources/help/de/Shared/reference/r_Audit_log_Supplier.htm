@@ -1,0 +1,1794 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="de-de" lang="de-de">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="Aktionen von Service-Managern"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="reference832"/>
+<meta name="DC.Language" content="de-de"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>Aktionen von Service-Managern</title>
+</head>
+<body id="reference832">
+
+
+    <h1 class="topictitle1">Aktionen von Service-Managern</h1>
+
+    <div>
+        <div class="section">
+            <p>Im folgenden werden Meldungen erläutert, die in das Aktionsprotokoll geschrieben werden, wenn Service-Manager eines Serviceanbieters Aktionen im Administrationsportal ausführen. Einige der Aktionen können auch von Wiederverkäufern oder Vermittlern ausgeführt werden. </p>
+
+            <p>Folgende weitere <samp class="codeph">&lt;<em>Name/Wert-Paare</em>&gt;</samp> werden im Anschluss an den Header und die für alle Meldungen gültigen Name/Wert-Paare ausgegeben: </p>
+
+            <div class="p">
+                <ul>
+                    <li>
+                        <p><samp class="codeph">serviceId=<em>&lt;Service-ID&gt;</em></samp>: ID des marktfähigen Service, wie sie beim Anlegen angegeben wurde. </p>
+
+                    </li>
+
+                    <li>
+                        <p><samp class="codeph">serviceName=<em>&lt;Name&gt;</em></samp>: Servicename für Kunden des marktfähigen Service, wie er beim Anlegen angegeben wurde. </p>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <p>Abhängig von der protokollierten Aktion können zusätzliche Name/Wert-Paare ausgegeben werden. </p>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Activate/deactivate service</strong></p>
+
+                                <p>Beschreibung: Ein Service-Manager, Wiederverkäufer oder Vermittler aktivierte oder deaktivierte einen marktfähigen Service. </p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li><samp class="codeph">marketplaceId=<em>&lt;Marktplatz-ID&gt;</em></samp>: ID des Marktplatzes, auf dem der Service veröffentlicht ist. </li>
+
+                                        <li><samp class="codeph">marketplaceName=<em>&lt;Marktplatzname&gt;</em></samp>: Name des Marktplatzes, auf dem der Service veröffentlicht ist. </li>
+
+                                        <li><samp class="codeph">activation=<em>&lt;Ja oder Nein&gt;</em></samp>: Gibt an, ob der Service aktiviert ist. Folgende Werte können ausgegeben werden: <samp class="codeph">ON</samp> (aktiviert) oder <samp class="codeph">OFF</samp> (nicht aktiviert). </li>
+
+                                        <li><samp class="codeph">inCatalog=<em>&lt;Ja oder Nein&gt;</em></samp>: Gibt an, ob der Service in den Servicekatalog aufgenommen werden soll. Folgende Werte können ausgegeben werden: <samp class="codeph">ON</samp> (im Katalog) oder <samp class="codeph">OFF</samp> (nicht im Katalog).</li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Assign brokers</strong></p>
+
+                                <p>Beschreibung: Bei der Vorbereitung zur Veröffentlichung eines Service berechtigte ein Service-Manager einen Vermittler, die Services seines Serviceanbieters zu verkaufen. </p>
+
+                                <p>Weiteres Name/Wert-Paar:</p>
+
+                                <p><samp class="codeph">BrokerId=<em>&lt;ID&gt;</em></samp>: ID der Vermittlerorganisation, der die Berechtigung zum Wiederverkauf erteilt wird. </p>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Assign categories</strong></p>
+
+                                <p>Beschreibung: Bei der Vorbereitung zur Veröffentlichung eines Service legte ein Service-Manager, Wiederverkäufer oder Vermittler eine oder mehrere Kategorien für einen marktfähigen Service fest.</p>
+
+                                <p>Weiteres Name/Wert-Paar:</p>
+
+                                <p><samp class="codeph">listOfCategories=<em>&lt;Namen&gt;</em></samp>: Die zugeordneten Kategorien. Die Listeneinträge sind durch Komma getrennt. </p>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Assign resellers</strong></p>
+
+                                <p>Beschreibung: Bei der Vorbereitung zur Veröffentlichung eines Service berechtigte ein Service-Manager einen Wiederverkäufer, die Services seines Serviceanbieters zu verkaufen. </p>
+
+                                <p>Weiteres Name/Wert-Paar:</p>
+
+                                <p><samp class="codeph">ResellerId=<em>&lt;ID&gt;</em></samp>: ID der Wiederverkäuferorganisation, der die Berechtigung zum Wiederverkauf erteilt wird.</p>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Assign service to marketplace</strong></p>
+
+                                <p>Beschreibung: Bei der Vorbereitung zur Veröffentlichung eines Service definierte oder änderte ein Service-Manager, Wiederverkäufer oder Vermittler den Marktplatz, auf dem der marktfähige Service veröffentlicht werden soll. </p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li><samp class="codeph">marketplaceId=<em>&lt;ID&gt;</em></samp>: ID des Marktplatzes. </li>
+
+                                        <li><samp class="codeph">marketplaceName=<em>&lt;Name&gt;</em></samp>: Name des Marktplatzes. </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Copy service</strong></p>
+
+                                <p>Beschreibung: Ein Service-Manager erstellte eine Kopie eines marktfähigen Service. </p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li>
+                                            <p><samp class="codeph">copyId=<em>&lt;Service-ID&gt;</em></samp>: ID des kopierten marktfähigen Service, wie sie in der Datenbank gespeichert ist. </p>
+
+                                        </li>
+
+                                        <li><samp class="codeph">copyName=<em>&lt;Servicename&gt;</em></samp>: Name des kopierten marktfähigen Service, wie er beim Kopieren angegeben wurde. </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Deassign brokers</strong></p>
+
+                                <p>Beschreibung: Bei der Vorbereitung zur Veröffentlichung eines Service entzog ein Service-Manager einem Vermittler die Berechtigung zum Wiederverkauf der Services des Serviceanbieters.</p>
+
+                                <p>Weiteres Name/Wert-Paar:</p>
+
+                                <p><samp class="codeph">BrokerId=<em>&lt;Organisations-ID&gt;</em></samp>: ID der Vermittlerorganisation, der die Berechtigung zum Wiederverkauf der Services entzogen wurde. </p>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Deassign resellers</strong></p>
+
+                                <p>Beschreibung: Bei der Vorbereitung zur Veröffentlichung eines Service entzog ein Service-Manager einem Wiederverkäufer die Berechtigung zum Wiederverkauf der Services des Serviceanbieters.</p>
+
+                                <p>Weiteres Name/Wert-Paar:</p>
+
+                                <p><samp class="codeph">ResellerId=<em>&lt;Organisations-ID&gt;</em></samp>: ID der Wiederverkäuferorganisation, der die Berechtigung zum Wiederverkauf der Services entzogen wurde. </p>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Define service</strong></p>
+
+                                <p>Beschreibung: Ein Service-Manager definierte einen marktfähigen Service. Pro Parameter und Parameteroption, die für den marktfähigen Service definiert wurden, wird je eine Meldung <strong>Update service parameter</strong> ausgegeben. </p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li><samp class="codeph">technServiceName=<em>&lt;Servicename&gt;</em></samp>: Name des technischen Service, der dem marktfähigen Service zugrunde liegt. </li>
+
+                                        <li><samp class="codeph">shortDescription=<em>&lt;Ja oder Nein&gt;</em></samp>: Gibt an, ob eine Kurzbeschreibung für den marktfähigen Service eingegeben wurde. Folgende Werte können ausgegeben werden: <samp class="codeph">YES</samp> (Ja) oder <samp class="codeph">NO</samp> (Nein). </li>
+
+                                        <li><samp class="codeph">description=<em>&lt;Ja oder Nein&gt;</em></samp>: Gibt an, ob eine Beschreibung für den marktfähigen Service eingegeben wurde. Folgende Werte können ausgegeben werden: <samp class="codeph">YES</samp> (Ja) oder <samp class="codeph">NO</samp> (Nein). </li>
+
+                                        <li><samp class="codeph">locale=<em>&lt;Sprache&gt;</em></samp>: Code der Sprache, in der die Beschreibungen gespeichert wurden. </li>
+
+                                        <li><samp class="codeph">autoAssignUser=<em>&lt;Ja oder Nein&gt;</em></samp>: Gibt an, ob der Benutzer, der den Service abonniert, automatisch dem Abonnement zugeordnet wird. Folgende Werte können ausgegeben werden: <samp class="codeph">YES</samp> (Ja) oder <samp class="codeph">NO</samp> (Nein). </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Define up/downgrade options</strong></p>
+
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte die Services, auf die ein Abonnement umgestellt werden kann. </p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li><samp class="codeph">targetId=<em>&lt;Service-ID&gt;</em></samp>: ID des marktfähigen Service, auf den Abonnements umgestellt werden können. </li>
+
+                                        <li><samp class="codeph">targetName=<em>&lt;Servicename&gt;</em></samp>: Name des marktfähigen Service, auf den Abonnements umgestellt werden können</li>
+
+                                        <li><samp class="codeph">upDownGrade=<em>&lt;Ja oder Nein&gt;</em></samp>: Gibt an, ob der Service als Up-/Downgrade-Option hinzugefügt oder entfernt wurde. Folgende Werte können ausgegeben werden: <samp class="codeph">ON</samp> (als Option verfügbar) oder <samp class="codeph">OFF</samp> (nicht als Option verfügbar). </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Delete customer price model</strong></p>
+
+                                <p>Beschreibung: Ein Service-Manager löschte ein Kunden-Preismodell.</p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li><samp class="codeph">customerKey=<em>&lt;Organisations-ID&gt;</em></samp>: ID der Kundenorganisation. </li>
+
+                                        <li><samp class="codeph">customerName=<em>&lt;Organisationsname&gt;</em></samp>: Name der Kundenorganisation. </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Delete service</strong></p>
+
+                                <p>Beschreibung: Ein Service-Manager löschte einen marktfähigen Service. </p>
+
+                                <p>Keine weiteren Name/Wert-Paare.</p>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Edit event price in customer price model</strong></p>
+
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte den Preis für ein Ereignis in einem Kunden-Preismodell.</p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li><samp class="codeph">customerKey=<em>&lt;Organisations-ID&gt;</em></samp>: ID der Kundenorganisation. </li>
+
+                                        <li><samp class="codeph">customerName=<em>&lt;Organisationsname&gt;</em></samp>: Name der Kundenorganisation. </li>
+
+                                        <li><samp class="codeph">currency=<em>&lt;Währung&gt;</em></samp>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+
+                                        <li><samp class="codeph">eventName=<em>&lt;Ereignisname&gt;</em></samp>: Name des Ereignisses, wie er im zugrunde liegenden technischen Service definiert ist. </li>
+
+                                        <li><samp class="codeph">range=<em>&lt;Obergrenze&gt;</em></samp>: Bei gestaffelten Preisen ist dies die Obergrenze, bis zu der der Preis gilt. Falls keine gestaffelten Preise definiert sind, ist die Obergrenze <samp class="codeph">1-ANY</samp>.</li>
+
+                                        <li><samp class="codeph">action=<em>&lt;action&gt;</em></samp>: Bei gestaffelten Preisen ist dies die Aktion, die durchgeführt wurde. Folgende Werte können ausgegeben werden: <samp class="codeph">INSERT</samp> (ein gestaffelter Preis wurde definiert), <samp class="codeph">UPDATE</samp> (ein gestaffelter Preis wurde geändert) oder <samp class="codeph">DELETE</samp> (ein gestaffelter Preis wurde gelöscht). Falls keine gestaffelten Preise definiert sind, wird der Parameter <samp class="codeph">action</samp> nicht im Aktionsprotokoll ausgegeben.</li>
+
+                                        <li><samp class="codeph">price=<em>&lt;Preis&gt;</em></samp>: Der im Preismodell definierte Preis. </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Edit event price in service price model</strong></p>
+
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte den Preis für ein Ereignis in einem Service-Preismodell.</p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li><samp class="codeph">currency=<em>&lt;Währung&gt;</em></samp>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+
+                                        <li><samp class="codeph">eventName=<em>&lt;Ereignisname&gt;</em></samp>: Name des Ereignisses, wie er im zugrunde liegenden technischen Service definiert ist. </li>
+
+                                        <li><samp class="codeph">range=<em>&lt;Obergrenze&gt;</em></samp>: Bei gestaffelten Preisen ist dies die Obergrenze, bis zu der der Preis gilt. Falls keine gestaffelten Preise definiert sind, ist die Obergrenze <samp class="codeph">1-ANY</samp>.</li>
+
+                                        <li><samp class="codeph">action=<em>&lt;action&gt;</em></samp>: Bei gestaffelten Preisen ist dies die Aktion, die durchgeführt wurde. Folgende Werte können ausgegeben werden: <samp class="codeph">INSERT</samp> (ein gestaffelter Preis wurde definiert), <samp class="codeph">UPDATE</samp> (ein gestaffelter Preis wurde geändert) oder <samp class="codeph">DELETE</samp> (ein gestaffelter Preis wurde gelöscht). Falls keine gestaffelten Preise definiert sind, wird der Parameter <samp class="codeph">action</samp> nicht im Aktionsprotokoll ausgegeben.</li>
+
+                                        <li><samp class="codeph">price=<em>&lt;Preis&gt;</em></samp>: Der im Preismodell definierte Preis. </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Edit event price in subscription price model</strong></p>
+
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte den Preis für ein Ereignis in einem Abo-Preismodell.</p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li><samp class="codeph">customerKey=<em>&lt;Organisations-ID&gt;</em></samp>: ID der Kundenorganisation. </li>
+
+                                        <li><samp class="codeph">customerName=<em>&lt;Organisationsname&gt;</em></samp>: Name der Kundenorganisation. </li>
+
+                                        <li>
+                                            <p><samp class="codeph">subscriptionName=<em>&lt;Abo-Name&gt;</em></samp>: Name des Abonnements, wie er beim Abonnieren angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li><samp class="codeph">currency=<em>&lt;Währung&gt;</em></samp>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+
+                                        <li><samp class="codeph">eventName=<em>&lt;Ereignisname&gt;</em></samp>: Name des Ereignisses, wie er im zugrunde liegenden technischen Service definiert ist. </li>
+
+                                        <li><samp class="codeph">range=<em>&lt;Obergrenze&gt;</em></samp>: Bei gestaffelten Preisen ist dies die Obergrenze, bis zu der der Preis gilt. Falls keine gestaffelten Preise definiert sind, ist die Obergrenze <samp class="codeph">1-ANY</samp>.</li>
+
+                                        <li><samp class="codeph">action=<em>&lt;action&gt;</em></samp>: Bei gestaffelten Preisen ist dies die Aktion, die durchgeführt wurde. Folgende Werte können ausgegeben werden: <samp class="codeph">INSERT</samp> (ein gestaffelter Preis wurde definiert), <samp class="codeph">UPDATE</samp> (ein gestaffelter Preis wurde geändert) oder <samp class="codeph">DELETE</samp> (ein gestaffelter Preis wurde gelöscht). Falls keine gestaffelten Preise definiert sind, wird der Parameter <samp class="codeph">action</samp> nicht im Aktionsprotokoll ausgegeben.</li>
+
+                                        <li><samp class="codeph">price=<em>&lt;Preis&gt;</em></samp>: Der im Preismodell definierte Preis. </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Operation</strong>: <strong>Edit one time fee in customer price model</strong></p>
+
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte die einmalige Gebühr in einem Kunden-Preismodell.</p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li><samp class="codeph">customerKey=<em>&lt;Organisations-ID&gt;</em></samp>: ID der Kundenorganisation. </li>
+
+                                        <li><samp class="codeph">customerName=<em>&lt;Organisationsname&gt;</em></samp>: Name der Kundenorganisation. </li>
+
+                                        <li><samp class="codeph">currency=<em>&lt;Währung&gt;</em></samp>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+
+                                        <li><samp class="codeph">timeUnit=<em>&lt;Zeiteinheit&gt;</em></samp>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+
+                                        <li><samp class="codeph">oneTimeFee=<em>&lt;Gebühr&gt;</em></samp>: Einmalige Gebühr für ein Abonnement. </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Operation</strong>: <strong>Edit one time fee in service price model</strong></p>
+
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte die einmalige Gebühr in einem Service-Preismodell.</p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li><samp class="codeph">currency=<em>&lt;Währung&gt;</em></samp>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+
+                                        <li><samp class="codeph">timeUnit=<em>&lt;Zeiteinheit&gt;</em></samp>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+
+                                        <li><samp class="codeph">oneTimeFee=<em>&lt;Gebühr&gt;</em></samp>: Einmalige Gebühr für ein Abonnement. </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Edit customer price model</strong></p>
+
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte die Währung, Zeiteinheit, den Abrechnungsmodus und/oder die kostenlose Nutzungsdauer in einem Kunden-Preismodell.</p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li><samp class="codeph">customerKey=<em>&lt;Organisations-ID&gt;</em></samp>: ID der Kundenorganisation. </li>
+
+                                        <li><samp class="codeph">customerName=<em>&lt;Organisationsname&gt;</em></samp>: Name der Kundenorganisation. </li>
+
+                                        <li><samp class="codeph">currency=<em>&lt;Währung&gt;</em></samp>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+
+                                        <li><samp class="codeph">timeUnit=<em>&lt;Zeiteinheit&gt;</em></samp>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+
+                                        <li><samp class="codeph">calculationMode=<em>&lt;Abrechnungsmodus&gt;</em></samp>: Modus zur Berechnung der Nutzungsgebühren. Folgende Werte können ausgegeben werden: <samp class="codeph">PRO_RATA</samp> (anteilige Abrechnung) oder <samp class="codeph">PER_UNIT</samp> (pro Zeiteinheit).</li>
+
+                                        <li><samp class="codeph">trialPeriod=<em>&lt;Ja oder Nein&gt;</em></samp>: Gibt an, ob im Preismodell eine kostenlose Nutzungsdauer vorgesehen ist. Folgende Werte können ausgegeben werden: <samp class="codeph">ON</samp> (Ja) oder <samp class="codeph">OFF</samp> (Nein). </li>
+
+                                        <li><samp class="codeph">daysOfTrial=<em>&lt;Anzahl Tage&gt;</em></samp>: Anzahl der kostenlosen Tage. </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Edit service price model</strong></p>
+
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte die Währung, Zeiteinheit, den Abrechnungsmodus und/oder die kostenlose Nutzungsdauer in einem Service-Preismodell.</p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li><samp class="codeph">currency=<em>&lt;Währung&gt;</em></samp>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+
+                                        <li><samp class="codeph">timeUnit=<em>&lt;Zeiteinheit&gt;</em></samp>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+
+                                        <li><samp class="codeph">calculationMode=<em>&lt;Abrechnungsmodus&gt;</em></samp>: Modus zur Berechnung der Nutzungsgebühren. Folgende Werte können ausgegeben werden: <samp class="codeph">PRO_RATA</samp> (anteilige Abrechnung) oder <samp class="codeph">PER_UNIT</samp> (pro Zeiteinheit).</li>
+
+                                        <li><samp class="codeph">trialPeriod=<em>&lt;Ja oder Nein&gt;</em></samp>: Gibt an, ob im Preismodell eine kostenlose Nutzungsdauer vorgesehen ist. Folgende Werte können ausgegeben werden: <samp class="codeph">ON</samp> (Ja) oder <samp class="codeph">OFF</samp> (Nein). </li>
+
+                                        <li><samp class="codeph">daysOfTrial=<em>&lt;Anzahl Tage&gt;</em></samp>: Anzahl der kostenlosen Tage. </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Edit price model type to free of charge for customer</strong></p>
+
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte ein kostenloses Kunden-Preismodell. </p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li><samp class="codeph">customerKey=<em>&lt;Organisations-ID&gt;</em></samp>: ID der Kundenorganisation. </li>
+
+                                        <li><samp class="codeph">customerName=<em>&lt;Organisationsname&gt;</em></samp>: Name der Kundenorganisation. </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Edit price model type to free of charge for service</strong></p>
+
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte ein kostenloses Service-Preismodell. </p>
+
+                                <p>Keine weiteren Name/Wert-Paare.</p>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Edit price per subscription parameter in customer price model</strong></p>
+
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte den Preis pro Abo für einen Parameter oder eine Parameteroption in einem Kunden-Preismodell.</p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li><samp class="codeph">customerKey=<em>&lt;Organisations-ID&gt;</em></samp>: ID der Kundenorganisation. </li>
+
+                                        <li><samp class="codeph">customerName=<em>&lt;Organisationsname&gt;</em></samp>: Name der Kundenorganisation. </li>
+
+                                        <li><samp class="codeph">currency=<em>&lt;Währung&gt;</em></samp>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+
+                                        <li><samp class="codeph">parameterName=<em>&lt;Parametername&gt;</em></samp>: Name des Parameters, wie er im zugrunde liegenden technischen Service definiert ist. </li>
+
+                                        <li><samp class="codeph">range=<em>&lt;Obergrenze&gt;</em></samp>: Für numerische Parameter können gestaffelte Preise definiert sein. In diesem Fall ist dies die Obergrenze, bis zu der der Preis gilt. Falls keine gestaffelten Preise definiert sind, ist die Obergrenze <samp class="codeph">1-ANY</samp>.</li>
+
+                                        <li><samp class="codeph">optionName=<em>&lt;Optionsname&gt;</em></samp>: Name der Parameteroption, wie er im zugrunde liegenden technischen Service definiert ist. </li>
+
+                                        <li><samp class="codeph">action=<em>&lt;action&gt;</em></samp>: Bei gestaffelten Preisen ist dies die Aktion, die durchgeführt wurde. Folgende Werte können ausgegeben werden: <samp class="codeph">INSERT</samp> (ein gestaffelter Preis wurde definiert), <samp class="codeph">UPDATE</samp> (ein gestaffelter Preis wurde geändert) oder <samp class="codeph">DELETE</samp> (ein gestaffelter Preis wurde gelöscht). Falls keine gestaffelten Preise definiert sind, wird der Parameter <samp class="codeph">action</samp> nicht im Aktionsprotokoll ausgegeben.</li>
+
+                                        <li><samp class="codeph">price=<em>&lt;Preis&gt;</em></samp>: Der im Preismodell definierte Preis. </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Edit price per subscription parameter in service price model</strong></p>
+
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte den Preis pro Abo für einen Parameter oder eine Parameteroption in einem Service-Preismodell.</p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li><samp class="codeph">currency=<em>&lt;Währung&gt;</em></samp>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+
+                                        <li><samp class="codeph">parameterName=<em>&lt;Parametername&gt;</em></samp>: Name des Parameters, wie er im zugrunde liegenden technischen Service definiert ist. </li>
+
+                                        <li><samp class="codeph">range=<em>&lt;Obergrenze&gt;</em></samp>: Für numerische Parameter können gestaffelte Preise definiert sein. In diesem Fall ist dies die Obergrenze, bis zu der der Preis gilt. Falls keine gestaffelten Preise definiert sind, ist die Obergrenze <samp class="codeph">1-ANY</samp>.</li>
+
+                                        <li><samp class="codeph">optionName=<em>&lt;Optionsname&gt;</em></samp>: Name der Parameteroption, wie er im zugrunde liegenden technischen Service definiert ist. </li>
+
+                                        <li><samp class="codeph">action=<em>&lt;action&gt;</em></samp>: Bei gestaffelten Preisen ist dies die Aktion, die durchgeführt wurde. Folgende Werte können ausgegeben werden: <samp class="codeph">INSERT</samp> (ein gestaffelter Preis wurde definiert), <samp class="codeph">UPDATE</samp> (ein gestaffelter Preis wurde geändert) oder <samp class="codeph">DELETE</samp> (ein gestaffelter Preis wurde gelöscht). Falls keine gestaffelten Preise definiert sind, wird der Parameter <samp class="codeph">action</samp> nicht im Aktionsprotokoll ausgegeben.</li>
+
+                                        <li><samp class="codeph">price=<em>&lt;Preis&gt;</em></samp>: Der im Preismodell definierte Preis. </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Edit price per subscription parameter in subscription price model</strong></p>
+
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte den Preis pro Abo für einen Parameter oder eine Parameteroption in einem Abo-Preismodell.</p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li><samp class="codeph">customerKey=<em>&lt;Organisations-ID&gt;</em></samp>: ID der Kundenorganisation. </li>
+
+                                        <li><samp class="codeph">customerName=<em>&lt;Organisationsname&gt;</em></samp>: Name der Kundenorganisation. </li>
+
+                                        <li>
+                                            <p><samp class="codeph">subscriptionName=<em>&lt;Abo-Name&gt;</em></samp>: Name des Abonnements, wie er beim Abonnieren angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li><samp class="codeph">currency=<em>&lt;Währung&gt;</em></samp>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+
+                                        <li><samp class="codeph">parameterName=<em>&lt;Parametername&gt;</em></samp>: Name des Parameters, wie er im zugrunde liegenden technischen Service definiert ist. </li>
+
+                                        <li><samp class="codeph">range=<em>&lt;Obergrenze&gt;</em></samp>: Für numerische Parameter können gestaffelte Preise definiert sein. In diesem Fall ist dies die Obergrenze, bis zu der der Preis gilt. Falls keine gestaffelten Preise definiert sind, ist die Obergrenze <samp class="codeph">1-ANY</samp>.</li>
+
+                                        <li><samp class="codeph">optionName=<em>&lt;Optionsname&gt;</em></samp>: Name der Parameteroption, wie er im zugrunde liegenden technischen Service definiert ist. </li>
+
+                                        <li><samp class="codeph">action=<em>&lt;action&gt;</em></samp>: Bei gestaffelten Preisen ist dies die Aktion, die durchgeführt wurde. Folgende Werte können ausgegeben werden: <samp class="codeph">INSERT</samp> (ein gestaffelter Preis wurde definiert), <samp class="codeph">UPDATE</samp> (ein gestaffelter Preis wurde geändert) oder <samp class="codeph">DELETE</samp> (ein gestaffelter Preis wurde gelöscht). Falls keine gestaffelten Preise definiert sind, wird der Parameter <samp class="codeph">action</samp> nicht im Aktionsprotokoll ausgegeben.</li>
+
+                                        <li><samp class="codeph">price=<em>&lt;Preis&gt;</em></samp>: Der im Preismodell definierte Preis. </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Edit price per user parameter in customer price model</strong></p>
+
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte den Preis pro Benutzer für einen Parameter oder eine Parameteroption in einem Kunden-Preismodell.</p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li><samp class="codeph">customerKey=<em>&lt;Organisations-ID&gt;</em></samp>: ID der Kundenorganisation. </li>
+
+                                        <li><samp class="codeph">customerName=<em>&lt;Organisationsname&gt;</em></samp>: Name der Kundenorganisation. </li>
+
+                                        <li><samp class="codeph">currency=<em>&lt;Währung&gt;</em></samp>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+
+                                        <li><samp class="codeph">parameterName=<em>&lt;Parametername&gt;</em></samp>: Name des Parameters, wie er im zugrunde liegenden technischen Service definiert ist. </li>
+
+                                        <li><samp class="codeph">optionName=<em>&lt;Optionsname&gt;</em></samp>: Name der Parameteroption, wie er im zugrunde liegenden technischen Service definiert ist.</li>
+
+                                        <li><samp class="codeph">price=<em>&lt;Preis&gt;</em></samp>: Der im Preismodell definierte Preis. </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Edit price per user parameter in service price model</strong></p>
+
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte den Preis pro Benutzer für einen Parameter oder eine Parameteroption in einem Service-Preismodell.</p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li><samp class="codeph">currency=<em>&lt;Währung&gt;</em></samp>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+
+                                        <li><samp class="codeph">parameterName=<em>&lt;Parametername&gt;</em></samp>: Name des Parameters, wie er im zugrunde liegenden technischen Service definiert ist. </li>
+
+                                        <li><samp class="codeph">optionName=<em>&lt;Optionsname&gt;</em></samp>: Name der Parameteroption, wie er im zugrunde liegenden technischen Service definiert ist.</li>
+
+                                        <li><samp class="codeph">price=<em>&lt;Preis&gt;</em></samp>: Der im Preismodell definierte Preis. </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Edit price per user parameter in subscription price model</strong></p>
+
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte den Preis pro Benutzer für einen Parameter oder eine Parameteroption in einem Abo-Preismodell.</p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li><samp class="codeph">customerKey=<em>&lt;Organisations-ID&gt;</em></samp>: ID der Kundenorganisation. </li>
+
+                                        <li><samp class="codeph">customerName=<em>&lt;Organisationsname&gt;</em></samp>: Name der Kundenorganisation. </li>
+
+                                        <li>
+                                            <p><samp class="codeph">subscriptionName=<em>&lt;Abo-Name&gt;</em></samp>: Name des Abonnements, wie er beim Abonnieren angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li><samp class="codeph">currency=<em>&lt;Währung&gt;</em></samp>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+
+                                        <li><samp class="codeph">parameterName=<em>&lt;Parametername&gt;</em></samp>: Name des Parameters, wie er im zugrunde liegenden technischen Service definiert ist. </li>
+
+                                        <li><samp class="codeph">optionName=<em>&lt;Optionsname&gt;</em></samp>: Name der Parameteroption, wie er im zugrunde liegenden technischen Service definiert ist.</li>
+
+                                        <li><samp class="codeph">price=<em>&lt;Preis&gt;</em></samp>: Der im Preismodell definierte Preis. </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Edit price per user role parameter in customer price model</strong></p>
+
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte den Preis pro Benutzer mit einer Servicerolle für einen Parameter oder eine Parameteroption in einem Kunden-Preismodell.</p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li><samp class="codeph">customerKey=<em>&lt;Organisations-ID&gt;</em></samp>: ID der Kundenorganisation. </li>
+
+                                        <li><samp class="codeph">customerName=<em>&lt;Organisationsname&gt;</em></samp>: Name der Kundenorganisation. </li>
+
+                                        <li><samp class="codeph">currency=<em>&lt;Währung&gt;</em></samp>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+
+                                        <li><samp class="codeph">timeUnit=<em>&lt;Zeiteinheit&gt;</em></samp>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+
+                                        <li><samp class="codeph">userRole=<em>&lt;Rollenname&gt;</em></samp>: Name der Servicerolle, wie er im zugrunde liegenden technischen Service definiert ist.</li>
+
+                                        <li><samp class="codeph">parameterName=<em>&lt;Parametername&gt;</em></samp>: Name des Parameters, wie er im zugrunde liegenden technischen Service definiert ist.</li>
+
+                                        <li><samp class="codeph">optionName=<em>&lt;Optionsname&gt;</em></samp>: Name der Parameteroption, wie er im zugrunde liegenden technischen Service definiert ist.</li>
+
+                                        <li><samp class="codeph">price=<em>&lt;Preis&gt;</em></samp>: Der im Preismodell definierte Preis. </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Edit price per user role parameter in service price model</strong></p>
+
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte den Preis pro Benutzer mit einer bestimmten Servicerolle für einen Parameter oder eine Parameteroption in einem Service-Preismodell.</p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li><samp class="codeph">currency=<em>&lt;Währung&gt;</em></samp>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+
+                                        <li><samp class="codeph">timeUnit=<em>&lt;Zeiteinheit&gt;</em></samp>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+
+                                        <li><samp class="codeph">userRole=<em>&lt;Rollenname&gt;</em></samp>: Name der Servicerolle, wie er im zugrunde liegenden technischen Service definiert ist.</li>
+
+                                        <li><samp class="codeph">parameterName=<em>&lt;Parametername&gt;</em></samp>: Name des Parameters, wie er im zugrunde liegenden technischen Service definiert ist.</li>
+
+                                        <li><samp class="codeph">optionName=<em>&lt;Optionsname&gt;</em></samp>: Name der Parameteroption, wie er im zugrunde liegenden technischen Service definiert ist. </li>
+
+                                        <li><samp class="codeph">price=<em>&lt;Preis&gt;</em></samp>: Der im Preismodell definierte Preis. </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Edit price per user role parameter in subscription price model</strong></p>
+
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte den Preis pro Benutzer mit einer Servicerolle für einen Parameter oder eine Parameteroption in einem Abo-Preismodell.</p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li><samp class="codeph">customerKey=<em>&lt;Organisations-ID&gt;</em></samp>: ID der Kundenorganisation. </li>
+
+                                        <li><samp class="codeph">customerName=<em>&lt;Organisationsname&gt;</em></samp>: Name der Kundenorganisation. </li>
+
+                                        <li>
+                                            <p><samp class="codeph">subscriptionName=<em>&lt;Abo-Name&gt;</em></samp>: Name des Abonnements, wie er beim Abonnieren angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li><samp class="codeph">currency=<em>&lt;Währung&gt;</em></samp>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+
+                                        <li><samp class="codeph">timeUnit=<em>&lt;Zeiteinheit&gt;</em></samp>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+
+                                        <li><samp class="codeph">userRole=<em>&lt;Rollenname&gt;</em></samp>: Name der Servicerolle, wie er im zugrunde liegenden technischen Service definiert ist.</li>
+
+                                        <li><samp class="codeph">parameterName=<em>&lt;Parametername&gt;</em></samp>: Name des Parameters, wie er im zugrunde liegenden technischen Service definiert ist.</li>
+
+                                        <li><samp class="codeph">optionName=<em>&lt;Optionsname&gt;</em></samp>: Name der Parameteroption, wie er im zugrunde liegenden technischen Service definiert ist.</li>
+
+                                        <li><samp class="codeph">price=<em>&lt;Preis&gt;</em></samp>: Der im Preismodell definierte Preis. </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Edit recurring charge for subscription in customer price model</strong></p>
+
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte den Preis pro Abo in einem Kunden-Preismodell.</p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li><samp class="codeph">customerKey=<em>&lt;Organisations-ID&gt;</em></samp>: ID der Kundenorganisation. </li>
+
+                                        <li><samp class="codeph">customerName=<em>&lt;Organisationsname&gt;</em></samp>: Name der Kundenorganisation. </li>
+
+                                        <li><samp class="codeph">currency=<em>&lt;Währung&gt;</em></samp>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+
+                                        <li><samp class="codeph">timeUnit=<em>&lt;Zeiteinheit&gt;</em></samp>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+
+                                        <li><samp class="codeph">oneTimeFee=<em>&lt;Gebühr&gt;</em></samp>: Einmalige Gebühr für ein Abonnement. </li>
+
+                                        <li><samp class="codeph">recurringCharge=<em>&lt;Gebühr&gt;</em></samp>: Gebühr, die für ein Abonnement in regelmäßigen Abständen anfällt.</li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Edit recurring charge for subscription in service price model</strong></p>
+
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte den Preis pro Abo in einem Service-Preismodell.</p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li><samp class="codeph">currency=<em>&lt;Währung&gt;</em></samp>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+
+                                        <li><samp class="codeph">timeUnit=<em>&lt;Zeiteinheit&gt;</em></samp>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+
+                                        <li><samp class="codeph">oneTimeFee=<em>&lt;Gebühr&gt;</em></samp>: Einmalige Gebühr für ein Abonnement. </li>
+
+                                        <li><samp class="codeph">recurringCharge=<em>&lt;Gebühr&gt;</em></samp>: Gebühr, die für ein Abonnement in regelmäßigen Abständen anfällt.</li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Edit recurring charge for subscription in subscription price model</strong></p>
+
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte den Preis pro Abo in einem Abo-Preismodell.</p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li><samp class="codeph">customerKey=<em>&lt;Organisations-ID&gt;</em></samp>: ID der Kundenorganisation. </li>
+
+                                        <li><samp class="codeph">customerName=<em>&lt;Organisationsname&gt;</em></samp>: Name der Kundenorganisation. </li>
+
+                                        <li>
+                                            <p><samp class="codeph">subscriptionName=<em>&lt;Abo-Name&gt;</em></samp>: Name des Abonnements, wie er beim Abonnieren angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li><samp class="codeph">currency=<em>&lt;Währung&gt;</em></samp>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+
+                                        <li><samp class="codeph">timeUnit=<em>&lt;Zeiteinheit&gt;</em></samp>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+
+                                        <li><samp class="codeph">oneTimeFee=<em>&lt;Gebühr&gt;</em></samp>: Einmalige Gebühr für ein Abonnement. </li>
+
+                                        <li><samp class="codeph">recurringCharge=<em>&lt;Gebühr&gt;</em></samp>: Gebühr, die für ein Abonnement in regelmäßigen Abständen anfällt.</li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Edit recurring charge for users in customer price model</strong></p>
+
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte den Preis für Benutzer in einem Kunden-Preismodell.</p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li><samp class="codeph">customerKey=<em>&lt;Organisations-ID&gt;</em></samp>: ID der Kundenorganisation. </li>
+
+                                        <li><samp class="codeph">customerName=<em>&lt;Organisationsname&gt;</em></samp>: Name der Kundenorganisation. </li>
+
+                                        <li><samp class="codeph">currency=<em>&lt;Währung&gt;</em></samp>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+
+                                        <li><samp class="codeph">timeUnit=<em>&lt;Zeiteinheit&gt;</em></samp>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+
+                                        <li><samp class="codeph">range=<em>&lt;Obergrenze&gt;</em></samp>: Bei gestaffelten Preisen ist dies die Obergrenze, bis zu der der Preis gilt. Falls keine gestaffelten Preise definiert sind, ist die Obergrenze <samp class="codeph">1-ANY</samp>.</li>
+
+                                        <li><samp class="codeph">action=<em>&lt;action&gt;</em></samp>: Bei gestaffelten Preisen ist dies die Aktion, die durchgeführt wurde. Folgende Werte können ausgegeben werden: <samp class="codeph">INSERT</samp> (ein gestaffelter Preis wurde definiert), <samp class="codeph">UPDATE</samp> (ein gestaffelter Preis wurde geändert) oder <samp class="codeph">DELETE</samp> (ein gestaffelter Preis wurde gelöscht). Falls keine gestaffelten Preise definiert sind, wird der Parameter <samp class="codeph">action</samp> nicht im Aktionsprotokoll ausgegeben.</li>
+
+                                        <li><samp class="codeph">recurringCharge=<em>&lt;Gebühr&gt;</em></samp>: Gebühr, die für die Anzahl der Zeiteinheiten bezahlt werden muss, die Benutzer einem Abonnement zugeordnet sind.</li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Edit recurring charge for users in service price model</strong></p>
+
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte den Preis für Benutzer in einem Service-Preismodell.</p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li><samp class="codeph">currency=<em>&lt;Währung&gt;</em></samp>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+
+                                        <li><samp class="codeph">timeUnit=<em>&lt;Zeiteinheit&gt;</em></samp>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+
+                                        <li><samp class="codeph">range=<em>&lt;Obergrenze&gt;</em></samp>: Bei gestaffelten Preisen ist dies die Obergrenze, bis zu der der Preis gilt. Falls keine gestaffelten Preise definiert sind, ist die Obergrenze <samp class="codeph">1-ANY</samp>.</li>
+
+                                        <li><samp class="codeph">action=<em>&lt;action&gt;</em></samp>: Bei gestaffelten Preisen ist dies die Aktion, die durchgeführt wurde. Folgende Werte können ausgegeben werden: <samp class="codeph">INSERT</samp> (ein gestaffelter Preis wurde definiert), <samp class="codeph">UPDATE</samp> (ein gestaffelter Preis wurde geändert) oder <samp class="codeph">DELETE</samp> (ein gestaffelter Preis wurde gelöscht). Falls keine gestaffelten Preise definiert sind, wird der Parameter <samp class="codeph">action</samp> nicht im Aktionsprotokoll ausgegeben.</li>
+
+                                        <li><samp class="codeph">recurringCharge=<em>&lt;Gebühr&gt;</em></samp>: Gebühr, die für die Anzahl der Zeiteinheiten bezahlt werden muss, die Benutzer einem Abonnement zugeordnet sind.</li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Edit recurring charge for users in subscription price model</strong></p>
+
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte den Preis für Benutzer in einem Abo-Preismodell.</p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li><samp class="codeph">customerKey=<em>&lt;Organisations-ID&gt;</em></samp>: ID der Kundenorganisation. </li>
+
+                                        <li><samp class="codeph">customerName=<em>&lt;Organisationsname&gt;</em></samp>: Name der Kundenorganisation. </li>
+
+                                        <li>
+                                            <p><samp class="codeph">subscriptionName=<em>&lt;Abo-Name&gt;</em></samp>: Name des Abonnements, wie er beim Abonnieren angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li><samp class="codeph">currency=<em>&lt;Währung&gt;</em></samp>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+
+                                        <li><samp class="codeph">timeUnit=<em>&lt;Zeiteinheit&gt;</em></samp>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+
+                                        <li><samp class="codeph">range=<em>&lt;Obergrenze&gt;</em></samp>: Bei gestaffelten Preisen ist dies die Obergrenze, bis zu der der Preis gilt. Falls keine gestaffelten Preise definiert sind, ist die Obergrenze <samp class="codeph">1-ANY</samp>.</li>
+
+                                        <li><samp class="codeph">action=<em>&lt;action&gt;</em></samp>: Bei gestaffelten Preisen ist dies die Aktion, die durchgeführt wurde. Folgende Werte können ausgegeben werden: <samp class="codeph">INSERT</samp> (ein gestaffelter Preis wurde definiert), <samp class="codeph">UPDATE</samp> (ein gestaffelter Preis wurde geändert) oder <samp class="codeph">DELETE</samp> (ein gestaffelter Preis wurde gelöscht). Falls keine gestaffelten Preise definiert sind, wird der Parameter <samp class="codeph">action</samp> nicht im Aktionsprotokoll ausgegeben.</li>
+
+                                        <li><samp class="codeph">recurringCharge=<em>&lt;Gebühr&gt;</em></samp>: Gebühr, die für die Anzahl der Zeiteinheiten bezahlt werden muss, die Benutzer einem Abonnement zugeordnet sind.</li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Edit service role prices for customer price model</strong></p>
+
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte den Preis für Benutzer mit einer bestimmten Servicerolle in einem Kunden-Preismodell.</p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li><samp class="codeph">customerKey=<em>&lt;Organisations-ID&gt;</em></samp>: ID der Kundenorganisation. </li>
+
+                                        <li><samp class="codeph">customerName=<em>&lt;Organisationsname&gt;</em></samp>: Name der Kundenorganisation. </li>
+
+                                        <li><samp class="codeph">currency=<em>&lt;Währung&gt;</em></samp>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+
+                                        <li><samp class="codeph">timeUnit=<em>&lt;Zeiteinheit&gt;</em></samp>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+
+                                        <li><samp class="codeph">userRole=<em>&lt;Rollenname&gt;</em></samp>: Name der Servicerolle, wie er im zugrunde liegenden technischen Service definiert ist.</li>
+
+                                        <li><samp class="codeph">price=<em>&lt;Preis&gt;</em></samp>: Preis für Benutzer mit der Servicerolle. </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Edit service role prices for service price model</strong></p>
+
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte den Preis für Benutzer mit einer bestimmten Servicerolle in einem Service-Preismodell.</p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li><samp class="codeph">currency=<em>&lt;Währung&gt;</em></samp>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+
+                                        <li><samp class="codeph">timeUnit=<em>&lt;Zeiteinheit&gt;</em></samp>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+
+                                        <li><samp class="codeph">userRole=<em>&lt;Rollenname&gt;</em></samp>: Name der Servicerolle, wie er im zugrunde liegenden technischen Service definiert ist.</li>
+
+                                        <li><samp class="codeph">price=<em>&lt;Preis&gt;</em></samp>: Preis für Benutzer mit der Servicerolle. </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Edit service role prices for subscription price model</strong></p>
+
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte den Preis für Benutzer mit einer bestimmten Servicerolle in einem Abo-Preismodell.</p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li><samp class="codeph">customerKey=<em>&lt;Organisations-ID&gt;</em></samp>: ID der Kundenorganisation. </li>
+
+                                        <li><samp class="codeph">customerName=<em>&lt;Organisationsname&gt;</em></samp>: Name der Kundenorganisation. </li>
+
+                                        <li>
+                                            <p><samp class="codeph">subscriptionName=<em>&lt;Abo-Name&gt;</em></samp>: Name des Abonnements, wie er beim Abonnieren angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li><samp class="codeph">currency=<em>&lt;Währung&gt;</em></samp>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+
+                                        <li><samp class="codeph">timeUnit=<em>&lt;Zeiteinheit&gt;</em></samp>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+
+                                        <li><samp class="codeph">userRole=<em>&lt;Rollenname&gt;</em></samp>: Name der Servicerolle, wie er im zugrunde liegenden technischen Service definiert ist.</li>
+
+                                        <li><samp class="codeph">price=<em>&lt;Preis&gt;</em></samp>: Preis für Benutzer mit der Servicerolle. </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Edit subscription attribute by service manager</strong></p>
+
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte den Wert eines eigenen Attributs für Abonnements. Für jeden Wert wird eine separate Meldung im Aktionsprotokoll ausgegeben. </p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li>
+                                            <p><samp class="codeph">subscriptionName=<em>&lt;Abo-Name&gt;</em></samp>: Name des Abonnements, wie er beim Abonnieren angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li><samp class="codeph">attributeName=<em>&lt;Attributname&gt;</em></samp>: Name des eigenen Attributs. </li>
+
+                                        <li><samp class="codeph">attributeValue=<em>&lt;Attributwert&gt;</em></samp>: Wert des eigenen Attributs. </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Localize price model for customer</strong></p>
+
+                                <p>Beschreibung: Ein Service-Manager hinterlegte die Beschreibungen und/oder die Lizenzvereinbarung für einen Kunden in einer anderen Sprache. </p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li><samp class="codeph">customerKey=<em>&lt;Organisations-ID&gt;</em></samp>: ID der Kundenorganisation. </li>
+
+                                        <li><samp class="codeph">customerName=<em>&lt;Organisationsname&gt;</em></samp>: Name der Kundenorganisation. </li>
+
+                                        <li><samp class="codeph">locale=<em>&lt;Sprache&gt;</em></samp>: Code der Sprache, in der die Texte gespeichert wurden. </li>
+
+                                        <li><samp class="codeph">description=<em>&lt;Ja oder Nein&gt;</em></samp>: Gibt an, ob die Beschreibung des Preismodells geändert wurde. Folgende Werte können ausgegeben werden: <samp class="codeph">YES</samp> (Ja) oder <samp class="codeph">NO</samp> (Nein). </li>
+
+                                        <li><samp class="codeph">license=<em>&lt;Ja oder Nein&gt;</em></samp>: Gibt an, ob die Lizenzvereinbarung geändert wurde. Folgende Werte können ausgegeben werden: <samp class="codeph">YES</samp> (Ja) oder <samp class="codeph">NO</samp> (Nein). </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Localize price model for service</strong></p>
+
+                                <p>Beschreibung: Ein Service-Manager hinterlegte die Beschreibungen und/oder die Lizenzvereinbarung eines Abonnements in einer anderen Sprache. </p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li><samp class="codeph">locale=<em>&lt;Sprache&gt;</em></samp>: Code der Sprache, in der die Texte gespeichert wurden. </li>
+
+                                        <li><samp class="codeph">description=<em>&lt;Ja oder Nein&gt;</em></samp>: Gibt an, ob die Beschreibung des Preismodells geändert wurde. Folgende Werte können ausgegeben werden: <samp class="codeph">YES</samp> (Ja) oder <samp class="codeph">NO</samp> (Nein). </li>
+
+                                        <li><samp class="codeph">license=<em>&lt;Ja oder Nein&gt;</em></samp>: Gibt an, ob die Lizenzvereinbarung geändert wurde. Folgende Werte können ausgegeben werden: <samp class="codeph">YES</samp> (Ja) oder <samp class="codeph">NO</samp> (Nein). </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Localize price model for subscription</strong></p>
+
+                                <p>Beschreibung: Ein Service-Manager hinterlegte die Beschreibungen und/oder die Lizenzvereinbarung eines Abonnements in einer anderen Sprache. </p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li><samp class="codeph">customerKey=<em>&lt;Organisations-ID&gt;</em></samp>: ID der Kundenorganisation. </li>
+
+                                        <li><samp class="codeph">customerName=<em>&lt;Organisationsname&gt;</em></samp>: Name der Kundenorganisation. </li>
+
+                                        <li>
+                                            <p><samp class="codeph">subscriptionName=<em>&lt;Abo-Name&gt;</em></samp>: Name des Abonnements, wie er beim Abonnieren angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li><samp class="codeph">locale=<em>&lt;Sprache&gt;</em></samp>: Code der Sprache, in der die Texte gespeichert wurden. </li>
+
+                                        <li><samp class="codeph">description=<em>&lt;Ja oder Nein&gt;</em></samp>: Gibt an, ob die Beschreibung des Preismodells geändert wurde. Folgende Werte können ausgegeben werden: <samp class="codeph">YES</samp> (Ja) oder <samp class="codeph">NO</samp> (Nein). </li>
+
+                                        <li><samp class="codeph">license=<em>&lt;Ja oder Nein&gt;</em></samp>: Gibt an, ob die Lizenzvereinbarung geändert wurde. Folgende Werte können ausgegeben werden: <samp class="codeph">YES</samp> (Ja) oder <samp class="codeph">NO</samp> (Nein). </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Localize service</strong></p>
+
+                                <p>Beschreibung: Ein Service-Manager hinterlegte die beschreibenden Texte eines marktfähigen Service in einer anderen Sprache. </p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li><samp class="codeph">shortDescription=<em>&lt;Ja oder Nein&gt;</em></samp>: Gibt an, ob die Kurzbeschreibung für den marktfähigen Service geändert wurde. Folgende Werte können ausgegeben werden: <samp class="codeph">YES</samp> (Ja) oder <samp class="codeph">NO</samp> (Nein). </li>
+
+                                        <li><samp class="codeph">description=<em>&lt;Ja oder Nein&gt;</em></samp>: Gibt an, ob die Beschreibung für den marktfähigen Service geändert wurde. Folgende Werte können ausgegeben werden: <samp class="codeph">YES</samp> (Ja) oder <samp class="codeph">NO</samp> (Nein). </li>
+
+                                        <li><samp class="codeph">locale=<em>&lt;Sprache&gt;</em></samp>: Code der Sprache, in der die Beschreibungen gespeichert wurden. </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Set service as public</strong></p>
+
+                                <p>Beschreibung: Bei der Vorbereitung zur Veröffentlichung eines Service legte ein Service-Manager, Wiederverkäufer oder Vermittler fest, dass der marktfähige Service öffentlich bzw. nicht mehr öffentlich sein soll. </p>
+
+                                <p>Weiteres Name/Wert-Paar:</p>
+
+                                <p><samp class="codeph">public=<em>&lt;Ja oder Nein&gt;</em></samp>: Gibt an, ob der Service als öffentlich gekennzeichnet ist. Folgende Werte können ausgegeben werden: <samp class="codeph">true</samp> (Ja) oder <samp class="codeph">false</samp> (Nein). </p>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Terminate subscription</strong></p>
+
+                                <p>Beschreibung: Ein Service-Manager oder Wiederverkäufer beendete explizit ein Abonnement eines Kunden. </p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li>
+                                            <p><samp class="codeph">subscriptionName=<em>&lt;Abo-Name&gt;</em></samp>: Name des Abonnements, wie er beim Abonnieren angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li><samp class="codeph">reason=<em>&lt;Text&gt;</em></samp>: Begründung, warum das Abonnement beendet wurde. </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Update service</strong></p>
+
+                                <p>Beschreibung: Ein Service-Manager änderte die Eigenschaften eines marktfähigen Service. </p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li><samp class="codeph">shortDescription=<em>&lt;Ja oder Nein&gt;</em></samp>: Gibt an, ob die Kurzbeschreibung des Service geändert wurde. Folgende Werte können ausgegeben werden: <samp class="codeph">YES</samp> (Ja) oder <samp class="codeph">NO</samp> (Nein). </li>
+
+                                        <li><samp class="codeph">description=<em>&lt;Ja oder Nein&gt;</em></samp>: Gibt an, ob die Beschreibung des Service geändert. Folgende Werte können ausgegeben werden: <samp class="codeph">YES</samp> (Ja) oder <samp class="codeph">NO</samp> (nein). </li>
+
+                                        <li><samp class="codeph">locale=<em>&lt;Sprache&gt;</em></samp>: Code der Sprache, in der die Beschreibungen gespeichert wurden. </li>
+
+                                        <li><samp class="codeph">autoAssignUser=<em>&lt;Ja oder Nein&gt;</em></samp>: Gibt an, ob der Benutzer, der den Service abonniert, automatisch dem Abonnement zugeordnet wird. Folgende Werte können ausgegeben werden: <samp class="codeph">YES</samp> (Ja) oder <samp class="codeph">NO</samp> (Nein). </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>Update service parameter</strong></p>
+
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte einen Parameter oder eine Parameteroption.</p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li><samp class="codeph">parameterName=<em>&lt;Parametername&gt;</em></samp>: Name des Parameters, wie er im zugrunde liegenden technischen Service definiert ist.</li>
+
+                                        <li><samp class="codeph">userOption=<em>&lt;Ja oder Nein&gt;</em></samp>: Gibt an, ob der Parameter dem Kunden beim Abonnieren des Service als Auswahlmöglichkeit angeboten werden soll. Folgende Werte können ausgegeben werden: <samp class="codeph">ON</samp> (Ja) oder <samp class="codeph">OFF</samp> (Nein). </li>
+
+                                        <li><samp class="codeph">value=<em>&lt;Wert&gt;</em></samp>: Für einen Parameter wird die Zeichenfolge und für eine Parameteroption <samp class="codeph">YES</samp> oder <samp class="codeph">NO</samp> ausgegeben.</li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" frame="above" border="1" rules="all">
+                    
+                    <tbody>
+                        <tr>
+                            <td class="nocellnorowborder" valign="top">
+                                <p><strong>Aktion</strong>: <strong>View subscription</strong></p>
+
+                                <p>Beschreibung: Ein Service-Manager, Wiederverkäufer oder Vermittler zeigte Details zu einem Abonnement an. </p>
+
+                                <p>Weitere Name/Wert-Paare:</p>
+
+                                <div class="p">
+                                    <ul>
+                                        <li>
+                                            <p><samp class="codeph">subscriptionName=<em>&lt;Abo-Name&gt;</em></samp>: Name des Abonnements, wie er beim Abonnieren angegeben wurde. </p>
+
+                                        </li>
+
+                                        <li><samp class="codeph">customerKey=<em>&lt;Organisations-ID&gt;</em></samp>: ID der Kundenorganisation. </li>
+
+                                        <li><samp class="codeph">customerName=<em>&lt;Organisationsname&gt;</em></samp>: Name der Kundenorganisation. </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>

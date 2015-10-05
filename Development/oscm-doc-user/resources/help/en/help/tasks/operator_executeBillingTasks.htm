@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="Executing billing tasks"/>
+<meta name="DC.Relation" scheme="URI" content="operator_manageConfiguration.htm"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="task634"/>
+<meta name="DC.Language" content="en-us"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>Executing billing tasks</title>
+</head>
+<body id="task634">
+
+
+  <h1 class="topictitle1">Executing billing tasks</h1>
+
+  <div>
+    <div class="section">
+      <p id="task634__Billing_Intro">At daily intervals, the database content is checked for organizations which have produced billing-relevant data, the billing data is calculated, and the data is collected and stored in the database. These checks and calculations are called "billing runs for customer billing data". </p>
+
+      <p id="task634__Billing_Introx">Each supplier and reseller can define his preferred start day of the monthly billing periods. When a billing period ends, the costs for all customer subscriptions that were produced in the course of this period are calculated. This is done in the billing run that is executed on the start day of the next billing period plus the offset defined by the <samp class="codeph">TIMER_INTERVAL_BILLING_OFFSET</samp> configuration setting. For example: A supplier defines that his billing period is to start on the 8th of a month. The <samp class="codeph">TIMER_INTERVAL_BILLING_OFFSET</samp> is set to 5 days and 4 hours. The billing run calculating the costs for the supplier's customers is executed on the 13th of each month at 04:00:00.000. </p>
+
+      <p id="task634__Billing_Intro1">Brokers and resellers, as well as the platform operator and the owners of the marketplaces on which services are published, usually receive a share of the revenue for the services. The revenue shares for these organizations and their effects on suppliers' revenues are calculated every month based on the results of the daily checks for customer billing data. This calculation is called "billing run for revenue share data". The billing period for this billing run cannot be changed; it is always executed for the previous month on the first day of a month plus the offset defined by the <samp class="codeph">TIMER_INTERVAL_BILLING_OFFSET</samp> configuration setting. </p>
+
+      <p id="task634__Billing_Intro2">When a billing run for customer billing data is finished, the billing data that must be handled by a payment service provider (PSP) is processed. This transaction is called "payment processing".</p>
+
+      <p>On the <span class="uicontrol">Execute billing tasks</span> page, you can perform the following tasks by clicking <span class="uicontrol">Execute</span> in the relevant section of the page: </p>
+
+      <div class="p">
+        <ul>
+          <li class="liexpand"><span class="uicontrol">Start billing run</span>
+            <p>This action explicitly starts a billing run for calculating the customer billing data for a billing period. </p>
+<p id="task634__StartBillingRun">The billing period depends on the day when you start the billing run and on the <samp class="codeph">TIMER_INTERVAL_BILLING_OFFSET</samp> configuration setting. Explicitly starting a billing run is useful, for example if you want to check the payment processing of billing data by a PSP test system, and you do not want to wait for the automatic calculation of the data.</p>
+<p id="task634__StartBillingRun2">If you start a billing run on the first day of a month plus the day(s) defined in the <samp class="codeph">TIMER_INTERVAL_BILLING_OFFSET</samp> setting, the revenue share data is also calculated and stored. </p>
+<p>Examples:</p>
+<p id="task634__StartBillingRun3">A supplier has defined his billing period to start on the 5th and end on the 4th of each month. The <samp class="codeph">TIMER_INTERVAL_BILLING_OFFSET</samp> is set to 3 days. If you want to recalculate the customer billing data for this supplier, for example for the period of January 5th through February 4th, you need to start the billing on February 8th. </p>
+
+            <p id="task634__StartBillingRun4">If you want to calculate the revenue share data for the month of January, you need to start the billing run on February 4th. </p>
+
+          </li>
+
+          <li class="liexpand"><span class="uicontrol">Start payment processing</span><p>This action starts the payment processing of customer billing data that must be handled by a payment service provider (PSP). It is checked whether the <samp class="codeph">PSP_USAGE_ENABLED</samp> parameter has been set to <samp class="codeph">true</samp>. If this is not the case, payment processing is aborted. To set the parameter, use the <strong>Update configuration settings</strong> option in the <strong>Operation</strong> menu.</p>
+</li>
+
+          <li class="liexpand"><span class="uicontrol">Retry failed payment processes</span><p>This action re-invokes failed payment processes, for example when communication problems caused the automatic payment processing for an organization to fail. </p>
+</li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div>
+<div class="linklist"><strong>Related topics</strong><br/>
+
+<div><a href="operator_manageConfiguration.htm">Updating configuration settings</a></div></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="ja-jp" lang="ja-jp">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="プロセスの管理"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="task634"/>
+<meta name="DC.Language" content="ja-jp"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>プロセスの管理</title>
+</head>
+<body id="task634">
+
+
+  <h1 class="topictitle1">プロセスの管理</h1>
+
+  <div>
+    <div class="section">
+      <p>組織のアクションはプロセス制御の対象となり、外部システムの承認を受けるまで実行されません。 </p>
+
+      <p>管理者は、各アクションを実行する際に承認が必要かどうかを指定できます。承認が必要な場合、プロセス制御システムから承認されるか拒否されるまでアクションは待機中になります。承認が不要な場合、そのアクションは即座に実行されます。 </p>
+
+      <p>アクションをプロセスで制御するには通知用のサービスが必要です。通知用のサービスはプラットフォームとプロセス制御システムのインターフェースの役割を担います。通知用サービスの実装の詳細については、システム運用管理部門にお問い合わせください。</p>
+
+      <p>外部プロセス制御の対象となるアクションが実行された場合、そのステータスが<span class="uicontrol">プロセスの管理</span>ページに表示されます。利用者のアクションを契機とするプロセスは参照、中止、削除することができます。ステータスには以下のものがあります。 </p>
+
+      <div class="p">
+        <ul>
+          <li class="liexpand"><span class="uicontrol">実行中</span>：アクションは初期化されました。</li>
+
+          <li class="liexpand"><span class="uicontrol">承認待ち</span>：アクションを実行する前にプロセス制御システムで承認する必要があります。 </li>
+
+          <li class="liexpand"><span class="uicontrol">承認済み</span>：アクションがプロセス制御システムで承認され、実行されました。例えば、サービスの申し込みを要求した場合に、その購入済サービスが作成されました。</li>
+
+          <li class="liexpand"><span class="uicontrol">却下</span>：アクションがプロセス制御システムで承認されなかったため、実行されません。 </li>
+
+          <li class="liexpand"><span class="uicontrol">通知済み</span>：このアクションには正常に実行され、プロセス制御システムは実行されたことについて通知されています。 </li>
+
+          <li class="liexpand"><span class="uicontrol">外部システムエラー</span>: プロセス制御システムとの通信が失敗し、アクションは実行されません。</li>
+
+          <li class="liexpand"><span class="uicontrol">失敗</span>:プロセス制御システムにてアクションが承認された後に、アクションの実行中にエラーが発生した。アクションは実行されていません。</li>
+
+          <li class="liexpand"><span class="uicontrol">中止</span>：アクションは中止されました。 </li>
+
+        </ul>
+
+      </div>
+
+      <p><strong>プロセスを管理するには</strong>：</p>
+
+      <div class="p">
+        <ul>
+          <li>サービス購入管理者としてログインしている場合、<span class="uicontrol">プロセスの管理</span>ページにはプロセス制御の対象すべてと自分のアクションが表示されます。<span class="uicontrol">説明</span>欄に、要求されたアクションが表示されます。<span class="uicontrol">ステータス</span>欄に現在の処理ステータスが表示されます。 </li>
+
+          <li>管理者としてログインしている場合、対応するチェックボックスを選択して、すべてのアクションを一覧に表示するかまたは自分のアクションのみを表示するのかを選択します。チェックボックスを選択しない場合、プロセスをトリガーした所属組織のすべての利用者のアクションが表示されます。</li>
+
+        </ul>
+
+      </div>
+
+      <p><strong>アクションの実行を中止するには</strong>：</p>
+
+      <p>アクションの実行を中止するには、アクションの横にあるチェックボックスを選択して<span class="uicontrol">中止</span>をクリックします。<strong>応答待ち</strong>のアクションのみ中止できます。</p>
+
+      <p>ステータスが「中止」に変わります。このアクションにはプロセス制御システムによる承認は必要なくなります。中止されたアクションは実行されず、一覧から削除することができます。プロセス制御システムはアクションが中止されたことについて通知を受け、承認を要求する処理を中止することができます。</p>
+
+      <p><strong>アクションを削除するには</strong>: </p>
+
+      <p>アクションの横にあるチェックボックスを選択して<span class="uicontrol">削除</span>をクリックします。<strong>中止</strong>のアクションのみ完全に削除できます。</p>
+
+    </div>
+
+  </div>
+
+
+</body>
+</html>

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="Managing languages"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="Language"/>
+<meta name="DC.Language" content="en-us"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>Managing languages</title>
+</head>
+<body id="Language">
+
+
+  <h1 class="topictitle1">Managing languages</h1>
+
+  <div>
+    <div class="section">
+      <p id="Language__language_intro"><span>The platform</span> supports multiple languages in which users can work. After installation, English, German, and Japanese language bundles are available. The operator can add additional languages and customize the texts provided in the English, German, and Japanese language bundles. <span>Click <a href="../../Shared/reference/r_Language_Codes.htm">here</a> for the list of languages that can be added.</span>
+      </p>
+
+      <div class="p" id="Language__resources">A language bundle consists of the following resources: <ul>
+          <li class="liexpand"><strong>User interface resources</strong>: All texts that appear on the user interface or in generated emails.</li>
+
+          <li class="liexpand"><span class="uicontrol">Online help</span> and <span class="uicontrol">FAQ</span> HTML files: The online help topics are available in the administration portal, the FAQs are available on the marketplaces. </li>
+
+          <li class="liexpand"><span class="uicontrol">Report labels</span>: The labels and texts for the content of generated reports. </li>
+
+        </ul>
+</div>
+
+      <div class="p" id="Language__AddingLanguage">Adding a language or customizing existing texts comprises the following steps: <ol>
+          <li class="liexpand">Translating all resources of a language bundle:<div class="p">
+              <ul>
+                <li>
+                  <p>The user interface resources are translated or updated in a Microsoft Excel file<span> generated with the <span class="uicontrol">Export</span> function on the <span class="uicontrol">Manage languages</span> page</span>. <span>Click <a href="../../Shared/reference/r_Language_Export_File.htm">here</a> for details.</span></p>
+
+                </li>
+
+                <li>
+                  <p>The online help and FAQ files are translated or updated directly in the HTML files. <span>Click <a href="../../Shared/reference/r_Language_OnlineHelp_FAQ.htm">here</a> for details.</span></p>
+
+                </li>
+
+                <li>
+                  <p>The report labels are translated or updated in properties files. <span>Click <a href="../../Shared/reference/r_Language_ReportLabels.htm">here</a> for details.</span></p>
+
+                </li>
+
+              </ul>
+
+            </div>
+</li>
+
+          <li class="liexpand">For a new language: Registering the language with <span>the platform</span><span> on the <span class="uicontrol">Manage languages</span> page</span>. </li>
+
+          <li class="liexpand">Importing the translated or updated Microsoft Excel file.</li>
+
+          <li class="liexpand">Deploying the translated or updated online help and FAQ files. </li>
+
+          <li class="liexpand">Deploying the translated or updated report labels. </li>
+
+          <li class="liexpand">For a new language: Activating the language in <span>the platform</span><span> on the <span class="uicontrol">Manage languages</span> page</span>. All activated languages are available to users for selection when they edit their user profile.</li>
+
+        </ol>
+</div>
+
+      <p>On the <strong>Manage languages</strong> page, you can: </p>
+
+      <div class="p">
+        <ul>
+          <li class="liexpand">View the list of supported languages. The default language is English.</li>
+
+          <li class="liexpand">Register a language with <span>the platform</span> by adding a language code. This is the prerequisite for providing translations in a different language than the ones available after installation (English, German, Japanese). </li>
+
+          <li class="liexpand">Export the user interface resources and import your translations into <span>the platform</span>.</li>
+
+          <li class="liexpand">Update existing translations. </li>
+
+          <li class="liexpand">Activate or deactivate a language. </li>
+
+        </ul>
+
+      </div>
+
+      <p><strong>To register a language</strong>:</p>
+
+    </div>
+
+    <ol><li class="stepexpand">
+        <span>In the <span class="uicontrol">ISO language code</span> field, enter the two-letter ISO code of the language to be added. </span>
+         For example, enter <samp class="codeph">cs</samp> for the Czech language. <p><span>The platform</span> supports left-to-right languages. Right-to-left or top-to-bottom languages as well as variants of languages, such as British and US English, are not supported. <span>Click <a href="../../Shared/reference/r_Language_Codes.htm">here</a> for the list of languages that can be added.</span></p>
+
+      </li>
+<li class="stepexpand">
+        <span>Click <span class="uicontrol">Add</span>. </span>
+         By default, the newly added language is deactivated, i.e. it is not yet available to users for selection.
+      </li>
+</ol>
+
+    <div class="section">
+      <p>You can now proceed with:</p>
+
+      <div class="p">
+        <ol>
+          <li class="liexpand">Exporting the user interface resources and translating them.</li>
+
+          <li class="liexpand">Importing the translated texts and names. </li>
+
+          <li class="liexpand">Translating online help and FAQ files as well as the report labels and providing them as described in <a href="../../Shared/reference/r_Language_OnlineHelp_FAQ.htm">Online help and FAQs</a> and <a href="../../Shared/reference/r_Language_ReportLabels.htm">Report labels</a>. <p>You can also provide a subset of the resources that can be translated. For example, you can decide to have the online help, FAQ, email, and report texts in Hungarian, but leave the user interface in English. When a user then sets Hungarian in his user profile, the user interface will still be in English, but the other texts are shown in Hungarian.</p>
+</li>
+
+          <li class="liexpand">Activating the new language so that it becomes available to users when selecting their working language. </li>
+
+        </ol>
+
+      </div>
+
+      <p><strong>To export, translate, and import the user interface resources</strong>: </p>
+
+      <div class="p">
+        <ol>
+          <li class="liexpand">Click <span class="uicontrol">Export</span> and save the resources to a Microsoft Excel file in <samp class="codeph">.xls</samp> format on your file system. </li>
+
+          <li class="liexpand">Translate the resources as required. Click <a href="../../Shared/reference/r_Language_Export_File.htm">here</a> for details.</li>
+
+          <li class="liexpand">Import the translated Microsoft Excel file: <div class="p">
+              <ol type="a">
+                <li class="liexpand">
+                  <p>Click the <strong>File name</strong> field or <strong>Browse</strong>, and select the file containing the translations. </p>
+
+                </li>
+
+                <li class="liexpand">
+                  <p>Click <span class="uicontrol">Import</span>.</p>
+
+                </li>
+
+              </ol>
+
+            </div>
+<p>Make sure that your customized file is a Microsoft Excel file containing three worksheets with five columns each (keys, the three system default languages de, en, ja, and the new language).</p>
+<p>If a label or string does not exist in the new language, the English term is used. If the English term is not defined either, the technical key is used.</p>
+</li>
+
+          <li class="liexpand">Click <span class="uicontrol">Save</span> for your changes to become effective. </li>
+
+        </ol>
+
+      </div>
+
+      <p><strong>To update the translations of an existing language</strong>: </p>
+
+      <div class="p">
+        <ol>
+          <li class="liexpand">Click the line of the language you want to update. <p>You can select any of the available languages including the system default languages (de, en, or jp).</p>
+</li>
+
+          <li class="liexpand">Click <span class="uicontrol">Export</span> and save the resources to a Microsoft Excel file in <samp class="codeph">.xls</samp> format on your file system. </li>
+
+          <li class="liexpand">The column headed by the code of the selected language is filled with already existing translations. Edit the strings as required. Click <a href="../../Shared/reference/r_Language_Export_File.htm">here</a> for details. </li>
+
+          <li class="liexpand">Import the updated Microsoft Excel file: <div class="p">
+              <ol type="a">
+                <li class="liexpand">
+                  <p>Click the <strong>File name</strong> field or <strong>Browse</strong>, and select the file containing the updated translations. </p>
+
+                </li>
+
+                <li class="liexpand">
+                  <p>Click <span class="uicontrol">Import</span>.</p>
+
+                </li>
+
+              </ol>
+
+            </div>
+</li>
+
+          <li class="liexpand">Click <span class="uicontrol">Save</span> for your changes to become effective. </li>
+
+        </ol>
+
+      </div>
+
+      <p><strong>To activate a language</strong>: </p>
+
+      <div class="p">
+        <ol>
+          <li class="liexpand">Select the <span class="uicontrol">Active</span> check box beside the language you want to activate.<p>You can select multiple languages at a time. </p>
+
+          </li>
+
+          <li class="liexpand">Click <span class="uicontrol">Save</span> for your changes to become effective. </li>
+
+        </ol>
+
+      </div>
+
+      <p>All active languages are available to users for selection when they edit their user profile. </p>
+
+      <p><strong>To deactivate a language</strong>: </p>
+
+      <div class="p">
+        <ol>
+          <li class="liexpand">Deselect the <span class="uicontrol">Active</span> check box beside the language you want to deactivate. You cannot deactivate the default language English.<p>A message is displayed telling you that the language will no longer be supported as soon as you confirm your changes by clicking <span class="uicontrol">Save</span>. </p>
+</li>
+
+          <li class="liexpand">Click <span class="uicontrol">Save</span> for your changes to become effective. </li>
+
+        </ol>
+
+      </div>
+
+      <p>If the language you deactivate is set in the user profile of users working with the system: </p>
+
+      <div class="p">
+        <ul>
+          <li class="liexpand">The users' language is set to the default language English. This means that all texts are presented in the default language. </li>
+
+          <li class="liexpand">The users must update their profile: They can either stay with the default language or select another active language.</li>
+
+          <li class="liexpand">The deactivated language is no longer available for selection.</li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+</body>
+</html>

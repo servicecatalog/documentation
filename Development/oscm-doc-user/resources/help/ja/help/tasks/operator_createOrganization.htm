@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="ja-jp" lang="ja-jp">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="組織の登録"/>
+<meta name="DC.Relation" scheme="URI" content="../../Shared/reference/r_LDAP_SettingTypes.htm"/>
+<meta name="DC.Relation" scheme="URI" content="operator_manageLdapSettings.htm"/>
+<meta name="DC.Relation" scheme="URI" content="operator_manageOperatorRevenueShare.htm"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="OrgCreate"/>
+<meta name="DC.Language" content="ja-jp"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>組織の登録</title>
+</head>
+<body id="OrgCreate">
+
+
+  <h1 class="topictitle1">組織の登録</h1>
+
+  <div>
+    <div class="section"><p id="OrgCreate__On_the_task_taskbody_context_p_1"><span class="uicontrol">組織の登録</span>ページでは、新しい組織を作成しそのロール(サービス提供部門、技術サービス開発部門、サービス提供代行部門、サービス仲介部門、あるいはサービス利用部門のみ)を設定できます。すべての新しい組織に対して、最初の管理者となる利用者を定義する必要があります。この利用者は後で新しい利用者を登録したり、ロールを割り当てることができます。</p>
+<p>作成する組織のロールに応じて、必須入力の項目が異なります。例えば、ロールを一切設定せずサービス利用部門を作成する場合、組織にはサービスポータルを割り当てる必要があり、そのサービスポータルはすでに登録されている必要があります。それ以外のロールを設定する場合、サービスポータルを割り当てる必要はありません。</p>
+<p><strong>利用者の権限と管理</strong></p>
+本プラットフォームでは以下の認証モードをサポートします:<ul>
+      <li><strong>INTERNAL</strong> モード - 利用者は<strong>プラットフォーム</strong>にて認証: 利用者IDとパスワードはプラットフォーム上または組織の既存のLDAPシステム上で作成またはメンテナンスできます。<p id="OrgCreate__UserMgmt2">プラットフォーム上でメンテナンスした場合、利用者はプラットフォームのデータベースに保存されます。組織の管理者は新しい利用者を登録することができ、必要に応じてシステム運用管理者にパスワードのリセットを依頼できます。</p>
+<p id="OrgCreate__UserMgmt3">LDAPシステムを使用する場合、組織はプラットフォーム上で手動で利用者を登録する必要はありません。組織の管理者はLDAPシステムから利用者をインポートすることができ、それによって自動的にプラットフォームに利用者を登録できます。その利用者の管理はLDAPシステム上でおこなわれます。プラットフォームは継続的に利用者情報の同期をおこないます。プラットフォームがLDAPシステムに接続できるよう、設定ファイルには接続パラメーターを定義する必要があります。</p>
+<p id="OrgCreate__UserMgmt4">プラットフォームとLDAPシステム両方による利用者のメンテナンスはサポートされていません。なお、利用者管理の方法は一度組織が作成された後は変更できません。</p>
+<p id="OrgCreate__UserMgmt5">システム運用管理者の認証に外部のLDAPシステムを使用することはできません。そのため、システム運用管理者はいつでもプラットフォームにログインして接続パラメーターを変更することが可能です。例えば、ある組織のLDAPシステムが利用不可となり、LDAPシステムによる認証ができなくなった場合などにです。</p>
+<p id="OrgCreate__UserMgmt6">システム運用管理者は<span class="uicontrol">LDAP設定の管理</span>画面からデフォルトのLDAP情報を設定できます。組織のLDAP設定ファイルの設定情報は、デフォルトの設定を補完または置換します。</p>
+</li>
+
+        <li><strong>SAML_SP</strong> モード - 利用者は<strong>外部の認証システム</strong> (SAML 2.0 アイデンティティプロバイダー(IdP)) にて認証: 組織の利用者IDおよびパスワードはIdPにて作成、メンテナンスされます。プラットフォームはSAML 2.0 サービスプロバイダとして機能します。<p>利用者がプラットフォームにアクセスするには、その利用者がIdPに存在し、かつ、プラットフォームと同じ利用者IDで登録されている必要があります。</p>
+
+        </li>
+
+      </ul>
+
+      <p><strong>新しい組織を登録するには：</strong></p>
+</div>
+
+    <ol><li class="stepexpand">
+        <span>以下の新しい組織の最初の管理者データをを入力します。 </span>
+         
+          <ul>
+            <li class="liexpand"><span class="uicontrol">性別</span>: <samp class="codeph">男性</samp>または<samp class="codeph">女性</samp>が設定できます。
+            </li>
+
+            <li class="liexpand"><span class="uicontrol">性</span>: 組織の管理者の姓。</li>
+
+            <li class="liexpand"><span class="uicontrol">名</span>: 組織の管理者の名。</li>
+
+            <li class="liexpand"><span class="uicontrol">メールアドレス</span>: 組織の管理者のメールアドレス。アカウントおよびアクセス情報の作成についての通知がこのメールアドレスに送信されます。
+                <p>指定されたメールアドレスの書式が有効な構文か確認され、ドメイン名がIANA（Internet Assigned Numbers Authority）によって定義、管理されている標準に適合しているか確認されます。</p>
+
+                <p>例: <samp class="codeph">user.name@domain.arpa</samp>, <samp class="codeph">user.name@domain.org</samp>, <samp class="codeph">user@mycompany.lan.uk</samp></p>
+</li>
+
+            <li class="liexpand"><span class="uicontrol">希望する利用者ID</span>：組織の管理者の利用者ID。利用者IDは100文字以内で以下の文字を含めることはできません。<p><samp class="codeph">!" # $ % &amp; ' * + , / :; &lt; = &gt; ?\ ^ `</samp>
+              </p>
+</li>
+
+            <li class="liexpand"><span class="uicontrol">言語</span>：デフォルトで管理者が使用する言語。 管理者に提供されるユーザーインターフェースや参考ドキュメント、メールなどは、ここで指定した言語で表示されます。 利用可能な言語は、プラットフォームに登録し、有効化した言語に依存します。詳細は<a href="operator_manageLanguages.htm">ここ</a>をクリックしてください。</li>
+
+          </ul>
+
+          <div class="note"><span class="notetitle">注:</span> INTERNAL認証モードでプラットフォームがインストールされており、LDAPベースの利用者管理で組織を作成する場合、利用者IDは外部のLDAPシステム上の既存のIDと一致している必要があります。組織のLDAPシステムの設定により、どの設定が追加で必要かが決まります。設定ファイルの全ての設定情報は関連した値に紐付けられる必要があります。(例:姓、名、メールアドレス、言語)<p>プラットフォームがSAML_SP認証モードでインストールされている場合、利用者IDはIdPに登録されている既存のIDと一致する必要があります。</p>
+</div>
+
+        
+      </li>
+<li class="stepexpand">
+        <span>組織に割り当てるロールを選択し、<span class="uicontrol">組織のロール</span>項目のチェックボックスにチェックします。組織には複数のロールを割り当てることが可能です。いずれのロールも選択されなかった場合、組織はサービス利用部門のロールとなります。この場合、サービス利用部門を管理するサービスポータルを設定する必要があります。</span>
+         サービス提供代行部門とサービス仲介部門は同時に選択またはサービス提供部門や技術サービス開発部門と組み合わせることはできません。
+      </li>
+<li class="stepexpand">
+        <span>組織の追加情報を入力します。作成する組織のロールに応じて、入力可能な項目や必須の項目が異なります。</span>
+         
+          <div class="p">
+            <ul>
+              <li class="liexpand"><span class="uicontrol">組織名</span>: 組織の名前 (例:サービス利用管理部門)</li>
+
+              <li class="liexpand"><span class="uicontrol">代表メールアドレス</span>: 組織と通常の連絡を行うためのEメールアドレス。組織には登録後に請求書の送り先として別のメールアドレスを登録することができます。
+                  <p>指定されたメールアドレスの書式が有効な構文か確認され、ドメイン名がIANA（Internet Assigned Numbers Authority）によって定義、管理されている標準に適合しているか確認されます。</p>
+
+                  <p>例: <samp class="codeph">user.name@domain.arpa</samp>, <samp class="codeph">user.name@domain.org</samp>, <samp class="codeph">user@mycompany.lan.uk</samp></p>
+</li>
+
+              <li class="liexpand"><span class="uicontrol">電話番号</span>: 組織の担当者に連絡ととるための電話番号もしくは携帯電話番号。</li>
+
+              <li class="liexpand"><span class="uicontrol">Web</span>: 組織のWebサイトのURL。サービス利用部門が購読したいと考えているサービスを提供している組織について詳細な情報を得るためにアクセスするWebサイトです。</li>
+
+              <li class="liexpand"><span class="uicontrol">言語</span>: 組織が使用するデフォルトの言語です。</li>
+
+              <li class="liexpand"><span class="uicontrol">所在地</span>: 組織の所在地。組織の管理者は組織の登録後に請求書の送り先として別の住所を登録することができます。</li>
+
+              <li class="liexpand"><span class="uicontrol">国</span>: 組織が所在する国。</li>
+
+              <li class="liexpand"><span class="uicontrol">説明</span>: 組織の説明文。(例:組織のプロフィール情報) <div class="p">
+                  <div class="note"><span class="notetitle">注:</span> 注:テキストをフォーマットするために提供されたエディタを用いて編集してください。HTMLを手作業で編集し、外部のスタイルシートやコンテンツを参照した場合、画面のレイアウトにエラーが生じる可能性があります。</div>
+
+                </div>
+</li>
+
+              <li class="liexpand">[サービス利用部門の場合のみ] <span class="uicontrol">サービスポータル</span>: サービス利用部門を管理するサービスポータル</li>
+
+              <li class="liexpand">[サービス提供部門の場合のみ] <strong>標準のシステム運用管理部門の売上配分率 (%)</strong>: システム運用管理部門とサービス提供部門の間で合意された売上配分率を入力してください。
+                  システム運用管理部門はプラットフォーム上で管理されているサービスポータルで購入されたサービスについて、この売上配分率に基づく金額をサービス提供部門から受けとります。
+                  標準のシステム運用管理部門の売上配分率は、<strong>操作</strong>メニューの<strong>システム運用管理部門の売上配分設定</strong>画面でサービス固有の売上配分率を設定しない限り、サービス提供部門が提供するサービスすべてに適用されます。
+                  これはサービス提供部門が直接サービスを提供したかどうか、つまりサービス仲介部門やサービス提供代行部門をとおしてサービスを提供したかどうかにかかわらず適用されます。
+                  サービス提供部門がサービス利用部門に適用する割引は、売上配分率から差し引かれます。</li>
+
+              <li class="liexpand">[技術サービス開発部門、サービス提供部門、サービス提供代行部門、サービス仲介部門の場合]<p><span class="uicontrol">プロフィール画像</span>: サービスポータルで使用する画像。プロフィール画像は利用部門がサービスの詳細を参照した際に表示されます。</p>
+<p><span class="uicontrol">画像のアップロード</span>入力部分または<span class="uicontrol">ファイル選択</span>をクリックし、画像のファイルを選択します。利用可能なファイルフォーマットはGIF、JPG、PNGです。プロフィール画像の最大サイズは 154 x 154 ピクセルです。推奨されるサイズは 154 x 60 ピクセルです。 </p>
+</li>
+
+            </ul>
+
+          </div>
+
+        
+      </li>
+<li class="stepexpand">
+        <span>組織がLDAPによる利用者管理をするかどうかを選択します。使用する場合はチェックボックスにチェックを入れます。</span>
+         <div class="p">
+            <div class="note"><span class="notetitle">注:</span> SAML-SP認証モードでプラットフォームをインストールしている場合、このオプションは利用できません。</div>
+
+          </div>
+LDAP認証を有効にした場合、プラットフォームにおけるLDAP設定の項目が表示されます。組織のLDAPシステムに接続するためのパラメーターが含まれているLDAP設定ファイルを設定してください。:<p>ファイルシステム上でLDAP設定ファイルを作成し、ファイルにLDAP接続設定を定義します。<span class="uicontrol">LDAP設定</span>入力部分または<span class="uicontrol">ファイル選択</span>をクリックし、設定ファイルを選択してファイルを読み込みます。</p>
+<p>設定ファイルのサンプル: </p>
+
+          <div class="p" id="OrgCreate__LDAPSample">
+            <pre class="codeblock">LDAP_BASE_DN=ou\=people,dc\=est,dc\=mycompany,dc\=de
+LDAP_CONTEXT_FACTORY=com.sun.jndi.ldap.LdapCtxFactory
+LDAP_URL=ldap://myldapserver.lan.est.company.de:389
+LDAP_ATTR_UID=uid
+LDAP_ATTR_LAST_NAME=sn
+LDAP_ATTR_FIRST_NAME=givenName
+LDAP_ATTR_EMAIL=scalixEmailAddress
+LDAP_ATTR_REFERRAL=ignore</pre>
+
+          </div>
+<p>サンプルで示されているデフォルトの値は、<samp class="codeph">LDAP_CONTEXT_FACTORY</samp>および<samp class="codeph">LDAP_ATTR_UID</samp>用に定義されています。値が設定されていない場合, プラットフォームのデフォルトのLDAP設定(<span class="uicontrol">LDAP設定の管理</span>)で異なる値が定義されない限りは、組織を作成する際にこの値が適用されます。</p>
+
+      </li>
+<li class="stepexpand">
+        <span>入力内容を保存するには、<span class="uicontrol">保存</span>をクリックします。</span>
+      </li>
+</ol>
+
+    <div class="section">
+      <p id="OrgCreate__The_new_organization_is_creat_task_taskbody_result_p">
+        
+        指定した管理者アカウントで新しい組織が作成されます。管理者には自分のアカウントが作成されたことがメールで通知されます。このメールには、利用者IDと初回ログインのためのパスワード、プラットフォームまたはサービスポータルにアクセスするためのURLが含まれます。 </p>
+
+      <p>管理者の組織が外部認証システムを利用する場合：</p>
+
+      <div class="p">
+        <ul>
+          <li>そのシステムでは、パスワードが管理されます。そのため、パスワードの記載が無いメールが管理者に送信されます。外部認証システムに登録されているパスワードはログインのために利用する必要があります。</li>
+
+          <li>管理者の利用者IDはすでにプラットフォームで存在した場合、その管理者のメールアドレス（例：<samp class="codeph">userSmith@organization.com</samp>）はシステムへログインするために利用されます。 さらにもう一つの組織が作成され、管理者の利用者IDは同一である場合、新規利用者IDは既存のIDの後ろにアットマーク（@）と管理者の組織のID（例：<samp class="codeph">userSmith@abcdefg</samp>）で構成されます。管理者には該当利用者IDが記載されたメールが送信されます。</li>
+
+        </ul>
+
+      </div>
+
+      <p>組織のデフォルトのユニットも同時に作成されます。管理者はデフォルトユニットの最初のメンバーになります。組織に登録されるすべての利用者は、自動的にこのデフォルトユニットに追加されます。組織の管理者はユニットを追加で作成することができます。</p>
+
+    </div>
+
+  </div>
+
+  <div>
+<div class="linklist"><strong>関連情報</strong><br/>
+
+<div><a href="../../Shared/reference/r_LDAP_SettingTypes.htm">LDAPキー</a></div>
+<div><a href="operator_manageLdapSettings.htm">LDAP設定の管理</a></div>
+<div><a href="operator_manageOperatorRevenueShare.htm">システム運用管理部門の売上配分設定</a></div></div>
+</div>
+
+</body>
+</html>

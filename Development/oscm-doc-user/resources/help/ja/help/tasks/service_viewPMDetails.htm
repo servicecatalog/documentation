@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="ja-jp" lang="ja-jp">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="reference"/>
+<meta name="DC.Title" content="料金設定詳細の確認"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="reference832"/>
+<meta name="DC.Language" content="ja-jp"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>料金設定詳細の確認</title>
+</head>
+<body id="reference832">
+
+
+    <h1 class="topictitle1">料金設定詳細の確認</h1>
+
+    <div>
+        <div class="section">
+            <p><span class="uicontrol">サービスの確認</span>および<span class="uicontrol">サービスの管理</span>ページでは、サービスの基本料金や利用料金の詳細を確認できます。すべての料金は税抜きです。</p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">基本料金</h4>
+            
+            <p>基本料金には以下が含まれます。:</p>
+
+            <ul>
+                <li class="liexpand">
+                    <div class="p" id="reference832__For_each_subscription_a_char_reference_refbody_section_1"><strong>料金計算方法</strong>: 料金設定に設定できる料金計算方法は以下のとおりです。:<ul>
+                            <li><span class="uicontrol">無料</span>: サービスは無料で提供されます。</li>
+
+                            <li><span class="uicontrol">従量課金</span>: サービスの使用時間をミリ秒単位として料金が計算されます。</li>
+
+                            <li><span class="uicontrol">定額</span>: 日、週などの時間単位で料金が計算されます。計算に用いる単位は<span class="uicontrol">課金単位</span>で設定します。</li>
+
+                        </ul>
+</div>
+
+                </li>
+
+                <li class="liexpand"><strong>無料試用期間 (日数)</strong>: サービスを無料で使用できる日数を設定できます。<span>この期間が経過すると、サービスは自動的に有料サービスとなります。</span></li>
+
+                <li class="liexpand"><strong>通貨</strong>: サービス利用部門がサービスを利用した際に生じる課金の通貨です。システム運用管理者がサポートされる通貨を定義します。購入済サービスの料金設定を定義しているときは通貨を変更できません。</li>
+
+                <li class="liexpand"><strong>課金単位</strong>: 課金対象となる時間単位。月ごと、週ごと、日ごと、あるいは時間ごとに料金を設定できます。この設定は定額料金の計算にも使用されます。購入済サービスの料金設定を定義しているときは課金単位を変更できません。</li>
+
+                <li class="liexpand"><strong>初期費用</strong>: サービスを申し込むときに支払う初期費用です。この手数料は、最初の請求期間の利用料金に追加されます。 </li>
+
+                <li class="liexpand"><strong>サービス契約単価</strong>: <span class="uicontrol">課金単位</span>フィールドに示した周期ごとに生じる購入済サービスの料金です。 </li>
+
+                <li class="liexpand"><span><strong>利用者単価</strong>: 購入済サービスに割り当てられた1利用者の時間単位あたりの料金です。時間単位は<span class="uicontrol">課金単位</span>フィールドで定義されます。この料金タイプでは「段階的な料金」を指定でき、利用者が購入済サービスに割り当てられた合計時間単位数に応じた割引率の設定が可能です。</span></li>
+
+            </ul>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">イベント料金</h4>
+            
+            <p>イベント料金は個別の請求可能なイベントに対する料金です。<span>例えば、サービスに対する利用者のログインやログアウト、特定のトランザクションの完了、特定のデータの作成・削除などが含まれます。サービスの実装や統合により、利用できるイベントが異なります。</span>
+            </p>
+
+            <p>この料金には段階的な価格が設定できます。例: イベントが発生した数に応じての割引</p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">パラメーター料金</h4>
+            
+            <p>サービスのパラメーターやオプションに対する料金です。<span>サービスの実装や統合により、利用できるパラメーターやオプション、またそれらを利用できるかどうかが決定されます。</span> サービス提供部門はすべてのパラメーターとオプションに対して料金が設定でき、それぞれパラメーターとオプションにはサービス契約単位または利用者単位の料金が設定できます。数値形式のパラメーターには乗算による課金、ブーリアン型(TrueまたはFalse)や選択肢のパラメーターには選択されている場合(Trueの場合)にその価格の課金がおこなわれます。それ以外の場合は課金はおこなわれません。</p>
+
+            <p>パラメーターの条件が数値形式の場合、この料金には段階的な価格が設定できます。 例: 数量割引</p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">ロールごとの料金</h4>
+            
+            <p>サービスの各ロールに対する料金です。この料金は利用者ごとの基本料金に追加して請求期間毎に課金されます。</p>
+
+            <p>サービスのロールは技術サービスに定義されている必要があります。サービスのロールはサービスのベースであるアプリケーションの権限からマッピングしてください。</p>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>
