@@ -1,0 +1,55 @@
+/* 
+ *  Copyright FUJITSU LIMITED 2015 
+ */ 
+body { font-size: 81.25%; font-family: Arial,Verdana,"Lucida Grande",'ＭＳ Ｐゴシック','ヒラギノ角ゴ Pro W3',sans-serif; }
+h1 {font-size: 138.5%;}
+h2 {font-size: 123.1%;}
+h3 {font-size: 100%;}
+hr { margin-top: 0px; margin-bottom: 0.5em; padding: 0px; border-style: solid; border-width: 1px 0px 0px; border-color: rgb(204, 204, 204); }
+p { margin-top: 0px; margin-bottom: 1.75em; padding: 0px;  }
+ul,ol { margin-top: 0px; margin-bottom: 1.75em; margin-left: 0pt; }
+li { margin-top: 0px; margin-bottom: 0.75em; margin-left: 0pt; padding: 0px;  }
+body { position: relative; text-align: center; }
+.bodyarea{ position: relative; width: 980px; margin: 0pt auto; padding-bottom: 60px; text-align: left; z-index: 900; }
+.maincontents div.scrolltop { clear: both; border-style: none; margin: 0pt; padding: 4px 0px 6px; }
+.maincontents div.scrolltop p { display: block; overflow: visible; border-style: none; margin: 0pt; padding: 0pt; text-align: right; font-size: 93%; }
+.maincontents div.scrolltop p img { margin-left: 5px; border: medium none; }
+.maincontents div.scrolltop a:link{ text-decoration: none; }
+.maincontents h1 , .maincontents h2 , .maincontents h3 { line-height: 1.5; }
+.maincontents h2.bg010 { padding: 6px 10px; background: none repeat-x scroll left top rgb(242, 242, 242); border: 1px solid rgb(210, 210, 210); }
+.maincontents div.wordindex div.heading {background:none repeat-x scroll left bottom #E5E5E5;  float: left;}
+.maincontents div.wordindex h2 {
+    background: none repeat-y scroll right top #E5E5E5;
+    font-size: 100%;
+    font-weight: bold;
+    line-height: 2em;
+    margin: 0;
+    padding: 0 8px;
+}
+.maincontents div.wordindex ul {
+    display: block;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+.maincontents div.wordindex li {
+    background: none repeat-x scroll left bottom #F7F7F7;
+    border-color: #FFFFFF #B5B5B5 #FFFFFF #FFFFFF;
+    border-style: solid;
+    border-width: 0 1px;
+    display: block;
+    float: left;
+    line-height: 2em;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0 8px;
+    white-space: nowrap;
+	 font-size: 100%;
+}
+.maincontents div.wordindex li:first-child a {border-left: medium none;}
+.maincontents div.wordindex li a {padding: 0;}
+.maincontents div.wordindex li a:link{text-decoration: none;}
+.maincontents div.wordindex li a:hover {text-decoration: underline;}
+.maincontents div.wordindex {margin-bottom: 5em;}
+.maincontents .vmiddle {vertical-align: middle;
+}
