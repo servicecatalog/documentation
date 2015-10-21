@@ -23,14 +23,29 @@
 
     <div>
         <div class="section">
-            <p>レポートは利用者がプロフィールに設定した言語で生成されます。インストール後<samp class="codeph">oscm-install-pack.zip</samp>ファイルに含まれる別の<samp class="codeph">.war</samp>ファイルに含まれるプロパティファイルで提供されています：</p>
+            <p>レポートは利用者がプロフィールに設定した言語で生成されます。レポートに使われるテキストは、
+            
+            <span>
+                             リリースごとに提供される次のアーカイブに含まれるプロパティファイルに従い設定されます:
+            </span>
+            </p>
 
-            <p><samp class="codeph">&lt;install_pack_dir&gt;/domains/bes_domain/eclipse-birt-runtime.war</samp>. </p>
+            <p>
+            
+            <span>
+            <samp class="codeph">oscm-reports.zip</samp>
+            </span>
+            </p>
 
             
-            <p><samp class="codeph">eclipse-birt-runtime.war</samp>には、以下のプロパティファイルが付いています： </p>
-
+            <p>
             
+            <span>
+            <samp class="codeph">oscm-reports.zip</samp>
+            </span>
+                            には、次のプロパティファイルが含まれます：
+            </p>
+
             <div class="p">
                 <ul>
                     <li><samp class="codeph">reportLabels.properties</samp>（デフォルト言語は英語）</li>
@@ -54,7 +69,13 @@
 
             <div class="p">
                 <ol>
-                    <li class="liexpand">ファイル <samp class="codeph">eclipse-birt-runtime.war</samp> を作業用フォルダに展開します。</li>
+                    <li class="liexpand">
+                    
+                    <span>
+                    <samp class="codeph">oscm-reports.zip</samp>
+                    </span>
+                                               を作業用フォルダに展開します。
+                    </li>
 
                     <li class="liexpand">サブディレクトリ <samp class="codeph">WEB-INF</samp> に移動します。</li>
 
@@ -91,9 +112,21 @@
                         </div>
 </li>
 
-                    <li class="liexpand">新しい言語向けに追加したプロパティファイルを含んだwarファイル <samp class="codeph">eclipse-birt-runtime.war</samp> を新たに作成します。</li>
+                    <li class="liexpand">新しい言語向けに追加したプロパティファイルを含んだ
+                    
+                    <span>
+                                               編集したプロパティファイルをBIRTレポートエンジンをデプロイしたフォルダ配下、<samp class="codeph">WEB-INF</samp>フォルダにコピーします。
+                                               通常は次のフォルダにデプロイしています:<samp class="codeph">&lt;GLASSFISH_HOME&gt;\glassfish\domains\&lt;domain&gt;\applications\birt</samp>
+                                               詳細は導入ガイドを参照してください。
+                    </span>
+                    </li>
 
-                    <li class="liexpand">カスタマイズしたファイル <samp class="codeph">eclipse-birt-runtime.war</samp> をアプリケーションサーバー上のドメイン<samp class="codeph">bes-domain</samp>に配備解除して配備するか、もしくは再配備します。詳細については、<em>運用ガイド（システム運用管理者編）</em>を参照ください。</li>
+                    <li class="liexpand">
+                    
+                    <span>
+                    Birtを再起動します。
+                    </span>
+                    </li>
 
                 </ol>
 

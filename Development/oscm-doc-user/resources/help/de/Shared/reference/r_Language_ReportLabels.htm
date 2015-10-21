@@ -22,11 +22,15 @@
 
     <div>
         <div class="section">
-            <p>Berichte werden in der Sprache generiert, die der Benutzer in seinem Profil eingestellt hat. Die in den Berichten verwendeten Texte werden nach der Installation in Konfigurationsdateien bereitgestellt, die in einer separaten <samp class="codeph">.war</samp>-Datei im Installation Package (<samp class="codeph">oscm-install-pack.zip</samp>) enthalten sind:</p>
+            <p>Berichte werden in der Sprache generiert, die der Benutzer in seinem Profil eingestellt hat. Die in den Berichten verwendeten Texte werden 
+                
+                <span>für jedes Release in Konfigurationsdateien in folgendem Archiv bereitgestellt:</span>
+            </p>
 
-            <p><samp class="codeph">&lt;install_pack_dir&gt;/domains/bes_domain/eclipse-birt-runtime.war</samp>. </p>
+            
+            <p><samp class="codeph">oscm-reports.zip</samp> </p>
 
-            <p>Die Datei <samp class="codeph">eclipse-birt-runtime.war</samp> enthält die folgenden Konfigurationsdateien: </p>
+            <p>Die Datei <span><samp class="codeph">oscm-reports.zip</samp></span> enthält die folgenden Konfigurationsdateien: </p>
 
             <div class="p">
                 <ul>
@@ -46,7 +50,7 @@
 
             <div class="p">
                 <ol>
-                    <li class="liexpand">Extrahieren Sie die Datei <samp class="codeph">eclipse-birt-runtime.war</samp> in ein lokales Verzeichnis. </li>
+                    <li class="liexpand">Extrahieren Sie die Datei <span><samp class="codeph">oscm-reports.zip</samp></span> in ein lokales Verzeichnis. </li>
 
                     <li class="liexpand">Wechseln Sie in das Unterverzeichnis <samp class="codeph">WEB-INF</samp>. </li>
 
@@ -85,15 +89,18 @@
                         </div>
 </li>
 
-                    <li class="liexpand">Erstellen Sie eine neue WAR-Datei, <samp class="codeph">eclipse-birt-runtime.war</samp>, die die Konfigurationsdatei für die neue Sprache enthält.</li>
+                    
+                    
+                    <li class="liexpand">Kopieren Sie die neue Konfigurationsdatei in das Unterverzeichnis <samp class="codeph">WEB-INF</samp> des Verzeichnisses auf dem Application Server, in dem die BIRT Report-Engine installiert ist. 
+                        Standardmäßig ist dies <samp class="codeph">&lt;GLASSFISH_HOME&gt;\glassfish\domains\&lt;domain&gt;\applications\birt</samp>.</li>
 
-                    <li class="liexpand">Deinstallieren Sie zunächst und installieren Sie anschließend die geänderte Datei <samp class="codeph">eclipse-birt-runtime.war</samp> in der Domäne <samp class="codeph">bes-domain</samp> auf Ihrem Application Server. Weitere Informationen finden Sie im <em>Installation Guide</em>. </li>
+                    <li class="liexpand">Starten Sie BIRT neu auf dem Application Server. </li>
 
                 </ol>
 
             </div>
 
-            <p>Durch Installieren der geänderten Datei werden bereits vorhandene Texte, die in Berichten ausgegeben werden, überschrieben.</p>
+            <p>Damit werden bereits vorhandene Texte, die in Berichten ausgegeben werden, überschrieben.</p>
 
             <div class="p">
                 <div class="note"><span class="notetitle">Hinweis:</span> Achten Sie darauf, dass die Verzeichnisstrukturen und Dateien konsistent bleiben!</div>

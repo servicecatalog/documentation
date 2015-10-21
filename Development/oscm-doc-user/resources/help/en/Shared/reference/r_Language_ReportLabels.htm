@@ -23,11 +23,12 @@
 
     <div>
         <div class="section">
-            <p>Reports are generated in the language the user has set in his profile. The texts used in the reports are provided after installation in properties files contained in a separate <samp class="codeph">.war</samp> file contained in the <samp class="codeph">oscm-install-pack.zip</samp> file: </p>
+            <p>Reports are generated in the language the user has set in his profile. The texts used in the reports are <span>available in properties files contained in the following archive which is provided for each release: </span>
+            </p>
 
-            <p><samp class="codeph">&lt;install_pack_dir&gt;/domains/bes_domain/eclipse-birt-runtime.war</samp>. </p>
+            <p><span><samp class="codeph">oscm-reports.zip</samp></span> </p>
 
-            <p>The <samp class="codeph">eclipse-birt-runtime.war</samp> comes with the following properties files: </p>
+            <p>The <span><samp class="codeph">oscm-reports.zip</samp></span> comes with the following properties files: </p>
 
             <div class="p">
                 <ul>
@@ -47,7 +48,7 @@
 
             <div class="p">
                 <ol>
-                    <li class="liexpand">Extract the <samp class="codeph">eclipse-birt-runtime.war</samp> file to a local directory. </li>
+                    <li class="liexpand">Extract the <span><samp class="codeph">oscm-reports.zip</samp></span> file to a local directory. </li>
 
                     <li class="liexpand">Go to the <samp class="codeph">WEB-INF</samp> subdirectory. </li>
 
@@ -84,15 +85,17 @@
                         </div>
 </li>
 
-                    <li class="liexpand">Create a new <samp class="codeph">eclipse-birt-runtime.war</samp> file containing the additional properties file for the new language. </li>
+                    <li class="liexpand"><span>Copy the new properties file to the <samp class="codeph">WEB-INF</samp> subfolder of the folder where the BIRT report engine is deployed on the application server, usually <samp class="codeph">&lt;GLASSFISH_HOME&gt;\glassfish\domains\&lt;domain&gt;\applications\birt</samp>. Refer to the <em>Installation Guide</em> for details.</span>
+                    </li>
 
-                    <li class="liexpand">Undeploy and deploy or redeploy the customized <samp class="codeph">eclipse-birt-runtime.war</samp> file to the <samp class="codeph">bes-domain</samp> domain on your application server. Refer to the <em>Installation Guide</em> for details. </li>
+                    <li class="liexpand"><span>Restart the BIRT application.</span>
+                    </li>
 
                 </ol>
 
             </div>
 
-            <p>By deploying the file, existing report labels are overwritten. </p>
+            <p>With this, existing report labels are overwritten. </p>
 
             <div class="p">
                 <div class="note"><span class="notetitle">Note:</span> You are responsible for keeping the directory structures and files consistent!</div>
