@@ -725,10 +725,11 @@ function anzeigen(das) {
               <li>Click <b>Account</b> in the top bar.
                 <li>Click <b>Users & Units</b>.
                   <li>Click <b>Add User</b> on the <b>Users</b> tab.
-                    <li>Enter the profile data for the new user and check the desired roles. If you do not check any role, 
+                    <li>Enter the profile data for the new user and click <b>Save</b>. 
+                    <li>In the next dialog, check the desired roles. If you do not check any role, 
                     the user is registered as a standard user without any specific privileges.  
-                      <li>If desired, assign the user to existing organizational units and subscriptions by checking them.
-                        <li>To register the user, click <b>Save</b>.
+                      <li>If desired, assign the user to existing organizational units and subscriptions by checking them. For each organizational unit you can choose the user’s role.
+                        <li>Click <b>Save</b>.
           </ol>
         <p>For each registered user, a user account is created and the user is notified by email of his
             registration. The email includes all the information required to log in. 
@@ -1127,29 +1128,31 @@ can I import users from a file?</a>
           <ol>
             <li>Log in as an organization administrator.</li>  
             <li>Click <b>Account</b> in the top bar.</li>
-            <li>Click <b>Users & Units</b> on the left side.</li>
+            <li>Click <b>Users & Units</b> or <b>Organizational units</b> on the left side.</li>
             <li>On the <b>Organizational units</b> tab, click <b>Add Unit</b>.</li>
-            <li>Check the services that are to be visible for the organizational unit.</li>
-            <li>To assign users to the new organizational unit click <b>Assign Users</b> and check the users in the subsequent dialog.</li>
-            <li>Click <b>Save</b> to create the organizational unit.</li> 
+            <li>Enter an appropriate name, reference ID and description.</li>
+            <li>Click <b>Save</b> to create the organizational unit.</li>
+            <li>In the following dialog, check the services that are to be visible for the members of the organizational unit.</li>
+            <li>To assign users to the new organizational unit check them in the <b>Organizational unit members</b> table and select their roles as required.</li>
+            <li>Click <b>Save</b>.</li> 
           </ol> 
           
           <p>Here is how to edit organizational units:</p>
           <ol>
             <li>Log in as an organization administrator or as an OU administrator.</li>  
             <li>Click <b>Account</b> in the top bar.</li>
-            <li>Click <b>Users & Units</b> or <b>Organizational units</b> on the left side.</li>
+            <li>Click <b>Users & Units</b> on the left side.</li>
             <li>On the <b>Organizational units</b> tab, click <img class="vmiddle" style="margin-right: 5px;" src="../img/edit.png"
                       width="20" height="20" alt="" /> next to the name of the organizational unit you want to edit.</li>
             <li>Make the desired changes in the <b>Edit organizational unit</b> dialog:</li>
                 <ul>
-                <li>To change the unit name, enter the new name in the <b>Name</b> field. This action is only available to users with administrative rights.</li> 
-                <li>To change the Reference ID, remove the old ID and enter a new one. This action is only available to users with administrative rights.</li>
-                <li>To make services visible to the unit, select them under <b>Accessible services</b>.</li>
+                <li>To change the unit name, enter the new name in the <b>Name</b> field. This action is only available to organization administrators.</li> 
+                <li>To change the Reference ID, remove the old ID and enter a new one. This action is only available to organization administrators.</li>
+                <li>To make services visible to the unit, check them under <b>Accessible services</b>.</li>
                 <li>To make a service invisible, deselect it under <b>Accessible services</b>.</li>
-                <li>To add new members to the unit, click <b>Assign Users</b> under <b>Organizational unit members</b> and check the users in the subsequent dialog.
-                    As an organization administrator, you can set or remove the role of an OU administrator for each user.</li>
-                <li>To remove members from the unit, click <img class="vmiddle" style="margin-right: 5px;" src="../img/remove_user.png" width="20" height="20" alt="" /> next to their names.</li></ul>
+                <li>To add new members to the unit, check them in the table <b>Organizational unit members</b>.
+                    As an organization administrator, you can set or remove the role of an OU administrator for each user in the <b>Role in unit</b> column.</li>
+                <li>To remove members from the unit, deselect them in the table <b>Organizational unit members</b>.</li></ul>
             <li>Click <b>Save</b></li></ol>
             
             <p>Here is how to delete an organizational unit:</p>
