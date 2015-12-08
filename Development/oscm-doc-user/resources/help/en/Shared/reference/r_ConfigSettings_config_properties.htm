@@ -191,6 +191,19 @@
 
         <div class="section"><h4 class="sectiontitle">LOG_CONFIG_FILE</h4>Optional. The path to the <samp class="codeph">log4j</samp> configuration file of <span>the platform</span>.<p>Default: </p>
 <p><samp class="codeph">./log4j.properties</samp> in the <samp class="codeph">&lt;GLASSFISH_HOME&gt;/glassfish/domains/bes-domain/config</samp> directory</p>
+<p>Every controller has its own configuration file in the domain where they are deployed.</p>
+<ul>
+                <li><strong>APP</strong>: <samp class="codeph">log4j.app.core.properties</samp></li>
+
+                <li><strong>ROR</strong>: <samp class="codeph">log4j.ess.ror.properties</samp></li>
+
+                <li><strong>AWS</strong>: <samp class="codeph">log4j.ess.aws.properties</samp></li>
+
+                <li><strong>OPENSTACK</strong>: <samp class="codeph">log4j.ess.openstack.properties</samp></li>
+
+                <li><strong>TPS5</strong>: <samp class="codeph">log4j.ess.tps5.properties</samp></li>
+
+            </ul>
 </div>
 
         <div class="section"><h4 class="sectiontitle">LOG_FILE_PATH</h4>Mandatory. The path to the <span>platform's</span> log files.<p>Default: </p>
@@ -201,6 +214,15 @@
         <div class="section"><h4 class="sectiontitle">LOG_LEVEL</h4>Optional. The log level for <span>the platform</span>. This setting applies to all logging classes if it is not overridden by the content of the <samp class="codeph">log4j.properties</samp> file. <p>Allowed values: <samp class="codeph">ERROR</samp>, <samp class="codeph">WARN</samp>, <samp class="codeph">INFO</samp>, <samp class="codeph">DEBUG</samp></p>
 <p>Default: <samp class="codeph">INFO</samp></p>
 <p>If you change this setting, you need to restart <span>the platform</span>.</p>
+<p>To adapt the log configuration level for any controller perform the following steps:</p>
+<ol>
+                <li>Open the corresponding <samp class="codeph">log4j</samp> configuration file of the controller.</li>
+
+                <li>Find <samp class="codeph">org.oscm.app</samp> in the configuration file.</li>
+
+                <li>Change the log level as desired.</li>
+
+            </ol>
 </div>
 
         <div class="section"><h4 class="sectiontitle">MAIL_JA_CHARSET</h4>Optional. Special character encoding for emails sent in Japanese.<p>Default: <samp class="codeph">UTF-8</samp></p>
