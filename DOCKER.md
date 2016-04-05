@@ -72,6 +72,6 @@ Configuration Setting |  New Value
 ------------ | ------------- | -------------
 BASE_URL | `http://localhost:8080/oscm-portal`
 BASE_URL_HTTPS | `https://localhost:8081/oscm-portal`
-REPORT_ENGINEURL | `http://localhost:18080/birt/frameset?\_\_report\=${reportname}.rptdesign&SessionId\=${sessionid}&\_\_locale\=${locale}&WSDLURL\=${wsdlurl}&SOAPEndPoint\=${soapendpoint}&wsname=Report&wsport=ReportPort`
+REPORT_ENGINEURL | `http://localhost:18080/birt/frameset?\_\_report\=${reportname}`<br>`.rptdesign&SessionId\=${sessionid}&\_\_locale\=${locale}&WSDLURL\=`<br>`${wsdlurl}&SOAPEndPoint\=${soapendpoint}&wsname=Report&wsport=ReportPort`
 REPORT_WSDLURL | `http://localhost:8080/Report/ReportingServiceBean?wsdl`
 REPORT_SOAP_ENDPOINT | `http://localhost:8080/Report/ReportingServiceBean`
