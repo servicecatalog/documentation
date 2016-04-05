@@ -62,3 +62,16 @@ Port | Description
 8048 | Glassfish administration port for the domain hosting the OSCM application 
 8480 | Glassfish HTTP port for the domain hosting the OSCM indexer application 
 8448 | Glassfish administration port for the domain hosting the OSCM indexer application
+
+## Configuring OSCM
+Before you start using the OSCM, some additional configuration steps are necessary to adapt the OSCM to your Docker environment:
+
+To ensure the communication between the OSCM components, please make sure OSCM knows the `<DOCKER_HOST>` and `<PORT>`. For that log in as *administrator* and change the following OSCM configuration settings. Please make sure you use the correct ports: the port Docker mapped for 8080 for HTTP URLs and the port mapped for 8081 for HTTPS URLs (set it to 18080 and 18081 respectively, unless you provided your own values during `docker run` command).
+
+Configuration Setting |  New Value
+------------ | ------------- | -------------
+BASE_URL | `http://localhost:8080/oscm-portal`
+BASE_URL_HTTPS | `https://localhost:8081/oscm-portal`
+REPORT_ENGINEURL | `http://localhost:18080/birt/frameset?\_\_report\=${reportname}.rptdesign&SessionId\=${sessionid}&\_\_locale\=${locale}&WSDLURL\=${wsdlurl}&SOAPEndPoint\=${soapendpoint}&wsname=Report&wsport=ReportPort`
+REPORT_WSDLURL | `http://localhost:8080/Report/ReportingServiceBean?wsdl`
+REPORT_SOAP_ENDPOINT | `http://localhost:8080/Report/ReportingServiceBean`
