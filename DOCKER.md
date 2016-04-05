@@ -32,11 +32,8 @@ ATTENTION: some users trying to set it up on local machines (a laptop or desktop
 	`docker-machine stop default`
 	`docker-machine rm default`
  - create new machine with proxy parameter:
-	`docker-machine create -d virtualbox \`
-    `--engine-env HTTP_PROXY=http://example.com:8080 \`
-    `--engine-env HTTPS_PROXY=https://example.com:8080 \`
-    `--engine-env NO_PROXY=example2.com \`
-    `default`
+ 
+	`docker-machine create -d virtualbox --engine-env HTTP_PROXY=http://example.com:8080 --engine-env HTTPS_PROXY=https://example.com:8080 --engine-env NO_PROXY=example2.com default`
  - start your new machine:
 	`docker-machine start default`
 
