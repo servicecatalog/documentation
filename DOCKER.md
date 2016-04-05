@@ -5,7 +5,7 @@ Welcome to the documentation of OSCM Docker image!
 ## Configuring Docker machine to work with corporate proxy
 To setup your proxy (skip if pulling the OSCM image succeeded):
 
-* Enter the following commands (please replace <proxy_host> and <proxy_port> with the host and port values of the active proxy in your network first. To obtain your proxy configuration, please contact your network administrator.):
+* Enter the following commands (please replace `<proxy_host>` and `<proxy_port>` with the host and port values of the active proxy in your network first. To obtain your proxy configuration, please contact your network administrator.):
 
 `sudo touch /var/lib/boot2docker/profile`
 
