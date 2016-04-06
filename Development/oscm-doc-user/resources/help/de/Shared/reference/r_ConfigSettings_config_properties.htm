@@ -239,7 +239,8 @@
    {locale}&amp;WSDLURL=$
    {wsdlurl}&amp;SOAPEndPoint=${soapendpoint}&amp;wsname=ReportSecure&amp;wsport=ReportSecurePort</pre>
 </div>
-<div class="note"><span class="notetitle">Hinweis:</span> Der obige Wert muss wie angegeben verwendet werden. Nehmen Sie keine Änderung vor.</div>
+<div class="note"><span class="notetitle">Hinweis:</span> Der obige Wert muss wie angegeben verwendet werden. Nehmen Sie keine Änderung vor.<p>Wenn Sie den SSL/HTTPS Port ändern und die BIRT Report Engine in derselben Domäne wie <span>die Plattform</span> läuft, müssen Sie diese Einstellung ebenfalls aktualisieren.</p>
+</div>
 </div>
 
                 <div class="section"><h4 class="sectiontitle">REPORT_SOAP_ENDPOINT</h4>Obligatorisch, wenn Sie Berichte verwenden möchten. Definiert den SOAP-Endpunkt des Report Web-Service. Alle Daten für einen Bericht werden über einen Aufruf des Report Web-Service zusammengestellt. Wenn Sie keinen korrekten Wert angeben, kann die Plattform keine Berichte generieren, da der Report Web-Service nicht korrekt aufgerufen werden kann. <p>Wenn HTTP-Zugriff für Ihre Installation konfiguriert ist, muss folgender Wert angegeben werden: </p>
@@ -247,20 +248,16 @@
 <p>Wenn HTTPS-Zugriff für Ihre Installation konfiguriert ist, muss folgender Wert angegeben werden:</p>
 <p><samp class="codeph">https://&lt;host IP address&gt;:&lt;port&gt;/ReportSecure/ReportingServiceSecureBean</samp>
                         </p>
-<div class="p">
-                                <div class="note"><span class="notetitle">Hinweis:</span> Der obige Wert muss wie angegeben verwendet werden. Nehmen Sie keine Änderung vor.</div>
-
-                        </div>
+<div class="note"><span class="notetitle">Hinweis:</span> Der obige Wert muss wie angegeben verwendet werden. Nehmen Sie keine Änderung vor.<p>Wenn Sie den SSL/HTTPS Port ändern und die BIRT Report Engine in derselben Domäne wie <span>die Plattform</span> läuft, müssen Sie diese Einstellung ebenfalls aktualisieren.</p>
+</div>
 </div>
 
                 <div class="section"><h4 class="sectiontitle">REPORT_WSDLURL</h4>Obligatorisch, wenn Sie Berichte verwenden möchten. Definiert die URL der WSDL-Datei des Report Web-Service. Alle Daten für einen Bericht werden über einen Aufruf des Report Web-Service zusammengestellt. Wenn Sie keinen korrekten Wert angeben, kann die Plattform keine Berichte generieren, da der Report Web-Service nicht korrekt aufgerufen werden kann.<p>Wenn HTTP-Zugriff für Ihre Installation konfiguriert ist, muss folgender Wert angegeben werden: </p>
 <p><samp class="codeph">http://&lt;host IP address&gt;:&lt;port&gt;/Report/ReportingServiceBean?wsdl</samp></p>
 <p>Wenn HTTPS-Zugriff für Ihre Installation konfiguriert ist, muss folgender Wert angegeben werden: </p>
 <p><samp class="codeph">https://&lt;host IP address&gt;:&lt;port&gt;/ReportSecure/ReportingServiceSecureBean?wsdl</samp></p>
-<div class="p">
-                                <div class="note"><span class="notetitle">Hinweis:</span> Der obige Wert muss wie angegeben verwendet werden. Nehmen Sie keine Änderung vor.</div>
-
-                        </div>
+<div class="note"><span class="notetitle">Hinweis:</span> Der obige Wert muss wie angegeben verwendet werden. Nehmen Sie keine Änderung vor.<p>Wenn Sie den SSL/HTTPS Port ändern und die BIRT Report Engine in derselben Domäne wie <span>die Plattform</span> läuft, müssen Sie diese Einstellung ebenfalls aktualisieren.</p>
+</div>
 </div>
 
                 <div class="section"><h4 class="sectiontitle">SEARCH_INDEX_MASTER_FACTORY_NAME</h4>Obligatorisch. Name der JMS Connection Factory der Suchindex-Applikation. Verwenden Sie den Wert <samp class="codeph">jms/bss/masterIndexerQueueFactory</samp> und nehmen Sie keine Änderung vor.</div>

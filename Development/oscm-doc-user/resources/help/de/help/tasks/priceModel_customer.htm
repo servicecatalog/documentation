@@ -46,144 +46,17 @@
                 <span>Wählen Sie in der Liste <span class="uicontrol">Service-ID</span> den Service, für den Sie ein Preismodell definieren möchten.</span>
             </li>
 <li class="stepexpand">
-                <span>Wählen Sie den Abrechnungsmodus für das Preismodell: </span>
+                <span>Vom für die zugrunde-liegenden Services definierten Abrechnungssystem abhängig verfahren Sie folgendermaßen:</span>
                  
                     <ul>
-            <li class="liexpand">Wählen Sie <span class="uicontrol">Kostenlos</span>, wenn der Service kostenlos zur Verfügung gestellt werden soll. </li>
+                        <li class="liexpand">Wenn der native Abrechnungssystem benutzt wird, benutzten Sie die Preismodelloptionen die durch die Plattform angeboten wurden um Ihren Preismodell zu definieren. Klicken Sie <a href="priceModel_customer_nat.htm">hier</a> für mehr Details.</li>
 
-            <li class="liexpand">Wählen Sie <span class="uicontrol">Abrechnung pro rata</span>, wenn die Nutzungsgebühren für die exakte Nutzungsdauer in Millisekunden berechnet werden sollen.</li>
+                        <li class="liexpand">Wenn Sie einen externen Abrechnungssystem benutzten, wählen Sie einen von den Preismodellen die durch den externen Abrechnungssystem angeboten werden. Klicken Sie <a href="priceModel_customer_ext.htm">hier</a> für mehr Details.</li>
 
-            <li class="liexpand">Wählen Sie <span class="uicontrol">Abrechnung pro Zeiteinheit</span>, wenn die Nutzungsgebühren für ganze Zeiteinheiten berechnet werden sollen, zum Beispiel Tage oder Wochen. Die Zeiteinheit wird im Feld <span class="uicontrol">Abrechnungseinheit</span> festgelegt.</li>
-
-          </ul>
-
-                    <p>Wenn Ihr Service kostenlos ist, fahren Sie mit Schritt 9 fort, ansonsten mit Schritt 4.</p>
-
-                    <div class="p">
-                        <div class="note"><span class="notetitle">Hinweis:</span> Wenn Sie ein Kunden-Preismodell mit Gebühren definieren, müssen im entsprechenden Service-Preismodell ebenfalls Gebühren definiert sein. Andernfalls können auf der Plattform keine Zahlungsarten verwaltet werden.</div>
-
-                    </div>
+                    </ul>
 
                 
             </li>
-<li class="stepexpand">
-        <span>Geben Sie im Feld <span class="uicontrol">Beschreibung</span> eine ausführliche Beschreibung des Preismodells ein. Sie können zum Beispiel Details zu jedem Preismodellelement eingeben.</span>
-         
-          <p>Die Beschreibung wird Kunden auf einem Marktplatz angezeigt, wenn sie Details zu einem Service aus dem Servicekatalog anfordern.</p>
-
-          <p>Sie können die Beschreibung später in weiteren Sprachen hinterlegen, indem Sie das Preismodell lokalisieren.</p>
-
-          <div class="p">
-            <div class="note"><span class="notetitle">Hinweis:</span> Verwenden Sie ausschließlich die Funktionen des Editors, um Textformatierungen vorzunehmen. Direkte HTML-Codierungen im Text sowie Verweise auf externe HTML-Stylesheets oder -Inhalte werden nicht ausgewertet und können zu Fehlern im Seitenlayout führen.</div>
-
-          </div>
-
-        
-      </li>
-<li class="stepexpand">
-        <span>Definieren Sie einen kostenlosen Nutzungszeitraum für Ihre Kunden, wenn Sie den Service für einen begrenzten Zeitraum ohne Gebühren anbieten möchten. Nach diesem Zeitraum wird der Service automatisch zu einem kostenpflichtigen Service.</span>
-         
-          <p>Markieren Sie <span class="uicontrol">Kostenlosen Nutzungszeitraum definieren</span> und geben Sie die Dauer in Tagen an. Die Tage werden als Ganzzahl eingeben. </p>
-
-        
-      </li>
-<li class="stepexpand">
-        <span>Geben Sie die <strong>Abrechnungskonditionen</strong> an. Dazu zählen die folgenden Informationen:</span>
-         
-          <div class="p">
-            <ul>
-              <li class="liexpand" id="task634__d651e142"><strong>Währung</strong>, in der mit dem Kunden abgerechnet wird. Der Plattform-Betreiber legt die unterstützten Währungen fest. Die Währung kann für ein Abo-Preismodell nicht geändert werden.</li>
-
-              <li class="liexpand" id="task634__d651e147"><strong>Abrechnungseinheit</strong>: Zeitspanne, nach der die Nutzungsgebühren abgerechnet werden. Eine monatliche, wöchentliche, tägliche oder stundenweise Abrechnung ist möglich. Die <span class="uicontrol">Abrechnungseinheit</span> legt auch die Einheit fest, die bei <span class="uicontrol">Abrechnung pro Zeiteinheit</span> verwendet wird. Die Zeiteinheit kann für ein Abo-Preismodell nicht geändert werden.</li>
-
-              <li class="liexpand" id="task634__d651e158"><strong>Einmalige Gebühr</strong> bei Abschluss eines Abonnements. Diese Gebühr wird zu den Nutzungsgebühren für den ersten Abrechnungszeitraum hinzugerechnet. </li>
-
-              <li class="liexpand" id="task634__d651e163"><strong>Preis pro Abo</strong>: Gebühr, die für ein Abonnement so oft bezahlt werden muss, wie in der <span class="uicontrol">Abrechnungseinheit</span> angegeben. </li>
-
-              <li class="liexpand" id="task634__d651e171"><strong>Preis für Benutzer</strong>: <span id="task634__d651e175">Gebühr, die pro Zeiteinheit, die Benutzer einem Abonnement zugeordnet sind, bezahlt werden muss. Die Zeiteinheit wird im Feld <span class="uicontrol">Abrechnungseinheit</span> angegeben. Diese Gebühr kann gestaffelt sein, um beispielsweise abhängig von der Zeit, die Benutzer mit einem Service arbeiten, Rabatte zu gewähren</span>: <ul>
-                  <li class="liexpand">Klicken Sie das Eingabefeld zur Preiseingabe. Rechts davon wird ein Pluszeichen angezeigt. </li>
-
-                  <li class="liexpand">Klicken Sie das Pluszeichen und geben Sie einen Preis pro Zeiteinheit und eine Obergrenze an. Die Obergrenze bestimmt die Summe der Zeiteinheiten, in denen Benutzer innerhalb eines Abrechnungszeitraums einem Abonnement zugeordnet sind, bis zu der der jeweilige Preis gültig ist. </li>
-
-                  <li class="liexpand">Fahren Sie mit der Eingabe weiterer Preise und Obergrenzen fort. </li>
-
-                  <li class="liexpand">Im letzten Feld <span class="uicontrol">Preis pro Zeiteinheit</span> geben Sie den Preis an, der für alle Zeiteinheiten gelten soll, die über der im letzten Feld <span class="uicontrol">Obergrenze</span> angegebenen Anzahl liegen. </li>
-
-                </ul>
-<p>Ausführliche Informationen finden Sie <a href="../../Shared/reference/r_PriceModelDetails_stepped.htm">hier</a>.</p>
-</li>
-
-            </ul>
-
-          </div>
-
-        
-      </li>
-<li class="stepexpand">
-        <span>Geben Sie Preise für die abrechenbaren <strong>Ereignisse</strong> an, die für den Service definiert sind. </span>
-         
-          <p><span id="task634__d651e223">Ein Ereignis ist beispielsweise das An- oder Abmelden von der zugrunde liegenden Anwendung, das Beenden einer bestimmten Transaktion oder das Anlegen oder Löschen bestimmter Daten. Für welche Ereignisse Preise definiert werden können, hängt von der Implementierung der Anwendung und ihrer Integration ab.</span></p>
-
-          <p>Die definierten Ereignisse werden in der Tabelle aufgelistet. In der Spalte <span class="uicontrol">Beschreibung</span> finden Sie jeweils eine Kurzbeschreibung.</p>
-
-          <div class="p"><span id="task634__d651e233">Diese Gebühr kann gestaffelt sein, um beispielsweise abhängig von der Anzahl der Ereignisse, die während der Nutzung eines abonnierten Service auftreten, Rabatte zu gewähren</span>:<ul>
-              <li class="liexpand">Klicken Sie das Eingabefeld zur Preiseingabe. Rechts davon wird ein Pluszeichen angezeigt. </li>
-
-              <li class="liexpand">Klicken Sie das Pluszeichen und geben Sie einen Preis pro Ereignis und eine Obergrenze an. Die Obergrenze bestimmt die Ereignisanzahl, bis zu der der jeweilige Preis gültig ist. </li>
-
-              <li class="liexpand">Fahren Sie mit der Eingabe weiterer Preise pro Ereignis und Obergrenzen fort. </li>
-
-              <li class="liexpand">Im letzten Feld <span class="uicontrol">Preis</span> geben Sie den Preis an, der für alle Ereignisse des gewählten Typs gelten soll, die über der im letzten Feld <span class="uicontrol">Obergrenze</span> angegebenen Anzahl liegen. </li>
-
-            </ul>
-Ausführliche Informationen finden Sie <a href="../../Shared/reference/r_PriceModelDetails_stepped.htm">hier</a>. </div>
-
-        
-      </li>
-<li class="stepexpand">
-        <span>Geben Sie Preise für <strong>Parameter und Optionen</strong> an. </span>
-         
-          <p>
-            <span>Ob und welche Parameter und Optionen zur Auswahl stehen, ist abhängig von der Implementierung und Integration der zugrunde liegenden Anwendung.</span>
-          </p>
-
-          <p>Die definierten Parameter und Optionen werden in der Tabelle aufgelistet. In der Spalte <span class="uicontrol">Beschreibung</span> finden Sie jeweils eine Kurzbeschreibung.</p>
-
-          <p><span>Für jeden Parameter und jede Option kann ein Preis festgelegt werden, der jeweils für ein Abonnement als ganzes oder pro Benutzer berechnet werden kann. Numerische Parameter sind Multiplikatoren für den angegebenen Preis. Bei booleschen Parametern mit dem Wert <samp class="codeph">true</samp> ist der Multiplikator <samp class="codeph">1</samp>. In allen anderen Fällen ist der Multiplikator <samp class="codeph">0</samp>.</span>
-          </p>
-
-          <div class="p">Bei numerischen Parametern (Parameter mit Werten vom Typ Integer oder Long) können Sie die Preise pro Abonnement staffeln, um beispielsweise Mengenrabatte zu gewähren:<ul>
-              <li class="liexpand">Klicken Sie das Eingabefeld zur Preiseingabe. Rechts davon wird ein Pluszeichen angezeigt. </li>
-
-              <li class="liexpand">Klicken Sie das Pluszeichen und geben Sie einen Preis und eine Obergrenze an. Die Obergrenze bestimmt den Wert, bis zu dem der jeweilige Preis gültig ist. </li>
-
-              <li class="liexpand">Fahren Sie mit der Eingabe weiterer Preise und Obergrenzen fort. </li>
-
-              <li class="liexpand">Im letzten Feld <span class="uicontrol">Preis</span> geben Sie den Preis an, der für alle Werte gelten soll, die über dem im letzten Feld <span class="uicontrol">Obergrenze</span> angegebenen Wert liegen. </li>
-
-            </ul>
-Weitere Informationen finden Sie <a href="../../Shared/reference/r_PriceModelDetails_stepped.htm">hier</a>.</div>
-
-        
-      </li>
-<li class="stepexpand">
-        <span>Ändern Sie nach Bedarf die <strong>Lizenzvereinbarung</strong>. Die Lizenzvereinbarung muss von Kunden gelesen und akzeptiert werden, wenn sie den Service abonnieren.</span>
-         
-          <p>Standardmäßig wird die Lizenzvereinbarung des Herstellers angezeigt. Sie können sie übernehmen oder eine andere eingeben. </p>
-
-          <p>Sie können die Lizenzvereinbarung später in weiteren Sprachen hinterlegen, indem Sie das Preismodell lokalisieren.</p>
-
-        
-      </li>
-<li class="stepexpand">
-        <span>Schließen Sie Ihre Eingaben mit <span class="uicontrol">Speichern</span> ab.</span>
-      </li>
-<li class="stepexpand">
-        <span>Um die Beschreibung und die Lizenzvereinbarung des Preismodells in einer anderen Sprache zu hinterlegen, klicken Sie <span class="uicontrol">Lokalisieren</span>.</span>
-      </li>
-<li class="stepexpand">
-        <span>Um Preise für Servicerollen zu definieren, die für die zugrunde liegende Anwendung definiert sind, klicken Sie <span class="uicontrol">Für Servicerollen definieren</span>. Der Preis, den Sie für eine Servicerolle festlegen, wird bei der Berechnung der Nutzungsgebühren für einen Abrechnungszeitraum zum Grundpreis für Benutzer addiert. </span>
-      </li>
 </ol>
 
         <div class="section">Sobald Sie den Service aktivieren, steht dem Kunden das Preismodell zur Verfügung. Es gilt für alle neuen Abonnements des Kunden.</div>

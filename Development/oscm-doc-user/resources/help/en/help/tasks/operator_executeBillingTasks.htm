@@ -31,6 +31,8 @@
 
       <p id="task634__Billing_Intro2">When a billing run for customer billing data is finished, the billing data that must be handled by a payment service provider (PSP) is processed. This transaction is called "payment processing".</p>
 
+      <div class="note" id="task634__Billing_runs_apply_to_the_nat_task_taskbody_context_note"><span class="notetitle">Note:</span> Billing runs and payment processing apply to the <span>platform's </span>native billing system. They do not take into account any costs and data in external billing systems integrated with <span>the platform</span>. These are controlled and managed solely in the external billing system. </div>
+
       <p>On the <span class="uicontrol">Execute billing tasks</span> page, you can perform the following tasks by clicking <span class="uicontrol">Execute</span> in the relevant section of the page: </p>
 
       <div class="p">
@@ -41,10 +43,8 @@
 <p id="task634__StartBillingRun2">If you start a billing run on the first day of a month plus the day(s) defined in the <samp class="codeph">TIMER_INTERVAL_BILLING_OFFSET</samp> setting, the revenue share data is also calculated and stored. </p>
 <p>Examples:</p>
 <p id="task634__StartBillingRun3">A supplier has defined his billing period to start on the 5th and end on the 4th of each month. The <samp class="codeph">TIMER_INTERVAL_BILLING_OFFSET</samp> is set to 3 days. If you want to recalculate the customer billing data for this supplier, for example for the period of January 5th through February 4th, you need to start the billing on February 8th. </p>
-
-            <p id="task634__StartBillingRun4">If you want to calculate the revenue share data for the month of January, you need to start the billing run on February 4th. </p>
-
-          </li>
+<p id="task634__StartBillingRun4">If you want to calculate the revenue share data for the month of January, you need to start the billing run on February 4th. </p>
+</li>
 
           <li class="liexpand"><span class="uicontrol">Start payment processing</span><p>This action starts the payment processing of customer billing data that must be handled by a payment service provider (PSP). It is checked whether the <samp class="codeph">PSP_USAGE_ENABLED</samp> parameter has been set to <samp class="codeph">true</samp>. If this is not the case, payment processing is aborted. To set the parameter, use the <strong>Update configuration settings</strong> option in the <strong>Operation</strong> menu.</p>
 </li>

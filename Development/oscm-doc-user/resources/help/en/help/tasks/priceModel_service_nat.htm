@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="Defining a service price model"/>
+<meta name="DC.Relation" scheme="URI" content="priceModel_localize.htm"/>
+<meta name="DC.Relation" scheme="URI" content="priceModel_roles.htm"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="task634"/>
+<meta name="DC.Language" content="en-us"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>Defining a service price model</title>
+</head>
+<body id="task634">
+
+
+  <h1 class="topictitle1">Defining a service price model</h1>
+
+  <div>
+    <div class="section">
+      <p>On the <span class="uicontrol">Define for service</span> page, you can define or update a price model for the selected service. </p>
+
+      <p>You have selected a service that is charged for using the platform's <strong>native billing system</strong>. This means that you are responsible for defining whether and how much customers subscribing to the service are charged for using the subscription.</p>
+
+      <p><strong>To define or update a service price model</strong>:</p>
+
+    </div>
+
+    <ol><li class="stepexpand">
+        <span id="task634__d701e51">Select the cost calculation option for the price model: </span>
+         
+          <ul id="task634__d701e56">
+            <li class="liexpand">Select <span class="uicontrol">Free of charge</span>, if the service is to be free of charge. </li>
+
+            <li class="liexpand">Select <span class="uicontrol">Pro rata calculation</span>, if the costs are to be calculated based on the exact usage of the service in milliseconds.</li>
+
+            <li class="liexpand">Select <span class="uicontrol">Per time unit calculation</span>, if the costs are to be calculated for complete time units, for example, whole days or weeks. The time unit is defined under <span class="uicontrol">Charges based on</span>.</li>
+
+          </ul>
+
+          <p>If your service is free of charge, proceed with Step 8, else with Step 3. </p>
+
+        
+      </li>
+<li class="stepexpand">
+        <span>In the <span class="uicontrol">Description</span> field, enter a detailed description of the price model. It may, for example, provide details of each element the price model consists of.</span>
+         
+          <p>The description is displayed to customers on a marketplace when they request details of the service from the service catalog.</p>
+
+          <p>You can specify the description in additional languages later by localizing the price model.</p>
+
+          <div class="note"><span class="notetitle">Note:</span> <span>Make sure to use only the controls provided in the editor for formatting your text. Manually entered HTML tags and references to external style sheets or content may result in errors in the page layout.</span>
+          </div>
+
+        
+      </li>
+<li class="stepexpand">
+        <span>Define a free trial period if you want to offer the service for free for a limited period of time. <span id="task634__d701e111">After this period, the service automatically turns into a chargeable service.</span></span>
+         
+          <p>Select the <span class="uicontrol">Define a free trial period</span> check box, and enter the length of the free trial period in days. Specify the number of days as an integer.</p>
+
+        
+      </li>
+<li class="stepexpand">
+        <span>Specify the <strong>charging conditions</strong>. They include the following information: </span>
+         
+          <ul>
+            <li class="liexpand" id="task634__d701e136"><strong>Currency</strong> in which a customer is charged for using the service. The supported currencies are defined by the operator. The currency cannot be changed when defining a subscription price model.</li>
+
+            <li class="liexpand" id="task634__d701e141"><strong>Charges based on</strong>: The time unit for recurring charges. The charges can be on a monthly, weekly, daily, or hourly basis. The option selected here also defines the time unit for per time unit calculation. The time unit cannot be changed when defining a subscription price model.</li>
+
+            <li class="liexpand" id="task634__d701e146"><strong>One-time fee</strong> to be paid when subscribing to the service. This fee is added to the usage charges for the first billing period. </li>
+
+            <li class="liexpand" id="task634__d701e151"><strong>Recurring charge per subscription</strong>: The charge to be paid for a subscription on a recurring basis as specified in the <span class="uicontrol">Charges based on</span> field. </li>
+
+            <li class="liexpand"><span id="task634__d701e160"><strong>Recurring charge for users</strong>: The charge to be paid per time unit users are assigned to a subscription. The time unit is defined in the <span class="uicontrol">Charges based on</span> field. For this type of charge, you can specify stepped prices, for example, to grant discounts depending on the amount of time users work with a subscription</span>: <ul>
+                <li class="liexpand">Click the field for entering a price. A plus sign appears to its right. </li>
+
+                <li class="liexpand">Click the plus sign and enter a price per time unit as well as a step limit. The step limit defines the sum of the time units of all user assignments in a billing period up to which the specified price is valid. </li>
+
+                <li class="liexpand">Proceed with the definition of prices and step limits. Use the plus sign to add a price step, the minus sign to remove a step.</li>
+
+                <li class="liexpand">The last <span class="uicontrol">Price per time unit</span> entry field defines the price to be applied for all time units exceeding the number specified in the last <span class="uicontrol">Step limit</span> field. </li>
+
+              </ul>
+Click <a href="../../Shared/reference/r_PriceModelDetails_stepped.htm">here</a> for detailed information. </li>
+
+          </ul>
+
+        
+      </li>
+<li class="stepexpand">
+        <span>Specify the prices for the billable <strong>events</strong> defined for the service. </span>
+         
+          <p><span>These include, for example, login and logout by users to the underlying application, the completion of specific transactions, or the creation or deletion of specific data. It depends on the implementation and integration of the underlying application which events are available.</span>
+          </p>
+
+          <p>The available events are listed in the table. In the <span class="uicontrol">Description</span> column, you can view their short descriptions.</p>
+
+          <div class="p">For this type of charge, you can specify stepped prices, for example, to grant discounts depending on the number of events that occurred while using the service: <ul>
+              <li class="liexpand">Click the field for entering a price. A plus sign appears to its right. </li>
+
+              <li class="liexpand">Click the plus sign and enter a price per event as well as a step limit. The step limit defines the number of events up to which the price per event is valid.</li>
+
+              <li class="liexpand">Proceed with the definition of prices per event and step limits. Use the plus sign to add a price step, the minus sign to remove a step.</li>
+
+              <li class="liexpand">The last <span class="uicontrol">Price</span> entry field defines the price to be applied for all events of the selected type exceeding the number specified in the last <span class="uicontrol">Step limit</span> field. </li>
+
+            </ul>
+Click <a href="../../Shared/reference/r_PriceModelDetails_stepped.htm">here</a> for detailed information. </div>
+
+        
+      </li>
+<li class="stepexpand">
+        <span>Specify the prices for <strong>parameters and options</strong>. </span>
+         
+          <p><span>It depends on the implementation and integration of the underlying application whether and which parameters and options are available.</span>
+          </p>
+
+          <p>The available parameters and options are listed in the table. In the <span class="uicontrol">Description</span> column, you can view their short descriptions.</p>
+
+          <p>You can define a price for every parameter and option, <span>and specify whether this price is to be charged per subscription or per user assigned to the subscription. Numeric parameters are a multiplier for the price. For boolean parameters, the multiplier is <samp class="codeph">1</samp> if the value is <samp class="codeph">true</samp>. In all other cases, the multiplier is <samp class="codeph">0</samp>.</span></p>
+
+          <div class="p">For numeric parameters (parameters with values of type Integer or Long), you can define stepped prices per subscription, for example, to grant volume discounts: <ul>
+              <li class="liexpand">Click the field for entering a price. A plus sign appears to its right. </li>
+
+              <li class="liexpand">Click the plus sign and enter a price as well as a step limit. The step limit defines the value up to which the price is valid.</li>
+
+              <li class="liexpand">Proceed with the definition of prices and step limits. Use the plus sign to add a price step, a minus sign to remove a step. </li>
+
+              <li class="liexpand">The last <span class="uicontrol">Price</span> entry field defines the price to be applied for all parameter values exceeding the number specified in the last <span class="uicontrol">Step limit</span> field. </li>
+
+            </ul>
+Click <a href="../../Shared/reference/r_PriceModelDetails_stepped.htm">here</a> for detailed information.</div>
+
+        
+      </li>
+<li class="stepexpand">
+        <span>Edit the <strong>license agreement</strong> as desired. The license agreement must be read and accepted by customers when they subscribe to the service.</span>
+         
+          <p>By default, the license agreement of the technology provider is used. It is up to you whether you use this license agreement or specify a different one. </p>
+
+          <p>You can specify the license agreement in additional languages later by localizing the price model.</p>
+
+          <p>Resellers who sell the service can provide their own license agreement. It is up to them whether they use the license agreement as you enter it or specify a different one. If you change the license agreement, the reseller's license agreement is not updated.</p>
+
+        
+      </li>
+<li class="stepexpand">
+        <span>To save the price model, click <span class="uicontrol">Save</span>. </span>
+      </li>
+<li class="stepexpand">
+        <span>To provide the price model's description and license agreement in another language, click <span class="uicontrol">Localize</span>.</span>
+      </li>
+<li class="stepexpand">
+        <span>To specify prices for roles that are defined for the underlying application, click <span class="uicontrol">Define for Service Roles</span>. The price you define for a service role is added to the base price per user in the cost calculation for a billing period. </span>
+      </li>
+</ol>
+
+    <div class="section">
+      <p>After activating the service, the price model is available to customers. It takes effect for all new subscriptions.</p>
+
+      <p>Brokers and resellers as well as their customers can instantly view any changes you have made.</p>
+
+    </div>
+
+  </div>
+
+  <div>
+<div class="linklist"><strong>Related topics</strong><br/>
+
+<div><a href="priceModel_localize.htm">Localizing price model elements</a></div>
+<div><a href="priceModel_roles.htm">Defining role-specific prices</a></div></div>
+</div>
+
+</body>
+</html>

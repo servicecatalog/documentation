@@ -91,7 +91,7 @@
 
                 <li><samp class="codeph">marketplace.navigation.Subscriptions</samp>: <span class="uicontrol">Subscriptions</span> menu </li>
 
-                        <li><samp class="codeph">marketplace.navigation.Users</samp>: <span class="uicontrol">Users &amp; Units</span> menu </li>
+                <li><samp class="codeph">marketplace.navigation.Users</samp>: <span class="uicontrol">Users &amp; Units</span> menu </li>
 
                 <li><samp class="codeph">marketplace.navigation.Reports</samp>: <span class="uicontrol">Reports</span> menu</li>
 
@@ -146,15 +146,6 @@
                 <li><samp class="codeph">navigation.marketplace</samp>: <span class="uicontrol">Marketplace</span> menu</li>
 
             </ul>
-<p><strong>Billing Adapter</strong></p>
-<p>By default, the element <samp class="codeph">HIDDEN_UI_ELEMENTS=</samp> has been commented out, so that the values: </p>
-<ul>
-                <li><samp class="codeph">operator.manageBillingAdapters</samp>: <span class="uicontrol">Managing billing systems</span> menu</li>
-
-                <li><samp class="codeph">techService.viewBillingAdapters</samp>: <span class="uicontrol">Viewing billing system details</span> menu</li>
-
-            </ul>
-<p>are visible. To hide them from the menu, you have to comment the element <samp class="codeph">HIDDEN_UI_ELEMENTS=</samp> back in.</p>
 <div class="note"><span class="notetitle">Note:</span> The <span class="uicontrol">Update configuration settings</span> page in the <span class="uicontrol">Operation</span> menu is the default page the operator is directed to when logging in. If you hide the page from the menu or hide the complete menu, you are still directed to the <span class="uicontrol">Update configuration settings</span> page where you can make changes, if required.</div>
 </div>
 
@@ -248,7 +239,7 @@
    {locale}&amp;WSDLURL=$
    {wsdlurl}&amp;SOAPEndPoint=${soapendpoint}&amp;wsname=ReportSecure&amp;wsport=ReportSecurePort</pre>
 </div>
-<div class="note"><span class="notetitle">Note:</span> The above value must be used as indicated. Do not change this value. <p>If the SSL/HTTPS port was changed and the BIRT report engine is running on the same domain as <span>OSCM</span>, then this setting must also be updated.</p>
+<div class="note"><span class="notetitle">Note:</span> The above value must be used as indicated. Do not change this value. <p>If the SSL/HTTPS port was changed and the BIRT report engine is running on the same domain as <span>the platform</span>, then this setting must also be updated.</p>
 </div>
 </div>
 
@@ -257,7 +248,7 @@
 <p>If your installation is configured to use HTTPS access, the required value is: </p>
 <p><samp class="codeph">https://&lt;host IP address&gt;:&lt;port&gt;/ReportSecure/ReportingServiceSecureBean</samp>
                 </p>
-<div class="note"><span class="notetitle">Note:</span> The above value must be used as indicated. Do not change this value. <p>If the SSL/HTTPS port was changed and the BIRT report engine is running on the same domain as <span>OSCM</span>, then this setting must also be updated.</p>
+<div class="note"><span class="notetitle">Note:</span> The above value must be used as indicated. Do not change this value. <p>If the SSL/HTTPS port was changed and the BIRT report engine is running on the same domain as <span>the platform</span>, then this setting must also be updated.</p>
 </div>
 </div>
 
@@ -265,7 +256,7 @@
 <p><samp class="codeph">http://&lt;host IP address&gt;:&lt;port&gt;/Report/ReportingServiceBean?wsdl</samp></p>
 <p>If your installation is configured to use HTTPS access, the required value is: </p>
 <p><samp class="codeph">https://&lt;host IP address&gt;:&lt;port&gt;/ReportSecure/ReportingServiceSecureBean?wsdl</samp></p>
-<div class="note"><span class="notetitle">Note:</span> The above value must be used as indicated. Do not change this value. <p>If the SSL/HTTPS port was changed and the BIRT report engine is running on the same domain as <span>OSCM</span>, then this setting must also be updated.</p>
+<div class="note"><span class="notetitle">Note:</span> The above value must be used as indicated. Do not change this value. <p>If the SSL/HTTPS port was changed and the BIRT report engine is running on the same domain as <span>the platform</span>, then this setting must also be updated.</p>
 </div>
 </div>
 

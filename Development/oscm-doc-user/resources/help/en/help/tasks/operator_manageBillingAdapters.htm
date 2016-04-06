@@ -22,31 +22,24 @@
 
   <div>
     <div class="section">
-      <p>The platform supports the integration of third-party or proprietary billing systems. Technology providers have the choice of using the platform's billing system or an external billing system of their choice when integrating their applications with the platform.</p>
+      <p>On the <strong>Manage billing systems</strong> page, you can view, add, and manage the billing systems that are to be available for technology provider and supplier organizations for providing price models and calculating the costs for services. </p>
 
-      <p>On the <strong>Manage billing systems</strong> page, you can link an external system to the platform. For successfully linking a system, the following prerequisites must be fulfilled:</p>
+      <p><span id="task634__d444e13"><span>The platform</span> comes with its own, native billing system for managing price models and calculating costs for services.</span>
+        <span id="task634__d444e18">However, it can also be integrated with one or more external billing systems. This is suitable, for example, when offering services from external providers which have their own pricing and billing facilities, such as Amazon Web Services (AWS). It is also useful when prices and costs for services need to be based on metering information that is not available in <span>the platform</span>.</span></p>
 
-      <ul>
-        <li class="liexpand">
-          <p>The connection properties specified by the operator need to point to the external billing system.</p>
+      <p>Technology providers have the choice of using the platform's native billing system or one of the integrated external billing systems when defining their technical services. One of the billing systems must be set as the  default. The default billing system is used for any technical service that does not explicitly specify a different one, as well as for any marketable services and subscriptions based on it. </p>
 
-        </li>
-
-      </ul>
-
-      <p>One of the supported billing systems must be set as default. The default billing system is predefined for technology providers who register an application as a technical service to make it available on the platform.</p>
-
-      <p>When accessing the <span class="uicontrol">Manage billing systems</span> page, the details of the billing system that is currently configured as default are expanded. On the page, you can: </p>
+      <p>The <span class="uicontrol">Manage billing systems</span> page shows the available billing systems in separate sections. The details of the default billing system are expanded when you access the page. On the page, you can: </p>
 
       <div class="p">
         <ul>
-          <li class="liexpand">View the list of supported billing systems.</li>
+          <li class="liexpand">View the details of the available billing systems.</li>
 
-          <li class="liexpand">Add a new billing system.</li>
-
-          <li class="liexpand">Update the short description and connection properties of a billing system.</li>
+          <li class="liexpand">Add external billing systems.</li>
 
           <li class="liexpand">Set the default billing system.</li>
+
+          <li class="liexpand">Update the short description and connection properties of external billing systems.</li>
 
           <li class="liexpand">Remove a billing system.</li>
 
@@ -54,41 +47,53 @@
 
       </div>
 
-      <p><strong>To define a new billing system</strong>:</p>
+      <p><strong>To add an external billing system</strong>:</p>
 
     </div>
 
     <ol><li class="stepexpand">
-        <span>Click <span class="uicontrol">Add</span>.</span>
-         This inserts an empty section for defining the billing system details.
+        <span>Make sure that the following prerequisites are fulfilled:</span>
+         
+          <ul>
+            <li>A billing adapter has been implemented that connects the platform with the external billing system. This task is carried out by a developer in tight cooperation with the supplier of the services that are to use the external billing system. For details, refer to the <em>Developer's Guide</em>.</li>
+
+            <li>The providers of the billing adapter have deployed it on application server and made sure that communication with the platform and the external billing system is possible.</li>
+
+            <li>You know the parameters required for addressing the remote interface of the billing adapter by means of JNDI lookup.</li>
+
+          </ul>
+
+        
       </li>
 <li class="stepexpand">
-        <span>Enter the <span class="uicontrol">Billing System ID</span> of the billing system. </span>
-         This ID uniquely identifies the billing system in the platform. Once the new billing system is defined, the ID cannot be changed.  <p>IDs are restricted to 40 characters and must not contain any of the following characters:</p>
+        <span>Click <span class="uicontrol">Add</span> at the bottom of the <span class="uicontrol">Manage billing systems</span> page.</span>
+         This inserts and opens an empty section for defining the billing system details.
+      </li>
+<li class="stepexpand">
+        <span>Enter the <span class="uicontrol">Billing system ID</span> for the new billing system. </span>
+          This ID uniquely identifies the billing system in the platform. Once the new billing system is defined, the ID cannot be changed. The ID is specified in the definitions of the technical services which intend to use the billing system.<p>Billing system IDs are restricted to 40 characters and must not contain any of the following characters:</p>
 <p><samp class="codeph">! " # $ % &amp; ' * + , / : ; &lt; = &gt; ? \ ^ `</samp>
           </p>
 
       </li>
 <li class="stepexpand">
-        <span>Enter the <span class="uicontrol">Short description</span> of the billing system.</span>
+        <span>Optionally specify a <span class="uicontrol">Short description</span> of the billing system.</span>
          
           <p>Short descriptions are restricted to 40 characters. Any character is allowed.</p>
 
         
       </li>
 <li class="stepexpand">
-        <span>Enter the <span class="uicontrol">Connection Properties</span>. </span>
-         Depending on the billing adapter implemented to connect the platform with the external billing system, the number of connection properties and their semantic can be different. However, they must point at the specific external billing system and specify such data as the port with which the billing system is connecting, or a provider URL. The connection between the billing system and the adapter is done using JNDI lookup.  <p>Enter the name of a property in the first field and the corresponding property value in the second field.</p>
-<p>Use the plus sign to add an additional property, the minus sign to remove a property.</p>
-
+        <span>Enter the <span class="uicontrol">Connection Properties</span> for addressing the remote interface of the billing adapter by means of JNDI lookup. </span>
+         You need to specify at least the JNDI name of the adapter. For additional properties, specify the name in the left field and the value in the right field. Use the plus sign to add an additional property, or the minus sign to remove a property.
       </li>
 <li class="stepexpand">
         <span>Click <span class="uicontrol">Test Connection</span> to make sure that the connection to the billing system can be established.</span>
-         A corresponding message is shown telling you whether the connection was successfully established.
+         A corresponding message is shown telling you whether the connection was successful.
       </li>
 <li class="stepexpand">
-        <span>Click <span class="uicontrol">Set as Default</span> to define the new billing system as default billing system, if required.</span>
-         The new billing system is instantly marked as default. The marker is removed from the previous default system.
+        <span>Click <span class="uicontrol">Set as Default</span> to define the new billing system as the default billing system, if required.</span>
+         The new billing system is instantly marked as the default, and the setting is removed from the previous default system.
       </li>
 <li class="stepexpand">
         <span>To define the billing system, click <span class="uicontrol">Save</span>. </span>
@@ -96,7 +101,21 @@
 </ol>
 
     <div class="section">
-      <p>Technology providers can now select this billing system when registering an application as a technical service on the platform.</p>
+      <p>Technology providers can immediately specify the new billing system when registering an application as a technical service on the platform.</p>
+
+      <p><strong>To change the default billing system</strong>: </p>
+
+      <div class="p">
+        <ol>
+          <li class="liexpand">Expand the details of the billing system to be set as the new default.</li>
+
+          <li class="liexpand">Click <span class="uicontrol">Set as Default</span> to define the billing system as the default and remove the setting from the previous default system. </li>
+
+          <li class="liexpand">Click <span class="uicontrol">Save</span> for your changes to become effective. </li>
+
+        </ol>
+
+      </div>
 
       <p><strong>To update an existing billing system</strong>: </p>
 
@@ -106,11 +125,11 @@
 
           <li class="liexpand">Change the <span class="uicontrol">Short description</span> of the billing system, if required.</li>
 
-          <li class="liexpand">Change the values of the connection properties. Use the plus sign to add an additional property, or the minus sign to remove a property, if required.</li>
+          <li class="liexpand">Change the values of the connection properties as required. Use the plus sign to add an additional property, or the minus sign to remove a property.</li>
 
           <li class="liexpand">Click <span class="uicontrol">Test Connection</span> to make sure that the connection to the billing system can still be established.</li>
 
-          <li class="liexpand">Click <span class="uicontrol">Set as Default</span> to define the billing system as default.</li>
+          <li class="liexpand">Click <span class="uicontrol">Set as Default</span> to define the billing system as the default one.</li>
 
           <li class="liexpand">Click <span class="uicontrol">Save</span> for your changes to become effective. </li>
 
@@ -127,7 +146,7 @@
               <ul>
                 <li>The billing system must not be marked as default.</li>
 
-                <li>There is no technical service, marketable service and no active subscription that uses the billing system.</li>
+                <li>There is no technical service, marketable service, or active subscription that uses the billing system.</li>
 
               </ul>
 

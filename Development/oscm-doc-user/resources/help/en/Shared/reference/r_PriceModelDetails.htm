@@ -40,6 +40,10 @@
 
             <p>For each marketable service, a price model must have been defined before you can publish the service and thus provide it to customers for subscription.</p>
 
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">Price Model Scope</h4>
+            
             <p>Price models can have different scopes: </p>
 
             <div class="p">
@@ -57,7 +61,17 @@
 
             <p>The service price model defines the prices to which brokers and resellers are bound if they offer and sell a service.</p>
 
-            <p><span id="reference832__Each_price_model_consists_of_reference_refbody_section_p">Each price model consists of different elements that determine how the charges for a service are calculated. The following elements can be defined:</span></p>
+            <p>The native billing system of <span>the platform</span> supports all price model scopes. With external billing systems, the scopes may be restricted, depending on the billing system itself and the billing adapter used to integrate it.</p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">Price Model Elements</h4>
+            
+            <p>The elements and options a price model consists of depend on where the price model is defined. </p>
+
+            <p>For services which use an external billing system for cost calculation, the price models are defined in this billing system and must comply with the given rules and structures. The price models are imported from the external billing system to <span>the platform</span> at the corresponding services and subscriptions and cannot be changed there.</p>
+
+            <p><span id="reference832__Each_price_model_consists_of_reference_refbody_section_p">Price models for services applying the <span>platform's </span>native billing system consist of the following elements that determine how the charges are calculated:</span></p>
 
             <ul>
                 <li>
@@ -94,7 +108,7 @@
 
         <div class="section"><h4 class="sectiontitle"><span>Cost calculation options</span></h4>
             
-            <p id="reference832__costcalc1">The charges for a service can be calculated pro rata or per time unit. This affects the recurring charges for subscriptions and users as well as the charges for parameters, options, and service roles. The one-time fee and event prices are not affected. </p>
+            <p id="reference832__costcalc1">The charges for a service using the <span>platform's </span>native billing system can be calculated pro rata or per time unit. This affects the recurring charges for subscriptions and users as well as the charges for parameters, options, and service roles. The one-time fee and event prices are not affected. </p>
 
             <div class="p" id="reference832__costcalc2">
                 <ul>
