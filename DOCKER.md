@@ -49,6 +49,7 @@ Another way to achieve the same result is to:
 * When running in a Docker container, OSCM is accessible via `http://<DOCKER_HOST>:<PORT>/oscm-portal`
 
 * We recommend setting up `localhost` for `<DOCKER_HOST>`, as described by our [manual](https://hub.docker.com/r/servicecatalog/oscm/) on DockerHub. On Windows, without explicitly setting up for using `localhost`, `<DOCKER_HOST>` will be the IP address of the Docker virtual machine, which is visible when starting the Docker Quickstart Terminal, or can be displayed by typing:
+	
 	`docker-machine ip <machine name>`
   
 * OSCM is available at the following ports:
