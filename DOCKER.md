@@ -30,24 +30,14 @@ Another way to achieve the same result is to:
 * Connect to the new Docker virtual machine:
 `docker-machine ssh default`
 
-## Configuring Docker host and ports
+## Configuring the OSCM host and ports
 
-* Docker image is accessible via http://DOCKER_HOST:PORT/oscm-portal
+* When running in a Docker container, OSCM is accessible via `http://<DOCKER_HOST>:<PORT>/oscm-portal`
 
-* If you follow our [manual](https://hub.docker.com/r/servicecatalog/oscm/) on DockerHub, we advise to use localhost as DOCKER_HOST.
-
-* Without explicitly changing to localhost, Docker will use the IP address of the virtual machine. 
-It is visible when starting the Docker Quickstart Terminal, or can be displayed by typing:
-
-`docker-machine ip <machine name>`
+* We recommend setting up `localhost` for `<DOCKER_HOST>`, as described by our [manual](https://hub.docker.com/r/servicecatalog/oscm/) on DockerHub. Without explicitly setting up for using `localhost`, `<DOCKER_HOST>` will be the IP address of the Docker virtual machine, which is visible when starting the Docker Quickstart Terminal, or can be displayed by typing:
+	`docker-machine ip <machine name>`
   
-* Docker ports can be changed when running our image:
-
-	`docker run -it -p 18080:8080 -p 18081:8081 -p 18048:8048 -p 18480:8480 -p 18448:8448 servicecatalog/oscm`
-	
-Ports 18080, 18081, 18048, 18480 and 18448 can be changed as you like. If you do not explicitly specify ports, Docker will assign random values.
-	
-Below you can find the ports which are exposed by running the servicecatalog/oscm image:
+* OSCM is available at the following ports:
 
 Port | Description
 ------------ | -------------
@@ -56,11 +46,11 @@ Port | Description
 8048 | Glassfish administration port for the domain hosting the OSCM application 
 8480 | Glassfish HTTP port for the domain hosting the OSCM indexer application 
 8448 | Glassfish administration port for the domain hosting the OSCM indexer application
+It is recommended to assign fixed ports when starting the Docker container:
+	`docker run -it -p 18080:8080 -p 18081:8081 -p 18048:8048 -p 18480:8480 -p 18448:8448 servicecatalog/oscm`
+If you do not explicitly specify ports, Docker will assign random values.
 
-## Configuring OSCM
-Before you start using the OSCM, some additional configuration steps are necessary to adapt the OSCM to your Docker environment:
-
-To ensure the communication between the OSCM components, please make sure OSCM knows the `<DOCKER_HOST>` and `<PORT>`. For that log in as *administrator* and change the following OSCM configuration settings. Please make sure you use the correct ports: the port Docker mapped for 8080 for HTTP URLs and the port mapped for 8081 for HTTPS URLs (set it to 18080 and 18081 respectively, unless you provided your own values during `docker run` command).
+By default OSCM is configured to be accessed using `localhost` for `<DOCKER_HOST>` and the ports specified in the previous  `docker run` command. If you would like to use the docker host IP address or custom ports, please configure OSCM to use them. For that, please log into `http://<DOCKER_HOST>:<PORT>/oscm-portal` as *administrator/admin123* and change the following OSCM configuration settings accordingly:
 
 Configuration Setting |  New Value
 ------------ | ------------- | -------------
@@ -70,4 +60,4 @@ REPORT_ENGINEURL | `http://localhost:18080/birt/frameset?\_\_report\=${reportnam
 REPORT_WSDLURL | `http://localhost:8080/Report/ReportingServiceBean?wsdl`
 REPORT_SOAP_ENDPOINT | `http://localhost:8080/Report/ReportingServiceBean`
 
-[OSCM DockerHub page](https://hub.docker.com/r/servicecatalog/oscm/)
+Please also see the [OSCM DockerHub page](https://hub.docker.com/r/servicecatalog/oscm/)!
