@@ -29,7 +29,7 @@ interface of OSCM and how to integrate applications and external systems with OS
 * Javadoc documentation for the public Web service interface of OSCM and additional resources
 and utilities for application developers. You can best access these from readme.htm files in the OSCM integration packages to which they belong (oscm-integration-pack.zip, oscm-integration-app-pack.zip, oscm-integration-psp-pack.zip)
 
-The documents are updated every night.
+The documents are updated every week.
 
 Enjoy!
 
