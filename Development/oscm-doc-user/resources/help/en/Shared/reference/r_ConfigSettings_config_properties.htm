@@ -226,20 +226,18 @@
 <p>If you change this setting, you need to restart <span>the platform</span>.</p>
 </div>
 
-        <div class="section"><h4 class="sectiontitle">REPORT_ENGINEURL</h4>Mandatory if you want to use the <span>platform's</span> reports. The URL template of the report engine. If you do not specify a correct URL template, <span>the platform</span> will not be able to generate any reports, since the Report Web service cannot be called correctly. <div class="p">If your installation is configured to use HTTP access, the required value is: <pre class="codeblock"><span>http://&lt;host IP address&gt;:&lt;port&gt;/birt/frameset?__report=$</span>
-   {reportname}.rptdesign&amp;SessionId=$
-   {sessionid}&amp;__locale=$
-   {locale}&amp;WSDLURL=$
-   {wsdlurl}&amp;SOAPEndPoint=${soapendpoint}&amp;wsname=Report&amp;wsport=ReportPort
+        <div class="section"><h4 class="sectiontitle">REPORT_ENGINEURL</h4>Mandatory if you want to use the <span>platform's</span> reports. The URL template of the report engine. If you do not specify a correct URL template, <span>the platform</span> will not be able to generate any reports, since the Report Web service cannot be called correctly. <div class="p">If your installation is configured to use HTTP access, the required value is: <pre class="codeblock">http://&lt;host IP address&gt;:&lt;port&gt;/birt/frameset?
+   __report=${reportname}.rptdesign&amp;SessionId=${sessionid}
+   &amp;__locale=${locale}&amp;WSDLURL=${wsdlurl}&amp;SOAPEndPoint=${soapendpoint}
+   &amp;wsname=Report&amp;wsport=ReportPort
 </pre>
 </div>
-<div class="p">If your installation is configured to use HTTPS access, the required value is: <pre class="codeblock"><span>https://&lt;host IP address&gt;:&lt;port&gt;/birt/frameset?__report=$</span>
-   {reportname}.rptdesign&amp;SessionId=$
-   {sessionid}&amp;__locale=$
-   {locale}&amp;WSDLURL=$
-   {wsdlurl}&amp;SOAPEndPoint=${soapendpoint}&amp;wsname=ReportSecure&amp;wsport=ReportSecurePort</pre>
+<div class="p">If your installation is configured to use HTTPS access, the required value is: <pre class="codeblock">https://&lt;host IP address&gt;:&lt;port&gt;/birt/frameset?
+   __report=${reportname}.rptdesign&amp;SessionId=${sessionid}
+   &amp;__locale=${locale}&amp;WSDLURL=${wsdlurl}&amp;SOAPEndPoint=${soapendpoint}
+   &amp;wsname=ReportSecure&amp;wsport=ReportSecurePort</pre>
 </div>
-<div class="note"><span class="notetitle">Note:</span> The above value must be used as indicated. Do not change this value. <p>If the SSL/HTTPS port was changed and the BIRT report engine is running on the same domain as <span>the platform</span>, then this setting must also be updated.</p>
+<div class="note"><span class="notetitle">Note:</span> The above value must be used as indicated. Do not change this value. <p>If the SSL/HTTPS port is changed and the BIRT report engine is running on the same domain as <span>the platform</span>, then this setting must also be updated.</p>
 </div>
 </div>
 
@@ -248,7 +246,7 @@
 <p>If your installation is configured to use HTTPS access, the required value is: </p>
 <p><samp class="codeph">https://&lt;host IP address&gt;:&lt;port&gt;/ReportSecure/ReportingServiceSecureBean</samp>
                 </p>
-<div class="note"><span class="notetitle">Note:</span> The above value must be used as indicated. Do not change this value. <p>If the SSL/HTTPS port was changed and the BIRT report engine is running on the same domain as <span>the platform</span>, then this setting must also be updated.</p>
+<div class="note"><span class="notetitle">Note:</span> The above value must be used as indicated. Do not change this value. <p>If the SSL/HTTPS port is changed and the BIRT report engine is running on the same domain as <span>the platform</span>, then this setting must also be updated.</p>
 </div>
 </div>
 
@@ -256,7 +254,7 @@
 <p><samp class="codeph">http://&lt;host IP address&gt;:&lt;port&gt;/Report/ReportingServiceBean?wsdl</samp></p>
 <p>If your installation is configured to use HTTPS access, the required value is: </p>
 <p><samp class="codeph">https://&lt;host IP address&gt;:&lt;port&gt;/ReportSecure/ReportingServiceSecureBean?wsdl</samp></p>
-<div class="note"><span class="notetitle">Note:</span> The above value must be used as indicated. Do not change this value. <p>If the SSL/HTTPS port was changed and the BIRT report engine is running on the same domain as <span>the platform</span>, then this setting must also be updated.</p>
+<div class="note"><span class="notetitle">Note:</span> The above value must be used as indicated. Do not change this value. <p>If the SSL/HTTPS port is changed and the BIRT report engine is running on the same domain as <span>the platform</span>, then this setting must also be updated.</p>
 </div>
 </div>
 

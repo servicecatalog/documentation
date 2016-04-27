@@ -276,18 +276,16 @@
             <p>この設定を変更した場合、<span>プラットフォーム</span>を再起動する必要があります。</p>
 </div>
 
-        <div class="section"><h4 class="sectiontitle">REPORT_ENGINEURL</h4><span>プラットフォーム</span>のレポートを使用する場合には必須。レポートエンジンのURLテンプレート。正しいURLテンプレートを指定しないと、Report Webサービスを正しく呼び出すことができないため、<span>プラットフォーム</span>はレポートを生成できません。 <div class="p">HTTPアクセスを使うように設定している場合の指定形式： <pre class="codeblock">http://&lt;ホストのIPアドレス&gt;:&lt;ポート&gt;/eclipse-birt-runtime/frameset?__report=$
-   {reportname}.rptdesign&amp;SessionId=$
-   {sessionid}&amp;__locale=$
-   {locale}&amp;WSDLURL=$
-   {wsdlurl}&amp;SOAPEndPoint=${soapendpoint}&amp;wsname=Report&amp;wsport=ReportPort
+        <div class="section"><h4 class="sectiontitle">REPORT_ENGINEURL</h4><span>プラットフォーム</span>のレポートを使用する場合には必須。レポートエンジンのURLテンプレート。正しいURLテンプレートを指定しないと、Report Webサービスを正しく呼び出すことができないため、<span>プラットフォーム</span>はレポートを生成できません。 <div class="p">HTTPアクセスを使うように設定している場合の指定形式： <pre class="codeblock">http://&lt;ホストのIPアドレス&gt;:&lt;ポート&gt;/birt/frameset?
+   __report=${reportname}.rptdesign&amp;SessionId=${sessionid}
+   &amp;__locale=${locale}&amp;WSDLURL=${wsdlurl}&amp;SOAPEndPoint=${soapendpoint}
+   &amp;wsname=Report&amp;wsport=ReportPort
 </pre>
 </div>
-<div class="p">HTTPSアクセスを使うように設定している場合の指定形式: <pre class="codeblock">https://&lt;ホストのIPアドレス&gt;:&lt;ポート&gt;/eclipse-birt-runtime/frameset?__report=$
-   {reportname}.rptdesign&amp;SessionId=$
-   {sessionid}&amp;__locale=$
-   {locale}&amp;WSDLURL=$
-   {wsdlurl}&amp;SOAPEndPoint=${soapendpoint}&amp;wsname=ReportSecure&amp;wsport=ReportSecurePort</pre>
+<div class="p">HTTPSアクセスを使うように設定している場合の指定形式: <pre class="codeblock">https://&lt;ホストのIPアドレス&gt;:&lt;ポート&gt;/birt/frameset?
+   __report=${reportname}.rptdesign&amp;SessionId=${sessionid}
+   &amp;__locale=${locale}&amp;WSDLURL=${wsdlurl}&amp;SOAPEndPoint=${soapendpoint}
+   &amp;wsname=ReportSecure&amp;wsport=ReportSecurePort</pre>
 </div>
 <div class="note"><span class="notetitle">注:</span> 上記の値は示されたとおりに使用する必要があります。この値を変更しないでください。</div>
 </div>

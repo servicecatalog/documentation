@@ -226,18 +226,16 @@
 <p>Wenn Sie diese Einstellung ändern, müssen Sie die Plattform neu starten.</p>
 </div>
 
-                <div class="section"><h4 class="sectiontitle">REPORT_ENGINEURL</h4>Obligatorisch, wenn Sie Berichte verwenden möchten. Definiert das URL-Template der Report Engine. Wenn das Template nicht korrekt angegeben wird, kann die Plattform keine Berichte generieren, da der Report Web-Service nicht korrekt aufgerufen werden kann. <div class="p">Wenn HTTP-Zugriff für Ihre Installation konfiguriert ist, muss folgender Wert angegeben werden: <pre class="codeblock">http://&lt;host IP address&gt;:&lt;port&gt;/eclipse-birt-runtime/frameset?__report=$
-   {reportname}.rptdesign&amp;SessionId=$
-   {sessionid}&amp;__locale=$
-   {locale}&amp;WSDLURL=$
-   {wsdlurl}&amp;SOAPEndPoint=${soapendpoint}&amp;wsname=Report&amp;wsport=ReportPort
+                <div class="section"><h4 class="sectiontitle">REPORT_ENGINEURL</h4>Obligatorisch, wenn Sie Berichte verwenden möchten. Definiert das URL-Template der Report Engine. Wenn das Template nicht korrekt angegeben wird, kann die Plattform keine Berichte generieren, da der Report Web-Service nicht korrekt aufgerufen werden kann. <div class="p">Wenn HTTP-Zugriff für Ihre Installation konfiguriert ist, muss folgender Wert angegeben werden: <pre class="codeblock">http://&lt;host IP address&gt;:&lt;port&gt;/birt/frameset?
+   __report=${reportname}.rptdesign&amp;SessionId=${sessionid}
+   &amp;__locale=${locale}&amp;WSDLURL=${wsdlurl}&amp;SOAPEndPoint=${soapendpoint}
+   &amp;wsname=Report&amp;wsport=ReportPort
 </pre>
 </div>
-<div class="p">Wenn HTTPS-Zugriff für Ihre Installation konfiguriert ist, muss folgender Wert angegeben werden: <pre class="codeblock">https://&lt;host IP address&gt;:&lt;port&gt;/eclipse-birt-runtime/frameset?__report=$
-   {reportname}.rptdesign&amp;SessionId=$
-   {sessionid}&amp;__locale=$
-   {locale}&amp;WSDLURL=$
-   {wsdlurl}&amp;SOAPEndPoint=${soapendpoint}&amp;wsname=ReportSecure&amp;wsport=ReportSecurePort</pre>
+<div class="p">Wenn HTTPS-Zugriff für Ihre Installation konfiguriert ist, muss folgender Wert angegeben werden: <pre class="codeblock">https://&lt;host IP address&gt;:&lt;port&gt;/birt/frameset?
+   __report=${reportname}.rptdesign&amp;SessionId=${sessionid}
+   &amp;__locale=${locale}&amp;WSDLURL=${wsdlurl}&amp;SOAPEndPoint=${soapendpoint}
+   &amp;wsname=ReportSecure&amp;wsport=ReportSecurePort</pre>
 </div>
 <div class="note"><span class="notetitle">Hinweis:</span> Der obige Wert muss wie angegeben verwendet werden. Nehmen Sie keine Änderung vor.<p>Wenn Sie den SSL/HTTPS Port ändern und die BIRT Report Engine in derselben Domäne wie <span>die Plattform</span> läuft, müssen Sie diese Einstellung ebenfalls aktualisieren.</p>
 </div>
