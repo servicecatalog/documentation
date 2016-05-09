@@ -33,22 +33,19 @@
 
             <p>Es werden folgende Arten der Authentifizierung unterstützt: </p>
 
-            <div class="p">
-                <ul>
-                    <li><strong>INTERNAL</strong> - Benutzer werden in der <strong>Plattform</strong> authentifiziert: Benutzernamen und Passwörter einer Organisation können in der Plattform oder in einem bestehenden LDAP-System der Organisation verwaltet werden. <p id="OrgCreate__UserMgmt2">Wenn sie in der Plattform verwaltet werden, werden die Benutzerdaten in der Datenbank der Plattform gespeichert. Der Administrator einer Organisation kann neue Benutzer registrieren und, falls erforderlich, durch den Betreiber Passwörter zurücksetzen lassen. </p>
+            <ul>
+                <li class="liexpand"><strong>INTERNAL</strong> - Benutzer werden in der <strong>Plattform</strong> authentifiziert: Benutzernamen und Passwörter einer Organisation können in der Plattform oder in einem bestehenden LDAP-System der Organisation verwaltet werden. <p id="OrgCreate__UserMgmt2">Wenn sie in der Plattform verwaltet werden, werden die Benutzerdaten in der Datenbank der Plattform gespeichert. Der Administrator einer Organisation kann neue Benutzer registrieren und, falls erforderlich, durch den Betreiber Passwörter zurücksetzen lassen. </p>
 <p id="OrgCreate__UserMgmt3">Wird ein LDAP-System verwendet, muss die Organisation ihre Benutzer nicht bei der Plattform registrieren. Der Administrator der Organisation kann Benutzer aus dem LDAP-System importieren, um sie automatisch bei der Plattform zu registrieren. Die Benutzer werden im LDAP-System verwaltet. Die Benutzerinformationen werden kontinuierlich mit der Plattform synchronisiert. Die für die Verbindung zum LDAP-System erforderlichen Einstellungen müssen in einer Konfigurationsdatei hinterlegt sein. </p>
 <p id="OrgCreate__UserMgmt4">Benutzer können entweder in der Plattform oder im LDAP-System verwaltet werden. Eine Kombination ist nicht möglich. Die Art der Authentifizierung kann nach dem Anlegen einer Organisation nicht mehr geändert werden.</p>
 <p id="OrgCreate__UserMgmt5">Die Betreiberorganisation kann kein LDAP-System verwenden. Das bedeutet, dass Sie immer in der Plattform authentifiziert werden und sich somit immer am System anmelden können. Dies ist beispielsweise erforderlich, um Verbindungseinstellungen zu ändern, wenn das LDAP-System einer Organisation nicht verfügbar ist und somit ihre Benutzer nicht authentifiziert werden können.</p>
 <p id="OrgCreate__UserMgmt6">Über die Option <span class="uicontrol">LDAP-Einstellungen verwalten</span> können Sie systemweite, für die gesamte Plattform geltende, LDAP-Konfigurationseinstellungen festlegen. Die Einstellungen in der LDAP-Konfigurationsdatei einer Organisation ergänzen oder ersetzen die systemweiten Einstellungen. </p>
 </li>
 
-                    <li><strong>SAML_SP</strong> - Benutzer werden in einem <strong>externen Authentifizierungssystem</strong> (SAML 2.0 Identity Provider) authentifiziert: Benutzernamen und Passwörter einer Organisation werden im Identity-Provider-System verwaltet. Die Plattform ist als SAML 2.0 Service Provider konfiguriert.<p>Damit ein Benutzer auf die Plattform zugreifen kann, muss sein Benutzername im Identity-Provider-System existieren. Der Benutzer muss auf der Plattform mit dem gleichen Benutzernamen registriert werden. </p>
+                <li class="liexpand"><strong>SAML_SP</strong> - Benutzer werden in einem <strong>externen Authentifizierungssystem</strong> (SAML 2.0 Identity Provider) authentifiziert: Benutzernamen und Passwörter einer Organisation werden im Identity-Provider-System verwaltet. Die Plattform ist als SAML 2.0 Service Provider konfiguriert.<p>Damit ein Benutzer auf die Plattform zugreifen kann, muss sein Benutzername im Identity-Provider-System existieren. Der Benutzer muss auf der Plattform mit dem gleichen Benutzernamen registriert werden. </p>
 
-                    </li>
+                </li>
 
-                </ul>
-
-            </div>
+            </ul>
 
             <p id="OrgCreate__UserMgmt"> </p>
 
@@ -116,7 +113,8 @@
 
                             <li class="liexpand">Für eine Kundenorganisation: <span class="uicontrol">Marktplatz</span>, den der Kunde besuchen soll.</li>
 
-                            <li class="liexpand">Für eine Organisation mit der Rolle Serviceanbieter: <strong>Umsatzbeteiligung Betreiber</strong>. Diese zwischen Betreiber und Serviceanbieter vereinbarte Umsatzbeteiligung erhält der Betreiber vom Serviceanbieter dafür, dass Services über die vom Betreiber bereitgestellten Marktplätze verkauft werden können. Diese vereinbarte Beteiligung gilt für alle Services, die der Serviceanbieter anbietet, sofern Sie nicht eine Umsatzbeteiligung pro Service festlegen (einstellbar über die Menüoption <strong>Umsatzbeteilung des Betreibers verwalten</strong> im Menü <strong>Betrieb</strong>). Die Beteiligung ist auch unabhängig davon, ob der Serviceanbieter seine Services selbst verkauft oder die Dienstleistung von Vermittlern oder Wiederverkäufern in Anspruch nimmt. Rabatte, die ein Serviceanbieter mit seinen Kunden vereinbart, wirken sich auf die Umsatzbeteiligung aus.</li>
+                            <li class="liexpand">Für eine Organisation mit der Rolle Serviceanbieter: <strong>Umsatzbeteiligung Betreiber</strong>. Diese zwischen Betreiber und Serviceanbieter vereinbarte Umsatzbeteiligung erhält der Betreiber vom Serviceanbieter dafür, dass Services über die vom Betreiber bereitgestellten Marktplätze verkauft werden können. Diese vereinbarte Beteiligung gilt für alle Services, die der Serviceanbieter anbietet, sofern Sie nicht eine Umsatzbeteiligung pro Service festlegen (einstellbar über die Menüoption <strong>Umsatzbeteilung des Betreibers verwalten</strong> im Menü <strong>Betrieb</strong>). Die Beteiligung ist auch unabhängig davon, ob der Serviceanbieter seine Services selbst verkauft oder die Dienstleistung von Vermittlern oder Wiederverkäufern in Anspruch nimmt. Rabatte, die ein Serviceanbieter mit seinen Kunden vereinbart, wirken sich auf die Umsatzbeteiligung aus.<div class="note"><span class="notetitle">Hinweis:</span> Umsatzbeteiligungen und Rabatte werden nur für Services errechnet, die das plattformeigene Abrechnungssystem verwenden. Services, die ein externes Abrechnungssystem verwenden, werden nicht berücksichtigt.</div>
+</li>
 
                             <li class="liexpand">Für eine Organisation mit der Rolle Hersteller, Serviceanbieter, Wiederverkäufer und/oder Vermittler: <p><span class="uicontrol">Bild für Profil</span>: Bild, das einen Anbieter auf einem Marktplatz identifiziert. Kunden sehen dieses Bild zusammen mit den Informationen zu der Organisation, die einen Service anbietet.</p>
 <p>Klicken Sie <span class="uicontrol">Durchsuchen</span> oder das Feld <span class="uicontrol">Bild hochladen</span> und wählen Sie die Datei mit dem gewünschten Bild. Folgende Bildformate werden unterstützt: GIF, JPG und PNG. Die maximal unterstützte Größe ist 154 x 154 Pixel. Die empfohlene Größe ist 154 x 60 Pixel.</p>

@@ -286,19 +286,60 @@ function anzeigen(das) {
 		  <div style="display: none;" id="info9">
           <p>
             <img class="vmiddle" style="margin-right: 5px;" src="../img/icon-a.gif" width="20" height="20" alt="" />You
-            can search for terms and phrases in the name, short description, and description of a service. Additionally, you can search for services by the categories assigned to them.
+            can search for services by terms that occur in their name, short description, or description. Additionally, 
+            you can search for services by the categories assigned to them.
             </p>
           <p>Here is how:</p>
           <ol>
-            <li>Enter the search term in the search field in the top bar.
-              <li>Click <img class="vmiddle" style="margin-right: 5px;" src="../img/icon-m.gif" width="20"
+            <li>Enter the search term or terms in the search field in the top bar, observing the rules described
+                <a href="#thirtyfour" onclick="javascript:anzeigen('info34')">here</a>.
+            <li>Click <img class="vmiddle" style="margin-right: 5px;" src="../img/icon-m.gif" width="20"
                 height="20" alt="" />.
           </ol>
           <p>The services matching the search criteria are listed.</p>
-
           <hr />
           </div>
 
+<h3 id="thirtythree">
+            <a href="javascript:anzeigen('info33')"><img class="vmiddle" style="margin-right: 5px;" src="../img/icon-q.gif" width="20" height="20" alt="" />How
+            do I search for subscriptions?</a>
+          </h3>
+		  <div style="display: none;" id="info33">
+          <p>
+            <img class="vmiddle" style="margin-right: 5px;" src="../img/icon-a.gif" width="20" height="20" alt="" />You
+            can search for subscriptions by terms that occur in their name, reference number, textual parameters, and custom attributes.
+            </p>
+          <p>Here is how:</p>
+          <ol>
+            <li>Click <b>My subscriptions</b>, or click <b>Account</b> and then <b>Subscriptions</b>.
+            <li>Enter the search term or terms in the search field above the table of subscriptions, observing the rules described
+                <a href="#thirtyfour" onclick="javascript:anzeigen('info34')">here</a>.
+              <li>Click <img class="vmiddle" style="margin-right: 5px;" src="../img/icon-m.gif" width="20"
+                height="20" alt="" />.
+          </ol>
+          <p>The subscriptions matching the search criteria are listed in a table. Only subscriptions for which the you have the appropriate access rights are included in the result.</p>
+          <hr />
+          </div>
+				
+<h3 id="thirtyfour">
+            <a href="javascript:anzeigen('info34')"><img class="vmiddle" style="margin-right: 5px;" src="../img/icon-q.gif" width="20" height="20" alt="" />How
+            do I specify search terms?</a>
+          </h3>
+		  <div style="display: none;" id="info34">
+          <p>
+            <img class="vmiddle" style="margin-right: 5px;" src="../img/icon-a.gif" width="20" height="20" alt="" />When 
+            searching for services or subscriptions, you can specify terms according to the following rules: 
+            </p>
+          <ul>
+            <li>You can search for one or more terms. Separate terms by a blank. All the terms must be found  
+            for a service or subscription to be included in the results.</li>
+            <li>The search is case-insensitive. For example, with the term <code>abc</code>, you will find 
+            <code>Abc</code>, <code>ABC</code>, or <code>aBc</code>.</li>
+            <li>The search terms must be found as separate words. Partial matches are not considered.</li>
+            <li>Special characters and wildcards (*, ?) are not supported in search terms.</li>
+          </ul>
+          <hr />
+          </div>
 				
           <h3 id="ten">
             <a href="javascript:anzeigen('info10')"><img class="vmiddle" style="margin-right: 5px;" src="../img/icon-q.gif" width="20" height="20" alt="" />Why

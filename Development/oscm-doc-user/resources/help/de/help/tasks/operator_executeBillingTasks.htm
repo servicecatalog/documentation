@@ -33,6 +33,8 @@
 
             <p>Nach jeder Berechnung der Nutzungsgebühren für Kunden werden die Rechnungsdaten in einer separaten Transaktion verarbeitet und für die Weiterverarbeitung durch einen Zahlungsdienstleister aufbereitet. </p>
 
+            <div class="note"><span class="notetitle">Hinweis:</span> Die Berechnung der Nutzungsgebühren und Umsatzbeteiligungen sowie die Weiterverarbeitung der Rechnungsdaten erfolgen nur für das plattformeigene Abrechnungssystem. Es werden keinerlei Kosten oder Daten eines externen Abrechnungssystems berücksichtigt, das mit der Plattform integriert ist. Diese werden einzig und alleine in dem externen Abrechnungssystem verwaltet.</div>
+
             <p>Auf der Seite <span class="uicontrol">Abrechnungen verwalten</span> können Sie folgende Aktionen mit <span class="uicontrol">Ausführen</span> im jeweiligen Bereich der Seite starten: </p>
 
             <div class="p">
@@ -43,7 +45,6 @@
 <p>Beispiele:</p>
 <p>Ein Servicanbieter legt fest, dass sein Abrechnungszeitraum vom 5. eines Monats bis zum 4. des Folgemonats gehen soll. Die Konfigurationseinstellung <samp class="codeph">TIMER_INTERVAL_BILLING_OFFSET</samp> hat einen Offset-Wert von 3 Tagen. Wenn Sie die Nutzungsgebühren der Kunden dieses Serviceanbieters beispielsweise für den Zeitraum vom 5. Januar bis einschließlich 4. Februar berechnen möchten, müssen Sie die Berechnung am 8. Februar starten.</p>
 <p>Um die Umsatzbeteiligungen für den Monat Januar zu berechnen, müssen Sie die Berechnung am 4. Februar starten.</p>
-<div class="note"><span class="notetitle">Hinweis:</span> Abrechnungverarbeitung gilt nur für Abonnements die den eigenen Abrechnungssystem von <span>OSCM</span> benutzten. Die Abrechnungen für Abonnements die einen externen Abrechnungssystem benutzten sind durch den externen Abrechnungssystem kontrolliert. Die jeweiligen Daten müssen der Plattform durch den jeweiligen Adapter gestellt werden.</div>
 </li>
 
                     <li class="liexpand"><span class="uicontrol">Rechnungsdaten verarbeiten</span><p>Diese Aktion verarbeitet die Rechungsdaten von Kunden, die von einem Zahlungdienstleister weiterverarbeitet werden müssen. Es wird überprüft, ob der Konfigurationsparameter <samp class="codeph">PSP_USAGE_ENABLED</samp> auf <samp class="codeph">true</samp> gesetzt ist. Wenn nicht, wird die Verarbeitung der Rechnungsdaten abgebrochen. Verwenden Sie die Option <strong>Konfiguration aktualisieren</strong> im Menü <strong>Betrieb</strong>, um diese Konfigurationseinstellung zu ändern.</p>

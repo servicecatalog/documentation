@@ -236,16 +236,60 @@ function anzeigen(das) {
             <a href="javascript:anzeigen('info9')"><img class="vmiddle" style="margin-right: 5px;" src="../img/icon-q.gif" width="20" height="20" alt="" />Wie kann ich nach Services suchen?</a>
           </h3>
 		  <div style="display: none;" id="info9">
-				<p><img class="vmiddle" style="margin-right: 5px;" src="../img/icon-a.gif" width="20" height="20" alt="" />Sie k&ouml;nnen im Namen, der Kurzbeschreibung und der Beschreibung eines Service nach Begriffen und Ausdr&uuml;cken suchen. Zudem k&ouml;nnen Sie &uuml;ber definierte Kategorien nach Services suchen.</p>
+				<p><img class="vmiddle" style="margin-right: 5px;" src="../img/icon-a.gif" width="20" height="20" alt="" />Sie k&ouml;nnen 
+				&uuml;ber Begriffe im Namen, der Kurzbeschreibung und der Beschreibung nach Services suchen. Zudem k&ouml;nnen Sie &uuml;ber definierte Kategorien nach Services suchen.</p>
 <p>So geht's:</p>
 				<ol>
-<li>Geben Sie den Suchbegriff in das Suchfeld der Kopfleiste ein.
+<li>Geben Sie einen oder mehrere Suchbegriffe in das Suchfeld der Kopfleiste ein. 
+    Regeln, die Sie dabei beachten sollten, finden Sie <a href="#thirtyfour" onclick="javascript:anzeigen('info34')">hier</a>.
 <li>Klicken Sie <img class="vmiddle" style="margin-right: 5px;" src="../img/icon-m.gif" width="20" height="20" alt="" />.
 </ol>				
 <p>Die Services, die den angegebenen Suchkriterien entsprechen, werden aufgelistet.</p>
 
 				<hr />
 			</div>	
+			
+			<h3 id="thirtythree">
+            <a href="javascript:anzeigen('info33')"><img class="vmiddle" style="margin-right: 5px;" src="../img/icon-q.gif" width="20" height="20" alt="" />Wie kann ich nach Abonnements suchen?</a>
+          </h3>
+		  <div style="display: none;" id="info33">
+          <p>
+            <img class="vmiddle" style="margin-right: 5px;" src="../img/icon-a.gif" width="20" height="20" alt="" />Sie k&ouml;nnen &uuml;ber Begriffe 
+            im Namen, der Referenznummer, in textuellen Parametern und benutzerdefinierten Attributen nach Abonnements suchen.
+            </p>
+          <p>So geht's:</p>
+          <ol>
+            <li>Klicken Sie <b>Meine Abonnements</b> oder <b>Konto</b> und danach <b>Abonnements</b>.
+            <li>Geben Sie einen oder mehrere Suchbegriffe in das Suchfeld &uuml;ber der Tabelle der Abonnements ein.
+                 Regeln, die Sie dabei beachten sollten, finden Sie <a href="#thirtyfour" onclick="javascript:anzeigen('info34')">hier</a>.
+            <li>Klicken Sie <img class="vmiddle" style="margin-right: 5px;" src="../img/icon-m.gif" width="20"
+                height="20" alt="" />.
+          </ol>
+          <p>Die Abonnements, die den angegebenen Suchkriterien entsprechen, werden in einer Tabelle aufgelistet. Nur Abonnements, f&uuml;r die Sie die notwendigen Zugriffsrechte haben, werden angezeigt.</p>
+          <hr />
+          </div>
+
+<h3 id="thirtyfour">
+            <a href="javascript:anzeigen('info34')"><img class="vmiddle" style="margin-right: 5px;" src="../img/icon-q.gif" width="20" height="20" alt="" />Wie
+            gebe ich Begriffe f&uuml;r eine Suche an?</a>
+          </h3>
+		  <div style="display: none;" id="info34">
+          <p>
+            <img class="vmiddle" style="margin-right: 5px;" src="../img/icon-a.gif" width="20" height="20" alt="" />Bei 
+            einer Suche nach Services oder Abonnements k&ouml;nnen Sie Begriffe entsprechend der folgenden
+            Regeln angeben: 
+            </p>
+          <ul>
+            <li>Sie k&ouml;nnen nach einem oder mehreren Begriffen suchen. Trennen Sie Begriffe mit einem Leerzeichen. 
+            Nur Services bzw. Abonnements, die alle Begriffe enthalten, werden ins Suchergebnis aufgenommen.</li>
+            <li>Bei der Suche wird nicht nach Gro&szlig;- und Kleinschreibung unterschieden. Beispielsweise finden Sie mit dem Begriff <code>abc</code> 
+            auch <code>Abc</code>, <code>ABC</code> oder <code>aBc</code>.</li>
+            <li>Die Suchbegriffe müssen als einzelne separate W&ouml;rter gefunden werden. Teilweise &Uuml;bereinstimmungen werden nicht
+            in Betracht gezogen.</li>
+            <li>Sonderzeichen und Platzhalterzeichen (*, ?) in Suchbegriffen werden nicht unterst&uuml;tzt.</li>
+          </ul>
+          <hr />
+          </div>
 
           <h3 id="ten">
             <a href="javascript:anzeigen('info10')"><img class="vmiddle" style="margin-right: 5px;" src="../img/icon-q.gif" width="20" height="20" alt="" />Warum werden bestimmte Services nicht gefunden?</a>
@@ -586,7 +630,7 @@ function anzeigen(das) {
 <li>Klicken Sie <b>Benutzer hinzuf&uuml;gen</b> im Tab <b>Benutzer</b>.
 <li>Geben Sie die Profildaten f&uuml;r den neuen Benutzer an und klicken Sie <b>speichern</b>.
 <li>Im n&auml;chsten Dialog, w&auml;hlen Sie die gew&uuml;nschten Benutzerrollen aus. Wenn Sie keine Benutzerrolle zuweisen, wird ein Standardbenutzer ohne besondere Rechte angelegt. 
-<li>Falls gew&uuml;nscht, weisen Sie den Benutzer bereits vorhandenen Organisationseinheiten und Abonnements zu. Für jede Organisationseinheit können Sie die Rolle des Benutzers wählen.
+<li>Falls gew&uuml;nscht, weisen Sie den Benutzer bereits vorhandenen Organisationseinheiten und Abonnements zu. F&uuml;r jede Organisationseinheit k&ouml;nnen Sie die Rolle des Benutzers w&auml;hlen.
 <li>Um den Benutzer zu registrieren, klicken Sie <b>Speichern</b>.
 </ol>
 <p>F&uuml;r jeden registrierten Benutzer wird ein Benutzerkonto angelegt, und der Benutzer wird in einer E-Mail &uuml;ber seine Registrierung informiert.
@@ -598,7 +642,7 @@ Der Standardorganisationseinheit sind alle Benutzer zugeordnet, die aktuell f&uu
 <p>Wenn Sie ein externes LDAP-System f&uuml;r die Benutzerverwaltung verwenden, m&uuml;ssen Sie die Benutzer nicht einzeln registrieren, sondern importieren diese aus dem LDAP-System. Weitere Informationen erhalten Sie <a href="#eight" onclick="javascript:anzeigen('info8')">hier</a>. </p>
 		<p>Wenn Sie kein externes LDAP-System f&uuml;r die Benutzerverwaltung verwenden, k&ouml;nnen Sie mehrere Benutzer auf einmal registrieren, indem Sie eine Datei mit Benutzerdaten importieren. Weitere Informationen erhalten Sie <a href="#eight2" onclick="javascript:anzeigen('info82')">hier</a>. </p>
 		<p>Beachten Sie folgendes:</p>
-		<p>Wenn Sie die Rollen eines Benutzers ändern, steht dem Benutzer die den Rollen entsprechende Funktionalität bei seiner nächsten Anmeldung zur Verfügung.</p>
+		<p>Wenn Sie die Rollen eines Benutzers &auml;ndern, steht dem Benutzer die den Rollen entsprechende Funktionalit&auml;t bei seiner n&auml;chsten Anmeldung zur Verf&uuml;gung.</p>
          
 		
 
@@ -1041,7 +1085,7 @@ kann ich mehrere Benutzer aus einer Datei importieren?</a>
       dass auf alle Services, auf die ein Abonnement umgestellt werden kann, von der gleichen Organisationseinheit zugegriffen werden kann.  
       Die verf&uuml;gbaren Services werden vom Serviceanbieter festgelegt.
       </p>
-      <p>Wenn Sie die Rollen eines Benutzers ändern, steht dem Benutzer die den Rollen entsprechende Funktionalität bei seiner nächsten Anmeldung zur Verfügung.</p>
+      <p>Wenn Sie die Rollen eines Benutzers &auml;ndern, steht dem Benutzer die den Rollen entsprechende Funktionalit&auml;t bei seiner n&auml;chsten Anmeldung zur Verf&uuml;gung.</p>
           <hr />
           </div>
           

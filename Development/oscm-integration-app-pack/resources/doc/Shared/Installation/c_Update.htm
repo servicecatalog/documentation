@@ -61,33 +61,6 @@
     </div>
 
     
-    <div class="section">
-      <p>If you are running <span>OSCM</span> and the <span>APP</span> software in SAML_SP mode, and if your SSO environment has changed (for example, if you are using a different IdP), you need to update your WSIT files accordingly: </p>
-
-      <ol>
-        <li>Extract the <samp class="codeph">CT-MG-wsit.jar</samp> file into a separate directory. <p>The <samp class="codeph">.jar</samp> file is located in </p>
-<p><samp class="codeph">&lt;install_pack_dir&gt;/domains/app_domain/lib</samp></p>
-<p>The <samp class="codeph">CT-MG-wsit.jar</samp> file contains the following files:</p>
-<p><samp class="codeph">wsit-client.xml</samp></p>
-<p><samp class="codeph">STSService.xml</samp></p>
-</li>
-
-        <li>Adapt the <samp class="codeph">.xml</samp> files as required by your environment. <span>For details, refer to <a href="t_InstConfiguring.htm">Configuring APP</a>.</span></li>
-
-        <li>Recreate the <samp class="codeph">CT-MG-wsit.jar</samp> file with the modified contents.</li>
-
-        <li>Stop the <samp class="codeph">app-domain</samp> domain.</li>
-
-        <li>Copy the adapted <samp class="codeph">CT-MG-wsit.jar</samp> to the following directory: <p><samp class="codeph">&lt;GLASSFISH_HOME&gt;/domains/app_domain/lib</samp></p>
-</li>
-
-        <li>Restart the <samp class="codeph">app-domain</samp> domain.</li>
-
-      </ol>
-
-    </div>
-
-    
     <div class="section"><h4 class="sectiontitle">Updating the Database</h4>
       
       <p>Proceed with updating the database as follows:</p>
@@ -160,6 +133,35 @@
     
     
     
+    <div class="section"><h4 class="sectiontitle">Updating the Configuration for SAML_SP Mode</h4>
+      
+      <p>If you are running <span>OSCM</span> and the <span>APP</span> software in SAML_SP mode, and if the IdP metadata of your SSO environment have changed, you need to update your WSIT files accordingly: </p>
+
+      <ol>
+        <li class="liexpand">Extract the <samp class="codeph">OSCM-wsit.jar</samp> file into a separate directory. <p>The <samp class="codeph">.jar</samp> file is located in </p>
+<p><samp class="codeph">&lt;GLASSFISH_HOME&gt;/domains/app_domain/lib</samp></p>
+<p>The <samp class="codeph">OSCM-wsit.jar</samp> file contains the following files:</p>
+<p><samp class="codeph">wsit-client.xml</samp></p>
+<p><samp class="codeph">STSService.xml</samp></p>
+</li>
+
+        <li class="liexpand">Adapt the <samp class="codeph">.xml</samp> files as required by your environment. <span>For details, refer to <a href="t_InstConfiguring.htm">Configuring APP</a>.</span></li>
+
+        <li class="liexpand">Recreate the <samp class="codeph">OSCM-wsit.jar</samp> file with the modified contents.</li>
+
+        <li class="liexpand">Stop the <samp class="codeph">app-domain</samp> domain.</li>
+
+        <li class="liexpand">Copy the adapted <samp class="codeph">OSCM-wsit.jar</samp> to the following directory: <p><samp class="codeph">&lt;GLASSFISH_HOME&gt;/domains/app_domain/lib</samp></p>
+</li>
+
+        <li class="liexpand">Restart the <samp class="codeph">app-domain</samp> domain.</li>
+
+      </ol>
+
+      <div class="note"><span class="notetitle">Note:</span> If, for some reason, you recreate the <samp class="codeph">app-domain</samp> domain, you also need to recreate the <samp class="codeph">OSCM-wsit.jar</samp> in the <samp class="codeph">&lt;GLASSFISH_HOME&gt;/domains/app_domain/lib</samp> directory.</div>
+
+    </div>
+
     
   </div>
 

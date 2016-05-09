@@ -22,124 +22,130 @@
 
   <div>
     <div class="section">
-      <p>Es ist möglich proprietäre und Fremdabrechnungssysteme in der Plattform zu benutzten. Während Hersteller die Anwendungen mit der Plattform integrieren, können sie auswählen ob sie den eigenen Abrechnungssystem der Plattform oder einen externen Abrechnungssystem benutzten möchten.</p>
+      <p>Auf der Seite <strong>Abrechnungssysteme verwalten</strong> können Sie die Abrechnungssysteme anzeigen und verwalten, die Herstellern und Serviceanbietern für die Bereitstellung von Preismodellen und die Kostenabrechnung für Services zur Verfügung stehen. </p>
 
-      <p>Auf der Seite <strong>Abrechnungssysteme verwalten</strong>, können Sie ein externes System an die Plattform anknöpfen. Um ein System erfolgreich anzuknöpfen, die folgenden Voraussetzungen müssen erfüllt werden: </p>
+      <p>Die Plattform besitzt ein eigenes Abrechnungsystem zur Verwaltung von Preismodellen und Berechnung von Kosten. Sie können jedoch auch ein oder mehrere externe Abrechnungssysteme anbinden. Dies ist beispielsweise dann von Vorteil, wenn Sie Services von externen Anbietern wie Amazon Web Services (AWS) zur Verfügung stellen, die eigene Systeme für die Bepreisung und Kostenberechnung besitzen. Es ist auch dann nützlich, wenn Preise und Kosten auf Mess- und Zählwerten basieren, die die Plattform nicht bereitstellt.</p>
+
+      <p>Hersteller können bei der Definition ihrer technischen Services das gewünschte Abrechnungssystem angeben - das plattformeigene oder eines der integrierten externen Systeme. Eines der Systeme muss als das Standardsystem festgesetzt sein. Das Standardsystem wird für jeden technischen Service verwendet, für den nicht explizit ein anderes Abrechnungssystem definiert ist, sowie für alle darauf basierenden marktfähigen Services und Abonnements.  </p>
+
+      <p>Die Seite <strong>Abrechnungssysteme verwalten</strong> zeigt die verfügbaren Abrechnungssysteme in jeweils eigenen Abschnitten an. Wenn Sie die Seite öffnen, sind die Details des Standardsystems eingeblendet. Auf der Seite können Sie:</p>
 
       <ul>
-        <li class="liexpand">
-          <p>Die durch den Betreiber bestimmten Verbindungseigenschaften müssen auf das externe Abrechnungssystem weisen. </p>
+        <li class="liexpand">Die Details der verfügbaren Abrechnungssysteme ansehen.</li>
 
-        </li>
+        <li class="liexpand">Neue Abrechnungssysteme hinzufügen.</li>
+
+        <li class="liexpand">Das Standardabrechnungssystem festlegen.</li>
+
+        <li class="liexpand">Die Kurzbeschreibung und Verbindungseigenschaften von Abrechnungssystemen aktualisieren.</li>
+
+        <li class="liexpand">Abrechnungssysteme entfernen.</li>
 
       </ul>
 
-      <p>Eins von den unterstützten Systemen muss als Standardsystem eingestellt werden. Der Standardabrechnungssystem ist für die Hersteller, die die Anwendung als einen technischen Service registrieren um sie in der Plattform verfügbar zu machen, vordefiniert.</p>
-
-      <p>Wenn man die Seite <strong>Abrechnungssysteme verwalten</strong> besucht, werden die Details von den Abrechnungssystem, der im Moment als Standardsystem konfiguriert ist, angezeigt. Auf dieser Seite können Sie: </p>
-
-      <div class="p">
-        <ul>
-          <li class="liexpand">Sich die Liste der unterstützen Abrechnungssysteme ansehen.</li>
-
-          <li class="liexpand">Einen neuen Abrechnungssystem hinzufügen.</li>
-
-          <li class="liexpand">Die Kurzbeschreibung und die Verbindungseigenschaften eines Abrechnungssystems aktualisieren.</li>
-
-          <li class="liexpand">Den Standardabrechnungssystem auswählen.</li>
-
-          <li class="liexpand">Einen Abrechnungssystem entfernen.</li>
-
-        </ul>
-
-      </div>
-
-      <p><strong>Um ein neues Abrechnungssystem zu definieren</strong>:</p>
+      <p><strong>So fügen Sie ein Abrechnungssystem hinzu</strong>:</p>
 
     </div>
 
     <ol><li class="stepexpand">
-        <span>Klicken Sie <span class="uicontrol">Hinzufügen</span>.</span>
-         Das fügt einen leeren Bereich ein, wo man die Abrechnungssystemdetails definieren kann.
+        <span>Stellen Sie sicher, dass folgende Voraussetzungen erfüllt sind:</span>
+         
+          <ul>
+            <li>Ein Billing-Adapter wurde implementiert, der die Plattform mit dem externen Abrechnungssystem verbindet. Die Implementierung erfolgt durch einen Entwickler in enger Zusammenarbeit mit dem Anbieter der Services, für die das Abrechnungssystem verwendet werden soll. Ausführliche Informationen dazu finden Sie im <em>Developer's Guide</em>.</li>
+
+            <li>Die Verantwortlichen haben den Billing-Adapter auf einem Application Server installiert und die Kommunikation mit der Plattform auf der einen Seite und dem Abrechnungssystem auf der anderen Seite sichergestellt.</li>
+
+            <li>Sie kennen die Parameter, die zur Adressierung des Remote Interface des Billing-Adapters über JNDI Lookup benötigt werden.</li>
+
+          </ul>
+
+        
       </li>
 <li class="stepexpand">
-        <span>Geben Sie das <span class="uicontrol">Abrechnungssystem ID</span> von den Abrechnungssystem ein. </span>
-         Dieses ID identifiziert eindeutig das Abrechnungssystem in der Plattform. Wenn das neue Abrechnungssystem definiert ist, kann das ID nicht geändert werden. <p>Die IDs sind auf 40 Zeichen beschränkt und darf keinen von den folgenden Zeichen beinhalten:</p>
+        <span>Klicken Sie <span class="uicontrol">Hinzufügen</span> am Ende der Seite <strong>Abrechnungssysteme verwalten</strong>.</span>
+         Dadurch wird auf der Seite ein neuer Abschnitt zur Definition des Abrechnungssystems erstellt und geöffnet. 
+      </li>
+<li class="stepexpand">
+        <span>Geben Sie eine <span class="uicontrol">ID</span> für das neue Abrechnungssystem ein. </span>
+         Mit dieser ID wird das Abrechnungssystem in der Plattform eindeutig identifiziert. Sie kann nach Anlegen des Systems nicht mehr geändert werden. Die ID wird bei der Definition von technischen Services angegeben, für die das Abrechnungssystem verwenden werden soll.  <p>Die IDs von Abrechnungssystemen sind auf 40 Zeichen beschränkt und dürfen keines der folgenden Zeichen enthalten:</p>
 <p><samp class="codeph">! " # $ % &amp; ' * + , / : ; &lt; = &gt; ? \ ^ `</samp>
           </p>
 
       </li>
 <li class="stepexpand">
-        <span>Fügen Sie die <span class="uicontrol">Kurzbeschreibung</span> des Abrechnungssystems ein.</span>
+        <span>Geben Sie optional eine <span class="uicontrol">Kurzbeschreibung</span> für des Abrechnungssystems ein.</span>
          
           <p>Kurzbeschreibungen sind auf 40 Zeichen beschränkt. Alle Zeichen sind erlaubt.</p>
 
         
       </li>
 <li class="stepexpand">
-        <span>Fügen Sie die <span class="uicontrol">Verbindungseigenschaften</span> ein. </span>
-         Je nach dem Abrechnungsadapter, der implementiert wurde um die Plattform mit dem externen Abrechnungssystem zu verbinden, kann die Zahl der Verbindungseigenschaften und ihre Semantik verschieden sein. Sie müssen aber auf ein spezifisches externes Abrechnungssystem deuten und solche Daten wie der Port den der Abrechnungssystem verbindet oder ein Provider-URL festlegen. Der Abrechnungssystem und der Adapter werden durch JNDI-lookup verbunden. <p>Fügen Sie den Namen der Eigenschaft in das erste Feld und den entsprechenden Wert in das zweite Feld ein.</p>
-<p>Benutzen Sie den Pluszeichen um eine zusätzliche Eigenschaft hinzuzufügen und den Minuszeichen um eine Eigenschaft zu entfernen.</p>
-
+        <span>Geben Sie unter <span class="uicontrol">Verbindung zum Abrechnungssystem</span> die Parameter zur Adressierung des Billing-Adapters über JNDI Lookup an. </span>
+         Sie müssen in jedem Fall den JNDI-Namen des Adapters angeben. Für weitere Parameter geben Sie im linken Feld den Namen, im rechten den Wert an. Mit dem Pluszeichen fügen Sie einen weiteren Parameter hinzu, mit dem Minuszeichen entfernen Sie einen Parameter. 
       </li>
 <li class="stepexpand">
-        <span>Klicken Sie <span class="uicontrol">Verbindung testen</span> um sicherzustellen, dass die Verbindung zu dem Abrechnungssystem erstellt werden kann.</span>
-         Eine entsprechende Nachricht wird gezeigt, die Sie informiert ob die Verbindung erfolgreich erstellt wurde.
+        <span>Klicken Sie <span class="uicontrol">Verbindung testen</span> um sicherzustellen, dass die Verbindung zu dem Abrechnungssystem hergestellt werden kann.</span>
+         Eine Nachricht wird angezeigt, die Sie darüber informiert, ob die Verbindung erfolgreich war.
       </li>
 <li class="stepexpand">
-        <span>Klicken Sie <span class="uicontrol">Als Standard auswählen</span> um das neue Abrechnungssystem als Standardabrechnungssystem zu definieren, wenn erforderlich.</span>
-         Das neue Abrechnungssystem wird sofort als Standard markiert. Der Marker wird von dem vorherigen Standardsystem entfernt.
+        <span>Klicken Sie gegebenenfalls <span class="uicontrol">Als Standard voreinstellen</span>, um das neue System als Standardabrechnungssystem festzulegen.</span>
+         Das neue Abrechnungssystem wird sofort als Standard gesetzt, und die Einstellung vom bisherigen Standardsystem wird entfernt.
       </li>
 <li class="stepexpand">
-        <span>Um den Abrechnungssystem zu definieren, klicken Sie <span class="uicontrol">Speichern</span>. </span>
+        <span>Schließen Sie Ihre Eingaben mit <span class="uicontrol">Speichern</span> ab.</span>
       </li>
 </ol>
 
     <div class="section">
-      <p>Hersteller können jetzt dieses Abrechnungssystem auswählen, wenn sie eine Anwendung als technischen Service in der Plattform registrieren.</p>
+      <p>Hersteller können das neue Abrechnungssystem jederzeit angeben, wenn sie eine Anwendung als technischen Service in der Plattform registrieren.</p>
 
-      <p><strong>Um einen existierenden Abrechnungssystem zu aktualisieren</strong>: </p>
+      <p><strong>So ändern Sie das Standardabrechnungssystem</strong>: </p>
 
-      <div class="p">
-        <ol>
-          <li class="liexpand">Erweitern Sie die Details des Abrechnungssystem, der aktualisiert werden muss.</li>
+      <ol>
+        <li class="liexpand">Zeigen Sie die Details des Abrechnungssystems an, das Sie als Standardsystem verwenden wollen. </li>
 
-          <li class="liexpand">Ändern Sie den <span class="uicontrol">Kurzbeschreibung</span> des Abrechnungssystems, solte es erforderlich sein. </li>
+        <li class="liexpand">Klicken Sie <span class="uicontrol">Als Standard voreinstellen</span>, um das Abrechnungssystem als Standardsystem festzulegen und die Einstellung vom bisherigen Standardsystem zu entfernen.</li>
 
-          <li class="liexpand">Ändern Sie die Werte der Verbindungseigenschaften. Benutzten Sie den Pluszeichen um eine zusätzliche Eigenschaft hinzuzufügen oder den Minuszeichen um eine Eigenschaft zu entfernen, wenn erforderlich. </li>
+        <li class="liexpand">Schließen Sie Ihre Eingaben mit <span class="uicontrol">Speichern</span> ab. </li>
 
-          <li class="liexpand">Klicken Sie <span class="uicontrol">Verbindung testen</span> um sicherzustellen, dass die Verbindung zum Abrechnungssystem erstellt werden kann.</li>
+      </ol>
 
-          <li class="liexpand">Klicken Sie <span class="uicontrol">Als Standard auswählen</span> um das Abrechnungssystem als Standard zu definieren.</li>
+      <p><strong>So aktualisieren Sie ein existierendes Abrechnungssystem</strong>: </p>
 
-          <li class="liexpand">Klicken Sie <span class="uicontrol">Speichern</span> um Änderungen wirksam zu machen. </li>
+      <ol>
+        <li class="liexpand">Zeigen Sie die Details des Abrechnungssystems an, das Sie aktualisieren möchten.</li>
 
-        </ol>
+        <li class="liexpand">Ändern Sie die <span class="uicontrol">Kurzbeschreibung</span>, falls gewünscht. </li>
 
-      </div>
+        <li class="liexpand">Ändern Sie, falls erforderlich, die Werte der Verbindungsparameter. Mit dem Pluszeichen fügen Sie einen weiteren Parameter hinzu, mit dem Minuszeichen entfernen Sie einen Parameter.</li>
 
-      <p><strong>Um ein Abrechnungssystem zu entfernen</strong>: </p>
+        <li class="liexpand">Klicken Sie <span class="uicontrol">Verbindung testen</span> um sicherzustellen, dass die Verbindung zu dem Abrechnungssystem hergestellt werden kann.</li>
 
-      <div class="p">
-        <ol>
-          <li class="liexpand">Erweitern Sie die Details des Abrechnungssystems, der entfernt werden muss.<p>Die folgenden Voraussetzungen müssen erfüllt werden damit ein Abrechnungssystem entfernt sein kann:</p>
+        <li class="liexpand">Klicken Sie gegebenenfalls <span class="uicontrol">Als Standard voreinstellen</span>, um das System als Standardabrechnungssystem festzulegen.</li>
+
+        <li class="liexpand">Schließen Sie Ihre Änderungen mit <span class="uicontrol">Speichern</span> ab. </li>
+
+      </ol>
+
+      <p><strong>So entfernen Sie ein Abrechnungssystem</strong>: </p>
+
+      <ol>
+        <li class="liexpand">Zeigen Sie die Details des Abrechnungssystems an, das Sie entfernen möchten. <p>Die folgenden Voraussetzungen müssen erfüllt sein, damit ein Abrechnungssystem entfernt werden kann:</p>
 <div class="p">
-              <ul>
-                <li>Das Abrechnungssystem muss als Standard markiert sein.</li>
+            <ul>
+              <li>Das System darf nicht als Standardabrechnungssystem festgesetzt sein.</li>
 
-                <li>Keine technischen Services, vermarktbaren Services und keine aktiven Abonnements benutzten das Abrechnungssystem.</li>
+              <li>Das System darf von keinen technischen Services, marktfähigen Services und aktiven Abonnements verwendet werden.</li>
 
-              </ul>
+            </ul>
 
-            </div>
+          </div>
 </li>
 
-          <li class="liexpand">Klicken Sie <span class="uicontrol">Entfernen</span> und bestätigen Sie die Entfernung. <p>Das Abrechnungssystem wird sofort entfernt. </p>
+        <li class="liexpand">Klicken Sie <span class="uicontrol">Löschen</span> und bestätigen Sie die Entfernung. <p>Das Abrechnungssystem wird sofort entfernt. </p>
 </li>
 
-        </ol>
-
-      </div>
+      </ol>
 
     </div>
 
