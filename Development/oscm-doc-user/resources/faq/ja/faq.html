@@ -250,16 +250,50 @@ function anzeigen(das) {
           </h3>
           <div style="display: none;" id="info9">
           <p>
-            <img class="vmiddle" style="margin-right: 5px;" src="../img/icon-a.gif" width="20" height="20" alt="" />名前、簡単な説明、サービスの詳細説明から用語や文字列で検索できます。さらに、割り当てられているカテゴリ別にサービスを検索することもできます。
+            <img class="vmiddle" style="margin-right: 5px;" src="../img/icon-a.gif" width="20" height="20" alt="" />名前、簡単な説明、サービスの詳細説明に含まれる語句からサービスを検索することができます。さらに、割り当てられているカテゴリ別にサービスを検索することもできます。
             </p>
           <p>方法：</p>
           <ol>
-            <li>の検索フィールドに検索文字列を入力します。
-              <li>次のアイコンをクリックします。<img class="vmiddle" style="margin-right: 5px;" src="../img/icon-m.gif" width="20"
-                height="20" alt="" />
+            <li>ヘッダーの検索フォームに検索語句を入力します。検索に関する規則は<a href="#thirtyfour" onclick="javascript:anzeigen('info34')">ここ</a>を参照してください。
+              <li><img class="vmiddle" style="margin-right: 5px;" src="../img/icon-m.gif" width="20"
+                height="20" alt="" />アイコンをクリックします。
           </ol>
           <p>検索条件に一致するサービスが一覧で表示されます。</p>
+          <hr />
+          </div>
 
+<h3 id="thirtythree">
+            <a href="javascript:anzeigen('info33')"><img class="vmiddle" style="margin-right: 5px;" src="../img/icon-q.gif" width="20" height="20" alt="" />購入済サービスの検索方法は？</a>
+          </h3>
+      <div style="display: none;" id="info33">
+          <p>
+            <img class="vmiddle" style="margin-right: 5px;" src="../img/icon-a.gif" width="20" height="20" alt="" />サービス利用名、参照番号、テキストパラメーター、およびカスタム属性に含まれる語句から購入済サービスを検索することができます。
+            </p>
+          <p>方法:</p>
+          <ol>
+            <li>ヘッダーの<b>購入済サービス</b>をクリックするか、ヘッダーの<b>アカウント</b>をクリックし、メニューの<b>購入済サービス</b>をクリックします。
+            <li>購入済サービスリストの上にある検索フォームに検索語句を入力します。検索に関する規則は
+                <a href="#thirtyfour" onclick="javascript:anzeigen('info34')">ここ</a>を参照してください。
+              <li><img class="vmiddle" style="margin-right: 5px;" src="../img/icon-m.gif" width="20"
+                height="20" alt="" />アイコンをクリックします。
+          </ol>
+          <p>検索条件に一致する購入済サービスがリストに表示されます。アクセス権を持つ購入済サービスのみが検索結果に含まれます。</p>
+          <hr />
+          </div>
+        
+<h3 id="thirtyfour">
+            <a href="javascript:anzeigen('info34')"><img class="vmiddle" style="margin-right: 5px;" src="../img/icon-q.gif" width="20" height="20" alt="" />検索語句の指定方法は？</a>
+          </h3>
+      <div style="display: none;" id="info34">
+          <p>
+            <img class="vmiddle" style="margin-right: 5px;" src="../img/icon-a.gif" width="20" height="20" alt="" />サービス、および購入済サービスを検索する場合、次の規則に従って検索語句を指定します: 
+            </p>
+          <ul>
+            <li>一語以上の語句で検索をすることができます。複数の語句を使用する場合は、スペースで区切ります。複数の語句を使用した場合、すべての語句が含まれるものだけが該当となります。</li>
+            <li>検索に大文字と小文字の区別はありません。<code>abc</code>で検索を行った場合、<code>Abc</code>、 <code>ABC</code>、 および<code>aBc</code>のすべてが該当します。</li>
+            <li>検索する語句が単語として完全に一致したものだけが該当します。部分一致の場合は該当となりません。</li>
+            <li>特殊文字、およびワイルドカード(*, ?)は使用できません。</li>
+          </ul>
           <hr />
           </div>
 
@@ -438,7 +472,7 @@ function anzeigen(das) {
             <li>管理者権限を持つ利用者またはサービス購入管理者としてログインします。
               <li>上部の[アカウント]をクリックします。
                 <li>左側の[購入済サービス]をクリックします。管理者権限を持つ利用者の場合、組織内のすべての購入済サービスを参照、管理できます。サービス購入管理者の場合、自分の購入済サービスにアクセスできます。 
-                  <li>購入済みサービスの一覧から、サービス利用者の割り当てを変更したいものの<img class="vmiddle" style="margin-right: 5px;" src="../img/edit.png"
+                  <li>購入済サービスの一覧から、サービス利用者の割り当てを変更したいものの<img class="vmiddle" style="margin-right: 5px;" src="../img/edit.png"
                       width="20" height="20" alt="" />アイコンをクリックします。
                     <li>購入済サービスへの割り当てを解除するサービス利用者の<img class="vmiddle" style="margin-right: 5px;" src="../img/remove_user.png"
                       width="20" height="20" alt="" />をクリックします。この利用者にメールが送信されます。
@@ -1097,7 +1131,7 @@ function anzeigen(das) {
             <li>購入済サービス名の変更などの購入済サービスを変更する処理 (<code>購入済サービスの編集</code>)。</li>
             <li>請求書作成を完了し、請求期間に対する請求データを計算する処理 (<code>請求書作成の完了</code>)。</li>
             <li>購入済サービスを追加する処理 (<code>サービスの購入</code>)。</li>
-            <li>購入済サービスに利用者を割り当てまたは除去する処理 (<code>購入済サービスへの利用者の割り当て</code>)。<br>サービスを購入する際、新たに購入したサービスへの利用者の自動割り当てに対しては、トリガーを設定することはできません。 <code>購入済サービスへの利用者の割り当て</code>のトリガーは購入済みサービスへ利用者を手作業で割り当てた場合にだけ有効です。
+            <li>購入済サービスに利用者を割り当てまたは除去する処理 (<code>購入済サービスへの利用者の割り当て</code>)。<br>サービスを購入する際、新たに購入したサービスへの利用者の自動割り当てに対しては、トリガーを設定することはできません。 <code>購入済サービスへの利用者の割り当て</code>のトリガーは購入済サービスへ利用者を手作業で割り当てた場合にだけ有効です。
             </li>
             <li>購入済サービスをアップグレードまたはダウングレードする処理(<code>購入済サービスのアップ/ダウングレード</code>)。</li>
             <li>購入済サービスを解約する処理 (<code>購入済サービスの解約</code>)。</li>
