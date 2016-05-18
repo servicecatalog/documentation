@@ -1,66 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html
   PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xml:lang="ja-jp" lang="ja-jp">
+<html xml:lang="de-de" lang="de-de">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta name="copyright" content="(C) Copyright 2005"/>
 <meta name="DC.rights.owner" content="(C) Copyright 2005"/>
 <meta name="DC.Type" content="task"/>
-<meta name="DC.Title" content="請求データのプレビュー"/>
+<meta name="DC.Title" content="Rechnungsdatenvorschau"/>
 <meta name="DC.Format" content="XHTML"/>
 <meta name="DC.Identifier" content="task634"/>
-<meta name="DC.Language" content="ja-jp"/>
+<meta name="DC.Language" content="de-de"/>
 <link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
 <link rel="stylesheet" type="text/css" href="../../book.css"/>
-<title>請求データのプレビュー</title>
+<title>Rechnungsdatenvorschau</title>
 </head>
 <body id="task634">
 
 
-  <h1 class="topictitle1">請求データのプレビュー</h1>
+    <h1 class="topictitle1">Rechnungsdatenvorschau</h1>
 
-  <div>
-    <div class="section">
-      <p id="task634__PreviewBillingData">特定の期間におけるサービス利用部門の購入済サービスの請求データをプレビューすることができます。請求データはXMLファイルに保存するか、任意のエディタで直接表示することもできます。データを経理システムに回送するなどの場合に、請求データを編集した上で作業することができます。</p>
+    <div>
+        <div class="section">
+            <p>Sie können Rechnungsdaten für die Abonnements eines Kunden von Services, die das plattformeigene  Abrechnungssystem benutzen, für einen bestimmten Zeitraum vorab anzeigen. Die Daten können in einer XML-Datei gespeichert oder einem Editor Ihrer Wahl angezeigt werden. Sie können die Daten bearbeiten und zum Beispiel an ein Buchhaltungssystem weiterleiten. </p>
 
-        <p id="task634__PreviewBillingData3">請求データのプレビューは特定のサービス利用部門の請求データに関するデータを収集し、特定の期間に対する計算をおこないます。ここで作成された請求データは特定のサービス利用部門のコスト見積りのみに利用され、データベースには保存されません。</p>
+            <p>Die Rechnungsdatenvorschau sammelt die Daten, die für die Rechnungen eines bestimmten Kunden relevant sind, und kumuliert sie für jeden Tag des angegebenen Zeitraums. Die Daten werden nicht in der Datenbank gespeichert; die Ergebnisse sind lediglich eine Kostenvorschau für den Kunden. </p>
 
-      <p><strong>請求データをプレビューするには</strong>：</p>
+            <p><strong>So starten Sie die Rechnungsdatenvorschau</strong>:</p>
 
-    </div>
+        </div>
 
-    <ol><li class="stepexpand">
-        <span>請求データを表示する組織を<span class="uicontrol">組織ID</span>一覧から選択します。 </span>
-         
-          <p>一覧にはプラットフォームで管理されるすべての組織が含まれます。 </p>
+        <ol><li class="stepexpand">
+                <span>Wählen Sie in der Liste <span class="uicontrol">Organisations-ID</span> die Organisation, deren Rechnungsdaten Sie anzeigen möchten.</span>
+                 
+                    <p>Es werden alle Organisationen angezeigt, die auf Ihrer Plattform verwaltet werden.</p>
 
-        
-      </li>
+                
+            </li>
 <li class="stepexpand">
-        <span>請求データを表示する期間の開始日と終了日を指定します。 </span>
-         
-          <p id="task634__PreviewBillingData2">システムは設定されている請求期間とは別に、ここで指定された期間に対して計算をおこないます。開始日と終了日に請求期間と同じ日付を設定した場合、請求データ作成処理と同じ結果が出力されます。</p>
+                <span>Geben Sie das Anfangs- und Enddatum des Zeitraums an, für den Sie Rechnungsdaten anzeigen möchten.</span>
+                 
+                    <p>Es werden die genauen Kosten innerhalb dieses Zeitraums berechnet, unabhängig von den festgelegten Abrechnungszeiträumen. Wenn Sie als Anfangs- und Enddatum den ersten und den letzten Tag eines Abrechnungszeitraums angeben, entsprechen die für die Vorschau errechneten Nutzungsgebühren genau denen für den Abrechnungszeitraum. </p>
 
-          <p id="task634__PreviewBillingData2">日付は<samp class="codeph">YYYY-MM-DD</samp>形式で指定します。</p>
+                    <p>Geben Sie das Anfangs- und Enddatum im Format <samp class="codeph">JJJJ-MM-TT</samp> an. </p>
 
-        
-      </li>
+                
+            </li>
 <li class="stepexpand">
-        <span><span class="uicontrol">エクスポート</span>をクリックします。 </span>
-      </li>
+                <span>Klicken Sie <span class="uicontrol">Exportieren</span>. </span>
+            </li>
 <li class="stepexpand">
-        <span>ファイル（<samp class="codeph">&lt;日付&gt;BillingData.xml</samp>）にデータを保存するか、選択したエディタで直接閲覧するかを選択します。</span>
-      </li>
+                <span>Entscheiden Sie, ob Sie die Daten in einer Datei speichern (<samp class="codeph">&lt;datum&gt;BillingData.xml</samp>) oder direkt in einem Editor Ihrer Wahl anzeigen lassen.</span>
+            </li>
 </ol>
 
-    <div class="section">
-      <p><span>XMLファイルの項目の詳細な説明や属性については<em>運用ガイド（技術サービス開発部門編）</em>を参照してください。</span></p>
+        <div class="section">
+            <p>Eine detaillierte Beschreibung der Elemente und Attribute in der erzeugten XML-Datei finden Sie im Handbuch <em>Developer's Guide</em>. </p>
 
-      
+        </div>
+
     </div>
-
-  </div>
 
 
 </body>
