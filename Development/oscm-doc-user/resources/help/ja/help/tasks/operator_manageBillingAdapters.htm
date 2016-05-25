@@ -1,151 +1,165 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html
   PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xml:lang="en-us" lang="en-us">
+<html xml:lang="ja-jp" lang="ja-jp">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta name="copyright" content="(C) Copyright 2005"/>
 <meta name="DC.rights.owner" content="(C) Copyright 2005"/>
 <meta name="DC.Type" content="task"/>
-<meta name="DC.Title" content="Abrechnungssysteme verwalten"/>
+<meta name="DC.Title" content="請求システムの管理"/>
 <meta name="DC.Format" content="XHTML"/>
 <meta name="DC.Identifier" content="task634"/>
-<meta name="DC.Language" content="en-us"/>
+<meta name="DC.Language" content="ja-jp"/>
 <link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
 <link rel="stylesheet" type="text/css" href="../../book.css"/>
-<title>Abrechnungssysteme verwalten</title>
+<title>請求システムの管理</title>
 </head>
 <body id="task634">
 
 
-  <h1 class="topictitle1">Abrechnungssysteme verwalten</h1>
+  <h1 class="topictitle1">請求システムの管理</h1>
 
   <div>
     <div class="section">
-      <p>Auf der Seite <strong>Abrechnungssysteme verwalten</strong> können Sie die Abrechnungssysteme anzeigen und verwalten, die Herstellern und Serviceanbietern für die Bereitstellung von Preismodellen und die Kostenabrechnung für Services zur Verfügung stehen. </p>
+      <p><strong>請求システムの管理</strong>ページで、技術サービス提供部門およびサービス提供部門が、料金設定の提供およびサービスの料金計算に使用できる請求システムの参照、追加、および管理を行うことができます。</p>
 
-      <p>Die Plattform besitzt ein eigenes Abrechnungsystem zur Verwaltung von Preismodellen und Berechnung von Kosten. Sie können jedoch auch ein oder mehrere externe Abrechnungssysteme anbinden. Dies ist beispielsweise dann von Vorteil, wenn Sie Services von externen Anbietern wie Amazon Web Services (AWS) zur Verfügung stellen, die eigene Systeme für die Bepreisung und Kostenberechnung besitzen. Es ist auch dann nützlich, wenn Preise und Kosten auf Mess- und Zählwerten basieren, die die Plattform nicht bereitstellt.</p>
+      <p id="task634__comes_with_its_own_native_b_concept_conbody_section_p_1"><span id="task634__comes_with_ph_1"><span>プラットフォームには</span>支払種別の管理とサービスのコスト計算のための請求システムが付属しています。</span>
+        <span id="task634__comes_with_ph_2">ただし、付属の請求システムを使用せずに一つ以上の外部の請求システムと統合することもできます。これは、Amazon Web Services (AWS)など、独自の価格設定、および請求機構を持つ外部のプロバイダーによるサービスを提供する場合に適しています。また、<span>プラットフォームで</span>提供されていない計測情報に基づいて価格設定、および請求を行いたいサービスにも適しています。
+        </span></p>
 
-      <p>Hersteller können bei der Definition ihrer technischen Services das gewünschte Abrechnungssystem angeben - das plattformeigene oder eines der integrierten externen Systeme. Eines der Systeme muss als das Standardsystem festgesetzt sein. Das Standardsystem wird für jeden technischen Service verwendet, für den nicht explizit ein anderes Abrechnungssystem definiert ist, sowie für alle darauf basierenden marktfähigen Services und Abonnements.  </p>
+      <p>技術サービス提供者は、技術サービスを定義する際に、使用する請求システムとして、プラットフォームのもの、または統合された外部の請求システムを選択することができます。請求システムのうちどれかひとつがデフォルトとして設定されます。明に請求システムを指定しない場合、デフォルトの請求システムが技術サービスに設定され、当該技術サービスに基づくサービスおよび購入済サービスは、デフォルトの請求システムを使用します。</p>
 
-      <p>Die Seite <strong>Abrechnungssysteme verwalten</strong> zeigt die verfügbaren Abrechnungssysteme in jeweils eigenen Abschnitten an. Wenn Sie die Seite öffnen, sind die Details des Standardsystems eingeblendet. Auf der Seite können Sie:</p>
+      <p><span class="uicontrol">請求システムの管理</span>ページでは使用可能な請求システムをそれぞれ参照することができます。このページを最初に訪れた際はデフォルトの請求システムの詳細が表示されます。このページでは次の操作を行うことができます: </p>
 
-      <ul>
-        <li class="liexpand">Die Details der verfügbaren Abrechnungssysteme ansehen.</li>
+      <div class="p">
+        <ul>
+          <li class="liexpand">使用可能な請求システムの参照</li>
 
-        <li class="liexpand">Neue Abrechnungssysteme hinzufügen.</li>
+          <li class="liexpand">外部の請求システムの追加</li>
 
-        <li class="liexpand">Das Standardabrechnungssystem festlegen.</li>
+          <li class="liexpand">デフォルト請求システムの設定</li>
 
-        <li class="liexpand">Die Kurzbeschreibung und Verbindungseigenschaften von Abrechnungssystemen aktualisieren.</li>
+          <li class="liexpand">外部の請求システムに対する、簡単な説明と接続プロパティの編集</li>
 
-        <li class="liexpand">Abrechnungssysteme entfernen.</li>
+          <li class="liexpand">請求システムの削除</li>
 
-      </ul>
+        </ul>
 
-      <p><strong>So fügen Sie ein Abrechnungssystem hinzu</strong>:</p>
+      </div>
+
+      <p><strong>請求システムの追加方法</strong>:</p>
 
     </div>
 
     <ol><li class="stepexpand">
-        <span>Stellen Sie sicher, dass folgende Voraussetzungen erfüllt sind:</span>
+        <span>次の条件を満たしていることを確認してください:</span>
          
           <ul>
-            <li>Ein Billing-Adapter wurde implementiert, der die Plattform mit dem externen Abrechnungssystem verbindet. Die Implementierung erfolgt durch einen Entwickler in enger Zusammenarbeit mit dem Anbieter der Services, für die das Abrechnungssystem verwendet werden soll. Ausführliche Informationen dazu finden Sie im <em>Developer's Guide</em>.</li>
+            <li>プラットフォームを外部の請求システムに接続するための請求システムアダプターが実装されている。アダプター開発者は外部の請求システムを使用することになるサービス提供者と密に連携してアダプターを開発する必要があります。詳細は<em>技術サービス開発部門編</em>を参照してください。</li>
 
-            <li>Die Verantwortlichen haben den Billing-Adapter auf einem Application Server installiert und die Kommunikation mit der Plattform auf der einen Seite und dem Abrechnungssystem auf der anderen Seite sichergestellt.</li>
+            <li>アプリケーションサーバに配備された請求システムアダプターにより、プラットフォームと外部の請求システムが通信可能な状態にある。</li>
 
-            <li>Sie kennen die Parameter, die zur Adressierung des Remote Interface des Billing-Adapters über JNDI Lookup benötigt werden.</li>
+            <li>JNDIルックアップを使用して請求システムアダプターのリモートインタフェースを呼び出すためのパラメーターを知っている。</li>
 
           </ul>
 
         
       </li>
 <li class="stepexpand">
-        <span>Klicken Sie <span class="uicontrol">Hinzufügen</span> am Ende der Seite <strong>Abrechnungssysteme verwalten</strong>.</span>
-         Dadurch wird auf der Seite ein neuer Abschnitt zur Definition des Abrechnungssystems erstellt und geöffnet. 
+        <span><span class="uicontrol">請求システムの管理</span>ページのいちばん下にある<span class="uicontrol">追加</span>ボタンをクリックします。</span>
+         請求システムの詳細を定義するためのフィールドが表示されます。
       </li>
 <li class="stepexpand">
-        <span>Geben Sie eine <span class="uicontrol">ID</span> für das neue Abrechnungssystem ein. </span>
-         Mit dieser ID wird das Abrechnungssystem in der Plattform eindeutig identifiziert. Sie kann nach Anlegen des Systems nicht mehr geändert werden. Die ID wird bei der Definition von technischen Services angegeben, für die das Abrechnungssystem verwenden werden soll.  <p>Die IDs von Abrechnungssystemen sind auf 40 Zeichen beschränkt und dürfen keines der folgenden Zeichen enthalten:</p>
+        <span>請求システムの<span class="uicontrol">識別子</span>を入力します。</span>
+         識別子はプラットフォームで一意である必要があります。識別子は後から変更することはできません。識別子は請求システムを使用する技術サービスの定義において指定されます。<p>識別子は40文字以内、かつ次の文字を使用することはできません:</p>
 <p><samp class="codeph">! " # $ % &amp; ' * + , / : ; &lt; = &gt; ? \ ^ `</samp>
           </p>
 
       </li>
 <li class="stepexpand">
-        <span>Geben Sie optional eine <span class="uicontrol">Kurzbeschreibung</span> für des Abrechnungssystems ein.</span>
+        <span>必要に応じて<span class="uicontrol">簡単な説明</span>を入力します。</span>
          
-          <p>Kurzbeschreibungen sind auf 40 Zeichen beschränkt. Alle Zeichen sind erlaubt.</p>
+          <p>簡単な説明は40文字以内で指定します。すべての文字を使用することができます。</p>
 
         
       </li>
 <li class="stepexpand">
-        <span>Geben Sie unter <span class="uicontrol">Verbindung zum Abrechnungssystem</span> die Parameter zur Adressierung des Billing-Adapters über JNDI Lookup an. </span>
-         Sie müssen in jedem Fall den JNDI-Namen des Adapters angeben. Für weitere Parameter geben Sie im linken Feld den Namen, im rechten den Wert an. Mit dem Pluszeichen fügen Sie einen weiteren Parameter hinzu, mit dem Minuszeichen entfernen Sie einen Parameter. 
+        <span>JNDIルックアップを使用して請求システムアダプターのリモートインタフェースを呼び出すため、<span class="uicontrol">接続プロパティ</span>を入力します。</span>
+         少なくとも請求システムアダプターのJNDI名を指定する必要があります。さらにプロパティを追加する場合は、プロパティ名を左のフィールドに値を右のフィールドに入力します。プロパティの追加は"+"ボタン、削除は"-"ボタンをクリックします。
       </li>
 <li class="stepexpand">
-        <span>Klicken Sie <span class="uicontrol">Verbindung testen</span> um sicherzustellen, dass die Verbindung zu dem Abrechnungssystem hergestellt werden kann.</span>
-         Eine Nachricht wird angezeigt, die Sie darüber informiert, ob die Verbindung erfolgreich war.
+        <span>請求システムとの接続確認を行うには<span class="uicontrol">接続テスト</span>ボタンをクリックします。</span>
+         接続が成功したかどうかをあわらすメッセージが表示されます。
       </li>
 <li class="stepexpand">
-        <span>Klicken Sie gegebenenfalls <span class="uicontrol">Als Standard voreinstellen</span>, um das neue System als Standardabrechnungssystem festzulegen.</span>
-         Das neue Abrechnungssystem wird sofort als Standard gesetzt, und die Einstellung vom bisherigen Standardsystem wird entfernt.
+        <span>請求システムをデフォルトの請求システムにしたい場合、<span class="uicontrol">デフォルトに設定</span>ボタンをクリックします。</span>
+         請求システムはただちにデフォルトとラベルが追加され、元のデフォルト請求システムからはラベルが削除されます。
       </li>
 <li class="stepexpand">
-        <span>Schließen Sie Ihre Eingaben mit <span class="uicontrol">Speichern</span> ab.</span>
+        <span>請求システムを定義するには<span class="uicontrol">保存</span>をクリックします。</span>
       </li>
 </ol>
 
     <div class="section">
-      <p>Hersteller können das neue Abrechnungssystem jederzeit angeben, wenn sie eine Anwendung als technischen Service in der Plattform registrieren.</p>
+      <p>技術サービス提供部門はアプリケーションを技術サービスとしてプラットフォームに登録するとき、新しい請求システムをすぐに指定することができます。</p>
 
-      <p><strong>So ändern Sie das Standardabrechnungssystem</strong>: </p>
+      <p><strong>デフォルトの請求システムを変更する方法</strong>: </p>
 
-      <ol>
-        <li class="liexpand">Zeigen Sie die Details des Abrechnungssystems an, das Sie als Standardsystem verwenden wollen. </li>
+      <div class="p">
+        <ol>
+          <li class="liexpand">デフォルトにしたい請求システムをクリックし、展開します。</li>
 
-        <li class="liexpand">Klicken Sie <span class="uicontrol">Als Standard voreinstellen</span>, um das Abrechnungssystem als Standardsystem festzulegen und die Einstellung vom bisherigen Standardsystem zu entfernen.</li>
+          <li class="liexpand"><span class="uicontrol">デフォルトに設定</span>をクリックします。</li>
 
-        <li class="liexpand">Schließen Sie Ihre Eingaben mit <span class="uicontrol">Speichern</span> ab. </li>
+          <li class="liexpand">必要に応じて設定を行い<span class="uicontrol">保存</span>をクリックします。</li>
 
-      </ol>
+        </ol>
 
-      <p><strong>So aktualisieren Sie ein existierendes Abrechnungssystem</strong>: </p>
+      </div>
 
-      <ol>
-        <li class="liexpand">Zeigen Sie die Details des Abrechnungssystems an, das Sie aktualisieren möchten.</li>
+      <p><strong>既存の請求システムを更新する方法</strong>: </p>
 
-        <li class="liexpand">Ändern Sie die <span class="uicontrol">Kurzbeschreibung</span>, falls gewünscht. </li>
+      <div class="p">
+        <ol>
+          <li class="liexpand">更新したい請求システムをクリックし、展開します。</li>
 
-        <li class="liexpand">Ändern Sie, falls erforderlich, die Werte der Verbindungsparameter. Mit dem Pluszeichen fügen Sie einen weiteren Parameter hinzu, mit dem Minuszeichen entfernen Sie einen Parameter.</li>
+          <li class="liexpand">必要に応じて<span class="uicontrol">簡単な説明</span>を変更します。</li>
 
-        <li class="liexpand">Klicken Sie <span class="uicontrol">Verbindung testen</span> um sicherzustellen, dass die Verbindung zu dem Abrechnungssystem hergestellt werden kann.</li>
+          <li class="liexpand">必要に応じて接続プロパティの値を変更します。プロパティの追加は"+"ボタン、削除は"-"ボタンをクリックします。</li>
 
-        <li class="liexpand">Klicken Sie gegebenenfalls <span class="uicontrol">Als Standard voreinstellen</span>, um das System als Standardabrechnungssystem festzulegen.</li>
+          <li class="liexpand">請求システムとの接続確認を行うには<span class="uicontrol">接続テスト</span>ボタンをクリックします。</li>
 
-        <li class="liexpand">Schließen Sie Ihre Änderungen mit <span class="uicontrol">Speichern</span> ab. </li>
+          <li class="liexpand">請求システムをデフォルトの請求システムにしたい場合、<span class="uicontrol">デフォルトに設定</span>ボタンをクリックします。</li>
 
-      </ol>
+          <li class="liexpand">編集内容を有効にするには<span class="uicontrol">保存</span>をクリックします。</li>
 
-      <p><strong>So entfernen Sie ein Abrechnungssystem</strong>: </p>
+        </ol>
 
-      <ol>
-        <li class="liexpand">Zeigen Sie die Details des Abrechnungssystems an, das Sie entfernen möchten. <p>Die folgenden Voraussetzungen müssen erfüllt sein, damit ein Abrechnungssystem entfernt werden kann:</p>
+      </div>
+
+      <p><strong>請求システムを削除するには</strong>: </p>
+
+      <div class="p">
+        <ol>
+          <li class="liexpand">削除したい請求システムをクリックし、展開します。<p>請求システムを削除するには次の条件を満たしている必要があります:</p>
 <div class="p">
-            <ul>
-              <li>Das System darf nicht als Standardabrechnungssystem festgesetzt sein.</li>
+              <ul>
+                <li>請求システムがデフォルトに設定されていない。</li>
 
-              <li>Das System darf von keinen technischen Services, marktfähigen Services und aktiven Abonnements verwendet werden.</li>
+                <li>請求システムを使用している技術サービス、サービス、およびアクティブな購入済サービスが存在していない。</li>
 
-            </ul>
+              </ul>
 
-          </div>
+            </div>
 </li>
 
-        <li class="liexpand">Klicken Sie <span class="uicontrol">Löschen</span> und bestätigen Sie die Entfernung. <p>Das Abrechnungssystem wird sofort entfernt. </p>
+          <li class="liexpand"><span class="uicontrol">削除</span>をクリックします。<p>請求システムはただちに削除されます。</p>
 </li>
 
-      </ol>
+        </ol>
+
+      </div>
 
     </div>
 
