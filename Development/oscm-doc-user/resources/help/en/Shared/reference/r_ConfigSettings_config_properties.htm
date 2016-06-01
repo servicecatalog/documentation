@@ -151,7 +151,9 @@
 
         <div class="section"><h4 class="sectiontitle">HIDE_PAYMENT_INFORMATION</h4>
             
-            <p>Optional. Determines whether customers need to specify payment information for subscribing to services that use the <span>platform's </span>native billing system and are not free of charge. If set to <samp class="codeph">true</samp>, the dialogs and options for specifying payment types and billing addresses are hidden on the marketplaces, and customer payment information does not appear in billing and payment preview reports. Billing runs and payment processing as well as payment information already stored for customers are not affected by changing the setting.</p>
+            <p>Optional. Determines whether customers need to specify payment information for subscribing to services that use the <span>platform's </span>native billing system and are not free of charge. <span>If set to <samp class="codeph">true</samp>, the dialogs and options for specifying payment types and billing addresses are hidden on the marketplaces, and customer payment information does not appear in billing and payment preview reports. Billing runs and payment processing are not affected by the setting. </span></p>
+
+            <p>The setting is evaluated only once when <span>the platform</span> is installed or updated. The value can no longer be changed after <span>the platform</span> has been started, not even with a further update installation.</p>
 
             <p>Allowed values: <samp class="codeph">true</samp>, <samp class="codeph">false</samp></p>
 
@@ -299,6 +301,12 @@
         <div class="section"><h4 class="sectiontitle">SSO_ISSUER_ID</h4>Mandatory if you install <span>the platform</span> in SAML_SP authentication mode. A unique identifier for <span>the platform</span>. The IdP uses this ID for identifying incoming SAML authentication requests from <span>the platform</span>.<p>Required for Web browser SSO.</p>
 <p>If you need to change this setting after the first exchange of data between <span>the platform</span> and the IdP, you must change it both in <span>the platform</span> and the IdP system. It may be required to send a new metadata exchange file to the IdP operator. </p>
 Default: <samp class="codeph">CT_MG</samp><p>If you change this setting, you need to restart <span>the platform</span>.</p>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">SSO_LOGOUT_URL</h4>Mandatory if you install <span>the platform</span> in SAML_SP authentication mode. The URL of the endpoint of the IdP system's single logout service. Logout and invalidate session requests from <span>the platform</span> are sent to this address. <p>Required for Web browser SSO.</p>
+<p>For security and confidentiality reasons, it is recommended to use the HTTPS protocol.</p>
+<p>Syntax: <samp class="codeph">https://&lt;host&gt;:&lt;port&gt;/&lt;LogoutServiceEndpoint&gt;</samp></p>
+<p>If you change this setting, you need to restart <span>the platform</span>.</p>
 </div>
 
         <div class="section"><h4 class="sectiontitle">SSO_STS_ENCKEY_LEN</h4>Mandatory if you install <span>the platform</span> in SAML_SP authentication mode. The length of the encryption key as used by the IdP.<p>Required for STS communication.</p>
