@@ -187,6 +187,26 @@
 <div class="note"><span class="notetitle">注:</span> <span class="uicontrol">操作</span>メニューの<span class="uicontrol">システム設定の変更</span>ページは、システム運用管理者がログインしたときに転送されるデフォルトページです。このページをメニューから非表示にしたり、メニューそのものを非表示とした場合でも、<span class="uicontrol">システム設定の変更</span>ページに転送され、必要であれば設定を変更することができます。</div>
 </div>
 
+        <div class="section"><h4 class="sectiontitle">HIDE_PAYMENT_INFORMATION</h4>
+            
+            <p>オプション項目。サービス利用部門が 
+              
+              <span>プラットフォームの</span>請求システムを使用する、有料のサービスを購入するときに請求情報の指定を必要とするかどうかを指定します。
+              <span><samp class="codeph">true</samp>に設定した場合、サービスポータルにおいて支払種別と請求先を指定するためのダイアログ、およびオプションが表示されなくなります。また、サービス利用部門の支払情報は、請求・支払プレビューのレポートに表示されません。この設定は請求処理と支払処理には影響しません。</span></p>
+
+            <p>設定は
+             
+            <span>プラットフォーム</span>をインストール、またはアップデートを行ったときに一度だけ評価されます。設定値は
+             
+            <span>プラットフォーム</span>が起動した後は、アップデートインストールを行っても変更することができません。
+            </p>
+
+            <p>設定可能な値: <samp class="codeph">true</samp>, <samp class="codeph">false</samp></p>
+
+            <p>デフォルト: <samp class="codeph">false</samp></p>
+
+        </div>
+
         <div class="section"><h4 class="sectiontitle">HTTP_PROXY</h4>オプション項目。プロキシサーバが存在する場合にそのプロキシサーバを指定します。<p>例： <samp class="codeph">proxy.domain</samp>またはプロキシサーバIPアドレス。</p>
 </div>
 

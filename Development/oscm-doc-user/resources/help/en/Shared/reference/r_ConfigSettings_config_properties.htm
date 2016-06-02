@@ -303,12 +303,7 @@
 Default: <samp class="codeph">CT_MG</samp><p>If you change this setting, you need to restart <span>the platform</span>.</p>
 </div>
 
-        <div class="section"><h4 class="sectiontitle">SSO_LOGOUT_URL</h4>Mandatory if you install <span>the platform</span> in SAML_SP authentication mode. The URL of the endpoint of the IdP system's single logout service. Logout and invalidate session requests from <span>the platform</span> are sent to this address. <p>Required for Web browser SSO.</p>
-<p>For security and confidentiality reasons, it is recommended to use the HTTPS protocol.</p>
-<p>Syntax: <samp class="codeph">https://&lt;host&gt;:&lt;port&gt;/&lt;LogoutServiceEndpoint&gt;</samp></p>
-<p>If you change this setting, you need to restart <span>the platform</span>.</p>
-</div>
-
+        
         <div class="section"><h4 class="sectiontitle">SSO_STS_ENCKEY_LEN</h4>Mandatory if you install <span>the platform</span> in SAML_SP authentication mode. The length of the encryption key as used by the IdP.<p>Required for STS communication.</p>
 <p>Default: <samp class="codeph">128</samp></p>
 <p>This setting is an installation property and cannot be changed in the administration portal. If you need to change the encryption key length, proceed as follows: </p>
