@@ -37,8 +37,11 @@
           <li class="liexpand">Make sure that all provisioning operations are complete. Follow the steps as described in <span><a href="../../APPInt/APP/c_HandleProblems.htm">Handling Problems in the Provisioning Process</a></span>.</li>
 
           
-          <li class="liexpand">In the <samp class="codeph">app-domain</samp> application server domain, disable or undeploy the following <span>application</span>:<p><samp class="codeph">oscm-app</samp></p>
-</li>
+          <li class="liexpand">In the <samp class="codeph">app-domain</samp> application server domain, disable or undeploy the following <span>application</span>:
+            <p><samp class="codeph">oscm-app</samp></p>
+
+            
+            </li>
 
           <li class="liexpand">Check for <samp class="codeph">.glassfishStaleFiles</samp> files in the <samp class="codeph">app-domain</samp> domain. If there are any, delete them. The files are located in<p><samp class="codeph">app-domain/applications/&lt;application name&gt;/.glassfishStaleFiles</samp></p>
 <p>For example: </p>
@@ -60,10 +63,9 @@
 
     </div>
 
-    
-    <div class="section"><h4 class="sectiontitle">Updating the Database</h4>
+    <div class="section"><h4 class="sectiontitle">Updating the  Database</h4>
       
-      <p>Proceed with updating the database as follows:</p>
+      <p>Proceed with updating the  database as follows:</p>
 
       <div class="p">
         <ol>
@@ -94,6 +96,7 @@
               
               
                 
+            
           </ul>
 </li>
 
@@ -116,6 +119,7 @@
 
     </div>
 
+    
     <div class="section"><h4 class="sectiontitle">Updating the Application Server</h4>
       
       <p>After you have executed the preparation steps:</p>
@@ -133,6 +137,12 @@
     
     
     
+    
+    
+    
+    
+    
+    
     <div class="section"><h4 class="sectiontitle">Updating the Configuration for SAML_SP Mode</h4>
       
       <p>If you are running <span>OSCM</span> and the <span>APP</span> software in SAML_SP mode, and if the IdP metadata of your SSO environment have changed, you need to update your WSIT files accordingly: </p>
@@ -145,7 +155,8 @@
 <p><samp class="codeph">STSService.xml</samp></p>
 </li>
 
-        <li class="liexpand">Adapt the <samp class="codeph">.xml</samp> files as required by your environment. <span>For details, refer to <a href="t_InstConfiguring.htm">Configuring APP</a>.</span></li>
+        <li class="liexpand">Adapt the <samp class="codeph">.xml</samp> files as required by your environment. 
+          <span>For details, refer to <a href="t_InstConfiguring.htm">Configuring APP</a>.</span></li>
 
         <li class="liexpand">Recreate the <samp class="codeph">OSCM-wsit.jar</samp> file with the modified contents.</li>
 
@@ -162,7 +173,7 @@
 
     </div>
 
-    
+
   </div>
 
 
