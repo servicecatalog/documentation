@@ -305,7 +305,32 @@
 <p>Wenn Sie diese Einstellung ändern, müssen Sie die Plattform neu starten.</p>
 </div>
 
-                
+                <div class="section"><h4 class="sectiontitle">SSO_LOGOUT_URL</h4>Obligatorisch, wenn die Plattform als SAML Service Provider installiert wird und Single Logout verwendet werden soll. <p>Gibt die URL zum Endpoint des Single Logout Service im IdP-System an. An diese Adresse sendet die Plattform Requests zur Abmeldung und zur Invalidierung von Sessions.</p>
+<p>Erforderlich für Web Browser Single Sign-On.</p>
+<p>Aus Sicherheitsgründen wird empfohlen, das HTTPS-Protokoll zu verwenden. </p>
+<p>Syntax: <samp class="codeph">https://&lt;host&gt;:&lt;port&gt;/&lt;LogoutServiceEndpoint&gt;</samp></p>
+<p>Wenn Sie diese Einstellung ändern, müssen Sie die Plattform neu starten.</p>
+<div class="note"><span class="notetitle">Hinweis:</span> Im IdP-System muss eine URL angegeben werden, zu der die Antwort auf den Request zur Abmeldung geschickt und der Benutzer nach der Abmeldung geleitet wird. Es wird empfohlen, folgende Standard-Marktplatzadresse der Plattform zu verwenden: <samp class="codeph">https://&lt;host&gt;:&lt;port&gt;/oscm-portal/marketplace/index.jsf</samp>. Bei Problemen kann der Benutzer automatisch von dieser Seite auf eine weitere Seite geleitet werden, die in der Konfigurationseinstellung <samp class="codeph">MP_ERROR_REDIRECT_HTTPS</samp> angegeben ist.</div>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">SSO_SIGNING_KEY_ALIAS</h4>Obligatorisch, wenn die Plattform als SAML Service Provider installiert wird, Single Logout verwendet werden soll, und der Single Logout Service des IdP-Systms signierte Requests erwartet, wie beispielsweise in Microsoft Active Directory Federation Services.<p>Gibt den Alias des privaten Schlüssels der Plattform an, der zum Signieren von Requests zur Abmeldung verwendet werden soll. Im IdP-System muss das entsprechende Zertifikat der Plattform hinterlegt werden, damit die Requests verifiziert werden können. </p>
+<p>Erforderlich für Web Browser Single Sign-On.</p>
+<p>Beispiel: <samp class="codeph">s1as</samp></p>
+<p>Wenn Sie diese Einstellung ändern, müssen Sie die Plattform neu starten.</p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">SSO_SIGNING_KEYSTORE</h4>Obligatorisch, wenn die Plattform als SAML Service Provider installiert wird, Single Logout verwendet werden soll, und der Single Logout Service des IdP-Systms signierte Requests erwartet, wie beispielsweise in Microsoft Active Directory Federation Services.<p>Gibt den Pfad und Namen des Keystores des Application Servers an, in dem der in der Einstellung <samp class="codeph">SSO_SIGNING_KEY_ALIAS</samp> angegebene private Schlüssel gespeichert ist. </p>
+<p>Erforderlich für Web Browser Single Sign-On.</p>
+<p>Beispiel: <samp class="codeph">/opt/glassfish-3.1.2.2/glassfish/domains/bes-domain/config/keystore.jks</samp></p>
+<p>Wenn Sie diese Einstellung ändern, müssen Sie die Plattform neu starten.</p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">SSO_SIGNING_KEYSTORE_PASS</h4>Obligatorisch, wenn die Plattform als SAML Service Provider installiert wird, Single Logout verwendet werden soll, und der Single Logout Service des IdP-Systms signierte Requests erwartet, wie beispielsweise in Microsoft Active Directory Federation Services. <p>Gibt das Passwort für den Keystore des Application Servers an, der in der Einstellung <samp class="codeph">SSO_SIGNING_KEYSTORE</samp> angegeben ist. </p>
+<p>Erforderlich für Web Browser Single Sign-On.</p>
+<p>Beispiel: <samp class="codeph">changeit</samp></p>
+<p>Wenn Sie diese Einstellung ändern, müssen Sie die Plattform neu starten.</p>
+</div>
+
                 <div class="section"><h4 class="sectiontitle">SSO_STS_ENCKEY_LEN</h4>Obligatorisch, wenn die Plattform als SAML Service Provider installiert wird. Gibt die Länge des Encryption Key an, wie er von dem IdP-System (Identity Provider) verwendet wird.<p>Erforderlich für die STS-Kommunikation.</p>
 <p>Voreinstellung: <samp class="codeph">128</samp></p>
 <p>Diese Einstellung wird bei der Installation ausgewertet und kann im Administrationsportal nicht geändert werden. Gehen Sie wie folgt vor, wenn Sie die Einstelllung ändern müssen:</p>

@@ -377,6 +377,81 @@
 
         </div>
 
+        <div class="section"><h4 class="sectiontitle">SSO_LOGOUT_URL</h4>
+           
+          
+          <span>プラットフォーム</span>にSAML_SP認証モードをインストールしシングルログアウトを使用したい場合は必須。
+          <p>IdPシステムのシングルログアウトサービスエンドポイントURL。
+            
+            <span>プラットフォーム</span>からのログアウト・セッション無効化リクエストがこのアドレスに送られます。</p>
+
+          <p>ブラウザのSSOに必要です。</p>
+
+          <p>セキュリティ上および機密性保持の理由からHTTPSプロトコルを使用することを推奨します。</p>
+
+          <p>指定形式: <samp class="codeph">https://&lt;ホスト&gt;:&lt;ポート番号&gt;/&lt;ログアウトサービスエンドポイント&gt;</samp></p>
+
+          <p>この設定を変更した場合、
+            
+            <span>プラットフォーム</span>を再起動する必要があります。</p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">SSO_SIGNING_KEY_ALIAS</h4>
+          
+          
+          <span>プラットフォーム</span>にSAML_SP認証モードのインストール、シングルログアウトの使用、およびIdPシステムのシングルログアウトサービスが署名リクエストを必要とする場合は必須。 例としてMicrosoft Active Directory Federation Servicesがあります。
+          <p>
+            
+            <span>プラットフォーム</span>の秘密鍵のエイリアスです。署名ログアウトリクエストに使用されます。IdPシステムは署名を確認するため
+            
+            <span>プラットフォーム</span>のトラストストアに正しい証明書を必要とします。
+          </p>
+
+          <p>ブラウザのSSOに必要です。</p>
+
+          <p>例: <samp class="codeph">s1as</samp></p>
+
+          <p>この設定を変更した場合、
+            
+            <span>プラットフォーム</span>を再起動する必要があります。</p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">SSO_SIGNING_KEYSTORE</h4>
+          
+          
+          <span>the platform</span>にSAML_SP認証モードのインストール、シングルログアウトの使用、およびIdPシステムのシングルログアウトサービスが署名リクエストを必要とする場合は必須。 例としてMicrosoft Active Directory Federation Servicesがあります。
+          <p><samp class="codeph">SSO_SIGNING_KEY_ALIAS</samp>に指定された
+            
+            <span>プラットフォーム</span>の秘密鍵が存在するアプリケーションサーバのキーストアのパス。</p>
+
+          <p>ブラウザのSSOに必要です。</p>
+
+          <p>例: <samp class="codeph">/opt/glassfish-3.1.2.2/glassfish/domains/bes-domain/config/keystore.jks</samp></p>
+
+          <p>この設定を変更した場合 
+            
+            <span>プラットフォーム</span>を再起動する必要があります。</p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">SSO_SIGNING_KEYSTORE_PASS</h4>
+           
+          
+          <span>the platform</span>にSAML_SP認証モードのインストール、シングルログアウトの使用、およびIdPシステムのシングルログアウトサービスが署名リクエストを必要とする場合は必須。 例としてMicrosoft Active Directory Federation Servicesがあります。
+          <p><samp class="codeph">SSO_SIGNING_KEYSTORE</samp>に指定されたキーストアにアクセスするためのパスワード。</p>
+
+          <p>ブラウザのSSOに必要です。</p>
+
+          <p>例: <samp class="codeph">changeit</samp></p>
+
+          <p>この設定を変更した場合
+            
+            <span>プラットフォーム</span>を再起動する必要があります。</p>
+
+        </div>
+
         <div class="section"><h4 class="sectiontitle">SSO_STS_ENCKEY_LEN</h4><span>プラットフォーム</span>をSAML_SP認証モードでインストールする場合は必須。IdPで使われている暗号化キーの長さ。
                 <p>STS通信のために必要です。</p>
 

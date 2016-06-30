@@ -82,14 +82,31 @@
         
       </li>
 <li class="stepexpand">
-        <span>In the <span class="uicontrol">Target type</span> field, stay with the entry <span class="uicontrol">Web Service</span>. </span>
+        <span>In the <span class="uicontrol">Target type</span> field, choose the appropriate entry depending on the application programming interface (API) used for implementing the notification service for your organization: </span>
          
-          <p>Currently, this is the only supported type of target. </p>
+          <ul>
+            <li class="liexpand">SOAP-based API: <span class="uicontrol">Web Service</span></li>
+
+            <li class="liexpand">REST API: <span class="uicontrol">REST Web Service</span></li>
+
+          </ul>
 
         
       </li>
 <li class="stepexpand">
-        <span>In the <span class="uicontrol">Target URL</span> field, enter the URL of the WSDL file of the notification service implemented for your organization.</span>
+        <span>In the <span class="uicontrol">Target URL</span> field, enter the URL of the notification service implemented for your organization. The URL depends on the API used for implementing the notification service: </span>
+         
+          <ul>
+            <li class="liexpand">SOAP-based API: the URL of the WSDL file of the notification service, for example: <p><samp class="codeph">https://myServer:8280/NotificationService?wsdl</samp>
+              </p>
+</li>
+
+            <li class="liexpand">REST API: the URL to which <samp class="codeph">POST</samp> requests are to be sent for notification purposes, for example: <p><samp class="codeph">https://myServer:8081/mynotification/v1/processes</samp></p>
+</li>
+
+          </ul>
+
+        
       </li>
 <li class="stepexpand">
         <span>Specify whether the execution of the action is to be suspended until it is approved or rejected in the external process control system. </span>

@@ -1291,15 +1291,25 @@ can I import users from a file?</a>
             <li>A user terminates a subscription to your service (<code>Subscription terminated (any user)</code>).</li>
           </ul>
         </p>
-                    <li>In the <b>Target type</b> field, stay with the entry <b>Web Service</b>. Currently, this is
-                      the only supported type of target.
-                      <li>In the <b>Target URL</b> field, enter the URL of the WSDL file of the notification
-                        service implemented for your organization.
-                        <li>Specify whether the execution of the action is to be suspended until it is approved or rejected in the external process control system. <br>
-                            If not, the action is instantly executed. The process control system is informed if the action for the non-suspending trigger is executed successfully. <br>
-                            Note that for the following triggers for suppliers the execution of the action cannot be suspended: <code>Subscription created (any user)</code>, <code>Subscription modified (any user)</code>, and <code>Subscription terminated (any user)</code>.
-                          <li>Click <b>Save</b> when you are finished.
-          </ol>
+        <li>In the <b>Target type</b> field, choose the appropriate entry depending on the application programming interface (API) used 
+        for implementing the notification service for your organization: 
+        <p><ul>
+          <li>SOAP-based API: <b>Web Service</b></li>
+          <li>REST API: <b>REST Web Service</b></li>
+         </ul></p></li>
+        <li>In the <b>Target URL</b> field, enter the URL of the notification service implemented for your organization. The URL depends 
+        on the API used for implementing the notification service:
+        <p><ul>
+          <li>SOAP-based API: the URL of the WSDL file of the notification service, for example: <br>
+              <code>https://myServer:8280/NotificationService?wsdl</code></li>
+          <li>REST API: the URL to which <code>POST</code> requests are to be sent for notification purposes, for example: <br>
+              <code>https://myServer:8081/mynotification/v1/processes</code></li>
+        </ul></p></li>
+        <li>Specify whether the execution of the action is to be suspended until it is approved or rejected in the external process control system. <br>
+           If not, the action is instantly executed. The process control system is informed if the action for the non-suspending trigger is executed successfully. <br>
+           Note that for the following triggers for suppliers the execution of the action cannot be suspended: <code>Subscription created (any user)</code>, <code>Subscription modified (any user)</code>, and <code>Subscription terminated (any user)</code>.
+           <li>Click <b>Save</b> when you are finished.
+         </ol>
           <hr />
           </div>
 

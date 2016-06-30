@@ -284,7 +284,7 @@ function anzeigen(das) {
             Nur Services bzw. Abonnements, die alle Begriffe enthalten, werden ins Suchergebnis aufgenommen.</li>
             <li>Bei der Suche wird nicht nach Gro&szlig;- und Kleinschreibung unterschieden. Beispielsweise finden Sie mit dem Begriff <code>abc</code> 
             auch <code>Abc</code>, <code>ABC</code> oder <code>aBc</code>.</li>
-            <li>Die Suchbegriffe müssen als einzelne separate W&ouml;rter gefunden werden. Teilweise &Uuml;bereinstimmungen werden nicht
+            <li>Die Suchbegriffe m&uuml;ssen als einzelne separate W&ouml;rter gefunden werden. Teilweise &Uuml;bereinstimmungen werden nicht
             in Betracht gezogen.</li>
             <li>Sonderzeichen und Platzhalterzeichen (*, ?) in Suchbegriffen werden nicht unterst&uuml;tzt.</li>
           </ul>
@@ -298,7 +298,7 @@ function anzeigen(das) {
 				<p><img class="vmiddle" style="margin-right: 5px;" src="../img/icon-a.gif" width="20" height="20" alt="" />Dies kann folgende Ursachen
 				haben:</p>
 		  <ul>
-		  <li>Wenn Services oder Abonnements angelegt oder ge&auml;ndert werden, m&uuml;ssen die Begriffe, nach denen Sie suchen können, in 
+		  <li>Wenn Services oder Abonnements angelegt oder ge&auml;ndert werden, m&uuml;ssen die Begriffe, nach denen Sie suchen k&ouml;nnen, in 
 		      einem Index hinzugef&uuml;gt bzw. modifiert werden. Dies kann mehrere Minuten dauern. In dieser Zeit werden die neuen Services
 		      oder Abonnements nicht gefunden.</li>
 		  <li>Inhalte, nach denen gesucht werden kann, k&ouml;nnen in verschiedenen Sprachen vorliegen. Die Standardsprache ist Englisch. 
@@ -1161,8 +1161,17 @@ kann ich mehrere Benutzer aus einer Datei importieren?</a>
             <li>Ein Benutzer beendet ein Abonnement f&uuml;r einen Ihrer Services (<code>Abo beendet (beliebiger Benutzer)</code>).</li>
           </ul>
  		 </p>
- 		 <li>Lassen Sie im Feld <b>Ziel-Typ</b> den Eintrag <b>Web Service</b> stehen. Dies ist derzeit der einzige unterst&uuml;tzte Ziel-Typ.
-         <li>Geben Sie im Feld <b>Ziel-URL</b> die URL f&uuml;r die WSDL-Datei des Notification Service ein, der f&uuml;r Ihre Organisation implementiert wurde. 
+         <li>W&auml;hlen Sie im Feld <b>Ziel-Typ</b> einen Eintrag abh&auml;ngig davon, mit welcher Programmierschnittstelle (API) der Notification Service Ihrer Organisation implementiert wurde:
+            <p><ul>
+            <li>SOAP-basierte API: <b>Web Service</b></li>
+            <li>REST API: <b>REST Web Service</b></li>
+            </ul></p></li>
+         <li>Geben Sie im Feld <b>Ziel-URL</b> die URL des Notification Service ein. Die URL ist abh&auml;ngig davon, mit welcher API der Notification Service Ihrer Organisation implementiert wurde: 
+            <p><ul>
+            <li>SOAP-basierte API: URL der WSDL-Datei des Notification Service, zum Beispiel: <p><code>https://myServer:8280/NotificationService?wsdl</code>
+              </p></li>
+            <li>REST API: URL, an die <code>POST</code> Requests zur Notifizierung gesendet werden sollen, zum Beispiel: <p><code>https://myServer:8081/mynotification/v1/processes</code></p>
+            </ul></p></li>
          <li>Geben Sie an, ob die Ausf&uuml;hrung der Aktion ausgesetzt werden soll, bis sie im Prozesssteuerungssystem genehmigt oder abgelehnt ist.<br>
              Wenn die Ausf&uuml;hrung nicht ausgesetzt werden soll, wird die Aktion sofort ausgef&uuml;hrt. Das Prozesssteuerungssystem wird informiert, sobald die Aktion erfolgreich ausgef&uuml;hrt ist. <br>
              Beachten Sie, dass die folgenden Trigger f&uuml;r Serviceanbieter nicht ausgesetzt werden k&ouml;nnen: <code>Service abonniert (beliebiger Benutzer)</code>, <code>Abo ge&auml;ndert (beliebiger Benutzer)</code> und <code>Abo beendet (beliebiger Benutzer)</code>.

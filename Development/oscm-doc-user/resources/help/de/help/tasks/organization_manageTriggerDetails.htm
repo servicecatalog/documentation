@@ -83,15 +83,32 @@
         
       </li>
 <li class="stepexpand">
-        <span>Lassen Sie im Feld <span class="uicontrol">Ziel-Typ</span> den Eintrag <span class="uicontrol">Web-Service</span> stehen. </span>
+        <span>Wählen Sie im Feld <span class="uicontrol">Ziel-Typ</span> einen Eintrag abhängig davon, mit welcher Programmierschnittstelle (API) der Notification Service Ihrer Organisation implementiert wurde:</span>
          
-          <p>Dies ist derzeit der einzige unterstützte Ziel-Typ. </p>
+          <ul>
+            <li class="liexpand">SOAP-basierte API: <span class="uicontrol">Web Service</span></li>
+
+            <li class="liexpand">REST API: <span class="uicontrol">REST Web Service</span></li>
+
+          </ul>
 
         
       </li>
 <li class="stepexpand">
-        <span>Geben Sie im Feld <span class="uicontrol">Ziel-URL</span> die URL der WSDL-Datei des Notification Service Ihrer Organisation ein.</span>
-      </li>
+          <span>Geben Sie im Feld <span class="uicontrol">Ziel-URL</span> die URL des Notification Service Ihrer Organisation ein. Die URL ist abhängig davon, mit welcher API der Notification Service Ihrer Organisation implementiert wurde: </span>
+           
+            <ul>
+              <li class="liexpand">SOAP-basierte API: URL der WSDL-Datei des Notification Service, zum Beispiel: <p><samp class="codeph">https://myServer:8280/NotificationService?wsdl</samp>
+              </p>
+</li>
+
+              <li class="liexpand">REST API: URL, an die <samp class="codeph">POST</samp> Requests zur Notifizierung gesendet werden sollen, zum Beispiel: <p><samp class="codeph">https://myServer:8081/mynotification/v1/processes</samp></p>
+</li>
+
+            </ul>
+
+          
+        </li>
 <li class="stepexpand">
         <span>Geben Sie an, ob die Ausführung der Aktion ausgesetzt werden soll, bis sie im Prozesssteuerungssystem genehmigt oder abgelehnt ist.</span>
          
