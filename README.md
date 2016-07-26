@@ -26,6 +26,8 @@ interface of OSCM and how to integrate applications and external systems with OS
 * [ServerView Resource Orchestrator Integration (GlassFish)] (Development/oscm-app-ror/doc/en/RORIntegration.pdf) : A PDF manual for operators describing how to offer and use virtual platforms and servers controlled by FUJITSU ServerView Resource Orchestrator through services in OSCM.
 * [Amazon Web Services Integration (GlassFish)] (Development/oscm-app-aws/doc/en/AWSIntegration.pdf): A PDF manual for operators describing how to offer and use virtual servers controlled by the Amazon Elastic Compute Cloud Web service through services in OSCM.
 * [OpenStack Integration (GlassFish)] (Development/oscm-app-openstack/doc/en/OSIntegration.pdf): A PDF manual for operators describing how to offer and use virtual systems controlled by OpenStack through services in OSCM.
+* [VMware vSphere Integration (GlassFish)] (Development/oscm-app-vmware/doc/en/VMWareIntegration.pdf): A PDF manual for operators describing how to offer and use virtual machines provisioned on a VMware vSphere server through services in
+OSCM.
 * Javadoc documentation for the public Web service interface of OSCM and additional resources
 and utilities for application developers. You can best access these from readme.htm files in the OSCM integration packages to which they belong (oscm-integration-pack.zip, oscm-integration-app-pack.zip, oscm-integration-psp-pack.zip)
 
