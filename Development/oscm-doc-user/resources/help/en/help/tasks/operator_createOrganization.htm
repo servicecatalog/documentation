@@ -8,6 +8,7 @@
 <meta name="DC.rights.owner" content="(C) Copyright 2005"/>
 <meta name="DC.Type" content="task"/>
 <meta name="DC.Title" content="Creating an organization"/>
+<meta name="DC.Relation" scheme="URI" content="operator_manageTenants.htm"/>
 <meta name="DC.Relation" scheme="URI" content="../../Shared/reference/r_LDAP_SettingTypes.htm"/>
 <meta name="DC.Relation" scheme="URI" content="operator_manageLdapSettings.htm"/>
 <meta name="DC.Relation" scheme="URI" content="operator_manageOperatorRevenueShare.htm"/>
@@ -36,8 +37,8 @@ The platform supports the following authentication modes:<ul>
 </li>
 
         <li class="liexpand"><strong>SAML_SP</strong> mode - users are authenticated against an <strong>external authentication system</strong> (SAML 2.0 IdP): User IDs and passwords of an organization are created and maintained in the IdP. The platform acts as SAML 2.0 service provider.<p>For enabling users to access the platform, they must exist in the IdP and be registered with the same user ID with the platform.</p>
-
-        </li>
+<p>In addition to using a platform-wide, so-called "default" IdP, you can define tenants to which different IdPs can be associated. By assigning a tenant to an organization, the emails sent to the users of the organization will contain the URL of a marketplace or an administration portal of this tenant. By using this URL, users access a tenant-specific marketplace or administration portal, and all users are authenticated authenticated against the IdP of this tenant. Each organization can be associated with one tenant only. Different organizations can be associated with one and the same tenant. </p>
+User names must be unique within the scope of the tenant. If no other tenant is defined, user names must be unique within the scope of the default tenant, i.e. platform-wide. </li>
 
       </ul>
 <p><strong>To create a new organization</strong>:</p>
@@ -47,7 +48,7 @@ The platform supports the following authentication modes:<ul>
         <span>Enter the following user data for the first administrator of the new organization.</span>
          
           <ul>
-            <li class="liexpand"><span class="uicontrol">Title</span>: Salutation, such as <samp class="codeph">Mr.</samp> or <samp class="codeph">Ms.</samp>
+            <li class="liexpand"><span class="uicontrol">Title</span>: Salutation, such as <samp class="codeph">MR</samp> or <samp class="codeph">MS</samp>
             </li>
 
             <li class="liexpand"><span class="uicontrol">First name</span>: The administrator's first name.</li>
@@ -80,34 +81,41 @@ The platform supports the following authentication modes:<ul>
          
           <div class="p">
             <ul>
-              <li class="liexpand"><span class="uicontrol">Organization</span>. Name of the organization, for example the company name.</li>
+              <li class="liexpand" id="OrgCreate__org"><span class="uicontrol">Organization</span>. Name of the organization, for example the company name.</li>
 
-              <li class="liexpand"><span class="uicontrol">Email</span>. Email address for general communication with the organization. The organization can later specify a separate email address to which invoices can be sent.<p>The system checks whether the syntax of the given email address is valid, and whether the domain name corresponds to the standards as defined and maintained by the Internet Assigned Numbers Authority (IANA). </p>
+              <li class="liexpand" id="OrgCreate__email"><span class="uicontrol">Email</span>. Email address for general communication with the organization. The organization can later specify a separate email address to which invoices can be sent.<p>The system checks whether the syntax of the given email address is valid, and whether the domain name corresponds to the standards as defined and maintained by the Internet Assigned Numbers Authority (IANA). </p>
 <p>Examples: <samp class="codeph">user.name@domain.arpa</samp>, <samp class="codeph">user.name@domain.org</samp>, <samp class="codeph">user@mycompany.lan.uk</samp></p>
 </li>
 
-              <li class="liexpand"><span class="uicontrol">Phone</span>. Telephone or mobile number of a contact person in the organization.</li>
+              <li class="liexpand" id="OrgCreate__phone"><span class="uicontrol">Phone</span>. Telephone or mobile number of a contact person in the organization.</li>
 
-              <li class="liexpand"><span class="uicontrol">Website</span>. URL of the organization's website. This website can be accessed by customers when displaying details of the organization that offers a service they want to subscribe to. </li>
+              <li class="liexpand" id="OrgCreate__website"><span class="uicontrol">Website</span>. URL of the organization's website. This website can be accessed by customers when displaying details of the organization that offers a service they want to subscribe to. </li>
 
-              <li class="liexpand"><span class="uicontrol">Language</span>: Default language used in the organization.</li>
+              <li class="liexpand" id="OrgCreate__lang"><span class="uicontrol">Language</span>: Default language used in the organization.</li>
 
-              <li class="liexpand"><span class="uicontrol">Address</span> of the organization. The organization's administrator can later specify a different address to be printed on invoices.</li>
+              <li class="liexpand" id="OrgCreate__address"><span class="uicontrol">Address</span> of the organization. The organization's administrator can later specify a different address to be printed on invoices.</li>
 
-              <li class="liexpand"><span class="uicontrol">Country</span> where the organization is located. </li>
+              <li class="liexpand" id="OrgCreate__country"><span class="uicontrol">Country</span> where the organization is located. </li>
 
-              <li class="liexpand"><span class="uicontrol">Description</span>: Description of the organization, for example information from the company's profile. <div class="p">
+              <li class="liexpand" id="OrgCreate__desc"><span class="uicontrol">Description</span>: Description of the organization, for example information from the company's profile. <div class="p">
                   <div class="note"><span class="notetitle">Note:</span> Make sure to use only the controls provided in the editor for formatting your text. Manually entered HTML tags and references to external style sheets or content may result in errors in the page layout.</div>
 
                 </div>
 </li>
 
-              <li class="liexpand">For a customer organization: <span class="uicontrol">Marketplace</span> to which the customer is to be directed. You can select one of the marketplaces to which you have been granted access by the marketplace owner.</li>
+              <li class="liexpand" id="OrgCreate__mp"><span class="uicontrol">Marketplace</span> to which users of this organization are to be directed. You can select one of the marketplaces to which you have been granted access by the marketplace owner.</li>
 
-              <li class="liexpand">For a supplier organization: <strong>Default operator rev. share (%)</strong>. This is the revenue share agreed between the operator and the supplier, which the operator is to receive from the supplier for selling services on the marketplaces managed on the operator's platform. The default operator revenue share applies to all services offered by the supplier as long as you do not define a service-specific revenue share using the <strong>Manage operator revenue share</strong> menu option in the <strong>Operation</strong> menu. It also applies irrespective of whether the supplier sells his services himself, or uses brokers or resellers for selling them. Discounts granted by a supplier to his customers are deducted from the revenue share. <div class="note"><span class="notetitle">Note:</span> Revenue shares and discounts are calculated only for services applying the <span>platform's </span>native billing system. Services using an external billing system are not included in the calculation. </div>
+              <li class="liexpand" id="OrgCreate__mp">
+                <p>If the platform is installed in SAML_SP authentication mode: <strong>Tenant</strong>. By assigning a tenant to an organization, the emails sent to the users of the organization will contain the URL of a marketplace or an administration portal of this tenant. Tenants must have been created beforehand on the <strong>Manage tenants</strong> page. The <strong>Marketplace</strong> drop-down list then offers all marketplaces associated with the tenant. </p>
+
+                <p>If you leave this field empty, the URL will point to the default tenant.</p>
+
+              </li>
+
+              <li class="liexpand" id="OrgCreate__supp">For a supplier organization: <strong>Default operator rev. share (%)</strong>. This is the revenue share agreed between the operator and the supplier, which the operator is to receive from the supplier for selling services on the marketplaces managed on the operator's platform. The default operator revenue share applies to all services offered by the supplier as long as you do not define a service-specific revenue share using the <strong>Manage operator revenue share</strong> menu option in the <strong>Operation</strong> menu. It also applies irrespective of whether the supplier sells his services himself, or uses brokers or resellers for selling them. Discounts granted by a supplier to his customers are deducted from the revenue share. <div class="note"><span class="notetitle">Note:</span> Revenue shares and discounts are calculated only for services applying the <span>platform's </span>native billing system. Services using an external billing system are not included in the calculation. </div>
 </li>
 
-              <li class="liexpand">For a technology provider, supplier, reseller, and/or broker organization:<p><span class="uicontrol">Profile image</span>: Image used on a marketplace. The profile image is shown as soon as a customer requests details of a service provided by this organization. </p>
+              <li class="liexpand" id="OrgCreate__other">For a technology provider, supplier, reseller, and/or broker organization:<p><span class="uicontrol">Profile image</span>: Image used on a marketplace. The profile image is shown as soon as a customer requests details of a service provided by this organization. </p>
 <p>Click in the <span class="uicontrol">Upload image</span> field or click <span class="uicontrol">Browse</span>, and select the file containing the desired image. Supported file formats are GIF, JPG, and PNG. The maximum size of the profile image is 154 x 154 pixels. The recommended size is 154 x 60 pixels. </p>
 </li>
 
@@ -169,6 +177,7 @@ LDAP_ATTR_REFERRAL=ignore</pre>
   <div>
 <div class="linklist"><strong>Related topics</strong><br/>
 
+<div><a href="operator_manageTenants.htm">Managing Tenants</a></div>
 <div><a href="../../Shared/reference/r_LDAP_SettingTypes.htm">LDAP keys</a></div>
 <div><a href="operator_manageLdapSettings.htm">Managing LDAP settings</a></div>
 <div><a href="operator_manageOperatorRevenueShare.htm">Managing operator revenue share</a></div></div>

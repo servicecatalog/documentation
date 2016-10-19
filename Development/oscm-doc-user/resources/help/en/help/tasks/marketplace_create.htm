@@ -10,6 +10,7 @@
 <meta name="DC.Title" content="Creating a marketplace"/>
 <meta name="DC.Relation" scheme="URI" content="marketplace_update.htm"/>
 <meta name="DC.Relation" scheme="URI" content="marketplace_delete.htm"/>
+<meta name="DC.Relation" scheme="URI" content="operator_manageTenants.htm"/>
 <meta name="DC.Format" content="XHTML"/>
 <meta name="DC.Identifier" content="task634"/>
 <meta name="DC.Language" content="en-us"/>
@@ -29,6 +30,8 @@
       <p>Creating a marketplace includes defining the marketplace features and settings and assigning an organization as the owner. The organization you assign as the owner is automatically assigned the marketplace owner role. All administrators automatically receive the marketplace manager role. The marketplace manager role enables them to administrate and customize the marketplace.</p>
 
       <p>As a prerequisite for creating a marketplace, the organization to be assigned as the marketplace owner must already exist.</p>
+
+      <p>If the platform is installed in SAML_SP mode, you can associate a tenant with the marketplace. The tenant defines the Identity Provider (IdP) against which users accessing the marketplace are to be authenticated. </p>
 
       <p><strong>To create a marketplace</strong>:</p>
 
@@ -91,7 +94,11 @@
       </li>
 <li class="stepexpand">
         <span>Select the organization which is to become the owner of the marketplace. An organization can be the owner of multiple marketplaces.</span>
-         The list contains all organizations managed on your platform. 
+         The list contains all organizations managed on your platform.
+      </li>
+<li class="stepexpand">
+        <span>If the platform is installed in SAML_SP mode, select the tenant to be used for authenticating users accessing this marketplace. If you leave this field empty, users accessing the marketplace are authenticated against the default IdP system specified during installation. </span>
+         The list contains all tenants managed on your platform. 
       </li>
 <li class="stepexpand">
         <span>To create the marketplace, click <span class="uicontrol">Save</span>. </span>
@@ -101,7 +108,7 @@
     <div class="section">
       <p>The administrators of the owner organization are assigned the marketplace manager role. They are notified by email about the creation of the marketplace. The email contains two URLs. One can be used by the marketplace managers for administrating and customizing the marketplace. The other can be used for public access to the marketplace. </p>
 
-      <p>Once you have created a marketplace, your role as a platform operator allows you to change the marketplace owner and to delete the marketplace, if required.</p>
+      <p>Once you have created a marketplace, your role as a platform operator allows you to change the marketplace owner, to delete the marketplace, if required, and to change the tenant assignment.</p>
 
     </div>
 
@@ -111,7 +118,8 @@
 <div class="linklist"><strong>Related topics</strong><br/>
 
 <div><a href="marketplace_update.htm">Updating a marketplace</a></div>
-<div><a href="marketplace_delete.htm">Deleting a marketplace</a></div></div>
+<div><a href="marketplace_delete.htm">Deleting a marketplace</a></div>
+<div><a href="operator_manageTenants.htm">Managing Tenants</a></div></div>
 </div>
 
 </body>
