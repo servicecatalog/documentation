@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="ja-jp" lang="ja-jp">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="task"/>
+<meta name="DC.Title" content="テナントの管理"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="id_276"/>
+<meta name="DC.Language" content="ja-jp"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>テナントの管理</title>
+</head>
+<body id="id_276">
+
+
+  <h1 class="topictitle1">テナントの管理</h1>
+
+    <div>
+        <div class="section">
+            <p>シングルサインオン(SSO)はプラットフォームがSAML_SP認証モードでインストールされている場合のみサポートされます。SAML_SP認証モードはサービスポータルおよび管理ポータルへのアクセス時にすべての利用者を認証するためアイデンティティプロバイダー(IdP)を定義する必要があります。組織の利用者IDとパスワードはOpenAMやActive Directory Federation Service(ADFS)のようなIdPシステムにて管理されます。</p>
+
+            <p>IdPに利用者情報が登録されている場合でも、すべての組織はプラットフォームに利用者を登録する必要があります。利用者の認証情報はIdPシステムに登録されている情報に一致する必要があります。接続設定はプラットフォームがIdPシステムに接続できるように構成ファイルに定義されている必要があります。</p>
+
+            <p>SAML_SP認証モードでプラットフォームをインストールしたときに設定したIdPはプラットフォームに登録されているすべての利用者で使用されます。本IdPはデフォルトIdPと呼ばれます。また、システム運用管理者はテナントを作成し、デフォルトIdP以外のIdPシステムをテナントに関連付けることができます。サービスポータルと組織はテナントにより関連付けられます。テナントに関連付けられたサービスポータルや管理ポータルにアクセスする場合、組織の利用者はテナントに関連付けられているIdPシステムにより認証されます。</p>
+
+            <p>利用者は常に各サービスポータルおよび管理ポータルに関連するIdPシステムにより認証されます。各組織に属する利用者が各テナントに関連付けられたサービスポータルにアクセスする場合、異なるIdPにより認証されます。</p>
+
+            <p><span class="uicontrol">テナント管理</span>ページではテナントの定義および管理ができます。各テナントにはテナントに関連するIdPの接続設定を定義することができます。テナントを定義していない場合、利用者はSAML_SP認証モードでプラットフォームをインストールしたときに設定したデフォルトIdPにより認証されます。</p>
+
+                             テナントを作成する前に、必ずIdP管理者と必要な情報についてやり取りしてください。<a href="../../Shared/reference/c_IdPInfo.htm">ここ</a>をクリックするとIdP管理者から取得する必要のある情報について知ることができます。また、<a href="../../Shared/reference/c_IdPInfo2.htm">ここ</a>をクリックするとIdP管理者が必要とする情報について知ることができます。
+            <div class="p">
+                <div class="note"><span class="notetitle">注:</span> システム運用管理者はテナントを正しく構成する必要があります!
+                    <p>サービスポータルをテナントと関連付けてもデフォルトではサービス公開およびサービス購入の制限はされていないことに注意してください。特定のサービス提供部門、サービス提供代行部門、サービス仲介部門のみにサービス公開を許可(認証された部門のみ)し、特定のサービス利用部門のみが公開されているサービスを購入できる(非公開サービスポータル)ようなサービスポータルを構成しないでください。このような構成のサービスポータルを作成するためには、サービスポータル運用部門である必要があります。</p>
+
+                </div>
+
+            </div>
+
+            <p><strong>テナントを作成するには</strong>:</p>
+
+        </div>
+
+        <ol><li class="stepexpand">
+                <span>IdP構成ファイルを準備します。そしてファイル内にIdP接続設定を記載します。</span>
+                 ファイル内に以下のパラメータを設定する必要があります: <div class="p">
+                        <ul>
+                            <li><samp class="codeph"><strong>SSO_LOGOUT_URL</strong></samp>
+                                <p>IdPシステムのシングルログアウトサービスに接続するエンドポイントのURL。ログアウトとセッションの無効化のリクエストが<span>プラットフォーム</span>から送られます。</p>
+
+                                <p>セキュリティと機密性の面から、HTTPSプロトコルを使用することを推奨します。</p>
+
+                                <p>シンタックス: <samp class="codeph">https://&lt;host&gt;:&lt;port&gt;/&lt;LogoutServiceEndpoint&gt;</samp></p>
+
+                                <div class="note"><span class="notetitle">注:</span> IdPシステム内でログアウトリクエストへの応答を送信し、ログアウト時にリダイレクトさせることができるURLを指定する必要があります。複数のテナントに同一IdPを設定する場合、IdP管理者はテナントごとにサービスエンドポイントを定義し、システム運用管理者に通知する必要があります。</div>
+
+                            </li>
+
+                            <li><samp class="codeph"><strong>SSO_IDP_URL</strong></samp>
+                                <p>IdPサービスのSAMLリダイレクト用エンドポイントのURL。本URLは<span>プラットフォーム</span>から認証リクエストが送られるエンドポイントです。</p>
+
+                                <p>セキュリティと機密性の面から、HTTPSプロトコルを使用することを推奨します。</p>
+
+                                <p>シンタックス: <samp class="codeph">https://&lt;host&gt;:&lt;port&gt;/&lt;RedirectServiceEndpoint&gt;</samp></p>
+
+                                <div class="p">
+                                    <div class="note"><span class="notetitle">注:</span> 複数のテナントに同一IdPを設定する場合、IdP管理者はテナントごとにサービスエンドポイントを定義し、システム運用管理者に通知する必要があります。</div>
+
+                                </div>
+
+                            </li>
+
+                            <li><samp class="codeph"><strong>SSO_IDP_AUTHENTICATION_REQUEST_HTTP_METHOD</strong></samp>
+                                <p>HTTP認証リクエストのメソッド。<samp class="codeph">GET</samp>もしくは<samp class="codeph">POST</samp>リクエストのどちらを使用するかはIdPに依存します。</p>
+
+                                <p>デフォルト: <samp class="codeph">POST</samp></p>
+
+                            </li>
+
+                            <li><samp class="codeph"><strong>SSO_STS_METADATA_URL</strong></samp>
+                                <p>STSのMEXアドレス(Issuer Metadata Exchange)のURL。本パラメータはSecurity Token Service (STS)の通信に使用されます。</p>
+
+                                <p>セキュリティと機密性の面から、HTTPSプロトコルを使用することを推奨します。</p>
+
+                                <p>デフォルト: <samp class="codeph">https://&lt;host&gt;:&lt;port&gt;/&lt;MEXAddress&gt;</samp></p>
+
+                            </li>
+
+                            <li><samp class="codeph"><strong>SSO_STS_URL</strong></samp>
+                                <p>The URL of the STS endpoint. This parameter is required for Security Token Service (STS) communication.</p>
+
+                                <p>セキュリティと機密性の面から、HTTPSプロトコルを使用することを推奨します。</p>
+
+                                <p>シンタックス: <samp class="codeph">https://&lt;host&gt;:&lt;port&gt;/&lt;ServiceEndpoint&gt;</samp></p>
+
+                            </li>
+
+                            <li><samp class="codeph"><strong>SSO_ISSUER_ID</strong></samp>
+                                <p>マルチテナント環境において認証リクエストを発行するテナントのID。すべての英数字を指定することができます。IdPは受け付けるSAML認証リクエストを特定するために本IDを使用します。</p>
+
+                                <p>###?</p>
+
+                            </li>
+
+                            <li><samp class="codeph"><strong>SSO_STS_ENCKEY_LEN</strong></samp>
+                                <p>IdPにより使用される暗号化鍵の長さ。本パラメータはSecurity Token Service (STS)の通信に使用されます。</p>
+
+                                <p>デフォルト: <samp class="codeph">128</samp></p>
+
+                            </li>
+
+                            <li><samp class="codeph"><strong>SSO_IDP_SAML_ASSERTION_ISSUER_ID</strong></samp>
+                                <p>IdPシステムのエンティティID。本IDはIdPごとに一意であり、システム運用管理者とIdP管理者間で共有する必要があります。本IDは利用者が登録されているIdPシステムから認証情報が返答されていることを確認するために使用します。</p>
+
+                                <p>IdP管理者は本IDをIdPシステム内のフェデレーションメタデータから取得することができます。</p>
+
+                                <strong>例</strong>:<p>OpenAMサーバーでは、フェデレーションメタデータをWebブラウザから以下のように取得することができます: </p>
+
+                                <p><samp class="codeph">https://&lt;OpenAM_server&gt;/openam/saml2/jsp/exportmetadata.jsp?entityid=</samp></p>
+
+                                <p>ADFSサーバーでは以下のファイルを確認することでフェデレーションメタデータを取得することができます: </p>
+
+                                <p><samp class="codeph">http://&lt;ADFShost&gt;/FederationMetadata/2007-06/FederationMetadata.xml</samp></p>
+
+                                <p>XMLファイル内で発行者ID(issuer ID)は<samp class="codeph">entityID</samp>として記載されています。 例; </p>
+
+                                <p><samp class="codeph">entityID="http://example.adfs.com/adfs/services/trust"</samp></p>
+
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+            </li>
+<li class="stepexpand">
+                <span><strong>テナント管理</strong>ページで<strong>追加</strong>をクリックします。</span>
+                 
+            </li>
+<li class="stepexpand">
+                <span>以下の情報を入力します: </span>
+                 
+                    <div class="p">
+                        <ul>
+                            <li><strong>テナント名</strong>: テナントの名前。たとえばIdPのタイプが関連付けられます。テナント名はプラットフォームで一意である必要があります。255文字以下の英数字で記載します。</li>
+
+                            <li><strong>説明</strong>: テナントの説明<span id="id_276__The_length_of_the_short_descr_task_taskbody_steps_step_2">40文字以下で記載します。</span></li>
+
+                        </ul>
+
+                    </div>
+
+                
+            </li>
+<li class="stepexpand">
+                <span>テナントを作成するには、<span class="uicontrol">保存</span>をクリックします。</span>
+                 
+            </li>
+<li class="stepexpand">
+                <span>テナントのIdP接続設定を読み込むには: <span class="uicontrol">ファイル名</span>の入力フィールドをクリックするか、<span class="uicontrol">ファイル選択</span>をクリックし、あらかじめ作成したIdP構成ファイルを選択します。</span>
+            </li>
+<li class="stepexpand">
+                <span><span class="uicontrol">インポート</span>をクリックします。</span>
+                 テナントのIDが自動で作成され<strong>ID</strong>フィールドに表示されます。IdPのURLはプロパティファイルから読み込まれ、<strong>IdP</strong>フィールドに表示されます。どちらのフィールドも手動編集はできません。
+            </li>
+</ol>
+
+        <div class="section">
+            <p><strong>テナント情報を更新するには</strong>: </p>
+
+            <div class="p">
+                <ol>
+                    <li>テナント一覧から編集したいテナントを選択します。テナントリストはテナント名、説明、ID、IdPでソートすることができます。</li>
+
+                    <li>テナント名もしくは説明を編集します。
+                        <p>注意: IDやURLを変更することはできません。</p>
+
+                    </li>
+
+                    <li>IdPの接続設定を更新するには:<div class="p">
+                            <ol type="a">
+                                <li><strong>エクスポート</strong>をクリックします。</li>
+
+                                <li>ファイル名を指定し保存します。
+                                    <p>プロパティファイル内には現在の接続設定が記載されています。</p>
+
+                                </li>
+
+                                <li>プロパティファイルを編集し、<strong>Import</strong>をクリックして編集したプロパティファイルをインポートします。</li>
+
+                                <li>プロパティファイルが上書きされ、選択しているテナントのIdP接続設定が変更されたことを確認します。</li>
+
+                            </ol>
+
+                        </div>
+</li>
+
+                    <li>変更を保存するには<span class="uicontrol">保存</span>をクリックします。</li>
+
+                </ol>
+
+            </div>
+
+            <p>プロパティファイルの読み込み表示下部にある<strong>削除</strong>をクリックすると選択しているテナントのすべてのプロパティ情報をデータベースから削除します。このボタンは選択しているテナントのプロパティ情報が事前に読み込まれている場合に活性化します。</p>
+
+            <p>テナント情報の詳細表示下部にある<strong>削除</strong>をクリックするとテナントを削除します。テナントは組織もしくはサービスポータルに関連付けられていない場合に削除可能です。</p>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>

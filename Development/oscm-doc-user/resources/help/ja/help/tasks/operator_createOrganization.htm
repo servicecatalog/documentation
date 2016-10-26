@@ -8,6 +8,7 @@
 <meta name="DC.rights.owner" content="(C) Copyright 2005"/>
 <meta name="DC.Type" content="task"/>
 <meta name="DC.Title" content="組織の登録"/>
+<meta name="DC.Relation" scheme="URI" content="operator_manageTenants.htm"/>
 <meta name="DC.Relation" scheme="URI" content="../../Shared/reference/r_LDAP_SettingTypes.htm"/>
 <meta name="DC.Relation" scheme="URI" content="operator_manageLdapSettings.htm"/>
 <meta name="DC.Relation" scheme="URI" content="operator_manageOperatorRevenueShare.htm"/>
@@ -38,7 +39,9 @@
 
         <li class="liexpand"><strong>SAML_SP</strong> モード - 利用者は<strong>外部の認証システム</strong> (SAML 2.0 アイデンティティプロバイダー(IdP)) にて認証: 組織の利用者IDおよびパスワードはIdPにて作成、メンテナンスされます。プラットフォームはSAML 2.0 サービスプロバイダとして機能します。<p>利用者がプラットフォームにアクセスするには、その利用者がIdPに存在し、かつ、プラットフォームと同じ利用者IDで登録されている必要があります。</p>
 
-        </li>
+        <p>プラットフォーム全体で使用されるデフォルトIdP以外に、異なるIdPを使用するテナントを設定することができます。組織にテナントを関連付けることにより、組織登録後にテナント向けのサービスポータルおよび管理ポータルのURLが記載されたメールが送付されます。本URLを使用することにより、利用者はテナント向けのサービスポータルおよび管理ポータルにアクセスします。また、すべての利用者は本テナントに関連付けられているIdPを使用して認証されます。各組織にはひとつのテナントのみ関連付けることができます。また、同一テナントに複数の組織を関連付けることができます。</p>
+
+                   利用者IDはテナント内で一意である必要があります。テナントが存IDはデフォルトナント（プラットフォーム）で,一意である必要があります。</li>
 
       </ul>
 
@@ -84,33 +87,40 @@
          
           <div class="p">
             <ul>
-              <li class="liexpand"><span class="uicontrol">組織名</span>: 組織の名前 (例:サービス利用管理部門)</li>
+              <li class="liexpand" id="OrgCreate__org"><span class="uicontrol">組織名</span>: 組織の名前 (例:サービス利用管理部門)</li>
 
-              <li class="liexpand"><span class="uicontrol">代表メールアドレス</span>: 組織と通常の連絡を行うためのEメールアドレス。組織には登録後に請求書の送り先として別のメールアドレスを登録することができます。
+              <li class="liexpand" id="OrgCreate__email"><span class="uicontrol">代表メールアドレス</span>: 組織と通常の連絡を行うためのEメールアドレス。組織には登録後に請求書の送り先として別のメールアドレスを登録することができます。
                   <p>指定されたメールアドレスの書式が有効な構文か確認され、ドメイン名がIANA（Internet Assigned Numbers Authority）によって定義、管理されている標準に適合しているか確認されます。</p>
 
                   <p>例: <samp class="codeph">user.name@domain.arpa</samp>, <samp class="codeph">user.name@domain.org</samp>, <samp class="codeph">user@mycompany.lan.uk</samp></p>
 </li>
 
-              <li class="liexpand"><span class="uicontrol">電話番号</span>: 組織の担当者に連絡ととるための電話番号もしくは携帯電話番号。</li>
+              <li class="liexpand" id="OrgCreate__phone"><span class="uicontrol">電話番号</span>: 組織の担当者に連絡ととるための電話番号もしくは携帯電話番号。</li>
 
-              <li class="liexpand"><span class="uicontrol">Web</span>: 組織のWebサイトのURL。サービス利用部門が購読したいと考えているサービスを提供している組織について詳細な情報を得るためにアクセスするWebサイトです。</li>
+              <li class="liexpand" id="OrgCreate__website"><span class="uicontrol">Web</span>: 組織のWebサイトのURL。サービス利用部門が購読したいと考えているサービスを提供している組織について詳細な情報を得るためにアクセスするWebサイトです。</li>
 
-              <li class="liexpand"><span class="uicontrol">言語</span>: 組織が使用するデフォルトの言語です。</li>
+              <li class="liexpand" id="OrgCreate__lang"><span class="uicontrol">言語</span>: 組織が使用するデフォルトの言語です。</li>
 
-              <li class="liexpand"><span class="uicontrol">所在地</span>: 組織の所在地。組織の管理者は組織の登録後に請求書の送り先として別の住所を登録することができます。</li>
+              <li class="liexpand" id="OrgCreate__address"><span class="uicontrol">所在地</span>: 組織の所在地。組織の管理者は組織の登録後に請求書の送り先として別の住所を登録することができます。</li>
 
-              <li class="liexpand"><span class="uicontrol">国</span>: 組織が所在する国。</li>
+              <li class="liexpand" id="OrgCreate__country"><span class="uicontrol">国</span>: 組織が所在する国。</li>
 
-              <li class="liexpand"><span class="uicontrol">説明</span>: 組織の説明文。(例:組織のプロフィール情報) <div class="p">
+              <li class="liexpand" id="OrgCreate__desc"><span class="uicontrol">説明</span>: 組織の説明文。(例:組織のプロフィール情報) <div class="p">
                   <div class="note"><span class="notetitle">注:</span> 注:テキストをフォーマットするために提供されたエディタを用いて編集してください。HTMLを手作業で編集し、外部のスタイルシートやコンテンツを参照した場合、画面のレイアウトにエラーが生じる可能性があります。</div>
 
                 </div>
 </li>
 
-              <li class="liexpand">[サービス利用部門の場合のみ] <span class="uicontrol">サービスポータル</span>: サービス利用部門を管理するサービスポータル。サービスポータル運用部門によってアクセス権が与えられているサービスポータルから選択します。</li>
+              <li class="liexpand" id="OrgCreate__mp"><span class="uicontrol">サービスポータル</span>: 本組織の利用者を管理するサービスポータル。サービスポータル運用部門によってアクセス権が与えられているサービスポータルから選択します。</li>
 
-              <li class="liexpand">[サービス提供部門の場合のみ] <strong>標準のシステム運用管理部門の売上配分率 (%)</strong>: システム運用管理部門とサービス提供部門の間で合意された売上配分率を入力してください。
+              <li class="liexpand" id="OrgCreate__mp">
+                <p>[プラットフォームがSAML_SP認証モードでインストールされている場合のみ] <strong>テナント</strong>: 組織にテナントを関連付けることにより、組織登録後にテナント向けのサービスポータルLおよび管理ポータルのURLが記載されたメールが送付されます。テナントは事前に<strong>テナント管理</strong>ページにて作成する必要があります。<strong>サービスポータル</strong>の一覧はテナントに関連するすべてのサービスポータルを表示します。</p>
+
+                <p>本項目を設定しない場合、デフォルトのテナントに関連するURLが設定されます。</p>
+
+              </li>
+
+              <li class="liexpand" id="OrgCreate__supp">[サービス提供部門の場合のみ] <strong>標準のシステム運用管理部門の売上配分率 (%)</strong>: システム運用管理部門とサービス提供部門の間で合意された売上配分率を入力してください。
                   システム運用管理部門はプラットフォーム上で管理されているサービスポータルで購入されたサービスについて、この売上配分率に基づく金額をサービス提供部門から受けとります。
                   標準のシステム運用管理部門の売上配分率は、<strong>操作</strong>メニューの<strong>システム運用管理部門の売上配分設定</strong>画面でサービス固有の売上配分率を設定しない限り、サービス提供部門が提供するサービスすべてに適用されます。
                   これはサービス提供部門が直接サービスを提供したかどうか、つまりサービス仲介部門やサービス提供代行部門をとおしてサービスを提供したかどうかにかかわらず適用されます。
@@ -122,7 +132,7 @@
 
                   </li>
 
-              <li class="liexpand">[技術サービス開発部門、サービス提供部門、サービス提供代行部門、サービス仲介部門の場合]<p><span class="uicontrol">プロフィール画像</span>: サービスポータルで使用する画像。プロフィール画像は利用部門がサービスの詳細を参照した際に表示されます。</p>
+              <li class="liexpand" id="OrgCreate__other">[技術サービス開発部門、サービス提供部門、サービス提供代行部門、サービス仲介部門の場合]<p><span class="uicontrol">プロフィール画像</span>: サービスポータルで使用する画像。プロフィール画像は利用部門がサービスの詳細を参照した際に表示されます。</p>
 <p><span class="uicontrol">画像のアップロード</span>入力部分または<span class="uicontrol">ファイル選択</span>をクリックし、画像のファイルを選択します。利用可能なファイルフォーマットはGIF、JPG、PNGです。プロフィール画像の最大サイズは 154 x 154 ピクセルです。推奨されるサイズは 154 x 60 ピクセルです。 </p>
 </li>
 
@@ -186,6 +196,7 @@ LDAP_ATTR_REFERRAL=ignore</pre>
   <div>
 <div class="linklist"><strong>関連情報</strong><br/>
 
+<div><a href="operator_manageTenants.htm">テナントの管理</a></div>
 <div><a href="../../Shared/reference/r_LDAP_SettingTypes.htm">LDAPキー</a></div>
 <div><a href="operator_manageLdapSettings.htm">LDAP設定の管理</a></div>
 <div><a href="operator_manageOperatorRevenueShare.htm">システム運用管理部門の売上配分設定</a></div></div>

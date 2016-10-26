@@ -51,7 +51,7 @@
             
             <p>必須項目。 <span>プラットフォーム</span>のユーザー認証を使用するか、それともプラットフォームがSAMLサービス提供者として機能するかを指定します。このシステム設定は、<span>システム</span>を初めて起動した時に評価され、<span>システム</span>が一度でも起動された後には設定を変更することはできません。アップグレードインストールでも設定を変更することはできません。</p>
 
-            <p>指定可能な値： <samp class="codeph">INTERNAL</samp> (<span>プラットフォーム</span>のユーザー認証を使用) または <samp class="codeph">SAML_SP</samp> (<span>プラットフォーム</span>はSAMLサービス提供者として機能)。 </p>
+            <p>指定可能な値： <samp class="codeph">INTERNAL</samp> (<span>プラットフォーム</span>のユーザー認証を使用) または <samp class="codeph">SAML_SP</samp> (<span>プラットフォーム</span>はSAMLサービス提供者として機能、また、利用者はアイデンティティプロバイダー(IdP)システムにより認証される)。 </p>
 
             <p>デフォルト： <samp class="codeph">INTERNAL</samp>
             </p>
@@ -120,7 +120,7 @@
 <p>デフォルト： <samp class="codeph">2</samp></p>
 </div>
 
-        <div class="section"><h4 class="sectiontitle">HIDDEN_UI_ELEMENTS</h4>オプション項目。<span>プラットフォーム</span>の管理ポータルおよびサービスポータルで非表示にするユーザーインターフェース項目を指定します。この設定でユーザーインターフェース要素を管理ポータルやサービスポータルから非表示にすることができます。<p><strong>サービスポータル</strong></p>
+        <div class="section"><h4 class="sectiontitle">HIDDEN_UI_ELEMENTS</h4>オプション項目。<span>プラットフォーム</span>の管理ポータルおよびサービスポータルで非表示にするユーザーインターフェース項目を指定します。この設定でユーザーインターフェース要素をサービスポータルや管理ポータルから非表示にすることができます。<p><strong>サービスポータル</strong></p>
 <p>サービスポータルの[アカウント]メニューからオプションを非表示にするには、以下の値のいずれかを入力します。: </p>
 <ul>
                 <li><samp class="codeph">marketplace.navigation.Profile</samp>:[プロフィール]メニュー </li>
@@ -214,31 +214,13 @@
 <p>デフォルト： <samp class="codeph">1080</samp></p>
 </div>
 
-        <div class="section"><h4 class="sectiontitle">IDP_ASSERTION_EXPIRATION</h4>技術サービスのアクセス種別を <strong>ユーザアクセス</strong> と定義し、かつ、<span>本プラットフォーム</span>をSAML 1.1 アイデンティティプロバイダー(IdP)として使用している場合は必須。アクセス種別の詳細については、<em>運用ガイド（技術サービス開発部門編）</em>を参照してください。<p>この設定は、SAML IdPによって生成されるアサーションが有効なミリ秒数を示します。これは、アサーションの<samp class="codeph">NotAfterOrOn属性と</samp><samp class="codeph">IssueInstant</samp>属性の差異です。 </p>
-<p>設定可能な値： <samp class="codeph">1</samp>～<samp class="codeph">9223372036854775807</samp>の範囲の値を指定します。</p>
-<p>デフォルト： <samp class="codeph">1800000ミリ秒（</samp>30分）</p>
-</div>
+        <div class="section"><h4 class="sectiontitle">IDP_ASSERTION_EXPIRATION</h4>非推奨。</div>
 
-        <div class="section"><h4 class="sectiontitle">IDP_ASSERTION_VALIDITY_TOLERANCE</h4>技術サービスのアクセス種別を <strong>ユーザアクセス</strong> と定義し、かつ、<span>本プラットフォーム</span>をSAML 1.1 IdPとして使用している場合は必須。アクセス種別の詳細については、<em>運用ガイド（技術サービス開発部門編）</em>を参照してください。<p>この設定は、SAML IdPによって生成されるアサーションが過去に有効であったミリ秒数を示します。これはサーバ間の同期問題を回避するために使用されます。この値はアサーションの<samp class="codeph">IssueInstant属性と</samp><samp class="codeph">NotBefore属性の</samp>差異です。 </p>
-<p>設定可能な値： <samp class="codeph">1</samp>～<samp class="codeph">9223372036854775807</samp>の範囲の値を指定します。</p>
-<p>デフォルト： <samp class="codeph">600000ミリ秒（</samp>10分）</p>
-</div>
+        <div class="section"><h4 class="sectiontitle">IDP_ASSERTION_VALIDITY_TOLERANCE</h4>非推奨。 </div>
 
-        <div class="section"><h4 class="sectiontitle">IDP_PRIVATE_KEY_FILE_PATH</h4>技術サービスのアクセス種別を <strong>ユーザアクセス</strong> と定義し、かつ、<span>本プラットフォーム</span>をSAML 1.1 IdPとして使用している場合は必須。アクセス種別の詳細については、<em>運用ガイド（技術サービス開発部門編）</em>を参照してください。
-                <p>この設定は、DER（Distinguished Encoding Rules）形式（<samp class="codeph">.derファイル）</samp>の秘密キーのURLを示します。このURLはSAMLメッセージを署名するためにIdPによって使用されます。 </p>
+        <div class="section"><h4 class="sectiontitle">IDP_PRIVATE_KEY_FILE_PATH</h4>非推奨。</div>
 
-                <p>例： <samp class="codeph">/opt/glassfish-3.1.2.2/glassfish/domains/bes-domain/config/cakey.der</samp></p>
-
-                <p>この設定を変更した場合、<span>プラットフォーム</span>を再起動する必要があります。</p>
-</div>
-
-        <div class="section"><h4 class="sectiontitle">IDP_PUBLIC_CERTIFICATE_FILE_PATH</h4>技術サービスのアクセス種別を <strong>ユーザアクセス</strong> と定義し、かつ、<span>本プラットフォーム</span>をSAML 1.0 IdPとして使用している場合は必須。アクセス種別の詳細については、<em>運用ガイド（技術サービス開発部門編）</em>を参照してください。
-                <p>この設定は、DER（Distinguished Encoding Rules）形式（<samp class="codeph">.derファイル）</samp>の公開キー証明書のURLを示します。アプリケーションが署名を確認できるように、このURLがIdPによってSAMLメッセージの署名に追加されます。 </p>
-
-                <p>例： <samp class="codeph">/opt/glassfish-3.1.2.2/glassfish/domains/bes-domain/config/cacert.der</samp></p>
-
-                <p>この設定を変更した場合、<span>プラットフォーム</span>を再起動する必要があります。</p>
-</div>
+        <div class="section"><h4 class="sectiontitle">IDP_PUBLIC_CERTIFICATE_FILE_PATH</h4>非推奨。</div>
 
         <div class="section"><h4 class="sectiontitle">LDAP_SEARCH_LIMIT</h4>オプション項目。組織が利用者の管理に外部LDAPシステムを使用する場合に、LDAPクエリが返すことができるエントリの最大数。 <p>設定可能な値： <samp class="codeph">1</samp>～<samp class="codeph">9223372036854775807</samp>の範囲の値を指定します。</p>
 <p>デフォルト： <samp class="codeph">100</samp></p>
@@ -329,12 +311,42 @@
 
         <div class="section"><h4 class="sectiontitle">SEARCH_INDEX_MASTER_QUEUE_NAME</h4>必須項目。検索インデックスアプリケーションのJMSキュー名。<samp class="codeph">jms/bss/masterIndexerQueue</samp>のまま変更しないでください。</div>
 
+        <div class="section"><h4 class="sectiontitle">SSO_DEFAULT_TENANT_ID</h4><span>プラットフォーム</span>をSAML_SP認証モードでインストールした場合に必須。
+            <p>デフォルトテナントのID。デフォルトテナントは<span>プラットフォーム</span>に登録されたすべてのユーザがサービスポータルおよび管理ポータルにアクセスする際認証に使用されるIdPと関連します。</p>
+
+            <p>8文字で記載してください。特殊文字および空白は使用できません。システム運用管理者はシステム設定で任意の値を指定します。</p>
+
+            <p>デフォルトテナントIDシステム運用管理者とIdP管理者間で共有する必要があります。IdP管理者は本IDをSAMLアサーションのための属性として設定する必要があります。たとえば、<span>プラットフォーム</span> ー(SPているOpenAM内で、IdP管理者は本SPを選択し、アサーションプロセス属性として<samp class="codeph">tenantID="&lt;the 8 characters"&gt;</samp>と入力します。</p>
+
+            <p>本設定を<span>プラットフォーム</span>とIdPの間で交換した後に変更する必要がある場合、<span>プラットフォーム</span>とIdPシステム双方の設定を変更する必要があります。それに伴いIdP管理者に変更を知らせる必要があります。</p>
+</div>
+
         <div class="section"><h4 class="sectiontitle">SSO_IDP_AUTHENTICATION_REQUEST_HTTP_METHOD</h4><span>プラットフォーム</span>をSAML_SP認証モードでインストールする場合は必須。 HTTP認証要求で利用する方式。IdPに依存して、<samp class="codeph">GET</samp> または <samp class="codeph">POST</samp> のいずれかのリクエストを使用できます。
                 <p>WebブラウザのSSOのために必要です。</p>
 
                 <p>デフォルト： <samp class="codeph">POST</samp></p>
 
                 <p>この設定を変更した場合、<span>プラットフォーム</span>を再起動する必要があります。</p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">SSO_SAML_ASSERTION_ISSUER_ID</h4><span>プラットフォーム</span>をSAML_SP認証モードでインストールする場合は必須。
+                <p>IdPシステムのエンティティID。本IDはIdPごとに一意であり、システム運用管理者とIdP管理者間で共有する必要があります。本IDは利用者が登録されているIdPシステムから認証情報が返答されていることを確認するために使用します。</p>
+
+                <p>IdP管理者は本IDをIdPシステム内のフェデレーションメタデータから取得することができます。</p>
+
+                <strong>例</strong>:<p>OpenAMサーバーでは、フェデレーションメタデータをWebブラウザから以下のように取得することができます: </p>
+
+                <p><samp class="codeph">https://&lt;OpenAM_server&gt;/openam/saml2/jsp/exportmetadata.jsp?entityid=</samp></p>
+
+                <p>ADFSサーバーでは以下のファイルを確認することでフェデレーションメタデータを取得することができます: </p>
+
+                <p><samp class="codeph">http://&lt;ADFShost&gt;/FederationMetadata/2007-06/FederationMetadata.xml</samp></p>
+
+                <p>XMLファイル内で発行者ID(issuer ID)は<samp class="codeph">entityID</samp>として記載されています。 例; </p>
+
+                <p><samp class="codeph">entityID="http://example.adfs.com/adfs/services/trust"</samp>
+            </p>
 
         </div>
 

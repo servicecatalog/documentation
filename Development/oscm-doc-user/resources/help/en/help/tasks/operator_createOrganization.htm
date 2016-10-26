@@ -37,8 +37,8 @@ The platform supports the following authentication modes:<ul>
 </li>
 
         <li class="liexpand"><strong>SAML_SP</strong> mode - users are authenticated against an <strong>external authentication system</strong> (SAML 2.0 IdP): User IDs and passwords of an organization are created and maintained in the IdP. The platform acts as SAML 2.0 service provider.<p>For enabling users to access the platform, they must exist in the IdP and be registered with the same user ID with the platform.</p>
-<p>In addition to using a platform-wide, so-called "default" IdP, you can define tenants to which different IdPs can be associated. By assigning a tenant to an organization, the emails sent to the users of the organization will contain the URL of a marketplace or an administration portal of this tenant. By using this URL, users access a tenant-specific marketplace or administration portal, and all users are authenticated authenticated against the IdP of this tenant. Each organization can be associated with one tenant only. Different organizations can be associated with one and the same tenant. </p>
-User names must be unique within the scope of the tenant. If no other tenant is defined, user names must be unique within the scope of the default tenant, i.e. platform-wide. </li>
+<p>In addition to using a platform-wide, so-called "default" IdP, you can define tenants to which different IdPs can be associated. By associating a tenant with an organization, the emails sent to the users of the organization will contain the URL of a marketplace or an administration portal of this tenant. By using this URL, users access a tenant-specific marketplace or administration portal, and all users are authenticated authenticated against the IdP of this tenant. Each organization can be associated with one tenant only. Different organizations can be associated with one and the same tenant. </p>
+User IDs must be unique within the scope of the tenant. If no other tenant is defined, user names must be unique within the scope of the default tenant, i.e. platform-wide. </li>
 
       </ul>
 <p><strong>To create a new organization</strong>:</p>
@@ -106,7 +106,7 @@ User names must be unique within the scope of the tenant. If no other tenant is 
               <li class="liexpand" id="OrgCreate__mp"><span class="uicontrol">Marketplace</span> to which users of this organization are to be directed. You can select one of the marketplaces to which you have been granted access by the marketplace owner.</li>
 
               <li class="liexpand" id="OrgCreate__mp">
-                <p>If the platform is installed in SAML_SP authentication mode: <strong>Tenant</strong>. By assigning a tenant to an organization, the emails sent to the users of the organization will contain the URL of a marketplace or an administration portal of this tenant. Tenants must have been created beforehand on the <strong>Manage tenants</strong> page. The <strong>Marketplace</strong> drop-down list then offers all marketplaces associated with the tenant. </p>
+                <p>If the platform is installed in SAML_SP authentication mode: <strong>Tenant</strong>. By associating a tenant with an organization, the emails sent to the users of the organization will contain the URL of a marketplace or an administration portal of this tenant. Tenants must have been created beforehand on the <strong>Manage tenants</strong> page. The <strong>Marketplace</strong> drop-down list then offers all marketplaces associated with the tenant. </p>
 
                 <p>If you leave this field empty, the URL will point to the default tenant.</p>
 

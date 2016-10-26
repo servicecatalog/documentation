@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Required Information From the IdP"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="concept_B32294CC9FA643A2A14A74B1DAA49C95"/>
+<meta name="DC.Language" content="en-us"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>Required Information From the IdP</title>
+</head>
+<body id="concept_B32294CC9FA643A2A14A74B1DAA49C95">
+
+
+        <h1 class="topictitle1">Required Information From the IdP</h1>
+
+        <div>
+                <div class="section">
+                        <p>As is the case with the default IdP set up when installing the platform, for every other IdP associated with a tenant, you require the following:</p>
+
+                        <div class="p">
+                                <ul>
+                                        <li class="liexpand">A contractual relationship with the IdP operator so that the IdP can allow for Web browser SSO and secure of Web service calls using a Security Token Service (STS).</li>
+
+                                        <li class="liexpand">Information on the following service endpoints. Ask the IdP operator for the following information: <div class="p">
+                                                        <ul>
+                                                            <li>For Web browser SSO: the SAML Redirect URL of the IdP as well as the URL of the single logout service endpoint.</li>
+
+                                                            <li>For STS communication: STS service endpoint URL as well as the URL pointing to the MEX address (Issuer Metadata Exchange) of the STS. </li>
+
+                                                        </ul>
+
+                                                </div>
+<p>In a multi-tenancy environment and when several tenants are associated with one and the same IdP system, one relying party per tenant must be defined and communicated.</p>
+</li>
+
+                                        <li class="liexpand">
+                                                <p>The entity ID of the IdP system. The IdP administrator can find out the ID by retrieving the federation metadata on his IdP system. </p>
+
+                                        </li>
+
+                                        <li class="liexpand">Length of the encryption key used by the IdP. </li>
+
+                                        <li class="liexpand">Information on whether the IdP can process <samp class="codeph">GET</samp> or <samp class="codeph">POST</samp> authentication requests.</li>
+
+                                        <li class="liexpand">For Web browser SSO: the public key certificate from the IdP. Request this certificate from the IdP operator and import it into the application server truststore where the platform is deployed. Refer to the <em>Operator's Guide</em> for details on certificate handling. </li>
+
+                                </ul>
+
+                        </div>
+
+                </div>
+
+        </div>
+
+
+</body>
+</html>

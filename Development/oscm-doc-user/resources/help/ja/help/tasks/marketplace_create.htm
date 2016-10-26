@@ -10,6 +10,7 @@
 <meta name="DC.Title" content="サービスポータルの登録"/>
 <meta name="DC.Relation" scheme="URI" content="marketplace_update.htm"/>
 <meta name="DC.Relation" scheme="URI" content="marketplace_delete.htm"/>
+<meta name="DC.Relation" scheme="URI" content="operator_manageTenants.htm"/>
 <meta name="DC.Format" content="XHTML"/>
 <meta name="DC.Identifier" content="task634"/>
 <meta name="DC.Language" content="ja-jp"/>
@@ -29,6 +30,8 @@
       <p>サービスポータルの登録時にはサービスポータルの機能の選択および運用管理をおこなう組織の設定がおこなえます。設定した組織には自動的にサービスポータル運用部門のロールが割り当てられ、その組織のすべての管理者にはサービスポータル運用者のロールが設定されます。サービスポータル運用者はサービスポータルの管理やカスタマイズがおこなえます。</p>
 
       <p>サービスポータルを登録するには、サービスポータル運用部門となる組織がすでに登録されている必要があります。</p>
+
+      <p>プラットフォームがSAML_SP認証モードでインストールされている場合、 サービスポータルにテナントを関連付けることができます。テナントを関連付けることでサービスポータルにアクセスする利用者の認証に使用するアイデンティティプロバイダー(IdP)を規定することができます。</p>
 
       <p><strong>サービスポータルを登録するには</strong>：</p>
 
@@ -101,6 +104,10 @@
          この一覧には、プラットフォームで管理されるすべての組織が含まれます。 
       </li>
 <li class="stepexpand">
+        <span>プラットフォームがSAML_SP認証モードでインストールされている場合、サービスポータルの利用者が所属するテナントを選択します。本項目を設定しない場合、サービスポータルの利用者はインストール時に設定したデフォルトのIdPを使用して認証されます。 </span>
+         この一覧には、プラットフォームで管理されるすべてのテナントが含まれます。 
+      </li>
+<li class="stepexpand">
         <span>サービスポータルを作成するには、<span class="uicontrol">保存</span>をクリックします。 </span>
       </li>
 </ol>
@@ -108,7 +115,7 @@
     <div class="section">
       <p>サービスポータル運用部門の管理者には、サービスポータル運用者ロールが割り当てられます。サービスポータルが作成されたことがサービスポータルの運用部門の管理者にメールで通知されます。メールには2つのURLが含まれます。1つはサービスポータル運用者がサービスポータルの管理およびカスタマイズに利用します。もう1つのURLは、サービスポータルとそこで公開されているサービスへの公開アクセスに使用できます。 </p>
 
-      <p>サービスポータルを作成すると、システム運用管理者は、サービスポータル運用部門の変更、サービスポータル名の変更、サービスポータルの削除を必要に応じて行うことができます。</p>
+      <p>サービスポータルを作成すると、システム運用管理者は、サービスポータル運用部門の変更、サービスポータルの削除、テナントの変更を必要に応じて行うことができます。</p>
 
     </div>
 
@@ -118,7 +125,8 @@
 <div class="linklist"><strong>関連情報</strong><br/>
 
 <div><a href="marketplace_update.htm">サービスポータルの変更</a></div>
-<div><a href="marketplace_delete.htm">サービスポータルの削除</a></div></div>
+<div><a href="marketplace_delete.htm">サービスポータルの削除</a></div>
+<div><a href="operator_manageTenants.htm">テナントの管理</a></div></div>
 </div>
 
 </body>

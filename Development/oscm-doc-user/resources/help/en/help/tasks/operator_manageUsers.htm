@@ -24,14 +24,14 @@
     <div class="section">
       <p>On the <span class="uicontrol">Manage users</span> page, you can lock the account of a specific user, for example when you assume unauthorized access. You can also unlock an account, for example in case it was locked because the user tried to log in using a wrong password for the configured number of times (default: 3). In addition, you can initiate the generation of a new password for a user. </p>
 
-      <p>For organizations that do not use an external system for user authentication, you can register multiple users in one operation by importing a user data file. </p>
+      <p>In addition, you can register multiple users in one operation by importing a user data file. </p>
 
       <p>At the top of the page, you can view the number of users registered with the platform as well as the configured maximum number of registered users (default: 10). At regular intervals (default: 12 hours), the system checks the number of registered users. You are informed by email when this check returns that the allowed number of registered users is exceeded. </p>
 
       <p>All tasks are executed on request of an organization's administrator who will provide you with the relevant user IDs. </p>
 
       <div class="p" id="task634__LDAPRestrictions">
-        <div class="note"><span class="notetitle">Note:</span> If the platform is installed in INTERNAL authentication mode and an organization uses an external LDAP system for user management and authentication, only those fields that are not mapped to settings in the LDAP system can be edited. For example, passwords can be changed only in the external system. An import of multiple users defined in a user data file is not possible either.<p>If the platform is installed in SAML_SP authentication mode, the <strong>Reset Password</strong> button is not available. In addition, users can be locked or unlocked only in the platform, not in the Identity Provider (IdP). This means that a user locked in the platform can still log in to the IdP. Passwords must be reset in the IdP system. If users are defined in a user data file, the user IDs must match the ones in the IdP.</p>
+        <div class="note"><span class="notetitle">Note:</span> If the platform is installed in INTERNAL authentication mode and an organization uses an external LDAP system for user management and authentication, only those fields that are not mapped to settings in the LDAP system can be edited. For example, passwords can be changed only in the external system. <p>If the platform is installed in SAML_SP authentication mode, the <strong>Reset Password</strong> button is not available. In addition, users can be locked or unlocked only in the platform, not in the Identity Provider (IdP). This means that a user locked in the platform can still log in to the IdP. Passwords must be reset in the IdP system. If users are defined in a user data file, the user IDs must match the ones in the IdP.</p>
 <p>Refer to the <em>Installation Guide</em> for details on authentication modes. </p>
 </div>
 
@@ -63,7 +63,7 @@
               <ol type="a">
                 <li class="liexpand">Select the organization for which you want to import users. </li>
 
-                <li class="liexpand">If standard users are to be imported for the organization, select the marketplace to which the users are to be directed. </li>
+                <li class="liexpand">Select the marketplace to which the users are to be directed. </li>
 
                 <li class="liexpand">Click the <strong>File name</strong> field or <strong>Browse</strong>, and select the file containing the user data.</li>
 

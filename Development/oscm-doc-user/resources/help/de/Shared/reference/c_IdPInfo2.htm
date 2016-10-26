@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="concept"/>
+<meta name="DC.Title" content="Required Information by the IdP"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="concept_B32294CC9FA643A2A14A74B1DAA49C95"/>
+<meta name="DC.Language" content="en-us"/>
+<link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="../../book.css"/>
+<title>Required Information by the IdP</title>
+</head>
+<body id="concept_B32294CC9FA643A2A14A74B1DAA49C95">
+
+
+        <h1 class="topictitle1">Required Information by the IdP</h1>
+
+        <div>
+                <div class="section">
+                        <p>The administrator of the IdP system that is to be used for authenticating users requires the following information from the platform operator: </p>
+
+                        <div class="p">
+                                <ul>
+                                        <li>The unique identifier of the tenant that issues authentication requests. This ID is generated when you create the tenant. The IdP system uses this ID for identifying incoming authentication requests.</li>
+
+                                        <li>The signature verification certificate of <span>the platform</span>. This is the same for all tenants.</li>
+
+                                </ul>
+
+                        </div>
+
+                        <p><strong>Required configuration steps in the IdP system:</strong></p>
+
+                        <div class="p">
+                                <ol>
+                                        <li>The IdP operator must ensure that the correct endpoints for the Web UI SSO and STS connections are activated. </li>
+
+                                        <li>For each tentant, the IdP operator must create a relying party in the IdP system. </li>
+
+                                        <li>Each tenant must be registered with the IdP. For this, the generated tenant ID and the manually created ID as specified in the <samp class="codeph">SSO_ISSUER_ID</samp> parameter must be provided to the IdP administrator, as well as the URL to which the IdP is to send its responses (as specified in the <samp class="codeph">SSO_IDP_URL</samp> parameter). The IdP administrator also requires the logout URL (as specified in the <samp class="codeph">SSO_LOGOUT_URL</samp> parameter).</li>
+
+                                        <li>The IdP administrator requires the signature verification certificate of <span>the platform</span>. The IdP system needs this certificate for handling logout requests. </li>
+
+                                        <li>The assertions returned to <span>OSCM</span> must contain user IDs and the corresponding tenant ID for each user. This is required for <span>OSCM</span> to map the users to the <span>OSCM</span> user roles (such as administrator, service manager, marketplace manager), and to ensure the uniqueness of user IDs in a multi-tenancy environment. <p>To achieve this, the IdP system must be configured such that its assertions contain two <samp class="codeph">&lt;AttributeStatement&gt;</samp> elements. The first <samp class="codeph">&lt;Attribute&gt;</samp> subelement must contain a <samp class="codeph">Name="userid"</samp> property, and the <samp class="codeph">&lt;AttributeValue&gt;</samp> subelement must specify the user ID that matches the ID of the calling user in <span>OSCM</span> . The second <samp class="codeph">&lt;Attribute&gt;</samp> subelement must contain a <samp class="codeph">Name="tenantID"</samp> property, and the <samp class="codeph">&lt;AttributeValue&gt;</samp> subelement must specify the ID of the tenant associated with the organization the corresponding user belongs to.</p>
+<p>Example: </p>
+<div class="p">
+                                                        <pre class="codeblock">&lt;saml:Assertion ...&gt;
+    ...
+    &lt;saml:AttributeStatement&gt;
+      &lt;saml:Attribute <strong>Name="userid"</strong>&gt;
+        <strong>&lt;saml:AttributeValue&gt;administrator&lt;/saml:AttributeValue&gt;</strong>
+      &lt;/saml:Attribute&gt;
+    &lt;saml:Attribute <strong>Name="tenantID"</strong>&gt;
+        <strong>&lt;saml:AttributeValue&gt;34ffd098&lt;/saml:AttributeValue&gt;</strong>
+      &lt;/saml:Attribute&gt;
+    &lt;/saml:AttributeStatement&gt;
+  &lt;/saml:Assertion&gt;
+</pre>
+
+                                                </div>
+</li>
+
+                                </ol>
+
+                        </div>
+
+                </div>
+
+        </div>
+
+
+</body>
+</html>

@@ -263,8 +263,8 @@
         <div class="section"><h4 class="sectiontitle">SEARCH_INDEX_MASTER_QUEUE_NAME</h4>Mandatory. The name of the search indexer application's JMS queue. Stay with the entry <samp class="codeph">jms/bss/masterIndexerQueue</samp> and do not change it.</div>
 
         <div class="section"><h4 class="sectiontitle">SSO_DEFAULT_TENANT_ID</h4>Mandatory if you install <span>the platform</span> in SAML_SP authentication mode. <p>The unique ID of the default tenant. The default tenant is associated with the IdP that all users registered with  are authenticated against when they access a marketplace or the administration portal. </p>
-<p>It must consist of exactly 8 characters. No special characters or blanks are allowed. </p>
-<p>The platform operator creates the ID by specifying the corresponding value in the configuration settings when installing the system. The default tenant ID must be communicated to the IdP administrator. The IdP administrator must set this ID as an attribute for SAML assertions. For example, in OpenAM, where <span>the platform</span> has been registered as Service Provider (SP), the IdP administrator selects this SP, and enters <samp class="codeph">tenantID="&lt;the 8 characters"&gt;</samp> as an assertion processing attribute. </p>
+<p>It must consist of exactly 8 characters. No special characters or blanks are allowed. The platform operator may specify any value in the configuration settings. </p>
+<p>The default tenant ID must be communicated to the IdP administrator. The IdP administrator must set this ID as an attribute for SAML assertions. For example, in OpenAM, where <span>the platform</span> has been registered as Service Provider (SP), the IdP administrator selects this SP, and enters <samp class="codeph">tenantID="&lt;the 8 characters"&gt;</samp> as an assertion processing attribute. </p>
 <p>If you need to change this setting after the first exchange of data between <span>the platform</span> and the IdP, you must change it both in <span>the platform</span> and the IdP system. The IdP administrator must be informed accordingly.</p>
 </div>
 
