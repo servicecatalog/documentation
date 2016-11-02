@@ -7,49 +7,49 @@
 <meta name="copyright" content="(C) Copyright 2005"/>
 <meta name="DC.rights.owner" content="(C) Copyright 2005"/>
 <meta name="DC.Type" content="concept"/>
-<meta name="DC.Title" content="Required Information From the IdP"/>
+<meta name="DC.Title" content="Vom IdP-System erforderliche Informationen"/>
 <meta name="DC.Format" content="XHTML"/>
 <meta name="DC.Identifier" content="concept_B32294CC9FA643A2A14A74B1DAA49C95"/>
 <meta name="DC.Language" content="en-us"/>
 <link rel="stylesheet" type="text/css" href="../../commonltr.css"/>
 <link rel="stylesheet" type="text/css" href="../../book.css"/>
-<title>Required Information From the IdP</title>
+<title>Vom IdP-System erforderliche Informationen</title>
 </head>
 <body id="concept_B32294CC9FA643A2A14A74B1DAA49C95">
 
 
-        <h1 class="topictitle1">Required Information From the IdP</h1>
+        <h1 class="topictitle1">Vom IdP-System erforderliche Informationen</h1>
 
         <div>
                 <div class="section">
-                        <p>As is the case with the default IdP set up when installing the platform, for every other IdP associated with a tenant, you require the following:</p>
+                        <p>Analog zum IdP-System, das Sie bei der Installation der Plattform im Authentifizierungsmodus SAML_SP konfiguriert haben, benötigen Sie für jedes IdP-System, das Sie einem Mandanten zuordnen wollen, folgendes:</p>
 
                         <div class="p">
                                 <ul>
-                                        <li class="liexpand">A contractual relationship with the IdP operator so that the IdP can allow for Web browser SSO and secure of Web service calls using a Security Token Service (STS).</li>
+                                        <li class="liexpand">Eine vertragliche Vereinbarung mit dem IdP-Administrator. Nur so kann das IdP-Sytem Single Sign-On (SSO) im Web Browser und Web Service Calls über einen sicheren Security Token Service (STS) zulassen. </li>
 
-                                        <li class="liexpand">Information on the following service endpoints. Ask the IdP operator for the following information: <div class="p">
+                                        <li class="liexpand">Informationen zu folgenden Endpoints:<div class="p">
                                                         <ul>
-                                                            <li>For Web browser SSO: the SAML Redirect URL of the IdP as well as the URL of the single logout service endpoint.</li>
+                                                            <li>Zum SSO im Web Browser: SAML Redirect URL des IdP-Systems und die URL des Single Logout Service Endpoint..</li>
 
-                                                            <li>For STS communication: STS service endpoint URL as well as the URL pointing to the MEX address (Issuer Metadata Exchange) of the STS. </li>
+                                                            <li>Für die STS-Kommunikation: URL zum STS Service Endpoint und die URL der MEX-Adresse (Issuer Metadata Exchange). </li>
 
                                                         </ul>
 
                                                 </div>
-<p>In a multi-tenancy environment and when several tenants are associated with one and the same IdP system, one relying party per tenant must be defined and communicated.</p>
+<p>In einer Umgebung mit mehreren Mandanten und für den Fall, dass mehrere Mandanten ein und demselben IdP-System zugeordnet sind, muss pro Mandant eine Relying Party im IdP-System definiert und dem Plattformbetreiber mitgeteilt werden. </p>
 </li>
 
                                         <li class="liexpand">
-                                                <p>The entity ID of the IdP system. The IdP administrator can find out the ID by retrieving the federation metadata on his IdP system. </p>
+                                                <p>Die Entity-ID des IdP-Systems. Der IdP-Administrator kann diese ID über die Federation Metadata seines IdP-Systems herausfinden.</p>
 
                                         </li>
 
-                                        <li class="liexpand">Length of the encryption key used by the IdP. </li>
+                                        <li class="liexpand">Länge des Encryption Key an, wie er von dem IdP-System verwendet wird.</li>
 
-                                        <li class="liexpand">Information on whether the IdP can process <samp class="codeph">GET</samp> or <samp class="codeph">POST</samp> authentication requests.</li>
+                                        <li class="liexpand">Information ob das IdP-System <samp class="codeph">GET</samp> oder <samp class="codeph">POST</samp> Requests verarbeiten kann.</li>
 
-                                        <li class="liexpand">For Web browser SSO: the public key certificate from the IdP. Request this certificate from the IdP operator and import it into the application server truststore where the platform is deployed. Refer to the <em>Operator's Guide</em> for details on certificate handling. </li>
+                                        <li class="liexpand">Zum SSO im Web Browser: Public Key Zertifikat vom IdP-System. Fordern Sie dieses Zertifikat vom IdP-Administrator an und importieren Sie es in the Truststore des Application Servers, auf dem die Plattform installiert ist. Im <em>Operator's Guide</em> finden Sie ausführliche Informationen zum Umgang mit Zertifikaten. </li>
 
                                 </ul>
 

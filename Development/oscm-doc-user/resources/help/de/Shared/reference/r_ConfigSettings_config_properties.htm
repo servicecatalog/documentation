@@ -51,7 +51,7 @@
                         
                         <p>Obligatorisch. Legt fest, ob die Plattform zur Benutzerauthentifizierung verwendet wird oder ob die Plattform als SAML Service Provider verwendet wird. Diese Einstellung wird beim ersten Starten des Systems ausgewertet. Sie kann nach dem ersten Starten des Systems nicht mehr geändert werden. Die Einstellung läßt sich auch nicht durch eine Upgrade-Installation ändern.</p>
 
-                        <p>Erlaubte Werte: <samp class="codeph">INTERNAL</samp> für Plattform-Authentifizierung oder <samp class="codeph">SAML_SP</samp>, wenn die Plattform als SAML Service Provider verwendet werden soll.</p>
+                        <p>Erlaubte Werte: <samp class="codeph">INTERNAL</samp> für Plattform-Authentifizierung oder <samp class="codeph">SAML_SP</samp>, wenn die Plattform als SAML Service Provider verwendet werden soll und Benutzer über ein Identity-Provider-System (IdP) authentifiziert werden sollen.</p>
 
                         <p>Voreinstellung: <samp class="codeph">INTERNAL</samp>
                         </p>
@@ -170,25 +170,13 @@
 <p>Voreinstellung: <samp class="codeph">1080</samp></p>
 </div>
 
-                <div class="section"><h4 class="sectiontitle">IDP_ASSERTION_EXPIRATION</h4>Obligatorisch, wenn für einen technischen Service als Zugriffsart Benutzerzugriff definiert ist und die Plattform als SAML 1.1 Identity Provider verwendet wird. Ausführliche Informationen zu Zugriffsarten finden Sie im <em>Technology Provider's Guide</em>.<p>Die Einstellung legt die Anzahl Millisekunden fest, die eine vom SAML Identity Provider generierte Anwort gültig ist. Dies ist die Differenz aus den Werten der Attribute <samp class="codeph">NotAfterOrOn</samp> und <samp class="codeph">IssueInstant</samp> der Antwort. </p>
-<p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">1</samp> und <samp class="codeph">9223372036854775807</samp></p>
-<p>Voreinstellung: <samp class="codeph">1800000</samp> Millisekunden (30 Minuten)</p>
-</div>
+                <div class="section"><h4 class="sectiontitle">IDP_ASSERTION_EXPIRATION</h4>Veraltet. </div>
 
-                <div class="section"><h4 class="sectiontitle">IDP_ASSERTION_VALIDITY_TOLERANCE</h4>Obligatorisch, wenn für einen technischen Service als Zugriffsart Benutzerzugriff definiert ist und die Plattform als SAML 1.1 Identity Provider verwendet wird. Ausführliche Informationen zu Zugriffsarten finden Sie im <em>Technology Provider's Guide</em>.<p>Die Einstellung legt die Anzahl Millisekunden fest, die eine vom SAML Identity Provider generierte Anwort in der Vergangenheit gültig war. Durch die Einstellung sollen Synchronisationsproblemen zwischen Servern vermieden werden. Die Anzahl ist die Differenz aus den Werten der Attribute <samp class="codeph">IssueInstant</samp> und <samp class="codeph">NotBefore</samp> der Antwort. </p>
-<p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">1</samp> und <samp class="codeph">9223372036854775807</samp></p>
-<p>Voreinstellung: <samp class="codeph">600000</samp> Millisekunden (10 Minuten)</p>
-</div>
+                <div class="section"><h4 class="sectiontitle">IDP_ASSERTION_VALIDITY_TOLERANCE</h4>Veraltet. </div>
 
-                <div class="section"><h4 class="sectiontitle">IDP_PRIVATE_KEY_FILE_PATH</h4>Obligatorisch, wenn für einen technischen Service als Zugriffsart Benutzerzugriff definiert ist und die Plattform als SAML 1.1 Identity Provider verwendet wird. Ausführliche Informationen zu Zugriffsarten finden Sie im <em>Technology Provider's Guide</em>.<p>Die Einstellung legt die URL im Format Distinguished Encoding Rules (DER, Dateierweiterung<samp class="codeph">.der</samp>) fest, die auf den Private Key zeigt. Diese URL wird vom Identity Provider verwendet, um SAML-Meldungen zu signieren. </p>
-<p>Beispiel: <samp class="codeph">/opt/glassfish-3.1.2.2/glassfish/domains/bes-domain/config/cakey.der</samp></p>
-<p>Wenn Sie diese Einstellung ändern, müssen Sie die Plattform neu starten.</p>
-</div>
+                <div class="section"><h4 class="sectiontitle">IDP_PRIVATE_KEY_FILE_PATH</h4>Veraltet. </div>
 
-                <div class="section"><h4 class="sectiontitle">IDP_PUBLIC_CERTIFICATE_FILE_PATH</h4>Obligatorisch, wenn für einen technischen Service als Zugriffsart Benutzerzugriff definiert ist und die Plattform als SAML 1.1 Identity Provider verwendet wird. Ausführliche Informationen zu Zugriffsarten finden Sie im <em>Technology Provider's Guide</em>.<p>Die Einstellung legt die URL im Format Distinguished Encoding Rules (DER, Dateierweiterung<samp class="codeph">.der</samp>) fest, die auf das Public Certificate zeigt. Die URL wird an die Signatur des Identity Providers von SAML-Meldungen angehängt, so dass die Anwendung die Signatur validieren kann. </p>
-<p>Beispiel: <samp class="codeph">/opt/glassfish-3.1.2.2/glassfish/domains/bes-domain/config/cacert.der</samp></p>
-<p>Wenn Sie diese Einstellung ändern, müssen Sie die Plattform neu starten.</p>
-</div>
+                <div class="section"><h4 class="sectiontitle">IDP_PUBLIC_CERTIFICATE_FILE_PATH</h4>Veraltet </div>
 
                 <div class="section"><h4 class="sectiontitle">LDAP_SEARCH_LIMIT</h4>Optional. Maximale Anzahl Einträge, die eine LDAP-Suchanfrage zurückgibt, wenn eine Organisation ein externes LDAP-System zur Benutzerverwaltung verwendet. <p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">1</samp> und <samp class="codeph">9223372036854775807</samp></p>
 <p>Voreinstellung: <samp class="codeph">100</samp></p>
@@ -274,11 +262,28 @@
 
                 <div class="section"><h4 class="sectiontitle">SEARCH_INDEX_MASTER_QUEUE_NAME</h4>Obligatorisch. Name der JMS Queue der Suchindex-Applikation. Verwenden Sie den Wert <samp class="codeph">jms/bss/masterIndexerQueue</samp> und nehmen Sie keine Änderung vor. </div>
 
+                <div class="section"><h4 class="sectiontitle">SSO_DEFAULT_TENANT_ID</h4>Obligatorisch, wenn die Plattform als SAML Service Provider installiert wird. <p>Eindeutige ID für den Standard-Mandanten. Diesem Mandanten ist das IdP-System zugeordnet, das für die Authentifizierung aller auf der Plattform registrierten Benutzer verwendet wird, wenn diese auf einen Marktplatz oder das Administrationsportal zugreifen.</p>
+<p>Die ID muss exakt 8 Zeichen lang sein und keine Sonderzeichen oder Leerzeichen enthalten. Der Plattformbetreiben kann eine beliebige Zeichenfolge angeben. </p>
+<p>Diese ID muss dem IdP-Administrator mitgeteilt werden. Der IdP-Administrator muss diese ID als Attribute für SAML-Assertions setzen. Zum Beispiel in OpenAM: Die Plattform wurde als Service Provider (SP) registriert, dann wählt der IdP-Administrator diesen SP aus und gibt als Assertion Processing-Attribut folgendes ein: <samp class="codeph">tenantID="&lt;die 8 Zeichen&gt;"</samp>.</p>
+<p>Wenn Sie diese Einstellung nach dem ersten Datenaustausch zwischen der Plattform und dem IdP-System ändern müssen, müssen Sie sie sowohl in den Einstellung der Plattform als auch im IdP-System ändern. Eventuell müssen Sie dem IdP-Administrator eine neue Metadata-Exchange-Datei schicken.</p>
+</div>
+
                 <div class="section"><h4 class="sectiontitle">SSO_IDP_AUTHENTICATION_REQUEST_HTTP_METHOD</h4>Obligatorisch, wenn die Plattform als SAML Service Provider installiert wird. Gibt die Methode an, die für HTTP-Requests zur Authentifizierung verwendet wird. Abhängig vom IdP-System (Identity Provider)können <samp class="codeph">GET</samp>- oder <samp class="codeph">POST</samp>-Requests verwendet werden. <p>Erforderlich für Web Browser Single Sign-On.</p>
 <p>Voreinstellung: <samp class="codeph">POST</samp></p>
 <p>Wenn Sie diese Einstellung ändern, müssen Sie die Plattform neu starten.</p>
 
                 </div>
+
+                <div class="section"><h4 class="sectiontitle">SSO_SAML_ASSERTION_ISSUER_ID</h4>Obligatorisch, wenn die Plattform als SAML Service Provider installiert wird. <p>Entity-ID des IdP-Systems an. Diese ID ist für das IdP-System eindeutig und muss zwischen dem Plattformbetreiber und dem IdP-Administrator kommuniziert werden. Anhand dieser ID kann die Plattform sicherstellen, dass die Authentifizierungsdaten, die vom IdP-System zurückkommen, eindeutig von dem System stammen, das für die Authentifizierung konfiguriert wurde. </p>
+<p>Der IdP-Administrator kann diese ID beispielsweise über die Federation Medadata auf seinem IdP-System herausfinden. </p>
+<strong>Beispiele</strong>:<p>Auf dem OpenAM-Server können die Federation Metadata wie folgt in einem Web Browser abgerufen werden: </p>
+<p><samp class="codeph">https://&lt;OpenAM_server&gt;/openam/saml2/jsp/exportmetadata.jsp?entityid=</samp></p>
+<p>Auf dem ADFS-Server befinden sich die Daten in folgender Datei: </p>
+<p><samp class="codeph">http://&lt;ADFShost&gt;/FederationMetadata/2007-06/FederationMetadata.xml</samp></p>
+<p>In der XML-Datei heißt die Issuer ID auch <samp class="codeph">entityID</samp>, zu Beispiel:</p>
+<p><samp class="codeph">entityID="http://example.adfs.com/adfs/services/trust"</samp>
+                        </p>
+</div>
 
                 <div class="section"><h4 class="sectiontitle">SSO_IDP_TRUSTSTORE</h4>Obligatorisch, wenn die Plattform als SAML Service Provider installiert wird. Gibt den Pfad und Namen der Truststore-Datei an, die das Public-Key-Zertifikat des IdP-Systems (Identity Provider) enthalten muss. <p>Erforderlich für Web Browser Single Sign-On.</p>
 <p>Voreinstellung: <samp class="codeph">&lt;path&gt;/cacerts.jks</samp></p>
@@ -299,7 +304,7 @@
 </div>
 
                 <div class="section"><h4 class="sectiontitle">SSO_ISSUER_ID</h4>Obligatorisch, wenn die Plattform als SAML Service Provider installiert wird. Gibt eine eindeutige ID für die Plattform an, anhand derer das IdP-System (Identity Provider) eingehende SAML-Authentifizierungs-Requests von der Plattform identifizieren kann. <p>Erforderlich für Web Browser Single Sign-On.</p>
-<p>Wenn Sie diese Einstellung nach dem ersten Datenaustausch zwischen der Plattform und dem IdP-System ändern müssen, müssen Sie sie sowohl in den Einstellung der Plattform als auch im IdP-System ändern. Eventuell müssen Sie dem IdP-Betreiber eine neue Metadata-Exchange-Datei schicken.</p>
+<p>Wenn Sie diese Einstellung nach dem ersten Datenaustausch zwischen der Plattform und dem IdP-System ändern müssen, müssen Sie sie sowohl in den Einstellung der Plattform als auch im IdP-System ändern. Eventuell müssen Sie dem IdP-Administrator eine neue Metadata-Exchange-Datei schicken.</p>
 <p>Voreinstellung: <samp class="codeph">CT_MG</samp>
                         </p>
 <p>Wenn Sie diese Einstellung ändern, müssen Sie die Plattform neu starten.</p>
