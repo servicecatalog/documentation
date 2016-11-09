@@ -46,8 +46,8 @@
 
                                         <li>IdP管理者は<span>プラットフォーム</span>の証明書を必要とします。 IdPシステムは本証明書をログアウトリクエストの処理に使用します。</li>
 
-                                        <li><span>OSCM</span>に返されるアサーションは利用者のIDと各利用者に対応するテナントIDを含む必要があります。これは<span>OSCM</span>が利用者を<span>OSCM</span>の利用者ロール(システム運用管理部門のシステム管理者、サービス提供部門のサービス管理者、サービスポータル運用部門のサービスポータル管理者)に関連付けること、およびマルチテナント環境において利用者IDの一意性を保つために必要です。
-                                            <p>本情報を送付するために、IdPシステムはアサーションに2つの<samp class="codeph">&lt;AttributeStatement&gt;</samp>エレメントを定義する必要があります。最初の<samp class="codeph">&lt;Attribute&gt;</samp>要素には<samp class="codeph">Name="userid"</samp>プロパティを含める必要があります。また、<samp class="codeph">&lt;AttributeValue&gt;</samp>要素は<span>OSCM</span>の利用者IDと一致するIDを記載する必要があります。2つ目の<samp class="codeph">&lt;Attribute&gt;</samp>要素には<samp class="codeph">Name="tenantID"</samp>プロパティを含める必要があります。また、<samp class="codeph">&lt;AttributeValue&gt;</samp>要素には利用者が登録されている組織に関連付けられているテナントのIDを記載する必要があります。</p>
+                                        <li><span>プラットフォーム</span>に返されるアサーションは利用者のIDと各利用者に対応するテナントIDを含む必要があります。これは<span>プラットフォーム</span>が利用者を<span>プラットフォーム</span>の利用者ロール(システム運用管理部門のシステム管理者、サービス提供部門のサービス管理者、サービスポータル運用部門のサービスポータル管理者)に関連付けること、およびマルチテナント環境において利用者IDの一意性を保つために必要です。
+                                            <p>本情報を送付するために、IdPシステムはアサーションに2つの<samp class="codeph">&lt;AttributeStatement&gt;</samp>エレメントを定義する必要があります。最初の<samp class="codeph">&lt;Attribute&gt;</samp>要素には<samp class="codeph">Name="userid"</samp>プロパティを含める必要があります。また、<samp class="codeph">&lt;AttributeValue&gt;</samp>要素は<span>プラットフォーム</span>の利用者IDと一致するIDを記載する必要があります。2つ目の<samp class="codeph">&lt;Attribute&gt;</samp>要素には<samp class="codeph">Name="tenantID"</samp>プロパティを含める必要があります。また、<samp class="codeph">&lt;AttributeValue&gt;</samp>要素には利用者が登録されている組織に関連付けられているテナントのIDを記載する必要があります。</p>
 
                                             <p>例: </p>
 <div class="p">

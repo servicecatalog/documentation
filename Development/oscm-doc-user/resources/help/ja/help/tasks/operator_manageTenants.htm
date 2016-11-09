@@ -56,7 +56,7 @@
 
                                 <p>シンタックス: <samp class="codeph">https://&lt;host&gt;:&lt;port&gt;/&lt;LogoutServiceEndpoint&gt;</samp></p>
 
-                                <div class="note"><span class="notetitle">注:</span> IdPシステム内でログアウトリクエストへの応答を送信し、ログアウト時にリダイレクトさせることができるURLを指定する必要があります。複数のテナントに同一IdPを設定する場合、IdP管理者はテナントごとにサービスエンドポイントを定義し、システム運用管理者に通知する必要があります。</div>
+                                <div class="note"><span class="notetitle">注:</span> IdPシステム内でログアウトリクエストへの応答を送信し、ログアウト時にリダイレクトさせることができるURLを指定する必要があります。複数のテナントに同一IdPシステムを設定する場合、IdP管理者はテナントごとにリライングパーティを定義し、システム運用管理者に通知する必要があります。</div>
 
                             </li>
 
@@ -68,7 +68,7 @@
                                 <p>シンタックス: <samp class="codeph">https://&lt;host&gt;:&lt;port&gt;/&lt;RedirectServiceEndpoint&gt;</samp></p>
 
                                 <div class="p">
-                                    <div class="note"><span class="notetitle">注:</span> 複数のテナントに同一IdPを設定する場合、IdP管理者はテナントごとにサービスエンドポイントを定義し、システム運用管理者に通知する必要があります。</div>
+                                    <div class="note"><span class="notetitle">注:</span> 複数のテナントに同一IdPシステムを設定する場合、IdP管理者はテナントごとにリライングパーティを定義し、システム運用管理者に通知する必要があります。</div>
 
                                 </div>
 
@@ -102,8 +102,6 @@
                             <li><samp class="codeph"><strong>SSO_ISSUER_ID</strong></samp>
                                 <p>マルチテナント環境において認証リクエストを発行するテナントのID。すべての英数字を指定することができます。IdPは受け付けるSAML認証リクエストを特定するために本IDを使用します。</p>
 
-                                <p>###?</p>
-
                             </li>
 
                             <li><samp class="codeph"><strong>SSO_STS_ENCKEY_LEN</strong></samp>
@@ -126,7 +124,7 @@
 
                                 <p><samp class="codeph">http://&lt;ADFShost&gt;/FederationMetadata/2007-06/FederationMetadata.xml</samp></p>
 
-                                <p>XMLファイル内で発行者ID(issuer ID)は<samp class="codeph">entityID</samp>として記載されています。 例; </p>
+                                <p>XMLファイル内で発行者ID(issuer ID)は<samp class="codeph">entityID</samp>として記載されています。 例: </p>
 
                                 <p><samp class="codeph">entityID="http://example.adfs.com/adfs/services/trust"</samp></p>
 
@@ -192,7 +190,7 @@
 
                                 <li>プロパティファイルを編集し、<strong>Import</strong>をクリックして編集したプロパティファイルをインポートします。</li>
 
-                                <li>プロパティファイルが上書きされ、選択しているテナントのIdP接続設定が変更されたことを確認します。</li>
+                                <li>プロパティファイルが上書きされることを確認します。</li>
 
                             </ol>
 
