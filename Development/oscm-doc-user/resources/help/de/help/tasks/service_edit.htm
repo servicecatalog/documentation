@@ -89,12 +89,55 @@
                 
             </li>
 <li class="stepexpand">
-                <span>Definieren oder ändern Sie optional die <strong>URL eines eigenen Tabs</strong> an. Sie können Sie einen zusätzlichen Tab zur Ansicht <strong>Details</strong> hinzufügen, der angezeigt wird, wenn ein Benutzer zu einem Abonnement weitere Informationen anzeigt. Diese URL kann auf eine Web-Seite oder Web-Applikation leiten, deren Inhalt dann auf dem eigenen Tab angezeigt wird. Insbesondere Benutzer, die IaaS-Services nutzen, sind oftmals an Details zu einem abonnierten Service und dessen Betrieb interessiert.</span>
+                <span>Definieren oder ändern Sie optional die <strong>URL eines eigenen Tabs</strong> an. So können Sie einen zusätzlichen Tab zur Ansicht <strong>Details</strong> hinzufügen, der angezeigt wird, wenn ein Benutzer zu einem Abonnement weitere Informationen aufruft. Diese URL kann auf eine Web-Seite oder Web-Applikation leiten, deren Inhalt dann auf dem eigenen Tab angezeigt wird. Insbesondere Benutzer, die IaaS-Services nutzen, sind oftmals an Details zu einem abonnierten Service und dessen Betrieb interessiert. Über einen eigenen Tab können Sie Information, die für den Zugriff auf provisionierte Instanzen erforderlich sind, zur Verfügung stellen, zum Beispiel IP-Adressen, Netzwerkinformationen oder Zugangsdaten. </span>
                  
                     <div class="p">
                         <div class="note"><span class="notetitle">Hinweis:</span> Achten Sie darauf, dass die URL keine Sicherheitslücken aufweist. Die Syntax und Semantik der URL werden von der Plattform nicht validiert.</div>
 
                     </div>
+
+                    <p>Sie können vordefinierte, eigene Tabs einrichten, die Details zu einem IaaS-Service wie beispielsweise OpenStack oder Amazon Web Services (AWS) zur Ansicht bringen. Auf den eigenen Tabs, werden zu den gebuchten Virtuellen Maschinen (VMs) folgende Informationen angezeit: </p>
+
+                    <div class="p">
+                        <ul>
+                            <li>Kopfzeile mit dem Namen des Abonnements</li>
+
+                            <li>Zugangsinformationen </li>
+
+                            <li>Zu jeder VM: <div class="p">
+                                    <ul>
+                                        <li>Name der Instanz</li>
+
+                                        <li>ID der Instanz</li>
+
+                                        <li>Art der Instanz</li>
+
+                                        <li>Status der Instanz</li>
+
+                                        <li>Öffentliche IP-Adresse</li>
+
+                                        <li>Private IP-Adressen</li>
+
+                                    </ul>
+
+                                </div>
+</li>
+
+                        </ul>
+
+                    </div>
+
+                    <p>Die URL zum Zugriff auf einen solchen eigenen Tab muss im folgenden Format eingegeben werden: </p>
+
+                    <p><samp class="codeph">http://&lt;app-host-name&gt;:&lt;app-port&gt;/&lt;service controller name&gt;/serverInformation.jsf</samp></p>
+
+                    <p>oder, abhängig vom verwendeten Protokoll: </p>
+
+                    <p><samp class="codeph">https://&lt;app-host-name&gt;:&lt;app-port&gt;/&lt;service controller name&gt;/serverInformation.jsf</samp></p>
+
+                    <p>Beispiel: </p>
+
+                    <p><samp class="codeph">https://MyAPPHost:8880/oscm-app-openstack/serverInformation.jsf</samp></p>
 
                 
             </li>

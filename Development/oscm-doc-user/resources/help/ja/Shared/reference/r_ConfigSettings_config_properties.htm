@@ -220,6 +220,16 @@
 
         <div class="section"><h4 class="sectiontitle">IDP_PUBLIC_CERTIFICATE_FILE_PATH</h4>非推奨。</div>
 
+        <div class="section"><h4 class="sectiontitle">KEY_FILE_PATH</h4>必須項目。データタイプが<samp class="codeph">PWD</samp>であるサービスパラメーター、および暗号化が指定されたカスタム属性の暗号化および復号化に必要なキーを含むファイルへのパス<p>
+              
+              <span>プラットフォーム</span>起動時に本設定に指定されたパスにファイルが存在するかが確認されます。当該ファイルが存在しない場合、当該パスに自動的にファイルが作成されます。本設定が行われていない場合、デフォルトのパスに<samp class="codeph">key</samp>という名前で作成されます。</p>
+デフォルトパス: <p><samp class="codeph">&lt;GLASSFISH_HOME&gt;/glassfish/domains/bes-domain/config</samp>ディレクトリ配下、<samp class="codeph">./key</samp></p>
+<div class="p">
+                <div class="note"><span class="notetitle">注:</span> キーファイルは削除しないように注意してください。削除した場合、暗号化および復号化を行うことができません。作成されたファイルをバックアップしておくことを推奨します。</div>
+
+            </div>
+</div>
+
         <div class="section"><h4 class="sectiontitle">LDAP_SEARCH_LIMIT</h4>オプション項目。組織が利用者の管理に外部LDAPシステムを使用する場合に、LDAPクエリが返すことができるエントリの最大数。 <p>設定可能な値： <samp class="codeph">1</samp>～<samp class="codeph">9223372036854775807</samp>の範囲の値を指定します。</p>
 <p>デフォルト： <samp class="codeph">100</samp></p>
 </div>
@@ -328,22 +338,21 @@
 
         </div>
 
-        <div class="section"><h4 class="sectiontitle">SSO_SAML_ASSERTION_ISSUER_ID</h4><span>プラットフォーム</span>をSAML_SP認証モードでインストールする場合は必須。
-                <p>IdPシステムのエンティティID。本IDはIdPごとに一意であり、システム運用管理者とIdP管理者間で共有する必要があります。本IDは利用者が登録されているIdPシステムから認証情報が返答されていることを確認するために使用します。</p>
+        <div class="section"><h4 class="sectiontitle">SSO_IDP_SAML_ASSERTION_ISSUER_ID</h4><span>プラットフォーム</span>をSAML_SP認証モードでインストールする場合は必須。 <p>IdPシステムのエンティティID。本IDはIdPごとに一意であり、システム運用管理者とIdP管理者間で共有する必要があります。本IDは利用者が登録されているIdPシステムから認証情報が返答されていることを確認するために使用します。</p>
 
-                <p>IdP管理者は本IDをIdPシステム内のフェデレーションメタデータから取得することができます。</p>
+            <p>IdP管理者は本IDをIdPシステム内のフェデレーションメタデータから取得することができます。</p>
 
-                <strong>例</strong>:<p>OpenAMサーバーでは、フェデレーションメタデータをWebブラウザから以下のように取得することができます: </p>
+            <strong>例</strong>:<p>OpenAMサーバーでは、フェデレーションメタデータをWebブラウザから以下のように取得することができます: </p>
 
-                <p><samp class="codeph">https://&lt;OpenAM_server&gt;/openam/saml2/jsp/exportmetadata.jsp?entityid=</samp></p>
+            <p><samp class="codeph">https://&lt;OpenAM_server&gt;/openam/saml2/jsp/exportmetadata.jsp?entityid=</samp></p>
 
-                <p>ADFSサーバーでは以下のファイルを確認することでフェデレーションメタデータを取得することができます: </p>
+            <p>ADFSサーバーでは以下のファイルを確認することでフェデレーションメタデータを取得することができます: </p>
 
-                <p><samp class="codeph">http://&lt;ADFShost&gt;/FederationMetadata/2007-06/FederationMetadata.xml</samp></p>
+            <p><samp class="codeph">http://&lt;ADFShost&gt;/FederationMetadata/2007-06/FederationMetadata.xml</samp></p>
 
-                <p>XMLファイル内で発行者ID(issuer ID)は<samp class="codeph">entityID</samp>として記載されています。 例; </p>
+            <p>XMLファイル内で発行者ID(issuer ID)は<samp class="codeph">entityID</samp>として記載されています。 例; </p>
 
-                <p><samp class="codeph">entityID="http://example.adfs.com/adfs/services/trust"</samp>
+            <p><samp class="codeph">entityID="http://example.adfs.com/adfs/services/trust"</samp>
             </p>
 
         </div>

@@ -33,20 +33,49 @@
 
       </li>
 <li class="stepexpand">
+        <span>Wenn Sie Ihren Kunden einen Namen für das Attribut in einer der unterstützten Sprachen anzeigen möchten:</span>
+         Wählen Sie die <span class="uicontrol">Sprache</span>, in der der Attributname angezeigt werden sollen, und geben Sie im Feld <span class="uicontrol">Attributname</span>einen Namen an. <p>Sie können maximal 255 Zeichen eingeben.</p>
+
+      </li>
+<li class="stepexpand">
         <span>Geben Sie im Feld <span class="uicontrol">Vordefinierter Wert</span> einen Standardwert für das Attribut ein.</span>
          
           <p>Sie können maximal 255 Zeichen eingeben.</p>
 
-          <p>Der Standardwert wird verwendet, sofern kein spezifischer Wert für einen bestimmten Kunden oder ein bestimmtes Abonnement angegeben wird. Wenn der Wert eines eigenen Attributs vom Kunden eingegeben werden soll (siehe nächster Schritt), ist das entsprechende Feld beim Abonnieren des Service mit dem Standardwert vorbelegt.</p>
+          <p>Der Standardwert wird verwendet, sofern kein spezifischer Wert für einen bestimmten Kunden oder ein bestimmtes Abonnement angegeben wird. Wenn der Wert eines eigenen Attributs für ein Abonnement vom Kunden eingegeben werden soll (siehe nächster Schritt), ist das entsprechende Feld beim Abonnieren des Service mit dem Standardwert vorbelegt. Wenn der Wert eines eigenen Attributes für Kunden vom Administrator des Kunden eingegeben werden soll, ist das entsprechende Feld beim Bearbeiten des Organisationsprofils auf der Seite <strong>Verwaltung</strong> vorbelegt.</p>
 
         
       </li>
 <li class="stepexpand">
-        <span>Markieren Sie die Option <span class="uicontrol">Benutzeroption</span>, wenn Sie einem Administrator oder Abo-Manager des Kunden beim Abonnieren Ihres Service die Möglichkeit bieten möchten, den Attributwert selbst einzugeben.</span>
+        <span>Markieren Sie die Option <span class="uicontrol">Benutzeroption</span>, wenn Sie einem Administrator oder Abo-Manager des Kunden beim Abonnieren Ihres Service die Möglichkeit bieten möchten, den Attributwert selbst einzugeben (für kundenspezifische Attribute), oder einem Administrator des Kunden beim Aktualisieren des Organisationsprofils. </span>
       </li>
 <li class="stepexpand">
-        <span>Markieren Sie die Option <span class="uicontrol">Pflichtangabe</span>, wenn die Eingabe des Attributwerts durch den Administrator oder Abo-Manager des Kunden obligatorisch sein soll.</span>
+        <span>Markieren Sie die Option <span class="uicontrol">Pflichtangabe</span>, wenn die Eingabe des Attributwerts durch den Administrator oder Abo-Manager des Kunden obligatorisch sein soll. </span>
          Die Option steht nur zur Verfügung, wenn Sie die Option <span class="uicontrol">Benutzeroption</span> im vorherigen Schritt markiert haben.
+      </li>
+<li class="stepexpand">
+        <span>Wenn Ihre Kunden einen IaaS-Service wie zum Beispiel OpenStack oder Amazon Web Services (AWS) verwenden, können Sie die ID des zugehörigen Service-Controllers im Feld <span class="uicontrol">Controller-ID</span> angeben. Für weitere Informationen, wenden Sie sich an Ihren Hersteller. Wenn Sie eine Controller-ID angeben, können Sie zulassen, dass Kunden ihre Zugangsdaten zu ihrem IaaS-Konto selbst angeben können. So müssen sie diese Zugangsdaten nur einmal angeben, und nicht einzeln für jedes Abonnement. </span>
+         Beachten Sie folgendes, wenn Sie Ihren Kunden diese Option anbieten wollen: <div class="p">
+            <ul>
+              <li>Sie müssen ein kundenspezifisches eigenes Attribut anlegen. </li>
+
+              <li>Die ID des Attributs muss mit der entsprechenden Konfigurationseinstellung für den Service Controller übereinstimmen. <p>Für OpenStack-Services können Sie beispielsweise zwei eigene Attribute mit folgenden IDs anlegen: <samp class="codeph">API_USER_NAME</samp> und <samp class="codeph">API_USER_PWD</samp>. Für AWS sind die entsprechenden IDs <samp class="codeph">ACCESS_KEY_ID_PWD</samp> und <samp class="codeph">SECRET_KEY_PWD</samp>.</p>
+</li>
+
+              <li>
+                <p>Wählen Sie <span class="uicontrol">Verschlüsselt</span> für Attribute zur Eingabe von Passwörtern. Dadurch werden die Passwörter in der Datenbank verschlüsselt gespeichert, in Berichten und Log-Dateien verschlüsselt ausgegeben, sowie an der Benutzeroberfläche nicht angezeigt.</p>
+
+              </li>
+
+              <li>Der Kunden-Administrator kann die Zugangsdaten seiner Organisation zum IaaS-System eingeben, sobald er das Profil seiner Organisation auf seinem Marktplatz bearbeitet. Sobald der Kunden-Administrator die Zugangsdaten ändert, gelten sie für alle Abonnements dieser Kundenorganisation. </li>
+
+            </ul>
+
+          </div>
+
+      </li>
+<li class="stepexpand">
+        <span>Wählen Sie <span class="uicontrol">Verschlüsselt</span>, um den Wert des Attributs in der Datenbank verschlüsselt zu speichern, in Berichten und Log-Dateien verschlüsselt auszugeben, sowie an der Benutzeroberfläche nicht anzuzeigen.</span>
       </li>
 <li class="stepexpand">
         <span>Schließen Sie Ihre Eingaben mit <span class="uicontrol">Speichern</span> ab.</span>

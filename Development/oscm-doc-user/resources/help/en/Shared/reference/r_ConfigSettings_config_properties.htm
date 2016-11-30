@@ -174,6 +174,14 @@
 
         <div class="section"><h4 class="sectiontitle">IDP_PUBLIC_CERTIFICATE_FILE_PATH</h4>Deprecated. </div>
 
+        <div class="section"><h4 class="sectiontitle">KEY_FILE_PATH</h4>Mandatory. The path to the file containing the key required for encryption and decryption of  service parameters with data type <samp class="codeph">PWD</samp> or custom attributes marked for encryption.<p>Upon the start of <span>the platform</span>, it is checked whether a key file exists in the location specified in this setting. If this not the case, the key file is automatically generated and stored in the location specified here. If nothing is specified, the file will be generated into the default location and named <samp class="codeph">key</samp>.</p>
+Default: <p><samp class="codeph">./key</samp> in the <samp class="codeph">&lt;GLASSFISH_HOME&gt;/glassfish/domains/bes-domain/config</samp> directory</p>
+<div class="p">
+                <div class="note"><span class="notetitle">Note:</span> Be aware that the key file must not be deleted. Otherwise, encryption and decryption is no longer possible. It is recommended to create a backup of this file once generated.</div>
+
+            </div>
+</div>
+
         <div class="section"><h4 class="sectiontitle">LDAP_SEARCH_LIMIT</h4>Optional. The maximum number of entries that will be returned by an LDAP query in case an organization uses an external LDAP system for user management. <p>Allowed values: Any value between <samp class="codeph">1</samp> and <samp class="codeph">9223372036854775807</samp></p>
 <p>Default: <samp class="codeph">100</samp></p>
 </div>
@@ -272,7 +280,7 @@
 
         </div>
 
-        <div class="section"><h4 class="sectiontitle">SSO_SAML_ASSERTION_ISSUER_ID</h4>Mandatory if you install <span>the platform</span> in SAML_SP authentication mode. <p>The entity ID of the IdP system. This ID is unique for the IdP system and has to be communicated between the platform operator and the IdP administrator. It is required so that the platform can ensure that the authentication information returned from the IdP system actually comes from the IdP system that is configured for authenticating users. </p>
+        <div class="section"><h4 class="sectiontitle">SSO_IDP_SAML_ASSERTION_ISSUER_ID</h4>Mandatory if you install <span>the platform</span> in SAML_SP authentication mode. <p>The entity ID of the IdP system. This ID is unique for the IdP system and has to be communicated between the platform operator and the IdP administrator. It is required so that the platform can ensure that the authentication information returned from the IdP system actually comes from the IdP system that is configured for authenticating users. </p>
 <p>The IdP administrator can find out the ID by retrieving the federation metadata on his IdP system. </p>
 <strong>Examples</strong>:<p>On the OpenAM server, the federation metadata can be retrieved in a Web browser as follows: </p>
 <p><samp class="codeph">https://&lt;OpenAM_server&gt;/openam/saml2/jsp/exportmetadata.jsp?entityid=</samp></p>

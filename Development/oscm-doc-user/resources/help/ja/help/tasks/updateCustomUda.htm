@@ -33,11 +33,17 @@
                     <ul>
                         <li class="liexpand"><span class="uicontrol">属性ID</span>: 属性の識別子または名前。属性IDは40文字以内に制限され、以下の文字は使用できません。: <samp class="codeph">! " # $ % &amp; ' * + , / : ; &lt; &gt; \ ^ `</samp></li>
 
+                        <li class="liexpand"><strong>属性名</strong>および<strong>言語</strong>: 選択した言語でのカスタム属性の名前。当該言語でサービス利用部門に表示されます。</li>
+
                         <li class="liexpand"><span class="uicontrol">既定値</span>: 属性の標準として用いる値。255文字まで入力できます。既定値は個々のサービス利用部門や購入済サービスに値が設定されていない場合に使用されます。サービス利用部門によって値が設定された場合、その値はサービスの購読時にデフォルトの値としてプリセットされます。</li>
 
                         <li class="liexpand"><span class="uicontrol">利用者による入力</span>: サービス利用部門の管理者またはサービス購入管理者がサービスを購入する際にそのカスタム属性を表示するかどうかを選択するためのチェックボックス。属性を表示した場合、管理者またはサービス購入管理者はサービス購入時に属性に対して値を設定できます。</li>
 
                         <li class="liexpand"><span class="uicontrol">必須</span>: サービス利用部門の管理者またはサービス購入管理者がサービスを購入する際にそのカスタム属性の値を入力必須にするかどうかを選択するためのチェックボックス。</li>
+
+                        <li class="liexpand"><strong>コントローラーID</strong>: OpenStackやAmazon Web Services (AWS)といったIaaSサービスを提供するために使うサービスコントローラーのID。</li>
+
+                        <li class="liexpand"><strong>暗号化</strong>: ログ、レポート、およびDBにおける属性値の暗号化有無。有効にするとサービス利用部門の管理者が入力した値が隠蔽されます。チェックボックスがあらかじめ選択されている場合、設定を変更することはできません。</li>
 
                     </ul>
 

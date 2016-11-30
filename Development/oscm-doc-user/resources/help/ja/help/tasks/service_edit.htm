@@ -95,9 +95,52 @@
         <span>必要に応じて、<strong>カスタムタブのURL</strong>を変更します。この項目を指定することでサービスポータルの購入済サービスの<strong>詳細</strong>画面にタブを追加することができます。本URLはカスタムタブ向けのWebページもしくはWebアプリケーションのコンテンツを表示します。たとえば、IaaSサービスの利用者向けにサービス詳細やサービスの操作に関する情報を表示することが可能です。</span>
          
           <div class="p">
-            <div class="note"><span class="notetitle">注:</span> 必ず安全なカスタムタブ向けのWebページやWebアプリケーションに接続するURLを指定してください。プラットフォームはURLの正当性(シンタックスや内容)を確認しません。</div>
+            <div class="note"><span class="notetitle">注:</span> カスタムタブに指定するWebページやWebアプリケーションに接続するURLは安全であることを確認してください。プラットフォームはURLの正当性(シンタックスや内容)を確認しません。</div>
 
           </div>
+
+          <p>OpenStackやAmazon Web Services (AWS)といったIaaSサービスを提供する購入済サービスの詳細を参照するために、事前に定義したカスタムタブを使用することができます。カスタムタブでは次の情報により配備した仮想マシン(VM)の一覧が表示されます。: </p>
+
+          <div class="p">
+            <ul>
+              <li>購入済サービスの名前(ヘッダー)</li>
+
+              <li>接続のための情報</li>
+
+              <li>個々のVMに対しての情報: <div class="p">
+                <ul>
+                  <li>インスタンス名</li>
+
+                  <li>インスタンスID </li>
+
+                  <li>インスタンスタイプ</li>
+
+                  <li>インスタンスの状態</li>
+
+                  <li>パブリックIP</li>
+
+                  <li>プライベートIP</li>
+
+                </ul>
+
+              </div>
+</li>
+
+            </ul>
+
+          </div>
+
+          <p>次のフォーマットでカスタムタブへアクセスするためのURLを設定することができます: </p>
+
+          <p><samp class="codeph">http://&lt;app-host-name&gt;:&lt;app-port&gt;/&lt;service controller name&gt;/serverInformation.jsf</samp></p>
+
+          <p>使用するプロトコルにより、次のフォーマットを使用します:</p>
+
+          <p><samp class="codeph">https://&lt;app-host-name&gt;:&lt;app-port&gt;/&lt;service controller name&gt;/serverInformation.jsf</samp></p>
+
+          <p>例: </p>
+
+          <p><samp class="codeph">https://MyAPPHost:8880/oscm-app-openstack/serverInformation.jsf</samp></p>
 
         
       </li>

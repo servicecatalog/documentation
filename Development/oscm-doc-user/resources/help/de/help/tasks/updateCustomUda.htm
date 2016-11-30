@@ -21,7 +21,7 @@
 
     <div>
         <div class="section">
-            <p>Auf der Seite <span class="uicontrol">Eigenes Attribut bearbeiten</span> können Sie ein ausgewähltes Attribut beabeiten oder löschen.</p>
+            <p>Auf der Seite <span class="uicontrol">Eigenes Attribut bearbeiten</span> können Sie ein ausgewähltes Attribut bearbeiten oder löschen.</p>
 
             <p><strong>So bearbeiten Sie ein eigenes Attribut</strong>:</p>
 
@@ -31,13 +31,19 @@
                 <span>Ändern Sie die erforderlichen Daten.</span>
                  
                     <ul>
-                        <li class="liexpand"><span class="uicontrol">Attribut-ID</span>: ID oder Name des Attributs. Die ID darf aus maximal 40 Zeichen bestehen. Die folgenden Zeichen sind nicht erlaubt: <samp class="codeph">! " # $ % &amp; ' * + , / : ; &lt; &gt; \ ^ `</samp></li>
+                        <li class="liexpand"><span class="uicontrol">Attribut-ID</span>: ID des Attributs. Die ID darf aus maximal 40 Zeichen bestehen. Die folgenden Zeichen sind nicht erlaubt: <samp class="codeph">! " # $ % &amp; ' * + , / : ; &lt; &gt; \ ^ `</samp></li>
+
+                        <li class="liexpand"><strong>Attributname</strong> und <strong>Sprache</strong>: Name des Attributs in der gewählten Sprache.</li>
 
                         <li class="liexpand"><span class="uicontrol">Vordefinierter Wert</span>: Standardwert für das Attribut. Sie können maximal 255 Zeichen eingeben. Der Standardwert wird verwendet, sofern kein spezifischer Wert für einen bestimmten Kunden oder ein bestimmtes Abonnement angegeben wird. Wenn der Wert eines eigenen Attributs vom Kunden eingegeben werden soll, ist das entsprechende Feld beim Abonnieren des Service mit dem Standardwert vorbelegt. </li>
 
                         <li class="liexpand"><span class="uicontrol">Benutzeroption</span>: Markieren Sie diese Option, wenn Sie dem Administrator des Kunden oder dem Abo-Manager beim Abonnieren Ihres Service die Möglichkeit bieten möchten, den Attributwert selbst einzugeben.</li>
 
                         <li class="liexpand"><span class="uicontrol">Pflichtangabe</span>: Markieren Sie diese Option, wenn die Eingabe des Attributwerts durch den Administrator des Kunden oder den Abo-Manager obligatorisch sein soll.</li>
+
+                        <li class="liexpand"><strong>Controller-ID</strong>: ID des Service-Controllers zur Bereitstellung von IaaS-Services, beispielsweise OpenStack oder Amazon Web Services (AWS).</li>
+
+                        <li class="liexpand"><strong>Verschlüsselt</strong>: Markieren Sie diese Option, wenn der Attributwert in der Datenbank verschlüsselt gespeichert und in Berichten und Log-Dateien ausgegeben werden soll. Zudem werden Werte, die an der Benutzeroberfläche eingegeben werden, nicht angezeigt. Wenn diese Option bereits gewählt ist, kann sie nicht mehr verändert werden. </li>
 
                     </ul>
 
