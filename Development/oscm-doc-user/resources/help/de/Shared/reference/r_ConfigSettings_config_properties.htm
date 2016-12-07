@@ -211,11 +211,11 @@ Voreinstellung: <p><samp class="codeph">./key</samp> im Verzeichnis <samp class=
 <p>Voreinstellung: <samp class="codeph">3</samp></p>
 </div>
 
-                <div class="section"><h4 class="sectiontitle">MP_ERROR_REDIRECT_HTTP</h4>Optional. Diese URL führt zur einer Webseite, die angezeigt wird, wenn HTTP verwendet wird und ein Kunde versucht, mit einer ungültigen ID auf einen Marktplatz zuzugreifen. Diese URL ersetzt die voreingestellte Fehlerseite.<p>Syntax: <samp class="codeph">http://&lt;Ihre Webseite&gt;</samp></p>
+                <div class="section"><h4 class="sectiontitle">MP_ERROR_REDIRECT_HTTP</h4>Optional. Diese URL führt zur einer Webseite, die angezeigt wird, wenn HTTP verwendet wird und ein Kunde versucht, mit einer ungültigen ID auf einen Marktplatz zuzugreifen. Diese URL ersetzt die voreingestellte Fehlerseite. Beachten Sie, dass diese URL systemweit gilt und nicht mandanten-spezifisch ist.<p>Syntax: <samp class="codeph">http://&lt;Ihre Webseite&gt;</samp></p>
 <p>Stellen Sie sicher, dass Sie eine gültige URL angeben, die aus maximal 255 Zeichen besteht. </p>
 </div>
 
-                <div class="section"><h4 class="sectiontitle">MP_ERROR_REDIRECT_HTTPS</h4>Optional. Diese URL führt zur einer Webseite, die angezeigt wird, wenn HTTPS verwendet wird und ein Kunde versucht, mit einer ungültigen ID auf einen Marktplatz zuzugreifen. Diese URL ersetzt die voreingestellte Fehlerseite.<p>Syntax: <samp class="codeph">https://&lt;Ihre Webseite&gt;</samp></p>
+                <div class="section"><h4 class="sectiontitle">MP_ERROR_REDIRECT_HTTPS</h4>Optional. Diese URL führt zur einer Webseite, die angezeigt wird, wenn HTTPS verwendet wird und ein Kunde versucht, mit einer ungültigen ID auf einen Marktplatz zuzugreifen. Diese URL ersetzt die voreingestellte Fehlerseite.  Beachten Sie, dass diese URL systemweit gilt und nicht mandanten-spezifisch ist.<p>Syntax: <samp class="codeph">https://&lt;Ihre Webseite&gt;</samp></p>
 <p>Stellen Sie sicher, dass Sie eine gültige URL angeben, die aus maximal 255 Zeichen besteht. </p>
 </div>
 
@@ -321,7 +321,7 @@ Voreinstellung: <p><samp class="codeph">./key</samp> im Verzeichnis <samp class=
 <p>Aus Sicherheitsgründen wird empfohlen, das HTTPS-Protokoll zu verwenden. </p>
 <p>Syntax: <samp class="codeph">https://&lt;host&gt;:&lt;port&gt;/&lt;LogoutServiceEndpoint&gt;</samp></p>
 <p>Wenn Sie diese Einstellung ändern, müssen Sie die Plattform neu starten.</p>
-<div class="note"><span class="notetitle">Hinweis:</span> Im IdP-System muss eine URL angegeben werden, zu der die Antwort auf den Request zur Abmeldung geschickt und der Benutzer nach der Abmeldung geleitet wird. Es wird empfohlen, folgende Standard-Marktplatzadresse der Plattform zu verwenden: <samp class="codeph">https://&lt;host&gt;:&lt;port&gt;/oscm-portal/marketplace/index.jsf</samp>. Bei Problemen kann der Benutzer automatisch von dieser Seite auf eine weitere Seite geleitet werden, die in der Konfigurationseinstellung <samp class="codeph">MP_ERROR_REDIRECT_HTTPS</samp> angegeben ist.</div>
+<div class="note"><span class="notetitle">Hinweis:</span> Im IdP-System muss eine URL angegeben werden, zu der die Antwort auf den Request zur Abmeldung geschickt und der Benutzer nach der Abmeldung geleitet wird. Es wird empfohlen, folgende Standard-Marktplatzadresse der Plattform zu verwenden: <samp class="codeph">https://&lt;host&gt;:&lt;port&gt;/oscm-portal/marketplace/index.jsf</samp>. Bei Problemen kann der Benutzer automatisch von dieser Seite auf eine weitere Seite geleitet werden, die in der Konfigurationseinstellung <samp class="codeph">MP_ERROR_REDIRECT_HTTPS</samp> angegeben ist. Beachten Sie aber, dass diese URL systemweit gilt und nicht mandanten-spezifisch ist.</div>
 </div>
 
                 <div class="section"><h4 class="sectiontitle">SSO_SIGNING_KEY_ALIAS</h4>Obligatorisch, wenn die Plattform als SAML Service Provider installiert wird, Single Logout verwendet werden soll, und der Single Logout Service des IdP-Systms signierte Requests erwartet, wie beispielsweise in Microsoft Active Directory Federation Services.<p>Gibt den Alias des privaten Schlüssels der Plattform an, der zum Signieren von Requests zur Abmeldung verwendet werden soll. Im IdP-System muss das entsprechende Zertifikat der Plattform hinterlegt werden, damit die Requests verifiziert werden können. </p>
