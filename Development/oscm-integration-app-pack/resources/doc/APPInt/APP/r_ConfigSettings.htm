@@ -62,6 +62,14 @@
 
         </div>
 
+        <div class="section"><h4 class="sectiontitle">APP_KEY_PATH</h4>The path to the file containing the key required for encryption and decryption of service parameters with data type <samp class="codeph">PWD</samp> or custom attributes marked for encryption.<p>Upon the start of APP, it is checked whether a key file exists in the location specified in this setting. If this not the case, the key file is automatically generated and stored in the location specified here. If nothing is specified, the file will be generated into the default location and named <samp class="codeph">key</samp>.</p>
+Default: <p><samp class="codeph">./key</samp> in the <samp class="codeph">&lt;GLASSFISH_HOME&gt;/glassfish/domains/app-domain/config</samp> directory</p>
+<div class="p">
+                <div class="note"><span class="notetitle">Note:</span> Be aware that the key file must not be deleted. Otherwise, encryption and decryption is no longer possible. It is recommended to create a backup of this file once generated.</div>
+
+            </div>
+</div>
+
         <div class="section"><h4 class="sectiontitle">APP_KEYSTORE_PASSWORD</h4>
             
             <p><samp class="codeph">APP_KEYSTORE_PASSWORD=changeit</samp></p>

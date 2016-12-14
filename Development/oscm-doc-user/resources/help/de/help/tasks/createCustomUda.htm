@@ -59,6 +59,8 @@
             <ul>
               <li>Sie müssen ein kundenspezifisches eigenes Attribut anlegen. </li>
 
+              <li>Verwenden Sie einen aussagekräftigen Namen für Controller-spezifische Attribute, weil Ihr Kunde nicht weiß, welches Attribut von welchem Controller abhängt. Wenn Sie beispielsweise zwei Attribute definieren, wovon eines für die Eingabe des Passworts für Amazon Web Services (AWS) und das andere für Openstack sein soll, sieht der Kundenadministrator die Namen der beiden Attribute. Hier könnten Sie zum Beispiel die Namen "AWS-Passwort" und "OpenStack-Passwort" als Namen definieren. </li>
+
               <li>Die ID des Attributs muss mit der entsprechenden Konfigurationseinstellung für den Service Controller übereinstimmen. <p>Für OpenStack-Services können Sie beispielsweise zwei eigene Attribute mit folgenden IDs anlegen: <samp class="codeph">API_USER_NAME</samp> und <samp class="codeph">API_USER_PWD</samp>. Für AWS sind die entsprechenden IDs <samp class="codeph">ACCESS_KEY_ID_PWD</samp> und <samp class="codeph">SECRET_KEY_PWD</samp>.</p>
 </li>
 

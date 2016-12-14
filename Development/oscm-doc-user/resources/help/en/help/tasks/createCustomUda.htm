@@ -57,7 +57,9 @@
         <span>If your customers use an IaaS service such as OpenStack or Amazon Web Services (AWS), you can enter the ID of the corresponding service controller in the <span class="uicontrol">Controller ID</span> field. Contact your technology provider for details. By specifying a controller ID, you can allow your customers to set his credentials for an IaaS service without having to maintain these credentials for each subscription separately. </span>
          Be aware of the following if you want to offer this feature to your customers:<div class="p">
             <ul>
-              <li>You need to define a custom attribute for customers. </li>
+              <li>You need to define a custom attribute for customers.</li>
+
+              <li>Use a meaningful name for controller-specific attributes, because the customer will not have information which attribute is controller-specific. For example, if you define two custom attributes for customers and one should be a password for Amazon Web Services (AWS) and one a password needed for using OpenStack, the customer sees the names of the two attributes. In this case, use, for example, "AWS password" and "OpenStack password" as attribute names. </li>
 
               <li>The attribute ID must match the corresponding setting in the service controller configuration settings. <p>For example, for OpenStack services you can create two custom attributes with the following IDs: <samp class="codeph">API_USER_NAME</samp> and <samp class="codeph">API_USER_PWD</samp>. For AWS, the IDs are <samp class="codeph">ACCESS_KEY_ID_PWD</samp> and <samp class="codeph">SECRET_KEY_PWD</samp>.</p>
 </li>

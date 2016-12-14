@@ -262,11 +262,11 @@
 <p>デフォルト： <samp class="codeph">3</samp></p>
 </div>
 
-        <div class="section"><h4 class="sectiontitle">MP_ERROR_REDIRECT_HTTP</h4>オプション項目。有効でないサービスポータルIDを指定してサービスポータルにHTTPでアクセスしようとした場合に表示するWebページのURLです。このWebページがデフォルトのエラーメッセージの代わりに表示されます。<p>指定形式： <samp class="codeph">http://&lt;表示するWebページ&gt;</samp></p>
+        <div class="section"><h4 class="sectiontitle">MP_ERROR_REDIRECT_HTTP</h4>オプション項目。有効でないサービスポータルIDを指定してサービスポータルにHTTPでアクセスしようとした場合に表示するWebページのURLです。このWebページがデフォルトのエラーメッセージの代わりに表示されます。この設定はテナントごとではなく、プラットフォーム全体に有効になることに注意してください。<p>指定形式： <samp class="codeph">http://&lt;表示するWebページ&gt;</samp></p>
 <p>255文字以下の有効なURLを指定します。</p>
 </div>
 
-        <div class="section"><h4 class="sectiontitle">MP_ERROR_REDIRECT_HTTPS</h4>オプション項目。有効でないサービスポータルIDを指定してサービスポータルにHTTPSでアクセスしようとした場合に表示するWebページのURLです。このWebページがデフォルトのエラーメッセージの代わりに表示されます。<p>指定形式： <samp class="codeph">https://&lt;表示するWebページ&gt;</samp></p>
+        <div class="section"><h4 class="sectiontitle">MP_ERROR_REDIRECT_HTTPS</h4>オプション項目。有効でないサービスポータルIDを指定してサービスポータルにHTTPSでアクセスしようとした場合に表示するWebページのURLです。このWebページがデフォルトのエラーメッセージの代わりに表示されます。この設定はテナントごとではなく、プラットフォーム全体に有効になることに注意してください。<p>指定形式： <samp class="codeph">https://&lt;表示するWebページ&gt;</samp></p>
 <p>255文字以下の有効なURLを指定します。</p>
 </div>
 
@@ -413,6 +413,12 @@
           <p>この設定を変更した場合、
             
             <span>プラットフォーム</span>を再起動する必要があります。</p>
+
+            <div class="note"><span class="notetitle">注:</span> IdPシステムにおいては、ログアウトリクエストに対するレスポンスが送られ、利用者がログアウトによってリダイレクトされるURLを指定する必要があります。この設定には
+             　　　　　　　
+             　　　　　　　<span>プラットフォーム</span>のデフォルトサービスポータルを使用することを推奨します:　
+             <samp class="codeph">https://&lt;host&gt;:&lt;port&gt;/oscm-portal/marketplace/index.jsf</samp>。問題が発生した場合、このページから<samp class="codeph">MP_ERROR_REDIRECT_HTTPS</samp>に指定したページに利用者をリダイレクトすることができます。ただし、この設定はテナントごとではなく、プラットフォーム全体に有効になることに注意してください。
+            </div>
 
         </div>
 
