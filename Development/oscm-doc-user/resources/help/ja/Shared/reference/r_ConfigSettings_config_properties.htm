@@ -212,14 +212,10 @@
 <p>デフォルト： <samp class="codeph">1080</samp></p>
 </div>
 
-        <div class="section"><h4 class="sectiontitle">IDP_ASSERTION_EXPIRATION</h4>非推奨。</div>
-
-        <div class="section"><h4 class="sectiontitle">IDP_ASSERTION_VALIDITY_TOLERANCE</h4>非推奨。 </div>
-
-        <div class="section"><h4 class="sectiontitle">IDP_PRIVATE_KEY_FILE_PATH</h4>非推奨。</div>
-
-        <div class="section"><h4 class="sectiontitle">IDP_PUBLIC_CERTIFICATE_FILE_PATH</h4>非推奨。</div>
-
+        
+        
+        
+        
         <div class="section"><h4 class="sectiontitle">KEY_FILE_PATH</h4>オプション項目。データタイプが<samp class="codeph">PWD</samp>であるサービスパラメーター、および暗号化が指定されたカスタム属性の暗号化および復号化に必要なキーを含むファイルへのパス<p>
               
               <span>プラットフォーム</span>起動時に本設定に指定されたパスにファイルが存在するかが確認されます。当該ファイルが存在しない場合、当該パスに自動的にファイルが作成されます。本設定が行われていない場合、デフォルトのパスに<samp class="codeph">key</samp>という名前で作成されます。</p>
@@ -315,10 +311,7 @@
 <div class="note"><span class="notetitle">注:</span> 上記の値は示されたとおりに使用する必要があります。この値を変更しないでください。</div>
 </div>
 
-        <div class="section"><h4 class="sectiontitle">SEARCH_INDEX_MASTER_FACTORY_NAME</h4>必須項目。検索インデックスアプリケーションのJMS接続ファクトリ名。<samp class="codeph">jms/bss/masterIndexerQueueFactory</samp>を設定し、値を変更しないでください。</div>
-
-        <div class="section"><h4 class="sectiontitle">SEARCH_INDEX_MASTER_QUEUE_NAME</h4>必須項目。検索インデックスアプリケーションのJMSキュー名。<samp class="codeph">jms/bss/masterIndexerQueue</samp>のまま変更しないでください。</div>
-
+        
         <div class="section"><h4 class="sectiontitle">SSO_DEFAULT_TENANT_ID</h4><span>プラットフォーム</span>をSAML_SP認証モードでインストールした場合に必須。
             <p>デフォルトテナントのID。デフォルトテナントは<span>プラットフォーム</span>に登録されたすべてのユーザがサービスポータルおよび管理ポータルにアクセスする際認証に使用されるIdPと関連します。</p>
 
