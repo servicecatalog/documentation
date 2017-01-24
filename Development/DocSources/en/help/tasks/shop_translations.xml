@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd">
+<task id="task634" xml:lang="en-us">
+            <title>Customizing texts</title>
+            <taskbody>
+                        <context>
+                                    <p>On the <uicontrol>Customize texts</uicontrol> page, you can:</p>
+                                    <ul compact="no">
+                                                <li>Export the current texts visible at the user interface and in automatically generated emails, and import changed or translated texts.</li>
+                                                <li>Specify a hyperlink to a Web page showing the imprint of a marketplace. The hyperlink is displayed at the bottom of each marketplace Web page.</li>
+                                                <li>Enter the terms and conditions and the privacy policy of a marketplace. The terms and conditions and the privacy policy have to be accepted by users when they register on the marketplace. Links to the terms and conditions and the privacy policy are provided at the bottom of each marketplace Web page.</li>
+                                    </ul>
+                                    <p>Translations for all texts can be provided in all supported languages. If a language is to be added to the system, contact the platform operator.</p>
+                                    <p>The branding of a marketplace also comprises a stage and the layout (colors, fonts, background images, logos, etc.). The stage, i.e. the area where you can place advertisements, eye catchers, or further information, can be customized using the <uicontrol>Customize stage</uicontrol> menu option in the <uicontrol>Marketplace</uicontrol> menu. The layout can be customized using the <uicontrol>Customize layout</uicontrol> menu option in the <uicontrol>Marketplace</uicontrol> menu. </p>
+                                    <p><b>To customize the texts for a marketplace</b>:</p>
+                        </context>
+                        <steps>
+                                    <step>
+                                                <cmd>From the <uicontrol>Marketplace</uicontrol> list, select the marketplace for which you want to customize the texts.</cmd>
+                                                <info>
+                                                            <p>The list contains all marketplaces to which you have access as a marketplace manager.</p>
+                                                </info>
+                                    </step>
+                                    <step>
+                                                <cmd>Click <uicontrol>Export</uicontrol> to save the current texts to a Microsoft Excel file in <codeph>.xls</codeph> format. </cmd>
+                                    </step>
+                                    <step>
+                                                <cmd>Open the file and change or translate the texts, as desired. The file contains the strings in all languages currently supported. </cmd>
+                                                <stepresult>
+                                                            <p>You can find any string that can be customized by searching for it in the file, for example, in English. </p>
+                                                            <p>Each text has a key for identification. This is followed by the text in each of the supported languages.</p>
+                                                            <p>Keys for texts used in emails can be identified as follows: <ul
+                                                            compact="no">
+                                                            <li>Keys ending with <codeph>.subject</codeph> and <codeph>.text</codeph> preceded by uppercase words: The text used in the subject and the body of an email sent due to the action mentioned in the uppercase words.</li>
+                                                            <li>Keys starting with <codeph>text.</codeph>: Header and footer text for all emails as well as the title and salutation. </li>
+                                                            </ul></p>
+                                                            <p>Be aware of the following: </p>
+                                                            <ul compact="no">
+                                                            <li>You can use HTML markups in the texts for all keys which represent a descriptive text (key ending with <codeph>.description</codeph>). For example, you can use <codeph>&lt;b&gt;</codeph> for bold text, <codeph>&lt;br&gt;</codeph> for line breaks, and so on. </li>
+                                                            <li>You can use the complete Unicode character set. </li>
+                                                            <!--li>If you want to translate into a language with non-ASCII characters: <p>Use Unicode encoding preceded by escaping backslashes for these characters. </p><p>For example in Japanese: <codeph>\u30B5\u30FC\u30D3\u30B9\u57FA\u672C\u6599\u91D1 </codeph> or in German for Umlauts: <codeph>ung\u00FCltig</codeph></p></li-->
+                                                            <!--li>Special characters such as colons must be escaped using a backslash (\). For example: <codeph>Role costs per subscription\:</codeph></li-->
+                                                            <li>You can remove the text from the table cells which you do not want to change. This may be useful for managing and tracking your changes to the user interface.</li>
+                                                            <li>You must make sure that HTML fields contain valid data and do not break the page layout. For example, text which is too long will be broken into multiple lines on the user interface. Use a separate test environment for testing your translations. </li>
+                                                            </ul>
+                                                </stepresult>
+                                    </step>
+                                    <step>
+                                                <cmd>To apply your changes to the user interface and the content of automatically generated emails, import the customized and localized file: Click <uicontrol>Import</uicontrol> and select the file containing the changed texts.</cmd>
+                                                <stepresult>The file to import must be a Microsoft Excel file in <codeph>.xls</codeph> format containing the keys and their translations on the first worksheet. </stepresult>
+                                    </step>
+                        </steps>
+                        <result>
+                                    <p>Your imported changes are saved and instantly visible to visitors of your marketplace. To return to the default texts and undo your changes, you can click <uicontrol>Reset</uicontrol>.</p>
+                                    <note><ph id="The_customized_texts_of_the_u_task_taskbody_result_note_ph"
+                                                            >The customized texts of the user interface are visible only in the context of the marketplace for which you have changed them. If you log in using the URL for managing a specific marketplace (<codeph>http://&lt;server&gt;:&lt;port&gt;/&lt;context-root>?mId=&lt;mId&gt;</codeph>) you cannot see the texts you change for a different marketplace. If you log in without a marketplace context (<codeph>http://&lt;server&gt;:&lt;port&gt;/&lt;context-root></codeph>), you cannot see any customized texts at all.</ph></note>
+                        </result>
+                        <example><b>To enter or customize the privacy policy and the terms and conditions for a marketplace</b>: <ol
+                                                compact="no">
+                                                <li>Choose the language, and enter the text in the editor that is provided.</li>
+                                                <li>To enter the text in different languages, save the text in the first language, choose another language, and enter the translation.<p>
+                                                            <note><ph
+                                                            conref="service_add.xml#task634/Make_sure_to_use_only_the_con_task_taskbody_steps_step_2"
+                                                            /></note>
+                                                            </p></li>
+                                                <li>To confirm your entries, click <uicontrol>Save</uicontrol>. </li>
+                                    </ol>Your changes are saved and instantly visible to customers on your marketplace.<p><b>To enter or customize the hyperlink to the imprint for a marketplace</b>:</p><ol
+                                                compact="no">
+                                                <li>Choose the language, and specify the hyperlink to the Web page showing the imprint of the marketplace in the <uicontrol>Imprint</uicontrol> field.</li>
+                                                <li>To enter the hyperlink for different languages, save the hyperlink in the first language, choose another language, and enter the corresponding hyperlink.</li>
+                                                <li>To confirm your entries, click <uicontrol>Save</uicontrol>. </li>
+                                    </ol>Your changes are saved and the hyperlink is instantly visible to customers on your marketplace.</example>
+            </taskbody>
+            <related-links>
+                        <linklist>
+                                    <title>Related topics</title>
+                                    <link href="shop_editStage.xml"/>
+                                    <link href="shop_customizeBrand.xml"/>
+                        </linklist>
+            </related-links>
+</task>

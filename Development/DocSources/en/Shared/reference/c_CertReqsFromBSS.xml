@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_B32294CC9FA643A2A14A74B1DAA49C95" xml:lang="en-us">
+    <title>Requirements for Web Service Calls from <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+        /></title>
+    <conbody>
+        <section>
+            <p>For the provisioning of application instances and for integrating external process control or PSP systems, <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> calls other Web services which can be addressed by HTTPS. In this scenario, <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> is the Web service client while the other entity is the HTTPS server. The following requirements must be fulfilled to establish a connection to the server:</p>
+            <p>
+                <ul>
+                    <li>The server must present a valid certificate: The CN (common name) must correspond to the server's domain name and it must be valid at the time of calling.</li>
+                    <li>The client (<ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        />) must trust the server's certificate. To this end, the server's certificate must have been imported into the client's truststore, or the client's truststore must contain a root certificate with a valid signing chain to the certificate presented by the server.</li>
+                </ul>
+            </p>
+        </section>
+    </conbody>
+</concept>

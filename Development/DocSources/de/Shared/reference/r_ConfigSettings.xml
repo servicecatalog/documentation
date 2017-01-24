@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<reference id="reference832" xml:lang="de-de">
+    <title>Configuration Settings</title>
+    <refbody>
+        <section>
+            <p>These configuration settings for <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> are provided in the following files in the directory where you installed and deployed <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> (<codeph
+                    >&lt;setup_dir></codeph>): </p>
+            <ul>
+                <li><codeph>configsettings.properties</codeph></li>
+                <li><codeph>glassfish.properties</codeph></li>
+                <li><codeph>glassfishJMSBrokerConfiguration.properties</codeph></li>
+                <li><codeph>db.properties</codeph></li>
+            </ul>
+            <p>This appendix describes the settings in detail. </p>
+        </section>
+    </refbody>
+</reference>

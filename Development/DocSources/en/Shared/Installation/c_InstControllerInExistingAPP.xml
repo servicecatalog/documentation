@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_1BCF5C425D7D4627AB1C66A085CF6E11"
+            xml:lang="en-us">
+        <title>Installing the <ph audience="ror">ROR</ph><ph audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph
+                        audience="tps5">TPS5</ph><ph audience="vmware"
+                >VMware</ph> Service Controller in an Existing APP Environment</title>
+        <conbody>
+                <p>If you already have a working APP installation in your environment, you can use it for the <ph
+                                audience="ror">ROR</ph><ph audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph
+                                audience="tps5">TPS5</ph><ph audience="vmware"
+                                >vSphere</ph> integration and simply register the <ph audience="ror">ROR</ph><ph
+                                audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph audience="tps5">TPS5</ph><ph
+                                audience="vmware">VMware</ph> service controller in it.<ph audience="vmware"
+                                > In addition, you need to setup the VMware service controller database.</ph> Proceed as follows:</p>
+                <p>
+                        <ol>
+                                <li>Check the prerequisites described in <xref
+                        href="c_PrepCTMG.xml"/>. </li>
+                                <li audience="vmware"
+                                                >Specify the settings for the VMware service controller database setup and access in the <codeph>db.properties</codeph> file located in the <codeph>&lt;install_pack_dir>/databases/controller_db</codeph> directory.</li>
+                                <li audience="vmware"
+                                                        > To set up the data source for the VMware service controller database in the application server, copy the following file: <p><codeph>&lt;install_pack_dir>/domains/app_domain/installer/resources-extension-template.xml</codeph> to <codeph>&lt;install_pack_dir>/domains/app_domain/installer/resources-extension.xml</codeph></p></li>
+                                <li audience="vmware"
+                                                >Edit the <codeph>resources-extension.xml</codeph> file and replace the following placeholders with the values defined in the <codeph>db.properties</codeph> file of the VMware service controller database. The corresponding property in the <codeph>db.properties</codeph> file is shown in parenthesis. <p>
+                                                <ul>
+                                                        <li>
+                                                            <p><codeph>@SERVER.NAME@</codeph> (<codeph>db.host</codeph>): The name of the host the VMware service controller database is running on. Example: <codeph>localhost</codeph></p>
+                                                        </li>
+                                                        <li>
+                                                            <p><codeph>@PORT.NUMBER@</codeph> (<codeph>db.port</codeph>): The database port. Example: <codeph>5432</codeph></p>
+                                                        </li>
+                                                        <li>
+                                                            <p><codeph>@DATABASE.NAME@</codeph> (<codeph>db.name</codeph>): The name of the database. Example: <codeph>vmware</codeph></p>
+                                                        </li>
+                                                        <li>
+                                                            <p><codeph>@DB.USER@</codeph> (<codeph>db.user</codeph>): The name of the user to connect to the database. Example: <codeph>vmwareuser</codeph></p>
+                                                        </li>
+                                                        <li>
+                                                            <p><codeph>@DB.PASSWORD@</codeph>(<codeph>db.pwd</codeph>): The password of the user to connect to the database. Example: <codeph>vmwareuser</codeph></p>
+                                                        </li>
+                                                </ul>
+                                        </p></li>
+                                <li audience="vmware"
+                                                >Specify the vSphere configuration in the <codeph>.csv</codeph> files located in the <codeph>&lt;install_pack_dir>/databases/controller_db/csv</codeph> directory.</li>
+                                <li audience="vmware"
+                                                >Create the VMware service controller database (<codeph>vmware</codeph>) by executing the <codeph>build-db.xml</codeph> file in <codeph>&lt;install_pack_dir&gt;/install</codeph> as follows:<p>
+                                                <codeblock>&lt;ANT_HOME&gt;/bin/ant -f build-db.xml CREATE.dbAndUser 
+   -Ddb.dir=controller_db</codeblock>
+                                        </p><note>It may be required to enclose <codeph>-Ddb.dir=controller_db</codeph> in double or single quotes depending on the operating system. </note></li>
+                                <li audience="vmware"
+                                                >Update the schema of the VMware service controller database (<codeph>vmware</codeph>) by executing the <codeph>build-db.xml</codeph> file in <codeph>&lt;install_pack_dir&gt;/install</codeph> as follows:<p>
+                                                <codeblock>&lt;ANT_HOME&gt;/bin/ant -f build-db.xml UPDATE.dbSchema
+   -Ddb.dir=controller_db</codeblock>
+                                        </p><note>It may be required to enclose <codeph>-Ddb.dir=controller_db</codeph> in double or single quotes depending on the operating system. </note></li>
+                                <li audience="vmware"
+                                                >Add the data source for the <codeph>vmware</codeph> database to the <codeph>app-domain</codeph> domain as follows:<p>
+                                                <codeblock>&lt;GLASSFISH_HOME&gt;/bin/asadmin -p 8848 add-resources 
+&lt;install_pack_dir>/domains/app_domain/installer/resources-extension.xml</codeblock>
+                                        </p></li>
+                                <li audience="vmware"
+                                                >Import the <codeph>.csv</codeph> files into the <codeph>vmware</codeph> database by executing the <codeph>build-db-import.xml</codeph> file in <codeph>&lt;install_pack_dir&gt;/install</codeph> as follows: <p>
+                                                <codeblock>&lt;ANT_HOME&gt;/bin/ant -f build-db-import.xml importAll 
+   -Ddb.dir=controller_db</codeblock>
+                                        </p><p>Instead of importing all <codeph>.csv</codeph> files in one step, you can split the import by executing the <codeph>build-db-import.xml</codeph> file in the following order: </p><p>
+                                                <codeblock>&lt;ANT_HOME&gt;/bin/ant -f build-db-import.xml importVCenter 
+   -Ddb.dir=controller_db
+&lt;ANT_HOME&gt;/bin/ant -f build-db-import.xml importCluster 
+   -Ddb.dir=controller_db
+&lt;ANT_HOME&gt;/bin/ant -f build-db-import.xml importVLAN 
+   -Ddb.dir=controller_db
+&lt;ANT_HOME&gt;/bin/ant -f build-db-import.xml importDomain 
+   -Ddb.dir=controller_db
+&lt;ANT_HOME&gt;/bin/ant -f build-db-import.xml importIPPool 
+   -Ddb.dir=controller_db</codeblock>
+                                        </p><note>It may be required to enclose <codeph>-Ddb.dir=controller_db</codeph> in double or single quotes depending on the operating system. </note><p>Usually, you do not need to change the settings once they have been imported into the database.</p><p>The <codeph>vcenter.csv</codeph> file specifies the URL and user credentials for accessing the vSphere server. For security reasons, it is recommended that you delete the file as soon as you have successfully installed and configured the VMware integration software.</p></li>
+                                <li>Deploy the <ph audience="ror">ROR</ph><ph audience="aws">AWS</ph><ph audience="os"
+                                                >OpenStack</ph><ph audience="tps5">TPS5</ph><ph audience="vmware"
+                                                >VMware</ph> service controller to the <codeph>app-domain</codeph> domain. To do this, you use the GlassFish administration console, for example: <p><codeph>http://127.0.0.1:8848/</codeph></p><p>The <ph
+                                                        audience="ror"><codeph>oscm-app-ror.ear</codeph></ph><ph
+                                                        audience="aws"><codeph>oscm-app-aws.ear</codeph></ph><ph
+                                                        audience="os"><codeph>oscm-app-openstack.ear</codeph></ph><ph
+                                                        audience="tps5"><codeph>oscm-app-tps5.ear</codeph></ph><ph
+                                                        audience="vmware"
+                                                        ><codeph>oscm-app-vmware.ear</codeph></ph> file of the service controller is located in <codeph>&lt;install_pack_dir&gt;/domains/app_domain/applications</codeph></p></li>
+                                <li>Register the <ph audience="ror">ROR</ph><ph audience="aws">AWS</ph><ph audience="os"
+                                                >OpenStack</ph><ph audience="tps5">TPS5</ph><ph audience="vmware"
+                                                >VMware</ph> service controller as follows in APP: <p>
+                                                <ol>
+                                                        <li>In a Web browser, access the base URL of APP, for example: <codeph>http://127.0.0.1:8880/oscm-app</codeph></li>
+                                                        <li>Log in with the ID and password of the user and organization defined in the <codeph>configsettings.properties</codeph> file of APP (<codeph>BSS_USER_ID</codeph> and <codeph>BSS_USER_PWD</codeph>). </li>
+                                                        <li>Specify the controller ID (<ph audience="ror"
+                                                            ><codeph>ess.ror</codeph></ph><ph audience="aws"
+                                                            ><codeph>ess.aws</codeph></ph><ph audience="os"
+                                                            ><codeph>ess.openstack</codeph></ph><ph audience="tps5"
+                                                            ><codeph>ess.tps5</codeph></ph><ph audience="vmware"
+                                                            ><codeph>ess.vmware</codeph></ph>) and the technology provider organization responsible for the <ph
+                                                            audience="ror">ROR</ph><ph audience="aws">AWS</ph><ph
+                                                            audience="os">OpenStack</ph><ph audience="tps5">TPS5</ph><ph
+                                                            audience="vmware">VMware</ph> service controller.</li>
+                                                        <li>Click <uicontrol>Save Configuration</uicontrol> to save the settings.</li>
+                                                </ol>
+                                        </p></li>
+                                <li>Configure the <ph audience="ror">ROR</ph><ph audience="aws">AWS</ph><ph
+                                                audience="os">OpenStack</ph><ph audience="tps5">TPS5</ph><ph
+                                                audience="vmware"
+                                                >VMware</ph> service controller following the instructions in <xref
+                                                href="c_UpdateConfiguration.xml"/>.</li>
+                                <li audience="tps5"
+                                                >Import the certificate of TPS5 into the truststore of the <codeph>app-domain</codeph> application server domain of the TPS5 integration software: <p>
+                                                <ul>
+                                                        <li audience="tps5"
+                                                            >Obtain the valid TPS5 certificate by exporting it from the <codeph>cacerts.jks</codeph> file. The file is contained in the <codeph>OViSS_JAVASDK/bin/security</codeph> subdirectory of the temporary directory to which you extracted the <codeph>OViSSSDK_*.zip</codeph> file you downloaded from the TPS5 Service Portal. Refer to <xref
+                                                            href="t_InstPreparing.xml"
+                                                            /> for details.<p>For details on the certificates, refer to the TPS5 documentation.</p></li>
+                                                        <li audience="tps5">Import the TPS5 certificate, for example, by executing the following command at the command prompt (Windows) or in a terminal session (UNIX/Linux) on the application server:<p>
+                                                            <codeblock>&lt;AppServerJRE>/bin/keytool -import -trustcacerts -alias &lt;alias>
+   -file &lt;filename> -storepass &lt;password> -keystore
+   &lt;GLASSFISH_HOME>/glassfish/domains/app-domain/config/cacerts.jks</codeblock>
+                                                            </p></li>
+                                                </ul>
+                                        </p></li>
+                                <li audience="ror">Import the certificate of ROR into the truststore of the <codeph>app-domain</codeph> application server domain of the ROR integration software: <p>
+                                                <ul>
+                                                        <li audience="ror"
+                                                            >Obtain a <codeph>.cer</codeph> file with the certificate of ROR. The <codeph>.cer</codeph> file can be created, for example, in the following way:<ul
+                                                            compact="no">
+                                                            <li>Open the URL of the <ph audience="aws">AWS</ph><ph
+                                                            audience="os">OpenStack Heat</ph><ph audience="ror"
+                                                            >ROR</ph><ph audience="app"
+                                                            >APP</ph> API (<codeph>https://&lt;server>:&lt;port>/cfmgapi/endpoint</codeph>) in a Web browser. View the certificate of the page and export it to a file using the standard procedures of the Web browser.</li>
+                                                            <li>Use the <codeph>scsexppfx</codeph> command included in ROR.</li>
+                                                            </ul></li>
+                                                        <li audience="ror"
+                                                            >Import the ROR certificate from the <codeph>.cer</codeph> file you created, for example, by executing the following command at the command prompt (Windows) or in a terminal session (UNIX/Linux) on the application server:<p>
+                                                            <codeblock>&lt;AppServerJRE>/bin/keytool -import -trustcacerts -alias &lt;alias>
+   -file &lt;filename>.cer -storepass &lt;password> -keystore
+   &lt;GLASSFISH_HOME>/glassfish/domains/app-domain/config/cacerts.jks</codeblock>
+                                                            </p></li>
+                                                </ul>
+                                        </p></li>
+                                <li audience="vmware"
+                                                >Import the certificate of vSphere into the truststore of the <codeph>app-domain</codeph> application server domain: <p>
+                                                <ol>
+                                                        <li audience="vmware"
+                                                            >Obtain a <codeph>.cer</codeph> file with the certificate of vSphere. The <codeph>.cer</codeph> file can be created, for example, in the following way:<p>Open the URL of the vSphere API (<codeph>https://&lt;server>:&lt;port>/sdk/vimService</codeph>) in a Web browser. View the certificate of the page and export it to a file using the standard procedures of the Web browser.</p></li>
+                                                        <li audience="vmware"
+                                                            >Import the vSphere certificate from the <codeph>.cer</codeph> file you created, for example, by executing the following command at the command prompt (Windows) or in a terminal session (UNIX/Linux) on the application server: <p>
+                                                            <codeblock>&lt;AppServerJRE>/bin/keytool -import -trustcacerts -alias &lt;alias>
+   -file &lt;filename>.cer -storepass &lt;password> -keystore
+   &lt;GLASSFISH_HOME>/glassfish/domains/app-domain/config/cacerts.jks</codeblock>
+                                                            </p></li>
+                                                </ol>
+                                        </p></li>
+                                <li audience="vmware">Stop and restart the <codeph>app-domain</codeph> and the <codeph>bes-domain</codeph> domains for the certificate to become effective.</li>
+                                <li audience="tps5">Stop and restart the <codeph>app-domain</codeph> and the <codeph>bes-domain</codeph> domains for the certificate to become effective.</li>
+                                <li audience="ror">Stop and restart the <codeph>app-domain</codeph> and the <codeph>bes-domain</codeph> domains for the certificate to become effective.</li>
+                        </ol>
+                </p>
+                <p/>
+
+        </conbody>
+</concept>

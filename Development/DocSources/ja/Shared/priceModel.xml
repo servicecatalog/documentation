@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd">
+<task id="PriceModelTopic" xml:lang="ja-jp">
+  <title>サービスの料金設定の定義</title>
+  <taskbody>
+    <context>
+      <p><uicontrol>サービスの料金設定</uicontrol>ページで、選択したサービスの料金設定を定義または更新します。 </p>
+      <p id="concept_price_model"
+          >料金設定では、あるサービスを申し込むサービス利用部門が課金されるかどうか、いくら課金されるのかを設定します。料金設定の基本的な情報については、<xref
+          href="reference/r_PriceModelDetails.xml">ここ</xref>をクリックしてください。 </p>
+      <p id="concept_service"
+          >提供するサービスポータルへ登録済の各サービスに対して、サービスを公開し、サービス利用部門に購入済サービスを提供するには、サービス料金設定が定義されている必要があります。サービスに対して定義できる料金設定は1つだけです。ただし、サービス利用部門固有の料金設定または購入済サービス固有の料金設定を定義することもできます。サービスおよびサービス利用部門固有の料金設定に対して、サービス利用部門に提示され、サービス利用部門が同意する必要のあるサービス利用規約のテキストを定義できます。技術サービスには、料金設定の定義時に変更することができるサービス利用規約情報が含まれます。 <note><uicontrol>サービスの料金設定</uicontrol>ページで既存の料金設定を編集する場合、変更内容によって現在定義されている料金設定が上書きされます。 </note></p>
+      <p><b>サービスの料金設定を定義するには</b>：</p>
+    </context>
+    <steps>
+      <step id="step_select_service">
+        <cmd id="From_the_task_taskbody_steps_step_1"
+          >料金設定を定義する対象サービスを<uicontrol>サービスID</uicontrol>一覧から選択します。</cmd>
+      </step>
+      <step id="step_free_service">
+        <cmd id="Added_description_of_new_o_task_taskbody_steps_step_2"
+          >料金設定の計算方法を選択します。</cmd>
+        <info>
+          <ul compact="no" id="Select_task_taskbody_steps_step_2">
+            <li><uicontrol>無料</uicontrol>: サービスは無料で提供されます。</li>
+            <li><uicontrol>従量課金</uicontrol>: サービスの使用時間をミリ秒単位として料金が計算されます。</li>
+            <li><uicontrol>定額</uicontrol>: 日、週などの時間単位で料金が計算されます。計算に用いる単位は<uicontrol>課金単位</uicontrol>で設定します。</li>
+          </ul>
+          <p>無料サービスの場合はステップ8に進んでください。有料の場合はステップ3に進んでください。 </p>
+        </info>
+      </step>
+      <step id="step_desc">
+        <cmd><uicontrol>説明</uicontrol>には、料金設定に関する詳細な説明を入力します。例えば、料金設定を構成する各要素の詳細を提供します。</cmd>
+        <info>
+          <p>サービスカタログからサービスの詳細を要求すると、サービスポータルへ登録済のサービスについての説明がサービス利用部門に表示されます。</p>
+          <p>料金設定をローカライズすると、後で異なる言語による説明も追加できます。</p>
+          <note><ph conref="../help/tasks/service_add.xml#task634/Make_sure_to_use_only_the_con_task_taskbody_steps_step_2"
+            /></note>
+        </info>
+      </step>
+      <step id="step_trialperiod">
+        <cmd>サービスを一定期間無料で提供する場合、無料試用期間を定義します。<ph
+            id="After_this_period_the_servic_task_taskbody_steps_step_4"
+            >この期間が経過すると、サービスは自動的に有料サービスとなります。</ph></cmd>
+        <info>
+          <p><uicontrol>無料試用期間の設定</uicontrol>チェックボックスを選択し、無料試用期間の日数を整数で入力します。</p>
+        </info>
+      </step>
+      <step id="step_charging">
+        <cmd><b>課金条件</b>を指定します。以下の情報が含まれます。 </cmd>
+        <info>
+          <ul compact="no">
+            <li id="Currency_task_taskbody_steps_step_5"
+              ><b>通貨</b>: サービス利用部門がサービスを利用した際に生じる課金の通貨です。システム運用管理者がサポートされる通貨を定義します。購入済サービスの料金設定を定義しているときは通貨を変更できません。</li>
+            <li id="Charges_based_on_task_taskbody_steps_step_5"
+              ><b>課金単位</b>: 課金対象となる時間単位。月ごと、週ごと、日ごと、あるいは時間ごとに料金を設定できます。この設定は定額料金の計算にも使用されます。購入済サービスの料金設定を定義しているときは課金単位を変更できません。</li>
+            <li id="One-time_fee_task_taskbody_steps_step_5"
+              ><b>初期費用</b>: サービスを申し込むときに支払う初期費用です。この手数料は、最初の請求期間の利用料金に追加されます。 </li>
+            <li id="Recurring_charge_per_subscrip_task_taskbody_steps_step_5"
+              ><b>サービス契約単価</b>: <uicontrol>課金単位</uicontrol>フィールドに示した周期ごとに生じる購入済サービスの料金です。 </li>
+            <li><ph id="Recurring_charge_per_user_task_taskbody_steps_step_5"
+                ><b>利用者単価</b>: 購入済サービスに割り当てられた1利用者の時間単位あたりの料金です。時間単位は<uicontrol>課金単位</uicontrol>フィールドで定義されます。この料金タイプでは「段階的な料金」を指定でき、利用者が購入済サービスに割り当てられた合計時間単位数に応じた割引率の設定が可能です。</ph>: <ul
+                compact="no">
+                <li>料金を入力するにはフィールドをクリックします。右側にプラス記号が表示されます。 </li>
+                <li>プラス記号をクリックして、上限数とその時間単位数に対する利用者単価を入力します。ここで上限数には、設定された利用者単価を適用する利用者が購入済サービスに割り当てられた合計時間単位数の上限値を定義します。</li>
+                <li>段階的な利用者単価と上限数の定義を続けます。プラス記号で段階的な料金を追加し、マイナス記号を使用して段階的な料金を削除します。</li>
+                <li>最後の<uicontrol>利用者単価</uicontrol>入力フィールドでは、<uicontrol>範囲フィールド</uicontrol>フィールドで先に指定した合計時間単位数を超えたときに適用する料金を定義します。 </li>
+              </ul>詳細については、<xref href="../Shared/reference/r_PriceModelDetails_stepped.xml"
+                >ここ</xref>をクリックしてください。</li>
+          </ul>
+        </info>
+      </step>
+      <step id="step_events">
+        <cmd>サービスで定義した請求対象<b>イベント</b>の料金を指定します。 </cmd>
+        <info>
+          <p><ph
+              conref="reference/r_PriceModelDetails_events.xml#reference832/These_include_for_example_l_reference_refbody_section_1"
+            /></p>
+          <p>表に利用可能なイベントを示します。<uicontrol>説明</uicontrol>欄に簡単な説明を表示できます。</p>
+          <p>この料金タイプでは段階的な料金を指定できます。例えば、サービス利用中に発生したイベントの数に応じた割引率の設定も可能です。 <ul
+              compact="no">
+              <li>料金を入力するにはフィールドをクリックします。右側にプラス記号が表示されます。 </li>
+              <li>プラス記号をクリックして、上限とイベント単価を入力します。範囲で、このイベント単価を適用するイベント数の上限値を設定します。</li>
+              <li>イベント単価と上限数の定義を行います。プラス記号で段階的な料金を追加し、マイナス記号を使用して段階的な料金を削除します。</li>
+              <li>最後の<uicontrol>料金</uicontrol>入力フィールドでは、最後の<uicontrol>範囲</uicontrol>フィールドで指定した数を超えた選択タイプのすべてのイベントに適用される料金を定義します。 </li>
+            </ul>詳細については、<xref href="../Shared/reference/r_PriceModelDetails_stepped.xml"
+              >ここ</xref>をクリックしてください。 </p>
+        </info>
+      </step>
+      <step id="step_params">
+        <cmd><b>パラメーターとオプション</b>の料金を指定します。 </cmd>
+        <info>
+          <p><ph
+              conref="reference/r_PriceModelDetails_parameters.xml#reference832/It_depends_on_the_implementat_reference_refbody_section_1"
+            /></p>
+          <p>表に利用可能なパラメーターとオプションを示します。<uicontrol>説明</uicontrol>欄に簡単な説明を表示できます。</p>
+          <p><ph
+              conref="reference/r_PriceModelDetails_parameters.xml#reference832/and_specify_whether_this_pric_reference_refbody_section_1"
+            /></p>
+          <p>数値型のパラメーター（整数型や長整数型の値を持つパラメーター）として、例えば数量割引を設定するために購入済サービスに段階的な料金を指定できます。 <ul
+              compact="no">
+              <li>料金を入力するにはフィールドをクリックします。右側にプラス記号が表示されます。 </li>
+              <li>プラス記号をクリックして、上限と料金を入力します。上限には、その料金を適用する値の上限値を定義します。</li>
+              <li>料金と上限値の定義を行います。プラス記号で段階的な料金を追加し、マイナス記号を使用して段階的な料金を削除します。 </li>
+              <li>最後の<uicontrol>単価</uicontrol>入力フィールドでは、最後の<uicontrol>範囲</uicontrol>フィールドで指定した数を超えるすべてのパラメーターに適用する料金を定義します。 </li>
+            </ul>詳細については、<xref href="../Shared/reference/r_PriceModelDetails_stepped.xml"
+              >ここ</xref>をクリックしてください。</p>
+        </info>
+      </step>
+      <step id="step_license">
+        <cmd>必要に応じて、<b>サービス利用規約</b>を編集します。サービス利用部門はサービスを利用する際にサービス利用規約を読んで、同意する必要があります。</cmd>
+        <info>
+          <p>デフォルトでは、技術サービス開発部門のサービス利用規約が使用されます。このサービス利用規約を使用するか、別の規約を指定するか選択できます。 </p>
+          <p>料金設定をローカライズすることによって、後で他の言語でサービス利用規約を指定することもできます。</p>
+          <p>サービス提供代行部門は独自のサービス利用規約を設定してサービスを提供することができます。サービス提供部門が設定したサービス利用規約を使用するか、サービス提供代行部門が設定した別の文を使用するかを選択します。サービス利用規約を変更しても、サービス提供代行部門のサービス利用規約は変更されません。</p>
+        </info>
+      </step>
+      <step id="step_license2">
+        <cmd><b>サービス利用規約</b>を変更します。サービス利用部門はサービスを購入する際にサービス利用規約を読んで同意する必要があります。</cmd>
+        <info>
+          <p>デフォルトでは、サービス利用規約は技術サービス開発部門が設定したものが使用されます。既にサービスに設定されているものを使用するか独自のものを設定するかは任意です。</p>
+          <p>他の言語のサービス利用規約は登録したのち、料金設定のローカライズから設定できます。</p>
+        </info>
+      </step>
+      <step id="step_save">
+        <cmd>料金設定を保存するには、<uicontrol>保存</uicontrol>をクリックします。 </cmd>
+      </step>
+      <step id="step_localize">
+        <cmd>料金設定の説明とサービス利用規約を別の言語で提供するには、<uicontrol>ローカライズ</uicontrol>をクリックします。</cmd>
+      </step>
+      <step id="step_roles">
+        <cmd>アプリケーションに定義されたロールに料金を指定するには、<uicontrol>サービスロールに料金を定義</uicontrol>をクリックします。請求期間の料金計算の際に、利用者ごとの基本料金にサービスロールに定義する料金が加算されます。 </cmd>
+      </step>
+    </steps>
+    <result>この操作に対応するサービスを有効化すると、サービス利用部門にもその変更が反映されます。</result>
+  </taskbody>
+</task>

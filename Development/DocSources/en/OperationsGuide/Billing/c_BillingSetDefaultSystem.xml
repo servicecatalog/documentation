@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="Billing"
+                    xml:lang="en-us">
+        <title>Setting the Default Billing System</title>
+            <conbody>
+                <section>
+                        <p>One of the billing systems known to <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        /> needs to be set as the default billing system. This can be the native billing system or any of the registered external ones. The default billing system is used for any technical service that does not explicitly specify a different one, as well as for the marketable services and subscriptions based on it. The default billing system cannot be removed. After the installation of <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                />, the native billing system is automatically set as the default one. You can change this as soon as you have registered the first external billing system.</p>
+                        <p><b>To set the default billing system, you have the following option: </b>
+                                <ul>
+                                        <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                        /> administration portal - Choose <b>Manage billing systems</b> in the <b>Operation</b> menu. <p>For detailed step-by-step instructions, refer to the online help. </p></li>
+                                </ul></p>
+                </section>
+            </conbody>
+</concept>

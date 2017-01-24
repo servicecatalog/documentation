@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<reference id="reference832"
+                xml:lang="en-us">
+    <title>Viewing billing system details </title>
+    <refbody>
+        <section>
+            <p>On the <uicontrol>View billing systems</uicontrol> page, you can view the details of the billing systems that the platform operator has set up for the platform. These billing systems are available for selection when defining a technical service.</p>
+            <p>When accessing the <uicontrol>View billing systems</uicontrol> page, the details of the billing system that is currently configured as the default are expanded. Your platform operator is responsible for specifying a different system as the default, if required.</p>
+            <p>The details displayed are specific to each billing system. Click <uicontrol>Test Connection</uicontrol> to make sure that the connection to a billing system can be established. If it cannot be established, contact your platform operator who can check and correct the connection properties. The billing system may have been shut down or other communication problems occurred.</p>
+        </section>
+    </refbody>
+</reference>

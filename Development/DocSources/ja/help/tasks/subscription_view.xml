@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd">
+<task id="task634" xml:lang="ja-jp">
+    <title>購入済サービスの確認</title>
+    <taskbody>
+        <context>
+            <p><uicontrol>購入済サービスの確認</uicontrol>ページでは、サービス利用部門が提供したサービスに関する購入済サービスの詳細を参照できます。サービス提供管理部門はそのサービス提供部門のサービスをサービス仲介部門が提供したサービス利用部門の購入済サービスについても詳細を参照できます。</p>
+            <p>購入済サービスに関する以下の情報を参照できます。</p>
+            <ul compact="yes">
+                <li><ph id="Activation_date_and_number_of_task_taskbody_context_ul_li"
+                       >利用開始日および購入済サービスに割り当てられている利用者数。</ph></li>
+                <li><ph id="Details_on_the_marketable_ser_task_taskbody_context_ul_li"
+                       >サービス利用部門が購入したサービスの詳細。</ph></li>
+                <li><ph id="Details_on_the_underlying_tec_task_taskbody_context_ul_li"
+                       >利用している技術サービスの詳細。</ph></li>
+                <li><ph id="Details_on_the_price_model_de_task_taskbody_context_ul_li"
+                          >サービスポータルへ登録済のサービスに定義されている料金設定の詳細。</ph></li>
+            </ul>
+            <p><b>購入済サービスの詳細を参照するには：</b></p>
+        </context>
+        <steps-unordered>
+            <step>
+                <cmd>ページの上部領域の一覧から、詳細を参照する購入済サービスを選択します。</cmd>
+                <info>
+                    <p>提供しているサービスを利用するサービス利用部門の任意の有効な購入済サービスを選択できます。サービス提供部門としてログインしている場合、そのサービス提供部門が提供するサービスを仲介しているサービス仲介部門のサービスを利用するサービス利用部門について、有効な購入済サービスも選択することができます。</p>
+                </info>
+            </step>
+        </steps-unordered>
+        <result>
+            <p>購入済サービスの詳細がページの下部領域にただちに表示されます。</p>
+        </result>
+    </taskbody>
+</task>

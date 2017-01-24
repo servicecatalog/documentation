@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634a" xml:lang="de-de">
+    <title>Abo-Preismodell definieren</title>
+    <taskbody>
+        <context>
+            <p>Auf der Seite <uicontrol>Abo-Preismodell definieren</uicontrol> können Sie für ein ausgewähltes Abonnement ein spezifisches Preismodell definieren oder ändern. </p>
+            <p>Sie haben ein Abonnement für einen Service gewählt, für dessen Kostenberechnung ein <b>externes Abrechnungssystem</b> verwendet wird. Die Preismodelle für die Kostenberechnung werden ebenfalls in diesem System definiert und verwaltet. Für das ausgewählte Abonnement müssen Sie das passende Preismodell von dem externen Abrechnungssystem importieren. Sie können das importierte Preismodell auf der Plattform anzeigen, aber nicht ändern. Falls Änderungen erforderlich sind, müssen diese im externen Abrechnungssystem vorgenommen werden, und Sie müssen danach das Preismodell erneut von dort importieren.</p>
+            <p><b>So definieren oder ändern Sie ein Abo-Preismodell</b>:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>In dem Bereich <uicontrol>Definieren Sie das Preismodell</uicontrol> klicken Sie <uicontrol>Importieren</uicontrol>, um das Preismodell von dem externen Abrechnungssystem zu importieren. </cmd>
+                <info>Der Billing-Adapter, der die Plattform mit dem externen Abrechnungssystem verbindet, ist für die Bereitstellung des richtigen Preismodells verantwortlich. Über <uicontrol>Anzeigen</uicontrol> können Sie sich das Preismodell ansehen. </info>
+            </step>
+            <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_save">
+                <cmd/>
+            </step>
+        </steps>
+        <result>Die Änderungen am Abo-Preismodell sind sofort gültig.</result>
+    </taskbody>
+</task>

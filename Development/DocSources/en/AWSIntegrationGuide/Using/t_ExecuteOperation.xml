@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<task id="task_E68E2024B1F6403AAA1130A39B1D4DCD" xml:lang="en-us">
+    <title>Executing Service Operations</title>
+    <taskbody>
+        <context>
+            <p>Customers can explicitly start and stop a virtual server in AWS from <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />. To do this, they execute the appropriate service operation from the subscription for the virtual server:</p>
+            <ul>
+                <li><b>Start</b>: Starts the virtual server if it was stopped.</li>
+                <li><b>Stop</b>: Stops the virtual server if it was started.</li>
+            </ul>
+            <p>As a prerequisite, the service operations must be defined in the technical service underlying the subscribed service.</p>
+        </context>
+    </taskbody>
+</task>

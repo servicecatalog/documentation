@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<reference id="reference832" xml:lang="en-us">
+    <title>Controller Configuration Settings</title>
+    <refbody>
+        <section id="The_reference_refbody_section_1">
+            <p>The <codeph>configsettings_controller.properties</codeph> file located in <codeph>&lt;install_pack_dir>/databases/app_db</codeph> contains the configuration settings for the AWS service controller. This configuration is used for the initial setup and stored in the APP database.</p>
+            <p id="cfg"
+                    >A technology provider can define service parameters in the technical service definition. If such a parameter has the same ID as a controller configuration setting stored in the APP database, it overrules the configuration setting in the database when the marketable service based on such a technical service is subscribed to. By default the values in the controller configuration settings are used. Refer to the <i>Technology Provider's Guide</i> for details on defining technical services. </p>
+            <p id="cfg2"
+                >In addition, a supplier can define custom attributes for subscriptions and for customers. If such an attribute has the same ID as a controller configuration setting stored in the APP database as well as a corresponding technical service parameter, it overrules the technical service parameter as well as the configuration setting in the database when the marketable service based on such a technical service is subscribed to.</p>
+            <p id="cfg3">The controller configuration settings are evaluated as follows: </p>
+            <p id="cfg4">
+                <ol>
+                    <li>Configuration setting as stored in the APP database. </li>
+                    <li>Technical service parameter. If defined, it overrules 1. </li>
+                    <li>Custom attribute for customer. If defined, it overrules 1. and 2.</li>
+                    <li>Custom attribute for subscription. If defined, it overrules 1. and 2. and 3. </li>
+                </ol>
+            </p>
+            <!--p>For changing the settings, use the graphical user interface provided by the controller: </p>
+            <p>In a Web browser, access the URL of the <ph audience="ror">ROR</ph><ph audience="aws">AWS</ph><ph
+                    audience="os">OpenStack</ph> service controller, for example, <ph audience="ror"
+                        ><codeph>http://127.0.0.1:8880/oscm-app-ror</codeph></ph><ph audience="aws"
+                        ><codeph>http://127.0.0.1:8880/oscm-app-aws</codeph></ph><ph audience="os"
+                        ><codeph>http://127.0.0.1:8880/oscm-app-openstack</codeph></ph>. </p-->
+        </section>
+        <section>
+            <title>CONTROLLER_ID</title>
+            <p><codeph>CONTROLLER_ID=ess.aws</codeph></p>
+            <p>The identifier of the service controller.</p>
+        </section>
+        <section>
+            <title>BSS_ORGANIZATION_ID</title>
+            <p><codeph>BSS_ORGANIZATION_ID=&lt;organizationID></codeph></p>
+            <p>The ID of the organization in <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> which is responsible for the service controller. The organization must have the technology provider role.</p>
+        </section>
+        <section>
+            <title>BSS_USER_ID</title>
+            <p><codeph>BSS_USER_ID=&lt;userId></codeph>
+            </p>
+            <p>The identifier of the user specified in <codeph>BSS_USER_KEY</codeph> for accessing <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+            <p>Replace <codeph>&lt;userId></codeph> with the user ID.</p>
+        </section>
+        <section>
+            <title>BSS_USER_KEY</title>
+            <p><codeph>BSS_USER_KEY=&lt;userKey></codeph>
+            </p>
+            <p>The user key for accessing <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />.</p>
+            <p>Replace <codeph>&lt;userKey></codeph> with the user key which you received with the confirmation email for your user account. </p>
+            <p>The user specified here must have the technology manager role in <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> and belong to the organization specified in the <codeph>BSS_ORGANIZATION_ID</codeph> setting. </p>
+            <p>It is recommended that the user account is used only for carrying out actions on behalf of the service controller in <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+        </section>
+        <section>
+            <title>BSS_USER_PWD</title>
+            <p><codeph>BSS_USER_PWD=_crypt:&lt;password></codeph></p>
+            <p>The password of the user specified in <codeph>BSS_USER_KEY</codeph> for accessing <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+            <p>Replace <codeph>&lt;password></codeph> with the plain text password. The password is encrypted when it is stored in the database. </p>
+        </section>
+        <section>
+            <title>ACCESS_KEY_ID_PWD</title>
+            <p><codeph>ACCESS_KEY_ID_PWD=_crypt:&lt;accessKeyID></codeph></p>
+            <p>The identifier of the access key for the AWS account.</p>
+            <p>A technology provider who is responsible for creating technical services for appropriate AMIs needs to have an AWS account to create Amazon EC2 instances. For details about creating an AWS account, refer to the user documentation of Amazon Web Services.</p>
+            <p>Together with the secret access key, the access key ID is used to authenticate API calls to Amazon EC2.</p>
+        </section>
+        <section>
+            <title>SECRET_KEY_PWD</title>
+            <p><codeph>SECRET_KEY_PWD=_crypt:&lt;secretAccessKey></codeph></p>
+            <p>The secret access key for the AWS account.</p>
+            <p>Together with the access key ID, the secret access key is used to authenticate API calls to Amazon EC2.</p>
+        </section>
+    </refbody>
+</reference>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_1BCF5C425D7D4627AB1C66A085CF6E11" xml:lang="en-us">
+            <title>Updating Configuration Settings</title>
+            <conbody>
+                        <section>
+                                    <p>The <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                /> software and setup utilities require a number of settings. In the installation, you adapted the settings to your environment, in particular server names, ports, paths, and user IDs.</p>
+   <p>The <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+     /> configuration settings are provided in the following subdirectories of the directory to which you extracted the <codeph>oscm-install-pack.zip</codeph> file (<codeph>&lt;install_pack_dir&gt;</codeph>) when you installed <ph
+     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>:</p>
+   <p conref="../../Shared/Installation/t_InstConfiguring.xml#Configuring/Cfg2"/>
+                                    <p>For details on the individual configuration settings, refer to <xref
+                                                            href="../../Shared/reference/r_ConfigSettings.xml"/>.</p>
+                                    <p><b>To update the configuration settings for JMS or the database, proceed as follows</b>: <ol>
+                                                            <li>Log in to the administration console of the application server. </li>
+                                                            <li>Adapt the settings as required. </li>
+                                                </ol></p>
+   <p><b>To update the configuration settings for the application server:</b>
+    <ol compact="no">
+     <li>Open the <codeph>glassfish.properties</codeph> file located in <codeph>&lt;install_pack_dir>/domains/bes_domain</codeph> with an editor.</li>
+     <li>Check the settings in the file and adapt them to your environment, if required.</li>
+     <li>Save the file to its original location in <ph><codeph>&lt;install_pack_dir&gt;/domains/bes_domain</codeph></ph>. </li>
+     <li>Update the settings and resources in the application server by executing the <codeph>build-glassfish.xml</codeph> file in <codeph>&lt;install_pack_dir&gt;/install</codeph> as follows:<p>
+       <codeblock>&lt;ANT_HOME&gt;/bin/ant -f build-glassfish.xml 
+   SETUP.configureDomains</codeblock>
+      </p></li>
+    </ol><note>Be aware that existing entries in the JMS queues are deleted by executing the above command.</note></p>
+                                    <p><b>To update existing settings for the <ph
+                                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                            /> services, choose one of the following options</b>: <ul>
+                                                            <li><ph
+                                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                            /> administration portal - Choose <b>Update configuration settings</b> in the <b>Operation</b> menu. <p>The current configuration settings as stored in the database are retrieved. You can check all settings and update them as required by entering a new value for the corresponding configuration key. </p><p>For detailed step-by-step instructions, refer to the online help. </p></li>
+                                                            <li>Edit the content of the <codeph>configsettings.properties</codeph> file as required. <p>Then execute the <codeph>build-db.xml</codeph> file in <codeph>&lt;install_pack_dir&gt;/install</codeph> as follows: </p><p>
+       <codeblock>&lt;ANT_HOME&gt;/bin/ant -f build-db.xml
+   UPDATE.configSettings</codeblock>
+      </p><p><codeph>&lt;ANT_HOME></codeph> is the installation directory of Apache Ant.</p><p>
+       <note>If you execute the above command while <ph
+         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> is running, you need to restart <ph
+         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+        /> for viewing the updated configuration settings in the administration portal, because the previous settings still exist in the cache. </note>
+      </p></li>
+                                                            <li>Command line tool - Use the <codeph>saveconfigurationsetting</codeph> command with the following syntax: <p>
+                                                            <codeblock>&lt;JAVA_HOME>/bin/java -jar lib/oscm-operatorsvc-client.jar 
+ &lt;userkey> &lt;password>
+ saveconfigurationsetting settingKey=&lt;key of the setting> 
+ settingValue=&lt;value>  </codeblock>
+                                                            </p><p>Execute the above command for every configuration setting you want to update. </p></li>
+                                                </ul></p>
+                        </section>
+                        <section><title>Retrieving the Current Configuration Settings</title>You can at any time view the current configuration settings for the <ph
+                                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                            /> services. <p><b>To retrieve the current configuration settings, choose one of the following options</b>:<ul>
+                                                            <li><ph
+                                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                            /> administration portal - Choose <b>Update configuration settings</b> in the <b>Operation</b> menu. <p>For detailed step-by-step instructions, refer to the online help. </p></li>
+                                                            <li>Command line tool - Use the <codeph>getconfigurationsettings</codeph> command with the following syntax: <p>
+                                                            <codeblock>&lt;JAVA_HOME>/bin/java -jar lib/oscm-operatorsvc-client.jar 
+ &lt;userkey> &lt;password>
+ getconfigurationsettings </codeblock>
+                                                            </p></li>
+                                                </ul></p><p>For details on the individual configuration settings, refer to <xref
+                                                            href="../../Shared/reference/r_ConfigSettings.xml"
+                                    />.</p></section>
+            </conbody>
+</concept>

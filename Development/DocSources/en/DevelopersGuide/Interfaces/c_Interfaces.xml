@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_3413BBD173324104B42FB714974CABE7" xml:lang="en-us">
+    <title>Platform Services and Web Service APIs</title>
+    <conbody>
+        <section>
+            <p>An application that integrates with <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> invokes the functionality of the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> platform services.</p>
+            <p>In addition, the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> integration package contains APIs for implementing a provisioning service, an operation service, or a notification service. </p>
+            <p>The subsequent sections describe the platform services and APIs in detail. </p>
+            <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> ships the Java interfaces for its Web services as <codeph>.jar</codeph> files. You can directly write your Java code and include these <codeph>.jar</codeph> files for calls from <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> to the application (outbound calls), or implement the Java interfaces for calls from the application to <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> (inbound calls). No code generation is required. Both call directions can be deployed in Java EE environments. </p>
+            <p>The available REST APIs are described in YAML files which are shipped with <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    >. With appropriate tools such as Swagger Editor, you can view the descriptions and collect experience with the APIs. </ph></p>
+        </section>
+    </conbody>
+</concept>

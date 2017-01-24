@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+<reference id="Marketplace_Owner_Revenue_Sha_386" xml:lang="en-us">
+    <title>Marketplace Owner Revenue Share Data</title>
+    <refbody>
+        <section>
+            <p>The following sections describe the XML elements and attributes that make up the revenue share data for marketplace owners. </p>
+        </section>
+        <section>
+            <title>MarketplaceOwnerRevenueShareResult</title>
+            <p>Top-level container element for marketplace owner revenue share data. For each marketplace owner organization in consideration, a <codeph>MarketplaceOwnerRevenueShareResult</codeph> element is added to the billing data file. </p>
+            <p>A <codeph>MarketplaceOwnerRevenueShareResult</codeph> element has the following attributes: </p>
+            <ul>
+                <li><codeph><b>organizationId</b></codeph> - (required, data type <codeph>string</codeph>) ID of the marketplace owner organization.</li>
+                <li><codeph><b>organizationKey</b></codeph> - (required, data type <codeph>positiveInteger</codeph>) Internal numeric key of the marketplace owner organization. </li>
+            </ul>
+            <p>A <codeph>MarketplaceOwnerRevenueShareResult</codeph> element contains the following subelements:</p>
+            <ul>
+                <li>An <codeph>OrganizationData</codeph> element specifying the details of the marketplace owner organization (see <xref
+                        href="r_RevenueShareCommon.xml#Revenue_Share_Data_265/OrganizationData_reference_refbody_section_4"
+                    />).</li>
+                <li>A <codeph>Period</codeph> element specifying the billing period (see <xref
+                        href="r_RevenueShareCommon.xml#Revenue_Share_Data_265/reference_refbody_section_3"/>).</li>
+                <li>A <codeph>Currency</codeph> element for each currency for which marketplace owner revenue share data is available (see <xref
+                        href="r_MPOwnerRevenueShare.xml#Marketplace_Owner_Revenue_Sha_386/Currency_reference_refbody_section_4"
+                    />).</li>
+            </ul>
+            <p><b>Example</b>:</p>
+            <p>
+                <codeblock><b>&lt;MarketplaceOwnerRevenueShareResult organizationId="cd9ffaac" organizationKey="19000"&gt;</b>
+  &lt;OrganizationData> ... &lt;/OrganizationData>
+  &lt;Period> ... &lt;/Period>
+  &lt;Currency> ... &lt;/Currency>
+<b>&lt;/MarketplaceOwnerRevenueShareResult&gt;</b></codeblock>
+            </p>
+        </section>
+        <section id="Currency_reference_refbody_section_4">
+            <title>Currency</title>
+            <p>Contains the marketplace owner revenue share data for a specific currency. </p>
+            <p>A <codeph>Currency</codeph> element has the following attribute: </p>
+            <p><codeph><b>id</b></codeph> - (required, data type <codeph>string</codeph>) ISO code of the currency. </p>
+            <p>A <codeph>Currency</codeph> element contains the following subelements:</p>
+            <ul>
+                <li>A <codeph>Marketplace</codeph> element for each marketplace for which revenue share data for the current marketplace owner organization is available (see <xref
+                        href="r_MPOwnerRevenueShare.xml#Marketplace_Owner_Revenue_Sha_386/Marketplace_reference_refbody_section_5"
+                    />).</li>
+                <li>A <codeph>RevenuesOverAllMarketplaces</codeph> element summarizing the revenue shares across the marketplaces (see <xref
+                        href="r_MPOwnerRevenueShare.xml#Marketplace_Owner_Revenue_Sha_386/RevenuesOverAllMarketplaces_reference_refbody_section_8"
+                    />).</li>
+            </ul>
+            <p><b>Example</b>:</p>
+            <p>
+                <codeblock><b>&lt;Currency id="EUR"&gt;</b>
+  &lt;Marketplace>...&lt;/Marketplace>
+  &lt;RevenuesOverAllMarketplaces> ... &lt;/RevenuesOverAllMarketplaces>
+<b>&lt;/Currency&gt;</b></codeblock>
+            </p>
+        </section>
+        <section id="Marketplace_reference_refbody_section_5">
+            <title>Marketplace</title>
+            <p>Contains the revenue share data for a specific marketplace. </p>
+            <p>A <codeph>Marketplace</codeph> element has the following attributes: </p>
+            <ul>
+                <li><codeph><b>id</b></codeph> - (required, data type <codeph>string</codeph>) ID of the marketplace.</li>
+                <li><codeph><b>key</b></codeph> - (required, data type <codeph>positiveInteger</codeph>) Internal numeric key of the marketplace. </li>
+            </ul>
+            <p>A <codeph>Marketplace</codeph> element contains the following subelements:</p>
+            <ul>
+                <li>A <codeph>Service</codeph> element for each service published on the marketplace for which revenue share data is available (see <xref
+                        href="r_MPOwnerRevenueShare.xml#Marketplace_Owner_Revenue_Sha_386/Service_reference_refbody_section_5"
+                    />).</li>
+                <li>A <codeph>RevenuesPerMarketplace</codeph> element summarizing the revenue shares for all organizations involved (see <xref
+                        href="r_MPOwnerRevenueShare.xml#Marketplace_Owner_Revenue_Sha_386/RevenuesPerMarketplace_reference_refbody_section_7"
+                    />).</li>
+            </ul>
+            <p><b>Example</b>:</p>
+            <p>
+                <codeblock><b>&lt;Marketplace id="e1828fba" key="17021"&gt;</b>
+  &lt;Service>...&lt;/Service>
+  &lt;RevenuesPerMarketplace> ... &lt;/RevenuesPerMarketplace>
+<b>&lt;/Marketplace&gt;</b></codeblock>
+            </p>
+        </section>
+        <section id="Service_reference_refbody_section_5">
+            <title>Service</title>
+            <p>Specifies the revenue share data for a specific service published on the current marketplace. </p>
+            <p>A <codeph>Service</codeph> element has the following attributes: </p>
+            <ul>
+                <li id="id_reference_refbody_section_5"
+                        ><codeph><b>id</b></codeph> - (required, data type <codeph>string</codeph>) Name of the service.</li>
+                <li id="key_reference_refbody_section_5"
+                        ><codeph><b>key</b></codeph> - (required, data type <codeph>positiveInteger</codeph>) Internal numeric key of the published service. If the service is offered by a broker or reseller, this is the key of an internal technical copy of the original service defined by the supplier. If the service is offered directly by its supplier, it is the key of the original service.</li>
+                <li id="model_reference_refbody_section_5"
+                        ><codeph><b>model</b></codeph> - (required, data type <codeph>string</codeph>) String specifying by which type of organization the service is offered. Possible values are: <ul>
+                        <li><codeph>DIRECT</codeph> : The service is offered by its supplier.</li>
+                        <li><codeph>BROKER</codeph> : The service is offered by a broker.</li>
+                        <li><codeph>RESELLER</codeph> : The service is offered by a reseller.</li>
+                    </ul></li>
+                <li id="templateKey_reference_refbody_section_5"
+                        ><codeph><b>templateKey</b></codeph> - (optional, data type <codeph>positiveInteger</codeph>) Internal numeric key of the original service defined by the supplier, if the service is published by a broker or reseller. </li>
+            </ul>
+            <p>A <codeph>Service</codeph> element contains the following subelements:</p>
+            <ul>
+                <li>A <codeph>Supplier</codeph> element specifying the supplier organization who defined the service in an <codeph>OrganizationData</codeph> subelement (see <xref
+                        href="r_RevenueShareCommon.xml#Revenue_Share_Data_265/OrganizationData_reference_refbody_section_4"
+                    />).</li>
+                <li>If the service is offered by a broker: A <codeph>Broker</codeph> element specifying the broker organization in an <codeph>OrganizationData</codeph> subelement (see <xref
+                        href="r_RevenueShareCommon.xml#Revenue_Share_Data_265/OrganizationData_reference_refbody_section_4"
+                    />).</li>
+                <li>If the service is offered by a reseller: A <codeph>Reseller</codeph> element specifying the reseller organization in an <codeph>OrganizationData</codeph> subelement (see <xref
+                        href="r_RevenueShareCommon.xml#Revenue_Share_Data_265/OrganizationData_reference_refbody_section_4"
+                    />).</li>
+                <li>A <codeph>RevenueShareDetails</codeph> element specifying the revenue shares for the service (see <xref
+                        href="r_MPOwnerRevenueShare.xml#Marketplace_Owner_Revenue_Sha_386/ServiceRevenue_reference_refbody_section_7"
+                    />).</li>
+            </ul>
+            <p><b>Examples</b>:</p>
+            <p>The service is offered directly by its supplier:</p>
+            <p>
+                <codeblock><b>&lt;Service id="Mega Office" key="17005" model="DIRECT"></b>
+  &lt;Supplier> &lt;OrganizationData> ... &lt;/OrganizationData> &lt;/Supplier>
+  &lt;RevenueShareDetails> ... &lt;/RevenueShareDetails>
+<b>&lt;/Service></b></codeblock>
+            </p>
+            <p>The service is offered by a broker:</p>
+            <p>
+                <codeblock><b>&lt;Service id="Mega Office" key="17005" model="BROKER" templateKey="10501"></b>
+  &lt;Supplier> &lt;OrganizationData> ... &lt;/OrganizationData> &lt;/Supplier>
+  &lt;Broker> &lt;OrganizationData> ... &lt;/OrganizationData> &lt;/Broker>
+  &lt;RevenueShareDetails> ... &lt;/RevenueShareDetails>
+<b>&lt;/Service></b></codeblock>
+            </p>
+            <p>The service is offered by a reseller:</p>
+            <p>
+                <codeblock><b>&lt;Service id="Mega Office" key="17005" model="RESELLER" templateKey="10501"></b>
+  &lt;Supplier> &lt;OrganizationData> ... &lt;/OrganizationData> &lt;/Supplier>
+  &lt;Reseller> &lt;OrganizationData> ... &lt;/OrganizationData> &lt;/Reseller>
+  &lt;RevenueShareDetails> ... &lt;/RevenueShareDetails>
+<b>&lt;/Service></b></codeblock>
+            </p>
+        </section>
+        <section id="ServiceRevenue_reference_refbody_section_7">
+            <title>RevenueShareDetails</title>
+            <p>Specifies the revenue for a specific service and the revenue shares for all organizations involved in selling the service. </p>
+            <p>A <codeph>RevenueShareDetails</codeph> element has the following attributes: </p>
+            <ul>
+                <li id="serviceRevenue_reference_refbody_section_6"
+                        ><codeph><b>serviceRevenue</b></codeph> - (required, data type <codeph>decimal</codeph>, scale 2) Total revenue for the service in the billing period.</li>
+                <li id="marketplaceRevenueSharePercen_reference_refbody_section_6"
+                            ><codeph><b>marketplaceRevenueSharePercentage</b></codeph> - (required, data type <codeph>decimal</codeph>, scale 2) Percentage of the revenue the marketplace owner is entitled to.</li>
+                <li><codeph><b>operatorRevenueSharePercentage</b></codeph> - (required, data type <codeph>decimal</codeph>, scale 2) Percentage of the revenue the platform operator is entitled to.</li>
+                <li id="brokerRevenueSharePercentage_reference_refbody_section_6"
+                            ><codeph><b>brokerRevenueSharePercentage</b></codeph> - (optional, data type <codeph>decimal</codeph>, scale 2) If the service is offered by a broker: Percentage of the revenue the broker is entitled to.</li>
+                <li id="resellerRevenueSharePercentage_reference_refbody_section_6"
+                            ><codeph><b>resellerRevenueSharePercentage</b></codeph> - (optional, data type <codeph>decimal</codeph>, scale 2) If the service is offered by a reseller: Percentage of the revenue the reseller is entitled to.</li>
+                <li id="marketplaceRevenue_reference_refbody_section_6"
+                        ><codeph><b>marketplaceRevenue</b></codeph> - (required, data type <codeph>decimal</codeph>, scale 2) The marketplace owner's revenue share for the service in the billing period.</li>
+                <li><codeph><b>operatorRevenue</b></codeph> - (required, data type <codeph>decimal</codeph>, scale 2) The platform operator's revenue share for the service in the billing period.</li>
+                <li id="brokerRevenue_reference_refbody_section_6"
+                        ><codeph><b>brokerRevenue</b></codeph> - (optional, data type <codeph>decimal</codeph>, scale 2) If the service is offered by a broker: The broker's revenue share for the service in the billing period.</li>
+                <li id="resellerRevenue_reference_refbody_section_6"
+                        ><codeph><b>resellerRevenue</b></codeph> - (optional, data type <codeph>decimal</codeph>, scale 2) If the service is offered by a reseller: The reseller's revenue share for the service in the billing period.</li>
+                <li><codeph><b>amountForSupplier</b></codeph> - (required, data type <codeph>decimal</codeph>, scale 2) The supplier's revenue share for the service in the billing period. This is the remaining value of the total service revenue after subtracting the revenue shares for the operator, marketplace owner, broker, and/or reseller.</li>
+            </ul>
+            <p><b>Examples</b>:</p>
+            <p>The service is offered directly by its supplier:</p>
+            <p>
+                <codeblock><b>&lt;RevenueShareDetails serviceRevenue="500.00"
+  marketplaceRevenueSharePercentage="15.00" marketplaceRevenue="75.00" 
+  operatorRevenueSharePercentage="10.00" operatorRevenue="50.00" 
+  amountForSupplier="375.00"></b>
+<b>&lt;/RevenueShareDetails></b></codeblock>
+            </p>
+            <p>The service is offered by a broker:</p>
+            <p>
+                <codeblock><b>&lt;RevenueShareDetails serviceRevenue="4000.00" 
+  marketplaceRevenueSharePercentage="21.00" marketplaceRevenue="840.00" 
+  brokerRevenueSharePercentage="9.00" brokerRevenue="360.00" 
+  operatorRevenueSharePercentage="5.00" operatorRevenue="200.00" 
+  amountForSupplier="2600.00"></b>
+<b>&lt;/RevenueShareDetails></b></codeblock>
+            </p>
+            <p>The service is offered by a reseller:</p>
+            <p>
+                <codeblock><b>&lt;RevenueShareDetails serviceRevenue="3000.00" 
+  marketplaceRevenueSharePercentage="16.00" marketplaceRevenue="480.00" 
+  resellerRevenueSharePercentage="20.00" resellerRevenue="600.00" 
+  operatorRevenueSharePercentage="5.00" operatorRevenue="150.00" 
+  amountForSupplier="1770.00"></b>
+<b>&lt;/RevenueShareDetails></b></codeblock>
+            </p>
+        </section>
+        <section id="RevenuesPerMarketplace_reference_refbody_section_7">
+            <title>RevenuesPerMarketplace</title>
+            <p>Provides an overview of the revenue shares for the different organizations involved in selling services on a specific marketplace.</p>
+            <p>A <codeph>RevenuesPerMarketplace</codeph> element contains the following subelements: </p>
+            <ul>
+                <li>A <codeph>Brokers</codeph> element listing the relevant broker organizations with their revenue shares in <codeph>Organization</codeph> subelements. </li>
+                <li>A <codeph>Resellers</codeph> element listing the relevant reseller organizations with their revenue shares in <codeph>Organization</codeph> subelements. </li>
+                <li>A <codeph>Suppliers</codeph> element listing the relevant supplier organizations with their revenue shares in <codeph>Organization</codeph> subelements. </li>
+                <li>A <codeph>MarketplaceOwner</codeph> element specifying the revenue share for the marketplace owner in its <codeph>amount</codeph> attribute (required, data type <codeph>decimal</codeph>, scale 2).</li>
+            </ul>
+            <p>Each <codeph>Brokers</codeph>, <codeph>Resellers</codeph>, or <codeph>Suppliers</codeph> element included in a <codeph>RevenuesPerMarketplace</codeph> element has the following attributes: </p>
+            <ul>
+                <li><codeph><b>amount</b></codeph> - (optional, data type <codeph>decimal</codeph>, scale 2) Overall revenue share of the listed broker, reseller, or supplier organizations. </li>
+                <li><codeph><b>marketplaceRevenue</b></codeph> - (optional, data type <codeph>decimal</codeph>, scale 2) The marketplace owner's share of the revenue of the listed broker, reseller, or supplier organizations.</li>
+                <li><codeph><b>totalAmount</b></codeph> - (optional, data type <codeph>decimal</codeph>, scale 2) Overall revenue for all services offered by the listed broker, reseller, or supplier organizations on the marketplace. </li>
+            </ul>
+            <p>An <codeph>Organization</codeph> element included in a <codeph>Brokers</codeph>, <codeph>Resellers</codeph>, or <codeph>Suppliers</codeph> element has the following attributes: </p>
+            <ul>
+                <li><codeph><b>identifier</b></codeph> - (required, data type <codeph>string</codeph>) ID of the organization.</li>
+                <li><codeph><b>amount</b></codeph> - (required, data type <codeph>decimal</codeph>, scale 2) Revenue share of the organization. </li>
+                <li><codeph><b>name</b></codeph> - (optional, data type <codeph>string</codeph>) Name of the organization. </li>
+                <li><codeph><b>marketplaceRevenue</b></codeph> - (optional, data type <codeph>decimal</codeph>, scale 2) The marketplace owner's share of the organization's revenue.</li>
+                <li><codeph><b>totalAmount</b></codeph> - (optional, data type <codeph>decimal</codeph>, scale 2) Overall revenue for all services offered by the organization on the marketplace.</li>
+            </ul>
+            <p><b>Example</b>:</p>
+            <p>
+                <codeblock><b>&lt;RevenuesPerMarketplace>
+  &lt;Brokers amount="250.00" totalAmount="1000.00" 
+   marketplaceRevenue="200.00">
+    &lt;Organization identifier="da3cd3a3" amount="100.00" name="broker" 
+     marketplaceRevenue="80.00" totalAmount="400.00" />
+    &lt;Organization identifier="ea4cd3a3" amount="150.00" name="broker2"
+     marketplaceRevenue="120.00" totalAmount="600.00" />
+  &lt;/Brokers>
+  &lt;Resellers amount="600.00" totalAmount="2000.00" 
+   marketplaceRevenue="400.00">
+    &lt;Organization identifier="bc4cd3a3" amount="240.00" name="reseller"
+     marketplaceRevenue="160.00" totalAmount="800.00" />
+    &lt;Organization identifier="fg5cd3a3" amount="360.00" name="reseller2"
+     marketplaceRevenue="240.00" totalAmount="1200.00" />
+  &lt;/Resellers>
+  &lt;Suppliers />
+  &lt;MarketplaceOwner amount="600.00" />
+&lt;/RevenuesPerMarketplace></b></codeblock>
+            </p>
+        </section>
+        <section id="RevenuesOverAllMarketplaces_reference_refbody_section_8">
+            <title>RevenuesOverAllMarketplaces</title>
+            <p>Provides an overview of the revenue shares for the different organizations involved in selling services on any of the marketplaces that belong to a specific marketplace owner.</p>
+            <p>A <codeph>RevenuesOverAllMarketplaces</codeph> element contains the following subelements: </p>
+            <ul>
+                <li>A <codeph>Brokers</codeph> element listing the relevant broker organizations with their revenue shares in <codeph>Organization</codeph> subelements. </li>
+                <li>A <codeph>Resellers</codeph> element listing the relevant reseller organizations with their revenue shares in <codeph>Organization</codeph> subelements. </li>
+                <li>A <codeph>Suppliers</codeph> element listing the relevant supplier organizations with their revenue shares in <codeph>Organization</codeph> subelements. </li>
+                <li>A <codeph>MarketplaceOwner</codeph> element specifying the revenue share for the marketplace owner in its <codeph>amount</codeph> attribute (required, data type <codeph>decimal</codeph>, scale 2).</li>
+            </ul>
+            <p>Each <codeph>Brokers</codeph>, <codeph>Resellers</codeph>, or <codeph>Suppliers</codeph> element included in a <codeph>RevenuesOverAllMarketplaces</codeph> element has the following attributes: </p>
+            <ul>
+                <li><codeph><b>amount</b></codeph> - (optional, data type <codeph>decimal</codeph>, scale 2) Overall revenue share of the listed broker, reseller, or supplier organizations. </li>
+                <li><codeph><b>marketplaceRevenue</b></codeph> - (optional, data type <codeph>decimal</codeph>, scale 2) The marketplace owner's share of the revenue of the listed broker, reseller, or supplier organizations.</li>
+                <li><codeph><b>totalAmount</b></codeph> - (optional, data type <codeph>decimal</codeph>, scale 2) Overall revenue for all services offered by the listed broker, reseller, or supplier organizations on the marketplaces. </li>
+            </ul>
+            <p>An <codeph>Organization</codeph> element included in a <codeph>Brokers</codeph>, <codeph>Resellers</codeph>, or <codeph>Suppliers</codeph> element has the following attributes: </p>
+            <ul>
+                <li><codeph><b>identifier</b></codeph> - (required, data type <codeph>string</codeph>) ID of the organization.</li>
+                <li><codeph><b>amount</b></codeph> - (required, data type <codeph>decimal</codeph>, scale 2) Revenue share of the organization. </li>
+                <li><codeph><b>name</b></codeph> - (optional, data type <codeph>string</codeph>) Name of the organization. </li>
+                <li><codeph><b>marketplaceRevenue</b></codeph> - (optional, data type <codeph>decimal</codeph>, scale 2) The marketplace owner's share of the organization's revenue.</li>
+                <li><codeph><b>totalAmount</b></codeph> - (optional, data type <codeph>decimal</codeph>, scale 2) Overall revenue for all services offered by the organizations on the marketplaces.</li>
+            </ul>
+            <p><b>Example</b>:</p>
+            <p>
+                <codeblock><b>&lt;RevenuesOverAllMarketplaces>
+  &lt;Brokers amount="250.00" totalAmount="1000.00" 
+   marketplaceRevenue="200.00">
+    &lt;Organization identifier="da3cd3a3" amount="100.00" name="broker" 
+     marketplaceRevenue="80.00" totalAmount="400.00" />
+    &lt;Organization identifier="ea4cd3a3" amount="150.00" name="broker2"
+     marketplaceRevenue="120.00" totalAmount="600.00" />
+  &lt;/Brokers>
+  &lt;Resellers amount="600.00" totalAmount="2000.00" 
+   marketplaceRevenue="400.00">
+    &lt;Organization identifier="bc4cd3a3" amount="240.00" name="reseller"
+     marketplaceRevenue="160.00" totalAmount="800.00" />
+    &lt;Organization identifier="fg5cd3a3" amount="360.00" name="reseller2"
+     marketplaceRevenue="240.00" totalAmount="1200.00" />
+  &lt;/Resellers>
+  &lt;Suppliers />
+  &lt;MarketplaceOwner amount="600.00" />
+&lt;/RevenuesOverAllMarketplaces></b></codeblock>
+            </p>
+        </section>
+    </refbody>
+</reference>

@@ -1,0 +1,1118 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<reference id="reference832" xml:lang="ja-jp">
+    <title><ph platform="print">サービス管理者の操作</ph><ph platform="help">サービス管理者の操作</ph>
+    </title>
+    <refbody>
+        <section>
+            <p>管理ポータルにおいてサービス提供者のロールがあるサービス管理者による操作によって出力される監査ログに出力されるメッセージについて説明します。これらの操作のいくつかは、サービス仲介者やサービス提供代行者によっても行われます。</p>
+        </section>
+        <section>
+            <p>以下の<codeph>&lt;<i>追加の名前と値の組</i>></codeph>は、すべてのログに共通で、ヘッダーに追加されます。:</p>
+            <p>
+                <ul>
+                    <li>
+                        <p><codeph>serviceId=<i>&lt;サービスID></i></codeph>: サービスの作成時に指定したサービスのID。</p>
+                    </li>
+                    <li>
+                        <p><codeph>serviceName=<i>&lt;サービス名></i></codeph>: サービスの作成時に指定した利用者向けサービス名。</p>
+                    </li>
+                </ul>
+            </p>
+            <p>記録される操作によっては、名前と値の組が追加される場合があります。</p>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Activate/deactivate service</b></p>
+                                <p>説明: サービス管理者、サービス仲介者、またはサービス提供代行者がサービスを有効化または無効化した。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>marketplaceId=<i>&lt;ID></i></codeph>: サービスが公開されたサービスポータルのID。</li>
+                                        <li><codeph>marketplaceName=<i>&lt;名前></i></codeph>: サービスが公開されたサービスポータルの名前。</li>
+                                        <li><codeph>activation=<i>&lt;on or off></i></codeph>: サービスが有効化されたか無効化されたかを示す。<codeph>ON</codeph> または <codeph>OFF</codeph>のいずれか。</li>
+                                        <li><codeph>inCatalog=<i>&lt;on or off></i></codeph>: サービスがサービスカタログに表示されるかどうかを示す。<codeph>ON</codeph> または <codeph>OFF</codeph>のいずれか。</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Assign brokers</b></p>
+                                <p>説明: サービス公開設定にて、サービス管理者がサービス仲介部門にサービスを提供する権限を与えた。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p><codeph>BrokerId=<i>&lt;ID></i></codeph>: サービス仲介部門の組織ID。</p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Assign categories</b></p>
+                                <p>説明: サービスの公開設定にて、サービス管理者、サービス仲介者、またはサービス提供代行者がサービスにカテゴリを設定した、または設定を解除した。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p><codeph>listOfCategories=<i>&lt;名前></i></codeph>: 設定されているカテゴリの名前。名前はカンマで区切られる。</p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Assign resellers</b></p>
+                                <p>説明: サービス公開設定にて、サービス管理者がサービス提供代行部門にサービスを提供する権限を与えた。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p><codeph>ResellerId=<i>&lt;ID></i></codeph>: サービス提供代行部門の組織ID。</p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Assign service to marketplace</b></p>
+                                <p>説明: サービスの公開設定において、サービス管理者、サービス仲介者、またはサービス提供代行者がサービスを公開するサービスポータルを指定または変更した。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>marketplaceId=<i>&lt;ID></i></codeph>: サービスポータルのID。</li>
+                                        <li><codeph>marketplaceName=<i>&lt;名前></i></codeph>: サービスポータルの名前。</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Copy service</b></p>
+                                <p>説明: サービス管理者がサービスのコピーを作成した。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>copyId=<i>&lt;サービスID></i></codeph>: データベースに格納されているコピーされたサービスのID。</li>
+                                        <li><codeph>copyName=<i>&lt;サービス名></i></codeph>: サービスのコピーを作成するときに入力したコピーされたサービスの名前。</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Deassign brokers</b></p>
+                                <p>説明: サービスの公開設定において、サービス仲介部門のサービスを提供する権限を削除した。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p><codeph>BrokerId=<i>&lt;ID></i></codeph>: 権限を削除されたサービス仲介部門の組織ID。</p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Deassign resellers</b></p>
+                                <p>説明: サービスの公開設定において、サービス提供代行部門のサービスを提供する権限を削除した。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p><codeph>ResellerId=<i>&lt;ID></i></codeph>: 権限を削除されたサービス提供代行部門の組織ID。</p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Define service</b></p>
+                                <p>説明: サービス管理者がサービスを定義した。サービスで定義したパラメーターおよびパラメーターのオプションごとに <b>Update service parameter</b> ログエントリーが追加で出力されます。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>technServiceName=<i>&lt;名前></i></codeph>: サービスの作成元の技術サービスの名前。</li>
+                                        <li><codeph>shortDescription=<i>&lt;yes or no></i></codeph>: サービスの概要が入力されたかどうかを示す。<codeph>YES</codeph> または <codeph>NO</codeph> のいずれか。</li>
+                                        <li><codeph>description=<i>&lt;yes or no></i></codeph>: サービスの説明が入力されたかどうかを示す。<codeph>YES</codeph> または <codeph>NO</codeph> のいずれか。</li>
+                                        <li><codeph>locale=<i>&lt;言語コード></i></codeph>: 説明が保存されている言語のコード</li>
+                                        <li><codeph>autoAssignUser=<i>&lt;yes or no></i></codeph>: サービスを購入する利用者がその購入済サービスに自動的に割り当てられるかを示す。<codeph>YES</codeph> か <codeph>NO</codeph>のいずれか。</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Define up/downgrade options</b></p>
+                                <p>説明: サービス管理者が、購入済サービスをアップグレードまたはダウングレード可能として定義したか、もしくは、サービスをアップグレードまたはダウングレード可能な一覧から削除した。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>targetId=<i>&lt;サービスID></i></codeph>: 購入済サービスをアップグレードまたはダウングレード可能なサービスのデータベースに格納されているID。</li>
+                                        <li><codeph>targetName=<i>&lt;サービス名></i></codeph>: 購入済サービスをアップグレードまたはダウングレード可能なサービスの名前。</li>
+                                        <li><codeph>upDownGrade=<i>&lt;on or off></i></codeph>: サービスがアップグレードまたはダウングレード可能として追加または削除されたかを示す。<codeph>ON</codeph> または <codeph>OFF</codeph>のいずれか。</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Delete customer price model</b></p>
+                                <p>説明: サービス管理者が、サービス利用部門向けの料金設定を削除した。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>customerKey=<i>&lt;組織ID></i></codeph>: サービス利用部門の組織のID。</li>
+                                        <li><codeph>customerName=<i>&lt;組織名></i></codeph>: サービス利用部門の組織の名前。</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Delete service</b></p>
+                                <p>説明: サービス管理者がサービスを削除した。</p>
+                                <p>追加の名前と値の組はなし。</p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Edit event price in customer price model</b></p>
+                                <p>説明: サービス管理者が、サービス利用部門向けの料金設定でイベントの料金を定義または変更した。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>customerKey=<i>&lt;組織ID></i></codeph>: サービス利用部門の組織のID。</li>
+                                        <li><codeph>customerName=<i>&lt;組織名></i></codeph>: サービス利用部門の組織の名前。</li>
+                                        <li><codeph>currency=<i>&lt;通貨コード></i></codeph>: サービス利用部門がサービスを利用することによって請求される通貨のISOコード。</li>
+                                        <li><codeph>eventName=<i>&lt;名前></i></codeph>: 技術サービスで定義されているイベントの名前。</li>
+                                        <li><codeph>range=<i>&lt;値></i></codeph>: 段階的な料金が設定されている場合、料金が適用される範囲。段階的な料金が設定されていない場合、値は <codeph>1-ANY</codeph> になります。</li>
+                                        <li><codeph>action=<i>&lt;アクション></i></codeph>: 段階的な料金が定義されている場合、実行されたアクション。<codeph>INSERT</codeph> (新しい段階的な料金が定義された場合), <codeph>UPDATE</codeph> (段階的な料金が更新された場合), または <codeph>DELETE</codeph> (段階的な料金が削除された場合) のいずれか。段階的な料金が定義されていない場合は、<codeph>action</codeph> パラメーターは監査ログに出力されません。</li>
+                                        <li><codeph>price=<i>&lt;単価></i></codeph>:料金設定で定義されている単価。</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Edit event price in service price model</b></p>
+                                <p>説明: サービス管理者が料金設定のイベント料金の単価を定義または変更した。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>currency=<i>&lt;通貨コード></i></codeph>: サービスを利用することによってサービス利用部門に課金される通貨のISOコード。</li>
+                                        <li><codeph>eventName=<i>&lt;名前></i></codeph>: 技術サービスで定義されているイベントの名前。</li>
+                                        <li><codeph>range=<i>&lt;値></i></codeph>: 段階的な料金が定義されている場合、料金が適用される範囲を示します。段階的な料金が定義されていない場合、値は <codeph>1-ANY</codeph> になります。</li>
+                                        <li><codeph>action=<i>&lt;アクション></i></codeph>: 段階的な料金が定義されている場合、実行されたアクション。<codeph>INSERT</codeph> (新しい段階的な料金が定義された場合), <codeph>UPDATE</codeph> (段階的な料金が更新された場合), または <codeph>DELETE</codeph> (段階的な料金が削除された場合) のいずれか。段階的な料金が定義されていない場合は、<codeph>action</codeph> パラメーターは監査ログに出力されません。</li>
+                                        <li><codeph>price=<i>&lt;単価></i></codeph>: 料金設定で定義されている単価。</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Edit event price in subscription price model</b></p>
+                                <p>説明: サービス管理者が購入済サービスの料金設定でイベントの料金を定義または変更した。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>customerKey=<i>&lt;組織ID></i></codeph>: サービス利用部門の組織のID。</li>
+                                        <li><codeph>customerName=<i>&lt;組織名></i></codeph>: サービス利用部門の組織の名前。</li>
+                                        <li>
+                                            <p><codeph>subscriptionName=<i>&lt;購入済サービスの名前></i></codeph>: サービスの購入時に入力した購入済サービスの名前。</p>
+                                        </li>
+                                        <li><codeph>currency=<i>&lt;通貨コード></i></codeph>: サービス利用部門がサービスを利用することによってい請求される通貨のISOコード。</li>
+                                        <li><codeph>eventName=<i>&lt;名前></i></codeph>: 技術サービスで定義されているイベントの名前。</li>
+                                        <li><codeph>range=<i>&lt;値></i></codeph>: 段階的な料金が設定されている場合、料金が適用される範囲。段階的な料金が設定されていない場合、値は <codeph>1-ANY</codeph> になります。</li>
+                                        <li><codeph>action=<i>&lt;アクション></i></codeph>: 段階的な料金が定義されている場合、実行されたアクション。<codeph>INSERT</codeph> (新しい段階的な料金が定義された場合), <codeph>UPDATE</codeph> (段階的な料金が更新された場合), または <codeph>DELETE</codeph> (段階的な料金が削除された場合) のいずれか。段階的な料金が定義されていない場合は、<codeph>action</codeph> パラメーターは監査ログに出力されません。</li>
+                                        <li><codeph>price=<i>&lt;単価></i></codeph>: 料金設定で定義されている単価。</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Edit one time fee in customer price model</b></p>
+                                <p>>説明: サービス管理者がサービス利用部門向けの料金設定にて初期費用を定義または変更した。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>customerKey=<i>&lt;組織ID></i></codeph>: サービス利用部門の組織のID。</li>
+                                        <li><codeph>customerName=<i>&lt;組織名></i></codeph>: サービス利用部門の組織の名前。</li>
+                                        <li><codeph>currency=<i>&lt;通貨コード></i></codeph>: サービス利用部門がサービスを利用することによって請求される通貨のISOコード。</li>
+                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 従量課金と定額の課金単位。<codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph>のいずれか。</li>
+                                        <li><codeph>oneTimeFee=<i>&lt;初期費用></i></codeph>: 購入時の初期費用。</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Edit one time fee in service price model</b></p>
+                                <p>>説明: サービス管理者がサービスの料金設定にて初期費用を定義または変更した。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>currency=<i>&lt;通貨コード></i></codeph>: サービス利用部門がサービスを利用することによって請求される通貨のISOコード。</li>
+                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 従量課金と定額の課金単位。<codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph>のいずれか。</li>
+                                        <li><codeph>oneTimeFee=<i>&lt;初期費用></i></codeph>: 購入時の初期費用。</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Edit customer price model</b></p>
+                                <p>説明: サービス管理者が、サービス利用部門向けの料金設定にて通貨、課金単位、料金タイプもしくは無料試用期間を定義または変更した。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>customerKey=<i>&lt;組織ID></i></codeph>: サービス利用部門の組織のID。</li>
+                                        <li><codeph>customerName=<i>&lt;組織名></i></codeph>: サービス利用部門の組織の名前。</li>
+                                        <li><codeph>currency=<i>&lt;通貨コード></i></codeph>: サービス利用部門がサービスを利用することによって請求される通貨のISOコード。</li>
+                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 従量課金と定額の課金単位。<codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph>のいずれか。</li>
+                                        <li><codeph>calculationMode=<i>&lt;料金タイプ></i></codeph>: サービスを利用することに対する課金の計算方法。<codeph>PRO_RATA</codeph> (従量課金), または <codeph>PER_UNIT</codeph> (定額)のいずれか。</li>
+                                        <li><codeph>trialPeriod=<i>&lt;on or off></i></codeph>: 料金設定で無料試用期間が設定されているかどうか。<codeph>ON</codeph> または <codeph>OFF</codeph>のいずれか。</li>
+                                        <li><codeph>daysOfTrial=<i>&lt;日数></i></codeph>: 無料試用期間に設定された日数。</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Edit service price model</b></p>
+                                <p>説明: サービス管理者が、サービスの料金設定にて通貨、課金単位、料金タイプもしくは無料試用期間を定義または変更した。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>currency=<i>&lt;通貨コード></i></codeph>: サービス利用部門がサービスを利用することによって請求される通貨のISOコード。</li>
+                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 従量課金と定額の課金単位。<codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph>のいずれか。</li>
+                                        <li><codeph>calculationMode=<i>&lt;料金タイプ></i></codeph>: サービスを利用することに対する課金の計算方法。<codeph>PRO_RATA</codeph> (従量課金), または <codeph>PER_UNIT</codeph> (定額) のいずれか。</li>
+                                        <li><codeph>trialPeriod=<i>&lt;on or off></i></codeph>: 料金設定で無料試用期間が設定されているかどうか。<codeph>ON</codeph> または <codeph>OFF</codeph>のいずれか。</li>
+                                        <li><codeph>daysOfTrial=<i>&lt;日数></i></codeph>: 無料試用期間に設定された日数。</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Edit price model type to free of charge for customer</b></p>
+                                <p>説明: サービス管理者がサービス利用部門向けの料金設定を無料に設定または変更し、サービスを利用することで料金が発生しないようになった。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>customerKey=<i>&lt;組織ID></i></codeph>: サービス利用部門の組織のID。</li>
+                                        <li><codeph>customerName=<i>&lt;組織名></i></codeph>: サービス利用部門の組織の名前。</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Edit price model type to free of charge for service</b></p>
+                                <p>説明: サービス管理者がサービスの料金設定を無料に設定または変更し、サービスを利用することで料金が発生しないようになった。</p>
+                                <p>追加の名前と値の組はなし。</p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Edit price per subscription parameter in customer price model</b></p>
+                                <p>説明: サービス管理者がサービス利用部門向けの料金設定にて、パラメーターまたはパラメーターのオプションのサービス契約単価を定義または変更した。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>customerKey=<i>&lt;組織ID></i></codeph>: サービス利用部門の組織のID。</li>
+                                        <li><codeph>customerName=<i>&lt;組織名></i></codeph>: サービス利用部門の組織の名前。</li>
+                                        <li><codeph>currency=<i>&lt;通貨コード></i></codeph>: サービス利用部門がサービスを利用することによって請求される通貨のISOコード。</li>
+                                        <li><codeph>parameterName=<i>&lt;名前></i></codeph>: 技術サービスで定義されているパラメーターの名前。</li>
+                                        <li><codeph>range=<i>&lt;値></i></codeph>: 数値パラメーターには段階的な料金を定義できます。この場合、料金が適用される範囲。段階的な料金が設定されていない場合、値は <codeph>1-ANY</codeph> になります。</li>
+                                        <li><codeph>action=<i>&lt;アクション></i></codeph>: 段階的な料金が定義されている場合、実行されたアクション。<codeph>INSERT</codeph> (新しい段階的な料金が定義された場合), <codeph>UPDATE</codeph> (段階的な料金が更新された場合), または <codeph>DELETE</codeph> (段階的な料金が削除された場合) のいずれか。段階的な料金が定義されていない場合は、<codeph>action</codeph> パラメーターは監査ログに出力されません。</li>
+                                        <li><codeph>optionName=<i>&lt;名前></i></codeph>: 技術サービスに定義されているパラメーターのオプションの名前。</li>
+                                        <li><codeph>price=<i>&lt;単価></i></codeph>: 料金設定で定義されている単価。</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Edit price per subscription parameter in service price model</b></p>
+                                <p>説明: サービス管理者が料金設定にてパラメーターまたはパラメーターのオプションのサービス契約単価を定義または変更した。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>currency=<i>&lt;通貨コード></i></codeph>: サービス利用部門がサービスを利用することによって請求される通貨のISOコード。</li>
+                                        <li><codeph>parameterName=<i>&lt;名前></i></codeph>: 技術サービスで定義されているパラメーターの名前。</li>
+                                        <li><codeph>range=<i>&lt;値></i></codeph>: 数値パラメーターには段階的な料金を定義できます。この場合、料金が適用される範囲。段階的な料金が設定されていない場合、値は <codeph>1-ANY</codeph> になります。</li>
+                                        <li><codeph>action=<i>&lt;アクション></i></codeph>: 段階的な料金が定義されている場合、実行されたアクション。<codeph>INSERT</codeph> (新しい段階的な料金が定義された場合), <codeph>UPDATE</codeph> (段階的な料金が更新された場合), または <codeph>DELETE</codeph> (段階的な料金が削除された場合) のいずれか。段階的な料金が定義されていない場合は、<codeph>action</codeph> パラメーターは監査ログに出力されません。</li>
+                                        <li><codeph>optionName=<i>&lt;名前></i></codeph>: 技術サービスに定義されているパラメーターのオプションの名前。</li>
+                                        <li><codeph>price=<i>&lt;単価></i></codeph>: 料金設定で定義されている単価。</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Edit price per subscription parameter in subscription price model</b></p>
+                                <p>説明: サービス管理者が、購入済サービスの料金設定にて、パラメーターまたはパラメーターのオプションのサービス契約単価を定義または変更した。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>customerKey=<i>&lt;組織ID></i></codeph>: サービス利用部門の組織のID。</li>
+                                        <li><codeph>customerName=<i>&lt;組織名></i></codeph>: サービス利用部門の組織の名前。</li>
+                                        <li>
+                                            <p><codeph>subscriptionName=<i>&lt;購入済サービスの名前></i></codeph>: サービスの購入時に入力した購入済サービスの名前。</p>
+                                        </li>
+                                        <li><codeph>currency=<i>&lt;通貨コード></i></codeph>: サービス利用部門がサービスを利用することによって請求される通貨のISOコード。</li>
+                                        <li><codeph>parameterName=<i>&lt;名前></i></codeph>: 技術サービスで定義されているパラメーターの名前。</li>
+                                        <li><codeph>range=<i>&lt;値></i></codeph>: 数値パラメーターには段階的な料金を定義できます。この場合、料金が適用される範囲。段階的な料金が設定されていない場合、値は <codeph>1-ANY</codeph> になります。</li>
+                                        <li><codeph>action=<i>&lt;アクション></i></codeph>: 段階的な料金が定義されている場合、実行されたアクション。<codeph>INSERT</codeph> (新しい段階的な料金が定義された場合), <codeph>UPDATE</codeph> (段階的な料金が更新された場合), または <codeph>DELETE</codeph> (段階的な料金が削除された場合) のいずれか。段階的な料金が定義されていない場合は、<codeph>action</codeph> パラメーターは監査ログに出力されません。</li>
+                                        <li><codeph>optionName=<i>&lt;名前></i></codeph>: 技術サービスに定義されているパラメーターのオプションの名前。</li>
+                                        <li><codeph>price=<i>&lt;単価></i></codeph>: 料金設定で定義されている単価。</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Edit price per user parameter in customer price model</b></p>
+                                <p>説明: サービス管理者が、サービス利用部門向けの料金設定にて、パラメーターまたはパラメーターのオプションの利用者単価パラメーターを定義または変更した。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>customerKey=<i>&lt;組織ID></i></codeph>: サービス利用部門の組織のID。</li>
+                                        <li><codeph>customerName=<i>&lt;組織名></i></codeph>: サービス利用部門の組織の名前。</li>
+                                        <li><codeph>currency=<i>&lt;通貨コード></i></codeph>: サービス利用部門がサービスを利用することによって請求される通貨のISOコード。</li>
+                                        <li><codeph>parameterName=<i>&lt;名前></i></codeph>: 技術サービスで定義されているパラメーターの名前。</li>
+                                        <li><codeph>optionName=<i>&lt;名前></i></codeph>: 技術サービスに定義されているパラメーターのオプションの名前。</li>
+                                        <li><codeph>price=<i>&lt;単価></i></codeph>: 料金設定で定義されている単価。</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Edit price per user parameter in service price model</b></p>
+                                <p>説明: サービス管理者が、サービスの料金設定にてパラメーターまたはパラメーターのオプションの利用者単価を定義または変更した。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>currency=<i>&lt;通貨コード></i></codeph>: サービス利用部門がサービスを利用することによって請求される通貨のISOコード。</li>
+                                        <li><codeph>parameterName=<i>&lt;名前></i></codeph>: 技術サービスで定義されているパラメーターの名前。</li>
+                                        <li><codeph>optionName=<i>&lt;名前></i></codeph>: 技術サービスに定義されているパラメーターのオプションの名前。</li>
+                                        <li><codeph>price=<i>&lt;単価></i></codeph>: 料金設定で定義されている単価。</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Edit price per user parameter in subscription price model</b></p>
+                                <p>説明: サービス管理者が、購入済サービス固有の料金設定にてパラメーターまたはパラメーターのオプションの利用者単価を定義または変更した。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>customerKey=<i>&lt;組織ID></i></codeph>: サービス利用部門の組織のID。</li>
+                                        <li><codeph>customerName=<i>&lt;組織名></i></codeph>: サービス利用部門の組織の名前。</li>
+                                        <li>
+                                            <p><codeph>subscriptionName=<i>&lt;購入済サービスの名前></i></codeph>: サービスの購入時に入力した購入済サービスの名前。</p>
+                                        </li>
+                                        <li><codeph>currency=<i>&lt;通貨コード></i></codeph>: サービス利用部門がサービスを利用することによって請求される通貨のISOコード。</li>
+                                        <li><codeph>parameterName=<i>&lt;名前></i></codeph>: 技術サービスで定義されているパラメーターの名前。</li>
+                                        <li><codeph>optionName=<i>&lt;名前></i></codeph>: 技術サービスに定義されているパラメーターのオプションの名前。</li>
+                                        <li><codeph>price=<i>&lt;単価></i></codeph>: 料金設定で定義されている単価。</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Edit price per user role parameter in customer price model</b></p>
+                                <p>説明: サービス管理者が、サービス利用部門向けの料金設定にて特定のサービスロールのパラメーターまたはパラメーターのオプションの利用者単価を定義または変更した。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>customerKey=<i>&lt;組織ID></i></codeph>: サービス利用部門の組織のID。</li>
+                                        <li><codeph>customerName=<i>&lt;組織名></i></codeph>: サービス利用部門の組織の名前。</li>
+                                        <li><codeph>currency=<i>&lt;通貨コード></i></codeph>: サービス利用部門がサービスを利用することによって請求される通貨のISOコード。</li>
+                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 従量課金と定額の課金単位。<codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph>のいずれか。</li>
+                                        <li><codeph>userRole=<i>&lt;ロール名></i></codeph>: 技術サービスで定義されているロールの名前。</li>
+                                        <li><codeph>parameterName=<i>&lt;名前></i></codeph>: 技術サービスで定義されているパラメーターの名前。</li>
+                                        <li><codeph>optionName=<i>&lt;名前></i></codeph>: 技術サービスに定義されているパラメーターのオプションの名前。</li>
+                                        <li><codeph>price=<i>&lt;単価></i></codeph>: 料金設定で定義されている単価。</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Edit price per user role parameter in service price model</b></p>
+                                <p>説明: サービス管理者が、サービスの料金設定にてパラメーターまたはパラメーターのオプションの特定のサービスロールに利用者単価を定義または変更した。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>currency=<i>&lt;通貨コード></i></codeph>: サービス利用部門がサービスを利用することによって請求される通貨のISOコード。</li>
+                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 従量課金と定額の課金単位。<codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph>のいずれか。</li>
+                                        <li><codeph>userRole=<i>&lt;ロール名></i></codeph>: 技術サービスで定義されているロールの名前。</li>
+                                        <li><codeph>parameterName=<i>&lt;名前></i></codeph>: 技術サービスで定義されているパラメーターの名前。</li>
+                                        <li><codeph>optionName=<i>&lt;名前></i></codeph>: 技術サービスに定義されているパラメーターのオプションの名前。</li>
+                                        <li><codeph>price=<i>&lt;単価></i></codeph>: 料金設定で定義されている単価。</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Edit price per user role parameter in subscription price model</b></p>
+                                <p>説明: サービス管理者が、購入済サービスに固有の料金設定にて、特定のサービスロールのパラメーターまたはパラメーターのオプションの利用者単価を定義または変更。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>customerKey=<i>&lt;組織ID></i></codeph>: サービス利用部門の組織のID。</li>
+                                        <li><codeph>customerName=<i>&lt;組織名></i></codeph>: サービス利用部門の組織の名前。</li>
+                                        <li>
+                                            <p><codeph>subscriptionName=<i>&lt;購入済サービスの名前></i></codeph>: サービスの購入時に入力した購入済サービスの名前。</p>
+                                        </li>
+                                        <li><codeph>currency=<i>&lt;通貨コード></i></codeph>: サービス利用部門がサービスを利用することによって請求される通貨のISOコード。</li>
+                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 従量課金と定額の課金単位。<codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph>のいずれか。</li>
+                                        <li><codeph>userRole=<i>&lt;ロール名></i></codeph>: 技術サービスで定義されているロールの名前。</li>
+                                        <li><codeph>parameterName=<i>&lt;名前></i></codeph>: 技術サービスで定義されているパラメーターの名前。</li>
+                                        <li><codeph>optionName=<i>&lt;名前></i></codeph>: 技術サービスに定義されているパラメーターのオプションの名前。</li>
+                                        <li><codeph>price=<i>&lt;単価></i></codeph>: 料金設定で定義されている単価。</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Edit recurring charge for subscription in customer price model</b></p>
+                                <p>説明: サービス管理者が、サービス利用部門向け料金設定にてサービス契約単価を定義または変更した。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>customerKey=<i>&lt;組織ID></i></codeph>: サービス利用部門の組織のID。</li>
+                                        <li><codeph>customerName=<i>&lt;組織名></i></codeph>: サービス利用部門の組織の名前。</li>
+                                        <li><codeph>currency=<i>&lt;通貨コード></i></codeph>: サービス利用部門がサービスを利用することによって請求される通貨のISOコード。</li>
+                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 単価の課金の時間単位。<codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph> のいずれか。</li>
+                                        <li><codeph>oneTimeFee=<i>&lt;初期費用></i></codeph>: 購入時の初期費用。</li>
+                                        <li><codeph>recurringCharge=<i>&lt;単価></i></codeph>: サービス契約単価。</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Edit recurring charge for subscription in service price model</b></p>
+                                <p>説明: サービス管理者が、サービスの料金設定にてサービス契約単価を定義または変更した。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>currency=<i>&lt;通貨コード></i></codeph>: サービス利用部門がサービスを利用することによって請求される通貨のISOコード。</li>
+                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 単価の課金の時間単位。<codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph> のいずれか。</li>
+                                        <li><codeph>oneTimeFee=<i>&lt;初期費用></i></codeph>: 購入時の初期費用。</li>
+                                        <li><codeph>recurringCharge=<i>&lt;単価></i></codeph>: サービス契約単価。</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Edit recurring charge for subscription in subscription price model</b></p>
+                                <p>説明: サービス管理者が、購入済サービスの料金設定にてサービス契約単価を定義または変更した。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>customerKey=<i>&lt;組織ID></i></codeph>: サービス利用部門の組織のID。</li>
+                                        <li><codeph>customerName=<i>&lt;組織名></i></codeph>: サービス利用部門の組織の名前。</li>
+                                        <li>
+                                            <p><codeph>subscriptionName=<i>&lt;購入済サービスの名前></i></codeph>: サービスの購入時に入力した購入済サービスの名前。</p>
+                                        </li>
+                                        <li><codeph>currency=<i>&lt;通貨コード></i></codeph>: サービス利用部門がサービスを利用することによって請求される通貨のISOコード。</li>
+                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 単価の課金の時間単位。<codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph> のいずれか。</li>
+                                        <li><codeph>oneTimeFee=<i>&lt;初期費用></i></codeph>: 購入時の初期費用。</li>
+                                        <li><codeph>recurringCharge=<i>&lt;単価></i></codeph>: サービス契約単価。</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Edit recurring charge for users in customer price model</b></p>
+                                <p>説明: サービス管理者が、サービス利用部門向けの料金設定にて利用者単価を定義または変更した。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>customerKey=<i>&lt;組織ID></i></codeph>: サービス利用部門の組織のID。</li>
+                                        <li><codeph>customerName=<i>&lt;組織名></i></codeph>: サービス利用部門の組織の名前。</li>
+                                        <li><codeph>currency=<i>&lt;通貨コード></i></codeph>: サービス利用部門がサービスを利用することによって請求される通貨のISOコード。</li>
+                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 単価の課金の時間単位。<codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph> のいずれか。</li>
+                                        <li><codeph>range=<i>&lt;値></i></codeph>: 段階的な料金が定義されている場合、その料金が適用される範囲の上限値です。段階的な料金が定義されていない場合、<codeph>1-ANY</codeph> です。</li>
+                                        <li><codeph>action=<i>&lt;アクション></i></codeph>: 段階的な料金が定義されている場合、実行されたアクション。<codeph>INSERT</codeph> (新しい段階的な料金が定義された場合), <codeph>UPDATE</codeph> (段階的な料金が更新された場合), または <codeph>DELETE</codeph> (段階的な料金が削除された場合) のいずれか。段階的な料金が定義されていない場合は、<codeph>action</codeph> パラメーターは監査ログに出力されません。</li>
+                                        <li><codeph>recurringCharge=<i>&lt;料金></i></codeph>: 利用者単価。</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Edit recurring charge for users in service price model</b></p>
+                                <p>説明: サービス管理者が、サービスの料金設定にて利用者単価を定義または変更した。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>currency=<i>&lt;通貨コード></i></codeph>: サービス利用部門がサービスを利用することによって請求される通貨のISOコード。</li>
+                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 単価の課金の時間単位。<codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph> のいずれか。</li>
+                                        <li><codeph>range=<i>&lt;値></i></codeph>: 段階的な料金が定義されている場合、その料金が適用される範囲の上限値です。段階的な料金が定義されていない場合、<codeph>1-ANY</codeph> です。</li>
+                                        <li><codeph>action=<i>&lt;アクション></i></codeph>: 段階的な料金が定義されている場合、実行されたアクション。<codeph>INSERT</codeph> (新しい段階的な料金が定義された場合), <codeph>UPDATE</codeph> (段階的な料金が更新された場合), または <codeph>DELETE</codeph> (段階的な料金が削除された場合) のいずれか。段階的な料金が定義されていない場合は、<codeph>action</codeph> パラメーターは監査ログに出力されません。</li>
+                                        <li><codeph>recurringCharge=<i>&lt;料金></i></codeph>: 利用者単価。</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Edit recurring charge for users in subscription price model</b></p>
+                                <p>説明: サービス管理者が、購入済サービスの料金設定にて利用者単価を定義または変更した。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>customerKey=<i>&lt;組織ID></i></codeph>: サービス利用部門の組織のID。</li>
+                                        <li><codeph>customerName=<i>&lt;組織名></i></codeph>: サービス利用部門の組織の名前。</li>
+                                        <li>
+                                            <p><codeph>subscriptionName=<i>&lt;購入済サービスの名前></i></codeph>: サービスの購入時に入力した購入済サービスの名前。</p>
+                                        </li>
+                                        <li><codeph>currency=<i>&lt;通貨コード></i></codeph>: サービス利用部門がサービスを利用することによって請求される通貨のISOコード。</li>
+                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 単価の課金の時間単位。<codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph> のいずれか。</li>
+                                        <li><codeph>range=<i>&lt;値></i></codeph>: 段階的な料金が定義されている場合、その料金が適用される範囲の上限値です。段階的な料金が定義されていない場合、<codeph>1-ANY</codeph> です。</li>
+                                        <li><codeph>action=<i>&lt;アクション></i></codeph>: 段階的な料金が定義されている場合、実行されたアクション。<codeph>INSERT</codeph> (新しい段階的な料金が定義された場合), <codeph>UPDATE</codeph> (段階的な料金が更新された場合), または <codeph>DELETE</codeph> (段階的な料金が削除された場合) のいずれか。段階的な料金が定義されていない場合は、<codeph>action</codeph> パラメーターは監査ログに出力されません。</li>
+                                        <li><codeph>recurringCharge=<i>&lt;料金></i></codeph>: 利用者単価。</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Edit service role prices for customer price model</b></p>
+                                <p>説明: サービス管理者が、サービス利用部門向けの料金設定にてサービスロールごとの利用者の料金を定義または変更した。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>customerKey=<i>&lt;組織ID></i></codeph>: サービス利用部門の組織のID。</li>
+                                        <li><codeph>customerName=<i>&lt;組織名></i></codeph>: サービス利用部門の組織の名前。</li>
+                                        <li><codeph>currency=<i>&lt;通貨コード></i></codeph>: サービス利用部門がサービスを利用することによって請求される通貨のISOコード。</li>
+                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 単価の課金の時間単位。<codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph> のいずれか。</li>
+                                        <li><codeph>userRole=<i>&lt;ロール名></i></codeph>: 技術サービスで定義されているロールの名前。</li>
+                                        <li><codeph>price=<i>&lt;単価></i></codeph>: 選択されたロールのある利用者に対する利用期間ごとの料金。</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Edit service role prices for service price model</b></p>
+                                <p>説明: サービス管理者が、サービスの料金設定にてサービスロールごとの利用者の料金を定義または変更した。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>currency=<i>&lt;通貨コード></i></codeph>: サービス利用部門がサービスを利用することによって請求される通貨のISOコード。</li>
+                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 単価の課金の時間単位。<codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph> のいずれか。</li>
+                                        <li><codeph>userRole=<i>&lt;ロール名></i></codeph>: 技術サービスで定義されているロールの名前。</li>
+                                        <li><codeph>price=<i>&lt;単価></i></codeph>: 選択されたロールのある利用者に対する利用期間ごとの料金。</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Edit service role prices for subscription price model</b></p>
+                                <p>説明: サービス管理者が、購入済サービスの料金設定にてサービスロールごとの利用者の料金を定義または変更した。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>customerKey=<i>&lt;組織ID></i></codeph>: サービス利用部門の組織のID。</li>
+                                        <li><codeph>customerName=<i>&lt;組織名></i></codeph>: サービス利用部門の組織の名前。</li>
+                                        <li>
+                                            <p><codeph>subscriptionName=<i>&lt;購入済サービスの名前></i></codeph>: サービスの購入時に入力した購入済サービスの名前。</p>
+                                        </li>
+                                        <li><codeph>currency=<i>&lt;通貨コード></i></codeph>: サービス利用部門がサービスを利用することによって請求される通貨のISOコード。</li>
+                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 単価の課金の時間単位。<codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph> のいずれか。</li>
+                                        <li><codeph>userRole=<i>&lt;ロール名></i></codeph>: 技術サービスで定義されているロールの名前。</li>
+                                        <li><codeph>price=<i>&lt;単価></i></codeph>: 選択されたロールのある利用者に対する利用期間ごとの料金。</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Edit subscription attribute by service manager</b></p>
+                                <p>説明: サービス管理者がカスタム属性を定義または変更した。各属性ごとにログのエントリが書き込まれます。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p>
+                                    <ul>
+                                        <li>
+                                            <p><codeph>subscriptionName=<i>&lt;購入済サービスの名前></i></codeph>: サービスの購入時に入力した購入済サービスの名前。</p>
+                                        </li>
+                                        <li><codeph>attributeName=<i>&lt;属性の名前></i></codeph>: カスタム属性の名前。</li>
+                                        <li><codeph>attributeValue=<i>&lt;属性の値></i></codeph>: カスタム属性の値。</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Localize price model for customer</b></p>
+                                <p>説明: サービス管理者がサービス利用部門向け料金設定の要素を特定の言語に翻訳した。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p>
+                                    <ul>
+                                        <li>
+                                            <p><codeph>customerKey=<i>&lt;ID></i></codeph>: サービス利用部門の組織のID。</p>
+                                        </li>
+                                        <li><codeph>customerName=<i>&lt;名前></i></codeph>: サービス利用部門の組織の名前。</li>
+                                        <li><codeph>locale=<i>&lt;言語コード></i></codeph>: 保存されているテキストの言語コード。</li>
+                                        <li><codeph>description=<i>&lt;yes or no></i></codeph>: 料金設定の説明が変更されたかどうかを示す。<codeph>YES</codeph> か <codeph>NO</codeph> のいずれか。 </li>
+                                        <li><codeph>license=<i>&lt;yes or no></i></codeph>: サービス利用規約が変更されたかどうかを示す。<codeph>YES</codeph> か <codeph>NO</codeph> のいずれか。</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Localize price model for service</b></p>
+                                <p>説明: サービス管理者がサービスの料金設定の要素を特定の言語に翻訳した。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>locale=<i>&lt;言語コード></i></codeph>: 保存されているテキストの言語コード。</li>
+                                        <li><codeph>description=<i>&lt;yes or no></i></codeph>: 料金設定の説明が変更されたかどうかを示す。<codeph>YES</codeph> か <codeph>NO</codeph> のいずれか。 </li>
+                                        <li><codeph>license=<i>&lt;yes or no></i></codeph>: サービス利用規約が変更されたかどうかを示す。<codeph>YES</codeph> か <codeph>NO</codeph> のいずれか。</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Localize price model for subscription</b></p>
+                                <p>説明: サービス管理者が購入済サービスの料金設定の要素を特定の言語に翻訳した。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p>
+                                    <ul>
+                                        <li>
+                                            <p><codeph>customerKey=<i>&lt;ID></i></codeph>: サービス利用部門の組織のID。</p>
+                                        </li>
+                                        <li><codeph>customerName=<i>&lt;組織名></i></codeph>: サービス利用部門の組織の名前。</li>
+                                        <li>
+                                            <p><codeph>subscriptionName=<i>&lt;購入済サービスの名前></i></codeph>: サービスの購入時に入力した購入済サービスの名前。</p>
+                                        </li>
+                                        <li><codeph>locale=<i>&lt;言語コード></i></codeph>: 保存されているテキストの言語コード。</li>
+                                        <li><codeph>description=<i>&lt;yes or no></i></codeph>: 料金設定の説明が変更されたかどうかを示す。<codeph>YES</codeph> か <codeph>NO</codeph> のいずれか。</li>
+                                        <li><codeph>license=<i>&lt;yes or no></i></codeph>: サービス利用規約が変更されたかどうかを示す。<codeph>YES</codeph> か <codeph>NO</codeph> のいずれか。</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Localize service</b></p>
+                                <p>説明: サービス管理者がサービスの説明または概要を他の言語で追加した。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>shortDescription=<i>&lt;yes or no></i></codeph>: サービスの概要が変更されたかどうかを示す。<codeph>YES</codeph> または <codeph>NO</codeph> のいずれか。</li>
+                                        <li><codeph>description=<i>&lt;yes or no></i></codeph>: サービスの説明が変更されたかどうかを示す。<codeph>YES</codeph> または <codeph>NO</codeph> のいずれか。 </li>
+                                        <li><codeph>locale=<i>&lt;言語コード></i></codeph>: 説明が保存されている言語のコード</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Set service as public</b></p>
+                                <p>説明: サービスの公開設定において、サービス管理者、サービス仲介者、またはサービス提供代行者がサービスを一般に公開するかどうかを指定した。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p><codeph>public=<i>&lt;true or false></i></codeph>: サービスを一般に公開したかどうかを示す。<codeph>true</codeph> (サービスは公開) または <codeph>false</codeph> (サービスは非公開) のいずれか。</p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Terminate subscription</b></p>
+                                <p>説明: サービス管理者またはサービス提供代行者がサービス利用部門の購入済サービスを明示的に解約した。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p>
+                                    <ul>
+                                        <li>
+                                            <p><codeph>subscriptionName=<i>&lt;購入済サービスの名前></i></codeph>: サービスの購入時に入力した購入済サービスの名前。</p>
+                                        </li>
+                                        <li><codeph>reason=<i>&lt;解約の理由></i></codeph>: 購入済サービスを解約した理由の説明。</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Update service</b></p>
+                                <p>説明: サービス管理者がサービスを変更した。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>shortDescription=<i>&lt;yes or no></i></codeph>: サービスの概要が変更されたかどうかを示す。<codeph>YES</codeph> または <codeph>NO</codeph> のいずれか。</li>
+                                        <li><codeph>description=<i>&lt;yes or no></i></codeph>: サービスの説明が変更されたかどうかを示す。<codeph>YES</codeph> または <codeph>NO</codeph>のいずれか。</li>
+                                        <li><codeph>locale=<i>&lt;言語コード></i></codeph>: 説明が保存されている言語のコード</li>
+                                        <li><codeph>autoAssignUser=<i>&lt;yes or no></i></codeph>: サービスを購入する利用者がその購入済サービスに自動的に割り当てられるかを示す。<codeph>YES</codeph> か <codeph>NO</codeph>のいずれか。</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>Update service parameter</b></p>
+                                <p>説明: サービス管理者がパラメーターまたはパラメーターのオプションを定義または変更した。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>parameterName=<i>&lt;名前></i></codeph>: 技術サービスで定義されているパラメーターの名前。</li>
+                                        <li><codeph>userOption=<i>&lt;on or off></i></codeph>: サービスを購入するサービス利用部門によって該当パラメーターを設定できるかどうかを示す。 <codeph>ON</codeph> または <codeph>OFF</codeph> のいずれか。</li>
+                                        <li><codeph>parameterValue=<i>&lt;値></i></codeph>: パラメーターについては実際の文字列または数値。パラメーターのオプションについては <codeph>YES</codeph> または <codeph>NO</codeph>。</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>操作</b>: <b>View subscription</b></p>
+                                <p>説明: サービス管理者、サービス仲介者、サービス提供代行者が購入済サービスの詳細を表示した。</p>
+                                <p>追加の名前と値の組:</p>
+                                <p>
+                                    <ul>
+                                        <li>
+                                            <p><codeph>subscriptionName=<i>&lt;購入済サービスの名前></i></codeph>: サービスの購入時に入力した購入済サービスの名前。</p>
+                                        </li>
+                                        <li><codeph>customerKey=<i>&lt;組織ID></i></codeph>: サービス利用部門の組織のID。</li>
+                                        <li><codeph>customerName=<i>&lt;組織名></i></codeph>: サービス利用部門の組織の名前。</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </section>
+    </refbody>
+</reference>

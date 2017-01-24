@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd">
+<task id="task634" xml:lang="en-us">
+  <title>Managing VAT rates</title>
+  <taskbody>
+    <context>
+      <p>On the <uicontrol>Manage VAT rates</uicontrol> page, you can perform the following tasks: </p>
+      <p>
+        <ul compact="no">
+          <li id="Enable_VAT_rate_support_for_y_task_taskbody_context_p_2_u"
+            >Enable VAT rate support for your organization. </li>
+          <li id="Define_a_default_VAT_rate_tha_task_taskbody_context_p_2_u"
+            >Define a default VAT rate that applies to all prices for all customers.</li>
+          <li><ph id="Define_a_country-specific_VAT_task_taskbody_context_p_2_u"
+              >Define a country-specific VAT rate for every country where you want to sell your services.</ph></li>
+          <li><ph id="Define_a_customer-specific_VA_task_taskbody_context_p_2_u"
+              >Define a customer-specific VAT rate, for example, in case a customer organization has a subsidiary located in another country than its parent organization.</ph></li>
+        </ul>
+      </p>
+      <note>The VAT rate settings apply only to the costs for services using the platform's native billing system.</note>
+      <p><ph id="The_VAT_rate_settings_have_th_task_taskbody_context_p_3_ph"
+          >The VAT rate settings have the following effects on the cost calculation for a customer: </ph></p>
+      <ul compact="no">
+        <li><ph id="If_VAT_rate_support_is_disabl_task_taskbody_context_ul_li"
+            >If VAT rate support is disabled, prices are calculated as net prices; no VAT is added to the overall costs.</ph></li>
+        <li><ph id="A_customer-specific_VAT_rate_task_taskbody_context_ul_li"
+            >A customer-specific VAT rate takes priority over any default or country-specific VAT rate.</ph></li>
+        <li><ph id="The_country-specific_VAT_rate_task_taskbody_context_ul_li"
+            >The country-specific VAT rate for the country where the customer organization is located is applied to the cost calculation when no customer-specific VAT rate is defined.</ph></li>
+        <li><ph id="The_default_VAT_rate_is_used_task_taskbody_context_ul_li"
+            >The default VAT rate is used in all other cases.</ph></li>
+      </ul>
+      <p><ph id="The_VAT_rate_does_not_affect_task_taskbody_context_p_4_ph"
+          >The VAT rate does not affect any price model elements. The calculated VAT amount is added to the overall costs and results in the gross price to be paid by a customer. </ph>Be aware that you are responsible for setting the correct VAT rates.</p>
+      <p><ph id="If_you_grant_resellers_the_pe_task_taskbody_context_p_5_ph"
+          >If you grant a reseller the permission to sell your services, the customers of your reseller are not affected by the VAT rate you define. Any cost calculation for a reseller's customers results in net prices. If you grant a broker the permission to offer your services, the VAT rates you define are used.</ph></p>
+      <p><b>To manage VAT rates</b>:</p>
+    </context>
+    <steps-unordered>
+      <step>
+        <cmd>Enable the VAT rate support for your organization by selecting the corresponding check box. </cmd>
+        <info>When enabled, usage charges for subscriptions are calculated as gross prices. This setting applies to all prices for all your customers. <p>To disable the VAT rate support, clear the check box. When VAT rate support is disabled, you cannot specify any default, country-specific, or customer-specific VAT rates; any usage charges are calculated as net prices.</p><p>Be aware that disabling the VAT rate support removes the values for all VAT rates you have defined.</p></info>
+      </step>
+      <step>
+        <cmd>In the <uicontrol>Default VAT rate (%)</uicontrol> field, enter a value to be set as the default VAT rate for your organization. </cmd>
+        <info>
+          <p>This rate is used in case you do not define any country-specific or customer-specific VAT rates.</p>
+          <p>Specify a percent value as a decimal number with a maximum of two decimal places.</p>
+        </info>
+      </step>
+      <step>
+        <cmd>To set a country-specific VAT rate:</cmd>
+        <info>
+          <ol compact="no">
+            <li>Select the country from the <uicontrol>Country</uicontrol> list. The <uicontrol>Country</uicontrol> list shows all countries that do not yet have a VAT rate defined.</li>
+            <li>Enter the VAT rate to be applied for the country in the <uicontrol>VAT rate (%)</uicontrol> column next to the country name. Specify a percent value as a decimal number with a maximum of two decimal places.</li>
+          </ol>
+        </info>
+      </step>
+      <step>
+        <cmd>To set a customer-specific VAT rate:</cmd>
+        <info>
+          <ol compact="no">
+            <li>Select the customer organization from the <uicontrol>Customer</uicontrol> list. The list shows the customer organizations that do not yet have a VAT rate defined.</li>
+            <li>Enter the VAT rate to be applied for the customer organization in the <uicontrol>VAT rate (%)</uicontrol> column next to the customer name. Specify a percent value as a decimal number with a maximum of two decimal places.</li>
+          </ol>
+        </info>
+      </step>
+      <step>
+        <cmd>To change a VAT rate, change the percent value in the corresponding field. </cmd>
+      </step>
+    </steps-unordered>
+    <result>
+      <p>To store the VAT rate settings you have defined, click <uicontrol>Save</uicontrol>.</p>
+    </result>
+  </taskbody>
+</task>

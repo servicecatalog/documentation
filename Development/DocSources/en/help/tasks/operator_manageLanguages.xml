@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd">
+<task id="Language" xml:lang="en-us">
+  <title>Managing languages</title>
+  <taskbody>
+    <context>
+      <p id="language_intro"><ph platform="print"><ph
+            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+          >The platform</ph> supports multiple languages in which users can work. After installation, English, German, and Japanese language bundles are available. The operator can add additional languages and customize the texts provided in the English, German, and Japanese language bundles. <ph
+          platform="help">Click <xref href="../../Shared/reference/r_Language_Codes.xml"
+          >here</xref> for the list of languages that can be added.</ph><ph platform="print">Refer to <xref
+            href="../../Shared/reference/r_Language_Codes.xml"/> for the list of languages that can be added.</ph>
+      </p>
+      <p id="resources">A language bundle consists of the following resources: <ul compact="no">
+          <li><b>User interface resources</b>: All texts that appear on the user interface or in generated emails.</li>
+          <li><uicontrol>Online help</uicontrol> and <uicontrol>FAQ</uicontrol> HTML files: The online help topics are available in the administration portal, the FAQs are available on the marketplaces. </li>
+          <li><uicontrol>Report labels</uicontrol>: The labels and texts for the content of generated reports. </li>
+        </ul></p>
+      <p id="AddingLanguage">Adding a language or customizing existing texts comprises the following steps: <ol
+          compact="no">
+          <li>Translating all resources of a language bundle:<p>
+              <ul>
+                <li>
+                  <p>The user interface resources are translated or updated in a Microsoft Excel file<ph platform="help"
+                        > generated with the <uicontrol>Export</uicontrol> function on the <uicontrol>Manage languages</uicontrol> page</ph>. <ph
+                      platform="print">Refer to <xref href="../../Shared/reference/r_Language_Export_File.xml"
+                      /> for details.</ph><ph platform="help">Click <xref
+                        href="../../Shared/reference/r_Language_Export_File.xml">here</xref> for details.</ph></p>
+                </li>
+                <li>
+                  <p>The online help and FAQ files are translated or updated directly in the HTML files. <ph
+                      platform="print">Refer to <xref href="../../Shared/reference/r_Language_OnlineHelp_FAQ.xml"
+                      /> for details.</ph><ph platform="help">Click <xref
+                        href="../../Shared/reference/r_Language_OnlineHelp_FAQ.xml">here</xref> for details.</ph></p>
+                </li>
+                <li>
+                  <p>The report labels are translated or updated in properties files. <ph platform="print"
+                        >Refer to <xref href="../../Shared/reference/r_Language_ReportLabels.xml"/> for details.</ph><ph
+                      platform=" help">Click <xref href="../../Shared/reference/r_Language_ReportLabels.xml"
+                      >here</xref> for details.</ph></p>
+                </li>
+              </ul>
+            </p></li>
+          <li>For a new language: Registering the language with <ph platform="print"><ph
+                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"> </ph></ph><ph platform="help"
+              >the platform</ph><ph platform="help"> on the <uicontrol>Manage languages</uicontrol> page</ph>. </li>
+          <li>Importing the translated or updated Microsoft Excel file.</li>
+          <li>Deploying the translated or updated online help and FAQ files. </li>
+          <li>Deploying the translated or updated report labels. </li>
+          <li>For a new language: Activating the language in <ph platform="print"><ph
+                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"> </ph></ph><ph platform="help"
+              >the platform</ph><ph platform="help"
+            > on the <uicontrol>Manage languages</uicontrol> page</ph>. All activated languages are available to users for selection when they edit their user profile.</li>
+        </ol></p>
+      <p>On the <b>Manage languages</b> page, you can: </p>
+      <p>
+        <ul compact="no">
+          <li>View the list of supported languages. The default language is English.</li>
+          <li>Register a language with <ph platform="print"><ph
+                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"> </ph></ph><ph platform="help"
+              >the platform</ph> by adding a language code. This is the prerequisite for providing translations in a different language than the ones available after installation (English, German, Japanese). </li>
+          <li>Export the user interface resources and import your translations into <ph platform="print"><ph
+                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"> </ph></ph><ph platform="help"
+              >the platform</ph>.</li>
+          <li>Update existing translations. </li>
+          <li>Activate or deactivate a language. </li>
+        </ul>
+      </p>
+      <p><b>To register a language</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>In the <uicontrol>ISO language code</uicontrol> field, enter the two-letter ISO code of the language to be added. </cmd>
+        <info>For example, enter <codeph>cs</codeph> for the Czech language. <p><ph platform="print"><ph
+                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"> </ph></ph><ph platform="help"
+              >The platform</ph> supports left-to-right languages. Right-to-left or top-to-bottom languages as well as variants of languages, such as British and US English, are not supported. <ph
+              platform="help">Click <xref href="../../Shared/reference/r_Language_Codes.xml"
+              >here</xref> for the list of languages that can be added.</ph></p></info>
+      </step>
+      <step>
+        <cmd>Click <uicontrol>Add</uicontrol>. </cmd>
+        <info>By default, the newly added language is deactivated, i.e. it is not yet available to users for selection.</info>
+      </step>
+    </steps>
+    <result>
+      <p>You can now proceed with:</p>
+      <p>
+        <ol compact="no">
+          <li>Exporting the user interface resources and translating them.</li>
+          <li>Importing the translated texts and names. </li>
+          <li>Translating online help and FAQ files as well as the report labels and providing them as described in <xref
+              href="../../Shared/reference/r_Language_OnlineHelp_FAQ.xml"/> and <xref
+              href="../../Shared/reference/r_Language_ReportLabels.xml"
+              />. <p>You can also provide a subset of the resources that can be translated. For example, you can decide to have the online help, FAQ, email, and report texts in Hungarian, but leave the user interface in English. When a user then sets Hungarian in his user profile, the user interface will still be in English, but the other texts are shown in Hungarian.</p></li>
+          <li>Activating the new language so that it becomes available to users when selecting their working language. </li>
+        </ol>
+      </p>
+      <p><b>To export, translate, and import the user interface resources</b>: </p>
+      <p>
+        <ol compact="no">
+          <li>Click <uicontrol>Export</uicontrol> and save the resources to a Microsoft Excel file in <codeph>.xls</codeph> format on your file system. </li>
+          <li>Translate the resources as required. Click <xref href="../../Shared/reference/r_Language_Export_File.xml"
+              >here</xref> for details.</li>
+          <li>Import the translated Microsoft Excel file: <p>
+              <ol compact="no">
+                <li>
+                  <p>Click the <b>File name</b> field or <b>Browse</b>, and select the file containing the translations. </p>
+                </li>
+                <li>
+                  <p>Click <uicontrol>Import</uicontrol>.</p>
+                </li>
+              </ol>
+            </p><p>Make sure that your customized file is a Microsoft Excel file containing three worksheets with five columns each (keys, the three system default languages de, en, ja, and the new language).</p><p>If a label or string does not exist in the new language, the English term is used. If the English term is not defined either, the technical key is used.</p></li>
+          <li>Click <uicontrol>Save</uicontrol> for your changes to become effective. </li>
+        </ol>
+      </p>
+      <p><b>To update the translations of an existing language</b>: </p>
+      <p>
+        <ol compact="no">
+          <li>Click the line of the language you want to update. <p>You can select any of the available languages including the system default languages (de, en, or jp).</p></li>
+          <li>Click <uicontrol>Export</uicontrol> and save the resources to a Microsoft Excel file in <codeph>.xls</codeph> format on your file system. </li>
+          <li>The column headed by the code of the selected language is filled with already existing translations. Edit the strings as required. Click <xref
+              href="../../Shared/reference/r_Language_Export_File.xml">here</xref> for details. </li>
+          <li>Import the updated Microsoft Excel file: <p>
+              <ol compact="no">
+                <li>
+                  <p>Click the <b>File name</b> field or <b>Browse</b>, and select the file containing the updated translations. </p>
+                </li>
+                <li>
+                  <p>Click <uicontrol>Import</uicontrol>.</p>
+                </li>
+              </ol>
+            </p></li>
+          <li>Click <uicontrol>Save</uicontrol> for your changes to become effective. </li>
+        </ol>
+      </p>
+      <p><b>To activate a language</b>: </p>
+      <p>
+        <ol compact="no">
+          <li>Select the <uicontrol>Active</uicontrol> check box beside the language you want to activate.<p>You can select multiple languages at a time. </p>
+          </li>
+          <li>Click <uicontrol>Save</uicontrol> for your changes to become effective. </li>
+        </ol>
+      </p>
+      <p>All active languages are available to users for selection when they edit their user profile. </p>
+      <p><b>To deactivate a language</b>: </p>
+      <p>
+        <ol compact="no">
+          <li>Deselect the <uicontrol>Active</uicontrol> check box beside the language you want to deactivate. You cannot deactivate the default language English.<p>A message is displayed telling you that the language will no longer be supported as soon as you confirm your changes by clicking <uicontrol>Save</uicontrol>. </p></li>
+          <li>Click <uicontrol>Save</uicontrol> for your changes to become effective. </li>
+        </ol>
+      </p>
+      <p>If the language you deactivate is set in the user profile of users working with the system: </p>
+      <p>
+        <ul compact="no">
+          <li>The users' language is set to the default language English. This means that all texts are presented in the default language. </li>
+          <li>The users must update their profile: They can either stay with the default language or select another active language.</li>
+          <li>The deactivated language is no longer available for selection.</li>
+        </ul>
+      </p>
+    </result>
+  </taskbody>
+</task>

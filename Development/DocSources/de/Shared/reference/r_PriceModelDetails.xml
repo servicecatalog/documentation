@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<reference id="reference832" xml:lang="de-de">
+    <title>Elemente eines Preismodells</title>
+    <refbody>
+        <section>
+            <p>Ein Preismodell legt fest, ob und in welcher Höhe Kunden, die einen Service abonnieren, Kosten entstehen. Gebühren können definiert werden für: </p>
+            <ul compact="no">
+                <li>Die Nutzung eines Abonnements an sich.</li>
+                <li>Jeden Benutzer, der dem Abonnement zugeordnet ist.</li>
+                <li>Einzelne Ereignisse. <ph id="Ein_Ereignis_ist_beispielswei_reference_refbody_section_ul"
+                        >Ein Ereignis ist beispielsweise das An- oder Abmelden in der zugrunde liegenden Anwendung, das Beenden einer bestimmten Transaktion oder das Anlegen oder Löschen bestimmter Daten.</ph></li>
+                <li>Parameter und ihre Optionen.</li>
+            </ul>
+            <p>Für jeden marktfähigen Service, den Sie veröffentlichen und Ihren Kunden zur Verfügung stellen möchten, müssen Sie ein Preismodell definieren. </p>
+        </section>
+        <section>
+            <title>Geltungsbereich</title>
+            <p>Jedes Preismodell hat einen bestimmten Geltungsbereich:<ul compact="no">
+                    <li><b>Service-Preismodelle</b> sind die Grundmodelle. Ein solches Preismodell müssen Sie für jeden marktfähigen Service definieren. Andernfalls können Sie den Service nicht veröffentlichen. Jeder Service kann genau ein Service-Preismodell haben.</li>
+                    <li>Ein <b>Kunden-Preismodell</b> gilt für einen bestimmten Kunden und einen Service, der von diesem Kunden genutzt wird. Es steht für andere Services, die Sie demselben oder einem anderen Kunden anbieten, nicht zur Verfügung. Wenn Sie ein Kunden-Preismodell definieren, wird automatisch ein neuer Service für den betreffenden Kunden angelegt. <p>Kunden-Preismodelle können Sie beispielsweise nutzen, um langjährigen Kunden Nachlässe zu gewähren oder Pilotkunden neue Services kostenlos zur Verfügung zu stellen.</p></li>
+                    <li>Ein <b>Abo-Preismodell</b> gilt für genau ein Abonnement eines bestimmten Kunden. Es gilt nicht für andere Abonnements desselben oder anderer Kunden. Sobald ein Abonnement beendet wird, verfällt das Preismodell.</li>
+                </ul></p>
+            <p>Das Service-Preismodell legt die Preise fest, an die Vermittler und Wiederverkäufer gebunden sind, wenn sie einen Service anbieten und verkaufen.</p>
+            <p>Das plattformeigene Abrechnungssystem unterstützt alle Geltungsbereiche von Preismodellen. Bei Verwendung eines externen Abrechnungssystems können Einschränkungen bestehen, die abhängig vom Abrechnungssystem an sich und vom zur Integration verwendeten Billing-Adapter sind.</p>
+        </section>
+        <section>
+            <title>Preismodellelemente</title>
+            <p>Die Elemente und Optionen, aus denen sich ein Preismodell zusammensetzt, sind abhängig davon, wo das Preismodell definiert ist.</p>
+            <p>Für Services, die ein externes Abrechnungssystem verwenden, werden die Preismodelle in diesem System definiert und müssen den dort gültigen Regeln und Strukturen entsprechen. Die Preismodelle werden für Services und Abonnements aus dem externen System importiert und können in der Plattform nicht geändert werden.</p>
+            <p>Preismodelle für Services, die das plattformeigene Abrechnungssystem verwenden, setzen sich aus den folgenden Elementen zusammen, die bestimmen, wie die Nutzungsgebühren berechnet werden:</p>
+            <ul>
+                <li>
+                    <xref href="r_PriceModelDetails_onetime.xml"/>
+                </li>
+                <li>
+                    <xref href="r_PriceModelDetails_recurringForSub.xml"/>
+                </li>
+                <li>
+                    <xref href="r_PriceModelDetails_recurringForUser.xml"/>
+                </li>
+                <li>
+                    <xref href="r_PriceModelDetails_parameters.xml"/>
+                </li>
+                <li>
+                    <xref href="r_PriceModelDetails_events.xml"/>
+                </li>
+                <li>
+                    <xref href="r_PriceModelDetails_role.xml"/>
+                </li>
+            </ul>
+            <p>Sie können <xref href="r_PriceModelDetails_stepped.xml"
+                    >Preise staffeln</xref>, also Bereiche angeben, für die unterschiedliche Preise gelten. Darüber hinaus können Sie einen <xref
+                    href="r_PriceModelDetails_freeTrial.xml"
+                    >kostenlosen Nutzungszeitraum</xref> festlegen und einzelnen Kunden <xref
+                    href="r_PriceModelDetails_discount.xml">Rabatte</xref> gewähren.</p>
+            <p>Die Berechnung der tatsächlichen Nutzungsgebühren für einen Service hängt von der Kombination der Preismodellelemente und von dem im Preismodell festgelegten Abrechnungsmodus ab.</p>
+        </section>
+        <section>
+            <title>Abrechnungsmodi</title>
+            <p>Die Nutzungsgebühren für einen Service, der das plattformeigene Abrechnungssystem verwendet, können pro rata oder pro Zeiteinheit abgerechnet werden. Der Abrechnungsmodus wirkt sich auf Preise pro Abonnement oder Preise für Benutzer aus, sowie auf Preise für Parameter, Optionen und Servicerollen. Bei einmaligen Gebühren und Preisen für Ereignisse spielt der Abrechnungsmodus keine Rolle.</p>
+            <ul compact="no">
+                <li>
+                    <p>Bei <b>Abrechnung pro rata</b> wird die Nutzungsdauer in Millisekunden berechnet.</p>
+                    <p>Kunden zahlen exakt für den Zeitraum, in dem Sie einen Service genutzt haben.</p>
+                    <p>Bei der Berechnung der Kosten werden Umstellungen auf Sommer- bzw. Winterzeit berücksichtigt: Bei der Umstellung auf Sommerzeit hat der betreffende Tag 23 Stunden. Die zugehörigen Abrechnungseinheiten Woche und Monat werden ebenfalls um eine Stunde verkürzt. Bei der Umstellung auf Winterzeit hat der betreffende Tag 25 Stunden. Die zugehörigen Abrechnungseinheiten Woche und Monat werden ebenfalls um eine Stunde verlängert. </p>
+                </li>
+                <li>
+                    <p>Bei <b>Abrechnung pro Zeiteinheit</b> richtet sich die Nutzungsdauer nach festen Zeiteinheiten (Monat, Woche, Tag oder Stunde).</p>
+                    <p>Kunden zahlen für die Zeiteinheiten, in denen sie einen Service nutzen. Die Zeiteinheiten werden immer vollständig berechnet, auch wenn ein Service nicht während der gesamten Zeiteinheit genutzt wird. Die Gebühren für eine Zeiteinheit werden für den Abrechnungszeitraum berechnet, in dem die Zeiteinheit endet.</p>
+                    <p>Als Zeiteinheit kann <b>Stunde</b>, <b>Tag</b>, <b>Woche</b> oder <b>Monat</b> festgelegt werden. Start und Ende jeder Zeiteinheit sind wie folgt definiert:</p>
+                    <p><b>Stunde</b>: Von 00:00.000 bis 59:59.999.</p>
+                    <p><b>Tag</b>: Von 00:00:00.000 Uhr bis 23:59:59.999 Uhr.</p>
+                    <p><b>Woche</b>: Von Montag, 00:00:00.000 Uhr, bis Sonntag, 23:59:59.999 Uhr.</p>
+                    <p><b>Monat</b>: Vom ersten Tag des Monats, 00:00:00.000 Uhr, bis zum letzten Tag des Monats, 23:59:59.999 Uhr.</p>
+                </li>
+                <li>
+                    <p>Bei Service- und Kunden-Preismodellen können Sie den Abrechnungsmodus festlegen und ändern. Beim Ändern eines Preismodells können Sie von <uicontrol>Abrechnung pro rata</uicontrol> zu <uicontrol>Abrechnung pro Zeiteinheit</uicontrol> wechseln und umgekehrt. Die Preise bleiben dabei unverändert. Die Preise werden gelöscht, wenn Sie ein Preismodell von <uicontrol>Abrechnung pro rata</uicontrol> oder <uicontrol>Abrechnung pro Zeiteinheit</uicontrol> auf <uicontrol>Kostenlos</uicontrol> umstellen.</p>
+                    <p>Bei Abo-Preismodellen können Sie den Abrechnungsmodus <b>nicht</b> ändern.</p>
+                </li>
+            </ul>
+        </section>
+    </refbody>
+</reference>

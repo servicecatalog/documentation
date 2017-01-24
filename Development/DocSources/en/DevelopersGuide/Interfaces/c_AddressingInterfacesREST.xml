@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_3413BBD173324104B42FB714974CABE7" xml:lang="en-us">
+    <title>Addressing the APIs - REST</title>
+    <conbody>
+        <section>
+            <p>The resources of Web services you develop using the REST APIs of <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> are addressed by their URLs in the following format: </p>
+            <p><codeph>https://&lt;host>:&lt;port>/&lt;resource></codeph></p>
+            <p><codeph>&lt;host></codeph> and <codeph>&lt;port></codeph> point to the server where the Web service has been deployed. <codeph>&lt;resource></codeph> is the path and name of the resource. </p>
+            <p>Example:</p>
+            <p><codeph>https://myServer:8081/mynotification/v1/processes</codeph></p>
+        </section>
+    </conbody>
+</concept>

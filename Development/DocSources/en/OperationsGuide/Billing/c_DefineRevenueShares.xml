@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_3413BBD173324104B42FB714974CABE7" xml:lang="en-us">
+    <title>Defining Revenue Shares</title>
+    <conbody>
+        <section>
+            <p>Suppliers may involve brokers and resellers in selling their services. The brokers and resellers as well as the platform operator and the owners of the marketplaces on which the services are published, usually receive a share of the revenue for the services. <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> calculates these revenue shares based on the billing data for the customers who use the services. The operator revenue share applies irrespective of whether services are sold by the supplier or by his resellers and brokers. Discounts granted by a supplier to his customers are deducted from the operator revenue share.</p>
+            <note>Revenue shares and discounts are calculated only for services applying the native billing system of <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />. The costs of services using an external billing system are not included in the share calculation. </note>
+            <p>Suppliers, brokers, resellers, and marketplace owners can generate reports for their revenue shares and export the revenue share data for a specific month. As an operator, you can export the data for all the suppliers, brokers, resellers, or marketplace owners known to your platform installation. The exported data can be forwarded, for example, to an accounting system which continues to process it. For details, refer to <xref
+                    href="../Billing/c_BillingTasks.xml"/>. </p>
+            <p>As an operator, you are responsible for defining the revenue shares. You can define the following: </p>
+            <p>
+                <ul>
+                    <li>Operator revenue share to be paid by each supplier for using the platform.</li>
+                    <li>Marketplace owner revenue share to be paid by a supplier for publishing services on a specific marketplace.</li>
+                    <li>Revenue shares for broker and reseller organizations to be paid by a supplier for selling his services. </li>
+                </ul>
+            </p>
+            <p>The revenue shares specify the percentage of the revenue the operator, marketplace owners, brokers, or resellers are entitled to.</p>
+            <p conref="../../help/tasks/marketplace_update.xml#task634/revenueshare"> </p>
+            <p>Revenue shares can be defined on the following levels: </p>
+            <p>
+                <ol>
+                    <li><b>Operator revenue share</b>. It is defined for every supplier organization that wants to sell its services on your platform. The default operator revenue share is specified when you create a supplier organization. It is independent of the marketplace to which a service is published, and whether the supplier sells services himself or authorizes resellers and brokers to do so. Discounts granted by a supplier to his customers are deducted from the operator revenue share. The default operator revenue share applies to all services of a supplier as long as you do not define service-specific operator revenue shares. A service-specific operator revenue share applies to a specific marketable service and overrules the default operator revenue share defined for the respective supplier organization. </li>
+                    <li><b>Marketplace-specific revenue shares</b>. They are defined for one marketplace and comprise a percentage for the marketplace owner as well as a default for all broker and reseller organizations. Discounts granted by a supplier to his customers are deducted from the revenue share for the marketplace owner.</li>
+                    <li><b>Service-specific revenue shares</b>. For every marketable service a supplier offers to brokers or resellers for publishing, a service-specific revenue share can be defined. This revenue share applies irrespective of the marketplace the service is published to. It overrules any defined marketplace-specific revenue shares. </li>
+                    <li><b>Individual broker or reseller revenue shares</b>. An individual revenue share can be defined for each broker and reseller organization. This revenue share definition overrules the service-specific and marketplace-specific revenue share definitions. </li>
+                </ol>
+            </p>
+            <p><b>To define operator revenue shares, proceed as follows:</b>
+                <ul>
+                    <li>Default operator revenue share for a supplier organization: <p><ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> administration portal - Choose <b>Create organization</b> in the <b>Operation</b> menu for a new supplier organization or <b>Manage organization</b> in the <b>Operation</b> menu for an existing supplier organization.</p></li>
+                    <li>To define a service-specific operator revenue share: <p><ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> administration portal - Choose <b>Manage operator revenue share</b> in the <b>Operation</b> menu.</p><p>For detailed step-by-step instructions, refer to the online help. </p></li>
+                </ul></p>
+            <p><b>To define marketplace-specific revenue shares, choose the following option:</b>
+                <ul>
+                    <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> administration portal - Choose <b>Update marketplace</b> in the <b>Marketplace</b> menu.<p>For detailed step-by-step instructions, refer to the online help. </p></li>
+                </ul></p>
+            <p><b>To define revenue shares for specific services, brokers, or resellers, choose the following option:</b>
+                <ul>
+                    <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> administration portal - Choose <b>Manage broker revenue share</b> or <b>Manage reseller revenue share</b> in the <b>Marketplace</b> menu, respectively.<p>For detailed step-by-step instructions, refer to the online help. </p></li>
+                </ul></p>
+        </section>
+    </conbody>
+</concept>

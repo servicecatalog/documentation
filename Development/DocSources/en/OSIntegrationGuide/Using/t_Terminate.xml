@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<task id="task_E68E2024B1F6403AAA1130A39B1D4DCD" xml:lang="en-us">
+    <title>Terminating Subscriptions</title>
+    <taskbody>
+        <context>
+            <p>A customer can at any time terminate a subscription for a virtual system in OpenStack.</p>
+            <p>OpenStack is triggered to delete the virtual system. The subscription is terminated in <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> independent of whether the deletion is successful in OpenStack. </p>
+        </context>
+    </taskbody>
+</task>

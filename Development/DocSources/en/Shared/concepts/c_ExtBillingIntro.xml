@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd">
+<concept
+                id="c_ExtBillingIntro_1">
+  <title>Integrating an External Billing System</title>
+  <conbody>
+    <section>
+      <p id="comes_with_its_own_native_b_concept_conbody_section_p_1"><ph id="comes_with_ph_1"><ph platform="help"
+            >The platform</ph><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"
+          /> comes with its own, native billing system for managing price models and calculating costs for services.</ph>
+        <ph id="comes_with_ph_2"
+            >However, it can also be integrated with one or more external billing systems. This is suitable, for example, when offering services from external providers which have their own pricing and billing facilities, such as Amazon Web Services (AWS). It is also useful when prices and costs for services need to be based on metering information that is not available in <ph
+            platform="help">the platform</ph><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+            platform="print"/>.</ph></p>
+      <p id="By_integrating_an_external_bi_concept_conbody_section_p_2"
+          >By integrating an external billing system, its price models can be imported and displayed for marketable services and subscriptions in <ph
+          platform="help">the platform</ph><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+          platform="print"
+          />. The calculation of the costs for using these services and subscriptions as well as the billing and payment processing takes place in the external billing system. <ph
+          platform="help">The platform</ph><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+          platform="print"
+        /> does not consider these costs in any calculations, discounts, revenue shares, or reports.</p>
+      <p id="The_connection_between_concept_conbody_section_p_3">The connection between <ph platform="help"
+          >the platform</ph><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"
+          /> and an external billing system is established by means of a <b>billing adapter</b>. Upon request of <ph
+          platform="help">the platform</ph><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+          platform="print"
+        />, the billing adapter gathers and returns the appropriate information from the external billing system, usually a price model for a service or subscription.</p>
+      <p
+                        id="concept_conbody_section_p_4">
+        <fig>
+          <image
+                        alt="IntBilling.png" height="230"
+                        href="../_images/IntBilling.png"
+                width="300"/>
+        </fig>
+      </p>
+      <p
+                    id="The_integration_and_usage_of_concept_conbody_section_p_5">The integration and usage of an external billing system involves the following basic tasks:</p>
+      <ol>
+        <li
+                        id="Development_and_deployment_of_concept_conbody_section_ol_l"><ph
+                            id="Development_and_deployment_ph_1"><b>Development and deployment of a billing adapter</b> that connects <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> with the external billing system. This task is carried out by a developer in tight cooperation with the supplier of the services that are to use the external billing system.</ph> For details, refer to the <i>Developer's Guide</i>.</li>
+        <li
+          id="Registration_of_the_billing_a_concept_conbody_section_ol_l"><ph id="Registration_of_the_billing_ph_1"><b>Registration of the billing adapter</b> in <ph
+                            conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>. This task is carried out by the operator of <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</ph> For details, refer to the <i>Operator's Guide</i>.</li>
+        <li
+                    id="Specification_of_the_external_concept_conbody_section_ol_l"><ph><b>Specification of the external billing system</b> at one or more technical services on which the marketable services using the billing system are to be based. This task is carried out by the responsible technology provider.</ph> For details, refer to the <i>Technology Provider's Guide</i>.</li>
+        <li
+                    id="Import_of_price_models_concept_conbody_section_ol_l"><ph><b>Import of price models</b> from the external billing system for usage with marketable services, specific customers, or subscriptions. This task is carried out by the responsible supplier.</ph> For details, refer to the <i>Supplier's Guide</i>.</li>
+        <li id="Display_of_the_external_price_concept_conbody_section_ol_l"><b>Display of the imported price models</b> at the corresponding services and subscriptions on the marketplaces and in the administration portal. This can be done by users with the appropriate authorities.</li>
+      </ol>
+    </section>
+
+  </conbody>
+</concept>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?> 
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+
+<concept xml:lang="en-us" id="concept_CC3DFA9536824295B364E161B9DCC6F1">
+    <title>Provisioning Applications as Services in <ph
+            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></title>
+    <conbody>
+        <section>
+            <p>After the required preparations and adaptations of the applications are finished, technology providers register the applications as technical services in <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />. By registering an application, the technology provider makes it available for suppliers. </p>
+            <p>An application can be registered in either of the following ways: </p>
+            <ul>
+                <li>If an application does not provide any parameters, options, user roles, events, or operations, the technology provider can register it using the <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> user interface. Afterwards, the technology provider can update the service definition and add, for example, license information. </li>
+                <li>If an application is complex and provides parameters, options, or events, the technology provider can create a technical service definition as an XML file and import this file into <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> using the <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> user interface.</li>
+            </ul>
+            <p>When registering an application as a technical service, the technology provider can decide which billing system to use for calculating the charges: the native one of <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> or an external one integrated with the platform.</p>
+            <p>After registering an application, a technology provider has to appoint one or more suppliers who are to be able to create service offerings based on the technical service. The suppliers must be known to <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />, i.e. they must have been previously registered by the operator. A supplier can be an entirely independent organization, yet a technology provider can also act as his own supplier. </p>
+        </section>
+    </conbody>
+</concept>

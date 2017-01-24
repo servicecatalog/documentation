@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="ja-jp">
+  <title>サービス利用に関するエラー</title>
+  <taskbody>
+    <context>
+      <p>利用制限に関するエラーが発生しました。原因として以下が考えられます: </p>
+      <ul compact="no">
+        <li>購入済サービスの最大同時アクセス利用者数超過。例えば、サービスを同時に利用できるのは5利用者までで、5名がログインしている状態で6人目がログインしようとした場合など。 </li>
+        <li>購入済サービスの停止。購入済サービスが停止されたため、当該の購入済サービスにアクセスできなくなった場合。 </li>
+      </ul>
+    </context>
+  </taskbody>
+</task>

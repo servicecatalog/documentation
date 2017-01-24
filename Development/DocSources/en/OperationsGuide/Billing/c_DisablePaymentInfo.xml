@@ -1,0 +1,25 @@
+<?xml version="1.0"?> 
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd"
+
+[
+<!ENTITY % entities PUBLIC "-//XDOC//ENTITIES//FujitsuUserDoc" "entities.dtd">
+]>
+
+<concept xml:lang="en-us" id="Billing_PT">
+    <title>Deactivating Payment Information Options</title>
+    <conbody>
+        <section>
+            <p>For subscriptions to services that are not free of charge and use the native billing system of <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    />, customers usually have to specify a payment type and billing address. In specific scenarios, this information may not be required, for example, if <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> is not used for payment collection, or in an enterprise set-up, where costs are captured only for transparency reasons but no payments are collected at all. </p>
+            <p>For these scenarios, <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> offers a configuration setting, <codeph>HIDE_PAYMENT_INFORMATION</codeph>. By setting it to <codeph>true</codeph>, you can hide the dialogs and options for specifying payment types and billing addresses on the marketplaces and exclude customer payment information from billing and payment preview reports. Billing runs and payment processing are not affected by changing the setting. Payment information already stored for customers is also not affected, but can be accessed on the marketplaces only when the setting is <codeph>false</codeph>.</p>
+            <p>To change the setting, proceed as described in <xref href="../Configuration/c_UpdateConfiguration.xml"
+                    /> for configuration settings for <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> services.</p>
+        </section>
+    </conbody>
+</concept>

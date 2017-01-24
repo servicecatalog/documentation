@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_B32294CC9FA643A2A14A74B1DAA49C95" xml:lang="en-us">
+    <title>Creating a CA Root Certificate for <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+        /></title>
+    <conbody>
+        <section>
+            <p>The creation of the CA (Certification Authority) root certificate for <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> involves the following steps: </p>
+            <p>
+                <ol>
+                    <li>Create a private key with the following <codeph>OpenSSL</codeph> command:<p>
+                            <codeblock>&lt;OPENSSL-Install-Dir&gt;/openssl genrsa -des3 -out ca.key 4096</codeblock>
+                        </p><p>A <codeph>ca.key</codeph> file is created in the directory where the command was executed. It contains the private key and is required for all subsequent certificate signing operations. <codeph>4096</codeph> is the number of bits the key will have. <note>Observe applicable national regulations as to the allowed number of bits the key may have.</note></p></li>
+                    <li>To create the CA root certificate, execute the following command: <p>
+                            <codeblock>&lt;OPENSSL-Install-Dir&gt;/openssl req -new -x509 -days 3650 
+ -key ca.key -out ca.crt</codeblock>
+                        </p><p>Using the private key created before, a certificate file (<codeph>ca.crt</codeph>) for the CA organization is created. The option <codeph>-days 3650</codeph> states that the created certificate will be valid for 10 years. The default (if you leave the value empty) is 1 month. The certificate file must be provided to all organizations that request their certificate to be signed.</p></li>
+                </ol>
+            </p>
+        </section>
+        <section> </section>
+    </conbody>
+</concept>

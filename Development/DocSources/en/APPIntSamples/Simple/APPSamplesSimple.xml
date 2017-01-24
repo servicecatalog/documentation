@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd">
+<concept id="id_87">
+    <title>GettingStarted Sample</title>
+    <conbody>
+        <section>
+            <p>The GettingStarted sample is a simple implementation of a service controller based on the Application Provisioning Platform (APP).</p>
+            <p>The sample shows how the methods of a service controller could be implemented using the automatic polling mechanisms of APP. For this purpose, the service controller does not require a real application. It just manages the instance status by means of a dispatcher and sends information emails. For details, refer to the documentation in the source code.</p>
+            <p>The source code as well as additional resources are contained in the <codeph>oscm-app-sampleSRC.zip</codeph> file.</p>
+            <p>You can deploy and use the sample service controller for testing and practicing purposes in a working APP environment. Proceed as follows:</p>
+            <ol compact="no">
+                <li>Using the standard utilities of the application server (administration console), add the service controller archive to the domain of APP (<codeph>app-domain</codeph>). <p>You can use the <codeph>oscm-app-sample.ear</codeph> archive shipped with the sample or build your own archive from the source code. </p></li>
+                <li>Register the service controller in APP for your organization and enter the required configuration settings in the APP database.<p>To do this, you can execute the SQL statements in the following file, which is included in the <codeph>oscm-app-sampleSRC.zip</codeph>:</p><p><codeph>resources\appconfiguration.sql</codeph></p><p>Before executing the SQL statements, replace <codeph>&lt;ORGANIZATION_ID&gt;</codeph> with the ID of your organization in <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        />. </p><p>Alternatively, you can register the service controller at the Web interface of APP or enter the settings in the APP database by means of a standard table editor.</p><p>In any case, connect to the database with the user ID and password specified for the database access in the <codeph>db.properties</codeph> file when configuring APP.</p></li>
+                <li>Create a technical service and import it in <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            />.<p>As a basis and for details on required parameters and settings, use the technical service definition which is included in the <codeph>oscm-app-sampleSRC.zip</codeph>:</p><p><codeph>resources\TechnicalService.xml</codeph></p></li>
+                <li>Define one or more marketable services based on the technical service and publish them to a marketplace. </li>
+                <li>Create, manage, and delete subscriptions to see how the service controller works. </li>
+            </ol>
+        </section>
+    </conbody>
+</concept>

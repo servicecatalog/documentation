@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<task id="Preparing_the_Software_and_Se_67"
+                    xml:lang="en-us">
+    <title>Preparing the Software and Setup Utilities</title>
+    <taskbody>
+        <context>
+            <p>The <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> software and setup utilities are provided in the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> installation package, <codeph>oscm-install-pack.zip</codeph>. The contents of the installation package need to be made available in your environment as follows: </p>
+            <p>Extract the contents of the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> installation package, <codeph>oscm-install-pack.zip</codeph>, to a separate temporary directory on the system from where you want to install and deploy <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+            <p>In the following sections, this directory is referred to as <codeph>&lt;install_pack_dir></codeph>.</p>
+            <p>After extraction, the following directories are available: <ul>
+                    <li>
+                        <p><codeph><b>databases/bes_db</b></codeph></p>
+                        <p>Configuration files for setting up the databases used by <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+                    </li>
+                    <li>
+                        <p><codeph><b>doc</b></codeph>
+                        </p>
+                        <p>PDF manuals providing installation and operation instructions, an overview of <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                />, and information on new features and compatibility issues when upgrading a <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> installation. </p>
+                    </li>
+                    <li>
+                        <p><codeph><b>domains/bes_domain</b></codeph>
+                        </p>
+                        <p>Configuration files for setting up the application server resources for the domain to which <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    /> is to be deployed. The <codeph><b>domains/bes_domain/applications</b></codeph> subdirectory contains the archive files that make up <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>:</p>
+                        <ul>
+                            <li>
+                                <p><codeph>oscm.ear</codeph>: The <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    /> platform.</p>
+                            </li>
+                            <li>
+                                <p><codeph>oscm-portal.war</codeph>: The <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    /> administration portal and marketplace.</p>
+                            </li>
+                            <li>
+                                <p><codeph>oscm-portal-help.war</codeph>. The online help for the administration portal and the marketplaces.</p>
+                            </li>
+                            <li product="oscm_ee">
+                                <p><codeph>birt.war</codeph>: The report engine.</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p><codeph><b>domains/indexer_domain</b></codeph>
+                        </p>
+                        <p>Configuration files for setting up the application server resources for the domain to which the search indexer application (<codeph>oscm-search.ear</codeph>) is to be deployed. The <codeph><b>domains/indexer_domain/applications</b></codeph> subdirectory contains the <codeph>oscm-search.ear</codeph> file.</p>
+                    </li>
+                    <li>
+                        <p><codeph><b>install</b></codeph></p>
+                        <p>XML files that support you in setting up the databases and application server resources for <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+                    </li>
+                    <li>
+                        <p><codeph><b>licenses</b></codeph></p>
+                        <p>License files of third-party software used by <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+                    </li>
+                    <li>
+                        <p><codeph><b>oscm-operatorclient.zip</b></codeph>: The command line tool.</p>
+                    </li>
+                </ul></p>
+            <note>The <codeph>&lt;install_pack_dir>/install</codeph> directory contains a properties file, <codeph>parallel-execution.properties</codeph>. Do not change the content of this file! </note>
+        </context>
+    </taskbody>
+</task>

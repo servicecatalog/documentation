@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<reference id="reference832" xml:lang="ja-jp">
+    <title><ph platform="print">複数利用者インポートのための利用者情報ファイル</ph><ph platform="help"
+            >複数利用者インポートのための利用者情報ファイル</ph>
+    </title>
+    <refbody>
+        <section>
+            <p>管理者は組織の複数の利用者をインポートし、プラットフォームに登録することができます。システム運用管理者は自分の組織内の複数の利用者をインポートできるだけではなく、プラットフォームで管理している任意の組織の複数の利用者をインポートすることができます。</p>
+            <p>利用者の情報は、<codeph>csv</codeph> (comma-separated values) 形式のファイルで提供する必要があります。この利用者情報ファイルは、<ph
+                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                    platform="help">システム</ph>にインポートして利用します。</p>
+            <p>ファイルの形式：</p>
+            <p>
+                <ul compact="no">
+                    <li>一人の利用者の情報は、一行で提供します。空行は無視されます。</li>
+                    <li>利用者情報ファイルはUTF-8 のエンコードで保存します。</li>
+                    <li>以下の順番で情報を各フィールドに格納します：<p>
+                            <ol>
+                                <li>利用者ID (必須)</li>
+                                <li>メールアドレス (必須)</li>
+                                <li>言語 (必須)</li>
+                                <li>性別 (省略可能)</li>
+                                <li>名 (省略可能)</li>
+                                <li>姓 (省略可能)</li>
+                                <li>利用者に割り当てる一つまたは複数の利用者ロール (サービスポータルが選択されていない場合は必須)</li>
+                            </ol>
+                        </p></li>
+                    <li>利用者情報の各フィールドはカンマで区切ります。省略可能なフィールドに値を指定しない場合、そのフィールドは空とし、次のフィールドとカンマで区切る必要があります。</li>
+                </ul>
+            </p>
+            <p>各フィールドは、以下の値をとることができます：</p>
+            <p>
+                <table frame="all" colsep="1" rowsep="1">
+                    <tgroup cols="2">
+                        <colspec colnum="1" colname="col1" colwidth="1.00*"/>
+                        <colspec colnum="2" colname="col2" colwidth="3.96*"/>
+                        <thead>
+                            <row>
+                                <entry>フィールド</entry>
+                                <entry>値</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>利用者ID</entry>
+                                <entry>必須。利用者がプラットフォームにログインする際に指定するID。<p>利用者IDは100文字以内に制限されており、以下の文字を含んではいけません：</p><p><codeph>! " # $ % &amp; ' * + , / : ; &lt; = > ? \ ^ `</codeph>
+                                    </p></entry>
+                            </row>
+                            <row>
+                                <entry>メールアドレス</entry>
+                                <entry>必須。利用者のメールアドレス。登録通知をするために利用されます。
+                                    <p>指定されたメールアドレスの書式が有効な構文か確認され、ドメイン名がIANA（Internet Assigned Numbers Authority）によって定義、管理されている標準に適合しているか確認されます。</p>
+                                    <p>例: <codeph>user.name@domain.arpa</codeph>, <codeph>user.name@domain.org</codeph>, <codeph>user@mycompany.lan.uk</codeph></p></entry>
+                            </row>
+                            <row>
+                                <entry>言語</entry>
+                                <entry>必須。利用者が作業するデフォルトの言語のISOコード。例えば、<codeph>en</codeph> (英語)。 </entry>
+                            </row>
+                            <row>
+                                <entry>性別</entry>
+                                <entry>省略可能。性別。<p>利用可能な値：<codeph>MR</codeph> または <codeph>MS</codeph></p><p>値は大文字小文字を区別します。また、示された通りに指定する必要があります。</p></entry>
+                            </row>
+                            <row>
+                                <entry>名</entry>
+                                <entry>省略可能。 </entry>
+                            </row>
+                            <row>
+                                <entry>姓</entry>
+                                <entry>省略可能。</entry>
+                            </row>
+                            <row>
+                                <entry>利用者ロール</entry>
+                                <entry>サービスポータルが選択されていない場合は必須。サービスポータルが選択されており、かつロールが指定されていない場合、特権を持たない標準的な利用者が登録されます。
+                                  <p>指定可能な利用者ロールは、その利用者が所属する組織のロールに依存します。 有効な利用者ロール：</p>
+                                  <p><codeph>ORGANIZATION_ADMIN</codeph> : 管理者。すべての組織の利用者に指定可能。</p>
+                                  <p><codeph>SUBSCRIPTION_MANAGER</codeph> : サービス購入管理者。すべての組織の利用者に指定可能。</p>
+                                  <p><codeph>PLATFORM_OPERATOR</codeph> : システム管理運用者。システム管理運用部門の利用者に指定可能。</p>
+                                  <p><codeph>MARKETPLACE_OWNER</codeph> : サービスポータル運用者。サービスポータル運用部門の利用者に指定可能。</p>
+                                  <p><codeph>SERVICE_MANAGER</codeph> : サービス管理者。サービス提供部門の利用者に指定可能。</p>
+                                  <p><codeph>TECHNOLOGY_MANAGER</codeph> : 技術サービス管理者。技術サービス開発部門の利用者に指定可能。</p>
+                                  <p><codeph>BROKER_MANAGER</codeph> : サービス仲介者。サービス仲介部門の利用者に指定可能。</p>
+                                  <p><codeph>RESELLER_MANAGER</codeph> : サービス提供代行者。サービス提供代行部門の利用者に指定可能。</p>
+                                  <p>以下の事項を遵守してください:</p><p>
+                                        <ul compact="no">
+                                            <li>ロール名は大文字小文字を区別します。上記の通り指定してください。</li>
+                                            <li>複数の利用者ロールを指定する場合、それらはカンマで区切られ、ダブルクォートで囲まれている必要があります(例: <codeph>"ORGANIZATION_ADMIN, RESELLER_MANAGER"</codeph>)。 ロール名の間の空白およびフィールド間の空白は無視されます。</li>
+                                            <li>その組織に指定できない利用者ロールが一つだけ指定されている場合、その値は無視され、その利用者は登録されません。</li>
+                                            <li>複数のロールが指定され、かつ少なくともその一つがその組織で有効なロールである場合、その利用者は正常にインポートされ、登録に成功し、無効なロールは無視されます。</li>
+                                        </ul>
+                                    </p></entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+            <p><b>利用者情報ファイルのサンプル</b>:</p>
+            <p>
+                <codeblock>user1,user1@company.com,en,MS,Jane,Smith,ORGANIZATION_ADMIN
+user2,user2@company.com,de,MR,John F.,Cool,SUBSCRIPTION_MANAGER
+user3,user3@company.com,en,,,,ORGANIZATION_ADMIN
+user4,user4@company.com,en,,,Admin,"SERVICE_MANAGER,ORGANIZATION_ADMIN"
+user5,user5@company.com,en,MR,,Mueller-Siegel,SERVICE_MANAGER
+user6,user6@company.com,en,MR,Joe,StandardUser,</codeblock>
+            </p>
+        </section>
+    </refbody>
+</reference>

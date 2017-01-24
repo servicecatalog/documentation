@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_3413BBD173324104B42FB714974CABE7" xml:lang="en-us">
+    <title>Reporting</title>
+    <conbody>
+        <section>
+            <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> offers comprehensive reports for different purposes and at different levels of detail. You can choose from various predefined reports.</p>
+            <p>The following reports are available for operators: <ul>
+                    <li conref="../../help/tasks/organization_report.xml#task634/operatorreport1"> </li>
+                    <li conref="../../help/tasks/organization_report.xml#task634/operatorreport2"> </li>
+                    <li conref="../../help/tasks/organization_report.xml#task634/operatorreport3"> </li>
+                    <li conref="../../help/tasks/organization_report.xml#task634/operatorreport4"> </li>
+                    <li conref="../../help/tasks/organization_report.xml#task634/operatorreport5"> </li>
+                    <li conref="../../help/tasks/organization_report.xml#task634/operatorreport6"> </li>
+                    <li conref="../../help/tasks/organization_report.xml#task634/operatorreport7"> </li>
+                    <li conref="../../help/tasks/organization_report.xml#task634/operatorreport8"> </li>
+                </ul></p>
+            <p><b>To create a supplier revenue report, choose one of the following options</b>: <ul>
+                    <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> administration portal - Choose <b>Create report</b> in the <b>Account</b> menu, and select the supplier revenue report.<p>For detailed step-by-step instructions, refer to the online help. </p><p>The generated report is instantly displayed at the <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> administration portal. You can choose to print the report or save it in several formats using the icons in the pane where the report is displayed.</p></li>
+                    <li>Command line tool - Use the <codeph>getrevenuelist</codeph> command with the following syntax: <p>
+                            <codeblock>&lt;JAVA_HOME>/bin/java -jar lib/oscm-operatorsvc-client.jar 
+ &lt;userkey> &lt;password>
+ getrevenuelist month=&lt;YYYY-MM></codeblock>
+                        </p><p>The command returns a CSV list in the following format: </p><p><codeph>FROM, TO</codeph>: Dates specifying the period for which the billing data have been generated. </p><p><codeph>ID, NAME</codeph>: ID and name of a supplier.</p><p><codeph>AMOUNT</codeph>: For each supplier, total revenue per currency and marketplace. </p><p><codeph>CURRENCY</codeph>: ISO currency code.</p><p><codeph>MARKETPLACE</codeph>: Name of the marketplace in the language specified by the locale setting of the calling user. If not set, the marketplace ID is returned.</p></li>
+                </ul></p>
+            <p><b>To create one of the other reports, choose the following option</b>: <ul>
+                    <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> administration portal - Choose <b>Create report</b> in the <b>Account</b> menu, and select the report of your choice.<p>For detailed step-by-step instructions, refer to the online help. </p><p>The generated report is instantly displayed in the <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> administration portal. You can choose to print the report or save it in several formats using the icons in the pane where the report is displayed.</p></li>
+                </ul></p>
+            <p>
+                <note>The reporting functionality is available only if you have defined the following configuration parameters: <codeph>REPORT_ENGINEURL</codeph>, <codeph>REPORT_SOAP_ENDPOINT</codeph>, <codeph>REPORT_WSDLURL</codeph>. For details, refer to <xref
+                        href="../../Shared/reference/r_ConfigSettings_config_properties.xml"/>.</note>
+            </p>
+        </section>
+    </conbody>
+</concept>

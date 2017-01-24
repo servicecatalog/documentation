@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="de-de">
+  <title>Service anzeigen</title>
+  <taskbody>
+    <context>
+      <p>Auf der Seite <uicontrol>Service anzeigen</uicontrol> können Sie die Eigenschaften der Services anzeigen, für die Sie die Berechtigung zum Wiederverkauf haben.</p>
+      <p id="Folgende_Eigenschaften_eines_task_taskbody_context_p_2"
+        >Folgende Eigenschaften eines Service werden angezeigt:</p>
+      <ul compact="no" id="Servicename_und_Kurzbeschreib_task_taskbody_context_ul">
+        <li id="Servicename_und_Kurzbeschreib_task_taskbody_context_ul_li"><ph
+            id="The_service_name_and_short_de_task_taskbody_context_ul_li"
+              ><b>Servicename</b> und <b>Kurzbeschreibung</b>. Diese werden im Servicekatalog auf einem Markplatz angezeigt, wenn Sie den Service veröffentlichen. </ph></li>
+        <li id="Ausführliche_Beschreibung_der_task_taskbody_context_ul_li"><ph
+            id="The_service_description_which_task_taskbody_context_ul_li"
+            >Ausführliche <b>Beschreibung</b> der Funktionalität des Service. Die Beschreibung wird auf einem Marktplatz angezeigt, wenn Kunden Details zu dem Service anfordern.</ph></li>
+        <li id="Lizenbeschreibung._Diese_muss_task_taskbody_context_ul_li"><ph
+            id="The_license_agreement_which_m_task_taskbody_context_ul_li"
+            ><b>Lizenzvereinbarung</b>. Diese muss von den Kunden gelesen und akzeptiert werden, wenn sie den Service abonnieren.</ph></li>
+        <li id="Details_zum_Preismodell._Dies_task_taskbody_context_ul_li"><ph
+            id="The_details_of_the_price_mode_task_taskbody_context_ul_li"
+            ><b>Details zum Preismodell</b>. Diese werden vom Serviceanbieter festgelegt. </ph><ul compact="no">
+            <li>Wenn für die Kostenberechnung für den Service ein externes Abrechnungssystem verwendet wird, können Sie die dort definierten Abrechnungsbedingungen und Preise über <uicontrol>Anzeigen</uicontrol> ansehen.</li>
+            <li>Wenn für die Kostenberechnung für den Service das plattformeigene Abrechnungssystem verwendet wird, kann der Service kostenlos oder kostenpflichtig sein. Wenn für die Nutzung des Service Kosten anfallen, können Sie hier die Abrechnungsbedingungen und Preise sehen. Details dazu finden Sie <xref
+                href="service_viewPMDetails.xml">hier</xref>. Alle Preise sind netto ohne Mehrwertsteuer.</li>
+          </ul></li>
+      </ul>
+      <p><b>So zeigen Sie die Eigenschaften eines Service an</b>:</p>
+    </context>
+    <steps-unordered>
+      <step>
+        <cmd>Wählen Sie im Feld <uicontrol>Service-ID</uicontrol> den Service, dessen Eigenschaften Sie anzeigen möchten.</cmd>
+        <info>
+          <p>Die Liste enthält alle Services, für die Sie die Berechtigung zum Wiederverkauf haben.</p>
+        </info>
+      </step>
+    </steps-unordered>
+    <result>
+      <p>Die Eigenschaften des Service werden sofort angezeigt.</p>
+      <p>Damit Kunden den Service abonnieren können, müssen Sie den Marktplatz festlegen, auf dem Sie den Service veröffentlichen möchten. Anschließend können Sie den Service aktivieren.</p>
+    </result>
+  </taskbody>
+  <related-links>
+    <linklist>
+      <title>Weitere Themen</title>
+      <link href="service_publish.xml"/>
+      <link href="service_activation.xml"/>
+    </linklist>
+  </related-links>
+</task>

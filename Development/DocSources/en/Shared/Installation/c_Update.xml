@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd">
+ 
+<concept id="Update" xml:lang="en-us">
+  <title>Update Installation</title>
+  <conbody>
+    <section>
+      <p>Before updating your installation of <ph audience="app">APP</ph><ph audience="ror"
+          >the ROR integration software</ph><ph audience="aws">the AWS integration software</ph><ph audience="os"
+          >the OpenStack integration software</ph><ph audience="tps5">the TPS5 integration software</ph><ph
+          audience="vmware"
+        >the vSphere integration software</ph>, read the <i>Release Notes</i> of the new release. They contain information on compatibility issues, changes and enhancements, and known restrictions. </p>
+    </section>
+    
+    
+    <section>
+      <title>Preparing the Update</title>
+      <p>Before you start with the update installation, carry out the following steps: </p>
+      <p>
+        <ol compact="no">
+          <li>Make sure that all provisioning operations are complete. Follow the steps as described in <ph
+              audience="aws"><xref href="../../Shared/concepts/c_ControllerHandleProblems.xml"/></ph><ph audience="os"
+                ><xref href="../../Shared/concepts/c_ControllerHandleProblems.xml"/></ph><ph audience="ror"><xref
+                href="../../Shared/concepts/c_ControllerHandleProblems.xml"/></ph><ph audience="tps5"><xref
+                  href="../../Shared/concepts/c_ControllerHandleProblems.xml"/></ph><ph audience="vmware"><xref
+                    href="../../Shared/concepts/c_ControllerHandleProblems.xml"/></ph><ph audience="app"><xref
+                href="../../APPInt/APP/c_HandleProblems.xml"/></ph>.</li>
+          
+          <li>In the <codeph>app-domain</codeph> application server domain, disable or undeploy the following <ph
+              audience="app">application</ph><ph audience="ror">applications</ph><ph audience="aws">applications</ph><ph
+                audience="os">applications</ph><ph
+                  audience="tps5">applications</ph><ph audience="vmware">applications</ph>:
+            <p><codeph>oscm-app</codeph></p>
+            <p audience="ror"><codeph>oscm-app-ror</codeph></p><p audience="aws"><codeph>oscm-app-aws</codeph></p><p
+                  audience="os"><codeph>oscm-app-openstack</codeph></p><p
+                    audience="tps5"><codeph>oscm-app-tps5</codeph></p>
+            <p
+              audience="vmware"><codeph>oscm-app-vmware</codeph></p></li>
+          <li>Check for <codeph>.glassfishStaleFiles</codeph> files in the <codeph>app-domain</codeph> domain. If there are any, delete them. The files are located in<p><codeph>app-domain/applications/&lt;application name&gt;/.glassfishStaleFiles</codeph></p><p>For example: </p><p><codeph>app-domain/applications/oscm-app/.glassfishStaleFiles</codeph></p>
+          </li>
+          <li>Set the following environment variable for your current session:<p><codeph>DB_INTERPRETER</codeph>: The absolute path and name of the <codeph>psql</codeph> executable of PostgreSQL. The executable is usually located in the <codeph>bin</codeph> subdirectory of the PostgreSQL installation directory.</p><p>Example:</p><codeblock>export DB_INTERPRETER="/opt/PostgreSQL/9.1/bin/psql"</codeblock>
+          </li>
+          <li audience="tps5"
+              >Prepare the new TPS5 integration software and setup utilities and include the required TPS5 libraries. Proceed as described in <xref
+                href="../../Shared/Installation/t_InstPreparing.xml"/>.</li>
+          <li audience="tps5"
+              >Execute the <codeph>patch-SSO.xml</codeph> file in <codeph>&lt;install_pack_dir&gt;/install</codeph> as follows: <codeblock>&lt;ANT_HOME&gt;/bin/ant -f patch-SSO.xml patchController -Ddomain.dir=app_domain</codeblock><p>
+              <note>This command creates a backup of the initial <codeph>&lt;install_pack_dir>/domains/ app_domain/applications/oscm-app-tps5.ear</codeph> file in the following directory: <p><codeph>&lt;install_pack_dir>/domains/app_domain/tmp</codeph></p>The initial file is overwritten with the one containing the TPS5 libraries.</note>
+            </p></li>
+          <li audience="vmware"
+                >Make sure that the <codeph>resources-extension.xml</codeph> file is available in <p><codeph>&lt;install_pack_dir>/domains/app_domain/installer</codeph></p><p>and that the settings for the VMware service controller database setup and access match the ones in defined in the following file: </p><p><codeph>&lt;install_pack_dir>/databases/controller_db/db.properties</codeph></p>If this is not the case, proceed as follows: <p>
+              <ol>
+                <li>
+                  <p>Copy the following file: </p>
+                  <p><codeph>&lt;install_pack_dir>/domains/app_domain/installer/resources-extension-template.xml</codeph> to <codeph>&lt;install_pack_dir>/domains/app_domain/installer/resources-extension.xml</codeph></p>
+                </li>
+                <li>
+                  <p>Edit the <codeph>resources-extension.xml</codeph> file and replace the following placeholders with the values defined in the <codeph>db.properties</codeph> file of the VMware service controller database. The corresponding property in the <codeph>db.properties</codeph> file is shown in parenthesis. </p>
+                  <p>
+                    <ul>
+                      <li>
+                        <p><codeph>@SERVER.NAME@</codeph> (<codeph>db.host</codeph>): The name of the host the VMware service controller database is running on. Default: <codeph>localhost</codeph></p>
+                        <p>The permitted length of host names depends on the operating system. </p>
+                      </li>
+                      <li>
+                        <p><codeph>@PORT.NUMBER@</codeph> (<codeph>db.port</codeph>): The database port. Default: <codeph>5432</codeph></p>
+                      </li>
+                      <li>
+                        <p><codeph>@DATABASE.NAME@</codeph> (<codeph>db.name</codeph>): The name of the database. Default: <codeph>vmware</codeph></p>
+                      </li>
+                      <li>
+                        <p><codeph>@DB.USER@</codeph> (<codeph>db.user</codeph>): The name of the user to connect to the database. Default: <codeph>vmwareuser</codeph></p>
+                      </li>
+                      <li>
+                        <p><codeph>@DB.PASSWORD@</codeph>(<codeph>db.pwd</codeph>): The password of the user to connect to the database. Default: <codeph>vmwareuser</codeph></p>
+                      </li>
+                    </ul>
+                  </p>
+                </li>
+              </ol>
+            </p></li>
+        </ol>
+      </p>
+    </section>
+    <section>
+      <title>Updating the <ph audience="vmware"><codeph>bssapp</codeph></ph> Database</title>
+      <p>Proceed with updating the <ph audience="vmware"><codeph>bssapp</codeph></ph> database as follows:</p>
+      <p>
+        <ol compact="no">
+          <li>Check whether the file <p><codeph>postgresql-9.1-903.jdbc4.jar</codeph></p><p> is contained in the following directories of the application server:</p><ul>
+              <li><codeph>lib</codeph> directory of the <codeph>app-domain</codeph> domain</li>
+              <li><codeph>&lt;GLASSFISH_HOME&gt;/mq/lib/ext</codeph></li>
+            </ul><p>If it is not, copy the file from the <codeph>&lt;install_pack_dir&gt;/install/lib</codeph> directory to the location where it is missing. </p></li>
+          <li>Create a backup of the <ph audience="ror"><codeph>bssapp</codeph></ph><ph audience="app"
+            ><codeph>bssapp</codeph></ph><ph audience="os"><codeph>bssapp</codeph></ph><ph audience="tps5"><codeph>bssapp</codeph></ph><ph audience="vmware"><codeph>bssapp</codeph></ph><ph audience="BSS"
+                ><codeph>bss</codeph></ph> database using the standard PostgreSQL commands. The database backup must be compatible with PostgreSQL 9.1.12. <ph
+              audience="BSS">Make sure to also have a backup of any customizations to marketplaces.</ph>
+            <p audience="BSS">
+              <note>Creating a backup of search index data is not required. The index will be automatically rebuilt when <ph
+                  conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> is operational again. </note>
+            </p></li>
+
+
+          <li>Update the following configuration files so that the settings match your current installation:<ul
+              compact="no">
+              <li><codeph>db.properties</codeph></li>
+              <li><codeph>configsettings.properties</codeph></li>
+              <li audience="app"><codeph>configsettings_controller.properties</codeph></li>
+              <li audience="ror"><codeph>configsettings_controller.properties</codeph></li>
+              <li audience="aws"><codeph>configsettings_controller.properties</codeph></li>
+              <li audience="os"><codeph>configsettings_controller.properties</codeph></li>
+              <li audience="tps5"><codeph>configsettings_controller.properties</codeph></li>  
+            <li audience="vmware"><codeph>configsettings_controller.properties</codeph></li>
+          </ul></li>
+          
+          <li>Update the schema and configuration settings of the <codeph>bssapp</codeph> database by executing the <codeph>build-db.xml</codeph> file in <codeph>&lt;install_pack_dir&gt;/install</codeph> as follows:<p>
+              <codeblock>&lt;ANT_HOME&gt;/bin/ant -f build-db.xml updateDatabase</codeblock>
+            </p><!--p>If you set a password other than <codeph>postgres</codeph> for the PostgreSQL user account (<codeph>postgres</codeph>) when installing the database management system, you have to specify the password with the call to the <codeph>build-db.xml</codeph> file as follows: </p><p>
+              <codeblock>&lt;ANT_HOME&gt;/bin/ant -f build-db.xml updateDatabase
+   -Ddb.pwd=&lt;password&gt;</codeblock>
+            </p--><note>
+              <p>Make sure that Ant runs in a Java 7 runtime environment when calling the <codeph>build-db.xml</codeph> file. </p>
+              <!--p>It may be required to enclose <codeph>-Ddb.pwd=&lt;password&gt;</codeph> in double or single quotes depending on the operating system. </p-->
+            </note>
+          </li>
+        </ol>
+      </p>
+    </section>
+    <section audience="vmware">
+      <title>Updating the <codeph>vmware</codeph> Database</title>
+      <p>If you want to update the vSphere configuration stored in the VMware service controller database, proceed as follows:</p>
+      <p>
+        <ol compact="no">
+          <li>Create a backup of the database using the standard PostgreSQL commands. The database backup must be compatible with PostgreSQL 9.1.12. </li>
+          <li>Update the following configuration files so that the settings match your current installation:<ul
+              compact="no">
+              <li><codeph>db.properties</codeph></li>
+              <li><codeph>databases/controller_db/csv/*.csv</codeph></li>
+            </ul></li>
+          <li>Delete the existing database tables by executing the <codeph>build-db-import.xml</codeph> file in <codeph>&lt;install_pack_dir&gt;/install</codeph> as follows:<p>
+              <codeblock>&lt;ANT_HOME&gt;\bin\ant -f build-db-import.xml deleteAll 
+   -Ddb.dir=controller_db</codeblock>
+            </p></li>
+          <li>To update the vSphere configuration in the VMware service controller database, import the <codeph>.csv</codeph> files into the database by executing the <codeph>build-db-import.xml</codeph> file in <codeph>&lt;install_pack_dir&gt;/install</codeph> as follows:<p>
+              <codeblock>&lt;ANT_HOME&gt;/bin/ant -f build-db-import.xml importAll 
+   -Ddb.dir=controller_db</codeblock>
+            </p><p>Instead of importing all <codeph>.csv</codeph> files in one step, you can split the import by executing the <codeph>build-db-import.xml</codeph> file in the following order: </p><p>
+              <codeblock>&lt;ANT_HOME&gt;/bin/ant -f build-db-import.xml importVCenter 
+   -Ddb.dir=controller_db
+&lt;ANT_HOME&gt;/bin/ant -f build-db-import.xml importCluster 
+   -Ddb.dir=controller_db
+&lt;ANT_HOME&gt;/bin/ant -f build-db-import.xml importVLAN 
+   -Ddb.dir=controller_db
+&lt;ANT_HOME&gt;/bin/ant -f build-db-import.xml importDomain 
+   -Ddb.dir=controller_db
+&lt;ANT_HOME&gt;/bin/ant -f build-db-import.xml importIPPool 
+   -Ddb.dir=controller_db</codeblock>
+            </p><note>It may be required to enclose <codeph>-Ddb.dir=controller_db</codeph> in double or single quotes depending on the operating system. </note></li>
+        </ol>
+      </p>
+    </section>
+    <section audience="app">
+      <title>Updating the Application Server</title>
+      <p>After you have executed the preparation steps:</p>
+      <ol>
+        <li>Redeploy or deploy <codeph>oscm-app</codeph> in the <codeph>app-domain</codeph> domain.</li>
+        <li>Restart the <codeph>app-domain</codeph> domain.</li>
+      </ol>
+    </section>
+    <section audience="ror">
+      <title>Updating the Application Server</title>
+      <p>After you have executed the preparation steps, redeploy or deploy the applications that make up the ROR integration software in the <codeph>app-domain</codeph> domain: </p>
+      <ol>
+        <li><codeph>oscm-app</codeph></li>
+        <li><codeph>oscm-app-ror</codeph>
+        </li>
+      </ol>
+      <p>Restart the <codeph>app-domain</codeph> domain.</p>
+    </section>
+    
+    <section audience="aws">
+      <title>Updating the Application Server</title>
+      <p>After you have executed the preparation steps, redeploy or deploy the applications that make up the AWS integration software in the <codeph>app-domain</codeph> domain: </p>
+      <ol>
+        <li><codeph>oscm-app</codeph></li>
+        <li><codeph>oscm-app-aws</codeph>
+        </li>
+      </ol>
+      <p>Restart the <codeph>app-domain</codeph> domain.</p>
+    </section>
+    
+    <section audience="os">
+      <title>Updating the Application Server</title>
+      <p>After you have executed the preparation steps, redeploy or deploy the applications that make up the OpenStack integration software in the <codeph>app-domain</codeph> domain: </p>
+      <ol>
+        <li><codeph>oscm-app</codeph></li>
+        <li><codeph>oscm-app-openstack</codeph>
+        </li>
+      </ol>
+      <p>Restart the <codeph>app-domain</codeph> domain.</p>
+    </section>
+    
+    <section audience="tps5">
+      <title>Updating the Application Server</title>
+      <p>After you have executed the preparation steps, redeploy or deploy the applications that make up the TPS5 integration software in the <codeph>app-domain</codeph> domain: </p>
+      <ol>
+        <li><codeph>oscm-app</codeph></li>
+        <li><codeph>oscm-app-tps5</codeph>
+        </li>
+      </ol>
+      <p>Restart the <codeph>app-domain</codeph> domain.</p>
+    </section>
+    
+    <section audience="vmware">
+      <title>Updating the Application Server</title>
+      <p>After you have executed the preparation steps, redeploy or deploy the applications that make up the vSphere integration software in the <codeph>app-domain</codeph> domain: </p>
+      <ol>
+        <li><codeph>oscm-app</codeph></li>
+        <li><codeph>oscm-app-vmware</codeph>
+        </li>
+        <li>Update the data source for the <codeph>vmware</codeph> database in the <codeph>app-domain</codeph> domain as follows:<p>
+            <codeblock>&lt;GLASSFISH_HOME&gt;/bin/asadmin -p 8848 add-resources 
+&lt;install_pack_dir>/domains/app_domain/installer/resources-extension.xml</codeblock>
+          </p></li>
+        <li>Restart the <codeph>app-domain</codeph> domain.</li>
+      </ol>
+    </section>
+    
+    <section>
+      <title>Updating the Configuration for SAML_SP Mode</title>
+      <p>If you are running <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> and the <ph
+          audience="ror">ROR integration</ph><ph audience="aws">AWS integration</ph><ph audience="os"
+            >OpenStack integration</ph><ph audience="tps5">TPS5 integration</ph><ph audience="vmware">vSphere integration</ph><ph audience="app"
+        >APP</ph> software in SAML_SP mode, and if the IdP metadata of your SSO environment have changed, you need to update your WSIT files accordingly: </p>
+      <ol compact="no">
+        <li>Extract the <codeph>OSCM-wsit.jar</codeph> file into a separate directory. <p>The <codeph>.jar</codeph> file is located in </p><p><codeph>&lt;GLASSFISH_HOME>/domains/app_domain/lib</codeph></p><p>The <codeph>OSCM-wsit.jar</codeph> file contains the following files:</p><p><codeph>wsit-client.xml</codeph></p><p><codeph>STSService.xml</codeph></p></li>
+        <li>Adapt the <codeph>.xml</codeph> files as required by your environment. <ph audience="ror"
+              >For details, refer to <xref href="../../Shared/Installation/t_InstConfiguringController.xml"/>.</ph><ph
+            audience="aws">For details, refer to <xref href="../../Shared/Installation/t_InstConfiguringController.xml"
+            />.</ph><ph audience="os">For details, refer to <xref
+              href="../../Shared/Installation/t_InstConfiguringController.xml"/>.</ph><ph audience="tps5"
+              >For details, refer to <xref href="../../Shared/Installation/t_InstConfiguringController.xml"/>.</ph>
+          <ph audience="vmware"
+            >For details, refer to <xref href="../../Shared/Installation/t_InstConfiguringController.xml"/>.</ph><ph
+            audience="app">For details, refer to <xref href="../../Shared/Installation/t_InstConfiguring.xml"
+          />.</ph></li>
+        <li>Recreate the <codeph>OSCM-wsit.jar</codeph> file with the modified contents.</li>
+        <li>Stop the <codeph>app-domain</codeph> domain.</li>
+        <li>Copy the adapted <codeph>OSCM-wsit.jar</codeph> to the following directory: <p><codeph>&lt;GLASSFISH_HOME>/domains/app_domain/lib</codeph></p></li>
+        <li>Restart the <codeph>app-domain</codeph> domain.</li>
+      </ol>
+      <note>If, for some reason, you recreate the <codeph>app-domain</codeph> domain, you also need to recreate the <codeph>OSCM-wsit.jar</codeph> in the <codeph>&lt;GLASSFISH_HOME>/domains/app_domain/lib</codeph> directory.</note>
+    </section>
+
+  </conbody>
+</concept>

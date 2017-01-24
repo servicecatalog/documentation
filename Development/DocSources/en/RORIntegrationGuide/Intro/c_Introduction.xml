@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd">
+<concept id="id_116">
+          <title>Introduction</title>
+          <conbody>
+                    <section>
+                              <p conref="../../Shared/concepts/c_WhatIsBES_Controller.xml#concept2311/is_a_set_of_services_which_concept_conbody_p_1"/>
+                              <p>ServerView Resource Orchestrator (ROR) is a data center management tool which provisions virtual systems configured and tuned for the user's needs. On virtual platforms, users can, for example, request specific servers and operating systems, firewalls, load balancers, or pre-installed software and databases. Servers can be added and removed dynamically as required.</p>
+                              <p>The integration of <ph
+                                                  conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                  /> and ROR provides for an Infrastructure as a Service (IaaS) solution that leverages the features of both products: Through services, which are published on a marketplace in <ph
+                                                  conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                  />, users can request and use virtual platforms and servers in ROR. The usage costs can be calculated and charged by means of the <ph
+                                                  conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        /> billing and payment services.</p>
+                              <p>The ROR integration package provided with <ph
+                                                  conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                  /> includes all the components required for connecting existing <ph
+                                                  conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                  /> and ROR installations. This manual describes how to deploy this package and how to create and use services for ROR on a <ph
+                                                  conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        /> marketplace. </p>
+                    </section>
+          </conbody>
+</concept>

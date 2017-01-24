@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_3413BBD173324104B42FB714974CABE7" xml:lang="en-us">
+    <title>Reporting</title>
+    <conbody>
+        <section>
+            <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> offers comprehensive reports for different purposes and at different levels of detail. </p>
+            <p>The following reports are available for suppliers:</p>
+            <ul>
+                <li><b>Service report.</b> It shows all your marketable services with their existing subscriptions. Subscriptions to services offered by your brokers are also listed.<p>A service report supports you, for example, in identifying unsold services or in gaining a quick overview of the services that need special promotion.</p></li>
+                <li><b>Customer report.</b> It shows all your customers and your brokers' customers with basic customer data and the services they subscribed to. The report outputs whether a subscription is still active or has already ended.<p>A customer report supports you, for example, in gaining an overview of your customers and in quickly accessing customer data. </p></li>
+                <li><b>Billing report.</b> It shows a summary of all billing data for your customers and your brokers' customers. The billing data is only generated for services applying the native billing system of <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    />. It is not generated for services using an external billing system.</li>
+                <li><b>Payment processing status report.</b> It shows the status of billing data calculations for your customers and your brokers' customers, their subscriptions, and the services they subscribed to. </li>
+                <li><b>Customer billing report.</b> It shows the billing data of the current billing period for a selected subscription of a customer. The billing data is only generated for services applying the native billing system of <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        />. It is not generated for services using an external billing system.<p>In combination with the payment processing status report, this report provides a detailed audit log for billing and payment issues. The data can be used, for example, to verify payment or service access issues.</p></li>
+                <li><b>Revenue share report.</b> It shows your actual revenue depending on the usage of your services. The report breaks down the data to the organizations which generated the revenue as well as to the individual services. <p>The report outputs your liabilities to the other participating parties. The data can be used as the basis for collecting or paying the shares, depending on your contracts with the other participating parties.</p>Revenue shares are calculated only for services applying the native billing system of <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    />. Services using an external billing system are not included in the calculation. </li>
+            </ul>
+            <p>To create a report, use the <uicontrol>Create report</uicontrol> menu option in the <uicontrol>Account</uicontrol> menu of the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> administration portal and choose the desired report. Depending on the report type, you may have to enter additional report parameters. </p>
+            <p>The generated report is instantly displayed at the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> administration portal. You can choose to print the report or save it in several formats.</p>
+            <p>
+                <note>Contact your platform operator if the reporting functionality is not available. He is responsible for defining the respective configuration parameters.</note>
+            </p>
+        </section>
+    </conbody>
+</concept>

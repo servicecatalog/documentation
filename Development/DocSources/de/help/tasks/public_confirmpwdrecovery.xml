@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="de-de">
+    <title>Passwort zurücksetzen</title>
+    <taskbody>
+        <context>
+            <p>Sie haben den Vorgang zum Zurücksetzen Ihres Passworts gestartet. Sie erhalten eine Email mit einem Link zu einer Webseite, auf der Sie den Vorgang abschließen können. </p>
+            <p>Folgen Sie dem Link in der Email, um ein neues Passwort festzulegen. Der Link steht Ihnen 24 Stunden lang zur Verfügung. </p>
+        </context>
+    </taskbody>
+</task>

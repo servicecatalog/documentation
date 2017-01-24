@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="ja-jp">
+  <title>サービス提供部門の管理</title>
+  <taskbody id="On_the_task_taskbody">
+    <context>
+      <p>
+        <ph conref="marketplace_manageSuppliers_notselected.xml#task634/On_the_task_taskbody_context_p_1_ph"/>
+      </p>
+      <p>許可されたサービス提供関連の部門のみのサービスポータルを選択した場合、サービスポータル運用者は一つまたは複数のサービス提供部門、サービス仲介部門またはサービス提供代行部門にサービスの公開を許可する必要があります。サービスポータルが登録されると、サービスポータル運用部門として指定された組織は自動的にサービスを公開できるようになり、サービス提供関連部門のロールが割り当てられます。ページには公開を許可されているサービス提供関連の部門がすべて一覧表示されます。</p>
+      <p>
+        <ph
+          conref="marketplace_manageSuppliers_notselected.xml#task634/As_the_marketplace_owner_you_task_taskbody_context_ul_li"
+        />
+      </p>
+      <p>サービス提供関連の部門に対してサービスポータルへのサービス公開を許可した場合およびサービス公開許可を解除した場合、そのサービス提供関連の部門の管理者にその旨を知らせるメールが自動的に送信されます。</p>
+      <p><b>サービス提供関連の部門に対してサービスポータルへのサービス公開を許可するには</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd><uicontrol>組織ID</uicontrol>にサービス提供関連の部門の組織IDを入力します。</cmd>
+        <info>サービス提供関連の部門に連絡をとり組織IDを入手してください。</info>
+      </step>
+      <step>
+        <cmd><uicontrol>許可</uicontrol>をクリックします。</cmd>
+        <info>公開の許可はすぐに反映され、許可されたサービス提供関連の部門はサービスポータルにサービスを公開できます。</info>
+      </step>
+    </steps>
+    <result>
+      <p><b>サービス提供関連の部門に対するサービスポータルへのサービス公開の許可を解除するには</b>:</p>
+      <p>
+        <ol compact="no">
+          <li>サービス公開許可を解除するサービス提供関連の部門のチェックボックスを選択します。<p>一つまたは複数のチェックボックスが選択可能です。</p></li>
+          <li><uicontrol>解除</uicontrol>をクリックし、公開許可が解除されたことを確認します。<p>公開許可の解除はすぐに反映され、それ以降そのサービス提供関連の部門はそのサービスポータルにサービスを公開することはできません。</p></li>
+        </ol>
+      </p>
+    </result>
+  </taskbody>
+</task>

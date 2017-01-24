@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd"
+>
+<reference xml:lang="de-de" id="reference832">
+    <title>LDAP-Einstellungen</title>
+    <refbody>
+        <section>
+            <p>Die folgenden Einstellungen müssen in einer Konfigurationsdatei für den Zugriff auf das LDAP-System einer Organisation definiert sein:</p>
+            <table colsep="1" frame="all" rowsep="1">
+                <tgroup cols="2">
+                    <colspec colname="col1" colwidth="1*"/>
+                    <colspec colname="col2" colwidth="1.4*"/>
+                    <tbody>
+                        <row valign="top">
+                            <entry align="left"><b>Schlüssel</b></entry>
+                            <entry align="left"><b>Beschreibung</b></entry>
+                        </row>
+                        <row>
+                            <entry align="left">LDAP_URL</entry>
+                            <entry align="left"
+                                        >Obligatorisch. Provider-URL des LDAP-Servers. Dieser LDAP-Server dient zur Authentifizierung der Benutzer der Organisation.<p>Beispiel: <codeph>LDAP_URL=ldap://myldapserver.lan.est.company.de:389</codeph></p></entry>
+                        </row>
+                        <row>
+                            <entry align="left">LDAP_BASE_DN</entry>
+                            <entry>Obligatorisch. Position in der LDAP-Verzeichnisstruktur, ab der nach Benutzern gesucht wird.<p>Beispiel: <codeph>LDAP_BASE_DN=ou=people,dc=est,dc=mycompany,dc=de</codeph></p></entry>
+                        </row>
+                        <row>
+                            <entry align="left">LDAP_PRINCIPAL</entry>
+                            <entry align="left"
+                                        >Optional. Name eines Benutzers, der zur Abfrage des LDAP-Servers berechtigt ist.<p>Beispiel: <codeph>LDAP_PRINCIPAL=uid=admin,ou=system</codeph></p></entry>
+                        </row>
+                        <row valign="top">
+                            <entry align="left">LDAP_CREDENTIALS</entry>
+                            <entry align="left"
+                                        >Optional. Passwort des Benutzers, der zur Abfrage des LDAP-Servers berechtigt ist.<p>Beispiel: <codeph>LDAP_CREDENTIALS=secret</codeph></p></entry>
+                        </row>
+                        <row>
+                            <entry align="left">LDAP_ATTR_UID</entry>
+                            <entry align="left"
+                                    >Obligatorisch. LDAP-Attribut, aus dem der Benutzername ausgelesen wird. Standardmäßig ist dies <codeph>uid</codeph>, außer der Betreiber hat einen anderen systemweit gültigen Wert definiert.<p>Beispiel: <codeph>LDAP_ATTR_UID=uid</codeph></p></entry>
+                        </row>
+                        <row valign="top">
+                            <entry align="left">LDAP_ATTR_EMAIL</entry>
+                            <entry align="left"
+                                        >Optional. LDAP-Attribut, aus dem die E-Mail-Adresse eines Benutzers ausgelesen wird.<p>Beispiel: <codeph>LDAP_ATTR_EMAIL=scalixEmailAddress</codeph></p></entry>
+                        </row>
+                        <row valign="top">
+                            <entry align="left">LDAP_ATTR_FIRST_NAME</entry>
+                            <entry align="left"
+                                        >Optional. LDAP-Attribut, aus dem der Vorname eines Benutzers ausgelesen wird.<p>Beispiel: <codeph>LDAP_ATTR_FIRST_NAME=givenName</codeph></p></entry>
+                        </row>
+                        <row valign="top">
+                            <entry align="left">LDAP_ATTR_LAST_NAME</entry>
+                            <entry align="left"
+                                        >Optional. LDAP-Attribut, aus dem der Nachname eines Benutzers ausgelesen wird.<p>Beispiel: <codeph>LDAP_ATTR_LAST_NAME=sn</codeph></p></entry>
+                        </row>
+                        <row valign="top">
+                            <entry align="left">LDAP_ATTR_ADDITIONAL_NAME</entry>
+                            <entry align="left">Wird aktuell nicht verwendet.</entry>
+                        </row>
+                        <row valign="top">
+                            <entry align="left">LDAP_ATTR_LOCALE</entry>
+                            <entry align="left"
+                                        >Optional. LDAP-Attribut, aus dem die im Benutzerprofil zu speichernde Sprache ausgelesen wird.<p>Beispiel: <codeph>LDAP_ATTR_LOCALE=locale</codeph></p></entry>
+                        </row>
+                        <row>
+                            <entry align="left">LDAP_CONTEXT_FACTORY</entry>
+                            <entry align="left"
+                                    >Obligatorisch. Context Factory, welche die Schnittstelle zur Abfrage des LDAP-Servers bereitstellt. Standardmäßig ist dies <codeph>com.sun.jndi.ldap.LdapCtxFactory</codeph>, außer der Betreiber hat einen anderen systemweit gültigen Wert definiert.<p>Beispiel: <codeph>LDAP_CONTEXT_FACTORY=com.sun.jndi.ldap. LdapCtxFactory</codeph></p></entry>
+                        </row>
+                        <row>
+                            <entry align="left">LDAP_ATTR_REFERRAL</entry>
+                            <entry align="left"
+                                    >Optional. Attribut, das festlegt, wie die Verarbeitung von Referrals erfolgen soll. <p>Wenn eine Organisation ein Active Directory mit Sub-Domänen verwendet, aus denen Benutzer in das System importiert werden sollen, können die Sub-Domänen als Referrals in LDAP modelliert werden. Ein Referral entspricht einer Referenz auf eine weitere Partition bzw. Sub-Domäne. Standardmäßig werden die Werte aus Referrals nicht ausgegeben.</p><p>Dieses Attribut kann folgende Werte haben:</p><codeph>follow</codeph>: Referrals werden verfolgt, d.h. Benutzer werden aus allen referenzierten Verzeichnispartitionen und Sub-Domänen importiert. <p><codeph>ignore</codeph>: Referrals werden ignoriert (Standardeinstellung), d.h. Benutzer werden nur aus der aktuellen Domäne importiert.</p><p>Beispiel: <codeph>LDAP_ATTR_REFERRAL=ignore</codeph></p></entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </section>
+    </refbody>
+</reference>

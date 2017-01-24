@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="en-us">
+  <title>Creating a payment service provider</title>
+  <taskbody>
+    <context>
+      <p>On the <uicontrol>Create payment service provider</uicontrol> page, you can register a payment service provider (PSP). A payment service provider can be used by supplier or reseller organizations for invoicing and payment collection. The supplier or reseller organization as well as the platform operator organization must have a contractual relationship with the PSP. </p>
+      <p>Registering a PSP is the prerequisite for configuring the communication with the PSP and thus integrating the PSP with the platform. </p>
+      <p><b>To create a payment service provider</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>Enter the <uicontrol>Identifier</uicontrol> of the PSP. </cmd>
+        <info>This ID uniquely identifies the PSP in the platform and is visible to the operator only. <p>IDs are restricted to 40 characters and must not contain any of the following characters:</p><p><codeph>! " # $ % &amp; ' * + , / : ; &lt; = > ? \ ^ `</codeph>
+          </p></info>
+      </step>
+      <step>
+        <cmd>Enter the <b>WSDL URL</b>.</cmd>
+        <info>This URL must be a link to the WSDL file containing the definition of the Web service which provides methods for integrating the PSP with the platform. For details on implementing the PSP integration adapter, refer to the documentation shipped with the <codeph>oscm-psp-pack.zip</codeph> file. </info>
+      </step>
+      <step>
+        <cmd>Enter the <b>Distinguished name</b> retrieved from the certificate of the Web server where the PSP integration adapter is deployed. </cmd>
+        <info>The integration of a PSP requires the usage of certificates for trusted communication between the platform operator organization and the PSP organization. For this purpose, the distinguished name must always be set. <p>The platform checks the distinguished name in the PSP's certificate. If it matches the one specified here, the caller is assumed to be authorized to connect to the platform. </p><p>You can retrieve the distinguished name of an organization from its certificate with the following call in your Java runtime environment: </p><p>
+            <codeblock>&lt;YourJRE>/bin/keytool -printcert -file &lt;filename.crt></codeblock>
+          </p><p>The distinguished name is composed of the following elements:</p><ul>
+            <li>CN (common name)</li>
+            <li>OU (organizational unit)</li>
+            <li>O (organization)</li>
+            <li>L (location)</li>
+            <li>ST (state)</li>
+            <li>C (country)</li>
+          </ul><p>Separate the individual elements of the DN with commas.</p><p>The process of integrating certificates is described in detail in the <i>Operator's Guide</i>.</p></info>
+      </step>
+      <step>
+        <cmd>To create the PSP, click <uicontrol>Save</uicontrol>.</cmd>
+      </step>
+    </steps>
+    <result>
+      <p>The payment service provider is created. You can now continue with the following steps: </p>
+      <p>
+        <ul>
+          <li>Configure the communication with the PSP. </li>
+          <li>Define the payment types the PSP offers to suppliers and resellers.</li>
+          <li>Assign payment types to supplier and reseller organizations. The suppliers and resellers, in turn, can then define which types of payment they offer to their customers. </li>
+        </ul>
+      </p>
+    </result>
+  </taskbody>
+  <related-links>
+    <linklist>
+      <title>Related topics</title>
+      <link href="operator_managePSPs.xml"/>
+      <link href="operator_manageOrganizations.xml"/>
+    </linklist>
+  </related-links>
+</task>

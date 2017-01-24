@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<reference id="reference832" xml:lang="ja-jp">
+    <title><ph platform="print">レポートのラベル</ph><ph platform="help">レポートのラベル</ph>
+    </title>
+    <refbody>
+        <section>
+            <p>レポートは利用者がプロフィールに設定した言語で生成されます。レポートに使われるテキストは、
+            <ph product="oscm_ee">
+            <codeph>oscm-install-pack.zip</codeph>ファイルに含まれる<codeph>.war</codeph>ファイル中のプロパティファイルに従い、インストール時に設定されます：
+            </ph>
+            <ph product="oscm_ce">
+                             リリースごとに提供される次のアーカイブに含まれるプロパティファイルに従い設定されます:
+            </ph>
+            </p>
+            <p>
+                <ph product="oscm_ee">
+                    <codeph>&lt;install_pack_dir&gt;/domains/bes_domain/birt.war</codeph>. </ph>
+                <ph product="oscm_ce">
+                    <codeph>oscm-reports.zip</codeph>
+                </ph>
+            </p>
+            
+            <p>
+                <ph product="oscm_ee">
+                    <codeph>birt.war</codeph>
+                </ph>
+                <ph product="oscm_ce">
+                    <codeph>oscm-reports.zip</codeph>
+                </ph> には、次のプロパティファイルが含まれます： </p>
+            <p>
+                <ul>
+                    <li><codeph>reportLabels.properties</codeph>（デフォルト言語は英語）</li>
+                    
+                    <li><codeph>reportLabels_de.properties</codeph>（ドイツ語）</li>
+                    
+                    <li><codeph>reportLabels_ja.properties</codeph>（日本語）</li>
+                    
+                </ul>
+                
+            </p>
+            
+            <p>英語、ドイツ語、日本語のレポートをニーズに合わせてカスタマイズしたいのであれば、これら言語についても文面を変更することができます。</p>
+            <p>レポートをその他の言語で生成するには、以下の手順をおこないます: </p>
+            <p>
+                <ol compact="no">
+                    <li>
+                        <ph product="oscm_ee">
+                            <codeph>birt.war</codeph>
+                        </ph>
+                        <ph product="oscm_ce">
+                            <codeph>oscm-reports.zip</codeph>
+                        </ph> を作業用フォルダに展開します。 </li>
+                    <li>サブディレクトリ <codeph>WEB-INF</codeph> に移動します。</li>
+                    <li>英語のプロパティファイル <codeph>reportLabels.properties</codeph> をコピーし、ファイル名を <codeph>reportLabels_<i>&lt;ISOコード></i>.properties</codeph>に変更します。<p>この<i>&lt;ISOコード></i>には、翻訳を提供したい言語のISOコードを指定します。例えば、チェコ語を追加するには、ファイル <codeph>reportLabels_cs.properties</codeph> をサブディレクトリ <codeph>WEB-INF</codeph> に置きます。</p></li>
+                    <li>新しく作成したプロパティファイルをテキストエディタで開きます。<p>ファイルの各行は、以下の書式です: </p><p>
+                            <ul compact="no">
+                                <li>大文字のキー。</li>
+                                <li>イコール記号 (=)。</li>
+                                <li>ファイルのサフィックスで示される言語で記述した文字列。</li>
+                            </ul>
+                        </p><p>イコール記号の後ろを目的の言語に翻訳します。このとき、次のことに注意してください:</p><p>
+                            <ul>
+                                <li>キーは変更しないでください。</li>
+                                <li>ASCII文字以外の文字を含む言語に翻訳する場合: <p>ASCII文字以外の文字はUnicodeエスケープ(「\u」に続いてユニコード文字の16進数を4桁で記述)で記載します。</p><p>例えば日本語では: <codeph>BASEPRICE=\u30B5\u30FC\u30D3\u30B9\u57FA\u672C\u6599\u91D1 </codeph> また、ドイツ語でウムラウトは: <codeph>INVALID=ung\u00FCltig</codeph></p></li>
+                                <li>コロンのような特殊文字はバックスラッシュ (\) でエスケープする必要があります。 例えば: <codeph>ROLESPERPRICEMODEL=Role costs per subscription\:</codeph></li>
+                                <li>ファイルをUTF-8エンコーディングで保存します。</li>
+                            </ul>
+                        </p></li>
+                    <li>新しい言語向けに追加したプロパティファイルを含んだ <ph product="oscm_ee">
+                            <codeph>birt.war</codeph>を新たに作成します。 </ph>
+                        <ph product="oscm_ce"
+                                > 編集したプロパティファイルをBIRTレポートエンジンをデプロイしたフォルダ配下、<codeph>WEB-INF</codeph>フォルダにコピーします。 通常は次のフォルダにデプロイしています:<codeph>&lt;GLASSFISH_HOME>/glassfish/domains/&lt;domain>/applications/birt</codeph> 詳細は導入ガイドを参照してください。 </ph>
+                    </li>
+                    <li>
+                        <ph product="oscm_ee"
+                                > カスタマイズしたファイル <codeph>birt.war</codeph> をアプリケーションサーバー上のドメイン<codeph>bes-domain</codeph>に配備解除して配備するか、もしくは再配備します。詳細については、<i>運用ガイド（システム運用管理者編）</i>を参照ください。 </ph>
+                        <ph product="oscm_ce"> Birtを再起動します。 </ph>
+                    </li>
+                </ol>
+            </p>
+            <p>ファイルを配備すると、既存のレポートのラベルは上書きされます。</p>
+            <p>
+                <note>ディレクトリ構成は変更しないでください。また、ファイルの妥当性は維持してください。</note>
+            </p>
+        </section>
+    </refbody>
+</reference>

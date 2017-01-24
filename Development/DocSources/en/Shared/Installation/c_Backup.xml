@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_3413BBD173324104B42FB714974CABE7" xml:lang="en-us">
+    <title>Backup and Recovery</title>
+    <conbody>
+        <section>
+            <p>The <ph audience="app">APP</ph><ph audience="aws">AWS</ph><ph audience="ror">ROR</ph><ph audience="os"
+                    >OpenStack</ph><ph audience="tps5">TPS5</ph><ph audience="vmware"
+                >vSphere</ph> integration software does not offer integrated backup and recovery mechanisms. Use the standard file system, application server, and database mechanisms instead. </p>
+        </section>
+        <section>
+            <title>Backup</title>
+            <p>It is recommended that you create a regular backup of the following data according to the general guidelines of your organization: </p>
+            <p>
+                <ul>
+                    <li>Database<ph audience="vmware">s</ph> (<codeph>bssapp</codeph><ph audience="vmware"
+                                > and <codeph>vmware</codeph></ph>). The frequency of database backups depends on the amount of changes and the availability of time slots with low load. PostgreSQL supports database backups without previous shutdown. For details, refer to the PostgreSQL documentation. <p>Make sure to also make a backup of the file containing the key required for encryption and decryption of service parameters with data type <codeph>PWD</codeph> or custom attributes marked for encryption. By default, this file is located in:</p><p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/app-domain/config/key</codeph></p><p>The location of this file can be changed using the <codeph>APP_KEY_PATH</codeph> configuration setting.</p></li>
+                    <li>Certificates contained in the truststore of the <codeph>app-domain</codeph> domain (<codeph>cacerts.jks</codeph> file). </li>
+                    <li>Configuration files. </li>
+                </ul>
+            </p>
+            <p>
+                <note>When preparing for an update installation of the current <ph audience="app"
+                        >APP installation</ph><ph audience="aws">AWS integration software</ph><ph audience="ror"
+                        >ROR integration software</ph><ph audience="os">OpenStack integration software</ph><ph
+                        audience="tps5">TPS5 integration software</ph><ph audience="vmware"
+                        >vSphere integration software</ph>, always create a backup of the data mentioned above. </note>
+            </p>
+        </section>
+        <section>
+            <title>Recovery</title>
+            <p>If you need to recover your <ph audience="app">APP installation</ph><ph audience="aws"
+                    >AWS integration installation</ph><ph audience="ror">ROR integration installation</ph><ph
+                    audience="os">OpenStack integration installation</ph><ph audience="tps5"
+                    >TPS5 integration installation</ph><ph audience="vmware"
+                >vSphere integration installation</ph>, the recommended procedure is as follows: </p>
+            <p>
+                <ol>
+                    <li>Restore the <codeph>bssapp</codeph><ph audience="vmware"
+                            > and <codeph>vmware</codeph></ph> database<ph audience="vmware"
+                        >s</ph> from the backup using the relevant PostgreSQL commands.</li>
+                    <li>Make sure that the file containing the key required for encryption and decryption of service parameters with data type <codeph>PWD</codeph> or custom attributes marked for encryption exists in the location specified in the <codeph>APP_KEY_PATH</codeph> configuration setting. By default, this file is to be located in:<p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/app-domain/config/key</codeph></p>Its default name is <codeph>key</codeph>.<p>If the file is missing, copy it from your backup to the correct location.</p></li>
+                    <li>Stop the <codeph>app-domain</codeph> domain of the application server.</li>
+                    <li>Restore the certificate truststore of the <codeph>app-domain</codeph> domain (<codeph>cacerts.jks</codeph> file) from the backup.</li>
+                    <li>Start the <codeph>app-domain</codeph> domain. </li>
+                </ol>
+            </p>
+        </section>
+    </conbody>
+</concept>

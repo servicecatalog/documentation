@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<val>
+  <prop att="audience" val="int" action="exclude" />
+  <prop att="audience" val="none" action="exclude" />
+  <prop att="audience" val="detail" action="include" />
+  <prop att="audience" val="BSS" action="include" />
+
+  <prop att="platform" val="print" action="exclude" />
+  <prop att="platform" val="help" action="include" />
+
+ <prop action="exclude" att="product" val="oscm_ee"/>
+ <prop action="include" att="product" val="oscm_ce"/>
+
+</val>

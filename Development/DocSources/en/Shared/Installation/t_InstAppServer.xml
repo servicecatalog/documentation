@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<task id="AppServer" xml:lang="en-us">
+    <title>Setting up the Application Server Resources</title>
+    <taskbody>
+        <context>
+            <p><ph audience="app">APP</ph><ph audience="ror">The ROR integration software</ph><ph audience="aws"
+                    >The AWS integration software</ph><ph audience="os">The OpenStack integration software</ph><ph
+                    audience="tps5">The TPS5 integration software</ph><ph audience="vmware"
+                    >The vSphere integration software</ph> requires specific settings and resources in the application server, such as mail settings or a data source.</p>
+            <note audience="app"
+                    >When creating the application server resources, you can also deploy a service controller. For details, refer to <xref
+                    href="../../APPInt/APP/t_DeployController.xml"/>.</note>
+            <p>Proceed as follows to create the resources and make the required settings in the application server:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Open the command prompt (Windows) or a terminal session (UNIX/Linux).</cmd>
+            </step>
+            
+            <step>
+                <cmd>Execute the <codeph>build-glassfish.xml</codeph> file in <codeph>&lt;install_pack_dir&gt;/install</codeph> as follows: </cmd>
+                <info>
+                    <codeblock>&lt;ANT_HOME&gt;/bin/ant -f build-glassfish.xml SETUP</codeblock>
+                    <p>This has the following results: </p>
+                    <p>
+                        <ul>
+                            <li>The <codeph>app-domain</codeph> domain is created and started. </li>
+                            <li>The settings and resources for APP are created in the application server.</li>
+                            <li>APP (<codeph>oscm-app.ear</codeph>) is deployed to the <codeph>app-domain</codeph> domain.</li>
+                            <li audience="ror"
+                                    >The ROR service controller (<codeph>oscm-app-ror.ear</codeph>) is deployed to the <codeph>app-domain</codeph> domain.</li>
+                            <li audience="aws"
+                                    >The AWS service controller (<codeph>oscm-app-aws.ear</codeph>) is deployed to the <codeph>app-domain</codeph> domain.</li>
+                            <li audience="os"
+                                    >The OpenStack service controller (<codeph>oscm-app-openstack.ear</codeph>) is deployed to the <codeph>app-domain</codeph> domain.</li>
+                            <li audience="tps5"
+                                >The TPS5 service controller (<codeph>oscm-app-tps5.ear</codeph>) is deployed to the <codeph>app-domain</codeph> domain.</li>
+                            <li audience="vmware"
+                                    >The VMware service controller (<codeph>oscm-app-vmware.ear</codeph>) is deployed to the <codeph>app-domain</codeph> domain.</li>
+                            <li audience="vmware"
+                                >A data source for the VMware service controller is created in the application server. </li>
+                        </ul>
+                    </p>
+                </info>
+            </step>
+            <step>
+                <cmd>Depending on your environment, it may be required to define a proxy server for the <codeph>app-domain</codeph> domain in the <b>JVM Options</b> of the application server. <ph
+                        audience="app"
+                        >A service controller implemented such that it supports proxy communication</ph><ph
+                        audience="ror">The ROR service controller</ph><ph audience="aws"
+                        >The AWS service controller</ph><ph audience="os">The OpenStack service controller</ph><ph
+                        audience="tps5">The TPS5 service controller</ph><ph audience="vmware"
+                        >The VMware service controller</ph> can address the corresponding system via the proxy server.</cmd>
+                <info>To define a proxy server, specify the following JVM options: <ul>
+                        <li><codeph>-Dhttps.proxyHost</codeph></li>
+                        <li><codeph>-Dhttps.proxyPort</codeph></li>
+                    </ul><p>If authentication is required, specify the following additional settings:</p><p>
+                        <ul>
+                            <li><codeph>-Dhttps.proxyUser</codeph></li>
+                            <li><codeph>-Dhttps.proxyPassword</codeph></li>
+                        </ul>
+                    </p><p>For all direct communication, you need to bypass the proxy server. Specify the hosts which are to be addressed directly and not through the proxy server in the following setting: <ul>
+                            <li><codeph>-Dhttp.nonProxyHosts</codeph></li>
+                        </ul>For example, APP must not use the configured proxy for Web service calls to <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            />: </p><p><codeph>-Dhttp.nonProxyHosts=localhost|127.0.0.1|myServer*</codeph></p><p>where <codeph>myServer</codeph> is the host on which <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> is running.</p><p>In case several service controllers are to run in the same APP domain, and only one of them is to communicate via a proxy server, you need to exclude the target systems of the other service controllers, for example, as follows: </p><codeph>-Dhttps.proxyHost=proxy.intern.myserver.com</codeph><p><codeph>-Dhttps.proxyPort=8081</codeph></p><p><codeph>-Dhttp.nonProxyHosts=myServer.com|localhost|127.0.0.1|</codeph></p><p><codeph>http://10.140.18.112*|http://myServer.com:8880/templates/*|</codeph></p><p><codeph>https://ror-demo.myServer.com:8014/cfmgapi/endpoint* </codeph></p><p>After having configured the proxy server, restart the <codeph>app-domain</codeph>.</p></info>
+            </step>
+            
+            
+            
+        </steps>
+        <result>
+            <p><b>If the setup of the application server domain fails with errors, proceed as follows:</b></p>
+           <p>
+                <ol>
+                    <li>Stop the <codeph>app-domain</codeph> domain. </li>
+                    <li>Delete the <codeph>app-domain</codeph> domain. </li>
+                    <li>Repeat the setup.</li>
+                </ol>
+            </p>
+        </result>
+    </taskbody>
+</task>

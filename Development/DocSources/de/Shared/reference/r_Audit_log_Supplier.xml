@@ -1,0 +1,1113 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<reference id="reference832" xml:lang="de-de">
+    <title>Aktionen von Service-Managern</title>
+    <refbody>
+        <section>
+            <p>Im folgenden werden Meldungen erläutert, die in das Aktionsprotokoll geschrieben werden, wenn Service-Manager eines Serviceanbieters Aktionen im Administrationsportal ausführen. Einige der Aktionen können auch von Wiederverkäufern oder Vermittlern ausgeführt werden. </p>
+            <p>Folgende weitere <codeph>&lt;<i>Name/Wert-Paare</i>></codeph> werden im Anschluss an den Header und die für alle Meldungen gültigen Name/Wert-Paare ausgegeben: </p>
+            <p>
+                <ul>
+                    <li>
+                        <p><codeph>serviceId=<i>&lt;Service-ID></i></codeph>: ID des marktfähigen Service, wie sie beim Anlegen angegeben wurde. </p>
+                    </li>
+                    <li>
+                        <p><codeph>serviceName=<i>&lt;Name></i></codeph>: Servicename für Kunden des marktfähigen Service, wie er beim Anlegen angegeben wurde. </p>
+                    </li>
+                </ul>
+            </p>
+            <p>Abhängig von der protokollierten Aktion können zusätzliche Name/Wert-Paare ausgegeben werden. </p>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Activate/deactivate service</b></p>
+                                <p>Beschreibung: Ein Service-Manager, Wiederverkäufer oder Vermittler aktivierte oder deaktivierte einen marktfähigen Service. </p>
+                                <p>Weitere Name/Wert-Paare:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>marketplaceId=<i>&lt;Marktplatz-ID></i></codeph>: ID des Marktplatzes, auf dem der Service veröffentlicht ist. </li>
+                                        <li><codeph>marketplaceName=<i>&lt;Marktplatzname></i></codeph>: Name des Marktplatzes, auf dem der Service veröffentlicht ist. </li>
+                                        <li><codeph>activation=<i>&lt;Ja oder Nein></i></codeph>: Gibt an, ob der Service aktiviert ist. Folgende Werte können ausgegeben werden: <codeph>ON</codeph> (aktiviert) oder <codeph>OFF</codeph> (nicht aktiviert). </li>
+                                        <li><codeph>inCatalog=<i>&lt;Ja oder Nein></i></codeph>: Gibt an, ob der Service in den Servicekatalog aufgenommen werden soll. Folgende Werte können ausgegeben werden: <codeph>ON</codeph> (im Katalog) oder <codeph>OFF</codeph> (nicht im Katalog).</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Assign brokers</b></p>
+                                <p>Beschreibung: Bei der Vorbereitung zur Veröffentlichung eines Service berechtigte ein Service-Manager einen Vermittler, die Services seines Serviceanbieters zu verkaufen. </p>
+                                <p>Weiteres Name/Wert-Paar:</p>
+                                <p><codeph>BrokerId=<i>&lt;ID></i></codeph>: ID der Vermittlerorganisation, der die Berechtigung zum Wiederverkauf erteilt wird. </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Assign categories</b></p>
+                                <p>Beschreibung: Bei der Vorbereitung zur Veröffentlichung eines Service legte ein Service-Manager, Wiederverkäufer oder Vermittler eine oder mehrere Kategorien für einen marktfähigen Service fest.</p>
+                                <p>Weiteres Name/Wert-Paar:</p>
+                                <p><codeph>listOfCategories=<i>&lt;Namen></i></codeph>: Die zugeordneten Kategorien. Die Listeneinträge sind durch Komma getrennt. </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Assign resellers</b></p>
+                                <p>Beschreibung: Bei der Vorbereitung zur Veröffentlichung eines Service berechtigte ein Service-Manager einen Wiederverkäufer, die Services seines Serviceanbieters zu verkaufen. </p>
+                                <p>Weiteres Name/Wert-Paar:</p>
+                                <p><codeph>ResellerId=<i>&lt;ID></i></codeph>: ID der Wiederverkäuferorganisation, der die Berechtigung zum Wiederverkauf erteilt wird.</p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Assign service to marketplace</b></p>
+                                <p>Beschreibung: Bei der Vorbereitung zur Veröffentlichung eines Service definierte oder änderte ein Service-Manager, Wiederverkäufer oder Vermittler den Marktplatz, auf dem der marktfähige Service veröffentlicht werden soll. </p>
+                                <p>Weitere Name/Wert-Paare:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>marketplaceId=<i>&lt;ID></i></codeph>: ID des Marktplatzes. </li>
+                                        <li><codeph>marketplaceName=<i>&lt;Name></i></codeph>: Name des Marktplatzes. </li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Copy service</b></p>
+                                <p>Beschreibung: Ein Service-Manager erstellte eine Kopie eines marktfähigen Service. </p>
+                                <p>Weitere Name/Wert-Paare:</p>
+                                <p>
+                                    <ul>
+                                        <li>
+                                            <p><codeph>copyId=<i>&lt;Service-ID></i></codeph>: ID des kopierten marktfähigen Service, wie sie in der Datenbank gespeichert ist. </p>
+                                        </li>
+                                        <li><codeph>copyName=<i>&lt;Servicename></i></codeph>: Name des kopierten marktfähigen Service, wie er beim Kopieren angegeben wurde. </li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Deassign brokers</b></p>
+                                <p>Beschreibung: Bei der Vorbereitung zur Veröffentlichung eines Service entzog ein Service-Manager einem Vermittler die Berechtigung zum Wiederverkauf der Services des Serviceanbieters.</p>
+                                <p>Weiteres Name/Wert-Paar:</p>
+                                <p><codeph>BrokerId=<i>&lt;Organisations-ID></i></codeph>: ID der Vermittlerorganisation, der die Berechtigung zum Wiederverkauf der Services entzogen wurde. </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Deassign resellers</b></p>
+                                <p>Beschreibung: Bei der Vorbereitung zur Veröffentlichung eines Service entzog ein Service-Manager einem Wiederverkäufer die Berechtigung zum Wiederverkauf der Services des Serviceanbieters.</p>
+                                <p>Weiteres Name/Wert-Paar:</p>
+                                <p><codeph>ResellerId=<i>&lt;Organisations-ID></i></codeph>: ID der Wiederverkäuferorganisation, der die Berechtigung zum Wiederverkauf der Services entzogen wurde. </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Define service</b></p>
+                                <p>Beschreibung: Ein Service-Manager definierte einen marktfähigen Service. Pro Parameter und Parameteroption, die für den marktfähigen Service definiert wurden, wird je eine Meldung <b>Update service parameter</b> ausgegeben. </p>
+                                <p>Weitere Name/Wert-Paare:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>technServiceName=<i>&lt;Servicename></i></codeph>: Name des technischen Service, der dem marktfähigen Service zugrunde liegt. </li>
+                                        <li><codeph>shortDescription=<i>&lt;Ja oder Nein></i></codeph>: Gibt an, ob eine Kurzbeschreibung für den marktfähigen Service eingegeben wurde. Folgende Werte können ausgegeben werden: <codeph>YES</codeph> (Ja) oder <codeph>NO</codeph> (Nein). </li>
+                                        <li><codeph>description=<i>&lt;Ja oder Nein></i></codeph>: Gibt an, ob eine Beschreibung für den marktfähigen Service eingegeben wurde. Folgende Werte können ausgegeben werden: <codeph>YES</codeph> (Ja) oder <codeph>NO</codeph> (Nein). </li>
+                                        <li><codeph>locale=<i>&lt;Sprache></i></codeph>: Code der Sprache, in der die Beschreibungen gespeichert wurden. </li>
+                                        <li><codeph>autoAssignUser=<i>&lt;Ja oder Nein></i></codeph>: Gibt an, ob der Benutzer, der den Service abonniert, automatisch dem Abonnement zugeordnet wird. Folgende Werte können ausgegeben werden: <codeph>YES</codeph> (Ja) oder <codeph>NO</codeph> (Nein). </li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Define up/downgrade options</b></p>
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte die Services, auf die ein Abonnement umgestellt werden kann. </p>
+                                <p>Weitere Name/Wert-Paare:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>targetId=<i>&lt;Service-ID></i></codeph>: ID des marktfähigen Service, auf den Abonnements umgestellt werden können. </li>
+                                        <li><codeph>targetName=<i>&lt;Servicename></i></codeph>: Name des marktfähigen Service, auf den Abonnements umgestellt werden können</li>
+                                        <li><codeph>upDownGrade=<i>&lt;Ja oder Nein></i></codeph>: Gibt an, ob der Service als Up-/Downgrade-Option hinzugefügt oder entfernt wurde. Folgende Werte können ausgegeben werden: <codeph>ON</codeph> (als Option verfügbar) oder <codeph>OFF</codeph> (nicht als Option verfügbar). </li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Delete customer price model</b></p>
+                                <p>Beschreibung: Ein Service-Manager löschte ein Kunden-Preismodell.</p>
+                                <p>Weitere Name/Wert-Paare:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>customerKey=<i>&lt;Organisations-ID></i></codeph>: ID der Kundenorganisation. </li>
+                                        <li><codeph>customerName=<i>&lt;Organisationsname></i></codeph>: Name der Kundenorganisation. </li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Delete service</b></p>
+                                <p>Beschreibung: Ein Service-Manager löschte einen marktfähigen Service. </p>
+                                <p>Keine weiteren Name/Wert-Paare.</p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Edit event price in customer price model</b></p>
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte den Preis für ein Ereignis in einem Kunden-Preismodell.</p>
+                                <p>Weitere Name/Wert-Paare:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>customerKey=<i>&lt;Organisations-ID></i></codeph>: ID der Kundenorganisation. </li>
+                                        <li><codeph>customerName=<i>&lt;Organisationsname></i></codeph>: Name der Kundenorganisation. </li>
+                                        <li><codeph>currency=<i>&lt;Währung></i></codeph>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+                                        <li><codeph>eventName=<i>&lt;Ereignisname></i></codeph>: Name des Ereignisses, wie er im zugrunde liegenden technischen Service definiert ist. </li>
+                                        <li><codeph>range=<i>&lt;Obergrenze></i></codeph>: Bei gestaffelten Preisen ist dies die Obergrenze, bis zu der der Preis gilt. Falls keine gestaffelten Preise definiert sind, ist die Obergrenze <codeph>1-ANY</codeph>.</li>
+                                        <li><codeph>action=<i>&lt;action></i></codeph>: Bei gestaffelten Preisen ist dies die Aktion, die durchgeführt wurde. Folgende Werte können ausgegeben werden: <codeph>INSERT</codeph> (ein gestaffelter Preis wurde definiert), <codeph>UPDATE</codeph> (ein gestaffelter Preis wurde geändert) oder <codeph>DELETE</codeph> (ein gestaffelter Preis wurde gelöscht). Falls keine gestaffelten Preise definiert sind, wird der Parameter <codeph>action</codeph> nicht im Aktionsprotokoll ausgegeben.</li>
+                                        <li><codeph>price=<i>&lt;Preis></i></codeph>: Der im Preismodell definierte Preis. </li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Edit event price in service price model</b></p>
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte den Preis für ein Ereignis in einem Service-Preismodell.</p>
+                                <p>Weitere Name/Wert-Paare:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>currency=<i>&lt;Währung></i></codeph>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+                                        <li><codeph>eventName=<i>&lt;Ereignisname></i></codeph>: Name des Ereignisses, wie er im zugrunde liegenden technischen Service definiert ist. </li>
+                                        <li><codeph>range=<i>&lt;Obergrenze></i></codeph>: Bei gestaffelten Preisen ist dies die Obergrenze, bis zu der der Preis gilt. Falls keine gestaffelten Preise definiert sind, ist die Obergrenze <codeph>1-ANY</codeph>.</li>
+                                        <li><codeph>action=<i>&lt;action></i></codeph>: Bei gestaffelten Preisen ist dies die Aktion, die durchgeführt wurde. Folgende Werte können ausgegeben werden: <codeph>INSERT</codeph> (ein gestaffelter Preis wurde definiert), <codeph>UPDATE</codeph> (ein gestaffelter Preis wurde geändert) oder <codeph>DELETE</codeph> (ein gestaffelter Preis wurde gelöscht). Falls keine gestaffelten Preise definiert sind, wird der Parameter <codeph>action</codeph> nicht im Aktionsprotokoll ausgegeben.</li>
+                                        <li><codeph>price=<i>&lt;Preis></i></codeph>: Der im Preismodell definierte Preis. </li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Edit event price in subscription price model</b></p>
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte den Preis für ein Ereignis in einem Abo-Preismodell.</p>
+                                <p>Weitere Name/Wert-Paare:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>customerKey=<i>&lt;Organisations-ID></i></codeph>: ID der Kundenorganisation. </li>
+                                        <li><codeph>customerName=<i>&lt;Organisationsname></i></codeph>: Name der Kundenorganisation. </li>
+                                        <li>
+                                            <p><codeph>subscriptionName=<i>&lt;Abo-Name></i></codeph>: Name des Abonnements, wie er beim Abonnieren angegeben wurde. </p>
+                                        </li>
+                                        <li><codeph>currency=<i>&lt;Währung></i></codeph>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+                                        <li><codeph>eventName=<i>&lt;Ereignisname></i></codeph>: Name des Ereignisses, wie er im zugrunde liegenden technischen Service definiert ist. </li>
+                                        <li><codeph>range=<i>&lt;Obergrenze></i></codeph>: Bei gestaffelten Preisen ist dies die Obergrenze, bis zu der der Preis gilt. Falls keine gestaffelten Preise definiert sind, ist die Obergrenze <codeph>1-ANY</codeph>.</li>
+                                        <li><codeph>action=<i>&lt;action></i></codeph>: Bei gestaffelten Preisen ist dies die Aktion, die durchgeführt wurde. Folgende Werte können ausgegeben werden: <codeph>INSERT</codeph> (ein gestaffelter Preis wurde definiert), <codeph>UPDATE</codeph> (ein gestaffelter Preis wurde geändert) oder <codeph>DELETE</codeph> (ein gestaffelter Preis wurde gelöscht). Falls keine gestaffelten Preise definiert sind, wird der Parameter <codeph>action</codeph> nicht im Aktionsprotokoll ausgegeben.</li>
+                                        <li><codeph>price=<i>&lt;Preis></i></codeph>: Der im Preismodell definierte Preis. </li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Operation</b>: <b>Edit one time fee in customer price model</b></p>
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte die einmalige Gebühr in einem Kunden-Preismodell.</p>
+                                <p>Weitere Name/Wert-Paare:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>customerKey=<i>&lt;Organisations-ID></i></codeph>: ID der Kundenorganisation. </li>
+                                        <li><codeph>customerName=<i>&lt;Organisationsname></i></codeph>: Name der Kundenorganisation. </li>
+                                        <li><codeph>currency=<i>&lt;Währung></i></codeph>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+                                        <li><codeph>oneTimeFee=<i>&lt;Gebühr></i></codeph>: Einmalige Gebühr für ein Abonnement. </li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Operation</b>: <b>Edit one time fee in service price model</b></p>
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte die einmalige Gebühr in einem Service-Preismodell.</p>
+                                <p>Weitere Name/Wert-Paare:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>currency=<i>&lt;Währung></i></codeph>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+                                        <li><codeph>oneTimeFee=<i>&lt;Gebühr></i></codeph>: Einmalige Gebühr für ein Abonnement. </li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Edit customer price model</b></p>
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte die Währung, Zeiteinheit, den Abrechnungsmodus und/oder die kostenlose Nutzungsdauer in einem Kunden-Preismodell.</p>
+                                <p>Weitere Name/Wert-Paare:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>customerKey=<i>&lt;Organisations-ID></i></codeph>: ID der Kundenorganisation. </li>
+                                        <li><codeph>customerName=<i>&lt;Organisationsname></i></codeph>: Name der Kundenorganisation. </li>
+                                        <li><codeph>currency=<i>&lt;Währung></i></codeph>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+                                        <li><codeph>calculationMode=<i>&lt;Abrechnungsmodus></i></codeph>: Modus zur Berechnung der Nutzungsgebühren. Folgende Werte können ausgegeben werden: <codeph>PRO_RATA</codeph> (anteilige Abrechnung) oder <codeph>PER_UNIT</codeph> (pro Zeiteinheit).</li>
+                                        <li><codeph>trialPeriod=<i>&lt;Ja oder Nein></i></codeph>: Gibt an, ob im Preismodell eine kostenlose Nutzungsdauer vorgesehen ist. Folgende Werte können ausgegeben werden: <codeph>ON</codeph> (Ja) oder <codeph>OFF</codeph> (Nein). </li>
+                                        <li><codeph>daysOfTrial=<i>&lt;Anzahl Tage></i></codeph>: Anzahl der kostenlosen Tage. </li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Edit service price model</b></p>
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte die Währung, Zeiteinheit, den Abrechnungsmodus und/oder die kostenlose Nutzungsdauer in einem Service-Preismodell.</p>
+                                <p>Weitere Name/Wert-Paare:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>currency=<i>&lt;Währung></i></codeph>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+                                        <li><codeph>calculationMode=<i>&lt;Abrechnungsmodus></i></codeph>: Modus zur Berechnung der Nutzungsgebühren. Folgende Werte können ausgegeben werden: <codeph>PRO_RATA</codeph> (anteilige Abrechnung) oder <codeph>PER_UNIT</codeph> (pro Zeiteinheit).</li>
+                                        <li><codeph>trialPeriod=<i>&lt;Ja oder Nein></i></codeph>: Gibt an, ob im Preismodell eine kostenlose Nutzungsdauer vorgesehen ist. Folgende Werte können ausgegeben werden: <codeph>ON</codeph> (Ja) oder <codeph>OFF</codeph> (Nein). </li>
+                                        <li><codeph>daysOfTrial=<i>&lt;Anzahl Tage></i></codeph>: Anzahl der kostenlosen Tage. </li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Edit price model type to free of charge for customer</b></p>
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte ein kostenloses Kunden-Preismodell. </p>
+                                <p>Weitere Name/Wert-Paare:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>customerKey=<i>&lt;Organisations-ID></i></codeph>: ID der Kundenorganisation. </li>
+                                        <li><codeph>customerName=<i>&lt;Organisationsname></i></codeph>: Name der Kundenorganisation. </li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Edit price model type to free of charge for service</b></p>
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte ein kostenloses Service-Preismodell. </p>
+                                <p>Keine weiteren Name/Wert-Paare.</p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Edit price per subscription parameter in customer price model</b></p>
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte den Preis pro Abo für einen Parameter oder eine Parameteroption in einem Kunden-Preismodell.</p>
+                                <p>Weitere Name/Wert-Paare:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>customerKey=<i>&lt;Organisations-ID></i></codeph>: ID der Kundenorganisation. </li>
+                                        <li><codeph>customerName=<i>&lt;Organisationsname></i></codeph>: Name der Kundenorganisation. </li>
+                                        <li><codeph>currency=<i>&lt;Währung></i></codeph>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+                                        <li><codeph>parameterName=<i>&lt;Parametername></i></codeph>: Name des Parameters, wie er im zugrunde liegenden technischen Service definiert ist. </li>
+                                        <li><codeph>range=<i>&lt;Obergrenze></i></codeph>: Für numerische Parameter können gestaffelte Preise definiert sein. In diesem Fall ist dies die Obergrenze, bis zu der der Preis gilt. Falls keine gestaffelten Preise definiert sind, ist die Obergrenze <codeph>1-ANY</codeph>.</li>
+                                        <li><codeph>optionName=<i>&lt;Optionsname></i></codeph>: Name der Parameteroption, wie er im zugrunde liegenden technischen Service definiert ist. </li>
+                                        <li><codeph>action=<i>&lt;action></i></codeph>: Bei gestaffelten Preisen ist dies die Aktion, die durchgeführt wurde. Folgende Werte können ausgegeben werden: <codeph>INSERT</codeph> (ein gestaffelter Preis wurde definiert), <codeph>UPDATE</codeph> (ein gestaffelter Preis wurde geändert) oder <codeph>DELETE</codeph> (ein gestaffelter Preis wurde gelöscht). Falls keine gestaffelten Preise definiert sind, wird der Parameter <codeph>action</codeph> nicht im Aktionsprotokoll ausgegeben.</li>
+                                        <li><codeph>price=<i>&lt;Preis></i></codeph>: Der im Preismodell definierte Preis. </li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Edit price per subscription parameter in service price model</b></p>
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte den Preis pro Abo für einen Parameter oder eine Parameteroption in einem Service-Preismodell.</p>
+                                <p>Weitere Name/Wert-Paare:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>currency=<i>&lt;Währung></i></codeph>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+                                        <li><codeph>parameterName=<i>&lt;Parametername></i></codeph>: Name des Parameters, wie er im zugrunde liegenden technischen Service definiert ist. </li>
+                                        <li><codeph>range=<i>&lt;Obergrenze></i></codeph>: Für numerische Parameter können gestaffelte Preise definiert sein. In diesem Fall ist dies die Obergrenze, bis zu der der Preis gilt. Falls keine gestaffelten Preise definiert sind, ist die Obergrenze <codeph>1-ANY</codeph>.</li>
+                                        <li><codeph>optionName=<i>&lt;Optionsname></i></codeph>: Name der Parameteroption, wie er im zugrunde liegenden technischen Service definiert ist. </li>
+                                        <li><codeph>action=<i>&lt;action></i></codeph>: Bei gestaffelten Preisen ist dies die Aktion, die durchgeführt wurde. Folgende Werte können ausgegeben werden: <codeph>INSERT</codeph> (ein gestaffelter Preis wurde definiert), <codeph>UPDATE</codeph> (ein gestaffelter Preis wurde geändert) oder <codeph>DELETE</codeph> (ein gestaffelter Preis wurde gelöscht). Falls keine gestaffelten Preise definiert sind, wird der Parameter <codeph>action</codeph> nicht im Aktionsprotokoll ausgegeben.</li>
+                                        <li><codeph>price=<i>&lt;Preis></i></codeph>: Der im Preismodell definierte Preis. </li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Edit price per subscription parameter in subscription price model</b></p>
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte den Preis pro Abo für einen Parameter oder eine Parameteroption in einem Abo-Preismodell.</p>
+                                <p>Weitere Name/Wert-Paare:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>customerKey=<i>&lt;Organisations-ID></i></codeph>: ID der Kundenorganisation. </li>
+                                        <li><codeph>customerName=<i>&lt;Organisationsname></i></codeph>: Name der Kundenorganisation. </li>
+                                        <li>
+                                            <p><codeph>subscriptionName=<i>&lt;Abo-Name></i></codeph>: Name des Abonnements, wie er beim Abonnieren angegeben wurde. </p>
+                                        </li>
+                                        <li><codeph>currency=<i>&lt;Währung></i></codeph>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+                                        <li><codeph>parameterName=<i>&lt;Parametername></i></codeph>: Name des Parameters, wie er im zugrunde liegenden technischen Service definiert ist. </li>
+                                        <li><codeph>range=<i>&lt;Obergrenze></i></codeph>: Für numerische Parameter können gestaffelte Preise definiert sein. In diesem Fall ist dies die Obergrenze, bis zu der der Preis gilt. Falls keine gestaffelten Preise definiert sind, ist die Obergrenze <codeph>1-ANY</codeph>.</li>
+                                        <li><codeph>optionName=<i>&lt;Optionsname></i></codeph>: Name der Parameteroption, wie er im zugrunde liegenden technischen Service definiert ist. </li>
+                                        <li><codeph>action=<i>&lt;action></i></codeph>: Bei gestaffelten Preisen ist dies die Aktion, die durchgeführt wurde. Folgende Werte können ausgegeben werden: <codeph>INSERT</codeph> (ein gestaffelter Preis wurde definiert), <codeph>UPDATE</codeph> (ein gestaffelter Preis wurde geändert) oder <codeph>DELETE</codeph> (ein gestaffelter Preis wurde gelöscht). Falls keine gestaffelten Preise definiert sind, wird der Parameter <codeph>action</codeph> nicht im Aktionsprotokoll ausgegeben.</li>
+                                        <li><codeph>price=<i>&lt;Preis></i></codeph>: Der im Preismodell definierte Preis. </li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Edit price per user parameter in customer price model</b></p>
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte den Preis pro Benutzer für einen Parameter oder eine Parameteroption in einem Kunden-Preismodell.</p>
+                                <p>Weitere Name/Wert-Paare:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>customerKey=<i>&lt;Organisations-ID></i></codeph>: ID der Kundenorganisation. </li>
+                                        <li><codeph>customerName=<i>&lt;Organisationsname></i></codeph>: Name der Kundenorganisation. </li>
+                                        <li><codeph>currency=<i>&lt;Währung></i></codeph>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+                                        <li><codeph>parameterName=<i>&lt;Parametername></i></codeph>: Name des Parameters, wie er im zugrunde liegenden technischen Service definiert ist. </li>
+                                        <li><codeph>optionName=<i>&lt;Optionsname></i></codeph>: Name der Parameteroption, wie er im zugrunde liegenden technischen Service definiert ist.</li>
+                                        <li><codeph>price=<i>&lt;Preis></i></codeph>: Der im Preismodell definierte Preis. </li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Edit price per user parameter in service price model</b></p>
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte den Preis pro Benutzer für einen Parameter oder eine Parameteroption in einem Service-Preismodell.</p>
+                                <p>Weitere Name/Wert-Paare:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>currency=<i>&lt;Währung></i></codeph>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+                                        <li><codeph>parameterName=<i>&lt;Parametername></i></codeph>: Name des Parameters, wie er im zugrunde liegenden technischen Service definiert ist. </li>
+                                        <li><codeph>optionName=<i>&lt;Optionsname></i></codeph>: Name der Parameteroption, wie er im zugrunde liegenden technischen Service definiert ist.</li>
+                                        <li><codeph>price=<i>&lt;Preis></i></codeph>: Der im Preismodell definierte Preis. </li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Edit price per user parameter in subscription price model</b></p>
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte den Preis pro Benutzer für einen Parameter oder eine Parameteroption in einem Abo-Preismodell.</p>
+                                <p>Weitere Name/Wert-Paare:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>customerKey=<i>&lt;Organisations-ID></i></codeph>: ID der Kundenorganisation. </li>
+                                        <li><codeph>customerName=<i>&lt;Organisationsname></i></codeph>: Name der Kundenorganisation. </li>
+                                        <li>
+                                            <p><codeph>subscriptionName=<i>&lt;Abo-Name></i></codeph>: Name des Abonnements, wie er beim Abonnieren angegeben wurde. </p>
+                                        </li>
+                                        <li><codeph>currency=<i>&lt;Währung></i></codeph>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+                                        <li><codeph>parameterName=<i>&lt;Parametername></i></codeph>: Name des Parameters, wie er im zugrunde liegenden technischen Service definiert ist. </li>
+                                        <li><codeph>optionName=<i>&lt;Optionsname></i></codeph>: Name der Parameteroption, wie er im zugrunde liegenden technischen Service definiert ist.</li>
+                                        <li><codeph>price=<i>&lt;Preis></i></codeph>: Der im Preismodell definierte Preis. </li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Edit price per user role parameter in customer price model</b></p>
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte den Preis pro Benutzer mit einer Servicerolle für einen Parameter oder eine Parameteroption in einem Kunden-Preismodell.</p>
+                                <p>Weitere Name/Wert-Paare:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>customerKey=<i>&lt;Organisations-ID></i></codeph>: ID der Kundenorganisation. </li>
+                                        <li><codeph>customerName=<i>&lt;Organisationsname></i></codeph>: Name der Kundenorganisation. </li>
+                                        <li><codeph>currency=<i>&lt;Währung></i></codeph>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+                                        <li><codeph>userRole=<i>&lt;Rollenname></i></codeph>: Name der Servicerolle, wie er im zugrunde liegenden technischen Service definiert ist.</li>
+                                        <li><codeph>parameterName=<i>&lt;Parametername></i></codeph>: Name des Parameters, wie er im zugrunde liegenden technischen Service definiert ist.</li>
+                                        <li><codeph>optionName=<i>&lt;Optionsname></i></codeph>: Name der Parameteroption, wie er im zugrunde liegenden technischen Service definiert ist.</li>
+                                        <li><codeph>price=<i>&lt;Preis></i></codeph>: Der im Preismodell definierte Preis. </li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Edit price per user role parameter in service price model</b></p>
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte den Preis pro Benutzer mit einer bestimmten Servicerolle für einen Parameter oder eine Parameteroption in einem Service-Preismodell.</p>
+                                <p>Weitere Name/Wert-Paare:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>currency=<i>&lt;Währung></i></codeph>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+                                        <li><codeph>userRole=<i>&lt;Rollenname></i></codeph>: Name der Servicerolle, wie er im zugrunde liegenden technischen Service definiert ist.</li>
+                                        <li><codeph>parameterName=<i>&lt;Parametername></i></codeph>: Name des Parameters, wie er im zugrunde liegenden technischen Service definiert ist.</li>
+                                        <li><codeph>optionName=<i>&lt;Optionsname></i></codeph>: Name der Parameteroption, wie er im zugrunde liegenden technischen Service definiert ist. </li>
+                                        <li><codeph>price=<i>&lt;Preis></i></codeph>: Der im Preismodell definierte Preis. </li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Edit price per user role parameter in subscription price model</b></p>
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte den Preis pro Benutzer mit einer Servicerolle für einen Parameter oder eine Parameteroption in einem Abo-Preismodell.</p>
+                                <p>Weitere Name/Wert-Paare:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>customerKey=<i>&lt;Organisations-ID></i></codeph>: ID der Kundenorganisation. </li>
+                                        <li><codeph>customerName=<i>&lt;Organisationsname></i></codeph>: Name der Kundenorganisation. </li>
+                                        <li>
+                                            <p><codeph>subscriptionName=<i>&lt;Abo-Name></i></codeph>: Name des Abonnements, wie er beim Abonnieren angegeben wurde. </p>
+                                        </li>
+                                        <li><codeph>currency=<i>&lt;Währung></i></codeph>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+                                        <li><codeph>userRole=<i>&lt;Rollenname></i></codeph>: Name der Servicerolle, wie er im zugrunde liegenden technischen Service definiert ist.</li>
+                                        <li><codeph>parameterName=<i>&lt;Parametername></i></codeph>: Name des Parameters, wie er im zugrunde liegenden technischen Service definiert ist.</li>
+                                        <li><codeph>optionName=<i>&lt;Optionsname></i></codeph>: Name der Parameteroption, wie er im zugrunde liegenden technischen Service definiert ist.</li>
+                                        <li><codeph>price=<i>&lt;Preis></i></codeph>: Der im Preismodell definierte Preis. </li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Edit recurring charge for subscription in customer price model</b></p>
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte den Preis pro Abo in einem Kunden-Preismodell.</p>
+                                <p>Weitere Name/Wert-Paare:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>customerKey=<i>&lt;Organisations-ID></i></codeph>: ID der Kundenorganisation. </li>
+                                        <li><codeph>customerName=<i>&lt;Organisationsname></i></codeph>: Name der Kundenorganisation. </li>
+                                        <li><codeph>currency=<i>&lt;Währung></i></codeph>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+                                        <li><codeph>oneTimeFee=<i>&lt;Gebühr></i></codeph>: Einmalige Gebühr für ein Abonnement. </li>
+                                        <li><codeph>recurringCharge=<i>&lt;Gebühr></i></codeph>: Gebühr, die für ein Abonnement in regelmäßigen Abständen anfällt.</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Edit recurring charge for subscription in service price model</b></p>
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte den Preis pro Abo in einem Service-Preismodell.</p>
+                                <p>Weitere Name/Wert-Paare:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>currency=<i>&lt;Währung></i></codeph>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+                                        <li><codeph>oneTimeFee=<i>&lt;Gebühr></i></codeph>: Einmalige Gebühr für ein Abonnement. </li>
+                                        <li><codeph>recurringCharge=<i>&lt;Gebühr></i></codeph>: Gebühr, die für ein Abonnement in regelmäßigen Abständen anfällt.</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Edit recurring charge for subscription in subscription price model</b></p>
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte den Preis pro Abo in einem Abo-Preismodell.</p>
+                                <p>Weitere Name/Wert-Paare:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>customerKey=<i>&lt;Organisations-ID></i></codeph>: ID der Kundenorganisation. </li>
+                                        <li><codeph>customerName=<i>&lt;Organisationsname></i></codeph>: Name der Kundenorganisation. </li>
+                                        <li>
+                                            <p><codeph>subscriptionName=<i>&lt;Abo-Name></i></codeph>: Name des Abonnements, wie er beim Abonnieren angegeben wurde. </p>
+                                        </li>
+                                        <li><codeph>currency=<i>&lt;Währung></i></codeph>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+                                        <li><codeph>oneTimeFee=<i>&lt;Gebühr></i></codeph>: Einmalige Gebühr für ein Abonnement. </li>
+                                        <li><codeph>recurringCharge=<i>&lt;Gebühr></i></codeph>: Gebühr, die für ein Abonnement in regelmäßigen Abständen anfällt.</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Edit recurring charge for users in customer price model</b></p>
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte den Preis für Benutzer in einem Kunden-Preismodell.</p>
+                                <p>Weitere Name/Wert-Paare:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>customerKey=<i>&lt;Organisations-ID></i></codeph>: ID der Kundenorganisation. </li>
+                                        <li><codeph>customerName=<i>&lt;Organisationsname></i></codeph>: Name der Kundenorganisation. </li>
+                                        <li><codeph>currency=<i>&lt;Währung></i></codeph>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+                                        <li><codeph>range=<i>&lt;Obergrenze></i></codeph>: Bei gestaffelten Preisen ist dies die Obergrenze, bis zu der der Preis gilt. Falls keine gestaffelten Preise definiert sind, ist die Obergrenze <codeph>1-ANY</codeph>.</li>
+                                        <li><codeph>action=<i>&lt;action></i></codeph>: Bei gestaffelten Preisen ist dies die Aktion, die durchgeführt wurde. Folgende Werte können ausgegeben werden: <codeph>INSERT</codeph> (ein gestaffelter Preis wurde definiert), <codeph>UPDATE</codeph> (ein gestaffelter Preis wurde geändert) oder <codeph>DELETE</codeph> (ein gestaffelter Preis wurde gelöscht). Falls keine gestaffelten Preise definiert sind, wird der Parameter <codeph>action</codeph> nicht im Aktionsprotokoll ausgegeben.</li>
+                                        <li><codeph>recurringCharge=<i>&lt;Gebühr></i></codeph>: Gebühr, die für die Anzahl der Zeiteinheiten bezahlt werden muss, die Benutzer einem Abonnement zugeordnet sind.</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Edit recurring charge for users in service price model</b></p>
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte den Preis für Benutzer in einem Service-Preismodell.</p>
+                                <p>Weitere Name/Wert-Paare:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>currency=<i>&lt;Währung></i></codeph>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+                                        <li><codeph>range=<i>&lt;Obergrenze></i></codeph>: Bei gestaffelten Preisen ist dies die Obergrenze, bis zu der der Preis gilt. Falls keine gestaffelten Preise definiert sind, ist die Obergrenze <codeph>1-ANY</codeph>.</li>
+                                        <li><codeph>action=<i>&lt;action></i></codeph>: Bei gestaffelten Preisen ist dies die Aktion, die durchgeführt wurde. Folgende Werte können ausgegeben werden: <codeph>INSERT</codeph> (ein gestaffelter Preis wurde definiert), <codeph>UPDATE</codeph> (ein gestaffelter Preis wurde geändert) oder <codeph>DELETE</codeph> (ein gestaffelter Preis wurde gelöscht). Falls keine gestaffelten Preise definiert sind, wird der Parameter <codeph>action</codeph> nicht im Aktionsprotokoll ausgegeben.</li>
+                                        <li><codeph>recurringCharge=<i>&lt;Gebühr></i></codeph>: Gebühr, die für die Anzahl der Zeiteinheiten bezahlt werden muss, die Benutzer einem Abonnement zugeordnet sind.</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Edit recurring charge for users in subscription price model</b></p>
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte den Preis für Benutzer in einem Abo-Preismodell.</p>
+                                <p>Weitere Name/Wert-Paare:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>customerKey=<i>&lt;Organisations-ID></i></codeph>: ID der Kundenorganisation. </li>
+                                        <li><codeph>customerName=<i>&lt;Organisationsname></i></codeph>: Name der Kundenorganisation. </li>
+                                        <li>
+                                            <p><codeph>subscriptionName=<i>&lt;Abo-Name></i></codeph>: Name des Abonnements, wie er beim Abonnieren angegeben wurde. </p>
+                                        </li>
+                                        <li><codeph>currency=<i>&lt;Währung></i></codeph>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+                                        <li><codeph>range=<i>&lt;Obergrenze></i></codeph>: Bei gestaffelten Preisen ist dies die Obergrenze, bis zu der der Preis gilt. Falls keine gestaffelten Preise definiert sind, ist die Obergrenze <codeph>1-ANY</codeph>.</li>
+                                        <li><codeph>action=<i>&lt;action></i></codeph>: Bei gestaffelten Preisen ist dies die Aktion, die durchgeführt wurde. Folgende Werte können ausgegeben werden: <codeph>INSERT</codeph> (ein gestaffelter Preis wurde definiert), <codeph>UPDATE</codeph> (ein gestaffelter Preis wurde geändert) oder <codeph>DELETE</codeph> (ein gestaffelter Preis wurde gelöscht). Falls keine gestaffelten Preise definiert sind, wird der Parameter <codeph>action</codeph> nicht im Aktionsprotokoll ausgegeben.</li>
+                                        <li><codeph>recurringCharge=<i>&lt;Gebühr></i></codeph>: Gebühr, die für die Anzahl der Zeiteinheiten bezahlt werden muss, die Benutzer einem Abonnement zugeordnet sind.</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Edit service role prices for customer price model</b></p>
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte den Preis für Benutzer mit einer bestimmten Servicerolle in einem Kunden-Preismodell.</p>
+                                <p>Weitere Name/Wert-Paare:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>customerKey=<i>&lt;Organisations-ID></i></codeph>: ID der Kundenorganisation. </li>
+                                        <li><codeph>customerName=<i>&lt;Organisationsname></i></codeph>: Name der Kundenorganisation. </li>
+                                        <li><codeph>currency=<i>&lt;Währung></i></codeph>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+                                        <li><codeph>userRole=<i>&lt;Rollenname></i></codeph>: Name der Servicerolle, wie er im zugrunde liegenden technischen Service definiert ist.</li>
+                                        <li><codeph>price=<i>&lt;Preis></i></codeph>: Preis für Benutzer mit der Servicerolle. </li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Edit service role prices for service price model</b></p>
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte den Preis für Benutzer mit einer bestimmten Servicerolle in einem Service-Preismodell.</p>
+                                <p>Weitere Name/Wert-Paare:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>currency=<i>&lt;Währung></i></codeph>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+                                        <li><codeph>userRole=<i>&lt;Rollenname></i></codeph>: Name der Servicerolle, wie er im zugrunde liegenden technischen Service definiert ist.</li>
+                                        <li><codeph>price=<i>&lt;Preis></i></codeph>: Preis für Benutzer mit der Servicerolle. </li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Edit service role prices for subscription price model</b></p>
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte den Preis für Benutzer mit einer bestimmten Servicerolle in einem Abo-Preismodell.</p>
+                                <p>Weitere Name/Wert-Paare:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>customerKey=<i>&lt;Organisations-ID></i></codeph>: ID der Kundenorganisation. </li>
+                                        <li><codeph>customerName=<i>&lt;Organisationsname></i></codeph>: Name der Kundenorganisation. </li>
+                                        <li>
+                                            <p><codeph>subscriptionName=<i>&lt;Abo-Name></i></codeph>: Name des Abonnements, wie er beim Abonnieren angegeben wurde. </p>
+                                        </li>
+                                        <li><codeph>currency=<i>&lt;Währung></i></codeph>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
+                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+                                        <li><codeph>userRole=<i>&lt;Rollenname></i></codeph>: Name der Servicerolle, wie er im zugrunde liegenden technischen Service definiert ist.</li>
+                                        <li><codeph>price=<i>&lt;Preis></i></codeph>: Preis für Benutzer mit der Servicerolle. </li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Edit subscription attribute by service manager</b></p>
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte den Wert eines eigenen Attributs für Abonnements. Für jeden Wert wird eine separate Meldung im Aktionsprotokoll ausgegeben. </p>
+                                <p>Weitere Name/Wert-Paare:</p>
+                                <p>
+                                    <ul>
+                                        <li>
+                                            <p><codeph>subscriptionName=<i>&lt;Abo-Name></i></codeph>: Name des Abonnements, wie er beim Abonnieren angegeben wurde. </p>
+                                        </li>
+                                        <li><codeph>attributeName=<i>&lt;Attributname></i></codeph>: Name des eigenen Attributs. </li>
+                                        <li><codeph>attributeValue=<i>&lt;Attributwert></i></codeph>: Wert des eigenen Attributs. </li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Localize price model for customer</b></p>
+                                <p>Beschreibung: Ein Service-Manager hinterlegte die Beschreibungen und/oder die Lizenzvereinbarung für einen Kunden in einer anderen Sprache. </p>
+                                <p>Weitere Name/Wert-Paare:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>customerKey=<i>&lt;Organisations-ID></i></codeph>: ID der Kundenorganisation. </li>
+                                        <li><codeph>customerName=<i>&lt;Organisationsname></i></codeph>: Name der Kundenorganisation. </li>
+                                        <li><codeph>locale=<i>&lt;Sprache></i></codeph>: Code der Sprache, in der die Texte gespeichert wurden. </li>
+                                        <li><codeph>description=<i>&lt;Ja oder Nein></i></codeph>: Gibt an, ob die Beschreibung des Preismodells geändert wurde. Folgende Werte können ausgegeben werden: <codeph>YES</codeph> (Ja) oder <codeph>NO</codeph> (Nein). </li>
+                                        <li><codeph>license=<i>&lt;Ja oder Nein></i></codeph>: Gibt an, ob die Lizenzvereinbarung geändert wurde. Folgende Werte können ausgegeben werden: <codeph>YES</codeph> (Ja) oder <codeph>NO</codeph> (Nein). </li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Localize price model for service</b></p>
+                                <p>Beschreibung: Ein Service-Manager hinterlegte die Beschreibungen und/oder die Lizenzvereinbarung eines Abonnements in einer anderen Sprache. </p>
+                                <p>Weitere Name/Wert-Paare:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>locale=<i>&lt;Sprache></i></codeph>: Code der Sprache, in der die Texte gespeichert wurden. </li>
+                                        <li><codeph>description=<i>&lt;Ja oder Nein></i></codeph>: Gibt an, ob die Beschreibung des Preismodells geändert wurde. Folgende Werte können ausgegeben werden: <codeph>YES</codeph> (Ja) oder <codeph>NO</codeph> (Nein). </li>
+                                        <li><codeph>license=<i>&lt;Ja oder Nein></i></codeph>: Gibt an, ob die Lizenzvereinbarung geändert wurde. Folgende Werte können ausgegeben werden: <codeph>YES</codeph> (Ja) oder <codeph>NO</codeph> (Nein). </li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Localize price model for subscription</b></p>
+                                <p>Beschreibung: Ein Service-Manager hinterlegte die Beschreibungen und/oder die Lizenzvereinbarung eines Abonnements in einer anderen Sprache. </p>
+                                <p>Weitere Name/Wert-Paare:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>customerKey=<i>&lt;Organisations-ID></i></codeph>: ID der Kundenorganisation. </li>
+                                        <li><codeph>customerName=<i>&lt;Organisationsname></i></codeph>: Name der Kundenorganisation. </li>
+                                        <li>
+                                            <p><codeph>subscriptionName=<i>&lt;Abo-Name></i></codeph>: Name des Abonnements, wie er beim Abonnieren angegeben wurde. </p>
+                                        </li>
+                                        <li><codeph>locale=<i>&lt;Sprache></i></codeph>: Code der Sprache, in der die Texte gespeichert wurden. </li>
+                                        <li><codeph>description=<i>&lt;Ja oder Nein></i></codeph>: Gibt an, ob die Beschreibung des Preismodells geändert wurde. Folgende Werte können ausgegeben werden: <codeph>YES</codeph> (Ja) oder <codeph>NO</codeph> (Nein). </li>
+                                        <li><codeph>license=<i>&lt;Ja oder Nein></i></codeph>: Gibt an, ob die Lizenzvereinbarung geändert wurde. Folgende Werte können ausgegeben werden: <codeph>YES</codeph> (Ja) oder <codeph>NO</codeph> (Nein). </li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Localize service</b></p>
+                                <p>Beschreibung: Ein Service-Manager hinterlegte die beschreibenden Texte eines marktfähigen Service in einer anderen Sprache. </p>
+                                <p>Weitere Name/Wert-Paare:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>shortDescription=<i>&lt;Ja oder Nein></i></codeph>: Gibt an, ob die Kurzbeschreibung für den marktfähigen Service geändert wurde. Folgende Werte können ausgegeben werden: <codeph>YES</codeph> (Ja) oder <codeph>NO</codeph> (Nein). </li>
+                                        <li><codeph>description=<i>&lt;Ja oder Nein></i></codeph>: Gibt an, ob die Beschreibung für den marktfähigen Service geändert wurde. Folgende Werte können ausgegeben werden: <codeph>YES</codeph> (Ja) oder <codeph>NO</codeph> (Nein). </li>
+                                        <li><codeph>locale=<i>&lt;Sprache></i></codeph>: Code der Sprache, in der die Beschreibungen gespeichert wurden. </li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Set service as public</b></p>
+                                <p>Beschreibung: Bei der Vorbereitung zur Veröffentlichung eines Service legte ein Service-Manager, Wiederverkäufer oder Vermittler fest, dass der marktfähige Service öffentlich bzw. nicht mehr öffentlich sein soll. </p>
+                                <p>Weiteres Name/Wert-Paar:</p>
+                                <p><codeph>public=<i>&lt;Ja oder Nein></i></codeph>: Gibt an, ob der Service als öffentlich gekennzeichnet ist. Folgende Werte können ausgegeben werden: <codeph>true</codeph> (Ja) oder <codeph>false</codeph> (Nein). </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Terminate subscription</b></p>
+                                <p>Beschreibung: Ein Service-Manager oder Wiederverkäufer beendete explizit ein Abonnement eines Kunden. </p>
+                                <p>Weitere Name/Wert-Paare:</p>
+                                <p>
+                                    <ul>
+                                        <li>
+                                            <p><codeph>subscriptionName=<i>&lt;Abo-Name></i></codeph>: Name des Abonnements, wie er beim Abonnieren angegeben wurde. </p>
+                                        </li>
+                                        <li><codeph>reason=<i>&lt;Text></i></codeph>: Begründung, warum das Abonnement beendet wurde. </li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Update service</b></p>
+                                <p>Beschreibung: Ein Service-Manager änderte die Eigenschaften eines marktfähigen Service. </p>
+                                <p>Weitere Name/Wert-Paare:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>shortDescription=<i>&lt;Ja oder Nein></i></codeph>: Gibt an, ob die Kurzbeschreibung des Service geändert wurde. Folgende Werte können ausgegeben werden: <codeph>YES</codeph> (Ja) oder <codeph>NO</codeph> (Nein). </li>
+                                        <li><codeph>description=<i>&lt;Ja oder Nein></i></codeph>: Gibt an, ob die Beschreibung des Service geändert. Folgende Werte können ausgegeben werden: <codeph>YES</codeph> (Ja) oder <codeph>NO</codeph> (nein). </li>
+                                        <li><codeph>locale=<i>&lt;Sprache></i></codeph>: Code der Sprache, in der die Beschreibungen gespeichert wurden. </li>
+                                        <li><codeph>autoAssignUser=<i>&lt;Ja oder Nein></i></codeph>: Gibt an, ob der Benutzer, der den Service abonniert, automatisch dem Abonnement zugeordnet wird. Folgende Werte können ausgegeben werden: <codeph>YES</codeph> (Ja) oder <codeph>NO</codeph> (Nein). </li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Update service parameter</b></p>
+                                <p>Beschreibung: Ein Service-Manager definierte oder änderte einen Parameter oder eine Parameteroption.</p>
+                                <p>Weitere Name/Wert-Paare:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>parameterName=<i>&lt;Parametername></i></codeph>: Name des Parameters, wie er im zugrunde liegenden technischen Service definiert ist.</li>
+                                        <li><codeph>userOption=<i>&lt;Ja oder Nein></i></codeph>: Gibt an, ob der Parameter dem Kunden beim Abonnieren des Service als Auswahlmöglichkeit angeboten werden soll. Folgende Werte können ausgegeben werden: <codeph>ON</codeph> (Ja) oder <codeph>OFF</codeph> (Nein). </li>
+                                        <li><codeph>value=<i>&lt;Wert></i></codeph>: Für einen Parameter wird die Zeichenfolge und für eine Parameteroption <codeph>YES</codeph> oder <codeph>NO</codeph> ausgegeben.</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>View subscription</b></p>
+                                <p>Beschreibung: Ein Service-Manager, Wiederverkäufer oder Vermittler zeigte Details zu einem Abonnement an. </p>
+                                <p>Weitere Name/Wert-Paare:</p>
+                                <p>
+                                    <ul>
+                                        <li>
+                                            <p><codeph>subscriptionName=<i>&lt;Abo-Name></i></codeph>: Name des Abonnements, wie er beim Abonnieren angegeben wurde. </p>
+                                        </li>
+                                        <li><codeph>customerKey=<i>&lt;Organisations-ID></i></codeph>: ID der Kundenorganisation. </li>
+                                        <li><codeph>customerName=<i>&lt;Organisationsname></i></codeph>: Name der Kundenorganisation. </li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </section>
+    </refbody>
+</reference>

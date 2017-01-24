@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_B32294CC9FA643A2A14A74B1DAA49C95" xml:lang="en-us">
+    <title>Importing the Signed Certificates</title>
+    <conbody>
+        <section>
+            <p>When the signing process is completed, you will receive the following from the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> operator: </p>
+            <p>
+                <ul>
+                    <li>CA public (root) certificate for <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></li>
+                    <li>Self-signed domain certificate</li>
+                    <li>Your own, signed certificate</li>
+                </ul>
+            </p>
+            <p>You have to import the certificates into your application server's keystore and truststore as follows: </p>
+            <p>
+                <ol>
+                    <li>Import the CA root certificate into the client's keystore by executing the following command:<p>
+                            <codeblock>%JAVA_HOME%\bin\keytool -import -alias cacert -file ca.crt 
+-keystore keystore.jks</codeblock>
+                        </p></li>
+                    <li>Update your certificate (signed by the <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> operator) in the keystore so that the certificate chain will be stored in the keystore:<p>
+                            <codeblock>%JAVA_HOME%\bin\keytool –import –file &lt;bssDomain&gt; 
+-keystore cacerts.jks –alias bssDomain</codeblock>
+                        </p><p>For checking which entries are contained in your keystore, you can execute the following command: </p><p>
+                            <codeblock>%JAVA_HOME%\bin\keytool -list -keystore keystore.jks</codeblock>
+                        </p><p>The result should look like</p><p>
+                            <codeblock>Keystore type: jks
+Keystore provider: SUN
+
+Your keystore contains two entries.
+
+<b>tpcert</b>, 2010-05-21, keyEntry,
+Certificate finger print (MD5): FA:E7:AF:99:33:A5:C9:8E:4F:28:50:04:08:0F:3F:4A
+<b>mykey</b>, 2010-05-21, trustedCertEntry,
+Certificate finger print (MD5): 33:E5:B9:77:C3:34:8R:9F:34:99:1G:78:D5:3H:4B:22</codeblock>
+                        </p></li>
+                    <li>Import the domain certificate into the client's truststore by executing the following command:<p>
+                            <codeblock>%JAVA_HOME%\bin\keytool –import –file &lt;bssDomain&gt; 
+-keystore cacerts.jks –alias bssDomain</codeblock>
+                        </p></li>
+                </ol>
+            </p>
+        </section>
+    </conbody>
+</concept>

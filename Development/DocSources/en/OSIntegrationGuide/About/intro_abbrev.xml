@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd"
+>
+<concept xml:lang="en-us" id="concept890">
+    <title>Abbreviations</title>
+    <conbody>
+        <p>This manual uses the following abbreviations:</p>
+        <p>
+            <table frame="none" colsep="0" rowsep="0">
+                <tgroup cols="2">
+                    <colspec colname="col1" colwidth="1.00*"/>
+                    <colspec colname="col2" colwidth="3.38*"/>
+                    <tbody>
+                        <row>
+                            <entry><b>APP</b></entry>
+                            <entry>Asynchronous Provisioning Platform</entry>
+                        </row>
+                        <row product="oscm_ee">
+                            <entry><b><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></b>
+                            </entry>
+                            <entry><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Name"/></entry>
+                        </row>
+                        <row>
+                            <entry><b>DBMS</b></entry>
+                            <entry>Database Management System</entry>
+                        </row>
+                        <row>
+                            <entry><b>IaaS</b></entry>
+                            <entry>Infrastructure as a Service</entry>
+                        </row>
+                        <row>
+                            <entry><b>IdP</b></entry>
+                            <entry>SAML Identity Provider</entry>
+                        </row>
+                        <row product="oscm_ce">
+                            <entry><b><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></b>
+                            </entry>
+                            <entry><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Name"/></entry>
+                        </row>
+                        <row>
+                            <entry><b>SAML</b></entry>
+                            <entry>Security Assertion Markup Language</entry>
+                        </row>
+                        <row>
+                            <entry><b>STS</b></entry>
+                            <entry>Security Token Service</entry>
+                        </row>
+                        <row>
+                            <entry><b>WSDL</b></entry>
+                            <entry>Web Services Description Language</entry>
+                        </row>
+                        <row>
+                            <entry><b>WSIT</b></entry>
+                            <entry>Web Services Interoperability Technologies</entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </p>
+    </conbody>
+</concept>

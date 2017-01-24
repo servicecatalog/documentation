@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="de-de">
+  <title>Servicedefinition registrieren</title>
+  <taskbody>
+    <context>
+      <p>Auf der Seite <uicontrol>Servicedefinition registrieren</uicontrol> können Sie die grundlegenden Eigenschaften eines technischen Service angeben. Sie können die Zugriffsart auswählen und die für den Zugriff auf Ihren Service nötigen Informationen eingeben. Durch das Registrieren einer Servicedefinition integrieren Sie eine Anwendung als technischen Service.</p>
+      <p>Alternativ - und dies ist der komplexere, aber flexiblere Weg - können Sie die Servicedefinition in eine XML-Datei schreiben und diese Datei importieren. Wenn Sie beispielsweise Parameter, Optionen oder Ereignisdefinitionen für Ihren Service festlegen oder ändern möchten, gehen Sie wie folgt vor: </p>
+      <ol compact="no">
+        <li>Exportieren Sie die Servicedefinition. </li>
+        <li>Bearbeiten Sie die XML-Datei. </li>
+        <li>Importieren Sie die geänderte XML-Datei. </li>
+      </ol>
+      <p>Ausführliche Informationen zu Zugriffsarten und zur Servicedefinition finden Sie im Handbuch <i>Technology Provider's Guide</i>.</p>
+      <p><b>So registrieren Sie eine Servicedefinition</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>Geben Sie im Feld <uicontrol>Name</uicontrol> einen Namen für den technischen Service ein. </cmd>
+        <info>
+          <p>Der Name des technischen Service darf aus maximal 100 Zeichen bestehen. Die folgenden Zeichen sind nicht erlaubt:</p>
+          <p><codeph>! " # $ % &amp; ' * + , / : ; &lt; = > ? \ ^ `</codeph></p>
+        </info>
+      </step>
+      <step>
+        <cmd>Wählen Sie die Zugriffsart für den technischen Service. Die Zugriffsart legt fest: </cmd>
+        <stepresult>
+          <ul>
+            <li>Ob Ihre Anwendung die Plattform zur Benutzerauthentifizierung verwendet und die Plattform die Login-Informationen an Ihre Anwendung weiterleitet (Application Login).</li>
+            <li>Ob Ihre Anwendung einen Provisioning Service implementieren muss.</li>
+          </ul>
+          <p>Abhängig von der gewählten Zugriffsart müssen unterschiedliche Eingabefelder ausgefüllt werden.</p>
+        </stepresult>
+      </step>
+      <step>
+        <cmd>Geben Sie die erforderlichen Informationen ein: </cmd>
+        <stepresult>
+          <ul compact="no">
+            <li><uicontrol>Service-URL</uicontrol> (gilt für <uicontrol>Login-Zugriff</uicontrol> und <uicontrol>Externer Zugriff</uicontrol> ): URL der Remote-Schnittstelle Ihrer Anwendung. Über diese URL greifen Benutzer auf Ihren Service zu. Ihre Anwendung sollte zu dieser URL Inhalte bereitstellen, da die URL auch als Zielseite verwendet wird, wenn sich ein Benutzer bereits angemeldet hat. <p>Die Service-URL entspricht dem Attribut <codeph>baseUrl</codeph> in der XML-Datei mit der Servicedefinition.</p><p>Beachten Sie folgende Regeln für Internet-Domain-Namen:<ul>
+                  <li>
+                    <p>Sie müssen mit einem Buchstaben beginnen und mit einem Buchstaben oder einer Ziffer enden.</p>
+                  </li>
+                  <li>
+                    <p>Sie dürfen Buchstaben, Zahlen oder Bindestriche enthalten. Sonderzeichen sind nicht zulässig. </p>
+                  </li>
+                  <li>
+                    <p>Sie dürfen maximal 63 Zeichen lang sein.</p>
+                  </li>
+                </ul></p></li>
+            <li><uicontrol>URL des Provisioning Service</uicontrol> (gilt für alle Zugriffsarten außer <uicontrol>Externer Zugriff</uicontrol>): URL des WSDL-Dokuments, das die Schnittstelle des von Ihnen implementierten Provisioning Service definiert. <p>Die URL des Provisioning Service entspricht dem Attribut <codeph>provisioningUrl</codeph> in der XML-Datei mit der Servicedefinition.</p></li>
+            <li><uicontrol>Login-Seite</uicontrol> (gilt für <uicontrol>Login-Zugriff</uicontrol>): Pfad zum Token Handler, dem Modul Ihrer Anwendung, das Login-Anforderungen mit einem Benutzer-Token bearbeitet. Der Pfad muss relativ zur Service-URL angegeben werden und mit einem Schrägstrich / beginnen. <p>Die Login-Seite entspricht dem Attribut <codeph>loginPath</codeph> in der XML-Datei mit der Servicedefinition.</p></li>
+          </ul>
+        </stepresult>
+      </step>
+      <step>
+        <cmd>Registrieren Sie die Servicedefinition mit <uicontrol>Speichern</uicontrol>.</cmd>
+      </step>
+    </steps>
+    <result>Der Service wird in die Liste der zur Verfügung stehenden Services aufgenommen. Geben Sie im nächsten Schritt auf der Seite <uicontrol>Servicedefinition ändern</uicontrol> beschreibende Texte für den Service und Ihre Lizenzbestimmungen ein. Legen Sie anschließend einen oder mehrere Serviceanbieter fest, die auf Basis Ihres technischen Service marktfähige Services definieren können. </result>
+  </taskbody>
+  <related-links>
+    <linklist>
+      <title>Weitere Themen</title>
+      <link href="techService_edit.xml"/>
+      <link href="organization_manageSuppliers.xml"/>
+      <link href="techService_export.xml"/>
+      <link href="techService_import.xml"/>
+    </linklist>
+  </related-links>
+</task>

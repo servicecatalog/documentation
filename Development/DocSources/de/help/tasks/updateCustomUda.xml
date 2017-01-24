@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd">
+<task id="task634" xml:lang="de-de">
+    <title>Eigenes Attribut bearbeiten</title>
+    <taskbody>
+        <context>
+            <p>Auf der Seite <uicontrol>Eigenes Attribut bearbeiten</uicontrol> können Sie ein ausgewähltes Attribut bearbeiten oder löschen.</p>
+            <p><b>So bearbeiten Sie ein eigenes Attribut</b>:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Ändern Sie die erforderlichen Daten.</cmd>
+                <info>
+                    <ul compact="no">
+                        <li><uicontrol>Attribut-ID</uicontrol>: ID des Attributs. Die ID darf aus maximal 40 Zeichen bestehen. Die folgenden Zeichen sind nicht erlaubt: <codeph>! " # $ % &amp; ' * + , / : ; &lt; &gt; \ ^ `</codeph></li>
+                        <li><b>Attributname</b> und <b>Sprache</b>: Name des Attributs in der gewählten Sprache.</li>
+                        <li><uicontrol>Vordefinierter Wert</uicontrol>: Standardwert für das Attribut. Sie können maximal 255 Zeichen eingeben. Der Standardwert wird verwendet, sofern kein spezifischer Wert für einen bestimmten Kunden oder ein bestimmtes Abonnement angegeben wird. Wenn der Wert eines eigenen Attributs vom Kunden eingegeben werden soll, ist das entsprechende Feld beim Abonnieren des Service mit dem Standardwert vorbelegt. </li>
+                        <li><uicontrol>Benutzeroption</uicontrol>: Markieren Sie diese Option, wenn Sie dem Administrator des Kunden oder dem Abo-Manager beim Abonnieren Ihres Service die Möglichkeit bieten möchten, den Attributwert selbst einzugeben.</li>
+                        <li><uicontrol>Pflichtangabe</uicontrol>: Markieren Sie diese Option, wenn die Eingabe des Attributwerts durch den Administrator des Kunden oder den Abo-Manager obligatorisch sein soll.</li>
+                        <li><b>Controller-ID</b>: ID des Service-Controllers zur Bereitstellung von IaaS-Services, beispielsweise OpenStack oder Amazon Web Services (AWS).</li>
+                        <li><b>Verschlüsselt</b>: Markieren Sie diese Option, wenn der Attributwert in der Datenbank verschlüsselt gespeichert und in Berichten und Log-Dateien ausgegeben werden soll. Zudem werden Werte, die an der Benutzeroberfläche eingegeben werden, nicht angezeigt. Wenn diese Option bereits gewählt ist, kann sie nicht mehr verändert werden. </li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>Schließen Sie Ihre Eingaben mit <uicontrol>Speichern</uicontrol> ab.</cmd>
+            </step>
+        </steps>
+        <result>
+            <p>Die vorherige Seite zur Verwaltung von eigenen Attributen wird wieder angezeigt. Sie sehen die geänderte Definition.</p>
+            <p>Ein geänderter Name oder ein geänderter Standardwert wird in die Rechnungsdaten übernommen, sobald diese neu generiert werden. Wenn kein Wert für ein Attribut angegeben ist, wird der Attributname ohne zugehörigen Wert in die Rechnungsdaten übernommen.</p>
+            <p><b>So löschen Sie ein eigenes Attribut</b>:</p>
+            <ul compact="no">
+                <li>Klicken Sie <uicontrol>Löschen</uicontrol> und bestätigen Sie den Löschauftrag. </li>
+            </ul>
+            <p>Das eigene Attribut wird sofort gelöscht und die vorherige Seite zur Verwaltung von eigenen Attributen wird wieder angezeigt. Das Attribut wird bei der nächsten Generierung der Rechnungsdaten nicht mehr berücksichtigt.</p>
+        </result>
+    </taskbody>
+    <related-links>
+        <linklist>
+            <title>Weitere Themen</title>
+            <link href="organization_manageUdas.xml"/>
+        </linklist>
+    </related-links>
+</task>

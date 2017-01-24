@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+                         ]>
+<concept id="id_31">
+  <title>Introduction</title>
+  <conbody>
+    <section>
+      <p conref="c_WhatIsBES.xml#concept2311/is_a_set_of_services_which_concept_conbody_p_1"/>
+      <p>
+        <ph conref="c_WhatIsBES.xml#concept2311/With_its_components_concept_conbody_p_2_ph"/>. </p>
+      <p>The basic scenario of deploying and using applications as services in the <ph
+          conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+        /> framework involves the following organizations:</p>
+      <ul>
+        <li>
+          <ph conref="c_BasicUsageScenario.xml#concept2311/Technology_providers_concept_conbody_section_ol_l"/>
+        </li>
+        <li>
+          <ph conref="c_BasicUsageScenario.xml#concept2311/Suppliers_concept_conbody_section_ol_l"/>
+        </li>
+        <li>
+          <ph conref="c_BasicUsageScenario.xml#concept2311/Customers_concept_conbody_section_ol_l"/>
+        </li>
+        <li>
+          <ph conref="c_BasicUsageScenario.xml#concept2311/Marketplace_owners_concept_conbody_section_ul_l"/>
+        </li>
+        <li>
+          <ph conref="c_BasicUsageScenario.xml#concept2311/Operators_concept_conbody_section_ul_l"/>
+        </li>
+      </ul>
+      <p>In extended usage scenarios, the <ph
+          conref="c_BasicUsageScenario.xml#concept2311/suppliers_who_define_marketab_concept_conbody_section_3_p"/>:</p>
+      <ul>
+        <li><ph conref="c_BasicUsageScenario.xml#concept2311/Brokers_concept_conbody_section_3_u"/></li>
+        <li><ph conref="c_BasicUsageScenario.xml#concept2311/Resellers_concept_conbody_section_3_u"/></li>
+      </ul>
+    </section>
+  </conbody>
+</concept>

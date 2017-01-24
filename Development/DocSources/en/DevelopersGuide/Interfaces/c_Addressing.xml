@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_3413BBD173324104B42FB714974CABE7" xml:lang="en-us">
+    <title>Addressing the Platform Services - SOAP</title>
+    <conbody>
+        <section>
+            <p>Once deployed, the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> public Web services can be addressed via WSDL URLs. </p>
+            <p>In the application server administration console, the <codeph>oscm-webservices.jar</codeph> subcomponent of the <codeph>oscm</codeph> application includes a descriptor file with all the information needed for finding out the WSDL URL of a platform service: </p>
+            <ol>
+                <li>
+                    <p>In the GlassFish administration console, go to <b>Common Tasks</b> -&gt;
+                        <b>Applications</b> -&gt; <b>oscm</b>. </p>
+                </li>
+                <li>
+                    <p>On the <b>Descriptor</b> tab, open the <codeph>META_INF/sun-ejb-jar.xml</codeph> descriptor file of the <codeph>oscm-webservices.jar</codeph> subcomponent. </p>
+                    <p>For every platform service, the endpoint address URI shows the Web service name and whether it is to be addressed through basic authentication (<codeph>BASIC</codeph>), certificate-based authentication (<codeph>CLIENTCERT</codeph>), or a security token service (<codeph>STS</codeph>). Refer to <xref
+                            href="c_Authentication.xml"/> for details on the authentication types. </p>
+                    <p>The URL pointing to the WSDL definition of a platform service is constructed as follows: </p>
+                    <p><codeph>&lt;BASE_URL_HTTPS&gt;/&lt;endpoint-address-uri&gt;?wsdl</codeph></p>
+                    <p>where </p>
+                    <p><codeph>&lt;BASE_URL_HTTPS&gt;</codeph> points to the local server and port where the platform services have been deployed.</p>
+                    <p><codeph>&lt;endpoint-address-uri&gt;</codeph> is the address as defined in the <codeph>sun-ejb-jar.xml</codeph> descriptor file.</p>
+                    <p><codeph>?wsdl</codeph> is the suffix to be used for identifying a WSDL file.</p>
+                    <p>Example: <codeph>https://myserver:8081/AccountService/BASIC?wsdl</codeph></p>
+                </li>
+            </ol>
+            <p>The following code creates a client for the Web service with a given WSDL. </p>
+            <p>
+                <codeblock>QName qName = new QName("http://oscm.org/xsd", 
+   AccountService.class.getSimpleName());
+//local wsdl file
+URL wsdlURL = this.getClass().getResource("/AccountService.wsdl");
+Service service = Service.create(wsdlURL, qName);
+AccountService port = service.getPort(AccountService.class);
+BindingProvider bindingProvider = (BindingProvider) port;
+Map&lt;String, Object> clientRequestContext = bindingProvider.getRequestContext();
+
+clientRequestContext.put(BindingProvider.USERNAME_PROPERTY, "1234");
+clientRequestContext.put(BindingProvider.PASSWORD_PROPERTY, "password");
+clientRequestContext.put(BindingProvider.ENDPOINT_ADDRESS_PROPERTY, 
+   "https://localhost:8081/AccountService/BASIC");
+</codeblock>
+            </p>
+            <p>In addition, the client application must integrate the current version number in the SOAP message header: </p>
+            <p>
+                <codeblock>&lt;S:Header> ...
+   &lt;auth xmlns="http://com/auth/" 
+     xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" 
+     SOAP-ENV:actor="<b>ctmg.service.version</b>"><b>v1.9</b>&lt;/auth> &lt;/S:Header> 
+</codeblock>
+            </p>
+            <p>The <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> integration package contains the following library:  <codeph>oscm-api-client-handler.jar</codeph>. This library provides a SOAP handler to modify the outgoing SOAP messages, i.e. it can be used to add the version number to the SOAP message header. </p>
+            <p>The source files of this library are part of the <codeph>IntegrationhelperSRC.zip</codeph> archive. </p>
+        </section>
+    </conbody>
+</concept>

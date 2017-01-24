@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<reference id="reference832" xml:lang="en-us">
+    <title><ph platform=" help">APP Configuration Settings</ph><ph platform="print"
+        >APP Configuration Settings</ph></title>
+    <refbody>
+        <section>
+            <p>The <codeph>configsettings.properties</codeph> file located in <codeph>&lt;install_pack_dir>/databases/app_db</codeph> contains the configuration settings for APP.</p>
+        </section>
+        <section>
+            <title>APP_BASE_URL</title>
+            <p><codeph>APP_BASE_URL=http://&lt;server>:&lt;port>/oscm-app</codeph></p>
+            <p>The URL used to access APP. </p>
+        </section>
+        <section>
+            <title>APP_TIMER_INTERVAL</title>
+            <p><codeph>APP_TIMER_INTERVAL=15000</codeph>
+            </p>
+            <p>The interval (in milliseconds) at which APP polls the status of instances. If you increase the value, provisioning takes longer. If you decrease it, more load is put on the system. We strongly recommend that you do not set a value of more than 180000 milliseconds (3 minutes), although the maximum value is much higher (922337203685477580).</p>
+            <p>If you do not specify this setting at all, the default value used is 15000.</p>
+        </section>
+        <section>
+            <title>APP_MAIL_RESOURCE</title>
+            <p><codeph>APP_MAIL_RESOURCE=mail/APPMail</codeph></p>
+            <p>The JNDI name of the GlassFish mail resource used to send emails. </p>
+            <p>The resource <codeph>mail/APPMail</codeph> is created during setup with the parameters defined in the <codeph>glassfish.properties</codeph> file. This setting needs to be changed only if you want to use a different mail resource. </p>
+        </section>
+        <section>
+            <title>APP_ADMIN_MAIL_ADDRESS</title>
+            <p><codeph>APP_ADMIN_MAIL_ADDRESS=admin@example.com</codeph>
+            </p>
+            <p>The email address to which email notifications are sent. </p>
+        </section>
+        <section><title>APP_KEY_PATH</title>The path to the file containing the key required for encryption and decryption of service parameters with data type <codeph>PWD</codeph> or custom attributes marked for encryption.<p>Upon the start of APP, it is checked whether a key file exists in the location specified in this setting. If this not the case, the key file is automatically generated and stored in the location specified here. If nothing is specified, the file will be generated into the default location and named <codeph>key</codeph>.</p>Default: <p><codeph>./key</codeph> in the <codeph>&lt;GLASSFISH_HOME&gt;/glassfish/domains/app-domain/config</codeph> directory</p><p>
+                <note>Be aware that the key file must not be deleted. Otherwise, encryption and decryption is no longer possible. It is recommended to create a backup of this file once generated.</note>
+            </p></section>
+        <section>
+            <title>APP_KEYSTORE_PASSWORD</title>
+            <p><codeph>APP_KEYSTORE_PASSWORD=changeit</codeph></p>
+            <p>The password required to access the keystore of the domain used for APP in the application server. </p>
+        </section>
+        <section>
+            <title>APP_TRUSTSTORE_PASSWORD</title>
+            <p><codeph>APP_TRUSTSTORE_PASSWORD=changeit</codeph></p>
+            <p>The password required to access the truststore of the domain used for APP in the application server. </p>
+        </section>
+        <section><title>BSS_AUTH_MODE</title><p><codeph>BSS_AUTH_MODE=INTERNAL</codeph>
+            </p><p>Specifies whether <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> is used for user authentication or whether it acts as a SAML service provider and allows for single sign-on. The setting must be identical to the <codeph>AUTH_MODE</codeph> setting in <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />.</p>Possible values: <codeph>INTERNAL</codeph> (<ph
+                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> user authentication is used) or <codeph>SAML_SP</codeph> (<ph
+                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> acts as a SAML service provider). <p>Contact the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> platform operator for details on which value to set.</p></section>
+        <section>
+            <title>BSS_USER_KEY</title>
+            <p><codeph>BSS_USER_KEY=&lt;userKey></codeph>
+            </p>
+            <p>The user key for accessing <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />. </p>
+            <p>Replace <codeph>&lt;userKey></codeph> with the user key which you receive with the confirmation email for your user account. </p>
+            <p>The user specified here must have the administrator role for your organization in <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    />. The user account is used for carrying out actions on behalf of APP in <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />. In addition, the user is allowed to register service controllers in APP.</p>
+        </section>
+        <section>
+            <title>BSS_USER_ID</title>
+            <p><codeph>BSS_USER_ID=&lt;userId></codeph>
+            </p>
+            <p>The identifier of the user specified in <codeph>BSS_USER_KEY</codeph> for accessing <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+            <p>Replace <codeph>&lt;userId></codeph> with the user ID.</p>
+        </section>
+        <section>
+            <title>BSS_USER_PWD</title>
+            <p><codeph>BSS_USER_PWD=_crypt:&lt;password></codeph></p>
+            <p>The password of the user specified in <codeph>BSS_USER_KEY</codeph> for accessing <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+            <p>Replace <codeph>&lt;password></codeph> with the plain text password. The password is encrypted when it is stored in the database. </p>
+        </section>
+        <section>
+            <title>BSS_WEBSERVICE_URL</title>
+            <p><codeph>BSS_WEBSERVICE_URL=https://&lt;server>:&lt;port>/{SERVICE}/BASIC</codeph>
+            </p>
+            <p>Mandatory when <codeph>BSS_AUTH_MODE</codeph> is set to <codeph>INTERNAL</codeph> and basic authentication is used. The endpoint of the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> Web services to be used. The <codeph>{SERVICE}</codeph> placeholder must not be replaced.</p>
+        </section>
+        <section>
+            <title>BSS_WEBSERVICE_WSDL_URL</title>
+            <p><codeph>BSS_WEBSERVICE_WSDL_URL=https://&lt;server>:&lt;port>/oscm/v1.9/{SERVICE}/BASIC?wsdl</codeph>
+            </p>
+            <p>Mandatory when <codeph>BSS_AUTH_MODE</codeph> is set to <codeph>INTERNAL</codeph> and basic authentication is used. The URL specifying the version of the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> Web services to be used. The <codeph>{SERVICE}</codeph> placeholder must not be replaced.</p>
+        </section>
+        <section>
+            <title>BSS_STS_WEBSERVICE_URL</title>
+            <p><codeph>BSS_STS_WEBSERVICE_URL=https://&lt;server>:&lt;port>/{SERVICE}/STS</codeph>
+            </p>
+            <p>Mandatory when <codeph>BSS_AUTH_MODE</codeph> is set to <codeph>SAML_SP</codeph> and security token based authentication is used. The endpoint of the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> Web services to be used. The <codeph>{SERVICE}</codeph> placeholder must not be replaced.</p>
+        </section>
+        <section>
+            <title>BSS_STS_WEBSERVICE_WSDL_URL</title>
+            <p><codeph>BSS_STS_WEBSERVICE_WSDL_URL=https://&lt;server>:&lt;port>/oscm/v1.9/{SERVICE}/STS?wsdl</codeph>
+            </p>
+            <p>Mandatory when <codeph>BSS_AUTH_MODE</codeph> is set to <codeph>SAML_SP</codeph>. The URL specifying the version of the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> Web services to be used. The <codeph>{SERVICE}</codeph> placeholder must not be replaced.</p>
+        </section>
+    </refbody>
+</reference>

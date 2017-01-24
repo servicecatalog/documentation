@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_B32294CC9FA643A2A14A74B1DAA49C95" xml:lang="en-us">
+    <title>Creating a Certificate</title>
+    <conbody>
+        <section>
+            <p>The following command creates a certificate: </p>
+            <p>
+                <codeblock>%JAVA_HOME%\bin\keytool -genkey -alias tpcert -keysize 1024 
+-keystore keystore.jks</codeblock>
+            </p>
+            <p>You will be prompted for a password for the <codeph>keystore.jks</codeph> keystore that will be created containing the certificate identified by the alias <codeph>tpcert</codeph>. In addition, you need to specify detailed information on your organization and its location. </p>
+        </section>
+    </conbody>
+</concept>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<reference id="reference832" xml:lang="en-us">
+    <title><ph platform="print">User Interface Resources</ph><ph platform="help">User interface resources</ph>
+    </title>
+    <refbody>
+        <section>
+            <p>The user interface resources are translated or updated in a Microsoft Excel file generated with the <uicontrol>Export</uicontrol> function on the <uicontrol>Manage languages</uicontrol> page. </p>
+            <p>The exported Microsoft Excel file contains three worksheets: </p>
+            <p>
+                <ul compact="no">
+                    <li><uicontrol>User interface</uicontrol>: All texts, labels, and messages that appear on the user interface of the platform's administration portal and the marketplaces.</li>
+                    <li><uicontrol>Email</uicontrol>: The subject and body texts of all email messages which are generated automatically by the platform. </li>
+                    <li><uicontrol>Platform objects</uicontrol>: The names of service parameters and events, report titles and names of payment types provided by the platform. The parameter and event names are visible to suppliers when defining a marketable service as well as to users subscribing to a service.</li>
+                </ul>
+            </p>
+            <p> </p>
+            <p>Each worksheet contains five columns: </p>
+            <p>
+                <ul compact="no">
+                    <li><uicontrol>Key</uicontrol> used by the platform to identify the label or string. The keys must not be changed. </li>
+                    <li><b>de system</b>, <b>en system</b>, <b>ja system</b>: The system default names and labels provided with the language bundles after installation (German, English, Japanese). The system default strings are for your reference when providing translations.</li>
+                    <li><b>Add your language code here</b> or <b><i>&lt;Language Code></i></b>: In this column, the strings of the new language to be supported are to be entered. <p><b>Add your language code here</b> is shown if you did not select a language on the <b>Manage languages</b> page before exporting the data. In this case, you usually want to provide a new language. The column is empty.</p><p>If you selected a language on the <b>Manage languages</b> page, the column is headed by the code of this language. In this case, you usually update existing translations of the selected language. You can also select the system default languages (de, en, or jp) if you want to customize the system default strings. </p><p>The strings can be also be changed by marketplace managers using the <uicontrol>Marketplace</uicontrol> --> <uicontrol>Customize texts</uicontrol> menu function. Their changes apply to the marketplaces owned by the organization of the marketplace managers.</p></li>
+                </ul>
+            </p>
+            <p>Proceed as follows to translate the file: </p>
+            <p>
+                <ol compact="no">
+                    <li><b>On the three worksheets</b>, enter the ISO language code of the language you want to provide in the header of the fifth column. </li>
+                    <li>For each key, enter your translation in the fifth column. <p>If a translation is missing, the English label or string is used. If the English label or string is not defined either, the language-independent technical key is displayed. </p><p>Be aware of the following: </p><ul
+                            compact="no">
+                            <li>You can use HTML markups in the texts for all keys which represent a descriptive text (keys ending with <codeph>.description</codeph>). For example, you can use <codeph>&lt;b&gt;</codeph> for bold text, <codeph>&lt;br&gt;</codeph> for line breaks, and so on. </li>
+                            <li>You can use the complete Unicode character set. </li>
+                            <!--li>If you want to translate into a language with non-ASCII characters: <p>Use Unicode encoding preceded by escaping backslashes for these characters. </p><p>For example in Japanese: <codeph>\u30B5\u30FC\u30D3\u30B9\u57FA\u672C\u6599\u91D1 </codeph> or in German for Umlauts: <codeph>ung\u00FCltig</codeph></p></li-->
+                            <!--li>Special characters such as colons must be escaped using a backslash (\). For example: <codeph>Role costs per subscription\:</codeph></li-->
+                            <li>You can remove the text from the table cells which you do not want to change. This may be useful for managing and tracking your changes to the user interface.</li>
+                            <li>You must make sure that HTML fields contain valid data and do not break the page layout. For example, text which is too long will be broken into multiple lines on the user interface. Use a separate test environment for testing your translations. </li>
+                        </ul></li>
+                    <li>Save the Microsoft Excel file in <codeph>.xls</codeph> format.</li>
+                    <li>Import the file on the <b>Manage languages</b> page. <p>By importing the file, existing labels and strings in the language with the code entered in the fifth column are overwritten. The language can be used instantly after its activation. Users who have set the language in their profile will instantly see your customizations.</p><p>
+                            <note>Make sure that all cells on all worksheets of the Excel file are formatted as text.</note>
+                        </p></li>
+                </ol>
+            </p>
+        </section>
+    </refbody>
+</reference>

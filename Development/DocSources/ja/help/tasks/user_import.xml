@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="ja-jp">
+    <title>利用者のインポート</title>
+    <taskbody>
+        <context>
+            <p><uicontrol>利用者のインポート</uicontrol>ページでは、外部のLDAPシステムから利用者をインポートして登録できます。また、利用者にロールを設定することができます。ログイン時に利用者を認証するためにLDAPシステムが使用されます。</p>
+            <p>組織を作成や登録するにあたって、事前にLDAPベースの認証を指定し、LDAP接続設定を定義する必要があります。</p>
+            <p>利用者に割り当てることができるロールは組織のロールに応じて決まります。利用者はそのロールによっておこなえる操作が決まります:<ul
+                    compact="no">
+                    <li><ph
+                            conref="../../Shared/concepts/c_OrgsRoles.xml#concept2311/Standard_user_concept_conbody_section_p_4"
+                            />登録されているすべての利用者は自動的にこのロールが割り当てられます。<ph
+                            conref="../../Shared/concepts/c_OrgsRoles.xml#concept2311/Additional_user_roles_must_be_concept_conbody_section_p_4"
+                        /></li>
+                    <li><ph
+                            conref="../../Shared/concepts/c_OrgsRoles.xml#concept2311/Administrator_concept_conbody_section_p_4"
+                        /></li>
+                    <li><ph
+                            conref="../../Shared/concepts/c_OrgsRoles.xml#concept2311/Subscription_manager_concept_conbody_section_p_4"
+                        /></li>
+                    <li><ph
+                            conref="../../Shared/concepts/c_OrgsRoles.xml#concept2311/Technology_manager_concept_conbody_section_p_4"
+                        /></li>
+                    <li><ph
+                            conref="../../Shared/concepts/c_OrgsRoles.xml#concept2311/Service_manager_concept_conbody_section_p_4"
+                        /></li>
+                    <li><ph
+                            conref="../../Shared/concepts/c_OrgsRoles.xml#concept2311/Reseller_concept_conbody_section_p_4"
+                        /></li>
+                    <li><ph
+                            conref="../../Shared/concepts/c_OrgsRoles.xml#concept2311/Broker_concept_conbody_section_p_4"
+                        /></li>
+                    <li><ph
+                            conref="../../Shared/concepts/c_OrgsRoles.xml#concept2311/Marketplace_manager_concept_conbody_section_p_4"
+                        /></li>
+                </ul></p>
+            <p><b>外部のLDAPシステムから利用者をインポートするには</b>：</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>インポートする利用者を特定します。</cmd>
+                <info/>
+                <stepresult>以下のフィルタ条件を使用できます。 <p>
+                        <ul compact="no">
+                            <li>ワイルドカード（*）：LDAPシステムに存在する全利用者が一覧表示されます。表示される利用者は100人までです。必要に応じて利用者IDの開始文字とワイルドカードなど、特定のフィルタ条件を使用します。 </li>
+                            <li>文字とワイルドカード（*）：指定した文字に一致する利用者IDの全利用者が一覧表示されます。例えば、<codeph>*o*</codeph>と入力すると、利用者IDに<codeph>o</codeph>という文字を含むすべての利用者が一覧表示されます。 </li>
+                            <li>利用者ID：特定の利用者を1人だけインポートする場合は、そのIDを直接入力します。 </li>
+                        </ul>
+                    </p><p><uicontrol>検索</uicontrol>をクリックすると、フィルタ条件に一致する利用者の一覧が表示されます。</p></stepresult>
+            </step>
+            <step>
+                <cmd>インポートする利用者のチェックボックスを選択します。 </cmd>
+                <info>利用者のメールアドレスを読み込むLDAP属性が対応する値にマッピングされていない場合、手動で各利用者のメールアドレスを入力する必要があります。</info>
+            </step>
+            <step>
+                <cmd>利用者に組織内の特別ロールを割り当てる場合、<uicontrol>管理者</uicontrol>、<uicontrol>サービス購入管理者</uicontrol>、<uicontrol>サービス管理者</uicontrol>、<uicontrol>技術サービス管理者</uicontrol>、<uicontrol>サービス提供代行者</uicontrol>、<uicontrol>サービス仲介者</uicontrol>、<uicontrol>サービスポータル運用者</uicontrol>または<uicontrol>システム運用管理者</uicontrol>チェックボックスを必要に応じて選択します。</cmd>
+                <info>
+                    <p>利用できる利用者ロールは所属組織のロールによって異なります。チェックボックスを選択しない場合、利用者に自動的に利用者ロールが割り当てられます。</p>
+                </info>
+            </step>
+            <step>
+                <cmd>インポートを開始するには、<uicontrol>インポート</uicontrol>をクリックします。</cmd>
+            </step>
+        </steps>
+        <result>
+            <p>選択した利用者がインポートされ、登録されます。インポートと登録が完了すると、サービスにアクセスするためのURLを含むメールが利用者に送信されます。これらの利用者は、組織のデフォルトユニットに自動的に追加されます。デフォルトユニットには、組織に現在登録されているすべての利用者が含まれています。</p>
+            <p>インポートしようとする利用者の利用者IDはすでにプラットフォームで存在した場合、その利用者のメールアドレス（例：<codeph>userSmith@organization.com</codeph>）はシステムへログインするための利用者IDとして利用されます。さらにもう一つの利用者を同じ利用者IDでインポートした場合、新規利用者IDは既存のIDの後ろにアットマーク（@）と利用者が所属する組織のID（例：<codeph>userSmith@abcdefg</codeph>）で構成されます。利用者には該当利用者IDが記載されたメールが送信されます。</p>
+            <p>パスワード、名、姓など、外部のLDAPシステム側で管理される利用者データは、外部のLDAPシステムでしか変更できません。データが変更されている場合、プラットフォームが自動的に同期します。注:LDAPシステムの利用者IDが変更されている場合、自動の同期はできません。この場合、利用者情報を再度インポートする必要があります。</p>
+        </result>
+    </taskbody>
+    <related-links>
+        <linklist>
+            <title>関連情報</title>
+            <link href="organization_addCustomer.xml"/>
+            <link href="user_add.xml"/>
+        </linklist>
+    </related-links>
+</task>

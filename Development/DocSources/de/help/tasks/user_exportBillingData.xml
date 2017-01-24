@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="de-de">
+  <title>Rechnungsdaten exportieren</title>
+  <taskbody>
+    <context>
+      <p>Die Seite <uicontrol>Rechnungsdaten exportieren</uicontrol> verwenden Sie für die folgenden Aufgaben:</p>
+      <ul compact="no">
+        <li>
+          <p>Als Serviceanbieter oder Wiederverkäufer können Sie die Rechnungsdaten eines oder mehrerer Kunden für einen bestimmten Zeitraum exportieren. </p>
+          <p>Die exportierten Daten können Sie für Rechnungen an Ihre Kunden verwenden. </p>
+        </li>
+        <li>
+          <p>Als Serviceanbieter, Vermittler, Wiederverkäufer oder Marktplatzeigentümer können Sie die anteiligen Umsätze Ihrer Organisation für einen bestimmten Zeitraum exportieren.</p>
+          <p>Als Plattform-Betreiber können Sie die anteiligen Umsätze aller Organisationen mit einer bestimmten Rolle für einen bestimmten Zeitraum exportieren.</p>
+          <p>Die exportierten Daten können Sie nutzen, um die Umsatzbeteiligung - je nach vertraglicher Vereinbarung - von den anderen Parteien einzufordern oder an die anderen Parteien zu zahlen.</p>
+        </li>
+      </ul>
+      <p>Die Rechnungsdaten können in einer XML-Datei gespeichert oder in einem Editor Ihrer Wahl angezeigt werden. Sie können die Rechnungsdaten nach Bedarf bearbeiten und zum Beispiel an ein Buchhaltungssystem weiterleiten.</p>
+      <note>
+        <p>Umsatzbeteiligungen werden nur für Services errechnet, die das plattformeigene Abrechnungssystem verwenden. Services, die ein externes Abrechnungssystem verwenden, werden nicht berücksichtigt.</p>
+        <p>Eine detaillierte Beschreibung der XML-Elemente finden Sie im Handbuch <i>Developer's Guide</i>.</p>
+      </note>
+      <p><b>So exportieren Sie Rechnungsdaten von Kunden</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>Wählen Sie <uicontrol>Kundenrechnungsdaten</uicontrol> im Feld <uicontrol>Rechnungsdatentyp</uicontrol>.</cmd>
+        <info>
+          <p>Es werden alle Kunden aufgelistet, die Sie selbst angelegt haben oder die mindestens einen Ihrer Services abonniert haben.</p>
+          <p>Wenn Sie als Serviceanbieter angemeldet sind, werden Ihnen auch die Kunden Ihrer Vermittler aufgelistet, die einen Ihrer Services abonniert haben.</p>
+        </info>
+      </step>
+      <step>
+        <cmd>Markieren Sie die Kunden, deren Rechnungsdaten Sie exportieren möchten.</cmd>
+      </step>
+      <step>
+        <cmd>Geben Sie das Anfangs- und Enddatum des Zeitraums an, für den Sie die Rechnungsdaten exportieren möchten. Klicken Sie dazu die Felder <uicontrol>Von</uicontrol> und <uicontrol>Bis</uicontrol> und wählen Sie das gewünschte Datum im bereitgestellten Kalender.</cmd>
+      </step>
+      <step>
+        <cmd>Entscheiden Sie, ob die Daten in einer Datei gespeichert (<codeph>&lt;datum>BillingData.xml</codeph>) oder direkt in einem Editor Ihrer Wahl angezeigt werden sollen.</cmd>
+      </step>
+    </steps>
+    <result>
+      <p><b>So exportieren Sie die Umsatzbeteiligungen von Organisationen</b>:</p>
+      <p>
+        <ol compact="no">
+          <li>Wählen Sie <uicontrol>Umsatzbeteiligungen</uicontrol> im Feld <uicontrol>Rechnungsdatentyp</uicontrol>.</li>
+          <li>Wählen Sie im Feld <uicontrol>Organisationsrolle</uicontrol> die Rolle aus, für die Sie die anteiligen Umsätze exportieren möchten. Abhängig von der Rolle Ihrer Organisation können Sie <uicontrol>Serviceanbieter</uicontrol>, <uicontrol>Vermittler</uicontrol>, <uicontrol>Wiederverkäufer</uicontrol> oder <uicontrol>Marktplatzeigentümer</uicontrol> wählen.</li>
+          <li>Geben Sie das Anfangs- und Enddatum des Zeitraums an, für den Sie die Daten exportieren möchten. Klicken Sie dazu die Felder <uicontrol>Von</uicontrol> und <uicontrol>Bis</uicontrol> und wählen Sie das gewünschte Datum im bereitgestellten Kalender.</li>
+          <li>Entscheiden Sie, ob die Daten in einer Datei gespeichert (<codeph>&lt;datum>BillingData.xml</codeph>) oder direkt in einem Editor Ihrer Wahl angezeigt werden sollen.</li>
+        </ol>
+      </p>
+    </result>
+  </taskbody>
+</task>

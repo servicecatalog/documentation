@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="implement_billing_adapter"
+                    xml:lang="en-us">
+    <title>Implementing a Billing Adapter</title>
+    <conbody>
+        <section>
+            <p>The following sections provide details and hints for developing a billing adapter by implementing the interfaces of the billing plug-in API: </p>
+            <ul>
+                <li><codeph>BillingPluginService</codeph>
+                </li>
+                <li><codeph>PriceModelPluginService</codeph>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <title>BillingPluginService</title>
+            <p>The <codeph>BillingPluginService</codeph> must be implemented for establishing and testing the connection with the external billing system. The  <codeph>testConnection</codeph> method is invoked by <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> when an operator configures the external billing system and clicks the corresponding button in the administration portal. The billing adapter must take the necessary actions and return the corresponding response to <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+        </section>
+        <section>
+            <title>PriceModelPluginService</title>
+            <p>The <codeph>PriceModelPluginService</codeph> must be implemented for retrieving price models from the external billing system and returning them to <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    />. The  <codeph>getPriceModel</codeph> method is invoked by <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> when a supplier imports a price model for a service, customer, or subscription in the administration portal. </p>
+            <p>In the method parameters, <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> passes the context and one or more locales for which the price model is to be returned. The context provides details of the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> element for which the billing adapter needs to return the appropriate price model. </p>
+            <p>For a <b>service price model</b>, the context consists of: <ul>
+                    <li><codeph>SERVICE_ID</codeph></li>
+                    <li><codeph>SERVICE_NAME</codeph></li>
+                    <li><codeph>SERVICE_PARAMETERS</codeph></li>
+                </ul></p>
+            <p>For a <b>customer price model</b>, the context consists of: <ul>
+                        <li><codeph>SERVICE_ID</codeph></li>
+                        <li><codeph>SERVICE_NAME</codeph></li>
+                        <li><codeph>SERVICE_PARAMETERS</codeph></li>
+                        <li><codeph>CUSTOMER_ID</codeph></li>
+                        <li><codeph>CUSTOMER_NAME</codeph></li>
+                    </ul></p>
+            <p>For a <b>subscription price model</b>, the context consists of:<ul>
+                        <li><codeph>SUBSCRIPTION_ID</codeph></li>
+                    </ul></p>
+            <p>Based on the information in the context and the desired locales, the billing adapter must retrieve the required data from the external billing system, build a price model, and return it to <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> in a <codeph>PriceModel</codeph> object. A price model is a file in PDF format. For a service, the billing adapter can return a tag in addition to this file. A tag is a string with short information, such as a price range, which is to be shown directly at the service on the marketplace.</p>
+            <p>In <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />, the price model is stored with the element and for the locales for which it was requested. The stored price model is displayed to users upon request.</p>
+        </section>
+    </conbody>
+</concept>

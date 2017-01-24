@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="en-us">
+  <title>Localizing price model elements</title>
+  <taskbody>
+    <context>
+      <p>On the <uicontrol>Localize price model description</uicontrol> page, you can provide and save price model elements in any of the supported languages: </p>
+      <ul compact="no">
+        <li>If you define the price model for a marketable service that is charged for using the platform's native billing system, you can localize the description and the license agreement.</li>
+        <li>If you define the price model for a marketable service that is charged for using an external billing system, you can localize the license agreement only. Additional price model elements must be localized in the external system.</li>
+      </ul>
+      <p>If you do not localize the price model elements, the English texts are displayed to customers.</p>
+      <p>You can only localize the elements if the marketable service for which you provide the translations is deactivated. Existing subscriptions are not affected by the localization. Any changes you make are visible to customers for new subscriptions only.</p>
+      <p id="Brokers_you_have_granted_the_task_taskbody_context_p_4"
+        >Brokers you have granted the permission to sell the service as well as their customers can instantly view the price model elements in the languages in which you provide them. Existing subscriptions to services sold by brokers are not affected by the localization. Any changes you make are effective for new subscriptions only.</p>
+      <p id="Resellers_can_provide_their_o_task_taskbody_context_p_5"
+        >Resellers can provide their own license agreement. Thus, localizing the license agreement does not have any effect on their service offering.</p>
+      <p><b>To localize price model elements</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>Select the source language. The price model elements you can localize are displayed in this language. </cmd>
+      </step>
+      <step>
+        <cmd>Select the target language. </cmd>
+        <info>The list contains all supported languages.</info>
+      </step>
+      <step>
+        <cmd>Enter the translation for the price model elements.</cmd>
+        <info>
+          <note><ph conref="service_add.xml#task634/Make_sure_to_use_only_the_con_task_taskbody_steps_step_2"/></note>
+        </info>
+      </step>
+      <step>
+        <cmd>To confirm your translations, click <uicontrol>OK</uicontrol>. </cmd>
+      </step>
+      <step>
+        <cmd>To save your changes, click <uicontrol>Save</uicontrol> on the <uicontrol>Define for service</uicontrol>, <uicontrol>Define for customer</uicontrol>, or <uicontrol>Define for subscription</uicontrol> page from where you started the localization. </cmd>
+      </step>
+    </steps>
+    <result>
+      <p>After activating the service, the localized elements are visible to customers who have the corresponding language set in their profile.</p>
+      <p>Brokers and resellers as well as their customers can instantly view the changes you have made. </p>
+    </result>
+  </taskbody>
+  <related-links>
+    <linklist>
+      <title>Related topics</title>
+      <link href="priceModel_service.xml"/>
+      <link href="priceModel_customer.xml"/>
+      <link href="priceModel_subscription.xml"/>
+    </linklist>
+  </related-links>
+</task>

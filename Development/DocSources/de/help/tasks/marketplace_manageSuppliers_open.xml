@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd">
+<task id="task634" xml:lang="de-de">
+  <title>Anbieter verwalten</title>
+  <taskbody>
+    <context>
+      <p>
+        <ph conref="marketplace_manageSuppliers_notselected.xml#task634/Auf_der_Seite_task_taskbody_context_p_1_ph"/>
+      </p>
+      <p>Sie haben einen offenen Marktplatz ausgewählt. Hier kann grundsätzlich jeder Serviceanbieter, Wiederverkäufer und Vermittler Services veröffentlichen. </p>
+      <p>Als Marktplatzeigentümer können Sie jedoch einem Anbieter jederzeit die Zulassung entziehen, zum Beispiel wenn er mit Zahlungen in Verzug ist. Die auf dem Marktplatz veröffentlichten Services des Anbieters werden automatisch deaktiviert und können nicht mehr von Kunden abonniert werden. Bestehende Abonnements sind nicht betroffen. Alle derzeit gesperrten Anbieter werden auf der Seite <uicontrol>Anbieter verwalten</uicontrol> angezeigt.</p>
+      <p
+        conref="marketplace_manageSuppliers_notselected.xml#task634/Einen_Serviceanbieter_den_Si_task_taskbody_context_ul_li"/>
+      <p>Wenn Sie einen Anbieter sperren oder wieder zulassen, werden die Administratoren seiner Organisation automatisch per E-Mail informiert. </p>
+      <p><b>So sperren Sie einen Anbieter auf dem gewählten Marktplatz</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>Geben Sie im Feld <uicontrol>Organisations-ID</uicontrol> die Organisations-ID des Anbieters ein.</cmd>
+        <info>
+          <p>Wenden Sie sich an den Anbieter, wenn Sie seine Organsations-ID nicht kennen.</p>
+        </info>
+      </step>
+      <step>
+        <cmd>Klicken Sie <uicontrol>Sperren</uicontrol> und bestätigen Sie die Sperrung.</cmd>
+        <info>
+          <p>Die Sperre ist sofort wirksam, und der Anbieter kann keine Services mehr auf dem Marktplatz veröffentlichen.</p>
+        </info>
+      </step>
+    </steps>
+    <result>
+      <p><b>So heben Sie die Sperre eines Anbieters für den gewählten Marktplatz auf</b>:</p>
+      <ol compact="no">
+        <li>Markieren Sie in der Liste den Anbieter, dessen Sperre Sie aufheben möchten.<p>Sie können einen oder mehrere Anbieter markieren.</p></li>
+        <li>Klicken Sie <uicontrol>Zulassen</uicontrol>.<p>Die Zulassung ist sofort wirksam, und der Anbieter kann seine Services wieder auf dem Marktplatz veröffentlichen.</p></li>
+      </ol>
+    </result>
+  </taskbody>
+</task>

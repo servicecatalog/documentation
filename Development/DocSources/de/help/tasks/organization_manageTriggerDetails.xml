@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd">
+<task id="task634" xml:lang="de-de">
+  <title>Trigger verwalten</title>
+  <taskbody>
+    <context>
+      <p>Auf der Seite <uicontrol>Trigger verwalten</uicontrol> können Sie einen neuen Trigger für Ihre Organisation definieren oder eine bestehende Triggerdefinition bearbeiten oder löschen.</p>
+      <p>Voraussetzung für die Steuerung von Aktionen durch externe Prozesse ist ein Notification Service. Dieser Service bildet die Schnittstelle zwischen der Plattform und dem Prozesssteuerungssystem. Informationen zu diesem Service erhalten Sie von Ihrem Plattform-Betreiber.</p>
+      <p><b>So definieren Sie einen neuen Trigger</b>: </p>
+    </context>
+    <steps>
+      <step>
+        <cmd>Geben Sie im Feld <uicontrol>Anzeigen als</uicontrol> einen Namen für den Trigger ein. Unter diesem Namen wird der Trigger auf der Seite <uicontrol>Prozesse verwalten</uicontrol> angezeigt.</cmd>
+      </step>
+      <step>
+        <cmd>Wählen Sie in der Liste <uicontrol>Typ</uicontrol> die Aktion, die prozessgesteuert ausgeführt werden soll.</cmd>
+        <info>
+          <p>Die Liste enthält alle Aktionen, für die ein Trigger konfiguriert werden kann.</p>
+          <p>Für beliebige Organisationen:</p>
+          <ul>
+            <li>Ein Abonnement ändern, zum Beispiel den Namen des Abonnements (<codeph>Abo ändern</codeph>). </li>
+            <li>Die Nutzungsgebühren eines Kunden wurden für einen Abrechnungszeitraum neu berechnet (<codeph>Nutzungsgebühren neu berechnet</codeph>). </li>
+            <li>Einen Service abonnieren (<codeph>Service abonnieren</codeph>). </li>
+            <li>Einen Benutzer einem Abonnement zuordnen oder eine existierende Zuordnung aufheben (<codeph>Benutzer dem Abo zuordnen</codeph>).<p>Sofern ein Benutzer einem Abonnement automatisch zugeordnet werden soll, wenn er einen Dienst abonniert, kann dieser Trigger nicht konfiguriert werden. Der Trigger <codeph>Benutzer dem Abo zuordnen</codeph> kann nur für Benutzer, die manuell einem Abonnement zugeordnet werden, definiert werden.</p>
+            </li>
+            <li>Ein Abonnement umstellen (<codeph>Abo umstellen</codeph>). </li>
+            <li>Ein Abonnement beenden (<codeph>Abo beenden</codeph>). </li>
+            <li>Einen Benutzer registrieren (<codeph>Benutzer registrieren</codeph>).<p>Trigger können nur zur Registrierung einzelner Benutzer definiert werden. Das Importieren mehrere Benutzer aus einem externen LDAP-System oder einer Datei mit Benutzerdaten kann nicht durch externe Prozesse gesteuert werden.</p></li>
+          </ul>
+          <p>Für <b>Serviceanbieter</b> können die folgenden zusätzlichen Trigger konfiguriert werden:</p>
+          <ul>
+            <li>Einen Kunden registrieren (<codeph>Kunden registrieren</codeph>). </li>
+            <li>Die Zahlungsarten für einen Kunden ändern (<codeph>Zahlungsarten für Kunden verwalten</codeph>). </li>
+            <li>Einen Service aktivieren (<codeph>Service aktivieren</codeph>). </li>
+            <li>Einen Service deaktivieren (<codeph>Service deaktivieren</codeph>). </li>
+            <li>Ein Benutzer abonniert einen Service des Serviceanbieters (<codeph>Service abonniert (beliebiger Benutzer)</codeph>).</li>
+            <li>Ein Benutzer ändert ein Abonnement für einen Service des Serviceanbieters (<codeph>Abo geändert (beliebiger Benutzer)</codeph>).</li>
+            <li>Ein Benutzer beendet ein Abonnement für einen Service des Serviceanbieters (<codeph>Abo beendet (beliebiger Benutzer)</codeph>).</li>
+          </ul>
+        </info>
+      </step>
+      <step>
+        <cmd>Wählen Sie im Feld <uicontrol>Ziel-Typ</uicontrol> einen Eintrag abhängig davon, mit welcher Programmierschnittstelle (API) der Notification Service Ihrer Organisation implementiert wurde:</cmd>
+        <info>
+          <ul compact="no">
+            <li>SOAP-basierte API: <uicontrol>Web Service</uicontrol></li>
+            <li>REST API: <uicontrol>REST Web Service</uicontrol></li>
+          </ul>
+        </info>
+      </step>
+        <step>
+          <cmd>Geben Sie im Feld <uicontrol>Ziel-URL</uicontrol> die URL des Notification Service Ihrer Organisation ein. Die URL ist abhängig davon, mit welcher API der Notification Service Ihrer Organisation implementiert wurde: </cmd>
+          <info>
+            <ul compact="no">
+              <li>SOAP-basierte API: URL der WSDL-Datei des Notification Service, zum Beispiel: <p><codeph>https://myServer:8280/NotificationService?wsdl</codeph>
+              </p></li>
+              <li>REST API: URL, an die <codeph>POST</codeph> Requests zur Notifizierung gesendet werden sollen, zum Beispiel: <p><codeph>https://myServer:8081/mynotification/v1/processes</codeph></p></li>
+            </ul>
+          </info>
+        </step>
+      <step>
+        <cmd>Geben Sie an, ob die Ausführung der Aktion ausgesetzt werden soll, bis sie im Prozesssteuerungssystem genehmigt oder abgelehnt ist.</cmd>
+        <info>
+          <p>Wenn die Ausführung nicht ausgesetzt werden soll, wird die Aktion sofort ausgeführt. Das Prozesssteuerungssystem wird informiert, sobald die Aktion erfolgreich ausgeführt ist.</p>
+          <p>Beachten Sie, dass die folgenden Trigger für Serviceanbieter nicht ausgesetzt werden können: <codeph>Service abonniert (beliebiger Benutzer)</codeph>, <codeph>Abo geändert (beliebiger Benutzer)</codeph> und <codeph>Abo beendet (beliebiger Benutzer)</codeph>.</p>
+        </info>
+      </step>
+      <step>
+        <cmd>Schließen Sie Ihre Eingaben mit <uicontrol>Speichern</uicontrol> ab.</cmd>
+        <info>
+          <p>Die vorherige Seite zur Verwaltung von Triggern wird wieder angezeigt. Klicken Sie <uicontrol>Hinzufügen</uicontrol>, um einen weiteren Trigger zu konfigurieren, oder klicken Sie einen Eintrag in der Liste der Trigger, um einen Trigger zu beabeiten oder zu löschen. </p>
+        </info>
+      </step>
+    </steps>
+    <result><b>So aktualisieren Sie eine Triggerdefinition</b>:<p>
+        <ol>
+          <li>Geben Sie die erforderlichen Änderungen ein. Im Abschnitt oben finden Sie Informationen zu den einzelnen Feldern.<p>Wenn durch den zu aktualisierenden Trigger schon Prozesse im Prozesssteuerungssystem gestartet wurden, können Sie nur den Namen für den Trigger ändern. Sie müssen die Prozesse abbrechen, wenn Sie andere Elemente der Triggerdefinition ändern möchten.</p></li>
+          <li>Schließen Sie Ihre Eingaben mit <uicontrol>Speichern</uicontrol> ab.</li>
+        </ol>
+      </p><p>Die vorherige Seite zur Verwaltung von Triggern wird wieder angezeigt. Klicken Sie <uicontrol>Hinzufügen</uicontrol>, um einen weiteren Trigger zu konfigurieren, oder klicken Sie einen Eintrag in der Liste der Trigger, um einen Trigger zu beabeiten oder zu löschen. </p><p><b>So löschen Sie eine Triggerdefinition</b>:</p><p>
+        <ol>
+          <li>Klicken Sie <uicontrol>Löschen</uicontrol>.</li>
+          <li>Bestätigen Sie den Löschauftrag.</li>
+        </ol>
+      </p><p>Die vorherige Seite zur Verwaltung von Triggern wird wieder angezeigt. Klicken Sie <uicontrol>Hinzufügen</uicontrol>, um einen weiteren Trigger zu konfigurieren, oder klicken Sie einen Eintrag in der Liste der Trigger, um einen Trigger zu beabeiten oder zu löschen. </p></result>
+  </taskbody>
+  <related-links>
+    <linklist>
+      <title>Weitere Themen</title>
+      <link href="../tasks/triggerProcess_list.xml"/>
+    </linklist>
+  </related-links>
+</task>

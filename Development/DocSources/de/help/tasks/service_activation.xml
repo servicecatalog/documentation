@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="de-de">
+    <title>Service aktivieren/deaktivieren</title>
+    <taskbody>
+        <context>
+            <p>Auf der Seite <uicontrol>Service aktivieren/deaktivieren</uicontrol> können Sie marktfähige Services aktivieren oder deaktivieren. Wenn Sie als Serviceanbieter angemeldet sind, enthält die Liste alle Services, die Sie definiert haben. Wenn Sie als Vermittler oder Wiederverkäufer angemeldet sind, enthält die Liste alle Services, für die Sie die Berechtigung zum Wiederverkauf haben.</p>
+            <p>Nur aktivierte Services können von Kunden auf einem Marktplatz abonniert werden. Ein deaktivierter Service steht Kunden nicht zur Verfügung, als Serviceanbieter können Sie aber seine Eigenschaften ändern. Laufende Abonnements sind nicht betroffen, wenn Sie einen Service deaktivieren. Kunden können die laufenden Abonnements weiter nutzen, lediglich das Abschließen neuer Abonnements ist nicht möglich. </p>
+            <p>Sie können einen Service aktivieren, wenn die folgenden Voraussetzungen erfüllt sind:</p>
+            <ul>
+                <li>Der Marktplatz, auf dem der Service veröffentlicht werden soll, muss feststehen.</li>
+                <li>Für den Service muss ein Preismodell definiert worden sein.</li>
+            </ul>
+            <p>
+                <note>Wenn Sie sehen möchten, wie ein aktivierter Service auf dem Marktplatz bereitgestellt wird, müssen Sie sicherstellen, dass Sie zu einer Organisationseinheit gehören, die auf den Service zugreifen darf. Wenden Sie sich an Ihren Administrator, wenn Sie einen aktivierten Service auf dem Marktplatz nicht sehen. Ihr Administrator ist für die Anzeige der Services auf dem Marktplatz und für die Zuordnung von Benutzern zu Organisationseinheiten zuständig.</note>
+            </p>
+            <p><b>So aktivieren/deaktivieren Sie einen Service</b>:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Markieren Sie einen zu aktivierenden Service in der Spalte <uicontrol>Aktiv</uicontrol>, oder entfernen Sie die Markierung für einen Service, den Sie deaktivieren möchten. </cmd>
+                <info/>
+            </step>
+            <step>
+                <cmd>Entscheiden Sie, ob ein aktivierter Service im Servicekatalog auf dem Marktplatz angezeigt werden soll.</cmd>
+                <info>
+                    <p>Wenn Sie mehrere marktfähige Services aktivieren, denen derselbe technische Service zugrunde liegt, können Sie festlegen, dass nur ein Teil dieser marktfähigen Services im Servicekatalog angezeigt wird. Mindestens einer dieser Services muss im Katalog angezeigt werden. Services, die Sie nicht anzeigen lassen möchten, werden Ihren Kunden angeboten, sobald sie Details zu einem Service anfordern, dem derselbe technische Service zugrunde liegt. In den Servicedetails wird automatisch eine vollständige Liste aller marktfähigen Services angezeigt, denen derselbe technische Service zugrunde liegt. </p>
+                    <p>Markieren Sie einen Service in der Spalte <uicontrol>Im Katalog</uicontrol>, um ihn in den Servicekatalog aufzunehmen. Entfernen Sie die Markierung, um ihn nicht aufzunehmen. Standardmäßig sind alle Services markiert.</p>
+                </info>
+            </step>
+            <step>
+                <cmd>Schließen Sie Ihre Änderungen mit <uicontrol>Speichern</uicontrol> ab.</cmd>
+            </step>
+        </steps>
+        <result>
+            <note>Der Marktplatzeigentümer darf Services deaktivieren, die Sie aktiviert haben, zum Beispiel, wenn Sie mit Zahlungen in Verzug sind. In einem solchen Fall erhalten Sie vom Marktplatzeigentümer eine E-Mail, die den Grund für die Deaktivierung angibt. Sobald das Problem behoben ist, kann der Marktplatzeigentümer Ihren Service wieder aktivieren.<p>Ein Service, der vom Marktplatzeigentümer deaktiviert wurde, kann nicht markiert werden. Er kann erst wieder markiert werden, nachdem der Marktplatzeigentümer ihn aktiviert hat.</p></note>
+        </result>
+    </taskbody>
+    <related-links>
+        <linklist>
+            <title>Weitere Themen</title>
+            <link href="service_edit.xml"/>
+            <link href="priceModel_service.xml"/>
+            <link href="service_publish.xml"/>
+        </linklist>
+    </related-links>
+</task>

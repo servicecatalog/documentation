@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<reference id="reference832" xml:lang="en-us">
+    <title><ph platform="print">Recurring Charge per Subscription</ph><ph platform="help"
+            >Recurring charge per subscription</ph>
+    </title>
+    <refbody>
+        <section>
+            <p id="For_each_subscription_a_char_reference_refbody_section_1"
+                >For each subscription, a charge can be defined that a customer has to pay on a recurring basis. Monthly, weekly, daily, or hourly periods are supported. The recurring charge for a subscription is independent of the amount of users, events, or other usage data. </p>
+        </section>
+        <section>
+            <title>Example</title>
+            <p>A customer subscribes to a service on Monday, 12 o'clock p.m. The subscription ends on Thursday, 12 o'clock p.m. </p>
+            <p>The price model specifies a recurring charge per subscription of 100.00 € per DAY. </p>
+            <p>The recurring charge for the subscription is calculated as follows:</p>
+            <fig platform="help">
+                <image href="../_images/PriceModelSamples_RecChargeForSubs.png" placement="break" height="175"
+                    width="380"/>
+            </fig>
+            <fig platform="print">
+                <image align="center" height="150" href="../_images/PriceModelSamples_RecChargeForSubs.png"
+                    placement="break" width="300"/>
+            </fig>
+            <p>With pro rata calculation, the customer is charged with 300 €. With per time unit calculation, the costs are 400 € because each day is fully charged.</p>
+        </section>
+    </refbody>
+</reference>

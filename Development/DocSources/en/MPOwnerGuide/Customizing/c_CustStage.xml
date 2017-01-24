@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_3413BBD173324104B42FB714974CABE7" xml:lang="en-us">
+    <title>Stage</title>
+    <conbody>
+        <section>
+            <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> supports you in customizing the stage of a marketplace. The stage is the area of the marketplace where you can place, for example, advertisements, eye catchers, or further information. </p>
+            <p>The marketplace stage can be provided as an image. <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> allows you to use a separate stage for each of the supported languages.</p>
+            <p>The marketplace stage is specified as HTML code referencing the desired image. The recommended width of the stage is 980 pixels, the recommended height is between 200 and 300 pixels.</p>
+            <p>Example:</p>
+            <p><codeph>&lt;IFRAME SRC="yourstage.htm" FRAMEBORDER="0" NAME="stage" WIDTH="980px" HEIGHT="280px">&lt;/IFRAME></codeph>
+            </p>
+            <p>A preview function allows you to view the stage before it is published. As soon as you confirm the preview, the stage is published and visible to all visitors of the marketplace.</p>
+            <p>To customize the marketplace stage, use the <uicontrol>Customize stage</uicontrol> menu option in the <uicontrol>Marketplace</uicontrol> menu of the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> administration portal.</p>
+        </section>
+    </conbody>
+</concept>

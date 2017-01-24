@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_3413BBD173324104B42FB714974CABE7" xml:lang="en-us">
+    <title>Removing Ratings and Comments</title>
+    <conbody>
+        <section>
+            <p>Customers can give ratings and comments on services to which they have subscribed. You can remove these ratings and comments from your marketplace, if you do not want them to be read by visitors. This enables you to moderate the customer reviews.</p>
+            <note>An alternative to removing individual ratings and comments is to deactivate the display of reviews completely. For details, refer to <xref
+                    href="../Marketplaces/c_MPUpdate.xml"/>.</note>
+            <p>When you remove a review from a marketplace, you have to state a reason. <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> automatically notifies the user who wrote the review by email about your intervention and the reason you entered.</p>
+            <p>To remove ratings and comments on a service, log in to the marketplace and display the details of the service. In the <uicontrol>Customer Reviews</uicontrol> section, choose the <uicontrol>Delete</uicontrol> option next to the entry you want to remove. </p>
+        </section>
+    </conbody>
+</concept>

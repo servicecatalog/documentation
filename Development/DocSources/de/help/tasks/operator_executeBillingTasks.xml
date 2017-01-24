@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd">
+<task id="task634" xml:lang="de-de">
+    <title>Abrechnungen verwalten</title>
+    <taskbody>
+        <context>
+            <p>Die Datenbank wird täglich nach Organisationen durchsucht, die Rechnungsdaten erzeugt haben. Die Daten werden gesammelt, berechnet und in der Datenbank gespeichert. Diese Prüfungen und Berechnungen werden als "Berechnung der Nutzungsgebühren für Kunden" zusammengefasst.</p>
+            <p>Serviceanbieter und Wiederverkäufer können festlegen, wann ihr monatlicher Abrechnungszeitraum beginnen soll. Sobald ein Abrechnungszeitraum endet, werden die Nutzungsgebühren für alle Kundenabonnements aus diesem Zeitraum berechnet, und zwar am ersten Tag des nächsten Abrechnungszeitraums plus dem Offset, der in der Konfigurationseinstellung <codeph>TIMER_INTERVAL_BILLING_OFFSET</codeph> festgelegt ist. </p>
+            <p>Beispiel: Ein Serviceanbieter legt fest, dass sein Abrechnungszeitraum am 8. eines Monats beginnen soll. In der Konfigurationseinstellung <codeph>TIMER_INTERVAL_BILLING_OFFSET</codeph> ist ein Offset-Wert von 5 Tagen und 4 Stunden definiert. Die Rechnungsdaten der Kunden dieses Serviceanbieters werden jeden Monat am 13. um 04:00:00:000 Uhr neu berechnet.</p>
+            <p>Wiederverkäufer und Vermittler sowie der Betreiber und die Eigentümer der Marktplätze, auf denen die Services veröffentlicht werden, sind üblicherweise am Umsatz beteiligt. Die jeweilige Umsatzbeteiligung sowie ihre Auswirkungen auf den Umsatz der Serviceanbieter werden monatlich anhand der täglich ermittelten Nutzungsgebühren der Kunden berechnet. Diese Berechnung wird auch "Berechnung der Umsatzbeteiligungen" genannt. Der Abrechnungszeitraum für diese Berechnung kann nicht verändert werden: Die Umsatzbeteiligungen werden immer am ersten Tag eines Monats für den vorangegangenen Monat berechnet, plus dem Offset, der in der Konfigurationseinstellung <codeph>TIMER_INTERVAL_BILLING_OFFSET</codeph> festgelegt ist. </p>
+            <p>Nach jeder Berechnung der Nutzungsgebühren für Kunden werden die Rechnungsdaten in einer separaten Transaktion verarbeitet und für die Weiterverarbeitung durch einen Zahlungsdienstleister aufbereitet. </p>
+            <note>Die Berechnung der Nutzungsgebühren und Umsatzbeteiligungen sowie die Weiterverarbeitung der Rechnungsdaten erfolgen nur für das plattformeigene Abrechnungssystem. Es werden keinerlei Kosten oder Daten eines externen Abrechnungssystems berücksichtigt, das mit der Plattform integriert ist. Diese werden einzig und alleine in dem externen Abrechnungssystem verwaltet.</note>
+            <p>Auf der Seite <uicontrol>Abrechnungen verwalten</uicontrol> können Sie folgende Aktionen mit <uicontrol>Ausführen</uicontrol> im jeweiligen Bereich der Seite starten: </p>
+            <p>
+                <ul compact="no">
+                    <li><uicontrol>Nutzungsgebühren berechnen</uicontrol><p>Diese Aktion startet explizit die Berechnung der Nutzungsgebühren von Kunden für einen Abrechnungszeitraum.</p><p>Der Abrechnungszeitraum hängt von dem Tag ab, an dem Sie die Berechnung der Nutzungsgebühren starten und von der Konfigurationseinstellung <codeph>TIMER_INTERVAL_BILLING_OFFSET</codeph>. Ein explizites Starten der Berechnung ist beispielsweise sinnvoll, wenn Sie prüfen möchten, ob die Weiterverarbeitung von Rechnungsdaten durch ein Testsystem eines Zahlungsdienstleisters funktioniert, ohne dafür auf die automatische Berechung der Daten warten zu müssen.</p><p>Wenn Sie die Berechnung der Nutzungsgebühren am ersten Tag eines Monats zuzüglich der in der Konfigurationseinstellung <codeph>TIMER_INTERVAL_BILLING_OFFSET</codeph> definierten Tage starten, werden die Umsatzbeteiligungen ebenfalls berechnet und in der Datenbank gespeichert.</p><p>Beispiele:</p><p>Ein Servicanbieter legt fest, dass sein Abrechnungszeitraum vom 5. eines Monats bis zum 4. des Folgemonats gehen soll. Die Konfigurationseinstellung <codeph>TIMER_INTERVAL_BILLING_OFFSET</codeph> hat einen Offset-Wert von 3 Tagen. Wenn Sie die Nutzungsgebühren der Kunden dieses Serviceanbieters beispielsweise für den Zeitraum vom 5. Januar bis einschließlich 4. Februar berechnen möchten, müssen Sie die Berechnung am 8. Februar starten.</p><p>Um die Umsatzbeteiligungen für den Monat Januar zu berechnen, müssen Sie die Berechnung am 4. Februar starten.</p></li>
+                    <li><uicontrol>Rechnungsdaten verarbeiten</uicontrol><p>Diese Aktion verarbeitet die Rechungsdaten von Kunden, die von einem Zahlungdienstleister weiterverarbeitet werden müssen. Es wird überprüft, ob der Konfigurationsparameter <codeph>PSP_USAGE_ENABLED</codeph> auf <codeph>true</codeph> gesetzt ist. Wenn nicht, wird die Verarbeitung der Rechnungsdaten abgebrochen. Verwenden Sie die Option <b>Konfiguration aktualisieren</b> im Menü <b>Betrieb</b>, um diese Konfigurationseinstellung zu ändern.</p></li>
+                    <li><uicontrol>Fehlgeschlagene Verarbeitung von Rechnungsdaten erneut ausführen</uicontrol><p>Diese Aktion führt die Verarbeitung der Rechnungsdaten erneut durch, wenn beispielsweise durch Verbindungsprobleme die automatische Verarbeitung fehlgeschlagen ist. </p></li>
+                </ul>
+            </p>
+        </context>
+    </taskbody>
+    <related-links>
+        <linklist>
+            <title>Weitere Themen</title>
+            <link href="operator_manageConfiguration.xml"/>
+        </linklist>
+    </related-links>
+</task>

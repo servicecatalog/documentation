@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN"
+                         "">
+<!-- Copyright FUJITSU LIMITED 2017 -->
+
+<bookmap id="BESDeveloperGuide" xml:lang="en_US">
+    <title>Developer's Guide</title>
+    <bookmeta>
+        <prodinfo product="oscm_ce">
+            <prodname/>
+            <vrmlist>
+                <vrm version="16.1.5"/>
+            </vrmlist>
+            <brand/>
+        	<prognum>16.1.5</prognum>
+            <component/>
+            <series>PSP Integration</series>
+        </prodinfo>
+        <prodinfo product="oscm_ee">
+            <prodname>Enterprise Service</prodname>
+            <vrmlist>
+                <vrm version="16.1 Fix 5"/>
+            </vrmlist>
+            <brand>FUJITSU Software</brand>
+            <prognum>Catalog Manager V16.1 Fix 5</prognum>
+            <component/>
+            <series>PSP Integration</series>
+        </prodinfo>
+        <bookid>
+            <edition>February 2017</edition>
+            <booknumber product="oscm_ee">.</booknumber>
+        </bookid>
+        <bookrights product="oscm_ce" >
+            <bookowner name="none"/>
+        </bookrights>
+        <bookrights product="oscm_ee" >
+            <bookowner name="FUJITSU LIMITED"/>
+        </bookrights>
+    </bookmeta>
+    <frontmatter>
+        <notices href="Shared/Frontmatter/BookInfo.xml"/>
+        <preface format="dita" href="PSPInt/About/c_About.xml" type="concept">
+            <!--TBD: Update-->
+            <topicref format="dita" href="PSPInt/About/c_Readers.xml" type="concept"/>
+            <topicref format="dita" href="Shared/gettingstarted/intro_convent.xml" type="concept"/>
+            <!--TBD: Decide if abbreviations 
+are shared with all manuals-->
+            <topicref format="dita" href="PSPInt/About/intro_abbrev.xml" type="concept"/>
+            <!--Shared: Update text for 
+Developer's Guide-->
+            <topicref format="dita" href="Shared/gettingstarted/intro_availabledoc.xml" type="concept"/>
+        </preface>
+    </frontmatter>
+    <chapter format="dita" href="PSPInt/PSP/c_ImplPSP.xml" type="concept">
+        <topicref format="dita" href="PSPInt/PSP/t_ImplPSP.xml" type="task"/>
+        <topicref format="dita" href="PSPInt/PSP/t_ImplPSPServlet.xml" type="task"/>
+    </chapter>
+</bookmap>

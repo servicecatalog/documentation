@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="en-us">
+  <title>Defining a customer price model</title>
+  <taskbody>
+    <context>
+      <p>On the <uicontrol>Define for customer</uicontrol> page, you can define or update the price model for a selected service and customer.  </p>
+      <p>You have selected a service that is charged for using the platform's <b>native billing system</b>. This means that you are responsible for defining whether and how much the specified customer is charged for using subscriptions to the service.</p>
+      <p><b>To define or update a customer price model</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd conref="../../Shared/priceModel.xml#PriceModelTopic/Added_description_of_new_o_task_taskbody_steps_step_2"/>
+        <info>
+          <ul conref="../../Shared/priceModel.xml#PriceModelTopic/Select_task_taskbody_steps_step_2">
+            <li/>
+          </ul>
+          <p>If your service is free of charge, proceed with Step 7, else with Step 2.<note>If you define a customer price model with costs, make sure that the corresponding service price model defines costs as well. Otherwise, the platform does not allow for managing payment types.</note></p>
+        </info>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_desc">
+        <cmd/>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_trialperiod">
+        <cmd/>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_charging">
+        <cmd/>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_events">
+        <cmd/>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_params">
+        <cmd/>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_license2">
+        <cmd/>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_save">
+        <cmd/>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_localize">
+        <cmd/>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_roles">
+        <cmd/>
+      </step>
+    </steps>
+    <result>After activating the service, the price model is available to the selected customer. It takes effect for all new subscriptions of the customer.</result>
+  </taskbody>
+  <related-links>
+    <linklist>
+      <title>Related topics</title>
+      <link href="priceModel_localize.xml"/>
+      <link href="priceModel_roles.xml"/>
+    </linklist>
+  </related-links>
+</task>

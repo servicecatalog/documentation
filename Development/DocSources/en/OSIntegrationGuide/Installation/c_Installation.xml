@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd">
+<concept id="Prerequisites_and_Preparation_59"
+                        xml:lang="en-us">
+    <title>Installation</title>
+    <conbody>
+        <section>
+            <p>The installation of the OpenStack integration software consists of the following main steps:</p>
+            <ol>
+                <li><xref
+                        href="../../Shared/Installation/t_InstPreparing.xml"/></li>
+                <li><xref
+                        href="../../Shared/Installation/t_InstConfiguringController.xml"/></li>
+                <li><xref
+                        href="../../Shared/Installation/t_InstDB.xml"/></li>
+                    <li><xref
+                            href="../../Shared/Installation/t_InstAppServer.xml"/></li>
+            </ol>
+        </section>
+    </conbody>
+</concept>

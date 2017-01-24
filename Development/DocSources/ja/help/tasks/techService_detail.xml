@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="ja-jp">
+  <title>サービス定義の閲覧</title>
+  <taskbody>
+    <context>
+      <p><uicontrol>サービス</uicontrol>ページでは、技術サービスの詳細を参照することができます。技術サービスの名前、アクセス種別、サービスのURL、プロビジョニングサービスのURL、サービスの詳細説明、パラメーター定義、イベント定義、ロール定義、および操作定義が参照できます。</p>
+      <p>技術サービス定義を構成する要素の詳細については、<i>運用ガイド（技術サービス開発部門編）</i>を参照してください。</p>
+    </context>
+  </taskbody>
+</task>

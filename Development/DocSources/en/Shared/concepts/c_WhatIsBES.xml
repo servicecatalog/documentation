@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd">
+<concept id="concept2311" xml:lang="en-us">
+    <title>What is <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>?</title>
+    <conbody>
+        <section>
+            <p id="is_a_set_of_services_which_concept_conbody_p_1"><ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Name"/> (<ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />) is a set of services which provide all business-related functions and features required for turning on-premise applications and tools into "as a Service" (aaS) offerings and using them in the Cloud. This includes ready-to-use account and subscription management, online service provisioning, billing and payment services, and reporting facilities. </p>
+            <p><ph id="With_its_components_concept_conbody_p_2_ph">With its components, <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> covers all the business-related aspects of a Platform as a Service (PaaS) or Cloud platform. It supports software vendors as well as their customers in leveraging the advantages of Cloud Computing</ph>: </p>
+            <ul>
+                <li>Sharing: Through the Internet, many customers use applications which are installed centrally and share a common IT infrastructure. Each customer's security and privacy are not sacrificed, but even improved by the concentration of security means and expertise at the data centers. </li>
+                <li>Pay-per-use: Software vendors as well as their customers only pay for the services they actually use, without upfront investment or entry costs for both human and non-human resources. Customers simply subscribe to the services they like to use and pay for what they consume. </li>
+                <li>Centralized management: Cloud application providers maintain and operate the applications centrally for all their customers. This substantially reduces installation and maintenance costs for all participants. </li>
+            </ul>
+            <p>Integration with <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> does not require software vendors to design or implement their applications in a specific way. Instead, <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> offers open and standards-based interfaces, which enable software vendors to: </p>
+            <ul>
+                <li>Easily and rapidly provide new as well as existing applications with the required business services without the need of rewriting existing applications or changing their development environment. </li>
+                <li>Leverage an open platform suitable for multiple sales channels such as online marketplaces, value-added resellers, system integrators, and direct sales. </li>
+            </ul>
+            <p>While being open in its interfaces, <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> provides all the required ways and means to ensure customer privacy and data security.</p>
+            <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> is typically operated and used in a SaaS environment. It supports, however, all types of "as-a-Service" environments.</p>
+        </section>
+    </conbody>
+</concept>

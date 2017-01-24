@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="searchIndex" xml:lang="en-us">
+    <title>Updating the search index</title>
+    <conbody>
+        <p id="concept_SearchIndex"
+                >The search index is automatically and periodically created by the system. In some cases, for example, after a recovery of the database, the search index may become inconsistent. In order to make sure that the index becomes consistent again, you can either manually delete the index files and restart the respective application server domain, or use the <b>Update search index</b> menu option to explicitly re-create the search index at any time. The search index is re-built based on the current data in the database. The existing index structure is overwritten. The search index is re-created online, and you do not need to restart any application server domain. </p>
+        <p>On the <uicontrol>Update search index</uicontrol> page, you can start the re-creation of the search index by clicking <uicontrol>Update</uicontrol>.</p>
+        <p id="concept_SearchIndex2"
+                >The search indexer application on the <codeph>master-indexer-domain</codeph> is triggered, the old index structure is deleted, a new one is created, and the collection of the current indexing data from the <codeph>bss</codeph> database is started. The time it takes to collect the data depends on the size of the database. When the collection is finished, the <codeph>hibernate.search.default.refresh</codeph> configuration setting defined in the <codeph>glassfish.properties</codeph> file located in <codeph>&lt;install_pack_dir>/domains/indexer_domain</codeph> is evaluated. The interval in seconds defined in this setting (default: 300 seconds) determines the additional time it will take until the new search index is available for users on marketplaces to search for subscriptions or services. </p>
+    </conbody>
+</concept>

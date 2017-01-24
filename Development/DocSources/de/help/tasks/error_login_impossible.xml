@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="de-de">
+  <title>Anmelden</title>
+  <taskbody>
+    <context>
+      <p>Eine Anmeldung ist zur Zeit nicht möglich.</p>
+      <p>Versuchen Sie es zu einem späteren Zeitpunkt erneut.</p>
+    </context>
+  </taskbody>
+</task>

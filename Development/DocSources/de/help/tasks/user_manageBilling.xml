@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd">
+<task id="task634" xml:lang="de-de">
+          <title>Abrechnungszeitraum festlegen</title>
+          <taskbody>
+                    <context>
+                              <p>Auf der Seite <uicontrol>Abrechnungszeitraum festlegen</uicontrol> definieren Sie den Anfangstag für Abrechnungszeiträume. </p>
+                              <p>Ein Abrechnungszeitraum ist die Zeitspanne, für die die Abrechnungsdaten der Kundenabonnements für Services erzeugt werden, die das plattformeigene Abrechnungssystem verwenden. Die Länge des Abrechnungszeitraums ist immer ein Monat.</p>
+                              <p>Standardmäßig beginnt ein Abrechnungszeitraum am erstem Tag eines Monats um 00:00:00.000 Uhr und endet am letzten Tag eines Monats um 23:59:59.999 Uhr. Dieser Abrechnungszeitraum ist aber im Geschäftsumfeld nicht immer geeignet. Deshalb können Sie den Anfangstag des Abrechnungszeitraums nach Wunsch festlegen. Wenn Sie zum Beispiel den Anfangstag auf den achten eines Monats legen, beginnt der Abrechnungszeitraum am achten des Monats um 00:00:00.000 Uhr und endet am siebten des Folgemonats um 23:59:59.999 Uhr.</p>
+                              <p>Wenn Sie den Anfangstag des Abrechnungszeitraums ändern, wirkt sich das auf alle Abonnements aus, die danach neu erstellt oder wieder aktiviert werden. Bestehende Abonnements sind davon nicht betroffen.</p>
+                              <p>Die Anfangs- und Endezeiten eines Abrechnungszeitraums erscheinen in folgenden Berichten:</p>
+                              <ul>
+                                        <li><b>Detaillierter Rechnungsbericht für eine existierende Rechnung eines Kunden</b> (Serviceanbieter)</li>
+                                        <li><b>Detaillierter Rechnungsbericht für eine existierende Rechnung</b> (Kunden)</li>
+                                        <li><b>Kostenvorschau</b> (Kunden)</li>
+                                        <li><b>Bericht über Umsatzbeteiligung</b> (Serviceanbieter, Wiederverkäufer, Vermittler und Marktplatzeigentümer)</li>
+                              </ul>
+                              <p><b>So legen Sie den Anfangstag des Abrechnungszeitraums fest</b>: </p>
+                    </context>
+                    <steps>
+                              <step>
+                                        <cmd>Wählen Sie im Feld <uicontrol>Tag</uicontrol> den Tag des Monats, an dem der Abrechnungszeitraum beginnen soll.</cmd>
+                                        <info>Sie können nur Werte von <codeph>1</codeph> bis <codeph>28</codeph> wählen, da diese Tage auf alle Monate angewendet werden können.</info>
+                              </step>
+                              <step>
+                                        <cmd>Schließen Sie Ihre Eingaben mit <uicontrol>Speichern</uicontrol> ab.</cmd>
+                              </step>
+                    </steps>
+          </taskbody>
+</task>

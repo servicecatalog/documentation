@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_3413BBD173324104B42FB714974CABE7" xml:lang="en-us">
+    <title>Backup and Recovery</title>
+    <conbody>
+        <section>
+            <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> does not offer integrated backup and recovery mechanisms. Use the standard file system, application server, and database mechanisms instead. </p>
+        </section>
+        <section>
+            <title>Backup</title>
+            <p>It is recommended to create a regular backup of the following data according to the general guidelines of the data center: </p>
+            <p>
+                <ul>
+                    <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> database (<codeph>bss</codeph>). The frequency of database backups depends on the amount of changes and on the availability of time slots with low load. PostgreSQL supports database backups without previous shutdown. For details, refer to the PostgreSQL documentation. <p>Make sure to also make a backup of the file containing the key required for encryption and decryption of service parameters with data type <codeph>PWD</codeph> or custom attributes marked for encryption. By default, this file is located in:</p><p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/bes-domain/config/key</codeph></p>Its default name is <codeph>key</codeph>.<p>The location of this file can be changed using the <codeph>KEY_FILE_PATH</codeph> configuration setting.</p></li>
+                    <li>Certificates contained in the <codeph>bes-domain</codeph> keystore and truststore (<codeph>keystore.jks</codeph> and <codeph>cacerts.jks</codeph> files). </li>
+                    <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> log files located in the configured directory. </li>
+                    <li>Configuration files. </li>
+                    <li>Customizations made to marketplaces, especially style sheets and localized texts presented at the user interface. </li>
+                </ul>
+            </p>
+            <p>
+                <note>When preparing for an update installation of your current <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> release, always create a backup of all data mentioned above. </note>
+            </p>
+        </section>
+        <section>
+            <title>Recovery</title>
+            <p>If you need to recover your <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> installation, the recommended procedure is as follows: </p>
+            <p>
+                <ol>
+                    <li>
+                        <p>Make sure that all JMS messages have been processed. They are stored in the <codeph>bssjms</codeph> database. For example, check the JMS broker as follows: </p>
+                        <p>
+                            <codeblock>&lt;GLASSFISH_HOME&gt;/mq/bin/imqcmd.exe -b localhost:8076
+   -u admin query bkr</codeblock>
+                        </p>
+                        <p>where <codeph>8076</codeph> is the port where the JMS broker is running.</p>
+                    </li>
+                    <li>Stop the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> domain and the master indexer domain.</li>
+                    <li>Restore the <codeph>bss</codeph> database from the backup using the relevant PostgreSQL commands. </li>
+                    <li>Make sure that the file containing the key required for encryption and decryption of service parameters with data type <codeph>PWD</codeph> or custom attributes marked for encryption exists in the location specified in the <codeph>KEY_FILE_PATH</codeph> configuration setting. By default, this file is to be located in:<p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/bes-domain/config/key</codeph></p>Its default name is <codeph>key</codeph>.<p>If the file is missing, copy it from your backup to the correct location.</p></li>
+                    <!--li>Stop the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> domain and the master indexer domain.</li>
+                    <li>Delete the shared directory containing the search index data. The location of the directory is specified by the <codeph>hibernate.search.shared.sourceBase</codeph> setting in the <codeph>glassfish.properties</codeph> files.</li>
+                    <li>On the master indexer domain, delete the master search index base directory:<p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/master-indexer-domain/masterIndexBase</codeph></p>
+                    </li>
+                    <li>On the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> domain, delete the slave index base directory:<p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/bes-domain/slaveIndexBase</codeph></p>
+                    </li-->
+                    <li>Start the master indexer domain. </li>
+                    <li>Start the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> domain. <p>The search index is rebuilt automatically. </p></li>
+                </ol>
+            </p>
+        </section>
+    </conbody>
+</concept>

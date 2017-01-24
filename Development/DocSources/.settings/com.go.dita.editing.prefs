@@ -1,0 +1,13 @@
+eclipse.preferences.version=1
+enableNameConventions=true
+enableStoringPolicy=false
+idGeneration/elementIdFormat={InnerText}_{XPath}
+idGeneration/guidCounter=276
+idGeneration/topicIdFormat={Title}_{GuidProjectScope}
+nameConventions/enableTransformSpaceCharacter=true
+nameConventions/imageNameFormat={Name}
+nameConventions/mapExtension=ditamap
+nameConventions/mapNameFormat={INFOTYPE}_{Title}
+nameConventions/topicExtension=xml
+nameConventions/topicNameFormat={FLInfoType}_{Title}
+storingPolicy/isMandatoryPolicy=false

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<reference id="reference832"
+                    xml:lang="en-us">
+    <title>Configuration Settings</title>
+    <refbody>
+        <section>
+            <p>The configuration settings for APP are provided in the following files in subfolders of the directory to which you extracted the <codeph>oscm-app-install-pack.zip</codeph> file contained in the <codeph>oscm-integration-app-pack.zip</codeph> package (<codeph>&lt;install_pack_dir&gt;</codeph>): </p>
+            <ul>
+                <li><codeph>databases/app_db/db.properties</codeph></li>
+                <li><codeph>domains/app_domain/glassfish.properties</codeph></li>
+                <li><codeph>databases/app_db/configsettings.properties</codeph></li>
+            </ul>
+            <p>The settings are described in detail in </p>
+            <p>
+                <ul>
+                    <li><xref href="../../Shared/reference/r_ConfigSettings_db.xml"/></li>
+                    <li><xref href="../../Shared/reference/r_ConfigSettings_glassfish_BESDomain.xml"/></li>
+                    <li><xref href="r_ConfigSettings.xml"/></li>
+                </ul>
+            </p>
+        </section>
+    </refbody>
+</reference>

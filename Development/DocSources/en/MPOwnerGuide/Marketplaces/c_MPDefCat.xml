@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_3413BBD173324104B42FB714974CABE7" xml:lang="en-us">
+    <title>Defining Categories</title>
+    <conbody>
+        <section>
+            <p><ph
+                    conref="../../help/tasks/marketplace_manageCategories.xml#task634/Categories_can_be_used_for_or_task_taskbody_context_p_2_ph"
+                /></p>
+            <p><ph
+                    conref="../../help/tasks/marketplace_manageCategories.xml#task634/As_a_marketplace_owner_you_c_task_taskbody_context_p_3_ph"
+                /></p>
+            <p>As a marketplace owner, you can decide to use the defined categories for grouping the services displayed on the marketplace home page. For details, refer to <xref
+                    href="../Marketplaces/c_MPDefFeatServ.xml"/>.</p>
+            <p><ph
+                    conref="../../help/tasks/marketplace_manageCategories.xml#task634/A_category_can_be_provided_in_task_taskbody_context_p_4_ph"
+                />
+            </p>
+            <p>You can at any time update the language-independent IDs and the language-specific terms of categories. The new values are available immediately to visitors of the marketplace and for assignment to services. The same applies when you delete a category: It is removed immediately from the marketplace and from the services it was assigned to. The sellers of the services are notified by email about the removal. </p>
+            <p>To create, update, and delete categories, use the <uicontrol>Manage categories</uicontrol> menu option in the <uicontrol>Marketplace</uicontrol> menu of the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> administration portal.</p>
+        </section>
+    </conbody>
+</concept>

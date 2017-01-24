@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="ja-jp">
+  <title>サービス提供部門の管理</title>
+  <taskbody id="On_the_task_taskbody">
+    <context>
+      <p>
+        <ph conref="marketplace_manageSuppliers_notselected.xml#task634/On_the_task_taskbody_context_p_1_ph"/>
+      </p>
+      <p>公開されたサービスポータルを選択した場合、基本的にはすべてのサービス提供部門、サービス仲介部門またはサービス提供代行部門がそのサービスポータルに対してサービスを公開できます。</p>
+      <p>しかし、サービスポータル運用部門はブラックリストにサービス提供関連の部門を設定し、そのサービス提供関連の部門によるサービスの公開を禁止できます。例えば、サービス提供関連の部門に支払遅延があるなどの場合が挙げられます。すでにそのサービス提供関連の部門によってサービスが公開されている場合、それらのサービスは自動的に無効化され、サービス利用部門は以後これらのサービスを購入できなくなります。既存の購入済サービスには影響はありません。<uicontrol>サービス提供部門の管理</uicontrol>ページには公開を禁止されているサービス提供関連の部門がすべて一覧表示されます。</p>
+      <p
+        conref="marketplace_manageSuppliers_notselected.xml#task634/You_can_allow_a_supplier_who_task_taskbody_context_ul_li"/>
+      <p>サービス提供関連の部門に対してサービスポータルへのサービス公開を禁止した場合およびサービス公開を再度許可した場合、そのサービス提供関連の部門の管理者にその旨を知らせるメールが自動的に送信されます。</p>
+      <p><b>サービス提供関連の部門に対してサービスポータルへのサービス公開を禁止するには</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd><uicontrol>組織ID</uicontrol>にサービス提供関連の部門の組織IDを入力します。</cmd>
+        <info>サービス提供関連の部門に連絡をとり組織IDを入手してください。</info>
+      </step>
+      <step>
+        <cmd><uicontrol>禁止</uicontrol>をクリックし、禁止されたことを確認します。</cmd>
+        <info>公開の禁止はすぐに反映され、それ以降そのサービス提供関連の部門はそのサービスポータルにサービスを公開することはできません。</info>
+      </step>
+    </steps>
+    <result>
+      <p><b>サービス提供関連の部門に対してサービス公開を再度許可するには</b>:</p>
+      <ol compact="no">
+        <li>サービス公開を再度許可するサービス提供関連の部門のチェックボックスを選択します。<p>一つまたは複数のチェックボックスが選択可能です。</p></li>
+        <li><uicontrol>許可</uicontrol>をクリックします。<p>変更はすぐに反映され、サービス提供関連の部門はそのサービスポータルにサービスを再度公開することができます。</p></li>
+      </ol>
+    </result>
+  </taskbody>
+</task>

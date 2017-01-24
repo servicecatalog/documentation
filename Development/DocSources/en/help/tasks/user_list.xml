@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd">
+<task id="task634" xml:lang="en-us">
+  <title>Managing users</title>
+  <taskbody>
+    <context>
+      <p>On the <uicontrol>Manage users</uicontrol> page, you can manage the users registered for your organization. You can change user data and user roles, reset a user's password, and delete users.</p>
+      <p>
+        <note>In case your organization uses an external system for user management and authentication, passwords can only be changed in the external system. Therefore, the option for resetting the password is not visible.</note>
+      </p>
+      <p><b>To change user data and user roles</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>In the list in the upper page area, select the user whose data and user roles you want to change.</cmd>
+      </step>
+      <step>
+        <cmd>In the fields in the lower page area, change the user data by editing the corresponding fields. </cmd>
+        <info>
+          <p>In case your organization uses an external system for user management and authentication, only those fields that are not mapped to entries in the external system can be edited.</p>
+        </info>
+      </step>
+      <step>
+        <cmd>To change the roles of a selected user, select or clear the corresponding <uicontrol>User role</uicontrol> check boxes. The user roles you can select depend on the role of your organization:</cmd>
+        <info>
+          <ul compact="no">
+            <li><ph conref="../../Shared/concepts/c_OrgsRoles.xml#concept2311/Administrator_concept_conbody_section_p_4"
+              /></li>
+            <li><ph conref="../../Shared/concepts/c_OrgsRoles.xml#concept2311/OUAdministrator_concept_conbody_section_p_4"
+              /></li>
+            <li><ph
+                conref="../../Shared/concepts/c_OrgsRoles.xml#concept2311/Subscription_manager_concept_conbody_section_p_4"
+              /></li>
+            <li><ph
+                conref="../../Shared/concepts/c_OrgsRoles.xml#concept2311/Technology_manager_concept_conbody_section_p_4"
+              /></li>
+            <li><ph
+                conref="../../Shared/concepts/c_OrgsRoles.xml#concept2311/Service_manager_concept_conbody_section_p_4"
+              /></li>
+            <li><ph conref="../../Shared/concepts/c_OrgsRoles.xml#concept2311/Reseller_concept_conbody_section_p_4"
+              /></li>
+            <li><ph conref="../../Shared/concepts/c_OrgsRoles.xml#concept2311/Broker_concept_conbody_section_p_4"/></li>
+            <li><ph
+                conref="../../Shared/concepts/c_OrgsRoles.xml#concept2311/Marketplace_manager_concept_conbody_section_p_4"
+              /></li>
+            <li><ph conref="../../Shared/concepts/c_OrgsRoles.xml#concept2311/Operator_concept_conbody_section_p_4"
+              /> The first operator is created together with its operator organization when the platform is installed.</li>
+          </ul>
+          <p>If you do not select a check box, the user is automatically assigned the role of a standard user. Users with this non-privileged role can work with services their organization has subscribed to.</p>
+          <p>If you change the role assignments of a user, the new assignments take effect with the user's next login.</p>
+        </info>
+      </step>
+      <step>
+        <cmd>To save your changes, click <uicontrol>Save</uicontrol>.</cmd>
+      </step>
+    </steps>
+    <result><b>To reset a user's password</b>:<p>
+        <ol>
+          <li>In the list in the upper page area, select the user whose password you want to reset. You can only reset a user's password if the user is logged out.</li>
+          <li>Click <uicontrol>Reset Password</uicontrol>.</li>
+        </ol>
+      </p><p>The password is instantly reset. The user is sent an email with a new initial password to be used for the next login.</p><p><b>To delete a user</b>:</p><p>
+        <ol>
+          <li>In the list in the upper page area, select the user you want to delete. The following prerequisites must be fulfilled for deleting a user:<ul
+              compact="no">
+              <li>The user is not assigned to a subscription.</li>
+              <li>The user is not the only one who is assigned the administrator role in your organization.</li>
+              <li>The user is not logged in.</li>
+            </ul></li>
+          <li>Click <uicontrol>Delete</uicontrol> and confirm the deletion.</li>
+        </ol>
+      </p><p>The user is instantly deleted from the platform.</p></result>
+  </taskbody>
+  <related-links>
+    <linklist>
+      <title>Related topics</title>
+      <link href="../tasks/user_add.xml"/>
+    </linklist>
+  </related-links>
+</task>

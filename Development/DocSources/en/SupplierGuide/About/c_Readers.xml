@@ -1,0 +1,17 @@
+<?xml version="1.0"?> 
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd"
+[
+<!ENTITY % entities PUBLIC "-//XDOC//ENTITIES//FujitsuUserDoc" "entities.dtd">
+]>
+
+<concept xml:lang="en-us" id="concept_1BFCE48133EA4E9995DCF7EF8CC6691E">
+    <title>Readers of this Manual</title>
+    <conbody>
+        <section>
+            <p>This manual is directed to people who want to offer services to customers for subscription and use. It assumes that you are familiar with the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> concepts as explained in the <i>Overview</i> manual.</p>
+        </section>
+    </conbody>
+</concept>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<task id="task_E68E2024B1F6403AAA1130A39B1D4DCD" xml:lang="en-us">
+    <title>Creating Technical Services</title>
+    <taskbody>
+        <context>
+            <p>The first step in providing <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> services for <ph audience="aws">AWS</ph><ph audience="ror">ROR</ph><ph audience="os"
+                    >OpenStack</ph><ph audience="tps5">TPS5</ph><ph audience="vmware"
+                >vSphere</ph> is to create one or more technical services. </p>
+            <p>Proceed as follows:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Define one or more technical services in an XML file. </cmd>
+                <info>
+                    <p audience="ror">As a basis, you can use the technical service definitions which are included in the 
+                        <codeph>oscm-ror-install-pack.zip</codeph> file:</p>
+                        <ul audience="ror">
+                        <li><codeph>samples/TechnicalService_VirtualPlatform.xml</codeph> for the provisioning of virtual platforms with one or more virtual servers</li>
+                        <li><codeph>samples/TechnicalService_VirtualServer.xml</codeph> for the provisioning of a virtual server on an existing virtual platform</li>
+                    </ul>
+                    
+                    <p audience="aws"
+                        >The AWS integration package, <codeph>oscm-aws-install-pack.zip</codeph>, includes a technical service as a sample. 
+                        Use the sample as a basis for defining your own technical services as required:</p>
+                       <p audience="aws"><codeph>samples/TechnicalService_AWS.xml</codeph>
+                       </p>
+                    
+                    <p audience="os"
+                        >The OpenStack integration package, <codeph>oscm-openstack-install-pack.zip</codeph>, includes technical services as samples:</p>
+                    <ul audience="os">
+                        <li><codeph>samples/TechnicalService_OpenStack.xml</codeph> for native OpenStack</li>
+                        <li><codeph>samples/TechnicalService_K5.xml</codeph> for FUJITSU Cloud Service K5</li>
+                    </ul>
+                        <p audience="os"
+                            >The technical services specify sample templates as parameter options. The sample templates are also included in the <codeph>oscm-openstack-install-pack.zip</codeph> file:</p>
+                        <ul audience="os">
+                        <li><codeph>samples/template.json</codeph> for a template of type AWS CloudFormation for native OpenStack</li>
+                        <li><codeph>samples/template.yaml</codeph> for a template of type Heat Orchestration Template for native OpenStack</li>
+                        <li><codeph>samples/template_k5.yaml</codeph> for a template of type Heat Orchestration Template for FUJITSU Cloud Service K5</li>
+                        </ul>
+                        <p audience="os"
+                            >You can use the samples to see how templates are mapped to technical service definitions. Copy the sample files to a location of your choice that can be reached from <ph
+                            conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> by HTTP or HTTPS. For example, you could copy them to the <codeph>docroot/templates</codeph> directory of the <codeph>app-domain</codeph> domain in your application server.</p>
+                    
+                    <p audience="tps5"
+                        >The TPS5 integration package, <codeph>oscm-tps5-install-pack.zip</codeph>, includes a technical service as a sample. Use the sample as a basis for defining your own technical services as required:</p>
+                    <p audience="tps5"><codeph>samples/TechnicalService_VirtualSystem.xml</codeph></p>
+                    
+                    <p audience="vmware"
+                        >The vSphere integration package, <codeph>oscm-vmware-install-pack.zip</codeph>, includes a technical service as a sample. Use the sample as a basis for defining your own technical services as required:</p>
+                    <p audience="vmware"><codeph>samples/TechnicalService_VMware.xml</codeph></p>
+                   <p>In the technical service definition, be sure to specify:</p>
+                    <ul>
+                        <li>The asynchronous provisioning type </li>
+                        <li audience="ror">The direct or user access type  </li>
+                        <li audience="aws">The direct access type </li>
+                        <li audience="os">The direct access type </li>
+                        <li audience="tps5">The direct access type </li>
+                        <li audience="vmware">The direct access type </li>
+                        <li audience="ror"
+                            >Service parameters which represent the virtual platform templates and virtual server images defined in ROR. For details on the supported service parameters, refer to <xref
+                                href="../../RORIntegrationGuide/Appendix/r_ServiceParameters.xml"/>.</li>
+                        <li audience="aws"
+                            >Service parameters which represent the AMIs defined in Amazon EC2. For details on the supported service parameters, refer to <xref
+                                href="../../AWSIntegrationGuide/Appendix/r_ServiceParameters.xml"/>.</li>
+                        <li audience="os"
+                                >Service parameters which correspond to the parameters specified in the template defined in OpenStack. For details on the supported service parameters, refer to <xref
+                                href="../../OSIntegrationGuide/Appendix/r_ServiceParameters.xml"/>.</li>
+                        <li audience="tps5"
+                                >Service parameters which represent the system templates and images defined in TPS5. For details on the supported service parameters, refer to their description in the appendix.</li>
+                        <li audience="vmware"
+                                >Service parameters which represent the VM templates defined in vSphere as well as the naming, location, and sizing parameters for the VMs to be provisioned. Service parameters also define the network setup in vSphere and the configuration of the VMs. For details on the supported service parameters, refer to <xref
+                                href="../../VMWareIntegrationGuide/Appendix/r_ServiceParameters.xml"/>.</li>
+                        
+                    </ul>
+                    <p>
+                        <note>Make sure that you do not specify the <codeph>baseUrl</codeph> attribute in the technical service definition XML file. It specifies an application's remote interface and is not needed for providing <ph
+                                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> services for <ph
+                                audience="ror">ROR</ph><ph audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph
+                                audience="tps5">TPS5</ph><ph audience="vmware">vSphere</ph>. </note>
+                    </p>
+                </info>
+            </step>
+            <step>
+                <cmd>Log in to the <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> administration portal with your technology manager account.</cmd>
+            </step>
+            <step>
+                <cmd>Import the technical services you created and appoint one or more supplier organizations for them.</cmd>
+            </step>
+        </steps>
+        <result>For details on these steps, refer to the <i>Technology Provider's Guide</i> and to the online help of <ph
+                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</result>
+    </taskbody>
+</task>

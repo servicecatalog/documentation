@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<reference id="reference832" xml:lang="de-de">
+                        <title>Rabatte</title>
+                        <refbody>
+                                                <section>
+                                                            <p><ph
+                                                            id="Einer_Kundenorganisation_kann_reference_refbody_section_p"
+                                                            >Einem Kunden kann ein Preisnachlass gewährt werden, der für alle seine Abonnements von Services gilt, die das plattformeigene Abrechnungssystem verwenden. Der Rabatt kann ab sofort oder ab einem künftigen Monat gelten und auf einen bestimmten Zeitraum begrenzt werden. Vor Ablauf dieses Zeitraums wird der Kunde per E-Mail informiert, so dass er rechtzeitig reagieren und den Serviceanbieter kontaktieren kann.</ph></p>
+                                                            <p><ph
+                                                            id="Ein_Rabatt_wird_als_Prozentsa_reference_refbody_section_p"
+                                                            >Ein Rabatt wird als Prozentsatz definiert, der von den Gesamtkosten für ein Abonnement abgezogen wird. Er wird auf alle Kosten innerhalb eines Abrechnungszeitraums gewährt, in dem der Rabatt gilt, unabhängig davon, ob der Rabatt für den gesamten oder nur für einen Teil des Abrechnungszeitraums definiert wurde.</ph></p>
+                                                            <p platform="print"><ph
+                                                            id="Ein_Rabatt_ist_völlig_unabhän_reference_refbody_section_p"
+                                                            >Ein Rabatt ist völlig unabhängig vom Service-Umfang, den ein Kunde abonniert.</ph> Wenn ein Rabatt geändert wird, werden die Preisnachlässe berücksichtigt, sobald neue Rechnungsdaten generiert werden. Üblicherweise wird ein Rabatt nur in Absprache mit dem jeweiligen Kunden geändert.</p>
+                                                            <p>Ein Serviceanbieter kann seinen direkten Kunden Rabatte gewähren. Rabatte werden für Kunden von Vermittlern und Wiederverkäufern nicht unterstützt.</p>
+                                                            <p>Rabatte wirken sich auf alle vereinbarten Umsatzbeteiligungen aus.</p>
+                                                </section>
+                        </refbody>
+</reference>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<reference id="reference832" xml:lang="en-us">
+    <title><ph platform="print">Audit Log</ph><ph platform="help">Audit log</ph>
+    </title>
+    <refbody>
+        <section>
+            <p>The operator can view and export audit log data on all kinds of user operations related to subscriptions and marketable services including their price models. This may be useful, for example, to check when and by whom a price model was changed, when subscriptions were created, when and by whom a license description was changed.</p>
+            <p>Single entries of the audit log consist of a <b>header</b> and a <b>message</b>, separated by a comma. </p>
+            <p>The header consists of the following elements, separated by a blank:</p>
+            <ul>
+                <li>
+                    <p><codeph>MM/DD/YYYY_hh:mm:ss.SSS</codeph>: The local server date and time.</p>
+                </li>
+                <li>
+                    <p><codeph>FSP_SW/CT-MG_CTMG-BSS</codeph>: The predefined log label for log entries resulting from user operations on your platform. This label cannot be changed.</p>
+                </li>
+                <li>
+                    <p><codeph>INFO</codeph>: The default log level. This level cannot be changed. </p>
+                </li>
+                <li>
+                    <p><codeph>3&lt;<i>nnnn</i>></codeph>: The ID of the operation that was logged. This is a number between 30000 and 39999. The ID is unique for each operation. For example, the ID of the <codeph>Define service</codeph> operation is 30090, the ID of the <codeph>Subscribe to service</codeph> operation is 30000. </p>
+                </li>
+                <li>
+                    <p><codeph>&lt;<i>operation</i>></codeph>: The operation that was logged, for example, <codeph>Define service</codeph>. </p>
+                </li>
+            </ul>
+            <p>Following the header, the detailed log message is appended. It consists of name-value pairs with additional information, separated by vertical bars (|).</p>
+            <p>Every message starts with the following name-value pairs:</p>
+            <ul>
+                <li>
+                    <p><codeph>userId=&lt;<i>user ID</i>></codeph>: The ID of the user who executed the operation. </p>
+                </li>
+                <li>
+                    <p><codeph>orgId=&lt;<i>organization ID</i>></codeph>: The ID of the organization the user belongs to.</p>
+                </li>
+                <li>
+                    <p><codeph>orgName=&lt;<i>organization name</i>></codeph>: The name of the organization the user belongs to.</p>
+                </li>
+                <li>
+                    <p><codeph>tenantId=&lt;<i>tenant name</i>></codeph>: The name of the tenant the user belongs to. This entry only appears if the system is set up for a multitenancy environment.</p>
+                </li>
+                <li>
+                    <p><codeph>&lt;<i>additional name-value pairs</i>></codeph>: Additional name-value pairs specific to the logged operation, separated by vertical bars (|). </p>
+                </li>
+            </ul>
+            <p>The log entries are categorized by the role of the user who executed an operation: </p>
+            <p>
+                <ul>
+                    <li><xref href="r_Audit_log_User.xml"/></li>
+                    <li><xref href="r_Audit_log_Admin.xml"/></li>
+                    <li><xref href="r_Audit_log_Supplier.xml"/></li>
+                </ul>
+            </p>
+            <p>The log entries show the information as stored in the database. If there are updated values, the initial values are not contained in the audit log file. </p>
+        </section>
+    </refbody>
+</reference>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?> 
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd"
+
+[
+<!ENTITY % entities PUBLIC "-//XDOC//ENTITIES//FujitsuUserDoc" "entities.dtd">
+]>
+
+<concept xml:lang="en-us" id="concept_B32294CC9FA643A2A14A74B1DAA49C95">
+    <title>Re-InitializingTimers</title>
+    <conbody>
+        <section>
+            <p>If you want to re-initialize timers, for example, when you have set new timers, proceed as follows using the operator Web client: <ol><li>From the <uicontrol>operation</uicontrol> list, select <codeph>reinittimers</codeph> and click <uicontrol>select</uicontrol>. </li><li>Click <uicontrol>execute</uicontrol>. </li></ol></p>
+            <p>The currently registered timers are listed and detailed information is displayed when they will expire the next time. </p>
+        </section>
+        <section>The syntax of the respective CLT command is as follows: <p><codeblock>java -jar oscm-operatorsvc-client.jar &lt;userkey> &lt;password>
+reininttimers</codeblock></p></section>
+    </conbody>
+</concept>

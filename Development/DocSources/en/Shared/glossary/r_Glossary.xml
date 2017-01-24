@@ -1,0 +1,169 @@
+<?xml version="1.0"?> 
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd"
+
+[
+<!ENTITY % entities PUBLIC "-//XDOC//ENTITIES//FujitsuUserDoc" "entities.dtd">
+]>
+
+<reference xml:lang="en-us" id="reference_7A5FB297419F4787832C9125D7CAC80F">
+    <title>Glossary</title>
+    <refbody>
+        <section>
+            <title>Administrator</title>
+            <p>A privileged user role within an organization with the permission to manage the organization's account and subscriptions as well as its users and their roles. Each organization has at least one administrator. </p>
+        </section>
+        <section>
+            <title>Application</title>
+            <p>A software, including procedures and documentation, which performs productive tasks for users. </p>
+        </section>
+        <section>
+            <title>Billing System</title>
+            <p>A system responsible for calculating the charges for using a service. <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> comes with a native billing system, but can also be integrated with external ones.</p>
+        </section>
+        <section>
+            <title>Broker</title>
+            <p>An organization which supports suppliers in establishing relationships to customers by offering the suppliers' services on a marketplace, as well as a privileged user role within such an organization.</p>
+        </section>
+        <section>
+            <title>Cloud</title>
+            <p>A metaphor for the Internet and an abstraction of the underlying infrastructure it conceals. </p>
+        </section>
+        <section>
+            <title>Cloud Computing</title>
+            <p>The provisioning of dynamically scalable and often virtualized resources as a service over the Internet on a utility basis.</p>
+        </section>
+        <section>
+            <title>Customer</title>
+            <p>An organization which subscribes to one or more marketable services in <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> in order to use the underlying applications in the Cloud.</p>
+        </section>
+        <section>
+            <title>Infrastructure as a Service (IaaS)</title>
+            <p>The delivery of computer infrastructure (typically a platform virtualization environment) as a service.</p>
+        </section>
+        <section>
+            <title>Marketable Service</title>
+            <p>A service offering to customers in <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />, based on a technical service. A marketable service defines prices, conditions, and restrictions for using the underlying application.</p>
+        </section>
+        <section>
+            <title>Marketplace</title>
+            <p>A virtual platform for suppliers, brokers, and resellers in <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> to provide their services to customers.</p>
+        </section>
+        <section>
+            <title>Marketplace Owner</title>
+            <p>An organization which holds a marketplace in <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />, where one or more suppliers, brokers, or resellers can offer their marketable services.</p>
+        </section>
+        <section>
+            <title>Marketplace Manager</title>
+            <p>A privileged user role within a marketplace owner organization. </p>
+        </section>
+        <section>
+            <title>Operator</title>
+            <p>An organization or person responsible for maintaining and operating <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </p>
+        </section>
+        <section>
+            <title>Organization</title>
+            <p>An organization typically represents a company, but it may also stand for a department of a company or a single person. An organization has a unique account and ID, and is assigned one or more of the following roles: technology provider, supplier, customer, broker, reseller, marketplace owner, operator.</p>
+        </section>
+        <section>
+            <title>Organizational Unit</title>
+            <p>A set of one or more users within an organization representing, for example, a department in a company, an individual project, a cost center, or a single person. A user may be assigned to one or more organizational units. </p>
+        </section>
+        <section>
+            <title>OU Administrator</title>
+        </section>
+        <section>
+            <p>A privileged user role within an organization allowing a user to manage the organizational units for which he has been appointed as an administrator, and to create, modify, and terminate subscriptions for these units.</p>
+        </section>
+        <section>
+            <title>Payment Service Provider (PSP)</title>
+            <p>A company that offers suppliers or resellers online services for accepting electronic payments by a variety of payment methods including credit card or bank-based payments such as direct debit or bank transfer. Suppliers and resellers can use the services of a PSP for the creation of invoices and payment collection. </p>
+        </section>
+        <section>
+            <title>Payment Type</title>
+            <p>A specification of how a customer may pay for the usage of his subscriptions. The operator defines the payment types available in <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />; the supplier or reseller determines which payment types are offered to his customers, for example payment on receipt of invoice, direct debit, or credit card. </p>
+        </section>
+        <section>
+            <title>Platform as a Service (PaaS)</title>
+            <p>The delivery of a computing platform and solution stack as a service.</p>
+        </section>
+        <section>
+            <title>Price Model</title>
+            <p>A specification for a marketable service defining whether and how much customers subscribing to the service will be charged for the subscription as such, each user assigned to the subscription, specific events, or parameters and their options.</p>
+        </section>
+        <section>
+            <title>Reseller</title>
+            <p>An organization which offers services defined by suppliers to customers applying its own terms and conditions, as well as a privileged user role within such an organization.</p>
+        </section>
+        <section>
+            <title>Role</title>
+            <p>A collection of authorities that control which actions can be carried out by an organization or user to whom the role is assigned.</p>
+        </section>
+        <section>
+            <title>Seller</title>
+            <p>Collective term for supplier, broker, and reseller organizations.</p>
+        </section>
+        <section>
+            <title>Service</title>
+            <p>Generally, a discretely defined set of contiguous or autonomous business or technical functionality, for example an infrastructure or Web service. <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> distinguishes between technical services and marketable services, and uses the term "service" as a synonym for "marketable service".</p>
+        </section>
+        <section>
+            <title>Service Manager</title>
+            <p>A privileged user role within a supplier organization.</p>
+        </section>
+        <section>
+            <title>Standard User</title>
+            <p>A non-privileged user role within an organization.</p>
+        </section>
+        <section>
+            <title>Software as a Service (SaaS)</title>
+            <p>A model of software deployment where a provider licenses an application to customers for use as a service on demand.</p>
+        </section>
+        <section>
+            <title>Subscription</title>
+            <p>An agreement registered by a customer for a marketable service in <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />. By subscribing to a service, the customer is given access to the underlying application under the conditions defined in the marketable service. </p>
+        </section>
+        <section>
+            <title>Subscription Manager</title>
+            <p>A privileged user role within an organization with the permission to create and manage his own subscriptions.</p>
+        </section>
+        <section>
+            <title>Supplier</title>
+            <p>An organization which defines marketable services in <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> for offering applications provisioned by technology providers to customers. </p>
+        </section>
+        <section>
+            <title>Technical Service</title>
+            <p>The representation of an application in <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />. A technical service describes parameters and interfaces of the underlying application and is the basis for one or more marketable services.</p>
+        </section>
+        <section>
+            <title>Technology Manager</title>
+            <p>A privileged user role within a technology provider organization.</p>
+        </section>
+        <section>
+            <title>Technology Provider</title>
+            <p>An organization which provisions applications as technical services in <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+        </section>
+    </refbody>
+</reference>

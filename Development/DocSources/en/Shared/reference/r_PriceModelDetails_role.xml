@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<reference id="reference832" xml:lang="en-us">
+    <title><ph platform="print">Role-Based Prices</ph><ph platform="help">Role-based prices</ph>
+    </title>
+    <refbody>
+        <section>
+            <p id="If_defined_for_the_underlying_reference_refbody_section_1"
+                >If defined for the underlying application, roles can be used to grant specific privileges to different users. The roles are specified in the technical service definition as service roles. Service roles can be mapped to corresponding permissions in the application. </p>
+            <p id="User_roles_can_be_used_for_ro_reference_refbody_section_2"
+                >Service roles can be used for role-specific prices: For each role, a price can be defined. This price is added to the base price per user in the cost calculation for a billing period. </p>
+            <p id="User_roles_can_be_used_for_ro_reference_refbody_section_3"
+                    >Regarding the cost calculation options, role-based prices are handled the same way as the recurring charges for users. <ph>With per time unit calculation, the costs for a time unit in which a user with a specific role is assigned to a subscription are always fully charged. There is no difference in costs between a user who is assigned from the start until the end of the time unit and a user who is assigned for a part of the time unit only.</ph></p>
+            <p id="If_the_charges_are_calculated_reference_refbody_section_1"
+                >If the charges are calculated per time unit and the role assignment of a user is changed within a time unit, the affected time unit is charged pro rata. This means that the customer is charged exactly for the time each user role is assigned.</p>
+            <p id="If_the_charges_are_calculated_reference_refbody_section_2"
+                >If the charges are calculated per time unit and a user with a specific role is removed from the subscription and assigned to it again with a different role in the same time unit, the customer is also charged for the time during which the user is not assigned to the subscription. This means that he is charged with the price for the first service role until the user is assigned to the subscription with the second service role. </p>
+        </section>
+        <section>
+            <title>Example</title>
+            <p>The sample calculation below uses the following data: </p>
+            <fig platform="help">
+                <image href="../_images/PriceModelSamples_RolesSimple.png" placement="break" height="113" width="525"/>
+            </fig>
+            <fig platform="print">
+                <image align="center" height="75" href="../_images/PriceModelSamples_RolesSimple.png" placement="break"
+                    width="350"/>
+            </fig>
+            <p>The customer has 100 users assigned to the subscription. All of them are assigned for an entire billing period. 5 users have the Administrator service role, 80 the User service role, and 15 the Guest service role for the subscription. </p>
+            <p>The costs are calculated as follows: </p>
+            <p>Role-specific charges: (5 * 2.00 €) + (80 * 3.00 €) + (15 * 5.00 €) = 325.00 €</p>
+            <p><b>Total amount: 325.00 €</b></p>
+            <p audience="int"
+                >This total amount is added to the base price per user in the cost calculation for the billing period.</p>
+        </section>
+    </refbody>
+</reference>

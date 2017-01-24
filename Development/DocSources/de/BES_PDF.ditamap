@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN"
+                         "">
+<!-- Copyright FUJITSU LIMITED 2017 -->                         
+
+<bookmap id="BSSUserGuide"
+            xml:lang="en_US">
+    <title>Catalog Manager Help</title>
+    <bookmeta>
+        <prodinfo
+                    product="oscm_ce">
+            <prodname/>
+            <vrmlist>
+                <vrm
+            version="16.1.5"/>
+            </vrmlist>
+            <brand/>
+        	<prognum>16.1.5</prognum>
+            <component/>
+            <series>Online Help Topics</series>
+        </prodinfo>
+        <prodinfo
+                    product="oscm_ee">
+            <prodname>Enterprise Service</prodname>
+            <vrmlist>
+                <vrm
+            version="16.1 Fix 5"/>
+            </vrmlist>
+            <brand>FUJITSU Software</brand>
+            <prognum>Catalog Manager V16.1 Fix 5</prognum>
+            <component/>
+            <series>Online Help Topics</series>
+        </prodinfo>
+        <bookid>
+            <edition>February 2017</edition>
+            <booknumber/>
+        </bookid>
+        <bookrights
+                product="oscm_ce">
+            <bookowner
+            name="none"/>
+        </bookrights>
+        <bookrights
+                product="oscm_ee">
+            <bookowner
+            name="FUJITSU LIMITED"/>
+        </bookrights>
+    </bookmeta>
+    <frontmatter>
+        <notices
+            href="help/Frontmatter/BookInfo.xml"/>
+        <preface
+        href="help/About/c_About.xml"/>
+    </frontmatter>
+    <!-- Needed for generation of title page, copyright page and footer-->
+    <chapter
+        href="Shared/concepts/c_Gettingstarted.xml"
+            navtitle="">
+        <topicref
+            href="help/tasks/marketplace_gotoMarketplace.xml"/>
+        <topicref
+            href="help/tasks/public_registration.xml"/>
+        <topicref
+            href="help/tasks/public_terms.xml"/>
+        <topicref
+            href="help/tasks/public_privacypolicy.xml"/>
+        <topicref
+            href="help/tasks/public_registrationok.xml"/>
+        <topicref
+            href="help/tasks/public_confirm.xml"/>
+        <topicref
+            href="help/tasks/public_login.xml"/>
+        <topicref
+            href="help/tasks/public_pwd.xml"/>
+        <topicref
+            href="help/tasks/public_recoverpassword.xml"/>
+        <topicref
+            href="help/tasks/public_confirmpwdrecovery.xml"/>    
+        <topicref
+            href="help/tasks/public_changepassword.xml"/>
+		<topicref
+            href="help/tasks/public_completepwdrecovery.xml"/>             
+        <topicref
+            href="help/tasks/error_user_locked.xml"/>
+		<topicref
+            href="help/tasks/error_database_notAvailable.xml"/>
+		<topicref
+            href="help/tasks/error_invalid_samlResponse.xml"/>
+        <topicref format="dita"
+            href="help/tasks/error_generating_authnrequest.xml"
+            type="task"/>
+		<topicref
+            href="help/tasks/error_login_samlsp.xml"/>
+			
+        <topicref
+            href="help/tasks/public_slogout.xml"/>
+        <topicref
+            href="help/tasks/public_serviceusage.xml"/>
+    	<topicref
+            href="help/tasks/error_subscription_parseKey.xml"/>
+        <topicref
+            href="help/tasks/error_subscription_subscriptionNotFound.xml"/>
+        <topicref
+            href="help/tasks/error_login_impossible.xml"/>
+        <topicref
+            href="help/tasks/error_user_lockedNotConfirmed.xml"/>
+        <topicref
+            href="help/tasks/error_accessToClosedMarketplace.xml"/>
+        <topicref
+        href="help/tasks/error_loginToClosedMarketplace.xml"/>
+    </chapter>
+    <!--     
+    <chapter href="Shared/concepts/c_Subs.xml" navtitle="">
+        <topicref href="help/tasks/subscription_add.xml"/>
+        <topicref href="help/tasks/organization_payment.xml"/>
+        <topicref href="help/tasks/subscription_add2.xml"/>
+        <topicref href="help/tasks/subscription_license.xml"/>
+        <topicref href="help/tasks/subscription_mylist.xml"/>
+        <topicref href="help/tasks/subscription_priceModel_show.xml"/>
+    </chapter>
+-->
+    <chapter
+        href="Shared/concepts/c_Account.xml"
+            navtitle="">
+        <topicref
+            href="help/tasks/organization_edit.xml"/>
+        <topicref
+            href="help/tasks/user_pwd.xml"/>
+        <topicref
+            href="help/tasks/user_add.xml"/>
+        <topicref
+            href="help/tasks/user_import.xml"/>
+        <topicref
+            href="help/tasks/user_list.xml"/>
+        <topicref
+            href="help/tasks/organization_report.xml"/>
+        <topicref
+            href="help/tasks/organization_manageSuppliers.xml"/>
+        <topicref
+            href="help/tasks/organization_manageUdas.xml"/>
+        <topicref
+            href="help/tasks/createCustomUda.xml"/>
+        <topicref
+            href="help/tasks/updateCustomUda.xml"/>
+        <topicref
+            href="help/tasks/organization_ldapSettings.xml"/>
+        <!--             
+        <topicref href="help/tasks/organization_managePayments.xml"/>
+        <topicref href="help/tasks/billingContact_create.xml"/>
+        <topicref href="help/tasks/billingContact_edit.xml"/>
+        <topicref href="help/tasks/paymentInfo_create.xml"/>
+        <topicref href="help/tasks/paymentInfo_editName.xml"/>
+-->
+        <topicref
+            href="help/tasks/organization_manageTriggers.xml"/>
+        <topicref
+            href="help/tasks/organization_manageTriggerDetails.xml"/>
+        <topicref
+            href="help/tasks/triggerProcess_list.xml"/>
+        <topicref
+            href="help/tasks/user_exportBillingData.xml"/>
+        <topicref
+            format="dita"
+        href="help/tasks/user_manageBilling.xml"/>
+    </chapter>
+    <chapter
+        href="Shared/concepts/c_Customer.xml"
+            navtitle="">
+        <topicref
+            href="help/tasks/organization_addCustomer.xml"/>
+        <topicref
+            href="Shared/reference/r_LDAP_SettingTypes.xml"/>
+        <topicref
+            href="help/tasks/organization_editCustomer.xml"/>
+        <topicref
+            href="help/tasks/organization_viewCustomer.xml"/>
+        <topicref
+            href="help/tasks/organization_managePaymentEnablement.xml"/>
+        <topicref
+            href="help/tasks/organization_manageVats.xml"/>
+        <topicref
+            href="help/tasks/subscription_view.xml"/>
+        <topicref
+            href="help/tasks/subscription_editUdas.xml"/>
+        <topicref
+        href="help/tasks/subscription_terminate.xml"/>
+    </chapter>
+    <!--    
+    <chapter href="Shared/concepts/c_Subscription.xml" navtitle="">
+        <topicref href="help/tasks/subscription_users.xml"/>
+        <topicref href="help/tasks/subscription_rename.xml"/>
+        <topicref href="help/tasks/subscription_upgrade.xml"/>
+        <topicref href="help/tasks/subscription_managePayment.xml"/>
+        <topicref href="help/tasks/subscription_delete.xml"/>
+    </chapter>
+-->
+    <chapter
+        href="Shared/concepts/c_TechService.xml"
+            navtitle="">
+        <topicref
+            href="help/tasks/techService_add.xml"/>
+        <topicref
+            href="help/tasks/techService_import.xml"/>
+        <topicref
+            href="help/tasks/techService_edit.xml"/>
+        <topicref
+            href="help/tasks/techService_export.xml"/>
+        <topicref
+            href="help/tasks/techService_delete.xml"/>
+        <topicref
+        href="help/tasks/techService_detail.xml"/>
+        <topicref
+        href="help/tasks/techService_viewBillingAdapters.xml"/>
+    </chapter>
+    <chapter
+        href="Shared/concepts/c_MarkService.xml"
+            navtitle="">
+        <topicref
+            href="help/tasks/service_add.xml"/>
+        <!--    <topicref href="help/tasks/service_importexport.xml"/> -->
+        <topicref
+            href="help/tasks/service_edit.xml"/>
+        <topicref
+            href="help/tasks/service_localize.xml"/>
+        <topicref
+            href="help/tasks/service_copy.xml"/>
+        <topicref
+            href="help/tasks/service_delete.xml"/>
+        <topicref
+            href="help/tasks/service_upgradeOptions.xml"/>
+        <topicref
+            href="help/tasks/service_view.xml"/>
+        <topicref
+            href="help/tasks/service_manage.xml"/>
+        <topicref
+            href="help/tasks/service_viewPMDetails.xml"/>
+        <topicref
+            href="help/tasks/service_publish.xml"/>
+        <topicref
+        href="help/tasks/service_activation.xml"/>
+    </chapter>
+    <chapter
+        href="Shared/concepts/c_PriceModel.xml"
+            navtitle="">
+        <topicref
+            href="help/tasks/priceModel_service.xml"/>
+       <topicref format="dita"
+            href="help/tasks/priceModel_service_nat.xml"/>
+        <topicref format="dita"
+            href="help/tasks/priceModel_service_ext.xml"/>
+        <topicref
+            href="help/tasks/priceModel_customer.xml"/>
+        <topicref format="dita"
+            href="help/tasks/priceModel_customer_nat.xml"/>
+        <topicref format="dita"
+            href="help/tasks/priceModel_customer_ext.xml"/>
+        <topicref
+            href="help/tasks/priceModel_customer_delete.xml"/>
+        <topicref
+            href="help/tasks/priceModel_subscription.xml"/>
+        <topicref format="dita"
+            href="help/tasks/priceModel_subscription_nat.xml"/>
+        <topicref format="dita"
+            href="help/tasks/priceModel_subscription_ext.xml"/>
+        <topicref
+            href="help/tasks/priceModel_localize.xml"/>
+        <topicref
+            href="help/tasks/priceModel_roles.xml"/>
+        <topicref
+                href="Shared/reference/r_PriceModelDetails.xml">
+            <topicref
+                href="Shared/reference/r_PriceModelDetails_onetime.xml"/>
+            <topicref
+                href="Shared/reference/r_PriceModelDetails_recurringForSub.xml"/>
+            <topicref
+                href="Shared/reference/r_PriceModelDetails_recurringForUser.xml"/>
+            <topicref
+                href="Shared/reference/r_PriceModelDetails_parameters.xml"/>
+            <topicref
+                href="Shared/reference/r_PriceModelDetails_events.xml"/>
+            <topicref
+                href="Shared/reference/r_PriceModelDetails_stepped.xml"/>
+            <topicref
+                href="Shared/reference/r_PriceModelDetails_role.xml"/>
+            <topicref
+                href="Shared/reference/r_PriceModelDetails_freeTrial.xml"/>
+            <topicref
+        href="Shared/reference/r_PriceModelDetails_discount.xml"/>
+        </topicref>
+    </chapter>
+    <chapter
+        href="Shared/concepts/c_Operation.xml"
+            navtitle="">
+        <topicref
+            href="help/tasks/operator_manageUsers.xml"/>
+			<topicref
+            href="Shared/reference/r_FileFormat_ImportUsers.xml"/>
+        <topicref
+            href="help/tasks/operator_createOrganization.xml"/>
+        <topicref
+            href="help/tasks/operator_manageOrganizations.xml"/>
+        <!-- topicref href="help/tasks/operator_manageRetiredOrganizations.xml"/ -->
+        <topicref
+            href="help/tasks/operator_manageTimers.xml"/>
+        <topicref
+            href="help/tasks/operator_manageCurrencies.xml"/>
+		<topicref
+            href="help/tasks/operator_manageLanguages.xml"/>
+		<topicref
+            href="help/tasks/operator_manageBillingAdapters.xml"/>
+        <topicref
+            href="help/tasks/operator_manageConfiguration.xml"/>
+        <topicref
+            href="help/tasks/operator_manageLdapSettings.xml"/>
+        <topicref
+            href="help/tasks/operator_exportBillingData.xml"/>
+        <topicref
+            href="help/tasks/operator_executeBillingTasks.xml"/>
+        <topicref
+            href="help/tasks/operator_exportAuditLogData.xml"/>
+        <topicref
+            href="help/tasks/operator_createPSP.xml"/>
+        <topicref
+            href="help/tasks/organization_managePaymentTypes.xml"/>
+        <topicref
+            href="help/tasks/operator_managePSPs.xml"/>
+        <topicref
+            href="help/tasks/psp_managePaymentTypes.xml"/>
+			<topicref
+            href="help/tasks/operator_manageOperatorRevenueShare.xml"/>
+		<topicref
+            format="dita"
+            href="Shared/reference/r_Language_Export_File.xml"
+            type="reference"/>
+		<topicref format="dita"
+            href="Shared/reference/r_Language_OnlineHelp_FAQ.xml"
+            type="reference"/>
+		<topicref format="dita"
+            href="Shared/reference/r_Language_ReportLabels.xml"
+            type="reference"/>
+		<topicref format="dita"
+            href="Shared/reference/r_Language_Codes.xml"
+            type="reference"/>
+		<topicref
+            href="help/tasks/operator_manageTenants.xml"/>
+		  <topicref href="Shared/reference/c_IdPInfo.xml" type="concept"/>
+		<topicref href="Shared/reference/c_IdPInfo2.xml" type="concept"/>
+		<topicref
+            href="help/tasks/operator_manageIndexes.xml" type="concept"/>
+		
+        <topicref
+            href="Shared/reference/r_Audit_log.xml"/>
+			<topicref
+            href="Shared/reference/r_Audit_log_User.xml"/>
+			<topicref
+            href="Shared/reference/r_Audit_log_Admin.xml"/>
+			<topicref
+            href="Shared/reference/r_Audit_log_Supplier.xml"/>
+        <topicref
+        href="Shared/reference/r_ConfigSettings_config_properties.xml"/>
+    </chapter>
+    <chapter
+        href="Shared/concepts/c_Marketplace.xml"
+            navtitle="">
+        <topicref
+            href="help/tasks/marketplace_manageCategories.xml"/>
+        <topicref
+            href="help/tasks/marketplace_manageAccess.xml"/>
+        <topicref
+            href="help/tasks/marketplace_manageSuppliers_notselected.xml"/>
+        <topicref
+            href="help/tasks/marketplace_manageSuppliers.xml"/>
+        <topicref
+            href="help/tasks/marketplace_manageSuppliers_open.xml"/>
+        <!--   <topicref href="help/tasks/service_manageCatalog.xml"/> -->
+        <topicref
+            href="help/tasks/marketplace_create.xml"/>
+        <topicref
+            href="help/tasks/marketplace_update.xml"/>
+        <topicref
+            href="help/tasks/marketplace_delete.xml"/>
+        <topicref
+            href="help/tasks/shop_trackingCode.xml"/>
+        <topicref
+            href="help/tasks/marketplace_customizeLandingpage.xml"/>
+        <topicref
+            href="help/tasks/shop_editStage.xml"/>
+        <topicref
+            href="help/tasks/shop_customizeBrand.xml"/>
+        <topicref
+            href="help/tasks/shop_translations.xml"/>
+        <topicref
+            href="help/tasks/marketplace_manageBrokerRevenueShare.xml"/>
+        
+	<topicref href="help/tasks/marketplace_manageResellerRevenueShare.xml"/>
+			
+    </chapter>
+</bookmap>

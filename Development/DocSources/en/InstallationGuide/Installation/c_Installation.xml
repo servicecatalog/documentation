@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd">
+<concept id="Installation_66"
+                    xml:lang="en-us">
+        <title>Installation</title>
+        <conbody>
+                <section>
+                        <p>The installation of <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> consists of the following main steps:</p>
+                        <ol>
+                                <li>Preparing the <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> software and setup utilities. Refer to <xref
+                        href="t_InstPreparing.xml"/>.</li>
+                                <li>Adapting configuration files. Refer to <xref
+                        href="../../Shared/Installation/t_InstConfiguring.xml"/>.</li>
+                                <li>Setting up the databases. Refer to <xref
+                        href="t_InstDB.xml"/>.</li>
+                                <li>Setting up the resources in the application server and deploying the <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> archives. Refer to <xref
+                        href="t_InstAppServer.xml"/>.</li>
+                                <li>Logging in to <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>, creating users, and checking the configuration of <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. Refer to <xref
+                        href="../Installation/c_NextSteps.xml"/>. </li>
+                                <li>When installing <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> in SAML_SP authentication mode, additional steps are required. Refer to <xref
+                    href="t_ConfigureIDP.xml"/>.</li>
+                        </ol>
+                        <p>The descriptions in the subsequent sections assume that you are using the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> setup utilities for setting up the databases and the application server resources. This is the easiest way and suitable for most environments, particularly when you are using a database management system and application server installation solely for <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </p>
+                        <p>In specific situations, however, you may have to set up some or all of the resources manually. This is the case, for example, if you want to integrate the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> resources in an existing environment on an application server. </p>
+                        <p>The resources required by <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> on the application server are described in detail in <xref href="../../Shared/reference/r_AppServerResources.xml"/>. Details of how to set up the resources properly can best be obtained from the XML files which are provided for the automated installation and described in the sections below. </p>
+                </section>
+        </conbody>
+</concept>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_FAFDCB5BC3864E738EE94DFD0478CF59" xml:lang="en-us">
+    <title>About this Manual</title>
+    <conbody>
+        <section>
+            <p>This manual describes how brokers can support service suppliers in establishing relationships to customers with <ph
+                    product="oscm_ce"><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Name"/> (<ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>)</ph><ph
+                    product="oscm_ee"
+                        > FUJITSU Software Enterprise Service Catalog Manager - hereafter referred to as <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Name"/> or <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph>.</p>
+            <p>This manual is structured as follows: </p>
+            <p>
+                <table colsep="1" frame="all" rowsep="1">
+                    <tgroup cols="2">
+                        <colspec colname="col2" colnum="1" colwidth="1.0*"/>
+                        <colspec colname="col3" colnum="2" colwidth="1.33*"/>
+                        <thead>
+                            <row>
+                                <entry colname="col2">Chapter</entry>
+                                <entry colname="col3">Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry colname="col2"><xref href="../../Shared/concepts/c_IntroExtended.xml"/></entry>
+                                <entry colname="col3">Outlines the role of a broker in <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    /> and gives an overview of the broker's tasks.</entry>
+                            </row>
+                            <row>
+                                <entry colname="col2"><xref href="../MarketableServices/c_MSIntro.xml"/></entry>
+                                <entry colname="col3"
+                                    >Describes the basic concepts of services and explains how to publish services to a marketplace.</entry>
+                            </row>
+                            <row>
+                                <entry colname="col2"><xref href="../CustomerManagement/c_CMIntro.xml"/></entry>
+                                <entry colname="col3"
+                                    >Describes the different tasks involved in customer management.</entry>
+                            </row>
+                            <row>
+                                <entry colname="col2"><xref href="../Billing/c_BillIntro.xml"/></entry>
+                                <entry colname="col3">Describes how <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    /> supports brokers in calculating and collecting their revenue shares.</entry>
+                            </row>
+                            <row>
+                                <entry colname="col2"><xref href="../Reports/c_Reports.xml"/></entry>
+                                <entry colname="col3">Describes the reports available for brokers in <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </entry>
+                            </row>
+                            <row>
+                                <entry colname="col2"><xref href="../Reference/r_MenuOptions.xml"/></entry>
+                                <entry colname="col3"
+                                    >Gives an overview of the menu options relevant for brokers.</entry>
+                            </row>
+                            <row>
+                                <entry colname="col2"><xref href="../../Shared/reference/r_LDAP_SettingTypes.xml"
+                                    /></entry>
+                                <entry colname="col3"
+                                    >Lists the keys to be defined for enabling access to a customer's LDAP system.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+    </conbody>
+</concept>

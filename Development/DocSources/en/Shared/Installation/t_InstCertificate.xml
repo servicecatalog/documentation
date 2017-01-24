@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<task id="task_certificates" xml:lang="en-us">
+    <title>Exchanging Certificates</title>
+    <taskbody>
+        <context>
+            <p>For secure communication of <ph audience="tps5">the TPS5 integration software</ph><ph audience="aws"
+                    >the AWS integration software</ph><ph audience="os">the OpenStack integration software</ph><ph
+                    audience="ror">the ROR integration software</ph><ph audience="vmware"
+                    >the vSphere integration software</ph><ph audience="app">APP</ph> with <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/><ph audience="vmware"
+                    > and the vSphere server</ph><ph audience="app"
+                > and integrated applications</ph>, you need to exchange the corresponding certificates. </p>
+            <p audience="app"><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> is the HTTPS server while APP is a Web service client. The Web service calls are secured with SSL. The following requirements must be met to establish a connection to <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>: </p>
+            <ul audience="app">
+                <li>The <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> server must present a valid certificate.</li>
+                <li>The <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> certificate must be trusted by APP. </li>
+            </ul>
+            <p>You need to:</p>
+            <ul>
+                <li>Import <ph audience="ror">the certificates of <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> and ROR</ph><ph
+                        audience="aws">the certificate of <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph audience="os"
+                            >the certificate of <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /></ph><ph audience="tps5">the certificates of <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> and TPS5</ph><ph
+                        audience="vmware">the certificates of <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> and vSphere</ph><ph
+                        audience="app">the certificates of <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> and the applications</ph> into the truststore of the <codeph>app-domain</codeph> application server domain of <ph
+                        audience="aws">the AWS integration software</ph><ph audience="os"
+                        >the OpenStack integration software</ph><ph audience="ror">the ROR integration software</ph><ph
+                        audience="tps5">the TPS5 integration software</ph><ph audience="vmware"
+                        >the vSphere integration software</ph><ph audience="app">APP</ph>.</li>
+                <li>Export the certificate of the <codeph>app-domain</codeph> domain and <ph audience="app">ask the <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> operator to </ph>import it into the <codeph>bes-domain</codeph> application server domain of <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</li>
+            </ul>
+            <p>Proceed as follows:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Obtain a <codeph>.crt</codeph> file with the certificate of <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> <ph audience="os"
+                            >from the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> operator</ph><ph audience="ror">from the <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> operator</ph><ph
+                        audience="aws">from the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> operator</ph><ph audience="tps5">from the <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> operator</ph><ph
+                        audience="vmware">from the <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> operator</ph>. </cmd>
+                <info>
+                    <p audience="ror"
+                            >The <codeph>.crt</codeph> file can be created, for example, by executing the following command at the command prompt (Windows) or in a terminal session (UNIX/Linux) on the application server where <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> is deployed:<codeblock>&lt;AppServerJRE>/bin/keytool -export -rfc -alias s1as
+   -file ctmgbss.crt -storepass &lt;password> -keystore
+   &lt;GLASSFISH_HOME>/glassfish/domains/bes-domain/config/keystore.jks</codeblock></p>
+                    <p audience="aws"
+                            >The <codeph>.crt</codeph> file can be created, for example, by executing the following command at the command prompt (Windows) or in a terminal session (UNIX/Linux) on the application server where <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> is deployed:<codeblock>&lt;AppServerJRE>/bin/keytool -export -rfc -alias s1as
+   -file ctmgbss.crt -storepass &lt;password> -keystore
+   &lt;GLASSFISH_HOME>/glassfish/domains/bes-domain/config/keystore.jks</codeblock></p>
+                    <p audience="os"
+                            >The <codeph>.crt</codeph> file can be created, for example, by executing the following command at the command prompt (Windows) or in a terminal session (UNIX/Linux) on the application server where <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> is deployed:<codeblock>&lt;AppServerJRE>/bin/keytool -export -rfc -alias s1as
+   -file ctmgbss.crt -storepass &lt;password> -keystore
+   &lt;GLASSFISH_HOME>/glassfish/domains/bes-domain/config/keystore.jks</codeblock></p>
+                    <p audience="tps5"
+                        >The <codeph>.crt</codeph> file can be created, for example, by executing the following command at the command prompt (Windows) or in a terminal session (UNIX/Linux) on the application server where <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> is deployed:<codeblock>&lt;AppServerJRE>/bin/keytool -export -rfc -alias s1as
+   -file ctmgbss.crt -storepass &lt;password> -keystore
+   &lt;GLASSFISH_HOME>/glassfish/domains/bes-domain/config/keystore.jks</codeblock></p>
+                    <p audience="vmware"
+                        >The <codeph>.crt</codeph> file can be created, for example, by executing the following command at the command prompt (Windows) or in a terminal session (UNIX/Linux) on the application server where <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> is deployed:<codeblock>&lt;AppServerJRE>/bin/keytool -export -rfc -alias s1as
+   -file ctmgbss.crt -storepass &lt;password> -keystore
+   &lt;GLASSFISH_HOME>/glassfish/domains/bes-domain/config/keystore.jks</codeblock></p>
+                </info>
+            </step>
+            <step audience="ror">
+                <cmd>Obtain a <codeph>.cer</codeph> file with the certificate of ROR.</cmd>
+                <info>The <codeph>.cer</codeph> file can be created, for example, in the following way:<ul compact="no">
+                        <li>Open the URL of the <ph audience="aws">AWS</ph><ph audience="os">OpenStack Heat</ph><ph
+                                audience="ror">ROR</ph><ph audience="app"
+                                >APP</ph> API (<codeph>https://&lt;server>:&lt;port>/cfmgapi/endpoint</codeph>) in a Web browser. View the certificate of the page and export it to a file using the standard procedures of the Web browser.</li>
+                        <li>Use the <codeph>scsexppfx</codeph> command included in ROR.</li>
+                    </ul></info>
+            </step>
+            <step audience="vmware">
+                <cmd>Obtain a <codeph>.cer</codeph> file with the certificate of vSphere.</cmd>
+                <info>The <codeph>.cer</codeph> file can be created, for example, in the following way:<p>Open the URL of the vSphere API (<codeph>https://&lt;server>:&lt;port>/sdk/vimService</codeph>) in a Web browser. View the certificate of the page and export it to a file using the standard procedures of the Web browser.</p></info>
+            </step>
+            <step audience="tps5">
+                <cmd>Obtain the valid TPS5 certificate by exporting it from the <codeph>cacerts.jks</codeph> file. The file is contained in the <codeph>OViSS_JAVASDK/bin/security</codeph> subdirectory of the temporary directory to which you extracted the <codeph>OViSSSDK_*.zip</codeph> file you downloaded from the TPS5 Service Portal. Refer to <xref
+                        href="t_InstPreparing.xml"/> for details.</cmd>
+                <info>For details on the certificates, refer to the TPS5 documentation.</info>
+            </step>
+            
+           
+            <step audience="app">
+                <cmd>Obtain a <codeph>.cer</codeph> file with the certificate of each application to be integrated.</cmd>
+            </step>
+            <step>
+                <cmd>Import <ph audience="ror">the certificates of <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> and ROR</ph><ph
+                        audience="aws">the certificate of <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph audience="os"
+                            >the certificate of <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /></ph><ph audience="tps5">the certificate of <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> and TPS5</ph>
+                    <ph audience="vmware">the certificates of <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> and vSphere</ph><ph
+                        audience="app">the certificates of <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> and the applications</ph> into the truststore of the <codeph>app-domain</codeph> application server domain. </cmd>
+                <info>
+                    <p><ph audience="app">To do this</ph><ph audience="aws">To import the <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> certificate from the <codeph>.crt</codeph> file you created</ph><ph audience="ror"
+                                >To import the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> certificate from the <codeph>.crt</codeph> file you created</ph><ph audience="os"
+                                >To import the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> certificate from the <codeph>.crt</codeph> file you created</ph><ph audience="tps5">To import the <ph
+                                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> certificate from the <codeph>.crt</codeph> file you created</ph><ph audience="vmware">To import the <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> certificate from the <codeph>.crt</codeph> file you created</ph>, you can use, for example, the following command at the command prompt (Windows) or in a terminal session (UNIX/Linux) on the application server: </p>
+                    <p>
+                        <codeblock>&lt;AppServerJRE>/bin/keytool -import -trustcacerts -alias &lt;alias>
+   -file &lt;filename>.crt -storepass &lt;password> -keystore
+   &lt;GLASSFISH_HOME>/glassfish/domains/app-domain/config/cacerts.jks</codeblock>
+                    </p>
+                    <p audience="ror"
+                        >To import the ROR certificate from the <codeph>.cer</codeph> file you created, you can use, for example, the following command at the command prompt (Windows) or in a terminal session (UNIX/Linux) on the application server: </p>
+                    <p audience="ror">
+                        <codeblock>&lt;AppServerJRE>/bin/keytool -import -trustcacerts -alias &lt;alias>
+   -file &lt;filename>.cer -storepass &lt;password> -keystore
+   &lt;GLASSFISH_HOME>/glassfish/domains/app-domain/config/cacerts.jks</codeblock>
+                    </p>
+                    <p audience="tps5"
+                        >To import the TPS5 certificate, you can use, for example, the following command at the command prompt (Windows) or in a terminal session (UNIX/Linux) on the application server:</p>
+                    <p audience="tps5">
+                        <codeblock>&lt;AppServerJRE>/bin/keytool -import -trustcacerts -alias &lt;alias>
+   -file &lt;filename> -storepass &lt;password> -keystore
+   &lt;GLASSFISH_HOME>/glassfish/domains/app-domain/config/cacerts.jks</codeblock>
+                    </p>
+                    <p audience="vmware"
+                        >To import the vSphere certificate from the <codeph>.cer</codeph> file you created, you can use, for example, the following command at the command prompt (Windows) or in a terminal session (UNIX/Linux) on the application server: </p>
+                    <p audience="vmware">
+                        <codeblock>&lt;AppServerJRE>/bin/keytool -import -trustcacerts -alias &lt;alias>
+   -file &lt;filename>.cer -storepass &lt;password> -keystore
+   &lt;GLASSFISH_HOME>/glassfish/domains/app-domain/config/cacerts.jks</codeblock>
+                    </p>
+                </info>
+            </step>
+            <step>
+                <cmd>Create a <codeph>.crt</codeph> file with the certificate of the <codeph>app-domain</codeph> domain in which you have deployed <ph
+                        audience="aws">the AWS integration software</ph><ph audience="os"
+                        >the OpenStack integration software</ph><ph audience="tps5"
+                        >the TPS5 integration software</ph><ph audience="ror">the ROR integration software</ph><ph
+                        audience="vmware">the vSphere integration software</ph><ph audience="app">APP</ph>.</cmd>
+                <info>
+                    <p>The <codeph>.crt</codeph> file can be created, for example, by executing the following command at the command prompt (Windows) or in a terminal session (UNIX/Linux) on the application server:</p>
+                    <p>
+                        <codeblock>&lt;AppServerJRE>/bin/keytool -export -rfc -alias s1as
+   -file ctmgapp.crt -storepass &lt;password> -keystore
+   &lt;GLASSFISH_HOME>/glassfish/domains/app-domain/config/keystore.jks</codeblock>
+                    </p>
+                </info>
+            </step>
+            <step audience="ror">
+                <cmd>Import the certificate of the <codeph>app-domain</codeph> domain into the <codeph>bes-domain</codeph> application server domain of <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </cmd>
+                <info>
+                    <p>To do this, you can use, for example, the following command at the command prompt (Windows) or in a terminal session (UNIX/Linux) on the application server: </p>
+                    <p>
+                        <codeblock>&lt;AppServerJRE>/bin/keytool -import -trustcacerts -alias ctmgapp
+   -file ctmgapp.crt -storepass &lt;password> -keystore
+   &lt;GLASSFISH_HOME>/glassfish/domains/bes-domain/config/cacerts.jks</codeblock>
+                    </p>
+                </info>
+            </step>
+            <step audience="aws">
+                <cmd>Import the certificate of the <codeph>app-domain</codeph> domain into the <codeph>bes-domain</codeph> application server domain of <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </cmd>
+                <info>
+                    <p>To do this, you can use, for example, the following command at the command prompt (Windows) or in a terminal session (UNIX/Linux) on the application server: </p>
+                    <p>
+                        <codeblock>&lt;AppServerJRE>/bin/keytool -import -trustcacerts -alias ctmgapp
+   -file ctmgapp.crt -storepass &lt;password> -keystore
+   &lt;GLASSFISH_HOME>/glassfish/domains/bes-domain/config/cacerts.jks</codeblock>
+                    </p>
+                </info>
+            </step>
+            <step audience="os">
+                <cmd>Import the certificate of the <codeph>app-domain</codeph> domain into the <codeph>bes-domain</codeph> application server domain of <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </cmd>
+                <info>
+                    <p>To do this, you can use, for example, the following command at the command prompt (Windows) or in a terminal session (UNIX/Linux) on the application server: </p>
+                    <p>
+                        <codeblock>&lt;AppServerJRE>/bin/keytool -import -trustcacerts -alias ctmgapp
+   -file ctmgapp.crt -storepass &lt;password> -keystore
+   &lt;GLASSFISH_HOME>/glassfish/domains/bes-domain/config/cacerts.jks</codeblock>
+                    </p>
+                </info>
+            </step>
+            <step audience="tps5">
+                <cmd>Import the certificate of the <codeph>app-domain</codeph> domain into the <codeph>bes-domain</codeph> application server domain of <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </cmd>
+                <info>
+                    <p>To do this, you can use, for example, the following command at the command prompt (Windows) or in a terminal session (UNIX/Linux) on the application server: </p>
+                    <p>
+                        <codeblock>&lt;AppServerJRE>/bin/keytool -import -trustcacerts -alias ctmgapp
+   -file ctmgapp.crt -storepass &lt;password> -keystore
+   &lt;GLASSFISH_HOME>/glassfish/domains/bes-domain/config/cacerts.jks</codeblock>
+                    </p>
+                </info>
+            </step>
+            
+            <step audience="vmware">
+                <cmd>Import the certificate of the <codeph>app-domain</codeph> domain into the <codeph>bes-domain</codeph> application server domain of <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </cmd>
+                <info>
+                    <p>To do this, you can use, for example, the following command at the command prompt (Windows) or in a terminal session (UNIX/Linux) on the application server: </p>
+                    <p>
+                        <codeblock>&lt;AppServerJRE>/bin/keytool -import -trustcacerts -alias ctmgapp
+   -file ctmgapp.crt -storepass &lt;password> -keystore
+   &lt;GLASSFISH_HOME>/glassfish/domains/bes-domain/config/cacerts.jks</codeblock>
+                    </p>
+                </info>
+            </step>
+            <step audience="app">
+                <cmd>Ask the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> operator to import the certificate of the <codeph>app-domain</codeph> domain into the <codeph>bes-domain</codeph> application server domain of <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </cmd>
+            </step>
+            <step>
+                <cmd>If <ph audience="aws">the AWS integration software</ph><ph audience="os"
+                        >the OpenStack integration software</ph><ph audience="tps5"
+                        >the TPS5 integration software</ph><ph audience="vmware"
+                        >the vSphere integration software</ph><ph audience="ror">the ROR integration software</ph><ph
+                        audience="app">APP</ph> and <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> are configured for SAML_SP authentication mode, obtain the relevant certificates from the IdP system and import them into the truststore of the <codeph>app-domain</codeph> domain. </cmd>
+                <info>For example, when using Microsoft Active Directory as the IdP, you need to obtain and import the service communications and token-signing certificates.</info>
+            </step>
+            <step>
+                <cmd>Stop and restart the <ph audience="app"><codeph>app-domain</codeph> domain</ph><ph audience="aws"
+                            ><codeph>app-domain</codeph> and the <codeph>bes-domain</codeph> domains</ph><ph
+                        audience="ror"><codeph>app-domain</codeph> and the <codeph>bes-domain</codeph> domains</ph><ph
+                        audience="os"
+                            ><codeph>app-domain</codeph> and the <codeph>bes-domain</codeph> domains</ph><ph audience="tps5"
+                                ><codeph>app-domain</codeph> and the <codeph>bes-domain</codeph> domains</ph><ph audience="vmware"
+                                    ><codeph>app-domain</codeph> and the <codeph>bes-domain</codeph> domains</ph> for the certificates to become effective.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

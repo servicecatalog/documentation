@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd">
+<task id="task634" xml:lang="ja-jp">
+          <title>請求期間の設定</title>
+          <taskbody>
+                    <context>
+                              <p><uicontrol>請求期間の設定</uicontrol>ページでは、請求期間の開始日を設定できます。</p>
+                              <p id="A_billing_period_is_the_time_task_taskbody_context_p_2"
+                                        >請求期間は、サービス利用部門に対して
+                                        <ph platform="print"><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph> 
+                                        <ph platform="help">プラットフォームの</ph>
+                                        請求システムを使用している購入済サービスの請求データを作成する対象期間です。請求期間は常に一カ月です。</p>
+                              <p><ph id="billing_period1"
+                                                  >請求期間はデフォルトでは毎月1日の00:00:00.000に開始し、月の最終日の23:59:59.999に終了します。しかしながら、実際のビジネスでこれが常に適しているとは限りません。このため、請求期間の開始日を自由に設定できます。</ph
+                                                  >例えば、請求期間を毎月8日に開始する設定とした場合、請求期間は8日の00:00:00.000から、翌月7日の23:59:59.999までとなります。</p>
+                              <p id="billing_period2"
+                                        >請求期間の開始日を変更した場合、それ以降に購入したサービスおよび再度有効化した購入済サービスに対して変更が適用されます。既存の購入済サービスには影響がありません。</p>
+                              <p id="The_billing_period_start_and_concept_conbody_section_3_p"
+                                                  >請求期間の情報を含んでいるすべてのレポートに、請求期間の開始日時と終了日時が記載されます: <ul
+                                                  compact="no">
+                                                  <li>
+                                                            <p>サービス提供部門の <b>サービス利用部門の請求書明細</b> レポート</p>
+                                                  </li>
+                                                  <li>
+                                                            <p>サービス利用部門の <b>請求書明細</b> レポート</p>
+                                                  </li>
+                                                  <li>
+                                                            <p>サービス利用部門の <b>支払いプレビュー</b> レポート</p>
+                                                  </li>
+                                                  <li>
+                                                            <p id="Revenue_share_report_concept_conbody_section_3_p"
+                                                            >サービス提供部門、サービス提供代行部門、サービス仲介部門およびサービスポータル運用部門の <b>売上配分明細</b> レポート</p>
+                                                  </li>
+                                        </ul>
+                              </p>
+                              <p><b>請求期間の開始日を設定するには</b>: </p>
+                    </context>
+                    <steps>
+                              <step>
+                                        <cmd><uicontrol>開始日</uicontrol>欄で請求期間の開始日を選択します。</cmd>
+                                        <info>値には<codeph>1</codeph>から<codeph>28</codeph>までが選択可能です。これは、すべての月に適用可能とするためです。</info>
+                              </step>
+                              <step>
+                                        <cmd><uicontrol>保存</uicontrol>をクリックして変更した内容を保存します。</cmd>
+                              </step>
+                    </steps>
+          </taskbody>
+</task>

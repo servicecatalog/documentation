@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="Billing" xml:lang="en-us">
+            <title>Export Revenue Share Data </title>
+            <conbody>
+                        <section>
+                                    <p>You can export the revenue share data for all organizations with a specific role for a specific time frame. Based on the customer billing data calculated for the given time frame, the costs are analyzed to determine the revenue shares for the operator, marketplace owners, brokers, and resellers and their effects on the suppliers' revenues. Discounts granted by a supplier to his customers are deducted from the revenue shares. </p>
+                                    <p>You can use the data to get an overview of who is to receive which revenue shares. The exported data can be forwarded, for example, to an accounting system which continues to process it. For example, you can invoice your revenue share to marketplace owners or suppliers. For details on defining revenue shares, refer to <xref
+                                                            href="../Billing/c_DefineRevenueShares.xml"/>. </p>
+                                    <p><b>To export billing data, choose the following option:</b>
+                                                <ul>
+                                                            <li><ph
+                                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                            /> administration portal - Choose <b>Export billing data</b> in the <b>Account</b> menu.<p>For detailed step-by-step instructions, refer to the online help. </p></li>
+                                                </ul></p>
+                                    <p>The billing data can be saved to an XML file (<codeph>&lt;date&gt;BillingData.xml</codeph>) and opened in an editor of your choice. You can edit the data and work with it as required. </p>
+                                    <p>For a detailed description of the elements and attributes that may occur in the XML file, refer to the <i>Developer's Guide</i>.</p>
+                        </section>
+            </conbody>
+</concept>

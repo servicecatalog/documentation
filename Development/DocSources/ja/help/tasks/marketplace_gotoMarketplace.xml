@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd">
+<task id="task634" xml:lang="ja-jp">
+  <title>サービスポータルを開く</title>
+  <taskbody>
+    <context>
+      <p><uicontrol>サービスポータルを開く</uicontrol>ページでは、サービスポータルに直接アクセスすることができます。</p>
+      <p><b>サービスポータルを開くには</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd><uicontrol>サービスポータル</uicontrol>ドロップダウンリストから、アクセスするサービスポータルを選択してください。</cmd>
+        <info>
+          <p>リストにはアクセス権を与えられているサービスポータル、またはサービスポータル運用部門として管理しているサービスポータルが表示されます。</p>
+        </info>
+      </step>
+      <step>
+        <cmd><uicontrol>開く</uicontrol>をクリックします。</cmd>
+      </step>
+    </steps>
+    <result>
+      <p>自動的にサービスポータルにログインし、画面が表示されます。ブラウザの設定によって、画面は新しいブラウザまたは同じブラウザのタブに表示されます。</p>
+    </result>
+  </taskbody>
+</task>

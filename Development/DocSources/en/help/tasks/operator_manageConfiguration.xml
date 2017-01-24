@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd">
+<task id="task634" xml:lang="en-us">
+  <title>Updating configuration settings</title>
+  <taskbody>
+    <context>
+      <p>On the <uicontrol>Update configuration settings</uicontrol> page, you see a list of the current configuration settings as stored in the database. In the installation, you adapted the settings to your environment, in particular server names, ports, paths, and user IDs. You can update and edit the current settings as required.</p>
+      <p>The configuration settings are also provided in the <codeph>configsettings.properties</codeph> file located in the following subdirectory of the directory to which you extracted the <codeph>oscm-install-pack.zip</codeph> file when you installed the system:</p>
+      <p><codeph>&lt;install_pack_dir>/databases/bes_db</codeph>
+      </p>
+    </context>
+  </taskbody>
+  <related-links>
+    <linklist>
+      <title>Related topics</title>
+      <link href="../../Shared/reference/r_ConfigSettings_config_properties.xml">
+        
+      </link>
+    </linklist>
+  </related-links>
+</task>

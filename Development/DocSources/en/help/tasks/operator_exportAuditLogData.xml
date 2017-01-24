@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd">
+<task id="task634" xml:lang="en-us">
+    <title>Exporting audit log data</title>
+    <taskbody>
+        <context>
+            <p>On the <uicontrol>Export audit log</uicontrol> page, you <ph
+                    id="can_export_information_on_all_task_taskbody_context_p_1_ph"
+                    >can export information on all kinds of user operations related to subscriptions and marketable services including their price model. The data represents an audit log. Exporting this data may be useful, for example to check when and by whom a price model was changed or when subscriptions were created.</ph></p>
+            <p>
+                <note>
+                    <p>The system records user operations only if the <codeph>AUDIT_LOG_ENABLED</codeph> configuration setting is set to <codeph>true</codeph>. </p>
+                </note>
+            </p>
+            <p><b>To export the audit log</b>:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>From the <uicontrol>User role</uicontrol> list, select the user role for which you want to export the log data. To export all logged information, select <b>All</b>.</cmd>
+                <info>
+                    <p>A list of operations depending on the user role is displayed. </p>
+                    <p id="You_can_export_information_on_task_taskbody_steps_step_1"
+                        >You can export information on subscription-related operations performed by administrators or standard users, as well as information on service and price model-related operations performed by service managers of supplier organizations. Administrator operations include actions performed by OU administrators and subscription managers. Service manager operations include actions performed by resellers and brokers. </p>
+                </info>
+            </step>
+            <step>
+                <cmd>In the <uicontrol>Operation</uicontrol> table, select the operations for which to export the log data. Clicking the check box in the table header selects all available operations. </cmd>
+            </step>
+            <step>
+                <cmd>Specify the start and end date of the time period for which you want to export the log data. </cmd>
+                <info>Dates must be specified in the format <codeph>YYYY-MM-DD</codeph>.</info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Export</uicontrol>. </cmd>
+            </step>
+        </steps>
+        <result>
+            <p>You can choose to view the exported data or save it to a file. Click <xref
+                    href="../../Shared/reference/r_Audit_log.xml">here</xref> for details on the content.</p>
+        </result>
+    </taskbody>
+</task>

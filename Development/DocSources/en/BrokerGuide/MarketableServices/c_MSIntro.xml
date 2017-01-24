@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_3413BBD173324104B42FB714974CABE7" xml:lang="en-us">
+        <title>Service Management</title>
+        <conbody>
+                <section>
+                        <p>Your main task as a broker is to support suppliers in establishing relationships to customers. To this end, you promote the suppliers' services by offering them on a marketplace to which you have been granted access by the marketplace owner.</p>
+                        <p>The supplier of a service is responsible for:<ul>
+                                        <li>Defining the service and specifying its parameters, conditions, and restrictions. </li>
+                                        <li>Defining a price model for the service which specifies whether and how much customers subscribing to the service will be charged for using it.</li>
+                                        <li>Defining a license agreement for the price model which is presented to customers and needs to be accepted by them. </li>
+                                        <li>Granting you the permission to publish the service on a marketplace of your choice.</li>
+                                </ul></p>
+                        <p>As a broker, you cannot change the service definition, the price model, and the terms and conditions. It is up to the supplier to change these elements, if required.</p>
+                        <p>When you are granted the permission to publish a service, you can view it and publish it to a marketplace. These tasks are described in more detail in the sections below. </p>
+                </section>
+        </conbody>
+</concept>

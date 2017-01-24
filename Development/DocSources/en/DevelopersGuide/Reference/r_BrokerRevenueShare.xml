@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+<reference id="Broker_Revenue_Share_Data_268" xml:lang="en-us">
+    <title>Broker Revenue Share Data</title>
+    <refbody>
+        <section>
+            <p>The following sections describe the XML elements and attributes that make up the revenue share data for brokers. </p>
+        </section>
+        <section>
+            <title>BrokerRevenueShareResult</title>
+            <p>Top-level container element for broker revenue share data. For each broker organization in consideration, a <codeph>BrokerRevenueShareResult</codeph> element is added to the billing data file. </p>
+            <p>A <codeph>BrokerRevenueShareResult</codeph> element has the following attributes: </p>
+            <ul>
+                <li><codeph><b>organizationId</b></codeph> - (required, data type <codeph>string</codeph>) ID of the broker organization.</li>
+                <li id="organizationKey_reference_refbody_section_2"
+                        ><codeph><b>organizationKey</b></codeph> - (required, data type <codeph>positiveInteger</codeph>) Internal numeric key of the broker organization. </li>
+            </ul>
+            <p id="A_reference_refbody_section_2"
+                >A <codeph>BrokerRevenueShareResult</codeph> element contains the following subelements:</p>
+            <ul>
+                <li>An <codeph>OrganizationData</codeph> element specifying the details of the broker organization (see <xref
+                        href="r_RevenueShareCommon.xml#Revenue_Share_Data_265/OrganizationData_reference_refbody_section_4"
+                    />).</li>
+                <li>A <codeph>Period</codeph> element specifying the billing period (see <xref
+                        href="r_RevenueShareCommon.xml#Revenue_Share_Data_265/reference_refbody_section_3"/>).</li>
+                <li>A <codeph>Currency</codeph> element for each currency for which broker revenue share data is available (see <xref
+                        href="r_BrokerRevenueShare.xml#Broker_Revenue_Share_Data_268/Currency_reference_refbody_section_4"
+                    />).</li>
+            </ul>
+            <p><b>Example</b>:</p>
+            <p>
+                <codeblock><b>&lt;BrokerRevenueShareResult organizationId="cd9ffaac" organizationKey="19000" &gt;</b>
+  &lt;OrganizationData> ... &lt;/OrganizationData>
+  &lt;Period> ... &lt;/Period>
+  &lt;Currency> ... &lt;/Currency>
+<b>&lt;/BrokerRevenueShareResult&gt;</b></codeblock>
+            </p>
+        </section>
+        <section id="Currency_reference_refbody_section_4">
+            <title>Currency</title>
+            <p> Contains the broker revenue share data for a specific currency. </p>
+            <p>A <codeph>Currency</codeph> element has the following attribute: </p>
+            <p><codeph><b>id</b></codeph> - (required, data type <codeph>string</codeph>) ISO code of the currency. </p>
+            <p>A <codeph>Currency</codeph> element contains the following subelements:</p>
+            <ul>
+                <li>A <codeph>Supplier</codeph> element for each supplier organization that provides a service for which the current broker organization receives a revenue share (see <xref
+                        href="r_BrokerRevenueShare.xml#Broker_Revenue_Share_Data_268/Supplier_reference_refbody_section_4"
+                    />).</li>
+                <li>A <codeph>BrokerRevenue</codeph> element specifying the overall revenue for the currency in its <codeph>totalAmount</codeph> attribute (optional, data type positive <codeph>decimal</codeph>, scale 2), and the overall broker revenue share for the currency in its <codeph>amount</codeph> attribute (required, data type positive <codeph>decimal</codeph>, scale 2).</li>
+            </ul>
+            <p><b>Example</b>:</p>
+            <p>
+                <codeblock><b>&lt;Currency id="EUR"&gt;</b>
+  &lt;Supplier>...&lt;/Supplier>
+  <b>&lt;BrokerRevenue totalAmount="1000.50" amount="100.05" /></b>
+<b>&lt;/Currency&gt;</b></codeblock>
+            </p>
+        </section>
+        <section id="Supplier_reference_refbody_section_4">
+            <title>Supplier</title>
+            <p>Contains the broker revenue share data for the services provided by a specific supplier.</p>
+            <p>A <codeph>Supplier</codeph> element contains the following subelements:</p>
+            <ul>
+                <li>An <codeph>OrganizationData</codeph> element specifying the details of the supplier organization (see <xref
+                        href="r_RevenueShareCommon.xml#Revenue_Share_Data_265/OrganizationData_reference_refbody_section_4"
+                    />).</li>
+                <li>A <codeph>Service</codeph> element for each service provided by the supplier for which the current broker organization receives a revenue share (see <xref
+                        href="r_BrokerRevenueShare.xml#Broker_Revenue_Share_Data_268/Service_reference_refbody_section_5"
+                    />).</li>
+                <li>A <codeph>BrokerRevenuePerSupplier</codeph> element specifying the overall revenue for the supplier in its <codeph>totalAmount</codeph> attribute (optional, data type positive <codeph>decimal</codeph>, scale 2), and the overall broker revenue share in its <codeph>amount</codeph> attribute (required, data type positive <codeph>decimal</codeph>, scale 2).</li>
+            </ul>
+            <p><b>Example</b>:</p>
+            <p>
+                <codeblock><b>&lt;Supplier&gt;</b>
+  &lt;OrganizationData> ... &lt;/OrganizationData>
+  &lt;Service> ... &lt;/Service>
+  <b>&lt;BrokerRevenuePerSupplier totalAmount="200.50" amount="20.05" /></b>
+<b>&lt;/Supplier></b></codeblock>
+            </p>
+        </section>
+        <section id="Service_reference_refbody_section_5">
+            <title>Service</title>
+            <p>Specifies the broker revenue share data for a specific service. </p>
+            <p>A <codeph>Service</codeph> element has the following attributes: </p>
+            <ul>
+                <li><codeph><b>id</b></codeph> - (required, data type <codeph>string</codeph>) Name of the service.</li>
+                <li><codeph><b>key</b></codeph> - (required, data type <codeph>positiveInteger</codeph>) Internal numeric key of the service offered by the broker. Technically, this is a copy of the original service defined by the supplier.</li>
+                <li><codeph><b>templateKey</b></codeph> - (required, data type <codeph>positiveInteger</codeph>) Internal numeric key of the original service defined by the supplier. </li>
+            </ul>
+            <p>A <codeph>Service</codeph> element contains a <codeph>ServiceRevenue</codeph> element which specifies the total revenue for the service and the broker revenue share in its attributes: </p>
+            <ul>
+                <li><codeph><b>totalAmount</b></codeph> - (required, data type positive <codeph>decimal</codeph>, scale 2) Total revenue for the service in the billing period.</li>
+                <li><codeph><b>brokerRevenueSharePercentage</b></codeph> - (required, data type positive <codeph>decimal</codeph>, scale 2) Percentage of the revenue the broker is entitled to.</li>
+                <li><codeph><b>brokerRevenue</b></codeph> - (required, data type positive <codeph>decimal</codeph>, scale 2) The broker's revenue share for the service in the billing period.</li>
+            </ul>
+            <p>A <codeph>ServiceRevenue</codeph> element contains a <codeph>ServiceCustomerRevenue</codeph> subelement for each customer who used the service. It specifies the total revenue for the service generated by the customer and the broker revenue share in its attributes: </p>
+            <ul>
+                <li><codeph><b>customerName</b></codeph> - (optional, data type <codeph>string</codeph>) Name of the customer organization.</li>
+                <li><codeph><b>customerId</b></codeph> - (optional, data type <codeph>string</codeph>) ID of the customer organization.</li>
+                <li><codeph><b>totalAmount</b></codeph> - (optional, data type positive <codeph>decimal</codeph>, scale 2) Total revenue for the service generated by the customer in the billing period.</li>
+                <li><codeph><b>brokerRevenueSharePercentage</b></codeph> - (optional, data type positive <codeph>decimal</codeph>, scale 2) Percentage of the revenue the broker is entitled to.</li>
+                <li><codeph><b>brokerRevenue</b></codeph> - (optional, data type positive <codeph>decimal</codeph>, scale 2) The broker's revenue share for the service generated by the customer in the billing period.</li>
+            </ul>
+            <p><b>Example</b>:</p>
+            <p>
+                <codeblock><b>&lt;Service id="Mega Office" key="17005" templateKey="10501">
+  &lt;ServiceRevenue totalAmount="200.00" 
+   brokerRevenueSharePercentage="10.00" brokerRevenue="20.00" />
+    &lt;ServiceCustomerRevenue customerName="MyCompany" 
+     customerId="862cfb94" totalAmount="50.00" 
+     brokerRevenueSharePercentage="10.00" brokerRevenue="5.00" />
+&lt;/Service></b></codeblock>
+            </p>
+        </section>
+    </refbody>
+</reference>

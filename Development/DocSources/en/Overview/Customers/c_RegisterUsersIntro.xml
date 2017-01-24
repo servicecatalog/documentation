@@ -1,0 +1,36 @@
+<?xml version="1.0"?> 
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+
+<concept xml:lang="en-us" id="concept_3413BBD173324104B42FB714974CABE7">
+        <title>Registering Users for Subscriptions</title>
+        <conbody>
+                <section>
+                        <p>Depending on the application underlying to a service a customer has subscribed to, the users may access the application under the control of <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                />, i.e. they log in to a marketplace and start their application sessions from there. </p>
+                        <p>To be able to do so, the users must be registered in <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> and assigned to the relevant subscriptions. </p>
+                        <p>There are three ways how customers can register users:</p>
+                        <ul>
+                                <li>The administrator of a customer organization can register the users manually.</li>
+                                <li>The administrator of a customer organization can import multiple users in one operation from a user data file he created before.</li>
+                                <li>Customer organizations can be allowed to use their own identity management system for user authentication. In this case, the administrator of the customer organization can import the users from the external system, thus registering them with <ph
+                                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                />. For details, refer to <xref format="dita"
+                                                href="../../Overview/All/c_AllUsersIntro.xml" type="concept"/>.</li>
+                        </ul>
+                        <p>When a user is registered, <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> creates a user account and notifies the user by email of his registration. The email includes all login information necessary for the user to access a marketplace.</p>
+                        <p>Before a user can access a service, he needs to be assigned to the relevant subscription. This can be done by an organization administrator, an OU administrator of the organizational unit to which the subscription is assigned, or the subscription manager or OU administrator owning the subscription. Each registered user can be assigned to any number of his organization's subscriptions. Administrators or subscription owners can assign any users from their organization to their subscriptions, regardless of which organizational unit the users or subscriptions belong to or if the users are barred from seeing the underlying services otherwise. </p>
+                        <p>When a user is assigned to a subscription, <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> notifies the user as well as the underlying application. The application may take corresponding actions, for example, add the new user to its own user management system and create an appropriate workspace. </p>
+                        <p>A user can be assigned a service role for each subscription in <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                />, provided that the underlying technical service defines such roles. The evaluation and handling of this information is at the discretion of the application. It may, for example, grant specific access rights to users with a certain service role. </p>
+                </section>
+        </conbody>
+</concept>

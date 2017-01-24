@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="en-us">
+  <title>Editing your profile</title>
+  <taskbody>
+    <context>
+      <p>On the <uicontrol>Edit profile</uicontrol> page, you can change your personal user data and specify the language in which you want to work. You can also view your organization's ID and change your organization's data if you have been assigned the administrator role for your organization. </p>
+      <p><b>Note</b>: If some fields on this page are deactivated, your organization uses an external system for user management and authentication. The data maintained in the external system can be changed only in the external system.</p>
+      <p><b>To edit your personal data</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>Change the data by editing the fields.</cmd>
+        <info>
+          <ul compact="no">
+            <li><uicontrol>Title</uicontrol>, <uicontrol>First name</uicontrol>, and <uicontrol>Last name</uicontrol>: Salutation, such as <codeph>MR</codeph> or <codeph>MS</codeph>, your first name, and your last name.</li>
+            <li><uicontrol>Email</uicontrol>: Your email address.<p>The system checks whether the syntax of the given email address is valid, and whether the domain name corresponds to the standards as defined and maintained by the Internet Assigned Numbers Authority (IANA). </p><p>Examples: <codeph>user.name@domain.arpa</codeph>, <codeph>user.name@domain.org</codeph>, <codeph>user@mycompany.lan.uk</codeph></p></li>
+            <li><uicontrol>Language</uicontrol>: Language in which the user interface, available documentation, and emails are presented to you. The list of available languages depends on the platform operator's definition of supported languages.<p>If your previously selected working language was deactivated by the platform operator, the user interface, available documentation, emails, and report labels are presented in the default language English. A corresponding message is shown telling you that you need to update your profile. This means that you must either save the default language setting or select another supported language. </p>
+            </li>
+          </ul>
+        </info>
+      </step>
+      <step>
+        <cmd>To save the changes, click <uicontrol>Save</uicontrol>.</cmd>
+      </step>
+    </steps>
+    <result>
+      <b>To edit the data of your organization (administrators only)</b> :<p>
+        <ol compact="no">
+          <li>Change the data by editing the fields.<ul compact="no">
+              <li><uicontrol>Organization</uicontrol>: Name of your organization, for example your company name.</li>
+              <li><uicontrol>Email</uicontrol>: Email address for general communication with your organization, for example <codeph>info@mycompany.com</codeph>.<p>The system checks whether the syntax of the given email address is valid, and whether the domain name corresponds to the standards as defined and maintained by the Internet Assigned Numbers Authority (IANA). </p><p>Examples: <codeph>user.name@domain.arpa</codeph>, <codeph>user.name@domain.org</codeph>, <codeph>user@mycompany.lan.uk</codeph></p></li>
+              <li><uicontrol>Support email</uicontrol>: Available only for administrators of supplier, broker, and reseller organizations. Email address for contacting the customer support of your organization, for example <codeph>support@mycompany.com</codeph>. If you do not specify this email address, the email address for general communication with your organization is used in case customers want to report incidents on services they have subscribed to.<p>
+                  <note>As a broker, you can save the support email address of your organization in your profile. In case customers want to report incidents on your services, however, these incidents are directly sent to the customer support of the service supplier.</note>
+                </p></li>
+              <li><uicontrol>Phone</uicontrol>: Telephone or mobile number of a contact person in your organization.</li>
+              <li><uicontrol>Website</uicontrol>: URL of your organization's website. This website is relevant if you act as a supplier. It can be accessed by customers when they display details of the supplier organization that offers a service they want to subscribe to.</li>
+              <li><uicontrol>Profile image</uicontrol>: Click either the <uicontrol>Upload image</uicontrol> field or <uicontrol>Browse</uicontrol>, and select the file containing the image. Supported file formats are GIF, JPG, and PNG. The maximum size of the profile image is 154 x 154 pixels. The recommended size is 154 x 60 pixels. A profile image is useful for customers if you act as a supplier. The profile image is shown as part of the supplier information on marketplaces when a customer requests details of a service.</li>
+              <li><uicontrol>Address</uicontrol>: Address of your organization. </li>
+              <li><uicontrol>Country</uicontrol>: Country where your organization is located.</li>
+              <li><uicontrol>Description</uicontrol>: Description of your organization, for example information from your company's profile. The text you enter is stored in the language defined by your user profile. If you want to localize the text, change the language in your user profile and enter the corresponding translation. The description is relevant if you act as a supplier. It can be accessed by customers when they display details of a supplier organization that offers a service they want to subscribe to.</li>
+            </ul></li>
+          <li>To save the changes, click <uicontrol>Save</uicontrol>.</li>
+        </ol>
+      </p></result>
+  </taskbody>
+</task>

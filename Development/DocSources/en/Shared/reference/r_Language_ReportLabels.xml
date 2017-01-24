@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<reference id="reference832" xml:lang="en-us">
+    <title><ph platform="print">Report Labels</ph><ph platform="help">Report labels</ph>
+    </title>
+    <refbody>
+        <section>
+            <p>Reports are generated in the language the user has set in his profile. The texts used in the reports are <ph
+                    product="oscm_ee"
+                        >provided after installation in properties files contained in a separate <codeph>.war</codeph> file contained in the <codeph>oscm-install-pack.zip</codeph> file:</ph><ph
+                    product="oscm_ce"
+                    >available in properties files contained in the following archive which is provided for each release: </ph>
+            </p>
+            <p><ph product="oscm_ee"><codeph>&lt;install_pack_dir>/domains/bes_domain/birt.war</codeph>.</ph><ph
+                    product="oscm_ce"><codeph>oscm-reports.zip</codeph></ph>
+            </p>
+            <p>The <ph product="oscm_ee"><codeph>birt.war</codeph></ph><ph product="oscm_ce"
+                        ><codeph>oscm-reports.zip</codeph></ph> archive comes with the following properties files: </p>
+            <p>
+                <ul>
+                    <li><codeph>reportLabels.properties</codeph> (default language English)</li>
+                    <li><codeph>reportLabels_de.properties</codeph> (German)</li>
+                    <li><codeph>reportLabels_ja.properties</codeph> (Japanese)</li>
+                </ul>
+            </p>
+            <p>You can also change the English, German, or Japanese strings if you want to customize the reports in these languages to your needs.</p>
+            <p>Proceed as follows to have reports generated in another language: </p>
+            <p>
+                <ol compact="no">
+                    <li>Extract the <ph product="oscm_ee"><codeph>birt.war</codeph></ph><ph product="oscm_ce"
+                                ><codeph>oscm-reports.zip</codeph></ph> file to a local directory. </li>
+                    <li>Go to the <codeph>WEB-INF</codeph> subdirectory. </li>
+                    <li>Copy the English properties file, <codeph>reportLabels.properties</codeph>, and name it <codeph>reportLabels_<i>&lt;ISO code></i>.properties</codeph>.<p>The ISO code denotes the language for which you want to provide translations. For example, add a <codeph>reportLabels_cs.properties</codeph> file to the <codeph>WEB-INF</codeph> subdirectory.</p></li>
+                    <li>Open the new properties file in a text editor. <p>The lines in the file are in the following format: </p><p>
+                            <ul compact="no">
+                                <li>Key in uppercase characters. </li>
+                                <li>Equals sign (=). </li>
+                                <li>String in the language as indicated by the file suffix. </li>
+                            </ul>
+                        </p><p>Translate the strings after the equals sign into the desired language. Observe the following: </p><p>
+                            <ul>
+                                <li>Do not modify the keys. </li>
+                                <li>If you want to translate into a language with non-ASCII characters: <p>Use Unicode encoding preceded by escaping backslashes for these characters. </p><p>For example in Japanese: <codeph>BASEPRICE=\u30B5\u30FC\u30D3\u30B9\u57FA\u672C\u6599\u91D1 </codeph> or in German for Umlauts: <codeph>INVALID=ung\u00FCltig</codeph></p></li>
+                                <li>Special characters such as colons must be escaped using a backslash (\). For example: <codeph>ROLESPERPRICEMODEL=Role costs per subscription\:</codeph></li>
+                                <li>Save the file in UTF-8 encoding.</li>
+                            </ul>
+                        </p></li>
+                    <li><ph product="oscm_ee"
+                            >Create a new <codeph>birt.war</codeph> file containing the additional properties file for the new language.</ph><ph
+                            product="oscm_ce"
+                                >Copy the new properties file to the <codeph>WEB-INF</codeph> subfolder of the folder where the BIRT report engine is deployed on the application server, usually <codeph>&lt;GLASSFISH_HOME>/glassfish/domains/&lt;domain>/applications/birt</codeph>. Refer to the <i>Installation Guide</i> for details.</ph>
+                    </li>
+                    <li><ph product="oscm_ee"
+                                >Undeploy and deploy or redeploy the customized <codeph>birt.war</codeph> file to the <codeph>bes-domain</codeph> domain on your application server. Refer to the <i>Installation Guide</i> for details.</ph><ph
+                            product="oscm_ce">Restart the BIRT application.</ph>
+                    </li>
+                </ol>
+            </p>
+            <p>With this, existing report labels are overwritten. </p>
+            <p>
+                <note>You are responsible for keeping the directory structures and files consistent!</note>
+            </p>
+        </section>
+    </refbody>
+</reference>

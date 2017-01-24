@@ -1,0 +1,17 @@
+<?xml version="1.0"?> 
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+
+<concept xml:lang="en-us" id="concept_3413BBD173324104B42FB714974CABE7">
+    <title>User Interface</title>
+    <conbody>
+        <section>
+            <p>The user interface of <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> is a state-of-the-art Web interface accessible from any of the supported Web browsers. It includes the marketplaces, where customers work with services and subscriptions, as well as an administration portal, where technology providers, suppliers, resellers, brokers, marketplace owners, and operators perform their tasks. </p>
+            <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> ensures that each user can only see and access the options and services he is entitled to by his organization and his role within the organization. </p>
+            <p>The <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> user interface supports multiple languages, each user being able to select his preferred one. </p>
+        </section>
+    </conbody>
+</concept>

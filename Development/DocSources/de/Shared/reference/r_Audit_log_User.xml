@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<reference id="reference832" xml:lang="de-de">
+    <title>Aktionen von Standardbenutzern</title>
+    <refbody>
+        <section>
+            <p>Im folgenden werden Meldungen erläutert, die in das Aktionsprotokoll geschrieben werden, wenn Standardbenutzer auf einem Marktplatz Aktionen ausführen. </p>
+        </section>
+        <section>
+            <p>Folgende weitere <codeph>&lt;<i>Name/Wert-Paare</i>></codeph> werden im Anschluss an den Header und die für alle Meldungen gültigen Name/Wert-Paare ausgegeben: </p>
+            <p>
+                <ul>
+                    <li>
+                        <p><codeph>serviceId=<i>&lt;Service-ID></i></codeph>: ID des marktfähigen Service, wie sie beim Anlegen angegeben wurde. </p>
+                    </li>
+                    <li>
+                        <p><codeph>serviceName=<i>&lt;Name></i></codeph>: Servicename für Kunden des marktfähigen Service, wie er beim Anlegen angegeben wurde. </p>
+                    </li>
+                    <li>
+                        <p><codeph>subscriptionName=<i>&lt;Abo-Name></i></codeph>: Name des Abonnements, wie er beim Abonnieren angegeben wurde. </p>
+                    </li>
+                </ul>
+            </p>
+            <p>Abhängig von der protokollierten Aktion können zusätzliche Name/Wert-Paare ausgegeben werden. </p>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Aktion</b>: <b>Execute service operation</b></p>
+                                <p>Beschreibung: Ein Benutzer führte eine Operation für den abonnierten Service aus. Operationen und ihre Parameter werden von dem technischen Service zur Verfügung stellt, der dem marktfähigen Service zugrunde liegt.</p>
+                                <p>Weitere Name/Wert-Paare:</p>
+                                <p>
+                                    <ul>
+                                        <li>
+                                            <p><codeph>serviceOperation=<i>&lt;Operation></i></codeph>: ID der vom Benutzer ausgeführten Operation. </p>
+                                        </li>
+                                        <li>
+                                            <p><codeph><i>&lt;Parameter-ID></i>=<i>&lt;Parameterwert></i></codeph>: Liste der Operationsparameter. Die Listeneinträge sind durch einen senkrechten Strich (|) voneinander getrennt. Jeder Parameter-ID ist der entsprechende Wert des Parameters zugeordnet. </p>
+                                        </li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </section>
+    </refbody>
+</reference>

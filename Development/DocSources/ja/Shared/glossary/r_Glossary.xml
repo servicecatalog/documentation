@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd"
+
+[
+<!ENTITY % entities PUBLIC "-//XDOC//ENTITIES//FujitsuUserDoc" "entities.dtd">
+]>
+
+<reference xml:lang="ja-jp" id="reference_7A5FB297419F4787832C9125D7CAC80F">
+    <title>用語集</title>
+    <refbody>
+        <section>
+            <title>管理者</title>
+            <p>組織内で特権を有する利用者ロールであり、組織のアカウントと購入済サービスを管理する権限、および利用者とそのロールを管理する権限を有します。各組織には、最低1名の管理者がいる。 </p>
+        </section>
+        <section>
+            <title>アプリケーション</title>
+            <p>手順やドキュメントを含め、利用者のために生産的な業務を実行するソフトウェア。 </p>
+        </section>
+        <section>
+            <title>請求システム</title>
+            <p>サービス使用に対する料金を計算するシステム。
+            <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>には請求システムが付属していますが、外部の請求システムと統合することも可能です。</p>
+        </section>
+        <section>
+            <title>クラウド</title>
+            <p>インターネットや、インターネットを実現するための設備を指す抽象的な表現。 </p>
+        </section>
+        <section>
+            <title>クラウドコンピューティング</title>
+            <p>スケーラビリティを動的に変更しながら、ときにはリソースを仮想化して、インターネットを介して要求されたサービスを提供すること。</p>
+        </section>
+        <section>
+            <title>サービス利用部門</title>
+            <p>クラウドで<ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />が提供するアプリケーションを利用するために、サービスポータルへ登録済のサービスを1つ以上購入する組織のこと。</p>
+        </section>
+        <section>
+            <title>Infrastructure as a Service（IaaS）</title>
+            <p>コンピュータのインフラストラクチャ（通常はプラットフォーム仮想環境）をサービスとして提供すること。</p>
+        </section>
+        <section>
+            <title>サービスポータルへ登録済のサービス</title>
+            <p><ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />でサービス利用部門に提供するサービスのこと。 技術サービスを利用して作成する。サービスポータルへ登録済のサービスには、料金、利用条件、制限事項などが設定されている。</p>
+        </section>
+        <section>
+            <title>サービスポータル</title>
+            <p><ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />でサービス利用部門に提供するためのサービス提供部門向けの仮想プラットフォーム。</p>
+        </section>
+        <section>
+            <title>サービスポータル運用部門</title>
+            <p><ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />でサービスポータルを保有する組織。サービスポータルでは、サービス提供部門が登録済のサービスを提供することができる。</p>
+        </section>
+        <section>
+            <title>サービスポータル運用者</title>
+            <p>サービスポータル組織内の特権を有する利用者ロール。 </p>
+        </section>
+        <section>
+            <title>システム運用管理部門</title>
+            <p><ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>を保守・運用する組織または個人。 </p>
+        </section>
+        <section>
+            <title>組織</title>
+            <p>通常、組織は企業を指すが、企業内の部署や一個人の場合もある。組織には一意のアカウントとIDが与えられ、技術サービス開発部門、サービス提供部門、サービス利用部門、サービスポータル運用者、システム運用管理者のいずれかのロールが割り当てられる。</p>
+        </section>
+        <section>
+            <title>支払代行システム（PSP）</title>
+            <p>クレジットカード、または自動引き落とし、口座振替などの銀行を利用した支払いを含め、各種支払種別によって電子的支払いを受けるためのオンラインサービスをサービス提供部門に提供する会社。サービス提供部門は請求書作成や集金にPSPのサービスを利用することができる。 </p>
+        </section>
+        <section>
+            <title>支払種別</title>
+            <p>サービス利用部門が購入済サービスの代金を支払う方法を指定すること。システム運用管理者は<ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />で利用できる支払種別を定義し、サービス提供部門は、請求書、口座振替、クレジットカードなど、サービス利用部門に提供する支払種別を決定する。 </p>
+        </section>
+        <section>
+            <title>Platform as a Service (PaaS)</title>
+            <p>サービスとしてのコンピューティングプラットフォームとソリューションスタックの提供。</p>
+        </section>
+        <section>
+            <title>料金設定</title>
+            <p>サービスを利用しているサービス利用部門、購入済サービスに割り当てられている各利用者、特定のイベント、またはパラメーターやそのオプションに課金するかどうか、あるいはいくら課金するかを定義するサービスポータルへ登録済のサービスの仕様。</p>
+        </section>
+        <section>
+            <title>ロール</title>
+            <p>ロールを割り当てられている組織や利用者がどのアクションを実行できるかを定義した権限範囲。</p>
+        </section>
+        <section>
+            <title>サービス提供関連部門</title>
+            <p>サービス提供部門、サービス仲介部門、サービス提供代行部門の総称。</p>
+        </section>
+        <section>
+            <title>サービス</title>
+            <p>一般に、インフラストラクチャやWebサービスなど、明確に定義された連続的あるいは独立した業務や技術機能全般を意味する。<ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />では技術サービスとサービスポータルへ登録済のサービスを区別しており、「サービス」は「サービスポータルへ登録済のサービス」と同義に使う。</p>
+        </section>
+        <section>
+            <title>サービス管理者</title>
+            <p>サービス提供部門内の特権を有する利用者ロール。</p>
+        </section>
+        <section>
+            <title>サービス利用者</title>
+            <p>組織内で特に権限を持たない利用者ロール。</p>
+        </section>
+        <section>
+            <title>Software as a Service（SaaS）</title>
+            <p>アプリケーションをオンデマンドで利用できるライセンスを、サービスとしてプロバイダがサービス利用部門に提供するソフトウェアの配布形態。</p>
+        </section>
+        <section>
+            <title>購入済サービス</title>
+            <p><ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />のサービスポータルへ登録するサービスについてサービス利用部門が登録に合意すること。サービスの申し込みを行うことにより、サービス利用部門はサービスポータルへ登録するサービスに定義される条件で、アプリケーションへのアクセスが許可される。 </p>
+        </section>
+        <section>
+            <title>サービス購入管理者</title>
+            <p>組織内で特権を有する利用者ロールであり、購入済サービスを作成、管理する権限を持ちます。</p>
+        </section>
+        <section>
+            <title>サービス提供部門</title>
+            <p>技術サービス開発部門が<ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />に登録したアプリケーションを利用してサービスポータルへ登録し、サービス利用部門に提供する組織のこと。 </p>
+        </section>
+        <section>
+            <title>技術サービス</title>
+            <p><ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />で提供するアプリケーションのこと。パラメーターや、アプリケーションに対するインターフェースの定義も含む。 技術サービスを利用してサービスポータルへ登録済のサービスを提供できる。</p>
+        </section>
+        <section>
+            <title>技術サービス管理者</title>
+            <p>技術サービス開発部門組織内の特権を有する利用者ロール。</p>
+        </section>
+        <section>
+            <title>技術サービス開発部門</title>
+            <p><ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>でアプリケーションを技術サービスとして提供する組織。</p>
+        </section>
+        <section>
+            <title>利用者グループ</title>
+            <p>例えば、会社内の部門、それぞれのプロジェクト、または一個人などを表す、一人以上の利用者の集合。利用者グループは、特定のサービスをサービスポータルで利用者に見せるかどうかを制御する手段を提供します。</p>
+        </section>
+    </refbody>
+</reference>

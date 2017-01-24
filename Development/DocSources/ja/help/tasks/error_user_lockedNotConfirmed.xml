@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="ja-jp">
+  <title>アカウントの確認</title>
+  <taskbody>
+    <context>
+      <p>プラットフォームにログインできるようになる前に、アカウントの確認作業をする必要があります。</p>
+      <p>アカウントを確認するためのURLを含んだメールを送信しました。アカウントを確認して登録処理を完了するには、メールに記載されているURLをクリックしてください。</p>
+    </context>
+  </taskbody>
+</task>

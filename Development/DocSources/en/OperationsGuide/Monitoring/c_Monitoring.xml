@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_3413BBD173324104B42FB714974CABE7" xml:lang="en-us">
+    <title>Monitoring <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></title>
+    <conbody>
+        <section>
+            <p>In addition to entries in the standard application server log file, <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> provides log files of its own that help you detect problems and identify, for example, illegal access to the system. </p>
+            <p>The logging of <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> is based on the <codeph>log4j</codeph> tool. </p>
+        </section>
+    </conbody>
+</concept>

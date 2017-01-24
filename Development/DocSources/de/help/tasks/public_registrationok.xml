@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="de-de">
+    <title>Zugang bestätigen</title>
+    <taskbody>
+        <context>
+            <p>Nachdem Sie Ihre Registrierung mit <uicontrol>Registrieren</uicontrol> bestätigt haben, erhalten Sie eine E-Mail mit einer URL. Folgen Sie der URL, um Ihren Zugang zu bestätigen und den Registrierungsvorgang abzuschließen. </p>
+        </context>
+    </taskbody>
+</task>

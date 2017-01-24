@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="en-us">
+    <title>Localizing the service information</title>
+    <taskbody>
+        <context>
+            <p>On the <uicontrol>Localize service description</uicontrol> page, you can provide the service name for customers, the short description, and the detailed description of the marketable service in all supported languages. If defined for the service, you can also translate the name of any defined custom tab that is shown when customers display details on their subscriptions. </p>
+            <p>For localizing the elements, the marketable service must be deactivated. Existing subscriptions of your customers are not affected by the localization. Any changes you make are effective for new subscriptions only. To provide the service to customers for subscription, you must activate it.</p>
+            <p id="Brokers_and_resellers_as_well_task_taskbody_context_p_3"
+                >Brokers and resellers as well as their customers can immediately view the service description in the languages in which you provide it. Existing subscriptions to services sold by brokers and resellers are not affected by the localization. Any changes you make are effective for new subscriptions only.</p>
+            <note>If you do not localize the service elements, the English descriptions are displayed to customers.</note>
+            <p><b>To localize the elements</b>:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Select the source language. For reference purposes, the service name for customers, the short description, the detailed description, and the name of the custom tab are displayed in the source language. </cmd>
+            </step>
+            <step>
+                <cmd>Select the target language. </cmd>
+                <info>The list contains all supported languages.</info>
+            </step>
+            <step>
+                <cmd>Enter the translations.</cmd>
+                <info>
+                    <note>
+                        <ph conref="service_add.xml#task634/Make_sure_to_use_only_the_con_task_taskbody_steps_step_2"/>
+                    </note>
+                </info>
+            </step>
+            <step>
+                <cmd>To confirm your translations, click <uicontrol>OK</uicontrol>.</cmd>
+            </step>
+        </steps>
+        <result>
+            <p>After activating the service, the localized elements are visible to your customers, provided they have the corresponding language set in their profile.</p>
+            <p>Brokers and resellers as well as their customers can instantly view your localized elements. </p>
+        </result>
+    </taskbody>
+    <related-links>
+        <linklist>
+            <title>Related topics</title>
+            <link href="priceModel_service.xml"/>
+            <link href="service_publish.xml"/>
+            <link href="service_activation.xml"/>
+        </linklist>
+    </related-links>
+</task>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="BillingPSP" xml:lang="en-us">
+    <title>Setting the PSP Identifier for a Supplier or Reseller</title>
+    <conbody>
+        <section>
+            <p>When defining the payment types offered by a PSP for a supplier or reseller organization, you need to set the ID provided by the PSP for the organization. This ID may be, for example, the supplier's or reseller's account number at the PSP. </p>
+            <p>An organization needs to have a contractual relationship with the PSP. The PSP configures the channel for a supplier or reseller organization and issues an identifier so that payments can be immediately linked to the supplier's or reseller's account. </p>
+            <p><b>To set the PSP identifier for an organization, choose one of the following options:</b>
+                <ul>
+                    <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> administration portal - Choose <b>Manage payment service provider</b> in the <b>Operation</b> menu.<p>For detailed step-by-step instructions, refer to the online help. </p></li>
+                    <li>Command line tool - Use the <codeph>setpspaccountfororganization</codeph> command with the following syntax: <p>
+                            <codeblock>&lt;JAVA_HOME>/bin/java -jar lib/oscm-operatorsvc-client.jar 
+ &lt;userkey> &lt;password>
+ setpspaccountfororganization orgid=&lt;organizationID&gt; 
+ pspid=&lt;Name of PSP&gt; pspidentifier=&lt;ID provided by PSP&gt;</codeblock>
+                        </p></li>
+                </ul></p>
+        </section>
+    </conbody>
+</concept>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="ja-jp">
+    <title>サービスのローカライズ</title>
+    <taskbody>
+        <context>
+            <p><uicontrol>サービスのローカライズ</uicontrol>ページでは、利用者向けサービス名、概要、説明をサポートされているすべての言語で提供できます。サービス向けに定義した場合、利用者が詳細や購入済みサービスを表示した際に表示されるカスタムタブの名前をローカライズすることができます。</p>
+            <p>要素をローカライズするためには、サービスを有効化されていない状態にする必要があります。ローカライズは、既存の購入済サービスには影響しません。変更内容はそれ以降に新しく購入されたサービスに対してのみ有効になります。サービス利用部門がサービスを購入できるようにするには、再度そのサービスを有効化する必要があります。</p>
+            <p id="Brokers_and_resellers_as_well_task_taskbody_context_p_3"
+                >サービス仲介部門、サービス提供代行部門およびそのサービス利用部門にはただちに変更された言語の内容でサービスの内容が表示されます。サービス仲介部門およびサービス提供代行部門から購入された既存の購入済サービスには変更内容は反映されません。おこなったすべての変更はそれ以降に新しく購入された場合にのみ反映されます。</p>
+            <note>料金設定の説明を英語以外の言語にローカライズしない場合、そのローカライズされていない言語に言語設定されているサービス利用部門に対し英語のテキストが表示されます。サービス利用規約も上記と同様に表示されます。</note>
+            <p><b>要素をローカライズするには：</b></p>
+        </context>
+        <steps>
+            <step>
+                <cmd>ソース言語を選択します。利用者向けサービス名、簡単な説明、詳細説明、カスタムタブの名前がソース言語で表示されます。 </cmd>
+            </step>
+            <step>
+                <cmd>ターゲット言語を選択します。 </cmd>
+                <info>一覧にはサポートされているすべての言語が含まれます。</info>
+            </step>
+            <step>
+                <cmd>翻訳文を入力します。</cmd>
+                <info>
+                    <note><ph conref="service_add.xml#task634/Make_sure_to_use_only_the_con_task_taskbody_steps_step_2"/></note>
+                </info>
+            </step>
+            <step>
+                <cmd><uicontrol>OK</uicontrol>をクリックして翻訳を確定します。</cmd>
+            </step>
+        </steps>
+        <result>
+            <p>サービスを有効化すると、サービス利用部門の利用者はそれぞれに設定しているプロフィールの言語でローカライズされた項目を見ることができます。</p>
+            <p>サービス仲介部門、サービス提供代行部門およびそれらのサービス利用部門には変更後すぐにローカライズされた情報が表示されます。</p>
+        </result>
+    </taskbody>
+    <related-links>
+        <linklist>
+            <title>関連情報</title>
+            <link href="priceModel_service.xml"/>
+            <link href="service_publish.xml"/>
+            <link href="service_activation.xml"/>
+        </linklist>
+    </related-links>
+</task>

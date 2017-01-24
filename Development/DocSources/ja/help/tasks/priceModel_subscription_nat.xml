@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="ja-jp">
+  <title>購入済サービスの料金設定変更</title>
+  <taskbody>
+    <context>
+      <p>On the <uicontrol>購入済サービスの料金設定変更</uicontrol>ページでは、サービス利用部門の購入済サービスに対して料金設定を定義、編集を行うことができます。</p>
+      <p>プラットフォームの<b>請求システム</b>を利用して料金請求される購入済サービスを選択しています。サービス利用部門の購入済サービス利用に関していかに料金設定を行うかを定義する必要があります。</p>
+      <p><b>購入済サービスの料金設定の定義、および編集方法</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>選択した購入済サービスに対して、どのコスト計算が有効になっているか確認します:</cmd>
+        <info>
+          <ul compact="no" id="Select_task_taskbody_steps_step_2">
+            <li><uicontrol>無料</uicontrol>: サービスは無料です。</li>
+            <li><uicontrol>従量課金</uicontrol>: サービスを利用した時間(ミリ秒単位)に従ってコスト計算が行われます。</li>
+            <li><uicontrol>定額</uicontrol>: 利用料金は、日や週といった時間単位毎に計算されます。時間単位は<uicontrol>課金単位</uicontrol>で定義します。</li>
+          </ul>
+          <p>購入済サービスが無料の場合はステップ6、その他の場合はステップ2へ進んでください。</p>
+        </info>
+      </step>
+      <step>
+        <cmd><uicontrol>説明</uicontrol>フィールドには料金設定の詳細な説明を入力してください。例として、料金設定要素の詳細を記入するなどがあります。</cmd>
+        <info>
+          <p>サービスカタログからサービスの詳細を要求した際にサービス利用部門に表示される説明です。</p>
+          <p>料金設定をローカライズすると、後で異なる言語による説明も追加できます。</p>
+          <note>書式を変更する際は、エディタが提供するコントロールのみを使用してください。手作業でHTMLタグを入力したり外部のスタイルシートやコンテンツを参照すると、ページレイアウトがエラーになる場合があります。</note>
+        </info>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_charging">
+        <cmd/>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_events">
+        <cmd/>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_params">
+        <cmd/>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_save">
+        <cmd/>
+      </step>
+      <step>
+        <cmd>料金設定の説明とサービス利用規約を別の言語で提供するには、<uicontrol>ローカライズ</uicontrol>をクリックします。</cmd>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_roles">
+        <cmd/>
+      </step>
+    </steps>
+    <result>購入済サービスに対する料金設定の変更はただちに有効となります。 </result>
+  </taskbody>
+  <related-links>
+    <linklist>
+      <title>関連情報</title>
+      <link href="priceModel_localize.xml"/>
+      <link href="priceModel_roles.xml"/>
+    </linklist>
+  </related-links>
+</task>

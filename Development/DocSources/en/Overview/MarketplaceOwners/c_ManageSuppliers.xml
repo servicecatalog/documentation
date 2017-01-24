@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd">
+
+<concept id="concept_3413BBD173324104B42FB714974CABE7" xml:lang="en-us">
+    <title>Managing Service Sellers</title>
+    <conbody>
+        <section>
+            <p>A marketplace owner is responsible for deciding who is allowed to publish services to his marketplace. <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> distinguishes between two seller policies:</p>
+            <p>On an <b>open marketplace</b>, any seller organization with the supplier, broker, or reseller role can publish services immediately after the marketplace has been created. The marketplace owner can exclude specific sellers from the marketplace. This may be required, for example, if a seller does not adhere to the code of conduct or does not pay his fees for using the marketplace. After the problems with a seller have been sorted out, the marketplace owner can re-admit him so that he can again publish services to the marketplace.</p>
+            <p>By defining that a marketplace is open to any seller, the marketplace owner does not need to spend effort on managing and controlling the marketplace and the sellers. However, it also increases the risk that many sellers publish numerous services to the marketplace and customers are lost in the variety.</p>
+            <p>On a <b>marketplace for authorized sellers</b>, only suppliers, brokers, and resellers who are explicitly admitted by the marketplace owner can publish services. Any number of sellers can be admitted. The publishing approval for a seller can be revoked at any time, for example, if the seller is in arrears with his payments.</p>
+            <p>By requiring that the publishing of services needs explicit approval, these marketplaces provide the marketplace owners with optimum control. Different marketplaces can be operated independently. This is useful, for example, if a seller in one country is not to be allowed to offer services on a marketplace in another country.</p>
+            <p>The operator who creates a marketplace specifies the seller policy for it. The marketplace owner can at any time turn a marketplace which is open to any seller into a marketplace for authorized sellers only, and vice versa. </p>
+        </section>
+    </conbody>
+</concept>

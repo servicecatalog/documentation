@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<reference id="reference832" xml:lang="ja-jp">
+    <title><ph platform="print">イベントの料金</ph><ph platform="help">イベントの料金</ph>
+    </title>
+    <refbody>
+        <section>
+            <p>料金設定では、請求対象イベントごとに料金を定義できます。<ph
+                    id="These_include_for_example_l_reference_refbody_section_1"
+                    >例えば、サービスに対する利用者のログインやログアウト、特定のトランザクションの完了、特定のデータの作成・削除などが含まれます。サービスの実装や統合により、利用できるイベントが異なります。</ph></p>
+            <p>このタイプでは次のような段階的な料金を適用できます。請求期間ごとの発生回数に応じてイベントに異なる単価を設定できます。
+                <ph platform="print">詳細については、<xref href="r_PriceModelDetails_stepped.xml"/>を参照してください。</ph><ph
+                    platform="help">詳細については、<xref href="r_PriceModelDetails_stepped.xml">ここ</xref>をクリックしてください。</ph></p>
+            <p>イベントの料金は選択された計算方式(従量課金、定額)とは別で扱われます。</p>
+        </section>
+        <section>
+           <title>例</title>
+           <p>以下の料金が5種類のイベントに定義されます。 </p>
+           <fig platform="help">     
+               <image href="../_images/PriceModelSamples_Events.png" placement="break" height="262" width="622"/>
+           </fig>    
+           <fig platform="print">
+               <image align="center" height="131" href="../_images/PriceModelSamples_Events.png" placement="break"
+                   width="311"/>
+           </fig>
+           <p>それぞれのイベントが発生するたびに料金が計算されます。購入済サービス期間は1つの請求期間内になります。</p>
+           <fig platform="help">
+               <image href="../_images/PriceModelSamples_EventsCalc.png" placement="break" height="150" width="400"/>
+           </fig>
+           <fig platform="print">
+               <image align="center" height="200" href="../_images/PriceModelSamples_EventsCalc.png" placement="break"
+                   width="400"/>
+           </fig>
+        </section>
+    </refbody>
+</reference>

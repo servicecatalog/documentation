@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<reference id="reference832" xml:lang="en-us">
+    <title>GlassFish Configuration Settings<ph audience="BSS"> for the <ph
+                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr" 
+        /> Domain</ph></title>
+    <refbody>
+        <section>
+            <p>The <codeph>glassfish.properties</codeph> file located in <ph audience="BSS"
+                        ><codeph>&lt;install_pack_dir>/domains/bes_domain</codeph></ph><ph audience="app"
+                        ><codeph>&lt;install_pack_dir>/domains/app_domain</codeph></ph><ph audience="aws"
+                        ><codeph>&lt;install_pack_dir>/domains/app_domain</codeph></ph><ph audience="os"
+                        ><codeph>&lt;install_pack_dir>/domains/app_domain</codeph></ph><ph audience="ror"
+                            ><codeph>&lt;install_pack_dir>/domains/app_domain</codeph></ph><ph audience="tps5"
+                                ><codeph>&lt;install_pack_dir>/domains/app_domain</codeph></ph><ph audience="vmware"
+                                    ><codeph>&lt;install_pack_dir>/domains/app_domain</codeph></ph> contains the configuration settings for the GlassFish application server. <ph
+                    audience="BSS">The settings are required for configuring the domain where the <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> application is deployed. </ph><ph audience="app"
+                    >The settings are required for configuring the domain where APP is deployed.</ph><ph audience="aws"
+                    >The settings are required for configuring the domain where APP is deployed.</ph><ph audience="os"
+                    >The settings are required for configuring the domain where APP is deployed.</ph><ph audience="ror"
+                        >The settings are required for configuring the domain where APP is deployed.</ph><ph audience="tps5"
+                            >The settings are required for configuring the domain where APP is deployed.</ph><ph audience="vmware"
+                                >The settings are required for configuring the domain where APP is deployed.</ph>
+            </p>
+            <p>Below you find a detailed description of the settings. </p>
+        </section>
+        <section>
+            <title>GLASSFISH_HOME</title>
+            <p>The absolute path and name of the GlassFish installation directory.</p>
+        </section>
+        <section>
+            <title>JDBC_DRIVER_JAR_NAME</title>
+            <p>The name of the PostgreSQL JDBC driver jar file as available after installation.</p>
+            <p>Example: <codeph>postgresql-9.1-903.jdbc4.jar</codeph></p>
+        </section>
+        <section>
+            <title>MAIL_HOST</title>
+            <p>The host name or IP address of your mail server. </p>
+        </section>
+        <section><title>MAIL_RESPONSE_ADDRESS</title>The email address used by the server as the sender of emails.<p>Example: <codeph>saas@yourcompany.com</codeph>
+            </p></section>
+        <section><title>MAIL_PORT</title>The port of your mail server. <p>Default: <codeph>25</codeph></p></section>
+        <section><title>MAIL_USE_AUTHENTICATION</title>Optional. Defines whether mails can be sent only to users authenticated against the SMTP mail system. <p>Allowed values: <codeph>true</codeph>, <codeph>false</codeph></p><p>Default: <codeph>false</codeph></p></section>
+        <section><title>MAIL_USER</title>Mandatory if <codeph>MAIL_USE_AUTHENTICATION=true</codeph>. Specifies the name of the user to be used for authentication against the SMTP mail system.</section>
+        <section><title>MAIL_PWD</title>Mandatory if <codeph>MAIL_USE_AUTHENTICATION=true</codeph>. Specifies the password of the user to be used for authentication against the SMTP mail system.</section>
+        <section>
+            <title>MAIL_TIMEOUT</title>
+            <p>Optional. The time interval in milliseconds for sending email messages, i.e. until a socket I/O timeout occurs.</p>
+            <p>Allowed values: Any value between <codeph>0</codeph> and <codeph>4924967296</codeph></p>
+            <p>Default: <codeph>30000</codeph></p>
+        </section>
+        <section>
+            <title>MAIL_CONNECTIONTIMEOUT</title>
+            <p>Optional. The time interval in milliseconds for establishing the SMTP connection, i.e. until a socket connection timeout occurs. </p>
+            <p>Allowed values: Any value between <codeph>0</codeph> and <codeph>4924967296</codeph></p>
+            <p>Default: <codeph>30000</codeph></p>
+        </section>
+        <section>
+            <title>glassfish.domain.portbase</title>
+            <p>Mandatory. The base number for all ports used by the domain of the <ph audience="BSS"><ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph audience="app"
+                    >APP</ph><ph audience="ror">APP</ph><ph audience="aws">APP</ph><ph audience="os"
+                        >APP</ph><ph audience="tps5"
+                            >APP</ph><ph audience="vmware"
+                                >APP</ph> application. <ph audience="BSS"
+                        >Make sure that the port base setting differs from the <codeph>glassfish.domain.portbase</codeph> setting for the <codeph>master_indexer_domain</codeph> domain by at least 200.</ph></p>
+            <p>Example: <codeph>8800</codeph></p>
+        </section>
+        <section>
+            <title>glassfish.domain.portadmin</title>
+            <p>The administration port of the domain used for <ph audience="BSS"><ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph audience="app"
+                            >APP</ph><ph audience="ror">APP</ph><ph audience="vmware">APP</ph><ph audience="aws">APP</ph><ph audience="os">APP</ph><ph audience="tps5">APP</ph>.</p>
+            <p>Example: <codeph>8848</codeph></p>
+        </section>
+        <section>
+            <title>glassfish.domain.name</title>
+            <p>The name of the domain where <ph audience="BSS"><ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph audience="app"
+                    >APP</ph><ph audience="ror">APP</ph><ph audience="aws">APP</ph><ph audience="os">APP</ph><ph
+                        audience="tps5">APP</ph><ph audience="vmware">APP</ph> is deployed.</p>
+            <p>Example: <codeph><ph audience="BSS">bes-domain</ph><ph audience="app">app-domain</ph><ph audience="ror"
+                >app-domain</ph><ph audience="aws">app-domain</ph><ph audience="os">app-domain</ph><ph audience="tps5">app-domain</ph><ph audience="vmware">app-domain</ph></codeph></p>
+        </section>
+        <section>
+            <title>glassfish.domain.admin.user</title>
+            <p>The user name of the <ph audience="BSS"><ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph audience="app"
+                    >APP</ph><ph audience="ror">APP</ph><ph audience="aws">APP</ph><ph audience="os"
+                        >APP</ph><ph audience="tps5"
+                            >APP</ph><ph audience="vmware">APP</ph> domain administrator. </p>
+            <p>Default: <codeph>admin</codeph></p>
+        </section>
+        <section>
+            <title>glassfish.domain.admin.pwd</title>
+            <p>The password of the <ph audience="BSS"><ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph audience="app"
+                    >APP</ph><ph audience="ror">APP</ph><ph audience="aws">APP</ph><ph audience="os"
+                        >APP</ph><ph audience="tps5"
+                            >APP</ph><ph audience="vmware">APP</ph> domain administrator. </p>
+            <p>Default: <codeph>adminadmin</codeph></p>
+        </section>
+        <section audience="BSS">
+            <title>glassfish.domain.remote.jms.host</title>
+            <p>Mandatory. The host name or IP address of the server where the domain for the search indexer application is deployed. </p>
+            <p>Example: <codeph>MyHibernateMasterIndexerHostName</codeph></p>
+        </section>
+        <section audience="BSS">
+            <title>glassfish.domain.remote.jms.port</title>
+            <p>Mandatory. The port of the JMS broker used by the domain of the search indexer application.</p>
+            <p>Example: <codeph>8476</codeph></p>
+        </section>
+        <section>
+            <title>glassfish.domain.admin.master.pwd</title>
+            <p>Mandatory. The master password required for accessing the keystore and truststore files of the application server domain. </p>
+            <p>Default: <codeph>changeit</codeph></p>
+        </section>
+        <section audience="BSS">
+            <title>glassfish.domain.WS_PORT</title>
+            <p>The port used for an HTTP listener for Web service connections of the application server. </p>
+            <!--p>Example: <codeph>8182</codeph> for standalone environment, <codeph>8582</codeph> for cluster environment. </p-->
+            <p>Example: <codeph>8082</codeph></p>
+        </section>
+        <section audience="BSS">
+            <title>hibernate.search.default.refresh</title>
+            <p>Mandatory. The interval in seconds between index data refresh operations. At this interval, the search index is read from the shared directory hosting the search index for the master indexer node and written to the index directory on the slave node. </p>
+            <p>Example: <codeph>300</codeph></p>
+        </section>
+        <section audience="BSS">
+            <title>hibernate.search.shared.sourceBase</title>
+            <p>Mandatory. The shared directory hosting the search index for the master indexer node and the slave nodes, if any. From this directory, the master search index is replicated to the slave nodes, if any.</p>
+            <p>On Windows, double-escape the colon in the drive specification of the path to the shared directory. </p>
+            <p>Example: <codeph>C\\:/glassfish/masterSourceBase</codeph></p>
+        </section>
+        <section>
+            <title>glassfish.domain.stop.waitSeconds</title>
+            <p>Mandatory. The time in seconds the application server waits until a stop domain operation is executed. </p>
+            <p>Default: <codeph>60</codeph></p>
+        </section>
+        <section>
+            <title>glassfish.domain.start.maxWaitSeconds</title>
+            <p>Mandatory. The maximum time in seconds the application server waits until it checks whether a domain is started. </p>
+            <p>Default: <codeph>600</codeph></p>
+        </section>
+    </refbody>
+</reference>

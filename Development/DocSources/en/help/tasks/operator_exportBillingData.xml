@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd">
+<task id="task634" xml:lang="en-us">
+  <title>Billing data preview</title>
+  <taskbody>
+    <context>
+      <p id="PreviewBillingData"
+        >You can preview the billing data for a customer's subscriptions to services using the <ph platform="help"
+          >platform's </ph>native billing system<ph platform="print"> of <ph
+            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+        /></ph> for a specified time frame. The billing data can be saved to an XML file or opened in an editor of your choice. You can edit the billing data and work with it as required, for example when forwarding the data to an accounting system. </p>
+      <p id="PreviewBillingData3"
+        >The billing data preview collects the billing-relevant data for the specified customer and accumulates it for every day within the specified time frame. The data is not stored in the database; the result is just a cost projection for the customer organization.</p>
+      <p><b>To preview billing data</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>From the <uicontrol>Organization ID</uicontrol> list, select the organization for which you want to view the billing data. </cmd>
+        <info>
+          <p>The list contains all organizations managed on your platform. </p>
+        </info>
+      </step>
+      <step>
+        <cmd>Specify the start and end date of the time frame for which you want to view the billing data. </cmd>
+        <info>
+          <p id="PreviewBillingData2"
+            >The system calculates the exact costs for this time frame, independent of the defined billing periods. If the two dates correspond to the first day and the last day of a billing period, the costs calculated for the preview are exactly the same as calculated by the billing run for the billing period.</p>
+          <p id="PreviewBillingData2">The dates need to be specified in the format <codeph>YYYY-MM-DD</codeph>. </p>
+        </info>
+      </step>
+      <step>
+        <cmd>Click <uicontrol>Export</uicontrol>. </cmd>
+      </step>
+      <step>
+        <cmd>Choose whether to save the data to a file (<codeph>&lt;date&gt;BillingData.xml</codeph>) or to view it instantly in an editor of your choice.</cmd>
+      </step>
+    </steps>
+    <result>
+      <p><ph conref="user_exportBillingData.xml#task634/For_a_detailed_description_of_task_taskbody_context_note_p"
+        /></p>
+      <!--p>
+        <note>
+          <p id="PreviewBillingData2"
+              >Be aware of the following: The dates that are output in the <codeph>&lt;Period></codeph> XML element may not correspond to the start and end dates you enter. </p>
+          <p id="PreviewBillingData2"
+              >For example: On March 22nd, you want to preview the billing data of an organization and enter March 1st as the start date and March 15th as the end date. The organization subscribed to a service on March 7th at 13:15. The price model for this service specifies the <b>per time unit</b> calculation on a monthly basis, i.e. the organization is charged for full months (from the 1st to the last day)during which the service is used. </p>
+          <p id="PreviewBillingData2"
+            >In this case, the <codeph>&lt;Period></codeph> element will contain the following information:</p>
+          <p id="PreviewBillingData2"
+              ><codeph>&lt;Period ... startDateIsoFormat="2013-03-07T13:15:..." ... "endDateIsoFormat="2013-03-31T23:59:59.999"/></codeph>
+          </p>
+          <p id="PreviewBillingData2"
+            >Since the subscription started on March 7th, the period start date is also March 7th. The end date is always the last day of a month irrespective of which end date you enter.</p>
+        </note>
+      </p-->
+    </result>
+  </taskbody>
+</task>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<reference id="Application_Server_Resources_74" xml:lang="en-us">
+    <title>Menu Options and User Roles</title>
+    <refbody>
+        <section>
+            <p>This appendix provides an overview of the user roles required for using the menu options at the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> administration portal which are of relevance to a supplier. For details on the menu options, refer to the <i>Online Help</i>.</p>
+        </section>
+        <section>
+            <title>Account Menu</title>
+            <p>The following user roles are required for using the menu options in the <b>Account</b> menu:</p>
+            <table colsep="1" frame="all" rowsep="1">
+                <tgroup cols="2">
+                    <colspec colname="col1" colnum="1" colwidth="195.0pt"/>
+                    <colspec colname="col2" colnum="2" colwidth="282.75pt"/>
+                    <tbody>
+                        <row>
+                            <entry colname="col1"><b>Edit profile</b>
+                            </entry>
+                            <entry colname="col2">Any user role</entry>
+                        </row>
+                        <row>
+                            <entry><b>Import users</b><p>(if the organization uses LDAP-based user authentication)</p></entry>
+                            <entry>Administrator</entry>
+                        </row>
+                        <row>
+                            <entry colname="col1"
+                                    ><b>Change password</b><p>(if the organization does not use an external system for user authentication)</p></entry>
+                            <entry colname="col2">Any user role</entry>
+                        </row>
+                        <row>
+                            <entry colname="col1"><b>Register new users</b></entry>
+                            <entry colname="col2">Administrator</entry>
+                        </row>
+                        <row>
+                            <entry colname="col1"><b>Manage users</b>
+                            </entry>
+                            <entry colname="col2">Administrator</entry>
+                        </row>
+                        <row>
+                            <entry><b>LDAP settings</b><p>(if the organization uses LDAP-based user authentication)</p></entry>
+                            <entry>Administrator</entry>
+                        </row>
+                        <row>
+                            <entry colname="col1"><b>Create report</b>
+                            </entry>
+                            <entry colname="col2">Administrator</entry>
+                        </row>
+                        <row>
+                            <entry colname="col1"><b>Process triggers</b>
+                            </entry>
+                            <entry colname="col2">Administrator</entry>
+                        </row>
+                        <row>
+                            <entry colname="col1"
+                                    ><b>Manage processes</b><p>(if the organization is connected to an external process control system)</p></entry>
+                            <entry colname="col2">Any user role</entry>
+                        </row>
+                        <row>
+                            <entry colname="col1"><b>Manage custom attributes</b>
+                            </entry>
+                            <entry colname="col2">Service manager</entry>
+                        </row>
+                        <row>
+                            <entry colname="col1"><b>Export billing data</b></entry>
+                            <entry colname="col2">Service manager</entry>
+                        </row>
+                        <row>
+                            <entry colname="col1"><b>Define billing period</b></entry>
+                            <entry colname="col2">Service manager</entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </section>
+        <section>
+            <title> Customer Menu</title>
+            <p>The following user roles are required for using the menu options in the <b>Customer</b> menu:</p>
+            <table colsep="1" frame="all" rowsep="1">
+                <tgroup cols="2">
+                    <colspec colname="col1" colnum="1" colwidth="195.0pt"/>
+                    <colspec colname="col2" colnum="2" colwidth="281.25pt"/>
+                    <tbody>
+                        <row>
+                            <entry colname="col1"><b>Register customer</b>
+                            </entry>
+                            <entry colname="col2">Service manager</entry>
+                        </row>
+                        <row>
+                            <entry colname="col1"><b>Manage customer</b>
+                            </entry>
+                            <entry colname="col2">Service manager</entry>
+                        </row>
+                        <row>
+                            <entry colname="col1"><b>Manage payment types</b>
+                            </entry>
+                            <entry colname="col2">Service manager</entry>
+                        </row>
+                        <row>
+                            <entry colname="col1"><b>Manage VAT rates</b>
+                            </entry>
+                            <entry colname="col2">Service manager</entry>
+                        </row>
+                        <row>
+                            <entry colname="col1"><b>View subscription</b>
+                            </entry>
+                            <entry colname="col2">Service manager</entry>
+                        </row>
+                        <row>
+                            <entry colname="col1"><b>Manage subscription attributes</b>
+                            </entry>
+                            <entry colname="col2">Service manager</entry>
+                        </row>
+                        <row>
+                            <entry colname="col1"><b>Terminate subscription</b>
+                            </entry>
+                            <entry colname="col2">Service manager</entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </section>
+        <section>
+            <title>Marketable Service Menu</title>
+            <p>The following user roles are required for using the menu options in the <b>Marketable service</b> menu:</p>
+            <table colsep="1" frame="all" rowsep="1">
+                <tgroup cols="2">
+                    <colspec colname="col1" colnum="1" colwidth="195.0pt"/>
+                    <colspec colname="col2" colnum="2" colwidth="280.5pt"/>
+                    <tbody>
+                        <row>
+                            <entry colname="col1"><b>Define service</b>
+                            </entry>
+                            <entry colname="col2">Service manager</entry>
+                        </row>
+                        <row>
+                            <entry colname="col1"><b>Update service</b>
+                            </entry>
+                            <entry colname="col2">Service manager</entry>
+                        </row>
+                        <row>
+                            <entry colname="col1"><b>Copy service</b>
+                            </entry>
+                            <entry colname="col2">Service manager</entry>
+                        </row>
+                        <row>
+                            <entry colname="col1"><b>Delete service</b>
+                            </entry>
+                            <entry colname="col2">Service manager</entry>
+                        </row>
+                        <row>
+                            <entry colname="col1"><b>Define up/downgrade options</b>
+                            </entry>
+                            <entry colname="col2">Service manager</entry>
+                        </row>
+                        <row>
+                            <entry colname="col1"><b>Define publishing options</b>
+                            </entry>
+                            <entry colname="col2">Service manager</entry>
+                        </row>
+                        <row>
+                            <entry colname="col1"><b>Activate or deactivate services</b>
+                            </entry>
+                            <entry colname="col2">Service manager</entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </section>
+        <section>
+            <title>Price Model Menu</title>
+            <p>The following user roles are required for using the menu options in the <b>Price model</b> menu:</p>
+            <table colsep="1" frame="all" rowsep="1">
+                <tgroup cols="2">
+                    <colspec colname="col1" colnum="1" colwidth="195.0pt"/>
+                    <colspec colname="col2" colnum="2" colwidth="282.75pt"/>
+                    <tbody>
+                        <row>
+                            <entry colname="col1"><b>Define for service</b>
+                            </entry>
+                            <entry colname="col2">Service manager</entry>
+                        </row>
+                        <row>
+                            <entry colname="col1"><b>Define for customer</b>
+                            </entry>
+                            <entry colname="col2">Service manager</entry>
+                        </row>
+                        <row>
+                            <entry colname="col1"><b>Delete for customer</b>
+                            </entry>
+                            <entry colname="col2">Service manager</entry>
+                        </row>
+                        <row>
+                            <entry colname="col1"><b>Define for subscription</b>
+                            </entry>
+                            <entry colname="col2">Service manager</entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </section>
+    </refbody>
+</reference>

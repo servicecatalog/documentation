@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd" >
+<reference id="Service_Parameters_114">
+  <title>Service Parameters and Operations</title>
+  <refbody>
+    <section>
+      <p>The following sections describe the technical service parameters and service operations which are supported by the ROR service controller. </p>
+    </section>
+    <section>
+      <title>Service Parameters for All Scenarios</title>
+      <p>The following parameters apply to all scenarios:</p>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>APP_CONTROLLER_ID</b></p>
+                <p>Mandatory. The ID of the service controller as defined in its implementation.</p>
+                <p>Default: <codeph>ess.ror</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>INSTANCENAME_PATTERN</b></p>
+                <p>Mandatory. A regular expression specifying a pattern for the virtual platform or server instance names entered by the users when they subscribe to a corresponding service. If the names do not match the pattern, the subscription is rejected.</p>
+                <p>Example: <codeph>ror([a-z0-9]){2,25}</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>INSTANCENAME_PREFIX</b></p>
+                <p>Optional. A string to be prepended to the virtual platform or server instance names entered by the users when they subscribe to a corresponding service. </p>
+                <p>Example: <codeph>ror</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>INSTANCENAME</b></p>
+                <p>Mandatory. The name of the virtual platform or server to be instantiated. This name must be specified by the users when they subscribe to a corresponding service. The string given in<codeph> INSTANCENAME_PREFIX</codeph> is prepended to the name. The name including the prefix must match the pattern given in <codeph>INSTANCENAME_PATTERN</codeph>.</p>
+                <p>Example: <codeph>IASPlatform</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>MAIL_FOR_COMPLETION</b></p>
+                <p>Optional. The address to which emails are to be sent that describe manual steps required to complete an operation. If you specify this parameter, the service controller interrupts the processing of each operation before its completion and waits for a notification about the execution of a manual action. Omit this parameter if you do not want to interrupt the processing. </p>
+                <p>Example: <codeph>info@company.com</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>MAIL_FOR_NOTIFICATION</b></p>
+                <p>Optional. The address to which emails are to be sent that notify service users or administrators of customer organizations about a successful modification of a virtual platform or server. Such modifications result from changes in the configuration parameters at a corresponding subscription.</p>
+                <p>Example: <codeph>administrators@company.com</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>Service Parameters for Virtual Platform Provisioning and Scaling</title>
+      <p>The following parameters are required for provisioning a virtual platform with one or more virtual servers as well as for the horizontal and vertical scaling scenarios:</p>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>SYSTEM_TEMPLATE_ID</b></p>
+                <p>Mandatory. The ID of the ROR template to be used for virtual platforms. </p>
+                <p>Customers should not be able to enter a value for this parameter, i.e. it should not be configurable. </p>
+                <p>Example: <codeph>template-13c8ab3348d</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>MASTER_TEMPLATE_ID</b></p>
+                <p>Mandatory. The ID of the ROR image to be used for the master server (or the only server) on a virtual platform. </p>
+                <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers or, in case you specify more than one image, have fixed parameter options for selection.</p>
+                <p>Example: <codeph>image-13cedeaf7ed</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>SLAVE_TEMPLATE_ID</b></p>
+                <p>Mandatory. The ID of the ROR image to be used for the slave servers on a virtual platform. Make sure that an image is used which allows the slave servers to run with the same <codeph>ServerType</codeph>, <codeph>NetworkId</codeph>, <codeph>HostPool</codeph>, and <codeph>StoragePool</codeph> as the master server. The reason is that the ROR service controller uses these properties of the master server for each newly created slave server. </p>
+                <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers or, in case you specify more than one image, have fixed parameter options for selection.</p>
+                <p>Example: <codeph>image-13c8a812d25</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>CLUSTER_SIZE</b></p>
+                <p>Mandatory. The number of virtual servers to be provisioned on a virtual platform. Make sure that users can only specify numbers that are supported by the corresponding templates and images in ROR. This can be done, for example, by presenting the supported numbers as different parameter options for selection.</p>
+                <p>Example: <codeph>2</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>COUNT_CPU</b></p>
+                <p>Optional. The number of CPUs each virtual server on a virtual platform is to have. Make sure that users can only specify numbers that are supported by the corresponding templates and images in ROR. This can be done, for example, by presenting the supported numbers as different parameter options.</p>
+                <p>Example: <codeph>4</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>Service Parameters for Virtual Server Provisioning</title>
+      <p>The following parameters are required for instantiating a virtual server and adding it to an existing virtual platform: </p>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>VSYS_ID</b></p>
+                <p>Mandatory. The ROR ID of the virtual platform to which the new virtual server is to be added.</p>
+                <p>Example: <codeph>SampleTe-4LPKTS4KQ</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>DISKIMG_ID</b></p>
+                <p>Mandatory. The ID of the ROR image to be used for the new virtual server. Do not use an image that is applied for the master server or slave servers of a cluster running on the virtual platform to which the new virtual server is to be added. </p>
+                <p>Example: <codeph>image-13c8a812d25</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>NETWORK_ID</b></p>
+                <p>Mandatory if the virtual platform to which the new virtual server is to be added has more than one network. The ID or name of the network within the virtual platform to which the new virtual server is to be added. </p>
+                <p>Example: <codeph>4LPKTS4KQ-N-2j0v</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>VSERVER_TYPE</b></p>
+                <p>Mandatory. A string describing the type of virtual server. The string must match one of the server types defined in ROR. </p>
+                <p>Example: <codeph>medium</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>COUNT_CPU</b></p>
+                <p>Optional. The number of CPUs the virtual server is to have. Make sure that users can only specify numbers that are supported by the corresponding templates and images in ROR. This can be done, for example, by presenting the supported numbers as different parameter options.</p>
+                <p>Example: <codeph>4</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>VM_POOL</b></p>
+                <p>Optional. The VM pool to be used for the new virtual server in ROR. </p>
+                <p>Default: <codeph>VMHostPool</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>STORAGE_POOL</b></p>
+                <p>Optional. The storage pool to be used for the new virtual server in ROR. </p>
+                <p>Default: <codeph>StoragePool</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>Service Operations for Virtual Platforms</title>
+      <p>The ROR service controller supports the service operations below for virtual platforms. </p>
+      <p>The <codeph>actionURL</codeph> for each operation is:</p>
+      <p><codeph>https://&lt;host>:&lt;port>/OperationService/AsynchronousOperationProxy?wsdl</codeph></p>
+      <p><codeph>&lt;host></codeph> and <codeph>&lt;port></codeph> are the server and port of the <codeph>app-domain</codeph> domain where the ROR integration software is deployed.</p>
+      <p>
+        <note>If you provision a virtual platform that does not support start and stop operations, make sure that you remove the service operations from the technical service definition.</note>
+      </p>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>START_VIRTUAL_SYSTEM</b></p>
+                <p>Starts a virtual platform in ROR if it was stopped.</p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>STOP_VIRTUAL_SYSTEM</b></p>
+                <p>Stops a virtual platform in ROR if it was started.</p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+  </refbody>
+</reference>

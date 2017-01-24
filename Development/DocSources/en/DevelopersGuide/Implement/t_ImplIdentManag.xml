@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<task id="task_FDCC821C3A75473CBB39DA34D210E380" xml:lang="en-us">
+    <title>Adapting the Login/Logout Implementation</title>
+    <taskbody>
+        <context>
+            <p
+                conref="../../TechProvGuide/Implement/t_UseIntHelpers.xml#task_FDCC821C3A75473CBB39DA34D210E380/If_you_opt_for_access_through_task_taskbody_context_p_1"/>
+            <p
+                conref="../../TechProvGuide/Implement/t_UseIntHelpers.xml#task_FDCC821C3A75473CBB39DA34D210E380/The_required_functionality_fo_task_taskbody_context_p_2"/>
+            <p/>
+            <p
+                conref="../../TechProvGuide/Implement/t_UseIntHelpers.xml#task_FDCC821C3A75473CBB39DA34D210E380/LoginLogout"/>
+            <p>As for the custom login and logout modules, you need to analyze the existing functionality of your application and adapt it to match the required behavior.</p>
+            <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> provides resources for J2EE environments that support you in adapting the login/logout implementation of a Java-based Web application. The resources are called <b>integration helpers</b> and contain a ready-to-use token handler and logout listener. </p>
+            <p>The integration helpers can be used with any Java-based Web application. The token handler is implemented as a Java servlet and as a JSP; the logout listener is implemented as a session listener. </p>
+            <p>If your application is based on a different technology, you need to implement your own token handler and logout listener by calling the following methods of the platform Session Service (see <xref
+                    href="../Interfaces/c_PlatformServices.xml"/>):</p>
+            <ul>
+                <li><codeph>resolveUserToken</codeph> for requesting <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> to resolve a user token</li>
+                <li><codeph>deleteServiceSession</codeph> for notifying <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> of a logout or session timeout</li>
+            </ul>
+            <p>The following figure illustrates how login access works and which parts have to be added or adapted in the login/logout implementation of your application (components provided by <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> including the integration helpers are shown in gray):</p>
+            <fig>
+                <image align="center" height="370" href="../_images/IntegrationHelpers2.png" placement="break"
+                    width="435"/>
+            </fig>
+            <p>The integration helpers are contained in the <codeph>integrationhelper</codeph> subfolder of the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> integration package (<codeph>oscm-integration-pack</codeph>):</p>
+            <p>
+                <ul>
+                    <li><codeph>oscm-webservices-proxy.jar</codeph>: A library containing a Web service proxy for <codeph>BASIC</codeph>, <codeph>CLIENTCERT</codeph>, and <codeph>STS</codeph> Web service ports of the <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> platform services. This proxy is implemented in Java and ready to be used. It creates a Web service proxy containing all information required to establish a connection with a <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> Web service.</li>
+                    <li><codeph>Integrationhelper.jar</codeph>: A library containing a token handler and logout listener. They are also implemented in Java and ready to be used.</li>
+                    <li><codeph>oscm-api-client-handler.jar</codeph>: A library containing a SOAP handler for adding a service version number to the outbound SOAP messages of a <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> Web service client. The service version can be found in the <codeph>&lt;documentation></codeph> tag included in the WSDL files.  </li>
+                    <li><codeph>Integrationhelper.war</codeph>: A Web archive including the above integration helpers and additional resources required by them.</li>
+                    <li><codeph>IntegrationhelperSRC.zip</codeph>: An archive file containing the source code of the integration helpers. </li>
+                </ul>
+            </p>
+            <p>The <codeph>Integrationhelper.war</codeph> package has the following contents:</p>
+            <table colsep="1" frame="all" rowsep="1">
+                <tgroup cols="2">
+                    <colspec colname="col1" colnum="1" colwidth="1.00*"/>
+                    <colspec colname="col2" colnum="2" colwidth="1.19*"/>
+                    <thead>
+                        <row>
+                            <entry colname="col1">Package Contents</entry>
+                            <entry colname="col2">Description</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry colname="col1"
+                                        ><codeph>Tokenhandler.jsp</codeph><p><codeph>Logout.jsp</codeph></p><p><codeph>Welcome.jsp</codeph></p><p><codeph>TestWebService.jsp</codeph></p></entry>
+                            <entry colname="col2"
+                                >Token handler, welcome, and logout page implemented as Java server pages (JSP), as well as a page for testing Web service calls.</entry>
+                        </row>
+                        <row>
+                            <entry colname="col1"><codeph>WEB-INF/web.xml</codeph></entry>
+                            <entry colname="col2"
+                                >A sample servlet configuration for the integration of a token handler and a logout listener in a custom Web application. </entry>
+                        </row>
+                        <row>
+                            <entry colname="col1"><codeph>WEB-INF/lib</codeph>
+                            </entry>
+                            <entry colname="col2">A folder containing all JAR files required by the <ph
+                                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> integration helpers.</entry>
+                        </row>
+                        <row>
+                            <entry colname="col1"><codeph>WEB-INF/classes/com </codeph></entry>
+                            <entry colname="col2"
+                                    >A folder containing the ready-to-use logout listener class:<codeph>LogoutListener.class</codeph>, as well as the ready-to-use token handler class: <codeph>TokenHandler.class</codeph>.</entry>
+                        </row>
+                        <row>
+                            <entry colname="col1"><codeph>WEB-INF/classes/ tokenhandler.properties</codeph></entry>
+                            <entry colname="col2"
+                                >A property file specifying the relative URL to the custom login module of your application. The custom login module must be on the same machine and in the same context as the token handler. </entry>
+                        </row>
+                        <row>
+                            <entry colname="col1"><codeph>WEB-INF/classes/ webserviceclient.properties</codeph></entry>
+                            <entry colname="col2">A property file specifying the information needed to access the <ph
+                                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> platform services.</entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <p><b>To integrate the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> integration helpers into your Web application:</b></p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Extract the <codeph>Integrationhelper.war</codeph> package from the <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> integration package to a location of your choice, or add the <codeph>Integrationhelper.jar</codeph> and <codeph>oscm-webservices-proxy.jar</codeph> packages to the class path of your application.</cmd>
+            </step>
+            <step>
+                <cmd>Configure the <codeph>webserviceclient.properties</codeph> file and enter the following information: </cmd>
+                <info>
+                    <ul>
+                        <li>Server and port where the <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> platform services have been deployed.</li>
+                        <li>The URL of the WSDL file of the platform's Session Service.<p>The Web service port of a <ph
+                                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    /> platform service can be <codeph>BASIC</codeph>, <codeph>CLIENTCERT</codeph>, or <codeph>STS</codeph>, so the Web service port to be addressed depends on the authentication mode in which <ph
+                                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> is installed:</p><p>In INTERNAL authentication mode these are the Web services with the <codeph>BASIC</codeph> or <codeph>CLIENTCERT</codeph> suffix, in SAML_SP mode, these are the Web services with the <codeph>STS</codeph> suffix. In SAML_SP mode, the URL may contain the <codeph>tenantID</codeph> parameter, for example: </p><p><codeph>https://myServer:8181/oscm/v1.9/SessionService/STS?wsdl&amp;tenantID=xxxxxxxx</codeph>
+                            </p><p>The platform operator is responsible for configuring tenants and associating an IdP (Identity Provider) system with them. When the system is installed, the operator configures the default tenant. If no tenant is specified when calling the <ph
+                                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> session service, the settings for the default tenant are used. The tenant ID must refer to an existing tenant configured and set up by the platform operator. </p></li>
+                        <li>Depending on the Web service port: ID or key as well as password of the calling user. The user must have the role of a technology manager in a technology provider organization. If the Web service port is <codeph>STS</codeph>, the ID of the tenant (<codeph>tenantID</codeph>) associated with the organization may also be specified. If left empty, the default tenant is used. The platform operator is responsible for associating and configuring the tenant with an IdP (Identity Provider) system.</li>
+                        <li>The <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> platform service version.</li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>For Web service client applications running on a GlassFish application server and using STS access in SAML_SP authentication mode, you need to configure your Web service client application as follows: </cmd>
+                <info>
+                    <ol>
+                        <li>From the IdP or <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> operator, obtain a federation metadata exchange file in XML format generated with and for the IdP system or systems that are to be used. The metadata include namespace information required for connecting to the STS. In a multi-tenancy environment, you need the data from every IdP system that is to be addressed. </li>
+                        <li>Create a <codeph>wsit-client.xml</codeph> file and specify the federation metadata file to be imported as well as the corresponding namespace. In a multi-tenancy environment, you need to specify the file and namespace for every IdP system to be addressed. For example:<p>
+                                <codeblock>&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;definitions
+  xmlns="http://schemas.xmlsoap.org/wsdl/"
+  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+  name="mainclientconfig">
+  &lt;import
+    location="ADFS_STS_Service.xml"
+    namespace="http://schemas.microsoft.com/ws/2008/06/identity/securitytokenservice"/>
+  &lt;import
+    location="MY_STSService.xml"
+    namespace="http://mysts.service.org/Imports"/>
+&lt;/definitions>
+</codeblock>
+                            </p></li>
+                        <li>Create a <codeph>.jar</codeph> file containing the <codeph>wsit-client.xml</codeph> file as well as the federation metadata file(s). You can choose any name for the <codeph>.jar</codeph> file. </li>
+                        <li>Place the above <codeph>.jar</codeph> file into the <codeph>\lib</codeph> folder of your Web service client application domain. For example: <p><codeph>C:\RunTime\Glassfish\glassfish\domains\my_client_domain\lib</codeph></p>
+                        </li>
+                        <li>Restart the domain for the changes to become effective. </li>
+                    </ol>
+                </info>
+            </step>
+            <step>
+                <cmd>Configure the <codeph>tokenhandler.properties</codeph> file and specify the relative URL to the custom login module of your application. The custom login module must be on the same machine and in the same context as the token handler. </cmd>
+            </step>
+            <step>
+                <cmd>Copy the contents of the <codeph>WEB-INF/lib</codeph> and <codeph>WEB-INF/classes</codeph> folders to the corresponding folders of your Web application.</cmd>
+            </step>
+            <step>
+                <cmd>Do one of the following:</cmd>
+                <choices>
+                    <choice>If you want to use the JSP-based token handler, copy the <codeph>Tokenhandler.jsp</codeph> file to your Web application.</choice>
+                    <choice>If you want to use the servlet-based token handler, register it in the <codeph>web.xml</codeph> file of your Web application. <p>To do this, you can copy the <codeph>servlet</codeph> and <codeph>servlet-mapping</codeph> sections from the sample <codeph>web.xml</codeph> file, which is part of the <codeph>Integrationhelper.war</codeph> package, to the <codeph>web.xml</codeph> file of your Web application.</p></choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>Register the logout listener in the <codeph>web.xml</codeph> file of your Web application. </cmd>
+                <info>
+                    <p>To do this, you can copy the <codeph>listener</codeph> section from the sample <codeph>web.xml</codeph> file, which is part of the <codeph>Integrationhelper.war</codeph> package, to the <codeph>web.xml</codeph> file of your Web application. </p>
+                </info>
+            </step>
+            <step>
+                <cmd>In the technical service definition of the application, the path to the token handler must be specified in the <codeph>loginPath</codeph> attribute for login access. </cmd>
+                <info>
+                    <p>For details on the technical service definition, refer to the <i>Technology Provider's Guide</i><?xm-replace_text xref: "Service Definition Reference"?>. </p>
+                </info>
+            </step>
+        </steps>
+        <result/>
+        <example>
+            <title>Example</title>
+            <p>Suppose you implemented a servlet-based custom login module for your application, which is to be called after the user token has been resolved. The custom login module is available as a Web resource as a <codeph>DoAutoLoginServlet</codeph> servlet at <codeph>/DoAutoLogin</codeph>. Your Web application is running on <codeph>myserver</codeph> at port <codeph>7777</codeph> using the context <codeph>myapplication</codeph>. The <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> platform services are listening at port <codeph>8081</codeph>. <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> is installed in SAML_SP mode.</p>
+            <p>Depending on whether you use the servlet-based or the JSP-based token handler, the configuration files look as shown below:</p>
+            <p><b>Servlet-Based Token Handler</b></p>
+            <ul>
+                <li><codeph>webserviceclient.properties</codeph>
+                    <codeblock># Machine where Catalog Manager is hosted and port to access the web 
+# service
+
+cm.host=localhost
+cm.port=8081
+
+# Catalog Manager web services are available on 3 different web
+# service ports (endpoints), 
+# depending on the Catalog Manager authentication mode.
+#
+# Example - Web service port URLs for the Catalog Manager session
+# service:
+# https://localhost:8081/SessionService/BASIC?wsdl
+# https://localhost:8081/SessionService/CLIENTCERT?wsdl
+# https://localhost:8081/SessionService/STS?wsdl&amp;tenantID=xxxxxxxx
+#
+# Set the web service port suffix, depending on the Catalog Manager
+# authentication mode:
+# - authentication mode INTERNAL: use BASIC or CLIENTCERT 
+# - authentication mode SAML-SP : use STS
+
+cm.service.port=BASIC
+
+# Catalog Manager web service version
+
+cm.service.version=v1.9
+
+# User credentials to access Catalog Manager web service.
+# User key is used for BASIC and CLIENTCERT ports, and user ID 
+# and tenant ID for STS port.
+
+cm.service.user.key=1000
+cm.service.user.id=administrator
+cm.service.user.password=&lt;user_password>
+cm.service.user.tenantID=&lt;tenant_ID></codeblock></li>
+                <li><codeph>tokenhandler.properties</codeph>
+                    <codeblock>FORWARD=/Welcome.jsp</codeblock></li>
+                <li>
+                    <codeph>web.xml </codeph>
+                    <codeblock scale="90">...
+&lt;servlet>
+    &lt;display-name>TokenhandlerServlet&lt;/display-name>
+    &lt;servlet-name>TokenhandlerServlet&lt;/servlet-name>
+    &lt;servlet-class>org.oscm.integrationhelper.TokenhandlerServlet
+    &lt;/servlet-class>
+&lt;/servlet>
+&lt;servlet-mapping>
+    &lt;servlet-name>TokenhandlerServlet&lt;/servlet-name>
+    &lt;url-pattern>/resolveToken&lt;/url-pattern>
+&lt;/servlet-mapping>
+
+&lt;servlet>
+    &lt;servlet-name>DoAutoLoginServlet&lt;/servlet-name>
+    &lt;servlet-class>servlets.DoAutoLoginServlet
+    &lt;/servlet-class>
+&lt;/servlet>
+&lt;servlet-mapping>
+    &lt;servlet-name>DoAutoLoginServlet&lt;/servlet-name>
+    &lt;url-pattern>/doAutoLogin&lt;/url-pattern>
+&lt;/servlet-mapping>
+
+&lt;listener>
+	&lt;listener-class>org.oscm.integrationhelper.LogoutListener
+    &lt;/listener-class>
+&lt;/listener>
+...
+</codeblock></li>
+                <li>Technical service definition<codeblock>...
+&lt;TechnicalService 
+   id="SampleService" 
+   baseUrl="<b>https://myserver:7777/myservice</b>" 
+   loginPath="<b>/resolveToken</b>" 
+   ...
+&gt;
+...</codeblock></li>
+            </ul>
+            <p>
+                <b>JSP-Based Token Handler</b>
+            </p>
+            <ul>
+                <li><codeph>webserviceclient.properties</codeph>
+                    <codeblock># Machine where Catalog Manager is hosted and port to access the 
+# web service
+cm.host=localhost
+cm.port=8081
+
+# Catalog Manager web services are available on 3 different web
+# service ports (endpoints),  
+# depending on the Catalog Manager authentication mode.
+#
+# Example - Web service port URLs for the Catalog Manager session
+# service:
+# https://localhost:8081/SessionService/BASIC?wsdl
+# https://localhost:8081/SessionService/CLIENTCERT?wsdl
+# https://localhost:8081/SessionService/STS?wsdl&amp;tenantID=xxxxxxxx
+#
+# Set the web service port suffix, depending on the Catalog Manager
+# authentication mode:
+# - authentication mode INTERNAL: use BASIC or CLIENTCERT 
+# - authentication mode SAML-SP : use STS
+
+cm.service.port=BASIC
+
+# Catalog Manager web service version
+
+cm.service.version=v1.9
+
+# User credentials to access Catalog Manager web service.  
+# User key is used for BASIC and CLIENTCERT ports, and user ID 
+# and tenant ID for STS port.
+
+cm.service.user.key=1000
+cm.service.user.id=administrator
+cm.service.user.password=&lt;user_password>
+cm.service.user.tenantID=&lt;tenant_ID></codeblock></li>
+                <li>
+                    <codeph>tokenhandler.properties</codeph>
+                    <codeblock>FORWARD=/Welcome.jsp</codeblock></li>
+                <li>
+                    <codeph>web.xml </codeph>
+                    <codeblock scale="90">...
+&lt;listener&gt;
+ 	 &lt;listener-class&gt;org.oscm.integrationhelper.LogoutListener
+      &lt;/listener-class&gt;
+&lt;/listener&gt;
+... </codeblock></li>
+                <li>Technical service definition<codeblock>...
+&lt;TechnicalService 
+   id="SampleService" 
+   baseUrl="<b>https://myserver:7777/myservice</b>" 
+   loginPath="<b>/Tokenhandler.jsp</b>" 
+   ...
+&gt;
+...</codeblock></li>
+            </ul>
+        </example>
+    </taskbody>
+</task>

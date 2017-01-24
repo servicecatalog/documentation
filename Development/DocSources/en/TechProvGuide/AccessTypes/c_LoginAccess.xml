@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_61077BCD8FA14EEAACBC7E421B654671" xml:lang="en-us">
+    <title>Login Access</title>
+    <conbody>
+        <section>
+            <p>With login access, <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> is involved during login. </p>
+            <p>User management and authentication are under full control of the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> identity management, and price models on a per-user basis and corresponding billing services can be used. </p>
+            <p>After login, any interaction between the client and the application takes place directly and without <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> being involved. </p>
+            <p>The following figure shows the interaction between the client, <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>, and the application:</p>
+            <fig>
+                <image align="center" height="326" href="../_images/AccessLogon.png" placement="break" width="435"/>
+            </fig>
+            <p>When a user logs in to <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> in order to use a service, he is authenticated by <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> and a <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> session is created. <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> creates a user token and returns it to the client together with a redirect to the application. The client, in turn, sends the login request with the user token to the application, which must be publicly visible. To be able to log the user in, the application sends a login request to <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> prompting for the user ID corresponding to the user token. Once the user ID is returned, the application needs to log the user in without requesting any further credentials. Users are trusted because they have been authenticated by <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+            <p>After login, any interaction takes place directly between the client and the application.</p>
+            <note>
+                <p>Your application should provide some default content for the base URL, since this URL specifies the application's remote interface if a user is already logged in to <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        />. The base URL is specified in the technical service definition (see <xref
+                        href="../Reference/r_TechServDescr.xml"/>).</p>
+            </note>
+        </section>
+        <section>
+            <title>Logout </title>
+            <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> needs to be notified by the application when a user logs out. The corresponding <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> user session is then closed and the session data is updated in the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> database.</p>
+            <p>After logout, the application must redirect the user to its own logout page. The full URL of this page is returned by the <codeph>deleteServiceSession</codeph> method of the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> session service. </p>
+            <note>Users must not be redirected to the session after logout. Access to the application is no longer authorized because the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> session has been closed.</note>
+        </section>
+    </conbody>
+</concept>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd">
+<task id="task634" xml:lang="de-de">
+  <title>Marktplatzeigenschaften ändern</title>
+  <taskbody>
+    <context>
+      <p>Die Seite <uicontrol>Marktplatzeigenschaften ändern</uicontrol> verwenden Sie für folgende Aufgaben:</p>
+      <p>
+        <ul compact="no">
+          <li>Ändern des Marktplatzeigentümers. Hierzu müssen Sie Betreiber der Plattform sein.</li>
+          <li>Definieren von Umsatzbeteiligungen für den Marktplatz sowie für Vermittler und Wiederverkäufer. Hierzu müssen Sie Betreiber der Plattform sein. </li>
+          <li>Ändern der Mandantenzuordnung, zum Beispiel, wenn Sie wieder das bei der Installation des System konfigurierte Identity-Provider-System zur Authentifizierung von Benutzern einstellen möchten. Hierzu müssen Sie Betreiber der Plattform sein, und die Plattform muss mit der Authentifizierungsart SAML_SP instaliert sein. Zudem dürfen auf dem Marktplatz noch keine Services abonniert worden sein. </li>
+          <li>Umbenennen des Marktplatzes. Hierzu müssen Sie Marktplatz-Manager des Marktplatzeigentümers sein.</li>
+          <li>Ändern des Funktionsumfangs und der Einstellungen für den Marktplatz. Hierzu müssen Sie Marktplatz-Manager des Marktplatzeigentümers sein.</li>
+        </ul>
+      </p>
+      <p><b>So ändern Sie den Eigentümer eines Marktplatzes</b> (nur Betreiber):</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>Wählen Sie in der Liste <uicontrol>Marktplatz</uicontrol> den Marktplatz, für den Sie den Eigentümer ändern möchten.</cmd>
+        <info>
+          <p>Die Liste stellt alle Marktplätze zur Auswahl, die auf Ihrer Plattform angelegt wurden.</p>
+        </info>
+      </step>
+      <step>
+        <cmd>Ordnen Sie eine andere Organisation als Eigentümer für den ausgewählten Marktplatz zu. </cmd>
+        <info>
+          <p>
+            <note>Wenn Sie einen neuen Eigentümer zuordnen, kann es sein, dass dem alten Eigentümer die Rolle Marktplatzeigentümer, bzw. seinen Benutzern die Rolle Marktplatz-Manager entzogen wird. Dies ist der Fall, wenn dies der letzte Marktplatz ist, der dieser Organisation zugeordnet ist. </note>
+          </p>
+        </info>
+      </step>
+      <step>
+        <cmd>Schließen Sie Ihre Änderungen mit <uicontrol>Speichern</uicontrol> ab.</cmd>
+        <info>
+          <p>Die Administratoren der neuen Eigentümerorganisation erhalten die Rolle Marktplatz-Manager. Sie werden per E-Mail informiert. Die E-Mail enthält zwei URLs. Die erste URL kann von den Marktplatz-Managern zur Administration und Anpassung des Marktplatzes verwendet werden. Die zweite URL kann für den öffentlichen Zugriff auf den Marktplatz genutzt werden.</p>
+        </info>
+      </step>
+    </steps>
+    <result>
+      <p><b>So definieren Sie Umsatzbeteiligungen</b> (nur Betreiber):</p>
+      <p>
+        <ol compact="no">
+          <li>Wählen Sie in der Liste <uicontrol>Marktplatz</uicontrol> den Marktplatz, für den Sie Umsatzbeteiligungen definieren möchten. <p>Die Liste stellt alle Marktplätze zur Auswahl, die auf Ihrer Plattform angelegt wurden.</p></li>
+          <li>Geben Sie in den folgenden Feldern Prozentwerte ein: <p>
+              <ul>
+                <li><uicontrol>Marktplatzeigentümer (%)</uicontrol>: Umsatzbeteiligung, die der Marktplatzeigentümer von den Organisationen erhalten soll, die auf dem Marktplatz Services anbieten und verkaufen. Diese Umsatzbeteiligung wird für alle Services fällig, die auf dem Marktplatz veröffentlicht werden.</li>
+                <li><uicontrol>Vermittler (%)</uicontrol>: Voreingestellte Umsatzbeteiligung, die alle von Serviceanbietern berechtigten Vermittler erhalten. Diese Umsatzbeteiligung wird fällig, sofern keine service- oder organisationsspezifische Beteiligung über die Menüfunktion <uicontrol>Umsatzbeteiligungen von Vermittlern verwalten</uicontrol> festgelegt wurde.</li>
+                <li><uicontrol>Wiederverkäufer (%)</uicontrol>: Voreingestellte Umsatzbeteiligung, die alle von Serviceanbietern berechtigten Wiederverkäufer erhalten. Diese Umsatzbeteiligung wird fällig, sofern keine service- oder organisationsspezifische Beteiligung über die Menüfunktion <uicontrol>Umsatzbeteiligung von Wiederverkäufern verwalten</uicontrol> festgelegt wurde. </li>
+              </ul>
+            </p><p><b>Beispiel</b>: Geben Sie folgende Werte ein: </p><p>
+              <ul>
+                <li><uicontrol>Marktplatzeigentümer (%)</uicontrol>: <codeph>10.00</codeph>
+                </li>
+                <li><uicontrol>Vermittler (%)</uicontrol>: <codeph>20.00</codeph></li>
+                <li><uicontrol>Wiederverkäufer (%)</uicontrol>: <codeph>30.00</codeph></li>
+              </ul>
+            </p><p><b>Situation 1</b>: Nur Serviceanbieter veröffentlichen Services auf dem Marktplatz. Der Betreiber erhält eine Umsatzbeteiligung von 10%. Der Marktplatzeigentümer erhält 10% der Umsätze aus dem Verkauf der Services; der Serviceanbieter erhält den Rest minus der Beteiligung des Betreibers (90% - 10% = 80%). </p><p><b>Situation 2</b>: Ein Serviceanbieter hat einen Wiederverkäufer berechtigt, seine Services auf dem Marktplatz zu verkaufen. Der Betreiber erhält eine Umsatzbeteiligung von 10%. Der Marktplatzeigentümer erhält 10% der Umsätze, der Wiederverkäufer erhält 30%, der Serviceanbieter den Rest minus der Beteiligung des Betreibers (60% - 10% = 50%). </p><p><b>Situation 3</b>: Ein Serviceanbieter hat einen Vermittler berechtigt, seine Services auf dem Marktplatz zu verkaufen. Der Betreiber erhält eine Umsatzbeteiligung von 10%. Der Marktplatzeigentümer erhält 10% der Umsätze, der Vermittler erhält 20%, der Serviceanbieter den Rest minus der Beteiligung des Betreibers (70% - 10% = 60%). </p><p
+              id="revenueshare"
+              >Die Werte der Umsatzbeteiligungen basieren auf vertraglich geregelten Konditionen zwischen Betreiber, Marktplatzeigentümern, Serviceanbietern, Wiederverkäufern und Vermittlern. Sie als Plattform-Betreiber sind für die Richtigkeit der Werte verantwortlich. Die Werte können in der Summe 100% überschreiten. Dies kann beabsichtigt sein. Beispielsweise kann ein Serviceanbieter einem Vermittler oder Wiederverkäufer für eine begrenzte Zeit 80% Umsatzbeteiligung zahlen, wenn er einen bestimmten Service extra bewerben möchte. Zusätzlich muss der Serviceanbieter zum Beispiel 30% an den Marktplatzeigentümer abführen. Daraus ergibt sich ein Gesamtprozentsatz der Umsatzbeteiligungen von 110 und damit ein negativer Umsatz für den Serviceanbieter. </p></li>
+          <li>Schließen Sie Ihre Eingaben mit <uicontrol>Speichern</uicontrol> ab.</li>
+        </ol>
+      </p>
+      <p>Bei der nächsten Neuberechnung der Nutzungsgebühren werden die Umsatzbeteiligungen berechnet und mit den Rechnungsdaten ausgegeben. </p>
+      <note>Umsatzbeteiligungen werden nur für Services errechnet, die das plattformeigene Abrechnungssystem verwenden. Services, die ein externes Abrechnungssystem verwenden, werden nicht berücksichtigt.</note>
+      <p><b>So ändern Sie die Zuordnung eines Mandanten</b> (nur Betreiber, und nur, wenn die Plattform mit der Authentifizierungsart SAML_SP instaliert ist):</p>
+      <p>
+        <ol compact="no">
+          <li>Wählen Sie in der Liste <uicontrol>Marktplatz</uicontrol> den Marktplatz, zu dem Sie einen Mandanten zuordnen oder die Zuordnung ändern möchten.  <p>Die Liste stellt alle Marktplätze zur Auswahl, die auf Ihrer Plattform angelegt wurden, bzw. falls im Feld <b>Mandant</b> ein Eintrag vorhanden ist, alle Marktplätze die diesem Mandanten zugeordnet sind.</p></li>
+          <li>Wählen Sie den Mandanten des Identity-Provider-Systems, über das Benutzer authentifiziert werden sollen. Wenn Sie das Feld leer lassen, werden die Benutzer beim Zugriff auf den Marktplatz über das bei der Installation angegebene Identity-Provider-System authentifiziert. <p>
+              <note>Wenn für diesen Marktplatz bereits Anbieter zugelassen wurden, wird dieses Recht zurückgenommen. Auf bestehende Abonnements für Services, die auf diesem Marktplatz veröffentlicht wurden kann nicht mehr zugegriffen werden. <p>Die Zuordnung eines Mandanten zu einem Marktplatz sollte immer beim Erstellen eines Marktplatzes erfolgen. </p>
+              </note>
+            </p></li>
+          <li>Schließen Sie Ihre Änderungen mit <uicontrol>Speichern</uicontrol> ab.</li>
+        </ol>
+      </p>
+      
+      <p><b>So benennen Sie einen Marktplatz um</b> (nur Marktplatz-Manager):</p>
+      <p>
+        <ol compact="no">
+          <li>Wählen Sie in der Liste <uicontrol>Marktplatz</uicontrol> den umzubenennenden Marktplatz. <p>Die Liste stellt alle Marktplätze zur Auswahl, für die Ihre Organisation als Eigentümer eingetragen ist. </p></li>
+          <li>Geben Sie einen neuen Namen für den Marktplatz ein.<p>Unter diesem Namen wird Ihnen der Marktplatz zur Auswahl angeboten, wenn Sie den Marktplatz verwalten oder anpassen, oder die Anbieter verwalten, die Services auf dem Marktplatz veröffentlichen dürfen.</p></li>
+          <li>Schließen Sie Ihre Änderungen mit <uicontrol>Speichern</uicontrol> ab.</li>
+        </ol>
+      </p>
+      <p>Der Marktplatz wird sofort unter seinem neuen Namen angezeigt.</p>
+      <p><b>So ändern Sie den Funktionsumfang und die Einstellungen des Marktplatzes</b> (nur Marktplatz-Manager):</p>
+      <ol compact="no">
+        <li>Wählen Sie in der Liste <uicontrol>Marktplatz</uicontrol> den Marktplatz, dessen Einstellungen Sie ändern möchten. <p>Die Liste stellt alle Marktplätze zur Auswahl, für die Ihre Organisation als Eigentümer eingetragen ist. </p></li>
+        <li>Ändern Sie die Einstellung <uicontrol>Suchwörter</uicontrol>, falls erforderlich. <ph
+            conref="marketplace_create.xml#task634/Mit_tags_stehen_task_taskbody_steps_step_2"/><p
+            conref="marketplace_create.xml#task634/Ohne_tags_Einstellung_werden_task_taskbody_steps_step_2"/></li>
+        <li>Ändern Sie die Einstellung <uicontrol>Kundenrezensionen</uicontrol>, falls erforderlich. <ph
+            conref="marketplace_create.xml#task634/Mit_reviews_können_task_taskbody_steps_step_2"/>
+          <p><ph conref="marketplace_create.xml#task634/Ohne_review_stehen_task_taskbody_steps_step_2"
+            /> Existierende Bewertungen und Kommentare bleiben erhalten, sind jedoch nicht sichtbar. Sie werden angezeigt, wenn Sie die Einstellung wieder aktivieren.</p></li>
+        <li>Ändern Sie die Einstellung <uicontrol>Social Bookmarks</uicontrol>, falls erforderlich. <ph
+            conref="marketplace_create.xml#task634/Mit_bookmarks_werde_task_taskbody_steps_step_2"/>
+          <p conref="marketplace_create.xml#task634/Ohne_bookmarks_werden_task_taskbody_steps_step_2"/></li>
+        <li>Ändern Sie die Einstellung <uicontrol>Nur zugelassene Serviceanbieter</uicontrol>, falls erforderlich. Mit dieser Einstellung können nur explizit zugelassene Anbieter ihre Services auf dem Marktplatz veröffentlichen. Für das Zulassen der Anbieter sind die Marktplatz-Manager des Marktplatzeigentümers verantwortlich. <p
+            conref="marketplace_create.xml#task634/Ohne_supplier_werden_task_taskbody_steps_step_2"
+            /><p>Wenn Sie einen offenen Marktplatz in einen Marktplatz nur für zugelassene Anbieter ändern, werden automatisch alle Anbieter zugelassen, die bereits Services veröffentlicht haben. Auch die schwarze Liste des Marktplatzes bleibt erhalten. Das bedeutet, dass Anbieter, die Sie gesperrt haben, weiterhin gesperrt sind, wenn Sie den Marktplatz später wieder zu einem offenen Marktplatz machen.</p><p>Analoges gilt in die andere Richtung: Die Liste der zugelassenen Anbieter bleibt erhalten, wenn Sie einen Marktplatz in einen offenen ändern. Die Services der zugelassenen Anbieter bleiben auf dem Marktplatz veröffentlicht, außer wenn die Anbieter auf der schwarzen Liste des Marktplatzes stehen.</p></li>
+        <li>Ändern Sie die Einstellung <uicontrol>Kategorien</uicontrol>, falls erforderlich. Mit dieser Einstellung stehen auf dem Marktplatz Kategorien zur Verfügung. Als Marktplatz-Manager des Marktplatzeigentümers können Sie Kategorien definieren, die Servicanbieter, Wiederverkäufer und Vermittler wiederum den Services zuordnen können, die sie auf dem Marktplatz veröffentlichen. Marktplatzbesucher können die Kategorien zum Navigieren und Filtern der Services benutzen oder nach Services einer bestimmten Kategorie suchen. <p>Ohne diese Einstellung stehen auf dem Marktplatz keine Kategorien zum Suchen, Filtern und Navigieren zur Verfügung. Jedoch können weiterhin Kategorien definiert und Services zugeordnet werden. Bestehende Definitionen und Zuordnungen sind nicht betroffen.</p><p>
+            <note>Als Marktplatz-Manager können Sie die Services auf der Startseite des Marktplatzes nach Kategorien gruppieren. Wenn Sie <uicontrol>Kategorien</uicontrol> ausschalten, wirkt sich dies nicht auf die Startseite des Marktplatzes aus. Die Services werden auch ohne diese Einstellung nach Kategorien gruppiert.</note>
+          </p></li>
+        <li>Schließen Sie Ihre Änderungen mit <uicontrol>Speichern</uicontrol> ab.</li>
+      </ol>
+      <p>Die Einstellungen werden sofort aktualisiert. Für Marktplatzbesucher sind die Änderungen wirksam, sobald sie sich das nächste Mal am Marktplatz anmelden.</p>
+    </result>
+  </taskbody>
+  <related-links>
+    <linklist>
+      <title>Weitere Themen</title>
+      <link href="marketplace_manageBrokerRevenueShare.xml"/>
+      <link href="marketplace_manageResellerRevenueShare.xml"/>
+      <link href="operator_manageOperatorRevenueShare.xml"/>
+      <link href="marketplace_manageSuppliers.xml"/>
+      <link href="marketplace_manageCategories.xml"/>
+      <link href="marketplace_customizeLandingpage.xml"/>
+    </linklist>
+  </related-links>
+</task>

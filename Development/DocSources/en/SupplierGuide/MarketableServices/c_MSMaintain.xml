@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_3413BBD173324104B42FB714974CABE7" xml:lang="en-us">
+            <title>Maintaining Marketable Services</title>
+            <conbody>
+                        <section>
+                                    <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                /> provides various features and functions for maintaining marketable services. You can:</p>
+                                    <ul>
+                                                <li>Deactivate a published service.</li>
+                                                <li>Update a service.</li>
+                                                <li>Localize elements of a service definition. </li>
+                                                <li>Copy a service.</li>
+                                                <li>Delete a service.</li>
+                                    </ul>
+                        </section>
+                        <section>
+                                    <title>Deactivating a Marketable Service</title>
+                                    <p>You can deactivate a published service if you want to withdraw it from a marketplace or if you want to update it. A deactivated service is no longer displayed in the service catalog. Thus, customers cannot subscribe to it any longer. Existing subscriptions are not affected.</p>
+                                    <p>You can only deactivate services you have published. You cannot deactivate services published by your brokers or resellers.</p>
+                                    <p>To deactivate a marketable service, use the <uicontrol>Activate or deactivate services</uicontrol> menu option in the <uicontrol>Marketable service</uicontrol> menu of the <ph
+                                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                /> administration portal.</p>
+                                    <note>A marketplace manager of the marketplace owner organization is also allowed to deactivate a service you have published, for example, if you are in arrears with your payments. An email from the marketplace manager informs you about the reason for a deactivation. As soon as the problem is solved, the marketplace manager can reactivate the service again.</note>
+                        </section>
+                        <section>
+                                    <title>Updating a Marketable Service</title>
+                                    <p>You can update all elements of a marketable service's definition except for the technical service. </p>
+                                    <p>For updating a marketable service, it must be deactivated. Existing subscriptions are not affected by the update. Any changes you make are effective for new subscriptions only.</p>
+                                    <p>To update a service, use the <uicontrol>Update a service</uicontrol> menu option in the <uicontrol>Marketable service</uicontrol> menu of the <ph
+                                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                /> administration portal. </p>
+                                    <p>If you update a service for which you have granted resale permissions, be aware of the fact that the brokers and resellers as well as their customers can instantly view any changes you make. Activated services are immediately offered with the updated definition. Existing subscriptions to services are not affected by your changes. The changes are effective for new subscriptions only. </p>
+                        </section>
+                        <section>
+                                    <title>Localizing Elements of a Service Definition</title>
+                                    <p>You can localize the following elements of a marketable service's definition to make them available in all languages supported by <ph
+                                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                />:</p>
+                                    <ul>
+                                                <li>Service name for customers</li>
+                                                <li>Short description</li>
+                                                <li>Description</li>
+                                    </ul>
+                                    <p><ph id="You_can_localize_the_elements_concept_conbody_section_4_p"
+                                                            >For localizing the elements, the marketable service must be deactivated. Existing subscriptions are not affected by the localization. Any changes you make are effective for new subscriptions only.</ph>
+                                    </p>
+                                    <p>To localize the elements, use the <uicontrol>Update a service</uicontrol> menu option in the <uicontrol>Marketable service</uicontrol> menu of the <ph
+                                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                            /> administration portal, and click <uicontrol>Localize</uicontrol> on the <uicontrol>Update a service</uicontrol> page that is displayed.</p>
+                                    <p>If you localize the elements for a service for which you have granted resale permissions, be aware of the fact that the brokers and resellers as well as their customers can immediately view the localized elements.</p>
+                        </section>
+                        <section>
+                                    <title>Copying a Marketable Service</title>
+                                    <p><ph
+                                                            conref="../../help/tasks/service_copy.xml#task634/Copying_a_marketable_service_task_taskbody_context_p_1_ph"
+                                                /></p>
+                                    <p>Copying a marketable service means:</p>
+                                    <ul>
+                                                <li>A new marketable service is created that is based on the same technical service as the copied service.</li>
+                                                <li>The service definition is copied to the new service.</li>
+                                                <li>The price model is copied to the new service.</li>
+                                    </ul>
+                                    <p>To copy a service, use the <uicontrol>Copy a service</uicontrol> menu option in the <uicontrol>Marketable service</uicontrol> menu of the <ph
+                                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                /> administration portal. Once you have created the copy, you can proceed with updating it as required.</p>
+                        </section>
+                        <section>
+                                    <title>Deleting a Marketable Service</title>
+                                    <p>You can delete a marketable service which you do not want to offer to customers any longer. </p>
+                                    <p>For deleting a marketable service, it must be deactivated and all resale permissions must be revoked. Existing subscriptions are not affected by the deletion. Your customers and your partners' customers can continue to use their subscriptions. </p>
+                                    <p>To delete a service, use the <uicontrol>Delete a service</uicontrol> menu option in the <uicontrol>Marketable service</uicontrol> menu of the <ph
+                                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                /> administration portal.</p>
+                        </section>
+            </conbody>
+</concept>

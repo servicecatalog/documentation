@@ -1,0 +1,76 @@
+<?xml version="1.0"?> 
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd"
+[
+<!ENTITY % entities PUBLIC "-//XDOC//ENTITIES//FujitsuUserDoc" "entities.dtd">
+]>
+<topic id="bkinfoa">
+  <title/>
+  <body>
+    <table frame="none">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1" colwidth="1.00*"/>
+        <colspec colnum="2" colname="col2" colwidth="2.04*"/>
+        <tbody valign="top">
+          <row>
+            <entry colname="col1">
+            </entry>
+            <entry colname="col2">
+            </entry>
+          </row>
+          <row>
+            <entry colname="col1"/>
+            <entry colname="col2"/>
+          </row>
+          <row>
+            <entry colname="col1"/>
+            <entry colname="col2"/>
+          </row>
+          <row>
+            <entry colname="col1">Trademarks</entry>
+            <entry colname="col2">Java and all Java-based trademarks and logos are trademarks or
+              registered trademarks of Sun Microsystems, Inc. in the United States and other
+                countries.<p>Other company names and product names are trademarks or registered
+                trademarks of their respective owners.</p></entry>
+          </row>
+          <row>
+            <entry colname="col1"/>
+            <entry colname="col2"/>
+          </row>
+          <row>
+            <entry colname="col1">Copyright (c) FUJITSU LIMITED 2010 - 2017</entry>
+            <entry colname="col2">All rights reserved, including those of translation into other
+              languages. No part of this manual may be reproduced in any form whatsoever without the
+              written permission of Fujitsu Limited.</entry>
+          </row>
+        </tbody>
+      </tgroup>
+      <tgroup cols="1">
+        <colspec colnum="1" colname="col1" colwidth="*"/>
+        <thead>
+          <row>
+            <entry colname="col1">High Risk Activity</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry colname="col1">The Customer acknowledges and agrees that the Product is designed,
+              developed and manufactured as contemplated for general use, including without
+              limitation, general office use, personal use, household use, and ordinary industrial
+              use, but is not designed, developed and manufactured as contemplated for use
+              accompanying fatal risks or dangers that, unless extremely high safety is secured,
+              could lead directly to death, personal injury, severe physical damage or other loss
+              (hereinafter "High Safety Required Use"), including without limitation, nuclear
+              reaction control in nuclear facility, aircraft flight control, air traffic control,
+              mass transport control, medical life support system, missile launch control in weapon
+              system. The Customer shall not use the Product without securing the sufficient safety
+              required for the High Safety Required Use. In addition, Fujitsu (or other affiliate's
+              name) shall not be liable against the Customer and/or any third party for any claims
+              or damages arising in connection with the High Safety Required Use of the Product.
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>

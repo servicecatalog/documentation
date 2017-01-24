@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd">
+<concept id="Uninstallation_73" xml:lang="en-us">
+    <title>Uninstallation</title>
+    <conbody>
+        <section>
+            <p>The uninstallation of <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> consists of the following steps:</p>
+            <ol>
+                <li>Stop the application server domains related to <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </li>
+                <li>Delete the <codeph>bes-domain</codeph> domain. </li>
+                <li>Delete the <codeph>master-indexer-domain</codeph> domain. </li>
+                <li>Delete the shared directory for the master search index. </li>
+                <li>Delete the databases, <codeph>bss</codeph> and <codeph>bssjms</codeph>, and uninstall the database management system and the application server, if you no longer need them for other purposes.</li>
+            </ol>
+            <p>For details on how to proceed, refer to the documentation of the database management system and the application server. </p>
+        </section>
+    </conbody>
+</concept>

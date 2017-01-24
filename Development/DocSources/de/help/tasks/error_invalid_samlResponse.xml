@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="de-de">
+  <title>Probleme mit einem externen Authentifizierungssystem beheben</title>
+  <taskbody>
+    <context>
+      <p>Wenden Sie sich an Ihren Plattform-Betreiber, der die Verbindung zu dem von Ihrer Organisation verwendeten Authentifizierungssystem überprüfen und gegebenenfalls Fehler beheben kann. Das System ist entweder falsch konfiguriert oder liefert ungültige Benutzerdaten. </p>
+    </context>
+  </taskbody>
+</task>

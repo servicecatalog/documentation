@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_3413BBD173324104B42FB714974CABE7" xml:lang="en-us">
+    <title>Price Model Elements</title>
+    <conbody>
+        <section>
+            <p><ph
+                    conref="../../Shared/reference/r_PriceModelDetails.xml#reference832/Each_price_model_consists_of_reference_refbody_section_p"
+                /></p>
+            <p>
+                <ul id="One-time_fee_concept_conbody_section_p_2">
+                    <li>One-time fee</li>
+                    <li>Recurring charge per subscription</li>
+                    <li>Recurring charge for users</li>
+                    <li>Prices for parameters and options</li>
+                    <li>Prices for events</li>
+                    <li>Role-based pricing</li>
+                </ul>
+            </p>
+            <p><ph>Stepped prices are supported which allow the definition of ranges for which different price model elements apply. In addition, a free trial period can be defined and discounts can be granted to individual customers.</ph></p>
+            <p>The calculation of the actual charges for a service varies depending on the combination of the price model elements that are defined. You can find a detailed description of each price model element together with an example for the cost calculation in the subsequent sections.</p>
+        </section>
+        <section>
+            <title>Cost Calculation Options</title>
+            <p conref="../../Shared/reference/r_PriceModelDetails.xml#reference832/costcalc1"/>
+            <p conref="../../Shared/reference/r_PriceModelDetails.xml#reference832/costcalc2"/>
+        </section>
+    </conbody>
+</concept>

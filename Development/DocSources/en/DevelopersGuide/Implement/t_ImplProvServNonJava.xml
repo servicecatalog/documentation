@@ -1,0 +1,19 @@
+<?xml version="1.0"?> 
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd"
+
+[
+<!ENTITY % entities PUBLIC "-//XDOC//ENTITIES//FujitsuUserDoc" "entities.dtd">
+]>
+
+<task xml:lang="en-us" id="task_E68E2024B1F6403AAA1130A39B1D4DCD">
+    <title>Implementing the Provisioning Service as a Non-Java Service</title>
+    <taskbody>
+        <context>
+            <p>Non-Java clients need to conform to the WSDL and XSD files shipped with <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    />: You create a Web service based on the <codeph>ProvisioningService.wsdl</codeph> document. </p>
+            <p>Depending on the platform and the Web services framework you are using, code generation will be required or dynamic usage will be possible. For example, dynamic languages like PHP or Python allow generating proxy object instances directly from a WSDL at runtime. </p>
+        </context>
+    </taskbody>
+</task>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd">
+<task id="task634" xml:lang="en-us">
+  <title>Viewing a service</title>
+  <taskbody>
+    <context>
+      <p>On the <uicontrol>View service</uicontrol> page, you can view the details of the services which you are authorized to offer on a marketplace.</p>
+      <p>The following information on a service is available:</p>
+      <ul compact="no">
+        <li><ph id="The_service_name_and_short_de_task_taskbody_context_ul_li"
+            >The service name and short description which are shown in the service catalog on a marketplace when you publish the service.</ph></li>
+        <li><ph id="The_service_description_which_task_taskbody_context_ul_li"
+            >The service description which provides details of the features offered by the service. It is displayed on a marketplace when customers request details of the service.</ph></li>
+        <li><ph id="The_license_agreement_which_m_task_taskbody_context_ul_li"
+            >The license agreement which must be read and accepted by customers when they subscribe to the service.</ph></li>
+        <li platform="print"><ph id="The_details_of_the_price_mode_task_taskbody_context_ul_li"
+            >The details of the price model defined by the supplier of the service. The service can be free of charge or with costs. If customers are charged for using the service, you can view the charging conditions and prices.</ph> Click <xref
+            href="service_viewPMDetails.xml">here</xref> for more details.</li>
+        <li platform="help">The details of the price model defined by the supplier of the service: <ul compact="no">
+            <li>If an external billing system is used for calculating the charges for the service, you can view the charging conditions and prices as defined in this system in a separate window by clicking <uicontrol>Display</uicontrol>.</li>
+            <li>If the platform's native billing system is used, the service can be free of charge or with costs. If customers are charged for using the service, the charging conditions and prices are shown. Click <xref
+                href="service_viewPMDetails.xml">here</xref> for more details. All prices are without VAT. </li>
+          </ul></li>
+      </ul>
+      <p><b>To view the details of a service</b>:</p>
+    </context>
+    <steps-unordered>
+      <step>
+        <cmd>From the <uicontrol>Service ID</uicontrol> list, select the service for which to view the details.</cmd>
+        <info>
+          <p>The list contains all services you are authorized to offer.</p>
+        </info>
+      </step>
+    </steps-unordered>
+    <result>
+      <p>The details of the service are instantly displayed.</p>
+      <p>To make the service available to customers for subscription, you must first specify the marketplace to which you want to publish it. You can then activate the service. </p>
+    </result>
+  </taskbody>
+  <related-links>
+    <linklist>
+      <title>Related topics</title>
+      <link href="service_publish.xml"/>
+      <link href="service_activation.xml"/>
+    </linklist>
+  </related-links>
+</task>

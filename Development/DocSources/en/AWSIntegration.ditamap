@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN"
+                         "">
+<!-- Copyright FUJITSU LIMITED 2017 -->
+
+<bookmap id="AWSIntegrationGuide" xml:lang="en_US">
+    <title>AWS Integration</title>
+    <bookmeta>
+        <prodinfo product="oscm_ce">
+            <prodname/>
+            <vrmlist>
+                <vrm version="16.1.5"/>
+            </vrmlist>
+            <brand/>
+            <prognum>16.1.5</prognum>
+            <component/>
+            <series>Amazon Web Services Integration (GlassFish)</series>
+        </prodinfo>
+        <prodinfo product="oscm_ee">
+            <prodname>Enterprise Service</prodname>
+            <vrmlist>
+                <vrm version="16.1 Fix 5"/>
+            </vrmlist>
+            <brand>FUJITSU Software</brand>
+            <prognum>Catalog Manager V16.1 Fix 5</prognum>
+            <component/>
+            <series>Amazon Web Services Integration (GlassFish)</series>
+        </prodinfo>
+        <bookid>
+            <edition>February 2017</edition>
+            <booknumber product="oscm_ee">B1WS-1263-02</booknumber>
+        </bookid>
+        <bookrights product="oscm_ce">
+            <bookowner name="none"/>
+        </bookrights>
+        <bookrights product="oscm_ee">
+            <bookowner name="FUJITSU LIMITED"/>
+        </bookrights>
+    </bookmeta>
+    <frontmatter>
+        <notices href="Shared/Frontmatter/BookInfo.xml"/>
+        <preface format="dita" href="AWSIntegrationGuide/About/c_About.xml" type="concept">
+            <topicref format="dita" href="AWSIntegrationGuide/About/c_Readers.xml" type="concept"/>
+            <topicref href="Shared/gettingstarted/intro_convent.xml" type="concept"/>
+            <topicref href="AWSIntegrationGuide/About/intro_abbrev.xml" type="concept"/>
+            <topicref href="Shared/gettingstarted/intro_availabledoc.xml" type="concept"/>
+        </preface>
+    </frontmatter>
+    <chapter format="dita" href="AWSIntegrationGuide/Intro/c_Introduction.xml" type="concept">
+        <topicref format="dita" href="AWSIntegrationGuide/Intro/c_Components.xml" type="concept"/>
+        <topicref format="dita" href="AWSIntegrationGuide/Intro/c_Scenarios.xml" type="concept"/>
+    </chapter>
+    <chapter format="dita" href="Shared/Installation/c_InstIntro.xml" type="concept">
+        <topicref format="dita" href="AWSIntegrationGuide/Installation/c_Preparation.xml" type="concept">
+            <topicref format="dita" href="Shared/Installation/c_PrepCTMG.xml" type="concept"/>
+            <topicref format="dita" href="Shared/Installation/c_PrepHardware.xml" type="concept"/>
+            <topicref format="dita" href="Shared/Installation/c_PrepJava.xml" type="concept"/>
+            <topicref format="dita" href="Shared/Installation/c_PrepAppServer.xml" type="concept"/>
+            <topicref format="dita" href="Shared/Installation/c_PrepDB.xml" type="concept"/>
+            <topicref format="dita" href="Shared/Installation/c_PrepMailServer.xml" type="concept"/>
+        </topicref>
+        <topicref format="dita" href="AWSIntegrationGuide/Installation/c_Installation.xml" type="concept">
+            <topicref format="dita" href="Shared/Installation/t_InstPreparing.xml" type="task"/>
+            <topicref format="dita" href="Shared/Installation/t_InstConfiguringController.xml" type="task"/>
+            <topicref format="dita" href="Shared/Installation/t_InstDB.xml" type="task"/>
+            <topicref format="dita" href="Shared/Installation/t_InstAppServer.xml" type="task"/>
+            <topicref format="dita" href="Shared/Installation/t_InstCertificate.xml" type="task"/>
+        </topicref>
+        <topicref format="dita" href="Shared/Installation/c_InstControllerInExistingAPP.xml" type="concept"/>
+        <topicref format="dita" href="Shared/Installation/c_Update.xml" type="concept"/>
+    </chapter>
+    <chapter format="dita" href="AWSIntegrationGuide/Services/c_ServicesIntro.xml" type="concept">
+        <topicref format="dita" href="Shared/concepts/c_ControllerPrerequisites.xml" type="concept"/>
+        <topicref format="dita" href="Shared/tasks/t_CreateTechService.xml" type="task"/>
+        <topicref format="dita" href="Shared/tasks/t_CreateMarkService.xml" type="task"/>
+    </chapter>
+    <chapter format="dita" href="AWSIntegrationGuide/Using/c_UsingIntro.xml" type="concept">
+        <topicref format="dita" href="AWSIntegrationGuide/Using/t_Subscribe.xml" type="task"/>
+        <topicref format="dita" href="AWSIntegrationGuide/Using/t_ExecuteUserData.xml" type="task"/>
+        <topicref format="dita" href="AWSIntegrationGuide/Using/t_ExecuteOperation.xml" type="task"/>
+        <topicref format="dita" href="AWSIntegrationGuide/Using/t_Terminate.xml" type="task"/>
+    </chapter>
+    <chapter format="dita" href="AWSIntegrationGuide/Administrating/c_AdministratingIntro.xml" type="concept">
+        <topicref format="dita" href="Shared/concepts/c_ControlExecution.xml" type="concept"/>
+        <topicref format="dita" href="Shared/concepts/c_ControllerHandleProblems.xml" type="concept"/>
+        <topicref format="dita" href="Shared/concepts/c_ControllerHandleCommProblems.xml" type="concept"/>
+        <topicref format="dita" href="Shared/Installation/c_Backup.xml" type="concept"/>
+        <topicref format="dita" href="Shared/Installation/c_UpdateConfiguration.xml" type="concept"/>
+        <topicref format="dita" href="Shared/reference/c_LogConfig.xml" type="concept"/>
+    </chapter>
+    <chapter format="dita" href="Shared/Installation/c_Uninstallation.xml" type="concept"/>
+    <appendix format="dita" href="Shared/Installation/r_ConfigSettings.xml" type="reference">
+        <topicref format="dita" href="Shared/reference/r_ConfigSettings_glassfish_BESDomain.xml" type="reference"/>
+        <topicref format="dita" href="Shared/reference/r_ConfigSettings_db.xml" type="reference"/>
+        <topicref format="dita" href="APPInt/APP/r_ConfigSettings.xml" type="reference"/>
+        <topicref format="dita" href="AWSIntegrationGuide/Appendix/r_ConfigSettingsController.xml" type="reference"/>
+    </appendix>
+    <appendix format="dita" href="AWSIntegrationGuide/Appendix/r_ServiceParameters.xml" type="reference"/>
+    <appendix format="dita" href="Shared/glossary/r_Glossary.xml" type="reference"/>
+</bookmap>

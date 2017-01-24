@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="de-de">
+    <title>Kunden-Preismodell löschen</title>
+    <taskbody>
+        <context>
+            <p>Auf der Seite <uicontrol>Kunden-Preismodell löschen</uicontrol> können Sie Preismodelle löschen, die Sie Ihren Kunden nicht mehr anbieten möchten. Sie können ein oder mehrere Preismodelle löschen, die für einen bestimmten Kunden definiert wurden. </p>
+            <p>Üblicherweise löschen Sie ein Kunden-Preismodell nur in Absprache mit dem jeweiligen Kunden. </p>
+            <p>Um ein Kunden-Preismodell zu löschen, muss der entsprechende marktfähige Service deaktiviert sein. Das Löschen wirkt sich nicht auf laufende Abonnements aus. Für neue Abonnements  wird automatisch das entsprechende Service-Preismodell verwendet.</p>
+            <p><b>So löschen Sie Kunden-Preismodelle</b>:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Wählen Sie in der Liste <uicontrol>Kunde</uicontrol> den Kunden, für den Sie Preismodelle löschen möchten. </cmd>
+                <info>
+                    <p>Die Liste führt alle Kundenorganisationen auf, für die Sie kundenspezifische Preismodelle definiert haben.</p>
+                </info>
+            </step>
+            <step>
+                <cmd>Markieren Sie die Services, für die Sie die Kunden-Preismodelle löschen möchten. </cmd>
+            </step>
+            <step>
+                <cmd>Klicken Sie <uicontrol>Löschen</uicontrol> und bestätigen Sie den Löschauftrag.</cmd>
+            </step>
+        </steps>
+        <result>Die Kunden-Preismodelle werden sofort gelöscht und stehen nicht mehr zur Verfügung. </result>
+    </taskbody>
+    <related-links>
+        <linklist>
+            <title>Weitere Themen</title>
+            <link href="priceModel_customer.xml"/>
+        </linklist>
+    </related-links>
+</task>

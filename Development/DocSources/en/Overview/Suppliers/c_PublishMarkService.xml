@@ -1,0 +1,28 @@
+<?xml version="1.0"?> 
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+
+<concept xml:lang="en-us" id="concept_3413BBD173324104B42FB714974CABE7">
+    <title>Publishing Marketable Services</title>
+    <conbody>
+        <section>
+            <p>Publishing marketable services means making them available to customers for subscription on a marketplace. Suppliers can publish their services by themselves and authorize brokers and resellers to do so. Brokers and resellers can publish any service for which they have been granted resale permission. They can choose any marketplace for publishing the services.</p>
+            <p>Publishing a marketable service includes the following steps:</p>
+            <ul>
+                <li>Select the marketplace, and decide whether the service is to be available to any visitor or to registered customers only. A service can be published to any marketplace to which the seller has been granted access by the marketplace owner. Categories defined for the marketplace can be assigned to the service as required.</li>
+                <li>Activate the marketable service to be published. Only activated services are available on a marketplace.</li>
+                <li>Publish the URL of the marketplace to make the service known to customers. A seller can publish the URL, for example, by email or on his organization's website or portal.</li>
+            </ul>
+        </section>
+        <section>
+            <title>Publishing Services through Brokers and Resellers</title>
+            <p>For each service, a supplier can grant resale permissions to any number of brokers or resellers: </p>
+            <ul>
+                <li>A broker provides a service as defined by the supplier. He is not allowed to change the name of the service, its definition, price model, parameters, options, terms, and conditions.</li>
+                <li>A reseller is not allowed to change the name of the service, its definition, price model, parameters, and options. However, he can apply a different license agreement specifying his own terms and conditions.</li>
+            </ul>
+            <p>The service details, which customers can display on a marketplace, include information on the broker or reseller who published the service and on the supplier who defined it. </p>
+            <p>A supplier can at any time revoke a resale permission for a broker or a reseller. The affected service is instantly withdrawn from the marketplace to which it was published. Existing subscriptions to the service are not affected. </p>
+        </section>
+    </conbody>
+</concept>

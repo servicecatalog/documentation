@@ -1,0 +1,37 @@
+<?xml version="1.0"?> 
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd"
+
+[
+<!ENTITY % entities PUBLIC "-//XDOC//ENTITIES//FujitsuUserDoc" "entities.dtd">
+]>
+
+<concept xml:lang="en-us" id="concept_B32294CC9FA643A2A14A74B1DAA49C95">
+    <title>Changing the Address Data of an Organization</title>
+    <conbody>
+        <section>
+            <p>As an operator, you can at any time update the address data of an organization. </p>
+            <p><b>To update the address data of an organization, choose one of the following options:</b>
+                <ul>
+                    <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> administration portal - Choose <b>Manage organization</b> in the <b>Operation</b> menu.<p>For detailed step-by-step instructions, refer to the online help. </p></li>
+                    <li>Command line tool: <p>You need to define the organization properties in the <codeph>org.properties</codeph> file and save it to an <codeph>update_org.properties</codeph> file before executing the command below. Proceed as follows: </p><ol>
+                            <li>Copy the <codeph>org.properties</codeph> file located in the directory to which you extracted the <codeph>oscm-operatorclient.zip</codeph> file and save it with the name <codeph>update_org.properties</codeph>.</li>
+                            <li>Adjust the entries in the <codeph>update_org.properties</codeph> file and add the following entry: <p><codeph>organization.id:</codeph> ID of the organization whose data you want to update.</p><p>The following entries cannot be changed: </p><p>
+                                    <ul>
+                                        <li><codeph>organization.roles</codeph></li>
+                                        <li><codeph>marketplaceid</codeph></li>
+                                        <li><codeph>organization.settings</codeph><p>Note that the command-line tool can be used for updating an organization using the default IdP only.</p></li>
+                                    </ul>
+                                </p></li>
+                            <li>Save the <codeph>update_org.properties</codeph> file in UTF-8 encoding.</li>
+                            <li>Use the <codeph>updateorganization</codeph> command with the following syntax: <p>
+                                    <codeblock>&lt;JAVA_HOME>/bin/java -jar lib/oscm-operatorsvc-client.jar 
+ &lt;userkey> &lt;password>
+ updateorganization -f update_org.properties</codeblock>
+                                </p></li>
+                        </ol></li>
+                </ul></p>
+        </section>
+    </conbody>
+</concept>

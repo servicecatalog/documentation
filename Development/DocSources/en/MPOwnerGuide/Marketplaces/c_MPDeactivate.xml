@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_3413BBD173324104B42FB714974CABE7"
+                    xml:lang="en-us">
+    <title>Deactivating Services</title>
+    <conbody>
+        <section>
+            <p>You can deactivate a service that a supplier, broker, or reseller published to your marketplace. Deactivating a service may be required under exceptional circumstances, for example, in the case of an infringement of the terms and conditions.</p>
+            <note>An alternative to deactivating an individual service of a seller is to no longer allow the seller to publish services at all. By doing this, all published services of the seller are automatically deactivated. For details, refer to <xref
+                    href="../Access/c_SuppliersIntro.xml"/>.</note>
+            <p>You can deactivate a service at any time. When you do this, you have to state a reason. A deactivated service is no longer displayed in the service catalog on the marketplace. Thus, it cannot be subscribed to by customers any longer. Existing subscriptions to the service are not affected. </p>
+            <p>As soon as the problem is solved, you can reactivate the service. The seller is not allowed to reactivate it by himself. After the reactivation, customers can instantly subscribe to the service again.</p>
+            <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> automatically notifies a seller by email about the deactivation of a service and the reason you entered for it.</p>
+            <p>To deactivate a service, log in to the marketplace and display the details of the service to be deactivated. Choose the <uicontrol>Deactivate service</uicontrol> option. For a deactivated service, the option turns into <uicontrol>Reactivate service</uicontrol>. </p>
+        </section>
+    </conbody>
+</concept>

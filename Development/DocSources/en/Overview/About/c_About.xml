@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB" xml:lang="en-us">
+    <title>About this Manual</title>
+    <conbody>
+        <section>
+            <p>This manual is an introduction to <ph product="oscm_ce"><ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Name"/> (<ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>)</ph><ph
+                    product="oscm_ee"
+                        > FUJITSU Software Enterprise Service Catalog Manager - hereafter referred to as <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Name"/> (<ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>)</ph>. </p>
+            <p>The manual is structured as follows: </p>
+            <p>
+                <table colsep="1" frame="all" rowsep="1">
+                    <tgroup cols="2">
+                        <colspec colname="col2" colnum="1" colwidth="2.61*"/>
+                        <colspec colname="col3" colnum="2" colwidth="3.39*"/>
+                        <thead>
+                            <row>
+                                <entry colname="col2">Chapter</entry>
+                                <entry colname="col3">Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry colname="col2"><xref href="../../Shared/concepts/c_WhatIsBES.xml"/></entry>
+                                <entry colname="col3">Introduces <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    />, its basic usage scenario, users, and components.</entry>
+                            </row>
+                            <row>
+                                <entry colname="col2"><xref href="../Providers/c_ProvIntro.xml"/></entry>
+                                <entry colname="col3"
+                                        >Describes how software vendors can integrate their applications with <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</entry>
+                            </row>
+                            <row>
+                                <entry colname="col2"><xref href="../Suppliers/c_SuppIntro.xml"/></entry>
+                                <entry colname="col3"
+                                    >Describes how suppliers can define and manage service offerings for applications and how brokers and resellers can support suppliers in selling the services.</entry>
+                            </row>
+                            <row>
+                                <entry colname="col2"><xref href="../Customers/c_CustIntro.xml"/></entry>
+                                <entry colname="col3">Describes how customers can subscribe to services in <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    />, manage their subscriptions, and work with the services they have subscribed to.</entry>
+                            </row>
+                            <row>
+                                <entry colname="col2"><xref href="../MarketplaceOwners/c_MPLOwnersIntro.xml"/></entry>
+                                <entry colname="col3"
+                                        >Describes how marketplace owners can administrate and customize their marketplaces in <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</entry>
+                            </row>
+                            <row>
+                                <entry colname="col2"><xref href="../Operators/c_Operators.xml"/></entry>
+                                <entry colname="col3">Describes how <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    /> supports its operators.</entry>
+                            </row>
+                            <row>
+                                <entry colname="col2"><xref href="../All/c_AllUsersIntro.xml"/></entry>
+                                <entry colname="col3">Describes features of <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    /> which are of relevance for all users.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+    </conbody>
+</concept>

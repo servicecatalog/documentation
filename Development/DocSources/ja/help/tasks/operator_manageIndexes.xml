@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="searchIndex" xml:lang="en-us">
+    <title>検索インデックスの更新</title>
+    <conbody>
+        <p id="concept_SearchIndex"
+                >検索インデックスは自動的かつ定期的にプラットフォームによって作成されます。データベースの復旧後などの場合、検索インデックスの整合性が失われる場合があります。検索インデックスを再び整合させるためには、検索インデックスのファイルを手動で削除した後、それぞれのアプリケーション・サーバドメインを再起動するか、または<b>検索インデックスの更新</b>を使用して任意のタイミングで検索インデックスを再作成します。検索インデックスはデータベース上にあるその時点のデータに基づいて再作成されます。再作成を行った場合、既存の検索インデックス構造は上書きされます。検索インデックスはプラットフォームの稼働中に再作成することができます。この場合アプリケーションサーバドメインを再起動する必要はありません。</p>
+        <p><uicontrol>検索インデックスの更新</uicontrol>ページにおいて、<uicontrol>更新</uicontrol>ボタンをクリックすることにより、検索インデックスの再作成を開始することができます。</p>
+        <p id="concept_SearchIndex2"
+                >インデクサ用ドメイン<codeph>master-indexer-domain</codeph>が動作し、古い検索インデックス構造の削除、新しい検索インデックス構造の作成、および<codeph>bss</codeph>データベースからのインデックスデータ収集を開始します。インデックスデータの収集にかかる時間はデータベースのサイズに依存します。収集が完了すると、<codeph>&lt;install_pack_dir&gt;/domains/indexer_domain</codeph>ディレクトリ配下、<codeph>glassfish.properties</codeph>ファイル中に定義されている<codeph>hibernate.search.default.refresh</codeph>設定が評価されます。この設定(単位: 秒、デフォルト値: 300)に定義された間隔が、サービスポータルの利用者が新しい検索インデックスにより、購入済サービスおよびサービスを検索できるようになるまでにかかる時間を決定します。</p>
+    </conbody>
+</concept>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_3413BBD173324104B42FB714974CABE7" xml:lang="en-us">
+    <title>Defining Featured Services</title>
+    <conbody>
+        <section>
+            <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> allows you to highlight or promote services on a marketplace by presenting them on the marketplace home page.</p>
+            <p>By default the marketplace home page displays the six services created most recently. The remaining services are displayed to marketplace visitors when they browse the service catalog. From the marketplace home page a marketplace visitor can access any service he wants to subscribe to.</p>
+            <p>You can specify how many and which services are to be displayed on the home page. By defining the sequence of the services, you can also rank these services, putting, for example, the most attractive offering to the very beginning of the home page</p>
+            <p>As an alternative, you can choose to display services and subscriptions on the marketplace home page and group them by categories. This requires each home page visitor to log in to the marketplace with his personal login data. As soon as he is logged in, the services and the existing subscriptions of the customer organization to which he belongs are displayed. They are grouped by the first three categories that are defined for the marketplace and listed in the order in which they were created.</p>
+            <p>The home page visitor can directly use the services his organization has subscribed to and he can access any service he is interested in.</p>
+            <p>To specify which services to promote on the marketplace home page, use the <uicontrol>Define featured services</uicontrol> menu option in the <uicontrol>Marketplace</uicontrol> menu of the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> administration portal.</p>
+            <note>Some services may not be visible to some users depending on the organizational units they are assigned to. </note>
+        </section>
+    </conbody>
+</concept>

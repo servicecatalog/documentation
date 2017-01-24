@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd">
+<task id="task634" xml:lang="en-us">
+  <title>Managing billing systems</title>
+  <taskbody>
+    <context>
+      <p>On the <b>Manage billing systems</b> page, you can view, add, and manage the billing systems that are to be available for technology provider and supplier organizations for providing price models and calculating the costs for services. </p>
+      <p
+        conref="../../Shared/concepts/c_ExtBillingIntro.xml#c_ExtBillingIntro_1/comes_with_its_own_native_b_concept_conbody_section_p_1"/>
+      <p>Technology providers have the choice of using the platform's native billing system or one of the integrated external billing systems when defining their technical services. One of the billing systems must be set as the default. The default billing system is used for any technical service that does not explicitly specify a different one, as well as for any marketable services and subscriptions based on it. </p>
+      <p>The <uicontrol>Manage billing systems</uicontrol> page shows the available billing systems in separate sections. The details of the default billing system are expanded when you access the page. On the page, you can: </p>
+      <p>
+        <ul compact="no">
+          <li>View the details of the available billing systems.</li>
+          <li>Add external billing systems.</li>
+          <li>Set the default billing system.</li>
+          <li>Update the short description and connection properties of external billing systems.</li>
+          <li>Remove a billing system.</li>
+        </ul>
+      </p>
+      <p><b>To add an external billing system</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>Make sure that the following prerequisites are fulfilled:</cmd>
+        <info>
+          <ul>
+            <li>A billing adapter has been implemented that connects the platform with the external billing system. This task is carried out by a developer in tight cooperation with the supplier of the services that are to use the external billing system. For details, refer to the <i>Developer's Guide</i>.</li>
+            <li>The providers of the billing adapter have deployed it on application server and made sure that communication with the platform and the external billing system is possible.</li>
+            <li>You know the parameters required for addressing the remote interface of the billing adapter by means of JNDI lookup.</li>
+          </ul>
+        </info>
+      </step>
+      <step>
+        <cmd>Click <uicontrol>Add</uicontrol> at the bottom of the <uicontrol>Manage billing systems</uicontrol> page.</cmd>
+        <info>This inserts and opens an empty section for defining the billing system details.</info>
+      </step>
+      <step>
+        <cmd>Enter the <uicontrol>Billing system ID</uicontrol> for the new billing system. </cmd>
+        <info> This ID uniquely identifies the billing system in the platform. Once the new billing system is defined, the ID cannot be changed. The ID is specified in the definitions of the technical services which intend to use the billing system.<p>Billing system IDs are restricted to 40 characters and must not contain any of the following characters:</p><p><codeph>! " # $ % &amp; ' * + , / : ; &lt; = > ? \ ^ `</codeph>
+          </p></info>
+      </step>
+      <step>
+        <cmd>Optionally specify a <uicontrol>Short description</uicontrol> of the billing system.</cmd>
+        <info>
+          <p>Short descriptions are restricted to 40 characters. Any character is allowed.</p>
+        </info>
+      </step>
+      <step>
+        <cmd>Enter the <uicontrol>Connection properties</uicontrol> for addressing the remote interface of the billing adapter by means of JNDI lookup. </cmd>
+        <info>You need to specify at least the JNDI name of the adapter. For additional properties, specify the name in the left field and the value in the right field. Use the plus sign to add an additional property, or the minus sign to remove a property.</info>
+      </step>
+      <step>
+        <cmd>Click <uicontrol>Test Connection</uicontrol> to make sure that the connection to the billing system can be established.</cmd>
+        <info>A corresponding message is shown telling you whether the connection was successful.</info>
+      </step>
+      <step>
+        <cmd>Click <uicontrol>Set as Default</uicontrol> to define the new billing system as the default billing system, if required.</cmd>
+        <info>The new billing system is instantly marked as the default, and the setting is removed from the previous default system.</info>
+      </step>
+      <step>
+        <cmd>To define the billing system, click <uicontrol>Save</uicontrol>. </cmd>
+      </step>
+    </steps>
+    <result>
+      <p>Technology providers can immediately specify the new billing system when registering an application as a technical service on the platform.</p>
+      <p><b>To change the default billing system</b>: </p>
+      <p>
+        <ol compact="no">
+          <li>Expand the details of the billing system to be set as the new default.</li>
+          <li>Click <uicontrol>Set as Default</uicontrol> to define the billing system as the default and remove the setting from the previous default system. </li>
+          <li>Click <uicontrol>Save</uicontrol> for your changes to become effective. </li>
+        </ol>
+      </p>
+      <p><b>To update an existing billing system</b>: </p>
+      <p>
+        <ol compact="no">
+          <li>Expand the details of the billing system to be updated.</li>
+          <li>Change the <uicontrol>Short description</uicontrol> of the billing system, if required.</li>
+          <li>Change the values of the connection properties as required. Use the plus sign to add an additional property, or the minus sign to remove a property.</li>
+          <li>Click <uicontrol>Test Connection</uicontrol> to make sure that the connection to the billing system can still be established.</li>
+          <li>Click <uicontrol>Set as Default</uicontrol> to define the billing system as the default one.</li>
+          <li>Click <uicontrol>Save</uicontrol> for your changes to become effective. </li>
+        </ol>
+      </p>
+      <p><b>To remove a billing system</b>: </p>
+      <p>
+        <ol compact="no">
+          <li>Expand the details of the billing system to be removed. <p>The following prerequisites must be fulfilled for removing a billing system:</p><p>
+              <ul>
+                <li>The billing system must not be marked as default.</li>
+                <li>There is no technical service, marketable service, or active subscription that uses the billing system.</li>
+              </ul>
+            </p></li>
+          <li>Click <uicontrol>Delete</uicontrol> and confirm the deletion. <p>The billing system is instantly removed. </p></li>
+        </ol>
+      </p>
+      <note>You can remove the native billing system if the prerequisites are fulfilled. In order to add it again later, specify <codeph>NATIVE_BILLING</codeph> as the billing system ID and a short description of your choice. Connection properties are not required.</note>
+    </result>
+  </taskbody>
+</task>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<task id="task_FDCC821C3A75473CBB39DA34D210E380" xml:lang="en-us">
+   <title>Adapting the Login/Logout Implementation</title>
+   <taskbody>
+      <context>
+         <p id="If_you_opt_for_access_through_task_taskbody_context_p_1">If you opt for access through <ph
+               conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+               /> (login access), you need to adapt the login/logout implementation of your application to pass the control and authentication of users from the application to <ph
+               conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+            />, and implement the relevant methods defined by the provisioning service. </p>
+         <p id="The_required_functionality_fo_task_taskbody_context_p_2"
+            >The required functionality for login and logout is distributed between a token handler, a custom login module, a custom logout module, and a logout listener:</p>
+         <p id="LoginLogout">
+         <ul>
+            <li id="1">The <b>token handler</b> is responsible for requesting <ph
+                  conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+               /> to resolve a user token into a user ID. It takes up the task of creating a session object and storing the user ID in that object. Additionally, it forwards requests containing a resolved user token to the custom login module.</li>
+            <li id="2"
+                  >The <b>custom login module</b> passes the user ID to the application. It enables users to log in to the application without requesting any further credentials. Users are trusted because they have already been authenticated by <ph
+                  conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                     />. For example, a custom login module might pass the user ID and a default password to the application. <p>To ensure that any login takes place through <ph
+                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                     />, the direct login to your application must be bypassed. For this purpose, you have to implement the required interface methods between the application and <ph
+                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p></li>
+            <li id="3"
+                  >The <b>custom logout module</b> closes user sessions on the application side and redirects users to the logout page of <ph
+                  conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                  />. The URL of the logout page is returned to the application by the <codeph>deleteServiceSession</codeph> method of the <ph
+                  conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> session service.</li>
+            <li id="4">The <b>logout listener</b> notifies <ph
+                  conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+               /> when a user logs out or a session timeout occurs.</li>
+         </ul>
+         </p>
+         
+      </context>
+      <result>
+         <p>For details on how to adapt the login/logout implementation, refer to the <i>Developer's Guide</i>.</p>
+      </result>
+   </taskbody>
+</task>

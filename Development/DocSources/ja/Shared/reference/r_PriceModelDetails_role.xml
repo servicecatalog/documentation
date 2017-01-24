@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<reference id="reference832" xml:lang="ja-jp">
+    <title><ph platform="print">ロールに基づく料金</ph><ph platform="help">ロールに基づく料金</ph></title>
+    <refbody>
+        <section>
+            <p id="If_defined_for_the_underlying_reference_refbody_section_1"
+                >ロールがアプリケーションに定義されている場合、利用者ごとに特定の権限を付与するために使用できます。ロールは技術サービス定義でサービスロールとして指定されます。サービスロールはアプリケーションで対応する許可にマッピングできます。 </p>
+            <p id="User_roles_can_be_used_for_ro_reference_refbody_section_2"
+                >ロールに基づく料金でサービスロールを使用できます。各ロールに対して料金を定義できます。請求期間の料金計算の際に、利用者ごとの基本料金にこの料金が加算されます。 </p>
+            <p id="User_roles_can_be_used_for_ro_reference_refbody_section_3"
+                    >ロールに基づく料金の計算方法については、利用者単価と同様の方法で扱われます。<ph>定額料金では、特定のロールを持っている利用者が購入済サービスに割り当てられたときの時間単位分の料金は、常に満額課金されます。その時間単位の最初から最後まで利用者が割り当てられている場合と、その時間単位の一部期間だけ利用者が割り当てられている場合とでは料金の差はありません。</ph></p>
+            <p id="If_the_charges_are_calculated_reference_refbody_section_1"
+                >購入済サービスが定額料金であり、かつある課金の時間単位内で利用者のロールの割り当てを変更した場合、その課金の時間単位内では比例配分されて課金されます。すなわち、利用者にロールが割り当てられたその期間の分だけ、それぞれの料金がサービス利用部門に課金されます。</p>
+            <p id="If_the_charges_are_calculated_reference_refbody_section_2"
+                >定額料金で課金の計算をしており、特定のロールを持つ利用者が購入済サービスから割り当てを解除され、そして、同じ時間単位内に同一の利用者が別のロールで再度割り当てられた場合、利用者が購入済サービスに割り当てられていない期間の分についてもサービス利用部門に課金されます。すなわち、再度別のロールで購入済サービスに割り当てられるまでの間は、ロールを変更する前の料金で課金され続けます。</p>
+        </section>
+        <section>
+            <title>例</title>
+            <p>サンプル計算では、次のデータを使用します。 </p>
+            <fig platform="help">
+            <image href="../_images/PriceModelSamples_RolesSimple.png" placement="break" height="173" width="580"/>
+            </fig>
+            <fig platform="print">
+                <image align="center" height="75" href="../_images/PriceModelSamples_RolesSimple.png" placement="break"
+                    width="350"/>
+            </fig>
+            <p>サービス利用部門は対象のサービスに100人の利用者を割り当てています。利用者全員が一ヶ月（支払請求周期）を通して割り当てられています。そのサービスの管理者ロールは5人、利用者ロールは80人、ゲストロールは15人です。</p>
+            <p>この場合のコスト計算は以下の通りです。 </p>
+            <p>ロールごとの料金：(5 * 200 円) + (80 * 300 円) + (15 * 500 円) = 32500 円</p>
+            <p><b>合計額 32500 円</b></p>
+            <p audience="int"
+                >この合計額が利用者単位の料金に加算されて料金が計算されます。</p>
+        </section>
+    </refbody>
+</reference>

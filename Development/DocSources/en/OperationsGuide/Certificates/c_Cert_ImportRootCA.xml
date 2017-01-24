@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_B32294CC9FA643A2A14A74B1DAA49C95" xml:lang="en-us">
+    <title>Importing the Certificates</title>
+    <conbody>
+        <section>
+            <p>You need to import the following certificate files created in the previous steps into the truststore of your application server:</p>
+            <p>
+                <ol>
+                    <li>The <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> domain certificate: <codeph>bssDomain.crt</codeph></li>
+                    <li>The CA root certificate: <codeph>ca.crt</codeph>
+                    </li>
+                </ol>
+            </p>
+            <p>Execute the following commands: </p>
+            <p>
+                <codeblock>&lt;YourJRE>/bin/keytool -import -trustcacerts -file bssDomain.crt 
+ -alias s1as -keystore
+ &lt;GLASSFISH_HOME>/glassfish/domains/bes-domain/config/cacerts.jks</codeblock>
+            </p>
+            <p>
+                <codeblock>&lt;YourJRE>/bin/keytool -import -trustcacerts -file CA.crt 
+ -alias CA -keystore
+ &lt;GLASSFISH_HOME>/glassfish/domains/bes-domain/config/cacerts.jks</codeblock>
+            </p>
+        </section>
+    </conbody>
+</concept>

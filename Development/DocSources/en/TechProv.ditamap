@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN"
+                         "">
+<!-- Copyright FUJITSU LIMITED 2017 -->
+
+<bookmap id="BESTechProvGuide" xml:lang="en_US">
+    <title>Technology Provider's Guide</title>
+    <bookmeta>
+        <prodinfo product="oscm_ce">
+            <prodname/>
+            <vrmlist>
+                <vrm version="16.1.5"/>
+            </vrmlist>
+            <brand/>
+        	<prognum>16.1.5</prognum>
+            <component/>
+            <series>Technology Provider's Guide</series>
+        </prodinfo>
+        <prodinfo product="oscm_ee">
+            <prodname>Enterprise Service</prodname>
+            <vrmlist>
+                <vrm version="16.1 Fix 5"/>
+            </vrmlist>
+            <brand>FUJITSU Software</brand>
+            <prognum>Catalog Manager V16.1 Fix 5</prognum>
+            <component/>
+            <series>Technology Provider's Guide</series>
+        </prodinfo>
+        <bookid>
+            <edition>February 2017</edition>
+            <booknumber product="oscm_ee">B1WS-1255-02</booknumber>
+        </bookid>
+        <bookrights product="oscm_ce" >
+            <bookowner name="none"/>
+        </bookrights>
+        <bookrights product="oscm_ee" >
+            <bookowner name="FUJITSU LIMITED"/>
+        </bookrights>
+    </bookmeta>
+    <frontmatter>
+        <notices href="Shared/Frontmatter/BookInfo.xml"/>
+        <preface format="dita" href="TechProvGuide/About/c_About.xml" type="concept">
+            <topicref format="dita" href="TechProvGuide/About/c_Readers.xml" type="concept"/>
+            <topicref format="dita" href="Shared/gettingstarted/intro_convent.xml" type="concept"/>
+            <!--TBD: Update-->
+            <topicref format="dita" href="TechProvGuide/About/intro_abbrev.xml" type="concept"/>
+            <topicref format="dita" href="Shared/gettingstarted/intro_availabledoc.xml" type="concept"/>
+        </preface>
+    </frontmatter>
+    <chapter format="dita" href="Shared/concepts/c_IntroExtended.xml" type="concept">
+        <topicref format="dita" href="TechProvGuide/Intro/c_IntroProviderRole.xml" type="concept"/>
+        <topicref format="dita" href="TechProvGuide/Intro/c_Prepare.xml" type="concept"/>
+        <topicref format="dita" href="TechProvGuide/Intro/c_OverviewIntTasks.xml" type="concept"/>
+        <topicref format="dita" href="TechProvGuide/Intro/c_IntroAccess.xml" type="concept"/>
+    </chapter>
+    <chapter format="dita" href="TechProvGuide/AccessTypes/c_AccessTypes.xml" type="concept">
+        <topicref format="dita" href="TechProvGuide/AccessTypes/c_LoginAccess.xml" type="concept"/>
+        <topicref format="dita" href="TechProvGuide/AccessTypes/c_DirectAccess.xml" type="concept"/>
+        <topicref format="dita" href="TechProvGuide/AccessTypes/c_UserAccess.xml" type="concept"/>
+        <topicref format="dita" href="TechProvGuide/AccessTypes/c_ExternalAccess.xml" type="concept"/>
+    </chapter>
+    <chapter format="dita" href="TechProvGuide/Implement/c_Implement.xml" type="concept">
+        <topicref format="dita" href="TechProvGuide/Implement/t_ImplProvServ.xml" type="task"/>
+        <topicref format="dita" href="TechProvGuide/Implement/t_UseIntHelpers.xml" type="task"/>
+        <topicref format="dita" href="TechProvGuide/Implement/t_ImplementEvents.xml" type="task"/>
+        <topicref format="dita" href="TechProvGuide/Implement/t_ImplementOperations.xml" type="task"/>
+    </chapter>
+    <chapter format="dita" href="TechProvGuide/Provision/c_Provision.xml" type="concept">
+        <topicref format="dita" href="TechProvGuide/Provision/t_RegisterServDef.xml" type="task"/>
+        <topicref format="dita" href="TechProvGuide/Provision/t_PrepareServDef.xml" type="task"/>
+        <topicref format="dita" href="TechProvGuide/Provision/t_AppointSuppliers.xml" type="task"/>
+        <topicref format="dita" href="TechProvGuide/Provision/t_UpdateServDef.xml" type="task"/>
+    </chapter>
+    <chapter format="dita" href="TechProvGuide/Reports/c_Reports.xml" type="concept"/>
+    <appendix format="dita" href="TechProvGuide/Reference/r_MenuOptions.xml" type="reference"/>
+    <appendix format="dita" href="TechProvGuide/Reference/r_TechServDescr.xml" type="reference"/>
+    <appendix format="dita" href="Shared/glossary/r_Glossary.xml" type="reference"/>
+</bookmap>

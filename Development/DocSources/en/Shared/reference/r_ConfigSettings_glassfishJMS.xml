@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<reference id="reference832" xml:lang="en-us">
+    <title>GlassFish JMS Configuration Settings</title>
+    <refbody>
+        <section>
+            <p>The <codeph>glassfishJMSBroker.properties</codeph> file contains the configuration settings for the Java Message Service (JMS) in the application server. It is required for both domains, <codeph>master-indexer-domain</codeph> and <codeph>bes-domain</codeph>, and thus available in the following directories: </p>
+            <p><codeph>&lt;install_pack_dir>/domains/indexer_domain</codeph></p>
+            <p><codeph>&lt;install_pack_dir>/domains/bes_domain</codeph></p>
+            <p>
+                <note>If you are using <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> in a multi-node installation, make sure to change the default setting <codeph>imq.brokerid=broker1</codeph> to a value that is unique for every node. </note>
+            </p>
+            <p>For details, refer to the <i>Sun GlassFish Message Queue 4.4 Administration Guide</i>.</p>
+        </section>
+        <section audience="int">
+            <title>imq.instanceconfig.version</title>
+            <p>Default: <codeph>300</codeph></p>
+        </section>
+        <section audience="int">
+            <title>imq.persist.jdbc.dbVendor</title>
+            <p>Default: <codeph>postgresql</codeph></p>
+        </section>
+        <section audience="int">
+            <title>imq.brokerid</title>
+            <p>### obsolete ? Default: <codeph>brokerid1</codeph></p>
+        </section>
+        <section audience="int">
+            <title>imq.persist.jdbc.postgresql.user</title>
+            <p>Default: <codeph>jmsuser</codeph></p>
+        </section>
+        <section audience="int">
+            <title>imq.persist.jdbc.postgresql.password</title>
+            <p>Default: <codeph>jmsuser</codeph></p>
+        </section>
+        <section audience="int">
+            <title>imq.persist.store</title>
+            <p>Default: <codeph>jdbc</codeph></p>
+        </section>
+        <section audience="int">
+            <title>imq.persist.jdbc.postgresql.driver</title>
+            <p>Default: <codeph>org.postgresql.Driver</codeph></p>
+        </section>
+        <section audience="int">
+            <title>imq.persist.jdbc.postgresql.opendburl</title>
+            <p>Default: <codeph>jdbc\:postgresql\://localhost\:5432/bssjms</codeph></p>
+        </section>
+        <section audience="int">
+            <title>imq.persist.jdbc.connection.limit</title>
+            <p>Default: <codeph>30</codeph></p>
+        </section>
+    </refbody>
+</reference>

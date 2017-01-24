@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="en-us">
+  <title>Kunden-Preismodell definieren</title>
+  <taskbody>
+    <context>
+      <p>Auf der Seite <uicontrol>Kunden-Preismodell definieren</uicontrol> können Sie für einen bestimmten Service ein kundenspezifisches Preismodell definieren oder ändern. </p>
+      <p>Sie haben einen Service gewählt, für dessen Kostenberechnung ein <b>externes Abrechnungssystem</b> verwendet wird. Die Preismodelle für die Kostenberechnung werden ebenfalls in diesem System definiert und verwaltet. Für den ausgewählten Service und Kunden müssen Sie das passende Preismodell von dem externen Abrechnungssystem importieren. Sie können das importierte Preismodell auf der Plattform anzeigen, aber nicht ändern. Falls Änderungen erforderlich sind, müssen diese im externen Abrechnungssystem vorgenommen werden, und Sie müssen danach das Preismodell erneut von dort importieren.</p>
+      <p><b>So definieren oder ändern Sie ein Kunden-Preismodell</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>In dem Bereich <uicontrol>Definieren Sie das Preismodell</uicontrol> klicken Sie <uicontrol>Importieren</uicontrol>, um das Preismodell von dem externen Abrechnungssystem zu importieren. </cmd>
+        <info>Der Billing-Adapter, der die Plattform mit dem externen Abrechnungssystem verbindet, ist für die Bereitstellung des richtigen Preismodells verantwortlich. Über <uicontrol>Anzeigen</uicontrol> können Sie sich das Preismodell ansehen. </info>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_license_2">
+        <cmd/>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_save">
+        <cmd/>
+      </step>
+      <step>
+        <cmd>Um die Lizenzvereinbarung des Preismodells in einer anderen Sprache zu hinterlegen, klicken Sie <uicontrol>Lokalisieren</uicontrol>.</cmd>
+      </step>
+    </steps>
+    <result>Sobald Sie den Service aktivieren, steht dem Kunden das Preismodell zur Verfügung. Es gilt für alle neuen Abonnements des Kunden.</result>
+  </taskbody>
+  <related-links>
+    <linklist>
+      <title>Weitere Themen</title>
+      <link href="priceModel_localize.xml"/>
+    </linklist>
+  </related-links>
+</task>

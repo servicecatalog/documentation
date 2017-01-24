@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="de-de">
+  <title>Von einem Service abmelden</title>
+  <taskbody>
+    <context>
+      <p>Sie haben sich von dem Service abgemeldet. </p>
+      <p>Befolgen Sie die angezeigten Anweisungen. Schließen Sie zum Beispiel das Fenster oder starten Sie den Service erneut. </p>
+    </context>
+  </taskbody>
+</task>

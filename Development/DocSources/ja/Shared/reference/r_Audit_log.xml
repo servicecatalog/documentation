@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<reference id="reference832" xml:lang="ja-jp">
+    <title><ph platform="print">監査ログ</ph><ph platform="help">監査ログ</ph>
+    </title>
+    <refbody>
+        <section>
+            <p>システム運用管理者は、料金設定も含めて購入済サービスやサービスに関する利用者のおこなったあらゆる操作について監査ログとして参照、エクスポートすることができます。これは、いつ誰が料金設定を変更したか、購入済サービスがいつ作成されたか、いつ誰がライセンスの説明を変更したかなどを確認する場合に役立ちます。</p>
+            <p>監査ログのエントリは、コンマで区切られた <b>ヘッダ</b> と <b>メッセージ</b>で構成されます。</p>
+            <p>ヘッダは、空白で区切られた以下の要素で構成されます。:</p>
+            <ul>
+                <li>
+                    <p><codeph>MM/DD/YYYY_hh:mm:ss.SSS</codeph>: ローカルサーバの日時。</p>
+                </li>
+                <li>
+                    <p><codeph>FSP_SW/CT-MG_CTMG-BSS</codeph>: プラットフォーム上で利用者がおこなった操作に伴うログのエントリに対する事前定義されたログのラベル。 このラベルは変更できません。</p>
+                </li>
+                <li>
+                    <p><codeph>INFO</codeph>: デフォルトのログレベル。このレベルは変更できません。</p>
+                </li>
+                <li>
+                    <p><codeph>3&lt;<i>nnnn</i>></codeph>: ログメッセージのID。これは30000～39999の数字です。 各操作毎にユニークなIDになります。例えば、操作[<codeph>Define service</codeph>]のIDは30090、操作[<codeph>Subscribe to service</codeph>]のIDは30000です。</p>
+                </li>
+                <li>
+                    <p><codeph>&lt;<i>操作</i>></codeph>: 記録された操作。例えば、[<codeph>Define service</codeph>]。</p>
+                </li>
+            </ul>
+            <p>ヘッダーに続いて、詳細なログメッセージが追加されます。詳細なログメッセージは、縦線(|)で区切られた付加的な情報を含む名前と値の組で構成されます。</p>
+            <p>メッセージはすべて以下の名前と値の組で始まります。:</p>
+            <ul>
+                <li>
+                    <p><codeph>userId=&lt;<i>利用者ID</i>></codeph>: 操作を行った利用者のID。</p>
+                </li>
+                <li>
+                    <p><codeph>orgId=&lt;<i>組織ID</i>></codeph>: 利用者が所属する組織のID。</p>
+                </li>
+                <li>
+                    <p><codeph>orgName=&lt;<i>組織名</i>></codeph>: 利用者が所属する組織の名前。</p>
+                </li>
+                <li>
+                    <p><codeph>&lt;<i>追加の名前と値の組</i>></codeph>: 縦線(|)で区切られた操作に固有の追加の名前と値の組。</p>
+                </li>
+            </ul>
+            <p>ログのエントリは、操作を行った利用者のロールに応じて分類されます: </p>
+            <p>
+                <ul>
+                    <li><xref href="r_Audit_log_User.xml"/></li>
+                    <li><xref href="r_Audit_log_Admin.xml"/></li>
+                    <li><xref href="r_Audit_log_Supplier.xml"/></li>
+                </ul>
+            </p>
+            <p>ログのエントリは、データベースに格納されている通りの情報です。値が更新された場合、初期値は監査ログには含まれません。</p>
+        </section>
+    </refbody>
+</reference>

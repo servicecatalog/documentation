@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<task id="task_E68E2024B1F6403AAA1130A39B1D4DCD" xml:lang="en-us">
+    <title>Terminating Subscriptions</title>
+    <taskbody>
+        <context>
+            <p>A customer can at any time terminate a subscription for a virtual machine in AWS.</p>
+            <p>AWS is triggered to delete the virtual server. The subscription is terminated in <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> independent of whether the deletion is successful in AWS.  Note, however, that the subscription name cannot be re-used before the deletion has been completed in AWS.</p>
+        </context>
+    </taskbody>
+</task>

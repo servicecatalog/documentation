@@ -1,0 +1,21 @@
+<?xml version="1.0"?> 
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd"
+
+[
+<!ENTITY % entities PUBLIC "-//XDOC//ENTITIES//FujitsuUserDoc" "entities.dtd">
+]>
+
+<concept xml:lang="en-us" id="concept_1BCF5C425D7D4627AB1C66A085CF6E11">
+    <title>Introduction</title>
+    <conbody>
+        <p conref="../../Shared/concepts/c_WhatIsBES.xml#concept2311/is_a_set_of_services_which_concept_conbody_p_1"/>
+        <p><ph conref="../../Shared/concepts/c_WhatIsBES.xml#concept2311/With_its_components_concept_conbody_p_2_ph"
+            />.</p>
+        <p><ph
+                conref="../../Shared/concepts/c_BasicUsageScenario.xml#concept2311/is_typically_operated_in_dat_concept_conbody_section_1_p"
+                /><ph
+                conref="../../Shared/concepts/c_BasicUsageScenario.xml#concept2311/The_applications_integrated_w_concept_conbody_section_1_p"
+            /></p>
+    </conbody>
+</concept>

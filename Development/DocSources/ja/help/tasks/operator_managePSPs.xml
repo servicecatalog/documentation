@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd">
+<task id="task634" xml:lang="ja-jp">
+  <title>支払代行システムの管理</title>
+  <taskbody>
+    <context>
+      <p><uicontrol>支払代行システムの管理</uicontrol>ページでは、支払代行システム（PSP）との通信方法の設定とPSPが利用できる支払種別を定義することができます。 </p>
+      <p>PSPを統合するためには、いくつかの条件を満たす必要があります。 </p>
+      <p>
+        <ul compact="no">
+          <li>
+            <p id="psp2">所属組織、すなわちシステム運用管理者がPSPシステムに登録されている必要があります。</p>
+          </li>
+          <li>
+            <p id="psp3"
+              >PSPのサービスを利用するサービス提供部門またはサービス提供代行部門がPSPと契約関係を結んでいる必要があります。さらに、サービス提供部門またはサービス提供代行部門がPSPシステムに登録されている必要があります。 </p>
+          </li>
+          <li>
+            <p id="psp3a"
+              >支払いがサービス提供部門またはサービス提供代行部門の口座にすぐにリンクされるように、PSPはサービス提供部門またはサービス提供代行部門にIDを発行します。</p>
+          </li>
+          <li>
+            <p id="psp4"
+                ><ph
+                platform="print"><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"> </ph></ph><ph
+                platform="help">プラットフォーム</ph>とPSPシステムの間で信頼できるセキュアな通信を確保するために、所属組織とPSPが証明書を交換している必要があります。</p>
+            <p>証明書の使用および統合については<i>運用ガイド システム運用管理部門編</i>に詳しい説明があります。</p>
+          </li>
+          <li>
+            <p id="psp5"
+              >PSP統合アダプタがWebサービスとして実装され、アプリケーションサーバ上に配備されている必要があります。このアダプタは<ph
+                platform="print"><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"> </ph></ph><ph
+                platform="help">プラットフォーム</ph>とPSPとの統合を提供するためのWebサービスです。このサービスのWSDLファイルにアクセスするURLが必要です。</p>
+            <p>統合アダプタの実装の詳細については、製品に同梱されている<codeph>oscm-integration-psp-pack.zip</codeph>ファイルの説明を参照してください。</p>
+          </li>
+          <li>
+            <p id="psp6"
+              >PSPから提供されている支払種別およびサービスを利用するための設定値について情報を入手し、その設定値をサービスに使用する必要があります。</p>
+          </li>
+          <li>
+            <p id="psp7"> 
+            <ph platform="print"><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"> </ph>の</ph>
+            <ph platform="help">プラットフォーム</ph>に次の設定を行う必要があります: </p>
+            <p id="psp8"
+                ><codeph>PSP_USAGE_ENABLED</codeph>: PSPが取り扱う請求データの支払処理を有効にするには、値を<codeph>true</codeph>に設定します（デフォルト：<codeph>false</codeph>)。</p>
+            <p>詳細については<xref href="operator_manageConfiguration.xml">ここ</xref>をクリックしてください。</p>
+          </li>
+        </ul>
+      </p>
+      <p><b>支払代行システムを設定するには：</b></p>
+    </context>
+    <steps>
+      <step>
+        <cmd><uicontrol>支払代行システム</uicontrol>一覧から設定するPSPを選択します。</cmd>
+        <info>
+          <p>この一覧には、プラットフォームに登録されているすべてのPSPが含まれます。</p>
+          <!-- p>プラットフォームのインストール後、サンプルPSPとしてHeidelpayが作成されます。一覧から<b>heidelpay</b>を選択すると、Heidelpayとの通信に必要なすべてのパラメーターを含むサンプル設定が表示されます。Heidelpayの統合を完了するには、<codeph>oscm-integration-psp-pack.zip</codeph>ファイルに含まれているHeidelpay統合アダプタに対し設定変更、構築、配備を行う必要があります。 </p -->
+        </info>
+      </step>
+      <step>
+        <cmd>PSPとの通信に必要な構成キーとその値を指定します。[追加]をクリックして新しいキーと値のペアを入力します。</cmd>
+        <info>
+          <p>構成設定はPSP統合アダプタの実装によって異なります。必要とされる設定についてはPSPより情報を入手しておく必要があります。 </p>
+        </info>
+      </step>
+      <step>
+        <cmd>PSPが提供する支払種別を定義します。[追加]をクリックし、<uicontrol>新規支払種別</uicontrol>ページに進みます。 </cmd>
+        <info>支払種別を追加することはできますが、PSPにすでに定義された方法を削除することはできません。支払種別の名前は自由に定義できます。支払種別自体はPSPが提供します。 
+            例えば、Heidelpayとの統合が実装され、それを使うように選択されている場合、<codeph>CREDIT_CARD</codeph> および <codeph>DIRECT_DEBIT</codeph> がすでに定義されています。</info>
+      </step>
+      <step>
+        <cmd><uicontrol>保存</uicontrol>をクリックし、入力内容を保存します。</cmd>
+      </step>
+    </steps>
+    <result/>
+  </taskbody>
+</task>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd">
+<task id="id_276">
+  <title>Mandanten verwalten</title>
+    <taskbody>
+        <context><p>Die Plattform unterstützt Single Sign-On (SSO) wenn sie im Authentifizierungsmodus SAML_SP installiert wurde. Bei der Installation wurde ein Identity Provider (IdP) - System für die Authentifizierung von Benutzern konfiguriert. Benutzernamen und Passwörter einer Organisation werden im Identity-Provider-System verwaltet, beispielsweise in OpenAM oder Active Directory Federation Service (ADFS). </p><p>Damit ein Benutzer auf die Plattform zugreifen kann, muss sein Benutzername im IdP-System existieren. Der Benutzer muss auf der Plattform mit dem gleichen Benutzernamen registriert werden. </p><p>Verbindungseinstellungen müssen in einer Konfigurationsdatei festgelegt werden, damit sich die Plattform zu dem IdP-System verbinden kann. </p><p>Das bei der Installation konfigurierte IdP-System hat systemweit Geltung, d.h. für alle Benutzer, die auf der Plattform registriert sind. Dieses IdP-System wird "Standard-IdP" genannt. Zusätzlich kann der Plattformbetreiber Mandanten definieren und ihnen jeweils ein IdP-System zuordnen. So kann später ein Markplatz und eine Organisation einem Mandanten zugeordnet werden. Die Benutzer der entsprechenden Organisation, die Zugriff auf einen solchen Marktplatz haben werden dann in dem IdP-System authentifiziert, das dem Mandanten zugeordnet ist. </p><p>Benutzer werden immer in dem IdP-System authentifiziert, das dem jeweiligen Marktplatz zugeordnet ist. Benutzer der gleichen oder einer anderen Organisation werden in einem anderen IdP-System authentifiziert, sobald sie auf einen anderen Marktplatz zugreifen, dem ein anderer Mandant mit anderem IdP-System zugeordnet ist.</p><p
+                id="On_the_task_taskbody_context_p_1"
+                >Auf der Seite <uicontrol>Mandanten verwalten</uicontrol> können Sie Mandanten anlegen und verwalten. Für jeden Mandanten können Sie die Verbindungseinstellungen zu dem IdP-System konfigurieren, das dem Mandanten zugeordnet werden soll. Legen Sie keine Mandanten fest werden Benutzer immer in dem bei der Installation angegebenen IdP-Sytem authentifiziert.</p>Bevor Sie mit dem Anlegen eines Mandanten beginnen, stellen Sie sicher, dass sowohl Sie als Plattformbetreiber als auch der Administrator des IdP-Systems über die erforderlichen Informationen verfügen. <xref
+                href="../../Shared/reference/c_IdPInfo.xml"
+                >Hier</xref> finden Sie die Informationen, die Sie benötigen und <xref
+                href="../../Shared/reference/c_IdPInfo2.xml">hier</xref> wird erläuter, welche Informationen der IdP-Administrator von Ihnen benötigt.<p>
+                <note>Sie sind für die korrekte Konfiguration von Mandanten verantwortlich!<p>Beachten Sie, dass ein Marktplatz zwar einem Mandanten zugeordnet werden kann, der Marktplatz aber immer noch öffentlich zugänglich ist und jeder kann Services veröffentlichen oder abonnieren. Sie können dies vermeiden, indem Sie den Zugriff auf bestimmte Anbieter beschränken (Marktplatz nur für zugelassene Anbieter) und auf bestimmte Kundenorganisationen (geschlossener Marktplatz).  Hierfür benötigen Sie die Rolle des Marktplatzeigentümers.</p></note>
+            </p><p><b>So legen Sie einen Mandanten an</b>:</p></context>
+        <steps>
+            <step>
+                <cmd>Bereiten Sie auf Ihrem Dateisystem eine Konfigurationsdatei mit den Verbindungseinstellungen zum IdP-System vor. </cmd>
+                <info>Die folgenden Parameter müssen in der Datei festgelegt werden: <p>
+                        <ul>
+                            <li><codeph><b>SSO_LOGOUT_URL</b></codeph><p>Gibt die URL zum Endpoint des Single Logout Service im IdP-System an. An diese Adresse sendet die Plattform Requests zur Abmeldung und zur Invalidierung von Sessions. Erforderlich für Web Browser Single Sign-On. </p><p>Aus Sicherheitsgründen wird empfohlen, das HTTPS-Protokoll zu verwenden. </p><p>Syntax: <codeph>https://&lt;host>:&lt;port>/&lt;LogoutServiceEndpoint></codeph></p></li>
+                            <li>
+                                <note>Im IdP-System muss eine URL angegeben werden, zu der die Antwort auf den Request zur Abmeldung geschickt und der Benutzer nach der Abmeldung geleitet wird. Wenn mehrere Mandanten dem gleichen IdP-System zugeordnet sind, muss der IdP-Administrator pro Mandant eine Relying Party anlegen und dem Plattformbetreiber mitteilen. </note>
+                            </li>
+                            <li><codeph><b>SSO_IDP_URL</b></codeph><p>Gibt die URL zum Service Endpoint des IdP-Systems an, das verwendet werden soll (SAML Redirect URL). An diesen Endpoint werden Requests zur Authentifizierung von der Plattform gesendet. </p><p>Aus Sicherheitsgründen wird empfohlen, das HTTPS-Protokoll zu verwenden. </p><p>Syntax: <codeph>https://&lt;host>:&lt;port>/&lt;RedirectServiceEndpoint&gt;</codeph></p><p>
+                                    <note>Wenn mehrere Mandanten dem gleichen IdP-System zugeordnet sind, muss der IdP-Administrator pro Mandant eine Relying Party anlegen und dem Plattformbetreiber mitteilen.  </note>
+                                </p></li>
+                            <li><codeph><b>SSO_IDP_AUTHENTICATION_REQUEST_HTTP_METHOD</b></codeph><p>Gibt die Methode an, die für HTTP-Requests zur Authentifizierung verwendet wird. Abhängig vom IdP-System können <codeph>GET</codeph>- oder <codeph>POST</codeph>-Requests verwendet werden. </p><p>Voreinstellung: <codeph>POST</codeph></p></li>
+                            <li><codeph><b>SSO_STS_METADATA_URL</b></codeph><p>Gibt die URL der MEX-Adresse (Issuer Metadata Exchange) des STS (Security Token System) an. Erforderlich für die STS-Kommunikation.</p><p>Aus Sicherheitsgründen wird empfohlen, das HTTPS-Protokoll zu verwenden.</p><p>Syntax: <codeph>https://&lt;host>:&lt;port>/&lt;MEXAddress></codeph></p></li>
+                            <li><codeph><b>SSO_STS_URL</b></codeph><p>Gibt die URL zum Service Endpoint des STS (Security Token System) an. Erforderlich für die STS-Kommunikation.</p><p>Aus Sicherheitsgründen wird empfohlen, das HTTPS-Protokoll zu verwenden.</p><p>Syntax: <codeph>https://&lt;host>:&lt;port>/&lt;ServiceEndpoint></codeph></p></li>
+                            <li><codeph><b>SSO_ISSUER_ID</b></codeph>
+                                <p>Gibt eine eindeutige ID für den Mandanten an, anhand derer das IdP-System eingehende SAML-Authentifizierungs-Requests von der Plattform identifizieren kann. Sie können eine beliebige, alphanumerische Zeichenfolge verwenden. </p></li>
+                            <li><codeph><b>SSO_STS_ENCKEY_LEN</b></codeph><p>Gibt die Länge des Encryption Key an, wie er von dem IdP-System verwendet wird. Erforderlich für die STS-Kommunikation.</p><p>Default: <codeph>128</codeph></p></li>
+                            <li><codeph><b>SSO_IDP_SAML_ASSERTION_ISSUER_ID</b></codeph><p>Gibt die Entity-ID des IdP-Systems an. Diese ID ist für das IdP-System eindeutig und muss zwischen dem Plattformbetreiber und dem IdP-Administrator kommuniziert werden. Anhand dieser ID kann die Plattform sicherstellen, dass die Authentifizierungsdaten, die vom IdP-System zurückkommen, eindeutig von dem System stammen, das für die Authentifizierung konfiguriert wurde. </p><p>Der IdP-Administrator kann diese ID beispielsweise über die Federation Medadata auf seinem IdP-System herausfinden. </p><b>Beispiele</b>:<p>Auf dem OpenAM-Server können die Federation Metadata wie folgt in einem Web Browser abgerufen werden: </p><p><codeph>https://&lt;OpenAM_server>/openam/saml2/jsp/exportmetadata.jsp?entityid=</codeph></p><p>Auf dem ADFS-Server befinden sich die Daten in folgender Datei: </p><p><codeph>http://&lt;ADFShost>/FederationMetadata/2007-06/FederationMetadata.xml</codeph></p><p>In der XML-Datei heißt die Issuer ID auch <codeph>entityID</codeph>, zu Beispiel:</p><p><codeph>entityID="http://example.adfs.com/adfs/services/trust"</codeph>
+                                </p></li>
+                        </ul>
+                    </p></info>
+            </step>
+            <step>
+                <cmd>Klicken Sie <b>Hinzufügen</b> auf der Seite <b>Mandanten verwalten</b>.</cmd>
+                <info/>
+            </step>
+            <step>
+                <cmd>Geben Sie folgende Daten ein: </cmd>
+                <info>
+                    <p>
+                        <ul>
+                            <li><b>Name</b>. Name des Mandanten, beispielsweise das IdP-System, mit dem der Mandant verbunden werden soll. Der Name muss auf der Plattform eindeutig sein und darf maximal 255 alphanumerische Zeichen enthalten.</li>
+                            <li><b>Beschreibung</b> des Mandanten. Diese is auf 40 Zeichen begrenzt.</li>
+                        </ul>
+                    </p>
+                </info>
+            </step>
+            <step>
+                <cmd>Laden Sie die Verbindungseinstellungen zum IdP-Systems des Mandanten hoch: Klicken Sie das Feld <b>Dateiname</b> oder <b>Durchsuchen</b> und wählen Sie die Konfigurationsdatei, die Sie im Schritt 1 vorbereitet haben. </cmd>
+            </step>
+            <step>
+                <cmd>Klicken Sie <uicontrol>Importieren</uicontrol>. </cmd>
+                <info>Die eindeutige ID des Mandanten wird generiert und im Feld <b>ID</b> angezeigt. Die URL zum IdP-System wird aus der Konfigurationsdatei gelesen und im Feld <b>IdP</b> angezeigt. Beide Felder können nicht geändert werden. </info>
+            </step>
+            <step>
+                <cmd>Schließen Sie Ihre Eingaben mit <uicontrol>Speichern</uicontrol> ab.</cmd>
+                <info/>
+            </step>
+        </steps>
+        <result>
+            <p>
+                <note>Wenn Sie einen Mandanten mit keinen oder ungültigen Verbindungsdaten erstellen, wird dieser Mandant zur Auswahl stehen, wenn eine Organisation oder ein Marktplatz erstellt wird. In diesem Fall wird sich kein Benutzer am Marktplatz anmelden können. Sie sind für die Definition der richtigen Verbindungsdaten zu allen Mandanten, die Sie erstellen, verantwortlich. </note>
+            </p>
+            <p><b>So aktualisieren Sie die Daten eines Mandanten</b>: </p>
+            <p>
+                <ol>
+                    <li>Wählen Sie in der Liste der Mandanten denjenigen aus, dessen Daten Sie bearbeiten möchten. Sie können die Liste sortieren nache Mandantenname, Beschreibung, ID oder URL zum IdP-System.</li>
+                    <li>Bearbeiten Sie den Namen und/oder die Beschreibung. <p>ID bzw. URL zum IdP können nicht geändert werden. </p></li>
+                    <li>So können Sie die Verbindungseinstellungen zum IdP-System ändern: <p>
+                            <ol>
+                                <li>Klicken Sie <b>Exportieren</b>. </li>
+                                <li>Geben Sie einen Dateinamen an und speichern Sie die Datei. <p>Die aktuellen Einstellungen werden in eine Konfigurationsdatei geschrieben. </p></li>
+                                <li>Bearbeiten Sie die Datei und importieren Sie sie wieder mit <b>Importieren</b>. </li>
+                                <li>Bestätigen Sie, dass die bestehenden Einstellungen überschrieben werden.</li>
+                            </ol>
+                        </p></li>
+                    <li>Mit <uicontrol>Speichern</uicontrol> schließen Sie Ihre Änderungen ab.</li>
+                </ol>
+            </p>
+            <p><b>Verwerden</b> löscht alle Einstellungen des gewählten Mandanten aus der Datenbank. Diese Schaltfläche ist nur dann aktiv, wenn vorher bereits eine Datein mit Verbindungseinstellungen geladen wurde. </p>
+            <p><b>Löschen</b> entfernt den gewählten Mandanten vollständig. Ein Mandant kann nur gelöscht werden, wenn er noch keinem Marktplatz bzw. keiner Organisation zugeorndet wurde. </p>
+        </result>
+    </taskbody>
+</task>

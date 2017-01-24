@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd">
+<task id="task634" xml:lang="de-de">
+    <title>Abo-Details anzeigen</title>
+    <taskbody>
+        <context>
+            <p>Auf der Seite <uicontrol>Abo-Details anzeigen</uicontrol> können Sie Informationen zu Abonnements Ihrer Kunden anfordern. Wenn Sie als Serviceanbieter angemeldet sind, gehören dazu auch Abonnements von Kunden Ihrer Vermittler.</p>
+            <p>Die folgenden Informationen zu einem Abonnement können angezeigt werden:</p>
+            <ul compact="yes">
+                <li>Datum, an dem der Kunde den Service abonniert hat, und Anzahl der Benutzer, die dem Abonnement zugeordnet sind.</li>
+                <li>Details zum marktfähigen Service, den der Kunde abonniert hat.</li>
+                <li>Details zum technischen Service, der dem marktfähigen Service zugrunde liegt.</li>
+                <li>Details zum Preismodell des marktfähigen Service.</li>
+            </ul>
+            <p><b>So zeigen Sie die Informationen zu einem Abonnement an</b>:</p>
+        </context>
+        <steps-unordered>
+            <step>
+                <cmd>Wählen Sie in der Liste im oberen Bereich der Seite das Abonnement, zu dem Sie Informationen anzeigen lassen möchten.</cmd>
+                <info>
+                    <p>Sie können jedes laufende Abonnement Ihrer Kunden wählen. Wenn Sie als Serviceanbieter angemeldet sind, können Sie auch ein laufendes Abonnement der Kunden Ihrer Vermittler wählen.</p>
+                </info>
+            </step>
+        </steps-unordered>
+        <result>
+            <p>Die Detailinformationen werden sofort im unteren Bereich der Seite angezeigt.</p>
+        </result>
+    </taskbody>
+</task>

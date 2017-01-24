@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd">
+<task id="task634" xml:lang="de-de">
+            <title>Texte anpassen</title>
+            <taskbody>
+                        <context><p>Auf der Seite <uicontrol>Texte anpassen</uicontrol> können Sie: </p><ul compact="no">
+                                                <li>Die aktuellen Texte exportieren, die auf der Benutzeroberfläche sichtbar sind und in automatisch generierten E-Mails verwendet werden, sowie geänderte oder übersetzte Texte importieren.</li>
+                                                <li>Einen Hyperlink zu einer Webseite mit dem Impressum Ihres Marktplatzes angeben. Der Hyperlink wird am unteren Rand jeder Marktplatzseite eingeblendet.</li>
+                                                <li>Den Text Ihrer Datenschutzerklärung sowie Ihrer allgemeinen Geschäftsbedingungen eingeben. Die Datenschutzerklärung und die allgemeinen Geschäftsbedingungen müssen von Ihren Kunden akzeptiert werden, wenn sie sich auf Ihrem Marktplatz registrieren. Hyperlinks für die Datenschutzerklärung und die allgemeinen Geschäftsbedingungen werden am unteren Rand jeder Marktplatzseite eingeblendet.</li>
+                                    </ul><p>Sie können für die Texte Übersetzungen in allen unterstützten Sprachen hinterlegen. Wenden Sie sich an Ihren Plattform-Betreiber, wenn eine zusätzliche Sprache unterstützt werden soll.</p><p
+                                                id="The_branding_of_a_marketplace_task_taskbody_context_p_4"
+                                                            >Das Branding eines Marktplatzes umfasst auch das Werbebanner und das Layout (Farben, Schriften, Hintergrundbilder, Logos, usw.). Zum Anpassen des Werbebanners, also des Bereiches zur Platzierung von Werbung, Firmenlogos und weiteren Informationen, verwenden Sie die Option <uicontrol>Werbebanner anpassen</uicontrol> im Menü <uicontrol>Marktplatz</uicontrol>. Das Layout können Sie über die Option <uicontrol>Layout anpassen</uicontrol> im Menü <uicontrol>Marktplatz</uicontrol> ändern.</p>
+                                    <b>So passen Sie die Texte an</b>: </context>
+                        <steps>
+                                    <step>
+                                                <cmd>Wählen Sie in der Liste <uicontrol>Marktplatz</uicontrol> den Marktplatz, für den Sie Anpassungen vornehmen möchten.</cmd>
+                                                <info>
+                                                            <p>Die Liste stellt alle Marktplätze zur Auswahl, auf die Sie als Marktplatz-Manager Zugriff haben.</p>
+                                                </info>
+                                    </step>
+                                    <step>
+                                                <cmd>Speichern Sie die Texte, die aktuell auf der Benutzeroberfläche sichtbar sind, mit <uicontrol>Exportieren</uicontrol> in einer Microsoft Excel-Datei mit Dateierweiterung <codeph>.xls</codeph>. </cmd>
+                                    </step>
+                                    <step>
+                                                <cmd>Öffnen Sie die Datei und bearbeiten oder übersetzen Sie die Texte. Die Datei enhält die Texte in allen aktuell unterstützen Sprachen.</cmd>
+                                                <stepresult>Sie finden einen Text, indem Sie in der Datei danach suchen, zum Beispiel auf Deutsch. <p>Jeder Text ist durch einen Schlüssel eindeutig gekennzeichnet. Auf den Schlüssel folgt der Text in jeder unterstützten Sprache.</p><p>Schlüssel für E-Mail-Texte sind wie folgt gekennzeichnet: <ul
+                                                            compact="no">
+                                                            <li>Schlüssel, die auf <codeph>.subject</codeph> oder <codeph>.text</codeph> enden und denen eine Beschreibung in Großbuchstaben vorausgeht, enthalten den Betreff bzw. den Inhalt der E-Mail. Die Beschreibung in Großbuchstaben gibt den Grund an, warum die E-Mail verschickt wird.</li>
+                                                            <li>Schlüssel, die mit <codeph>text.</codeph> beginnen, enthalten die Kopf- und Fußzeile, die Anrede zu Beginn und die Grußformel am Ende der E-Mails.</li>
+                                                            </ul></p><p>Beachten Sie folgendes:</p><ul compact="no">
+                                                            <li>Alle beschreibenden Texte (gekennzeichnet durch einen auf <codeph>.description</codeph> endenden Schlüssel) können Sie mit HTML-Tags formatieren. Zum Beispiel können Sie mit <codeph>&lt;b></codeph> Text fett darstellen oder <codeph>&lt;br></codeph> für Zeilenumbrüche verwenden. </li>
+                                                            <li>Sie können in den Texten alle Zeichen des Unicode-Zeichensatzes verwenden. </li>
+                                                            <li>Wenn Sie einen Text nicht ändern möchten, können Sie die entsprechenden Tabellenzellen löschen. Dies kann zum Nachvollziehen von Änderungen an der Benutzeroberfläche hilfreich sein.</li>
+                                                            <li>Stellen Sie sicher, dass die Felder keine ungültigen Daten enthalten und somit Fehler im Seitenlayout erzeugen können. Ein zu langer Text wird zum Beispiel an der Benutzeroberfläche auf mehrere Zeilen aufgeteilt. Verwenden Sie zum Testen der Übersetzungen eine separate Umgebung.</li>
+                                                            </ul></stepresult>
+                                    </step>
+                                    <step>
+                                                <cmd>Importieren Sie die angepasste oder übersetzte Datei, um Ihre Änderungen sichtbar zu machen. Wählen Sie dazu die Datei aus, die die bearbeiteten Texte enthält, und klicken Sie <uicontrol>Importieren</uicontrol>. </cmd>
+                                                <stepresult>Die Datei muss im Microsoft Excel-Format mit Dateierweiterung <codeph>.xls</codeph> sein. Die Schlüssel und Übersetzungen müssen auf dem ersten Arbeitsblatt stehen.</stepresult>
+                                    </step>
+                        </steps>
+                        <result>
+                                    <p>Ihre Anpassungen werden gespeichert und sind für Marktplatzbesucher sofort sichtbar. Um Ihre Änderungen rückgängig zu machen und die Benutzeroberfläche wieder im Lieferzustand anzuzeigen, klicken Sie <uicontrol>Zurücksetzen</uicontrol>.</p>
+                                    <p>
+                                                <note>Die geänderten Texte der Benutzeroberfläche sind nur im Kontext des Marktplatzes sichtbar, für den Sie die Änderungen durchgeführt haben. Wenn Sie sich mit der URL zur Verwaltung eines bestimmten Marktplatzes anmelden (<codeph>http://&lt;server&gt;:&lt;port&gt;/&lt;context-root>?mId=&lt;mId&gt;</codeph>), können Sie keine Änderungen für einen anderen Marktplatz sehen. Wenn Sie sich ohne einen Marktplatzkontext anmelden (<codeph>http://&lt;server&gt;:&lt;port&gt;/&lt;context-root></codeph>), können Sie überhaupt keine angepassten Texte sehen.</note>
+                                    </p>
+                        </result>
+                        <example><p><b>So geben Sie die Allgemeinen Geschäftsbedingungen und die Datenschutzerklärung ein</b>:</p><ol
+                                                compact="no">
+                                                <li>Wählen Sie die gewünschte Sprache und geben Sie den jeweiligen Text im bereitgestellten Editor ein. </li>
+                                                <li>Um den Text in einer weiteren Sprache zu hinterlegen, speichern Sie den Text in der ersten Sprache, wählen die nächste Sprache und geben die Übersetzung ein.<p>
+                                                            <note><ph
+                                                            conref="service_add.xml#task634/Verwenden_Sie_ausschließlich_task_taskbody_steps_step_2"
+                                                            /></note>
+                                                            </p></li>
+                                                <li>Schließen Sie Ihre Eingaben mit <uicontrol>Speichern</uicontrol> ab. </li>
+                                    </ol>Ihre Texte werden gespeichert und sind für Marktplatzbesucher sofort sichtbar.<p><b>So definieren Sie einen Hyperlink zu einer Webseite mit dem Impressum Ihres Marktplatzes</b>:</p><ol
+                                                compact="no">
+                                                <li>Wählen Sie die gewünschte Sprache und geben Sie den Hyperlink auf die Webseite mit dem Impressum im Feld <uicontrol>Impressum</uicontrol> ein.</li>
+                                                <li>Um den Hyperlink in einer weiteren Sprache zu hinterlegen, speichern Sie den Hyperlink in der ersten Sprache, wählen die nächste Sprache und geben den entsprechenden Hyperlink ein.</li>
+                                                <li>Schließen Sie Ihre Eingaben mit <uicontrol>Speichern</uicontrol> ab. </li>
+                                    </ol>Ihre Änderungen werden gespeichert, und der Hyperlink ist für Marktplatzbesucher sofort sichtbar.</example>
+            </taskbody>
+            <related-links>
+                        <linklist>
+                                    <title>Weitere Themen</title>
+                                    <link href="shop_editStage.xml"/>
+                                    <link href="shop_customizeBrand.xml"/>
+                        </linklist>
+            </related-links>
+</task>

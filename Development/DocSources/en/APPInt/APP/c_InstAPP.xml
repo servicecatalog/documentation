@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_1BCF5C425D7D4627AB1C66A085CF6E11" xml:lang="en-us">
+    <title>Installing and Configuring APP</title>
+    <conbody>
+        <p>The following sections describe the installation and configuration of APP, as well as the preparations you need to take before.</p>
+        <section>
+            <title>Prerequisites and Preparation</title>
+            <p>Consider the following before you install APP:</p>
+            <ul>
+                <li><xref href="../../Shared/Installation/c_PrepHardware.xml"/></li>
+                <li><xref href="../../Shared/Installation/c_PrepJava.xml"/></li>
+                <li><xref href="../../Shared/Installation/c_PrepAppServer.xml"/></li>
+                <li><xref href="../../Shared/Installation/c_PrepDB.xml"/></li>
+                <li><xref href="../../Shared/Installation/c_PrepMailServer.xml"/></li>
+            </ul>
+        </section>
+        <section>
+            <title>Installation</title>
+            <p>The installation of APP consists of the following main steps:</p>
+            <ul>
+                <li><xref href="t_InstPreparing.xml"/></li>
+                <li><xref href="../../Shared/Installation/t_InstConfiguring.xml"/></li>
+                <li><xref href="../../Shared/Installation/t_InstDB.xml"/></li>
+                <li><xref href="../../Shared/Installation/t_InstAppServer.xml"/></li>
+                <li><xref href="../../Shared/Installation/t_InstCertificate.xml"/></li>
+            </ul>
+            <p>The descriptions assume that you are using the APP setup utilities for setting up the database and the application server resources. </p>
+        </section>
+        <section>
+            <title>Update Installation</title>
+            <p>For updating your APP installation, read the following: </p>
+            <ul>
+                <li><xref href="../../Shared/Installation/c_Update.xml"/></li>
+                
+            </ul>
+        </section>
+    </conbody>
+</concept>

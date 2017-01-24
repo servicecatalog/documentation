@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_3413BBD173324104B42FB714974CABE7" xml:lang="en-us">
+            <title>Handling Subscriptions</title>
+            <conbody>
+                        <section>
+                                    <p>You can view the details of the subscriptions customers have created for services you promote. The following information on a subscription is available:</p>
+                                    <ul>
+                                                <li><ph
+                                                            conref="../../help/tasks/subscription_view.xml#task634/Activation_date_and_number_of_task_taskbody_context_ul_li"
+                                                            /></li>
+                                                <li><ph
+                                                            conref="../../help/tasks/subscription_view.xml#task634/Details_on_the_marketable_ser_task_taskbody_context_ul_li"
+                                                            /></li>
+                                                <li><ph
+                                                            conref="../../help/tasks/subscription_view.xml#task634/Details_on_the_underlying_tec_task_taskbody_context_ul_li"
+                                                            /></li>
+                                                <li><ph
+                                                            conref="../../help/tasks/subscription_view.xml#task634/Details_on_the_price_model_de_task_taskbody_context_ul_li"
+                                                            /></li>
+                                    </ul>
+                                    <p>You cannot change subscriptions or terminate them. To view the information, use the <uicontrol>View subscription</uicontrol> menu option in the <uicontrol>Customer</uicontrol> menu of the <ph
+                                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                /> administration portal.</p>
+                                    <p>The suppliers of your services can explicitly terminate a subscription. <ph
+                                                            conref="../../help/tasks/subscription_terminate.xml#task634/This_may_be_required_for_exa_task_taskbody_context_p_1_ph"
+                                                /> As soon as a supplier terminates a subscription, your customer is sent an email informing him about the termination and the reason the supplier has entered for it.</p>
+                                    <p>To offer support to customers, <ph
+                                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                /> allows the suppliers of your services to enter a support email address for their organization. This allows administrators and subscription managers of customer organizations to directly contact a supplier in case they have questions or want to report an incident on a service they have subscribed to.</p>
+                        </section>
+            </conbody>
+</concept>

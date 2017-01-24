@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd">
+<concept id="id_121">
+  <title>Components Involved in the AWS Integration</title>
+  <conbody>
+    <section>
+      <p>The following picture provides an overview of the main components involved in the integration of <ph
+          conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> and AWS:</p>
+      <p>
+        <fig>
+          <image align="left" alt="Components.png" height="171" href="../_images/Components.png" width="400"/>
+        </fig>
+      </p>
+      <p conref="../../Shared/concepts/c_ControllerConcepts.xml#controller/cmp1"/>
+      <p conref="../../Shared/concepts/c_ControllerConcepts.xml#controller/cmp2"/>
+      <p>Amazon EC2 allows customers to provision and use virtual servers on which to run their applications. Each virtual server is based on an Amazon Machine Image (AMI). An AMI serves as the basic unit of deployment for services delivered with Amazon EC2. AWS customers can either request pre-configured AMIs or they can create their own images. They can provision their images with a variety of operating systems and load them with custom application environments.</p>
+      <p>Each APP installation supports one AWS service controller. This limitation can be overcome by installing APP several times to different application server domains. The need for more than one service controller may arise because multiple AWS accounts or technology provider organizations have to be used.</p>
+    </section>
+  </conbody>
+</concept>

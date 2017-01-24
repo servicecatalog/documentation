@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="de-de">
+  <title>Anbieter verwalten</title>
+  <taskbody>
+    <context>
+      <p>
+        <ph conref="marketplace_manageSuppliers_notselected.xml#task634/Auf_der_Seite_task_taskbody_context_p_1_ph"/>
+      </p>
+      <p>Sie haben einen Marktplatz für zugelassene Anbieter ausgewählt. In diesem Fall bestimmen Sie explizit einen oder mehrere Serviceanbieter, Wiederverkäufer oder Vermittler, die Services auf dem Marktplatz veröffentlichen dürfen. Beim Anlegen des Marktplatzes wird die als Marktplatzeigentümer angegebene Organisation automatisch zugelassen, wenn Sie die Rolle Serviceanbieter, Wiederverkäufer oder Vermittler hat. Alle derzeit zugelassenen Anbieter werden auf der Seite angezeigt. </p>
+      <p>
+        <ph
+          conref="marketplace_manageSuppliers_notselected.xml#task634/As_the_marketplace_owner_you_task_taskbody_context_ul_li"
+        />
+      </p>
+      <p>Wenn Sie einen Anbieter auf dem Marktplatz zulassen oder ihm die Zulassung entziehen, werden seine Administratoren automatisch per E-Mail informiert. </p>
+      <p><b>So lassen Sie einen Anbieter auf dem gewählten Marktplatz zu</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>Geben Sie im Feld <uicontrol>Organisations-ID</uicontrol> die Organisations-ID des Anbieters ein.</cmd>
+        <info>
+          <p>Wenden Sie sich an den Anbieter, wenn Sie seine Organsations-ID nicht kennen.</p>
+        </info>
+      </step>
+      <step>
+        <cmd>Klicken Sie <uicontrol>Zulassen</uicontrol>.</cmd>
+        <info>
+          <p>Die Zulassung ist sofort wirksam, und der Anbieter kann seine Services auf dem Marktplatz veröffentlichen.</p>
+        </info>
+      </step>
+    </steps>
+    <result>
+      <p><b>So entziehen Sie einem Serviceanbieter die Zulassung für den gewählten Marktplatz</b>:</p>
+      <ol compact="no">
+        <li>Markieren Sie in der Liste den Anbieter, dem Sie die Zulassung entziehen möchten.<p>Sie können einen oder mehrere Serviceanbieter markieren.</p></li>
+        <li>Klicken Sie <uicontrol>Sperren</uicontrol> und bestätigen Sie den Auftrag.<p>Die Sperre ist sofort wirksam, und der Anbieter kann keine Services mehr auf dem Marktplatz veröffentlichen.</p></li>
+      </ol>
+    </result>
+  </taskbody>
+</task>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<reference id="reference832" xml:lang="de-de">
+    <title>Kostenloser Nutzungszeitraum</title>
+    <refbody>
+        <section>
+            <p>Mit einem kostenlosen Nutzungszeitraum wird ein begrenzter Zeitraum definiert, in dem ein Service kostenlos genutzt werden kann. Eine Serviceanbieter kann zum Beispiel einen kostenlosen Nutzungszeitraum festlegen, um seinen Kunden die Möglichkeit zu geben, einen Service zu testen. Nach diesem Zeitraum werden den Kunden die Kosten automatisch entsprechend dem für den Service definierten Preismodell berechnet. </p>
+            <p>Wird ein Abonnement während des kostenlosen Nutzungszeitraums ausgesetzt und wieder fortgesetzt, wird der kostenlose Nutzungszeitraum nicht verlängert, obwohl die Benutzer während dieser Zeit nicht mit dem Service arbeiten können.</p>
+            <p>Werden die Kosten für einen Service pro Zeiteinheit berechnet, wird die Zeiteinheit, in der der kostenlose Nutzungszeitraum endet, immer komplett berechnet. Dies ist unabhängig davon, welcher Anteil der Zeiteinheit in den kostenlosen Nutzungszeitraum fällt. Die Kosten für diese Zeiteinheit werden auf Grundlage der Preismodellelemente berechnet, die nach dem Ende des kostenlosen Nutzungszeitraums gelten, zum Beispiel die Anzahl der zu diesem Zeitpunkt zugeordneten Benutzer, die festgelegten Parameterwerte oder die den Benutzern zugeordneten Servicerollen.</p>
+            <p>Ist für einen Service, den ein Serviceanbieter als Up-/Downgrade-Option zur Verfügung stellt, ein kostenloser Nutzungszeitraum festgelegt, beginnt dieser Zeitraum unmittelbar nach der Umstellung. Dies gilt unabhängig davon, ob für den Service, von dem aus umgestellt wird, bereits ein kostenloser Nutzungszeitraum definiert war. </p>
+        </section>
+    </refbody>
+</reference>

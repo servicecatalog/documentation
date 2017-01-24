@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="ja-jp">
+  <title>外部認証システムの問題の対処</title>
+  <taskbody>
+    <context>
+      <p>組織で利用している外部認証システムについて接続を確認、修正できるシステム運用管理者に連絡してください。認証システムの設定または返却された資格情報が正しくない可能性があります。</p>
+    </context>
+  </taskbody>
+</task>

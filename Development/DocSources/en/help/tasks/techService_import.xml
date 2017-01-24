@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="en-us">
+  <title>Importing a service definition</title>
+  <taskbody>
+    <context>
+      <p>On the <uicontrol>Import service definition</uicontrol> page, you can import the definition of a technical service from an XML file. This is one of the steps in the process of integrating an application with the platform. </p>
+      <p>If you want to update an existing technical service, import a technical service definition XML file which specifies the same name (ID) for the technical service as the one you want to update. </p>
+      <p>Observe the following: </p>
+      <p>
+        <ul compact="no">
+          <li>If there is no marketable service and no subscription based on the technical service, you can change all properties of the technical service. </li>
+          <li>If there is a marketable service or a subscription based on the technical service, you cannot: <p>
+              <ul>
+                <li>Change parameters and their options</li>
+                <li>Change event types</li>
+                <li>Remove parameters, options, or event types</li>
+              </ul>
+            </p></li>
+          <li>Roles cannot be removed if prices are defined for them or users having one of the roles are assigned to a related subscription.</li>
+          <li>If you try to import an incomplete technical service definition XML file, default values are set as available. If the XML file is still incomplete, the import is aborted with an <b>XML incomplete</b> error. The import of a technical service definition with invalid attribute values is aborted with an <b>Invalid attribute value</b> error. </li>
+        </ul>
+      </p>
+      <p>On the <uicontrol>Import service definition</uicontrol> page, you can also check the availability of existing services and view their details.</p>
+      <p>For details on technical service definition XML files, refer to the <i>Technology Provider's Guide</i>.</p>
+      <p><b>To import a technical service</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>Click the entry field or <uicontrol>Browse</uicontrol> to search your file system for the file containing the technical service definition.</cmd>
+        <info/>
+      </step>
+      <step>
+        <cmd>To import the technical service, click <uicontrol>Import</uicontrol>.</cmd>
+      </step>
+    </steps>
+    <result>The imported service is added to the list of available services. In a next step, appoint one or more suppliers for the technical service so that marketable services can be defined based on it. <p>To view the details of existing services, click an entry in the list of services. On the <uicontrol>Service</uicontrol> page, you can see the service's name, the access type, access URLs and paths, the service's description, parameter and event definitions, user roles, and operations . </p><p>It depends on the implementation of the underlying application and on its integration which parameters, events, roles, and operation definitions are available.</p></result>
+  </taskbody>
+  <related-links>
+    <linklist>
+      <title>Related topics</title>
+      <link href="techService_export.xml"/>
+      <link href="organization_manageSuppliers.xml"/>
+    </linklist>
+  </related-links>
+</task>

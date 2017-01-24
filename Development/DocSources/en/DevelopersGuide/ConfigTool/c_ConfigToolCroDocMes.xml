@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_crodocmes" xml:lang="en-us">
+    <title>Cross-Document Messaging</title>
+    <conbody>
+        <section>
+            <p>The following illustration shows how <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> uses cross-document messaging for the communication with a parameter configuration tool:</p>
+            <p>
+                <fig>
+                    <image href="../_images/CrossDoc.png" alt="IntExtTool.png" width="374" height="200"/>
+                </fig>
+            </p>
+            <p>Cross-document messaging is a JavaScript API which enables communication between documents from different origins or source domains. With the methods of this API, scripts can interact across domain boundaries and send plain text messages from one domain to another. Cross-document messaging can be used in all Web browsers supported by the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> user interface.</p>
+            <p>User action in a Web browser (client) initiates cross-document messaging:</p>
+            <ol>
+                <li>When subscribing to a service or updating a service on a marketplace, a customer clicks <uicontrol>Configure</uicontrol> to specify the service parameters. This is the trigger for loading a modal window in the Web browser:<ul>
+                        <li>The lower part of the modal window is an inline frame element (<codeph>&lt;iframe></codeph>) which links the external parameter configuration tool with <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            />. The HTML page of the tool is the source of the frame.</li>
+                        <li>The upper part of the window outputs error messages in case the validation of an HTTP response from the tool fails. </li>
+                    </ul></li>
+                <li>The Web browser sends an HTTP request to the Web server where the external parameter configuration tool is deployed to load the HTML page of the tool into the inline frame element.</li>
+                <li>As soon as the HTML page of the external parameter configuration tool is loaded, the Web browser receives the first message from the tool, the initialization message. This confirms that the communication is enabled. The HTML page of the tool is displayed in the Web browser.</li>
+            </ol>
+            <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> delivers a sample JavaScript tool that you can integrate with <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> to see how cross-document messaging can be implemented. For information on the resources that support you in integrating a parameter configuration tool, refer to <xref
+                    href="../ConfigTool/c_ConfigToolTasks.xml"/>. </p>
+        </section>
+    </conbody>
+</concept>

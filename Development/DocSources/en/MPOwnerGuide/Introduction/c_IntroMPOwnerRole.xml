@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_3413BBD173324104B42FB714974CABE7" xml:lang="en-us">
+    <title>The Marketplace Owner's Tasks in <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+        /></title>
+    <conbody>
+        <section>
+            <p>As a marketplace owner, you are responsible for one or more marketplaces. This involves the followings tasks:</p>
+            <ul>
+                <li>Defining who is allowed to access your marketplace.</li>
+                <li>Defining the suppliers, brokers, and resellers who are allowed to publish services to your marketplace. </li>
+                <li>Administrating your marketplace, for example, managing categories or enabling specific features and settings.</li>
+                <li>Customizing your marketplace to adapt it to your organization's standards, for example, adapting the texts presented to customers on the marketplace.</li>
+                <li>Collecting your share of the revenue for the services offered by suppliers, brokers, and resellers on your marketplace.</li>
+            </ul>
+        </section>
+    </conbody>
+</concept>

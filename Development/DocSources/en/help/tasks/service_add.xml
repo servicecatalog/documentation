@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="en-us">
+  <title>Defining a service</title>
+  <taskbody>
+    <context>
+      <p>On the <uicontrol>Define service</uicontrol> page, you can create a marketable service you want to provide to customers. You can offer the service directly to customers or cooperate with brokers or resellers whom you grant the permission to sell the service. </p>
+      <p>Creating a service means specifying its parameters, conditions, and restrictions. </p>
+      <p><b>To create a service</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>Select the technical service the new marketable service is to be based on.</cmd>
+        <info>
+          <p>The description of the technical service is displayed. </p>
+        </info>
+      </step>
+      <step>
+        <cmd>Specify the following elements for the new service:</cmd>
+        <info>
+          <ul compact="no">
+            <li><uicontrol>Service ID</uicontrol>: Identifier of the service. It must be unique within the marketable services of your organization.<p>
+                <ph id="This_field_is_mandatory._The_task_taskbody_steps_step_2"
+                  >The service ID is restricted to 40 characters and must not contain any of the following characters:</ph></p><p><ph
+                  id="3"><codeph>! " # $ % &amp; ' * + , / : ; &lt; = &gt; ? \ ^ `</codeph></ph></p><p><ph id="2"
+                  >The service ID is offered for selection, for example, when updating or deleting services, or when specifying upgrade and downgrade options or a price model.</ph></p></li>
+            <li><uicontrol>Service image</uicontrol>: File containing the image for identifying the service. <p>Click <ph
+                  id="either_the_task_taskbody_steps_step_2"
+                    >the <uicontrol>Image upload</uicontrol> field or <uicontrol>Browse</uicontrol>, and select the file containing the image. Supported file formats are GIF, JPG, and PNG. The size of the service image must be 80 x 80 pixels.</ph></p><p><ph
+                  id="The_service_image_is_shown_in_task_taskbody_steps_step_2"
+                  >The service image is shown in the service catalog on a marketplace when you publish the service. It may be useful, for example, for customers to identify the service.</ph></p></li>
+            <li><uicontrol>Service name for customers</uicontrol>: Meaningful name for the service. It should have a high recognition value for customers. The field is preset with the name of the technical service the marketable service is based on. You can update it as required. <p><ph
+                  id="The_service_name_for_customer_task_taskbody_steps_step_2"
+                  >The service name for customers is shown in the service catalog on a marketplace when you publish the service. If you do not specify it, a string is displayed saying that the service name is not defined. </ph></p><p>You can specify the service name for customers in additional languages later by updating the service.</p></li>
+            <li><uicontrol>Short description</uicontrol>: Brief description for the service. <ph
+                id="The_length_of_the_short_descr_task_taskbody_steps_step_2"
+                >The length of the short description is restricted to 256 characters. </ph><p><ph
+                  id="The_short_description_is_show_task_taskbody_steps_step_2"
+                  >The short description is shown in the service catalog on a marketplace when you publish the service. Usually, it contains an overview of the features the service provides.</ph></p><p>You can specify the short description in additional languages later by updating the service.</p></li>
+            <li><uicontrol>Description</uicontrol>: Detailed description of the features offered by the new service. The field is preset with the description of the technical service the marketable service is based on. You can update it as required. <p>The service description is displayed on a marketplace when customers request details of the service. </p><p>You can specify the description in additional languages later by updating the service.</p><p>
+                <note><ph id="Make_sure_to_use_only_the_con_task_taskbody_steps_step_2"
+                    >Make sure to use only the controls provided in the editor for formatting your text. Manually entered HTML tags and references to external style sheets or content may result in errors in the page layout.</ph></note>
+              </p></li>
+          </ul>
+        </info>
+      </step>
+      <step>
+        <cmd>If a user subscribing to this service is to be assigned automatically to the subscription after having completed the subscription process, select the <uicontrol>Auto-assign the subscribing user</uicontrol> check box. </cmd>
+        <info>By default, every user, including the one subscribing to the service, must be explicitly assigned to the subscription before he can use the service. </info>
+      </step>
+      <step>
+        <cmd>Enter values for the subscription and usage parameters in the <uicontrol>Service parameters</uicontrol> table:</cmd>
+        <info>
+          <ul compact="no">
+            <li><ph id="Subscription_parameters_inclu_task_taskbody_steps_step_3"
+                >Subscription parameters include, for example, the maximum number of users per subscription or the maximum lifetime of a subscription. It depends on the underlying technical service which subscription parameters are available.</ph>
+              <ph id="Usage_parameters_include_for_task_taskbody_steps_step_3"
+                >Usage parameters include, for example, the enablement or disablement of specific features of the underlying application, or the maximum number of folders, files, or objects that can be created. The usage parameters are defined and provided by the underlying technical service.</ph></li>
+            <li>In the <uicontrol>Description</uicontrol> column of the table, you can view a short description of each parameter. This description is provided by the technology provider. </li>
+            <li>By selecting the <uicontrol>User option</uicontrol> check box for a parameter you can specify whether it is offered as an option to customers who subscribe to the service.</li>
+            <li>In the <uicontrol>Value</uicontrol> column of the table, you can define a value for each parameter. The value must be within the range defined for the technical service. </li>
+          </ul>
+        </info>
+      </step>
+      <step>
+        <cmd>Optionally, specify a <b>URL of a parameter configuration tool</b>. In this way, you can link an external tool of your choice. Your customers can use this tool for configuring the subscription and usage parameters when they subscribe to the service.</cmd>
+        <info>
+          <p>If an external tool is used, the <uicontrol>Service parameters</uicontrol> table for configuring the parameters is replaced by the tool's interface during the subscription process. <note>Make sure that the URL pointing to the parameter configuration tool is secure. The URL is not validated by the platform, neither for syntax nor for semantic.</note></p>
+        </info>
+      </step>
+      <step>
+        <cmd>Optionally, specify a <b>URL of a custom tab</b>. In this way, you can add a tab to the <b>Details</b> view for subscriptions on the marketplace. This URL may point to a Web page or Web application the content of which will be retrieved and shown on the custom tab. Particularly users of IaaS services may be interested in additional details on the service and the operation of the service they subscribed to. Using a custom tab, you can provide the information needed for accessing provisioned instances, such as IP addresses, network information, or user credentials. </cmd>
+        <info>
+          <p>
+            <note>Make sure that the URL pointing to the Web page or Web application for the custom tab is secure. The URL is not validated by the platform, neither for syntax nor for semantic.</note>
+          </p>
+          <p>Predefined custom tabs are available for viewing details on subscriptions to an IaaS service such as OpenStack or Amazon Web Services (AWS). On the custom tab, the booked Virtual Machines (VMs) are listed with the following information: </p>
+          <p>
+            <ul>
+              <li>Header with the name of the subscription</li>
+              <li>Access information</li>
+              <li>For each booked VM: <p>
+                <ul>
+                  <li>Instance name</li>
+                  <li>Instance ID </li>
+                  <li>Instance type </li>
+                  <li>Instance status </li>
+                  <li>Public IP address</li>
+                  <li>Private IP addresses</li>
+                </ul>
+              </p></li>
+            </ul>
+          </p>
+          <p>You can set the URL for accessing the custom tab in the following format: </p>
+          <p><codeph>http://&lt;app-host-name>:&lt;app-port>/&lt;service controller name>/serverInformation.jsf</codeph></p>
+          <p>or, depending on the protocol used, </p>
+          <p><codeph>https://&lt;app-host-name>:&lt;app-port>/&lt;service controller name>/serverInformation.jsf</codeph></p>
+          <p>For example: </p>
+          <p><codeph>https://MyAPPHost:8881/oscm-app-openstack/serverInformation.jsf</codeph></p>
+          <p>As soon as a customer opens the <b>Details</b> view for a subscription to an IaaS service, the context of the subscription is returned to the URL of the custom tab with the following information: </p>
+          <p>
+            <ul>
+              <li><codeph>orgId</codeph>: Organization owning the subscription</li>
+              <li><codeph>subId</codeph>: Subscription Name (ID)</li>
+              <li><codeph>instId</codeph>: ID of the provisioned instance, for example, the instance ID used in APP</li>
+            </ul>
+          </p>
+
+        </info>
+      </step>
+      <step>
+        <cmd>Optionally, specify a <b>Name of the custom tab</b> as it will be shown to your customers. The name is restricted to 40 alphanumeric characters and must not contain special characters.</cmd>
+        <info/>
+      </step>
+      <step>
+        <cmd>To create the service, click <uicontrol>Save</uicontrol>.</cmd>
+      </step>
+    </steps>
+    <result>
+      <p>The service is created and available for further operations. You must now define its price model and specify the marketplace to which you want to publish it. After that you can activate the service to make it finally available for subscription to customers. </p>
+      <p>Optionally, you can define upgrade and downgrade options for your service and grant brokers and resellers the permission to sell it.</p>
+    </result>
+  </taskbody>
+  <related-links>
+    <linklist>
+      <title>Related topics </title>
+      <link href="priceModel_service.xml"/>
+      <link href="service_publish.xml"/>
+      <link href="service_activation.xml"/>
+      <link href="service_edit.xml"/>
+      <link href="service_copy.xml"/>
+      <link href="service_delete.xml"/>
+      <link href="service_upgradeOptions.xml"/>
+    </linklist>
+  </related-links>
+</task>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="en-us">
+  <title>Recovering your password</title>
+  <taskbody>
+    <context>
+      <p>You have started the process for recovering your password. You are sent an email with a URL for completing the process. </p>
+      <p>Click the URL provided in the email to define a new password. The URL is available for 24 hours only. </p>
+    </context>
+  </taskbody>
+</task>

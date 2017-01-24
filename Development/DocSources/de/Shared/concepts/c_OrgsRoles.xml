@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd">
+<concept id="concept2311" xml:lang="de-de">
+        <title>Organizations and User Roles</title>
+        <conbody>
+                <section>
+                        <p>Each user working in <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        /> is a member of a specific organization. An organization typically represents a company, but it may also stand for a department of a company or a single person. Each organization in <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        /> has a unique account and ID as well as one or more of the following roles: <b>operator</b>, <b>technology provider</b>, <b>supplier</b>, <b>marketplace owner</b>, <b>customer</b>. </p>
+                        <p>When a customer registers with <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> or is registered by a supplier, an organization with the customer role is created. Organizations with other roles can also act as customers, i.e. they are implicitly assigned the customer role. These organizations are created and assigned their roles as follows: </p>
+                        <ul>
+                                <li>When <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        /> is installed, an organization with the operator role is created.</li>
+                                <li>Operators can assign the supplier and/or technology provider role to any existing organization or create new organizations with these roles.</li>
+                                <li>When operators create a marketplace, they specify an existing organization as the owner of the marketplace. In this way, the organization is assigned the marketplace owner role.</li>
+                        </ul>
+                        <p>The roles of an organization determine which features are available to its users at the <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> interfaces and which roles the users can be assigned. These user roles control the actions an individual user is allowed to carry out:</p>
+                        <p>
+                                <ul>
+                                        <li><ph id="Standardbenutzer_concept_conbody_section_p_4"
+                                                            ><b>Standardbenutzer</b>: Benutzer mit dieser Rolle können mit Services arbeiten, die ihre Organisation abonniert hat.</ph> Every user registered in <ph
+                                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                        /> automatically is a standard user. <ph
+                                                        id="Weitere_Benutzerrollen_müssen_concept_conbody_section_p_4"
+                                                        >Weitere Benutzerrollen müssen explizit vom Administrator zugeordnet werden.</ph></li>
+                                        <li><ph id="Administrator_concept_conbody_section_p_4"
+                                                            ><b>Administrator</b>: Jede Organisation muss mindestens einen Benutzer haben, dem die Administratorrolle zugeordnet ist. <ph
+                                                            id="An_administrator_can_manage_t_concept_conbody_section_p_4"
+                                                            >Ein Administrator kann das Konto seiner Organisation verwalten sowie die Abonnements, Benutzer und Benutzerrollen. Der erste Administrator wird beim Anlegen der Organisation festgelegt.</ph></ph>
+                                        </li>
+                                        <li><ph id="OUAdministrator_concept_conbody_section_p_4"
+                                                        ><b>OE-Administrator</b>: Die Benutzer einer Organisation können in Organisationseinheiten (OE) gruppiert werden. Benutzer mit der Rolle OE-Administrator können Organisationseinheiten verwalten, für die sie als Administrator eingesetzt wurden, sowie Abonnements für diese Einheiten anlegen, ändern und beenden. Die Rolle wird Benutzern, die als Administratoren für Organisationseinheiten eingesetzt werden, automatisch zugeordnet.</ph></li>
+                                        
+                                        <li><ph id="SubMgr"
+                                                        ><b>Abo-Manager</b>: Benutzer mit dieser Rolle können Services abonnieren und ihre eigenen Abonnements verwalten. Im Gegensatz zu Administratoren dürfen Abo-Manager nicht die Abonnements anderer Benutzer bearbeiten. Darüber hinaus dürfen sie keine Zahlungsinformationen ändern.</ph>
+                                        </li>
+                                        <li><ph id="Technology_manager_concept_conbody_section_p_4"
+                                                            ><b>Technologie-Manager</b>: Benutzer mit dieser Rolle können technische Services definieren. Die Rolle kann Benutzern in Organisationen mit der Rolle Hersteller zugewiesen werden.</ph>
+                                        </li>
+                                        <li><ph id="Service_manager_concept_conbody_section_p_4"
+                                                        ><b>Service-Manager</b>: Benutzer mit dieser Rolle können marktfähige Services und Preismodelle definieren sowie marktfähige Services veröffentlichen. Die Rolle kann Benutzern in Organisationen mit der Rolle Serviceanbieter zugewiesen werden.</ph>
+                                        </li>
+                                        <li><ph id="Wiederverkäufer_concept_conbody_section_p_4"
+                                                        ><b>Wiederverkäufer</b>: Benutzer mit dieser Rolle können marktfähige Services eines Serviceanbieters unter ihren eigenen allgemeinen Geschäftsbedingungen veröffentlichen. Die Rolle kann Benutzern in Organisationen mit der Rolle Wiederverkäufer zugewiesen werden.</ph></li>
+                                        <li><ph id="Vermittler_concept_conbody_section_p_4"
+                                                        ><b>Vermittler</b>: Benutzer mit dieser Rolle können marktfähige Services eines Serviceanbieters veröffentlichen, es gelten aber die allgemeinen Geschäftsbedingungen des Serviceanbieters. Die Rolle kann Benutzern in Organisationen mit der Rolle Vermittler zugewiesen werden.</ph></li>
+                                        <li><ph id="Marketplace_manager_concept_conbody_section_p_4"
+                                                            ><b>Marktplatz-Manager</b>: Benutzer mit dieser Rolle können festlegen, welche Organisationen Zugang zu einem Marktplatz haben und Services darauf veröffentlichen dürfen. Sie können darüber hinaus die Eigenschaften eines Marktplatzes ändern und Anpassungen des Marktplatzes an die individuellen Vorgaben Ihrer Organisation vornehmen. Die Rolle kann Benutzern in Organisationen zugewiesen werden, die Marktplatzeigentümer sind. Beim Anlegen des Marktplatzes wird sie automatisch allen Administratoren des Marktplatzeigentümers zugewiesen.</ph>
+                                        </li>
+                                        <li><ph id="Betreiber_concept_conbody_section_p_4"
+                                                        ><b>Betreiber</b>: Benutzer mit dieser Rolle können Konfigurations- und Wartungsaufgaben übernehmen sowie Organisationen verwalten und Marktplätze erstellen.</ph> The first operator is created together with its operator organization when <ph
+                                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                /> is installed. </li>
+                                </ul>
+                        </p>
+                        <p audience="detail"
+                                >The following illustration provides an overview of the organizations and user roles and the relationships between them:</p>
+                        <p audience="detail">&lt;&lt; image to be inserted &gt;&gt;</p>
+                </section>
+        </conbody>
+</concept>

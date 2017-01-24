@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="ja-jp">
+  <title>ロールごとの料金の定義</title>
+  <taskbody>
+    <context>
+      <p><uicontrol>ロールごとの料金の定義</uicontrol>ページでは、技術サービス定義で指定したサービスロールの料金を指定できます。サービスロールを使用して異なる利用者に特定の権限を付与できます。これらはアプリケーションで対応する許可にマッピングできます。</p>
+      <p>サービスロールにはそれぞれ料金を定義できます。請求期間の料金計算の際に、利用者ごとの基本料金にこの料金が加算されます。</p>
+      <note>ロールごとの料金はプラットフォームの請求システムを使用して料金請求されるサービスに対して定義した料金設定に対してだけ有効です。外部の請求システムの料金設定はサービスに対する料金がいかに計算されるかを決定する独自の要素を定義しています。</note>
+      <p><b>サービスロールに料金を定義するには：</b></p>
+    </context>
+    <steps>
+      <step>
+        <cmd>料金を定義するサービスロールを選択します。 </cmd>
+      </step>
+      <step>
+        <cmd><uicontrol>利用者単価</uicontrol>フィールドに、選択したロールの各利用者に対して利用期間ごと料金が発生する場合に、その単価を入力します。</cmd>
+        <info/>
+      </step>
+      <step>
+        <cmd>利用できるすべてのサービスオプションに対して料金を指定します。</cmd>
+      </step>
+      <step>
+        <cmd>入力内容を確認し、別のサービスロールに料金を定義するには、<uicontrol>適用</uicontrol>をクリックします。</cmd>
+        <info>入力内容を確定し、<uicontrol>サービスの料金設定</uicontrol>、<uicontrol>サービス利用部門向け料金設定</uicontrol>または<uicontrol>購入済サービスの料金設定変更</uicontrol>ページに戻るには、<uicontrol>OK</uicontrol>をクリックします。</info>
+      </step>
+      <step>
+        <cmd>料金設定を保存するには、<uicontrol>サービスの料金設定</uicontrol>、<uicontrol>サービス利用部門向け料金設定</uicontrol>または<uicontrol>購入済サービスの料金設定変更</uicontrol>ページで<uicontrol>保存</uicontrol>をクリックします。</cmd>
+      </step>
+    </steps>
+  </taskbody>
+  <related-links>
+    <linklist>
+      <title>関連情報</title>
+      <link href="priceModel_service.xml"/>
+      <link href="priceModel_customer.xml"/>
+      <link href="priceModel_subscription.xml"/>
+    </linklist>
+  </related-links>
+</task>

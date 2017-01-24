@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="de-de">
+  <title>Mehrwertsteuersätze verwalten</title>
+  <taskbody>
+    <context>
+      <p>Auf der Seite <uicontrol>Mehrwertsteuersätze verwalten</uicontrol> können Sie folgende Aufgaben durchführen: </p>
+      <p>
+        <ul compact="no">
+          <li>Sie können festlegen, ob die Berechnung der Nutzungsgebühren mit Mehrwertsteuer erfolgen soll.</li>
+          <li>Sie können einen allgemeinen Mehrwertsteuersatz definieren, der für alle Preise Ihrer Kunden gelten soll.</li>
+          <li>Sie können einen landesspezifischen Mehrwertsteuersatz für jedes Land definieren, in dem Sie Ihre Services anbieten möchten.</li>
+          <li>Sie können einen kundenspezifischen Mehrwertsteuersatz definieren. Dies ist beispielsweise erforderlich, wenn eine Kundenorganisation eine Niederlassung in einem anderen Land hat als Ihre Hauptverwaltung.</li>
+        </ul>
+      </p>
+      <note>Die Mehrwertsteuersätze gelten nur für die Nutzungsgebühren für Services, die das plattformeigene Abrechnungssystem verwenden.</note>
+      <p>Die Mehrwertsteuersätze wirken sich wie folgt auf die Berechnung der Nutzungsgebühren für einen Kunden aus:</p>
+      <ul compact="no">
+        <li>Wenn Sie die Berechnung mit Mehrwertsteuer deaktivieren, werden die Preise netto berechnet. Es wird keine Mehrwertsteuer auf die Gesamtkosten erhoben.</li>
+        <li>Ein kundenspezifischer Mehrwertsteuersatz hat immer Vorrang vor dem allgemeinen oder einem landesspezifischen Mehrwertsteuersatz.</li>
+        <li>Der Mehrwertsteuersatz des Landes, in dem sich die Kundenorganisation befindet, wird verwendet, wenn kein kundenspezifischer Mehrwertsteuersatz festgelegt wurde.</li>
+        <li>In allen anderen Fällen wird der allgemeine Mehrwertsteuersatz verwendet.</li>
+      </ul>
+      <p>Der Mehrwertsteuersatz wirkt sich nicht auf die Elemente des Preismodells aus. Die Mehrwertsteuer wird zu den Gesamtkosten addiert. Die Summe ergibt den vom Kunden zu zahlende Bruttobetrag. Achten Sie darauf, dass Sie die richtigen gesetzlichen Mehrwertsteuersätze angeben.</p>
+      <p>Wenn Sie einem Wiederverkäufer die Berechtigung zum Verkauf eines Service erteilen, hat der von Ihnen definierte Mehrwertsteuersatz keine Auswirkung auf die Kunden des Wiederverkäufers. Die Nutzungsgebühren seiner Kunden werden immer ohne Mehrwertsteuer berechnet. Wenn Sie einem Vermittler die Berechtigung zum Verkauf eines Service erteilen, wird die von ihnen definierte Mehrwertsteuer bei der Berechnung der Nutzungsgebühren berücksichtigt.</p>
+      <p><b>So verwalten Sie Mehrwertsteuersätze</b>:</p>
+    </context>
+    <steps-unordered>
+      <step>
+        <cmd>Markieren Sie <b>Berechnung mit Mehrwertsteuer aktiviert</b>, um die Berechnung mit Mehrwertsteuer für die Kunden Ihrer Organisation einzuschalten.</cmd>
+        <info>So werden die Nutzungsgebühren für Abonnements Ihrer Kunden als Bruttobeträge berechnet. Diese Einstellung wirkt sich auf alle Preise und alle Ihre Kunden aus. <p>Um die Berechnung mit Mehrwersteuer zu deaktivieren, entfernen Sie die Markierung. Wenn die Markierung entfernt ist, können Sie keinen allgemeinen, landes- oder kundenspezifischen Mehrwertsteuersatz festlegen. Alle Nutzungsgebühren werden netto berechnet. </p><p>Beachten Sie, dass alle von Ihnen definierten Mehrwertsteuersätze gelöscht werden, wenn Sie die Markierung entfernen. </p></info>
+      </step>
+      <step>
+        <cmd>Geben Sie im Feld <uicontrol>Allgemeiner Mehrwertsteuersatz (%)</uicontrol> den Wert ein, der für alle Organisationen verwendet werden soll, sofern kein landes- oder kundenspezifischer Satz definiert ist. </cmd>
+        <info>Geben Sie den Mehrwertsteuersatz in Prozent als Dezimalzahl mit maximal zwei Dezimalstellen an.</info>
+      </step>
+      <step>
+        <cmd>So legen Sie einen landesspezifischen Mehrwertsteuersatz fest: </cmd>
+        <info>
+          <ol compact="no">
+            <li>Wählen Sie in der Liste <uicontrol>Land</uicontrol> das Land. Es werden nur die Länder aufgelistet, für die noch kein Mehrwertsteuersatz festgelegt wurde. </li>
+            <li>Geben Sie im Feld <uicontrol>Mehrwertsteuersatz (%)</uicontrol> neben dem Namen des Landes den geltenden Wert ein. Geben Sie den Wert in Prozent als Dezimalzahl mit maximal zwei Dezimalstellen an.</li>
+          </ol>
+        </info>
+      </step>
+      <step>
+        <cmd>So legen Sie einen kundenspezifischen Mehrwertsteuersatz fest: </cmd>
+        <info>
+          <ol compact="no">
+            <li>Wählen Sie in der Liste <uicontrol>Kunde</uicontrol> die Kundenorganisation. Es werden nur die Kunden aufgelistet, für die noch kein Mehrwertsteuersatz festgelegt wurde. </li>
+            <li>Geben Sie im Feld <uicontrol>Mehrwertsteuersatz (%)</uicontrol> neben dem Namen des Kunden den geltenden Wert ein. Geben Sie den Wert in Prozent als Dezimalzahl mit maximal zwei Dezimalstellen an.</li>
+          </ol>
+        </info>
+      </step>
+      <step>
+        <cmd>Ändern Sie einen Mehrwertsteuersatz, indem Sie den Prozentsatz im jeweiligen Feld überschreiben.</cmd>
+      </step>
+    </steps-unordered>
+    <result>
+      <p>Schließen Sie Ihre Eingaben mit <uicontrol>Speichern</uicontrol> ab.</p>
+    </result>
+  </taskbody>
+</task>

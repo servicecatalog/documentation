@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="de-de">
+    <title>Service ändern</title>
+    <taskbody>
+        <context>
+            <p>Auf der Seite <uicontrol>Service ändern</uicontrol> können Sie alle Eigenschaften eines marktfähigen Service ändern, mit Ausnahme des zugrunde liegenden technischen Service. Im Rahmen der Änderungen haben Sie auch die Möglichkeit, den Servicenamen für Kunden, die Kurzbeschreibung, die Beschreibung und den Namen eines eigenen Tabs in weiteren Sprachen zu hinterlegen.</p>
+            <p>Sie können einen Service nur ändern, wenn er deaktiviert ist. Laufende Abonnements Ihrer Kunden sind von Ihren Änderungen nicht betroffen. Die Änderungen wirken sich nur auf neue Abonnements aus. Sie müssen den Service aktivieren, damit er den Kunden zum Abonnieren angeboten wird.</p>
+            <p>Wenn Sie bereits Berechtigungen zum Wiederverkauf des Service erteilt haben, können die Vermittler und Wiederverkäufer sowie ihre Kunden alle von Ihnen gemachten Änderungen sofort sehen, selbst dann, wenn Sie den Service noch nicht aktiviert haben. Laufende Abonnements von Services sind von Ihren Änderungen nicht betroffen. Die Änderungen wirken sich nur auf neue Abonnements aus.</p>
+            <p><b>So ändern Sie die Elemente und Eigenschaften eines Service</b>:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Wählen Sie im Feld <uicontrol>Service-ID</uicontrol> den zu bearbeitenden Service.</cmd>
+                <info>
+                    <p>Die Liste enthält alle Services, die Sie definiert haben.</p>
+                </info>
+            </step>
+            <step>
+                <cmd>Sie können die folgenden Elemente und Eigenschaften ändern:</cmd>
+                <info>
+                    <ul compact="no">
+                        <li><uicontrol>Service-ID</uicontrol>: ID des Service. Sie muss innerhalb der marktfähigen Services Ihrer Organisation eindeutig sein.<p><ph
+                                    conref="service_add.xml#task634/This_field_is_mandatory._The_task_taskbody_steps_step_2"
+                                /></p><p><ph conref="service_add.xml#task634/3"/></p><p><ph
+                                    conref="service_add.xml#task634/2"/></p></li>
+                        <li><uicontrol>Bild für Service</uicontrol>: Datei mit einem Bild zur Kennzeichnung des Service.<p>Klicken Sie das <ph
+                                    conref="service_add.xml#task634/either_the_task_taskbody_steps_step_2"/></p><p><ph
+                                    conref="service_add.xml#task634/The_service_image_is_shown_in_task_taskbody_steps_step_2"
+                                /></p></li>
+                        <li><uicontrol>Servicename für Kunden</uicontrol>: Aussagekräftiger Name für den Service. Dieser Name sollte einen hohen Wiedererkennungswert für Kunden haben.<p><ph
+                                    conref="service_add.xml#task634/The_service_name_for_customer_task_taskbody_steps_step_2"
+                                /></p></li>
+                        <li><uicontrol>Kurzbeschreibung</uicontrol>: Kurze Beschreibung des Service. <ph
+                                conref="service_add.xml#task634/The_length_of_the_short_descr_task_taskbody_steps_step_2"/>
+                            <p>Die Kurzbeschreibung wird im Servicekatalog auf einem Marktplatz angezeigt, wenn Sie den Service veröffentlichen. Die Kurzbeschreibung liefert in der Regel einen Überblick über die Funktionalität des Service</p></li>
+                        <li><uicontrol>Beschreibung</uicontrol>: Ausführliche Beschreibung der Funktionalität des Service. <p>Die Beschreibung wird auf einem Marktplatz angezeigt, wenn Kunden Details zu dem Service anfordern.</p></li>
+                    </ul>
+                    <p>
+                        <note><ph
+                                conref="service_add.xml#task634/Verwenden_Sie_ausschließlich_task_taskbody_steps_step_2"
+                            /></note>
+                    </p>
+                </info>
+            </step>
+            <step>
+                <cmd>Legen Sie mit der Option <uicontrol>Benutzer dem Abo automatisch zuordnen</uicontrol> fest, ob der Benutzer, der den Service abonniert, automatisch dem Abonnement zugeordnet werden soll. </cmd>
+            </step>
+            <step>
+                <cmd>In der Tabelle <uicontrol>Parameter und Optionen</uicontrol> können Sie die Abonnement- und Nutzungsparameter für den Service ändern. Geben Sie in der Spalte <uicontrol>Wert</uicontrol> die neuen Parameterwerte ein. Der Wert muss in dem Bereich liegen, der für den technischen Service definiert ist.</cmd>
+                <info>Markieren Sie <uicontrol>Wählbar</uicontrol> für einen Parameter, wenn Sie festlegen möchten, dass der Parameter Kunden beim Abonnieren des Service als Auswahlmöglichkeit angeboten werden soll.</info>
+            </step>
+            <step>
+                <cmd>Definieren oder ändern Sie optional die <b>URL eines Tools zur Parameterkonfiguration</b>. So können Sie ein externes Tool Ihrer Wahl einbinden und Kunden zum Konfigurieren der Parameter beim Abonnieren des Service zur Verfügung stellen.</cmd>
+                <info>
+                    <p>Falls ein solches Tool verwendet wird, wird die Tabelle <b>Parameter und Optionen</b> während des Abonnierens durch dieses Tool ersetzt. <note>Achten Sie darauf, dass das Tool keine Sicherheitslücken aufweist. Die Syntax und Semantik der URL werden von der Plattform nicht validiert.</note></p>
+                </info>
+            </step>
+            <step>
+                <cmd>Definieren oder ändern Sie optional die <b>URL eines eigenen Tabs</b> an. So können Sie einen zusätzlichen Tab zur Ansicht <b>Details</b> hinzufügen, der angezeigt wird, wenn ein Benutzer zu einem Abonnement weitere Informationen aufruft. Diese URL kann auf eine Web-Seite oder Web-Applikation leiten, deren Inhalt dann auf dem eigenen Tab angezeigt wird. Insbesondere Benutzer, die IaaS-Services nutzen, sind oftmals an Details zu einem abonnierten Service und dessen Betrieb interessiert. Über einen eigenen Tab können Sie Information, die für den Zugriff auf provisionierte Instanzen erforderlich sind, zur Verfügung stellen, zum Beispiel IP-Adressen, Netzwerkinformationen oder Zugangsdaten. </cmd>
+                <info>
+                    <p>
+                        <note>Achten Sie darauf, dass die URL keine Sicherheitslücken aufweist. Die Syntax und Semantik der URL werden von der Plattform nicht validiert.</note>
+                    </p>
+                    <p>Sie können vordefinierte, eigene Tabs einrichten, die Details zu einem IaaS-Service wie beispielsweise OpenStack oder Amazon Web Services (AWS) zur Ansicht bringen. Auf den eigenen Tabs, werden zu den gebuchten Virtuellen Maschinen (VMs) folgende Informationen angezeit: </p>
+                    <p>
+                        <ul>
+                            <li>Kopfzeile mit dem Namen des Abonnements</li>
+                            <li>Zugangsinformationen </li>
+                            <li>Zu jeder VM: <p>
+                                    <ul>
+                                        <li>Name der Instanz</li>
+                                        <li>ID der Instanz</li>
+                                        <li>Art der Instanz</li>
+                                        <li>Status der Instanz</li>
+                                        <li>Öffentliche IP-Adresse</li>
+                                        <li>Private IP-Adressen</li>
+                                    </ul>
+                                </p></li>
+                        </ul>
+                    </p>
+                    <p>Die URL zum Zugriff auf einen solchen eigenen Tab muss im folgenden Format eingegeben werden: </p>
+                    <p><codeph>http://&lt;app-host-name>:&lt;app-port>/&lt;service controller name>/serverInformation.jsf</codeph></p>
+                    <p>oder, abhängig vom verwendeten Protokoll: </p>
+                    <p><codeph>https://&lt;app-host-name>:&lt;app-port>/&lt;service controller name>/serverInformation.jsf</codeph></p>
+                    <p>Beispiel: </p>
+                    <p><codeph>https://MyAPPHost:8881/oscm-app-openstack/serverInformation.jsf</codeph></p>
+                </info>
+            </step>
+            <step>
+                <cmd>Definieren oder ändern Sie optional den <b>Name des eigenen Tabs</b> an. Dieser Name wird im Titel des Tabs angezeigt. Er darf maximal 40 alphanumerische Zeichen und keine Sonderzeichen enthalten.</cmd>
+                <info/>
+            </step>
+            <step>
+                <cmd>Schließen Sie Ihre Änderungen mit <uicontrol>Speichern</uicontrol> ab. </cmd>
+            </step>
+            <step>
+                <cmd>Um den Servicenamen für den Kunden, die Kurzbeschreibung, die Beschreibung und den Namen eines eigenen Tabs in einer anderen Sprache zu hinterlegen, klicken Sie <uicontrol>Lokalisieren</uicontrol>. Auf der Seite <uicontrol>Servicebeschreibung lokalisieren</uicontrol> können Sie anschließend die Texte in allen unterstützten Sprachen eingeben.</cmd>
+            </step>
+        </steps>
+        <result>
+            <p>Sobald Sie den Service aktivieren, stehen Ihren Kunden die Änderungen für neue Abonnements zur Verfügung. Für Vermittler und Wiederverkäufer sowie deren Kunden sind Ihre Änderungen sofort sichtbar.</p>
+        </result>
+    </taskbody>
+    <related-links>
+        <linklist>
+            <title>Weitere Themen</title>
+            <link href="service_localize.xml"/>
+            <link href="priceModel_service.xml"/>
+            <link href="service_publish.xml"/>
+            <link href="service_activation.xml"/>
+        </linklist>
+    </related-links>
+</task>

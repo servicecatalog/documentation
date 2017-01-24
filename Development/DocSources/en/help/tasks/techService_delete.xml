@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="en-us">
+  <title>Deleting a service definition</title>
+  <taskbody>
+    <context>
+      <p>On the <uicontrol>Delete service definition</uicontrol> page, you can delete an existing technical service. If marketable services exist for the technical service, or if there are active subscriptions, it cannot be deleted.</p>
+      <p audience="none"
+        >You can delete a service definition if you have the technology manager user role, and your organization is registered as a technology provider.</p>
+      <p><b>To delete a technical service</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>Select the technical service to be deleted, and click <uicontrol>Delete</uicontrol>. </cmd>
+        <info/>
+      </step>
+      <step>
+        <cmd>Confirm the deletion.</cmd>
+      </step>
+    </steps>
+    <result>The service is deleted. A technical service definition XML file is not deleted physically, and you can import it again on demand. </result>
+  </taskbody>
+  <related-links>
+    <linklist>
+      <title>Related topics</title>
+      <link href="techService_import.xml"></link>
+    </linklist>
+  </related-links>
+</task>

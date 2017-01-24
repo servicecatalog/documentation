@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<task id="InstDB"
+            xml:lang="en-us">
+    <title>Setting up the Database<ph audience="vmware">s</ph></title>
+    <taskbody>
+        <context>
+            <p><ph audience="app">APP</ph><ph audience="ror">The ROR integration software</ph><ph audience="aws"
+                    >The AWS integration software</ph><ph audience="os">The OpenStack integration software</ph><ph
+                    audience="tps5">The TPS5 integration software</ph><ph audience="vmware"
+                    >The VMware integration software</ph> requires and stores its data in the <codeph>bssapp</codeph> PostgreSQL database. </p>
+            <p>The database is created by executing installation scripts. It is initialized with the appropriate schema and settings. </p>
+            <note audience="app"
+                    >When initializing the database, you can also register a service controller with its settings. For details, refer to <xref
+                    href="../../APPInt/APP/t_RegisterAPP.xml"/>.</note>
+            <p>Proceed as follows:</p>
+        </context>
+        
+        <steps>
+            <step>
+                <cmd>Make sure that the database server is running.</cmd>
+            </step>
+            
+            
+            <step>
+                <cmd>Open the command prompt (Windows) or a terminal session (UNIX/Linux).</cmd>
+            </step>
+            <step>
+                <cmd>Set the following environment variable for your current session:</cmd>
+                <info>
+                    <p><codeph>DB_INTERPRETER</codeph>: The absolute path and name of the <codeph>psql</codeph> executable of PostgreSQL. The executable is usually located in the <codeph>bin</codeph> subdirectory of the PostgreSQL installation directory.</p>
+                    <p>Example (Unix/Linux):</p>
+                    <codeblock>export DB_INTERPRETER="/opt/PostgreSQL/9.1/bin/psql"</codeblock>
+                    <p>Example (Windows):</p>
+                    <codeblock>set DB_INTERPRETER="C:\Program Files\PostgreSQL\9.1\bin\psql"</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Create the database by executing the <codeph>build-db.xml</codeph> file in <codeph>&lt;install_pack_dir>/install</codeph> as follows:</cmd>
+                <info>
+                    <p>
+                        <codeblock>&lt;ANT_HOME&gt;/bin/ant -f build-db.xml initDB</codeblock>
+                    </p>
+                    <p>If you set an ID or password other than <codeph>postgres</codeph> for the PostgreSQL user account (<codeph>postgres</codeph>) when installing the database management system, you have to specify the ID or password with the call to the <codeph>build-db.xml</codeph> file as follows: <codeblock>&lt;ANT_HOME&gt;/bin/ant -f build-db.xml initDB
+   -Ddb.admin.user=&lt;user ID> -Ddb.admin.pwd=&lt;password&gt;</codeblock></p>
+                    <note>It may be required to enclose the <codeph>-Ddb.admin.user=&lt;user ID&gt;</codeph> and <codeph>-Ddb.admin.pwd=&lt;password&gt;</codeph> in double or single quotes depending on the operating system. </note>
+                </info>
+            </step>
+        </steps>
+        
+        
+        <result>
+            <p>If the setup of the database fails with errors, proceed as follows: </p>
+            <p>
+                <ol compact="no">
+                    <li>Check and correct the configuration files. </li>
+                    <li>Execute the <codeph>build-db.xml</codeph> file in <codeph>&lt;install_pack_dir>/install</codeph> as follows: <p>
+                            <codeblock>&lt;ANT_HOME&gt;/bin/ant -f build-db.xml DROP.dbsAndUsers</codeblock>
+                        </p>
+                    </li>
+                    <li>Repeat the setup.</li>
+                </ol>
+            </p>
+        </result>
+    </taskbody>
+</task>

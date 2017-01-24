@@ -1,0 +1,21 @@
+<?xml version="1.0"?> 
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+
+<concept xml:lang="en-us" id="concept_3413BBD173324104B42FB714974CABE7">
+    <title>Subscribing to Services</title>
+    <conbody>
+        <section>
+            <p>A customer can subscribe to any of the marketable services provided on a marketplace, accepting the applicable terms and conditions, and the privacy policy. <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> even allows for making several subscriptions to the same service.</p>
+            <p>When subscribing to a service, the customer can choose between the options defined for the service and view the details on charging conditions and prices. Depending on the charging conditions, the applicable billing system, and general settings, the customer can either immediately subscribe to the service or has to supply his payment information before. The payment information may consist, for example, of a credit card number or bank account data, depending on the facilities used for payment collection. <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> even allows a customer to enter different payment information for different subscriptions as desired.</p>
+            <p>By means of organizational units, the administrators of a customer organization can define to which marketable services the administrators, OU administrators, and subscription managers of their organization can subscribe. Subscriptions can also be assigned to organizational units, for example, for cost-controlling purposes.</p>
+            <p>When a customer subscribes to a service, <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> triggers the underlying application to provision all the required items, typically a specific set of data or configuration, for exclusive use by the customer in the scope of the subscription.</p>
+        </section>
+    </conbody>
+</concept>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="ja-jp">
+  <title>サービス利用部門向け料金設定</title>
+  <taskbody>
+    <context>
+      <p><uicontrol>サービス利用部門向け料金設定</uicontrol>ページで、サービスとサービス利用部門に対して料金設定の定義と編集を行うことができます。</p>
+      <p>プラットフォームの<b>請求システム</b>を使用して請求が行われるサービスを選択しています。サービス利用部門のサービス利用に関していかに料金設定を行うかを定義する必要があります。</p>
+      <p><b>サービス利用部門向け料金設定の定義、および編集方法</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd conref="../../Shared/priceModel.xml#PriceModelTopic/Added_description_of_new_o_task_taskbody_steps_step_2"/>
+        <info>
+          <ul conref="../../Shared/priceModel.xml#PriceModelTopic/Select_task_taskbody_steps_step_2">
+            <li/>
+          </ul>
+          <p>サービスが無料の場合はステップ7に進んでください。有料の場合はステップ2へ進んでください。<note>無料でないサービス利用部門向け料金設定を定義する場合、対応するサービス料金設定にも費用を定義してください。これを行わなかった場合、支払種別の管理を行うことができません。</note></p>
+        </info>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_desc">
+        <cmd/>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_trialperiod">
+        <cmd/>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_charging">
+        <cmd/>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_events">
+        <cmd/>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_params">
+        <cmd/>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_license2">
+        <cmd/>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_save">
+        <cmd/>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_localize">
+        <cmd/>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_roles">
+        <cmd/>
+      </step>
+    </steps>
+    <result>サービスを有効化すると選択したサービス利用部門で料金設定が使用可能になります。これは当該サービス利用部門のすべての購入済サービスに対して有効になります。</result>
+  </taskbody>
+  <related-links>
+    <linklist>
+      <title>関連情報</title>
+      <link href="priceModel_localize.xml"/>
+      <link href="priceModel_roles.xml"/>
+    </linklist>
+  </related-links>
+</task>

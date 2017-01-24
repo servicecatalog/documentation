@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="ja-jp">
+  <title>ログイン</title>
+  <taskbody>
+    <context>
+      <p>現在、プラットフォームにログインすることはできません。</p>
+      <p>後ほど、ログインしなおしてください。</p>
+    </context>
+  </taskbody>
+</task>

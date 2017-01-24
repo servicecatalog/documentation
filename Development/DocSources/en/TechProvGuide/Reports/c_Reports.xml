@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_3413BBD173324104B42FB714974CABE7" xml:lang="en-us">
+    <title>Reporting</title>
+    <conbody>
+        <section>
+            <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> offers comprehensive reports for different purposes and at different levels of detail. You can choose from various predefined reports.</p>
+            <p>The following reports are available for technology providers:</p>
+            <ul>
+                <li
+                    conref="../../help/tasks/organization_report.xml#task634/Technical_service_usage_report_task_taskbody_context_ul_li"/>
+                <li
+                    conref="../../help/tasks/organization_report.xml#task634/Supplier_report_task_taskbody_context_ul_li"/>
+                <li
+                    conref="../../help/tasks/organization_report.xml#task634/Subscription_report_task_taskbody_context_ul_li"/>
+                <li
+                    conref="../../help/tasks/organization_report.xml#task634/Instance_report_task_taskbody_context_ul_li"
+                />
+            </ul>
+            <p>Use the <uicontrol>Create report</uicontrol> menu option in the <uicontrol>Account</uicontrol> menu of the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> user interface and choose the desired report. Depending on the report type, you might have to enter additional report parameters. </p>
+            <p>The generated report is instantly displayed at the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> user interface. You can choose to print the report or save it in several formats.</p>
+            <p>
+                <note>Contact your platform operator if the reporting functionality is not available. He is responsible for defining the respective configuration parameters.</note>
+            </p>
+        </section>
+    </conbody>
+</concept>

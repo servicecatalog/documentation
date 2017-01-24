@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.ant.AntLaunchConfigurationType">
+<stringAttribute key="activeResolveConfiguration" value="none"/>
+<stringAttribute key="generate_name" value="false"/>
+<booleanAttribute key="isClearOutputNeeded" value="true"/>
+<booleanAttribute key="isConfirmClearOutputNeeded" value="true"/>
+<booleanAttribute key="isMergeFileNeeded" value="false"/>
+<booleanAttribute key="isResolveNeeded" value="true"/>
+<stringAttribute key="launchType" value="LOCAL"/>
+<listAttribute key="mapsForResolve"/>
+<booleanAttribute key="org.eclipse.debug.ui.ATTR_CONSOLE_OUTPUT_ON" value="false"/>
+<booleanAttribute key="org.eclipse.debug.ui.ATTR_LAUNCH_IN_BACKGROUND" value="true"/>
+<stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.ant.ui.AntClasspathProvider"/>
+<mapAttribute key="org.eclipse.ui.externaltools.ATTR_ANT_PROPERTIES">
+<mapEntry key="args.fo.userconfig" value="${workspace_loc}\.metadata\.plugins\com.go.dita.transform\userconfig.xml"/>
+<mapEntry key="args.input" value="/DocSources/en/BES_PDF.ditamap"/>
+<mapEntry key="customization.dir" value="/DocModel12/pdf.customization"/>
+<mapEntry key="dita.ant.catalog" value="${dita.ant.catalog}"/>
+<mapEntry key="dita.dir" value="${dita.dir}"/>
+<mapEntry key="dita.input.valfile" value="DocSources/.meta-resources/profiles/BES_PDF_CE.ditaval"/>
+<mapEntry key="dita.temp.dir" value="${dita.temp.dir}"/>
+<mapEntry key="dita.xml.catalog" value="${dita.xml.catalog}"/>
+<mapEntry key="generate.copy.outer" value="2"/>
+<mapEntry key="output.dir" value="/DocSources/Output/CE/en/BES_RTF"/>
+<mapEntry key="realtranstype" value="pdf"/>
+<mapEntry key="transtype" value="Fujitsu RTF"/>
+</mapAttribute>
+<stringAttribute key="org.eclipse.ui.externaltools.ATTR_LOCATION" value="${dita.dir}\build.xml"/>
+<mapAttribute key="resolvedLinks"/>
+</launchConfiguration>

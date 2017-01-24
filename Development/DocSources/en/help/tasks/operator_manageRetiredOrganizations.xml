@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="en-us">
+  <title>Deleting organizations</title>
+  <taskbody>
+    <context>
+      <p>### Check when GUI is available ###</p>
+      <p>On the <uicontrol>Delete organization</uicontrol> page, you can permanently delete an organization account. The following prerequisites must be fulfilled: </p>
+      <p>
+        <ul compact="no">
+          <li>The period defined by the <codeph>ORGANIZATION_RETIRE_PERIOD</codeph> configuration parameter has expired. </li>
+          <li>The administrator of the organization to be deleted has requested this deletion (he has removed the organization already, but the data is still kept for the period defined by the <codeph>ORGANIZATION_RETIRE_PERIOD</codeph> configuration parameter). </li>
+        </ul>
+      </p>
+      <p><b>To delete an organization</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>Select the organization to delete by clicking the corresponding check box. </cmd>
+        <info>
+          <p>Check boxes are inactive as long as the <codeph>ORGANIZATION_RETIRE_PERIOD</codeph> has not expired. </p>
+        </info>
+      </step>
+      <step>
+        <cmd>Click <uicontrol>Delete</uicontrol>.</cmd>
+      </step>
+    </steps>
+    <result>
+      <p>The email address and the user ID of the organization's administrator who removed the organization are deleted as well as all business-related data of the organization. </p>
+    </result>
+  </taskbody>
+</task>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<reference id="reference832" xml:lang="de-de">
+        <title>Preise für Parameter und Optionen</title>
+        <refbody>
+                <section>
+                        <p id="Ein_Preismodell_kann_Preise_f_reference_refbody_section_1"
+                                        >Ein Preismodell kann Preise für Serviceparameter und deren Optionen definieren. <ph
+                                        id="Ob_und_welche_Parameter_und_O_reference_refbody_section_1"
+                                        >Ob und welche Parameter und Optionen zur Auswahl stehen, ist abhängig von der Implementierung und Integration der zugrunde liegenden Anwendung.</ph>
+                        </p>
+                        <p><ph id="Für_jeden_Parameter_und_jede_reference_refbody_section_1"
+                                                >Für jeden Parameter und jede Option kann ein Preis festgelegt werden, der jeweils für ein Abonnement als ganzes oder pro Benutzer berechnet werden kann. Numerische Parameter sind Multiplikatoren für den angegebenen Preis. Bei booleschen Parametern mit dem Wert <codeph>true</codeph> ist der Multiplikator <codeph>1</codeph>. In allen anderen Fällen ist der Multiplikator <codeph>0</codeph>.</ph></p>
+                        <p>Wenn die Nutzungsgebühren für ein Abonnement pro Zeiteinheit abgerechnet werden und ein Kunde einen Parameterwert innerhalb einer Zeiteinheit ändert, wird die betroffene Zeiteinheit pro rata abgerechnet. Das heißt, dass dem Kunden exakt die Zeit in Rechnung gestellt wird, in der der Parameterwert gültig war. </p>
+                        <p><ph id="Bei_numerischen_Parametern_is_reference_refbody_section_1"
+                                        >Bei numerischen Parametern ist eine Preisstaffelung pro Abonnement möglich: Abhängig von den Werten des Parameters können unterschiedliche Preise definiert werden.</ph> Weitere Informationen finden Sie <xref
+                                        href="r_PriceModelDetails_stepped.xml">hier</xref>.</p>
+                        <p id="Die_Preise_für_Parameter_und_reference_refbody_section_1"
+                                >Die Preise für Parameter und Optionen sind unabhängig von anderen Preismodellelementen.</p>
+                </section>
+                <section>
+                        <title>Beispiel</title>
+                        <p>Im nachfolgenden Beispiel ist der Preis für den Parameter "Anzahl neuer Ordner" auf 4,00 € pro Ordner pro Abonnement festgelegt worden. Das Umbenennen von Ordnern kostet 1,00 € pro Tag für jeden zugewiesenen Benutzer. Die Beispielrechnung geht von 2 Benutzern aus, die dem Abonnement für einen Tag zugeordnet sind. Dies entspricht der Laufzeit des Abonnements. Der Kunde hat die Anzahl Ordner, die erstellt werden dürfen, beim Anlegen des Abonnements auf 45 begrenzt. </p>
+                        <p>Die Gebühren errechnen sich bei Abrechnung pro rata und bei Abrechnung pro Zeiteinheit wie folgt:</p>
+                        <p>(45 * 4,00 €) + (2 * 1,00 €) = 182,00 € </p>
+                        <p><b>Gesamt: 182,00 €</b></p>
+                        <p>Wenn die Benutzer dem Abonnement nicht über die gesamte Laufzeit des Abonnements zugeordnet sind, sondern nur einige Stunden, werden die Kosten wie folgt berechnet: </p>
+                        <p>Angenommen, Benutzer A ist dem Abonnement für 2 Stunden zugeordnet, Benutzer B für 4 Stunden. Dies ergibt eine Summe von 6 Stunden, was 25 % der Laufzeit des Abonnements (1 Tag) entspricht. Damit errechnen sich die anteiligen Kosten wie folgt:</p>
+                        <p>(45 * 4,00 €) + (<b>0,25</b> * 1,00 €) = 180,25 € </p>
+                        <p><b>Gesamt: 180,25 €</b>
+                        </p>
+                        <p>Wenn pro Zeiteinheit abgerechnet wird, belaufen sich die Kosten wieder auf <b>182.00 €</b>, weil der Tag voll in Rechnung gestellt wird.</p>
+                </section>
+        </refbody>
+</reference>

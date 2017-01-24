@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="en-us">
+  <title>Reactivating a locked account</title>
+  <taskbody>
+    <context>
+      <p>Contact your administrator who can reset your password. After resetting the password, you will get a new temporary password for your next login.</p>
+    </context>
+  </taskbody>
+</task>

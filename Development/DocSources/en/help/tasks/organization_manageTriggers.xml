@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd">
+<task id="task634" xml:lang="en-us">
+  <title>Managing process triggers</title>
+  <taskbody>
+    <context>
+      <p>Organizations often have specific processes for registering users, subscribing to services, or defining prices. Usually, such processes include approval processes and are modeled and automated with a process control system. </p>
+      <p>For specific actions performed by users or triggered by the platform, the platform provides a way to interact with such process control systems: Triggers can be configured which are invoked when the actions are carried out in the platform. The triggers start the corresponding process in the process control system. If approval for an action is required, the action is suspended until it is approved or rejected in the process control system. If no approval is required, the action is instantly executed.</p>
+      <p>As a prerequisite for controlling actions by processes, a notification service must exist and be deployed. This service forms the interface between the platform and the process control system. For details on implementing such a service, contact the platform operator.</p>
+      <p>You can see the actions that are subject to process control on the <uicontrol>Manage processes</uicontrol> page. On this page, you can abort suspended actions and delete aborted ones. </p>
+      <p>On the <uicontrol>Process triggers</uicontrol> page, you can view all triggers configured for your organization. You can add, update, or delete triggers.</p>
+      <p>
+        <b>To manage the triggers of your organization:</b></p>
+      <p>
+        <ul>
+          <li>To configure a new trigger, click <b>Add</b>. The <xref href="organization_manageTriggerDetails.xml"
+                ><b>Manage trigger</b></xref> page is displayed. Proceed with the definition of the trigger details.</li>
+          <li>To update or delete a trigger, click it in the list. The <xref
+              href="organization_manageTriggerDetails.xml"
+            ><b>Manage trigger</b></xref> page is displayed. Proceed with updating or deleting the trigger.</li>
+        </ul>
+      </p>
+    </context>
+  </taskbody>
+  <related-links>
+    <linklist>
+      <title>Related topics</title>
+      <link href="../tasks/triggerProcess_list.xml"/>
+    </linklist>
+  </related-links>
+</task>

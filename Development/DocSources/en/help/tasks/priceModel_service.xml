@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="en-us">
+  <title>Defining a service price model</title>
+  <taskbody>
+    <context>
+      <p>On the <uicontrol>Define for service</uicontrol> page, you can define or update the price model for a service that uses the platform's native billing system, or import a new or changed price model for a service that applies an external billing system.  </p>
+      <p conref="../../Shared/priceModel.xml#PriceModelTopic/concept_price_model"/>
+      <p>For each marketable service, a service price model must have been defined before you can activate the service and thus offer it to customers for subscription. You can define exactly one price model for a service. You can, however, also define customer-specific price models or even subscription-specific ones. </p>
+      <p>For updating a service price model on the <uicontrol>Define for service</uicontrol> page, the relevant marketable service must be deactivated. If you update an existing price model, your changes overwrite the previous values. The update does not affect existing subscriptions. The changes only take effect for new subscriptions after the service has been activated again. </p>
+      <p>For granting brokers or resellers the permission to sell a service, it is a prerequisite to define a service price model. Brokers and resellers cannot change the prices you define. Resellers, however, can define a license agreement of their own.</p>
+      <p id="If_you_update_a_price_model_f_task_taskbody_context_p_7"
+        >If you update a price model for a service for which you have granted resale permissions, the brokers and resellers as well as their customers can instantly view any changes you make. A service that is already published is immediately offered with the new prices. Existing subscriptions to services are not affected by the update. Any changes you make are effective for new subscriptions only. </p>
+      <p>
+        <note>For a marketable service that is based on a technical service with the external access type, there is no need to define a price model. With the external access type, the underlying application is responsible for controlling how customers are charged for using the service.</note>
+      </p>
+      <p><b>To define a service price model</b>:</p>
+    </context>
+    <steps>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_select_service">
+        <cmd/>
+      </step>
+      <step>
+        <cmd>Depending on the billing system that is defined for the underlying technical service, proceed as follows:</cmd>
+        <info>
+          <ul compact="no">
+            <li>If the platform's native billing system is used, define the price model in the subsequent sections of the page. Click <xref
+                href="priceModel_service_nat.xml">here</xref> for details.</li>
+            <li>If an external billing system is used, import the appropriate price model from this system and specify the license agreement. Click <xref
+                href="priceModel_service_ext.xml">here</xref> for details.</li>
+          </ul>
+        </info>
+      </step>
+    </steps>
+    <result>
+      <p>After activating the service, the price model is available to customers. It takes effect for all new subscriptions.</p>
+      <p>Brokers and resellers as well as their customers can instantly view any changes you have made.</p>
+    </result>
+  </taskbody>
+  <related-links>
+    <linklist>
+      <title>Related topics</title>
+      <link href="priceModel_customer.xml"/>
+      <link href="priceModel_subscription.xml"/>
+    </linklist>
+  </related-links>
+</task>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_43677218ADE94448B96BF212B03E7CC0" xml:lang="en-us">
+    <title>Overview of Integration Tasks</title>
+    <conbody>
+        <section>
+            <p><ph id="An_application_can_be_integra_concept_conbody_section_p_1"
+                        >An application can be integrated with <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> components as shown in the following illustration. The <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> components are colored in dark grey:</ph></p>
+            <fig>
+                <image align="center" height="268" href="../../Shared/_images/Integration.png" placement="break"
+                    width="374"/>
+            </fig>
+            <p><ph id="Depending_on_your_requirement_concept_conbody_section_p_2"
+                    >Depending on your requirements, the integration involves the following tasks:</ph></p>
+            <ol>
+                <li><ph id="Decide_how_users_access_your_concept_conbody_section_ol_l"
+                        >Decide how users access your application. Depending on the type of access, you need to consider different aspects for integration</ph>.<p><ph
+                            id="Users_may_access_an_applicati_concept_conbody_section_ol_l"
+                                >Users may access an application directly or through <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                />. When access occurs through <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                />, user management and authentication are under full control of the <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> identity management, and price models on a per-user basis can be used.</ph></p><p>For details on access types, refer to <xref
+                            href="../AccessTypes/c_AccessTypes.xml"/>.</p></li>
+                <li><ph id="Implement_a_provisioning_serv_concept_conbody_section_ol_l"
+                        >Implement a provisioning service</ph> (optional).<p><ph
+                            id="If_your_application_is_to_int_concept_conbody_section_ol_l"
+                                >If an application is to integrate with the subscription management of <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                />, it must provide a corresponding Web service (provisioning service). By the provisioning service, <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> triggers the application to provision and manage whatever is required for a subscription.</ph></p><p>For more details, refer to <xref
+                            href="../Implement/t_ImplProvServ.xml"/>.</p></li>
+                <li><ph id="Implement_the_identity_manage_concept_conbody_section_ol_l"
+                        >Adapt the application's login/logout implementation</ph> (optional).<p><ph
+                            id="If_the_application_is_to_be_a_concept_conbody_section_ol_l"
+                                >If an application is to be accessed through <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            />, its login/logout implementation must be adapted. Depending on the access type, specific methods defined by the provisioning service must be implemented. </ph></p><p>For more details, refer to <xref
+                            href="../Implement/t_UseIntHelpers.xml"/>.</p></li>
+                <li><ph id="Integrate_with_concept_conbody_section_ol_l">Integrate with the <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> event management</ph> (optional, but recommended for fine-grained pay-per-use billing).<p><ph
+                            id="The_application_can_send_even_concept_conbody_section_ol_l"
+                                >The application can send events to the event management of <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            />. Events can be used as a basis for price models, billing, and reporting.</ph></p><p>For more details, refer to <xref
+                            href="../Implement/t_ImplementEvents.xml"/>.</p></li>
+                <li><ph id="Implement_service_operations_concept_conbody_section_ol_l"
+                            >Implement service operations</ph> (optional). <p><ph
+                            id="The_application_can_implement_concept_conbody_section_ol_l"
+                                >The application can implement operations that can be executed from the <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> user interface. Service operations can be used to access the resources of the application and perform administrative tasks. </ph></p><p>For more details, refer to <xref
+                            href="../Implement/t_ImplementOperations.xml"/>.</p></li>
+                <li>Provision your application as a service in <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            />. <p>To do so, you first have to register the application as a technical service with <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>, either via the <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> user interface or by preparing an XML service definition and importing it into <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        />. Afterwards, you appoint suppliers for your services, who can then define service offerings.</p><p>For details, refer to <xref
+                            href="../Provision/c_Provision.xml"/>.</p></li>
+            </ol>
+            <p>An additional issue to think of when integrating an application with <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> is the billing system to be used for providing price models and calculating charges for the corresponding services. <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> comes with its own, native billing system. However, it can also be integrated with one or more external billing systems.  An external billing system is usually closely related to the application provided as a service in <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    />. For integrating an external billing system with <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    />, a billing adapter needs to be implemented (for details, refer to the <i>Developer's Guide</i>) and registered in <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> by the operator. The billing system to be used for an application is specified in the technical service definition. For details, refer to <xref
+                    href="../Reference/r_TechServDescr.xml"/>.</p>
+        </section>
+    </conbody>
+</concept>

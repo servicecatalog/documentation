@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<reference id="reference832" xml:lang="en-us">
+    <title><ph platform="print">One-Time Fee</ph><ph platform="help">One-time fee</ph>
+    </title>
+    <refbody>
+        <section>
+            <p id="A_one-time_fee_defines_the_am_reference_refbody_section_1"
+                >A one-time fee defines an amount a customer has to pay for a subscription in the first billing period.</p>
+            <p id="A_one-time_fee_is_added_to_th_reference_refbody_section_1"
+                >A one-time fee is added to the total charges for the first billing period. It is independent of the number of users, events, or other usage data.</p>
+            <p id="If_a_one-time_fee_is_defined_reference_refbody_section_1"
+                >If a one-time fee is defined for a service to which a customer upgrades or downgrades a subscription, it is added to the total charges for the customer, even if the service from which the customer migrates also defines a one-time fee.</p>
+        </section>
+        <section>
+            <title>Example</title>
+            <fig platform="help">
+                <image height="157" href="../_images/PriceModelSamples_OneTime.png" placement="break" width="332"/>
+            </fig>
+            <fig platform="print">
+                <image align="center" height="150" href="../_images/PriceModelSamples_OneTime.png" placement="break"
+                    width="300"/>
+            </fig>
+            <p>In the example above, 50.00 € are added to the charges of the first billing period. </p>
+        </section>
+    </refbody>
+</reference>

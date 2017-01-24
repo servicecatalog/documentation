@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN"
+                         "">
+<!-- Copyright FUJITSU LIMITED 2017 -->
+
+<bookmap id="BESResellGuide" xml:lang="en_US">
+    <title>Reseller's Guide</title>
+    <bookmeta>
+        <prodinfo product="oscm_ce">
+            <prodname/>
+            <vrmlist>
+                <vrm version="16.1.5"/>
+            </vrmlist>
+            <brand/>
+        	<prognum>16.1.5</prognum>
+            <component/>
+            <series>Reseller's Guide</series>
+        </prodinfo>
+        <prodinfo product="oscm_ee">
+            <prodname>Enterprise Service</prodname>
+            <vrmlist>
+                <vrm version="16.1 Fix 5"/>
+            </vrmlist>
+            <brand>FUJITSU Software</brand>
+            <prognum>Catalog Manager V16.1 Fix 5</prognum>
+            <component/>
+            <series>Reseller's Guide</series>
+        </prodinfo>
+        <bookid>
+            <edition>February 2017</edition>
+            <booknumber product="oscm_ee">B1WS-1257-02</booknumber>
+        </bookid>
+        <bookrights product="oscm_ce" >
+            <bookowner name="none"/>
+        </bookrights>
+        <bookrights product="oscm_ee" >
+            <bookowner name="FUJITSU LIMITED"/>
+        </bookrights>
+    </bookmeta>
+    <frontmatter>
+        <notices href="Shared/Frontmatter/BookInfo.xml"/>
+        <preface href="ResellerGuide/About/c_About.xml">
+            <topicref href="ResellerGuide/About/c_Readers.xml" type="concept"/>
+            <topicref href="Shared/gettingstarted/intro_convent.xml" type="concept"/>
+            <topicref href="ResellerGuide/About/intro_abbrev.xml" type="concept"/>
+            <topicref href="Shared/gettingstarted/intro_availabledoc.xml" type="concept"/>
+        </preface>
+    </frontmatter>
+    <chapter href="Shared/concepts/c_IntroExtended.xml">
+        <topicref href="ResellerGuide/Introduction/c_IntroResellerRole.xml" type="concept"/>
+        <topicref href="ResellerGuide/Introduction/c_IntroAccess.xml" type="concept"/>
+    </chapter>
+    <chapter href="ResellerGuide/MarketableServices/c_MSIntro.xml">
+        <topicref href="ResellerGuide/MarketableServices/c_MSManage.xml" type="concept"/>
+        <topicref href="Shared/tasks/c_MSPublish.xml" type="concept"/>
+    </chapter>
+    <chapter href="ResellerGuide/CustomerManagement/c_CMIntro.xml">
+        <topicref href="ResellerGuide/CustomerManagement/c_CMRegisterCustomers.xml" type="concept"/>
+        <topicref href="Shared/tasks/c_CMUseLDAP.xml" type="concept"/>
+        <topicref href="ResellerGuide/CustomerManagement/c_CMHandleSubscriptions.xml" type="concept"/>
+    </chapter>
+    <chapter href="ResellerGuide/Billing/c_BillIntro.xml">
+        <topicref href="ResellerGuide/Billing/c_BillCustomer.xml" type="concept"/>
+        <topicref href="ResellerGuide/Billing/c_BillRevenue.xml" type="concept"/>
+    </chapter>
+    <chapter href="ResellerGuide/Reports/c_Reports.xml"/>
+    <appendix href="ResellerGuide/Reference/r_MenuOptions.xml"/>
+    <appendix href="Shared/reference/r_LDAP_SettingTypes.xml"/>
+    <appendix href="Shared/glossary/r_Glossary.xml"/>
+</bookmap>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_3413BBD173324104B42FB714974CABE7" xml:lang="en-us">
+    <title>Log Entry Format</title>
+    <conbody>
+        <section>
+            <p>Every entry in a <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> log file has the following format: </p>
+            <p><codeph>&lt;YYYY-MM-DD'T'HH:MM:SS z> LogLabel:&lt;label> LogType:&lt;level> MessageID: &lt;MessageID> Message: &lt;Message></codeph></p>
+            <p><codeph>LogLabel</codeph> identifies the product that created the log entry. For <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>, this is <codeph
+                    >FSP_INTS-BSS</codeph>. <codeph>LogType</codeph>  is one of the log levels, <codeph>MessageID</codeph> is a numeric identifier of the entry.</p>
+            <p>Detailed information on the logged issue is contained in the <codeph>Message</codeph> text. The text contains the ID of the thread handling a transaction, which can be a useful indicator of relations between the activities on the server itself. Knowing the ID of the thread handling a transaction, you can completely track all steps involved in the transaction and thus easily investigate an error. </p>
+        </section>
+    </conbody>
+</concept>

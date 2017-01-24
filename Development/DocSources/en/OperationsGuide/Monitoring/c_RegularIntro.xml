@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_1BCF5C425D7D4627AB1C66A085CF6E11" xml:lang="en-us">
+    <title>Monitoring, Backup and Recovery</title>
+    <conbody>
+        <p>Regular system operation and maintenance includes the monitoring of the system and its processes as well as the backup of the databases, configuration settings, and log files. </p>
+        <p>This chapter describes: </p>
+        <ul>
+            <li>The monitoring of <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />, including the types and locations of log files. </li>
+            <li>How to configure the log level.</li>
+            <li>The format of the log entries.</li>
+            <li>How to maintain the log files.</li>
+            <li>How to export audit log data.</li>
+            <li>The backup of the databases, configuration settings, encryption key file, and log files.</li>
+            <li>The monitoring of the JMS queues. </li>
+        </ul>
+    </conbody>
+</concept>

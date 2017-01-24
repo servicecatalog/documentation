@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<reference id="reference832"
+                xml:lang="en-us">
+    <title>Abrechnungssysteme anzeigen</title>
+    <refbody>
+        <section>
+            <p>Auf der Seite <uicontrol>Abrechnungssysteme anzeigen</uicontrol> können Sie detaillierte Informationen zu den Abrechnungssystemen sehen, die der Plattform-Betreiber für die Plattform definiert hat. Diese Abrechnungssysteme können bei der Definition eines technischen Service angegeben werden. </p>
+            <p>Wenn Sie die Seite <uicontrol>Abrechnungssysteme anzeigen</uicontrol> öffnen, werden die Details des Abrechnungssystems angezeigt, das momentan als Standardsystem eingestellt ist. Falls erforderlich, kann der Plattform-Betreiber ein anderes Abrechnungssystem als Standard festlegen.</p>
+            <p>Die angezeigten Informationen sind abhängig vom jeweiligen Abrechnungssystem. Über <uicontrol>Verbindung testen</uicontrol> können Sie prüfen, ob die Verbindung zu einem Abrechnungssystem hergestellt werden kann. Falls dies nicht möglich ist, bitten Sie den Plattform-Betreiber, die Verbindungseigenschaften zu überprüfen und zu korrigieren. Eventuell ist das Abrechnungssystem außer Betrieb oder Verbindungsprobleme sind aufgetreten. </p>
+        </section>
+    </refbody>
+</reference>

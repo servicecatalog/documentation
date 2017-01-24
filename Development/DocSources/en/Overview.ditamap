@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN"
+                         "">
+<!-- Copyright FUJITSU LIMITED 2017 -->
+
+<bookmap id="BESOverview" xml:lang="en_US">
+    <title>Overview</title>
+    <bookmeta>
+        <prodinfo product="oscm_ce">
+            <prodname/>
+            <vrmlist>
+                <vrm version="16.1.5"/>
+            </vrmlist>
+            <brand/>
+            <prognum>16.1.5</prognum>
+            <component/>
+            <series>Overview</series>
+        </prodinfo>
+        <prodinfo product="oscm_ee">
+            <prodname>Enterprise Service</prodname>
+            <vrmlist>
+                <vrm version="16.1.5"/>
+            </vrmlist>
+            <brand>FUJITSU Software</brand>
+            <prognum>Catalog Manager V16.1.5</prognum>
+            <component/>
+            <series>Overview</series>
+        </prodinfo>
+        <bookid>
+            <edition>February 2017</edition>
+            <booknumber product="oscm_ee">B1WS-1250-02</booknumber>
+        </bookid>
+        <bookrights product="oscm_ce">
+            <bookowner name="none"/>
+        </bookrights>
+        <bookrights product="oscm_ee">
+            <bookowner name="FUJITSU LIMITED"/>
+        </bookrights>
+    </bookmeta>
+    <frontmatter>
+        <notices href="Shared/Frontmatter/BookInfo.xml"/>
+        <preface format="dita" href="Overview/About/c_About.xml" type="concept">
+            <topicref href="Overview/About/c_Readers.xml" type="concept"/>
+            <topicref href="Overview/About/intro_abbrev.xml" type="concept"/>
+            <topicref href="Shared/gettingstarted/intro_availabledoc.xml" type="concept"/>
+        </preface>
+    </frontmatter>
+    <chapter href="Shared/concepts/c_WhatIsBES.xml">
+        <topicref format="dita" href="Shared/concepts/c_BasicUsageScenario.xml" type="concept"/>
+        <topicref format="dita" href="Shared/concepts/c_OrgsRoles.xml" type="concept"/>
+        <topicref href="Shared/concepts/c_Components.xml" type="concept"/>
+    </chapter>
+    <chapter href="Overview/Providers/c_ProvIntro.xml">
+        <topicref href="Overview/Providers/c_Prepare.xml" type="concept"/>
+        <topicref href="Overview/Providers/c_Implement.xml" type="concept"/>
+        <topicref href="Overview/Providers/c_Provision.xml" type="concept"/>
+    </chapter>
+    <chapter href="Overview/Suppliers/c_SuppIntro.xml">
+        <topicref href="Overview/Suppliers/c_DefineMarkService.xml" type="concept"/>
+        <topicref href="Overview/Suppliers/c_PriceModelDetails.xml" type="reference"/>
+        <topicref href="Overview/Suppliers/c_PublishMarkService.xml" type="concept"/>
+        <topicref href="Overview/Suppliers/c_ManageCustomer.xml" type="concept"/>
+        <topicref href="Overview/Suppliers/c_PrepareBillPay.xml" type="concept"/>
+        <topicref href="Overview/Suppliers/c_ManageRevShares.xml" type="concept"/>
+    </chapter>
+    <chapter href="Overview/Customers/c_CustIntro.xml">
+        <topicref href="Overview/Customers/c_UseMPLFeatures.xml" type="concept"/>
+        <topicref href="Overview/Customers/c_Register.xml" type="concept"/>
+        <topicref href="Overview/Customers/c_Subscribe.xml" type="concept"/>
+        <topicref format="dita" href="Overview/Customers/c_RegisterUsersIntro.xml" type="concept"/>
+        <topicref href="Overview/Customers/c_SUsersIntro.xml" type="concept"/>
+        <topicref format="dita" href="Overview/Customers/c_ManageSubscriptions.xml" type="concept"/>
+        <topicref href="Overview/Customers/c_Pay.xml" type="concept"/>
+    </chapter>
+    <chapter format="dita" href="Overview/MarketplaceOwners/c_MPLOwnersIntro.xml" type="concept">
+        <topicref format="dita" href="Overview/MarketplaceOwners/c_ManageAccess.xml" type="concept"/>
+        <topicref href="Overview/MarketplaceOwners/c_ManageSuppliers.xml" type="concept"/>
+        <topicref format="dita" href="Overview/MarketplaceOwners/c_ManageMPLs.xml" type="concept"/>
+        <topicref href="Overview/MarketplaceOwners/c_CustomizeLayoutText.xml" type="concept"/>
+        <topicref format="dita" href="Overview/MarketplaceOwners/c_MPRevenueShare.xml" type="concept"/>
+    </chapter>
+    <chapter format="dita" href="Overview/Operators/c_Operators.xml" type="concept"/>
+    <chapter href="Overview/All/c_AllUsersIntro.xml">
+        <topicref href="Shared/concepts/c_UserInterface.xml" type="concept"/>
+        <topicref format="dita" href="Shared/concepts/c_AccountIdentityManagement.xml" type="concept"/>
+        <topicref href="Shared/concepts/c_ProcessControl.xml" type="concept"/>
+        <topicref href="Overview/All/c_Developers.xml" type="concept"/>
+    </chapter>
+    <appendix href="Shared/glossary/r_Glossary.xml"/>
+</bookmap>

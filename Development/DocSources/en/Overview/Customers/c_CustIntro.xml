@@ -1,0 +1,27 @@
+<?xml version="1.0"?> 
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+
+<concept xml:lang="en-us" id="concept_3413BBD173324104B42FB714974CABE7">
+    <title><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> for Customers</title>
+    <conbody>
+        <section>
+            <p>Customers are the companies, departments, or people who subscribe to one or more marketable services on a marketplace. After a customer has subscribed to a service in <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />, his registered users who are assigned to the subscription can work with the underlying application in the Cloud.</p>
+            <p>Customers perform the following basic tasks which are described in more detail in the sections below: </p>
+            <ul>
+                <li>Access the services they want to subscribe to on a marketplace.</li>
+                <li>Register in <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </li>
+                <li>Subscribe to services.</li>
+                <li>Register service users and assign them to subscriptions.</li>
+                <li>Use the services they subscribed to.</li>
+                <li>Manage existing subscriptions.</li>
+                <li>Pay for the services consumed.</li>
+            </ul>
+            <p>Customers can use the reporting facilities provided by <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> to get, for example, an overview on all users assigned to their subscriptions and on the billable events that occurred in using the services.</p>
+        </section>
+    </conbody>
+</concept>

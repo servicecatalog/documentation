@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd"
+
+[
+<!ENTITY % entities PUBLIC "-//XDOC//ENTITIES//FujitsuUserDoc" "entities.dtd">
+]>
+<concept xml:lang="ja-jp" id="concept637">
+    <title>表記法</title>
+    <conbody>
+        <p>本書では次の表記法を用いています。</p>
+        <table frame="all" colsep="1" rowsep="1">
+            <tgroup cols="2">
+                <colspec colnum="1" colname="col1" colwidth="1.00*"/>
+                <colspec colnum="2" colname="col2" colwidth="3.96*"/>
+                <tbody>
+                    <row>
+                        <entry colname="col1"><uicontrol>追加</uicontrol></entry>
+                        <entry colname="col2"
+                            >メニューオプションなどGUIの要素名は太字で表記します。</entry>
+                    </row>
+                    <row>
+                        <entry colname="col1"><codeph>init</codeph></entry>
+                        <entry colname="col2"
+                            >システム名、コマンド名、キーボード入力テキストなどはCourierフォントで表記します。 </entry>
+                    </row>
+                    <row>
+                        <entry colname="col1"><codeph>&lt;変数&gt;</codeph></entry>
+                        <entry colname="col2"
+                            >入力必須の変数値は山括弧で囲みます。 </entry>
+                    </row>
+                    <row>
+                        <entry colname="col1"><codeph>[オプション]</codeph></entry>
+                        <entry colname="col2"
+                            >省略可能なコマンドパラメーターなどのオプション項目は角括弧で囲みます。 </entry>
+                    </row>
+                    <row>
+                        <entry colname="col1"><codeph>one | two</codeph></entry>
+                        <entry colname="col2">パラメーターの選択肢は縦棒で記述します。 </entry>
+                    </row>
+                    <row>
+                        <entry colname="col1"><codeph>{one | two}</codeph></entry>
+                        <entry colname="col2"
+                            >必須パラメーターの選択肢は波括弧で囲みます。</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </conbody>
+</concept>

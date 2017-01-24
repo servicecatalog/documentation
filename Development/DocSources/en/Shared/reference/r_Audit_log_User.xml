@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<reference id="reference832" xml:lang="en-us">
+    <title><ph platform="print">User Operations</ph><ph platform="help">User operations</ph>
+    </title>
+    <refbody>
+        <section>
+            <p>This section explains the messages that are output in the audit log for operations executed by standard users on a marketplace. </p>
+        </section>
+        <section>
+            <p>The following <codeph>&lt;<i>additional name-value pairs</i>></codeph> are appended to the header and the name-value pairs common to all log entries:</p>
+            <p>
+                <ul>
+                    <li>
+                        <p><codeph>serviceId=<i>&lt;service ID></i></codeph>: The ID of a marketable service as entered during its creation. </p>
+                    </li>
+                    <li>
+                        <p><codeph>serviceName=<i>&lt;service name></i></codeph>: The service name for customers of a marketable service as entered during its creation. </p>
+                    </li>
+                    <li>
+                        <p><codeph>subscriptionName=<i>&lt;subscription name></i></codeph>: The name of the subscription as entered when subscribing to a service. </p>
+                    </li>
+                </ul>
+            </p>
+            <p>Additional name-value pairs may be appended depending on the logged operation.</p>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Operation</b>: <b>Execute service operation</b></p>
+                                <p>Description: A user selected an operation to be executed for the service he subscribed to. The operations and their parameters are defined in the technical service underlying the marketable service.</p>
+                                <p>Additional name-value pairs:</p>
+                                <p>
+                                    <ul>
+                                        <li>
+                                            <p><codeph>serviceOperation=<i>&lt;operation></i></codeph>: The ID of the service operation executed by the user. </p>
+                                        </li>
+                                        <li>
+                                            <p><codeph><i>&lt;parameter ID></i>=<i>&lt;parameter value></i></codeph>: List of operation parameters, separated by vertical bars (|). For every parameter, its ID and its corresponding value are indicated. </p>
+                                        </li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </section>
+    </refbody>
+</reference>

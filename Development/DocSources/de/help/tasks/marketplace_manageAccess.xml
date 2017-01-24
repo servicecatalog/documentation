@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd">
+<task id="task634"
+  xml:lang="de-de">
+  <title>Zugang zu Marktplatz verwalten</title>
+  <taskbody>
+    <context>
+      <p><ph id="On_the_task_taskbody_context_p_1_ph"
+          >Auf der Seite <uicontrol>Zugang verwalten</uicontrol> legen Sie fest, wen Sie auf einen Marktplatz zulassen.</ph>
+      </p>
+      <p><ph id="When_a_marketplace_is_created_task_taskbody_context_p_2_ph"><ph id="When_a_marketplace_small_ph"
+            >Nach dem Anlegen ist ein Marktplatz öffentlich und damit zugänglich für alle anonymen und registrierten Benutzer. Als Marktplatzeigentümer können Sie den Zugang auf Benutzer von bestimmten registrierten Organisationen beschränken.</ph>
+          <ph id="When_a_marketplace_small2_ph"
+            >Die Benutzer müssen sich in diesem Fall anmelden, um die Services auf dem Marktplatz sehen, abonnieren und verwenden zu können. Neue Kunden können sich auf dem Marktplatz nicht selbst registrieren, sondern müssen von einem Serviceanbieter, Wiederverkäufer, Vermittler oder dem Betreiber registriert werden. </ph>
+        </ph></p>
+      <p><ph id="If_task_taskbody_context_p_3_ph"
+          >Wenn Sie einen Marktplatz von einem öffentlichen zu einem nicht-öffentlichen ändern, erhalten Organisationen mit bestehenden Abonnements oder auf dem Marktplatz veröffentlichten Services automatisch Zugang. Sie können jeder Organisation den Zugang entziehen, unabhängig davon, ob er automatisch oder explizit von Ihnen erteilt wurde. Voraussetzung dafür ist, dass die Organisation keine laufenden Abonnements besitzt und keine Services auf dem Marktplatz veröffentlicht hat. </ph></p>
+      <p><ph id="A_marketplace_with_restricted_task_taskbody_context_p_4_ph"
+          >Einen Marktplatz mit eingeschränktem Zugang können Sie jederzeit wieder öffentlich und damit zugänglich für alle Benutzer und Organisationen machen. </ph></p>
+      <p><b>So verwalten Sie den Zugang zu einem Marktplatz</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>Wählen Sie in der Liste <uicontrol>Marktplatz</uicontrol> den Marktplatz, für den Sie den Zugang verwalten möchten. </cmd>
+        <info>
+          <p>Die Liste enthält alle Marktplätze, auf die Sie als Marktplatz-Manager Zugriff haben. </p>
+          <p>Die Option <uicontrol>Nur ausgewählte Kunden</uicontrol> zeigt, ob der Marktplatz öffentlich oder nur für Benutzer bestimmter Organisationen zugänglich ist. Im letzteren Fall sind alle Organisationen aufgelistet, und Markierungen zeigen, welche davon Zugang zum Marktplatz haben. </p>
+        </info>
+      </step>
+      <step>
+        <cmd>Ändern Sie falls gewünscht die Zugangsart für den Marktplatz, indem Sie die Option <uicontrol>Nur ausgewählte Kunden</uicontrol> markieren oder die Markierung entfernen. </cmd>
+      </step>
+      <step>
+        <cmd>Wählen Sie für einen nicht-öffentlichen Marktplatz die Organisationen aus, die Zugang haben sollen. </cmd>
+        <info>Entfernen Sie die Markierung für jede Organisation, die keinen Zugang mehr haben sollen. Voraussetzung dafür ist, dass die Organisation keine laufenden Abonnements besitzt und keine Services auf dem Marktplatz veröffentlicht hat.</info>
+      </step>
+    </steps>
+  </taskbody>
+</task>

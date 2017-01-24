@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<reference id="reference832" xml:lang="en-us">
+    <title>Viewing price model details </title>
+    <refbody>
+        <section>
+            <p>On the <uicontrol>View service</uicontrol> and <uicontrol>Manage service</uicontrol> page, you can view the following details of the charging conditions and prices for using the service, if the service is not free of charge and applies the platform's native billing system. All prices are without VAT.</p>
+        </section>
+        <section>
+            <title>Charging conditions</title>
+            <p>The charging conditions include the following information:</p>
+            <ul compact="no">
+                <li>
+                    <p id="For_each_subscription_a_char_reference_refbody_section_1"><b>Calculation option</b>: The cost calculation option for the price model:<ul>
+                            <li><uicontrol>Free of charge</uicontrol>: The service is free of charge. </li>
+                            <li><uicontrol>Pro rata calculation</uicontrol>: The costs are calculated based on the exact usage of the service in milliseconds.</li>
+                            <li><uicontrol>Per time unit calculation</uicontrol>: The costs are calculated for complete time units, for example, whole days or weeks. The time unit is defined under <uicontrol>Charges based on</uicontrol>.</li>
+                        </ul></p>
+                </li>
+                <li><b>Free trial period (in days)</b>: The number of days during which the service can be used for free. <ph
+                        conref="../../Shared/priceModel.xml#PriceModelTopic/After_this_period_the_servic_task_taskbody_steps_step_4"
+                    /></li>
+                <li conref="../../Shared/priceModel.xml#PriceModelTopic/Currency_task_taskbody_steps_step_5"/>
+                <li conref="../../Shared/priceModel.xml#PriceModelTopic/Charges_based_on_task_taskbody_steps_step_5"/>
+                <li conref="../../Shared/priceModel.xml#PriceModelTopic/One-time_fee_task_taskbody_steps_step_5"/>
+                <li
+                    conref="../../Shared/priceModel.xml#PriceModelTopic/Recurring_charge_per_subscrip_task_taskbody_steps_step_5"/>
+                <li><ph
+                        conref="../../Shared/priceModel.xml#PriceModelTopic/Recurring_charge_per_user_task_taskbody_steps_step_5"
+                    /></li>
+            </ul>
+        </section>
+        <section>
+            <title>Event prices</title>
+            <p>Event prices refer to individual, billable events. <ph
+                    conref="../../Shared/reference/r_PriceModelDetails_events.xml#reference832/These_include_for_example_l_reference_refbody_section_1"
+                />
+            </p>
+            <p>For this type of charge, stepped prices can be defined granting the customer, for example, discounts depending on the number of events that occurred while using the service.</p>
+        </section>
+        <section>
+            <title>Parameter prices</title>
+            <p>A price model can define prices for service parameters and options. <ph
+                    conref="../../Shared/reference/r_PriceModelDetails_parameters.xml#reference832/It_depends_on_the_implementat_reference_refbody_section_1"
+                    /> The supplier can define a price for every parameter and option, and specify whether this price is to be charged per subscription or per user assigned to the subscription. Numeric parameters are a multiplier for the price. For boolean parameters, the multiplier is <codeph>1</codeph> if the value is <codeph>true</codeph>. In all other cases, the multiplier is <codeph>0</codeph>.</p>
+            <p>For numeric parameters (parameters with values of type Integer or Long), stepped prices can be defined granting the customer, for example, volume discounts.</p>
+        </section>
+        <section>
+            <title>Role-specific prices</title>
+            <p>A price model can define a price for each service role that is defined. This price is added to the base price per user in the cost calculation for a billing period.</p>
+            <p>The service roles must have been specified in the technical service definition. Service roles can be mapped to corresponding permissions in the underlying application. </p>
+        </section>
+    </refbody>
+</reference>

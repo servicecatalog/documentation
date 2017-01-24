@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="ja-jp">
+  <title>パスワードの復元</title>
+  <taskbody>
+    <context>
+      <p>パスワードの復元を実行しました。利用者に処理を完了するためのURLが記載されたEメールが送信されます。</p>
+      <p>Eメールに記載されているURLをクリックして新しいパスワードを設定してください。URLは24時間のみ有効です。</p>
+    </context>
+  </taskbody>
+</task>

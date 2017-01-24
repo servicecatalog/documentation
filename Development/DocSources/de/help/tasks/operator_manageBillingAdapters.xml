@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd">
+<task id="task634" xml:lang="en-us">
+  <title>Abrechnungssysteme verwalten</title>
+  <taskbody>
+    <context>
+      <p>Auf der Seite <b>Abrechnungssysteme verwalten</b> können Sie die Abrechnungssysteme anzeigen und verwalten, die Herstellern und Serviceanbietern für die Bereitstellung von Preismodellen und die Kostenabrechnung für Services zur Verfügung stehen. </p>
+      <p>Die Plattform besitzt ein eigenes Abrechnungsystem zur Verwaltung von Preismodellen und Berechnung von Kosten. Sie können jedoch auch ein oder mehrere externe Abrechnungssysteme anbinden. Dies ist beispielsweise dann von Vorteil, wenn Sie Services von externen Anbietern wie Amazon Web Services (AWS) zur Verfügung stellen, die eigene Systeme für die Bepreisung und Kostenberechnung besitzen. Es ist auch dann nützlich, wenn Preise und Kosten auf Mess- und Zählwerten basieren, die die Plattform nicht bereitstellt.</p>
+      <p>Hersteller können bei der Definition ihrer technischen Services das gewünschte Abrechnungssystem angeben - das plattformeigene oder eines der integrierten externen Systeme. Eines der Systeme muss als das Standardsystem festgesetzt sein. Das Standardsystem wird für jeden technischen Service verwendet, für den nicht explizit ein anderes Abrechnungssystem definiert ist, sowie für alle darauf basierenden marktfähigen Services und Abonnements.  </p>
+      <p>Die Seite <b>Abrechnungssysteme verwalten</b> zeigt die verfügbaren Abrechnungssysteme in jeweils eigenen Abschnitten an. Wenn Sie die Seite öffnen, sind die Details des Standardsystems eingeblendet. Auf der Seite können Sie:</p>
+      <ul compact="no">
+        <li>Die Details der verfügbaren Abrechnungssysteme ansehen.</li>
+        <li>Neue Abrechnungssysteme hinzufügen.</li>
+        <li>Das Standardabrechnungssystem festlegen.</li>
+        <li>Die Kurzbeschreibung und Verbindungseigenschaften von Abrechnungssystemen aktualisieren.</li>
+        <li>Abrechnungssysteme entfernen.</li>
+      </ul>
+      <p><b>So fügen Sie ein Abrechnungssystem hinzu</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>Stellen Sie sicher, dass folgende Voraussetzungen erfüllt sind:</cmd>
+        <info>
+          <ul>
+            <li>Ein Billing-Adapter wurde implementiert, der die Plattform mit dem externen Abrechnungssystem verbindet. Die Implementierung erfolgt durch einen Entwickler in enger Zusammenarbeit mit dem Anbieter der Services, für die das Abrechnungssystem verwendet werden soll. Ausführliche Informationen dazu finden Sie im <i>Developer's Guide</i>.</li>
+            <li>Die Verantwortlichen haben den Billing-Adapter auf einem Application Server installiert und die Kommunikation mit der Plattform auf der einen Seite und dem Abrechnungssystem auf der anderen Seite sichergestellt.</li>
+            <li>Sie kennen die Parameter, die zur Adressierung des Remote Interface des Billing-Adapters über JNDI Lookup benötigt werden.</li>
+          </ul>
+        </info>
+      </step>
+      <step>
+        <cmd>Klicken Sie <uicontrol>Hinzufügen</uicontrol> am Ende der Seite <b>Abrechnungssysteme verwalten</b>.</cmd>
+        <info>Dadurch wird auf der Seite ein neuer Abschnitt zur Definition des Abrechnungssystems erstellt und geöffnet. </info>
+      </step>
+      <step>
+        <cmd>Geben Sie eine <uicontrol>ID</uicontrol> für das neue Abrechnungssystem ein. </cmd>
+        <info>Mit dieser ID wird das Abrechnungssystem in der Plattform eindeutig identifiziert. Sie kann nach Anlegen des Systems nicht mehr geändert werden. Die ID wird bei der Definition von technischen Services angegeben, für die das Abrechnungssystem verwenden werden soll.  <p>Die IDs von Abrechnungssystemen sind auf 40 Zeichen beschränkt und dürfen keines der folgenden Zeichen enthalten:</p><p><codeph>! " # $ % &amp; ' * + , / : ; &lt; = > ? \ ^ `</codeph>
+          </p></info>
+      </step>
+      <step>
+        <cmd>Geben Sie optional eine <uicontrol>Kurzbeschreibung</uicontrol> für des Abrechnungssystems ein.</cmd>
+        <info>
+          <p>Kurzbeschreibungen sind auf 40 Zeichen beschränkt. Alle Zeichen sind erlaubt.</p>
+        </info>
+      </step>
+      <step>
+        <cmd>Geben Sie unter <uicontrol>Verbindung zum Abrechnungssystem</uicontrol> die Parameter zur Adressierung des Billing-Adapters über JNDI Lookup an. </cmd>
+        <info>Sie müssen in jedem Fall den JNDI-Namen des Adapters angeben. Für weitere Parameter geben Sie im linken Feld den Namen, im rechten den Wert an. Mit dem Pluszeichen fügen Sie einen weiteren Parameter hinzu, mit dem Minuszeichen entfernen Sie einen Parameter. </info>
+      </step>
+      <step>
+        <cmd>Klicken Sie <uicontrol>Verbindung testen</uicontrol> um sicherzustellen, dass die Verbindung zu dem Abrechnungssystem hergestellt werden kann.</cmd>
+        <info>Eine Nachricht wird angezeigt, die Sie darüber informiert, ob die Verbindung erfolgreich war.</info>
+      </step>
+      <step>
+        <cmd>Klicken Sie gegebenenfalls <uicontrol>Als Standard voreinstellen</uicontrol>, um das neue System als Standardabrechnungssystem festzulegen.</cmd>
+        <info>Das neue Abrechnungssystem wird sofort als Standard gesetzt, und die Einstellung vom bisherigen Standardsystem wird entfernt.</info>
+      </step>
+      <step>
+        <cmd>Schließen Sie Ihre Eingaben mit <uicontrol>Speichern</uicontrol> ab.</cmd>
+      </step>
+    </steps>
+    <result>
+      <p>Hersteller können das neue Abrechnungssystem jederzeit angeben, wenn sie eine Anwendung als technischen Service in der Plattform registrieren.</p>
+      <p><b>So ändern Sie das Standardabrechnungssystem</b>: </p>
+      <ol compact="no">
+        <li>Zeigen Sie die Details des Abrechnungssystems an, das Sie als Standardsystem verwenden wollen. </li>
+        <li>Klicken Sie <uicontrol>Als Standard voreinstellen</uicontrol>, um das Abrechnungssystem als Standardsystem festzulegen und die Einstellung vom bisherigen Standardsystem zu entfernen.</li>
+        <li>Schließen Sie Ihre Eingaben mit <uicontrol>Speichern</uicontrol> ab. </li>
+      </ol>
+      <p><b>So aktualisieren Sie ein existierendes Abrechnungssystem</b>: </p>
+      <ol compact="no">
+        <li>Zeigen Sie die Details des Abrechnungssystems an, das Sie aktualisieren möchten.</li>
+        <li>Ändern Sie die <uicontrol>Kurzbeschreibung</uicontrol>, falls gewünscht. </li>
+        <li>Ändern Sie, falls erforderlich, die Werte der Verbindungsparameter. Mit dem Pluszeichen fügen Sie einen weiteren Parameter hinzu, mit dem Minuszeichen entfernen Sie einen Parameter.</li>
+        <li>Klicken Sie <uicontrol>Verbindung testen</uicontrol> um sicherzustellen, dass die Verbindung zu dem Abrechnungssystem hergestellt werden kann.</li>
+        <li>Klicken Sie gegebenenfalls <uicontrol>Als Standard voreinstellen</uicontrol>, um das System als Standardabrechnungssystem festzulegen.</li>
+        <li>Schließen Sie Ihre Änderungen mit <uicontrol>Speichern</uicontrol> ab. </li>
+      </ol>
+      <p><b>So entfernen Sie ein Abrechnungssystem</b>: </p>
+      <ol compact="no">
+        <li>Zeigen Sie die Details des Abrechnungssystems an, das Sie entfernen möchten. <p>Die folgenden Voraussetzungen müssen erfüllt sein, damit ein Abrechnungssystem entfernt werden kann:</p><p>
+            <ul>
+              <li>Das System darf nicht als Standardabrechnungssystem festgesetzt sein.</li>
+              <li>Das System darf von keinen technischen Services, marktfähigen Services und aktiven Abonnements verwendet werden.</li>
+            </ul>
+          </p></li>
+        <li>Klicken Sie <uicontrol>Löschen</uicontrol> und bestätigen Sie die Entfernung. <p>Das Abrechnungssystem wird sofort entfernt. </p></li>
+      </ol>
+      <note>Sie können das plattformeigene Abrechnungssystem entfernen, wenn die Voraussetzungen erfüllt sind. Um dieses Abrechnungssystem später wieder hinzuzufügen, geben Sie als ID <codeph>NATIVE_BILLING</codeph> sowie eine Kurzbeschreibung Ihrer Wahl an. Verbindungseigenschaften sind nicht erforderlich.</note>
+    </result>
+  </taskbody>
+</task>

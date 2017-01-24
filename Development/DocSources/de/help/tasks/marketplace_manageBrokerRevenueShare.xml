@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd">
+<task id="task634" xml:lang="de-de">
+  <title>Umsatzbeteiligung von Vermittlern verwalten</title>
+  <taskbody id="On_the_task_taskbody">
+    <context>
+      <p>Auf der Seite <uicontrol>Umsatzbeteiligung von Vermittlern verwalten</uicontrol> können Sie für einzelne Services, die Vermittler verkaufen dürfen, eine Umsatzbeteiligung festlegen. Diese Beteiligung pro Service hat Vorrang vor der für einen Marktplatz voreingestellten Umsatzbeteiligung für Vermittler (einstellbar über die Menüoption <uicontrol>Marktplatzeigenschaften ändern</uicontrol>). Desweiteren können Sie für einzelne Vermittlerorganisationen eine Umsatzbeteiligung festlegen. Diese wiederum hat Vorrang vor der Beteiligung pro Service.</p>
+      <p> Marktplatz-spezifische Umsatzbeteiligungen legen Sie auf der Seite <uicontrol>Marktplatzeigenschaften ändern</uicontrol> fest.</p>
+      <p>Auf der Seite <uicontrol>Umsatzbeteiligung von Vermittlern verwalten</uicontrol> können Sie auch die Umsatzbeteiligung für Services ändern, für die keine Berechtigung mehr zum Wiederverkauf besteht oder die bereits vom Serviceanbieter gelöscht wurden. Es besteht die Möglichkeit, dass noch Abonnements für diese Services laufen und dass Sie die jeweilige Umsatzbeteiligung ändern möchten.</p>
+      <note>Umsatzbeteiligungen werden nur für Services errechnet, die das plattformeigene Abrechnungssystem verwenden. Services, die ein externes Abrechnungssystem verwenden, werden nicht berücksichtigt.</note>
+      <p><b>So legen Sie die Umsatzbeteiligung für einen Vermittler fest</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>Wählen Sie in der Liste <uicontrol>Service-ID</uicontrol> den Service, für den Sie eine Umsatzbeteiligung festlegen möchten.</cmd>
+        <info>
+          <p>Die Liste enthält alle auf der Plattform verfügbaren Services. Dazu gehören auch alle Services, die bereits gelöscht wurden. An den Namen von gelöschten Services wird eine Raute (#) sowie ein UNIX-Zeitstempel angehängt. Dieser gibt an, wann der Service gelöscht wurde. Bei allen Services ist die Organisations-ID des Serviceanbieters, der den Service zur Verfügung stellt, in Klammern angegeben.</p>
+        </info>
+      </step>
+      <step>
+        <cmd>In der ersten Tabelle wird die für den Marktplatz eingestellte Umsatzbeteiligung für Vermittler angezeigt, die auch für den gewählten Service voreingestellt ist. </cmd>
+        <info>
+          <p>Im Feld <uicontrol>Umsatzbeteiligung (%)</uicontrol> können Sie die Umsatzbeteiligung für den gewählten Service ändern: Geben Sie einen Prozentwert an.</p>
+          <p>Dieser Wert gilt für alle Vermittler, die den gewählten Service veröffentlichen. Der Wert hat Vorrang vor der Einstellung, die über die Menüoption <uicontrol>Marktplatzeigenschaften ändern</uicontrol> festgelegt wurde.</p>
+        </info>
+      </step>
+      <step>
+        <cmd>In der zweiten Tabelle werden alle Vermittlerorganisationen angezeigt, die den gewählten Service verkaufen dürfen. </cmd>
+        <info>
+          <p>Im Feld <uicontrol>Umsatzbeteiligung (%)</uicontrol> können Sie einen Prozentwert eingeben, der nur für die entsprechende Vermittlerorganisation gilt. </p>
+          <p>Dieser Wert hat Vorrang sowohl vor der Umsatzbeteiligung für den gewählten Service als auch vor der Einstellung, die über die Menüoption <uicontrol>Marktplatzeigenschaften ändern</uicontrol> festgelegt wurde.</p>
+        </info>
+      </step>
+      <step>
+        <cmd>Schließen Sie Ihre Eingaben mit <uicontrol>Speichern</uicontrol> ab.</cmd>
+        <info>
+          <p>Die Prozentsätze werden berücksichtigt, sobald der Vermittler den Service auf einem Marktplatz veröffentlicht. Die tatsächlichen Umsatzbeteiligungen werden bei der nächsten Neuberechnung der Nutzungsdaten errechnet und mit den Rechnungsdaten ausgegeben. </p>
+        </info>
+      </step>
+    </steps>
+    <result/>
+  </taskbody>
+  <related-links>
+    <linklist>
+      <title>Weitere Themen</title>
+      <link href="marketplace_update.xml"/>
+    </linklist>
+  </related-links>
+</task>

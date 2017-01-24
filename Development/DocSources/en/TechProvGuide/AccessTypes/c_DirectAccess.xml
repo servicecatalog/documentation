@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_CD8E7680C60241F8AC117DF04C7589A9" xml:lang="en-us">
+    <title>Direct Access</title>
+    <conbody>
+        <section>
+            <p>With direct access, users interact directly with the application. </p>
+            <p id="As_login_is_not_carried_out_t_concept_conbody_section_p_4">As login is not carried out through <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    />, there are no special requirements from <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> concerning the application's login/logout functionality. <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> has no information about the number and duration of user sessions. Therefore, price models on a per-user basis and corresponding billing services in <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> cannot be used.</p>
+            <p>The following figure shows the interaction between the client, <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>, and the application:</p>
+            <fig>
+                <image align="center" height="240" href="../_images/AccessDirect.png" placement="break" width="435"/>
+            </fig>
+            <p id="The_client_sends_a_user_s_log_concept_conbody_section_p_2"
+                >The client sends a user's login request directly to the application. The application authenticates the user, creates a session, and returns that session to the client. Any subsequent interaction also takes place directly between the client and the application.</p>
+            <p id="The_application_needs_to_ensu_concept_conbody_section_p_3"
+                    >The application needs to ensure that users are directed to the application instance that belongs to the relevant subscription in <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    />. For Web applications, this could be achieved, for example, by configuring separate application URLs for the individual subscriptions. The relevant application URL can be included in the information which is returned to <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> when the instance for a new subscription is created.</p>
+        </section>
+    </conbody>
+</concept>

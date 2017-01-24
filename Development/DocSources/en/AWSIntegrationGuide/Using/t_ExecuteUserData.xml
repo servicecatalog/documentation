@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<task id="task_E68E2024B1F6403AAA1130A39B1D4DCD" xml:lang="en-us">
+    <title>Executing User-Specific Configuration Data</title>
+    <taskbody>
+        <context>
+            <p>When an instance is provisioned in Amazon EC2, a customer has the option of passing user-specific configuration data to the instance. The data can be used to perform automated configuration tasks or run scripts. Customers can pass two types of user data to Amazon EC2 instances: shell scripts and <codeph>cloud-init</codeph> directives. They can also pass this data as plain text, as a file, or as base64-encoded text for API calls.</p>
+            <p>To access user data scripts or <codeph>cloud-init</codeph> directives, the technology provider must enter the URL pointing to the scripts or directives into the definition of the technical service. The URL must be accessible for APP. </p>
+            <p>For details on executing user data, refer to the user documentation of Amazon Web Services.</p>
+        </context>
+    </taskbody>
+</task>

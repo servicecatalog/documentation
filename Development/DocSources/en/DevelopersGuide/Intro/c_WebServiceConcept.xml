@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_3413BBD173324104B42FB714974CABE7"
+                    xml:lang="en-us">
+    <title>SOAP-based Web Services</title>
+    <conbody>
+        <section>
+            <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> exposes its basic functionality as public Web services which are based on SOAP (Simple Object Access Protocol) and WSDL (Web Services Description Language). The Web services, their public APIs, and additional resources, templates, samples, and utilities can be used to integrate applications with <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> in order to make them available as services to customers as well as to connect <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> with external systems.</p>
+            <p>A Web service is a software module performing a discrete task or a set of tasks that can be accessed and invoked over a network, especially the World Wide Web. A provider makes Web services available to client applications that want to use them. A client application can invoke Web services through remote procedure calls (RPC). A published Web service is described in a WSDL file that allows you to locate it and evaluate its suitability for your needs. As an example, a company could provide a Web service to its customers to check an inventory on products before they order them. </p>
+            <p>Web services as well as the client applications can be written in different languages and run on different platforms. The <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> Web services are written in Java using JAX-WS. </p>
+        </section>
+        <section>
+            <title>Web Service Standards</title>
+            <p>The development of Web services is based on the following standards: </p>
+            <ul>
+                <li>SOAP (Simple Object Access Protocol)<p>SOAP is a transport-independent messaging protocol. SOAP messages are XML documents that are sent back and forth between a Web service and the calling application. SOAP uses one-way messages, although it is possible to combine messages into request-response sequences. The SOAP specification defines the format of the XML message but not its content and how it is actually sent. However, the SOAP specification defines how SOAP messages are routed over HTTP.</p><p>The <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> Web services use SOAP for the XML payload (XML data part) and HTTP as the transport protocol for the SOAP messages. The <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> Web services support the SOAP 1.1 protocol.</p></li>
+                <li>WSDL (Web Service Description Language), version 1.1<p>WSDL is an XML-based language used to define Web services and describe how to access them. Specifically, it describes the data and message contracts a Web service offers. By examining a Web service's WSDL document, developers know what methods are available and how to call them using the proper parameters. </p></li>
+            </ul>
+            <p>For more information about SOAP and WSDL, refer to the SOAP and WSDL documents on the website of the World Wide Consortium website (<codeph>www.w3c.org</codeph>).</p>
+        </section>
+        <section>
+            <title>Web Service Versions</title>
+            <p>The current version of a <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> Web service is provided in a <codeph>&lt;documentation&gt;</codeph> tag in the service's WSDL file.</p>
+            <p>A compatibility layer ensures that SOAP messages received from a Web service client are analyzed, and, if required, converted to the newest format. In addition, outgoing SOAP messages from <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> are adapted to the version the client can consume. </p>
+            <p>Web service clients must provide the version of the Web services they want to consume in the header of their outgoing SOAP messages.</p>
+            <p>The version value can be specified in a configuration property of the Web service client. In case of compatible changes to the Web services in a new release of <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />, it is sufficient to change the version value in the configuration of the client. The client itself only needs to be adapted if there are incompatible changes. </p>
+        </section>
+    </conbody>
+</concept>

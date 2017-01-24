@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<reference id="reference832" xml:lang="ja-jp">
+    <title><ph platform="print" id="Price_Model_Details_reference_title_ph_1">料金設定の詳細</ph><ph
+            platform="help" id="Price_model_details_reference_title_ph_2">料金設定の詳細</ph></title>
+    <refbody>
+        <section>
+            <p><ph id="A_price_model_specifies_wheth_reference_refbody_section_p"
+                    >サービスを利用するサービス利用部門に対して課金するかどうか、また課金の金額を以下のような料金設定として指定します:</ph></p>
+            <p>
+                <ul compact="no">
+                    <li>購入済サービスの使用ごと。</li>
+                    <li>購入済サービスに割り当てられている利用者ごと。</li>
+                    <li>個々のイベントごと。例えば、サービスに対する利用者のログインやログアウト、特定のトランザクションの完了、特定のデータの作成・削除などが含まれます。 </li>
+                    <li>パラメーターとオプション</li>
+                </ul>
+            </p>
+            <p>サービスポータルへ登録済のサービスに対して、サービスを公開し、サービス利用部門にサービスを提供するには、サービス料金設定が定義されている必要があります。</p>
+        </section>
+        <section>
+            <title>料金設定のスコープ</title>
+            <p>料金設定に対し以下のスコープを持つことができます。 </p>
+            <p>
+                <ul compact="no">
+                    <li><b>サービスの料金設定</b>は基本的な料金設定です。サービスポータルへ登録済のサービスすべてにサービスの料金設定を登録する必要があります。サービスの料金設定を定義しない限り、そのサービスを公開できません。各サービスに対して定義できる料金設定は1つだけです。</li>
+                    <li><b>サービス利用部門向け料金設定</b>は、サービス利用部門およびそのサービス利用部門が使用するサービスに限定されます。同じサービス利用部門に提供される他のサービスまたは別のサービス利用部門では利用できません。サービス利用部門向け料金設定を定義すると、この特定のサービス利用部門だけにサービスポータルへ登録済のサービスが自動的に作成されます。<p>長年取引のあるサービス利用部門に対して低い料金を提供したり、試行中のサービス利用部門に新規サービスを無料提供する場合など、サービス利用部門向け料金設定を使用できます。</p></li>
+                    <li><b>購入済サービス向け料金設定</b>は、個別のサービス利用部門の購入済サービスに限定されます。同じサービス利用部門の他の購入済サービスまたは他のサービス利用部門では利用できません。購入済サービスが終了すると、料金設定が自動的に失効します。 </li>
+                </ul>
+            </p>
+            <p>サービスの料金設定はサービス仲介部門またはサービス提供代行部門が提供しているそのサービスにも適用されます。</p>
+            <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"/>
+            <ph platform="help">プラットフォームの</ph>請求システムはすべての料金設定のスコープを持っています。
+             外部の請求システムでは、請求システムと統合に使用する請求システムアダプターによって、スコープは制限されます。</p>
+        </section>
+        <section>
+            <title>料金設定要素</title>
+            <p>料金設定の持つ要素は料金設定が定義に依存します。</p>
+            <p>コスト計算に外部の請求システムを使用するサービスの料金設定は、当該システムにおいて定義されるため、その規則や構造に依存したものになります。この料金設定は外部の請求システムから
+            <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"/>
+            <ph platform="help">プラットフォームの</ph>当該サービス、購入済サービスにインポートされ、編集することはできません。</p>
+            <p><ph id="Each_price_model_consists_of_reference_refbody_section_p"
+                    >
+                    <ph platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"/></ph> 
+                    <ph platform="help">プラットフォームの</ph>
+                    請求システムを使用するサービスの料金設定は料金の計算方法を決定する次の要素で構成されます:
+               </ph>
+            </p>
+            <ul>
+                <li>
+                    <xref href="r_PriceModelDetails_onetime.xml"/>
+                </li>
+                <li>
+                    <xref href="r_PriceModelDetails_recurringForSub.xml"/>
+                </li>
+                <li>
+                    <xref href="r_PriceModelDetails_recurringForUser.xml"/>
+                </li>
+                <li>
+                    <xref href="r_PriceModelDetails_parameters.xml"/>
+                </li>
+                <li>
+                    <xref href="r_PriceModelDetails_events.xml"/>
+                </li>
+                <li>
+                    <xref href="r_PriceModelDetails_role.xml"/>
+                </li>
+            </ul>
+            <p>異なる料金要素が適用されるスコープを定義することで<xref href="r_PriceModelDetails_stepped.xml"
+                    >段階的な料金</xref>をサポートします。さらに、<xref
+                    href="r_PriceModelDetails_freeTrial.xml">無料試用期間</xref>を定義でき、<xref
+                    href="r_PriceModelDetails_discount.xml">割引</xref>を個別のサービス利用部門に付与することができます。</p>
+            <p>実際のサービスの料金の計算は、定義される料金設定の要素の組み合わせおよび料金設定で選択される料金計算方法によって異なります。</p>
+        </section>
+        <section>
+            <title><ph platform="help">料金計算方法</ph><ph platform="print"
+                >料金計算方法</ph></title>
+            <p id="costcalc1"
+                >
+                <ph platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"/></ph> 
+                <ph platform="help">プラットフォームの</ph>
+                請求システムを使用するサービスの課金方法には従量課金と定額があります。この料金設定は、購入済サービスや利用者毎の定期的な料金だけでなく、パラメーター、オプション、およびロールに対する料金にも影響を与えます。初期費用およびイベントの料金は影響を受けません。</p>
+            <p id="costcalc2">
+                <ul compact="no">
+                    <li>
+                        <p id="Pro_rata_calculation_concept_conbody_section_2_p"
+                            ><b>従量課金</b>は、ミリ秒単位で計算されます。</p>
+                        <p id="If_the_calculation_is_pro_rat_concept_conbody_section_2_p"
+                            >サービス利用部門は、サービスを利用した時間に比例した分だけ課金されます。</p>
+                        <p id="Pro_rata_calculation_concept_conbody_section_2_p"
+                            >夏時間への切り替えについては、料金計算で考慮に入れられています: 夏時間が始まる日は、１日が23時間で計算されます。切り替えがおこなわれるその週とその月は、１時間短い時間で計算されます。夏時間が終わる日は、25時間で計算されます。その週とその月は、同様に１時間長い時間で計算されます。</p>
+                    </li>
+                    <li>
+                        <p id="If_the_calculation_is_per_tim_concept_conbody_section_2_p"
+                                ><b>定額</b>は、課金単位 (月, 週, 日, 時間) に応じて計算されます。</p>
+                        <p id="If_the_calculation_is_per_tim_concept_conbody_section_2_p"
+                            >サービス利用部門は、サービスを利用したその課金単位毎に課金されます。その課金単位内ですべての時間利用していなくても、その時間単位分全額を課金します。 定額の料金は、請求期間の最後の課金単位の時間に計算されます。</p>
+                        <p><ph id="The_time_unit_for_the_concept_conbody_section_2_p"
+                                    >課金単位は、<b>時間</b>, <b>日</b>, <b>週</b>, または <b>月</b> のいずれかを指定できます。</ph> 各時間単位の開始と終了は、以下のように事前に定義されています: </p>
+                        <p><b>時間</b>: 00:00.000 から 59:59.999　まで。</p>
+                        <p><b>日</b>: 00:00:00.000 から 23:59:59.999 まで。</p>
+                        <p><b>週</b>: 月曜日 00:00:00.000 から 日曜日 23:59:59.999　まで。</p>
+                        <p><b>月</b>: 月の初日 00:00:00.000 から月の最終日 23:59:59.999　まで。</p>
+                    </li>
+                    <li><p id="costcalc3"
+                            >サービスの料金設定やサービス利用部門向け料金設定では、料金計算方法を独自に設定したり変更することができます。料金設定を更新する際には、従量課金と定額を切り替えることができます。この場合は価格は維持されます。料金設定を無料に変更すると、価格は失われます。</p>購入済サービスの料金設定の料金計算方法を変更することは<b>できません</b>。</li>
+                </ul>
+            </p>
+        </section>
+    </refbody>
+</reference>

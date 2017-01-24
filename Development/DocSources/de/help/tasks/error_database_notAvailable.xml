@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="de-de">
+  <title>Probleme mit der Verbindung zur Datenbank beheben</title>
+  <taskbody>
+    <context>
+      <p>Wenden Sie sich an Ihren Plattform-Betreiber, der die Verbindung zur Datenbank überprüfen und gegebenenfalls Fehler beheben kann. In der Datenbank werden die Zugangsdaten der Benutzer gespeichert. Die Datenbank wurde eventuell gestoppt, oder es sind andere Verbindungsprobleme aufgetreten. </p>
+    </context>
+  </taskbody>
+</task>

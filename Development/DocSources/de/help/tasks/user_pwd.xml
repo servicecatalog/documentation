@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="de-de">
+    <title>Passwort ändern</title>
+    <taskbody>
+        <context>
+            <p>Auf der Seite <uicontrol>Passwort ändern</uicontrol> können Sie Ihr aktuelles Passwort ändern. </p>
+            <p>
+                <note>Falls Ihre Organisation ein externes Authentifizierungssystem zur Benutzerverwaltung verwendet, wenden Sie sich zum Ändern Ihres Passworts an Ihren Administrator.</note>
+            </p>
+            <p><b>So ändern Sie Ihr Passwort</b>:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Geben Sie Ihr aktuelles Passwort und das neue Passwort in die entsprechenden Felder ein, und wiederholen Sie danach das neue Passwort.</cmd>
+                <info>
+                    <p>Das Passwort muss aus mindestens 6 Zeichen bestehen. Es darf nicht länger als 100 Zeichen sein.</p>
+                    <p>Beim Eingeben des Passworts zeigt Ihnen das Feld <uicontrol>Passwortsicherheit</uicontrol>, wie sicher Ihr Passwort ist. Die Farbe grün bedeutet, dass Sie ein sicheres Passwort eingegeben haben. Ein sicheres Passwort besteht aus mindestens 8 Zeichen und verwendet eine Kombination aus Zahlen, Buchstaben und Sonderzeichen. </p>
+                </info>
+            </step>
+            <step>
+                <cmd>Speichern Sie das neue Passwort mit <uicontrol>Ändern</uicontrol>.</cmd>
+            </step>
+        </steps>
+        <result>
+            <p>Das neue Passwort wird gespeichert. Verwenden Sie es, wenn Sie sich das nächste Mal anmelden. </p>
+        </result>
+    </taskbody>
+</task>

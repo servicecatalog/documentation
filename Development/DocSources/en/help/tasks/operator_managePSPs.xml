@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd">
+<task id="task634" xml:lang="en-us">
+  <title>Managing payment service providers</title>
+  <taskbody>
+    <context>
+      <p>On the <uicontrol>Manage payment service provider</uicontrol> page, you can configure the communication with a payment service provider (PSP) and define the payment types made available by the PSP. </p>
+      <p>For successfully integrating a PSP, several prerequisites must be fulfilled: </p>
+      <p>
+        <ul compact="no">
+          <li>
+            <p id="psp2">Your organization, i.e. the operator organization, must be registered in the PSP system.</p>
+          </li>
+          <li>
+            <p id="psp3"
+              >The suppliers or resellers who are to use the services of the PSP need to have a contractual relationship with the PSP. The supplier or reseller organizations must also be registered in the PSP system. </p>
+          </li>
+          <li>
+            <p id="psp3a"
+              >The PSP issues an identifier for the supplier or reseller so that payments can be immediately linked to the supplier's or reseller's account.</p>
+          </li>
+          <li>
+            <p id="psp4"
+                >Your own organization and the PSP organization must have exchanged certificates so that trusted and secure communication between <ph
+                platform="print"><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"> </ph></ph><ph
+                platform="help">the platform</ph> and the PSP system is ensured.</p>
+            <p>The usage and integration of certificates is described in detail in the <i>Operator's Guide</i>.</p>
+          </li>
+          <li>
+            <p id="psp5"
+                >A PSP integration adapter must have been implemented as a Web service and deployed on an application server. This adapter is a Web service providing the methods for integrating the PSP with <ph
+                platform="print"><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"> </ph></ph><ph
+                platform="help">the platform</ph>. You need the URL pointing to the WSDL file of this service.</p>
+            <p>For details on implementing an integration adapter, refer to the documentation shipped with the <codeph>oscm-integration-psp-pack.zip</codeph> file.</p>
+          </li>
+          <li>
+            <p id="psp6"
+              >The PSP must have informed you about the types of payment he offers and which configuration values to set for using his services.</p>
+          </li>
+          <li>
+            <p id="psp7">You need to make the following configuration setting for <ph platform="print"><ph
+                  conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"> </ph></ph><ph platform="help"
+                >the platform</ph>: </p>
+            <p id="psp8"
+                ><codeph>PSP_USAGE_ENABLED</codeph>: Set the value to <codeph>true</codeph> in order to enable PSP integration (default: <codeph>false</codeph>).</p>
+            <p>Click <xref href="operator_manageConfiguration.xml">here</xref> for details.</p>
+          </li>
+        </ul>
+      </p>
+      <p><b>To configure a payment service provider</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>From the <uicontrol>Payment service provider</uicontrol> list, select the PSP to configure.</cmd>
+        <info>
+          <p>The list contains all PSPs registered with your platform.</p>
+          <!--p>After the installation of the platform, Heidelpay is created as a sample PSP. When you select <b>heidelpay</b> from the list, the sample configuration is displayed including all parameters required for communicating with Heidelpay. In order to complete the integration of Heidelpay, you need to build, deploy, and configure the Heidelpay integration adapter as shipped with the <codeph>oscm-integration-psp-pack.zip</codeph> file. </p-->
+        </info>
+      </step>
+      <step>
+        <cmd>Specify the configuration keys and their values needed for communicating with the PSP: Click <b>Add</b> to enter a new key-value pair.</cmd>
+        <info>
+          <p>The configuration settings depend on the implementation of the PSP integration adapter. You must be informed about the required settings by the PSP. </p>
+        </info>
+      </step>
+      <step>
+        <cmd>Define the payment types that the PSP offers. Click <b>Add</b>, and proceed on the <uicontrol>New payment type</uicontrol> page. </cmd>
+        <info>You can add payment types, but not remove a type already defined for the PSP. The names of the payment types can be freely defined. The payment types themselves are provided by the PSP. For example, if an integration with Heidelpay has been implemented and selected, <codeph>CREDIT_CARD</codeph> and <codeph>DIRECT_DEBIT</codeph> are already present.</info>
+      </step>
+      <step>
+        <cmd>To save your entries, click <uicontrol>Save</uicontrol>.</cmd>
+      </step>
+    </steps>
+    <result/>
+  </taskbody>
+</task>

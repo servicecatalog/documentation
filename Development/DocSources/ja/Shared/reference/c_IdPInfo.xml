@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_B32294CC9FA643A2A14A74B1DAA49C95" xml:lang="ja-jp">
+        <title>IdP管理者から取得する必要のある情報</title>
+        <conbody>
+                <section>
+                        <p>プラットフォームをインストールする際にデフォルトIdPをそのままセットアップし、テナントに他のIdPを関連付けたい場合以下が必要となります。</p>
+                        <p>
+                                <ul compact="no">
+                                        <li>IdP運用者との契約関係: IdPはWebブラウザのSSOやSecurity Token Service (STS)を使用したセキュアなWebサービスの呼び出しを許可します。</li>
+                                        <li>以下のサービスエンドポイントの情報: IdP運用者からこれらの情報を取得してください<p>
+                                                        <ul>
+                                                            <li>[WebブラウザのSSO向け] IdPのSAMLリダイレクションURL、およびシングルログアウトサービスのエンドポイントになるURL</li>
+                                                            <li>[WebブラウザのSSO向け] STSのサービスエンドポイント、およびSTSのMEXアドレス(Issuer Metadata Exchange)を指すURL</li>
+                                                        </ul>
+                                                </p><p>マルチテナント環境かつ複数テナントが一つの同じIdPシステムに関連づいている場合、テナントごとにリライングパーティを定義し通信する必要があります。</p></li>
+                                        <li>
+                                                <p>IdPシステムのエンティティID: IdP管理者はIdPシステム内のフェデレーションメタデータを検索することによりIDを取得することができます。</p>
+                                        </li>
+                                        <li>IdPにより使用される暗号化キーの長さ </li>
+                                        <li>認証リクエスト時に<codeph>GET</codeph>もしくは<codeph>POST</codeph>のどちらの方式を使用するかの情報</li>
+                                        <li>[WebブラウザのSSO向け] IdPからの公開鍵証明書: IdP運用者から本証明書を取得し、プラットフォームをデプロイしたアプリケーションサーバのトラストストアにインポートします。証明書のインポートの詳細については<i>運用ガイド システム運用管理部門編</i>を参照してください。</li>
+                                </ul>
+                        </p>
+                </section>
+        </conbody>
+</concept>

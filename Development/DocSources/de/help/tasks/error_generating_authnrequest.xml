@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="en-us">
+  <title>Anmelden mit ungültiger Mandanten-ID</title>
+  <taskbody>
+    <context>
+      <p>Sie haben versucht, sich am Administrationsportal anzumelden über einen URL mit der ID eines nicht existierenden Mandanten. Ein Mandant legt das externe Authentifizierungssystem fest, über das Sie authentifiziert werden. Wenden Sie sich an Ihren Plattformbetreiber oder Administrator, damit dieser überprüft, ob das System richtig konfiguriert ist, oder um Ihnen die richtige Mandanten-ID mitzuteilen. </p>
+    </context>
+  </taskbody>
+</task>

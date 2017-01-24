@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="en-us">
+  <title>Adding payment types</title>
+  <taskbody>
+    <context>
+      <p>On the <uicontrol>New payment type</uicontrol> page, you can add the payment types to be available for a supplier or reseller organization. The payment types defined here can later be made available for selection by customers. </p>
+      <p><b>To add a payment type</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>From the <uicontrol>Payment service provider</uicontrol> list, select the PSP that offers the payment type that you want to assign to the selected supplier or reseller organization. </cmd>
+        <info>
+          <p>The list contains all PSPs registered and configured on your platform.</p>
+        </info>
+      </step>
+      <step>
+        <cmd>In the <b>PSP identifier</b> field, enter the identifier or account number for the supplier or reseller as provided by the PSP. </cmd>
+        <info>Suppliers and resellers need to have a contractual relationship with the PSP. The PSP configures the channel for a supplier or reseller and issues an identifier, usually an account number, so that payments can be immediately linked to the supplier's or reseller's account.</info>
+      </step>
+      <step>
+        <cmd>Select the types of payment that the selected supplier or reseller may offer to his customers.</cmd>
+        <info>Next to <b>Payment</b>, you see the payment types offered by the selected PSP. The available payment types depend on the configuration of the PSP.</info>
+      </step>
+      <step>
+        <cmd>To save your entries, click <uicontrol>Save</uicontrol>.</cmd>
+        <info>
+          <p>
+            <note>You can no longer remove a payment type which has been assigned to a supplier or reseller organization.</note>
+          </p>
+        </info>
+      </step>
+    </steps>
+    <result>
+      <p>You are returned to the page for managing the organization. </p>
+    </result>
+  </taskbody>
+</task>

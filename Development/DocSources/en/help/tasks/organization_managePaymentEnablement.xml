@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="en-us">
+  <title>Managing payment types</title>
+  <taskbody>
+    <context>
+      <p>On the <uicontrol>Manage payment types</uicontrol> page, you specify how customers may pay for their subscriptions, for example, on receipt of invoice, with credit card, or by direct debit. You can specify the payment types for individual customers and services. </p>
+      <note>Payment types as well as billing addresses are relevant for services that use the platform's native billing system and are not free of charge. Even for these services, however, your operator may deactivate any possibilities for customers to enter such payment information. If this is the case, the <uicontrol>Manage payment types</uicontrol> page is not available and the definition of payment types is not possible.</note>
+      <p><ph id="Your_operator_is_responsible_task_taskbody_context_p_2_ph"
+          >Your operator is responsible for configuring the payment types you can offer. Payment on receipt of invoice is automatically set up for all suppliers and resellers. This means that you can always allow your customers to pay on receipt of invoice without additional preparations by your operator. Payment on receipt of invoice implies that you are responsible for creating invoices and collecting payments.</ph></p>
+      <p><ph id="If_you_request_a_payment_type_task_taskbody_context_p_3_ph"
+          >If you request a payment type other than invoice, you need to have a contractual relationship with a commercial payment service provider (PSP). Your operator can then set up the types of payment as allowed in your agreement with the PSP. The responsibility for creating invoices and collecting payments is thus delegated to the PSP.</ph></p>
+      <p><ph id="If_you_decide_to_offer_more_t_task_taskbody_context_p_4_ph"
+          >If you decide to offer more than one payment type to a customer, the customer is free to choose the type he prefers when subscribing to a service. If you remove a used payment type, the customer must specify a new one before he can continue using the service.</ph></p>
+      <p id="Be_aware_of_the_following_eff_task_taskbody_context_p_5"
+        >Be aware of the following effects of removing a used payment type:</p>
+      <ul compact="no">
+        <li id="If_you_remove_a_used_payment_task_taskbody_context_ul_li"
+          >If you remove a used payment type during a customer's free trial period, the free trial period is not extended by the time the service could not be used. </li>
+        <li id="If_you_remove_a_used_payment2_task_taskbody_context_ul_li"
+          >If you remove a used payment type for a subscription for which the charges are calculated per time unit, the customer may be charged with additional costs from stepped prices. Any customer who does not continue using the service in the time unit in which you removed the payment type, is affected. The resumed subscription is treated like a new subscription. This means that additional costs result, for example, from the sum of time units the users are assigned to the subscription or from the number of events that occur.</li>
+      </ul>
+      <p>On the <uicontrol>Manage payment types</uicontrol> page, you can define the payment types you want to offer for services and for customers. The intersection of both sets of payment types determines which payment types a customer can finally choose from when subscribing to a service. If the intersection is empty, i.e. the two sets of payment types have no payment types in common, the customer is not offered any payment type at all. Subscribing to a service is not possible in this case.</p>
+      <p><b>To define a payment type</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>Select the check box in the corresponding section. You can select a payment type for all new services, all new customers, individual services, or individual customers. </cmd>
+        <info/>
+      </step>
+      <step>
+        <cmd>To store the payment type, click <uicontrol>Save</uicontrol>.</cmd>
+      </step>
+    </steps>
+    <result>
+      <p>The selected payment type is instantly available for selection.</p>
+      <p><b>To remove a payment type</b>:</p>
+      <p>
+        <ol>
+          <li>Clear the check box in the corresponding section.</li>
+          <li>To remove the payment type, click <uicontrol>Save</uicontrol>. </li>
+        </ol>
+      </p>
+      <p>The selected payment type is instantly removed. It is no longer available for selection.</p>
+    </result>
+  </taskbody>
+</task>

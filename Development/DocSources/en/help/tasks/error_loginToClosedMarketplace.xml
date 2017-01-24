@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="en-us">
+  <title>Login to restricted marketplace</title>
+  <taskbody>
+    <context>
+      <p>Your login failed because you do not have access to this marketplace.</p>
+      <p>Contact the marketplace owner for the required permissions.</p>
+    </context>
+  </taskbody>
+</task>

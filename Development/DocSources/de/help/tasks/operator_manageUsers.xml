@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="de-de">
+  <title>Benutzer verwalten</title>
+  <taskbody>
+    <context>
+      <p>Auf der Seite <uicontrol>Benutzer verwalten</uicontrol> können Sie folgende Aufgaben durchführen: <ul>
+          <li>Das Konto eines Benutzers sperren. Dies ist beispielsweise erforderlich, wenn Sie unerlaubten Zugriff auf das System vermuten. </li>
+          <li>Das Konto eines Benutzer entsperren. Ein Benutzerkonto wird automatisch gesperrt, wenn der Benutzer mehrmals versucht, sich mit einem falschen Passwort anzumelden (Voreinstellung: dreimal).</li>
+          <li>Das Passwort eines Benutzers zurücksetzen. In diesem Fall wird ein neues Passwort generiert und dem Benutzer per E-Mail gesendet. </li>
+          <li>Mehrere Benutzer auf einmal registrieren. Hierzu importieren Sie eine Datei mit Benutzerdaten. </li>
+        
+        </ul></p>
+      <p>Im oberen Bereich der Seite wird die Anzahl der aktuell für die Plattform registrierten Benutzer und die maximale Anzahl der Benutzer angezeigt (Voreinstellung: 10). In regelmäßigen Abständen überprüft das System die Anzahl der registrierten Benutzer. Sie werden per Email informiert, sobald die maximale Anzahl registrierter Benutzer überschritten ist.</p>
+      <p>Alle Aufgaben, die auf der Seite <uicontrol>Benutzer verwalten</uicontrol> erledigt werden können, führen Sie im Auftrag eines Administrators der Organisation durch, dessen Benutzer Sie verwalten sollen. Der Administrator muss Ihnen die jeweiligen Benutzernamen mitteilen.</p>
+      <p>
+        <note>Wenn die Plattform zur Authentifizierung von Benutzern verwendet wird (Authentifizierungsart INTERNAL) und eine Organisation ein externes LDAP-System zur Authentifizierung von Benutzern verwendet, können Eingaben nur in die Felder gemacht werden, die nicht auf Felder im LDAP-System abgebildet sind. Beispielweise können Passwörter nur im LDAP-System geändert werden. Das Registrieren mehrere Benutzer durch den Import einer Datei mit Benutzerdaten ist nicht möglich.<p>Wenn die Plattform als SAML Service Provider installiert ist (Authentifizierungsart SAML_SP), steht die Option <b>Passwort zurücksetzen</b> nicht zur Verfügung.  Das Zurücksetzen von Passwörtern muss im Identity Provider-System erfolgen. Außerdem können Benutzer nur auf der Plattform gesperrt oder entsperrt werden, nicht im Identity Provider-System. Das heißt, dass sich ein auf der Plattform gesperrter Benutzer weiterhin am Identity Provider-System anmelden kann. Wenn Benutzer in einer Datei mit Benutzerdaten definiert sind, müssen die Benutzernamen mit denen im Identity Provider-System übereinstimmen.</p><p>Detaillierte Informationen zu den Authentifizierungsarten finden Sie im <i>Installation Guide</i>. </p></note>
+      </p>
+      <p><b>So setzen Sie ein Passwort zurück oder sperren/entsperren das Konto eines Benutzers</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>Geben Sie den Benutzernamen ein oder wählen Sie den Namen in der Liste.</cmd>
+        <info/>
+      </step>
+      <step>
+        <cmd>Klicken Sie <uicontrol>Passwort zurücksetzen</uicontrol>, <uicontrol>Entsperren</uicontrol> oder <uicontrol>Sperren</uicontrol>.</cmd>
+      </step>
+    </steps>
+    <result>
+      <p>Der Benutzer erhält per E-Mail eine entsprechende Benachrichtigung.</p>
+      <p><b>So registrieren Sie mehrere Benutzer einer Organisation</b>:</p>
+      <p>
+        <ol compact="no">
+          <li>Fordern Sie vom Administrator der Organisation eine Datei mit den erforderlichen Benutzerdaten an oder legen Sie die Datei selbst an. Ausführliche Informationen zum Format und Inhalt der Datei finden Sie <xref
+              href="../../Shared/reference/r_FileFormat_ImportUsers.xml">hier</xref>. </li>
+          <li>Importieren Sie die Datei mit den Benutzerdaten: <p>
+              <ol compact="no">
+                <li>Wählen Sie die Organisation, für die Sie Benutzer importieren möchten.</li>
+                <li>Wählen Sie den Marktplatz, auf dem Benutzer arbeiten werden.</li>
+                <li>Klicken Sie das Feld <b>Dateiname</b> oder <b>Durchsuchen</b> und wählen Sie die Datei mit den Benutzerdaten.</li>
+                <li>Klicken Sie <b>Importieren</b>. <p>Die Plattform validiert die Benutzerdaten, bevor der eigentliche Import gestartet wird. Folgendes wird geprüft: </p><p><ul
+                      compact="no">
+                      <li>Ob alle Zeilen mit Benutzerdaten vollständig ausgefüllt sind (alle Felder müssen angegeben sein).</li>
+                      <li>Ob die Schreibweise der Anrede und Benutzerrollen korrekt ist.</li>
+                      <li>Wenn mehrere Benutzerrollen angegeben sind, ob diese in doppelte Anführungszeichen eingeschlossen ist.</li>
+                    </ul>Wenn die Plattform bei der Validierung einen Fehler feststellt, wird eine Fehlermeldung angezeigt und der Import nicht gestartet.</p><p>Sie müssen die Informationen in der Datei korrigieren, bevor Sie den Importvorgang erneut starten können.</p><p>Sie können nicht mehrere Importvorgänge gleichzeitig starten. Sie müssen warten, bis der aktuelle Vorgang beendet ist. Bei einer großen Benutzeranzahl kann dies einige Zeit in Anspruch nehmen.</p></li>
+              </ol>
+            </p></li>
+        </ol>
+      </p>
+      <p>Nach dem Import erhält jeder erfolgreich importierte und registrierte Benutzer per E-Mail seine Anmeldedaten und ein Passwort für die erste Anmeldung. Die neuen Benutzer werden automatisch zur Standard-Organisationseinheit der Organisation hinzugefügt. Dieser Einheit sind alle Benutzer zugeordnet, die aktuell für die Organisation registriert sind.</p>
+      <p>Sie selbst erhalten eine E-Mail mit folgenden Informationen: </p>
+      <p>
+        <ul compact="no">
+          <li>Anzahl der erfolgreich importierten und registrierten Benutzer. </li>
+          <li>Zu jedem nicht importierten Benutzer den Benutzernamen und den Grund für den Importfehler.<p>Mögliche Gründe sind: </p><ul
+              compact="no">
+              <li>Es existiert bereits ein Benutzer mit dem angegebenen Benutzernamen.</li>
+              <li>Der angegebene Benutzername ist ungültig. </li>
+              <li>Die angegebene Benutzerrolle steht für die Organisation nicht zur Verfügung. Wenn Sie beispielsweise für einen Serviceanbieter Benutzer importieren, kann die Benutzerrolle <codeph>BROKER_MANAGER</codeph> nicht zugewiesen werden. </li>
+            </ul></li>
+        </ul>
+      </p>
+    </result>
+  </taskbody>
+</task>

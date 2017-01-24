@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<reference id="reference832" xml:lang="en-us">
+    <title>Configuration Settings</title>
+    <refbody>
+        <section>
+            <p>The configuration settings for <ph audience="app">APP</ph><ph audience="aws"
+                    >the AWS integration software</ph><ph audience="ror">the ROR integration software</ph><ph
+                    audience="os">the OpenStack integration software</ph><ph audience="tps5"
+                    >the TPS5 integration software</ph><ph audience="vmware"
+                    >the vSphere integration software</ph> are provided in the following files in subfolders of the directory to which you extracted the <ph
+                    audience="app"><codeph>oscm-app-install-pack.zip</codeph></ph><ph audience="aws"
+                        ><codeph>oscm-aws-install-pack.zip</codeph></ph><ph audience="ror"
+                        ><codeph>oscm-ror-install-pack.zip</codeph></ph><ph audience="os"
+                        ><codeph>oscm-openstack-install-pack.zip</codeph></ph><ph audience="tps5"
+                        ><codeph>oscm-tps5-install-pack.zip</codeph></ph><ph audience="vmware"
+                        ><codeph>oscm-vmware-install-pack.zip</codeph></ph> file (<codeph>&lt;install_pack_dir></codeph>): </p>
+            <p audience="aws"><ul>
+                    <li><codeph>domains/app_domain/glassfish.properties</codeph></li>
+                    <li><codeph>databases/app_db/db.properties</codeph></li>
+                    <li><codeph>databases/app_db/configsettings.properties</codeph></li>
+                    <li><codeph>databases/app_db/configsettings_controller.properties</codeph></li>
+                </ul>This appendix describes the settings in detail. </p>
+            <p audience="ror"><ul>
+                    <li><codeph>domains/app_domain/glassfish.properties</codeph></li>
+                    <li><codeph>databases/app_db/db.properties</codeph></li>
+                    <li><codeph>databases/app_db/configsettings.properties</codeph></li>
+                    <li><codeph>databases/app_db/configsettings_controller.properties</codeph></li>
+                </ul>This appendix describes the settings in detail. </p>
+            <p audience="os"><ul>
+                    <li><codeph>domains/app_domain/glassfish.properties</codeph></li>
+                    <li><codeph>databases/app_db/db.properties</codeph></li>
+                    <li><codeph>databases/app_db/configsettings.properties</codeph></li>
+                    <li><codeph>databases/app_db/configsettings_controller.properties</codeph></li>
+                </ul>This appendix describes the settings in detail. </p>
+            <p audience="tps5"><ul>
+                <li><codeph>domains/app_domain/glassfish.properties</codeph></li>
+                <li><codeph>databases/app_db/db.properties</codeph></li>
+                <li><codeph>databases/app_db/configsettings.properties</codeph></li>
+                <li><codeph>databases/app_db/configsettings_controller.properties</codeph></li>
+            </ul>This appendix describes the settings in detail. </p>
+            <p audience="vmware"><ul>
+                <li><codeph>domains/app_domain/glassfish.properties</codeph></li>
+                <li><codeph>databases/app_db/db.properties</codeph></li>
+                    <li><codeph>databases/app_db/configsettings.properties</codeph></li>
+                    <li><codeph>databases/controller_db/db.properties</codeph></li>
+                    <li><codeph>databases/controller_db/csv/*.csv</codeph></li>
+                <li><codeph>databases/app_db/configsettings_controller.properties</codeph></li>
+            </ul>This appendix describes the settings in detail. </p>
+            <p audience="app">
+                <ul>
+                    <li><codeph>domains/app_domain/glassfish.properties</codeph><p>Refer to <xref
+                                href="../reference/r_ConfigSettings_glassfish_BESDomain.xml"/> for details.</p></li>
+                    <li><codeph>databases/app_db/db.properties</codeph><p>Refer to <xref
+                                href="../reference/r_ConfigSettings_db.xml"/> for details.</p></li>
+                    <li><codeph>databases/app_db/configsettings.properties</codeph><p>Refer to <xref
+                                href="../../APPInt/APP/r_ConfigSettings.xml"/> for details.</p></li>
+                </ul>
+            </p>
+        </section>
+    </refbody>
+</reference>

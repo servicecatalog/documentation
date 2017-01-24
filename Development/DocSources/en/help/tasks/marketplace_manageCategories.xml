@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd">
+<task id="task634" xml:lang="en-us">
+  <title>Managing categories</title>
+  <taskbody>
+    <context>
+      <p>On the <uicontrol>Manage categories</uicontrol> page, you can create, update, and delete categories for a marketplace.</p>
+      <p id="Categories_can_be_used_for_or_task_taskbody_context_p_2"><ph
+          id="Categories_can_be_used_for_or_task_taskbody_context_p_2_ph"
+          >Categories can be used for organizing and classifying services on a marketplace. For example, they may group different types of application software, such as word processing, desktop publishing, or spreadsheet software.</ph></p>
+      <p id="Categories_can_be_used_for_or_task_taskbody_context_p_2"><ph
+          id="As_a_marketplace_owner_you_c_task_taskbody_context_p_3_ph"
+          >As a marketplace owner, you can create any number of categories for your marketplace. Suppliers, brokers, and resellers can assign these categories to the services they publish to the marketplace. Marketplace visitors can use the categories for browsing the service catalog and filtering the services, provided that you have enabled the display of categories. Categories are also taken into consideration by the full-text search feature on the marketplace.</ph></p>
+      <p id="As_a_marketplace_owner_you_c_task_taskbody_context_p_3"
+          >As a marketplace owner, you can decide to use the categories for grouping the services displayed on the marketplace home page. Click <xref
+          href="marketplace_customizeLandingpage.xml">here</xref> for details.</p>
+      <p><ph id="A_category_can_be_provided_in_task_taskbody_context_p_4_ph"
+          >A category can be provided in all supported languages. For each category, you define a language-independent ID and the actual term to be displayed in each language.</ph> If a term for a specific language is not found, the English term is displayed by default. If the English term is not defined either, the language-independent category ID is used.</p>
+      <p><b>To create a category</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>From the <uicontrol>Marketplace</uicontrol> list, select the marketplace for which you want to create categories. </cmd>
+        <info>The list contains all marketplaces to which you have access as a marketplace manager.</info>
+      </step>
+      <step>
+        <cmd>Select the <uicontrol>Language</uicontrol> for which you want to provide a category.</cmd>
+        <info>
+          <p>The list contains all supported languages. You can add terms for additional languages later.</p>
+        </info>
+      </step>
+      <step>
+        <cmd>Click <b>Add</b> to define a new category.</cmd>
+      </step>
+      <step>
+        <cmd>Enter a language-independent ID for the category in the <b>Category ID</b> column.</cmd>
+        <info>
+          <p>The ID is restricted to 40 characters and must be unique within the category IDs defined for the marketplace.</p>
+        </info>
+      </step>
+      <step>
+        <cmd>Enter a term for the category that is to be displayed in the selected language.</cmd>
+        <info>
+          <p>The term is restricted to 100 characters. It must be unique within the selected language.</p>
+        </info>
+      </step>
+      <step>
+        <cmd>Click <b>Add</b> if you want to add an additional category. Otherwise, click <b>Save</b> to store the new category.</cmd>
+      </step>
+    </steps>
+    <result>
+      <p><b>To update a category</b>:</p>
+      <p>Updating a category allows you to change the category ID and the terms to be displayed for the category in all supported languages.</p>
+      <p>
+        <ol compact="no">
+          <li>From the <uicontrol>Marketplace</uicontrol> list, select the marketplace for which you want to update a category.<p>The list contains all marketplaces to which you have access as a marketplace manager.</p></li>
+          <li>To update the language-independent ID of a category, enter the new ID in the <b>Category ID</b> column.<p>The ID is restricted to 40 characters and must be unique within the category IDs defined for the marketplace.</p></li>
+          <li>To localize a category or update a localized term, select the required <uicontrol>Language</uicontrol> and enter the localized term in the corresponding column.<p>The term is restricted to 100 characters. It must be unique within the selected language.</p></li>
+          <li>Repeat Step 2 or Step 3 to update an additional category.</li>
+          <li>Click <uicontrol>Save</uicontrol> to store your changes.</li>
+        </ol>
+      </p>
+      <p>The categories are instantly updated. For marketplace visitors, the update takes effect with their next login to the marketplace.</p>
+      <p>The assignment of a category to a service by a supplier, broker, or reseller is not affected by the update. Usually, you will inform your suppliers, brokers, and resellers when you update a category. They are not notified automatically.</p>
+      <p><b>To delete a category</b>:</p>
+      <p>
+        <ol compact="no">
+          <li>From the <uicontrol>Marketplace</uicontrol> list, select the marketplace for which you want to delete a category.<p>The list contains all marketplaces to which you have access as a marketplace manager.</p></li>
+          <li>Select the check box in the <uicontrol>Delete</uicontrol> column for the category to be deleted. You can select one or multiple categories.<p>
+              <note>Do not delete the first three categories defined for the marketplace if you have decided to display services on the marketplace home page grouped by categories.</note>
+            </p></li>
+          <li>Click <uicontrol>Save</uicontrol>. If there are services published to the marketplace that have the category assigned, a corresponding warning is displayed. </li>
+          <li>Confirm the deletion.</li>
+        </ol>
+      </p>
+      <p>The category is instantly deleted. Visitors of the marketplace who use the category for filtering the services receive an empty service list. With their next login to the marketplace, the category is no longer provided to them as a filter.</p>
+      <p>If suppliers, brokers, or resellers had assigned the deleted category to their services, the assignment is removed. The suppliers, brokers, and resellers are notified by email about the deletion. </p>
+    </result>
+  </taskbody>
+</task>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_3413BBD173324104B42FB714974CABE7" xml:lang="en-us">
+        <title>Configuring an External User Authentication System</title>
+        <conbody>
+                <section>
+                        <p>Instead of maintaining user IDs and passwords in <ph
+                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        />, your customer may want to connect to his organization's own identity management system for user authentication. <ph
+                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> supports user authentication against remote LDAP systems via secure VPN connections.</p>
+                        <p>When using an LDAP system, your customer does not need to register his users manually with <ph
+                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                />. The administrator of the customer organization can import the users, thus automatically registering them.</p>
+                        <p>To enable access to the customer's LDAP system, you need to perform the following steps:</p>
+                        <ol>
+                                <li>Create an LDAP configuration file on your file system. </li>
+                                <li>Define the LDAP connection settings in the file. For a list of the relevant keys, refer to <xref
+                                                href="../reference/r_LDAP_SettingTypes.xml"/>.</li>
+                                <li>Activate the LDAP-based authentication when registering the customer, and use the <uicontrol>LDAP settings</uicontrol> option to store the connection settings specified in the configuration file in <ph
+                                                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                        />. <p>If you do not store any organization-specific connection settings in <ph
+                                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                        />, <ph
+                                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                /> will use default settings for LDAP connections.</p></li>
+                        </ol>
+                        <p>Access to the LDAP system is enabled for the customer as soon as the customer is registered with <ph
+                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                />. The administrator of the new customer organization can then import the required users from the LDAP system. The administrator can choose to import all users from the LDAP system or apply filter criteria to select specific users only. The imported users are sent an email with the URL for accessing the provided services. If required, the administrator of the customer organization can change the LDAP settings you defined for the organization.</p>
+                        <p>User data maintained in the LDAP system such as the password, first name, or last name, can only be changed in the LDAP system. If the data is changed, <ph
+                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> automatically synchronizes its own data with it. An automatic synchronization is not possible in case a user ID is changed in the LDAP system. Such a user has to be imported again.</p>
+                </section>
+        </conbody>
+</concept>

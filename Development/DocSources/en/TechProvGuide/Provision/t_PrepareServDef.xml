@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<task id="task_7C08DE35754A4E9CBD45408A2B742B77" xml:lang="en-us">
+   <title>Defining a Technical Service in an XML File</title>
+   <taskbody>
+      <context>
+         <p id="Each_application_to_be_integr_task_taskbody_context_p_1"
+            >You can define a technical service in an XML file. The file contains a description of the service's purpose, the license agreement, application parameters, options, events, service roles, and operations. </p>
+         <p id="A_service_definition_must_con_task_taskbody_context_p_2"
+               >A service definition must conform to the <codeph>TechnicalServices.xsd</codeph> XML schema. For detailed information on the elements and attributes, refer to <xref
+               format="dita" href="../Reference/r_TechServDescr.xml"/>. </p>
+         <p>To prepare a service definition in an XML file:</p>
+      </context>
+      <steps>
+         <step>
+            <cmd>Create an XML file according to the <codeph>TechnicalServices.xsd</codeph> XML schema, and save it under a name of your choice, for example, <codeph>ServiceDefinition.xml</codeph>.</cmd>
+         </step>
+         <step>
+            <cmd>In the <codeph>TechnicalService</codeph> section of the file, specify at least the following information:</cmd>
+            <info>
+               <ul>
+                  <li><codeph>id</codeph></li>
+                  <li><codeph>accessType</codeph></li>
+                  <li><codeph>provisioningType</codeph> (if not specified, instance provisioning is performed in synchronous mode)</li>
+                  <li><codeph>provisioningUrl</codeph> (optional for external access, otherwise required)</li>
+               </ul>
+            </info>
+         </step>
+         <step>
+            <cmd>If you have configured basic user authentication (authentication without certificates) and since <ph
+                  conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+               /> is the only application allowed to access your provisioning service, specify the following information:</cmd>
+            <info>
+               <ul>
+                  <li><codeph>provisioningUserName</codeph></li>
+                  <li><codeph>provisioningPassword</codeph></li>
+               </ul>
+            </info>
+         </step>
+         <step>
+            <cmd>Do one of the following:</cmd>
+            <choices>
+               <choice>If users log in directly to your application (user or direct access), describe how to access the application using the <codeph>accessInfo</codeph> element.</choice>
+               <choice>Fill in the <codeph>baseUrl</codeph> attribute (mandatory for login and external access). </choice>
+               <choice>If login is performed through <ph
+                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                     /> (login access), fill in the <codeph>loginPath</codeph> attribute. </choice>
+            </choices>
+         </step>
+         <step>
+            <cmd>If a billing system other than the default one set for <ph
+                  conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                  /> is to be used for providing price models and calculating charges for the service, fill in the <codeph>billingIdentifier</codeph> attribute.</cmd>
+         </step>
+         <step>
+            <cmd>If there are any parameters that are to be passed to your application by an instance provisioning call, declare them in the <codeph>ParameterDefinition</codeph> sections.</cmd>
+         </step>
+         <step>
+            <cmd>If your application sends events to <ph
+                  conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                  />, declare all the events in the <codeph>Event</codeph> sections.</cmd>
+         </step>
+         <step>
+            <cmd>If you want to define your own service roles, declare them in the <codeph>Role</codeph> sections.</cmd>
+         </step>
+         <step>
+            <cmd>If you want to allow users to invoke specific operations on your technical service, declare the operations in the <codeph>Operation</codeph> sections.</cmd>
+         </step>
+      </steps>
+   </taskbody>
+</task>

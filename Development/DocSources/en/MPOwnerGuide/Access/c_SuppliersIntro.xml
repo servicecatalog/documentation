@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_3413BBD173324104B42FB714974CABE7"
+                    xml:lang="en-us">
+            <title>Managing Service Sellers</title>
+            <conbody>
+                        <section>
+                                    <p>As a marketplace owner, you are responsible for deciding who is allowed to publish services to your marketplace. There are two basic strategies to do this:</p>
+                                    <ul>
+                                                <li>Use an open marketplace, where any seller organization can publish services. Explicitly exclude specific suppliers, brokers, and resellers, if required. </li>
+                                                <li>Use a marketplace for authorized sellers only, and explicitly admit the suppliers, brokers, and resellers who are to publish their services to it.</li>
+                                    </ul>
+                                    <p>The operator who creates a marketplace specifies whether it is open to all sellers or restricted to authorized sellers only. As the marketplace owner, you can change this setting later. </p>
+                        </section>
+                        <section>
+                                    <title>Open Marketplaces</title>
+                                    <p>On an open marketplace, any seller organization can publish services immediately after the marketplace has been created. For you as the marketplace owner, this strategy reduces the effort of managing and controlling the marketplace and the sellers. However, it also increases the risk that many sellers publish numerous services to the marketplace and customers are lost in the variety. </p>
+                                    <p>Another issue you may encounter on an open marketplace is the presence of sellers who do not adhere to the code of conduct, do not pay their fees for using the marketplace, or offer services which are not acceptable for some reason. As the marketplace owner, you can exclude these sellers from the marketplace and add them to a blacklist. The sellers' services are deactivated and customers can no longer subscribe to them. Existing subscriptions are not affected.</p>
+                                    <p>After the problems have been sorted out, you can re-admit a seller you have excluded from the marketplace and thus remove him from the blacklist. The seller can then again publish services to the marketplace.</p>
+                                    <p><ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> automatically notifies a seller by email when you exclude him from the marketplace or re-admit him. </p>
+                                    <p>To exclude and re-admit sellers, use the <uicontrol>Manage sellers</uicontrol> menu option in the <uicontrol>Marketplace</uicontrol> menu of the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> administration portal. </p>
+                        </section>
+                        <section>
+                                    <title>Marketplaces for Authorized Sellers</title>
+                                    <p>A marketplace can be restricted to one or more sellers who are explicitly authorized by the marketplace owner. <ph
+                    id="By_requiring_that_the_publish_concept_conbody_section_p_1">By requiring that the publishing of services needs explicit approval, marketplaces for authorized sellers provide the marketplace owners with optimum control. Different marketplaces can be operated independently. This is useful, for example, if a seller in one country is not to be allowed to offer services on a marketplace in another country.</ph>
+                                    </p>
+                                    <p>
+                                                <ph
+                    id="You_can_authorize_one_or_seve_concept_conbody_section_p_2">When the operator creates a marketplace for authorized sellers, the organization specified as the marketplace owner is automatically admitted to it, provided that it is assigned the supplier, broker, or reseller role. The marketplace owner can then authorize any number of sellers to publish services to the marketplace.</ph>
+                                    </p>
+                                    <p>
+                                                <ph
+                    conref="../../help/tasks/marketplace_manageSuppliers_notselected.xml#task634/As_the_marketplace_owner_you_task_taskbody_context_ul_li"/>
+                                    </p>
+                                    <p><ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> automatically notifies a seller by email when you admit him to a marketplace or when you revoke your publishing approval.</p>
+                                    <p>To allow sellers to publish services to your marketplace or to revoke your approval, use the <uicontrol>Manage sellers</uicontrol> menu option in the <uicontrol>Marketplace</uicontrol> menu of the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> administration portal. </p>
+                        </section>
+                        <section>
+                                    <title>Changing the Seller Policy for a Marketplace</title>
+                                    <p>You can at any time turn a marketplace which is open to any seller into a marketplace for authorized sellers only, and vice versa.</p>
+                                    <p>
+                                                <ph
+                    conref="../../help/tasks/marketplace_update.xml#task634/When_you_switch_from_an_open_task_taskbody_result_p_5_ol"/>
+                                    </p>
+                                    <p>
+                                                <ph
+                    conref="../../help/tasks/marketplace_update.xml#task634/The_same_applies_in_the_oppos_task_taskbody_result_p_5_ol"/>
+                                    </p>
+                                    <p>To change the seller policy for a marketplace, use the <uicontrol>Update marketplace</uicontrol> menu option in the <uicontrol>Marketplace</uicontrol> menu of the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> administration portal. </p>
+                        </section>
+            </conbody>
+</concept>

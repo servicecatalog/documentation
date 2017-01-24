@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="push_subsription_pm"
+                    xml:lang="en-us">
+    <title>Uploading Subscription Price Models</title>
+    <conbody>
+        <section>
+            <p>A billing adapter can be extended to upload external price models for subscriptions to <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> without a previous request from <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    />. This is accomplished by making the billing adapter work as a JMS client and pushing JMS messages with subscription price models into the remote queue of <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </p>
+            <p>This upload mechanism may be useful, for example, if the price model in the external billing system changes during the life time of a subscription. The billing adapter could check for such changes at regular intervals or the billing system could notify the adapter accordingly. The environment involving <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />, the billing adapter, and the external billing system must be set up and configured in a way to allow for the passing of the required notifications and JMS messages.</p>
+            <p>To make a billing adapter work as a JMS client and push JMS messages with price models to the remote queue of <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />, perform the following steps:</p>
+            <ol>
+                <li>Create the initial context for the remote JMS server.<codeblock>Properties jndiProperties = new Properties();
+InitialContext context = new InitialContext(jndiProperties);</codeblock><p>The <codeph>jndiProperties</codeph> must contain the provider URL of <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            />: </p><p><codeph>mq://&lt;host>:8176</codeph>
+                    </p><p><codeph>mq</codeph> is the Message Queue protocol of the application server Message Queue software (JMS provider for the application server).</p><p><codeph>&lt;host></codeph> is the host where <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> is deployed.</p></li>
+                <li>Retrieve the queue connection factory through JNDI lookup and create a connection.<codeblock>Object lookup = context.lookup("jms/bss/taskQueueFactory"); 
+ConnectionFactory conFactory =  ConnectionFactory.class.cast(lookup);
+Connection connection = conFactory.createConnection();</codeblock></li>
+                <li>Retrieve the queue in the remote JMS provider through JNDI lookup.<codeblock>Queue queue = (Queue)cntxt.lookup("jms/bss/taskQueue");</codeblock></li>
+                <li>Initialize the communication session.<codeblock>Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);</codeblock></li>
+                <li>Create and send the message with the subscription price model.<codeblock>MessageProducer producer = session.createProducer(queue);
+            ObjectMessage msg = session.createObjectMessage();
+            msg.setObject(priceModel);
+            producer.send(msg);</codeblock><p>The price model is a <codeph>PriceModel</codeph> object of the billing plug-in API. The context sent in the price model must contain values for:  <ul>
+                            <li><codeph>SUBSCRIPTION_ID</codeph></li>
+                            <li><codeph>TENANT_ID</codeph></li>
+                        </ul></p></li>
+            </ol>
+        </section>
+    </conbody>
+</concept>

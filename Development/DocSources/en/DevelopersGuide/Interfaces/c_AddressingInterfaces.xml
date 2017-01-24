@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_3413BBD173324104B42FB714974CABE7" xml:lang="en-us">
+    <title>Addressing the APIs - SOAP</title>
+    <conbody>
+        <section><p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> ships its APIs as WSDL files and as <codeph>.jar</codeph> files. You can directly implement the interfaces for calls from your application to <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />. No code generation is required. </p><p>For all Web service interfaces, <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> acts as a Web service client. <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> tries to detect the version of the implemented Web service and adapts its client version to the Web service version. <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> expects the version in the <codeph>&lt;documentation></codeph> tag of the respective WSDL file. If there is no version information, <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> assumes the latest service version. </p><p>It is recommended to use the WSDL files delivered with the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> integration package for the deployment of the Web service you implement. </p><p>Below is an example for implementing a provisioning service as an EJB (annotated bean) for an application that is to be deployed in a Java EE-compliant application server (GlassFish): </p><p>
+                <ol>
+                    <li>Copy the <codeph>ProvisioningService.wsdl</codeph> file delivered with the <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> integration package as well as its schema to the <codeph>META-INF/wsdl</codeph> directory of your application.</li>
+                    <li>In the <codeph>webservices.xml</codeph> descriptor file, add the WSDL file as follows: <p>
+                            <codeblock>&lt;webservices xmlns="http://java.sun.com/xml/ns/javaee" 
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2"
+   xsi:schemaLocation=
+      "http://java.sun.com/xml/ns/javaee 
+       http://www.ibm.com/webservices/xsd/
+            javaee_web_services_1_2.xsd">
+      &lt;webservice-description>
+         &lt;display-name>ProvisioningService&lt;/display-name>
+         &lt;webservice-description-name>ProvisioningService
+            &lt;/webservice-description-name>
+         &lt;wsdl-file><b>ProvisioningService.wsdl</b>&lt;/wsdl-file>
+         &lt;port-component> ... &lt;/port-component> 
+         ...
+      &lt;/webservice-description>
+   </codeblock>
+                        </p></li>
+                </ol>
+            </p><p>Below is an example for implementing a provisioning service for an application that is to be deployed as a standard <codeph>.war</codeph> archive (non-EJB implementation): </p><ol>
+                <li>Copy the <codeph>ProvisioningService.wsdl</codeph> file delivered with the <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> integration package as well as its schema to the <codeph>META-INF/wsdl</codeph> directory of your application.</li>
+                <li>In the <codeph>sun-jaxws.xml</codeph> descriptor file, add the WSDL file as follows: </li>
+            </ol><p>
+                <codeblock>&lt;endpoints version="2.0"
+       xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime">
+       &lt;endpoint name="ProvisioningService" implementation="org.oscm.jaxws.ProvisioningServicImpl"
+             url-pattern="/ProvisioningService"
+             <b>wsdl="ProvisioningService.wsdl"</b> />
+&lt;/endpoints>
+</codeblock>
+            </p>Refer to <xref href="../Implement/t_ImplProvServ.xml"/> for details.</section>
+    </conbody>
+</concept>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd">
+<task id="id_276">
+  <title>Managing Tenants</title>
+    <taskbody>
+        <context><p>Single sign-on (SSO) is supported when the platform is installed in SAML_SP mode for user authentication. This authentication mode requires the definition of an Identity Provider (IdP) against which all platform users are authenticated when accessing a marketplace or the administration portal. User IDs and passwords of the organization are maintained in the IdP system, such as OpenAM or Active Directory Federation Service (ADFS). </p><p>Any organization still needs to register its users with the platform. The user credentials must match the ones maintained in the IdP system. Connection settings have to be defined in a configuration file so that the platform can connect to the IdP system.</p><p>The initial IdP defined when installing the platform in SAML_SP mode is used platform-wide, i.e. for all users registered on the platform. This initial IdP is called "default IdP". In addition, the operator can define tenants and associate an IdP system with each tenant. Marketplaces and organizations can then be associated with a tenant. In this way, the users of an organization with access to such a marketplace are authenticated against the IdP system associated with this tenant when accessing the marketplace or the administration portal. </p><p>Users are always authenticated against the IdP associated with the respective marketplace or administration portal. Users of the same or of different organizations are authenticated against a different IdP when accessing different marketplaces with different IdPs associated.</p><p>On the <uicontrol>Manage tenants</uicontrol> page, you can define and manage tenants. For each tenant, you can define the connection settings to the IdP that is to be associated with the tenant. If no tenant is defined, users are authenticated against the default IdP specified when installing the platform in SAML_SP mode.</p>Before you start creating a tenant, make sure to have exchanged the required information with the IdP administrator. Click <xref
+                href="../../Shared/reference/c_IdPInfo.xml"
+                >here</xref> for information on what you need from the IdP administrator, and <xref
+                href="../../Shared/reference/c_IdPInfo2.xml">here</xref> for information on what the IdP administrator needs from you.<p>
+                <note>You as the platform operator are responsible for the correct configuration of tenants!<p>Be aware that although a marketplace can be associated with a tenant, the marketplace is, by default, still open for publishing and subscribing to services. To avoid this, configure the marketplace in a way that you restrict the access to it to specific sellers who can publish their services (authorized sellers only) and to specific customer organizations that can subscribe to services published on the marketplace (closed marketplace). To do so, you need to be the owner of the marketplace.</p></note>
+            </p><p><b>To create a tenant</b>:</p></context>
+        <steps>
+            <step>
+                <cmd>Prepare an IdP configuration file on your file system, and define the IdP connection settings in the file. </cmd>
+                <info>In the file, the following parameters must be defined: <p>
+                        <ul>
+                            <li><codeph><b>SSO_LOGOUT_URL</b></codeph><p>The URL of the endpoint of the IdP system's single logout service. Logout and invalidate session requests from <ph
+                                        platform="print"><ph
+                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        /></ph><ph platform="help"
+                                    >the platform</ph> are sent to this address. </p><p>For security and confidentiality reasons, it is recommended to use the HTTPS protocol.</p><p>Syntax: <codeph>https://&lt;host>:&lt;port>/&lt;LogoutServiceEndpoint></codeph></p><note>In the IdP system, a URL must be specified to which the response to the logout request is sent and the user is redirected by the logout. If several tenants are associated with one and the same IdP system, the IdP administrator must define one relying party per tenant and communicate it to the platform operator. </note></li>
+                            <li><codeph><b>SSO_IDP_URL</b></codeph><p>The SAML Redirect URL for the IdP service endpoint. This is the endpoint to which the authentication requests from <ph
+                                        platform="print"><ph
+                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        /></ph><ph platform="help"
+                                    >the platform</ph> are sent.</p><p>For security and confidentiality reasons, it is recommended to use the HTTPS protocol.</p><p>Syntax: <codeph>https://&lt;host>:&lt;port>/&lt;RedirectServiceEndpoint></codeph></p><p>
+                                    <note>If several tenants are associated with one and the same IdP system, the IdP administrator must define one relying party per tenant and communicate it to the platform operator. </note>
+                                </p></li>
+                            <li><codeph><b>SSO_IDP_AUTHENTICATION_REQUEST_HTTP_METHOD</b></codeph><p>The method used for HTTP authentication requests. Depending on the IdP, <codeph>GET</codeph> or <codeph>POST</codeph> requests can be used. </p><p>Default: <codeph>POST</codeph></p></li>
+                            <li><codeph><b>SSO_STS_METADATA_URL</b></codeph><p>The URL of the MEX address (Issuer Metadata Exchange) of the STS. This parameter is required for Security Token Service (STS) communication.</p><p>For security and confidentiality reasons, it is recommended to use the HTTPS protocol.</p><p>Syntax: <codeph>https://&lt;host>:&lt;port>/&lt;MEXAddress></codeph></p></li>
+                            <li><codeph><b>SSO_STS_URL</b></codeph><p>The URL of the STS endpoint. This parameter is required for Security Token Service (STS) communication.</p><p>For security and confidentiality reasons, it is recommended to use the HTTPS protocol.</p><p>Syntax: <codeph>https://&lt;host>:&lt;port>/&lt;ServiceEndpoint></codeph></p></li>
+                            <li><codeph><b>SSO_ISSUER_ID</b></codeph><p>A unique identifier of the tenant which issues authentication requests in a multi-tenancy environment. You can specify any alphanumeric string. The IdP uses this ID for identifying incoming SAML authentication requests.</p></li>
+                            <li><codeph><b>SSO_STS_ENCKEY_LEN</b></codeph><p>The length of the encryption key as used by the IdP. This parameter is required for Security Token Service (STS) communication.</p><p>Default: <codeph>128</codeph></p></li>
+                            <li><codeph><b>SSO_IDP_SAML_ASSERTION_ISSUER_ID</b></codeph><p>The entity ID of the IdP system. This ID is unique for the IdP system and has to be communicated between the platform operator and the IdP administrator. It is required so that the platform can ensure that the authentication information returned from the IdP system actually comes from the IdP system that is configured for authenticating users. </p><p>The IdP administrator can find out the ID by retrieving the federation metadata on his IdP system. </p><b>Examples</b>:<p>On the OpenAM server, the federation metadata can be retrieved in a Web browser as follows: </p><p><codeph>https://&lt;OpenAM_server>/openam/saml2/jsp/exportmetadata.jsp?entityid=</codeph></p><p>On the ADFS server, look for the following file: </p><p><codeph>http://&lt;ADFShost>/FederationMetadata/2007-06/FederationMetadata.xml</codeph></p><p>In the XML file, the issuer ID is known as <codeph>entityID</codeph>, for example: </p><p><codeph>entityID="http://example.adfs.com/adfs/services/trust"</codeph>
+                                </p></li>
+                        </ul>
+                    </p></info>
+            </step>
+            <step>
+                <cmd>On the <b>Manage tenants</b> page, click <b>Add</b>.</cmd>
+                <info/>
+            </step>
+            <step>
+                <cmd>Enter the following information: </cmd>
+                <info>
+                    <p>
+                        <ul>
+                            <li><b>Name</b>. Name of the tenant, for example the type of IdP associated with it. The tenant name must be unique on the platform. It may consist of a maximum of 255 alphanumeric characters.</li>
+                            <li><b>Description</b>. Brief description for the tenant. <ph
+                                    id="The_length_of_the_short_descr_task_taskbody_steps_step_2"
+                                    >The length of the description is restricted to 40 characters. </ph></li>
+                        </ul>
+                    </p>
+                </info>
+            </step>
+            <step>
+                <cmd>Load the IdP connection settings for the tenant: Click the <uicontrol>File name</uicontrol> entry field or <uicontrol>Browse</uicontrol>, and select the properties file prepared in Step 1. </cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Import</uicontrol>. </cmd>
+                <info>The unique identifier of the tenant is generated by the system and shown in the <b>ID</b> field. The URL of the IdP is retrieved from the IdP properties file and shown in the <b>IdP</b> field. Both fields cannot be edited manually.</info>
+            </step>
+            <step>
+                <cmd>To create the tenant, click <uicontrol>Save</uicontrol>.</cmd>
+                <info/>
+            </step>
+        </steps>
+        <result>
+            <p>
+                <note>If you create a tenant with invalid or no connection settings, the tenant will still be available for selection when an organization or marketplace is created. In this case, no user will be able to log in. You are responsible for defining the correct settings for all tenants you create. </note>
+            </p>
+            <p><b>To update the data of a tenant</b>: </p>
+            <p>
+                <ol>
+                    <li>From the tenants list, select the tenant whose data you want to edit. You can sort the list by tenant name, description, ID, or URL of the IdP.</li>
+                    <li>Edit the name and/or the description as desired. <p>Note that you cannot change the ID or the URL of the IdP.</p></li>
+                    <li>To update the connection settings to the IdP:<p>
+                            <ol>
+                                <li>Click <b>Export</b>. </li>
+                                <li>Specify a file name and save the file. <p>The current connection settings are written to a properties file. </p></li>
+                                <li>Edit the file as desired, and import it again by clicking <b>Import</b>. </li>
+                                <li>Confirm that existing properties will be overwritten.</li>
+                            </ol>
+                        </p></li>
+                    <li>To apply your changes, click <uicontrol>Save</uicontrol>.</li>
+                </ol>
+            </p>
+            <p>Clicking <b>Clear</b> removes all properties of the selected tenant from the database. This button is only enabled when properties for the selected tenant have been loaded before.</p>
+            <p>Clicking <b>Delete</b> removes the selected tenant. A tenant can only be deleted if it is not yet associated with an organization or a marketplace. </p>
+        </result>
+    </taskbody>
+</task>

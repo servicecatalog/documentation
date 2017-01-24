@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_3413BBD173324104B42FB714974CABE7" xml:lang="en-us">
+    <title>Purpose and Usage</title>
+    <conbody>
+        <section>
+            <p>This section contains a description of the purpose and usage of each API. For details on the interfaces and resources, refer to the Javadoc and YAML documentation. </p>
+        </section>
+        <section>
+            <title>Provisioning Service API</title>
+            <p>WSDL file: <codeph>ProvisioningService.wsdl</codeph></p>
+            <p>This interface must be implemented for providing a provisioning service to integrate an application with <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. For details, refer to <xref
+                    href="../Implement/t_ImplProvServ.xml"/>. </p>
+        </section>
+        <section>
+            <title>Notification Service API</title>
+            <p>WSDL file: <codeph>NotificationService.wsdl</codeph></p>
+            <p>REST API: <codeph>notification-rest-api.yaml</codeph></p>
+            <p>This interface must be implemented if you want to integrate an external process control system. For details, refer to <xref
+                    href="../ProcessControl/c_ProcessMgmtIntegration.xml"/>. </p>
+        </section>
+        <section>
+            <title>Operation Service API</title>
+            <p>WSDL file: <codeph>OperationService.wsdl</codeph></p>
+            <p>This interface must be implemented for providing additional functions or operations for a technical service that are to be accessible via the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> user interface. For details, refer to <xref href="../Implement/t_ImplementOperations.xml"/>.</p>
+        </section>
+    </conbody>
+</concept>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="Triggers" xml:lang="en-us">
+    <title>Integrating External Process Control</title>
+    <conbody>
+        <section
+            conref="../../Shared/concepts/c_ProcessMgmtIntegration.xml#concept_61077BCD8FA14EEAACBC7E421B654671/Organizations_often_have_spec_concept_conbody_section_1"/>
+        <section>
+            <p>For details on implementing such a service, contact the platform operator.</p>
+            <p>Users can see all pending actions at the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> user interface, cancel them, or delete aborted ones. </p>
+        </section>
+        <section
+            conref="../../Shared/concepts/c_ProcessMgmtIntegration.xml#concept_61077BCD8FA14EEAACBC7E421B654671/The_following_actions_may_be_concept_conbody_section_2"/>
+        <section>
+            <title>Involved Tasks</title>
+            <p>The following figure provides an overview of the steps required for integrating an external process control system with <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>: </p>
+            <p>
+                <fig>
+                    <image href="../_images/OPProcessControl.png" alt="OPProcessControl.png" width="435" height="567"/>
+                </fig>
+            </p>
+            <p>For details on the implementation of a notification service, refer to the <i>Developer's Guide</i>. Checking the load on the JMS queue is a platform operator task and therefore described in the <i>Operator's Guide</i>. </p>
+        </section>
+        <section>
+            <title>Creating a Process Trigger</title>
+            <p>To create a process trigger, use the <uicontrol>Process triggers</uicontrol> menu option in the <uicontrol>Account</uicontrol> menu of the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> administration portal.</p>
+            <p>For configuring the triggers for your organization, you need the following information: </p>
+            <p>
+                <ul>
+                    <li>Which action is to be subject to process control?</li>
+                    <li>How can the notification service of the external process control system be reached? You need the URL of the notification service. This URL depends on the application programming interface used for implementing the notification service.</li>
+                    <li>Is the action to be suspended until it is approved or rejected? If not, it will instantly be executed in <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            />. The process control system is informed if the action for a  non-suspending trigger is executed successfully. If the action is to be suspended, <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> will wait for a reply from the external system before the action is executed.</li>
+                </ul>
+            </p>
+        </section>
+    </conbody>
+</concept>

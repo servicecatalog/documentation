@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_B32294CC9FA643A2A14A74B1DAA49C95" xml:lang="en-us">
+    <title>Importing the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+        /> Server Certificate</title>
+    <conbody>
+        <section>
+            <p>To secure the calls from <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> to the provisioning service of an application, the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> server certificate has to be imported into the truststore valid for the provisioning service so that the service can identify <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> as a client. </p>
+            <p>Execute the following command: </p>
+            <p>
+                <codeblock>%JAVA_HOME%\bin\keytool -import -file bsssrv.crt -keystore keystore.jks -alias bsssrv</codeblock>
+            </p>
+        </section>
+    </conbody>
+</concept>

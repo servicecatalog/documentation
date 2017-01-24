@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="de-de">
+  <title>Marktplatz löschen</title>
+  <taskbody>
+    <context>
+      <p>Auf der Seite <uicontrol>Marktplatz löschen</uicontrol> können Sie einen Marktplatz von Ihrer Plattform löschen. </p>
+      <p>Wenn Sie einen Marktplatz löschen, werden automatisch alle auf dem Marktplatz veröffentlichten Services deaktiviert. Kunden können diese Services nicht mehr abonnieren. Laufende Abonnements sind nicht betroffen. </p>
+      <p><b>So löschen Sie einen Marktplatz</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>Wählen Sie in der Liste <uicontrol>Marktplatz</uicontrol> den zu löschenden Marktplatz.</cmd>
+        <info>
+          <p>Die Liste stellt alle Marktplätze zur Auswahl, die auf Ihrer Plattform angelegt wurden.</p>
+        </info>
+      </step>
+      <step>
+        <cmd>Klicken Sie <uicontrol>Löschen</uicontrol> und bestätigen Sie den Löschauftrag. </cmd>
+      </step>
+    </steps>
+  </taskbody>
+</task>

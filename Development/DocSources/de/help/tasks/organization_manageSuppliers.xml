@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="de-de">
+    <title>Serviceanbieter verwalten</title>
+    <taskbody>
+        <context>
+            <p>Auf der Seite <uicontrol>Serviceanbieter verwalten</uicontrol> legen Sie fest, welche Serviceanbieter berechtigt sein sollen, marktfähige Services für einen bestimmten technischen Service zu definieren. </p>
+            <p><b>So verwalten Sie Serviceanbieter</b>:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Wählen Sie den technischen Service, für den Sie Serviceanbieter hinzufügen oder löschen möchten.</cmd>
+                <info>Die Serviceanbieter, die aktuell berechtigt sind, marktfähige Services für diesen technischen Service zu definieren, werden angezeigt.</info>
+            </step>
+            <step>
+                <cmd>Um einen Serviceanbieter zur Liste der berechtigten Serviceanbieter hinzuzufügen, geben Sie die ID des Serviceanbieters im Feld <uicontrol>Organisations-ID</uicontrol> ein und klicken <uicontrol>Hinzufügen</uicontrol>.</cmd>
+                <info>Wenden Sie sich an den Serviceanbieter oder Ihren Plattform-Betreiber, wenn Sie die Organisations-ID nicht kennen.</info>
+            </step>
+            <step>
+                <cmd>Um einen Serviceanbieter aus der Liste der berechtigten Serviceanbieter zu löschen, markieren Sie den Serviceanbieter in der Liste und klicken <uicontrol>Löschen</uicontrol>.</cmd>
+                <info>
+                    <p>Wenn Kunden einen auf dem technischen Service basierenden marktfähigen Service des Serviceanbieters abonniert haben, wird eine entsprechende Meldung ausgegeben. Die Meldung listet die IDs der zugrunde liegenden Anwendungsinstanzen auf. Um die IDs der Instanzen Ihrer technischen Services anzuzeigen, können Sie einen Instanzenbericht erstellen.</p>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+    <related-links>
+        <linklist>
+            <title>Weitere Themen</title>
+            <link href="../tasks/organization_report.xml"/>
+        </linklist>
+    </related-links>
+</task>

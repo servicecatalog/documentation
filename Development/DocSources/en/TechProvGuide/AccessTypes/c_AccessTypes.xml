@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_1BCF5C425D7D4627AB1C66A085CF6E11" xml:lang="en-us">
+    <title>Access Types</title>
+    <conbody>
+        <section>
+            <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> offers various ways of integrating and accessing your application. The interaction takes place between the following components:</p>
+            <ul>
+                <li>The client which in fact is the user who accesses a service using a Web browser or a Web service</li>
+                <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></li>
+                <li>The application which is accessed by the user</li>
+            </ul>
+            <p>There are some criteria to be considered before you decide to use a specific access type. The following decision diagram helps you in deciding which access type to use according to your environment and requirements:</p>
+            <fig>
+                <image href="../_images/AccessDecision.png" height="254" width="261"/>
+            </fig>
+            <p>The decision you make is reversible. If the basic requirements of your system are changing, you can, of course, also change the access type.</p>
+            <p>The access type determines </p>
+            <ul>
+                <li>whether your application uses <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> for user authentication and <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> forwards login information to your application (<b>application login</b>).</li>
+                <li>whether your application needs to implement a <b>provisioning service</b>.</li>
+            </ul>
+            <p>The following table provides an overview of the different access types and the available combinations:</p>
+            <fig>
+                <image align="center" href="../../Shared/_images/MatrixAccessTypes.png" height="159" width="277"
+                    placement="break"/>
+            </fig>
+            <p>* <i>With user access, the application login can be controlled completely by the application, or SAML 1.1 can be used as a single sign-on mechanism for user authentication. </i></p>
+            <!-- note>
+                <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> offers the following additional access types: platform access and proxy access. The usage of these access types is discouraged since time or data-sensitive applications put a considerable load on <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> and cause a significant resource consumption. If you want to use platform or proxy access nevertheless, contact your platform operator.</p>
+            </note-->
+            <p>You define the desired access type when preparing a technical service definition for your application. If you opt for access through <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> (login access), you need to adapt the login/logout implementation in your application. Depending on the access type you choose, you must implement the methods defined by the provisioning service. </p>
+            <p>The following sections provide detailed information on the different access types. The sequence diagrams illustrate the interaction between the involved components. Arrows with solid lines represent messages requiring a response, arrows with dotted lines represent the response messages. </p>
+        </section>
+    </conbody>
+</concept>

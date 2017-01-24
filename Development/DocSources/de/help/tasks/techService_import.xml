@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="de-de">
+    <title>Servicedefinition importieren</title>
+    <taskbody>
+        <context>
+            <p>Auf der Seite <uicontrol>Servicedefinition importieren</uicontrol> können Sie eine XML-Datei mit einer Definition eines technischen Service importieren. Dies ist ein notwendiger Schritt, um eine Anwendung in die Plattform zu integrieren. </p>
+            <p>Wenn Sie einen technischen Service aktualisieren möchten, können Sie auch eine geänderte Servicedefinition gleichen Namens (ID) importieren. </p>
+            <p>Beachten Sie dabei folgendes:</p>
+            <ul compact="no">
+                <li>Wenn noch kein marktfähiger Service und kein Abonnement auf Basis des technischen Service definiert wurde, können Sie alle Eigenschaften des Service ändern.</li>
+                <li>Wenn bereits ein marktfähiger Service oder ein Abonnement auf Basis des technischen Service definiert wurde, sind die folgenden Aktionen nicht möglich:<p>
+                        <ul>
+                            <li>Parameter und deren Optionen ändern</li>
+                            <li>Ereignistypen ändern</li>
+                            <li>Parameter, Optionen und Ereignistypen löschen</li>
+                        </ul>
+                    </p></li>
+                <li>Servicerollen können nicht gelöscht werden, wenn bereits rollenspezifische Preise definiert sind oder Benutzer mit einer Servicerolle einem Abonnement zugeordnet sind.</li>
+                <li>Wenn Sie versuchen, eine unvollständige XML-Datei zu importieren, werden - soweit verfügbar - Standardwerte eingesetzt. Falls die XML-Datei danach noch immer unvollständig ist, wird der Import mit einer entsprechenden Fehlermeldung abgebrochen. Der Import einer XML-Datei mit ungültigen Werten für Attribute wird ebenfalls mit einer entsprechenden Fehlermeldung abgebrochen. </li>
+            </ul>
+            <p>Auf der Seite <uicontrol>Servicedefinition importieren</uicontrol> können Sie darüber hinaus prüfen, welche technischen Services aktuell verfügbar sind und wie sie definiert sind. </p>
+            <p>Informationen zu den XML-Dateien mit Servicedefinitionen finden Sie im Handbuch <i>Technology Provider's Guide</i>.</p>
+            <p><b>So importieren Sie einen technischen Service</b>:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Klicken Sie das Eingabefeld oder <uicontrol>Durchsuchen</uicontrol>, um die Datei mit der Definition des technischen Service in Ihrem Dateisystem auszuwählen. </cmd>
+                <info/>
+            </step>
+            <step>
+                <cmd>Starten Sie den Import mit <uicontrol>Importieren</uicontrol>.</cmd>
+            </step>
+        </steps>
+        <result>Der importierte Service wird in die Liste der zur Verfügung stehenden Services aufgenommen. Legen Sie anschließend einen oder mehrere Serviceanbieter fest, die auf Basis Ihres technischen Service marktfähige Services definieren. <p>Um die Eigenschaften eines existierenden technischen Service zu überprüfen, klicken Sie den Eintrag für den Service in der Liste. Die Seite <uicontrol>Service</uicontrol> wird angezeigt mit dem Namen des technischen Service, der Adresse des Provisioning Service, der Beschreibung, den Parameter- und Ereignisdefinitionen, den Servicerollen und den möglichen Operationen. </p><p>Welche Parameter- und Ereignisdefinitionen, Servicerollen und Operationen zur Verfügung stehen, ist abhängig von der Implementierung der zugrunde liegenden Anwendung und ihrer Integration.</p></result>
+    </taskbody>
+    <related-links>
+        <linklist>
+            <title>Weitere Themen</title>
+            <link href="techService_export.xml"/>
+            <link href="organization_manageSuppliers.xml"/>
+        </linklist>
+    </related-links>
+</task>

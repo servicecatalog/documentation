@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="en-us">
+    <title>Registering new users</title>
+    <taskbody>
+        <context>
+            <p>On the <uicontrol>Register new users</uicontrol> page, you can register new users for your organization and define their user roles. You can also register multiple users with the administrator and/or manager roles in one operation by importing a user data file. This is possible, if your organization does not use LDAP for user authentication. If your organization uses LDAP for user authentication, you can import them from the LDAP system using the <b>Import users</b> option and thus register them. </p>
+            <p>The role of your organization determines which roles can be assigned to the users. The user roles control the actions a user is allowed to execute:<ul
+                    compact="no">
+                    <li><ph
+                            conref="../../Shared/concepts/c_OrgsRoles.xml#concept2311/Standard_user_concept_conbody_section_p_4"
+                            /> Every user registered with the platform automatically is a standard user. <ph
+                            conref="../../Shared/concepts/c_OrgsRoles.xml#concept2311/Additional_user_roles_must_be_concept_conbody_section_p_4"
+                        />
+                    </li>
+                    <li><ph
+                            conref="../../Shared/concepts/c_OrgsRoles.xml#concept2311/Administrator_concept_conbody_section_p_4"
+                        /></li>
+                    <li><ph
+                            conref="../../Shared/concepts/c_OrgsRoles.xml#concept2311/OUAdministrator_concept_conbody_section_p_4"
+                        /></li>
+                    <li><ph
+                            conref="../../Shared/concepts/c_OrgsRoles.xml#concept2311/Subscription_manager_concept_conbody_section_p_4"
+                        /></li>
+                    <li><ph
+                            conref="../../Shared/concepts/c_OrgsRoles.xml#concept2311/Technology_manager_concept_conbody_section_p_4"
+                        /></li>
+                    <li><ph
+                            conref="../../Shared/concepts/c_OrgsRoles.xml#concept2311/Service_manager_concept_conbody_section_p_4"
+                        /></li>
+                    <li><ph
+                            conref="../../Shared/concepts/c_OrgsRoles.xml#concept2311/Reseller_concept_conbody_section_p_4"
+                        /></li>
+                    <li><ph
+                            conref="../../Shared/concepts/c_OrgsRoles.xml#concept2311/Broker_concept_conbody_section_p_4"
+                        /></li>
+                    <li><ph
+                            conref="../../Shared/concepts/c_OrgsRoles.xml#concept2311/Marketplace_manager_concept_conbody_section_p_4"
+                        /></li>
+                    <li><ph
+                            conref="../../Shared/concepts/c_OrgsRoles.xml#concept2311/Operator_concept_conbody_section_p_4"
+                        /> The first operator is created together with its operator organization when the platform is installed.</li>
+                </ul></p>
+            <p><b>To register a new user</b>:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Specify the following personal data for the user by editing the corresponding fields:</cmd>
+                <info>
+                    <p>
+                        <ul compact="no">
+                            <li><uicontrol>Title</uicontrol>: Salutation, such as <codeph>MR</codeph> or <codeph>MS</codeph></li>
+                            <li><uicontrol>First name</uicontrol></li>
+                            <li><uicontrol>Last name</uicontrol></li>
+                            <li><uicontrol>Email</uicontrol>: Email address of the user. It is used for notifying the user about the registration.<p>The system checks whether the syntax of the given email address is valid, and whether the domain name corresponds to the standards as defined and maintained by the Internet Assigned Numbers Authority (IANA). </p><p>Examples: <codeph>user.name@domain.arpa</codeph>, <codeph>user.name@domain.org</codeph>, <codeph>user@mycompany.lan.uk</codeph></p></li>
+                            <li><uicontrol>User ID</uicontrol>: ID with which the user is to log in to the platform. User IDs are restricted to 100 characters and must not contain any of the following characters:<p><codeph>! " # $ % &amp; ' * + , / : ; &lt; = > ? \ ^ `</codeph>
+                                </p><p>
+                                    <note>If your organization uses an external system for user authentication, the ID of the user to be registered must match an existing ID in the external system. </note>
+                                </p></li>
+                        </ul>
+                    </p>
+                </info>
+            </step>
+            <step>
+                <cmd>Select the language in which the user wants to work.</cmd>
+                <info>The user interface, available documentation, and emails are presented to the user in the language specified here. The user can change the language later. The list of available languages depends on the platform operator's definition of supported languages. </info>
+            </step>
+            <step>
+                <cmd>Assign the user one or several special user roles within your organization by selecting the relevant check boxes. </cmd>
+                <info>
+                    <p>The available user roles depend on the role of your organization. Standard users can only be registered on a marketplace. </p>
+                </info>
+            </step>
+            <step>
+                <cmd>To save the changes, click <uicontrol>Register</uicontrol>.</cmd>
+            </step>
+        </steps>
+        <result>
+            <p>The new user is sent an email with the login data and an initial password to be used for the first login. If your organization uses an external authentication system, passwords are managed in this system. Therefore, the new user is sent an email without a password. The password stored in the external authentication system must be used for logging in.</p>
+            <p>The new user is automatically added to your organization's default organizational unit. The default unit contains all users currently registered for your organization.</p>
+            <p><b>To register multiple administrators and managers in one operation</b>:</p>
+            <p>
+                <ol compact="no">
+                    <li>Create a file containing the required user data. Click <xref
+                            href="../../Shared/reference/r_FileFormat_ImportUsers.xml"
+                        >here</xref> for details on the format and content of the file.</li>
+                    <li>Import the user data file: <p>
+                            <ol compact="no">
+                                <li>Click the <b>File name</b> field or <b>Browse</b>, and select the file containing the user data.</li>
+                                <li>Click <b>Import</b>. <p>The system validates the user data file before starting the actual import. It checks whether: </p><p><ul
+                                            compact="no">
+                                            <li>All lines containing user data are complete (all fields are specified).</li>
+                                            <li>The spelling of the values for title and user roles is correct.</li>
+                                            <li>Multiple user roles are enclosed in double quotes.</li>
+                                        </ul>If an error is found during the validation of the user data file, a corresponding message is displayed and the import does not start. </p><p>You must correct the information in the file before you can start the import again. </p><p>You cannot start multiple imports at a time. You need to wait until the current import is finished. For long lists of users, this may take some time.</p></li>
+                            </ol>
+                        </p></li>
+                </ol>
+            </p>
+            <p>As soon as the import is finished, all users who have been imported and registered successfully are sent an email with the login data and an initial password to be used for the first login. The newly registered users are automatically added to your organization's default organizational unit. The default unit contains all users currently registered for your organization.</p>
+            <p>You are sent an email with the following information: </p>
+            <p>
+                <ul compact="no">
+                    <li>Number of users who were imported and registered successfully. </li>
+                    <li>For every user that was not imported: user ID and reason.<p>Possible reasons are: </p><ul
+                            compact="no">
+                            <li>A user with the specified ID already exists.</li>
+                            <li>The specified user ID is invalid. </li>
+                            <li>The specified user role is not available for your organization. For example, if your organization is a supplier, you cannot specify the <codeph>BROKER_MANAGER</codeph> user role.</li>
+                        </ul></li>
+                </ul>
+            </p>
+            <p>
+                <note>If you want to register multiple <b>standard</b> users for your organization:<p>
+                        <ol compact="no">
+                            <li>Define a user data file with the standard users to be registered. Do not specify a user role for these users.</li>
+                            <li>Login to a marketplace and import the user data file there (<uicontrol>Account</uicontrol> --> <uicontrol>Users</uicontrol>). </li>
+                        </ol>
+                    </p></note>
+            </p>
+        </result>
+    </taskbody>
+</task>

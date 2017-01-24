@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="ja-jp">
+  <title>支払種別の追加</title>
+  <taskbody>
+    <context>
+      <p><uicontrol>新規支払種別</uicontrol> ページでは、選択された支払代行システム（PSP）が提供する支払種別を定義することができます。ここで定義された支払情報は後でサービス提供部門およびサービス提供代行部門に対して提供することができます。これに対して、サービス提供部門およびサービス提供代行部門はサービス利用部門に対して提供する支払種別を選択できます。 </p>
+      <p>支払種別を追加することはできますが、PSPにすでに定義された方法を削除することはできません。支払種別の名前は自由に定義できます。支払種別自体はPSPが提供します。</p>
+      <p><b>支払種別を追加するには：</b></p>
+    </context>
+    <steps>
+      <step>
+        <cmd><uicontrol>名前</uicontrol> フィールドで、サービス提供部門、サービス提供代行部門およびサービス利用部門に表示する支払種別を入力します。 </cmd>
+        <info>
+          <p>名前には最大100文字まで指定できます。</p>
+        </info>
+      </step>
+      <step>
+        <cmd><uicontrol>支払種別</uicontrol> フィールドで、PSPが指定する支払種別のIDを入力します。 </cmd>
+        <info/>
+      </step>
+      <step>
+        <cmd>支払種別を保存するには、<uicontrol>保存</uicontrol> をクリックします。</cmd>
+        <info>
+          <p>
+            <note>支払種別を保存すると削除できなくなります。 </note>
+          </p>
+        </info>
+      </step>
+    </steps>
+    <result>
+      <p>PSPを設定するページに戻ります。</p>
+    </result>
+  </taskbody>
+</task>

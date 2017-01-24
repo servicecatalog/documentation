@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd">
+<task id="task634" xml:lang="en-us">
+  <title>Creating a marketplace</title>
+  <taskbody>
+    <context>
+      <p>On the <uicontrol>Create marketplace</uicontrol> page, you can create a marketplace to be operated on your platform.</p>
+      <p>Creating a marketplace includes defining the marketplace features and settings and assigning an organization as the owner. The organization you assign as the owner is automatically assigned the marketplace owner role. All administrators automatically receive the marketplace manager role. The marketplace manager role enables them to administrate and customize the marketplace.</p>
+      <p>As a prerequisite for creating a marketplace, the organization to be assigned as the marketplace owner must already exist.</p>
+      <p>If the platform is installed in SAML_SP mode, you can associate a tenant with the marketplace. The tenant defines the Identity Provider (IdP) against which users accessing the marketplace are to be authenticated. </p>
+      <p><b>To create a marketplace</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>Specify a name for the marketplace.</cmd>
+        <info>
+          <p>The marketplace name is offered for selection when marketplace managers administrate or customize the marketplace.</p>
+        </info>
+      </step>
+      <step>
+        <cmd>Define the features and settings for the marketplace by selecting or clearing the corresponding check boxes as required. The marketplace manager of the marketplace owner organization can update the features and settings later.</cmd>
+        <info>
+          <ul compact="no">
+            <li>
+              <p><uicontrol>Tagging</uicontrol>: <ph id="The_tag_cloud_contains_search_task_taskbody_steps_step_2"
+                  >When enabled, the tag cloud is available on the marketplace. It contains search terms that characterize the services offered on the marketplace. Visitors to the marketplace can filter the displayed services by these tags. The tags are specified by the technology providers who technically prepare the applications underlying the offered services.</ph></p>
+              <p><ph id="With_task_taskbody_steps_step_2"
+                  >When you disable this feature, the tag cloud and the tags for the individual services are not displayed on the marketplace. The tags defined for the services are not affected.</ph></p>
+            </li>
+            <li>
+              <p><uicontrol>Reviews</uicontrol>: <ph id="When_enabled_customers_who_s_task_taskbody_steps_step_2"
+                  >When enabled, customers who subscribed to services on the marketplace can rate these services and write comments on them. Other visitors can see the ratings and comments.</ph></p>
+              <p><ph id="With_task_taskbody_steps_step_3"
+                  >When you disable this feature, ratings and comments are not available on the marketplace.</ph></p>
+            </li>
+            <li>
+              <p><uicontrol>Social bookmarks</uicontrol>: <ph
+                  id="When_enabled_bookmarks_for_d_task_taskbody_steps_step_2"
+                  >When enabled, bookmarks for direct access to social networks and communication services are provided with the services on the marketplace. Visitors can use these bookmarks, for example, to recommend a service to a social network.</ph></p>
+              <p><ph id="With_task_taskbody_steps_step_4"
+                  >When you disable this feature, social bookmarks are not available.</ph></p>
+            </li>
+            <li>
+              <p><uicontrol>Authorized sellers only</uicontrol>: <ph
+                  id="When_enabled_only_authorized_task_taskbody_steps_step_2"
+                  >When enabled, only authorized supplier, broker, and reseller organizations are allowed to publish services to the marketplace. The marketplace manager of the marketplace owner organization is responsible for defining these sellers.</ph></p>
+              <p><ph id="Select_task_taskbody_steps_step_5"
+                  >When you disable this feature, the marketplace is open to any supplier, broker, and reseller organization. Any seller is allowed to publish services to the marketplace without the explicit authorization of the marketplace owner.</ph></p>
+            </li>
+            <li>
+              <p><uicontrol>Categories</uicontrol>: <ph id="When_enabled_categories_are_task_taskbody_steps_step_2"
+                  >When enabled, categories are shown on the marketplace. The marketplace owner can define categories which suppliers, brokers, and resellers can assign to the services they publish to the marketplace. The categories can be used by visitors to the marketplace for filtering and browsing the services. The categories are also taken into consideration by the full-text search feature on the marketplace.</ph></p>
+              <p><ph id="When_you_disable_this_feature_task_taskbody_steps_step_2"
+                  >When you disable this feature, categories are no longer available to marketplace visitors for searching, filtering and browsing, but can still be defined and assigned to services. Existing category definitions and assignments are not affected. </ph></p>
+              <p>
+                <note>The marketplace owner can use categories for grouping the services displayed on the marketplace home page. Disabling this feature has no effect on the marketplace home page. The services are still grouped by categories, even if this feature is disabled.</note>
+              </p>
+            </li>
+          </ul>
+        </info>
+      </step>
+      <step>
+        <cmd>Select the organization which is to become the owner of the marketplace. An organization can be the owner of multiple marketplaces.</cmd>
+        <info>The list contains all organizations managed on your platform.</info>
+      </step>
+      <step>
+        <cmd>If the platform is installed in SAML_SP mode, select the tenant to be used for authenticating users accessing this marketplace. If you leave this field empty, users accessing the marketplace are authenticated against the default IdP system specified during installation. </cmd>
+        <info>The list contains all tenants managed on your platform. </info>
+      </step>
+      <step>
+        <cmd>To create the marketplace, click <uicontrol>Save</uicontrol>. </cmd>
+      </step>
+    </steps>
+    <result>
+      <p>The administrators of the owner organization are assigned the marketplace manager role. They are notified by email about the creation of the marketplace. The email contains two URLs. One can be used by the marketplace managers for administrating and customizing the marketplace. The other can be used for public access to the marketplace. </p>
+      <p>Once you have created a marketplace, your role as a platform operator allows you to change the marketplace owner, to delete the marketplace, if required, and to change the association with a tenant.</p>
+    </result>
+  </taskbody>
+  <related-links>
+    <linklist>
+      <title>Related topics</title>
+      <link href="marketplace_update.xml"/>
+      <link href="marketplace_delete.xml"/>
+      <link href="operator_manageTenants.xml"/>
+    </linklist>
+  </related-links>
+</task>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN"
+                         "">
+<!-- Copyright FUJITSU LIMITED 2017 -->
+
+<bookmap id="BESSuppGuide" xml:lang="en_US">
+    <title>Supplier's Guide</title>
+    <bookmeta>
+        <prodinfo product="oscm_ce">
+            <prodname/>
+            <vrmlist>
+                <vrm version="16.1.5"/>
+            </vrmlist>
+            <brand/>
+        	<prognum>16.1.5</prognum>
+            <component/>
+            <series>Supplier's Guide</series>
+        </prodinfo>
+        <prodinfo product="oscm_ee">
+            <prodname>Enterprise Service</prodname>
+            <vrmlist>
+                <vrm version="16.1 Fix 5"/>
+            </vrmlist>
+            <brand>FUJITSU Software</brand>
+            <prognum>Catalog Manager V16.1 Fix 5</prognum>
+            <component/>
+            <series>Supplier's Guide</series>
+        </prodinfo>
+        <bookid>
+            <edition>February 2017</edition>
+            <booknumber product="oscm_ee">B1WS-1256-02</booknumber>
+        </bookid>
+        <bookrights product="oscm_ce" >
+            <bookowner name="none"/>
+        </bookrights>
+        <bookrights product="oscm_ee" >
+            <bookowner name="FUJITSU LIMITED"/>
+        </bookrights>
+    </bookmeta>
+    <frontmatter>
+        <notices href="Shared/Frontmatter/BookInfo.xml"/>
+        <preface href="SupplierGuide/About/c_About.xml">
+            <topicref href="SupplierGuide/About/c_Readers.xml" type="concept"/>
+            <topicref href="Shared/gettingstarted/intro_convent.xml" type="concept"/>
+            <topicref href="SupplierGuide/About/intro_abbrev.xml" type="concept"/>
+            <topicref href="Shared/gettingstarted/intro_availabledoc.xml" type="concept"/>
+        </preface>
+    </frontmatter>
+    <chapter href="Shared/concepts/c_IntroExtended.xml">
+        <topicref href="SupplierGuide/Introduction/c_IntroSupplierRole.xml" type="concept"/>
+        <topicref href="SupplierGuide/Introduction/c_IntroAccess.xml" type="concept"/>
+    </chapter>
+    <chapter href="SupplierGuide/MarketableServices/c_MSIntro.xml">
+        <topicref href="SupplierGuide/MarketableServices/c_MSDefine.xml" type="concept">
+            <topicref href="SupplierGuide/MarketableServices/c_MSCreate.xml" type="concept"/>
+            <topicref href="SupplierGuide/MarketableServices/c_MSUpgrade.xml" type="concept"/>
+        </topicref>
+        <topicref href="SupplierGuide/MarketableServices/c_MSPublish.xml" type="concept"/>
+        <topicref href="SupplierGuide/MarketableServices/c_MSPartners.xml" type="concept"/>
+        <topicref href="SupplierGuide/MarketableServices/c_MSMaintain.xml" type="concept"/>
+    </chapter>
+    <chapter href="SupplierGuide/PriceModels/c_PMIntro.xml">
+        <topicref href="SupplierGuide/PriceModels/c_PMTypes.xml" type="concept"/>
+        <topicref href="SupplierGuide/PriceModels/c_PMElements.xml" type="concept">
+            <topicref href="Shared/reference/r_PriceModelDetails_onetime.xml" type="reference"/>
+            <topicref href="Shared/reference/r_PriceModelDetails_recurringForSub.xml" type="reference"/>
+            <topicref href="Shared/reference/r_PriceModelDetails_recurringForUser.xml" type="reference"/>
+            <topicref href="Shared/reference/r_PriceModelDetails_parameters.xml" type="reference"/>
+            <topicref href="Shared/reference/r_PriceModelDetails_events.xml" type="reference"/>
+            <topicref href="Shared/reference/r_PriceModelDetails_role.xml" type="reference"/>
+            <topicref href="Shared/reference/r_PriceModelDetails_stepped.xml" type="reference"/>
+            <topicref href="Shared/reference/r_PriceModelDetails_freeTrial.xml" type="reference"/>
+            <topicref href="Shared/reference/r_PriceModelDetails_discount.xml" type="reference"/>
+        </topicref>
+        <topicref href="SupplierGuide/PriceModels/c_PMDefine.xml" type="concept"/>
+        <topicref format="dita" href="SupplierGuide/PriceModels/c_PMMaintain.xml" type="concept">
+        </topicref>
+    </chapter>
+    <chapter href="SupplierGuide/CustomerManagement/c_CMIntro.xml">
+        <topicref href="SupplierGuide/CustomerManagement/c_CMRegisterCustomers.xml" type="concept"/>
+        <topicref href="Shared/tasks/c_CMUseLDAP.xml" type="concept"/>
+        <topicref href="SupplierGuide/CustomerManagement/c_CMDefineAttributes.xml" type="concept"/>
+        <topicref href="SupplierGuide/CustomerManagement/c_CMHandleSubscriptions.xml" type="concept"/>
+    </chapter>
+    <chapter format="dita" href="SupplierGuide/Billing/c_BillIntro.xml" type="concept">
+        <topicref href="SupplierGuide/Billing/c_BillPrepare.xml" type="concept">
+            <topicref href="SupplierGuide/Billing/c_BillManagePaymentTypes.xml" type="concept"/>
+            <topicref href="SupplierGuide/Billing/c_BillManageVATs.xml" type="concept"/>
+            <topicref format="dita" href="SupplierGuide/Billing/c_BillDefineBillPeriod.xml" type="concept"/>
+            <topicref href="SupplierGuide/Billing/c_BillExportBillingData.xml" type="concept"/>
+            <topicref href="SupplierGuide/Billing/c_BillUsePSP.xml" type="concept"/>
+        </topicref>
+        <topicref format="dita" href="SupplierGuide/Billing/c_BillRevenue.xml" type="concept"/>
+    </chapter>
+    <chapter format="dita" href="SupplierGuide/Reports/c_Reports.xml" type="concept"/>
+    <chapter href="SupplierGuide/Triggers/c_Triggers.xml" type="concept"/>
+    <appendix href="SupplierGuide/Reference/r_MenuOptions.xml"/>
+    <appendix href="Shared/reference/r_LDAP_SettingTypes.xml"/>
+    <appendix href="Shared/glossary/r_Glossary.xml"/>
+</bookmap>

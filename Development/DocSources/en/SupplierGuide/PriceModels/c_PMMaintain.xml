@@ -1,0 +1,77 @@
+<?xml version="1.0"?> 
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd"
+
+[
+<!ENTITY % entities PUBLIC "-//XDOC//ENTITIES//FujitsuUserDoc" "entities.dtd">
+]>
+
+<concept xml:lang="en-us" id="concept_3413BBD173324104B42FB714974CABE7">
+    <title>Maintaining Price Models</title>
+    <conbody>
+        <section>
+            <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> provides various features and functions for maintaining price models. You can:</p>
+            <ul>
+                <li>Update the definition of a price model. </li>
+                <li>Localize elements of the price model definition. </li>
+                <li>Delete a customer price model.</li>
+            </ul>
+        </section>
+        <section>
+            <title>Updating the Definition of a Price Model</title>
+            <p>You can update the definition of a price model, but not change the service identifier, the customer in the case of a customer price model, and the customer subscription in the case of a subscription price model. </p>
+            <p>The update options depend on the billing system with which the price model is defined and used:</p>
+            <ul>
+                <li><b>Native billing system</b>: You can update all elements of a price model definition in <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        />. Be aware of the following: <p
+                        conref="../../Shared/reference/r_PriceModelDetails.xml#reference832/costcalc3"
+                            /><p>If you change the price model of a specific subscription, <ph
+                            conref="../../help/tasks/priceModel_subscription.xml#task634/the_modified_settings_are_val_task_taskbody_context_p_2_ph"
+                        />
+                    </p></li>
+                <li><b>External billing system</b>: The price model definitions are maintained in the external billing system. After an update, you can re-import a price model into <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> for information purposes.</li>
+            </ul>
+            <p>For updating a service price model or a customer price model, the corresponding marketable service must be deactivated. Changing a service price model or a customer price model does not affect existing subscriptions. The changes will only take effect for new subscriptions after the service has been activated again. Usually, you will change a customer price model only in agreement with the relevant customer.</p>
+            <p>To update a service price model, use the <uicontrol>Define for service</uicontrol> menu option in the <uicontrol>Price model</uicontrol> menu of the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> administration portal. To update a customer price model or a subscription price model, use the <uicontrol>Define for customer</uicontrol> or <uicontrol>Define for subscription</uicontrol> menu option, respectively. </p>
+            <p
+                conref="../../help/tasks/priceModel_service.xml#task634/If_you_update_a_price_model_f_task_taskbody_context_p_7"/>
+            <p>Resellers can provide their own license agreement. If you update the license agreement after granting a reseller the permission, the reseller's license agreement is not updated.</p>
+        </section>
+        <section>
+            <title>Localizing Elements of a Price Model</title>
+            <p>You can localize elements of a price model to make them available in all languages supported by <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />. The elements you can localize depend on the billing system with which the price model is defined and used:</p>
+            <ul>
+                <li><b>Native billing system</b>: description and license agreement.</li>
+                <li><b>External billing system</b>: license agreement.</li>
+            </ul>
+            <p>For localizing these elements, the corresponding marketable service must be deactivated. Existing subscriptions are not affected by the localization. Any changes you make are effective for new subscriptions only.</p>
+            <p>To localize the elements:</p>
+            <ol>
+                <li>Use the <uicontrol>Define for service</uicontrol>, <uicontrol>Define for customer</uicontrol>, or <uicontrol>Define for subscription</uicontrol> menu option in the <uicontrol>Price model</uicontrol> menu of the <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> administration portal depending on the type of price model whose elements you want to localize.</li>
+                <li>Select the price model to be localized on the <uicontrol>Define for service</uicontrol>, <uicontrol>Define for customer</uicontrol>, or <uicontrol>Define for subscription</uicontrol> page that is displayed.</li>
+                <li>Click <uicontrol>Localize</uicontrol> to enter the translations. </li>
+            </ol>
+            <p>If you localize the elements for a service for which you have granted resale permissions, the brokers and resellers as well as their customers can instantly view the price model elements in the languages in which you provide them. Existing subscriptions to services sold by brokers or resellers are not affected by the localization. Any changes you make are effective for new subscriptions only. </p>
+            <p>Resellers can provide their own license agreement. If you localize the license agreement after granting a reseller the permission, the reseller's license agreement is not localized. </p>
+        </section>
+        <section>
+            <title>Deleting a Customer Price Model</title>
+            <p>You can delete a customer price model which you do not want to offer to a customer any longer. Usually, you delete a customer price model only in agreement with the relevant customer.</p>
+            <p><ph
+                    conref="../../help/tasks/priceModel_customer_delete.xml#task634/For_deleting_a_customer_price_task_taskbody_context_p_3_ph"
+                /></p>
+            <p>To delete a customer price model, use the <uicontrol>Delete for customer</uicontrol> menu option in the <uicontrol>Price model</uicontrol> menu of the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> administration portal.</p>
+        </section>
+    </conbody>
+</concept>

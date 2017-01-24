@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_1BCF5C425D7D4627AB1C66A085CF6E11" xml:lang="en-us">
+    <title>Integrating Applications with <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+        /> Using the Asynchronous Provisioning Platform</title>
+    <conbody>
+        <section>
+            <p>When integrating applications with <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />, the instance provisioning can be done in two provisioning modes: synchronous or asynchronous mode.</p>
+            <p>Asynchronous provisioning is required if provisioning operations take a long time because long-running processes or manual steps are involved. This is the case, for example, when provisioning virtual machines on a virtual machine server. <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> supports the integration of such applications with its asynchronous provisioning platform (APP). This is a framework which provides a provisioning service as well as functions, data persistence, and notification features which are always required for integrating applications in asynchronous mode.</p>
+            <p>APP also includes the operation service interface for executing technical service operations on the integrated applications from the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> user interface.</p>
+        </section>
+        <section>
+            <title>Components and Communication Paths</title>
+            <p>The following figure illustrates the components and communication paths involved when using APP to integrate an application with <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+            <fig>
+                <image href="../_images/IntegrationAPP.png" alt="IntegrationAPP.png" width="483" height="344"/>
+            </fig>
+            <p>The following components are involved:<ul compact="no">
+                    <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> with the subscription service handling the provisioning tasks.</li>
+                    <li>APP including the provisioning service, a database, a notification handler, and an API to enable the communication between the application instances and <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</li>
+                    <li>A service controller for communication with the application. A service controller must be implemented for each application. <p>To implement a service controller, you use the API provided with the integration package for asynchronous provisioning. Samples included in the package show how a service controller can be implemented. A detailed documentation for the API is provided as Javadoc.</p><p>The following packages include ready-to-use service controllers: </p><p>
+                            <ul>
+                                <li><codeph>oscm-ror-install-pack.zip</codeph><p>Can be used for integrating FUJITSU ServerView Resource Orchestrator (ROR) with <ph
+                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    />.</p></li>
+                                <li><codeph>oscm-aws-install-pack.zip</codeph>: <p>Can be used for integrating the Amazon Elastic Compute Cloud Web service with <ph
+                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    />.</p></li>
+                                <li><codeph>oscm-openstack-install-pack.zip</codeph>: <p>Can be used for integrating OpenStack services with <ph
+                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    />.</p></li>
+                            </ul>
+                        </p></li>
+                    <li>The application with a remote interface and the application instances, if needed. </li>
+                </ul></p>
+            <p>The communication paths are as follows:</p>
+            <ul compact="no">
+                <li>When a subscription is created, deleted, or modified in <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    />, the provisioning service of APP triggers the service controller to execute all the tasks required on the application side. </li>
+                <li>It is recommended to divide long-running provisioning operations into several steps using the polling feature of APP. For example, when creating an application instance, the controller could immediately return the instance ID, report the instance status as "not ready", and request APP to poll the status at regular intervals. Only after the instance has actually been set up at the application side, the controller would report its status as "ready" upon the next polling by APP. </li>
+                <li>All intermediate artefacts of the tasks are stored in the database of APP. </li>
+                <li>When the provisioning operation for a subscription has been successfully completed, <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> receives an appropriate message, and the status of the subscription is set to <codeph>COMPLETE</codeph>. When deleting a subscription, <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> does not expect a response. The task is completed immediately.</li>
+                <li>Specific tasks may require manual steps. In this case, the service controller can request the automatic execution to be paused and then send an email notification to the responsible person providing a link to continue the automatic processing. As soon as the link contained in the email is clicked, the task execution is continued. </li>
+            </ul>
+            <p>If the provisioning or modification of an application instance fails or if there are problems in the communication between the participating systems, the corresponding subscription in <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> remains pending. APP supports you in recovering from such problems with its instance status interface. For details, refer to <xref
+                    href="c_HandleProblems.xml"/>.</p>
+        </section>
+        <section>
+            <title>Provisioning by Instance</title>
+            <p>The following figure shows details of the communication paths between APP and an application, for example, a VMware platform. </p>
+            <p>
+                <fig>
+                    <image href="../_images/IntegrationAPP_2.png" alt="IntegrationAPP_2.png" width="333" height="263"/>
+                </fig>
+            </p>
+            <p>Besides communicating with the application's general remote interface via the service controller, APP can forward the provisioning calls directly to the application instance in question. </p>
+            <p>Each provisioning operation first invokes the service controller, which in turn triggers the relevant actions in the application's general remote interface. When the controller returns with an appropriate status setting, APP calls the provisioning service of the application instance in question. This provisioning service must implement the standard <codeph>ProvisioningService</codeph> interface and work in synchronous mode. </p>
+            <p>This feature is useful if not all provisioning operations can be executed via the application's general remote interface. For example, the general remote interface of a virtual machine server allows you to provision virtual machines, but you usually cannot create or manage users within these virtual machines. To do this, you have to address the virtual machine itself. </p>
+            <p>For proper operation, the application's remote interface needs to support the following network connectivity:</p>
+            <ul compact="no">
+                <li>HTTPS/SOAP requests from APP to the application instances within the application.</li>
+                <li>HTTPS/SOAP calls from an application instance to APP (in specific scenarios).</li>
+            </ul>
+        </section>
+        <section>
+            <title>Service Operations</title>
+            <p>APP also includes the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> operation service interface for executing technical service operations on the integrated applications from the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> user interface. </p>
+            <p>Technical service operations can be used to access the resources of an application and perform administrative tasks without actually opening the application. The operations and the access information of the operation service must be specified in the technical service definition for the application. </p>
+            <p>APP passes service operation calls from the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> user interface directly to the service controller for the underlying application. The service controller is responsible for the execution of the operation in the application. </p>
+        </section>
+        <section>
+            <title>Integration Tasks</title>
+            <p>Integrating an application with <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> involves the following tasks: </p>
+            <ul>
+                <li><xref href="c_InstAPP.xml"/></li>
+                <li><xref href="t_ImplAPP.xml"/></li>
+                <li><xref href="t_DeployController.xml"/></li>
+                <li><xref href="t_RegisterAPP.xml"/></li>
+            </ul>
+        </section>
+        <section>
+            <title>Administration Tasks</title>
+            <p>From time to time, you may need to perform the following administration tasks: </p>
+            <ul>
+                <li><xref href="c_HandleProblems.xml"/></li>
+                <li><xref href="../../Shared/concepts/c_ControllerHandleCommProblems.xml"/></li>
+                <li><xref href="../../Shared/Installation/c_Backup.xml"/></li>
+                <li><xref href="../../Shared/Installation/c_UpdateConfiguration.xml"/></li>
+                <li><xref href="../../Shared/Installation/c_Update.xml"/></li>
+                <li><xref href="../../APPInt/APP/c_LogConfig.xml"/></li>
+            </ul>
+        </section>
+    </conbody>
+</concept>

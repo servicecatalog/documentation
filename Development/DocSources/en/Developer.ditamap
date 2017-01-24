@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN"
+                         "">
+<!-- Copyright FUJITSU LIMITED 2017 -->
+
+<bookmap id="BESDeveloperGuide" xml:lang="en_US">
+    <title>Developer's Guide</title>
+    <bookmeta>
+        <prodinfo product="oscm_ce">
+            <prodname/>
+            <vrmlist>
+                <vrm version="16.1.5"/>
+            </vrmlist>
+            <brand/>
+            <prognum>16.1.5</prognum>
+            <component/>
+            <series>Developer's Guide</series>
+        </prodinfo>
+        <prodinfo product="oscm_ee">
+            <prodname>Enterprise Service</prodname>
+            <vrmlist>
+                <vrm version="16.1 Fix 5"/>
+            </vrmlist>
+            <brand>FUJITSU Software</brand>
+            <prognum>Catalog Manager V16.1 Fix 5</prognum>
+            <component/>
+            <series>Developer's Guide</series>
+        </prodinfo>
+        <bookid>
+            <edition>February 2017</edition>
+            <booknumber product="oscm_ee">B1WS-1254-02</booknumber>
+        </bookid>
+        <bookrights product="oscm_ce">
+            <bookowner name="none"/>
+        </bookrights>
+        <bookrights product="oscm_ee">
+            <bookowner name="FUJITSU LIMITED"/>
+        </bookrights>
+    </bookmeta>
+    <frontmatter>
+        <notices href="Shared/Frontmatter/BookInfo.xml"/>
+        <preface format="dita" href="DevelopersGuide/About/c_About.xml" type="concept">
+            <!--TBD: Update-->
+            <topicref format="dita" href="DevelopersGuide/About/c_Readers.xml" type="concept"/>
+            <topicref format="dita" href="Shared/gettingstarted/intro_convent.xml" type="concept"/>
+            <!--TBD: Decide if abbreviations 
+are shared with all manuals-->
+            <topicref format="dita" href="DevelopersGuide/About/intro_abbrev.xml" type="concept"/>
+            <!--Shared: Update text for 
+Developer's Guide-->
+            <topicref format="dita" href="Shared/gettingstarted/intro_availabledoc.xml" type="concept"/>
+        </preface>
+    </frontmatter>
+    <chapter format="dita" href="DevelopersGuide/Intro/c_Intro.xml" type="concept">
+        <topicref format="dita" href="DevelopersGuide/Intro/c_IntroDeveloperRole.xml" type="concept"/>
+        <topicref format="dita" href="DevelopersGuide/Intro/c_WebServiceConcept.xml" type="concept"/>
+        <topicref format="dita" href="DevelopersGuide/Intro/c_RestAPI.xml" type="concept"/>
+    </chapter>
+    <chapter format="dita" href="DevelopersGuide/Interfaces/c_Interfaces.xml" type="concept">
+        <topicref format="dita" href="DevelopersGuide/Interfaces/c_PlatformServices.xml" type="concept">
+            <topicref format="dita" href="DevelopersGuide/Interfaces/c_PurposeUsage.xml" type="concept"/>
+            <topicref format="dita" href="DevelopersGuide/Interfaces/c_Addressing.xml" type="concept"/>
+            <topicref format="dita" href="DevelopersGuide/Interfaces/c_AddressingREST.xml" type="concept"/>
+        </topicref>
+        <topicref format="dita" href="DevelopersGuide/Interfaces/c_WebInterfaces.xml" type="concept">
+            <topicref format="dita" href="DevelopersGuide/Interfaces/c_PurposeUsageInterfaces.xml" type="concept"/>
+            <topicref format="dita" href="DevelopersGuide/Interfaces/c_AddressingInterfaces.xml" type="concept"/>
+            <topicref format="dita" href="DevelopersGuide/Interfaces/c_AddressingInterfacesREST.xml" type="concept"/>
+        </topicref>
+        <topicref format="dita" href="DevelopersGuide/Interfaces/c_Authentication.xml" type="concept"/>
+    </chapter>
+    <chapter format="dita" href="DevelopersGuide/Implement/c_Implement.xml" type="concept">
+        <!--topicref format="dita" href="DevelopersGuide/Implement/c_SetupEnv.xml" type="concept"/-->
+        <topicref format="dita" href="DevelopersGuide/Implement/t_ImplProvServ.xml" type="task">
+            <topicref format="dita" href="DevelopersGuide/Implement/t_ImplProvServJava.xml" type="task"/>
+            <topicref format="dita" href="DevelopersGuide/Implement/t_ImplProvServNonJava.xml" type="task"/>
+            <topicref format="dita" href="DevelopersGuide/Implement/t_ImplProvServDetails.xml" type="task"/>
+        </topicref>
+        <topicref format="dita" href="DevelopersGuide/Implement/t_ImplIdentManag.xml" type="task"/>
+        <topicref format="dita" href="DevelopersGuide/Implement/t_ImplementEvents.xml" type="task"/>
+        <topicref format="dita" href="DevelopersGuide/Implement/t_ImplementOperations.xml" type="task"/>
+    </chapter>
+    <chapter format="dita" href="DevelopersGuide/ProcessControl/c_ProcessMgmtIntegration.xml" type="concept"/>
+    <chapter format="dita" href="DevelopersGuide/ConfigTool/c_ConfigToolIntegration.xml" type="concept">
+        <topicref format="dita" href="DevelopersGuide/ConfigTool/c_ConfigToolCroDocMes.xml" type="concept"/>
+        <topicref format="dita" href="DevelopersGuide/ConfigTool/c_ConfigToolMessageInt.xml" type="concept"/>
+        <topicref format="dita" href="DevelopersGuide/ConfigTool/c_ConfigToolTasks.xml" type="concept"/>
+    </chapter>
+    <chapter format="dita" href="DevelopersGuide/ExternalBilling/c_ExtBillingIntro.xml" type="concept">
+        <topicref format="dita" href="DevelopersGuide/ExternalBilling/c_BillingAdapters.xml" type="concept"/>
+        <topicref format="dita" href="DevelopersGuide/ExternalBilling/c_ImplementBillingAdapter.xml" type="concept"/>
+        <topicref format="dita" href="DevelopersGuide/ExternalBilling/c_PushPriceModel.xml" type="concept"/>
+    </chapter>
+    <chapter format="dita" href="Shared/reference/c_Certificates.xml" type="concept">
+        <topicref format="dita" href="Shared/reference/c_CertIntro.xml" type="concept"/>
+        <topicref format="dita" href="Shared/reference/c_CertReqsFromBSS.xml" type="concept"/>
+        <topicref format="dita" href="Shared/reference/c_CertReqsToBSS.xml" type="concept"/>
+        <topicref format="dita" href="DevelopersGuide/Certificates/c_CertProviderTasks.xml" type="concept">
+            <topicref format="dita" href="DevelopersGuide/Certificates/c_CertCreateCertCSR.xml" type="concept"/>
+            <topicref format="dita" href="DevelopersGuide/Certificates/c_CertImport.xml" type="concept"/>
+            <topicref format="dita" href="DevelopersGuide/Certificates/c_CertImportBESCert.xml" type="concept"/>
+        </topicref>
+    </chapter>
+    <appendix format="dita" href="DevelopersGuide/Reference/r_BillingData.xml" type="reference"/>
+    <appendix format="dita" href="DevelopersGuide/Reference/r_RevenueShareIntro.xml" type="reference">
+        <topicref format="dita" href="DevelopersGuide/Reference/r_RevenueShareCommon.xml" type="reference"/>
+        <topicref format="dita" href="DevelopersGuide/Reference/r_BrokerRevenueShare.xml" type="reference"/>
+        <topicref format="dita" href="DevelopersGuide/Reference/r_ResellerRevenueShare.xml" type="reference"/>
+        <topicref format="dita" href="DevelopersGuide/Reference/r_MPOwnerRevenueShare.xml" type="reference"/>
+        <topicref format="dita" href="DevelopersGuide/Reference/r_SupplierRevenueShare.xml" type="reference"/>
+    </appendix>
+    <appendix format="dita" href="Shared/glossary/r_Glossary.xml" type="reference"/>
+</bookmap>

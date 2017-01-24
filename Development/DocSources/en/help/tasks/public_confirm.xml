@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="en-us">
+  <title>Logging in after confirmation</title>
+  <taskbody>
+    <context>
+      <p>After confirming your account, you can log in by clicking <uicontrol>Continue</uicontrol> on the <uicontrol>Registration</uicontrol> page. </p>
+      <p>You are sent an email with the URL for accessing your account. You can use it for future logins.</p>
+    </context>
+  </taskbody>
+  <related-links>
+    <linklist>
+      <title>Related topics</title>
+      <link href="../tasks/public_login.xml"></link>
+    </linklist>
+  </related-links>
+</task>

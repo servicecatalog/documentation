@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="ja-jp">
+  <title>サービスの料金設定</title>
+  <taskbody>
+    <context>
+      <p><uicontrol>サービスの料金設定</uicontrol>ページで、サービスに対して料金設定の定義と編集を行うことができます。</p>
+      <p>プラットフォームの<b>請求システム</b>を使用して料金請求されるサービスを選択しています。サービス利用部門のサービス利用に関していかに料金設定を行うかを定義する必要があります。</p>
+      <p><b>サービス料金設定の定義、および編集方法</b>:</p>
+    </context>
+    <steps>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_free_service">
+        <cmd/>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_desc">
+        <cmd/>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_trialperiod">
+        <cmd/>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_charging">
+        <cmd/>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_events">
+        <cmd/>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_params">
+        <cmd/>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_license">
+        <cmd/>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_save">
+        <cmd/>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_localize">
+        <cmd/>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_roles">
+        <cmd/>
+      </step>
+    </steps>
+    <result>
+      <p>サービスを有効化すると選択したサービス利用部門で料金設定が使用可能になります。これは当該サービス利用部門のすべての購入済サービスに対して有効になります。</p>
+      <p>変更はサービス利用部門、サービス仲介部門、およびサービス提供代行部門に対してただちに反映されます。</p>
+    </result>
+  </taskbody>
+  <related-links>
+    <linklist>
+      <title>関連情報</title>
+      <link href="priceModel_localize.xml"/>
+      <link href="priceModel_roles.xml"/>
+    </linklist>
+  </related-links>
+</task>

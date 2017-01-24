@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_3413BBD173324104B42FB714974CABE7"
+                xml:lang="en-us">
+    <title>RESTful Web Services</title>
+    <conbody>
+        <section>
+                        <p>Some <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        /> components comply with the constraints of REST (Representational State Transfer) and offer a public REST API in addition to the SOAP-based API. For example, a REST API is available for integrating external process management systems with <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+                        <p>REST is an architectural style that specifies certain constraints with the purpose to induce performance, scalability, simplicity, modifiability, visibility, portability, and reliability. If applied to Web services, these properties are intended to enable the services to work best on the Web. In REST, data and functionality are considered resources. The resources are accessed using Uniform Resource Identifiers (URIs)and a stateless communication protocol. The resources are retrieved and manipulated with a set of simple, well-defined operations: <codeph>GET</codeph>, <codeph>PUT</codeph>, <codeph>POST</codeph>, and <codeph>DELETE</codeph>.</p>
+                        <p>The <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> REST APIs use HTTP as the protocol and JSON for data representation and transfer. The API version to be addressed is specified as part of the URI. </p>
+                </section>
+    </conbody>
+</concept>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="en-us">
+  <title>Updating a service definition</title>
+  <taskbody>
+    <context>
+      <p>On the <uicontrol>Update service definition</uicontrol> page, you can change the descriptive texts of a technical service. The changes are effective for all newly defined marketable services based on the technical service.</p>
+      <p>The texts you enter are stored in the language defined by your user profile. For details on how to edit the user profile, refer to <xref
+          href="organization_edit.xml"/>.</p>
+      <p><b>To update a technical service definition</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>Select the technical service you want to change. </cmd>
+        <info/>
+        <stepresult>The editable parts of the service definition are displayed. </stepresult>
+      </step>
+      <step>
+        <cmd>Enter or edit the following: </cmd>
+        <stepresult>
+          <ul compact="no">
+            <li><uicontrol>Access information</uicontrol>: This text is shown to customers when they start using an application based on this technical service. It is displayed at the user interface and included in the email that is sent to users of services based on your technical service. The description is required if the technical service has the direct or user access type, because in this case users do not access the application through the platform. For example, you could provide some introductory text and the URL of the login page.<p>Be aware of the following: If no access information was specified for the English language before, the text you enter here is also stored for English, irrespective of your current language setting. English is the platform's default language. This means that the text stored for English is displayed to customers working in any language for which no separate text has been specified. </p></li>
+            <li><uicontrol>Description</uicontrol>: This text is shown to suppliers who define a marketable service based on the technical service. The supplier can use the description you provide or define a different one.</li>
+            <li><uicontrol>License agreement</uicontrol>: This text is shown to suppliers when they define a price model based on the technical service. The supplier can use your license agreement or define a different one. </li>
+            <li><uicontrol>Tags</uicontrol>: Tags are search terms characterizing an application. On a marketplace, customers can use the tags to search for marketable services based on the technical service, provided that the tag display is enabled for the marketplace by the marketplace owner.<p>You can enter up to five terms, separated by commas. The tags are not case-sensitive. They must not consist of more than 20 characters. </p><p>By following the <uicontrol>Display the most popular tags</uicontrol> link, you can view the most commonly used tags of all available technical services.</p></li>
+          </ul>
+          <p>
+            <note>Make sure to only use the controls provided in the editor for formatting your text. Manually entered HTML tags and references to external style sheets or content may result in errors in the page layout.</note>
+          </p>
+        </stepresult>
+      </step>
+      <step>
+        <cmd>Enter or edit the text describing the parameters and their options that are defined for the service. </cmd>
+        <stepresult>These texts are visible when a supplier defines a marketable service based on the technical service. </stepresult>
+      </step>
+      <step>
+        <cmd>Enter or edit the text describing the events defined for the service. </cmd>
+        <stepresult>These texts are visible when a supplier defines a marketable service based on the technical service.</stepresult>
+      </step>
+      <step>
+        <cmd>If roles are defined for the technical service, enter or edit the names and texts describing them. </cmd>
+        <stepresult>Roles can be mapped to specific permissions in the underlying application. The price model for a marketable service based on the technical service can define role-specific prices. <p>These texts are visible when a supplier defines a price model for a marketable service based on the technical service. </p></stepresult>
+      </step>
+      <step>
+        <cmd>If operations are defined for the service, enter or edit the names and texts describing them. </cmd>
+        <stepresult>Operations, such as system backup, shutdown or startup of a specific application, allow for accessing the system resources of an application over the Web. <p>These texts are visible when a customer starts using an application based on the technical service. </p></stepresult>
+      </step>
+      <step>
+        <cmd>To save your changes, click <uicontrol>Save</uicontrol>.</cmd>
+      </step>
+    </steps>
+    <result>The changes are available to suppliers when they define new marketable services based on the technical service. </result>
+  </taskbody>
+  <related-links>
+    <linklist>
+      <title>Related topics</title>
+      <link href="techService_import.xml"/>
+    </linklist>
+  </related-links>
+</task>

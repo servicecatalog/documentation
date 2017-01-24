@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_3413BBD173324104B42FB714974CABE7" xml:lang="en-us">
+    <title>Customizing Marketplaces</title>
+    <conbody>
+        <section>
+            <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> offers various options that allow you to customize marketplaces. You can customize the following:</p>
+            <ul>
+                <li>Texts presented on the Web pages of a marketplace and in emails</li>
+                <li>Stage of a marketplace </li>
+                <li>Layout and branding of a marketplace </li>
+            </ul>
+            <p>The following sections describe the individual options.</p>
+        </section>
+    </conbody>
+</concept>

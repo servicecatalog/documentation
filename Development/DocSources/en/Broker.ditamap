@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN"
+                         "">
+<!-- Copyright FUJITSU LIMITED 2017 -->
+
+<bookmap id="BESBrokerGuide" xml:lang="en_US">
+    <title>Broker's Guide</title>
+    <bookmeta>
+        <prodinfo product="oscm_ce">
+            <prodname/>
+            <vrmlist>
+                <vrm version="16.1.5"/>
+            </vrmlist>
+            <brand/>
+        	<prognum>16.1.5</prognum>
+            <component/>
+            <series>Broker's Guide</series>
+        </prodinfo>
+        <prodinfo product="oscm_ee">
+            <prodname>Enterprise Service</prodname>
+            <vrmlist>
+                <vrm version="16.1 Fix 5"/>
+            </vrmlist>
+            <brand>FUJITSU Software</brand>
+            <prognum>Catalog Manager V16.1 Fix 5</prognum>
+            <component/>
+            <series>Broker's Guide</series>
+        </prodinfo>
+        <bookid>
+            <edition>February 2017</edition>
+            <booknumber product="oscm_ee">B1WS-1258-02</booknumber> 
+        </bookid>
+        <bookrights product="oscm_ce" >
+            <bookowner name="none"/>
+        </bookrights>
+        <bookrights product="oscm_ee" >
+            <bookowner name="FUJITSU LIMITED"/>
+        </bookrights>
+    </bookmeta>
+    <frontmatter>
+        <notices href="Shared/Frontmatter/BookInfo.xml"/>
+        <preface href="BrokerGuide/About/c_About.xml">
+            <topicref href="BrokerGuide/About/c_Readers.xml" type="concept"/>
+            <topicref href="Shared/gettingstarted/intro_convent.xml" type="concept"/>
+            <topicref href="BrokerGuide/About/intro_abbrev.xml" type="concept"/>
+            <topicref href="Shared/gettingstarted/intro_availabledoc.xml" type="concept"/>
+        </preface>
+    </frontmatter>
+    <chapter href="Shared/concepts/c_IntroExtended.xml">
+        <topicref href="BrokerGuide/Introduction/c_IntroBrokerRole.xml" type="concept"/>
+        <topicref href="BrokerGuide/Introduction/c_IntroAccess.xml" type="concept"/>
+    </chapter>
+    <chapter href="BrokerGuide/MarketableServices/c_MSIntro.xml">
+        <topicref href="BrokerGuide/MarketableServices/c_MSView.xml" type="concept"/>
+        <topicref href="Shared/tasks/c_MSPublish.xml" type="concept"/>
+    </chapter>
+    <chapter href="BrokerGuide/CustomerManagement/c_CMIntro.xml">
+        <topicref href="BrokerGuide/CustomerManagement/c_CMRegisterCustomers.xml" type="concept"/>
+        <topicref href="Shared/tasks/c_CMUseLDAP.xml" type="concept"/>
+        <topicref href="BrokerGuide/CustomerManagement/c_CMHandleSubscriptions.xml" type="concept"/>
+    </chapter>
+    <chapter href="BrokerGuide/Billing/c_BillIntro.xml"/>
+    <chapter href="BrokerGuide/Reports/c_Reports.xml"/>
+    <appendix href="BrokerGuide/Reference/r_MenuOptions.xml"/>
+    <appendix format="dita" href="Shared/reference/r_LDAP_SettingTypes.xml" type="reference"/>
+    <appendix href="Shared/glossary/r_Glossary.xml"/>
+</bookmap>

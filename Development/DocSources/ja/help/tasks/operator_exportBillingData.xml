@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd">
+<task id="task634" xml:lang="ja-jp">
+  <title>請求データのプレビュー</title>
+  <taskbody>
+    <context>
+      <p id="PreviewBillingData"
+        >特定の期間におけるサービス利用部門の購入済サービスの請求データをプレビューすることができます。請求データはXMLファイルに保存するか、任意のエディタで直接表示することもできます。データを経理システムに回送するなどの場合に、請求データを編集した上で作業することができます。
+                     指定した期間における、サービス利用部門の購入済サービスに対する請求データを確認することができます。 
+        <ph platform="print"><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>の</ph>
+        <ph platform="help">プラットフォームの</ph>
+      請求システムを使用している購入済サービスだけが対象となります。請求データはXMLファイルとして保存、またはお好みのエディタで開くことができます。データを経理システムに回送する場合など、必要に応じて請求データを編集した上で扱うことができます。</p>
+        <p id="PreviewBillingData3"
+          >請求データのプレビューは特定のサービス利用部門の請求データに関するデータを収集し、特定の期間に対する計算をおこないます。ここで作成された請求データは特定のサービス利用部門のコスト見積りのみに利用され、データベースには保存されません。</p>
+      <p><b>請求データをプレビューするには</b>：</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>請求データを表示する組織を<uicontrol>組織ID</uicontrol>一覧から選択します。 </cmd>
+        <info>
+          <p>一覧にはプラットフォームで管理されるすべての組織が含まれます。 </p>
+        </info>
+      </step>
+      <step>
+        <cmd>請求データを表示する期間の開始日と終了日を指定します。 </cmd>
+        <info>
+          <p id="PreviewBillingData2"
+              >システムは設定されている請求期間とは別に、ここで指定された期間に対して計算をおこないます。開始日と終了日に請求期間と同じ日付を設定した場合、請求データ作成処理と同じ結果が出力されます。</p>
+          <p id="PreviewBillingData2">日付は<codeph>YYYY-MM-DD</codeph>形式で指定します。</p>
+        </info>
+      </step>
+      <step>
+        <cmd><uicontrol>エクスポート</uicontrol>をクリックします。 </cmd>
+      </step>
+      <step>
+        <cmd>ファイル（<codeph>&lt;日付&gt;BillingData.xml</codeph>）にデータを保存するか、選択したエディタで直接閲覧するかを選択します。</cmd>
+      </step>
+    </steps>
+    <result>
+      <p><ph conref="user_exportBillingData.xml#task634/For_a_detailed_description_of_task_taskbody_context_note_p"
+        /></p>
+      <!--p>
+        <note>
+          <p id="PreviewBillingData2"
+              >以下の点に注意してください。: 出力されるXMLファイルの<codeph>&lt;Period></codeph>の項目に記述される日付は画面で入力した開始日および終了日とは一致しない場合があります。</p>
+          <p id="PreviewBillingData2"
+              >例: 3月22日に、ある組織の請求データのプレビューをおこなう場合で、画面の開始日に3月1日を、終了日に15日を入力した場合を考えます。組織は3月7日13:15にサービスを購入し、サービスの料金設定には計算方法として月単位の<b>定額</b>が設定されていたとします。また、組織は月の全期間(1日から最終日まで)サービスを使用し、それに対して課金がおこなわれるとします。</p>
+          <p id="PreviewBillingData2"
+            >この場合、<codeph>&lt;Period></codeph>は以下のように記述されます。:</p>
+          <p id="PreviewBillingData2"
+              ><codeph>&lt;Period ... startDateIsoFormat="2013-03-07T13:15:..." ... "endDateIsoFormat="2013-03-31T23:59:59.999"/></codeph>
+          </p>
+          <p id="PreviewBillingData2"
+            >購入済サービスは3月7日に始まっているため、期間の開始日は3月7日となります。また、期間の終了日は画面で入力された日付に関わらず常に月の最終日となります。</p>
+        </note>
+      </p-->
+    </result>
+  </taskbody>
+</task>

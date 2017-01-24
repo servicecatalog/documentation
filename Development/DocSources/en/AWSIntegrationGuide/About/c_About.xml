@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="About_this_Manual_115" xml:lang="en-us">
+    <title>About this Manual</title>
+    <conbody>
+        <section>
+            <p>This manual describes the integration of the Amazon Elastic Compute Cloud Web service (Amazon EC2), a major component of Amazon Web Services (AWS), with <ph
+                    product="oscm_ce"><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Name"/> (<ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>)</ph><ph
+                    product="oscm_ee"
+                        > FUJITSU Software Enterprise Service Catalog Manager - hereafter referred to as <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Name"/> or <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph>.</p>
+            <p>This manual is structured as follows: </p>
+            <p>
+                <table colsep="1" frame="all" rowsep="1">
+                    <tgroup cols="2">
+                        <colspec colname="col2" colnum="1" colwidth="1*"/>
+                        <colspec colname="col3" colnum="2" colwidth="1.43*"/>
+                        <thead>
+                            <row>
+                                <entry colname="col2">Chapter</entry>
+                                <entry colname="col3">Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry colname="col2"><xref href="../Intro/c_Introduction.xml"/></entry>
+                                <entry colname="col3">Provides an overview of the <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    /> AWS integration, the components involved, and the supported usage scenarios. </entry>
+                            </row>
+                            <row>
+                                <entry colname="col2"><xref href="../../Shared/Installation/c_InstIntro.xml"/></entry>
+                                <entry colname="col3"
+                                    >Describes how to prepare and carry out the installation of the AWS integration software.</entry>
+                            </row>
+                            <row>
+                                <entry colname="col2"><xref href="../Services/c_ServicesIntro.xml"/></entry>
+                                <entry colname="col3">Describes how to create and publish services for AWS in <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </entry>
+                            </row>
+                            <row>
+                                <entry colname="col2"><xref href="../Using/c_UsingIntro.xml"/></entry>
+                                <entry colname="col3"
+                                        >Describes how to provision and deprovision virtual servers in AWS through services in <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</entry>
+                            </row>
+                            <row>
+                                <entry colname="col2"><xref href="../Administrating/c_AdministratingIntro.xml"/></entry>
+                                <entry colname="col3">Describes administration tasks related to the  <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    /> AWS integration. </entry>
+                            </row>
+                            <row>
+                                <entry colname="col2"><xref href="../../Shared/Installation/c_Uninstallation.xml"/></entry>
+                                <entry colname="col3">Describes how to uninstall the <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    /> AWS integration software. </entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+    </conbody>
+</concept>

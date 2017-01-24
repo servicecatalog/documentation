@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="ja-jp">
+  <title>新しいパスワードの設定</title>
+  <taskbody>
+    <context>
+      <p>利用者IDに対して新しいパスワードが設定されました。画面が自動的に<uicontrol>ログイン</uicontrol>ページに切り替わります。新しいパスワードを使って再度ログインしてください。</p>
+      <p>なお、パスワードが変更されたことを確認するEメールが送信されます。</p>
+    </context>
+  </taskbody>
+</task>

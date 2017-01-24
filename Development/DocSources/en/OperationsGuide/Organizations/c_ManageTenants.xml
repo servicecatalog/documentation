@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_B32294CC9FA643A2A14A74B1DAA49C95" xml:lang="en-us">
+        <title>Managing Tenants and IdPs</title>
+        <conbody>
+                <section>
+                        <p>Single sign-on (SSO) is supported by <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> when the system is installed in SAML_SP mode for user authentication. This authentication mode requires the definition of an Identity Provider (IdP) against which all platform users are authenticated when accessing a marketplace or the administration portal. User IDs and passwords of the organization are maintained in the IdP system, such as OpenAM or Active Directory Federation Service (ADFS). </p>
+                        <p>Any organization still needs to register its users with <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                />. The user credentials must match the ones maintained in the IdP system. Connection settings have to be defined in a configuration file so that the platform can connect to the IdP system.</p>
+                        <p>The initial IdP defined when installing the platform in SAML_SP mode is used platform-wide, i.e. for all users registered on the platform. This initial IdP is called "default IdP". In addition, the operator can define tenants and associate an IdP system with each tenant. Marketplaces and organizations can then be associated with a tenant. In this way, the users of an organization with access to such a marketplace are authenticated against the IdP system associated with this tenant when accessing the marketplace or the administration portal. </p>
+                        <p>Users are always authenticated against the IdP associated with the respective marketplace or administration portal. Users of the same or of different organizations are authenticated against a different IdP when accessing different marketplaces with different IdPs associated.</p>
+                        <p>User names must no longer be unique on the platform, but only within the scope of each tenant.</p>
+                        <p>
+                                <note>You as the platform operator are responsible for the correct configuration of tenants!<p>Be aware that although a marketplace can be associated with a tenant, the marketplace is, by default, still open for publishing and subscribing to services. To avoid this, configure the marketplace in a way that you restrict the access to it to specific sellers who can publish their services (authorized sellers only) and to specific customer organizations that can subscribe to services published on the marketplace (closed marketplace). To do so, you need to be the owner of the marketplace.</p></note>
+                        </p>
+                </section>
+                <section>
+                        <p><b>To create a tenant, choose the following option:</b>
+                        </p>
+                        <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        /> administration portal - Choose <b>Manage tenants</b> in the <b>Operation</b> menu.</p>
+                        <p>For detailed step-by-step instructions, refer to the online help. </p>
+                </section>
+        </conbody>
+</concept>

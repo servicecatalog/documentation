@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd">
+<task id="task634" xml:lang="en-us">
+  <title>Managing broker revenue shares</title>
+  <taskbody id="On_the_task_taskbody">
+    <context>
+      <p>On the <uicontrol>Manage broker revenue share</uicontrol> page, you can define a revenue share for individual services which a broker is authorized to sell. The service-specific revenue share overrules any broker revenue share defined for the marketplace to which the service is published. In addition, you can define a revenue share for specific broker organizations which overrules any marketplace-specific and service-specific revenue shares.</p>
+      <p>Marketplace-specific revenue shares are defined using the <uicontrol>Update marketplace</uicontrol> menu option.</p>
+      <p>On the <uicontrol>Manage broker revenue share</uicontrol> page, you can also update the revenue share for services for which the resale permission has already been revoked and for services which have already been deleted by the supplier. There might still be active subscriptions for these services. Therefore it might be necessary for you to update the revenue share.</p>
+      <note>Revenue shares are calculated only for services applying the platform's native billing system. Services using an external billing system are not included in the calculation. </note>
+      <p><b>To define the revenue share for a broker</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>Select the service for which the revenue share is to be defined. </cmd>
+        <info>
+          <p>The list contains all services that are currently available on your platform including all services that have already been deleted. The name of a deleted service is followed by a hash (#) and a UNIX time stamp indicating when the service was deleted. For all services, the organization ID of the supplier who provides or provided the service is appended in brackets.</p>
+        </info>
+      </step>
+      <step>
+        <cmd>The first table shows the default and service-specific broker revenue share defined for the marketplace the service is published to. </cmd>
+        <info>
+          <p>In the <uicontrol>Revenue share (%)</uicontrol> entry field, the default service-specific broker revenue share can be changed: Specify a percent value. </p>
+          <p>This percentage is valid for all brokers publishing the selected service. The value overrules the default value defined using the <uicontrol>Update marketplace</uicontrol> menu option. </p>
+        </info>
+      </step>
+      <step>
+        <cmd>The second table shows all broker organizations with resale permissions for the selected service and all broker organizations for which these permissions have already been revoked.</cmd>
+        <info>
+          <p>In the <uicontrol>Revenue share (%)</uicontrol> entry field, you can specify a percent value which is valid for the respective broker organization. </p>
+          <p>This value overrules any service-specific revenue share as well as the default broker revenue share value defined using the <uicontrol>Update marketplace</uicontrol> menu option. </p>
+        </info>
+      </step>
+      <step>
+        <cmd>Click <uicontrol>Save</uicontrol>.</cmd>
+        <info>
+          <p>The values are instantly applied. The revenue share amounts are calculated when the next billing run is started. </p>
+        </info>
+      </step>
+    </steps>
+    <result/>
+  </taskbody>
+  <related-links>
+    <linklist>
+      <title>Related topics</title>
+      <link href="marketplace_update.xml"/>
+    </linklist>
+  </related-links>
+</task>

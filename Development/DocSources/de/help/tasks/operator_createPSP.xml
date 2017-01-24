@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="de-de">
+  <title>Zahlungsdienstleister anlegen</title>
+  <taskbody>
+    <context>
+      <p>Auf der Seite <uicontrol>Zahlungsdienstleister anlegen</uicontrol> können Sie einen Zahlungsdienstleister (Payment Service Provider - PSP) registrieren. Serviceanbieter und Wiederverkäufer können die Dienste eines Zahlungsdienstleisters zur Rechnungsstellung und Zahlungsabwicklung in Anspruch nehmen. Serviceanbieter, Wiederverkäufer sowie Plattform-Betreiber müssen hierzu einen entsprechenden Vertrag mit dem Zahlungsdienstleister abgeschlossen haben.</p>
+      <p>Erst wenn ein Zahlungsdienstleister im System registriert ist, kann die Kommunikation mit ihm konfiguriert werden und die Integration in das System erfolgen. </p>
+      <p><b>So legen Sie einen Zahlungsdienstleister an</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>Geben Sie eine <b>ID</b> für den Zahlungsdienstleister ein. </cmd>
+        <info>Die ID identifiziert den Zahlungsdienstleister eindeutig. Sie ist nur für den Betreiber sichtbar. <p>IDs dürfen aus maximal 40 Zeichen bestehen. Folgende Zeichen sind nicht zulässig: </p><p><codeph>! " # $ % &amp; ' * + , / : ; &lt; = > ? \ ^ `</codeph>
+          </p></info>
+      </step>
+      <step>
+        <cmd>Geben Sie die <b>WSDL-URL</b> ein.</cmd>
+        <info>Diese URL muss auf die WSDL-Datei zeigen, die die Definition des Web-Service zur Integration des Zahlungsdienstleisters enthält. Detaillierte Informationen zur Implementierung eines Adapters zur Integration eines Zahlungsdienstleisters finden Sie in der Dokumentation, die mit der Datei <codeph>oscm-psp-pack.zip</codeph> ausgeliefert wird.</info>
+      </step>
+      <step>
+        <cmd>Geben Sie den <b>Distinguished Name</b> aus dem Zertifikat des Web-Servers an, auf dem der Adapter zur Integration des Zahlungsdienstleisters installiert ist.</cmd>
+        <info>Die Integration eines Zahlungsdienstleisters setzt die Verwendung von Zertifikaten voraus, die die vertrauenswürdige Kommunikation zwischen der Betreiberorganisation und der Zahlungsdienstleister-Organisation sicherstellt. Daher muss der Distinguished Name immer angegeben werden.<p>Die Plattform überprüft den Distinguished Name im Zertifikat des PSP. Falls er mit dem hier angegebenen Zertifikat übereinstimmt, ist der Aufrufer berechtigt, eine Verbindung zur Plattform herzustellen. </p><p>Den Distinguished Name einer Organisation können Sie aus ihrem Zertifikat mit folgendem Aufruf in Ihrer Java-Laufzeitumgebung ermitteln: </p><p>
+            <codeblock>&lt;IhrJRE>/bin/keytool -printcert -file &lt;Dateiname.crt></codeblock>
+          </p><p>Der Distinguished Name ist im Zertifikat der Organisation definiert und besteht aus folgenden Elementen: </p><ul>
+            <li>CN - Common Name</li>
+            <li>OU - Organizational Unit</li>
+            <li>O - Organization</li>
+            <li>L - Location</li>
+            <li>ST - State</li>
+            <li>C - Country</li>
+          </ul><p>Die einzelnen Elemente müssen durch Komma getrennt werden. </p><p>Detaillierte Informationen zur Verwendung von Zertifikaten finden Sie im <i>Operator's Guide</i>.</p></info>
+      </step>
+      <step>
+        <cmd>Schließen Sie Ihre Eingaben mit <uicontrol>Speichern</uicontrol> ab.</cmd>
+      </step>
+    </steps>
+    <result>
+      <p>Der Zahlungsdienstleister wird angelegt. Sie können nun mit folgenden Schritten fortfahren: </p>
+      <p>
+        <ul>
+          <li>Konfigurieren Sie die Kommunikation mit dem Zahlungsdienstleister. </li>
+          <li>Definieren Sie die Zahlungsarten, die der Zahlungsdienstleister Serviceanbietern und Wiederverkäufern zur Verfügung stellt. </li>
+          <li>Weisen Sie Serviceanbietern und Wiederverkäufern die Zahlungsarten zu. Die Serviceanbieter und Wiederverkäufer können dann festlegen, welche Zahlungsarten sie ihren Kunden anbieten. </li>
+        </ul>
+      </p>
+    </result>
+  </taskbody>
+  <related-links>
+    <linklist>
+      <title>Weitere Themen</title>
+      <link href="operator_managePSPs.xml"/>
+      <link href="operator_manageOrganizations.xml"/>
+    </linklist>
+  </related-links>
+</task>

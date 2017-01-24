@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<reference id="reference832" xml:lang="en-us">
+    <title>Controller Configuration Settings</title>
+    <refbody>
+        <section>
+            <p>The <codeph>configsettings_controller.properties</codeph> file located in <codeph>&lt;install_pack_dir>/databases/app_db</codeph> contains the configuration settings for the ROR service controller. This configuration is used for the initial setup and stored in the APP database.</p>
+            <p conref="../../AWSIntegrationGuide/Appendix/r_ConfigSettingsController.xml#reference832/cfg"/>
+            <p conref="../../AWSIntegrationGuide/Appendix/r_ConfigSettingsController.xml#reference832/cfg2"/>
+            <p conref="../../AWSIntegrationGuide/Appendix/r_ConfigSettingsController.xml#reference832/cfg3"/>
+            <p conref="../../AWSIntegrationGuide/Appendix/r_ConfigSettingsController.xml#reference832/cfg4"/>
+            <!--p>For changing the settings, use the graphical user interface provided by the controller: </p>
+            <p>In a Web browser, access the URL of the <ph audience="ror">ROR</ph><ph audience="aws">AWS</ph><ph
+                    audience="os">OpenStack</ph> service controller, for example, <ph audience="ror"
+                        ><codeph>http://127.0.0.1:8880/oscm-app-ror</codeph></ph><ph audience="aws"
+                        ><codeph>http://127.0.0.1:8880/oscm-app-aws</codeph></ph><ph audience="os"
+                        ><codeph>http://127.0.0.1:8880/oscm-app-openstack</codeph></ph>. </p-->
+        </section>
+        <section>
+            <title>CONTROLLER_ID</title>
+            <p><codeph>CONTROLLER_ID=ess.ror</codeph></p>
+            <p>The identifier of the service controller.</p>
+        </section>
+        <section>
+            <title>IAAS_API_LOCALE</title>
+            <p><codeph>IAAS_API_LOCALE=&lt;locale></codeph></p>
+            <p>The locale to be used for accessing ROR.</p>
+            <p>Replace <codeph>&lt;locale></codeph> with the identifier of the desired locale, for example, <codeph>en</codeph> or <codeph>ja</codeph>. </p>
+        </section>
+        <section>
+            <title>IAAS_API_PWD</title>
+            <p><codeph>IAAS_API_PWD=_crypt:&lt;password></codeph></p>
+            <p>The password of the user for accessing the tenant in ROR.</p>
+            <p>Replace <codeph>&lt;password></codeph> with the plain text password which is valid for the user given in <codeph>IAAS_API_USER</codeph>. The password is encrypted when it is stored in the database.</p>
+        </section>
+        <section>
+            <title>IAAS_API_TENANT</title>
+            <p><codeph>IAAS_API_TENANT=&lt;tenant></codeph></p>
+            <p>The identifier of the tenant for your organization in ROR.</p>
+        </section>
+        <section>
+            <title>IAAS_API_URI</title>
+            <p><codeph>IAAS_API_URI=https://&lt;ROR server>:&lt;port>/cfmgapi/endpoint</codeph></p>
+            <p>The URL of the ROR API. </p>
+            <p>Replace <codeph>&lt;ROR server></codeph> and <codeph>&lt;port></codeph> with the host name and port of your ROR server. </p>
+        </section>
+        <section>
+            <title>IAAS_API_USER</title>
+            <p><codeph>IAAS_API_USER=&lt;user></codeph></p>
+            <p>The user ID to be used to access the tenant for your organization in ROR. The user must have the necessary credentials to create and configure virtual platforms and servers for the tenant. This means that he must have the role of a tenant administrator.</p>
+        </section>
+        <section>
+            <title>BSS_ORGANIZATION_ID</title>
+            <p><codeph>BSS_ORGANIZATION_ID=&lt;organizationID></codeph></p>
+            <p>The ID of the organization in <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> which is responsible for the service controller. The organization must have the technology provider role.</p>
+        </section>
+        <section>
+            <title>BSS_USER_KEY</title>
+            <p><codeph>BSS_USER_KEY=&lt;userKey></codeph>
+            </p>
+            <p>The user key for accessing <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />.</p>
+            <p>Replace <codeph>&lt;userKey></codeph> with the user key which you receive with the confirmation email for your user account. </p>
+            <p>The user specified here must have the technology manager role in <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> and belong to the organization specified in the <codeph>BSS_ORGANIZATION_ID</codeph> setting. </p>
+            <p>It is recommended that the user account is used only for carrying out actions on behalf of the service controller in <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+        </section>
+        <section>
+            <title>BSS_USER_ID</title>
+            <p><codeph>BSS_USER_ID=&lt;userId></codeph>
+            </p>
+            <p>The identifier of the user specified in <codeph>BSS_USER_KEY</codeph> for accessing <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+            <p>Replace <codeph>&lt;userId></codeph> with the user ID.</p>
+        </section>
+        <section>
+            <title>BSS_USER_PWD</title>
+            <p><codeph>BSS_USER_PWD=_crypt:&lt;password></codeph></p>
+            <p>The password of the user specified in <codeph>BSS_USER_KEY</codeph> for accessing <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+            <p>Replace <codeph>&lt;password></codeph> with the plain text password. The password is encrypted when it is stored in the database. </p>
+        </section>
+    </refbody>
+</reference>

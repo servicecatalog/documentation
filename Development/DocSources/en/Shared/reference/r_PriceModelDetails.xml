@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<reference id="reference832" xml:lang="en-us">
+    <title><ph platform="print" id="Price_Model_Details_reference_title_ph_1">Price Model Details</ph><ph
+            platform="help" id="Price_model_details_reference_title_ph_2">Price model details</ph></title>
+    <refbody>
+        <section>
+            <p><ph id="A_price_model_specifies_wheth_reference_refbody_section_p"
+                    >A price model specifies whether and how much customers subscribing to a service will be charged for:</ph></p>
+            <p>
+                <ul compact="no">
+                    <li>Using the subscription as such.</li>
+                    <li>Each user assigned to the subscription.</li>
+                    <li>Individual events. These include, for example, login and logout by users to the underlying application, the completion of specific transactions, or the creation or deletion of specific data.</li>
+                    <li>Parameters and their options.</li>
+                </ul>
+            </p>
+            <p>For each marketable service, a price model must have been defined before you can publish the service and thus provide it to customers for subscription.</p>
+        </section>
+        <section>
+            <title>Price Model Scope</title>
+            <p>Price models can have different scopes: </p>
+            <p>
+                <ul compact="no">
+                    <li>A <b>service price model</b> is the basic price model. It must be defined for every marketable service. Without defining a service price model, you cannot publish a service. You can define exactly one service price model for each service.</li>
+                    <li>A <b>customer price model</b> is specific to one customer and to one service that is used by the customer. It is not available for any other services offered to the same or a different customer. When you define a customer price model, a separate marketable service is automatically created for this specific customer only.<p>A customer price model can be used, for example, to offer lower charges to a long-time customer, or to make a new service available to a pilot customer at no charge.</p></li>
+                    <li>A <b>subscription price model</b> is specific to one subscription of an individual customer. It is not available for any other subscriptions of the same or a different customer. As soon as the subscription terminates, the price model is automatically outdated. </li>
+                </ul>
+            </p>
+            <p>The service price model defines the prices to which brokers and resellers are bound if they offer and sell a service.</p>
+            <p>The native billing system of <ph platform="help">the platform</ph><ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"
+                /> supports all price model scopes. With external billing systems, the scopes may be restricted, depending on the billing system itself and the billing adapter used to integrate it.</p>
+        </section>
+        <section>
+            <title>Price Model Elements</title>
+            <p>The elements and options a price model consists of depend on where the price model is defined. </p>
+            <p>For services which use an external billing system for cost calculation, the price models are defined in this billing system and must comply with the given rules and structures. The price models are imported from the external billing system to <ph
+                    platform="help">the platform</ph><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    platform="print"/> at the corresponding services and subscriptions and cannot be changed there.</p>
+            <p><ph id="Each_price_model_consists_of_reference_refbody_section_p"
+                    >Price models for services applying the <ph platform="help"
+                        >platform's </ph>native billing system <ph platform="print">of <ph
+                            conref="../Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"/>
+                    </ph>consist of the following elements that determine how the charges are calculated:</ph></p>
+            <ul>
+                <li>
+                    <xref href="r_PriceModelDetails_onetime.xml"/>
+                </li>
+                <li>
+                    <xref href="r_PriceModelDetails_recurringForSub.xml"/>
+                </li>
+                <li>
+                    <xref href="r_PriceModelDetails_recurringForUser.xml"/>
+                </li>
+                <li>
+                    <xref href="r_PriceModelDetails_parameters.xml"/>
+                </li>
+                <li>
+                    <xref href="r_PriceModelDetails_events.xml"/>
+                </li>
+                <li>
+                    <xref href="r_PriceModelDetails_role.xml"/>
+                </li>
+            </ul>
+            <p><xref href="r_PriceModelDetails_stepped.xml"
+                    >Stepped prices</xref> are supported which allow the definition of ranges for which different price elements apply. In addition, a <xref
+                    href="r_PriceModelDetails_freeTrial.xml">free trial period</xref> can be defined and <xref
+                    href="r_PriceModelDetails_discount.xml">discounts</xref> can be granted to individual customers.</p>
+            <p>The calculation of the actual charges for a service varies depending on the combination of the price model elements that are defined, and on the calculation option which has been selected for the price model. </p>
+        </section>
+        <section>
+            <title><ph platform="help">Cost calculation options</ph><ph platform="print"
+                >Cost Calculation Options</ph></title>
+            <p id="costcalc1">The charges for a service using the <ph platform="help"
+                    >platform's </ph>native billing system <ph platform="print">of <ph
+                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"/>
+                </ph>can be calculated pro rata or per time unit. This affects the recurring charges for subscriptions and users as well as the charges for parameters, options, and service roles. The one-time fee and event prices are not affected. </p>
+            <p id="costcalc2">
+                <ul compact="no">
+                    <li>
+                        <p id="Pro_rata_calculation_concept_conbody_section_2_p"
+                            >The <b>pro rata calculation</b> is based on milliseconds. </p>
+                        <p id="If_the_calculation_is_pro_rat_concept_conbody_section_2_p"
+                            >Customers are charged exactly for the time a service was used. </p>
+                        <p id="Pro_rata_calculation_concept_conbody_section_2_p"
+                            >Switches to daylight saving time are considered in the cost calculation: When daylight saving time begins, the respective day has 23 hours. The related week and month time units are also shortened by one hour. When daylight saving time ends, the respective day has 25 hours. The related week and month time units are also extended by one hour.</p>
+                    </li>
+                    <li>
+                        <p id="If_the_calculation_is_per_tim_concept_conbody_section_2_p"
+                                >The <b>per time unit calculation</b> is based on fixed time units (month, week, day, or hour). </p>
+                        <p id="If_the_calculation_is_per_tim_concept_conbody_section_2_p"
+                            >Customers are charged for the time units during which they use a service. The time units are always fully charged, even if they are not fully used. The costs for a time unit are calculated for the billing period in which the unit ends. </p>
+                        <p><ph id="The_time_unit_for_the_concept_conbody_section_2_p"
+                                    >The time unit can be defined as <b>Hour</b>, <b>Day</b>, <b>Week</b>, or <b>Month</b>.</ph> The start and end of each unit are pre-defined as follows: </p>
+                        <p><b>Hour</b>: From 00:00.000 to 59:59.999.</p>
+                        <p><b>Day</b>: From 00:00:00.000 to 23:59:59.999.</p>
+                        <p><b>Week</b>: From Monday, 00:00:00.000, to Sunday, 23:59:59.999. </p>
+                        <p><b>Month</b>: From the first day of the month, 00:00:00.000, to the last day of the month, 23:59:59.999.</p>
+                    </li>
+                    <li><p id="costcalc3"
+                            >In service price models and customer-specific price models, you can define and change the cost calculation option. When updating a price model, you can switch between the pro rata and the per time unit calculation. The prices are kept in this case. The prices get lost when a price model is changed to free of charge. </p>The cost calculation options <b>cannot</b> be changed for subscription price models. </li>
+                </ul>
+            </p>
+        </section>
+    </refbody>
+</reference>

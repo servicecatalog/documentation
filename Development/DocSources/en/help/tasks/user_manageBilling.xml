@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd">
+<task id="task634" xml:lang="en-us">
+          <title>Defining the billing period</title>
+          <taskbody>
+                    <context>
+                              <p>On the <uicontrol>Define billing period</uicontrol> page, you can define the start day for billing periods. </p>
+                              <p id="A_billing_period_is_the_time_task_taskbody_context_p_2"
+                                                  >A billing period is the time interval for which billing data for customer subscriptions to services using the <ph
+                                                  platform="help">platform's </ph>native billing system <ph
+                                                  platform="print">of <ph
+                                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                  /></ph> is generated. It is always one month. </p>
+                              <p><ph id="billing_period1"
+                                                  >By default, a billing period starts on the 1st day of a month at 00:00:00.000 and ends on the last day of a month at 23:59:59.999. However, this is not always suitable in real business. For this reason, you can define your desired start day of the billing period.</ph> For example, if you define that the billing period is to start on the 8th of a month, it starts on the 8th at 00:00:00.000 and ends on the 7th of the next month at 23:59:59.999.</p>
+                              <p id="billing_period2"
+                                        >When you change the start day of the billing period, this affects all subscriptions which are created or reactivated afterwards. Existing subscriptions are not affected.</p>
+                              <p id="The_billing_period_start_and_concept_conbody_section_3_p"
+                                                  >The billing period start and end date and time are displayed in all reports containing billing period information: <ul
+                                                  compact="no">
+                                                  <li>
+                                                            <p><b>Detailed billing report for an existing invoice of a customer</b> for suppliers.</p>
+                                                  </li>
+                                                  <li>
+                                                            <p><b>Detailed billing report for an existing invoice</b> for customers.</p>
+                                                  </li>
+                                                  <li>
+                                                            <p><b>Payment preview report</b> for customers.</p>
+                                                  </li>
+                                                  <li>
+                                                            <p id="Revenue_share_report_concept_conbody_section_3_p"
+                                                            ><b>Revenue share report</b> for suppliers, resellers, brokers, and marketplace owners. </p>
+                                                  </li>
+                                        </ul>
+                              </p>
+                              <p><b>To define the start day for billing periods</b>: </p>
+                    </context>
+                    <steps>
+                              <step>
+                                        <cmd>In the <uicontrol>Day of the month</uicontrol> field, select the day of the month on which the billing period is to be started.</cmd>
+                                        <info>You can only select values from <codeph>1</codeph> to <codeph>28</codeph> because these days can be applied to all months.</info>
+                              </step>
+                              <step>
+                                        <cmd>To save your changes, click <uicontrol>Save</uicontrol>.</cmd>
+                              </step>
+                    </steps>
+          </taskbody>
+</task>

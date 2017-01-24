@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="de-de">
+    <title>Registrieren</title>
+    <taskbody>
+        <context>
+            <p>Auf der Seite <uicontrol>Registrieren</uicontrol> geben Sie die Daten ein, die für die Einrichtung Ihres Benutzerkontos erforderlich sind. </p>
+            <p><uicontrol>So registrieren Sie sich</uicontrol>:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Geben Sie Ihre E-Mail-Adresse ein.</cmd>
+                <info>
+                    <p>Die E-Mail-Adresse muss eingegeben werden. Sobald Sie registriert sind, erhalten Sie eine Bestätigung an diese Adresse.</p>
+                    <p>Das System validiert, ob die Syntax der E-Mail-Adresse gültig ist und ob der Domain-Name den Standards der Internet Assigned Numbers Authority (IANA) entspricht. </p>
+                    <p>Beispiele: <codeph>user.name@domain.arpa</codeph>, <codeph>user.name@domain.org</codeph>, <codeph>user@mycompany.lan.uk</codeph></p>
+                </info>
+            </step>
+            <step>
+                <cmd>Geben Sie Ihre Registrierungsdaten ein.</cmd>
+                <info>
+                    <p>Felder, die mit einem Stern (*) gekennzeichnet sind, müssen ausgefüllt werden. </p>
+                    <ul compact="no">
+                        <li><uicontrol>Gewünschter Benutzername</uicontrol>: Name, mit dem Sie sich anmelden möchten. Benutzernamen dürfen aus maximal 100 Zeichen bestehen. Die folgenden Zeichen sind nicht zulässig: <p><codeph>! " # $ % &amp; ' * + , / : ; &lt; = > ? \ ^ `</codeph>
+                            </p></li>
+                        <li><uicontrol>Passwort</uicontrol>: Passwort, mit dem Sie sich anmelden möchten. Das Passwort muss aus mindestens 6 Zeichen bestehen. Es darf nicht länger als 100 Zeichen sein.<p>Beim Eingeben des Passworts zeigt Ihnen das Feld <uicontrol>Passwortsicherheit</uicontrol>, wie sicher Ihr Passwort ist. Die Farbe grün bedeutet, dass Sie ein sicheres Passwort eingegeben haben. Ein sicheres Passwort besteht aus mindestens 8 Zeichen und verwendet eine Kombination aus Zahlen, Buchstaben und Sonderzeichen. </p></li>
+                        <li><uicontrol>Anrede</uicontrol>: Anrede oder Titel, zum Beispiel <codeph>Herr</codeph> oder <codeph>Frau</codeph>. </li>
+                        <li><uicontrol>Vorname</uicontrol>: Ihr Vorname. </li>
+                        <li><uicontrol>Nachname</uicontrol>: Ihr Nachname.</li>
+                        <li><uicontrol>Organisation</uicontrol> und <uicontrol>Adresse</uicontrol>: Name und Adresse Ihrer Organisation. </li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>Wählen Sie im Feld <uicontrol>Land</uicontrol> das Land, in dem sich Ihre Organisation befindet.</cmd>
+            </step>
+            <step>
+                <cmd>Geben Sie die im Bild <uicontrol>Sicherheitsüberprüfung</uicontrol> angezeigten Zeichen ein. Achten Sie dabei auf Groß-/Kleinschreibung. </cmd>
+            </step>
+            <step>
+                <cmd>Lesen und akzeptieren Sie die allgemeinen Geschäftsbedingungen sowie die Datenschutzerklärung. </cmd>
+            </step>
+            <step>
+                <cmd>Bestätigen Sie Ihre Registrierung mit <uicontrol>Registrieren</uicontrol>.</cmd>
+                <stepresult>
+                    <p>Per E-Mail erhalten Sie eine URL, über die Sie Ihren Zugang bestätigen und den Registrierungsvorgang abschließen müssen. </p>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Zur Bestätigung Ihres Zugangs folgen Sie der URL in der E-Mail.</cmd>
+            </step>
+            <step>
+                <cmd>Klicken Sie <uicontrol>Weiter</uicontrol> auf der Registrierungsseite.</cmd>
+                <stepresult>
+                    <p>Auf der Seite <uicontrol>Anmelden</uicontrol> können Sie sich nun mit dem von Ihnen angegebenen Benutzernamen und Passwort anmelden. </p>
+                    <p>Per E-Mail erhalten Sie die URL für den Zugang zum System. Sie können diese URL für alle zukünftigen Anmeldungen verwenden.</p>
+                </stepresult>
+            </step>
+        </steps>
+        <result>
+            <p>Nach erfolgreicher Registrierung erhalten Sie automatisch die Administratorrolle für Ihre Organisation. Mit dieser Benutzerrolle haben Sie die erforderlichen Zugriffsrechte, um Ihre Organisation und deren Benutzer sowie Abonnements zu verwalten. </p>
+        </result>
+    </taskbody>
+    <related-links>
+        <linklist>
+            <title>Weitere Themen</title>
+            <link href="../tasks/public_login.xml"/>
+        </linklist>
+    </related-links>
+</task>

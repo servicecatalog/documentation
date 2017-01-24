@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_3413BBD173324104B42FB714974CABE7" xml:lang="en-us">
+        <title>The Developer's Tasks in <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /></title>
+        <conbody>
+                <section>
+                        <p>As a developer, you integrate external applications and systems with <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                />. You typically do this for the following organizations and purposes:</p>
+                        <ul>
+                                <li>Technology provider: You technically prepare applications for usage in a SaaS model and implement the services and interfaces required to integrate the applications with <ph
+                                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                />. Depending on the application, this may involve: Implementing a provisioning service, adapting the application's login and logout behavior, providing for the generation and sending of events, implementing operations that can be carried out from <ph
+                                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        />. </li>
+                                <li>Supplier or customer: You can integrate <ph
+                                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                /> with an external process control system in order to control the execution of specific <ph
+                                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                /> actions. This involves implementing a notification service which is invoked through appropriate triggers configured in <ph
+                                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                />. The triggers are defined and managed by the administrator of the affected organization. For details, refer to the <ph
+                                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        /> online help.</li>
+                                <li>Supplier: You can integrate an external tool for configuring service parameters with <ph
+                                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        />. The tool can be used by the supplier's customers instead of the default user interface for configuring service parameters on a marketplace. </li>
+                                <li>Supplier: You can integrate <ph
+                                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                /> with one or more external billing systems which are to be used instead of the native billing system for specific services. This involves implementing a billing adapter that connects the external billing system with <ph
+                                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        /> and provides price models for services and subscriptions.</li>
+                        </ul>
+                        <p>For performing these tasks, you use the public Web services and APIs of <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        />. These interfaces, their documentation and additional resources, templates, samples, and utilities are provided in the <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        /> integration package (<codeph>oscm-integration-pack.zip</codeph> file). A detailed documentation for the APIs is provided as Javadoc and in YAML files. By opening the <codeph>readme.htm</codeph> file of the integration package, you can access the available documentation as well as the resources themselves.</p>
+                        <p>In order to provide for secure communication between <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> and the applications or external systems integrated with it, you can make use of certificates. </p>
+                        <p>An additional task of a developer in the <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        /> context is the processing of billing data, for example, in an external accounting system. <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> allows suppliers, brokers, resellers, marketplace owners, and operators to export customer billing data and revenue share data to XML files. From these files, the required data can be extracted for further processing. </p>
+                </section>
+        </conbody>
+</concept>

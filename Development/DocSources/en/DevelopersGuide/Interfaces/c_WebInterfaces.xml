@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_3413BBD173324104B42FB714974CABE7" xml:lang="en-us">
+    <title>Web Service APIs</title>
+    <conbody>
+        <section>
+            <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> offers APIs for implementing the following Web services:</p>
+            <ul>
+                <li>Provisioning service</li>
+                <li>Notification service</li>
+                <li>Operation service</li>
+            </ul>
+            <p>The APIs are available in the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> integration package. </p>
+        </section>
+    </conbody>
+</concept>

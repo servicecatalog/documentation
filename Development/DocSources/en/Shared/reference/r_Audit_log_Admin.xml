@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<reference id="reference832" xml:lang="en-us">
+    <title><ph platform="print">Administrator Operations</ph><ph platform="help">Administrator operations</ph>
+    </title>
+    <refbody>
+        <section>
+            <p>This section explains the messages that are output in the audit log for operations executed by an administrator of an organization with any role on a marketplace. Most of these operations can also be executed by OU administrators and subscription managers. </p>
+            <p><codeph>&lt;<i>additional name-value pairs</i>></codeph> are appended depending on the logged operation. </p>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Operation</b>: <b>Assign service role</b></p>
+                                <p>Description: An administrator, OU administrator, or subscription manager set or changed a service role for a user assigned to a subscription. </p>
+                                <p>Additional name-value pairs:</p>
+                                <p>
+                                    <ul>
+                                        <li>
+                                            <p><codeph>serviceId=<i>&lt;service ID></i></codeph>: The ID of a marketable service as entered during its creation. </p>
+                                        </li>
+                                        <li>
+                                            <p><codeph>serviceName=<i>&lt;service name></i></codeph>: The service name for customers of a marketable service as entered during its creation. </p>
+                                        </li>
+                                        <li>
+                                            <p><codeph>subscriptionName=<i>&lt;subscription name></i></codeph>: The name of a subscription as entered when subscribing to a service. </p>
+                                        </li>
+                                        <li><codeph>user=<i>&lt;user ID></i></codeph>: The ID of the user who was assigned the service role. </li>
+                                        <li><codeph>userRole=<i>&lt;service role></i></codeph>: The name of the service role as defined in the underlying technical service.</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Operation</b>: <b>Assign user to organizational unit</b></p>
+                                <p>Description: An administrator or OU administrator added one or more users to an organizational unit.</p>
+                                <p>Additional name-value pairs:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>user=<i>&lt;user ID></i></codeph>: The IDs of the users who were assigned to the organizational unit, separated by commas.</li>
+                                        <li><codeph>organizationalUnit=<i>&lt;organizational unit name></i></codeph>: The name of the organizational unit to which the users were added. </li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Operation</b>: <b>Assign user to subscription</b></p>
+                                <p>Description: An administrator, OU administrator, or subscription manager assigned a user to a subscription.</p>
+                                <p>Additional name-value pairs:</p>
+                                <ul compact="no">
+                                    <li>
+                                        <p><codeph>serviceId=<i>&lt;service ID></i></codeph>: The ID of a marketable service as entered during its creation. </p>
+                                    </li>
+                                    <li>
+                                        <p><codeph>serviceName=<i>&lt;service name></i></codeph>: The service name for customers of a marketable service as entered during its creation. </p>
+                                    </li>
+                                    <li>
+                                        <p><codeph>subscriptionName=<i>&lt;subscription name></i></codeph>: The name of a subscription as entered when subscribing to a service. </p>
+                                    </li>
+                                    <li>
+                                        <p><codeph>user=<i>&lt;user ID></i></codeph>: The ID of the user who was assigned to the subscription. </p>
+                                    </li>
+                                </ul>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Operation</b>: <b>Deassign service role</b></p>
+                                <p>Description: An administrator, OU administrator, or subscription manager removed a service role from a user assigned to a subscription. </p>
+                                <p>Additional name-value pairs:</p>
+                                <ul compact="no">
+                                    <li>
+                                        <p><codeph>serviceId=<i>&lt;service ID></i></codeph>: The ID of a marketable service as entered during its creation. </p>
+                                    </li>
+                                    <li>
+                                        <p><codeph>serviceName=<i>&lt;service name></i></codeph>: The service name for customers of a marketable service as entered during its creation. </p>
+                                    </li>
+                                    <li>
+                                        <p><codeph>subscriptionName=<i>&lt;subscription name></i></codeph>: The name of a subscription as entered when subscribing to a service. </p>
+                                    </li>
+                                    <li><codeph>user=<i>&lt;user ID></i></codeph>: The ID of the user who was deassigned the service role. </li>
+                                    <li><codeph>userRole=<i>&lt;service role></i></codeph>: The name of the service role as defined in the underlying technical service.</li>
+                                </ul>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Operation</b>: <b>Deassign user from subscription</b></p>
+                                <p>Description: An administrator, OU administrator, or subscription manager removed the assignment of a user to a subscription.</p>
+                                <p>Additional name-value pairs:</p>
+                                <ul compact="no">
+                                    <li>
+                                        <p><codeph>serviceId=<i>&lt;service ID></i></codeph>: The ID of a marketable service as entered during its creation. </p>
+                                    </li>
+                                    <li>
+                                        <p><codeph>serviceName=<i>&lt;service name></i></codeph>: The service name for customers of a marketable service as entered during its creation. </p>
+                                    </li>
+                                    <li>
+                                        <p><codeph>subscriptionName=<i>&lt;subscription name></i></codeph>: The name of a subscription as entered when subscribing to a service. </p>
+                                    </li>
+                                    <li>
+                                        <p><codeph>user=<i>&lt;user ID></i></codeph>: The ID of the user who was deassigned from the subscription. </p>
+                                    </li>
+                                </ul>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Operation</b>: <b>Disable access to services</b></p>
+                                <p>Description: An administrator or OU administrator specified the services that can no longer be accessed by the members of an organizational unit. For every service, a separate log entry is written. </p>
+                                <p>Additional name-value pairs:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>organizationalUnit=<i>&lt;organizational unit name></i></codeph>: The name of the organizational unit whose members cannot access the service. </li>
+                                        <li><codeph>marketplaceId=<i>&lt;marketplace ID></i></codeph>: The ID of the marketplace on which the members of the organizational unit were able to access the service.</li>
+                                        <li><codeph>marketplaceName=<i>&lt;marketplace name></i></codeph>: The name of the marketplace on which the members of the organizational unit were able to access the service.</li>
+                                        <li><codeph>serviceID=<i>&lt;service ID></i></codeph>: The ID of a marketable service as entered during its creation.</li>
+                                        <li><codeph>serviceName=<i>&lt;service name></i></codeph>: The service name for customers of a marketable service as entered during its creation.</li>
+                                        <li><codeph>sellerID=<i>&lt;seller ID></i></codeph>: The organization ID of the supplier, broker, or reseller who offers the service.</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Operation</b>: <b>Edit customer attribute by customer</b></p>
+                                <p>Description: An administrator or subscription manager defined or changed an attribute value for a customer attribute. For every attribute value, a separate log entry is written.</p>
+                                <p>Additional name-value pairs:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>customerKey=<i>&lt;organization ID></i></codeph>: The ID of the customer organization. </li>
+                                        <li><codeph>customerName=<i>&lt;organization name></i></codeph>: The name of the customer organization. </li>
+                                        <li><codeph>attributeName=<i>&lt;attribute name></i></codeph>: The name of the customer attribute. </li>
+                                        <li><codeph>attributeValue=<i>&lt;attribute value></i></codeph>: The value of the customer attribute. </li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Operation</b>: <b>Edit subscription attribute by customer</b></p>
+                                <p>Description: An administrator, OU administrator, or subscription manager defined or changed an attribute value for a custom subscription attribute. For every attribute value, a separate log entry is written.</p>
+                                <p>Additional name-value pairs:</p>
+                                <ul compact="no">
+                                    <li>
+                                        <p><codeph>serviceId=<i>&lt;service ID></i></codeph>: The ID of a marketable service as entered during its creation. </p>
+                                    </li>
+                                    <li>
+                                        <p><codeph>serviceName=<i>&lt;service name></i></codeph>: The service name for customers of a marketable service as entered during its creation. </p>
+                                    </li>
+                                    <li>
+                                        <p><codeph>subscriptionName=<i>&lt;subscription name></i></codeph>: The name of a subscription as entered when subscribing to a service. </p>
+                                    </li>
+                                    <li><codeph>attributeName=<i>&lt;attribute name></i></codeph>: The name of the custom attribute. </li>
+                                    <li><codeph>attributeValue=<i>&lt;attribute value></i></codeph>: The value of the custom attribute. </li>
+                                </ul>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Operation</b>: <b>Edit subscription owner</b></p>
+                                <p>Description: An administrator or OU administrator set or changed the owner of a subscription. </p>
+                                <p>Additional name-value pairs:</p>
+                                <ul compact="no">
+                                    <li>
+                                        <p><codeph>serviceId=<i>&lt;service ID></i></codeph>: The ID of a marketable service as entered during its creation. </p>
+                                    </li>
+                                    <li>
+                                        <p><codeph>serviceName=<i>&lt;service name></i></codeph>: The service name for customers of a marketable service as entered during its creation. </p>
+                                    </li>
+                                    <li>
+                                        <p><codeph>subscriptionName=<i>&lt;subscription name></i></codeph>: The name of a subscription as entered when subscribing to a service. </p>
+                                    </li>
+                                    <li>
+                                        <p><codeph>subscriptionOwner=<i>&lt;user ID></i></codeph>: The ID of the administrator, OU administrator, or subscription manager who was set as the new owner of the subscription.</p>
+                                    </li>
+                                </ul>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Operation</b>: <b>Edit subscription parameter configuration</b></p>
+                                <p>Description: An administrator, OU administrator, or subscription manager changed the parameter options for a subscription. For every parameter option, a separate log entry is written. </p>
+                                <p>Additional name-value pairs:</p>
+                                <p>
+                                    <ul>
+                                        <li>
+                                            <p><codeph>serviceId=<i>&lt;service ID></i></codeph>: The ID of a marketable service as entered during its creation. </p>
+                                        </li>
+                                        <li>
+                                            <p><codeph>serviceName=<i>&lt;service name></i></codeph>: The service name for customers of a marketable service as entered during its creation. </p>
+                                        </li>
+                                        <li>
+                                            <p><codeph>subscriptionName=<i>&lt;subscription name></i></codeph>: The name of a subscription as entered when subscribing to a service. </p>
+                                        </li>
+                                        <li><codeph>parameterName=<i>&lt;option name></i></codeph>: The name of the parameter option.</li>
+                                        <li><codeph>parameterValue=<i>&lt;option value></i></codeph>: The new option value. For boolean parameter options, <codeph>ON</codeph> or <codeph>OFF</codeph> (<codeph>ON</codeph>: the option has been selected, <codeph>OFF</codeph>: the option has not been selected). For enumerations, the value set for the parameter option. </li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Operation</b>: <b>Enable access to services</b></p>
+                                <p>Description: An administrator or OU administrator specified the services that can be accessed by the members of an organizational unit. For every service, a separate log entry is written. </p>
+                                <p>Additional name-value pairs:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>organizationalUnit=<i>&lt;organizational unit name></i></codeph>: The name of the organizational unit whose members can access the service. </li>
+                                        <li><codeph>marketplaceId=<i>&lt;marketplace ID></i></codeph>: The ID of the marketplace on which the members of the organizational unit can access the service.</li>
+                                        <li><codeph>marketplaceName=<i>&lt;marketplace name></i></codeph>: The name of the marketplace on which the members of the organizational unit can access the service.</li>
+                                        <li><codeph>serviceID=<i>&lt;service ID></i></codeph>: The ID of a marketable service as entered during its creation.</li>
+                                        <li><codeph>serviceName=<i>&lt;service name></i></codeph>: The service name for customers of a marketable service as entered during its creation.</li>
+                                        <li><codeph>sellerID=<i>&lt;seller ID></i></codeph>: The organization ID of the supplier, broker, or reseller who offers the service.</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Operation</b>: <b>Remove user from organizational unit</b></p>
+                                <p>Description: An administrator or OU administrator removed one or more users from an organizational unit.</p>
+                                <p>Additional name-value pairs:</p>
+                                <p>
+                                    <ul>
+                                        <li><codeph>user=<i>&lt;user IDs></i></codeph>: The IDs of the users who were removed from the organizational unit, separated by commas.</li>
+                                        <li><codeph>organizationalUnit=<i>&lt;organizational unit name></i></codeph>: The name of the organizational unit from which the users were removed. </li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Operation</b>: <b>Report issue</b></p>
+                                <p>Description: An administrator, OU administrator, or subscription manager reported an issue on a subscription to the responsible supplier or reseller. </p>
+                                <p>Additional name-value pairs:</p>
+                                <p>
+                                    <ul>
+                                        <li>
+                                            <p><codeph>serviceId=<i>&lt;service ID></i></codeph>: The ID of a marketable service as entered during its creation. </p>
+                                        </li>
+                                        <li>
+                                            <p><codeph>serviceName=<i>&lt;service name></i></codeph>: The service name for customers of a marketable service as entered during its creation. </p>
+                                        </li>
+                                        <li>
+                                            <p><codeph>subscriptionName=<i>&lt;subscription name></i></codeph>: The name of a subscription as entered when subscribing to a service. </p>
+                                        </li>
+                                        <li>
+                                            <p><codeph>issue=<i>&lt;text></i></codeph>: The subject of the issue as entered by the administrator, OU administrator, or subscription manager. </p>
+                                        </li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Operation</b>: <b>Set subscription billing address</b></p>
+                                <p>Description: An administrator, OU administrator, or subscription manager set or changed the billing address for a subscription.</p>
+                                <p>Additional name-value pairs:</p>
+                                <p>
+                                    <ul>
+                                        <li>
+                                            <p><codeph>serviceId=<i>&lt;service ID></i></codeph>: The ID of a marketable service as entered during its creation. </p>
+                                        </li>
+                                        <li>
+                                            <p><codeph>serviceName=<i>&lt;service name></i></codeph>: The service name for customers of a marketable service as entered during its creation. </p>
+                                        </li>
+                                        <li>
+                                            <p><codeph>subscriptionName=<i>&lt;subscription name></i></codeph>: The name of a subscription as entered when subscribing to a service. </p>
+                                        </li>
+                                        <li><codeph>address=<i>&lt;display name></i></codeph>: The name of the billing address as shown to the user. </li>
+                                        <li><codeph>addressDetails=<i>&lt;address details></i></codeph>: The name of the organization, email, and postal address to which invoices are to be sent. </li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Operation</b>: <b>Set subscription payment type</b></p>
+                                <p>Description: An administrator, OU administrator, or subscription manager set or changed the payment type for a subscription. </p>
+                                <p>Additional name-value pairs:</p>
+                                <p>
+                                    <ul>
+                                        <li>
+                                            <p><codeph>serviceId=<i>&lt;service ID></i></codeph>: The ID of a marketable service as entered during its creation. </p>
+                                        </li>
+                                        <li>
+                                            <p><codeph>serviceName=<i>&lt;service name></i></codeph>: The service name for customers of a marketable service as entered during its creation. </p>
+                                        </li>
+                                        <li>
+                                            <p><codeph>subscriptionName=<i>&lt;subscription name></i></codeph>: The name of a subscription as entered when subscribing to a service. </p>
+                                        </li>
+                                        <li><codeph>paymentName=<i>&lt;display name></i></codeph>: The name of the payment type as shown to the user. </li>
+                                        <li><codeph>paymentType=<i>&lt;payment type></i></codeph>: The payment type name as offered by the supplier or PSP.</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Operation</b>: <b>Subscribe to service</b></p>
+                                <p>Description: An administrator, OU administrator, or subscription manager completed subscribing to a marketable service offered on a marketplace. </p>
+                                <p>Additional name-value pairs.</p>
+                                <p>
+                                    <ul>
+                                        <li>
+                                            <p><codeph>serviceId=<i>&lt;service ID></i></codeph>: The ID of a marketable service as entered during its creation. </p>
+                                        </li>
+                                        <li>
+                                            <p><codeph>serviceName=<i>&lt;service name></i></codeph>: The service name for customers of a marketable service as entered during its creation. </p>
+                                        </li>
+                                        <li>
+                                            <p><codeph>subscriptionName=<i>&lt;subscription name></i></codeph>: The name of a subscription as entered when subscribing to a service. </p>
+                                        </li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Operation</b>: <b>Unsubscribe from service</b></p>
+                                <p>Description: An administrator, OU administrator, or subscription manager terminated a subscription.</p>
+                                <p>Additional name-value pairs:</p>
+                                <p>
+                                    <ul>
+                                        <li>
+                                            <p><codeph>serviceId=<i>&lt;service ID></i></codeph>: The ID of a marketable service as entered during its creation. </p>
+                                        </li>
+                                        <li>
+                                            <p><codeph>serviceName=<i>&lt;service name></i></codeph>: The service name for customers of a marketable service as entered during its creation. </p>
+                                        </li>
+                                        <li>
+                                            <p><codeph>subscriptionName=<i>&lt;subscription name></i></codeph>: The name of a subscription as entered when subscribing to a service. </p>
+                                        </li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <table frame="top">
+                <tgroup cols="1">
+                    <colspec colname="c1" colnum="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <p><b>Operation</b>: <b>Up/downgrade subscription</b></p>
+                                <p>Description: An administrator, OU administrator, or subscription manager upgraded or downgraded a subscription.</p>
+                                <p>Additional name-value pairs:</p>
+                                <p>
+                                    <ul>
+                                        <li>
+                                            <p><codeph>serviceId=<i>&lt;service ID></i></codeph>: The ID of a marketable service as entered during its creation. </p>
+                                        </li>
+                                        <li>
+                                            <p><codeph>serviceName=<i>&lt;service name></i></codeph>: The service name for customers of a marketable service as entered during its creation. </p>
+                                        </li>
+                                        <li>
+                                            <p><codeph>subscriptionName=<i>&lt;subscription name></i></codeph>: The name of a subscription as entered when subscribing to a service. </p>
+                                        </li>
+                                        <li><codeph>newServiceId=<i>&lt;service ID></i></codeph>: The ID of the marketable service to which the subscription was upgraded or downgraded. </li>
+                                        <li><codeph>newServiceName=<i>&lt;service name></i></codeph>: The service name for customers of the service to which the subscription was upgraded or downgraded. </li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </section>
+    </refbody>
+</reference>

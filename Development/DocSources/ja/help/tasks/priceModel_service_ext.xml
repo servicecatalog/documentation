@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="ja-jp">
+  <title>サービスの料金設定</title>
+  <taskbody>
+    <context>
+      <p><uicontrol>サービスの料金設定</uicontrol>ページで、サービスに対して料金設定の定義と編集を行うことができます。</p>
+      <p><b>外部の請求システム</b>を使用して料金請求されるサービスを選択しています。料金計算のための料金設定は当該請求システムで定義、管理されています。プラットフォームでは、サービスに対する適切な料金設定をインポートする必要があります。プラットフォームでは料金設定の参照のみすることができ、編集することはできません。料金設定を変更するには、該当する情報を外部の請求システムで編集した後に再度インポートする必要があります。</p>
+      <p><b>サービス料金設定の定義、および編集方法</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd><uicontrol>料金設定を入力してください</uicontrol>において、外部のシステムから料金設定をインポートするために<uicontrol>インポート</uicontrol>をクリックします。</cmd>
+        <info>請求システムアダプターがプラットフォームを外部の請求システムと接続し、正しい料金設定を使用可能な状態である必要があります。<uicontrol>表示</uicontrol>ボタンをクリックすると料金設定を参照することができます。</info>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_license">
+        <cmd/>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_save">
+        <cmd/>
+      </step>
+      <step>
+        <cmd>別の言語でサービス利用規約を提供するには、 <uicontrol>ローカライズ</uicontrol>をクリックします。</cmd>
+      </step>
+    </steps>
+    <result>
+      <p>サービスを有効化すると選択したサービス利用部門で料金設定が使用可能になります。これは当該サービス利用部門のすべての購入済サービスに対して有効になります。</p>
+      <p>変更はサービス利用部門、サービス仲介部門、およびサービス提供代行部門に対してただちに反映されます。</p>
+    </result>
+  </taskbody>
+  <related-links>
+    <linklist>
+      <title>関連情報</title>
+      <link href="priceModel_localize.xml"/>
+    </linklist>
+  </related-links>
+</task>

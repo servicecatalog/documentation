@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd">
+<task id="task634" xml:lang="de-de">
+    <title>Tracking Code hinzufügen</title>
+    <taskbody>
+        <context>
+            <p>Auf der Seite <uicontrol>Tracking Code hinzufügen</uicontrol> können Sie Code zu den Seiten Ihres Marktplatzes hinzufügen oder entfernen.</p>
+            <p>Tracking Code dient zur Verfolgung der Besuche auf Ihrem Marktplatz. Zum Beispiel können Sie damit die Häufigkeit messen, mit der Marktplatzbesucher Ihren Marktplatz aufrufen. Sie können jede beliebige Web-Analyse-Software verwenden.  Tracking Code wird als HTML-Code angegeben. Dieser HTML-Code wird auf allen Seiten Ihres Marktplatzes eingefügt. Sobald eine Seite von einem Besucher geladen wird, wird das entsprechende Skript aufgerufen und Sie können die Daten auswerten. </p>
+            <p id="To_add_tracking_code_task_taskbody_context_p_2"><b>So fügen Sie Tracking Code hinzu</b>:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Wählen Sie in der Liste <uicontrol>Marktplatz</uicontrol> den Marktplatz, dem Sie Tracking Code hinzufügen möchten.</cmd>
+                <info>
+                    <p>Die Liste enthält alle Marktplätze, auf die Sie als Marktplatz-Manager Zugriff haben.</p>
+                </info>
+            </step>
+            <step>
+                <cmd>Geben Sie den HTML-Code ein. Falls erforderlich, können Sie JavaScript-Code verwenden.</cmd>
+                <info>
+                    <p>
+                        <note>Der Code kann zu Fehlern im Seitenlayout des Marktplatzes führen. Zudem können Änderungen am Layout Anpassungen des Marktplatzes zunichte machen.<p>Sie sind verantwortlich für ein fehlerfreies Seitenlayout. </p></note>
+                    </p>
+                </info>
+            </step>
+            <step>
+                <cmd>Schließen Sie Ihre Eingaben mit <uicontrol>Speichern</uicontrol> ab. </cmd>
+            </step>
+        </steps>
+        <result>
+            <p>Der Code wird auf allen Seiten Ihres Marktplatzes eingefügt. Die Änderung wird wirksam, sobald Besucher sich das nächste Mal am Marktplatz anmelden oder den Inhalt ihres Browsers neu laden. </p>
+            <p><b>So entfernen Sie Tracking Code</b>:</p>
+            <p>
+                <ol compact="no">
+                    <li>Wählen Sie in der Liste <uicontrol>Marktplatz</uicontrol> den Marktplatz, für den Sie Tracking Code löschen möchten.<p>Die Liste enthält alle Marktplätze, auf die Sie als Marktplatz-Manager Zugriff haben.</p></li>
+                    <li>Löschen Sie den HTML-Code.</li>
+                    <li>Schließen Sie Ihre Änderungen mit <uicontrol>Speichern</uicontrol> ab.</li>
+                </ol>
+            </p>
+            <p>Der Code wird von den Seiten Ihres Marktplatzes gelöscht. Die Änderung wird wirksam, sobald Besucher sich das nächste Mal am Marktplatz anmelden oder den Inhalt ihres Browsers neu laden. </p>
+        </result>
+    </taskbody>
+</task>

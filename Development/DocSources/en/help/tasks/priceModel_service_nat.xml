@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="en-us">
+  <title>Defining a service price model</title>
+  <taskbody>
+    <context>
+      <p>On the <uicontrol>Define for service</uicontrol> page, you can define or update a price model for the selected service. </p>
+      <p>You have selected a service that is charged for using the platform's <b>native billing system</b>. This means that you are responsible for defining whether and how much customers subscribing to the service are charged for using the subscription.</p>
+      <p><b>To define or update a service price model</b>:</p>
+    </context>
+    <steps>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_free_service">
+        <cmd/>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_desc">
+        <cmd/>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_trialperiod">
+        <cmd/>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_charging">
+        <cmd/>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_events">
+        <cmd/>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_params">
+        <cmd/>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_license">
+        <cmd/>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_save">
+        <cmd/>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_localize">
+        <cmd/>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_roles">
+        <cmd/>
+      </step>
+    </steps>
+    <result>
+      <p>After activating the service, the price model is available to customers. It takes effect for all new subscriptions.</p>
+      <p>Brokers and resellers as well as their customers can instantly view any changes you have made.</p>
+    </result>
+  </taskbody>
+  <related-links>
+    <linklist>
+      <title>Related topics</title>
+      <link href="priceModel_localize.xml"/>
+      <link href="priceModel_roles.xml"/>
+    </linklist>
+  </related-links>
+</task>

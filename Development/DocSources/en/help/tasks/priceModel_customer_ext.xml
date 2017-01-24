@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="en-us">
+  <title>Defining a customer price model</title>
+  <taskbody>
+    <context>
+      <p>On the <uicontrol>Define for customer</uicontrol> page, you can define or update the price model for a selected service and customer. </p>
+      <p>You have selected a service that is charged for using an <b>external billing system</b>. The price models for calculating the charges are also defined and managed in this billing system. You need to import the appropriate price model for the service and customer in the platform. You can view the price model but not modify it on the platform. To change the price model, you need to import it again after the relevant information has been updated in the external billing system. </p>
+      <p><b>To define or update a customer price model</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>In the <uicontrol>Define the price model</uicontrol> section, click <uicontrol>Import</uicontrol> to import the price model from the external system.</cmd>
+        <info>The billing adapter, that connects the platform with the external billing system, is responsible for providing the correct price model. You can view the price model by clicking <uicontrol>Display</uicontrol>.</info>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_license2">
+        <cmd/>
+      </step>
+      <step conref="../../Shared/priceModel.xml#PriceModelTopic/step_save">
+        <cmd/>
+      </step>
+      <step>
+        <cmd>To provide the license agreement in another language, click <uicontrol>Localize</uicontrol>.</cmd>
+      </step>
+    </steps>
+    <result>After activating the service, the price model is available to the selected customer. It takes effect for all new subscriptions of the customer.</result>
+  </taskbody>
+  <related-links>
+    <linklist>
+      <title>Related topics</title>
+      <link href="priceModel_localize.xml"/>
+    </linklist>
+  </related-links>
+</task>

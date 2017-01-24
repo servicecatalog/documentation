@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_B32294CC9FA643A2A14A74B1DAA49C95" xml:lang="en-us">
+    <title>Updating a Trigger Definition</title>
+    <conbody>
+        <section>
+            <p>You can update an existing trigger definition as follows using the operator Web client: </p>
+            <p>
+                <ol compact="no">
+                    <li>From the <uicontrol>operation</uicontrol> list, select <codeph>updatetriggerdefinition</codeph> and click <uicontrol>select</uicontrol>. </li>
+                    <li>In the <uicontrol>orgid</uicontrol> field, enter the ID of the organization for which the trigger is to be configured. </li>
+                    <li>In the <uicontrol>key</uicontrol> field, enter the unique key of the trigger definition to be updated. The trigger definition key is generated automatically when the trigger definition is created. You can retrieve the keys of all trigger definitions for an organization by executing the <codeph>retrievetriggerdefinitions</codeph> function. </li>
+                    <li>In the <uicontrol>type</uicontrol> field, enter the trigger type. Allowed values are:<ul
+                            compact="no"><li><codeph>ADD_SUPPLIER_TO_TECHNOLOGY_PROVIDER</codeph></li><li><codeph
+                                    >MODIFY_SUBSCRIPTION</codeph></li><li><codeph>UPGRADE_SUBSCRIPTION</codeph></li><li><codeph>DEACTIVATE_SERVICE</codeph></li><li><codeph>ADD_REVOKE_USER</codeph></li><li><codeph>SUBSCRIBE_TO_SERVICE</codeph></li><li><codeph>ACTIVATE_SERVICE</codeph></li><li><codeph>REGISTER_CUSTOMER_FOR_SUPPLIER</codeph></li><li><codeph>REMOVE_SUPPLIER_FROM_TECHNOLOGY_PROVIDER</codeph></li><li><codeph>UNSUBSCRIBE_FROM_SERVICE</codeph></li><li><codeph>SAVE_PAYMENT_CONFIGURATION</codeph></li><li><codeph>START_BILLING_RUN</codeph></li></ul></li>
+                    <li>In the <uicontrol>targettype</uicontrol> field, enter <codeph>WEB_SERVICE</codeph>. Currently, this is the only type of target supported by <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</li>
+                    <li>In the <uicontrol>target</uicontrol> field, enter the URL of the notification service WSDL file provided by the organization that requested trigger configuration. </li>
+                    <li>In the <uicontrol>suspendprocess</uicontrol> field, specify whether the execution of an action is to be suspended by entering either <codeph>true</codeph> or <codeph>false</codeph>. If you leave this field empty, <codeph>false</codeph> is the default. </li>
+                    <li>Click <uicontrol>execute</uicontrol>. </li>
+                </ol>
+            </p>
+        </section>
+        <section>The syntax of the respective CLT command is as follows: <p><codeblock>java -jar oscm-operatorsvc-client.jar &lt;userkey> &lt;password>
+updatetriggerdefinition orgid=&lt;organizationID> type=&lt;type> targettype=WEB_SERVICE target=&lt;wsdlURL> suspendprocess=[true|false]</codeblock></p></section>
+    </conbody>
+</concept>

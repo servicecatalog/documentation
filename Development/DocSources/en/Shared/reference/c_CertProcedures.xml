@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="CertIntProc"
+                    xml:lang="en-us">
+    <title>Certificate Integration Procedures</title>
+    <conbody>
+        <section>
+            <p id="certInt1">For implementing a secure <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> environment where the nodes trust each other, the usage of custom root certificates is recommended. The basic procedure is as follows: </p>
+            <p id="certInt2">The <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> operator creates the root certificate. This certificate is imported to the <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> truststore as well as handed out to all technology providers or other organizations calling <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> Web services. </p>
+        </section>
+        <section>
+            <p id="certInt3">The following figure illustrates the process and tasks involved in using custom root certificates for secure communication: </p>
+            <p id="certInt4">
+                <fig>
+                    <image alt="OPCertificates.png" height="580" href="../_images/OPCertificates.png" width="350"/>
+                </fig>
+            </p>
+        </section>
+    </conbody>
+</concept>

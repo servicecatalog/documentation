@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<reference id="reference832" xml:lang="de-de">
+    <title>Preise für Ereignisse</title>
+    <refbody>
+        <section>
+            <p>In einem Preismodell kann für jedes abrechenbare Ereignis ein eigener Preis definiert werden. <ph
+                    id="Für_welche_Ereignisse_Preise_reference_refbody_section_1"><ph
+                        conref="r_PriceModelDetails.xml#reference832/Ein_Ereignis_ist_beispielswei_reference_refbody_section_ul"
+                    /> Für welche Ereignisse Preise definiert werden können, ist abhängig von der Implementierung und Integration der zugrunde liegenden Anwendung.</ph></p>
+            <p>Für Ereignisse ist eine Preisstaffelung möglich: Abhängig davon, wie oft ein Ereignis während des Abrechnungszeitraums auftritt, können unterschiedliche Preise definiert werden. Weitere Informationen finden Sie <xref
+                    href="r_PriceModelDetails_stepped.xml">hier</xref>. </p>
+            <p>Der festgelegte Abrechnungsmodus (pro rata oder pro Zeiteinheit) hat keine Auswirkung auf die Kosten für Ereignisse.</p>
+        </section>
+        <section>
+            <title>Beispiel</title>
+            <p>Folgende Preise sind für Ereignisse definiert: </p>
+            <fig>
+                <image href="../_images/PriceModelSamples_Events.png" placement="break" height="262" width="622"/>
+            </fig>
+            <p>Die Kosten für die Ereignisse errechnen sich anhand der Häufigkeit ihres Auftretens. Die Laufzeit des Abonnements liegt innerhalb des Abrechnungszeitraums.</p>
+            <fig>
+                <image href="../_images/PriceModelSamples_EventsCalc.png" placement="break" height="150" width="400"/>
+            </fig>
+        </section>
+    </refbody>
+</reference>

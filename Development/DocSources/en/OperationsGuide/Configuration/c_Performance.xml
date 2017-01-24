@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="Timers" xml:lang="en-us">
+        <title>Tuning Performance</title>
+        <conbody>
+                <p><b>JDBC pool size</b></p>
+                <p id="concept_Timers">If you encounter a decrease in performance when operating <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                />, this might be caused by an insufficient JDBC pool size setting for the <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> domain in your application server together with an insufficient setting for the maximum number of connections in your PostgreSQL server. </p>
+                <p id="concept_Timers"
+                        >Check the application server log file. If you find exceptions like the following, proceed as described below. </p>
+                <p>
+                        <codeblock>--- ERROR org.hibernate.util.JDBCExceptionReporter
+- Error in allocating a connection.
+Cause: In-use connections equal max-pool-size and expired max-wait-time. 
+Cannot allocate more connections.
+-- javax.persistence.PersistenceException: org.hibernate.exception.
+GenericJDBCException: Cannot open connection</codeblock>
+                </p>
+                <p id="concept_Timers"
+                                >The <codeph>max-pool-size</codeph> setting in GlassFish determines the maximum number of connections that can be created by <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> to the database server. The <codeph>max-wait-time</codeph> is the time <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> waits for a response before sending a connection timeout (default: 60,000 milliseconds).</p>
+                <p id="concept_Timers">Proceed as follows: </p>
+                <p id="concept_Timers">
+                        <ol>
+                                <li>
+                                        <p id="concept_Timers"
+                                                        >In the application server's administration console, go to <b>Resources > JDBC > Connection Pools > BSSPool</b>.</p>
+                                </li>
+                                <li>
+                                        <p id="concept_Timers"
+                                                        >In the <b>General</b> section, set the <b>Maximum Pool Size</b> to a value higher than the default value (<codeph>32</codeph>), for example, to <codeph>100</codeph>.</p>
+                                </li>
+                                <li>
+                                        <p id="concept_Timers">Stop and restart the <ph
+                                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                /> domain. </p>
+                                </li>
+                                <li>
+                                        <p id="concept_Timers">Stop your PostgreSQL server. </p>
+                                </li>
+                                <li>
+                                        <p>Edit the file</p>
+                                        <p><codeph>&lt;postgres_dir>/data/postgresql.conf</codeph>
+                                        </p>
+                                        <p>as follows (<codeph>&lt;postgres_dir></codeph> is the PostgreSQL installation directory): </p>
+                                        <p>Set the <codeph>max_connections</codeph> property value to a value higher than or equal to the size of all the JDBC connection pools on your application server. This setting determines the maximum number of concurrent connections to the PostgreSQL server. If you are running no applications other than <ph
+                                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                />, the value is calculated as follows: </p>
+                                        <p>Maximum pool size of the BSSPool + 92 (default for JMS connections in the <ph
+                                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                /> domain and the master indexer domain).</p>
+                                        <p>Example: Set the pool size for the BSSPool in the application server to <codeph>100</codeph>. Then you need to set the maximum number of connections in your database server to at least <codeph>192</codeph>. </p>
+                                </li>
+                                <li>
+                                        <p>Restart your PostgreSQL server for the changes to take effect. </p>
+                                </li>
+                        </ol>
+                </p>
+                <p><b>Thread pool size</b></p>
+                <p>If you encounter performance problems when several users concurrently access <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                />, you can increase the maximum thread pool size in your application server. The <b>Max Thread Pool Size</b> parameter specifies the maximum number of simultaneous requests the server can handle. The default value is 5. When the server has reached the limit of request threads, it defers processing new requests until the number of active requests drops below the maximum amount. Increasing this value will reduce HTTP response latency times.</p>
+                <p>Proceed as follows: </p>
+                <p id="concept_Timers">
+                        <ol>
+                                <li>
+                                        <p id="concept_Timers"
+                                                        >In the application server's administration console, go to <b>Configurations > server-config > Thread Pools > http-thread-pool</b>.</p>
+                                </li>
+                                <li>
+                                        <p id="concept_Timers"
+                                                        >Change the default setting of the <b>Max Thread Pool Size</b> parameter. It is recommended to choose a value between <codeph>100</codeph> and <codeph>500</codeph>, for example, <codeph>120</codeph>.</p>
+                                </li>
+                        </ol>
+                </p>
+                <p>For detailed information on application server tuning, refer to the <i>Oracle GlassFish Server 3.1 Performance Tuning Guide</i>.</p>
+        </conbody>
+</concept>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<reference id="Application_Server_Resources_74" xml:lang="en-us">
+    <title>Menu Options and User Roles</title>
+    <refbody>
+        <section>
+            <p>This appendix provides an overview of the user roles required for using the menu options at the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> administration portal which are of relevance to a technology provider. For details on the menu options, refer to the <i>Online Help</i>.</p>
+        </section>
+        <section>
+            <title>Account Menu</title>
+            <p>The following user roles are required for using the menu options in the <b>Account</b> menu:</p>
+            <table colsep="1" frame="all" rowsep="1">
+                <tgroup cols="2">
+                    <colspec colname="col1" colnum="1" colwidth="196.5pt"/>
+                    <colspec colname="col2" colnum="2" colwidth="282.75pt"/>
+                    <tbody>
+                        <row>
+                            <entry colname="col1"><b>Edit profile</b>
+                            </entry>
+                            <entry colname="col2">Any user role</entry>
+                        </row>
+                        <row>
+                            <entry><b>Import users</b><p>(if the organization uses LDAP-based user authentication)</p></entry>
+                            <entry>Administrator</entry>
+                        </row>
+                        <row>
+                            <entry colname="col1"
+                                    ><b>Change password</b><p>(if the organization does not use an external system for user authentication)</p></entry>
+                            <entry colname="col2"
+                                >Any user role</entry>
+                        </row>
+                        <row>
+                            <entry colname="col1"><b>Register new users</b></entry>
+                            <entry colname="col2"
+                                >Administrator</entry>
+                        </row>
+                        <row>
+                            <entry colname="col1"><b>Manage users</b>
+                            </entry>
+                            <entry colname="col2">Administrator</entry>
+                        </row>
+                        <row>
+                            <entry><b>LDAP settings</b><p>(if the organization uses LDAP-based user authentication)</p></entry>
+                            <entry>Administrator</entry>
+                        </row>
+                        <row>
+                            <entry colname="col1"><b>Create report</b>
+                            </entry>
+                            <entry colname="col2">Administrator</entry>
+                        </row>
+                        <row>
+                            <entry colname="col1"><b>Process triggers</b>
+                            </entry>
+                            <entry colname="col2">Administrator</entry>
+                        </row>
+                        <row>
+                            <entry colname="col1"
+                                ><b>Manage processes</b><p>(if the organization is connected to an external process control system)</p></entry>
+                            <entry colname="col2">Any user role</entry>
+                        </row>
+                        <row>
+                            <entry colname="col1">
+                                <b>Manage suppliers</b>
+                            </entry>
+                            <entry colname="col2">Technology manager</entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </section>
+        <section>
+            <title>Technical Service Menu</title>
+            <p>The following user roles are required for using the menu options in the <b>Technical service</b> menu:</p>
+            <table colsep="1" frame="all" rowsep="1">
+                <tgroup cols="2">
+                    <colspec colname="col1" colnum="1" colwidth="194.25pt"/>
+                    <colspec colname="col2" colnum="2" colwidth="280.5pt"/>
+                    <tbody>
+                        <row>
+                            <entry colname="col1">
+                                <b>Register service definition</b>
+                            </entry>
+                            <entry colname="col2">Technology manager</entry>
+                        </row>
+                        <row>
+                            <entry colname="col1">
+                                <b>Import service definition</b>
+                            </entry>
+                            <entry colname="col2">Technology manager</entry>
+                        </row>
+                        <row>
+                            <entry colname="col1">
+                                <b>Update service definition</b>
+                            </entry>
+                            <entry colname="col2">Technology manager</entry>
+                        </row>
+                        <row>
+                            <entry colname="col1">
+                                <b>Export service definition</b>
+                            </entry>
+                            <entry colname="col2">Technology manager</entry>
+                        </row>
+                        <row>
+                            <entry colname="col1">
+                                <b>Delete service definition</b>
+                            </entry>
+                            <entry colname="col2">Technology manager</entry>
+                        </row>
+                        <row>
+                            <entry colname="col1">
+                                <b>View billing systems</b></entry>
+                            <entry colname="col2">Technology manager</entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </section>
+    </refbody>
+</reference>

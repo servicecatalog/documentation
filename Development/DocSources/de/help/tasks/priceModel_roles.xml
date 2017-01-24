@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="de-de">
+  <title>Rollenspezifische Preise definieren</title>
+  <taskbody>
+    <context>
+      <p>Auf der Seite <uicontrol>Rollenspezifische Preise definieren</uicontrol> können Sie für jede Servicerolle, die im zugrunde liegenden technischen Service definiert ist, eine zusätzliche Gebühr festlegen. Servicerollen können dazu verwendet werden, Benutzern bestimmte Privilegien zu gewähren. In der zugrunde liegenden Anwendung werden diese Servicerollen dann auf die entsprechenden Rechte abgebildet.</p>
+      <p>Für jede Servicerolle können Sie einen Preis definieren. Der Preis wird bei der Berechnung der Nutzungsgebühren für einen Abrechnungszeitraum zum Grundpreis für Benutzer addiert.</p>
+      <note>Rollenspezifische Preise sind nur für Preismodelle von Services relevant, für deren Kostenberechnung das plattformeigene Abrechnungssystem verwendet wird. Preismodelle von externen Abrechnungssystemen definieren ihre eigenen Elemente, auf deren Basis die Kosten für einen Services berechnet werden.</note>
+      <p><b>So definieren Sie Preise für Servicerollen</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>Wählen Sie die Servicerolle, für die Sie Preise festlegen möchten. </cmd>
+      </step>
+      <step>
+        <cmd>Geben Sie im Feld <uicontrol>Preis für Benutzer</uicontrol> einen Wert ein, falls die Nutzungsbebühren pro Benutzer mit der Servicerolle monatlich, wöchentlich, täglich oder stundenweise in Rechnung gestellt werden sollen.</cmd>
+        <info/>
+      </step>
+      <step>
+        <cmd>Geben Sie einen Preis für jede Serviceoption an.</cmd>
+      </step>
+      <step>
+        <cmd>Bestätigen Sie Ihre Eingaben mit <uicontrol>Anwenden</uicontrol> und geben Sie für eine weitere Servicerolle Preise ein. </cmd>
+        <info>Speichern Sie Ihre Eingaben mit <uicontrol>OK</uicontrol>. Sie werden zur Seite <uicontrol>Service-Preismodell definieren</uicontrol>, <uicontrol>Kunden-Preismodell definieren</uicontrol> oder <uicontrol>Abo-Preismodell definieren</uicontrol> weitergeleitet.</info>
+      </step>
+      <step>
+        <cmd>Schließen Sie auf der Seite <uicontrol>Service-Preismodell definieren</uicontrol>, <uicontrol>Kunden-Preismodell definieren</uicontrol> oder <uicontrol>Abo-Preismodell definieren</uicontrol> die Definition Ihres Preismodells mit <uicontrol>Speichern</uicontrol> ab.</cmd>
+      </step>
+    </steps>
+  </taskbody>
+  <related-links>
+    <linklist>
+      <title>Weitere Themen</title>
+      <link href="priceModel_service.xml"/>
+      <link href="priceModel_customer.xml"/>
+      <link href="priceModel_subscription.xml"/>
+    </linklist>
+  </related-links>
+</task>

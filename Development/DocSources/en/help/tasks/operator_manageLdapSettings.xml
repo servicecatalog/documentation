@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd">
+<task id="task634" xml:lang="en-us">
+  <title>Managing LDAP settings</title>
+  <taskbody>
+    <context>
+      <p>User IDs and passwords of an organization can be created and maintained in the platform or in an existing LDAP system of the organization.</p>
+      <p conref="operator_createOrganization.xml#OrgCreate/UserMgmt2"/>
+      <p>On the <uicontrol>Manage LDAP settings</uicontrol> page, you can define and manage LDAP settings that apply to the whole platform. You can also check and restore the settings for an organization's LDAP system, for example when the LDAP system cannot be reached. </p>
+      <p>Defining platform LDAP settings is useful if LDAP settings are to be reused for several organizations on your platform. It is possible to overwrite, omit, or add additional settings in the LDAP settings of each organization. </p>
+      <p><b>To define platform LDAP settings</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>Create an LDAP configuration file on your file system, and define the platform LDAP connection settings in the file. </cmd>
+        <info>
+          <p>Here is a sample configuration file: </p>
+          <p conref="operator_createOrganization.xml#OrgCreate/LDAPSample"/>
+        </info>
+      </step>
+      <step>
+        <cmd>To load the LDAP settings, click the <uicontrol>File name</uicontrol> entry field or <uicontrol>Browse</uicontrol>, and select the file containing the settings. </cmd>
+      </step>
+      <step>
+        <cmd>Click <uicontrol>Import</uicontrol>. </cmd>
+        <info>The settings as defined in the configuration file are listed in a read-only table.</info>
+      </step>
+      <step>
+        <cmd>To save your entries, click <uicontrol>Save</uicontrol>.</cmd>
+      </step>
+    </steps>
+    <result>
+      <p><b>To check and update an organization's LDAP settings</b>:</p>
+      <p>
+        <ol>
+          <li>Select the organization for which you want to define or update the LDAP connection.<p>The currently defined LDAP settings and their values are listed. You can also see whether a setting corresponds to a platform default setting. </p></li>
+          <li>Click <uicontrol>Export</uicontrol> to save the current settings to a file on your file system.</li>
+          <li>Edit the configuration file as required. </li>
+          <li>To load the organization's LDAP settings, click the <uicontrol>File name</uicontrol> entry field or <uicontrol>Browse</uicontrol>, and select the file containing the updated settings.</li>
+          <li>Click <uicontrol>Import</uicontrol> and confirm the message. <p>
+              <note>Be aware that this action replaces all existing LDAP settings for the organization.</note>
+            </p></li>
+          <li>To check if the connection to the LDAP system can be established, click <uicontrol>Test connection</uicontrol>.</li>
+        </ol>
+      </p>
+    </result>
+  </taskbody>
+  <related-links>
+    <linklist>
+      <title>Related topics</title>
+      <link href="../../Shared/reference/r_LDAP_SettingTypes.xml"/>
+    </linklist>
+  </related-links>
+</task>

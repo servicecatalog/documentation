@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="en-us">
+  <title>Deleting customer price models</title>
+  <taskbody>
+    <context>
+      <p>On the <uicontrol>Delete for customer</uicontrol> page, you can delete customer price models which you do not want to offer to customers any longer. You can delete one or several price models that have been defined for a specific customer.</p>
+      <p>Usually, you delete a customer price model only in agreement with the relevant customer. </p>
+      <p><ph id="For_deleting_a_customer_price_task_taskbody_context_p_3_ph"
+          >For deleting a customer price model, the relevant marketable service must be deactivated. Existing subscriptions are not affected by the deletion. The corresponding service price model is automatically applied for new subscriptions to the service.</ph></p>
+      <p><b>To delete customer price models</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>From the <uicontrol>Customer</uicontrol> list, select the customer whose price models you want to delete.</cmd>
+        <info>
+          <p>The list contains all customer organizations for which you defined customer price models. </p>
+        </info>
+      </step>
+      <step>
+        <cmd>From the list of services, choose the services whose customer price models you want to delete by selecting the corresponding check boxes. </cmd>
+      </step>
+      <step>
+        <cmd>To delete the customer price models, click <uicontrol>Delete</uicontrol> and confirm the deletion.</cmd>
+      </step>
+    </steps>
+    <result>The price models are instantly deleted and no longer available.</result>
+  </taskbody>
+  <related-links>
+    <linklist>
+      <title>Related topics</title>
+      <link href="priceModel_customer.xml"/>
+    </linklist>
+  </related-links>
+</task>

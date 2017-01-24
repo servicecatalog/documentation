@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<reference id="reference832" xml:lang="en-us">
+            <title><ph platform="print">Prices for Parameters and Options</ph><ph platform="help"
+                                    >Prices for parameters and options</ph></title>
+            <refbody>
+                        <section>
+                                    <p id="A_price_model_can_define_pric_reference_refbody_section_1"
+                                                            >A price model can define prices for service parameters and options. <ph
+                                                            id="It_depends_on_the_implementat_reference_refbody_section_1"
+                                                            >It depends on the implementation and integration of the underlying application whether and which parameters and options are available.</ph>
+                                    </p>
+                                    <p id="The_supplier_reference_refbody_section_1"><ph platform="print"
+                                                            >A supplier</ph><ph platform="help"
+                                                            >You</ph> can define a price for every parameter and option, <ph
+                                                            id="and_specify_whether_this_pric_reference_refbody_section_1"
+                                                            >and specify whether this price is to be charged per subscription or per user assigned to the subscription. Numeric parameters are a multiplier for the price. For boolean parameters, the multiplier is <codeph>1</codeph> if the value is <codeph>true</codeph>. In all other cases, the multiplier is <codeph>0</codeph>.</ph></p>
+                                    <p id="If_the_charges_for_a_subscrip_reference_refbody_section_1"
+                                                >If the charges for a subscription are calculated per time unit and a customer changes a parameter value within a time unit, the affected time unit is charged pro rata. This means that the customer is charged exactly for the time each parameter value is set. </p>
+                                    <p><ph id="For_numeric_parameters_stepp_reference_refbody_section_1"
+                                                            >For numeric parameters, stepped prices can be applied per subscription: Different prices can be defined depending on the parameter values.</ph>
+                                                <ph platform="print">For details, refer to <xref
+                                                            href="r_PriceModelDetails_stepped.xml"/>.</ph><ph
+                                                            platform="help">Click <xref
+                                                            href="r_PriceModelDetails_stepped.xml"
+                                                            >here</xref> for details.</ph></p>
+                                    <p id="The_prices_for_parameters_and_reference_refbody_section_2"
+                                                >The prices for parameters and options are independent of other price model elements. </p>
+                        </section>
+                        <section>
+                                    <title>Example</title>
+                                    <p>In the following example, the price for the parameter "number of folders that can be created" is set to 4.00 € per folder per subscription. The renaming of folders costs 1.00 € per day for each user assigned to the subscription. It is assumed that 2 users are assigned to the subscription for one day, which corresponds to the subscription period in this example. The customer chose to restrict the number of new folders to 45 when subscribing to the service. </p>
+                                    <p>The costs are calculated as follows with both pro rata and per time unit calculation: </p>
+                                    <p>(45 * 4.00 €) + (2 * 1.00 € ) = 182.00 € </p>
+                                    <p><b>Total amount: 182.00 €</b>
+                                    </p>
+                                    <p>If the users are not assigned for the entire subscription period, but for a few hours only, the costs are calculated as follows:</p>
+                                    <p>Assume that user A is assigned for 2 hours, user B for 4 hours. This is a total of 6 hours, i.e. 25 % of the entire subscription period (DAY). This results in the following costs with pro rata calculation: </p>
+                                    <p>(45 * 4.00 €) + (<b>0.25</b> * 1.00€) = 180.25 € </p>
+                                    <p><b>Total amount: 180.25 €</b>
+                                    </p>
+                                    <p>With per time unit calculation, the costs are again <b>182.00 €</b> because the day is fully charged.</p>
+                        </section>
+            </refbody>
+</reference>

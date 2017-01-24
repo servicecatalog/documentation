@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="en-us">
+  <title>Defining your new password</title>
+  <taskbody>
+    <context>
+      <p>You have defined a new password for your user ID. You are forwarded to the <uicontrol>Login</uicontrol> page. Use your new password when logging in again.</p>
+      <p>You are also sent an email confirming that you have successfully changed your password.</p>
+    </context>
+  </taskbody>
+</task>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_3413BBD173324104B42FB714974CABE7" xml:lang="en-us">
+    <title>Marketplaces in <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></title>
+    <conbody>
+        <section>
+            <p>A marketplace is a virtual platform on which seller organizations with the supplier, broker, or reseller role can offer their services to customers. Visitors of the marketplace can browse the service catalog, search for services, sort and organize them by different criteria, and subscribe to them.</p>
+            <p>Marketplaces are created by operators. For each marketplace, the operator specifies a marketplace owner organization. An organization can become the owner of one or several marketplaces. The organization is automatically assigned the marketplace owner role, and its administrators are assigned the marketplace manager role. </p>
+            <p id="The_operator_who_creates_a_ma_concept_conbody_section_p_3"
+                >The operator who creates a marketplace defines its initial features and settings. He specifies whether: </p>
+            <ul>
+                <li>The marketplace is open to any seller or only to sellers authorized by the marketplace owner. </li>
+                <li>The services can be organized and searched for by categories and tags of a tag cloud.</li>
+                <li>Customers can rate services, and write comments.</li>
+                <li>Social bookmarks are available, for example, for recommending a service to a social network.</li>
+            </ul>
+            <p>These settings can be changed later at any time by the marketplace owner.</p>
+            <p>The operator also defines revenue shares for marketplace owners, brokers, and resellers. The revenue shares define how the entire revenue collected from the customers is shared between all participating parties: the marketplace owner, the operator, brokers, resellers, and suppliers. The revenue shares may differ for individual marketplaces, suppliers, brokers or resellers, or even specific services.</p>
+            <p><ph conref="../../help/tasks/marketplace_manageAccess.xml#task634/When_a_marketplace_small_ph"/></p>
+            <p>Marketplace owners specify which services they want to highlight on a marketplace. They can select the services they want to present on the marketplace home page, or display services and subscriptions. The latter requires a login by home page visitors and allows them to directly use any service their customer organization has subscribed to.</p>
+            <p>A new marketplace has a neutral layout and branding which the marketplace owner can customize according to his organization's standards and requirements. The marketplace owner can also adapt the texts and the stage of the marketplace, i.e. the area where, for example, advertisements, eye catchers, or further information can be placed.</p>
+            <p>The following picture shows a marketplace with an initial, neutral layout and branding: </p>
+            <fig>
+                <image align="center" href="../_images/MPLneutral.png" placement="break" width="260"/>
+            </fig>
+            <p>After customization, a marketplace may look like this:</p>
+            <fig>
+                <image align="center" href="../_images/MPLacme.jpg" placement="break" width="260"/>
+            </fig>
+        </section>
+    </conbody>
+</concept>

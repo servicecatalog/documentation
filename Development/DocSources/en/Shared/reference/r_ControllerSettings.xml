@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<reference id="reference832"
+                    xml:lang="en-us">
+    <title>General Settings </title>
+    <refbody>
+        <section>
+            <p>For each service controller installation, a technology provider organization must be defined which is responsible for the service controller. These settings are used for the communication with <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> and stored in the APP database. </p>
+            <p>
+                <fig>
+                    <image
+                    href="../_images/GeneralConfig.png"/>
+                </fig>
+            </p>
+        </section>
+        <section>
+            <title>Organization ID</title>
+            <p>The ID of the organization in <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> which is responsible for the service controller. The organization must have the technology provider role.</p>
+        </section>
+        <section>
+            <title>User ID</title>
+            <p>The identifier of the user specified by the user key for accessing <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+        </section>
+        <section>
+            <title>User Key</title>
+            <p>The user key for accessing <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+            <p>Specify the user key which you receive with the confirmation email for your user account. </p>
+            <p>The user specified here must have the administrator and technology manager role, and belong to the organization specified by the organization ID. </p>
+            <note>We recommend to create a user account which is only used for carrying out any actions on behalf of the service controller in <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />, a so-called technical user account.</note>
+        </section>
+        <section>
+            <title>Password</title>
+            <p>The password of the user specified by the user key for accessing <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+            <p>Type the plain text password. The password is encrypted when it is stored in the database. </p>
+        </section>
+    </refbody>
+</reference>

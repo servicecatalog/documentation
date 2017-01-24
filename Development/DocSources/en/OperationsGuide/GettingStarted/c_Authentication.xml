@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_B32294CC9FA643A2A14A74B1DAA49C95" xml:lang="en-us">
+    <title>Authentication</title>
+    <conbody>
+        <section>
+            <p>The authentication mode in which <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> is installed, determines how users and Web services are authenticated. It also determines the initial credentials of the first operator created by the installation. </p>
+            <p>The following authentication modes are supported:</p>
+            <p>
+                <ol>
+                    <li>INTERNAL</li>
+                    <li>SAML_SP</li>
+                </ol>
+            </p>
+        </section>
+        <section conref="../../Shared/concepts/c_AuthenticationMode.xml#Auth/auth_internal"/>
+        <section>
+            <table colsep="1" frame="all" rowsep="1">
+                <tgroup cols="4">
+                    <colspec colname="c1" colnum="1"/>
+                    <colspec colname="c2" colnum="2"/>
+                    <colspec colname="c3" colnum="3"/>
+                    <colspec colname="newCol4" colnum="4"/>
+                    <thead>
+                        <row>
+                            <entry>What is accessed?</entry>
+                            <entry>Authentication by</entry>
+                            <entry>Authentication via</entry>
+                            <entry>Initial credentials</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry>Administration portal</entry>
+                            <entry><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></entry>
+                            <entry>User ID<p>Password</p></entry>
+                            <entry>
+                                <p>User ID: <codeph>administrator</codeph></p>
+                                <p>Password: <codeph>admin123</codeph></p>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>Web service by SOAP/WSDL</entry>
+                            <entry><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></entry>
+                            <entry>User key<p>Password</p></entry>
+                            <entry>
+                                <p>User key: </p>
+                                <p><codeph>1000</codeph></p>
+                                <p>Password: </p>
+                                <p><codeph>admin123</codeph></p>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>Web service by REST API</entry>
+                            <entry><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></entry>
+                            <entry>User ID<p>Password</p></entry>
+                            <entry>
+                                <p>User ID: <codeph>administrator</codeph></p>
+                                <p>Password: <codeph>admin123</codeph></p>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>Command line tool</entry>
+                            <entry><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></entry>
+                            <entry>User key<p>Password</p></entry>
+                            <entry>
+                                <p>User key:</p>
+                                <p><codeph>1000</codeph></p>
+                                <p>Password: </p>
+                                <p><codeph>admin123</codeph></p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <p>It is recommended that you change the initial password in the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> administration portal (<b>Change Password</b> page in the <uicontrol>Account</uicontrol> menu). </p>
+        </section>
+        <section conref="../../Shared/concepts/c_AuthenticationMode.xml#Auth/auth_saml">
+            <p id="tenant1"
+                >In addition to using a platform-wide IdP system, i.e. an IdP against which all users including the platform operator are authenticated (default IdP), you can set up a multi-tenancy environment: You can define tenants by giving them a name which is unique on the platform, and by setting the properties for the connection to the IdP associated with the tenant. </p>
+            <p id="tenant2"
+                >When defining a marketplace, you can optionally define a tenant which the marketplace is associated with. When a user logs in to the marketplace, he is authenticated against the IdP associated with the respective tenant. User names must no longer be unique on the platform, but only within the scope of each tenant. </p>
+        </section>
+        <section>
+            <table colsep="1" frame="all" rowsep="1">
+                <tgroup cols="4">
+                    <colspec colname="c1" colnum="1"/>
+                    <colspec colname="c2" colnum="2"/>
+                    <colspec colname="c3" colnum="3"/>
+                    <colspec colname="newCol4" colnum="4"/>
+                    <thead>
+                        <row>
+                            <entry>What is accessed?</entry>
+                            <entry>Authentication by</entry>
+                            <entry>Authentication via </entry>
+                            <entry>Initial credentials</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry>Administration portal</entry>
+                            <entry>IdP<p>SAML 2.0 assertion in <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /></p></entry>
+                            <entry>User ID<p>Password</p></entry>
+                            <entry>
+                                <p>User ID: </p>
+                                <p>The ID you specified in the <codeph>ADMIN_USER_ID</codeph> configuration key in the <codeph>sso.properties</codeph> configuration file. </p>
+                                <p>Password: </p>
+                                <p>Password as known in the IdP for the operator user ID.</p>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>Web service by SOAP/WSDL</entry>
+                            <entry>STS<p>SAML 2.0 assertion in <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /></p></entry>
+                            <entry>User ID<p>Password</p></entry>
+                            <entry>
+                                <p>User ID: </p>
+                                <p>The ID you specified in the <codeph>ADMIN_USER_ID</codeph> configuration key in the <codeph>sso.properties</codeph> configuration file. </p>
+                                <p>Password: </p>
+                                <p>Password as known in the STS system for the operator user ID.</p>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>Web service by REST API</entry>
+                            <entry>not supported</entry>
+                            <entry/>
+                            <entry/>
+                        </row>
+                        <row>
+                            <entry>Command line tool</entry>
+                            <entry><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></entry>
+                            <entry>User key <p>Password</p></entry>
+                            <entry>
+                                <p>User key: <codeph>1000</codeph></p>
+                                <p>Password: <codeph>admin123</codeph>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <p>If you are the first operator accessing <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    />, you need to change your password in the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> administration portal (<b>Change Password</b> page in the <uicontrol>Account</uicontrol> menu). Any additional operator as well as all other users can change their password in the external authentication system only. </p>
+        </section>
+    </conbody>
+</concept>

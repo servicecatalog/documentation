@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="de-de">
+  <title>Servicedefinition exportieren</title>
+  <taskbody>
+    <context>
+      <p>Auf der Seite <uicontrol>Servicedefinition exportieren</uicontrol> können Sie die Definition technischer Services, die Sie bereitgestellt haben, exportieren und in einer XML-Datei speichern. Sie können die XML-Datei nach Belieben editieren oder als Vorlage für neue Servicedefinitionen verwenden. Ausführliche Informationen zum Format und zur Verwendung der XML-Elemente in der Datei finden Sie im Handbuch <i>Technology Provider's Guide</i>.</p>
+      <p><b>So exportieren Sie die Definition technischer Services</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>Markieren Sie die Services, deren Definition Sie exportieren möchten. </cmd>
+        <info>Beim Export mehrerer Definitionen werden alle Definitionen in einer XML-Datei gespeichert.</info>
+      </step>
+      <step>
+        <cmd>Klicken Sie <uicontrol>Exportieren</uicontrol>. </cmd>
+      </step>
+      <step>
+        <cmd>Entscheiden Sie, ob Sie die Definitionen in einer XML-Datei speichern oder in einem Editor Ihrer Wahl anzeigen lassen möchten.</cmd>
+      </step>
+    </steps>
+  </taskbody>
+  <related-links>
+    <linklist>
+      <title>Weitere Themen</title>
+      <link href="techService_import.xml"/>
+    </linklist>
+  </related-links>
+</task>

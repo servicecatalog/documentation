@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd">
+<task id="task634" xml:lang="ja-jp">
+  <title>トリガーの管理</title>
+  <taskbody>
+    <context>
+      <p>組織には、通常、利用者の登録、サービスの申し込み、料金定義に関して特定の手続きがあります。例えば、承認などの手続きです。 こういった手続きは、モデル化され、プロセス制御システムで自動化されます。 </p>
+      <p>利用者またはプラットフォームが起動した特定のアクションを、プロセス制御システムと情報をやりとりしながら進めるための仕組みをこのプラットフォームは提供しています。こうした処理の要求に対して、アクションを開始するためのトリガーを設定することができます。承認が必要な場合、外部システムから承認されるか拒否されるまでアクションは待機中になります。承認が不要な場合、CTMGはそのアクションの即時に実行します。</p>
+      <p><uicontrol>プロセスの管理</uicontrol>ページで待機中のすべてのアクションを表示し、キャンセル、または中止されたアクションの削除を行うことができます。 </p>
+      <p><uicontrol>トリガーの管理</uicontrol>ページでは、所属組織に設定されたすべてのトリガーを参照できます。トリガーを追加、更新、削除することができます。</p>
+      <p><b>所属組織のトリガーを管理するには：</b></p>
+    </context>
+    <steps>
+      <step>
+        <cmd>新しいトリガーを設定するには、[追加]をクリックします。 </cmd>
+        <info><xref href="organization_manageTriggerDetails.xml"
+            ><b>トリガーの編集</b></xref>ページが表示されます。トリガー詳細の定義を進めます。</info>
+      </step>
+      <step>
+        <cmd>トリガーを更新または削除するには、一覧のエントリをクリックします。 </cmd>
+        <info><xref href="organization_manageTriggerDetails.xml"
+            ><b>トリガーの編集</b></xref>ページが表示されます。トリガーの更新または削除を行います。</info>
+      </step>
+      <step>
+        <cmd>設定が完了したら[保存]をクリックします。 </cmd>
+      </step>
+    </steps>
+  </taskbody>
+  <related-links>
+    <linklist>
+      <title>関連情報</title>
+      <link href="../tasks/triggerProcess_list.xml"/>
+    </linklist>
+  </related-links>
+</task>

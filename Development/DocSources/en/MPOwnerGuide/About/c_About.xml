@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>About this Manual</title>
+    <conbody>
+        <section>
+            <p>This manual describes how marketplace owners can administrate and customize their marketplaces with <ph
+                        product="oscm_ce"><ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Name"/> (<ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>)</ph><ph
+                        product="oscm_ee"> FUJITSU Software Enterprise Service Catalog Manager - hereafter referred to as <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Name"/> or <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph>.</p>
+            <p>The manual is structured as follows: </p>
+            <p>
+                <table
+                    colsep="1" frame="all"
+                        rowsep="1">
+                    <tgroup
+                            cols="2">
+                        <colspec
+                            colname="col2" colnum="1"
+                            colwidth="2.61*"/>
+                        <colspec
+                            colname="col3" colnum="2"
+                                    colwidth="3.39*"/>
+                        <thead>
+                            <row>
+                                <entry
+                                    colname="col2">Chapter</entry>
+                                <entry
+                                    colname="col3">Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry
+                                    colname="col2"><xref
+                                    href="../../Shared/concepts/c_IntroExtended.xml"/></entry>
+                                <entry
+                                    colname="col3">Outlines the role of a marketplace owner and gives an overview of the marketplace owner's tasks.</entry>
+                            </row>
+                            <row>
+                                <entry
+                                    colname="col2"><xref
+                                    href="../Access/c_AccessIntro.xml"/></entry>
+                                <entry colname="col3"
+                                    >Describes how to define who is allowed to access a marketplace and publish services to it.</entry>
+                            </row>
+                            <row>
+                                <entry
+                                    colname="col2"><xref
+                                    href="../Marketplaces/c_MPsIntro.xml"/></entry>
+                                <entry
+                                    colname="col3">Describes the administration options available for marketplace owners.</entry>
+                            </row>
+                            <row>
+                                <entry
+                                    colname="col2"><xref
+                                    href="../Customizing/c_CustIntro.xml"/></entry>
+                                <entry
+                                    colname="col3">Describes the customizing options available for marketplace owners.</entry>
+                            </row>
+                            <row>
+                                <entry
+                                    colname="col2"><xref
+                                    href="../Billing/c_BillingIntro.xml"/></entry>
+                                <entry
+                                    colname="col3">Describes how <ph
+                                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> supports marketplace owners in calculating and collecting their revenue shares.</entry>
+                            </row>
+                            <row>
+                                <entry
+                                    colname="col2"><xref
+                                    href="../Reference/r_MenuOptions.xml"/></entry>
+                                <entry colname="col3">Gives an overview of the menu options relevant for marketplace owners.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+    </conbody>
+</concept>

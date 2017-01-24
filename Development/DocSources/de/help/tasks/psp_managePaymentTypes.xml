@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="de-de">
+    <title>Zahlungsarten hinzufügen</title>
+    <taskbody>
+        <context>
+            <p>Auf der Seite <uicontrol>Neue Zahlungsart</uicontrol> können Sie eine vom ausgewählten Zahlungsdienstleister angebotene Zahlungsart einrichten. Die Zahlungsarten, die Sie hier einrichten, können später Serviceanbietern und Wiederverkäufern zur Verfügung gestellt werden. Die Serviceanbieter und Wiederverkäufer können wiederum Zahlungsarten auswählen, die sie ihren Kunden anbieten möchten. </p>
+            <p>Sie können eine neue Zahlungsart hinzufügen, jedoch keine bereits für den Zahlungsdienstleister definierte Zahlungsart löschen. Sie können für jede Zahlungsart einen beliebigen Namen vergeben. Die Zahlungsarten selbst werden vom Zahlungsdienstleister vorgegeben. </p>
+            <p><b>So fügen Sie eine Zahlungsart hinzu</b>:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Geben Sie im Feld <uicontrol>Name</uicontrol> einen Namen für die Zahlungsart ein. Serviceanbietern, Wiederverkäufern und Kunden wird die Zahlungsart unter diesem Namen angezeigt.</cmd>
+                <info>
+                    <p>Der Name kann maximal 100 Zeichen enthalten.</p>
+                </info>
+            </step>
+            <step>
+                <cmd>Geben Sie im Feld <b>Zahlungsart</b> die vom Zahlungsdienstleister definierte ID für die Zahlungsart ein.</cmd>
+                <info/>
+            </step>
+            <step>
+                <cmd>Schließen Sie Ihre Eingaben mit <uicontrol>Speichern</uicontrol> ab.</cmd>
+                <info>
+                    <note>
+                        <p>Eine einmal gespeicherte Zahlungsart kann nicht mehr entfernt werden.</p>
+                    </note>
+                </info>
+            </step>
+        </steps>
+        <result>
+            <p>Fahren Sie mit der Konfiguration des Zahlungsdienstleisters auf der vorherigen Seite fort.</p>
+        </result>
+    </taskbody>
+</task>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_3413BBD173324104B42FB714974CABE7" xml:lang="en-us">
+            <title>Working with Brokers and Resellers</title>
+            <conbody>
+                        <section>
+                                    <p>As a supplier, you can involve brokers and resellers in offering and selling your services. This requires contractual relationships between you and your partners. The operator is responsible for creating the broker and reseller organizations in <ph
+                                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                />. He also needs to have a contractual relationship with them.</p>
+                                    <p>The following sections describe the different usage scenarios and your tasks as a supplier within these scenarios.</p>
+                        </section>
+                        <section>
+                                    <title>Broker Usage Scenario</title>
+                                    <p>A broker can support you in promoting a marketable service you have defined. To this end, the broker publishes the service to a marketplace. A subscription to a service establishes a contract between you and the customer.</p>
+                                    <p>
+                                                <fig>
+                                                            <image href="../../Shared/_images/ScenarioBroker.png"
+                                                            alt="ScenarioBroker.png" width="400" height="77"
+                                                            align="center"/>
+                                                </fig>
+                                    </p>
+                                    <p>For offering a service on a marketplace, the broker needs your explicit permission. You can grant this permission if you have fulfilled the following prerequisites:</p>
+                                    <ul>
+                                                <li>The service must be defined, and its parameters, conditions, and restrictions must be specified. For details, refer to <xref
+                                                            href="../MarketableServices/c_MSCreate.xml"/>.</li>
+                                                <li>The price model, including a license agreement, must be defined for the service. For details, refer to <xref
+                                                            href="../PriceModels/c_PMIntro.xml"/>.</li>
+                                    </ul>
+                                    <p>The broker cannot change the service definition, the price model, and the license agreement. He can view these elements and publish the service to a marketplace of his choice.</p>
+                                    <p>As a supplier, you are responsible for preparing billing and payment for your broker's customers and collecting the payments. For details, refer to <xref
+                                                            href="../Billing/c_BillIntro.xml"/>.</p>
+                                    <p>A broker usually receives a share of the revenue for the services he offers. <ph
+                                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                            /> allows a broker to retrieve information on his actual revenue. As a supplier, you can also retrieve information on the revenue accumulated by your brokers. For details, refer to <xref
+                                                            href="../Billing/c_BillIntro.xml"/>.</p>
+                        </section>
+                        <section>
+                                    <title>Reseller Usage Scenario</title>
+                                    <p>A reseller can offer and sell a service you have defined, applying his own terms and conditions. A subscription to the service establishes a contract between the reseller and the customer.</p>
+                                    <p>
+                                                <fig>
+                                                            <image href="../../Shared/_images/ScenarioReseller.png"
+                                                            alt="ScenarioReseller.png" width="400" height="74"
+                                                            align="center"/>
+                                                </fig>
+                                    </p>
+                                    <p>For offering a service on a marketplace, the reseller needs your explicit permission. You can grant this permission if you have fulfilled the following prerequisites:</p>
+                                    <ul>
+                                                <li>The service must be defined and its parameters, conditions, and restrictions must be specified. For details, refer to <xref
+                                                            href="../MarketableServices/c_MSCreate.xml"/>.</li>
+                                                <li>The price model must be defined for the service. For details, refer to <xref
+                                                            href="../PriceModels/c_PMIntro.xml"/>.</li>
+                                    </ul>
+                                    <p>The reseller can view the service definition and the price model, but he cannot change them. The contract between him and the customer is based on your prices. The reseller can, however, define his own license agreement. It is up to him whether he uses your license agreement or enters a different one.</p>
+                                    <p>A reseller who has been granted your permission can publish the service to a marketplace of his choice.</p>
+                                    <p>Since a subscription establishes a contract between the reseller and the customer, you are not involved in billing and payment. The reseller is responsible for preparing billing and payment for his customers and collecting the payments. </p>
+                                    <p>A reseller is usually not entitled to keep the entire revenue collected from his customers, but only a certain share thereof. <ph
+                                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                            /> allows a reseller to retrieve information on his actual revenue. As a supplier, you can also retrieve information on the revenue accumulated by your resellers. For details, refer to <xref
+                                                            href="../Reports/c_Reports.xml"/>.</p>
+                        </section>
+                        <section>
+                                    <title>Granting Brokers and Resellers the Resale Permission</title>
+                                    <p>To grant brokers and resellers the permission to sell a service, use the <uicontrol>Define publishing options</uicontrol> menu option in the <uicontrol>Marketable service</uicontrol> menu of the <ph
+                                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                /> administration portal. Your resale permission is not bound to an individual marketplace. The brokers and resellers can choose any marketplace to which they have been granted access by the marketplace owner.</p>
+                                    <p>The menu option can also be used for revoking the resale permission. This may be required, for example, if a reseller is in arrears with his payments to the other participating parties. If you revoke the permission, a service is instantly withdrawn from the marketplace to which it was published. Customers can no longer subscribe to it. Yet, existing subscriptions of the broker's or reseller's customers are not affected.</p>
+                        </section>
+            </conbody>
+</concept>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="en-us">
+  <title>Defining a subscription price model</title>
+  <taskbody>
+    <context>
+      <p>On the <uicontrol>Define for subscription</uicontrol> page, you can define or update the price model for a specific subscription of a selected customer. For a subscription to a service using the platform's native billing system, you can edit the price model directly on this page. For a subscription to a service using an external billing system, you can import a new or changed price model from the external system. </p>
+      <p>You can define subscription price models for your direct customers and for your brokers' customers. </p>
+      <p>The subscription price model you define or update takes priority over the service price model or a customer price model that is defined. However, you cannot change the cost calculation option. Click <xref
+          href="../../Shared/reference/r_PriceModelDetails.xml">here</xref> for basic information on price models.</p>
+      <p>If you update a subscription price model with a service using the native billing system, <ph
+          id="the_modified_settings_are_val_task_taskbody_context_p_2_ph"
+          >the modified settings are valid for the current and future billing periods. This means that, for example, all user assignments or billable events that occurred in using the subscription in the current billing period before the change will be charged according to the new price model.</ph></p>
+      <p><ph id="Usually_you_will_change_a_su_task_taskbody_context_p_3_ph"
+          >Usually, you will change a subscription price model only in agreement with the relevant customer. For changing a subscription price model, it does not matter whether the relevant service is activated or deactivated.</ph></p>
+      <p><b>To define a subscription price model</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>In the list in the upper page area, select the subscription for which you want to define the price model. </cmd>
+        <info>
+          <p>You can select any active subscription to your services. The subscriptions of your direct customers and your brokers' customers are included.</p>
+        </info>
+      </step>
+      <step>
+        <cmd>Depending on the billing system that is defined for the underlying technical service, proceed as follows:</cmd>
+        <info>
+          <ul compact="no">
+            <li>If the platform's native billing system is used, define the price model in the subsequent sections of the page. Click <xref
+                href="priceModel_subscription_nat.xml">here</xref> for details.</li>
+            <li>If an external billing system is used,  import the appropriate price model from this system. Click <xref
+                href="priceModel_subscription_ext.xml">here</xref> for details.</li>
+          </ul>
+        </info>
+      </step>
+    </steps>
+    <result>The price model changes for the subscription take effect immediately. </result>
+  </taskbody>
+  <related-links>
+    <linklist>
+      <title>Related topics</title>
+      <link href="priceModel_service.xml"/>
+      <link href="priceModel_customer.xml"/>
+    </linklist>
+  </related-links>
+</task>

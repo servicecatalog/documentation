@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="de-de">
+  <title>Fehler beim Aufruf des Abonnements</title>
+  <taskbody>
+    <context>
+      <p>Das Abonnement wurde nicht gefunden. Wenden Sie sich an Ihren Administrator.</p>
+    </context>
+  </taskbody>
+</task>

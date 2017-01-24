@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_B32294CC9FA643A2A14A74B1DAA49C95" xml:lang="en-us">
+    <title>Setting the Distinguished Name for an Organization</title>
+    <conbody>
+        <section>
+            <p>The logic of the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> call handling checks the distinguished name in a client's certificate. If it matches the one specified by the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> operator, the caller is assumed to be authorized to connect to <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </p>
+            <p>You can retrieve the distinguished name of an organization from its certificate with the following call in your Java runtime environment: </p>
+            <p>
+                <codeblock>&lt;YourJRE&gt;/bin/keytool -printcert -file &lt;filename.crt&gt;</codeblock>
+            </p>
+            <p>The distinguished name is composed of the following elements:</p>
+            <ul>
+                <li>CN (common name)</li>
+                <li>OU (organizational unit)</li>
+                <li>O (organization)</li>
+                <li>L (location)</li>
+                <li>ST (state)</li>
+                <li>C (country)</li>
+            </ul>
+            <p>Sample output: </p>
+            <p>
+                <codeblock>Owner: EMAILADDRESS=test@test.com, CN=test, OU=test, O=Test, L=Test, ST=Test, C=GE
+Issuer: EMAILADDRESS=test@test.com, CN=test, OU=test, O=Test, L=Test, ST=Test, C=GE
+Serial number: 932577b192765bf6
+Valid from: Mon Jan 23 16:26:58 CET 2012 until: Thu Jan 20 16:26:58 CET 2022
+Certificate fingerprints:
+         MD5:  46:2E:CE:05:1A:57:B6:16:15:8A:4B:8A:CE:1D:F8:21
+         SHA1: 8A:A6:B9:44:FE:E5:18:0B:92:FD:04:D4:4E:69:0F:09:FB:7B:02:34
+</codeblock>
+            </p>
+            <p>
+                <note>When integrating the services of commercial payment service providers (PSPs), the distinguished name must always be set. You set the distinguished name when registering the PSP with <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        />. For details, refer to <xref href="../Billing/c_BillingCreatePSP.xml"/>.</note>
+            </p>
+            <p><b>To set the distinguished name for an organization, choose one of the following options:</b>
+                <ul>
+                    <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> administration portal - Choose <b>Manage organization</b> in the <b>Operation</b> menu.<p>For detailed step-by-step instructions, refer to the online help. </p></li>
+                    <li>Command line tool - Use the <codeph>setdistinguishedname</codeph> command with the following syntax: <p>
+                            <codeblock>&lt;JAVA_HOME>/bin/java -jar lib/oscm-operatorsvc-client.jar 
+ &lt;userkey&gt; &lt;password&gt;
+ setdistinguishedname orgid=&lt;organizationID&gt; 
+ distinguishedname=&lt;distinguished name&gt;</codeblock>
+                        </p><p>The DN must exactly match the one as retrieved using the <codeph>keytool</codeph> command (see above). </p><p>Sample DN: </p><p>
+                            <codeblock>CN=test, OU=test, O=Test, L=Test, ST=Test, C=GE
+</codeblock>
+                        </p></li>
+                </ul></p>
+        </section>
+    </conbody>
+</concept>

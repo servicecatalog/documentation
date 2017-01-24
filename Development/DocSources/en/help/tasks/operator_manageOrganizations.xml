@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="en-us">
+  <title>Managing organizations</title>
+  <taskbody>
+    <context>
+      <p>On the <uicontrol>Manage organization</uicontrol> page, you can perform the following tasks:</p>
+      <p>
+        <ul compact="no">
+          <li>Add another <b>role</b> to the organization (technology provider, supplier, reseller, broker)</li>
+          <li><b>Update</b> the address and contact <b>data</b> of the organization. </li>
+          <li>Set the <b>Distinguished name</b> for an organization.<p>This is required if the organization wants to use certificates for trusted communication between the organization itself and the platform operator organization.</p><p>The platform checks the distinguished name in a client's certificate. If it matches the one specified here, the caller is assumed to be authorized to connect to the platform. </p><p>You can retrieve the distinguished name of an organization from its certificate with the following call in your Java runtime environment: </p><p>
+              <codeblock>&lt;YourJRE>/bin/keytool -printcert -file &lt;filename.crt></codeblock>
+            </p><p>The process of integrating certificates is described in detail in the <i>Operator's Guide</i>.</p></li>
+          <li>If the platform is installed in SAML_SP authentication mode, change or associate a <b>tenant</b> with the organization. <p>By associating a tenant with an organization, the emails sent to the users of the organization will contain the URL of a marketplace or an administration portal of this tenant. Tenants must have been created beforehand on the <b>Manage tenants</b> page. The <b>Marketplace</b> drop-down list then offers all marketplaces associated with the tenant. </p><p>If you leave this field empty, the URL will point to the default tenant.</p></li>
+          <li>Define the <b>payment types</b> that a supplier or reseller organization may offer to its customers for services applying the platform's native billing system.<p>By default, suppliers and resellers can allow customers to pay on invoice so that they can subscribe to a service that is not free of charge. </p><p
+              id="PayTypes2"
+              >If a supplier or reseller requests a payment type other than on invoice, he must use the services of a commercial PSP. </p>The process of integrating PSP support is described in detail in the <i>Operator's Guide</i>. </li>
+        </ul>
+      </p>
+      <p><b>To manage an organization</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>From the <uicontrol>Organization ID</uicontrol> list, select the organization whose data you want to edit. </cmd>
+        <info>
+          <p>The list contains all organizations managed on your platform. </p>
+        </info>
+      </step>
+      <step>
+        <cmd>Edit the data as required: </cmd>
+        <info>
+          <ol>
+            <li conref="operator_createOrganization.xml#OrgCreate/org"/>
+            <li conref="operator_createOrganization.xml#OrgCreate/email"/>
+            <li conref="operator_createOrganization.xml#OrgCreate/phone"/>
+            <li conref="operator_createOrganization.xml#OrgCreate/website"/>
+            <li conref="operator_createOrganization.xml#OrgCreate/lang"/>
+            <li conref="operator_createOrganization.xml#OrgCreate/address"/>
+            <li conref="operator_createOrganization.xml#OrgCreate/country"/>
+            <li conref="operator_createOrganization.xml#OrgCreate/desc"/>
+            <li conref="operator_createOrganization.xml#OrgCreate/supp"/>
+            <li conref="operator_createOrganization.xml#OrgCreate/other"/>
+            
+          </ol>
+        </info>
+      </step>
+      <step>
+        <cmd>In the <uicontrol>Organization role</uicontrol> section, select a new role for the organization, if required. </cmd>
+        <info>The reseller and broker roles cannot be combined with each other or with the technology provider or supplier role.</info>
+      </step>
+      <step>
+        <cmd>In the <uicontrol>Distinguished name</uicontrol> field, enter the DN for the organization. </cmd>
+        <info>The DN is defined in the organization's certificate and composed of the following elements: <ul id="DN">
+            <li>CN (common name)</li>
+            <li>OU (organizational unit)</li>
+            <li>O (organization)</li>
+            <li>L (location)</li>
+            <li>ST (state)</li>
+            <li>C (country)</li>
+          </ul><p>Separate the individual elements of the DN with commas.</p></info>
+      </step>
+      <step>
+        <cmd>If the platform is installed in SAML_SP authentication mode, the <b>Tenant</b> field is shown. </cmd>
+        <info>By associating a tenant with an organization, the emails sent to the users of the organization will contain the URL of a marketplace or an administration portal of this tenant. <p>Updating the tenant can be used to remove an organization from a tenant, or to associate an organization with another tenant. </p><p>
+            <note>If you associate a different tenant, the IdP administrator must ensure that all users of this organization are properly configured in the IdP system. If users of this organization already exist with the same name in the newly associated IdP system, changing the tenant is not possible. <p>If sellers have the right to publish on a marketplace that is associated with a tenant, this right is removed when a new tenant is associated.</p></note>
+          </p></info>
+      </step>
+      <step>
+        <cmd>Define the payment types that the organization can offer to its customers. Click <b>Add</b>, and proceed to the <uicontrol>New payment type</uicontrol> page. </cmd>
+        <info>Adding payment types is possible for supplier and reseller organizations only. <p>
+            <note>You can no longer remove a payment type which has been assigned to a supplier or reseller organization.</note>
+          </p></info>
+      </step>
+      <step>
+        <cmd>To save your entries, click <uicontrol>Save</uicontrol>.</cmd>
+      </step>
+    </steps>
+    <result>
+      <p>The organization's administrators are notified by email about any changes you made.</p>
+    </result>
+  </taskbody>
+  <related-links>
+    <linklist>
+      <title>Related topics</title>
+      <link href="organization_managePaymentTypes.xml"/>
+      <link href="operator_manageTenants.xml"/>
+      <link href="operator_managePSPs.xml"/>
+      <link href="operator_createPSP.xml"/>
+    </linklist>
+  </related-links>
+</task>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="ja-jp">
+    <title>パスワードの変更</title>
+    <taskbody>
+        <context>
+            <p><uicontrol>パスワードの変更</uicontrol>ページでは、プラットフォームに保存されているパスワードを変更できます。 </p>
+            <p><b>注意</b>：利用者認証に外部のシステムを使用している場合は、パスワードの変更方法を組織内の管理者に問い合わせてください。 </p>
+            <p><b>パスワードを変更するには</b>：</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>該当するフィールドに、現在のパスワードと新しいパスワード（新しいパスワードは２回）を入力します。</cmd>
+                <info>
+                    <p>パスワードは6文字から100文字の長さで指定してください。</p>
+                    <p><ph
+                            conref="public_registration.xml#task634/When_you_type_the_password_t_task_taskbody_steps_step_2"
+                        /></p>
+                </info>
+            </step>
+            <step>
+                <cmd>新しいパスワードを保存するには、<uicontrol>変更</uicontrol>をクリックします。</cmd>
+            </step>
+        </steps>
+        <result>
+            <p>新しいパスワードが保存されます。再度ログインする際に使用します。</p>
+        </result>
+    </taskbody>
+</task>

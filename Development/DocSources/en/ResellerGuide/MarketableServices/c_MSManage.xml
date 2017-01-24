@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_3413BBD173324104B42FB714974CABE7" xml:lang="en-us">
+    <title>Viewing and Updating Services</title>
+    <conbody>
+        <section>
+            <p>You can view the details of all services for which you have been granted a resale permission. The following information on a service is available:</p>
+            <ul>
+                <li><ph
+                        conref="../../help/tasks/service_view.xml#task634/The_service_name_and_short_de_task_taskbody_context_ul_li"
+                    /></li>
+                <li><ph
+                        conref="../../help/tasks/service_view.xml#task634/The_service_description_which_task_taskbody_context_ul_li"
+                    /></li>
+                <li><ph
+                        conref="../../help/tasks/service_view.xml#task634/The_license_agreement_which_m_task_taskbody_context_ul_li"
+                    /></li>
+                <li><ph
+                        conref="../../help/tasks/service_view.xml#task634/The_details_of_the_price_mode_task_taskbody_context_ul_li"
+                    /></li>
+            </ul>
+            <p>The information can only be viewed, except for the license agreement. You are free to use the license agreement as defined by the supplier, or you can specify a new one.</p>
+            <p>To view and update the details of a service, use the <uicontrol>Manage service</uicontrol> menu option in the <uicontrol>Marketable service</uicontrol> menu of the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> administration portal. The license agreement you specify is stored in the language defined by your user profile. If you want to localize the text, change the language in your user profile and enter the corresponding translation.</p>
+        </section>
+    </conbody>
+</concept>

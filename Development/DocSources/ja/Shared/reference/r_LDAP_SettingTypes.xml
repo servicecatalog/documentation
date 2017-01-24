@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd"
+>
+<reference xml:lang="ja-jp" id="reference832">
+    <title><ph platform="print">LDAPキー</ph><ph platform="help">LDAPキー</ph></title>
+    <refbody>
+        <section>
+            <p>組織のLDAPシステムにアクセスするためには、設定ファイルで以下のキーを定義する必要があります。 </p>
+            <table colsep="1" frame="all" rowsep="1">
+                <tgroup cols="2">
+                    <colspec colname="col1" colwidth="1.25*"/>
+                    <colspec colname="col2" colwidth="1.75*"/>
+                    <tbody>
+                        <row valign="top">
+                            <entry align="left"><b>キー</b></entry>
+                            <entry align="left"><b>説明</b></entry>
+                        </row>
+                        <row>
+                            <entry align="left">LDAP_URL</entry>
+                            <entry align="left"
+                                    >必須項目です。LDAPサーバのプロバイダURLです。このLDAPサーバは、利用者の認証に使用されます。<p>例:</p><p><codeph>LDAP_URL=ldap://myldapserver.lan.est.company.de:389</codeph></p></entry>
+                        </row>
+                        <row>
+                            <entry align="left">LDAP_BASE_DN</entry>
+                            <entry>必須項目です。利用者の検索を開始するLDAPディレクトリツリーの位置です。<p>例：<codeph>LDAP_BASE_DN=ou=people,dc=est,dc=mycompany,dc=de</codeph></p></entry>
+                        </row>
+                        <row>
+                            <entry align="left">LDAP_PRINCIPAL</entry>
+                            <entry align="left"
+                                              >オプション項目です。LDAPサーバに問い合わせできる利用者名です。 <p>例：<codeph>LDAP_PRINCIPAL=uid=admin,ou=system</codeph></p></entry>
+                        </row>
+                        <row valign="top">
+                            <entry align="left">LDAP_CREDENTIALS</entry>
+                            <entry align="left"
+                                    >オプション項目です。LDAPサーバに問い合わせできる利用者のパスワードです。 <p>例：<codeph>LDAP_CREDENTIALS=secret</codeph></p></entry>
+                        </row>
+                        <row>
+                            <entry align="left">LDAP_ATTR_UID</entry>
+                            <entry align="left"
+                                    >必須項目です。利用者IDを読み込むLDAP属性です。システム運用管理者がプラットフォームのデフォルトのLDAP設定に異なる値を設定していない場合、<codeph>uid</codeph>が組織の登録時にデフォルトとして使用されます。<p>例：<codeph>LDAP_ATTR_UID=uid</codeph></p></entry>
+                        </row>
+                        <row valign="top">
+                            <entry align="left">LDAP_ATTR_EMAIL</entry>
+                            <entry align="left"
+                                    >オプション項目です。利用者のメールアドレスを読み込むLDAP属性です。 <p>例：<codeph>LDAP_ATTR_EMAIL=scalixEmailAddress</codeph></p></entry>
+                        </row>
+                        <row valign="top">
+                            <entry align="left">LDAP_ATTR_FIRST_NAME</entry>
+                            <entry align="left">オプション項目です。利用者の名を読み込むLDAP属性です。<p
+                                        >例：<codeph>LDAP_ATTR_FIRST_NAME=givenName</codeph></p></entry>
+                        </row>
+                        <row valign="top">
+                            <entry align="left">LDAP_ATTR_LAST_NAME</entry>
+                            <entry align="left"
+                                              >オプション項目です。利用者の姓を読み込むLDAP属性です。<p>例：<codeph>LDAP_ATTR_LAST_NAME=sn</codeph></p></entry>
+                        </row>
+                        <row valign="top">
+                            <entry align="left">LDAP_ATTR_LOCALE</entry>
+                            <entry align="left"
+                                              >オプション項目です。利用者に保存されるデフォルトの言語を読み込むLDAP属性です。 <p>例：<codeph>LDAP_ATTR_LOCALE=locale</codeph></p></entry>
+                        </row>
+                        <row>
+                            <entry align="left">LDAP_CONTEXT_FACTORY</entry>
+                            <entry align="left"
+                                    >必須項目です。LDAPサーバに問い合わせをするAPIを提供するコンテキストファクトリです。システム運用管理者がプラットフォームのデフォルトのLDAP設定に異なる値を設定していない場合、<codeph>com.sun.jndi.ldap.LdapCtxFactory</codeph>が組織の登録時にデフォルトとして使用されます。<p>例：<codeph>LDAP_CONTEXT_FACTORY=com.sun.jndi.ldap.LdapCtxFactory</codeph></p></entry>
+                        </row>
+                        <row>
+                            <entry align="left">LDAP_ATTR_REFERRAL</entry>
+                            <entry align="left"
+                                        >オプション項目です。LDAP紹介をどのように処理するかを定義する属性です。 <p>組織がサブドメインを持つActive Directoryを使い、サブドメインから利用者を<ph
+                                        platform="help">プラットフォーム</ph><ph platform="print"><ph
+                                            conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    /></ph>にインポートする場合、紹介としてサブドメインを使うことができます。 この意味では、紹介は他のディレクトリパーティションまたはサブドメインへの参照となります。デフォルトでは紹介からは利用者はインポートされません。</p>この属性には次の値を設定することができます: <p><codeph>follow</codeph>: 紹介を行います。 利用者はすべての参照ディレクトリパーティションまたはサブドメインからインポートされます。</p><p><codeph>ignore</codeph>: 紹介を無視します(デフォルト)。ユーザーは現在のドメインのディレクトリからだけインポートされます。</p><p>例: <codeph>LDAP_ATTR_REFERRAL=ignore</codeph></p></entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </section>
+    </refbody>
+</reference>

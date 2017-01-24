@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<reference id="reference832" xml:lang="de-de">
+    <title>Texte der Benutzeroberfläche </title>
+    <refbody>
+        <section>
+            <p>Die Texte der Benutzeroberfläche werden in einer Microsoft Excel-Datei übersetzt oder aktualisiert. Sie erstellen solch eine Datei mit der Option <uicontrol>Exportieren</uicontrol> auf der Seite <uicontrol>Sprachen verwalten</uicontrol>. </p>
+            <p>Die exportierte Microsoft Excel-Datei enthält drei Arbeitsblätter: </p>
+            <p>
+                <ul compact="no">
+                    <li><uicontrol>User interface</uicontrol>: Alle Texte und Meldungen, die auf der Benutzeroberfläche des Administrationsportals und der Marktplätze sichtbar sind.</li>
+                    <li><uicontrol>Email</uicontrol>: Betreff und Inhalt aller E-Mails, die von der Plattform automatisch generiert und verschickt werden.</li>
+                    <li><uicontrol>Platform objects</uicontrol>: Namen von Serviceparametern, Ereignissen, Berichten und Zahlungsarten, die von der Plattform bereitgestellt werden. Die Parameter- und Ereignisnamen sind für Serviceanbieter sichtbar, wenn Sie einen marktfähigen Service definieren, sowie für alle Benutzer, wenn sie einen Service abonnieren.</li>
+                </ul>
+            </p>
+            <p> </p>
+            <p>Jedes Arbeitsblatt enthält fünf Spalten:</p>
+            <p>
+                <ul compact="no">
+                    <li><uicontrol>Key</uicontrol>: Schlüssel, über den die Plattform den zugehörigen Text eindeutig ausliest. Der Schlüssel darf nicht verändert werden.</li>
+                    <li><b>de system</b>, <b>en system</b>, <b>ja system</b>: Die Standardsprachen der Plattform, die als Sprachpakete nach der Installation vorhanden sind (Deutsch, Englisch, Japanisch). Die Texte in den Standardsprachen können für die Übersetzung als Referenz verwendet werden. </li>
+                    <li><b>Add your language code here</b> oder <b><i>&lt;Language Code></i></b>: In diese Spalte tragen Sie die Texte der neuen Sprache ein, die unterstützt werden soll.<p><b>Add your language code here</b> wird angezeigt, wenn Sie auf der Seite <b>Sprachen verwalten</b> beim Starten des Exports keine Sprache ausgewählt hatten, d.h. Sie wollen in der Regel eine neue Sprache bereitstellen. Die Spalte ist leer.</p><p>Wenn Sie auf der Seite <b>Sprachen verwalten</b> eine Sprache ausgewählt haben, ist der Sprachcode für diese Sprache als Spaltenüberschrift eingetragen. In diesem Fall bearbeiten Sie die Texte der ausgewählten Sprache. Sie können auch eine Standardsprache auswählen (de, en oder jp) , wenn Sie die Standardtexte anpassen möchten.</p><p>Die Texte können auch von Marktplatz-Managern bearbeitet werden. Marktplatz-Manager verwenden dazu die Menüoption <uicontrol>Marktplatz</uicontrol> --> <uicontrol>Texte anpassen</uicontrol>. Solche Änderungen wirken sich auf alle Marktplätze aus, von denen die Organisation der Marktplatz-Manager Eigentümer ist.</p></li>
+                </ul>
+            </p>
+            <p>Gehen Sie wie folgt vor, um die Datei zu übersetzen: </p>
+            <p>
+                <ol compact="no">
+                    <li>Geben Sie <b>auf allen drei Arbeitsblättern</b> im Feld für die Überschrift der fünften Spalte den ISO-Sprachcode für die Sprache ein, die Sie bereitstellen möchten.</li>
+                    <li>Geben Sie für jeden Schlüssel in der fünften Spalte Ihre Übersetzung ein.<p>Wenn eine Übersetzung fehlt, wird der englische Text verwendet. Wenn auch der englische Text nicht definiert ist, wird der sprachunabhängige technische Schlüssel angezeigt.</p><p>Beachten Sie folgendes: </p><ul
+                            compact="no">
+                            <li>Alle beschreibenden Texte (gekennzeichnet durch einen auf <codeph>.description</codeph> endenden Schlüssel) können Sie mit HTML-Tags formatieren. Zum Beispiel können Sie mit <codeph>&lt;b></codeph> Text fett darstellen oder <codeph>&lt;br></codeph> für Zeilenumbrüche verwenden.</li>
+                            <li>Sie können in den Texten alle Zeichen des Unicode-Zeichensatzes verwenden.</li>
+                            <li>Wenn Sie einen Text nicht ändern möchten, können Sie die entsprechenden Tabellenzellen löschen. Dies kann zum Nachvollziehen von Änderungen an der Benutzeroberfläche hilfreich sein.</li>
+                            <li>Stellen Sie sicher, dass die Felder keine ungültigen Daten enthalten und somit Fehler im Seitenlayout erzeugen können. Ein zu langer Text wird zum Beispiel an der Benutzeroberfläche auf mehrere Zeilen aufgeteilt. Verwenden Sie zum Testen der Übersetzungen eine separate Umgebung.</li>
+                        </ul></li>
+                    <li>Speichern Sie die Microsoft Excel-Datei im Format <codeph>.xls</codeph> .</li>
+                    <li>Importieren Sie die Datei auf der Seite <b>Sprachen verwalten</b>. <p>Durch den Import der Datei werden vorhandene Texte in der Sprache des in der fünften Spalte eingegebenen Sprachcodes überschrieben. Die Sprache kann verwendet werden, sobald sie aktiviert ist. Für Benutzer, die die Sprache in ihrem Profil eingestellt haben, sind Ihre Änderungen sofort sichtbar.</p></li>
+                </ol>
+            </p>
+            <p>
+                <note>Vergewissern Sie sich, dass alle Zellen in allen Arbeitsblättern der Excel-Datei als Text formatiert sind.</note>
+            </p>
+        </section>
+    </refbody>
+</reference>

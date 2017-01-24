@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="de-de">
+    <title>Anmelden</title>
+    <taskbody>
+        <context>
+            <p>Auf der Seite <uicontrol>Anmelden</uicontrol> können Sie sich mit Ihren persönlichen Daten anmelden. Sie erreichen diese Seite, indem Sie die Zugangs-URL in Ihrem Browser eingeben, ein entsprechendes Lesezeichen wählen oder dem Link in Ihrer Registrierungs-E-Mail folgen. </p>
+            <p><b>So melden Sie sich an</b>:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Geben Sie Ihren Benutzernamen und Ihr Passwort ein. </cmd>
+                <info/>
+            </step>
+            <step>
+                <cmd>Klicken Sie <uicontrol>Anmelden</uicontrol> oder drücken Sie die Eingabetaste. </cmd>
+                <stepresult>
+                    <p>Sie werden anschließend entweder direkt angemeldet oder aufgefordert, Ihr erstes Passwort zu ändern. </p>
+                </stepresult>
+            </step>
+        </steps>
+        <result>
+            <p>Wenn Sie beim Anmelden ein falsches Passwort eingeben, wird Ihr Zugang nach der dritten Falscheingabe möglicherweise gesperrt. Das hängt davon ab, ob ihre Organisation die Benutzerdaten in einem externen Authentifizierungssystem verwaltet. In diesem Fall können Passwörter nur in diesem System geändert oder zurückgesetzt werden. Wird dagegen die Plattform zur Benutzerauthentifizierung verwendet, wenden Sie sich an Ihren Administrator. Dieser kann Ihr Passwort zurücksetzen, und Sie erhalten eine E-Mail mit einem neuen Passwort.</p>
+            <p>Wenn Sie Ihr Passwort vergessen haben, klicken Sie <uicontrol>Passwort vergessen?</uicontrol> auf der Seite <uicontrol>Anmelden</uicontrol>. Sie können anschließend ein neues Passwort für Ihren Benutzernamen festlegen. Ein neues Passwort kann nicht festgelegt werden, wenn Ihr Zugang gesperrt ist oder wenn Ihre Organisation Benutzernamen und Passwörter in einem externen Authentifizierungssystem verwaltet.</p>
+            <p>Wenn Sie Ihren Benutzernamen vergessen haben, wenden Sie sich an Ihren Administrator. Dieser kann sich die Benutzernamen anzeigen lassen, die für Ihre Organisation registriert sind. </p>
+            <p>Wenn Ihre Sitzung unterbrochen wird, müssen Sie sich erneut anmelden. </p>
+        </result>
+    </taskbody>
+    <related-links>
+        <linklist>
+            <title>Weitere Themen</title>
+            <link href="../tasks/public_registration.xml"/>
+            <link href="../tasks/user_pwd.xml"/>
+        </linklist>
+    </related-links>
+</task>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="de-de">
+  <title>Zahlungsarten verwalten</title>
+  <taskbody>
+    <context>
+      <p>Auf der Seite <uicontrol>Zahlungsarten verwalten</uicontrol> legen Sie fest, wie Kunden für die Nutzung Ihrer Abonnements bezahlen können, zum Beispiel Zahlung auf Rechnung, per Kreditkarte oder Bankeinzug. Sie können Zahlungsarten für einzelne Kunden und für einzelne Services festlegen. </p>
+      <note>Zahlungsarten wie auch Rechnungsanschriften sind relevant für kostenpflichtige Services, die das plattformeigene Abrechnungssystem verwenden. Selbst für diese Services kann der Plattform-Betreiber jedoch alle Möglichkeiten für den Kunden zum Angeben solcher Zahlungsinformationen deaktivieren. Falls dies der Fall ist, steht die Seite <uicontrol>Zahlungsarten verwalten</uicontrol> nicht zur Verfügung und die Definition von Zahlungsarten ist nicht möglich.</note>
+      <p>Es ist Aufgabe Ihres Plattform-Betreibers, die Zahlungsarten einzurichten, die Sie anbieten können. Zahlung auf Rechnung ist automatisch für jeden Serviceanbieter eingerichtet. Das bedeutet, dass Sie Ihren Kunden immer Zahlung auf Rechnung anbieten können ohne zusätzliche Vorbereitungen durch Ihren Plattform-Betreiber. Sie sind bei dieser Zahlungsart für die Erstellung der Rechnungen und die Zahlungsabwicklung zuständig.</p>
+      <p>Wenn Sie Ihren Kunden eine andere Zahlungsart anbieten möchten, benötigen Sie eine vertragliche Vereinbarung mit einem Zahlungsdienstleister. Ihr Plattform-Betreiber kann dann die entsprechenden Zahlungsarten für Sie einrichten. Die Verantwortung für die Erstellung der Rechnungen und die Zahlungsabwicklung liegt beim Zahlungsdienstleister.</p>
+      <p>Wenn Sie entscheiden, einem Kunden für einen kostenpflichtigen Service mehrere Zahlungsarten anzubieten, kann sich der Kunde beim Abonnieren des Service seine bevorzugte Zahlungsart aussuchen. Wenn Sie eine Zahlungsart löschen, die bereits von einem Kunden für ein Abonnement ausgewählt wurde, muss Ihr Kunde eine neue Zahlungsart wählen, bevor er den Service weiter nutzen kann. </p>
+      <p id="Be_aware_of_the_following_eff_task_taskbody_context_p_5"
+        >Beachten Sie die folgenden Hinweise zum Löschen einer Zahlungsart:</p>
+      <ul compact="no">
+        <li id="If_you_remove_a_used_payment_task_taskbody_context_ul_li"
+          >Wenn Sie eine Zahlungsart während der kostenlosen Nutzungsdauer eines Kunden löschen, wird die kostenlose Nutzungsdauer nicht um den Zeitraum verlängert, in dem der Kunde den Service nicht nutzen kann.</li>
+        <li id="If_you_remove_a_used_payment2_task_taskbody_context_ul_li"
+          >Wenn Sie eine Zahlungsart für ein Abonnement löschen, bei dem die Kosten pro Zeiteinheit abgerechnet werden, können dem Kunden bei gestaffelten Preisen zusätzliche Kosten entstehen. Von zusätzlichen Kosten ist jeder Kunde betroffen, der den Service nicht innerhalb der Zeiteinheit weiter nutzt, in der Sie die Zahlungsart löschen. Bei einem Kunden, der einen Service nach erneuter Auswahl einer Zahlungsart weiter nutzt, wird das Abonnement wie ein neues Abonnement behandelt. Dadurch ergeben sich zum Beispiel zusätzliche Kosten für die Summe der Zeiteinheiten, die die Benutzer dem Abonnement zugeordnet sind, oder für die Anzahl der abrechenbaren Ereignisse.</li>
+      </ul>
+      <p>Auf der Seite <uicontrol>Zahlungsarten verwalten</uicontrol> können Sie Zahlungsarten für Services und Kunden festlegen. Die Schnittmenge aus beidem bestimmt, welche Zahlungsart der Kunde wählen kann, wenn er einen Service abonniert. Wenn die Schnittmenge leer ist, das heißt, die für Services und für Kunden festgelegten Zahlungsarten haben keine Zahlungsarten gemeinsam, steht dem Kunden keine Zahlungsart zur Verfügung. In einem solchen Fall ist es dem Kunden nicht möglich, einen kostenpflichtigen Service zu abonnieren.</p>
+      <p><b>So legen Sie eine Zahlungsart fest</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>Markieren Sie die Zahlungsart im jeweiligen Bereich. Sie können eine Zahlungsart für alle neuen Services, alle neuen Kunden, einzelne Services oder einzelne Kunden festlegen. </cmd>
+      </step>
+      <step>
+        <cmd>Schließen Sie Ihre Eingaben mit <uicontrol>Speichern</uicontrol> ab.</cmd>
+      </step>
+    </steps>
+    <result>
+      <p>Die festgelegten Zahlungsarten stehen Ihren Kunden sofort zur Auswahl.</p>
+      <p><b>So entfernen Sie eine Zahlungsart</b>:</p>
+      <p>
+        <ol>
+          <li>Entfernen Sie die Markierung für eine Zahlungsart im jeweiligen Bereich.</li>
+          <li>Beenden Sie Ihre Eingaben mit <uicontrol>Speichern</uicontrol>.</li>
+        </ol>
+      </p>
+      <p>Die Zahlungsart wird sofort entfernt und steht nicht mehr zur Auswahl.</p>
+    </result>
+  </taskbody>
+</task>

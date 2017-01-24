@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="de-de">
+  <title>Service verwalten</title>
+  <taskbody>
+    <context>
+      <p>Auf der Seite <uicontrol>Service verwalten</uicontrol> können Sie die Eigenschaften der Services anzeigen und ändern, für die Sie die Berechtigung zum Wiederverkauf haben.</p>
+      <p conref="service_view.xml#task634/Folgende_Eigenschaften_eines_task_taskbody_context_p_2"/>
+      <ul compact="no">
+        <li conref="service_view.xml#task634/Servicename_und_Kurzbeschreib_task_taskbody_context_ul_li"/>
+        <li conref="service_view.xml#task634/Ausführliche_Beschreibung_der_task_taskbody_context_ul_li"/>
+        <li conref="service_view.xml#task634/Lizenbeschreibung._Diese_muss_task_taskbody_context_ul_li"/>
+        <li conref="service_view.xml#task634/Details_zum_Preismodell._Dies_task_taskbody_context_ul_li"/>
+      </ul>
+      <p>Mit Ausnahme der Lizenzvereinbarung können die Informationen nur angezeigt werden. Den Text der Lizenzvereinbarung können Sie nach Bedarf ändern. Dazu muss der Service deaktiviert sein. Laufende Abonnements sind von Ihren Änderungen nicht betroffen. Die Änderungen wirken sich nur auf neue Abonnements aus. Sie müssen den Service aktivieren, damit er den Kunden zum Abonnieren angeboten wird. </p>
+      <p><b>So sehen und ändern Sie die Eigenschaften eines Service</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>Wählen Sie im Feld <uicontrol>Service-ID</uicontrol> den Service, dessen Eigenschaften Sie anzeigen oder ändern möchten.</cmd>
+        <info>
+          <p>Die Liste enthält alle Services, für die Sie die Berechtigung zum Wiederverkauf haben.</p>
+        </info>
+      </step>
+      <step>
+        <cmd>Im Feld <uicontrol>Lizenzvereinbarung</uicontrol> ändern Sie den Text der Lizenzvereinbarung nach Bedarf. Das Feld ist mit der Lizenzvereinbarung vorbelegt, die der Serviceanbieter festgelegt hat. Sie können diese entweder übernehmen oder Ihre eigene festlegen. </cmd>
+        <info>
+          <p>
+            <note><ph conref="service_add.xml#task634/Verwenden_Sie_ausschließlich_task_taskbody_steps_step_2"/></note>
+          </p>
+        </info>
+      </step>
+      <step>
+        <cmd>Schließen Sie Ihre Änderungen mit <uicontrol>Speichern</uicontrol> ab. </cmd>
+        <info>Der Text wird in der Sprache gespeichert, die in Ihrem Profil festgelegt ist.</info>
+      </step>
+      <step>
+        <cmd>Um die Lizenzvereinbarung in einer anderen Sprachen verfügbar zu machen, ändern Sie die Sprache in Ihrem Profil. Verwenden Sie dazu die Menüoption <uicontrol>Profil bearbeiten</uicontrol> im Menü <uicontrol>Benutzerkonto</uicontrol>. Anschließend können Sie die gewünschten Übersetzungen bearbeiten.</cmd>
+      </step>
+    </steps>
+    <result>
+      <p>Der Service wird mit den neuen Eigenschaften angezeigt. </p>
+      <p>Damit Kunden den Service abonnieren können, müssen Sie den Marktplatz festlegen, auf dem Sie den Service veröffentlichen möchten. Anschließend können Sie den Service aktivieren.</p>
+    </result>
+  </taskbody>
+  <related-links>
+    <linklist>
+      <title>Weitere Themen</title>
+      <link href="organization_edit.xml"/>
+      <link href="service_publish.xml"/>
+      <link href="service_activation.xml"/>
+    </linklist>
+  </related-links>
+</task>

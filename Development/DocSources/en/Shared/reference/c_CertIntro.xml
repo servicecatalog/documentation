@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="CertIntro" xml:lang="en-us">
+    <title>Introduction</title>
+    <conbody>
+        <section>
+            <p id="cert1">Web service calls coming from <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> (e.g. for provisioning application instances for services, or for integrating a process control system) or sent to it (e.g. by an application such as a PSP system) can be secured with SSL. SSL is used for authentication and for encryption at the transport level.</p>
+            <p id="cert2">Every HTTPS connection involves a client and a server. Depending on the calling direction, <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> can act as a server (Web service calls to <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    />) or as a client (Web service calls from <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>).</p>
+            <p>Every application integrated with <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> or accessing the platform services acts as a Web service client. <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> acts as the server, and the client must provide its authenticating data to the server. Three options are available: </p>
+            <p>
+                <ul>
+                    <li id="BasicAuth"
+                                ><b>Basic authentication</b>:<p>The caller sends the key or ID and password of a <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> user. SOAP-based calls address the <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> Web services with the <codeph>BASIC</codeph> suffix. This mechanism does not apply certificates for user authentication. However, certificates are involved because the communication between the client and <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> must be secured using TLS/SSL and HTTPS. You should also configure your network's firewall to block JNDI lookups from the outside when using basic authentication. </p><p>Basic authentication can only be used if <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> is installed in INTERNAL authentication mode. It must be used for calling <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> functions that require the specification of a user role. The user role determines whether the user is allowed to execute the function. </p><p>The REST APIs of <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> only support basic authentication.</p></li>
+                    <li id="ClientCert"
+                                ><b>Certificate-based authentication</b>:<p>The caller provides a certificate to the <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> server. SOAP-based calls address the <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> Web services with the <codeph>CLIENTCERT</codeph> suffix. In this case, the following requirements must be fulfilled:</p><ul>
+                            <li>The distinguished name (DN) of the client's certificate must correspond to the distinguished name (DN) configured and stored in <ph
+                                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> for the corresponding organization. </li>
+                            <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    /> must trust the client's certificate: The <ph
+                                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> truststore must contain a certificate with a valid signing chain to the certificate presented by the client.</li>
+                        </ul><p>Certificate-based authentication must be used when integrating a PSP such as Heidelpay. Web services calling PSP-related functions of <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> do not require the specification of a user role.</p><p>Certificate-based authentication can be used in both authentication modes (INTERNAL and SAML_SP). This chapter describes the certificate integration procedure in detail.</p></li>
+                    <li id="STS">
+                        <p><b>Security token service authentication</b>:</p>
+                        <p>SOAP-based Web service calls address the <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> Web services with the <codeph>STS</codeph> suffix. </p>
+                        <p>The calls are authenticated by means of a security token service (STS). This is a Web service that issues security tokens as defined in the WS-Security/WS-Trust specification. WS-Security (Web Services Security) is an extension to SOAP to apply security to Web services.</p>
+                        <p>This mechanism does not apply certificates for user authentication. However, certificates are involved because the communication between the client and <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> must be secured using TLS/SSL and HTTPS. </p>
+                        <p>Security token service authentication can only be used if <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> is installed in SAML_SP authentication mode.</p>
+                    </li>
+                </ul>
+            </p>
+            <p id="Note">
+                <note>Both, the server and the client certificates must be created and signed using the same JRE/JDK. Otherwise, the communication may fail.</note>
+            </p>
+        </section>
+        <section id="Terminology">
+            <title>Terminology</title>
+            <p><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> uses an <b>X.509 </b>certificate to prove the identity of an entity. This certificate is always used to prove the server's identity and optionally to prove the client's identity. </p>
+            <p>A certificate has a <b>subject</b> which usually identifies the owner of the certificate, and an <b>issuer</b> who signed the certificate. A certificate also includes a validity period. Cryptographic algorithms ensure that the information contained in the certificate cannot be changed without breaking the signature of the certificate.</p>
+            <p>The subject as well as the issuer is given as a <b>distinguished name (DN)</b> consisting of a list of key-value pairs. One of the standardized keys is called <b>common name (CN)</b>. The CN is of particular importance to HTTPS servers: The CN must contain the server's domain; otherwise the client will refuse the connection.</p>
+            <p>The process of issuing a certificate for another entity is called <b>signing</b>. Certificates always form a chain up to a certain <b>root certificate</b>. In a root certificate, the subject and the issuer are one and the same entity. Such certificates are called "<b>self-signed</b>".</p>
+            <p>Signing certificates or proofing that someone is the owner of a certificate requires the possession of the corresponding <b>private key</b>. While certificates can be distributed to other parties, special care must be taken to keep the private key secret.</p>
+            <p>Each client and server may have a keystore and a truststore. A <b>keystore</b> is used to keep certificates along with the corresponding private key. This means that a keystore is used to prove your own identity or to sign certificates. A <b>truststore</b> contains public certificates of other entities.</p>
+        </section>
+    </conbody>
+</concept>

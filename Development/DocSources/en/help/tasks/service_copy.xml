@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="en-us">
+  <title>Copying a service</title>
+  <taskbody>
+    <context>
+      <p>On the <uicontrol>Copy service</uicontrol> page, you can make a copy of an existing marketable service. <ph
+          id="Copying_a_marketable_service_task_taskbody_context_p_1_ph"
+          >Copying a marketable service may be useful for offering an existing service with slightly different properties, for example, a higher service level with a higher price, or special discounts for a promotion campaign.</ph>
+      </p>
+      <p>Copying a marketable service means:<ul>
+          <li>A new marketable service is created that is based on the same technical service as the copied service.</li>
+          <li>The service definition is copied to the new service.</li>
+          <li>The price model is copied to the new service.</li>
+        </ul></p>
+      <p><b>To copy a service</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>From the list, select the service you want to copy. </cmd>
+      </step>
+      <step>
+        <cmd>In the <uicontrol>Service ID</uicontrol> field, type an identifier for the service copy. </cmd>
+        <info>
+          <p>
+            <ph conref="service_add.xml#task634/This_field_is_mandatory._The_task_taskbody_steps_step_2"/>
+          </p>
+          <p><ph conref="service_add.xml#task634/3"/></p>
+          <p><ph conref="service_add.xml#task634/2"/></p>
+        </info>
+      </step>
+      <step>
+        <cmd>Click <uicontrol>Copy</uicontrol>.</cmd>
+      </step>
+    </steps>
+    <result>
+      <p>The copy of the service is created. You can proceed with updating the service definition and the price model of the new service as required. </p>
+      <p>To provide the new service to customers for subscription, you need to define its publishing options and activate it. Optionally, you can define upgrade and downgrade options for the service and grant brokers and resellers the permission to sell it.</p>
+    </result>
+  </taskbody>
+  <related-links>
+    <linklist>
+      <title>Related topics</title>
+      <link href="service_edit.xml"/>
+      <link href="priceModel_service.xml"/>
+      <link href="service_publish.xml"/>
+      <link href="service_activation.xml"/>
+    </linklist>
+  </related-links>
+</task>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_3413BBD173324104B42FB714974CABE7" xml:lang="en-us">
+    <title>Publishing Services</title>
+    <conbody>
+        <section id="Publishing_marketable_service_concept_conbody_section_1">
+            <p>Publishing a service means making it available to customers for subscription on a marketplace. </p>
+            <p>The following prerequisites must be fulfilled for publishing a service: <ul>
+                    <li>You need the permission to publish the service by the supplier.</li>
+                    <li>You must have been granted access and admitted as a seller to the marketplace by the marketplace owner.</li>
+                </ul></p>
+            <p>Publishing a service involves selecting the marketplace, activating the service, and publishing the URL of the marketplace. These tasks are described in more detail in the sections below.</p>
+        </section>
+        <section id="Specifying_a_Marketplace_concept_conbody_section_2">
+            <title>Specifying a Marketplace</title>
+            <p>As a prerequisite for publishing a service, you need to specify the desired marketplace.</p>
+            <p>A service can be published to exactly one marketplace. If you want to publish it to a different marketplace, you have to deactivate it before you can select the new marketplace. </p>
+            <p>Specifying a marketplace includes:</p>
+            <ul>
+                <li>Deciding whether the service is to be public.<p><ph
+                            conref="../../help/tasks/service_publish.xml#task634/A_public_service_is_visible_i_task_taskbody_steps_step_2"
+                        /></p></li>
+                <li>Selecting the marketplace. <p>You can publish the service to a marketplace that is open to any seller, or to a marketplace that is not open but for which you have been admitted as a seller by the marketplace owner. The marketplace must be public or you need to be granted access by the marketplace owner.</p></li>
+                <li>Assigning categories. <p>Provided that categories are defined for the marketplace you select, you can assign one or multiple categories to your service. The marketplace owner is responsible for creating the categories you can choose from. Customers can use the categories for browsing the service catalog and filtering the services on the marketplace. The marketplace owner may also decide to display the services on the marketplace home page grouped by categories.</p></li>
+            </ul>
+            <p>To specify the marketplace, use the <uicontrol>Define publishing options</uicontrol> menu option in the <uicontrol>Marketable service</uicontrol> menu of the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> administration portal.</p>
+        </section>
+        <section id="Activating_a_Service_concept_conbody_section_3">
+            <title>Activating a Service</title>
+            <p>To make a service available for subscription, you must activate it. To do this, use the <uicontrol>Activate or deactivate services</uicontrol> menu option in the <uicontrol>Marketable service</uicontrol> menu of the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> administration portal.</p>
+            <p>The menu option can also be used for deactivating a service. This is required if you do not want to offer it any longer or if you want to change the marketplace. If you deactivate a service, customers can no longer subscribe to it. Existing subscriptions are not affected. </p>
+        </section>
+        <section id="Publishing_the_URL_of_a_Marke_concept_conbody_section_4">
+            <title>Publishing the URL of a Marketplace</title>
+            <p>To make your service offering known to customers, you publish the URL of the marketplace. You can do this, for example, by email or on your website or portal. You can obtain the URL from the marketplace owner, who receives it from <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> via email when the marketplace is created. </p>
+            <p>The URL has the following format: </p>
+            <p><codeph>http://&lt;server&gt;:&lt;port&gt;/&lt;context-root>/marketplace?mId=&lt;mID&gt;</codeph>
+            </p>
+            <p><codeph>&lt;server&gt;</codeph> is the Web/application server where <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> has been deployed. <codeph>&lt;port&gt;</codeph> is the port to address the Web/application server (default: <codeph>8080</codeph> for HTTP, <codeph>8081</codeph> for HTTPS). <codeph>&lt;context-root></codeph> is the context root of <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> as set by the platform operator (default: <codeph>oscm-portal</codeph>). <codeph>&lt;mId&gt;</codeph> is the ID of the marketplace.</p>
+            <p>People who use the URL for accessing a marketplace can view all services that are marked as public. When subscribing to a service, they are either redirected to the registration Web page or they can log in to <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> directly, provided they are already registered as a customer. </p>
+            <p>You can also publish the URL of the registration Web page of <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    />. This allows customers to directly register with <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />. Registered customers can see all services, no matter whether they are marked as public or not. A registered customer is sent an email with the login data and an initial password to be used for the first login.</p>
+            <p>The URL of the registration Web page has the following format: </p>
+            <p><codeph>http://&lt;server&gt;:&lt;port&gt;/&lt;context-root>/marketplace/registration.jsf?mId=&lt;mID&gt;</codeph>
+            </p>
+            <p><codeph>&lt;server&gt;</codeph> is the Web/application server where <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> has been deployed. <codeph>&lt;port&gt;</codeph> is the port to address the Web/application server (default: <codeph>8080</codeph> for HTTP, <codeph>8081</codeph> for HTTPS). <codeph>&lt;context-root></codeph> is the context root of <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> as set by the platform operator (default: <codeph>oscm-portal</codeph>). <codeph>&lt;mId&gt;</codeph> is the ID of the marketplace.</p>
+            <note>The marketplace owner may restrict the access to a marketplace to the users of specific organizations. <ph
+                    conref="../../help/tasks/marketplace_manageAccess.xml#task634/When_a_marketplace_small2_ph"/></note>
+        </section>
+    </conbody>
+</concept>

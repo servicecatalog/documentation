@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<reference id="reference832" xml:lang="ja-jp">
+    <title>料金設定詳細の確認</title>
+    <refbody>
+        <section>
+            <p><uicontrol>サービスの確認</uicontrol>および<uicontrol>サービスの管理</uicontrol>ページでは、サービスが無料でない、かつプラットフォームの請求システムを利用している場合、サービスの基本料金や利用料金の詳細を確認できます。すべての料金は税抜きです。</p>
+        </section>
+        <section>
+            <title>基本料金</title>
+            <p>基本料金には以下が含まれます。:</p>
+            <ul compact="no">
+                <li>
+                    <p id="For_each_subscription_a_char_reference_refbody_section_1"><b>料金計算方法</b>: 料金設定に設定できる料金計算方法は以下のとおりです。:<ul>
+                            <li><uicontrol>無料</uicontrol>: サービスは無料で提供されます。</li>
+                            <li><uicontrol>従量課金</uicontrol>: サービスの使用時間をミリ秒単位として料金が計算されます。</li>
+                            <li><uicontrol>定額</uicontrol>: 日、週などの時間単位で料金が計算されます。計算に用いる単位は<uicontrol>課金単位</uicontrol>で設定します。</li>
+                        </ul></p>
+                </li>
+                <li><b>無料試用期間 (日数)</b>: サービスを無料で使用できる日数を設定できます。<ph
+                        conref="../../Shared/priceModel.xml#PriceModelTopic/After_this_period_the_servic_task_taskbody_steps_step_4"
+                    /></li>
+                <li conref="../../Shared/priceModel.xml#PriceModelTopic/Currency_task_taskbody_steps_step_5"/>
+                <li conref="../../Shared/priceModel.xml#PriceModelTopic/Charges_based_on_task_taskbody_steps_step_5"/>
+                <li conref="../../Shared/priceModel.xml#PriceModelTopic/One-time_fee_task_taskbody_steps_step_5"/>
+                <li
+                    conref="../../Shared/priceModel.xml#PriceModelTopic/Recurring_charge_per_subscrip_task_taskbody_steps_step_5"/>
+                <li><ph
+                        conref="../../Shared/priceModel.xml#PriceModelTopic/Recurring_charge_per_user_task_taskbody_steps_step_5"
+                    /></li>
+            </ul>
+        </section>
+        <section>
+            <title>イベント料金</title>
+            <p>イベント料金は個別の請求可能なイベントに対する料金です。<ph
+                    conref="../../Shared/reference/r_PriceModelDetails_events.xml#reference832/These_include_for_example_l_reference_refbody_section_1"
+                />
+            </p>
+            <p>この料金には段階的な価格が設定できます。例: イベントが発生した数に応じての割引</p>
+        </section>
+        <section>
+            <title>パラメーター料金</title>
+            <p>サービスのパラメーターやオプションに対する料金です。<ph
+                    conref="../../Shared/reference/r_PriceModelDetails_parameters.xml#reference832/It_depends_on_the_implementat_reference_refbody_section_1"
+                    /> サービス提供部門はすべてのパラメーターとオプションに対して料金が設定でき、それぞれパラメーターとオプションにはサービス契約単位または利用者単位の料金が設定できます。数値形式のパラメーターには乗算による課金、ブーリアン型(TrueまたはFalse)や選択肢のパラメーターには選択されている場合(Trueの場合)にその価格の課金がおこなわれます。それ以外の場合は課金はおこなわれません。</p>
+            <p>パラメーターの条件が数値形式の場合、この料金には段階的な価格が設定できます。 例: 数量割引</p>
+        </section>
+        <section>
+            <title>ロールごとの料金</title>
+            <p>サービスの各ロールに対する料金です。この料金は利用者ごとの基本料金に追加して請求期間毎に課金されます。</p>
+            <p>サービスのロールは技術サービスに定義されている必要があります。サービスのロールはサービスのベースであるアプリケーションの権限からマッピングしてください。</p>
+        </section>
+    </refbody>
+</reference>

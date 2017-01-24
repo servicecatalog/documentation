@@ -1,0 +1,55 @@
+<?xml version="1.0"?> 
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd"
+
+[
+<!ENTITY % entities PUBLIC "-//XDOC//ENTITIES//FujitsuUserDoc" "entities.dtd">
+]>
+
+<concept xml:lang="en-us" id="concept_61077BCD8FA14EEAACBC7E421B654671">
+    <title>Integrating External Process Control</title>
+    <conbody>
+        <section id="Organizations_often_have_spec_concept_conbody_section_1">
+            <p>Organizations often have specific processes for registering users, subscribing to services, or defining prices. Usually, such processes include approval processes and are modeled and automated with a process control system.</p>
+            <p>Certain actions of customers and suppliers can be carried out under the control of an external process control system. You can configure so-called triggers which are invoked when these actions are carried out. The triggers start the corresponding process in the process control system. If approval for the action is required, it is suspended until it is approved or rejected in the process control system. If no approval is required, the action is instantly executed.</p>
+            <p>As a prerequisite for controlling actions by processes, a notification service must exist and be deployed. This service forms the interface between the platform and the process control system. </p>
+        </section>
+        <section id="The_following_actions_may_be_concept_conbody_section_2">
+            <title>Process-Controlled Actions</title>
+            <p>The following actions may be subject to process control and thus to approval in an external process control system before they are executed in <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>: </p>
+            <p>
+                <ul>
+                    <li>
+                        <p>For any type of organization, the following triggers can be configured: </p>
+                        <p>
+                            <ul>
+                                <li>A subscription is to be changed, for example, renamed (<codeph>Modify subscription</codeph>). </li>
+                                <li>A billing run is completed, and the billing data for a billing period is calculated (<codeph>Billing run finished</codeph>). </li>
+                                <li>A subscription is to be added (<codeph>Subscribe to service</codeph>). </li>
+                                <li>A user is to be assigned to or removed from a subscription (<codeph>Assign users to subscription</codeph>). <p>For the case that a user is automatically assigned to a new subscription when subscribing to a service, no trigger can be configured. The <codeph>Assign users to subscription</codeph> trigger only applies to users that are manually assigned to a subscription.</p></li>
+                                <li>A subscription is to be upgraded or downgraded (<codeph>Up/Downgrade subscription</codeph>). </li>
+                                <li>A subscription is to be terminated (<codeph>Terminate subscription</codeph>). </li>
+                                <li>A user is to be registered (<codeph>Register user</codeph>).<p>Triggers can only be configured for registering single users. The import of multiple users in one operation from an LDAP system or a user data file cannot be executed under process control.</p></li>
+                            </ul>
+                        </p>
+                    </li>
+                    <li>
+                        <p>For suppliers, the following additional triggers can be configured: </p>
+                        <p>
+                            <ul>
+                                <li>A customer is to be registered (<codeph>Register customer</codeph>). </li>
+                                <li>The payment types for a customer are to be changed (<codeph>Manage payment types for customer</codeph>). </li>
+                                <li>A marketable service is to be activated (<codeph>Activate service</codeph>). </li>
+                                <li>A marketable service is to be deactivated (<codeph>Deactivate service</codeph>). </li>
+                                <li>A user of an organization subscribes to a service offered by the supplier (<codeph>Subscription created (any user)</codeph>).</li>
+                                <li>A user of a customer modifies a subscription to a service of the supplier (<codeph>Subscription modified (any user)</codeph>).</li>
+                                <li>A user of a customer terminates a subscription to a service of the supplier (<codeph>Subscription terminated (any user)</codeph>).</li>
+                            </ul>
+                        </p>
+                    </li>
+                </ul>
+            </p>
+        </section>
+    </conbody>
+</concept>

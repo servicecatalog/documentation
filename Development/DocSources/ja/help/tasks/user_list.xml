@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd">
+<task id="task634" xml:lang="ja-jp">
+  <title>利用者の管理</title>
+  <taskbody>
+    <context>
+      <p><uicontrol>利用者の管理</uicontrol>ページでは、所属組織に登録された利用者を管理できます。利用者情報や利用者のロールの変更や、利用者のパスワードのリセット、利用者の削除ができます。購入済サービスを行っている場合、利用者にサービスへのアクセス権を付与したり、サービスへのアクセス権を剥奪することもできます。 </p>
+      <p>
+        <note>所属組織が利用者の管理や認証に外部システムを使用している場合、パスワードは外部のシステムにおいてのみ変更できます。したがって、その場合はパスワードをリセットするためのオプションは表示されません。</note>
+      </p>
+      <p><b>利用者情報と利用者のロールを変更するには：</b></p>
+    </context>
+    <steps>
+      <step>
+        <cmd>ページ上部にある一覧から、情報と利用者のロールを変更する利用者を選択します。</cmd>
+      </step>
+      <step>
+        <cmd>ページ下部のフィールドで、対応するフィールドを編集して利用者情報を変更します。 </cmd>
+        <info>
+          <p>利用者の管理と認証に外部システムを使用している場合、外部システムのエントリにマッピングされていない項目のみ編集できます。</p>
+        </info>
+      </step>
+      <step>
+        <cmd>選択した利用者のロールを変更するには、対応する<uicontrol>利用者のロール</uicontrol>チェックボックスを選択するか、選択を解除します。選択できる利用者のロールは所属組織のロールによって異なります。</cmd>
+        <info>
+          <ul compact="no">
+            <li><ph conref="../../Shared/concepts/c_OrgsRoles.xml#concept2311/Administrator_concept_conbody_section_p_4"
+              /></li>
+            <li><ph conref="../../Shared/concepts/c_OrgsRoles.xml#concept2311/OUAdministrator_concept_conbody_section_p_4"
+              /></li>
+            <li><ph
+                conref="../../Shared/concepts/c_OrgsRoles.xml#concept2311/Subscription_manager_concept_conbody_section_p_4"
+              /></li>
+            <li><ph
+                conref="../../Shared/concepts/c_OrgsRoles.xml#concept2311/Technology_manager_concept_conbody_section_p_4"
+              /></li>
+            <li><ph
+                conref="../../Shared/concepts/c_OrgsRoles.xml#concept2311/Service_manager_concept_conbody_section_p_4"
+              /></li>
+            <li><ph conref="../../Shared/concepts/c_OrgsRoles.xml#concept2311/Reseller_concept_conbody_section_p_4"
+              /></li>
+            <li><ph conref="../../Shared/concepts/c_OrgsRoles.xml#concept2311/Broker_concept_conbody_section_p_4"/></li>
+            <li><ph
+                conref="../../Shared/concepts/c_OrgsRoles.xml#concept2311/Marketplace_manager_concept_conbody_section_p_4"
+              /></li>
+            <li><ph conref="../../Shared/concepts/c_OrgsRoles.xml#concept2311/Operator_concept_conbody_section_p_4"
+              />プラットフォームがインストールされるとシステム運用管理部門と共に最初のシステム運用管理者が作成されます。</li>
+          </ul>
+          <p>チェックボックスを選択しない場合、自動的に利用者のロールが割り当てられます。特に権限を持たないロールの利用者は、所属組織が契約しているサービスを使用できます。</p>
+          <p>利用者のロール割り当てを変更すると、その利用者の次回ログイン時に新しい割り当てが有効になります。</p>
+        </info>
+      </step>
+      <step>
+        <cmd>変更を保存するには、<uicontrol>保存</uicontrol>をクリックします。</cmd>
+      </step>
+    </steps>
+    <result><b>利用者のパスワードをリセットするには</b>: <p>
+        <ol>
+          <li>ページ上部にある一覧から、パスワードをリセットする利用者を選択します。利用者がログアウトしている場合のみ、その利用者のパスワードをリセットできます。</li>
+          <li><uicontrol>パスワードのリセット</uicontrol>をクリックします。</li>
+        </ol>
+      </p><p>パスワードがただちにリセットされます。次回ログイン時に使用する新しい初期パスワードを通知するメールが該当の利用者に送信されます。</p><p><b>利用者を削除するには</b>：</p><p>
+        <ol>
+          <li>ページ上部にある一覧から、削除する利用者を選択します。利用者を削除するには、以下の条件を満たす必要があります。<ul
+              compact="no">
+              <li>該当の利用者が購入済サービスに割り当てられていないこと</li>
+              <li>該当の利用者がその組織の唯一の管理者ロールとして割り当てられていないこと</li>
+              <li>該当の利用者がログイン中ではないこと</li>
+            </ul></li>
+          <li><uicontrol>削除</uicontrol>をクリックし、削除します。</li>
+        </ol>
+      </p><p>利用者がただちにプラットフォームから削除されます。</p></result>
+  </taskbody>
+  <related-links>
+    <linklist>
+      <title>関連情報</title>
+      <link href="../tasks/user_add.xml"/>
+    </linklist>
+  </related-links>
+</task>

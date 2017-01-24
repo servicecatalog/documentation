@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<reference id="reference832" xml:lang="ja-jp">
+    <title><ph platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+            /> システム設定</ph><ph platform="help">システム設定</ph></title>
+    <refbody>
+        <section>
+            <p><codeph>&lt;install_pack_dir>/databases/bes_db</codeph>にある<codeph>configsettings.properties</codeph>ファイルには、<ph
+                platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                    platform="help">プラットフォーム</ph>サービスのシステム設定が含まれます。 </p>
+        </section>
+        <section>
+            <title>AUDIT_LOG_ENABLED</title>
+            <p>オプション項目。購入済サービス、サービス、および料金設定に関連した利用者の操作を記録し、データベースに格納するかどうかを指定します。<codeph>true</codeph>に設定した場合、システム運用管理者は監査ログのデータをエクスポートし、利用者の操作に関する情報を取得することができます。</p>
+            <p>指定可能な値： <codeph>true</codeph>, <codeph>false</codeph></p>
+            <p>デフォルト： <codeph>false</codeph></p>
+        </section>
+        <section>
+            <title>AUDIT_LOG_MAX_ENTRIES_RETRIEVED</title>
+            <p>オプション項目。一回の監査ログのエクスポートで、いくつのログのエントリを取得するかを指定します。この値を超えた場合、フィルタ条件を変更して再度エクスポートを実施するように操作者に警告を表示します。この設定は、監査ログをエクスポートする際、データベースへのSQL要求の数を低く抑えるために必要です。要求数が多いと、システムパフォーマンスの低下になります。</p>
+            <p>指定可能な値： <codeph>1</codeph>から<codeph>1000</codeph>の間の任意の値
+            </p>
+            <p>デフォルト： <codeph>100</codeph></p>
+        </section>
+        <section>
+            <title>AUTH_MODE</title>
+            <p>必須項目。 <ph platform="print"><ph
+              conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+              >プラットフォーム</ph>のユーザー認証を使用するか、それともプラットフォームがSAMLサービス提供者として機能するかを指定します。このシステム設定は、<ph
+              platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+              >システム</ph>を初めて起動した時に評価され、<ph
+              platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+              platform="help">システム</ph>が一度でも起動された後には設定を変更することはできません。アップグレードインストールでも設定を変更することはできません。</p>
+            <p>指定可能な値： <codeph>INTERNAL</codeph> (<ph platform="print"><ph
+                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                    >プラットフォーム</ph>のユーザー認証を使用) または <codeph>SAML_SP</codeph> (<ph platform="print"><ph
+                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                    >プラットフォーム</ph>はSAMLサービス提供者として機能、また、利用者はアイデンティティプロバイダー(IdP)システムにより認証される)。 </p>
+            <p>デフォルト： <codeph>INTERNAL</codeph>
+            </p>
+        </section>
+        <section><title>BASE_URL</title>オプション項目。<ph platform="print"><ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                    >プラットフォーム</ph>にてHTTPS通信をする必要がない場合に、<ph platform="print"><ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                    >プラットフォーム</ph>のトップページにアクセスするのにベースURLが使用されます。未入力の場合<codeph>BASE_URL_HTTPS</codeph>が使われます。<p
+                    >指定形式： <codeph> http://&lt;ホスト&gt;:&lt;ポート&gt;/&lt;コンテキストルート></codeph></p>
+                    <p><codeph>&lt;コンテキストルート></codeph> のデフォルト値は <codeph>oscm-portal</codeph> です。</p>
+                    <p>インターネットのドメイン名は以下のルールを満たしている必要があります:<ul>
+                    <li>
+                        <p>文字で始まり、文字または数字で終わる。</p>
+                    </li>
+                    <li>
+                        <p>文字、数値またはハイフンのみで構成される。特殊文字は使用不可。</p>
+                    </li>
+                    <li>
+                        <p>最大63文字以内で構成される。</p>
+                    </li>
+                </ul></p></section>
+                <section><title>BASE_URL_HTTPS</title>必須項目。HTTPSプロトコルで<ph platform="print"><ph 
+                            conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                            >プラットフォーム</ph>のホームページにアクセスするため、および、サービスにアクセスするURLを作成するために使われます。<p
+                            >指定形式： <codeph>https://&lt;ホスト&gt;:&lt;ポート&gt;/&lt;コンテキストルート></codeph></p>
+                            <p><codeph>&lt;コンテキストルート></codeph> のデフォルト値は <codeph>oscm-portal</codeph> です。</p>
+                            <p>インターネットのドメイン名は以下のルールを満たしている必要があります:<ul>
+                    <li>
+                        <p>文字で始まり、文字または数字で終わる。</p>
+                    </li>
+                    <li>
+                        <p>文字、数値またはハイフンのみで構成される。特殊文字は使用不可。</p>
+                    </li>
+                    <li>
+                        <p>最大63文字以内で構成される。</p>
+                    </li>
+                </ul></p></section>
+        <section>
+            <title>CUSTOMER_SELF_REGISTRATION_ENABLED</title>
+            <p>オプション項目。サービスポータルでサービス利用部門の登録が可能かどうかを設定します。<codeph>false</codeph>が設定されている場合、サービス利用部門はすべてシステム運用管理者による登録が必要です。</p>
+            <p>設定可能な値： <codeph>true</codeph>、<codeph>false</codeph></p>
+            <p>デフォルト： <codeph>true</codeph></p>
+        </section>
+        <section><title>DECIMAL_PLACES</title>オプション項目。使用料の計算で使用する小数点数を指定します。この設定は、<ph
+                platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                platform="help"
+                    >プラットフォーム</ph>を V14.1から上位のバージョンに移行する場合にだけ必要です。 <p>設定可能な値： <codeph>2</codeph>, <codeph>3</codeph>, <codeph>4</codeph>, <codeph>5</codeph>, <codeph>6</codeph></p><p>デフォルト： <codeph>2</codeph></p></section>
+        <section><title>HIDDEN_UI_ELEMENTS</title>オプション項目。<ph
+                platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                platform="help"
+                  >プラットフォーム</ph>の管理ポータルおよびサービスポータルで非表示にするユーザーインターフェース項目を指定します。この設定でユーザーインターフェース要素をサービスポータルや管理ポータルから非表示にすることができます。<p><b>サービスポータル</b></p><p>サービスポータルの[アカウント]メニューからオプションを非表示にするには、以下の値のいずれかを入力します。: </p><ul>
+                <li><codeph>marketplace.navigation.Profile</codeph>:[プロフィール]メニュー </li>
+                <li><codeph>marketplace.navigation.Payment</codeph>:[支払情報]メニュー</li>
+                <li><codeph>marketplace.navigation.Subscriptions</codeph>:[購入済サービス]メニュー</li>
+                <li><codeph>marketplace.navigation.Users</codeph>:[利用者]メニュー</li>
+                <li><codeph>marketplace.navigation.Reports</codeph>:[レポート]メニュー</li>
+                <li><codeph>marketplace.navigation.Processes</codeph>:[トリガー・プロセス]メニュー</li>
+                      <li><codeph>marketplace.navigation.Operations</codeph>:[操作]メニュー</li>
+            </ul><p><uicontrol>アカウント</uicontrol>メニューから複数のオプションを非表示にするには、オプションをカンマで区切ります。</p><p><b>管理ポータル</b></p><p>特定ページを非表示にするには、以下の方法で非表示にしたいページの設定値を割り出す必要があります。 </p><ol>
+                <li><ph platform="print"><ph
+                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                         >プラットフォーム</ph>の管理ポータルで各ページを開きます。</li>
+                <li>このページのオンラインヘルプを表示します。 </li>
+                <li>オンラインヘルプHTMLページの名前を参照します。 </li>
+                <li>ファイルの拡張子「<codeph>.htm</codeph>」を省略し、下線をドットに置き換えます。 </li>
+            </ol><p>例： </p><p>[付加価値税率の管理]ページを非表示にするとします。このページに紐付くオンラインヘルプHTMLページ名は<codeph>organization_manageVats.htm</codeph>です。そこから、対応する管理ポータルページの設定値は<codeph>organization.manageVats</codeph>になります。このページを非表示にするためには、以下のようにHIDDEN_UI_ELEMENTSキーを編集する必要があります。 </p><p><codeph>HIDDEN_UI_ELEMENTS=organization.manageVats</codeph></p><p>管理ポータルから複数ページを非表示にするには、エントリをコンマで区切ります。 </p><p>以下に、特定ページを非表示にするために使用できる値の例を示します。この一覧はすべてを網羅しているわけではありません。 </p><p>
+                <ul>
+                    <li><codeph>organization.edit</codeph>：[プロフィールの編集]ページ </li>
+                    <li><codeph>shop.editSkin</codeph>：[レイアウトのカスタマイズ]ページ </li>
+                    <li><codeph>techService.edit</codeph>：[技術サービス説明の編集]ページ </li>
+                </ul>
+            </p><p>メニューを管理ポータルからカテゴリごと非表示にするには、以下の値のいずれかを入力します。 </p><ul>
+                <li><codeph>navigation.myAccount</codeph>：[アカウント]メニュー </li>
+                <li><codeph>navigation.customer</codeph>：[サービス利用部門]メニュー</li>
+                <li><codeph>navigation.operator</codeph>：[操作]メニュー</li>
+                <li><codeph>navigation.techService</codeph>：[技術サービス]メニュー </li>
+                <li><codeph>navigation.service</codeph>：[サービス]メニュー </li>
+                <li><codeph>navigation.priceModel</codeph>：[料金設定]メニュー</li>
+                <li><codeph>navigation.marketplace</codeph>：[サービスポータル]メニュー</li>
+            </ul><note><uicontrol>操作</uicontrol>メニューの<uicontrol>システム設定の変更</uicontrol>ページは、システム運用管理者がログインしたときに転送されるデフォルトページです。このページをメニューから非表示にしたり、メニューそのものを非表示とした場合でも、<uicontrol>システム設定の変更</uicontrol>ページに転送され、必要であれば設定を変更することができます。</note></section>
+        <section>
+            <title>HIDE_PAYMENT_INFORMATION</title>
+            <p>オプション項目。サービス利用部門が 
+              <ph platform="print">
+                <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>
+              </ph>
+              <ph platform="help">プラットフォームの</ph>請求システムを使用する、有料のサービスを購入するときに請求情報の指定を必要とするかどうかを指定します。
+              <ph><codeph>true</codeph>に設定した場合、サービスポータルにおいて支払種別と請求先を指定するためのダイアログ、およびオプションが表示されなくなります。また、サービス利用部門の支払情報は、請求・支払プレビューのレポートに表示されません。サービス提供部門およびサービス提供代行部門は、管理ポータルでサービス利用部門に対する支払種別を管理することができません。この設定は請求処理と支払処理には影響しません。</ph></p>
+            <p>設定は
+            <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"/> 
+            <ph platform="help">プラットフォーム</ph>をインストール、またはアップデートを行ったときに一度だけ評価されます。設定値は
+            <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"/> 
+            <ph platform="help">プラットフォーム</ph>が起動した後は、アップデートインストールを行っても変更することができません。
+            </p>
+            <p>設定可能な値: <codeph>true</codeph>, <codeph>false</codeph></p>
+            <p>デフォルト: <codeph>false</codeph></p>
+        </section>
+        <section><title>HTTP_PROXY</title>オプション項目。プロキシサーバが存在する場合にそのプロキシサーバを指定します。<p>例： <codeph>proxy.domain</codeph>またはプロキシサーバIPアドレス。</p></section>
+        <section><title>HTTP_PROXY_PORT</title>オプション項目。プロキシサーバが存在する場合にそのプロキシサーバに接続するポート番号を指定します。<p>設定可能な値： <codeph>1</codeph>～<codeph>65535</codeph>の範囲の値を指定します。</p><p>デフォルト： <codeph>1080</codeph></p></section>
+        <!--section><title>IDP_ASSERTION_EXPIRATION</title>非推奨。<p>
+                   技術サービスのアクセス種別を <b>ユーザアクセス</b> と定義し、かつ、<ph
+                platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                platform="help"
+                >本プラットフォーム</ph>をSAML 1.1 アイデンティティプロバイダー(IdP)として使用している場合は必須。アクセス種別の詳細については、<i>運用ガイド（技術サービス開発部門編）</i>を参照してください。<p>この設定は、SAML IdPによって生成されるアサーションが有効なミリ秒数を示します。これは、アサーションの<codeph>NotAfterOrOn属性と</codeph><codeph>IssueInstant</codeph>属性の差異です。 </p><p>設定可能な値： <codeph>1</codeph>～<codeph>9223372036854775807</codeph>の範囲の値を指定します。</p><p>デフォルト： <codeph>1800000ミリ秒（</codeph>30分）</p></section-->
+        <!--section><title>IDP_ASSERTION_VALIDITY_TOLERANCE</title>非推奨。 <p>技術サービスのアクセス種別を <b>ユーザアクセス</b> と定義し、かつ、<ph
+                platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                platform="help"
+                >本プラットフォーム</ph>をSAML 1.1 IdPとして使用している場合は必須。アクセス種別の詳細については、<i>運用ガイド（技術サービス開発部門編）</i>を参照してください。<p>この設定は、SAML IdPによって生成されるアサーションが過去に有効であったミリ秒数を示します。これはサーバ間の同期問題を回避するために使用されます。この値はアサーションの<codeph>IssueInstant属性と</codeph><codeph>NotBefore属性の</codeph>差異です。 </p><p>設定可能な値： <codeph>1</codeph>～<codeph>9223372036854775807</codeph>の範囲の値を指定します。</p><p>デフォルト： <codeph>600000ミリ秒（</codeph>10分）</p></section-->
+        <!--section><title>IDP_PRIVATE_KEY_FILE_PATH</title>非推奨。<p>技術サービスのアクセス種別を <b>ユーザアクセス</b> と定義し、かつ、<ph
+                platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                platform="help"
+                >本プラットフォーム</ph>をSAML 1.1 IdPとして使用している場合は必須。アクセス種別の詳細については、<i>運用ガイド（技術サービス開発部門編）</i>を参照してください。
+                <p>この設定は、DER（Distinguished Encoding Rules）形式（<codeph>.derファイル）</codeph>の秘密キーのURLを示します。このURLはSAMLメッセージを署名するためにIdPによって使用されます。 </p>
+                <p>例： <codeph>/opt/glassfish-3.1.2.2/glassfish/domains/bes-domain/config/cakey.der</codeph></p>
+                <p>この設定を変更した場合、<ph
+                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                    platform="help">プラットフォーム</ph>を再起動する必要があります。</p></section-->
+        <!--section><title>IDP_PUBLIC_CERTIFICATE_FILE_PATH</title>非推奨。<p>技術サービスのアクセス種別を <b>ユーザアクセス</b> と定義し、かつ、<ph
+                platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                platform="help"
+                >本プラットフォーム</ph>をSAML 1.0 IdPとして使用している場合は必須。アクセス種別の詳細については、<i>運用ガイド（技術サービス開発部門編）</i>を参照してください。
+                <p>この設定は、DER（Distinguished Encoding Rules）形式（<codeph>.derファイル）</codeph>の公開キー証明書のURLを示します。アプリケーションが署名を確認できるように、このURLがIdPによってSAMLメッセージの署名に追加されます。 </p>
+                <p>例： <codeph>/opt/glassfish-3.1.2.2/glassfish/domains/bes-domain/config/cacert.der</codeph></p>
+                <p>この設定を変更した場合、<ph
+                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                    platform="help">プラットフォーム</ph>を再起動する必要があります。</p></section-->
+        <section><title>KEY_FILE_PATH</title>オプション項目。データタイプが<codeph>PWD</codeph>であるサービスパラメーター、および暗号化が指定されたカスタム属性の暗号化および復号化に必要なキーを含むファイルへのパス<p>
+              <ph platform="print">
+                <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>
+              </ph>
+              <ph platform="help">プラットフォーム</ph>起動時に本設定に指定されたパスにファイルが存在するかが確認されます。当該ファイルが存在しない場合、当該パスに自動的にファイルが作成されます。本設定が行われていない場合、デフォルトのパスに<codeph>key</codeph>という名前で作成されます。</p>デフォルトパス: <p><codeph>&lt;GLASSFISH_HOME&gt;/glassfish/domains/bes-domain/config</codeph>ディレクトリ配下、<codeph>./key</codeph></p><p>
+                <note>キーファイルは削除しないように注意してください。削除した場合、暗号化および復号化を行うことができません。作成されたファイルをバックアップしておくことを推奨します。</note>
+            </p></section>
+        <section><title>LDAP_SEARCH_LIMIT</title>オプション項目。組織が利用者の管理に外部LDAPシステムを使用する場合に、LDAPクエリが返すことができるエントリの最大数。 <p>設定可能な値： <codeph>1</codeph>～<codeph>9223372036854775807</codeph>の範囲の値を指定します。</p><p>デフォルト： <codeph>100</codeph></p></section>
+        <section><title>LOG_CONFIG_FILE</title>オプション項目。<ph
+                platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                platform="help"
+                      >プラットフォーム</ph>の<codeph>log4j</codeph>設定ファイルのパス。<p>デフォルト： <codeph>&lt;GLASSFISH_HOME&gt;/glassfish/domains/bes-domain/config</codeph> ディレクトリの <codeph>./log4j.properties</codeph> ファイル。</p>
+            </section>
+        <section><title>LOG_FILE_PATH</title>必須項目。<ph platform="print"><ph
+                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                >プラットフォーム</ph>のログファイルのパス。<p>デフォルト： <codeph>../logs</codeph> 、すなわち <codeph>&lt;GLASSFISH_HOME&gt;/glassfish/domains/bes-domain/logs</codeph> ディレクトリ。</p>
+                <p>この設定を変更した場合、<ph
+                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                    platform="help">プラットフォーム</ph>を再起動する必要があります。</p>
+            </section>
+        <section><title>LOG_LEVEL</title>オプション項目。<ph platform="print"><ph
+                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                >プラットフォーム</ph>のBSSのログレベル。この設定は<codeph>log4j.properties</codeph>ファイルの設定によって明確に指定されない場合、すべてのログクラスに適用されます。 <p>設定可能な値： <codeph>ERROR</codeph>、<codeph>WARN</codeph>、<codeph>INFO</codeph>、<codeph>DEBUG</codeph></p><p>デフォルト： <codeph>INFO</codeph></p>
+                <p>この設定を変更した場合、<ph
+                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                    platform="help">プラットフォーム</ph>を再起動する必要があります。</p></section>
+        <section><title>MAIL_JA_CHARSET</title>オプション項目。日本語で送信されるメールの特殊文字エンコーディング。<p>デフォルト： <codeph>UTF-8</codeph></p></section>
+    
+        <section><title>MAX_NUMBER_ALLOWED_USERS</title>必須項目。<ph
+                platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /></ph>インストレーションで登録できる最大利用者数。<p>設定可能な値： <codeph>1</codeph>～<codeph>9223372036854775807</codeph>の範囲の値を指定します。</p><p>デフォルト： <codeph>10</codeph></p></section>
+        <section><title>MAX_NUMBER_LOGIN_ATTEMPTS</title>オプション項目。<ph
+                platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                platform="help"
+                    >プラットフォーム</ph>にログインできる最大試行回数。利用者がこの回数でログインできなかった場合、そのアカウントがロックされます。 <p>設定可能な値： <codeph>1</codeph>～<codeph>9223372036854775807</codeph>の範囲の値を指定します。</p><p>デフォルト： <codeph>3</codeph></p></section>
+        <section><title>MP_ERROR_REDIRECT_HTTP</title>オプション項目。有効でないサービスポータルIDを指定してサービスポータルにHTTPでアクセスしようとした場合に表示するWebページのURLです。このWebページがデフォルトのエラーメッセージの代わりに表示されます。この設定はテナントごとではなく、プラットフォーム全体に有効になることに注意してください。<p>指定形式： <codeph>http://&lt;表示するWebページ></codeph></p><p>255文字以下の有効なURLを指定します。</p></section>
+        <section><title>MP_ERROR_REDIRECT_HTTPS</title>オプション項目。有効でないサービスポータルIDを指定してサービスポータルにHTTPSでアクセスしようとした場合に表示するWebページのURLです。このWebページがデフォルトのエラーメッセージの代わりに表示されます。この設定はテナントごとではなく、プラットフォーム全体に有効になることに注意してください。<p>指定形式： <codeph>https://&lt;表示するWebページ></codeph></p><p>255文字以下の有効なURLを指定します。</p></section>
+        <section><title>PERMITTED_PERIOD_INACTIVE_ON_BEHALF_USERS</title>オプション項目。サービス利用部門の代わりにログインした利用者が利用されなかった場合に、システムから削除されるまでのミリ秒の時間。値はミリ秒単位です。<p>設定可能な値： <codeph>1</codeph>～<codeph>9223372036854775807</codeph>の範囲の値を指定します。</p><p>デフォルト： <codeph>604800000（</codeph>7日） </p></section>
+        <section><title>PERMITTED_PERIOD_UNCONFIRMED_ORGANIZATIONS</title>オプション項目。組織の最初の管理アカウントを承認するまでの最大許容時間。この時間が経過すると、アカウントが削除されます。値はミリ秒単位です。 <p>設定可能な値： <codeph>1</codeph>～<codeph>9223372036854775807</codeph>の範囲の値を指定します。</p><p>デフォルト： <codeph>604800000（</codeph>7日） </p></section>
+        <section><title>PSP_USAGE_ENABLED</title>必須項目。現在の環境にPSP統合を使用するか指定します。
+            <p>設定可能な値： <codeph>true</codeph>, <codeph>false</codeph></p>
+            <p>デフォルト： <codeph>false</codeph></p>
+            <p>この設定を変更した場合、<ph
+                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                    platform="help">プラットフォーム</ph>を再起動する必要があります。</p></section>
+        <section><title>REPORT_ENGINEURL</title><ph platform="print"><ph
+                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                  >プラットフォーム</ph>のレポートを使用する場合には必須。レポートエンジンのURLテンプレート。正しいURLテンプレートを指定しないと、Report Webサービスを正しく呼び出すことができないため、<ph
+                platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                platform="help"
+                  >プラットフォーム</ph>はレポートを生成できません。 <p>HTTPアクセスを使うように設定している場合の指定形式： <codeblock>http://&lt;ホストのIPアドレス&gt;:&lt;ポート&gt;/birt/frameset?
+   __report=${reportname}.rptdesign&amp;SessionId=${sessionid}
+   &amp;__locale=${locale}&amp;WSDLURL=${wsdlurl}&amp;SOAPEndPoint=${soapendpoint}
+   &amp;wsname=Report&amp;wsport=ReportPort
+</codeblock></p><p>HTTPSアクセスを使うように設定している場合の指定形式: <codeblock>https://&lt;ホストのIPアドレス&gt;:&lt;ポート&gt;/birt/frameset?
+   __report=${reportname}.rptdesign&amp;SessionId=${sessionid}
+   &amp;__locale=${locale}&amp;WSDLURL=${wsdlurl}&amp;SOAPEndPoint=${soapendpoint}
+   &amp;wsname=ReportSecure&amp;wsport=ReportSecurePort</codeblock></p><note>上記の値は示されたとおりに使用する必要があります。この値を変更しないでください。</note></section>
+        <section><title>REPORT_SOAP_ENDPOINT</title><ph platform="print"><ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                  >プラットフォーム</ph>のレポートを使用する場合には必須。Report WebサービスのSOAPエンドポイント。Report Webサービスへの呼び出しによってすべてのレポートデータが取得されます。正しい値を指定しないと、Report Webサービスを正しく呼び出すことができないため、<ph
+                platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                platform="help"
+                      >プラットフォーム</ph>はレポートを生成できません。 <p>HTTPアクセスを使うように設定している場合の指定形式： </p><p><codeph>http://&lt;ホストのIPアドレス&gt;:&lt;ポート&gt;/Report/ReportingServiceBean</codeph></p><p>HTTPSアクセスを使うように設定している場合の指定形式: </p><p><codeph>https://&lt;ホストのIPアドレス&gt;:&lt;port&gt;/ReportSecure/ReportingServiceSecureBean</codeph>
+            </p><note>上記の値は示されたとおりに使用する必要があります。この値を変更しないでください。</note></section>
+        <section><title>REPORT_WSDLURL</title><ph platform="print"><ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                  >プラットフォームの</ph>レポートを使用する場合には必須。Report WebサービスのWSDLファイルのURL。Report Webサービスへの呼び出しによってすべてのレポートデータが取得されます。正しい値を指定しないと、Report Webサービスを正しく呼び出すことができないため、<ph
+                platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                platform="help"
+                      >プラットフォーム</ph>はレポートを生成できません。 <p>HTTPアクセスを使うように設定している場合の指定形式： </p><p><codeph>http://&lt;ホストのIPアドレス&gt;:&lt;ポート&gt;/Report/ReportingServiceBean?wsdl</codeph></p><p>HTTPSアクセスを使うように設定している場合の指定形式: </p><p><codeph>https://&lt;ホストのIPアドレス&gt;:&lt;ポート&gt;/ReportSecure/ReportingServiceSecureBean?wsdl</codeph></p><note>上記の値は示されたとおりに使用する必要があります。この値を変更しないでください。</note></section>
+        <!--section><title>SEARCH_INDEX_MASTER_FACTORY_NAME</title>必須項目。検索インデックスアプリケーションのJMS接続ファクトリ名。<codeph>jms/bss/masterIndexerQueueFactory</codeph>を設定し、値を変更しないでください。</section>
+        <section><title>SEARCH_INDEX_MASTER_QUEUE_NAME</title>必須項目。検索インデックスアプリケーションのJMSキュー名。<codeph>jms/bss/masterIndexerQueue</codeph>のまま変更しないでください。</section-->
+        <section><title>SSO_DEFAULT_TENANT_ID</title><ph platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help">プラットフォーム</ph>をSAML_SP認証モードでインストールした場合に必須。
+            <p>デフォルトテナントのID。デフォルトテナントは<ph platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help">プラットフォーム</ph>に登録されたすべてのユーザがサービスポータルおよび管理ポータルにアクセスする際認証に使用されるIdPと関連します。</p>
+            <p>8文字で記載してください。特殊文字および空白は使用できません。システム運用管理者はシステム設定で任意の値を指定します。</p>
+            <p>デフォルトテナントIDシステム運用管理者とIdP管理者間で共有する必要があります。IdP管理者は本IDをSAMLアサーションのための属性として設定する必要があります。たとえば、<ph platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help">プラットフォーム</ph> ー(SPているOpenAM内で、IdP管理者は本SPを選択し、アサーションプロセス属性として<codeph>tenantID="&lt;the 8 characters"></codeph>と入力します。</p>
+            <p>本設定を<ph platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help">プラットフォーム</ph>とIdPの間で交換した後に変更する必要がある場合、<ph platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help">プラットフォーム</ph>とIdPシステム双方の設定を変更する必要があります。それに伴いIdP管理者に変更を知らせる必要があります。</p></section>
+        <section><title>SSO_IDP_AUTHENTICATION_REQUEST_HTTP_METHOD</title><ph platform="print"
+                    ><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                >プラットフォーム</ph>をSAML_SP認証モードでインストールする場合は必須。 HTTP認証要求で利用する方式。IdPに依存して、<codeph>GET</codeph> または <codeph>POST</codeph> のいずれかのリクエストを使用できます。
+                <p>WebブラウザのSSOのために必要です。</p>
+                <p>デフォルト： <codeph>POST</codeph></p>
+                <p>この設定を変更した場合、<ph
+                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                    platform="help">プラットフォーム</ph>を再起動する必要があります。</p>
+        </section>
+        <section><title>SSO_IDP_SAML_ASSERTION_ISSUER_ID</title><ph platform="print"><ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                >プラットフォーム</ph>をSAML_SP認証モードでインストールする場合は必須。 <p>IdPシステムのエンティティID。本IDはIdPごとに一意であり、システム運用管理者とIdP管理者間で共有する必要があります。本IDは利用者が登録されているIdPシステムから認証情報が返答されていることを確認するために使用します。</p>
+            <p>IdP管理者は本IDをIdPシステム内のフェデレーションメタデータから取得することができます。</p>
+            <b>例</b>:<p>OpenAMサーバーでは、フェデレーションメタデータをWebブラウザから以下のように取得することができます: </p>
+            <p><codeph>https://&lt;OpenAM_server>/openam/saml2/jsp/exportmetadata.jsp?entityid=</codeph></p>
+            <p>ADFSサーバーでは以下のファイルを確認することでフェデレーションメタデータを取得することができます: </p>
+            <p><codeph>http://&lt;ADFShost>/FederationMetadata/2007-06/FederationMetadata.xml</codeph></p>
+            <p>XMLファイル内で発行者ID(issuer ID)は<codeph>entityID</codeph>として記載されています。 例; </p>
+            <p><codeph>entityID="http://example.adfs.com/adfs/services/trust"</codeph>
+            </p>
+        </section>
+        <section><title>SSO_IDP_TRUSTSTORE</title><ph platform="print"><ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                >プラットフォーム</ph>をSAML_SP認証モードでインストールする場合は必須。IdPの公開鍵証明書を保持しているトラストストアのファイルへのパスとファイル名。 <p>WebブラウザのSSOのために必要です。</p>
+            <p>デフォルト： <codeph>&lt;path>/cacerts.jks</codeph></p>
+            <p>ほかのIdPシステム、例えばOpenAM、Cloudminder、またはActive Directoryはインストールされ、利用される次第、この設定を変更する必要があるかもしれません。この設定を変更した場合、<ph
+                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                    platform="help">プラットフォーム</ph>を再起動する必要があります。</p>
+        </section>
+        <section><title>SSO_IDP_TRUSTSTORE_PASSWORD</title><ph platform="print"><ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                >プラットフォーム</ph>をSAML_SP認証モードでインストールする場合は必須。IdPの公開鍵証明書を保持しているトラストストアのパスワード。
+                <p>WebブラウザのSSOのために必要です。</p>
+                <p>GlassFishのデフォルトパスワード： <codeph>changeit</codeph></p>
+                <p>パスワードは大文字小文字を区別します。またIdPの出力と一致している必要があります。</p>
+                <p>この設定を変更した場合、<ph
+                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                    platform="help">プラットフォーム</ph>を再起動する必要があります。</p>
+        </section>
+        <section><title>SSO_IDP_URL</title><ph platform="print"><ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                >プラットフォーム</ph>をSAML_SP認証モードでインストールする場合は必須。IdPサービスエンドポイントのためのSAML転送先URL。
+                <p>WebブラウザのSSOのために必要です。</p>
+                <p>セキュリティ上および機密性の理由から、HTTPSプロトコルを利用することを推奨します。</p>
+                <p>指定形式： <codeph>https://&lt;ホスト>:&lt;ポート>/&lt;転送先サービスエンドポイント></codeph></p>
+                <p>この設定を変更した場合、<ph
+                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                    platform="help">プラットフォーム</ph>を再起動する必要があります。</p></section>
+        <section><title>SSO_ISSUER_ID</title><ph platform="print"><ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                >プラットフォーム</ph>をSAML_SP認証モードでインストールする場合は必須。<ph platform="print"><ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                >プラットフォーム</ph>を識別する一意な識別子。 IdPは、<ph platform="print"><ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                >プラットフォーム</ph>からのSAML認証要求を識別するのにこのIDを使います。 <p>WebブラウザのSSOのために必要です。</p>
+            <p><ph platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                    platform="help">プラットフォーム</ph>とIdPの間で情報の交換が一度でもおこなわれた後にこの設定を変更する場合は、<ph platform="print"><ph
+                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                    >プラットフォーム</ph>とIdPの両方を変更する必要があります。IdPの運用管理者に新しいメタデータ交換ファイルを送付する必要がある場合があります。</p>
+            <p>デフォルト： <codeph>CT_MG</codeph></p>
+            <p>この設定を変更した場合、<ph platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                    platform="help">プラットフォーム</ph>を再起動する必要があります。</p>
+        </section>
+        <section>
+          <title>SSO_LOGOUT_URL</title> 
+          <ph platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph>
+          <ph platform="help">プラットフォーム</ph>にSAML_SP認証モードをインストールしシングルログアウトを使用したい場合は必須。
+          <p>IdPシステムのシングルログアウトサービスエンドポイントURL。
+            <ph platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph>
+            <ph platform="help">プラットフォーム</ph>からのログアウト・セッション無効化リクエストがこのアドレスに送られます。</p>
+          <p>ブラウザのSSOに必要です。</p>
+          <p>セキュリティ上および機密性保持の理由からHTTPSプロトコルを使用することを推奨します。</p>
+          <p>指定形式: <codeph>https://&lt;ホスト>:&lt;ポート番号>/&lt;ログアウトサービスエンドポイント></codeph></p>
+          <p>この設定を変更した場合、
+            <ph platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph>
+            <ph platform="help">プラットフォーム</ph>を再起動する必要があります。</p>
+            <note>IdPシステムにおいては、ログアウトリクエストに対するレスポンスが送られ、利用者がログアウトによってリダイレクトされるURLを指定する必要があります。この設定には
+             　　　　　　　<ph platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph>
+             　　　　　　　<ph platform="help">プラットフォーム</ph>のデフォルトサービスポータルを使用することを推奨します:　
+             <codeph>https://&lt;host>:&lt;port>/oscm-portal/marketplace/index.jsf</codeph>。問題が発生した場合、このページから<codeph>MP_ERROR_REDIRECT_HTTPS</codeph>に指定したページに利用者をリダイレクトすることができます。ただし、この設定はテナントごとではなく、プラットフォーム全体に有効になることに注意してください。
+            </note>
+        </section>
+        <section>
+          <title>SSO_SIGNING_KEY_ALIAS</title>
+          <ph platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph>
+          <ph platform="help">プラットフォーム</ph>にSAML_SP認証モードのインストール、シングルログアウトの使用、およびIdPシステムのシングルログアウトサービスが署名リクエストを必要とする場合は必須。 例としてMicrosoft Active Directory Federation Servicesがあります。
+          <p>
+            <ph platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph>
+            <ph platform="help">プラットフォーム</ph>の秘密鍵のエイリアスです。署名ログアウトリクエストに使用されます。IdPシステムは署名を確認するため
+            <ph platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph>
+            <ph platform="help">プラットフォーム</ph>のトラストストアに正しい証明書を必要とします。
+          </p>
+          <p>ブラウザのSSOに必要です。</p>
+          <p>例: <codeph>s1as</codeph></p>
+          <p>この設定を変更した場合、
+            <ph platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph>
+            <ph platform="help">プラットフォーム</ph>を再起動する必要があります。</p>
+        </section>
+        <section>
+          <title>SSO_SIGNING_KEYSTORE</title>
+          <ph platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph>
+          <ph platform="help">the platform</ph>にSAML_SP認証モードのインストール、シングルログアウトの使用、およびIdPシステムのシングルログアウトサービスが署名リクエストを必要とする場合は必須。 例としてMicrosoft Active Directory Federation Servicesがあります。
+          <p><codeph>SSO_SIGNING_KEY_ALIAS</codeph>に指定された
+            <ph platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph>
+            <ph platform="help">プラットフォーム</ph>の秘密鍵が存在するアプリケーションサーバのキーストアのパス。</p>
+          <p>ブラウザのSSOに必要です。</p>
+          <p>例: <codeph>/opt/glassfish-3.1.2.2/glassfish/domains/bes-domain/config/keystore.jks</codeph></p>
+          <p>この設定を変更した場合 
+            <ph platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph>
+            <ph platform="help">プラットフォーム</ph>を再起動する必要があります。</p>
+        </section>
+        <section>
+          <title>SSO_SIGNING_KEYSTORE_PASS</title> 
+          <ph platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph>
+          <ph platform="help">the platform</ph>にSAML_SP認証モードのインストール、シングルログアウトの使用、およびIdPシステムのシングルログアウトサービスが署名リクエストを必要とする場合は必須。 例としてMicrosoft Active Directory Federation Servicesがあります。
+          <p><codeph>SSO_SIGNING_KEYSTORE</codeph>に指定されたキーストアにアクセスするためのパスワード。</p>
+          <p>ブラウザのSSOに必要です。</p>
+          <p>例: <codeph>changeit</codeph></p>
+          <p>この設定を変更した場合
+            <ph platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph>
+            <ph platform="help">プラットフォーム</ph>を再起動する必要があります。</p>
+        </section>
+        <section><title>SSO_STS_ENCKEY_LEN</title><ph platform="print"><ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                >プラットフォーム</ph>をSAML_SP認証モードでインストールする場合は必須。IdPで使われている暗号化キーの長さ。
+                <p>STS通信のために必要です。</p>
+                <p>デフォルト： <codeph>128</codeph></p>
+                <p>この設定はインストールプロパティであり、管理ポータルからは変更できません。暗号化キーの長さを変更する必要がある場合は、以下の手順を実施します： </p>
+                <p>
+                  <ol>
+                    <li><codeph>bes-domain</codeph> ドメインを停止します。</li>
+                    <li>ファイル <codeph>configsettings.properties</codeph> を編集し、<codeph>SSO_STS_ENCKEY_LEN</codeph> の値を必要に応じて変更します。</li>
+                    <li><codeph audience="BSS"
+                            >&lt;install_pack_dir>/install</codeph> にあるファイル <codeph>build-glassfish.xml</codeph> を以下のように実行：  
+                        <p><codeblock>&lt;ANT_HOME&gt;/bin/ant -DpatchProps.path=../domains/bes_domain/installer 
+   -f build-glassfish.xml patchAndRedeployApplication</codeblock>
+                        </p><codeph>&lt;ANT_HOME></codeph>はApache Antのインストールディレクトリです。
+                        <p><note>オペレーティングシステムによっては、<codeph>-DpatchProps.path=&lt;path&gt;</codeph> コマンドをダブルクォーテーションまたはシングルクォーテーションで囲む必要がある場合があります。</note>変更した設定のパラメーター値は、ファイル <codeph>configsettings.properties</codeph> から読み込まれ、<codeph>oscm.ear</codeph> アーカイブに含まれるWSITファイルに書き込まれます。更新されたアーカイブは <codeph>bes-domain</codeph> ドメインに再配備されます。</p>
+                        <p>上記コマンドの実行中にサブディレクトリ <codeph>/tmp</codeph> が作成され、更新された <codeph>oscm.ear</codeph> アーカイブが保存されます。アーカイブの再配備に失敗した場合、<codeph>/tmp/oscm.ear</codeph> アーカイブを手動で再配備することができます。</p></li>
+                    <li>ファイル <codeph>oscm-portal.war</codeph> を <codeph>bes-domain</codeph> ドメインに再配備します。</li>
+                    <li><codeph>bes-domain</codeph> ドメインを再起動します。</li>
+                  </ol>
+                </p></section>
+        <section><title>SSO_STS_METADATA_URL</title><ph platform="print"><ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                >プラットフォーム</ph>をSAML_SP認証モードでインストールする場合は必須。STSのMEXアドレス (Issuer Metadata Exchange) のURL。
+                <p>STS通信のために必要です。</p>
+                <p>セキュリティ上および機密性の理由から、HTTPSプロトコルを使うことを推奨します。</p>
+                <p>指定形式： <codeph>https://&lt;ホスト>:&lt;ポート>/&lt;MEXアドレス></codeph></p>
+                <p>この設定はインストールプロパティであり、管理ポータルからは変更できません。URLを変更する必要がある場合は、以下の手順を実施します: </p>
+                <p>
+                  <ol>
+                    <li><codeph>bes-domain</codeph> ドメインを停止します。</li>
+                    <li>ファイル <codeph>configsettings.properties</codeph> を編集し、<codeph>SSO_STS_METADATA_URL</codeph> の値を必要に応じて変更します。</li>
+                    <li><codeph audience="BSS"
+                            >&lt;install_pack_dir>/oscm-setup</codeph> にあるファイル <codeph>build-glassfish.xml</codeph> を以下のように実行：  
+                        <p><codeblock>&lt;ANT_HOME&gt;/bin/ant 
+   -DpatchProps.path=../domains/bes_domain/installer 
+   -f build-glassfish.xml patchAndRedeployApplication</codeblock></p>
+                        <p><codeph>&lt;ANT_HOME></codeph>はApache Antのインストールディレクトリです。</p>
+                        <p>変更した設定のパラメーター値は、ファイル <codeph>configsettings.properties</codeph> から読み込まれ、<codeph>oscm.ear</codeph> アーカイブに含まれるWSITファイルに書き込まれます。更新されたアーカイブは <codeph>bes-domain</codeph> ドメインに再配備されます。</p>
+                        <p>上記コマンドの実行中にサブディレクトリ <codeph>/tmp</codeph> が作成され、更新された <codeph>oscm.ear</codeph> アーカイブが保存されます。アーカイブの再配備に失敗した場合、<codeph>/tmp/oscm.ear</codeph> アーカイブを手動で再配備することができます。</p></li>
+                    <li>ファイル <codeph>oscm-portal.war</codeph> を <codeph>bes-domain</codeph> ドメインに再配備します。</li>
+                    <li><codeph>bes-domain</codeph> ドメインを再起動します。</li>
+                  </ol>
+                </p></section>
+        <section><title>SSO_STS_URL</title><ph platform="print"><ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                >プラットフォーム</ph>をSAML_SP認証モードでインストールする場合は必須。STSエンドポイントのURL。
+                <p>セキュリティ上および機密性の理由から、HTTPSプロトコルを使うことを推奨します。</p>
+                <p>指定形式： <codeph>https://&lt;ホスト>:&lt;ポート>/&lt;サービスエンドポイント></codeph></p>
+                <p>この設定はインストールプロパティです。管理ポータルで変更することはできません。URLを変更する必要がある場合は、以下の手順を実施します: </p>
+                  <ol>
+                    <li><codeph>bes-domain</codeph> ドメインを停止します。</li>
+                    <li>ファイル <codeph>configsettings.properties</codeph> を編集し、<codeph>SSO_STS_URL</codeph> の値を必要に応じて変更します。</li>
+                    <li><codeph audience="BSS"
+                            >&lt;install_pack_dir>/install</codeph> にあるファイル <codeph>build-glassfish.xml</codeph> を以下のように実行：  
+                        <p><codeblock>&lt;ANT_HOME&gt;/bin/ant 
+   -DpatchProps.path=../domains/bes_domain/installer 
+   -f build-glassfish.xml patchAndRedeployApplication</codeblock></p>
+                        <p><codeph>&lt;ANT_HOME></codeph>はApache Antのインストールディレクトリです。</p>
+                        <p>変更した設定のパラメーター値は、ファイル <codeph>configsettings.properties</codeph> から読み込まれ、<codeph>oscm.ear</codeph> アーカイブに含まれるWSITファイルに書き込まれます。更新されたアーカイブは <codeph>bes-domain</codeph> ドメインに再配備されます。</p>
+                        <p>上記コマンドの実行中にサブディレクトリ <codeph>/tmp</codeph> が作成され、更新された <codeph>oscm.ear</codeph> アーカイブが保存されます。アーカイブの再配備に失敗した場合、<codeph>/tmp/oscm.ear</codeph> アーカイブを手動で再配備することができます。</p></li>
+                    <li>ファイル <codeph>oscm-portal.war</codeph> を <codeph>bes-domain</codeph> ドメインに再配備します。</li>
+                    <li><codeph>bes-domain</codeph> ドメインを再起動します。</li>
+                  </ol>
+        </section>
+        <section><title>SUPPLIER_SETS_INVOICE_AS_DEFAULT</title>オプション項目。請求書がすべてのサービス利用部門のデフォルトの支払種別として使用されるかどうかを指定します。 <p>設定可能な値： <codeph>true</codeph>, <codeph>false</codeph></p><p>デフォルト： <codeph>false</codeph></p></section>
+        <section><title>TAGGING_MAX_TAGS</title>必須項目。タグクラウドを構成するタグの最大数。 <p>タグクラウドは、定義された検索用語（タグ）を含むサービスポータルの領域です。サービスでタグを使う頻度が多いほど、タグの文字が大きく表示されます。サービスポータル運用者によってタグクラウドがサービスポータルで有効になっている場合に、サービス利用部門はタグを使用してサービスを検索することができます。</p><p>設定可能な値： <codeph>0</codeph>～<codeph>2147483647</codeph>の範囲の値を指定します。</p><p>デフォルト： <codeph>20</codeph>
+            </p></section>
+        <section><title>TAGGING_MIN_SCORE</title>必須項目。タグをタグクラウドで表示させるために必要な最少利用回数。 <p>タグクラウドは、定義された検索用語（タグ）を含むサービスポータルの領域です。サービスでタグを使う頻度が多いほど、タグの文字が大きく表示されます。対応するサービスポータル運用者によってタグクラウドがサービスポータルで有効になっている場合に、サービス利用部門はタグを使用してサービスを検索することができます。</p><p>設定可能な値： <codeph>1</codeph>～<codeph>2147483647</codeph>の範囲の値を指定します。</p><p>デフォルト： <codeph>1</codeph>、タグクラウドで表示するにはタグが最低1回使用される必要があります。 </p></section>
+        <section><title>TIME_ZONE_ID</title>オプション項目。表示に使用する時間帯。 <p>設定可能な値：Javaではすべての時間帯がサポートされます。これは<codeph>PST</codeph>のような略称、<codeph>America/Los_Angeles</codeph>のようなフルネーム、<codeph>GMT-8:00</codeph>のようなカスタムIDで指定することができます。使用できるIDの一覧については、<codeph>java.util.TimeZone</codeph>を参照してください。</p><p>デフォルト： <codeph>GMT</codeph></p></section>
+        <section><title>TIMER_INTERVAL_BILLING_OFFSET</title>オプション項目。購入済サービスの利用料金（サービス利用部門請求データ）または売上配分用請求データを計算する請求データ作成処理のためのタイマーのオフセット。値はミリ秒単位です。このタイマーの間隔は常に１日間で変更できません。オフセットが設定去れていない場合、デフォルトの値である4日間が適用されます。<p>サービス利用部門請求データは一カ月の期間（請求期間）に対して計算されます。それぞれのサービス提供部門およびサービス提供代行部門は異なる請求期間の開始日を設定できます。売上配分用請求データは毎月1日に過去の月に対して計算されます。</p><p>請求データ作成処理のためのオフセットの設定は以下のとおりです。: </p><p>
+                <ul>
+                    <li>サービス利用部門請求書を計算する日および売上配分用請求データを計算する日を遅らせる日数。</li>
+                    <li>毎日の請求データ作成処理の開始を遅らせる時間。</li>
+                </ul>
+            </p><p>例:</p><p>サービス提供部門が請求期間の開始日を10日に設定し、オフセットに4日と4時間を設定した場合、そのサービス提供部門に関する請求データ作成処理はそれ以降の月の14日の4時に開始されます。売上配分用請求データは4日の4時に計算されます。毎日の請求期間が終了したかどうかの確認は毎日の4時におこなわれます。</p><p>設定可能な値： <codeph>0</codeph>～<codeph>2419200000</codeph>(28日間)の範囲の値を指定します。</p><p>デフォルト： <codeph>345600000</codeph>(4日間)</p></section>
+        <section><title>TIMER_INTERVAL_DISCOUNT_END_NOTIFICATION_OFFSET</title>オプション項目。すべての組織に対する割引を解除するタイマーのオフセット。請求処理間隔は1日で、変更できません。オフセットはミリ秒単位で、1月1日の00:00を基準とします。<p>設定可能な値： <codeph>0</codeph>～<codeph>9223372036854775807</codeph>の範囲の値を指定します。</p><p>デフォルト： <codeph>0</codeph></p></section>
+        <section><title>TIMER_INTERVAL_INACTIVE_ON_BEHALF_USERS</title>オプション項目。別の組織の代理をおこなっている実在しない利用者の確認が実行される時間間隔。値はミリ秒単位です。0は、このタイマーが無効なことを示します。<p>技術サービス定義には、組織が別の組織名で行動することを示すためのフラグ（<codeph>allowingOnBehalfActing</codeph>)を含めることができます。指定された組織は、別の組織のサービス利用部門でなければなりません。これは技術サービス開発部門およびサービス提供部門ロールを両方有している必要があることを意味します。さらに、サービス利用部門は、別の組織が自らログインすることを許可している必要があります。これは、技術サービスが<codeph>allowingOnBehalfActing</codeph>フラグを<codeph>true</codeph>に設定している購入済サービスによって実現できます。</p><p>組織が別の組織名で行動する場合、疑似利用者IDが生成されます。</p><p>技術サービス自身がこのような利用者を常に削除するようにはできないため、購入済サービスに存在しなくなった利用者を定期的に削除して<ph
+                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                    platform="help"
+                    >プラットフォーム</ph>のデータベースを整理する必要があります。</p><p>設定可能な値： <codeph>0</codeph>、及び<codeph>10000</codeph>（10秒）～<codeph>9223372036854775807</codeph>の範囲の値を指定します。</p><p>デフォルト： <codeph>0</codeph></p></section>
+        <section><title>TIMER_INTERVAL_INACTIVE_ON_BEHALF_USERS_OFFSET</title>オプション項目。非アクティブな「代理の」利用者を削除するタイマーのオフセット。オフセットはミリ秒単位です。<p>設定可能な値： <codeph>0</codeph>～<codeph>9223372036854775807</codeph>の範囲の値を指定します。</p><p>デフォルト： <codeph>0</codeph></p></section>
+        <section><title>TIMER_INTERVAL_ORGANIZATION</title>オプション項目。組織関連のタスクを実行する時間間隔。値はミリ秒単位です。0は、このタイマーが無効なことを示します。 <p>設定可能な値： <codeph>0</codeph>、及び<codeph>10000</codeph>（10秒）～<codeph>9223372036854775807</codeph>の範囲の値を指定します。</p><p>デフォルト： <codeph>0</codeph></p></section>
+        <section><title>TIMER_INTERVAL_ORGANIZATION_OFFSET</title>オプション項目。組織関連の作業のためのタイマーのオフセット。値はミリ秒単位で、1月1日の00:00を基準とします。<p>設定可能な値： <codeph>0</codeph>～<codeph>9223372036854775807</codeph>の範囲の値を指定します。</p><p>デフォルト： <codeph>0</codeph></p></section>
+        <section><title>TIMER_INTERVAL_SUBSCRIPTION_EXPIRATION</title>オプション項目。期限切れの購入済サービスの確認が実行される時間間隔。値はミリ秒単位です。このタイマーは無効にはできません（0には設定できません）。 <p>設定可能な値： <codeph>0</codeph>、及び<codeph>10000</codeph>（10秒）～<codeph>9223372036854775807</codeph>の範囲の値を指定します。</p><p>デフォルト： <codeph>86400000（</codeph>1日） </p></section>
+        <section><title>TIMER_INTERVAL_SUBSCRIPTION_EXPIRATION_OFFSET</title>オプション項目。購入済サービス期限切れ確認のためのタイマーのオフセット。値はミリ秒単位す。<p>設定可能な値： <codeph>0</codeph>～<codeph>9223372036854775807</codeph>の範囲の値を指定します。</p><p>デフォルト： <codeph>0</codeph></p></section>
+        <section><title>TIMER_INTERVAL_TENANT_PROVISIONING_TIMEOUT</title>オプション項目。タイムアウトの購入済サービスの確認が実行される時間間隔。値はミリ秒単位です。0は、このタイマーが無効なことを示します。<p>設定可能な値： <codeph>0</codeph>、及び<codeph>10000</codeph>（10秒）～<codeph>9223372036854775807</codeph>の範囲の値を指定します。</p><p>デフォルト： <codeph>0</codeph></p></section>
+        <section><title>TIMER_INTERVAL_TENANT_PROVISIONING_TIMEOUT_OFFSET</title>オプション項目。保留中の購入済サービス確認のためのタイマーのオフセット。値はミリ秒単位です。<p>設定可能な値： <codeph>0</codeph>～<codeph>9223372036854775807</codeph>の範囲の値を指定します。</p><p>デフォルト： <codeph>0</codeph></p></section>
+        
+        <section>
+            <title>TIMER_INTERVAL_USER_COUNT</title>
+            <p>必須項目。プラトフォームで登録された利用者数を確認する時間間隔。値はミリ秒単位です。このタイマーを無効にすることはできません。つまり、0に設定することはできません。</p>
+            <p>設定可能な値：<codeph>1</codeph>～<codeph>9223372036854775807</codeph>の範囲の値を指定します。</p>
+            <p>デフォルト：<codeph>43200000</codeph>、つまり12時間。</p>
+        </section>
+            
+
+        <section><title>WS_TIMEOUT</title>必須項目。外部Webサービス呼び出しのタイムアウト時間をミリ秒で指定します。この時間が経過すると、JAX-WSフレームワークによってタイムアウト例外が発生します。<p>外部Webサービス呼び出しは<ph
+                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                    platform="help"
+                    >プラットフォーム</ph>から実行される呼び出しです。アプリケーションによって実装される<codeph>ProvisioningService</codeph>インターフェースの<codeph>createUsers</codeph>メソッドの呼び出しが典型的な例です。Webサービス呼び出しが戻る前に本タイムアウト時間に達した場合、操作は中止され、例外が発生します。 </p><p>設定可能な値： <codeph>1</codeph>～<codeph>9223372036854775807</codeph>の範囲の値を指定します。</p><p>デフォルト： <codeph>30000</codeph>（30秒） </p><p>
+                <note>リクエストタイムアウトなど、GlassFishアプリケーションサーバで設定されるタイムアウトが、<ph
+                        platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph>
+                    <ph platform="help">プラットフォーム</ph>の構成設定で定義されるタイムアウトと不整合を起こすことがないようにしてください。 </note>
+                </p></section>
+    </refbody>
+</reference>

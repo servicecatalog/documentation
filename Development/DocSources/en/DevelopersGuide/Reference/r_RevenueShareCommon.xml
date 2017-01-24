@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+<reference id="Revenue_Share_Data_265" xml:lang="en-us">
+    <title>Common Elements</title>
+    <refbody>
+        <section>
+            <p>The sections below describe the following elements that are common to all revenue share data files:</p>
+            <ul>
+                <li><codeph>Period</codeph></li>
+                <li><codeph>OrganizationData</codeph></li>
+            </ul>
+        </section>
+        <section
+            conref="r_BillingData.xml#reference_25043B5D1DED4B2F9D5E9B099A9AC69C/Period_reference_refbody_section_3"
+            id="reference_refbody_section_3"/>
+        <section id="OrganizationData_reference_refbody_section_4">
+            <title>OrganizationData</title>
+            <p>Provides details of an organization.</p>
+            <p>An <codeph>OrganizationData</codeph> element has the following attributes: </p>
+            <ul>
+                <li><codeph><b>id</b></codeph> - (required, data type <codeph>string</codeph>) ID of the organization.</li>
+                <li><codeph><b>key</b></codeph> - (required, data type <codeph>positiveInteger</codeph>) Internal numeric key of the organization. </li>
+            </ul>
+            <p>An <codeph>OrganizationData</codeph> element contains the following subelements:</p>
+            <ul>
+                <li><codeph><b>Email</b></codeph> - (data type <codeph>string</codeph>) Email address of the organization.</li>
+                <li><codeph><b>Name</b></codeph> - (data type <codeph>string</codeph>) Name of the organization.</li>
+                <li><codeph><b>Address</b></codeph> - (data type <codeph>string</codeph>) Address of the organization.</li>
+                <li><codeph><b>CountryIsoCode</b></codeph> - (data type <codeph>string</codeph>) ISO code of the country where the organization is located.</li>
+            </ul>
+            <p><b>Example</b>:</p>
+            <p>
+                <codeblock><b>&lt;OrganizationData id="8e8f596c" key="37003"&gt;
+  &lt;Email&gt;info@company.com&lt;/Email&gt;
+  &lt;Name&gt;Company&lt;/Name&gt;
+  &lt;Address&gt;Postal Address&lt;/Address&gt;
+  &lt;CountryIsoCode&gt;DE&lt;/CountryIsoCode&gt;
+&lt;/OrganizationData&gt;</b></codeblock>
+            </p>
+        </section>
+    </refbody>
+</reference>

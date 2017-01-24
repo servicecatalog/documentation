@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="ja-jp">
+  <title>ロックされたアカウントの再開</title>
+  <taskbody>
+    <context>
+      <p>パスワードをリセットできる管理者に連絡してください。パスワードのリセット後、次にログインするための新しい初期パスワードが与えられます。</p>
+    </context>
+  </taskbody>
+</task>

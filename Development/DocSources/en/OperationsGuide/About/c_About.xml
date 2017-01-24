@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_FAFDCB5BC3864E738EE94DFD0478CF59" xml:lang="en-us">
+    <title>About this Manual</title>
+    <conbody>
+        <section>
+            <p>This manual describes the basic tasks involved in the operation and maintenance of <ph product="oscm_ce"
+                        ><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Name"/> (<ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>)</ph><ph
+                    product="oscm_ee"
+                        > FUJITSU Software Enterprise Service Catalog Manager - hereafter referred to as <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Name"/> (<ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>)</ph>.</p>
+            <p>The manual is structured as follows: </p>
+            <p>
+                <table colsep="1" frame="all" rowsep="1">
+                    <tgroup cols="2">
+                        <colspec colname="col2" colnum="1" colwidth="1.0*"/>
+                        <colspec colname="col3" colnum="2" colwidth="1.3*"/>
+                        <thead>
+                            <row>
+                                <entry colname="col2">Chapter</entry>
+                                <entry colname="col3">Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry colname="col2"><xref href="../Introduction/c_Intro.xml"> </xref></entry>
+                                <entry colname="col3">Describes <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    /> and its architecture, its organizations and users.</entry>
+                            </row>
+                            <row>
+                                <entry colname="col2"><xref href="../GettingStarted/c_GettingStarted.xml"/></entry>
+                                <entry colname="col3"
+                                        >Provides an overview of the tasks involved in the operation and maintenance of <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        />, shows the initial steps to be performed after installing <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    />, and introduces the tools that support you in performing operational tasks. </entry>
+                            </row>
+                            <row>
+                                <entry><xref href="../Configuration/c_Configuration.xml"/></entry>
+                                <entry>Describes how to maintain the <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    /> configuration settings, how to tune system performance, how to add a currency and a language, and how to use and configure timers for automatic task processing.</entry>
+                            </row>
+                            <row>
+                                <entry colname="col2"><xref href="../Monitoring/c_RegularIntro.xml"/></entry>
+                                <entry colname="col3">Describes the <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    /> log files and log entry types, how to configure the log level, as well as which data is subject to regular backups. In addition, it describes how to export the audit log data and how to monitor the JMS queues.</entry>
+                            </row>
+                            <row>
+                                <entry colname="col2"><xref href="../Organizations/c_Organizations.xml"/></entry>
+                                <entry colname="col3"
+                                    >Describes how to create and manage organizations and user accounts. </entry>
+                            </row>
+                            <row>
+                                <entry><xref href="../Reports/c_Reports.xml"/></entry>
+                                <entry>Describes the reports available for operators in <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</entry>
+                            </row>
+                            <row>
+                                <entry><xref href="../Billing/c_BillingPayment.xml"/></entry>
+                                <entry>Describes how to define revenue shares, how to set up the payment types allowed for suppliers and resellers, and how to integrate <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    /> with a payment service provider (PSP) and an external billing system. In addition, it describes how to handle billing data: how to restart payment processes and billing runs, preview and export billing data.</entry>
+                            </row>
+                            <row>
+                                <entry><xref href="../../Shared/reference/c_Certificates.xml"/></entry>
+                                <entry>Describes the usage of certificates for secure communication between <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    /> and applications integrated with it. </entry>
+                            </row>
+                            <row>
+                                <entry><xref href="../Marketplace/c_ManageMP.xml"/></entry>
+                                <entry>Describes how to create, update, and delete marketplaces. </entry>
+                            </row>
+                            <row>
+                                <entry colname="col2"><xref href="../../Shared/reference/r_AppServerResources.xml"
+                                    /></entry>
+                                <entry colname="col3">Describes the resources required for <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    /> on the application server.</entry>
+                            </row>
+                            <row>
+                                <entry><xref href="../../Shared/reference/r_ConfigSettings.xml"/></entry>
+                                <entry>Describes the <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    /> configuration settings.</entry>
+                            </row>
+                            <row>
+                                <entry><xref href="../../Shared/reference/r_LDAP_SettingTypes.xml"/></entry>
+                                <entry>Describes the keys to be defined for enabling access to an organization's LDAP system.</entry>
+                            </row>
+                            <row>
+                                <entry><xref href="../../Shared/reference/r_Audit_log.xml"/></entry>
+                                <entry>Describes the elements of the audit log. </entry>
+                            </row>
+                            <row>
+                                <entry><xref href="../Reference/r_LanguageResourceBundles.xml"/></entry>
+                                <entry>Describes the resources that can be provided and customized in different languages.</entry>
+                            </row>
+                            <row>
+                                <entry><xref href="../../Shared/reference/r_FileFormat_ImportUsers.xml"/></entry>
+                                <entry>Describes the content and format of a user data file for importing multiple users in one operation.</entry>
+                            </row>
+                            <row>
+                                <entry><xref href="../Reference/r_UserRolesMenuOptions.xml"/></entry>
+                                <entry>Gives an overview of the <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    /> administration portal menu options and the roles required for using them.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+    </conbody>
+</concept>

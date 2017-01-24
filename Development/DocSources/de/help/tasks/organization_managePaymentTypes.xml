@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="de-de">
+  <title>Zahlungsarten hinzufügen</title>
+  <taskbody>
+    <context>
+      <p>Auf der Seite <uicontrol>Neue Zahlungsart</uicontrol> können Sie die Zahlungsarten definieren, die dem gewählten Serviceanbieter bzw. Wiederverkäufer zur Auswahl stehen sollen. Später kann der Serviceanbieter bzw. Wiederverkäufer festlegen, welche Zahlungsarten er seinen Kunden zur Verfügung stellen will.</p>
+      <p><b>So fügen Sie eine Zahlungsart hinzu</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>Wählen Sie in der Liste <uicontrol>Zahlungsdienstleister</uicontrol> denjenigen, den Sie dem Serviceanbieter bzw. Wiederverkäufer zuweisen möchten. </cmd>
+        <info>
+          <p>Die Liste enthält alle Zahlungsanbieter, die auf Ihrer Plattform registriert und konfiguriert sind. </p>
+        </info>
+      </step>
+      <step>
+        <cmd>Geben Sie im Feld <b>PSP-ID</b> die vom Zahlungsdienstleister festgelegte ID für den Serviceanbieter bzw. Wiederverkäufer ein. </cmd>
+        <info>Der Serviceanbieter bzw. Wiederverkäufer muss ein Vertragsverhältnis mit dem Zahlungsdienstleister haben. Serviceanbieter und Wiederverkäufer werden beim Zahlungsdienstleister im PSP-System registriert. Über eine eindeutige ID können Zahlungen dem Konto des Serviceanbieters bzw. Wiederverkäufers zugeordnet werden. </info>
+      </step>
+      <step>
+        <cmd>Wählen Sie die Zahlungsarten, die dem Serviceanbieter bzw. Wiederverkäufer für seine Kunden zur Verfügung stehen sollen.</cmd>
+        <info>
+          <p>Neben <b>Zahlungsart</b> werden alle Zahlungsarten angezeigt, die für den Zahlungsdienstleister definiert sind. Sie sind abhängig von der Konfiguration des Zahlungsdienstleisters.</p>
+        </info>
+      </step>
+      <step>
+        <cmd>Schließen Sie Ihre Eingaben mit <uicontrol>Speichern</uicontrol> ab.</cmd>
+        <info>
+          <p>
+            <note>Eine einmal hinzugefügte Zahlungsart kann nicht mehr entfernt werden.</note>
+          </p>
+        </info>
+      </step>
+    </steps>
+    <result>
+      <p>Fahren Sie mit der Verwaltung der Organisation fort. </p>
+    </result>
+  </taskbody>
+</task>

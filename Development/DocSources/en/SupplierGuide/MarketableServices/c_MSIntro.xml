@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_3413BBD173324104B42FB714974CABE7" xml:lang="en-us">
+    <title>Marketable Services</title>
+    <conbody>
+        <section>
+            <p><ph id="A_marketable_service_is_a_ser_concept_conbody_section_p_1"
+                    >A marketable service is a service offering to customers based on a technical service provided by a technology provider. It specifies parameters, conditions, and restrictions for using the underlying application.</ph>
+            </p>
+            <p>You can define marketable services for all the technical services for which you have been granted permissions by the relevant technology providers. <ph
+                    id="For_each_technical_service_a_concept_conbody_section_p_2"
+                    >For each technical service, any number of marketable services can be defined, applying different price models, configurations, and upgrade and downgrade options.</ph>
+            </p>
+            <p>You could, for example, define three marketable services based on one technical service, thus offering three different editions of an application to your customers. The services could be defined as follows:</p>
+            <table colsep="1" frame="all" rowsep="1">
+                <tgroup cols="3">
+                    <colspec colname="col1" colwidth="1.0*"/>
+                    <colspec colname="col2" colwidth="1.48*"/>
+                    <colspec colname="col3" colwidth="1.52*"/>
+                    <tbody>
+                        <row valign="top">
+                            <entry align="left"> </entry>
+                            <entry align="left">
+                                <b>Configuration</b>
+                            </entry>
+                            <entry align="left">
+                                <b>Price</b>
+                            </entry>
+                        </row>
+                        <row valign="top">
+                            <entry align="left">
+                                <p>
+                                    <b>Trial edition</b>
+                                </p>
+                            </entry>
+                            <entry align="left">
+                                <p>Limited subscription for 4 weeks</p>
+                                <p>Limited set of features</p>
+                                <p>Number of users limited to 1</p>
+                            </entry>
+                            <entry align="left">
+                                <p>Free of charge</p>
+                            </entry>
+                        </row>
+                        <row valign="top">
+                            <entry align="left">
+                                <p>
+                                    <b>Standard edition</b>
+                                </p>
+                            </entry>
+                            <entry align="left">
+                                <p>No limit of subscription lifetime</p>
+                                <p>Standard set of features</p>
+                                <p>Number of users limited to 25</p>
+                            </entry>
+                            <entry align="left">
+                                <p>Basic charge of 45 € per month</p>
+                            </entry>
+                        </row>
+                        <row valign="top">
+                            <entry align="left">
+                                <p>
+                                    <b>Enterprise edition</b>
+                                </p>
+                            </entry>
+                            <entry align="left">
+                                <p>No limit of subscription lifetime</p>
+                                <p>Full set of features</p>
+                                <p>Unlimited number of users</p>
+                            </entry>
+                            <entry align="left">
+                                <p>Basic charge of 60 € per month</p>
+                                <p>1 € per user login</p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <p>If defined for the underlying application, specific parameters can take on different values which you can make available to customers as different options. When a customer subscribes to the service, he can choose between the options. This makes service definitions flexible, since there is no need for defining separate services for every option you want to offer. </p>
+            <p>For example, you could offer a parameter defining the required disk space with three options for the customer to choose from: </p>
+            <ul compact="yes">
+                <li>Minimum space of 100 GB</li>
+                <li>Medium space of 200 GB</li>
+                <li>Maximum space of 400 GB</li>
+            </ul>
+            <p>You can define different prices for the three options. For details, refer to <xref
+                    href="../PriceModels/c_PMElements.xml"/>.</p>
+            <p>In the following sections, you will find an overview of the elements that make up the definition of a marketable service and the functions that support you in defining, maintaining, and publishing marketable services. In addition, the sections describe how you can use the support of brokers and resellers. </p>
+        </section>
+    </conbody>
+</concept>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<reference id="reference832" xml:lang="ja-jp">
+    <title>割引</title>
+    <refbody>
+        <section>
+            <p><ph id="For_each_customer_organizatio_reference_refbody_section_p"
+                    >特定のサービス利用部門に対して、 
+                    <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"/>
+                    <ph platform="help">プラットフォームの</ph>
+                    請求システムを使用している購入済サービスすべてに適用される割引を設定できます。現在あるいは将来の月に対して割引を設定することも可能です。一定の期間に制限することもできます。期間が終了する前になると、サービス利用部門がサービス提供部門に連絡するなどの対応ができるように、通知メールが配信されます。</ph></p>
+            <p><ph id="The_discount_is_defined_as_a_reference_refbody_section_p"
+                    >割引は、購入済サービスの定価から差し引くパーセントとして定義されます。割引が有効な請求期間内に発生したサービス利用部門の費用すべてに対して適用されます。請求期間のすべての期間で割引が有効なのか一部の期間で割引が有効なのかは関係ありません。</ph></p>
+            <p id="A_discount_is_completely_inde_reference_refbody_section_p" platform="print"><ph
+                    id="A_discount_is_completely_inde_reference_refbody_section_p"
+                    >割引はサービス利用部門の購入状況には左右されません。</ph>割引を変更すると、次回請求データ生成時に新しい割引が有効になります。通常は、当該サービス利用部門との合意の元でのみ、割引を変更できます。</p>
+            <p>割引はサービス提供部門がそのサービス利用部門に対して設定できます。それらの割引はそのサービス提供部門がサービスの再提供設定を付与しているサービス提供代行部門およびサービス仲介部門のサービス利用部門には適用されません。</p>
+            <p>割引は、同意済みの売上配分率から差し引かれることに注意してください。</p>
+        </section>
+    </refbody>
+</reference>

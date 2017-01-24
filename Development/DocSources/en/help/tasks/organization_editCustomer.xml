@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+<task id="task634" xml:lang="en-us">
+  <title>Managing customers</title>
+  <taskbody>
+    <context>
+      <p>On the <uicontrol>Manage customer</uicontrol> page, you can see the organization data that is currently defined for your customers. You can enter attribute values for custom attributes for subscriptions, provided such attributes have been defined, and you can grant discounts to customers. </p>
+      <p><b>To manage a customer</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>From the <uicontrol>Organization ID</uicontrol> list, select the customer whose data you want to edit. </cmd>
+        <info>
+          <p>The list shows all customers that have subscribed to one of your services and all customers you have registered, irrespective of whether they have subscribed to a service. The organization IDs of the customers are appended to the names of the organizations.</p>
+        </info>
+      </step>
+      <step>
+        <cmd>If custom attributes for subscriptions have been defined for your customers and your brokers' customers and you are authorized to enter the required values, specify them in the <uicontrol>Attributes</uicontrol> table. </cmd>
+        <info>
+          <p>A maximum of 255 characters can be entered. The values will be included in the billing data for the customer the next time the data is generated. If no value is specified for an attribute, the attribute name will be inserted into the billing data without a value.</p>
+          <p>The <uicontrol>Attributes</uicontrol> table also lists custom attributes whose values are to be entered by the customer's administrator or subscription manager during the subscription process. You cannot change the values for these attributes.</p>
+        </info>
+      </step>
+      <step>
+        <cmd>To grant a discount to the customer, enter the required information in the <uicontrol>Specify a discount for the customer</uicontrol> section.</cmd>
+        <info>
+          <p><ph
+              conref="../../Shared/reference/r_PriceModelDetails_discount.xml#reference832/For_each_customer_organizatio_reference_refbody_section_p"
+            />
+          </p>
+          <p><ph
+              conref="../../Shared/reference/r_PriceModelDetails_discount.xml#reference832/The_discount_is_defined_as_a_reference_refbody_section_p"
+            /> If you change a discount, the new discount is valid the next time the billing data is generated. Usually, you will change a discount only in agreement with the relevant customer.</p>
+          <p>Enter the discount information as follows:</p>
+          <ul compact="no">
+            <li>In the <uicontrol>Percent</uicontrol> field, enter the discount value specifying how many percent will be deducted from the regular price for each of the customer's subscriptions.</li>
+            <li>If you want the discount to be applied as of the current month, leave the <uicontrol>From</uicontrol> field empty. Otherwise enter the month and year when the discounting is to be started in the format <codeph>MM/YYYY</codeph>, e.g. 11/2010. If you enter a month in the past, this will be ignored. Discounting always starts with the current billing period or with the month you enter. </li>
+            <li>If you want the discount to be applied for a specific number of months only, enter the month and year when the discounting is to be terminated in the <uicontrol>Thru</uicontrol> field in the format <codeph>MM/YYYY</codeph>, e.g. 11/2010. If you leave this field empty, the discount is valid until you specify something else. </li>
+          </ul>
+          <p>If you want, for example, a customer to benefit from a discount immediately for one year, leave the <uicontrol>From</uicontrol> field empty and enter the previous month and the next year in the <uicontrol>Thru</uicontrol> field.</p>
+        </info>
+      </step>
+      <step>
+        <cmd>To save your entries, click <uicontrol>Save</uicontrol>.</cmd>
+      </step>
+    </steps>
+    <result>
+      <p>The customer's administrators are sent an email informing them about the changes you have made. </p>
+    </result>
+  </taskbody>
+</task>
