@@ -108,8 +108,7 @@
         <topicref
         href="help/tasks/error_loginToClosedMarketplace.xml"/>
     </chapter>
-    
-    <!--     
+<!--     
     <chapter href="Shared/concepts/c_Subs.xml" navtitle="">
         <topicref href="help/tasks/subscription_add.xml"/>
         <topicref href="help/tasks/organization_payment.xml"/>
