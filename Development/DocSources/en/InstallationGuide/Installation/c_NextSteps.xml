@@ -49,6 +49,8 @@
                                         /> administration portal and the marketplaces is <codeph>oscm-portal</codeph>. You can change this setting in the application server administration console. In addition, you need to adapt the <codeph>BASE_URL_HTTPS</codeph> configuration setting, and, if specified, the <codeph>BASE_URL</codeph> configuration setting, in <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
                         <p>
+Proceed as follows:</p>
+                        <p>
                                 <ol>
                                         <li>In the application server administration console:<p>
                                                         <ol>
