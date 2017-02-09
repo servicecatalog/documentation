@@ -2,25 +2,28 @@
 <!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN"
                          "">
 <!-- Copyright FUJITSU LIMITED 2017 -->
-
 <bookmap id="BESInstallation"
-                    xml:lang="en_US">
+            xml:lang="en_US">
     <title>Installation Guide</title>
     <bookmeta>
-        <prodinfo product="oscm_ce">
+        <prodinfo
+                    product="oscm_ce">
             <prodname/>
             <vrmlist>
-                <vrm version="16.1.5"/>
+                <vrm
+            version="16.1.5"/>
             </vrmlist>
             <brand/>
         	<prognum>16.1.5</prognum>
             <component/>
             <series>Installation Guide (GlassFish)</series>
         </prodinfo>
-        <prodinfo product="oscm_ee">
+        <prodinfo
+                    product="oscm_ee">
             <prodname>Enterprise Service</prodname>
             <vrmlist>
-                <vrm version="16.1 Fix 5"/>
+                <vrm
+                version="16.1 Fix 5"/>
             </vrmlist>
             <brand>FUJITSU Software</brand>
             <prognum>Catalog Manager V16.1 Fix 5</prognum>
@@ -29,17 +32,23 @@
         </prodinfo>
         <bookid>
             <edition>February 2017</edition>
-            <booknumber product="oscm_ee">B1WS-1261-02</booknumber>
+            <booknumber
+            product="oscm_ee">B1WS-1261-02</booknumber>
         </bookid>
-        <bookrights product="oscm_ce" >
-            <bookowner name="none"/>
+        <bookrights
+                product="oscm_ce">
+            <bookowner
+            name="none"/>
         </bookrights>
-        <bookrights product="oscm_ee" >
-            <bookowner name="FUJITSU LIMITED"/>
+        <bookrights
+                product="oscm_ee">
+            <bookowner
+            name="FUJITSU LIMITED"/>
         </bookrights>
     </bookmeta>
     <frontmatter>
-        <notices href="Shared/Frontmatter/BookInfo.xml"/>
+        <notices
+            href="Shared/Frontmatter/BookInfo.xml"/>
         <preface
                 href="InstallationGuide/About/c_About.xml">
             <topicref
