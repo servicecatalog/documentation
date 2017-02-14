@@ -33,7 +33,7 @@
           <tbody>
             <row>
               <entry>
-                <p><b>diskSize</b></p>
+                <p><b>DISK_SIZE</b></p>
                 <p>Optional. The maximum disk size of the virtual server to be instantiated. The value is a number specifying the size in GB. If not specified, the default size for the selected type of server is used.</p>
                 <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers or, in case you specify more than one disk size, have fixed parameter options for selection.</p>
                 <p>Example: <codeph>3</codeph></p>
@@ -158,7 +158,7 @@
           <tbody>
             <row>
               <entry>
-                <p><b>publicIP</b></p>
+                <p><b>PUBLIC_IP</b></p>
                 <p>Optional. Specifies whether the virtual server to be instantiated is to be assigned a public IP address. The value can be <codeph>true</codeph> or <codeph>false</codeph>. If not specified, the default is <codeph>false</codeph>. </p>
                 <p>Example: <codeph>true</codeph></p>
               </entry>
@@ -209,7 +209,7 @@
           <tbody>
             <row>
               <entry>
-                <p><b>subnet</b></p>
+                <p><b>SUBNET</b></p>
                 <p>Optional. The subnet to which the virtual server is to be assigned. </p>
                 <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers or, in case you specify more than one subnet, have fixed parameter options for selection.</p>
                 <p>Example: <codeph>subnet-a77430d0</codeph></p>
