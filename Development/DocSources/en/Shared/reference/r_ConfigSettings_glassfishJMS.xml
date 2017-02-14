@@ -11,7 +11,7 @@
             <p><codeph>&lt;install_pack_dir>/domains/bes_domain</codeph></p>
             <p>
                 <note>If you are using <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        /> in a multi-node installation, make sure to change the default setting <codeph>imq.brokerid=broker1</codeph> to a value that is unique for every node. </note>
+                        /> in a multi-node installation, make sure to change the default value of the <codeph>imq.brokerid</codeph> setting to a unique value for the <codeph>bes-domain</codeph> on every slave node. Do <b>not</b> change the setting in the master indexer domain. </note>
             </p>
             <p>For details, refer to the <i>Sun GlassFish Message Queue 4.4 Administration Guide</i>.</p>
         </section>
