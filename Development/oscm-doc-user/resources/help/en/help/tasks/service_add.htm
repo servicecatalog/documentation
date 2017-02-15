@@ -109,7 +109,8 @@
         <span>Optionally, specify a <strong>URL of a custom tab</strong>. In this way, you can add a tab to the <strong>Details</strong> view for subscriptions on the marketplace. This URL may point to a Web page or Web application the content of which will be retrieved and shown on the custom tab. Particularly users of IaaS services may be interested in additional details on the service and the operation of the service they subscribed to. Using a custom tab, you can provide the information needed for accessing provisioned instances, such as IP addresses, network information, or user credentials. </span>
          
           <div class="p">
-            <div class="note"><span class="notetitle">Note:</span> Make sure that the URL pointing to the Web page or Web application for the custom tab is secure. The URL is not validated by the platform, neither for syntax nor for semantic.</div>
+            <div class="note" id="task634__Make_sure_that_the_URL_pointi_task_taskbody_steps_step_6"><span class="notetitle">Note:</span> Make sure that the URL pointing to the Web page or Web application for the custom tab is secure. The URL is not validated by the platform, neither for syntax nor for semantic.<p>For secure communication, the requests sent to the Web page or Web application are signed by <span>the platform</span>. For this to be possible, specific configuration settings in <span>the platform</span> are required. The application server used for the Web page or Web application needs the corresponding certificate of <span>the platform</span> in its truststore for verifying the signature. Contact your operator for support, if required.</p>
+</div>
 
           </div>
 
