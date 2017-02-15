@@ -42,9 +42,22 @@
             <p>The password required to access the keystore of the domain used for APP in the application server. </p>
         </section>
         <section>
+            <title>APP_TRUSTSTORE</title>
+            <p><codeph>APP_TRUSTSTORE=./cacerts.jks</codeph></p>
+            <p>The path and file name of the truststore of the application server domain used for APP. The certificate of <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> is stored in this truststore.</p>
+        </section>
+        <section>
+            <title>APP_TRUSTSTORE_BSS_ALIAS</title>
+            <p><codeph>APP_TRUSTSTORE_PASSWORD=bes-s1as</codeph></p>
+            <p>The alias of the certificate of <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> as stored in the truststore of the application server domain used for APP. </p>
+        </section>
+        <section>
             <title>APP_TRUSTSTORE_PASSWORD</title>
             <p><codeph>APP_TRUSTSTORE_PASSWORD=changeit</codeph></p>
-            <p>The password required to access the truststore of the domain used for APP in the application server. </p>
+            <p>The password required to access the truststore of the application server domain used for APP.</p>
         </section>
         <section><title>BSS_AUTH_MODE</title><p><codeph>BSS_AUTH_MODE=INTERNAL</codeph>
             </p><p>Specifies whether <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"

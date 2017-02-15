@@ -111,9 +111,9 @@
               <li audience="ror"><codeph>configsettings_controller.properties</codeph></li>
               <li audience="aws"><codeph>configsettings_controller.properties</codeph></li>
               <li audience="os"><codeph>configsettings_controller.properties</codeph></li>
-              <li audience="tps5"><codeph>configsettings_controller.properties</codeph></li>  
-            <li audience="vmware"><codeph>configsettings_controller.properties</codeph></li>
-          </ul></li>
+              <li audience="tps5"><codeph>configsettings_controller.properties</codeph></li>
+              <li audience="vmware"><codeph>configsettings_controller.properties</codeph></li>
+            </ul><p>Particularly take care of settings which have been introduced or changed with the new release to which you are upgrading.</p></li>
           
           <li>Update the schema and configuration settings of the <codeph>bssapp</codeph> database by executing the <codeph>build-db.xml</codeph> file in <codeph>&lt;install_pack_dir&gt;/install</codeph> as follows:<p>
               <codeblock>&lt;ANT_HOME&gt;/bin/ant -f build-db.xml updateDatabase</codeblock>

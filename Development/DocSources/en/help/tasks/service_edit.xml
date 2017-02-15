@@ -51,7 +51,8 @@
       <step>
         <cmd>Optionally, specify or change the <b>URL of a parameter configuration tool</b>. In this way, you can link an external tool of your choice. Your customers can use this tool for configuring the subscription and usage parameters when they subscribe to the service.</cmd>
         <info>
-          <p>If an external tool is used, the <uicontrol>Service parameters</uicontrol> table for configuring the parameters is replaced by the tool's interface during the subscription process. <note>Make sure that the URL pointing to the parameter configuration tool is secure. The URL is not validated by the platform, neither for syntax nor for semantic.</note></p>
+          <p>If an external tool is used, the <uicontrol>Service parameters</uicontrol> table for configuring the parameters is replaced by the tool's interface during the subscription process. <note
+              conref="service_add.xml#task634/Make_sure_that_the_URL_pointi_task_taskbody_steps_step_6"/></p>
         </info>
       </step>
       <step>

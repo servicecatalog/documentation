@@ -74,7 +74,16 @@
         <cmd>Optionally, specify a <b>URL of a custom tab</b>. In this way, you can add a tab to the <b>Details</b> view for subscriptions on the marketplace. This URL may point to a Web page or Web application the content of which will be retrieved and shown on the custom tab. Particularly users of IaaS services may be interested in additional details on the service and the operation of the service they subscribed to. Using a custom tab, you can provide the information needed for accessing provisioned instances, such as IP addresses, network information, or user credentials. </cmd>
         <info>
           <p>
-            <note>Make sure that the URL pointing to the Web page or Web application for the custom tab is secure. The URL is not validated by the platform, neither for syntax nor for semantic.</note>
+            <note id="Make_sure_that_the_URL_pointi_task_taskbody_steps_step_6"
+                  >Make sure that the URL pointing to the Web page or Web application for the custom tab is secure. The URL is not validated by the platform, neither for syntax nor for semantic.<p>For secure communication, the requests sent to the Web page or Web application are signed by <ph
+                  platform="print"><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                  platform="help">the platform</ph>. For this to be possible, specific configuration settings in <ph
+                  platform="print"><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                  platform="help"
+                  >the platform</ph> are required. The application server used for the Web page or Web application needs the corresponding certificate of <ph
+                  platform="print"><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                  platform="help"
+                >the platform</ph> in its truststore for verifying the signature. Contact your operator for support, if required.</p></note>
           </p>
           <p>Predefined custom tabs are available for viewing details on subscriptions to an IaaS service such as OpenStack or Amazon Web Services (AWS). On the custom tab, the booked Virtual Machines (VMs) are listed with the following information: </p>
           <p>

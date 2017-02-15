@@ -268,28 +268,33 @@
                     platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
                     platform="help"
                     >the platform</ph>: <codeph>https://&lt;host>:&lt;port>/oscm-portal/marketplace/index.jsf</codeph>. In case of problems, the user can be automatically redirected from this page to another one specified in the <codeph>MP_ERROR_REDIRECT_HTTPS</codeph> configuration setting. Note, however, that this URL is used platform-wide. It is not tenant-specific.</note></section>
-        <section><title>SSO_SIGNING_KEY_ALIAS</title>Mandatory if you install <ph platform="print"><ph
+        <section><title>SSO_SIGNING_KEY_ALIAS</title>Mandatory, if requests are to be signed by <ph platform="print"><ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
-                >the platform</ph> in SAML_SP authentication mode, want to make use of single logout, and the IdP system's single logout service requires signed requests, as, for example, in Microsoft Active Directory Federation Services. <p>The alias of the private key of <ph
+                >the platform</ph>. The alias of the private key of <ph platform="print"><ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                >the platform</ph> to be used for signing requests. <p>Requests are signed in the following situations: </p><ul
+                compact="no">
+                <li>Communication with Web pages or applications from custom tabs in subscriptions.</li>
+                <li>Logout requests, if <ph platform="print"><ph
+                            conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                        >the platform</ph> is installed in SAML_SP authentication mode, single logout is configured, and the IdP system's single logout service requires signed requests, as, for example, in Microsoft Active Directory Federation Services. </li>
+            </ul><p>The application server used for the Web page, Web application, or IdP system needs the corresponding certificate of <ph
                     platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
                     platform="help"
-                    >the platform</ph> to be used for signing logout requests. The IdP system needs the corresponding certificate of <ph
-                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
-                    platform="help"
-                >the platform</ph> in its truststore for verifying the signature.</p><p>Required for Web browser SSO.</p><p>Example: <codeph>s1as</codeph></p><p>If you change this setting, you need to restart <ph
+                    >the platform</ph> in its truststore for verifying the signature.</p><p>Default: <codeph>s1as</codeph></p><p>If you change this setting, you need to restart <ph
                     platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
                     platform="help">the platform</ph>.</p></section>
-        <section><title>SSO_SIGNING_KEYSTORE</title>Mandatory if you install <ph platform="print"><ph
+        <section><title>SSO_SIGNING_KEYSTORE</title>Mandatory if requests are to be signed by <ph platform="print"><ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
-                >the platform</ph> in SAML_SP authentication mode, want to make use of single logout, and the IdP system's single logout service requires signed requests, as, for example, in Microsoft Active Directory Federation Services.<p>The path and name of the application server's keystore where the private key of <ph
-                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
-                    platform="help"
-                >the platform</ph> specified in the <codeph>SSO_SIGNING_KEY_ALIAS</codeph> setting is stored. </p><p>Required for Web browser SSO.</p><p>Example: <codeph>/opt/glassfish-3.1.2.2/glassfish/domains/bes-domain/config/keystore.jks</codeph></p><p>If you change this setting, you need to restart <ph
+                >the platform</ph>. The path and name of the application server's keystore where the private key of <ph
+                platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                platform="help"
+                    >the platform</ph> specified in the <codeph>SSO_SIGNING_KEY_ALIAS</codeph> setting is stored. <p>Default: <codeph>./keystore.jks</codeph></p><p>If you change this setting, you need to restart <ph
                     platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
                     platform="help">the platform</ph>.</p></section>
-        <section><title>SSO_SIGNING_KEYSTORE_PASS</title>Mandatory if you install <ph platform="print"><ph
-                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
-                >the platform</ph> in SAML_SP authentication mode, want to make use of single logout, and the IdP system's single logout service requires signed requests, as, for example, in Microsoft Active Directory Federation Services.<p>The password for accessing the keystore specified in the <codeph>SSO_SIGNING_KEYSTORE</codeph> setting.</p><p>Required for Web browser SSO.</p><p>Example: <codeph>changeit</codeph></p><p>If you change this setting, you need to restart <ph
+        <section><title>SSO_SIGNING_KEYSTORE_PASS</title>Mandatory if requests are to be signed by <ph platform="print"
+                    ><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                >the platform</ph>. The password for accessing the keystore specified in the <codeph>SSO_SIGNING_KEYSTORE</codeph> setting.<p>Default: <codeph>s1as</codeph></p><p>If you change this setting, you need to restart <ph
                     platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
                     platform="help">the platform</ph>.</p></section>
         <section><title>SSO_STS_ENCKEY_LEN</title>Mandatory if you install <ph platform="print"><ph
