@@ -268,7 +268,7 @@
                     platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
                     platform="help"
                     >the platform</ph>: <codeph>https://&lt;host>:&lt;port>/oscm-portal/marketplace/index.jsf</codeph>. In case of problems, the user can be automatically redirected from this page to another one specified in the <codeph>MP_ERROR_REDIRECT_HTTPS</codeph> configuration setting. Note, however, that this URL is used platform-wide. It is not tenant-specific.</note></section>
-        <section><title>SSO_SIGNING_KEY_ALIAS</title>Mandatory, if requests are to be signed by <ph platform="print"><ph
+        <section><title>SSO_SIGNING_KEY_ALIAS</title>Mandatory if requests are to be signed by <ph platform="print"><ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
                 >the platform</ph>. The alias of the private key of <ph platform="print"><ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
