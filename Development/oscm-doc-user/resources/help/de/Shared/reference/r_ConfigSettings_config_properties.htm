@@ -317,21 +317,23 @@ Voreinstellung: <p><samp class="codeph">./key</samp> im Verzeichnis <samp class=
 <div class="note"><span class="notetitle">Hinweis:</span> Im IdP-System muss eine URL angegeben werden, zu der die Antwort auf den Request zur Abmeldung geschickt und der Benutzer nach der Abmeldung geleitet wird. Es wird empfohlen, folgende Standard-Marktplatzadresse der Plattform zu verwenden: <samp class="codeph">https://&lt;host&gt;:&lt;port&gt;/oscm-portal/marketplace/index.jsf</samp>. Bei Problemen kann der Benutzer automatisch von dieser Seite auf eine weitere Seite geleitet werden, die in der Konfigurationseinstellung <samp class="codeph">MP_ERROR_REDIRECT_HTTPS</samp> angegeben ist. Beachten Sie aber, dass diese URL systemweit gilt und nicht mandanten-spezifisch ist.</div>
 </div>
 
-                <div class="section"><h4 class="sectiontitle">SSO_SIGNING_KEY_ALIAS</h4>Obligatorisch, wenn die Plattform als SAML Service Provider installiert wird, Single Logout verwendet werden soll, und der Single Logout Service des IdP-Systms signierte Requests erwartet, wie beispielsweise in Microsoft Active Directory Federation Services.<p>Gibt den Alias des privaten Schlüssels der Plattform an, der zum Signieren von Requests zur Abmeldung verwendet werden soll. Im IdP-System muss das entsprechende Zertifikat der Plattform hinterlegt werden, damit die Requests verifiziert werden können. </p>
-<p>Erforderlich für Web Browser Single Sign-On.</p>
-<p>Beispiel: <samp class="codeph">s1as</samp></p>
+                <div class="section"><h4 class="sectiontitle">SSO_SIGNING_KEY_ALIAS</h4>Obligatorisch für das Signieren von Requests durch die Plattform. Gibt den Alias des privaten Schlüssels der Plattform an, der zum Signieren von Requests verwendet wird. <p>Requests werden in folgenden Fällen signiert:</p>
+<ul>
+                                <li class="liexpand">Kommunikation mit Web-Seiten und Web-Applikationen aus zusätzlich definierten Tabs in Abonnements.</li>
+
+                                <li class="liexpand">Requests zur Abmeldung, wenn die Plattform als SAML Service Provider installiert wird, Single Logout konfiguriert wird, und der Single Logout Service des IdP-Systms signierte Requests erwartet, wie beispielsweise in Microsoft Active Directory Federation Services.</li>
+
+                        </ul>
+<p>Zur Verifizierung der Signatur muss das entsprechende Zertifikat der Plattform im Truststore des Application Servers hinterlegt werden, auf dem die Web-Seite, die Web-Applikation, oder das IdP-System läuft. </p>
+<p>Voreinstellung: <samp class="codeph">s1as</samp></p>
 <p>Wenn Sie diese Einstellung ändern, müssen Sie die Plattform neu starten.</p>
 </div>
 
-                <div class="section"><h4 class="sectiontitle">SSO_SIGNING_KEYSTORE</h4>Obligatorisch, wenn die Plattform als SAML Service Provider installiert wird, Single Logout verwendet werden soll, und der Single Logout Service des IdP-Systms signierte Requests erwartet, wie beispielsweise in Microsoft Active Directory Federation Services.<p>Gibt den Pfad und Namen des Keystores des Application Servers an, in dem der in der Einstellung <samp class="codeph">SSO_SIGNING_KEY_ALIAS</samp> angegebene private Schlüssel gespeichert ist. </p>
-<p>Erforderlich für Web Browser Single Sign-On.</p>
-<p>Beispiel: <samp class="codeph">/opt/glassfish-3.1.2.2/glassfish/domains/bes-domain/config/keystore.jks</samp></p>
+                <div class="section"><h4 class="sectiontitle">SSO_SIGNING_KEYSTORE</h4>Obligatorisch für das Signieren von Requests durch die Plattform. Gibt den Pfad und Namen des Keystores des Application Servers an, in dem der in der Einstellung <samp class="codeph">SSO_SIGNING_KEY_ALIAS</samp> angegebene private Schlüssel gespeichert ist. <p>Voreinstellung: <samp class="codeph">./keystore.jks</samp></p>
 <p>Wenn Sie diese Einstellung ändern, müssen Sie die Plattform neu starten.</p>
 </div>
 
-                <div class="section"><h4 class="sectiontitle">SSO_SIGNING_KEYSTORE_PASS</h4>Obligatorisch, wenn die Plattform als SAML Service Provider installiert wird, Single Logout verwendet werden soll, und der Single Logout Service des IdP-Systms signierte Requests erwartet, wie beispielsweise in Microsoft Active Directory Federation Services. <p>Gibt das Passwort für den Keystore des Application Servers an, der in der Einstellung <samp class="codeph">SSO_SIGNING_KEYSTORE</samp> angegeben ist. </p>
-<p>Erforderlich für Web Browser Single Sign-On.</p>
-<p>Beispiel: <samp class="codeph">changeit</samp></p>
+                <div class="section"><h4 class="sectiontitle">SSO_SIGNING_KEYSTORE_PASS</h4>Obligatorisch für das Signieren von Requests durch die Plattform. Gibt das Passwort für den Keystore des Application Servers an, der in der Einstellung <samp class="codeph">SSO_SIGNING_KEYSTORE</samp> angegeben ist. <p>Voreinstellung: <samp class="codeph">changeit</samp></p>
 <p>Wenn Sie diese Einstellung ändern, müssen Sie die Plattform neu starten.</p>
 </div>
 

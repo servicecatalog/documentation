@@ -110,7 +110,8 @@
                 <span>Geben Sie optional die <strong>URL eines eigenen Tabs</strong> an. So können Sie einen zusätzlichen Tab zur Ansicht <strong>Details</strong> hinzufügen, der angezeigt wird, wenn ein Benutzer zu einem Abonnement weitere Informationen aufruft. Diese URL kann auf eine Web-Seite oder Web-Applikation leiten, deren Inhalt dann auf dem eigenen Tab angezeigt wird. Insbesondere Benutzer, die IaaS-Services nutzen, sind oftmals an Details zu einem abonnierten Service und dessen Betrieb interessiert. Über einen eigenen Tab können Sie Information, die für den Zugriff auf provisionierte Instanzen erforderlich sind, zur Verfügung stellen, zum Beispiel IP-Adressen, Netzwerkinformationen oder Zugangsdaten. </span>
                  
                     <div class="p">
-                        <div class="note"><span class="notetitle">Hinweis:</span> Achten Sie darauf, dass die URL keine Sicherheitslücken aufweist. Die Syntax und Semantik der URL werden von der Plattform nicht validiert.</div>
+                        <div class="note" id="task634__Achten_Sie_darauf_dass_die_U_task_taskbody_steps_step_6"><span class="notetitle">Hinweis:</span> Achten Sie darauf, dass die Web-Seite oder Web-Applikation keine Sicherheitslücken aufweist. Die Syntax und Semantik der URL werden von der Plattform nicht validiert.<p>Aus Sicherheitsgründen werden Requests zu der Web-Seite oder Web-Applikation von der Plattform signiert. Dazu sind bestimmte Konfigurationseinstellungen in der Plattform erforderlich. Außerdem muss sich zur Verifizierung der Signatur das entsprechende Zertifikat der Plattform im Truststore des Application Servers befinden, auf dem die Web-Seite oder Web-Applikation läuft. Falls Sie Unterstützung benötigen, wenden Sie sich bitte an Ihren Plattformbetreiber. </p>
+</div>
 
                     </div>
 
