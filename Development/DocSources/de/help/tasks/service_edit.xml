@@ -62,7 +62,7 @@
                 <cmd>Definieren oder ändern Sie optional die <b>URL eines eigenen Tabs</b> an. So können Sie einen zusätzlichen Tab zur Ansicht <b>Details</b> hinzufügen, der angezeigt wird, wenn ein Benutzer zu einem Abonnement weitere Informationen aufruft. Diese URL kann auf eine Web-Seite oder Web-Applikation leiten, deren Inhalt dann auf dem eigenen Tab angezeigt wird. Insbesondere Benutzer, die IaaS-Services nutzen, sind oftmals an Details zu einem abonnierten Service und dessen Betrieb interessiert. Über einen eigenen Tab können Sie Information, die für den Zugriff auf provisionierte Instanzen erforderlich sind, zur Verfügung stellen, zum Beispiel IP-Adressen, Netzwerkinformationen oder Zugangsdaten. </cmd>
                 <info>
                     <p>
-                        <note>Achten Sie darauf, dass die URL keine Sicherheitslücken aufweist. Die Syntax und Semantik der URL werden von der Plattform nicht validiert.</note>
+                        <note conref="service_add.xml#task634/Achten_Sie_darauf_dass_die_U_task_taskbody_steps_step_6"/>
                     </p>
                     <p>Sie können vordefinierte, eigene Tabs einrichten, die Details zu einem IaaS-Service wie beispielsweise OpenStack oder Amazon Web Services (AWS) zur Ansicht bringen. Auf den eigenen Tabs, werden zu den gebuchten Virtuellen Maschinen (VMs) folgende Informationen angezeit: </p>
                     <p>

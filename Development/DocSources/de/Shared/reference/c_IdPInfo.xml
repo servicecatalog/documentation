@@ -14,7 +14,7 @@
                                         <li>Eine vertragliche Vereinbarung mit dem IdP-Administrator. Nur so kann das IdP-Sytem Single Sign-On (SSO) im Web Browser und Web Service Calls über einen sicheren Security Token Service (STS) zulassen. </li>
                                         <li>Informationen zu folgenden Endpoints:<p>
                                                         <ul>
-                                                            <li>Zum SSO im Web Browser: SAML Redirect URL des IdP-Systems und die URL des Single Logout Service Endpoint..</li>
+                                                            <li>Zum SSO im Web Browser: SAML Redirect URL des IdP-Systems und die URL des Single Logout Service Endpoint.</li>
                                                             <li>Für die STS-Kommunikation: URL zum STS Service Endpoint und die URL der MEX-Adresse (Issuer Metadata Exchange). </li>
                                                         </ul>
                                                 </p><p>In einer Umgebung mit mehreren Mandanten und für den Fall, dass mehrere Mandanten ein und demselben IdP-System zugeordnet sind, muss pro Mandant eine Relying Party im IdP-System definiert und dem Plattformbetreiber mitgeteilt werden. </p></li>
@@ -23,7 +23,7 @@
                                         </li>
                                         <li>Länge des Encryption Key an, wie er von dem IdP-System verwendet wird.</li>
                                         <li>Information ob das IdP-System <codeph>GET</codeph> oder <codeph>POST</codeph> Requests verarbeiten kann.</li>
-                                        <li>Zum SSO im Web Browser: Public Key Zertifikat vom IdP-System. Fordern Sie dieses Zertifikat vom IdP-Administrator an und importieren Sie es in the Truststore des Application Servers, auf dem die Plattform installiert ist. Im <i>Operator's Guide</i> finden Sie ausführliche Informationen zum Umgang mit Zertifikaten. </li>
+                                        <li>Public Key Zertifikat vom IdP-System. Fordern Sie dieses Zertifikat vom IdP-Administrator an und importieren Sie es in the Truststore des Application Servers, auf dem die Plattform installiert ist. Im <i>Operator's Guide</i> finden Sie ausführliche Informationen zum Umgang mit Zertifikaten. </li>
                                 </ul>
                         </p>
                 </section>

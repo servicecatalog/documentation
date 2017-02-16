@@ -31,8 +31,8 @@
             <li><uicontrol>利用者向けサービス名</uicontrol>：サービスの有意な名前です。サービス利用部門にとって認知しやすい値にする必要があります。 <p><ph
                   conref="service_add.xml#task634/The_service_name_for_customer_task_taskbody_steps_step_2"/></p></li>
             <li><uicontrol>概要</uicontrol>：サービスの簡単な説明です。<ph
-                conref="service_add.xml#task634/The_length_of_the_short_descr_task_taskbody_steps_step_2"/><p><ph conref="service_add.xml#task634/The_short_description_is_show_task_taskbody_steps_step_2"
-              /></p></li>
+                conref="service_add.xml#task634/The_length_of_the_short_descr_task_taskbody_steps_step_2"/><p><ph
+                  conref="service_add.xml#task634/The_short_description_is_show_task_taskbody_steps_step_2"/></p></li>
             <li><uicontrol>説明</uicontrol>：サービスによって提供される機能の詳細な説明です。<p>サービス利用部門がサービスの詳細を要求すると、サービスポータルにサービスの詳細説明が表示されます。 </p><p>
                 <note><ph conref="service_add.xml#task634/Make_sure_to_use_only_the_con_task_taskbody_steps_step_2"
                   /></note>
@@ -62,7 +62,7 @@
         <cmd>必要に応じて、<b>カスタムタブのURL</b>を変更します。この項目を指定することでサービスポータルの購入済サービスの<b>詳細</b>画面にタブを追加することができます。本URLはカスタムタブ向けのWebページもしくはWebアプリケーションのコンテンツを表示します。たとえば、IaaSサービスの利用者向けにサービス詳細やサービスの操作に関する情報を表示することが可能です。</cmd>
         <info>
           <p>
-            <note>カスタムタブに指定するWebページやWebアプリケーションに接続するURLは安全であることを確認してください。プラットフォームはURLの正当性(シンタックスや内容)を確認しません。</note>
+            <note conref="service_add.xml#task634/serv_add_task_taskbody_steps_step_6"/>
           </p>
           <p>OpenStackやAmazon Web Services (AWS)といったIaaSサービスを提供する購入済サービスの詳細を参照するために、事前に定義したカスタムタブを使用することができます。カスタムタブでは次の情報により配備した仮想マシン(VM)の一覧が表示されます。: </p>
           <p>
