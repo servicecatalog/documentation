@@ -8,7 +8,7 @@
     <refbody>
         <section>
             <p id="For_every_user_assigned_to_a_reference_refbody_section_1"
-                >For the users assigned to a subscription, a charge can be defined that a customer has to pay on a recurring basis. Monthly, weekly, daily, or hourly periods are supported. The charge depends on the amount of time units one or more users are assigned to the subscription. This type of charge can only be defined for services with the login or user access type.</p>
+                >For the users assigned to a subscription, a charge can be defined that a customer has to pay on a recurring basis. Monthly, daily, or hourly periods are supported. The charge depends on the amount of time units one or more users are assigned to the subscription. This type of charge can only be defined for services with the login or user access type.</p>
             <p id="The_recurring_charge_for_user_reference_refbody_section_1"
                 >The recurring charge for users is independent of the recurring charge per subscription or other usage data.</p>
             <p>For this type of charge, stepped prices can be applied: Recurring charges can be defined that depend on the sum of the time units of all user assignments<ph

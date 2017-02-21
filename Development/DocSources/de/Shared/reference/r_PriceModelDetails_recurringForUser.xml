@@ -7,7 +7,7 @@
     <refbody>
         <section>
             <p id="Für_jeden_Benutzer_der_einem_reference_refbody_section_1"
-                    ><ph>Für die Benutzer, die einem Abonnement zugeordnet sind, kann eine Gebühr definiert werden, die in regelmäßigen Abständen bezahlt werden muss. Unterstützt werden die Zeiträume Monat, Woche, Tag und Stunde. Die Gebühr ist abhängig von der Anzahl der Zeiteinheiten, die ein oder mehrere Benutzer einem Abonnement zugeordnet sind. Diese Gebühr kann nur für Services mit Login-Zugriff oder Benutzerzugriff definiert werden.</ph></p>
+                    ><ph>Für die Benutzer, die einem Abonnement zugeordnet sind, kann eine Gebühr definiert werden, die in regelmäßigen Abständen bezahlt werden muss. Unterstützt werden die Zeiträume Monat, Tag und Stunde. Die Gebühr ist abhängig von der Anzahl der Zeiteinheiten, die ein oder mehrere Benutzer einem Abonnement zugeordnet sind. Diese Gebühr kann nur für Services mit Login-Zugriff oder Benutzerzugriff definiert werden.</ph></p>
             <p>Der Preis für Benutzer ist unabhängig von einem Preis pro Abo oder anderen Nutzungsdaten. </p>
             <p>Der Preis für Benutzer kann gestaffelt sein: Abhängig von der Summe aller Zeiteinheiten, in denen Benutzer einem Abonnement zugeordnet sind, können unterschiedliche Preise definiert werden. Weitere Informationen finden Sie <xref
                     href="r_PriceModelDetails_stepped.xml">hier</xref>.</p>

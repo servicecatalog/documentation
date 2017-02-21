@@ -26,7 +26,7 @@
           <ul compact="no" id="Select_task_taskbody_steps_step_2">
             <li>Select <uicontrol>Free of charge</uicontrol>, if the service is to be free of charge. </li>
             <li>Select <uicontrol>Pro rata calculation</uicontrol>, if the costs are to be calculated based on the exact usage of the service in milliseconds.</li>
-            <li>Select <uicontrol>Per time unit calculation</uicontrol>, if the costs are to be calculated for complete time units, for example, whole days or weeks. The time unit is defined under <uicontrol>Charges based on</uicontrol>.</li>
+            <li>Select <uicontrol>Per time unit calculation</uicontrol>, if the costs are to be calculated for complete time units, for example, whole days or months. The time unit is defined under <uicontrol>Charges based on</uicontrol>.</li>
           </ul>
           <p>If your service is free of charge, proceed with Step 8, else with Step 3. </p>
         </info>
@@ -56,7 +56,7 @@
             <li id="Currency_task_taskbody_steps_step_5"
               ><b>Currency</b> in which a customer is charged for using the service. The supported currencies are defined by the operator. The currency cannot be changed when defining a subscription price model.</li>
             <li id="Charges_based_on_task_taskbody_steps_step_5"
-              ><b>Charges based on</b>: The time unit for recurring charges. The charges can be on a monthly, weekly, daily, or hourly basis. The option selected here also defines the time unit for per time unit calculation. The time unit cannot be changed when defining a subscription price model.</li>
+              ><b>Charges based on</b>: The time unit for recurring charges. The charges can be on a monthly, daily, or hourly basis. The option selected here also defines the time unit for per time unit calculation. The time unit cannot be changed when defining a subscription price model.</li>
             <li id="One-time_fee_task_taskbody_steps_step_5"
               ><b>One-time fee</b> to be paid when subscribing to the service. This fee is added to the usage charges for the first billing period. </li>
             <li id="Recurring_charge_per_subscrip_task_taskbody_steps_step_5"
