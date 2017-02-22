@@ -14,9 +14,9 @@
                     audience="tps5">The TPS5 integration software</ph>
                 <ph audience="vmware">The vSphere integration software</ph>
                 <ph id="must_be_deployed_on_an_applic_concept_conbody_section_p_1"
-                    >must be deployed on an application server compatible with Java EE version 6. The following application server is supported:</ph></p>
+                    >must be deployed on an application server compatible with Java EE version 7. The following application server is supported:</ph></p>
             <p id="Oracle_GlassFish_Server_vers_concept_conbody_section_p_2"
-                >Oracle GlassFish Server, version 3.1.2.2.</p>
+>Oracle GlassFish Server, version 4.1.1.</p>
             <p audience="app">You can deploy APP on the application server you use for <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 />. Alternatively, you can use a separate application server installation.</p>
@@ -36,7 +36,7 @@
                     >You can deploy the vSphere integration software on the application server you use for <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 />. Alternatively, you can use a separate application server installation.</p>
-            <note>Before installing GlassFish, make sure that the <codeph>JAVA_HOME</codeph> environment variable points to a Java Development Kit (JDK), version 7, 64 bit. </note>
+            <note>Before installing GlassFish, make sure that the <codeph>JAVA_HOME</codeph> environment variable points to a Java Development Kit (JDK), version 8, 64 bit. </note>
             <p>Proceed as follows: </p>
             <ol
                     compact="no">
@@ -47,7 +47,7 @@
                     <p>After you have configured GlassFish, make a backup copy of the GlassFish installation. </p>
                 </li>
                 <li>
-                    <p>Make sure that GlassFish is running in a JDK 7 environment. Also, make sure that no other applications (e.g. Tomcat) are running on your GlassFish ports.</p>
+                    <p>Make sure that GlassFish is running in a JDK 8 environment. Also, make sure that no other applications (e.g. Tomcat) are running on your GlassFish ports.</p>
                 </li>
             </ol>
             <p audience="app"
