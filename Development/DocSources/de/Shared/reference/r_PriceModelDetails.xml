@@ -65,14 +65,15 @@
                 <li>
                     <p>Bei <b>Abrechnung pro rata</b> wird die Nutzungsdauer in Millisekunden berechnet.</p>
                     <p>Kunden zahlen exakt für den Zeitraum, in dem Sie einen Service genutzt haben.</p>
-                    <p>Bei der Berechnung der Kosten werden Umstellungen auf Sommer- bzw. Winterzeit berücksichtigt: Bei der Umstellung auf Sommerzeit hat der betreffende Tag 23 Stunden. Die zugehörige Abrechnungseinheit Monat wird ebenfalls um eine Stunde verkürzt. Bei der Umstellung auf Winterzeit hat der betreffende Tag 25 Stunden. Die zugehörige Abrechnungseinheit Monat wird ebenfalls um eine Stunde verlängert. </p>
+                    <p>Bei der Berechnung der Kosten werden Umstellungen auf Sommer- bzw. Winterzeit berücksichtigt: Bei der Umstellung auf Sommerzeit hat der betreffende Tag 23 Stunden. Die zugehörigen Abrechnungseinheiten Woche und Monat werden ebenfalls um eine Stunde verkürzt. Bei der Umstellung auf Winterzeit hat der betreffende Tag 25 Stunden. Die zugehörigen Abrechnungseinheiten Woche und Monat werden ebenfalls um eine Stunde verlängert. </p>
                 </li>
                 <li>
-                    <p>Bei <b>Abrechnung pro Zeiteinheit</b> richtet sich die Nutzungsdauer nach festen Zeiteinheiten (Monat, Tag oder Stunde).</p>
+                    <p>Bei <b>Abrechnung pro Zeiteinheit</b> richtet sich die Nutzungsdauer nach festen Zeiteinheiten (Monat, Woche, Tag oder Stunde).</p>
                     <p>Kunden zahlen für die Zeiteinheiten, in denen sie einen Service nutzen. Die Zeiteinheiten werden immer vollständig berechnet, auch wenn ein Service nicht während der gesamten Zeiteinheit genutzt wird. Die Gebühren für eine Zeiteinheit werden für den Abrechnungszeitraum berechnet, in dem die Zeiteinheit endet.</p>
-                    <p>Als Zeiteinheit kann <b>Stunde</b>, <b>Tag</b>, oder <b>Monat</b> festgelegt werden. Start und Ende jeder Zeiteinheit sind wie folgt definiert:</p>
+                    <p>Als Zeiteinheit kann <b>Stunde</b>, <b>Tag</b>, <b>Woche</b> oder <b>Monat</b> festgelegt werden. Start und Ende jeder Zeiteinheit sind wie folgt definiert:</p>
                     <p><b>Stunde</b>: Von 00:00.000 bis 59:59.999.</p>
                     <p><b>Tag</b>: Von 00:00:00.000 Uhr bis 23:59:59.999 Uhr.</p>
+                    <p><b>Woche</b>: Von Montag, 00:00:00.000 Uhr, bis Sonntag, 23:59:59.999 Uhr.</p>
                     <p><b>Monat</b>: Vom ersten Tag des Monats, 00:00:00.000 Uhr, bis zum letzten Tag des Monats, 23:59:59.999 Uhr.</p>
                 </li>
                 <li>

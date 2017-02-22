@@ -34,15 +34,12 @@
             </p></li>
           <li>Set the following environment variable for your current session:<p><codeph>DB_INTERPRETER</codeph>: The absolute path and name of the <codeph>psql</codeph> executable of PostgreSQL. The executable is usually located in the <codeph>bin</codeph> subdirectory of the PostgreSQL installation directory.</p><p>Example:</p><codeblock>export DB_INTERPRETER="/opt/PostgreSQL/9.1/bin/psql"</codeblock>
           </li>
-          <li>Copy the <codeph>configsettings.properties</codeph> file located in <codeph>&lt;install_pack_dir>/databases/bes_db</codeph> contains to a different location. Check whether the <codeph>configsettings.properties</codeph> file contained in the <ph
-              conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-              /> installation package new different or less settings than specified in the new <codeph>configsettings.properties</codeph> If you are upgrading from a release prior to <ph
-              product="oscm_ce">16.0.5</ph><ph product="oscm_ee"
-              >V16.0 Fix 5</ph>, check and, if necessary, adapt the value of the <codeph>HIDE_PAYMENT_INFORMATION</codeph> configuration setting introduced with this release. By default, it is set to <codeph>false</codeph>. This setting is evaluated only once and cannot be changed anymore after <ph
-              conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> has been started. <p>The setting is made in the <codeph>configsettings.properties</codeph> file located in <codeph>&lt;install_pack_dir>/databases/bes_db</codeph>.</p></li>
-          <li>If you are running <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> in SAML_SP mode:<p>In the <codeph>configsettings.properties</codeph> file located in <codeph>&lt;install_pack_dir>/databases/bes_db</codeph>, add the following configuration parameters and enter appropriate values:</p><p><codeph>SSO_DEFAULT_TENANT_ID</codeph></p><p><codeph>SSO_IDP_SAML_ASSERTION_ISSUER_ID</codeph></p><p>If you do not want to use the default value for the <codeph>KEY_FILE_PATH</codeph> configuration setting (<codeph>&lt;GLASSFISH_HOME>/glassfish/domains/bes-domain/config</codeph>), specify its value accordingly in the <codeph>configsettings.properties</codeph> file.</p>
+          <li>If you are upgrading from a release prior to <ph
+                            product="oscm_ce">16.0.5</ph><ph
+                            product="oscm_ee">V16.0 Fix 5</ph>, check and, if necessary, adapt the value of the <codeph>HIDE_PAYMENT_INFORMATION</codeph> configuration setting introduced with this release. By default, it is set to <codeph>false</codeph>. This setting is evaluated only once and cannot be changed anymore after <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> has been started. <p>The setting is made in the <codeph>configsettings.properties</codeph> file located in <codeph>&lt;install_pack_dir&gt;/databases/bes_db</codeph>.</p></li>
+          <li>If you are running <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> in SAML_SP mode:<p>In the <codeph>configsettings.properties</codeph> file located in <codeph>&lt;install_pack_dir&gt;/databases/bes_db</codeph>, add the following configuration parameters and enter appropriate values:</p><p><codeph>SSO_DEFAULT_TENANT_ID</codeph></p><p><codeph>SSO_IDP_SAML_ASSERTION_ISSUER_ID</codeph></p><p>If you do not want to use the default value for the <codeph>KEY_FILE_PATH</codeph> configuration setting (<codeph>&lt;GLASSFISH_HOME&gt;/glassfish/domains/bes-domain/config</codeph>), specify its value accordingly in the <codeph>configsettings.properties</codeph> file.</p>
           </li>
           <li>If you are running <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> in SAML_SP mode and want to update or change STS-related configuration settings:<p>In the <codeph>configsettings.properties</codeph> file located in <codeph>&lt;install_pack_dir&gt;/databases/bes_db</codeph>, change the values for the following configuration parameters as required:</p><p><codeph>SSO_STS_ENCKEY_LEN</codeph></p><p><codeph>SSO_STS_METADATA_URL</codeph></p><p><codeph>SSO_STS_URL</codeph></p>

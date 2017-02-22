@@ -16,7 +16,7 @@
                     <p><b>Abrechnungsart</b>: <ul>
                             <li><uicontrol>Kostenlos</uicontrol>: Die Nutzung des Service ist kostenlos.</li>
                             <li><uicontrol>Abrechnung pro rata</uicontrol>: Die Nutzungsgebühren werden auf Grundlage der exakten Nutzungsdauer des Service in Millisekunden abgerechnet.</li>
-                            <li><uicontrol>Abrechnung pro Zeiteinheit</uicontrol>: Die Nutzungsgebühren werden für angefangene Zeiteinheiten abgerechnet, beispielsweise für Tage oder Monate. Die Zeiteinheit ist durch die <uicontrol>Abrechnungseinheit</uicontrol> festgelegt.</li>
+                            <li><uicontrol>Abrechnung pro Zeiteinheit</uicontrol>: Die Nutzungsgebühren werden für angefangene Zeiteinheiten abgerechnet, beispielsweise für Tage oder Wochen. Die Zeiteinheit ist durch die <uicontrol>Abrechnungseinheit</uicontrol> festgelegt.</li>
                         </ul></p>
                 </li>
                 <li><b>Kostenloser Nutzungszeitraum (in Tagen)</b>: Anzahl der Tage, die der Service kostenlos genutzt werden kann. Nach diesem Zeitraum wird der Service automatisch zu einem kostenpflichtigen Service.</li>

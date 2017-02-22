@@ -16,7 +16,7 @@
                     <p id="For_each_subscription_a_char_reference_refbody_section_1"><b>Calculation option</b>: The cost calculation option for the price model:<ul>
                             <li><uicontrol>Free of charge</uicontrol>: The service is free of charge. </li>
                             <li><uicontrol>Pro rata calculation</uicontrol>: The costs are calculated based on the exact usage of the service in milliseconds.</li>
-                            <li><uicontrol>Per time unit calculation</uicontrol>: The costs are calculated for complete time units, for example, whole days or months. The time unit is defined under <uicontrol>Charges based on</uicontrol>.</li>
+                            <li><uicontrol>Per time unit calculation</uicontrol>: The costs are calculated for complete time units, for example, whole days or weeks. The time unit is defined under <uicontrol>Charges based on</uicontrol>.</li>
                         </ul></p>
                 </li>
                 <li><b>Free trial period (in days)</b>: The number of days during which the service can be used for free. <ph

@@ -17,7 +17,7 @@
           <ul compact="no" id="Select_task_taskbody_steps_step_2">
             <li><uicontrol>Free of charge</uicontrol>: The service is free of charge. </li>
             <li><uicontrol>Pro rata calculation</uicontrol>: The costs are calculated based on the exact usage of the service in milliseconds.</li>
-            <li><uicontrol>Per time unit calculation</uicontrol>: The costs are calculated for complete time units, for example, whole days or months. The time unit is defined under <uicontrol>Charges based on</uicontrol>.</li>
+            <li><uicontrol>Per time unit calculation</uicontrol>: The costs are calculated for complete time units, for example, whole days or weeks. The time unit is defined under <uicontrol>Charges based on</uicontrol>.</li>
           </ul>
           <p>If the subscription is free of charge, proceed with Step 6, else with Step 2.</p>
         </info>

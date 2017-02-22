@@ -327,7 +327,7 @@
                                         <li><codeph>customerKey=<i>&lt;組織ID></i></codeph>: サービス利用部門の組織のID。</li>
                                         <li><codeph>customerName=<i>&lt;組織名></i></codeph>: サービス利用部門の組織の名前。</li>
                                         <li><codeph>currency=<i>&lt;通貨コード></i></codeph>: サービス利用部門がサービスを利用することによって請求される通貨のISOコード。</li>
-                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 従量課金と定額の課金単位。<codeph>MONTH</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph>のいずれか。</li>
+                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 従量課金と定額の課金単位。<codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph>のいずれか。</li>
                                         <li><codeph>oneTimeFee=<i>&lt;初期費用></i></codeph>: 購入時の初期費用。</li>
                                     </ul>
                                 </p>
@@ -348,7 +348,7 @@
                                 <p>
                                     <ul>
                                         <li><codeph>currency=<i>&lt;通貨コード></i></codeph>: サービス利用部門がサービスを利用することによって請求される通貨のISOコード。</li>
-                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 従量課金と定額の課金単位。<codeph>MONTH</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph>のいずれか。</li>
+                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 従量課金と定額の課金単位。<codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph>のいずれか。</li>
                                         <li><codeph>oneTimeFee=<i>&lt;初期費用></i></codeph>: 購入時の初期費用。</li>
                                     </ul>
                                 </p>
@@ -371,7 +371,7 @@
                                         <li><codeph>customerKey=<i>&lt;組織ID></i></codeph>: サービス利用部門の組織のID。</li>
                                         <li><codeph>customerName=<i>&lt;組織名></i></codeph>: サービス利用部門の組織の名前。</li>
                                         <li><codeph>currency=<i>&lt;通貨コード></i></codeph>: サービス利用部門がサービスを利用することによって請求される通貨のISOコード。</li>
-                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 従量課金と定額の課金単位。<codeph>MONTH</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph>のいずれか。</li>
+                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 従量課金と定額の課金単位。<codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph>のいずれか。</li>
                                         <li><codeph>calculationMode=<i>&lt;料金タイプ></i></codeph>: サービスを利用することに対する課金の計算方法。<codeph>PRO_RATA</codeph> (従量課金), または <codeph>PER_UNIT</codeph> (定額)のいずれか。</li>
                                         <li><codeph>trialPeriod=<i>&lt;on or off></i></codeph>: 料金設定で無料試用期間が設定されているかどうか。<codeph>ON</codeph> または <codeph>OFF</codeph>のいずれか。</li>
                                         <li><codeph>daysOfTrial=<i>&lt;日数></i></codeph>: 無料試用期間に設定された日数。</li>
@@ -394,7 +394,7 @@
                                 <p>
                                     <ul>
                                         <li><codeph>currency=<i>&lt;通貨コード></i></codeph>: サービス利用部門がサービスを利用することによって請求される通貨のISOコード。</li>
-                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 従量課金と定額の課金単位。<codeph>MONTH</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph>のいずれか。</li>
+                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 従量課金と定額の課金単位。<codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph>のいずれか。</li>
                                         <li><codeph>calculationMode=<i>&lt;料金タイプ></i></codeph>: サービスを利用することに対する課金の計算方法。<codeph>PRO_RATA</codeph> (従量課金), または <codeph>PER_UNIT</codeph> (定額) のいずれか。</li>
                                         <li><codeph>trialPeriod=<i>&lt;on or off></i></codeph>: 料金設定で無料試用期間が設定されているかどうか。<codeph>ON</codeph> または <codeph>OFF</codeph>のいずれか。</li>
                                         <li><codeph>daysOfTrial=<i>&lt;日数></i></codeph>: 無料試用期間に設定された日数。</li>
@@ -605,7 +605,7 @@
                                         <li><codeph>customerKey=<i>&lt;組織ID></i></codeph>: サービス利用部門の組織のID。</li>
                                         <li><codeph>customerName=<i>&lt;組織名></i></codeph>: サービス利用部門の組織の名前。</li>
                                         <li><codeph>currency=<i>&lt;通貨コード></i></codeph>: サービス利用部門がサービスを利用することによって請求される通貨のISOコード。</li>
-                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 従量課金と定額の課金単位。<codeph>MONTH</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph>のいずれか。</li>
+                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 従量課金と定額の課金単位。<codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph>のいずれか。</li>
                                         <li><codeph>userRole=<i>&lt;ロール名></i></codeph>: 技術サービスで定義されているロールの名前。</li>
                                         <li><codeph>parameterName=<i>&lt;名前></i></codeph>: 技術サービスで定義されているパラメーターの名前。</li>
                                         <li><codeph>optionName=<i>&lt;名前></i></codeph>: 技術サービスに定義されているパラメーターのオプションの名前。</li>
@@ -629,7 +629,7 @@
                                 <p>
                                     <ul>
                                         <li><codeph>currency=<i>&lt;通貨コード></i></codeph>: サービス利用部門がサービスを利用することによって請求される通貨のISOコード。</li>
-                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 従量課金と定額の課金単位。<codeph>MONTH</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph>のいずれか。</li>
+                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 従量課金と定額の課金単位。<codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph>のいずれか。</li>
                                         <li><codeph>userRole=<i>&lt;ロール名></i></codeph>: 技術サービスで定義されているロールの名前。</li>
                                         <li><codeph>parameterName=<i>&lt;名前></i></codeph>: 技術サービスで定義されているパラメーターの名前。</li>
                                         <li><codeph>optionName=<i>&lt;名前></i></codeph>: 技術サービスに定義されているパラメーターのオプションの名前。</li>
@@ -658,7 +658,7 @@
                                             <p><codeph>subscriptionName=<i>&lt;購入済サービスの名前></i></codeph>: サービスの購入時に入力した購入済サービスの名前。</p>
                                         </li>
                                         <li><codeph>currency=<i>&lt;通貨コード></i></codeph>: サービス利用部門がサービスを利用することによって請求される通貨のISOコード。</li>
-                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 従量課金と定額の課金単位。<codeph>MONTH</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph>のいずれか。</li>
+                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 従量課金と定額の課金単位。<codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph>のいずれか。</li>
                                         <li><codeph>userRole=<i>&lt;ロール名></i></codeph>: 技術サービスで定義されているロールの名前。</li>
                                         <li><codeph>parameterName=<i>&lt;名前></i></codeph>: 技術サービスで定義されているパラメーターの名前。</li>
                                         <li><codeph>optionName=<i>&lt;名前></i></codeph>: 技術サービスに定義されているパラメーターのオプションの名前。</li>
@@ -684,7 +684,7 @@
                                         <li><codeph>customerKey=<i>&lt;組織ID></i></codeph>: サービス利用部門の組織のID。</li>
                                         <li><codeph>customerName=<i>&lt;組織名></i></codeph>: サービス利用部門の組織の名前。</li>
                                         <li><codeph>currency=<i>&lt;通貨コード></i></codeph>: サービス利用部門がサービスを利用することによって請求される通貨のISOコード。</li>
-                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 単価の課金の時間単位。<codeph>MONTH</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph> のいずれか。</li>
+                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 単価の課金の時間単位。<codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph> のいずれか。</li>
                                         <li><codeph>oneTimeFee=<i>&lt;初期費用></i></codeph>: 購入時の初期費用。</li>
                                         <li><codeph>recurringCharge=<i>&lt;単価></i></codeph>: サービス契約単価。</li>
                                     </ul>
@@ -706,7 +706,7 @@
                                 <p>
                                     <ul>
                                         <li><codeph>currency=<i>&lt;通貨コード></i></codeph>: サービス利用部門がサービスを利用することによって請求される通貨のISOコード。</li>
-                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 単価の課金の時間単位。<codeph>MONTH</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph> のいずれか。</li>
+                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 単価の課金の時間単位。<codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph> のいずれか。</li>
                                         <li><codeph>oneTimeFee=<i>&lt;初期費用></i></codeph>: 購入時の初期費用。</li>
                                         <li><codeph>recurringCharge=<i>&lt;単価></i></codeph>: サービス契約単価。</li>
                                     </ul>
@@ -733,7 +733,7 @@
                                             <p><codeph>subscriptionName=<i>&lt;購入済サービスの名前></i></codeph>: サービスの購入時に入力した購入済サービスの名前。</p>
                                         </li>
                                         <li><codeph>currency=<i>&lt;通貨コード></i></codeph>: サービス利用部門がサービスを利用することによって請求される通貨のISOコード。</li>
-                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 単価の課金の時間単位。<codeph>MONTH</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph> のいずれか。</li>
+                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 単価の課金の時間単位。<codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph> のいずれか。</li>
                                         <li><codeph>oneTimeFee=<i>&lt;初期費用></i></codeph>: 購入時の初期費用。</li>
                                         <li><codeph>recurringCharge=<i>&lt;単価></i></codeph>: サービス契約単価。</li>
                                     </ul>
@@ -757,7 +757,7 @@
                                         <li><codeph>customerKey=<i>&lt;組織ID></i></codeph>: サービス利用部門の組織のID。</li>
                                         <li><codeph>customerName=<i>&lt;組織名></i></codeph>: サービス利用部門の組織の名前。</li>
                                         <li><codeph>currency=<i>&lt;通貨コード></i></codeph>: サービス利用部門がサービスを利用することによって請求される通貨のISOコード。</li>
-                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 単価の課金の時間単位。<codeph>MONTH</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph> のいずれか。</li>
+                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 単価の課金の時間単位。<codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph> のいずれか。</li>
                                         <li><codeph>range=<i>&lt;値></i></codeph>: 段階的な料金が定義されている場合、その料金が適用される範囲の上限値です。段階的な料金が定義されていない場合、<codeph>1-ANY</codeph> です。</li>
                                         <li><codeph>action=<i>&lt;アクション></i></codeph>: 段階的な料金が定義されている場合、実行されたアクション。<codeph>INSERT</codeph> (新しい段階的な料金が定義された場合), <codeph>UPDATE</codeph> (段階的な料金が更新された場合), または <codeph>DELETE</codeph> (段階的な料金が削除された場合) のいずれか。段階的な料金が定義されていない場合は、<codeph>action</codeph> パラメーターは監査ログに出力されません。</li>
                                         <li><codeph>recurringCharge=<i>&lt;料金></i></codeph>: 利用者単価。</li>
@@ -780,7 +780,7 @@
                                 <p>
                                     <ul>
                                         <li><codeph>currency=<i>&lt;通貨コード></i></codeph>: サービス利用部門がサービスを利用することによって請求される通貨のISOコード。</li>
-                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 単価の課金の時間単位。<codeph>MONTH</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph> のいずれか。</li>
+                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 単価の課金の時間単位。<codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph> のいずれか。</li>
                                         <li><codeph>range=<i>&lt;値></i></codeph>: 段階的な料金が定義されている場合、その料金が適用される範囲の上限値です。段階的な料金が定義されていない場合、<codeph>1-ANY</codeph> です。</li>
                                         <li><codeph>action=<i>&lt;アクション></i></codeph>: 段階的な料金が定義されている場合、実行されたアクション。<codeph>INSERT</codeph> (新しい段階的な料金が定義された場合), <codeph>UPDATE</codeph> (段階的な料金が更新された場合), または <codeph>DELETE</codeph> (段階的な料金が削除された場合) のいずれか。段階的な料金が定義されていない場合は、<codeph>action</codeph> パラメーターは監査ログに出力されません。</li>
                                         <li><codeph>recurringCharge=<i>&lt;料金></i></codeph>: 利用者単価。</li>
@@ -808,7 +808,7 @@
                                             <p><codeph>subscriptionName=<i>&lt;購入済サービスの名前></i></codeph>: サービスの購入時に入力した購入済サービスの名前。</p>
                                         </li>
                                         <li><codeph>currency=<i>&lt;通貨コード></i></codeph>: サービス利用部門がサービスを利用することによって請求される通貨のISOコード。</li>
-                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 単価の課金の時間単位。<codeph>MONTH</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph> のいずれか。</li>
+                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 単価の課金の時間単位。<codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph> のいずれか。</li>
                                         <li><codeph>range=<i>&lt;値></i></codeph>: 段階的な料金が定義されている場合、その料金が適用される範囲の上限値です。段階的な料金が定義されていない場合、<codeph>1-ANY</codeph> です。</li>
                                         <li><codeph>action=<i>&lt;アクション></i></codeph>: 段階的な料金が定義されている場合、実行されたアクション。<codeph>INSERT</codeph> (新しい段階的な料金が定義された場合), <codeph>UPDATE</codeph> (段階的な料金が更新された場合), または <codeph>DELETE</codeph> (段階的な料金が削除された場合) のいずれか。段階的な料金が定義されていない場合は、<codeph>action</codeph> パラメーターは監査ログに出力されません。</li>
                                         <li><codeph>recurringCharge=<i>&lt;料金></i></codeph>: 利用者単価。</li>
@@ -833,7 +833,7 @@
                                         <li><codeph>customerKey=<i>&lt;組織ID></i></codeph>: サービス利用部門の組織のID。</li>
                                         <li><codeph>customerName=<i>&lt;組織名></i></codeph>: サービス利用部門の組織の名前。</li>
                                         <li><codeph>currency=<i>&lt;通貨コード></i></codeph>: サービス利用部門がサービスを利用することによって請求される通貨のISOコード。</li>
-                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 単価の課金の時間単位。<codeph>MONTH</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph> のいずれか。</li>
+                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 単価の課金の時間単位。<codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph> のいずれか。</li>
                                         <li><codeph>userRole=<i>&lt;ロール名></i></codeph>: 技術サービスで定義されているロールの名前。</li>
                                         <li><codeph>price=<i>&lt;単価></i></codeph>: 選択されたロールのある利用者に対する利用期間ごとの料金。</li>
                                     </ul>
@@ -855,7 +855,7 @@
                                 <p>
                                     <ul>
                                         <li><codeph>currency=<i>&lt;通貨コード></i></codeph>: サービス利用部門がサービスを利用することによって請求される通貨のISOコード。</li>
-                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 単価の課金の時間単位。<codeph>MONTH</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph> のいずれか。</li>
+                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 単価の課金の時間単位。<codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph> のいずれか。</li>
                                         <li><codeph>userRole=<i>&lt;ロール名></i></codeph>: 技術サービスで定義されているロールの名前。</li>
                                         <li><codeph>price=<i>&lt;単価></i></codeph>: 選択されたロールのある利用者に対する利用期間ごとの料金。</li>
                                     </ul>
@@ -882,7 +882,7 @@
                                             <p><codeph>subscriptionName=<i>&lt;購入済サービスの名前></i></codeph>: サービスの購入時に入力した購入済サービスの名前。</p>
                                         </li>
                                         <li><codeph>currency=<i>&lt;通貨コード></i></codeph>: サービス利用部門がサービスを利用することによって請求される通貨のISOコード。</li>
-                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 単価の課金の時間単位。<codeph>MONTH</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph> のいずれか。</li>
+                                        <li><codeph>timeUnit=<i>&lt;課金単位></i></codeph>: 単価の課金の時間単位。<codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, または <codeph>HOUR</codeph> のいずれか。</li>
                                         <li><codeph>userRole=<i>&lt;ロール名></i></codeph>: 技術サービスで定義されているロールの名前。</li>
                                         <li><codeph>price=<i>&lt;単価></i></codeph>: 選択されたロールのある利用者に対する利用期間ごとの料金。</li>
                                     </ul>

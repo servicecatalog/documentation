@@ -104,7 +104,6 @@
 -Dhibernate.search.default.refresh=${hibernate.search.default.refresh}
 -Dorg.apache.catalina.loader.WebappClassLoader.
    ENABLE_CLEAR_REFERENCES=false
--Dproduct.name=CT-MG
 </codeblock>
                         </p></li>
                 </ol>

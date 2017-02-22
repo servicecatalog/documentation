@@ -288,7 +288,7 @@
             <p>A <codeph>PeriodFee</codeph> element is contained in a <codeph>PriceModel</codeph> element.</p>
             <p>A <codeph>PeriodFee</codeph> element has the following attributes: </p>
             <ul>
-                <li><codeph><b>basePeriod</b></codeph> - (required, data type <codeph>string</codeph>) Period on which the charges are based. Can be set to one of the following values: <codeph>MONTH</codeph>, <codeph>DAY</codeph>, <codeph>HOUR</codeph>.</li>
+                <li><codeph><b>basePeriod</b></codeph> - (required, data type <codeph>string</codeph>) Period on which the charges are based. Can be set to one of the following values: <codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, <codeph>HOUR</codeph>.</li>
                 <li><codeph><b>basePrice</b></codeph> - (required, data type <codeph>decimal</codeph>) Recurring charge per base period according to the price model. </li>
                 <li><codeph><b>factor</b></codeph> - (required, data type <codeph>decimal</codeph>) Factor used to calculate the period fee for the subscription. The factor is calculated from the usage period of the subscription divided by the base period (<codeph>basePeriod</codeph>). The recurring charge is multiplied with this factor to calculate the total costs (<codeph>price</codeph>).</li>
                 <li><codeph><b>price</b></codeph> - (required, data type <codeph>decimal</codeph>) Total period fee for the subscription. This value is calculated from the recurring charge (<codeph>basePrice</codeph>) multiplied with the factor (<codeph>factor</codeph>). The value is rounded to two decimal places.</li>
@@ -318,7 +318,7 @@
             <p>A <codeph>UserAssignmentCosts</codeph> element is contained in a <codeph>PriceModel</codeph> element. </p>
             <p>A <codeph>UserAssignmentCosts</codeph> element has the following attributes: </p>
             <ul>
-                <li><codeph><b>basePeriod</b></codeph> - (optional, data type <codeph>string</codeph>) Period on which the charges are based. Can be set to one of the following values: <codeph>MONTH</codeph>, <codeph>DAY</codeph>, <codeph>HOUR</codeph>.</li>
+                <li><codeph><b>basePeriod</b></codeph> - (optional, data type <codeph>string</codeph>) Period on which the charges are based. Can be set to one of the following values: <codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, <codeph>HOUR</codeph>.</li>
                 <li><codeph><b>basePrice</b></codeph> - (optional, data type <codeph>decimal</codeph>) Recurring charge for users per base period according to the price model. If the charge for users has stepped prices, this attribute is omitted.</li>
                 <li><codeph><b>factor</b></codeph> - (optional, data type <codeph>decimal</codeph>) Factor used to calculate the costs for the user assignments. The factor is calculated by summing up the factors for each user specified in the <codeph>UserAssignmentCostsByUser</codeph> element. The recurring charge (<codeph>basePrice</codeph>) is multiplied with this factor to calculate the costs (<codeph>price</codeph>). </li>
                 <li><codeph><b>numberOfUsersTotal</b></codeph> - (optional, data type <codeph>long</codeph>) Number of users assigned to the subscription in the usage period. </li>
@@ -452,7 +452,7 @@
             <p>Specifies the costs for using the parameter in the given usage period. If a parameter has stepped prices, a <codeph>SteppedPrices</codeph> element is included in the <codeph>PeriodFee</codeph> element.</p>
             <p>A <codeph>PeriodFee</codeph> element has the following attributes:</p>
             <ul>
-                <li><codeph><b>basePeriod</b></codeph> - (required, data type <codeph>string</codeph>) Period on which the charges are based. Can be set to one of the following values: <codeph>MONTH</codeph>, <codeph>DAY</codeph>, <codeph>HOUR</codeph>.</li>
+                <li><codeph><b>basePeriod</b></codeph> - (required, data type <codeph>string</codeph>) Period on which the charges are based. Can be set to one of the following values: <codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, <codeph>HOUR</codeph>.</li>
                 <li><codeph><b>basePrice</b></codeph> - (optional, data type <codeph>decimal</codeph>) Recurring charge per base period according to the price model. If a parameter has stepped prices, this attribute is omitted.</li>
                 <li><codeph><b>factor</b></codeph> - (required, data type <codeph>decimal</codeph>) Factor used to calculate the costs for using the parameter. The factor is calculated from the usage period divided by the base period (<codeph>basePeriod</codeph>). The recurring charge (<codeph>basePrice</codeph>) is multiplied with this factor to calculate the costs (<codeph>price</codeph>).</li>
                 <li><codeph><b>price</b></codeph> - (required, data type <codeph>decimal</codeph>) Costs for using the parameter. This value is calculated from the recurring charge (<codeph>basePrice</codeph>) multiplied with the factors (<codeph>factor</codeph> and <codeph>valueFactor</codeph>). The value is rounded to two decimal places.</li>
@@ -464,7 +464,7 @@
                 /> for details). </p>
             <p>A <codeph>UserAssignmentCosts</codeph> element has the following attributes:</p>
             <ul>
-                <li><codeph><b>basePeriod</b></codeph> - (required, data type <codeph>string</codeph>) Period on which the charges are based. Can be set to one of the following values: <codeph>MONTH</codeph>, <codeph>DAY</codeph>, <codeph>HOUR</codeph>.</li>
+                <li><codeph><b>basePeriod</b></codeph> - (required, data type <codeph>string</codeph>) Period on which the charges are based. Can be set to one of the following values: <codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, <codeph>HOUR</codeph>.</li>
                 <li><codeph><b>basePrice</b></codeph> - (required, data type <codeph>decimal</codeph>) Recurring charge for users per base period for the parameter according to the price model. </li>
                 <li><codeph><b>factor</b></codeph> - (required, data type <codeph>decimal</codeph>) Factor used to calculate the costs for using the parameter. The factor is calculated from the parameter usage period divided by the base period (<codeph>basePeriod</codeph>) multiplied with the number of users. The recurring charge (<codeph>basePrice</codeph>) is multiplied with this factor to calculate the costs (<codeph>price</codeph>).</li>
                 <li><codeph><b>price</b></codeph> - (required, data type <codeph>decimal</codeph>) Costs for using the parameter. This value is calculated from the recurring charge (<codeph>basePrice</codeph>) multiplied with the factors (<codeph>factor</codeph> and <codeph>valueFactor</codeph>). The value is rounded to two decimal places. If stepped prices are defined for user assignments, the costs are given in the <codeph>price</codeph> attribute.</li>
@@ -525,7 +525,7 @@
             <p>Specifies the costs for using the parameter option in the given usage period. </p>
             <p>A <codeph>PeriodFee</codeph> element has the following attributes:</p>
             <ul>
-                <li><codeph><b>basePeriod</b></codeph> - (required, data type <codeph>string</codeph>) Period on which the charges are based. Can be set to one of the following values: <codeph>MONTH</codeph>, <codeph>DAY</codeph>, <codeph>HOUR</codeph>.</li>
+                <li><codeph><b>basePeriod</b></codeph> - (required, data type <codeph>string</codeph>) Period on which the charges are based. Can be set to one of the following values: <codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, <codeph>HOUR</codeph>.</li>
                 <li><codeph><b>basePrice</b></codeph> - (required, data type <codeph>decimal</codeph>) Recurring charge per base period according to the price model. </li>
                 <li><codeph><b>factor</b></codeph> - (required, data type <codeph>decimal</codeph>) Factor used to calculate the costs for using the parameter option. The factor is calculated from the usage period divided by the base period (<codeph>basePeriod</codeph>). The recurring charge (<codeph>basePrice</codeph>) is multiplied with this factor to calculate the total costs (<codeph>price</codeph>).</li>
                 <li><codeph><b>price</b></codeph> - (required, data type <codeph>decimal</codeph>) Costs for the parameter option. This value is calculated from the recurring charge (<codeph>basePrice</codeph>) multiplied with the factor (<codeph>factor</codeph>), and is rounded to two decimal places.</li>
@@ -536,7 +536,7 @@
                 />). </p>
             <p>A <codeph>UserAssignmentCosts</codeph> element has the following attributes:</p>
             <ul>
-                <li><codeph><b>basePeriod</b></codeph> - (required, data type <codeph>string</codeph>) Period on which the charges are based. Can be set to one of the following values: <codeph>MONTH</codeph>, <codeph>DAY</codeph>, <codeph>HOUR</codeph>.</li>
+                <li><codeph><b>basePeriod</b></codeph> - (required, data type <codeph>string</codeph>) Period on which the charges are based. Can be set to one of the following values: <codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, <codeph>HOUR</codeph>.</li>
                 <li><codeph><b>basePrice</b></codeph> - (required, data type <codeph>decimal</codeph>) Recurring charge for users per base period for the parameter option according to the price model. </li>
                 <li><codeph><b>factor</b></codeph> - (required, data type <codeph>decimal</codeph>) Factor used to calculate the costs for using the parameter option. The factor is calculated from the usage period divided by the base period (<codeph>basePeriod</codeph>). The recurring charge (<codeph>basePrice</codeph>) is multiplied with this factor to calculate the costs (<codeph>price</codeph>). </li>
                 <li><codeph><b>total</b></codeph> - (data type <codeph>decimal</codeph>) Total costs for using the parameter option including role-based costs. The value is rounded to two decimal places. For details on role-based costs, refer to <xref

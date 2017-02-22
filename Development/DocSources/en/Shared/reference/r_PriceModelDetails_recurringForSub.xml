@@ -9,7 +9,7 @@
     <refbody>
         <section>
             <p id="For_each_subscription_a_char_reference_refbody_section_1"
-                >For each subscription, a charge can be defined that a customer has to pay on a recurring basis. Monthly, daily, or hourly periods are supported. The recurring charge for a subscription is independent of the amount of users, events, or other usage data. </p>
+                >For each subscription, a charge can be defined that a customer has to pay on a recurring basis. Monthly, weekly, daily, or hourly periods are supported. The recurring charge for a subscription is independent of the amount of users, events, or other usage data. </p>
         </section>
         <section>
             <title>Example</title>
