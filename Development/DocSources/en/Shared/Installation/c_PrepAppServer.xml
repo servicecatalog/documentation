@@ -17,7 +17,12 @@
                 <ph audience="vmware">The vSphere integration software</ph>
                 <ph id="must_be_deployed_on_an_applic_concept_conbody_section_p_1"
                     >must be deployed on an application server compatible with Java EE version 7. The following application server is supported:</ph></p>
+<<<<<<< Upstream, based on origin/master
             <p id="Oracle_GlassFish_Server_vers_concept_conbody_section_p_2">Oracle GlassFish Server, version 4.1.1.</p>
+=======
+            <p id="Oracle_GlassFish_Server_vers_concept_conbody_section_p_2"
+>Oracle GlassFish Server, version 4.1.1.</p>
+>>>>>>> af6f99b Initial commit after resetting to Fix 6 version
             <p audience="app">You can deploy APP on the application server you use for <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 />. Alternatively, you can use a separate application server installation.</p>
