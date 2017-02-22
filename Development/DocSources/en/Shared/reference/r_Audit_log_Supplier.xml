@@ -327,7 +327,7 @@
                                         <li><codeph>customerKey=<i>&lt;organization ID></i></codeph>: The ID of the customer organization. </li>
                                         <li><codeph>customerName=<i>&lt;organization name></i></codeph>: The name of the customer organization. </li>
                                         <li><codeph>currency=<i>&lt;currency code></i></codeph>: The ISO code of the currency in which a customer is charged for using the service. </li>
-                                        <li><codeph>timeUnit=<i>&lt;time unit></i></codeph>: The time unit defined for recurring charges. Can be <codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, or <codeph>HOUR</codeph>. </li>
+                                        <li><codeph>timeUnit=<i>&lt;time unit></i></codeph>: The time unit defined for recurring charges. Can be <codeph>MONTH</codeph>, <codeph>DAY</codeph>, or <codeph>HOUR</codeph>. </li>
                                         <li><codeph>oneTimeFee=<i>&lt;fee></i></codeph>: The one-time fee for a subscription. </li>
                                     </ul>
                                 </p>
@@ -348,7 +348,7 @@
                                 <p>
                                     <ul>
                                         <li><codeph>currency=<i>&lt;currency code></i></codeph>: The ISO code of the currency in which a customer is charged for using the service. </li>
-                                        <li><codeph>timeUnit=<i>&lt;time unit></i></codeph>: The time unit defined for recurring charges. Can be <codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, or <codeph>HOUR</codeph>. </li>
+                                        <li><codeph>timeUnit=<i>&lt;time unit></i></codeph>: The time unit defined for recurring charges. Can be <codeph>MONTH</codeph>, <codeph>DAY</codeph>, or <codeph>HOUR</codeph>. </li>
                                         <li><codeph>oneTimeFee=<i>&lt;fee></i></codeph>: The one-time fee for a subscription. </li>
                                     </ul>
                                 </p>
@@ -371,7 +371,7 @@
                                         <li><codeph>customerKey=<i>&lt;organization ID></i></codeph>: The ID of the customer organization. </li>
                                         <li><codeph>customerName=<i>&lt;organization name></i></codeph>: The name of the customer organization. </li>
                                         <li><codeph>currency=<i>&lt;currency code></i></codeph>: The ISO code of the currency in which a customer is charged for using the service. </li>
-                                        <li><codeph>timeUnit=<i>&lt;time unit></i></codeph>: The time unit for recurring charges and per time unit calculation. Can be <codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, or <codeph>HOUR</codeph>. </li>
+                                        <li><codeph>timeUnit=<i>&lt;time unit></i></codeph>: The time unit for recurring charges and per time unit calculation. Can be <codeph>MONTH</codeph>, <codeph>DAY</codeph>, or <codeph>HOUR</codeph>. </li>
                                         <li><codeph>calculationMode=<i>&lt;calculation option></i></codeph>: The way charges for using a service are calculated. Can be <codeph>PRO_RATA</codeph> or <codeph>PER_UNIT</codeph>. </li>
                                         <li><codeph>trialPeriod=<i>&lt;on or off></i></codeph>: Specifies whether a free trial period has been defined in the price model. Can be <codeph>ON</codeph> or <codeph>OFF</codeph>. </li>
                                         <li><codeph>daysOfTrial=<i>&lt;Number of days></i></codeph>: The number of days defined for the free trial period. </li>
@@ -394,7 +394,7 @@
                                 <p>
                                     <ul>
                                         <li><codeph>currency=<i>&lt;currency code></i></codeph>: The ISO code of the currency in which a customer is charged for using the service. </li>
-                                        <li><codeph>timeUnit=<i>&lt;time unit></i></codeph>: The time unit for recurring charges and per time unit calculation. Can be <codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, or <codeph>HOUR</codeph>. </li>
+                                        <li><codeph>timeUnit=<i>&lt;time unit></i></codeph>: The time unit for recurring charges and per time unit calculation. Can be <codeph>MONTH</codeph>, <codeph>DAY</codeph>, or <codeph>HOUR</codeph>. </li>
                                         <li><codeph>calculationMode=<i>&lt;calculation option></i></codeph>: The way charges for using a service are calculated. Can be <codeph>PRO_RATA</codeph> or <codeph>PER_UNIT</codeph>. </li>
                                         <li><codeph>trialPeriod=<i>&lt;on or off></i></codeph>: Specifies whether a free trial period has been defined in the price model. Can be <codeph>ON</codeph> or <codeph>OFF</codeph>. </li>
                                         <li><codeph>daysOfTrial=<i>&lt;Number of days></i></codeph>: The number of days defined for the free trial period. </li>
@@ -605,7 +605,7 @@
                                         <li><codeph>customerKey=<i>&lt;organization ID></i></codeph>: The ID of the customer organization. </li>
                                         <li><codeph>customerName=<i>&lt;organization name></i></codeph>: The name of the customer organization. </li>
                                         <li><codeph>currency=<i>&lt;currency code></i></codeph>: The ISO code of the currency in which a customer is charged for using the service. </li>
-                                        <li><codeph>timeUnit=<i>&lt;time unit></i></codeph>: The time unit defined for recurring charges. Can be <codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, or <codeph>HOUR</codeph>. </li>
+                                        <li><codeph>timeUnit=<i>&lt;time unit></i></codeph>: The time unit defined for recurring charges. Can be <codeph>MONTH</codeph>, <codeph>DAY</codeph>, or <codeph>HOUR</codeph>. </li>
                                         <li><codeph>userRole=<i>&lt;role name></i></codeph>: The name of the service role as defined in the underlying technical service. </li>
                                         <li><codeph>parameterName=<i>&lt;name></i></codeph>: The name of the parameter as defined in the underlying technical service. </li>
                                         <li><codeph>optionName=<i>&lt;name></i></codeph>: The name of the parameter option as defined in the underlying technical service. </li>
@@ -629,7 +629,7 @@
                                 <p>
                                     <ul>
                                         <li><codeph>currency=<i>&lt;currency code></i></codeph>: The ISO code of the currency in which a customer is charged for using the service. </li>
-                                        <li><codeph>timeUnit=<i>&lt;time unit></i></codeph>: The time unit defined for recurring charges. Can be <codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, or <codeph>HOUR</codeph>. </li>
+                                        <li><codeph>timeUnit=<i>&lt;time unit></i></codeph>: The time unit defined for recurring charges. Can be <codeph>MONTH</codeph>, <codeph>DAY</codeph>, or <codeph>HOUR</codeph>. </li>
                                         <li><codeph>userRole=<i>&lt;role name></i></codeph>: The name of the service role as defined in the underlying technical service. </li>
                                         <li><codeph>parameterName=<i>&lt;name></i></codeph>: The name of the parameter as defined in the underlying technical service. </li>
                                         <li><codeph>optionName=<i>&lt;name></i></codeph>: The name of the parameter option as defined in the underlying technical service. </li>
@@ -658,7 +658,7 @@
                                             <p><codeph>subscriptionName=<i>&lt;subscription name></i></codeph>: The name of the subscription as entered when subscribing to a service. </p>
                                         </li>
                                         <li><codeph>currency=<i>&lt;currency code></i></codeph>: The ISO code of the currency in which a customer is charged for using the service. </li>
-                                        <li><codeph>timeUnit=<i>&lt;time unit></i></codeph>: The time unit defined for recurring charges. Can be <codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, or <codeph>HOUR</codeph>. </li>
+                                        <li><codeph>timeUnit=<i>&lt;time unit></i></codeph>: The time unit defined for recurring charges. Can be <codeph>MONTH</codeph>, <codeph>DAY</codeph>, or <codeph>HOUR</codeph>. </li>
                                         <li><codeph>userRole=<i>&lt;role name></i></codeph>: The name of the service role as defined in the underlying technical service. </li>
                                         <li><codeph>parameterName=<i>&lt;name></i></codeph>: The name of the parameter as defined in the underlying technical service. </li>
                                         <li><codeph>optionName=<i>&lt;name></i></codeph>: The name of the parameter option as defined in the underlying technical service. </li>
@@ -684,7 +684,7 @@
                                         <li><codeph>customerKey=<i>&lt;organization ID></i></codeph>: The ID of the customer organization. </li>
                                         <li><codeph>customerName=<i>&lt;organization name></i></codeph>: The name of the customer organization. </li>
                                         <li><codeph>currency=<i>&lt;currency code></i></codeph>: The ISO code of the currency in which a customer is charged for using the service. </li>
-                                        <li><codeph>timeUnit=<i>&lt;time unit></i></codeph>: The time unit defined for recurring charges. Can be <codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, or <codeph>HOUR</codeph>. </li>
+                                        <li><codeph>timeUnit=<i>&lt;time unit></i></codeph>: The time unit defined for recurring charges. Can be <codeph>MONTH</codeph>, <codeph>DAY</codeph>, or <codeph>HOUR</codeph>. </li>
                                         <li><codeph>oneTimeFee=<i>&lt;fee></i></codeph>: The one-time fee for a subscription. </li>
                                         <li><codeph>recurringCharge=<i>&lt;charge></i></codeph>: The recurring charge per subscription.</li>
                                     </ul>
@@ -706,7 +706,7 @@
                                 <p>
                                     <ul>
                                         <li><codeph>currency=<i>&lt;currency code></i></codeph>: The ISO code of the currency in which a customer is charged for using the service. </li>
-                                        <li><codeph>timeUnit=<i>&lt;time unit></i></codeph>: The time unit defined for recurring charges. Can be <codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, or <codeph>HOUR</codeph>. </li>
+                                        <li><codeph>timeUnit=<i>&lt;time unit></i></codeph>: The time unit defined for recurring charges. Can be <codeph>MONTH</codeph>, <codeph>DAY</codeph>, or <codeph>HOUR</codeph>. </li>
                                         <li><codeph>oneTimeFee=<i>&lt;fee></i></codeph>: The one-time fee for a subscription. </li>
                                         <li><codeph>recurringCharge=<i>&lt;charge></i></codeph>: The recurring charge per subscription.</li>
                                     </ul>
@@ -733,7 +733,7 @@
                                             <p><codeph>subscriptionName=<i>&lt;subscription name></i></codeph>: The name of the subscription as entered when subscribing to a service. </p>
                                         </li>
                                         <li><codeph>currency=<i>&lt;currency code></i></codeph>: The ISO code of the currency in which a customer is charged for using the service. </li>
-                                        <li><codeph>timeUnit=<i>&lt;time unit></i></codeph>: The time unit defined for recurring charges. Can be <codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, or <codeph>HOUR</codeph>. </li>
+                                        <li><codeph>timeUnit=<i>&lt;time unit></i></codeph>: The time unit defined for recurring charges. Can be <codeph>MONTH</codeph>, <codeph>DAY</codeph>, or <codeph>HOUR</codeph>. </li>
                                         <li><codeph>oneTimeFee=<i>&lt;fee></i></codeph>: The one-time fee for a subscription. </li>
                                         <li><codeph>recurringCharge=<i>&lt;charge></i></codeph>: The recurring charge per subscription.</li>
                                     </ul>
@@ -757,7 +757,7 @@
                                         <li><codeph>customerKey=<i>&lt;organization ID></i></codeph>: The ID of the customer organization. </li>
                                         <li><codeph>customerName=<i>&lt;organization name></i></codeph>: The name of the customer organization. </li>
                                         <li><codeph>currency=<i>&lt;currency code></i></codeph>: The ISO code of the currency in which a customer is charged for using the service. </li>
-                                        <li><codeph>timeUnit=<i>&lt;time unit></i></codeph>: The time unit defined for recurring charges. Can be <codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, or <codeph>HOUR</codeph>. </li>
+                                        <li><codeph>timeUnit=<i>&lt;time unit></i></codeph>: The time unit defined for recurring charges. Can be <codeph>MONTH</codeph>, <codeph>DAY</codeph>, or <codeph>HOUR</codeph>. </li>
                                         <li><codeph>range=<i>&lt;value></i></codeph>: If stepped prices are defined, this is the step limit up to which the price applies. If no stepped prices are defined, the value is <codeph>1-ANY</codeph>.</li>
                                         <li><codeph>action=<i>&lt;action></i></codeph>: If stepped prices are defined, action that was executed. Can be <codeph>INSERT</codeph> (when a new stepped price was defined), <codeph>UPDATE</codeph> (when a stepped price was updated), or <codeph>DELETE</codeph> (when a stepped price was deleted. If no stepped prices are defined, the <codeph>action</codeph> parameter is not written to the audit log. </li>
                                         <li><codeph>recurringCharge=<i>&lt;charge></i></codeph>: The recurring charge for users.</li>
@@ -780,7 +780,7 @@
                                 <p>
                                     <ul>
                                         <li><codeph>currency=<i>&lt;currency code></i></codeph>: The ISO code of the currency in which a customer is charged for using the service. </li>
-                                        <li><codeph>timeUnit=<i>&lt;time unit></i></codeph>: The time unit defined for recurring charges. Can be <codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, or <codeph>HOUR</codeph>. </li>
+                                        <li><codeph>timeUnit=<i>&lt;time unit></i></codeph>: The time unit defined for recurring charges. Can be <codeph>MONTH</codeph>, <codeph>DAY</codeph>, or <codeph>HOUR</codeph>. </li>
                                         <li><codeph>range=<i>&lt;value></i></codeph>: If stepped prices are defined, this is the step limit up to which the price applies. If no stepped prices are defined, the value is <codeph>1-ANY</codeph>.</li>
                                         <li><codeph>action=<i>&lt;action></i></codeph>: If stepped prices are defined, action that was executed. Can be <codeph>INSERT</codeph> (when a new stepped price was defined), <codeph>UPDATE</codeph> (when a stepped price was updated), or <codeph>DELETE</codeph> (when a stepped price was deleted. If no stepped prices are defined, the <codeph>action</codeph> parameter is not written to the audit log. </li>
                                         <li><codeph>recurringCharge=<i>&lt;charge></i></codeph>: The recurring charge for users.</li>
@@ -808,7 +808,7 @@
                                             <p><codeph>subscriptionName=<i>&lt;subscription name></i></codeph>: The name of the subscription as entered when subscribing to a service. </p>
                                         </li>
                                         <li><codeph>currency=<i>&lt;currency code></i></codeph>: The ISO code of the currency in which a customer is charged for using the service. </li>
-                                        <li><codeph>timeUnit=<i>&lt;time unit></i></codeph>: The time unit defined for recurring charges. Can be <codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, or <codeph>HOUR</codeph>. </li>
+                                        <li><codeph>timeUnit=<i>&lt;time unit></i></codeph>: The time unit defined for recurring charges. Can be <codeph>MONTH</codeph>, <codeph>DAY</codeph>, or <codeph>HOUR</codeph>. </li>
                                         <li><codeph>range=<i>&lt;value></i></codeph>: If stepped prices are defined, this is the step limit up to which the price applies. If no stepped prices are defined, the value is <codeph>1-ANY</codeph>.</li>
                                         <li><codeph>action=<i>&lt;action></i></codeph>: If stepped prices are defined, action that was executed. Can be <codeph>INSERT</codeph> (when a new stepped price was defined), <codeph>UPDATE</codeph> (when a stepped price was updated), or <codeph>DELETE</codeph> (when a stepped price was deleted. If no stepped prices are defined, the <codeph>action</codeph> parameter is not written to the audit log. </li>
                                         <li><codeph>recurringCharge=<i>&lt;charge></i></codeph>: The recurring charge for users.</li>
@@ -833,7 +833,7 @@
                                         <li><codeph>customerKey=<i>&lt;organization ID></i></codeph>: The ID of the customer organization. </li>
                                         <li><codeph>customerName=<i>&lt;organization name></i></codeph>: The name of the customer organization. </li>
                                         <li><codeph>currency=<i>&lt;currency code></i></codeph>: The ISO code of the currency in which a customer is charged for using the service. </li>
-                                        <li><codeph>timeUnit=<i>&lt;time unit></i></codeph>: The time unit defined for recurring charges. Can be <codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, or <codeph>HOUR</codeph>. </li>
+                                        <li><codeph>timeUnit=<i>&lt;time unit></i></codeph>: The time unit defined for recurring charges. Can be <codeph>MONTH</codeph>, <codeph>DAY</codeph>, or <codeph>HOUR</codeph>. </li>
                                         <li><codeph>userRole=<i>&lt;role name></i></codeph>: The name of the service role as defined in the underlying technical service. </li>
                                         <li><codeph>price=<i>&lt;price></i></codeph>: The recurring charge for users having the selected role. </li>
                                     </ul>
@@ -855,7 +855,7 @@
                                 <p>
                                     <ul>
                                         <li><codeph>currency=<i>&lt;currency code></i></codeph>: The ISO code of the currency in which a customer is charged for using the service. </li>
-                                        <li><codeph>timeUnit=<i>&lt;time unit></i></codeph>: The time unit defined for recurring charges. Can be <codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, or <codeph>HOUR</codeph>. </li>
+                                        <li><codeph>timeUnit=<i>&lt;time unit></i></codeph>: The time unit defined for recurring charges. Can be <codeph>MONTH</codeph>, <codeph>DAY</codeph>, or <codeph>HOUR</codeph>. </li>
                                         <li><codeph>userRole=<i>&lt;role name></i></codeph>: The name of the service role as defined in the underlying technical service. </li>
                                         <li><codeph>price=<i>&lt;price></i></codeph>: The recurring charge for users having the selected role. </li>
                                     </ul>
@@ -882,7 +882,7 @@
                                             <p><codeph>subscriptionName=<i>&lt;subscription name></i></codeph>: The name of the subscription as entered when subscribing to a service. </p>
                                         </li>
                                         <li><codeph>currency=<i>&lt;currency code></i></codeph>: The ISO code of the currency in which a customer is charged for using the service. </li>
-                                        <li><codeph>timeUnit=<i>&lt;time unit></i></codeph>: The time unit defined for recurring charges. Can be <codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, or <codeph>HOUR</codeph>. </li>
+                                        <li><codeph>timeUnit=<i>&lt;time unit></i></codeph>: The time unit defined for recurring charges. Can be <codeph>MONTH</codeph>, <codeph>DAY</codeph>, or <codeph>HOUR</codeph>. </li>
                                         <li><codeph>userRole=<i>&lt;role name></i></codeph>: The name of the service role as defined in the underlying technical service. </li>
                                         <li><codeph>price=<i>&lt;price></i></codeph>: The recurring charge for users having the selected role. </li>
                                     </ul>

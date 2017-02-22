@@ -60,7 +60,7 @@
             </p>
             <p>Stepped prices are supported which allow the definition of ranges for which different price model elements apply. In addition, a free trial period can be defined and discounts can be granted to individual customers.</p>
             <p id="The_actual_charges_for_a_serv_reference_refbody_section_3"
-                >The actual charges for a service depend on the combination of the price model elements. The charges are either calculated pro rata (based on milliseconds) or per time unit (month, week, day, or hour). With pro rata calculation, customers are charged exactly for the time a service was used. With per time unit calculation, customers are charged for complete time units, for example, one week, even if the service was not used for the whole week.</p>
+                >The actual charges for a service depend on the combination of the price model elements. The charges are either calculated pro rata (based on milliseconds) or per time unit (month, day, or hour). With pro rata calculation, customers are charged exactly for the time a service was used. With per time unit calculation, customers are charged for complete time units, for example, one day, even if the service was not used for the whole day.</p>
         </section>
     </refbody>
 </reference>

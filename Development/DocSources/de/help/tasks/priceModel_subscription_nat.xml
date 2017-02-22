@@ -17,7 +17,7 @@
                     <ul compact="no" id="Select_task_taskbody_steps_step_2">
                         <li><uicontrol>Kostenlos</uicontrol>: Der Service wird kostenlos zur Verfügung gestellt. </li>
                         <li><uicontrol>Abrechnung pro rata</uicontrol>: Die Nutzungsgebühren werden für die exakte Nutzungsdauer in Millisekunden berechnet.</li>
-                        <li><uicontrol>Abrechnung pro Zeiteinheit</uicontrol>: Die Nutzungsgebühren werden für ganze Zeiteinheiten berechnet, zum Beispiel Tage oder Wochen. </li>
+                        <li><uicontrol>Abrechnung pro Zeiteinheit</uicontrol>: Die Nutzungsgebühren werden für ganze Zeiteinheiten berechnet, zum Beispiel Tage oder Monate. </li>
                     </ul>
                     <p>Wenn Ihr Service kostenlos ist, fahren Sie mit Schritt 6 fort, ansonsten mit Schritt 2. </p>
                 </info>

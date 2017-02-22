@@ -326,7 +326,7 @@
                                         <li><codeph>customerKey=<i>&lt;Organisations-ID></i></codeph>: ID der Kundenorganisation. </li>
                                         <li><codeph>customerName=<i>&lt;Organisationsname></i></codeph>: Name der Kundenorganisation. </li>
                                         <li><codeph>currency=<i>&lt;Währung></i></codeph>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
-                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, täglich oder stundenweise abgerechnet werden.</li>
                                         <li><codeph>oneTimeFee=<i>&lt;Gebühr></i></codeph>: Einmalige Gebühr für ein Abonnement. </li>
                                     </ul>
                                 </p>
@@ -347,7 +347,7 @@
                                 <p>
                                     <ul>
                                         <li><codeph>currency=<i>&lt;Währung></i></codeph>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
-                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, täglich oder stundenweise abgerechnet werden.</li>
                                         <li><codeph>oneTimeFee=<i>&lt;Gebühr></i></codeph>: Einmalige Gebühr für ein Abonnement. </li>
                                     </ul>
                                 </p>
@@ -370,7 +370,7 @@
                                         <li><codeph>customerKey=<i>&lt;Organisations-ID></i></codeph>: ID der Kundenorganisation. </li>
                                         <li><codeph>customerName=<i>&lt;Organisationsname></i></codeph>: Name der Kundenorganisation. </li>
                                         <li><codeph>currency=<i>&lt;Währung></i></codeph>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
-                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, täglich oder stundenweise abgerechnet werden.</li>
                                         <li><codeph>calculationMode=<i>&lt;Abrechnungsmodus></i></codeph>: Modus zur Berechnung der Nutzungsgebühren. Folgende Werte können ausgegeben werden: <codeph>PRO_RATA</codeph> (anteilige Abrechnung) oder <codeph>PER_UNIT</codeph> (pro Zeiteinheit).</li>
                                         <li><codeph>trialPeriod=<i>&lt;Ja oder Nein></i></codeph>: Gibt an, ob im Preismodell eine kostenlose Nutzungsdauer vorgesehen ist. Folgende Werte können ausgegeben werden: <codeph>ON</codeph> (Ja) oder <codeph>OFF</codeph> (Nein). </li>
                                         <li><codeph>daysOfTrial=<i>&lt;Anzahl Tage></i></codeph>: Anzahl der kostenlosen Tage. </li>
@@ -393,7 +393,7 @@
                                 <p>
                                     <ul>
                                         <li><codeph>currency=<i>&lt;Währung></i></codeph>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
-                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, täglich oder stundenweise abgerechnet werden.</li>
                                         <li><codeph>calculationMode=<i>&lt;Abrechnungsmodus></i></codeph>: Modus zur Berechnung der Nutzungsgebühren. Folgende Werte können ausgegeben werden: <codeph>PRO_RATA</codeph> (anteilige Abrechnung) oder <codeph>PER_UNIT</codeph> (pro Zeiteinheit).</li>
                                         <li><codeph>trialPeriod=<i>&lt;Ja oder Nein></i></codeph>: Gibt an, ob im Preismodell eine kostenlose Nutzungsdauer vorgesehen ist. Folgende Werte können ausgegeben werden: <codeph>ON</codeph> (Ja) oder <codeph>OFF</codeph> (Nein). </li>
                                         <li><codeph>daysOfTrial=<i>&lt;Anzahl Tage></i></codeph>: Anzahl der kostenlosen Tage. </li>
@@ -604,7 +604,7 @@
                                         <li><codeph>customerKey=<i>&lt;Organisations-ID></i></codeph>: ID der Kundenorganisation. </li>
                                         <li><codeph>customerName=<i>&lt;Organisationsname></i></codeph>: Name der Kundenorganisation. </li>
                                         <li><codeph>currency=<i>&lt;Währung></i></codeph>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
-                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, täglich oder stundenweise abgerechnet werden.</li>
                                         <li><codeph>userRole=<i>&lt;Rollenname></i></codeph>: Name der Servicerolle, wie er im zugrunde liegenden technischen Service definiert ist.</li>
                                         <li><codeph>parameterName=<i>&lt;Parametername></i></codeph>: Name des Parameters, wie er im zugrunde liegenden technischen Service definiert ist.</li>
                                         <li><codeph>optionName=<i>&lt;Optionsname></i></codeph>: Name der Parameteroption, wie er im zugrunde liegenden technischen Service definiert ist.</li>
@@ -628,7 +628,7 @@
                                 <p>
                                     <ul>
                                         <li><codeph>currency=<i>&lt;Währung></i></codeph>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
-                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, täglich oder stundenweise abgerechnet werden.</li>
                                         <li><codeph>userRole=<i>&lt;Rollenname></i></codeph>: Name der Servicerolle, wie er im zugrunde liegenden technischen Service definiert ist.</li>
                                         <li><codeph>parameterName=<i>&lt;Parametername></i></codeph>: Name des Parameters, wie er im zugrunde liegenden technischen Service definiert ist.</li>
                                         <li><codeph>optionName=<i>&lt;Optionsname></i></codeph>: Name der Parameteroption, wie er im zugrunde liegenden technischen Service definiert ist. </li>
@@ -657,7 +657,7 @@
                                             <p><codeph>subscriptionName=<i>&lt;Abo-Name></i></codeph>: Name des Abonnements, wie er beim Abonnieren angegeben wurde. </p>
                                         </li>
                                         <li><codeph>currency=<i>&lt;Währung></i></codeph>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
-                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, täglich oder stundenweise abgerechnet werden.</li>
                                         <li><codeph>userRole=<i>&lt;Rollenname></i></codeph>: Name der Servicerolle, wie er im zugrunde liegenden technischen Service definiert ist.</li>
                                         <li><codeph>parameterName=<i>&lt;Parametername></i></codeph>: Name des Parameters, wie er im zugrunde liegenden technischen Service definiert ist.</li>
                                         <li><codeph>optionName=<i>&lt;Optionsname></i></codeph>: Name der Parameteroption, wie er im zugrunde liegenden technischen Service definiert ist.</li>
@@ -683,7 +683,7 @@
                                         <li><codeph>customerKey=<i>&lt;Organisations-ID></i></codeph>: ID der Kundenorganisation. </li>
                                         <li><codeph>customerName=<i>&lt;Organisationsname></i></codeph>: Name der Kundenorganisation. </li>
                                         <li><codeph>currency=<i>&lt;Währung></i></codeph>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
-                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, täglich oder stundenweise abgerechnet werden.</li>
                                         <li><codeph>oneTimeFee=<i>&lt;Gebühr></i></codeph>: Einmalige Gebühr für ein Abonnement. </li>
                                         <li><codeph>recurringCharge=<i>&lt;Gebühr></i></codeph>: Gebühr, die für ein Abonnement in regelmäßigen Abständen anfällt.</li>
                                     </ul>
@@ -705,7 +705,7 @@
                                 <p>
                                     <ul>
                                         <li><codeph>currency=<i>&lt;Währung></i></codeph>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
-                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, täglich oder stundenweise abgerechnet werden.</li>
                                         <li><codeph>oneTimeFee=<i>&lt;Gebühr></i></codeph>: Einmalige Gebühr für ein Abonnement. </li>
                                         <li><codeph>recurringCharge=<i>&lt;Gebühr></i></codeph>: Gebühr, die für ein Abonnement in regelmäßigen Abständen anfällt.</li>
                                     </ul>
@@ -732,7 +732,7 @@
                                             <p><codeph>subscriptionName=<i>&lt;Abo-Name></i></codeph>: Name des Abonnements, wie er beim Abonnieren angegeben wurde. </p>
                                         </li>
                                         <li><codeph>currency=<i>&lt;Währung></i></codeph>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
-                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, täglich oder stundenweise abgerechnet werden.</li>
                                         <li><codeph>oneTimeFee=<i>&lt;Gebühr></i></codeph>: Einmalige Gebühr für ein Abonnement. </li>
                                         <li><codeph>recurringCharge=<i>&lt;Gebühr></i></codeph>: Gebühr, die für ein Abonnement in regelmäßigen Abständen anfällt.</li>
                                     </ul>
@@ -756,7 +756,7 @@
                                         <li><codeph>customerKey=<i>&lt;Organisations-ID></i></codeph>: ID der Kundenorganisation. </li>
                                         <li><codeph>customerName=<i>&lt;Organisationsname></i></codeph>: Name der Kundenorganisation. </li>
                                         <li><codeph>currency=<i>&lt;Währung></i></codeph>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
-                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, täglich oder stundenweise abgerechnet werden.</li>
                                         <li><codeph>range=<i>&lt;Obergrenze></i></codeph>: Bei gestaffelten Preisen ist dies die Obergrenze, bis zu der der Preis gilt. Falls keine gestaffelten Preise definiert sind, ist die Obergrenze <codeph>1-ANY</codeph>.</li>
                                         <li><codeph>action=<i>&lt;action></i></codeph>: Bei gestaffelten Preisen ist dies die Aktion, die durchgeführt wurde. Folgende Werte können ausgegeben werden: <codeph>INSERT</codeph> (ein gestaffelter Preis wurde definiert), <codeph>UPDATE</codeph> (ein gestaffelter Preis wurde geändert) oder <codeph>DELETE</codeph> (ein gestaffelter Preis wurde gelöscht). Falls keine gestaffelten Preise definiert sind, wird der Parameter <codeph>action</codeph> nicht im Aktionsprotokoll ausgegeben.</li>
                                         <li><codeph>recurringCharge=<i>&lt;Gebühr></i></codeph>: Gebühr, die für die Anzahl der Zeiteinheiten bezahlt werden muss, die Benutzer einem Abonnement zugeordnet sind.</li>
@@ -779,7 +779,7 @@
                                 <p>
                                     <ul>
                                         <li><codeph>currency=<i>&lt;Währung></i></codeph>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
-                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, täglich oder stundenweise abgerechnet werden.</li>
                                         <li><codeph>range=<i>&lt;Obergrenze></i></codeph>: Bei gestaffelten Preisen ist dies die Obergrenze, bis zu der der Preis gilt. Falls keine gestaffelten Preise definiert sind, ist die Obergrenze <codeph>1-ANY</codeph>.</li>
                                         <li><codeph>action=<i>&lt;action></i></codeph>: Bei gestaffelten Preisen ist dies die Aktion, die durchgeführt wurde. Folgende Werte können ausgegeben werden: <codeph>INSERT</codeph> (ein gestaffelter Preis wurde definiert), <codeph>UPDATE</codeph> (ein gestaffelter Preis wurde geändert) oder <codeph>DELETE</codeph> (ein gestaffelter Preis wurde gelöscht). Falls keine gestaffelten Preise definiert sind, wird der Parameter <codeph>action</codeph> nicht im Aktionsprotokoll ausgegeben.</li>
                                         <li><codeph>recurringCharge=<i>&lt;Gebühr></i></codeph>: Gebühr, die für die Anzahl der Zeiteinheiten bezahlt werden muss, die Benutzer einem Abonnement zugeordnet sind.</li>
@@ -807,7 +807,7 @@
                                             <p><codeph>subscriptionName=<i>&lt;Abo-Name></i></codeph>: Name des Abonnements, wie er beim Abonnieren angegeben wurde. </p>
                                         </li>
                                         <li><codeph>currency=<i>&lt;Währung></i></codeph>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
-                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, täglich oder stundenweise abgerechnet werden.</li>
                                         <li><codeph>range=<i>&lt;Obergrenze></i></codeph>: Bei gestaffelten Preisen ist dies die Obergrenze, bis zu der der Preis gilt. Falls keine gestaffelten Preise definiert sind, ist die Obergrenze <codeph>1-ANY</codeph>.</li>
                                         <li><codeph>action=<i>&lt;action></i></codeph>: Bei gestaffelten Preisen ist dies die Aktion, die durchgeführt wurde. Folgende Werte können ausgegeben werden: <codeph>INSERT</codeph> (ein gestaffelter Preis wurde definiert), <codeph>UPDATE</codeph> (ein gestaffelter Preis wurde geändert) oder <codeph>DELETE</codeph> (ein gestaffelter Preis wurde gelöscht). Falls keine gestaffelten Preise definiert sind, wird der Parameter <codeph>action</codeph> nicht im Aktionsprotokoll ausgegeben.</li>
                                         <li><codeph>recurringCharge=<i>&lt;Gebühr></i></codeph>: Gebühr, die für die Anzahl der Zeiteinheiten bezahlt werden muss, die Benutzer einem Abonnement zugeordnet sind.</li>
@@ -832,7 +832,7 @@
                                         <li><codeph>customerKey=<i>&lt;Organisations-ID></i></codeph>: ID der Kundenorganisation. </li>
                                         <li><codeph>customerName=<i>&lt;Organisationsname></i></codeph>: Name der Kundenorganisation. </li>
                                         <li><codeph>currency=<i>&lt;Währung></i></codeph>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
-                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, täglich oder stundenweise abgerechnet werden.</li>
                                         <li><codeph>userRole=<i>&lt;Rollenname></i></codeph>: Name der Servicerolle, wie er im zugrunde liegenden technischen Service definiert ist.</li>
                                         <li><codeph>price=<i>&lt;Preis></i></codeph>: Preis für Benutzer mit der Servicerolle. </li>
                                     </ul>
@@ -854,7 +854,7 @@
                                 <p>
                                     <ul>
                                         <li><codeph>currency=<i>&lt;Währung></i></codeph>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
-                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, täglich oder stundenweise abgerechnet werden.</li>
                                         <li><codeph>userRole=<i>&lt;Rollenname></i></codeph>: Name der Servicerolle, wie er im zugrunde liegenden technischen Service definiert ist.</li>
                                         <li><codeph>price=<i>&lt;Preis></i></codeph>: Preis für Benutzer mit der Servicerolle. </li>
                                     </ul>
@@ -881,7 +881,7 @@
                                             <p><codeph>subscriptionName=<i>&lt;Abo-Name></i></codeph>: Name des Abonnements, wie er beim Abonnieren angegeben wurde. </p>
                                         </li>
                                         <li><codeph>currency=<i>&lt;Währung></i></codeph>: ISO-Code der Währung, in der dem Kunden die Nutzungsgebühren in Rechnung gestellt werden. </li>
-                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, wöchentlich, täglich oder stundenweise abgerechnet werden.</li>
+                                        <li><codeph>timeUnit=<i>&lt;Zeiteinheit></i></codeph>: Zeiteinheit zur Berechnung der Nutzungsgebühren. Die Gebühren können monatlich, täglich oder stundenweise abgerechnet werden.</li>
                                         <li><codeph>userRole=<i>&lt;Rollenname></i></codeph>: Name der Servicerolle, wie er im zugrunde liegenden technischen Service definiert ist.</li>
                                         <li><codeph>price=<i>&lt;Preis></i></codeph>: Preis für Benutzer mit der Servicerolle. </li>
                                     </ul>

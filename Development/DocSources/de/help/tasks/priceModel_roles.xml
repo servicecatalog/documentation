@@ -16,7 +16,7 @@
         <cmd>Wählen Sie die Servicerolle, für die Sie Preise festlegen möchten. </cmd>
       </step>
       <step>
-        <cmd>Geben Sie im Feld <uicontrol>Preis für Benutzer</uicontrol> einen Wert ein, falls die Nutzungsbebühren pro Benutzer mit der Servicerolle monatlich, wöchentlich, täglich oder stundenweise in Rechnung gestellt werden sollen.</cmd>
+        <cmd>Geben Sie im Feld <uicontrol>Preis für Benutzer</uicontrol> einen Wert ein, falls die Nutzungsbebühren pro Benutzer mit der Servicerolle monatlich, täglich oder stundenweise in Rechnung gestellt werden sollen.</cmd>
         <info/>
       </step>
       <step>

@@ -30,7 +30,7 @@
           <ul compact="no" id="Select_task_taskbody_steps_step_2">
             <li>Wählen Sie <uicontrol>Kostenlos</uicontrol>, wenn der Service kostenlos zur Verfügung gestellt werden soll. </li>
             <li>Wählen Sie <uicontrol>Abrechnung pro rata</uicontrol>, wenn die Nutzungsgebühren für die exakte Nutzungsdauer in Millisekunden berechnet werden sollen.</li>
-            <li>Wählen Sie <uicontrol>Abrechnung pro Zeiteinheit</uicontrol>, wenn die Nutzungsgebühren für ganze Zeiteinheiten berechnet werden sollen, zum Beispiel Tage oder Wochen. Die Zeiteinheit wird im Feld <uicontrol>Abrechnungseinheit</uicontrol> festgelegt.</li>
+            <li>Wählen Sie <uicontrol>Abrechnung pro Zeiteinheit</uicontrol>, wenn die Nutzungsgebühren für ganze Zeiteinheiten berechnet werden sollen, zum Beispiel Tage oder Monate. Die Zeiteinheit wird im Feld <uicontrol>Abrechnungseinheit</uicontrol> festgelegt.</li>
           </ul>
           <p>Wenn Ihr Service kostenlos ist, fahren Sie mit Schritt 8 fort, ansonsten mit Schritt 3. </p>
         </info>
@@ -59,7 +59,7 @@
               <li id="Währung_task_taskbody_steps_step_5"
                 ><b>Währung</b>, in der mit dem Kunden abgerechnet wird. Der Plattform-Betreiber legt die unterstützten Währungen fest. Die Währung kann für ein Abo-Preismodell nicht geändert werden.</li>
               <li id="Abrechnungseinheit_task_taskbody_steps_step_5"
-                  ><b>Abrechnungseinheit</b>: Zeitspanne, nach der die Nutzungsgebühren abgerechnet werden. Eine monatliche, wöchentliche, tägliche oder stundenweise Abrechnung ist möglich. Die <uicontrol>Abrechnungseinheit</uicontrol> legt auch die Einheit fest, die bei <uicontrol>Abrechnung pro Zeiteinheit</uicontrol> verwendet wird. Die Zeiteinheit kann für ein Abo-Preismodell nicht geändert werden.</li>
+                  ><b>Abrechnungseinheit</b>: Zeitspanne, nach der die Nutzungsgebühren abgerechnet werden. Eine monatliche, tägliche oder stundenweise Abrechnung ist möglich. Die <uicontrol>Abrechnungseinheit</uicontrol> legt auch die Einheit fest, die bei <uicontrol>Abrechnung pro Zeiteinheit</uicontrol> verwendet wird. Die Zeiteinheit kann für ein Abo-Preismodell nicht geändert werden.</li>
               <li id="Einmalige_Gebühr_task_taskbody_steps_step_5"
                 ><b>Einmalige Gebühr</b> bei Abschluss eines Abonnements. Diese Gebühr wird zu den Nutzungsgebühren für den ersten Abrechnungszeitraum hinzugerechnet. </li>
               <li id="Preis_pro_Abo_task_taskbody_steps_step_5"

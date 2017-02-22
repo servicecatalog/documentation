@@ -86,18 +86,17 @@
                         <p id="If_the_calculation_is_pro_rat_concept_conbody_section_2_p"
                             >Customers are charged exactly for the time a service was used. </p>
                         <p id="Pro_rata_calculation_concept_conbody_section_2_p"
-                            >Switches to daylight saving time are considered in the cost calculation: When daylight saving time begins, the respective day has 23 hours. The related week and month time units are also shortened by one hour. When daylight saving time ends, the respective day has 25 hours. The related week and month time units are also extended by one hour.</p>
+                            >Switches to daylight saving time are considered in the cost calculation: When daylight saving time begins, the respective day has 23 hours. The related month time unit is also shortened by one hour. When daylight saving time ends, the respective day has 25 hours. The related month time unit is also extended by one hour.</p>
                     </li>
                     <li>
                         <p id="If_the_calculation_is_per_tim_concept_conbody_section_2_p"
-                                >The <b>per time unit calculation</b> is based on fixed time units (month, week, day, or hour). </p>
+                                >The <b>per time unit calculation</b> is based on fixed time units (month, day, or hour). </p>
                         <p id="If_the_calculation_is_per_tim_concept_conbody_section_2_p"
                             >Customers are charged for the time units during which they use a service. The time units are always fully charged, even if they are not fully used. The costs for a time unit are calculated for the billing period in which the unit ends. </p>
                         <p><ph id="The_time_unit_for_the_concept_conbody_section_2_p"
-                                    >The time unit can be defined as <b>Hour</b>, <b>Day</b>, <b>Week</b>, or <b>Month</b>.</ph> The start and end of each unit are pre-defined as follows: </p>
+                                    >The time unit can be defined as <b>Hour</b>, <b>Day</b>, or <b>Month</b>.</ph> The start and end of each unit are pre-defined as follows: </p>
                         <p><b>Hour</b>: From 00:00.000 to 59:59.999.</p>
                         <p><b>Day</b>: From 00:00:00.000 to 23:59:59.999.</p>
-                        <p><b>Week</b>: From Monday, 00:00:00.000, to Sunday, 23:59:59.999. </p>
                         <p><b>Month</b>: From the first day of the month, 00:00:00.000, to the last day of the month, 23:59:59.999.</p>
                     </li>
                     <li><p id="costcalc3"
