@@ -10,7 +10,10 @@
         <section>
             <p>The following sections give an overview of the resources which must be provided for the <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> domain (<codeph>bes-domain</codeph>) on the application server. </p>
+                    /> domain (<codeph>bes-domain</codeph>) on the application server. They are also available in:</p>
+            <p>
+                <codeblock>domains\bes-domain\installer\resources-template.xml</codeblock>
+            </p>
         </section>
         <section>
             <title>Data Source</title>
@@ -61,13 +64,13 @@
             <p>The following JMS queues and corresponding connection factories are required for asynchronous processing:</p>
             <p>
                 <ol>
-                    <li><b>Trigger queue: </b><p>Queue name: <codeph>jms/bss/triggerQueue</codeph></p><p>Connection factory name: <codeph>jms/bss/triggerQueueFactory</codeph>
+                    <li><b>Trigger queue: </b><p>Queue name: <codeph>jms/bss/triggerQueue</codeph></p><p>Connection factory name: <codeph>jms/bss/triggerQueueFactoryConPool</codeph>
                         </p></li>
-                    <li><b>Task queue: </b><p>Queue name: <codeph>jms/bss/taskQueue</codeph></p><p>Connection factory name: <codeph>jms/bss/taskQueueFactory</codeph>
+                    <li><b>Task queue: </b><p>Queue name: <codeph>jms/bss/taskQueue</codeph></p><p>Connection factory name: <codeph>jms/bss/taskQueueFactoryConPool</codeph>
                         </p></li>
-                    <li><b>Indexer queue: </b><p>Queue name: <codeph>jms/bss/indexerQueue</codeph></p><p>Connection factory name: <codeph>jms/bss/indexerQueueFactory</codeph>
+                    <li><b>Indexer queue: </b><p>Queue name: <codeph>jms/bss/indexerQueue</codeph></p><p>Connection factory name: <codeph>jms/bss/indexerQueueFactoryConPool</codeph>
                         </p></li>
-                    <li><b>Master indexer queue:</b><p>Queue name: <codeph>jms/bss/masterIndexerQueue</codeph></p><p>Connection factory name: <codeph>jms/bss/masterIndexerQueueFactory</codeph>
+                    <li><b>Master indexer queue:</b><p>Queue name: <codeph>jms/bss/masterIndexerQueue</codeph></p><p>Connection factory name: <codeph>jms/bss/masterIndexerQueueFactoryConPool</codeph>
                         </p></li>
                 </ol>
             </p>
@@ -93,19 +96,8 @@
                                     <codeph>250</codeph> connections </entry>
                             </row>
                             <row>
-                                <entry colname="col1">
-                                    <b>Pool resize quantity</b>
-                                </entry>
-                                <entry colname="col2">
-                                    <codeph>2</codeph> connections </entry>
-                            </row>
-                            <row>
                                 <entry><b>Idle timeout</b></entry>
                                 <entry><codeph>600</codeph> seconds</entry>
-                            </row>
-                            <row>
-                                <entry><b>Max wait time</b></entry>
-                                <entry><codeph>60000</codeph> milliseconds</entry>
                             </row>
                             <row>
                                 <entry><b>On any failure</b></entry>
@@ -221,6 +213,11 @@
                             <entry colname="col2">
                                 <codeph>password</codeph>
                             </entry>
+                        </row>
+                        <row>
+                            <entry colname="col1"><b>mail-smtp-connectiontimeout</b></entry>
+                            <entry colname="col2">
+                                <codeph>30000</codeph></entry>
                         </row>
                     </tbody>
                 </tgroup>
