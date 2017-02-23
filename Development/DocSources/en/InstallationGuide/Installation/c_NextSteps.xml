@@ -8,13 +8,39 @@
                 <section>
                         <p>After you have successfully completed the installation of <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                        />, you can optionally change the URL to be used for accessing the <ph
+                                        />, you can <ph product="oscm_ce">deploy BIRT in order to enable reports and </ph>optionally change the URL to be used for accessing the <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                         /> administration portal and the marketplaces. You can then start to set up the <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                         /> organizations using the <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                 /> administration portal. </p>
+                </section>
+
+                <section product="oscm_ce">
+                        <title>Deploying BIRT</title>
+                        <p>### is the deployment of birt also required for CT-MG Enterprise edition? ### </p>
+                        <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        /> uses BIRT to generate reports. BIRT is not included in the <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> packages. To be able to generate reports, you need to obtain and manually deploy BIRT on your own. </p>
+                        <p>Proceed as follows:</p>
+                        <ol>
+                                <li>Download the latest version of Eclipse BIRT runtime, for example, from http://www.eclipse.org.</li>
+                                <li>Deploy the <codeph>birt.war</codeph> archive to a domain on the application server which you use for <ph
+                                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                />. You can deploy the archive to the <codeph>bes-domain</codeph> domain of OSCM or a separate domain.</li>
+                                <li>Add the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                /> report designs and localized labels to the folder of the <codeph>birt</codeph> application on the application server. <p>The <ph
+                                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                        /> report designs and labels are available in the following archive provided for each release: <codeph>oscm-reports.zip</codeph>. Extract the contents of this archive to the root folder of the <codeph>birt</codeph> application, <codeph>&lt;GLASSFISH_HOME>/glassfish/domains/&lt;domain>/applications/birt</codeph>.</p></li>
+                                <li>Restart <codeph>birt</codeph>.</li>
+                        </ol>
+                        <p>Each time you install a new release of <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        />, you should also check for new releases of BIRT and changes in the <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> report designs and labels and update them as required. </p>
                 </section>
                 <section>
                         <title>Setting the Context Root</title>
