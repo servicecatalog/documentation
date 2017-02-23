@@ -30,7 +30,7 @@
                                             href="../../APPInt/APP/r_ConfigSettings.xml"/>.</ph>
                                     <p>The initial installation stores these settings in the <ph audience="BSS"
                                                 ><codeph>bss</codeph></ph><ph audience="app"
-                                            ><codeph>bssapp</codeph></ph> database, where you can change them later, if required. An update installation only adds new settings to the database but does not overwrite existing ones.</p></li>
+                                            ><codeph>bssapp</codeph></ph> database, where you can change them later, if required. An update installation only adds new settings to the database but does not overwrite existing ones. In case that mandatory settings are missing, an error is thrown, and you need to add these settings manually before executing the installation scripts. </p></li>
                                 <li audience="app"
                                             ><codeph>configsettings_controller.properties</codeph>: In this file, you can specify settings for a service controller which you want to register when installing APP. <p>The initial installation stores these settings in the <codeph>bssapp</codeph> database. You can change them later using a graphical user interface. </p>For details, refer to <xref
                                         href="../../APPInt/APP/t_RegisterAPP.xml"/>. </li>

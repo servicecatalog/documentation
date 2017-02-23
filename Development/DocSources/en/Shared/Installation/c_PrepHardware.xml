@@ -15,8 +15,13 @@
                     >APP</ph><ph> as a Java application does not rely on specific hardware or operating systems. It can be deployed on any platform supported by the application server and the database management system</ph>.</p>
             <p audience="BSS"><ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> without any data requires about 150 MB of disk space.</p>
-            <p audience="BSS">Apart from this, <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> does not have specific requirements as to the power, performance, capacity, or configuration of CPUs, memory, and disks. <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> is usually deployed as part of a Cloud platform for which the most powerful and efficient hardware is used anyway.</p>
+            <p audience="BSS">The installation scripts automatically assign 1 GB of memory for <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        />. Apart from this, <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        /> does not have specific requirements as to the power, performance, capacity, or configuration of CPUs, memory, and disks. <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> is usually deployed as part of a Cloud platform for which the most powerful and efficient hardware is used anyway.</p>
         </section>
     </conbody>
 </concept>

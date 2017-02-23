@@ -18,6 +18,7 @@
                 </section>
                 <section product="oscm_ce">
                         <title>Deploying BIRT</title>
+                        <p>### is the deployment of birt also required for CT-MG Enterprise edition? ### </p>
                         <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                         /> uses BIRT to generate reports. BIRT is not included in the <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
@@ -72,14 +73,16 @@ Proceed as follows:</p>
                         </title>
                         <p>You can access the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                 /> administration portal in a Web browser using an URL in the following format: </p>
-                        <p><codeph>https://&lt;server&gt;:&lt;port&gt;/&lt;context-root></codeph> or </p>
-                        <p><codeph>http://&lt;server&gt;:&lt;port&gt;/&lt;context-root></codeph>
+                        <p><codeph>https://&lt;server&gt;:&lt;port&gt;/&lt;context-root>/&lt;tenant-id></codeph> or </p>
+                        <p><codeph>http://&lt;server&gt;:&lt;port&gt;/&lt;context-root>/&lt;tenant-id></codeph>
                         </p>
                         <p><codeph>&lt;server&gt;</codeph> is the host of the application server where <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                         /> has been deployed. <codeph>&lt;port&gt;</codeph> is the port to address the application server (default: <codeph>8080</codeph> for HTTP, <codeph>8081</codeph> for HTTPS). <codeph>&lt;context-root></codeph> is the context root of <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                        /> (default: <codeph>oscm-portal</codeph>). </p>
+                                        /> (default: <codeph>oscm-portal</codeph>). <codeph>&lt;tenant-id></codeph> is the ID of the tenant specified when installing <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> in SAML_SP mode. If installed in INTERNAL mode, the tenant ID is not appended to the URL.   </p>
                         <p>You are prompted for a user ID and password. </p>
                         <p>Depending on the authentication mode, the initial credentials are the following: </p>
                         <ul>
