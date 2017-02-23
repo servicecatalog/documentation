@@ -8,7 +8,10 @@
     <title>Search Indexer Application Domain</title>
     <refbody>
         <section>
-            <p>The following sections provide an overview of the resources which must be provided for the search indexer application domain (<codeph>master-indexer-domain</codeph>) on the application server. </p>
+            <p>The following sections provide an overview of the resources which must be provided for the search indexer application domain (<codeph>master-indexer-domain</codeph>) on the application server. They are also available in:</p>
+            <p>
+                <codeblock>domains\indexer-domain\installer\resources-template.xml</codeblock>
+            </p>
         </section>
         <section>
             <title>Data Source</title>
