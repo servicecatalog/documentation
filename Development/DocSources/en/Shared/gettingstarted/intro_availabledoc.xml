@@ -78,6 +78,7 @@
                                                         ><ph><i>Systemwalker Runbook Automation Integration Guide:</i> A PDF manual for operators describing how to offer and use automated operation processes of Systemwalker Runbook Automation through services in <ph
                                                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                                                 />.</ph></li>
+                                <li>### Add Azure Controller ###</li>
                                 <li product="oscm_ee"
                                                         ><ph><i>IaaS Integration Guide:</i> A PDF manual for operators describing how to offer and use virtual systems on different platforms through services in <ph
                                                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
