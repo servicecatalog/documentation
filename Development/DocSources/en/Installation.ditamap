@@ -123,6 +123,9 @@
             href="InstallationGuide/Installation/t_InstAppServer.xml"
             type="task"/>
 		<topicref format="dita"
+            href="InstallationGuide/Installation/c_DeployBirt.xml"
+            type="concept"/>
+        <topicref format="dita"
             href="InstallationGuide/Installation/c_NextSteps.xml"
             type="concept"/>
 		<topicref format="dita"
