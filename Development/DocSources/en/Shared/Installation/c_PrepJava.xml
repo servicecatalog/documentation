@@ -11,7 +11,7 @@
                     audience="app">APP</ph><ph audience="ror">The ROR integration software</ph><ph audience="aws"
                     >The AWS integration software</ph><ph audience="os">The OpenStack integration software</ph><ph
                     audience="tps5">The TPS5 integration software</ph><ph audience="vmware"
-                    >The vSphere integration software</ph>
+                    >The vSphere integration software</ph><ph audience="azure">The Azure integration software</ph>
                 <ph id="requires_a_Java_Development_K_concept_conbody_section_p_1"
                     >requires a Java Development Kit (JDK), version 8, 64 bit. Deployment with JDK 8, Update 80 has been tested and is recommended. </ph></p>
             <!--p

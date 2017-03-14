@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd">
+<concept id="id_112">
+  <title>Usage Scenarios</title>
+  <conbody>
+    <section>
+      <p>The <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+        /> Azure integration supports the following usage scenarios: </p>
+      <ul compact="no">
+        <li><b>Provisioning of virtual machines in existing resource groups</b>: When a customer subscribes to a corresponding service on a <ph
+            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+          /> marketplace, the service controller triggers the Azure Resource Manager to deploy one or more virtual machines to a given resource group with a complete network configuration. Depending on the service parameters, a new storage account is created or an existing one is used.</li>
+        <li><b>Provisioning of resource groups with virtual machines</b>: When a customer subscribes to a corresponding service on a <ph
+            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+          /> marketplace, the service controller triggers the Azure Resource Manager to deploy a new resource group with the network configuration, storage account, and virtual machines specified by the service parameters. </li>
+        <li><b>Starting and stopping virtual machines</b>: By executing the respective service operation at a subscription, the customer can start and stop the virtual machines created for the subscription. </li>
+        <li><b>Deletion of resources</b>: When a customer terminates a subscription, the service controller triggers the Azure Resource Manager to delete all the resources (virtual machines, storage account, resource group) created for the subscription. The subscription is terminated in <ph
+            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+          /> independent of whether the deletion in Azure is successful. </li>
+      </ul>
+      <p>In Azure, the virtual machines and resource groups created for <ph
+          conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+        /> subscriptions are managed in the same way as other resources. They can be viewed and monitored with the available Azure tools.</p>
+      <p>Modifying a subscription and thereby triggering modifications of the resources in Azure is not supported. For more details on the supported usage scenarios, refer to <xref
+          href="../Using/c_UsingIntro.xml"/>.</p>
+    </section>
+  </conbody>
+</concept>

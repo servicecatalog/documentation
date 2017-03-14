@@ -7,15 +7,16 @@
 <concept id="concept_1BCF5C425D7D4627AB1C66A085CF6E11"
             xml:lang="en-us">
         <title>Installing the <ph audience="ror">ROR</ph><ph audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph
-                        audience="tps5">TPS5</ph><ph audience="vmware"
-                >VMware</ph> Service Controller in an Existing APP Environment</title>
+                        audience="tps5">TPS5</ph><ph audience="vmware">VMware</ph><ph audience="azure"
+                >Azure</ph> Service Controller in an Existing APP Environment</title>
         <conbody>
                 <p>If you already have a working APP installation in your environment, you can use it for the <ph
                                 audience="ror">ROR</ph><ph audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph
-                                audience="tps5">TPS5</ph><ph audience="vmware"
-                                >vSphere</ph> integration and simply register the <ph audience="ror">ROR</ph><ph
+                                audience="tps5">TPS5</ph><ph audience="vmware">vSphere</ph><ph audience="azure"
+                                >Azure</ph> integration and simply register the <ph audience="ror">ROR</ph><ph
                                 audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph audience="tps5">TPS5</ph><ph
-                                audience="vmware">VMware</ph> service controller in it.<ph audience="vmware"
+                                audience="vmware">VMware</ph><ph audience="azure"
+                                >Azure</ph> service controller in it.<ph audience="vmware"
                                 > In addition, you need to setup the VMware service controller database.</ph> Proceed as follows:</p>
                 <p>
                         <ol>
@@ -80,16 +81,18 @@
                                         </p><note>It may be required to enclose <codeph>-Ddb.dir=controller_db</codeph> in double or single quotes depending on the operating system. </note><p>Usually, you do not need to change the settings once they have been imported into the database.</p><p>The <codeph>vcenter.csv</codeph> file specifies the URL and user credentials for accessing the vSphere server. For security reasons, it is recommended that you delete the file as soon as you have successfully installed and configured the VMware integration software.</p></li>
                                 <li>Deploy the <ph audience="ror">ROR</ph><ph audience="aws">AWS</ph><ph audience="os"
                                                 >OpenStack</ph><ph audience="tps5">TPS5</ph><ph audience="vmware"
-                                                >VMware</ph> service controller to the <codeph>app-domain</codeph> domain. To do this, you use the GlassFish administration console, for example: <p><codeph>http://127.0.0.1:8848/</codeph></p><p>The <ph
+                                                >VMware</ph><ph audience="azure"
+                                                >Azure</ph> service controller to the <codeph>app-domain</codeph> domain. To do this, you use the GlassFish administration console, for example: <p><codeph>http://127.0.0.1:8848/</codeph></p><p>The <ph
                                                         audience="ror"><codeph>oscm-app-ror.ear</codeph></ph><ph
                                                         audience="aws"><codeph>oscm-app-aws.ear</codeph></ph><ph
                                                         audience="os"><codeph>oscm-app-openstack.ear</codeph></ph><ph
                                                         audience="tps5"><codeph>oscm-app-tps5.ear</codeph></ph><ph
-                                                        audience="vmware"
-                                                        ><codeph>oscm-app-vmware.ear</codeph></ph> file of the service controller is located in <codeph>&lt;install_pack_dir&gt;/domains/app_domain/applications</codeph></p></li>
+                                                        audience="vmware"><codeph>oscm-app-vmware.ear</codeph></ph><ph
+                                                        audience="azure"
+                                                        ><codeph>oscm-app-azure.ear</codeph></ph> file of the service controller is located in <codeph>&lt;install_pack_dir&gt;/domains/app_domain/applications</codeph></p></li>
                                 <li>Register the <ph audience="ror">ROR</ph><ph audience="aws">AWS</ph><ph audience="os"
                                                 >OpenStack</ph><ph audience="tps5">TPS5</ph><ph audience="vmware"
-                                                >VMware</ph> service controller as follows in APP: <p>
+                                                >VMware</ph><ph audience="azure">Azure</ph> service controller as follows in APP: <p>
                                                 <ol>
                                                         <li>In a Web browser, access the base URL of APP, for example: <codeph>http://127.0.0.1:8880/oscm-app</codeph></li>
                                                         <li>Log in with the ID and password of the user and organization defined in the <codeph>configsettings.properties</codeph> file of APP (<codeph>BSS_USER_ID</codeph> and <codeph>BSS_USER_PWD</codeph>). </li>
@@ -98,17 +101,19 @@
                                                             ><codeph>ess.aws</codeph></ph><ph audience="os"
                                                             ><codeph>ess.openstack</codeph></ph><ph audience="tps5"
                                                             ><codeph>ess.tps5</codeph></ph><ph audience="vmware"
-                                                            ><codeph>ess.vmware</codeph></ph>) and the technology provider organization responsible for the <ph
+                                                            ><codeph>ess.vmware</codeph></ph><ph audience="azure"
+                                                            ><codeph>ess.azureARM</codeph></ph>) and the technology provider organization responsible for the <ph
                                                             audience="ror">ROR</ph><ph audience="aws">AWS</ph><ph
                                                             audience="os">OpenStack</ph><ph audience="tps5">TPS5</ph><ph
-                                                            audience="vmware">VMware</ph> service controller.</li>
+                                                            audience="vmware">VMware</ph><ph audience="azure"
+                                                            >Azure</ph> service controller.</li>
                                                         <li>Click <uicontrol>Save Configuration</uicontrol> to save the settings.</li>
                                                 </ol>
                                         </p></li>
                                 <li>Configure the <ph audience="ror">ROR</ph><ph audience="aws">AWS</ph><ph
                                                 audience="os">OpenStack</ph><ph audience="tps5">TPS5</ph><ph
-                                                audience="vmware"
-                                                >VMware</ph> service controller following the instructions in <xref
+                                                audience="vmware">VMware</ph><ph audience="azure"
+                                                >Azure</ph> service controller following the instructions in <xref
                                                 href="c_UpdateConfiguration.xml"/>.</li>
                                 <li audience="tps5"
                                                 >Import the certificate of TPS5 into the truststore of the <codeph>app-domain</codeph> application server domain of the TPS5 integration software: <p>
@@ -156,9 +161,24 @@
                                                             </p></li>
                                                 </ol>
                                         </p></li>
+                                <li audience="azure"
+                                                >Import the certificate of Azure into the truststore of the <codeph>app-domain</codeph> application server domain: <p>
+                                                <ol>
+                                                        <li 
+                                                            >Obtain a <codeph>.crt</codeph> file with the certificate of Azure. The <codeph>.crt</codeph> file can be created, for example, in the following way:<p>Open the base management URL of Azure (<codeph>https://management.azure.com</codeph>) in a Web browser. View the certificate of the page and export it to a file using the standard procedures of the Web browser.</p></li>
+                                                        <li 
+                                                            >Import the Azure certificate from the <codeph>.crt</codeph> file you created, for example, by executing the following command at the command prompt (Windows) or in a terminal session (UNIX/Linux) on the application server: <p>
+                                                            <codeblock>&lt;AppServerJRE>/bin/keytool -import -trustcacerts -alias &lt;alias>
+   -file &lt;filename>.crt -storepass &lt;password> -keystore
+   &lt;GLASSFISH_HOME>/glassfish/domains/app-domain/config/cacerts.jks</codeblock>
+                                                            </p></li>
+                                                </ol>
+                                        </p></li>
                                 <li audience="vmware">Stop and restart the <codeph>app-domain</codeph> and the <codeph>bes-domain</codeph> domains for the certificate to become effective.</li>
                                 <li audience="tps5">Stop and restart the <codeph>app-domain</codeph> and the <codeph>bes-domain</codeph> domains for the certificate to become effective.</li>
                                 <li audience="ror">Stop and restart the <codeph>app-domain</codeph> and the <codeph>bes-domain</codeph> domains for the certificate to become effective.</li>
+                                <li audience="azure"
+                                                >Stop and restart the <codeph>app-domain</codeph> and the <codeph>bes-domain</codeph> domains for the certificate to become effective.</li>
                         </ol>
                 </p>
                 <p/>

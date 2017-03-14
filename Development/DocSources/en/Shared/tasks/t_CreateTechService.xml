@@ -10,8 +10,8 @@
         <context>
             <p>The first step in providing <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> services for <ph audience="aws">AWS</ph><ph audience="ror">ROR</ph><ph audience="os"
-                    >OpenStack</ph><ph audience="tps5">TPS5</ph><ph audience="vmware"
-                >vSphere</ph> is to create one or more technical services. </p>
+                    >OpenStack</ph><ph audience="tps5">TPS5</ph><ph audience="vmware">vSphere</ph><ph audience="azure"
+                    >Azure</ph> is to create one or more technical services. </p>
             <p>Proceed as follows:</p>
         </context>
         <steps>
@@ -56,6 +56,13 @@
                     <p audience="vmware"
                         >The vSphere integration package, <codeph>oscm-vmware-install-pack.zip</codeph>, includes a technical service as a sample. Use the sample as a basis for defining your own technical services as required:</p>
                     <p audience="vmware"><codeph>samples/TechnicalService_VMware.xml</codeph></p>
+                    <p audience="azure"
+                        >The Azure integration package, <codeph>oscm-azure-install-pack.zip</codeph>, includes technical services as samples:</p>
+                    <p audience="azure"><codeph>samples/TechnicalService.xml</codeph></p>
+                    <p audience="azure"
+                            >The technical service specifies sample resource manager templates and parameter definition files as parameter options. These files are available in the same directory, their names indicating the technical service they belong to. In order to use these files or adapted versions thereof, copy them to a location hat can be accessed from <ph
+                            conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> and the Azure integration software by HTTP or HTTPS at runtime, for example, the <codeph>docroot/templates</codeph> directory of the <codeph>app-domain</codeph> domain in your application server.</p>
                    <p>In the technical service definition, be sure to specify:</p>
                     <ul>
                         <li>The asynchronous provisioning type </li>
@@ -64,6 +71,7 @@
                         <li audience="os">The direct access type </li>
                         <li audience="tps5">The direct access type </li>
                         <li audience="vmware">The direct access type </li>
+                        <li audience="azure">The direct access type </li>
                         <li audience="ror"
                             >Service parameters which represent the virtual platform templates and virtual server images defined in ROR. For details on the supported service parameters, refer to <xref
                                 href="../../RORIntegrationGuide/Appendix/r_ServiceParameters.xml"/>.</li>
@@ -78,13 +86,16 @@
                         <li audience="vmware"
                                 >Service parameters which represent the VM templates defined in vSphere as well as the naming, location, and sizing parameters for the VMs to be provisioned. Service parameters also define the network setup in vSphere and the configuration of the VMs. For details on the supported service parameters, refer to <xref
                                 href="../../VMWareIntegrationGuide/Appendix/r_ServiceParameters.xml"/>.</li>
+                        <li audience="azure"
+                                >Service parameters which match the ones specified in the given resource manager template. For details on the supported service parameters, refer to <xref
+                                href="../../AzureIntegrationGuide/Appendix/r_ServiceParameters.xml"/>.</li>
                         
                     </ul>
                     <p>
                         <note>Make sure that you do not specify the <codeph>baseUrl</codeph> attribute in the technical service definition XML file. It specifies an application's remote interface and is not needed for providing <ph
                                 conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> services for <ph
                                 audience="ror">ROR</ph><ph audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph
-                                audience="tps5">TPS5</ph><ph audience="vmware">vSphere</ph>. </note>
+                                    audience="tps5">TPS5</ph><ph audience="vmware">vSphere</ph><ph audience="azure">Azure</ph>. </note>
                     </p>
                 </info>
             </step>

@@ -10,27 +10,32 @@
         <context id="The_task_taskbody_context">
             <p>The <ph audience="ror">ROR integration</ph><ph audience="aws">AWS integration</ph><ph audience="os"
                     >OpenStack integration</ph><ph audience="tps5">TPS5 integration</ph><ph audience="vmware"
-                    >vSphere integration</ph> software and setup utilities are provided in the <ph audience="ror"
+                    >vSphere integration</ph><ph audience="azure"
+                    >Azure integration</ph> software and setup utilities are provided in the <ph audience="ror"
                         >ROR integration package, <codeph>oscm-ror-install-pack.zip</codeph></ph><ph audience="aws"
                         >AWS integration package, <codeph>oscm-aws-install-pack.zip</codeph></ph><ph audience="os"
                         >OpenStack integration package, <codeph>oscm-openstack-install-pack.zip</codeph></ph><ph
                     audience="tps5">TPS5 integration package, <codeph>oscm-tps5-install-pack.zip</codeph></ph><ph
-                    audience="vmware"
-                >vSphere integration package, <codeph>oscm-vmware-install-pack.zip</codeph></ph>. The contents of the package need to be made available in your environment as follows: </p>
+                    audience="vmware">vSphere integration package, <codeph>oscm-vmware-install-pack.zip</codeph></ph><ph
+                    audience="azure"
+                >Azure integration package, <codeph>oscm-azure-install-pack.zip</codeph></ph>. The contents of the package need to be made available in your environment as follows: </p>
             <p>Extract the contents of the <ph audience="ror"><codeph>oscm-ror-install-pack.zip</codeph></ph><ph
                     audience="aws"><codeph>oscm-aws-install-pack.zip</codeph></ph><ph audience="os"
                         ><codeph>oscm-openstack-install-pack.zip</codeph></ph><ph audience="tps5"
                         ><codeph>oscm-tps5-install-pack.zip</codeph></ph><ph audience="vmware"
-                        ><codeph>oscm-vmware-install-pack.zip</codeph></ph> package to a separate temporary directory on the system from where you want to install and deploy the <ph
+                        ><codeph>oscm-vmware-install-pack.zip</codeph></ph><ph audience="azure"
+                        ><codeph>oscm-azure-install-pack.zip</codeph></ph> package to a separate temporary directory on the system from where you want to install and deploy the <ph
                     audience="ror">ROR</ph><ph audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph
-                    audience="tps5">TPS5</ph><ph audience="vmware">vSphere</ph> integration software. </p>
+                    audience="tps5">TPS5</ph><ph audience="vmware">vSphere</ph><ph audience="azure"
+                >Azure</ph> integration software. </p>
             <p>In the following sections, this directory is referred to as <codeph>&lt;install_pack_dir></codeph>.</p>
             <p>After extraction, the following directories are available: <ul>
                     <li><ph><codeph><b>databases/app_db</b></codeph></ph><p>Configuration files for setting up the database used by <ph
                                 audience="app">APP</ph><ph audience="ror">the ROR integration software</ph><ph
                                 audience="aws">the AWS integration software</ph><ph audience="os"
                                 >the OpenStack integration software</ph><ph audience="tps5"
-                                >the TPS5 integration software</ph><ph audience="vmware"
+                                >the TPS5 integration software</ph><ph audience="azure"
+                                >the Azure integration software</ph><ph audience="vmware"
                                 >the vSphere integration software for storing its own data</ph>. </p></li>
                     <li audience="vmware">
                         <p><codeph><b>databases/controller_db</b></codeph></p>
@@ -51,6 +56,7 @@
                         <p audience="os">The <i>OpenStack Integration</i> guide (this manual).</p>
                         <p audience="tps5">The <i>Trusted Public S5 Integration</i> guide (this manual).</p>
                         <p audience="vmware">The <i>VMware vSphere Integration</i> guide (this manual).</p>
+                        <p audience="azure">The <i>Microsoft Azure Integration</i> guide (this manual).</p>
                     </li>
                     <li>
                         <p><ph><codeph><b>domains/app_domain</b></codeph></ph></p>
@@ -59,7 +65,8 @@
                                 <li>Configuration file (<codeph>glassfish.properties</codeph>) for setting up the application server resources for the domain to which the <ph
                                         audience="ror">ROR</ph><ph audience="aws">AWS</ph><ph audience="os"
                                         >OpenStack</ph><ph audience="tps5">TPS5</ph><ph audience="vmware"
-                                    >vSphere</ph> integration software is to be deployed. </li>
+                                        >vSphere</ph><ph audience="azure"
+                                    >Azure</ph> integration software is to be deployed. </li>
                                 <li><codeph>applications</codeph>: The APP application (<codeph>oscm-app.ear</codeph>) <ph
                                         audience="ror"
                                         >and the ROR service controller (<codeph>oscm-app-ror.ear</codeph>)</ph><ph
@@ -70,7 +77,9 @@
                                         audience="tps5"
                                             >and the TPS5 service controller (<codeph>oscm-app-tps5.ear</codeph>)</ph><ph
                                         audience="vmware"
-                                            >and the VMware service controller (<codeph>oscm-app-vmware.ear</codeph>)</ph>. </li>
+                                            >and the VMware service controller (<codeph>oscm-app-vmware.ear</codeph>)</ph><ph
+                                        audience="azure"
+                                            >and the Azure service controller (<codeph>oscm-app-azure.ear</codeph>)</ph>. </li>
                                 <li audience="tps5"
                                     ><codeph>applib</codeph>: Folder for the required TPS5 libraries. See below for details.</li>
                             </ul>
@@ -100,6 +109,10 @@
                     <li audience="vmware">
                         <p><codeph><b>samples</b></codeph></p>
                         <p>Technical service sample and a sample script file for changing the Linux root password.</p>
+                    </li>
+                    <li audience="azure">
+                        <p><codeph><b>samples</b></codeph>: </p>
+                        <p>Templates for the Azure Resource Manager and corresponding technical service samples.</p>
                     </li>
                 </ul></p>
         </context>

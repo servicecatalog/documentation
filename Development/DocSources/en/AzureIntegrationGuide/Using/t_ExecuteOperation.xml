@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<task id="task_E68E2024B1F6403AAA1130A39B1D4DCD" xml:lang="en-us">
+    <title>Executing Service Operations</title>
+    <taskbody>
+        <context>
+            <p>Customers can explicitly start and stop the virtual machines created for a specific subscription in Azure from <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />. To do this, they execute the appropriate service operation at the subscription:</p>
+            <ul>
+                <li><b>Start</b>: Starts all virtual machines created for the subscription if they were stopped.</li>
+                <li><b>Stop</b>: Stops all virtual machines created for the subscription if they were started.</li>
+            </ul>
+            <p>As a prerequisite, the service operations must be defined in the technical service underlying the subscription.</p>
+            <p>Customers can view the status of all operations they started in their account information on the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> marketplace.</p>
+        </context>
+    </taskbody>
+</task>

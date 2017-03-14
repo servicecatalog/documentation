@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_1BCF5C425D7D4627AB1C66A085CF6E11" xml:lang="en-us">
+        <title>Using Azure Services in <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>
+        </title>
+        <conbody>
+                <p>The following sections describe how users can subscribe to and work with the services you have created for Azure in <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                />. You will find details of the supported usage scenarios outlined in <xref
+                                href="../Intro/c_Scenarios.xml"/>. </p>
+        </conbody>
+</concept>

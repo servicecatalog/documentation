@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd" >
+<reference id="Service_Parameters_114">
+  <title>Service Parameters and Operations</title>
+  <refbody>
+    <section>
+      <p>The following sections describe the technical service parameters and service operations which are supported by the AWS service controller. </p>
+    </section>
+    <section>
+      <title>Service Parameters</title>
+      <p>The AWS service controller supports the parameters below.</p>
+      <p>
+        <note>All parameters defined in the technical service definition must be one-time parameters, since the modification of parameters is not supported. Be sure to set their <codeph>modificationType</codeph> to <codeph>ONE_TIME</codeph>. </note>
+      </p>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>APP_CONTROLLER_ID</b></p>
+                <p>Mandatory. The ID of the service controller as defined in its implementation. The ID is set during the installation of the AWS integration software.</p>
+                <p>Default (must not be changed): <codeph>ess.aws</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>DISK_SIZE</b></p>
+                <p>Optional. The maximum disk size of the virtual server to be instantiated. The value is a number specifying the size in GB. If not specified, the default size for the selected type of server is used.</p>
+                <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers or, in case you specify more than one disk size, have fixed parameter options for selection.</p>
+                <p>Example: <codeph>3</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>IMAGE_NAME</b></p>
+                <p>Mandatory. Name of the AMI which is the basis for virtual servers. </p>
+                <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers or, in case you specify more than one image, have fixed parameter options for selection.</p>
+                <p>Example: <codeph>ami-0d77397e</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>INSTANCENAME</b></p>
+                <p>Mandatory. The name of the virtual server to be instantiated. This name must be specified by customers when they subscribe to a corresponding service. The string given in <codeph>INSTANCENAME_PREFIX</codeph> is prepended to the name. The name including the prefix must match the pattern given in <codeph>INSTANCENAME_PATTERN</codeph>.</p>
+                <p>As the instance name is stored as a tag on the Amazon EC2 instance, the maximum length is 255 Unicode characters.</p>
+                <p>Example: <codeph>MyServer</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>INSTANCENAME_PATTERN</b></p>
+                <p>Mandatory. A regular expression specifying a pattern for the virtual server instance names entered by the users when they subscribe to a corresponding service. If the names do not match the pattern, the subscription is rejected.</p>
+                <p>The regular expression must be specified in the technical service definition.</p>
+                <p>Example: <codeph>.*{1,255}</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>INSTANCENAME_PREFIX</b></p>
+                <p>Optional. A string to be prepended to the virtual server instance names entered by the users when they subscribe to a corresponding service. </p>
+                <p>The string must be specified in the technical service definition.</p>
+                <p>Example: <codeph>aws</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>INSTANCE_TYPE</b></p>
+                <p>Mandatory. The type of the virtual server to be instantiated. Any valid Amazon EC2 instance type can be specified. In the sample technical service, the following types are defined:</p>
+                <ul>
+                  <li><b>t1.micro</b></li>
+                  <li><b>t1.small</b></li>
+                  <li><b>t1.medium</b></li>
+                </ul>
+                <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers or, in case you specify more than one type, have fixed parameter options for selection.</p>
+                <p>Example: <codeph>t1.micro</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>KEY_PAIR_NAME</b></p>
+                <p>Mandatory. The key pair name of the virtual server to be instantiated. </p>
+                <p>The key pair name must be specified by the customer when subscribing to an AWS service. To log in to the instance, the customer must enter the key pair name and the associated private key.</p>
+                <p>For details on creating key pairs, refer to the user documentation of Amazon Web Services.</p>
+                <p>Example: <codeph>my-key-pair</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>MAIL_FOR_COMPLETION</b></p>
+                <p>Optional. The address to which emails are to be sent that describe manual steps required to complete an operation. If you specify this parameter, the service controller interrupts the processing of each operation before its completion and waits for a notification about the execution of a manual action. Omit this parameter if you do not want to interrupt the processing. </p>
+                <p>Example: <codeph>info@company.com</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>PUBLIC_IP</b></p>
+                <p>Optional. Specifies whether the virtual server to be instantiated is to be assigned a public IP address. The value can be <codeph>true</codeph> or <codeph>false</codeph>. If not specified, the default is <codeph>false</codeph>. </p>
+                <p>Example: <codeph>true</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>REGION </b></p>
+                <p>Mandatory. The region where the data center hosting the virtual servers is located. Any valid region can be specified. In the sample technical service, the following regions are defined: </p>
+                <ul>
+                  <li><b>us-west-1</b> (US West (Northern California) Region)</li>
+                  <li><b>us-west-2</b> (US West (Oregon) Region)</li>
+                  <li><b>us-east-1</b> (US East (Northern Virginia) Region)</li>
+                </ul>
+                <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers or, in case you specify more than one region, have fixed parameter options for selection.</p>
+                <p>Example: <codeph>us-east-1</codeph>
+                </p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>SECURITY_GROUP_NAMES</b></p>
+                <p>Optional. Comma-separated list of security group names for the virtual server to be instantiated. </p>
+                <p>A security group acts as a firewall that controls the traffic to an Amazon EC2 instance. An Amazon EC2 instance can be assigned to one or more security groups. For details on security groups, refer to the user documentation of Amazon Web Services.</p>
+                <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers or, in case you specify more than one security group, have fixed parameter options for selection.</p>
+                <p>Example: <codeph>MySecurityGroup</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>SUBNET</b></p>
+                <p>Optional. The subnet to which the virtual server is to be assigned. </p>
+                <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers or, in case you specify more than one subnet, have fixed parameter options for selection.</p>
+                <p>Example: <codeph>subnet-a77430d0</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>USERDATA_URL</b></p>
+                <p>Optional. URL to access the user data scripts or <codeph>cloud-init</codeph> directives for the automatic execution of user-specific configuration data. This URL must be accessible for APP.</p>
+                <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers or, in case you specify more than one URL, have fixed parameter options for selection.</p>
+                <p>Example: <codeph> http://127.0.0.1:8880/cloud-init/LAMP.script</codeph> (if the file was created under <codeph>&lt;appdomain>/docroot/cloud-init/LAMP.script</codeph>)</p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>Service Operations for Virtual Servers</title>
+      <p>The AWS service controller supports the service operations below for virtual servers. </p>
+      <p>The <codeph>actionURL</codeph> for each operation is:</p>
+      <p><codeph>https://&lt;host>:&lt;port>/OperationService/AsynchronousOperationProxy?wsdl</codeph></p>
+      <p><codeph>&lt;host></codeph> and <codeph>&lt;port></codeph> are the server and port of the <codeph>app-domain</codeph> domain where the AWS integration software is deployed.</p>
+      <p>
+        <note>If you provision a virtual server that does not support start and stop operations, make sure that you remove the service operations from the technical service definition. </note>
+      </p>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>START_VIRTUAL_SYSTEM</b></p>
+                <p>Starts a virtual server in AWS if it was stopped.</p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>STOP_VIRTUAL_SYSTEM</b></p>
+                <p>Stops a virtual server in AWS if it was started.</p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+  </refbody>
+</reference>

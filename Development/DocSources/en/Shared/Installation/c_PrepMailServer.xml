@@ -12,8 +12,8 @@
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/><ph audience="app">APP</ph><ph
                     audience="ror">the ROR integration software</ph><ph audience="aws"
                     >the AWS integration software</ph><ph audience="os">the OpenStack integration software</ph><ph
-                    audience="tps5">the TPS5 integration software</ph>
-                <ph audience="vmware">the vSphere integration software</ph>
+                    audience="tps5">the TPS5 integration software</ph><ph audience="vmware"
+                    >the vSphere integration software</ph><ph audience="azure">the Azure integration software</ph>
                 <ph id="Mail2"
                     >requires a mail server in its environment. You can use any mail server that supports SMTP.</ph></p>
             <p><ph>The settings for addressing the mail server are defined in the <codeph>glassfish.properties</codeph> file</ph><ph
@@ -22,7 +22,8 @@
                     > of APP</ph><ph audience="ror"> of the ROR integration package </ph><ph audience="aws"
                     > of the AWS integration package</ph><ph audience="os"> of the OpenStack integration package</ph><ph
                     audience="tps5"> of the TPS5 integration package</ph><ph audience="vmware"
-                    > of the vSphere integration package</ph>. <ph audience="BSS">Refer to <xref
+                    > of the vSphere integration package</ph><ph audience="azure"
+                    > of the Azure integration package</ph>. <ph audience="BSS">Refer to <xref
                         href="../reference/r_ConfigSettings_glassfish_BESDomain.xml"/> for details.</ph></p>
         </section>
     </conbody>

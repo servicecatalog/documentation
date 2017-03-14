@@ -14,7 +14,8 @@
                     audience="app">APP</ph><ph audience="ror">The ROR integration software</ph><ph audience="aws"
                     >The AWS integration software</ph><ph audience="os">The OpenStack integration software</ph><ph
                     audience="tps5">The TPS5 integration software</ph>
-                <ph audience="vmware">The vSphere integration software</ph>
+                <ph audience="vmware">The vSphere integration software</ph><ph audience="azure"
+                    >The Azure integration software</ph>
                 <ph id="must_be_deployed_on_an_applic_concept_conbody_section_p_1"
                     >must be deployed on an application server compatible with Java EE version 7. The following application server is supported:</ph></p>
             <p id="Oracle_GlassFish_Server_vers_concept_conbody_section_p_2">Oracle GlassFish Server, version 4.1.1.</p>
@@ -35,6 +36,9 @@
                 />. Alternatively, you can use a separate application server installation.</p>
             <p audience="vmware"
                     >You can deploy the vSphere integration software on the application server you use for <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />. Alternatively, you can use a separate application server installation.</p>
+            <p audience="azure">You can deploy the Azure integration software on the application server you use for <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 />. Alternatively, you can use a separate application server installation.</p>
             <p>Be aware that when operating <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
@@ -64,6 +68,8 @@
                     >The installation of the TPS5 integration software creates the <codeph>app-domain</codeph> domain in your application server. If required, you can change the domain name in the <codeph>glassfish.properties</codeph> file before starting the installation.</p>
             <p audience="vmware"
                     >The installation of the vSphere integration software creates the <codeph>app-domain</codeph> domain in your application server. If required, you can change the domain name in the <codeph>glassfish.properties</codeph> file before starting the installation.</p>
+            <p audience="azure"
+                    >The installation of the Azure integration software creates the <codeph>app-domain</codeph> domain in your application server. If required, you can change the domain name in the <codeph>glassfish.properties</codeph> file before starting the installation.</p>
             <p audience="BSS"><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> requires two domains in the application server: <ul>
                     <li>One for the actual <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                             /> application (<codeph>bes-domain</codeph>).</li>

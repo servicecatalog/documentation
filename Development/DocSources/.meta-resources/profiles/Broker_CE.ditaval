@@ -13,6 +13,7 @@
  <prop action="include" att="audience" val="app"/>
  <prop action="include" att="audience" val="ror"/>
  <prop action="include" att="audience" val="aws"/>
+ <prop action="include" att="audience" val="azure"/>
  <prop action="include" att="audience" val="os"/>
  <prop action="include" att="audience" val="tps5"/>
  <prop action="include" att="audience" val="vmware"/>

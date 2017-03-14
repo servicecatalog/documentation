@@ -8,11 +8,13 @@
     <conbody>
         <section>
             <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr" audience="BSS"/><ph
-                    audience="ror">The ROR integration software</ph><ph audience="aws"
-                    >The AWS integration software</ph><ph audience="vmware">The vSphere integration software</ph><ph
-                    audience="os">The OpenStack integration software</ph><ph audience="tps5"
-                    >The TPS5 integration software</ph><ph audience="app"
-                    >APP</ph><ph> as a Java application does not rely on specific hardware or operating systems. It can be deployed on any platform supported by the application server and the database management system</ph>.</p>
+                                        audience="ror">The ROR integration software</ph><ph audience="aws"
+                                        >The AWS integration software</ph><ph audience="vmware"
+                                        >The vSphere integration software</ph><ph audience="azure"
+                                        >The Azure integration software</ph><ph audience="os"
+                                        >The OpenStack integration software</ph><ph audience="tps5"
+                                        >The TPS5 integration software</ph><ph audience="app"
+                                        >APP</ph><ph> as a Java application does not rely on specific hardware or operating systems. It can be deployed on any platform supported by the application server and the database management system</ph>.</p>
             <p audience="BSS"><ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> without any data requires about 150 MB of disk space.</p>
                         <p audience="BSS"

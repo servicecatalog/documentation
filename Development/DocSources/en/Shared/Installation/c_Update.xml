@@ -10,8 +10,8 @@
       <p>Before updating your installation of <ph audience="app">APP</ph><ph audience="ror"
           >the ROR integration software</ph><ph audience="aws">the AWS integration software</ph><ph audience="os"
           >the OpenStack integration software</ph><ph audience="tps5">the TPS5 integration software</ph><ph
-          audience="vmware"
-        >the vSphere integration software</ph>, read the <i>Release Notes</i> of the new release. They contain information on compatibility issues, changes and enhancements, and known restrictions. </p>
+          audience="vmware">the vSphere integration software</ph><ph audience="azure"
+          >the Azure integration software</ph>, read the <i>Release Notes</i> of the new release. They contain information on compatibility issues, changes and enhancements, and known restrictions. </p>
       <p>The platform operator and technology managers must make sure that the following rules are observed: The <ph
           conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
         /> version must be higher or equal to the APP version. The APP version must be equal to the controller version.</p>
@@ -32,19 +32,22 @@
                 ><xref href="../../Shared/concepts/c_ControllerHandleProblems.xml"/></ph><ph audience="ror"><xref
                 href="../../Shared/concepts/c_ControllerHandleProblems.xml"/></ph><ph audience="tps5"><xref
                   href="../../Shared/concepts/c_ControllerHandleProblems.xml"/></ph><ph audience="vmware"><xref
-                    href="../../Shared/concepts/c_ControllerHandleProblems.xml"/></ph><ph audience="app"><xref
+                    href="../../Shared/concepts/c_ControllerHandleProblems.xml"/></ph><ph audience="azure"><xref
+                    href="../../Shared/concepts/c_ControllerHandleProblems.xml"/></ph><ph audience="azure"><xref
+                      href="../../Shared/concepts/c_ControllerHandleProblems.xml"/></ph><ph audience="app"><xref
                 href="../../APPInt/APP/c_HandleProblems.xml"/></ph>.</li>
           
           <!--li>In the <codeph>app-domain</codeph> application server domain, disable or undeploy the following <ph
               audience="app">application</ph><ph audience="ror">applications</ph><ph audience="aws">applications</ph><ph
                 audience="os">applications</ph><ph
-                  audience="tps5">applications</ph><ph audience="vmware">applications</ph>:
+                  audience="tps5">applications</ph><ph audience="vmware">applications</ph><ph audience="azure">applications</ph>:
             <p><codeph>oscm-app</codeph></p>
             <p audience="ror"><codeph>oscm-app-ror</codeph></p><p audience="aws"><codeph>oscm-app-aws</codeph></p><p
                   audience="os"><codeph>oscm-app-openstack</codeph></p><p
                     audience="tps5"><codeph>oscm-app-tps5</codeph></p>
             <p
-              audience="vmware"><codeph>oscm-app-vmware</codeph></p></li-->
+              audience="vmware"><codeph>oscm-app-vmware</codeph></p><p
+                audience="azure"><codeph>oscm-app-azure</codeph></p></li-->
           <!--li>Check for <codeph>.glassfishStaleFiles</codeph> files in the <codeph>app-domain</codeph> domain. If there are any, delete them. The files are located in<p><codeph>app-domain/applications/&lt;application name&gt;/.glassfishStaleFiles</codeph></p><p>For example: </p><p><codeph>app-domain/applications/oscm-app/.glassfishStaleFiles</codeph></p>
           </li-->
           <li>Set the following environment variable for your current session:<p><codeph>DB_INTERPRETER</codeph>: The absolute path and name of the <codeph>psql</codeph> executable of PostgreSQL. The executable is usually located in the <codeph>bin</codeph> subdirectory of the PostgreSQL installation directory.</p><p>Example:</p><codeblock>export DB_INTERPRETER="/opt/PostgreSQL/9.1/bin/psql"</codeblock>
@@ -121,6 +124,7 @@
               <li audience="os"><codeph>configsettings_controller.properties</codeph></li>
               <li audience="tps5"><codeph>configsettings_controller.properties</codeph></li>
               <li audience="vmware"><codeph>configsettings_controller.properties</codeph></li>
+              <li audience="azure"><codeph>configsettings_controller.properties</codeph></li>
             </ul><p>Particularly take care of settings which have been introduced or changed with the new release to which you are upgrading.</p></li>
           
           <li>Update the schema and configuration settings of the <codeph>bssapp</codeph> database by executing the <codeph>build-db.xml</codeph> file in <codeph>&lt;install_pack_dir&gt;/install</codeph> as follows:<p>
@@ -299,12 +303,23 @@
         </ol>
       </p>
     </section>
+    <section audience="azure">
+      <title>Updating the Application Server</title>
+      <p>After you have executed the preparation steps, redeploy or deploy the applications that make up the AWS integration software in the <codeph>app-domain</codeph> domain: </p>
+      <ol>
+        <li><codeph>oscm-app</codeph></li>
+        <li><codeph>oscm-app-azure</codeph>
+        </li>
+      </ol>
+      <p>Restart the <codeph>app-domain</codeph> domain.</p>
+    </section>
     
     <section>
       <title>Updating the Configuration for SAML_SP Mode</title>
       <p>If you are running <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> and the <ph
           audience="ror">ROR integration</ph><ph audience="aws">AWS integration</ph><ph audience="os"
-            >OpenStack integration</ph><ph audience="tps5">TPS5 integration</ph><ph audience="vmware">vSphere integration</ph><ph audience="app"
+          >OpenStack integration</ph><ph audience="tps5">TPS5 integration</ph><ph audience="vmware"
+          >vSphere integration</ph><ph audience="azure">Azure integration</ph><ph audience="app"
         >APP</ph> software in SAML_SP mode, and if the IdP metadata of your SSO environment have changed, you need to update your WSIT files accordingly: </p>
       <ol compact="no">
         <li>Extract the <codeph>OSCM-wsit.jar</codeph> file into a separate directory. <p>The <codeph>.jar</codeph> file is located in </p><p><codeph>&lt;GLASSFISH_HOME>/domains/app_domain/lib</codeph></p><p>The <codeph>OSCM-wsit.jar</codeph> file contains the following files:</p><p><codeph>wsit-client.xml</codeph></p><p><codeph>STSService.xml</codeph></p></li>
@@ -315,7 +330,8 @@
               href="../../Shared/Installation/t_InstConfiguringController.xml"/>.</ph><ph audience="tps5"
               >For details, refer to <xref href="../../Shared/Installation/t_InstConfiguringController.xml"/>.</ph>
           <ph audience="vmware"
-            >For details, refer to <xref href="../../Shared/Installation/t_InstConfiguringController.xml"/>.</ph><ph
+            >For details, refer to <xref href="../../Shared/Installation/t_InstConfiguringController.xml"/>.</ph><ph audience="azure"
+              >For details, refer to <xref href="../../Shared/Installation/t_InstConfiguringController.xml"/>.</ph><ph
             audience="app">For details, refer to <xref href="../../Shared/Installation/t_InstConfiguring.xml"
           />.</ph></li>
         <li>Recreate the <codeph>OSCM-wsit.jar</codeph> file with the modified contents.</li>

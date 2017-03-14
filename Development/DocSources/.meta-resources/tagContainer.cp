@@ -10,6 +10,7 @@
     <tags name="os" color="00ff00"/>
     <tags name="tps5" color="00ff00"/>
     <tags name="vmware" color="00ff00"/>
+    <tags name="azure" color="ff0000"/>
   </tagGroups>
   <tagGroups name="product">
     <tags name="oscm_ee" color="00ff00"/>

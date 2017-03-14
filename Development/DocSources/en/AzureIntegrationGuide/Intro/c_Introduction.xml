@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd">
+<concept id="id_116">
+          <title>Introduction</title>
+          <conbody>
+                    <section>
+   <p
+    conref="../../Shared/concepts/c_WhatIsBES_Controller.xml#concept2311/is_a_set_of_services_which_concept_conbody_p_1"/>
+      <p>Microsoft Azure is a cloud computing service for building, deploying, and managing applications and services through a global network of Microsoft-managed data centers. Apart from software as a service and platform as a service, it provides infrastructure as a service according to your needs and allows you to quickly scale these capacities as your computing requirements change.</p>
+                              <p>The integration of Azure with <ph
+          conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+          /> provides for an Infrastructure as a Service (IaaS) solution that leverages the features of both products: Through services, which are published on a marketplace in <ph
+          conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+          />, users can request and use virtual machines in Azure. The usage costs can be calculated and charged by means of the <ph
+          conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> billing and payment services.</p>
+                              <p>The Azure integration package provided with <ph
+          conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+          /> includes all components required for connecting an existing <ph
+          conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+          /> installation with Azure. This manual describes how to deploy this package and how to create and use services for Azure on a <ph
+          conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> marketplace. </p>
+                    </section>
+          </conbody>
+</concept>

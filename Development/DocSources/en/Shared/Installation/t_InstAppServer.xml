@@ -11,7 +11,8 @@
             <p><ph audience="app">APP</ph><ph audience="ror">The ROR integration software</ph><ph audience="aws"
                     >The AWS integration software</ph><ph audience="os">The OpenStack integration software</ph><ph
                     audience="tps5">The TPS5 integration software</ph><ph audience="vmware"
-                    >The vSphere integration software</ph> requires specific settings and resources in the application server, such as mail settings or a data source.</p>
+                    >The vSphere integration software</ph><ph audience="azure"
+                >The Azure integration software</ph> requires specific settings and resources in the application server, such as mail settings or a data source.</p>
             <note audience="app"
                     >When creating the application server resources, you can also deploy a service controller. For details, refer to <xref
                     href="../../APPInt/APP/t_DeployController.xml"/>.</note>
@@ -41,6 +42,8 @@
                                     >The OpenStack service controller (<codeph>oscm-app-openstack.ear</codeph>) is deployed to the <codeph>app-domain</codeph> domain.</li>
                             <li audience="tps5"
                                 >The TPS5 service controller (<codeph>oscm-app-tps5.ear</codeph>) is deployed to the <codeph>app-domain</codeph> domain.</li>
+                            <li audience="azure"
+                                    >The Azure service controller (<codeph>oscm-azure-aws.ear</codeph>) is deployed to the <codeph>app-domain</codeph> domain.</li>
                             <li audience="vmware"
                                     >The VMware service controller (<codeph>oscm-app-vmware.ear</codeph>) is deployed to the <codeph>app-domain</codeph> domain.</li>
                             <li audience="vmware"
@@ -56,7 +59,8 @@
                         audience="ror">The ROR service controller</ph><ph audience="aws"
                         >The AWS service controller</ph><ph audience="os">The OpenStack service controller</ph><ph
                         audience="tps5">The TPS5 service controller</ph><ph audience="vmware"
-                        >The VMware service controller</ph> can address the corresponding system via the proxy server.</cmd>
+                        >The VMware service controller</ph><ph audience="azure"
+                    >The Azure service controller</ph> can address the corresponding system via the proxy server.</cmd>
                 <info>To define a proxy server, specify the following JVM options: <ul>
                         <li><codeph>-Dhttps.proxyHost</codeph></li>
                         <li><codeph>-Dhttps.proxyPort</codeph></li>

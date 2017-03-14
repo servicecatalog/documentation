@@ -7,11 +7,12 @@
 <task id="Configuring"
             xml:lang="en-us">
     <title>Configuring the <ph audience="os">OpenStack</ph><ph audience="tps5">TPS5</ph><ph audience="ror">ROR</ph><ph
-            audience="aws">AWS</ph><ph audience="vmware">vSphere</ph> Integration</title>
+            audience="aws">AWS</ph><ph audience="vmware">vSphere</ph><ph audience="azure">Azure</ph> Integration</title>
     <taskbody>
         <context><p id="Cfg1">The <ph audience="os">OpenStack integration</ph><ph audience="ror">ROR integration</ph><ph
                     audience="aws">AWS integration</ph><ph audience="tps5">TPS5 integration</ph><ph audience="vmware"
-                    >vSphere integration</ph> software and setup utilities require a number of settings. These settings are provided in the following subdirectories and files of <codeph>&lt;install_pack_dir&gt;</codeph>:</p><p
+                    >vSphere integration</ph><ph audience="azure"
+                    >Azure integration</ph> software and setup utilities require a number of settings. These settings are provided in the following subdirectories and files of <codeph>&lt;install_pack_dir&gt;</codeph>:</p><p
                 id="Cfg2">
                 <ul>
                     <li>
@@ -51,6 +52,10 @@
                                             ><codeph>configsettings_controller.properties</codeph>: Configuration settings for the VMware service controller. <p>The initial installation stores these settings in the <codeph>bssapp</codeph> database. You can change them later, if required.</p><p>The <codeph>configsettings_controller.properties</codeph> file specifies the organization ID and user credentials for accessing <ph
                                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                         />. For security reasons, it is recommended that you delete the file as soon as you have successfully installed and configured the vSphere integration software.</p></li>
+                                <li audience="azure"
+                                            ><codeph>configsettings_controller.properties</codeph>: Configuration settings for the Azure service controller. <p>The initial installation stores these settings in the <codeph>bssapp</codeph> database. You can change them later using a graphical user interface.</p><p>The <codeph>configsettings_controller.properties</codeph> file specifies the organization ID and user credentials for accessing <ph
+                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        /> as well as the Azure access ID and key. For security reasons, it is recommended that you delete the file as soon as you have successfully installed and configured the Azure integration software.</p></li>
                             </ul>
                         </p>
                     </li>
@@ -103,7 +108,8 @@
                 /> installation you want to work with is configured for SAML_SP authentication mode, Web service calls to it are secured and authenticated by a Security Token Service (STS). This is a Web service that issues security tokens as defined in the WS-Security/WS-Trust specification. The STS is usually provided by the Identity Provider (IdP) system in use (for example Active Directory Federation Service, Cloudminder, or OpenAM).</p>
             <p>To use an STS for Web service calls, you must perform the following steps before installing the <ph
                     audience="os">OpenStack</ph><ph audience="ror">ROR</ph><ph audience="tps5">TPS5</ph><ph
-                    audience="aws">AWS</ph><ph audience="vmware">vSphere</ph> integration software: </p>
+                    audience="aws">AWS</ph><ph audience="vmware">vSphere</ph><ph audience="azure"
+                >Azure</ph> integration software: </p>
             <p>
                 <ol compact="no">
                     <li>From the IdP or <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"

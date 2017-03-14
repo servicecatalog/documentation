@@ -5,15 +5,16 @@
 <concept id="Prerequisites_and_Preparation_59" xml:lang="en-us">
     <title><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> and <ph audience="ror">ROR</ph><ph
             audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph audience="tps5">TPS5</ph><ph audience="vmware"
-            >vSphere</ph></title>
+            >vSphere</ph><ph audience="azure">Azure</ph></title>
     <conbody>
         <section>
             <ul>
                 <li>You must have access to a fully functional <ph
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                         /> installation. You can install the <ph audience="ror">ROR</ph><ph audience="aws">AWS</ph><ph
-                        audience="os">OpenStack</ph><ph audience="tps5">TPS5</ph><ph audience="vmware"
-                    >vSphere</ph> integration software in the same environment or on a different server. </li>
+                        audience="os">OpenStack</ph><ph audience="tps5">TPS5</ph><ph audience="vmware">vSphere</ph><ph
+                        audience="azure"
+                    >Azure</ph> integration software in the same environment or on a different server. </li>
                 <li>
                     <p>You must have access to <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                         /> as an administrator and as a technology manager of an organization that has at least the technology provider role.</p>
@@ -36,6 +37,7 @@
                         </ul>
                     </p><p>For details on vCenter, users, and their privileges in vSphere, refer to the vSphere documentation.</p>
                 </li>
+                <li audience="azure">You must have access to Azure ???. <p>???</p></li>
             </ul>
         </section>
     </conbody>

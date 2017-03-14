@@ -12,7 +12,8 @@
             <p><ph audience="app">APP</ph><ph audience="ror">The ROR integration software</ph><ph audience="aws"
                     >The AWS integration software</ph><ph audience="os">The OpenStack integration software</ph><ph
                     audience="tps5">The TPS5 integration software</ph><ph audience="vmware"
-                    >The VMware integration software</ph> requires and stores its data in the <codeph>bssapp</codeph> PostgreSQL database. </p>
+                    >The VMware integration software</ph><ph audience="azure"
+                    >The Azure integration software</ph> requires and stores its data in the <codeph>bssapp</codeph> PostgreSQL database. </p>
             <p>The database is created by executing installation scripts. It is initialized with the appropriate schema and settings. </p>
             <note audience="app"
                     >When initializing the database, you can also register a service controller with its settings. For details, refer to <xref

@@ -74,6 +74,10 @@
                                                         ><i>VMware vSphere Integration (GlassFish):</i> A PDF manual for operators describing how to offer and use virtual machines provisioned on a VMware vSphere server through services in <ph
                                                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                                                 />.</ph></li>
+                                <li><ph id="Azure_Guide:_concept_conbody_section_ul_l"
+                                                        ><i>Microsoft Azure Integration (GlassFish):</i> A PDF manual for operators describing how to offer and use virtual machines in Microsoft Azure through services in <ph
+                                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                />.</ph></li>                                                
                                 <!--li product="oscm_ee"
                                                         ><ph><i>Systemwalker Runbook Automation Integration Guide:</i> A PDF manual for operators describing how to offer and use automated operation processes of Systemwalker Runbook Automation through services in <ph
                                                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"

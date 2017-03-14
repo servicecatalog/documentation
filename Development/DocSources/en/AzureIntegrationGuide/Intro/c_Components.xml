@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd">
+<concept id="id_121">
+  <title>Components Involved in the AWS Integration</title>
+  <conbody>
+    <section>
+      <p>The following picture provides an overview of the main components involved in the integration of <ph
+          conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> and AWS:</p>
+      <p>
+        <fig>
+          <image align="left" alt="Components.png" height="171" href="../_images/Components.png" width="400"/>
+        </fig>
+      </p>
+      <p conref="../../Shared/concepts/c_ControllerConcepts.xml#controller/cmp1"/>
+      <p conref="../../Shared/concepts/c_ControllerConcepts.xml#controller/cmp2"/>
+      <p>In Azure, virtual machines as well as additional resources required for specific purposes can be deployed and managed with <b>Azure Resource Manager (ARM)</b>. Each virtual machine is based on a predefined <b>image</b>, which determines the operating system and other characteristics. Virtual machines and other resources that are to be managed together are organized in resource groups. Customers can define resource groups as required and control the resource deployment by means of <b>Resource Manager templates</b> in JavaScript Object Notation (JSON). </p>
+      <p>Each APP installation supports one Azure service controller. This limitation can be overcome by installing APP several times to different application server domains. The need for more than one service controller may arise because multiple Azure accounts or technology provider organizations have to be used.</p>
+    </section>
+  </conbody>
+</concept>

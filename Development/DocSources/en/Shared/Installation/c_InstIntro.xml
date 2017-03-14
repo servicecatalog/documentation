@@ -7,18 +7,20 @@
 <concept id="concept_1BCF5C425D7D4627AB1C66A085CF6E11"
                 xml:lang="en-us">
         <title>Installing the <ph audience="ror">ROR</ph><ph audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph
-                        audience="tps5">TPS5</ph><ph audience="vmware">vSphere</ph> Integration Software</title>
+                        audience="tps5">TPS5</ph><ph audience="vmware">vSphere</ph><ph audience="azure"
+                >Azure</ph> Integration Software</title>
         <conbody>
                 <p>The following sections describe how to install and configure the <ph audience="ror">ROR</ph><ph
                                 audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph audience="tps5">TPS5</ph><ph
-                                audience="vmware"
-                        >vSphere</ph> integration software as well as the preparations you need to take beforehand.</p>
+                                audience="vmware">vSphere</ph><ph audience="azure"
+                        >Azure</ph> integration software as well as the preparations you need to take beforehand.</p>
                 <p>Installing the <ph audience="ror">ROR</ph><ph audience="aws">AWS</ph><ph audience="os"
-                                >OpenStack</ph><ph audience="tps5">TPS5</ph><ph audience="vmware"
-                                >vSphere</ph> integration software consists of installing APP<ph audience="ror"
-                                > and registering the ROR</ph><ph audience="aws"> and registering the AWS</ph><ph
-                                audience="os"> and registering the OpenStack</ph><ph audience="tps5"
-                                > and registering the TPS5</ph><ph audience="vmware"
+                                >OpenStack</ph><ph audience="tps5">TPS5</ph><ph audience="vmware">vSphere</ph><ph
+                                audience="azure">Azure</ph> integration software consists of installing APP<ph
+                                audience="ror"> and registering the ROR</ph><ph audience="aws"
+                                > and registering the AWS</ph><ph audience="os"> and registering the OpenStack</ph><ph
+                                audience="tps5"> and registering the TPS5</ph><ph audience="azure"
+                                > and registering the Azure</ph><ph audience="vmware"
                                 >, registering the VMware</ph> service controller<ph audience="vmware"
                                 > and setting up a database for the controller</ph>. </p>
                 <p>If you already have a working APP installation in your environment, proceed as described in <xref

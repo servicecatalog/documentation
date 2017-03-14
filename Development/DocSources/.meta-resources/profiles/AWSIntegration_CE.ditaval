@@ -6,6 +6,7 @@
  <prop action="exclude" att="audience" val="app"/>
  <prop action="exclude" att="audience" val="ror"/>
  <prop action="include" att="audience" val="aws"/>
+ <prop action="exclude" att="audience" val="azure"/>
  <prop action="exclude" att="audience" val="os"/>
  <prop action="exclude" att="audience" val="int"/>
  <prop action="exclude" att="audience" val="tps5"/>
