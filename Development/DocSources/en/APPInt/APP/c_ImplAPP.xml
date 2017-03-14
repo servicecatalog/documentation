@@ -41,6 +41,13 @@
                                 <li><codeph>oscm-openstack-install-pack.zip</codeph>: <p>Can be used for integrating OpenStack services with <ph
                                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                     />.</p></li>
+                                <li product="oscm_ee"
+                                            ><codeph>oscm-tps5-install-pack.zip</codeph>: <p>Can be used for integrating FUJITSU Trusted Public S5 with <ph
+                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    />.</p></li>
+                                <li><codeph>oscm-vmware-install-pack.zip</codeph>: <p>Can be used for integrating VMware vSphere with <ph
+                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    />.</p></li>
                             </ul>
                         </p></li>
                     <li>The application with a remote interface and the application instances, if needed. </li>
