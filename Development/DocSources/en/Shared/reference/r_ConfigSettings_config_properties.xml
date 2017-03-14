@@ -171,17 +171,17 @@
                 >platform's</ph> reports. The URL template of the report engine. If you do not specify a correct URL template, <ph
                 platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
                 platform="help"
-                >the platform</ph> will not be able to generate any reports, since the Report Web service cannot be called correctly. <p>If your installation is configured to use HTTP access, the required value is: <codeblock>http://&lt;host IP address&gt;:&lt;port&gt;/birt/frameset?
+                >the platform</ph> will not be able to generate any reports, since the Report Web service cannot be called correctly. <p>If your installation is configured to use HTTP access, the required value is: <codeblock>http://<codeph>&lt;host IP address</codeph>&gt;:&lt;port&gt;/birt/frameset?
    __report=${reportname}.rptdesign&amp;SessionId=${sessionid}
    &amp;__locale=${locale}&amp;WSDLURL=${wsdlurl}&amp;SOAPEndPoint=${soapendpoint}
    &amp;wsname=Report&amp;wsport=ReportPort
 </codeblock></p><p>If your installation is configured to use HTTPS access, the required value is: <codeblock>https://&lt;host IP address&gt;:&lt;port&gt;/birt/frameset?
    __report=${reportname}.rptdesign&amp;SessionId=${sessionid}
    &amp;__locale=${locale}&amp;WSDLURL=${wsdlurl}&amp;SOAPEndPoint=${soapendpoint}
-   &amp;wsname=ReportSecure&amp;wsport=ReportSecurePort</codeblock></p><note>The above value must be used as indicated. Do not change this value. <p>If the SSL/HTTPS port is changed and the BIRT report engine is running on the same domain as <ph
+   &amp;wsname=ReportSecure&amp;wsport=ReportSecurePort</codeblock></p><p>The <codeph>&lt;host IP address></codeph> is the IP address of the application server to which the BIRT report engine has been deployed. </p><note>The above value must be used as indicated. Do not change this value. <!--p>If the SSL/HTTPS port is changed and the BIRT report engine is running on the same domain as <ph
                         platform="print"><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                         > </ph></ph><ph platform="help"
-                >the platform</ph>, then this setting must also be updated.</p></note></section>
+                        >the platform</ph>, then this setting must also be updated.</p--></note></section>
         <section><title>REPORT_SOAP_ENDPOINT</title>Mandatory if you want to use the <ph platform="print"><ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
                 >platform's</ph> reports. The SOAP end point of the Report Web service. All report data is retrieved via a call to the Report Web service. If you do not specify a correct value, <ph

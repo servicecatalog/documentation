@@ -34,11 +34,6 @@
             </p></li>
           <li>Set the following environment variable for your current session:<p><codeph>DB_INTERPRETER</codeph>: The absolute path and name of the <codeph>psql</codeph> executable of PostgreSQL. The executable is usually located in the <codeph>bin</codeph> subdirectory of the PostgreSQL installation directory.</p><p>Example:</p><codeblock>export DB_INTERPRETER="/opt/PostgreSQL/9.1/bin/psql"</codeblock>
           </li>
-          <li>Make a copy of your current <codeph>configsettings.properties</codeph> file. By default, this file is located in <codeph>&lt;install_pack_dir>/databases/bes_db</codeph>. Check whether the <codeph>configsettings.properties</codeph> file contained in the new <ph
-              conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-            /> installation package to which you want to upgrade contains new, different, or less settings than your copy of the old file. </li>
-          <li>Adjust the settings in the new file to your environment. Observe that the paths need to be adapted for the new application server installation. </li>
-          <li>Make a copy of your key file required for the encryption and decryption of service parameters with data type <codeph>PWD</codeph> or custom attributes marked for encryption. By default, this file is located and named as follows:  <p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/bes-domain/config/.key</codeph></p>Be aware that the key file must not be deleted. Otherwise, encryption and decryption is no longer possible.</li>
           <li>If you are running <ph
                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> in SAML_SP mode and want to make use of multiple tenants associated with IdP (Identity Provider) systems: <p>Apart from user IDs, the assertions returned to <ph
                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> must contain the corresponding tenant ID for each user. This is required for <ph
@@ -58,18 +53,47 @@
   &lt;/saml:Assertion&gt;
 </codeblock>
             </p></li>
-          <li>Install and configure GlassFish 4.1.1 according to the application server product documentation.</li>
           <li>Proceed with updating your installation in the following sequence: <p>
               <ol>
+                <li>Update you application server installation.</li>
+                <li>Create backups of configuration and key files, and adjust the configuration settings for the new application server version. </li>
                 <li>Update the database.</li>
                 <li>Update the application server resources. </li>
-                <li>Copy the key file for encryption and decryption to the location you specified in the <codeph>KEY_FILE_PATH</codeph> setting in the <codeph>configsettings.properties</codeph> file.</li>
                 <li>If you are using certificates for authenticating Web service calls, or if you want to run <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> in SAML_SP mode, you need to exchange the corresponding certificates again. Refer to the <i>Operator's Guide</i> for details on certificate handling. </li>
-                <li>Restart both domains. </li>
+                    /> in SAML_SP mode, you need to exchange the corresponding certificates again. Refer to the <i>Operator's Guide</i> for details on certificate handling.</li>
+                <li>Deploy the BIRT report engine to be able to generate reports. Refer to <xref
+                    href="../Installation/c_DeployBirt.xml"/> for details.</li>
               </ol>
-            </p><p>See below for details.</p><p>???### Was ist mit birt ###?</p></li>
+            </p><p>See below for details.</p></li>
+        </ol>
+      </p>
+    </section>
+    <section id="must_be_deployed_on_an_appli_concept_conbody_section">
+      <title>Updating the Application Server</title>
+      <p><ph audience="BSS" conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+        /> must be deployed on an application server compatible with Java EE version 7. The following application server is supported:</p>
+      <p id="Oracle_GlassFish_Server_vers_concept_conbody_section_p_2">Oracle GlassFish Server, version 4.1.1.</p>
+      <p audience="app">Proceed as described in <xref href="../../Shared/Installation/c_PrepAppServer.xml"/>. </p>
+    </section>
+    <section>
+      <title>Creating Backups and Updating the Configuration Settings</title>
+      <p>Proceed with updating your installation as follows:</p>
+      <p>
+        <ol compact="no">
+          <li>Create a backup of the following files present in your old GlassFish 3 installation:<p>
+              <ul>
+                <li><codeph>configsettings.properties</codeph></li>
+                <li><codeph>db.properties</codeph></li>
+                <li><codeph>glassfish.properties</codeph> of both the <codeph>bes-domain</codeph> and the <codeph>indexer-domain</codeph> domains.</li>
+                <li>Key file required for the encryption and decryption of service parameters with data type <codeph>PWD</codeph> or custom attributes marked for encryption. By default, the file is named <codeph>./key</codeph> and located in the following directory: <codeph>&lt;GLASSFISH3_HOME>/glassfish/domains/bes-domain/config</codeph></li>
+              </ul>
+            </p></li>
+          <li>Check whether the <codeph>configsettings.properties</codeph> file contained in the new <ph
+              conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+            /> installation package to which you want to upgrade contains new, different, or less settings than your copy of the old file. </li>
+          <li>Adjust the settings in the new <codeph>configsettings.properties</codeph> file located in the <codeph>&lt;install_pack_dir>/databases/bes_db</codeph> directory to your environment. Observe that especially the paths need to be adapted for the new application server installation.</li>
+          <li>Copy the key file for encryption and decryption to the location you specified in the <codeph>KEY_FILE_PATH</codeph> setting in the new <codeph>configsettings.properties</codeph>. By default, this is<p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/bes-domain/config</codeph></p></li>
         </ol>
       </p>
     </section>
@@ -77,17 +101,16 @@
       <title>Updating the Database</title>
       <p>Proceed with updating the database as follows:</p>
       <p>
-        <ol
-                            compact="no">
+        <ol compact="no">
           <li>Check whether the file <p><codeph>postgresql-9.1-903.jdbc4.jar</codeph></p><p> is contained in the following directories of the application server:</p><ul>
               <li><codeph>lib</codeph> directory of the <codeph>bes-domain</codeph> domain</li>
               <li><codeph>&lt;GLASSFISH_HOME&gt;/mq/lib/ext</codeph></li>
             </ul><p>If this is not the case, copy the file from the <codeph>&lt;install_pack_dir&gt;/install/lib</codeph> directory to the location where it is missing. </p></li>
           <li>Create a backup of the <ph><codeph>bss</codeph></ph> database using the standard PostgreSQL commands. The database backup must be compatible with PostgreSQL 9.1.12. <ph
-                                    audience="BSS">Make sure to also have a backup of any customizations to marketplaces.</ph>
+              audience="BSS">Make sure to also have a backup of any customizations to marketplaces.</ph>
             <p>
               <note>Creating a backup of search index data is not required. The index will be automatically rebuilt when <ph
-                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> is operational again. </note>
+                  conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> is operational again. </note>
             </p></li>
           <li>Update the following configuration files so that the settings match your current installation:<ul>
               <li><codeph>db.properties</codeph> located in <codeph>&lt;install_pack_dir&gt;/databases/bes_db</codeph></li>
@@ -97,7 +120,7 @@
           <li>Start the <codeph>bss</codeph> database.</li>
           <li>Update the schema and configuration settings of the <codeph>bss</codeph> database by executing the <codeph>build-db.xml</codeph> file in <codeph>&lt;install_pack_dir&gt;/install</codeph> as follows:<p>
               <codeblock>&lt;ANT_HOME&gt;/bin/ant -f build-db.xml updateDatabase</codeblock>
-            </p><p>### ist das jetzt: </p><p>
+            </p><p>### is it true that the command is now as follows: ??? </p><p>
               <codeblock>&lt;ANT_HOME&gt;/bin/ant -f build-db.xml UPDATE.dbSchema</codeblock>
             </p><p>
               <note>
