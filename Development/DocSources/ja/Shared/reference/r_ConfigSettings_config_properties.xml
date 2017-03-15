@@ -325,41 +325,46 @@
             </note>
         </section>
         <section>
-          <title>SSO_SIGNING_KEY_ALIAS</title>
+          <title>SSO_SIGNING_KEY_ALIAS</title>リクエストが
           <ph platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph>
-          <ph platform="help">プラットフォーム</ph>にSAML_SP認証モードのインストール、シングルログアウトの使用、およびIdPシステムのシングルログアウトサービスが署名リクエストを必要とする場合は必須。 例としてMicrosoft Active Directory Federation Servicesがあります。
-          <p>
-            <ph platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph>
-            <ph platform="help">プラットフォーム</ph>の秘密鍵のエイリアスです。署名ログアウトリクエストに使用されます。IdPシステムは署名を確認するため
-            <ph platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph>
-            <ph platform="help">プラットフォーム</ph>のトラストストアに正しい証明書を必要とします。
-          </p>
-          <p>ブラウザのSSOに必要です。</p>
-          <p>例: <codeph>s1as</codeph></p>
-          <p>この設定を変更した場合、
-            <ph platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph>
-            <ph platform="help">プラットフォーム</ph>を再起動する必要があります。</p>
+          <ph platform="help">プラットフォーム</ph>によって署名される場合は必須。署名リクエストに使用される
+          <ph platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph>
+          <ph platform="help">プラットフォーム</ph>の秘密鍵のエイリアスです。<p>リクエストは次の場合に署名されます:</p>
+            <ul compact="no">
+              <li>購入済みサービスのカスタムタブにおけるウェブページ、またはアプリケーションとの通信</li>
+              <li>
+                <ph platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph>
+                <ph platform="help">プラットフォーム</ph>がSAML_SP認証モードでインストールされ、シングルログアウトが設定され、かつMicrosoft Active Directory Federation Servicesのように、IdPシステムのシングルログアウトサービスが認証リクエストを必要としている場合のログアウトリクエスト。
+              </li>
+            </ul>
+            <p>ウェブページ、ウェブアプリケーション、またはIdPシステムに使用されるアプリケーションサーバーは、署名の検証のためトラストストアに
+                <ph platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph>
+                <ph platform="help">プラットフォーム</ph>の証明書が必要です。<p>デフォルト: <codeph>s1as</codeph></p>
+                <p>この設定を変更した場合
+                <ph platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph>
+                <ph platform="help">プラットフォーム</ph>を再起動する必要があります。
+                </p>
+            </p>
         </section>
         <section>
-          <title>SSO_SIGNING_KEYSTORE</title>
+          <title>SSO_SIGNING_KEYSTORE</title>リクエストが
           <ph platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph>
-          <ph platform="help">the platform</ph>にSAML_SP認証モードのインストール、シングルログアウトの使用、およびIdPシステムのシングルログアウトサービスが署名リクエストを必要とする場合は必須。 例としてMicrosoft Active Directory Federation Servicesがあります。
+          <ph platform="help">プラットフォーム</ph>によって署名される場合は必須。
           <p><codeph>SSO_SIGNING_KEY_ALIAS</codeph>に指定された
             <ph platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph>
             <ph platform="help">プラットフォーム</ph>の秘密鍵が存在するアプリケーションサーバのキーストアのパス。</p>
-          <p>ブラウザのSSOに必要です。</p>
-          <p>例: <codeph>/opt/glassfish-3.1.2.2/glassfish/domains/bes-domain/config/keystore.jks</codeph></p>
+            <p>デフォルト: <codeph>./keystore.jks</codeph>
+            </p>
           <p>この設定を変更した場合 
             <ph platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph>
             <ph platform="help">プラットフォーム</ph>を再起動する必要があります。</p>
         </section>
         <section>
-          <title>SSO_SIGNING_KEYSTORE_PASS</title> 
+          <title>SSO_SIGNING_KEYSTORE_PASS</title>リクエストが 
           <ph platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph>
-          <ph platform="help">the platform</ph>にSAML_SP認証モードのインストール、シングルログアウトの使用、およびIdPシステムのシングルログアウトサービスが署名リクエストを必要とする場合は必須。 例としてMicrosoft Active Directory Federation Servicesがあります。
+          <ph platform="help">プラットフォーム</ph>によって署名される場合は必須。
           <p><codeph>SSO_SIGNING_KEYSTORE</codeph>に指定されたキーストアにアクセスするためのパスワード。</p>
-          <p>ブラウザのSSOに必要です。</p>
-          <p>例: <codeph>changeit</codeph></p>
+          <p>デフォルト: <codeph>changeit</codeph></p>
           <p>この設定を変更した場合
             <ph platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph>
             <ph platform="help">プラットフォーム</ph>を再起動する必要があります。</p>

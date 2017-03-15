@@ -75,8 +75,15 @@
         <cmd>必要に応じて、<b>カスタムタブのURL</b>を指定します。この項目を指定することでサービスポータルの購入済サービスの<b>詳細</b>画面にタブを追加することができます。本URLはカスタムタブ向けのWebページもしくはWebアプリケーションのコンテンツを表示します。たとえば、IaaSサービスの利用者向けにサービス詳細やサービスの操作に関する情報を表示することが可能です。</cmd>
         <info>
           <p>
-            <note
-                id="serv_add_task_taskbody_steps_step_6">カスタムタブに指定するWebページやWebアプリケーションに接続するURLは安全であることを確認してください。プラットフォームはURLの正当性(シンタックスや内容)を確認しません。</note>
+            <note id="Make_sure_that_the_URL_pointi_task_taskbody_steps_step_6">カスタムタブに指定するWebページやWebアプリケーションに接続するURLは安全であることを確認してください。プラットフォームはURLの正当性(シンタックスや内容)を確認しません。
+                  <p>安全な通信を行うためウェブページやウェブアプリケーションに送られるリクエストは
+                  <ph
+                  platform="print"><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                  platform="help">プラットフォーム</ph>によって署名されます。これには
+                  <ph platform="print"><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                  platform="help">プラットフォーム</ph>に特定の設定が必要です。ウェブページやウェブアプリケーションに使用されるアプリケーションサーバーは署名の検証のためトラストストアに
+                  <ph platform="print"><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph>
+                  <ph platform="help">プラットフォーム</ph>の証明書が必要です。必要に応じて、システム運用管理部門にお問い合わせください。</p></note>
           </p>
           <p>OpenStackやAmazon Web Services (AWS)といったIaaSサービスを提供する購入済サービスの詳細を参照するために、事前に定義したカスタムタブを使用することができます。カスタムタブでは次の情報により配備した仮想マシン(VM)の一覧が表示されます。: </p>
           <p>

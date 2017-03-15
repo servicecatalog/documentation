@@ -53,9 +53,7 @@
             利用者は、サービスを購入する際にこの外部ツールを使って購入済サービスやパラメーターを構成できるようになります。</cmd>
         <info>
           <p>外部ツールを使った場合、サービスを購入する際に表示される<uicontrol>サービスのパラメーター</uicontrol>テーブルは指定されたツールのインターフェースで置き換わります。
-            <note>パラメーターの設定ツールへのURLがセキュアであることを確認してください。
-                指定されたURLについて、プラットフォームは構文もセマンティックも検証しません。</note>
-          </p>
+          <note conref="service_add.xml#task634/Make_sure_that_the_URL_pointi_task_taskbody_steps_step_6"/></p>
         </info>
       </step>
       <step>
