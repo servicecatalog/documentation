@@ -121,7 +121,7 @@
               <codeblock>&lt;ANT_HOME&gt;/bin/ant -f build-db.xml updateDatabase
    -Ddb.pwd=&lt;password&gt;</codeblock>
             </p--><note>
-              <p>Make sure that Ant runs in a Java 7 runtime environment when calling the <codeph>build-db.xml</codeph> file. </p>
+              <p>Make sure that Ant runs in a Java 8 runtime environment when calling the <codeph>build-db.xml</codeph> file. </p>
               <!--p>It may be required to enclose <codeph>-Ddb.pwd=&lt;password&gt;</codeph> in double or single quotes depending on the operating system. </p-->
             </note>
           </li>
