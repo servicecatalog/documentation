@@ -10,8 +10,8 @@
                         <section>
                                     <p>The <ph audience="aws">AWS</ph><ph audience="ror">ROR</ph><ph audience="os"
                                                             >OpenStack</ph><ph audience="tps5">TPS5</ph><ph
-                                                            audience="vmware"
-                                                            >vSphere</ph> integration provides you with the following feature for controlling the <ph
+                                                            audience="vmware">vSphere</ph><ph audience="azure"
+                                                            >Azure</ph> integration provides you with the following feature for controlling the <ph
                                                             audience="ror"
                                                             >provisioning, modification, and deprovisioning of virtual platforms and servers:</ph><ph
                                                             audience="aws"
@@ -21,12 +21,15 @@
                                                             audience="tps5"
                                                             >provisioning, modification, and deprovisioning of virtual platforms:</ph>
                                                 <ph audience="vmware"
-                                                            >provisioning, modification, and deprovisioning of VMs:</ph>
+                                                            >provisioning, modification, and deprovisioning of VMs:</ph><ph
+                                                            audience="azure"
+                                                            >provisioning and deprovisioning of virtual machines:</ph>
                                     </p>
                                     <p>In the definition of the technical services for <ph audience="aws">AWS</ph><ph
                                                             audience="ror">ROR</ph><ph audience="os">OpenStack</ph><ph
                                                             audience="tps5">TPS5</ph><ph audience="vmware"
-                                                            >vSphere</ph>, you can specify the<codeph> MAIL_FOR_COMPLETION</codeph> parameter. This is an address to which emails are to be sent <ph
+                                                            >vSphere</ph><ph audience="azure"
+                                                            >Azure</ph>, you can specify the<codeph> MAIL_FOR_COMPLETION</codeph> parameter. This is an address to which emails are to be sent <ph
                                                             audience="aws"
                                                             >describing manual steps required to complete an operation</ph><ph
                                                             audience="ror"
@@ -36,11 +39,14 @@
                                                             audience="tps5"
                                                             >describing manual steps required to complete an operation</ph><ph
                                                             audience="vmware"
-                                                            >in case manual steps are required to complete an operation</ph>. </p>
+                                                            >in case manual steps are required to complete an operation</ph><ph
+                                                            audience="azure"
+                                                            >describing manual steps required to complete an operation</ph>. </p>
                                     <p>If you specify this parameter, the <ph audience="aws">AWS</ph><ph audience="ror"
                                                             >ROR</ph><ph audience="os">OpenStack</ph><ph audience="tps5"
-                                                            >TPS5</ph><ph audience="vmware"
-                                                >VMware</ph> service controller interrupts the processing of each operation before its completion and waits for a notification about the execution of a manual action. This notification consists in opening the link given in the email. </p>
+                                                            >TPS5</ph><ph audience="vmware">VMware</ph><ph
+                                                            audience="azure"
+                                                >Azure</ph> service controller interrupts the processing of each operation before its completion and waits for a notification about the execution of a manual action. This notification consists in opening the link given in the email. </p>
                                     <p>Omit the <codeph>MAIL_FOR_COMPLETION</codeph> parameter if you do not want to interrupt the processing. </p>
                         </section>
             </conbody>

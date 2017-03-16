@@ -3,11 +3,11 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
                          "concept.dtd">
 <concept id="id_121">
-  <title>Components Involved in the AWS Integration</title>
+  <title>Components Involved in the Azure Integration</title>
   <conbody>
     <section>
       <p>The following picture provides an overview of the main components involved in the integration of <ph
-          conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> and AWS:</p>
+          conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> and Azure:</p>
       <p>
         <fig>
           <image align="left" alt="Components.png" height="171" href="../_images/Components.png" width="400"/>

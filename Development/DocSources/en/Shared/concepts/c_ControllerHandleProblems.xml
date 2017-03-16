@@ -11,100 +11,111 @@
                         <section>
                             <p>If the <ph audience="ror">provisioning or modification</ph><ph audience="tps5"
                     >provisioning or modification</ph><ph audience="aws">provisioning</ph><ph audience="os"
-                    >provisioning</ph><ph audience="vmware">provisioning</ph> of a <ph audience="aws"
-                    >virtual server</ph><ph audience="ror">virtual system</ph><ph audience="os">virtual system</ph><ph
-                    audience="tps5">virtual system</ph><ph audience="vmware">VM</ph> fails on the <ph audience="aws"
+                    >provisioning</ph><ph audience="vmware">provisioning</ph><ph audience="azure"
+                    >provisioning</ph> of a <ph audience="aws">virtual server</ph><ph audience="ror"
+                    >virtual system</ph><ph audience="os">virtual system</ph><ph audience="tps5">virtual system</ph><ph
+                    audience="vmware">VM</ph><ph audience="azure">virtual resources</ph> fails on the <ph audience="aws"
                     >AWS</ph><ph audience="ror">ROR</ph><ph audience="os">OpenStack</ph><ph audience="tps5">TPS5</ph><ph
-                    audience="vmware"
-                    >vSphere</ph> side or if there are problems in the communication between the participating systems, the corresponding subscription in <ph
+                    audience="vmware">vSphere</ph><ph audience="azure"
+                    >Azure</ph> side or if there are problems in the communication between the participating systems, the corresponding subscription in <ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> remains pending. The <ph audience="aws"
                     >AWS</ph><ph audience="ror">ROR</ph><ph audience="os">OpenStack</ph><ph audience="tps5">TPS5</ph><ph
-                    audience="vmware"
-                    >VMware</ph> service controller informs the technology managers of its responsible technology provider organization by email of any incomplete <ph
+                    audience="vmware">VMware</ph><ph audience="azure"
+                    >Azure</ph> service controller informs the technology managers of its responsible technology provider organization by email of any incomplete <ph
                     audience="ror">provisioning, modification, or delete</ph><ph audience="tps5"
                     >provisioning, modification, or delete</ph><ph audience="aws">provisioning or delete</ph><ph
-                    audience="os">provisioning or delete</ph> operation in <ph audience="aws">AWS</ph><ph audience="ror"
-                    >ROR</ph><ph audience="os">OpenStack</ph><ph audience="tps5">TPS5</ph><ph audience="vmware"
-                    >vSphere</ph>. </p>
+                    audience="os">provisioning or delete</ph><ph audience="azure"
+                    >provisioning or delete</ph> operation in <ph audience="aws">AWS</ph><ph audience="ror">ROR</ph><ph
+                    audience="os">OpenStack</ph><ph audience="tps5">TPS5</ph><ph audience="vmware">vSphere</ph><ph
+                    audience="azure">Azure</ph>. </p>
                                     <p>You can then take the appropriate actions to solve the problem in <ph
                     audience="aws">AWS</ph><ph audience="ror">ROR</ph><ph audience="os">OpenStack</ph><ph
-                    audience="tps5">TPS5</ph><ph audience="vmware"
-                    >vSphere</ph> or in the communication. For example, you could remove an incomplete <ph
-                    audience="aws">virtual server</ph><ph audience="ror">virtual platform or server</ph><ph
-                    audience="os">virtual system</ph><ph audience="tps5">virtual platform</ph><ph audience="vmware"
-                    >VM</ph>, or you could restore a missing connection.</p>
+                    audience="tps5">TPS5</ph><ph audience="vmware">vSphere</ph><ph audience="azure"
+                    >Azure</ph> or in the communication. For example, you could remove an incomplete <ph audience="aws"
+                    >virtual server</ph><ph audience="ror">virtual platform or server</ph><ph audience="os"
+                    >virtual system</ph><ph audience="tps5">virtual platform</ph><ph audience="vmware">VM</ph><ph
+                    audience="azure">virtual machine</ph>, or you could restore a missing connection.</p>
                                     <p>After solving the problem, the <ph audience="aws">AWS</ph><ph audience="ror"
                     >ROR</ph><ph audience="os">OpenStack</ph><ph audience="tps5">TPS5</ph><ph audience="vmware"
-                    >vSphere</ph> integration components and <ph
+                    >vSphere</ph><ph audience="azure">Azure</ph> integration components and <ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> need to be synchronized accordingly. You do this by triggering a corresponding action in the APP component. Proceed as follows:</p>
                                     <ol>
                                                 <li>Work as a technology manager of the technology provider organization responsible for the <ph
                         audience="aws">AWS</ph><ph audience="ror">ROR</ph><ph audience="os">OpenStack</ph><ph
-                        audience="tps5">TPS5</ph><ph audience="vmware">VMware</ph> service controller. </li>
+                        audience="tps5">TPS5</ph><ph audience="vmware">VMware</ph><ph audience="azure"
+                    >Azure</ph> service controller. </li>
                                                 <li>Invoke the instance status interface of APP for the <ph
                         audience="aws">AWS</ph><ph audience="ror">ROR</ph><ph audience="os">OpenStack</ph><ph
-                        audience="tps5">TPS5</ph><ph audience="vmware"
-                                >VMware</ph> service controller by opening the following URL in a Web browser:<p><codeph>https://&lt;server&gt;:&lt;port&gt;/oscm-app/controller/?cid=ess.<ph
+                        audience="tps5">TPS5</ph><ph audience="vmware">VMware</ph><ph audience="azure"
+                                >Azure</ph> service controller by opening the following URL in a Web browser:<p><codeph>https://&lt;server&gt;:&lt;port&gt;/oscm-app/controller/?cid=ess.<ph
                                 audience="ror">ror</ph><ph audience="aws">aws</ph><ph audience="os">openstack</ph><ph
-                                audience="tps5">tps5</ph><ph audience="vmware">vmware</ph></codeph></p>
+                                audience="tps5">tps5</ph><ph audience="vmware">vmware</ph><ph audience="azure"
+                                >azureARM</ph></codeph></p>
                     <p>For example: </p><p><codeph>https://127.0.0.1:8881/oscm-app/controller/?cid=ess.<ph
                                 audience="ror">ror</ph><ph audience="aws">aws</ph><ph audience="os">openstack</ph><ph
-                                audience="tps5">tps5</ph><ph audience="vmware"
-                            >vmware</ph></codeph></p><p>The Web page shows all subscriptions for <ph audience="aws"
-                            >AWS</ph><ph audience="ror">ROR</ph><ph audience="os">OpenStack</ph><ph audience="tps5"
-                            >TPS5</ph><ph audience="vmware"
-                            >VMs</ph>, including detailed information such as the customer organization, the ID of the related <ph
+                                audience="tps5">tps5</ph><ph audience="vmware">vmware</ph><ph audience="azure"
+                                >azureARM</ph></codeph></p><p>The Web page shows all subscriptions for <ph
                             audience="aws">AWS</ph><ph audience="ror">ROR</ph><ph audience="os">OpenStack</ph><ph
-                            audience="tps5">TPS5</ph><ph audience="vmware"
-                        >VM</ph> instance, and the provisioning status. </p></li>
+                            audience="tps5">TPS5</ph><ph audience="vmware">VMs</ph><ph audience="azure"
+                            >Azure</ph>, including detailed information such as the customer organization, the ID of the related <ph
+                            audience="aws">AWS</ph><ph audience="ror">ROR</ph><ph audience="os">OpenStack</ph><ph
+                            audience="tps5">TPS5</ph><ph audience="vmware">VM</ph><ph audience="azure"
+                        >Azure</ph> instance, and the provisioning status. </p></li>
                                         <li>Find the subscription for which you solved the problem in the most recent <ph
                         audience="ror">provisioning, modification, or delete</ph><ph audience="aws"
                         >provisioning or delete</ph><ph audience="os">provisioning or delete</ph><ph audience="tps5"
                         >provisioning, modification, or delete</ph><ph audience="vmware"
-                        >provisioning, modification, or delete</ph> operation. </li>
+                        >provisioning, modification, or delete</ph><ph audience="azure"
+                    >provisioning or delete</ph> operation. </li>
                                                 <li>In the <b>Action</b> column, select the action for the <ph
                         audience="aws">AWS</ph><ph audience="ror">ROR</ph><ph audience="os">OpenStack</ph><ph
-                        audience="tps5">TPS5</ph><ph audience="vmware">vSphere</ph> integration components to execute next. Possible actions are the following:<ul>
+                        audience="tps5">TPS5</ph><ph audience="vmware">vSphere</ph><ph audience="azure">Azure</ph> integration components to execute next. Possible actions are the following:<ul>
                         <li><codeph>RESUME</codeph> - to resume the processing of a provisioning operation in APP which was suspended.</li>
-                        <li><codeph>SUSPEND</codeph> - to suspend the processing of a provisioning operation in APP, for example when <ph
+                        <li><codeph>SUSPEND</codeph> - to suspend the processing of a provisioning operation in APP, for example, when <ph
                                 audience="aws">AWS</ph><ph audience="ror">ROR</ph><ph audience="os">OpenStack</ph><ph
-                                audience="tps5">TPS5</ph><ph audience="vmware">vSphere</ph> does not respond. </li>
+                                audience="tps5">TPS5</ph><ph audience="vmware">vSphere</ph><ph audience="azure"
+                                >Azure</ph> does not respond. </li>
                         <li><codeph>UNLOCK</codeph> - to remove the lock for <ph audience="aws">an AWS</ph><ph
                                 audience="ror">an ROR</ph><ph audience="os">an OpenStack</ph><ph audience="tps5"
-                                >a TPS5</ph><ph audience="vmware">a VM</ph> instance in APP.</li>
+                                >a TPS5</ph><ph audience="vmware">a VM</ph><ph audience="azure"
+                            >an Azure</ph> instance in APP.</li>
                         <li><codeph>DELETE</codeph> - to terminate the subscription in <ph
                                 conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                                 /> and remove the instance in APP, but keep the <ph audience="ror"
                                 >virtual platform or server</ph><ph audience="aws">virtual server</ph><ph audience="os"
                                 >virtual system</ph><ph audience="tps5">virtual platform</ph><ph audience="vmware"
-                                >VM</ph> in <ph audience="aws">AWS</ph><ph audience="ror">ROR</ph><ph audience="os"
-                                >OpenStack</ph><ph audience="tps5">TPS5</ph><ph audience="vmware"
-                            >vSphere</ph> for later use. The service manager role is required for this action.</li>
+                                >VM</ph><ph audience="azure">resources</ph> in <ph audience="aws">AWS</ph><ph
+                                audience="ror">ROR</ph><ph audience="os">OpenStack</ph><ph audience="tps5">TPS5</ph><ph
+                                audience="vmware">vSphere</ph><ph audience="azure"
+                            >Azure</ph> for later use. The service manager role is required for this action.</li>
                         <li><codeph>DEPROVISION</codeph> - to terminate the subscription in <ph
                                 conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                                 />, remove the instance in APP, and delete the <ph audience="ror"
                                 >virtual platform or server</ph><ph audience="aws">virtual server</ph><ph audience="os"
                                 >virtual system</ph><ph audience="tps5">virtual platform</ph><ph audience="vmware"
-                                >VM</ph> in <ph audience="aws">AWS</ph><ph audience="ror">ROR</ph><ph audience="os"
-                                >OpenStack</ph><ph audience="tps5">TPS5</ph><ph audience="vmware"
-                            >vSphere</ph>. The service manager role is required for this action.</li>
+                                >VM</ph><ph audience="azure">resources</ph> in <ph audience="aws">AWS</ph><ph
+                                audience="ror">ROR</ph><ph audience="os">OpenStack</ph><ph audience="tps5">TPS5</ph><ph
+                                audience="vmware">vSphere</ph><ph audience="azure"
+                            >Azure</ph>. The service manager role is required for this action.</li>
                         <li><codeph>ABORT_PENDING</codeph> - to abort a pending <ph audience="ror"
                                 >provisioning or modification operation</ph><ph audience="aws"
                                 >provisioning operation</ph><ph audience="os">provisioning operation</ph><ph
                                 audience="tps5">provisioning or modification operation</ph><ph audience="vmware"
-                                >provisioning or modification operation</ph> in <ph
+                                >provisioning or modification operation</ph><ph audience="azure"
+                                >provisioning operation</ph> in <ph
                                 conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>. <ph
                                 conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                                 /> is notified to roll back the changes made for the subscription and return it to its previous state. In <ph
                                 audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph audience="ror">ROR</ph><ph
-                                audience="tps5">TPS5</ph><ph audience="vmware"
-                            >vSphere</ph>, no actions are carried out.</li>
+                                audience="tps5">TPS5</ph><ph audience="vmware">vSphere</ph><ph audience="azure"
+                                >Azure</ph>, no actions are carried out.</li>
                         <li><codeph>COMPLETE_PENDING</codeph> - to complete a pending <ph audience="ror"
                                 >provisioning or modification operation</ph><ph audience="aws"
                                 >provisioning operation</ph><ph audience="os">provisioning operation</ph><ph
                                 audience="tps5">provisioning or modification operation</ph><ph audience="vmware"
-                                >provisioning or modification operation</ph> in <ph
+                                >provisioning or modification operation</ph><ph audience="azure"
+                                >provisioning operation</ph> in <ph
                                 conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>. <ph
                                 conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                                 /> is notified to complete the changes for the subscription and set the subscription status to <b>ready</b> (or <b>suspended</b> if it was suspended before). This is possible only if the operations of the service controller are already completed.</li>

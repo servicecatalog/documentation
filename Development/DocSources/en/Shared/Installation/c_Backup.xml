@@ -9,8 +9,8 @@
     <conbody>
         <section>
             <p>The <ph audience="app">APP</ph><ph audience="aws">AWS</ph><ph audience="ror">ROR</ph><ph audience="os"
-                    >OpenStack</ph><ph audience="tps5">TPS5</ph><ph audience="vmware"
-                >vSphere</ph> integration software does not offer integrated backup and recovery mechanisms. Use the standard file system, application server, and database mechanisms instead. </p>
+                    >OpenStack</ph><ph audience="tps5">TPS5</ph><ph audience="vmware">vSphere</ph><ph audience="azure"
+                    >Azure</ph> integration software does not offer integrated backup and recovery mechanisms. Use the standard file system, application server, and database mechanisms instead. </p>
         </section>
         <section>
             <title>Backup</title>
@@ -28,7 +28,8 @@
                         >APP installation</ph><ph audience="aws">AWS integration software</ph><ph audience="ror"
                         >ROR integration software</ph><ph audience="os">OpenStack integration software</ph><ph
                         audience="tps5">TPS5 integration software</ph><ph audience="vmware"
-                        >vSphere integration software</ph>, always create a backup of the data mentioned above. </note>
+                        >vSphere integration software</ph><ph audience="azure"
+                    >Azure integration software</ph>, always create a backup of the data mentioned above. </note>
             </p>
         </section>
         <section>
@@ -36,8 +37,8 @@
             <p>If you need to recover your <ph audience="app">APP installation</ph><ph audience="aws"
                     >AWS integration installation</ph><ph audience="ror">ROR integration installation</ph><ph
                     audience="os">OpenStack integration installation</ph><ph audience="tps5"
-                    >TPS5 integration installation</ph><ph audience="vmware"
-                >vSphere integration installation</ph>, the recommended procedure is as follows: </p>
+                    >TPS5 integration installation</ph><ph audience="vmware">vSphere integration installation</ph><ph
+                    audience="azure">Azure integration installation</ph>, the recommended procedure is as follows: </p>
             <p>
                 <ol>
                     <li>Restore the <codeph>bssapp</codeph><ph audience="vmware"

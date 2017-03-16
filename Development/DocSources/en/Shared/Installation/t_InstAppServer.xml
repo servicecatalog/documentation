@@ -43,7 +43,7 @@
                             <li audience="tps5"
                                 >The TPS5 service controller (<codeph>oscm-app-tps5.ear</codeph>) is deployed to the <codeph>app-domain</codeph> domain.</li>
                             <li audience="azure"
-                                    >The Azure service controller (<codeph>oscm-azure-aws.ear</codeph>) is deployed to the <codeph>app-domain</codeph> domain.</li>
+                                    >The Azure service controller (<codeph>oscm-app-azure.ear</codeph>) is deployed to the <codeph>app-domain</codeph> domain.</li>
                             <li audience="vmware"
                                     >The VMware service controller (<codeph>oscm-app-vmware.ear</codeph>) is deployed to the <codeph>app-domain</codeph> domain.</li>
                             <li audience="vmware"

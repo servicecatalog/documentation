@@ -5,11 +5,11 @@
   <title>Service Parameters and Operations</title>
   <refbody>
     <section>
-      <p>The following sections describe the technical service parameters and service operations which are supported by the AWS service controller. </p>
+      <p>The following sections describe the technical service parameters and service operations which are supported by the Azure service controller. </p>
     </section>
     <section>
       <title>Service Parameters</title>
-      <p>The AWS service controller supports the parameters below.</p>
+      <p>The Azure service controller supports the parameters below.</p>
       <p>
         <note>All parameters defined in the technical service definition must be one-time parameters, since the modification of parameters is not supported. Be sure to set their <codeph>modificationType</codeph> to <codeph>ONE_TIME</codeph>. </note>
       </p>
@@ -20,8 +20,8 @@
             <row>
               <entry>
                 <p><b>APP_CONTROLLER_ID</b></p>
-                <p>Mandatory. The ID of the service controller as defined in its implementation. The ID is set during the installation of the AWS integration software.</p>
-                <p>Default (must not be changed): <codeph>ess.aws</codeph></p>
+                <p>Mandatory. The ID of the service controller as defined in its implementation. The ID is set during the installation of the Azure integration software.</p>
+                <p>Default (must not be changed): <codeph>ess.azureARM</codeph></p>
               </entry>
             </row>
           </tbody>
@@ -33,10 +33,10 @@
           <tbody>
             <row>
               <entry>
-                <p><b>DISK_SIZE</b></p>
-                <p>Optional. The maximum disk size of the virtual server to be instantiated. The value is a number specifying the size in GB. If not specified, the default size for the selected type of server is used.</p>
-                <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers or, in case you specify more than one disk size, have fixed parameter options for selection.</p>
-                <p>Example: <codeph>3</codeph></p>
+                <p><b>SUBSCRIPTION_ID</b></p>
+                <p>Mandatory. The ID of the subscription in Azure on the account of which the virtual machines and other resources are to be created. </p>
+                <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers.</p>
+                <p>Example: <codeph>1234a5d6-a7c8-909a-912b-34cd56e78901</codeph></p>
               </entry>
             </row>
           </tbody>
@@ -48,10 +48,10 @@
           <tbody>
             <row>
               <entry>
-                <p><b>IMAGE_NAME</b></p>
-                <p>Mandatory. Name of the AMI which is the basis for virtual servers. </p>
-                <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers or, in case you specify more than one image, have fixed parameter options for selection.</p>
-                <p>Example: <codeph>ami-0d77397e</codeph></p>
+                <p><b>TENANT_ID</b></p>
+                <p>Mandatory. The ID of the tenant in Azure on the account of which the virtual machines and other resources are to be created. This is the directory ID of the Active Directory of the user or organization who owns the subscription specified in <codeph>SUBSCRIPTION_ID</codeph>.</p>
+                <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers.</p>
+                <p>Example: <codeph>9e8d7cb6-5432-1098-7654-3210a9876f54</codeph></p>
               </entry>
             </row>
           </tbody>
@@ -63,10 +63,10 @@
           <tbody>
             <row>
               <entry>
-                <p><b>INSTANCENAME</b></p>
-                <p>Mandatory. The name of the virtual server to be instantiated. This name must be specified by customers when they subscribe to a corresponding service. The string given in <codeph>INSTANCENAME_PREFIX</codeph> is prepended to the name. The name including the prefix must match the pattern given in <codeph>INSTANCENAME_PATTERN</codeph>.</p>
-                <p>As the instance name is stored as a tag on the Amazon EC2 instance, the maximum length is 255 Unicode characters.</p>
-                <p>Example: <codeph>MyServer</codeph></p>
+                <p><b>CLIENT_ID</b></p>
+                <p>Mandatory. The application ID of the application used to carry out the resource operations in Azure. For creating new resource groups, the application must have at least the Contributor role for the subscription specified in <codeph>SUBSCRIPTION_ID</codeph>. For creating virtual machines in existing resource groups, at least the Contributor role for these resource groups is required. </p>
+                <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers.</p>
+                <p>Example: <codeph>3cd456e7-890f-12ab-3c4d-5efa6b789c01 </codeph></p>
               </entry>
             </row>
           </tbody>
@@ -78,10 +78,10 @@
           <tbody>
             <row>
               <entry>
-                <p><b>INSTANCENAME_PATTERN</b></p>
-                <p>Mandatory. A regular expression specifying a pattern for the virtual server instance names entered by the users when they subscribe to a corresponding service. If the names do not match the pattern, the subscription is rejected.</p>
-                <p>The regular expression must be specified in the technical service definition.</p>
-                <p>Example: <codeph>.*{1,255}</codeph></p>
+                <p><b>CLIENT_SECRET</b></p>
+                <p>Mandatory. The authentication key generated in Azure for the application specified in <codeph>SUBSCRIPTION_ID</codeph>. The key is only visible at the time it is created. </p>
+                <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers.</p>
+                <p>Example: <codeph>XaNvrzqRRVFkjV5pVBG4CEwOPFERfakZaP2kKZf67t9</codeph></p>
               </entry>
             </row>
           </tbody>
@@ -93,10 +93,10 @@
           <tbody>
             <row>
               <entry>
-                <p><b>INSTANCENAME_PREFIX</b></p>
-                <p>Optional. A string to be prepended to the virtual server instance names entered by the users when they subscribe to a corresponding service. </p>
-                <p>The string must be specified in the technical service definition.</p>
-                <p>Example: <codeph>aws</codeph></p>
+                <p><b>REGION</b></p>
+                <p>Mandatory. The full name of the Azure region where the resource groups are or are to be located. </p>
+                <p>Examples: </p>
+                <p><codeph>Central US, Japan East, West Europe</codeph></p>
               </entry>
             </row>
           </tbody>
@@ -108,15 +108,10 @@
           <tbody>
             <row>
               <entry>
-                <p><b>INSTANCE_TYPE</b></p>
-                <p>Mandatory. The type of the virtual server to be instantiated. Any valid Amazon EC2 instance type can be specified. In the sample technical service, the following types are defined:</p>
-                <ul>
-                  <li><b>t1.micro</b></li>
-                  <li><b>t1.small</b></li>
-                  <li><b>t1.medium</b></li>
-                </ul>
-                <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers or, in case you specify more than one type, have fixed parameter options for selection.</p>
-                <p>Example: <codeph>t1.micro</codeph></p>
+                <p><b>RESOURCE_GROUP</b></p>
+                <p>Mandatory. The name of the resource group that is to be created or in which virtual machines are to be deployed. In the latter case, the resource group must exist with a complete network configuration in Azure and be associated with the subscription specified in <codeph>SUBSCRIPTION_ID</codeph>.</p>
+                <p>Resource group names may consist of up to 64 alphanumeric characters, hyphen (-), and underscore (_).</p>
+                <p>Example: <codeph>myservice-context-rg</codeph></p>
               </entry>
             </row>
           </tbody>
@@ -128,11 +123,10 @@
           <tbody>
             <row>
               <entry>
-                <p><b>KEY_PAIR_NAME</b></p>
-                <p>Mandatory. The key pair name of the virtual server to be instantiated. </p>
-                <p>The key pair name must be specified by the customer when subscribing to an AWS service. To log in to the instance, the customer must enter the key pair name and the associated private key.</p>
-                <p>For details on creating key pairs, refer to the user documentation of Amazon Web Services.</p>
-                <p>Example: <codeph>my-key-pair</codeph></p>
+                <p><b>STORAGE_ACCOUNT</b></p>
+                <p>Mandatory. The name of the storage account to be used with the virtual machines. </p>
+                <p>Storage account names my consist of 3-24 lowercase letters and numbers. They must be unique within Azure. </p>
+                <p>Example: <codeph>mycompanyaccount2</codeph></p>
               </entry>
             </row>
           </tbody>
@@ -144,60 +138,10 @@
           <tbody>
             <row>
               <entry>
-                <p><b>MAIL_FOR_COMPLETION</b></p>
-                <p>Optional. The address to which emails are to be sent that describe manual steps required to complete an operation. If you specify this parameter, the service controller interrupts the processing of each operation before its completion and waits for a notification about the execution of a manual action. Omit this parameter if you do not want to interrupt the processing. </p>
-                <p>Example: <codeph>info@company.com</codeph></p>
-              </entry>
-            </row>
-          </tbody>
-        </tgroup>
-      </table>
-      <table frame="top">
-        <tgroup cols="1">
-          <colspec colname="c1" colnum="1"/>
-          <tbody>
-            <row>
-              <entry>
-                <p><b>PUBLIC_IP</b></p>
-                <p>Optional. Specifies whether the virtual server to be instantiated is to be assigned a public IP address. The value can be <codeph>true</codeph> or <codeph>false</codeph>. If not specified, the default is <codeph>false</codeph>. </p>
-                <p>Example: <codeph>true</codeph></p>
-              </entry>
-            </row>
-          </tbody>
-        </tgroup>
-      </table>
-      <table frame="top">
-        <tgroup cols="1">
-          <colspec colname="c1" colnum="1"/>
-          <tbody>
-            <row>
-              <entry>
-                <p><b>REGION </b></p>
-                <p>Mandatory. The region where the data center hosting the virtual servers is located. Any valid region can be specified. In the sample technical service, the following regions are defined: </p>
-                <ul>
-                  <li><b>us-west-1</b> (US West (Northern California) Region)</li>
-                  <li><b>us-west-2</b> (US West (Oregon) Region)</li>
-                  <li><b>us-east-1</b> (US East (Northern Virginia) Region)</li>
-                </ul>
-                <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers or, in case you specify more than one region, have fixed parameter options for selection.</p>
-                <p>Example: <codeph>us-east-1</codeph>
-                </p>
-              </entry>
-            </row>
-          </tbody>
-        </tgroup>
-      </table>
-      <table frame="top">
-        <tgroup cols="1">
-          <colspec colname="c1" colnum="1"/>
-          <tbody>
-            <row>
-              <entry>
-                <p><b>SECURITY_GROUP_NAMES</b></p>
-                <p>Optional. Comma-separated list of security group names for the virtual server to be instantiated. </p>
-                <p>A security group acts as a firewall that controls the traffic to an Amazon EC2 instance. An Amazon EC2 instance can be assigned to one or more security groups. For details on security groups, refer to the user documentation of Amazon Web Services.</p>
-                <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers or, in case you specify more than one security group, have fixed parameter options for selection.</p>
-                <p>Example: <codeph>MySecurityGroup</codeph></p>
+                <p><b>VIRTUAL_NETWORK</b></p>
+                <p>Mandatory. The name of the virtual network within the resource group specified in <codeph>RESOURCE_GROUP</codeph> to which the virtual machines are to be assigned. </p>
+                <p>Virtual network names are case-insensitive. They may consist of 2-64 alphanumeric characters, hyphen (-), underscore (_), and period (.).</p>
+                <p>Example: <codeph>myservice.vnet</codeph></p>
               </entry>
             </row>
           </tbody>
@@ -210,9 +154,9 @@
             <row>
               <entry>
                 <p><b>SUBNET</b></p>
-                <p>Optional. The subnet to which the virtual server is to be assigned. </p>
-                <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers or, in case you specify more than one subnet, have fixed parameter options for selection.</p>
-                <p>Example: <codeph>subnet-a77430d0</codeph></p>
+                <p>Mandatory. The name of the subnet within the virtual network specified in <codeph>VIRTUAL_NETWORK</codeph> to which the virtual machines are to be assigned. </p>
+                <p>Subnet names are case-insensitive. They may consist of 2-80 alphanumeric characters, hyphen (-), underscore (_), and period (.).</p>
+                <p>Example: <codeph>myservice-vnet-subnet1</codeph></p>
               </entry>
             </row>
           </tbody>
@@ -224,10 +168,91 @@
           <tbody>
             <row>
               <entry>
-                <p><b>USERDATA_URL</b></p>
-                <p>Optional. URL to access the user data scripts or <codeph>cloud-init</codeph> directives for the automatic execution of user-specific configuration data. This URL must be accessible for APP.</p>
-                <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers or, in case you specify more than one URL, have fixed parameter options for selection.</p>
-                <p>Example: <codeph> http://127.0.0.1:8880/cloud-init/LAMP.script</codeph> (if the file was created under <codeph>&lt;appdomain>/docroot/cloud-init/LAMP.script</codeph>)</p>
+                <p><b>VIRTUAL_MACHINE_IMAGE_ID</b></p>
+                <p>Mandatory. The identifier of the virtual machine image that is to be used as the basis for provisioning the virtual machines. The image determines the operating system and other characteristics of the virtual machines.</p>
+                <p>The identifier must have the following format and components, separated by blanks:</p>
+                <p><codeph>&lt;publisher> &lt;offer> &lt;SKU></codeph></p>
+                <p><codeph>&lt;publisher></codeph> is the identifier of the organization or person who provides the virtual machine image, <codeph>&lt;offer></codeph> is the offer by which it is made available, and <codeph>&lt;SKU></codeph> the commercial name of the image.</p>
+                <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers or, in case you specify more than one image, have fixed parameter options for selection. </p>
+                <p>Examples: </p>
+                <p><codeph>MicrosoftWindowsServer WindowsServer 2012-R2-Datacenter</codeph></p>
+                <p><codeph>RedHat RHEL Red Hat Enterprise Linux 7.3</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>TEMPLATE_BASE_URL</b></p>
+                <p>Mandatory. The URL leading to the Resource Manager templates specified in the <codeph>TEMPLATE_NAME</codeph> and <codeph>TEMPLATE_PARAMETERS_NAME</codeph> parameters. Specify a URL that can be reached from <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> by HTTP or HTTPS. </p>
+                <p> Users should not be able to enter a value for this parameter, i.e. it should not be configurable for customers.</p>
+                <p>Example: <codeph>https://myserver:8880/oscm-app/docroot/templates/</codeph>
+                </p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>TEMPLATE_NAME</b></p>
+                <p>Mandatory. The name or relative path and name of the template to be used by Azure Resource Manager for provisioning the virtual machines and additional resources. The template must be in JSON format and detail everything needed to carry out the resource orchestration in Azure. The <codeph>TEMPLATE_NAME</codeph> is added to the <codeph>TEMPLATE_BASE_URL</codeph>. </p>
+                <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers or, in case you specify more than one template, have fixed parameter options for selection. </p>
+                <p>Example: <codeph>SampleTemplate.json</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>TEMPLATE_PARAMETER_NAME</b></p>
+                <p>Mandatory. The name or relative path and name of the parameter definition file to be used for passing the parameter values a user specifies at subscription time to the resource manager template. The file must be in JSON format and contain all the parameters required for provisioning the virtual machines and additional resources. The <codeph>TEMPLATE_PARAMETER_NAME</codeph> is added to the <codeph>TEMPLATE_BASE_URL</codeph>. </p>
+                <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers or, in case you specify more than one definition file, have fixed parameter options for selection. </p>
+                <p>Example: <codeph>SampleTemplate.parameters.json</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>VM_NAME</b></p>
+                <p>Mandatory. The name of the virtual machine to be provisioned. If more than one virtual machine is to be created, this name is used for all of them with a consecutive number appended to it, for example, <codeph>mymachine1</codeph>, <codeph>mymachine2</codeph>. </p>
+                <p>The name must be specified by customers when they subscribe to a corresponding service. It may consist of up to 15 alphanumeric characters, hyphen (-), and underscore (_).</p>
+                <p>Example: <codeph>mymachine</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>INSTANCE_COUNT</b></p>
+                <p>Mandatory. The number of virtual machines to be provisioned. </p>
+                <p>Default: <codeph>1</codeph></p>
               </entry>
             </row>
           </tbody>
@@ -235,13 +260,13 @@
       </table>
     </section>
     <section>
-      <title>Service Operations for Virtual Servers</title>
-      <p>The AWS service controller supports the service operations below for virtual servers. </p>
+      <title>Service Operations</title>
+      <p>The Azure service controller supports the service operations below for virtual machines. </p>
       <p>The <codeph>actionURL</codeph> for each operation is:</p>
       <p><codeph>https://&lt;host>:&lt;port>/OperationService/AsynchronousOperationProxy?wsdl</codeph></p>
-      <p><codeph>&lt;host></codeph> and <codeph>&lt;port></codeph> are the server and port of the <codeph>app-domain</codeph> domain where the AWS integration software is deployed.</p>
+      <p><codeph>&lt;host></codeph> and <codeph>&lt;port></codeph> are the server and port of the <codeph>app-domain</codeph> domain where the Azure integration software is deployed.</p>
       <p>
-        <note>If you provision a virtual server that does not support start and stop operations, make sure that you remove the service operations from the technical service definition. </note>
+        <note>If you provision a virtual machine that does not support start and stop operations, make sure that you remove the service operations from the technical service definition. </note>
       </p>
       <table frame="top">
         <tgroup cols="1">
@@ -250,7 +275,7 @@
             <row>
               <entry>
                 <p><b>START_VIRTUAL_SYSTEM</b></p>
-                <p>Starts a virtual server in AWS if it was stopped.</p>
+                <p>Starts all virtual machines created for a subscription if they were stopped.</p>
               </entry>
             </row>
           </tbody>
@@ -263,7 +288,7 @@
             <row>
               <entry>
                 <p><b>STOP_VIRTUAL_SYSTEM</b></p>
-                <p>Stops a virtual server in AWS if it was started.</p>
+                <p>Stops all virtual machines created for a subscription if they were started.</p>
               </entry>
             </row>
           </tbody>

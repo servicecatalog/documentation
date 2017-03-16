@@ -13,7 +13,7 @@
             <brand/>
             <prognum>16.1.6</prognum>
             <component/>
-            <series>Microsoft Integration (GlassFish)</series>
+            <series>Microsoft Azure Integration (GlassFish)</series>
         </prodinfo>
         <prodinfo product="oscm_ee">
             <prodname>Enterprise Service</prodname>
@@ -84,7 +84,6 @@
         <topicref format="dita" href="Shared/concepts/c_ControllerHandleCommProblems.xml" type="concept"/>
         <topicref format="dita" href="Shared/Installation/c_Backup.xml" type="concept"/>
         <topicref format="dita" href="Shared/Installation/c_UpdateConfiguration.xml" type="concept"/>
-        <!--topicref format="dita" href="AzureIntegrationGuide/Administrating/c_LoadBalancing.xml" type="concept"/-->
         <topicref format="dita" href="Shared/reference/c_LogConfig.xml" type="concept"/>
     </chapter>
     <chapter format="dita" href="Shared/Installation/c_Uninstallation.xml" type="concept"/>

@@ -305,7 +305,7 @@
     </section>
     <section audience="azure">
       <title>Updating the Application Server</title>
-      <p>After you have executed the preparation steps, redeploy or deploy the applications that make up the AWS integration software in the <codeph>app-domain</codeph> domain: </p>
+      <p>After you have executed the preparation steps, redeploy or deploy the applications that make up the Azure integration software in the <codeph>app-domain</codeph> domain: </p>
       <ol>
         <li><codeph>oscm-app</codeph></li>
         <li><codeph>oscm-app-azure</codeph>
