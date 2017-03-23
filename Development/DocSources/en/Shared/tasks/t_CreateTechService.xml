@@ -57,10 +57,10 @@
                         >The vSphere integration package, <codeph>oscm-vmware-install-pack.zip</codeph>, includes a technical service as a sample. Use the sample as a basis for defining your own technical services as required:</p>
                     <p audience="vmware"><codeph>samples/TechnicalService_VMware.xml</codeph></p>
                     <p audience="azure"
-                        >The Azure integration package, <codeph>oscm-azure-install-pack.zip</codeph>, includes a technical services as a sample:</p>
-                    <p audience="azure"><codeph>samples/Technical_service_Azure.xml</codeph></p>
+                        >The Azure integration package, <codeph>oscm-azure-install-pack.zip</codeph>, includes a technical service as a sample:</p>
+                    <p audience="azure"><codeph>samples/TechnicalService_Azure.xml</codeph></p>
                     <p audience="azure"
-                            >The technical service specifies a sample resource manager template and parameter definition file as parameter options. These files are available in the same directory. In order to use these files or adapted versions thereof, copy them to a location hat can be accessed from <ph
+                            >The technical service specifies a sample Resource Manager template and parameter definition file as parameter options. These files are available in the same directory. In order to use these files or adapted versions thereof, copy them to a location hat can be accessed from <ph
                             conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                             /> and the Azure integration software by HTTP or HTTPS at runtime, for example, the <codeph>docroot/templates</codeph> directory of the <codeph>app-domain</codeph> domain in your application server.</p>
                    <p>In the technical service definition, be sure to specify:</p>
@@ -87,7 +87,7 @@
                                 >Service parameters which represent the VM templates defined in vSphere as well as the naming, location, and sizing parameters for the VMs to be provisioned. Service parameters also define the network setup in vSphere and the configuration of the VMs. For details on the supported service parameters, refer to <xref
                                 href="../../VMWareIntegrationGuide/Appendix/r_ServiceParameters.xml"/>.</li>
                         <li audience="azure"
-                                >Service parameters which match the ones specified in the given resource manager template. For details on the supported service parameters, refer to <xref
+                                >Service parameters which match the ones specified in the given Resource Manager template and parameter definition file. For details on the supported service parameters, refer to <xref
                                 href="../../AzureIntegrationGuide/Appendix/r_ServiceParameters.xml"/>.</li>
                         
                     </ul>

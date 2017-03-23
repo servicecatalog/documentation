@@ -9,12 +9,12 @@
       <p>The <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
         /> ROR integration supports the following usage scenarios: </p>
       <ul compact="no">
-        <li><b>Provisioning of a virtual platform (L-Platform)</b>: When a customer subscribes to a corresponding service on a <ph
+        <li><b>Provisioning of a virtual platform (L-Platform)</b>: When a customer subscribes to a corresponding service on a<ph product="oscm_ce">n</ph> <ph
             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
           /> marketplace, ROR is triggered to create a virtual platform with one or more virtual servers based on a specific template.</li>
         <li><b>Horizontal scale-up and scale-down</b>: By changing the corresponding parameters at an existing subscription, customers can trigger ROR to add a virtual server to their virtual platform. In the same way, they can request ROR to remove a virtual server from the platform. </li>
         <li><b>Vertical scale-up and scale-down</b>: By changing the corresponding parameters at an existing subscription, customers can trigger ROR to add CPUs to each virtual server in their virtual platform. In the same way, they can request ROR to remove CPUs from the virtual servers. </li>
-        <li><b>Assignment of a single server to an existing virtual platform</b>: When a customer subscribes to a corresponding service on a <ph
+        <li><b>Assignment of a single server to an existing virtual platform</b>: When a customer subscribes to a corresponding service on a<ph product="oscm_ce">n</ph> <ph
             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
           /> marketplace, ROR is triggered to instantiate a virtual server. This virtual server is added to an existing virtual platform for which the same customer already has a subscription. </li>
         <li><b>Starting and stopping a virtual platform</b>: A customer can explicitly start and stop a virtual platform in ROR by executing a service operation at the corresponding subscription. </li>

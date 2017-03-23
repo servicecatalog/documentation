@@ -12,7 +12,7 @@
  <prop action="exclude" att="audience" val="vmware"/>
  <prop action="exclude" att="audience" val="int"/>
  <prop action="include" att="platform" val="print"/>
- <prop action="include" att="platform" val="help"/>
+ <prop action="exclude" att="platform" val="help"/>
  <prop action="include" att="product" val="sqa"/>
  <prop action="include" att="product" val="cs"/>
  <prop action="include" att="product" val="adm"/>

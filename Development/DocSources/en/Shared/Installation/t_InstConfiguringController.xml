@@ -55,7 +55,7 @@
                                 <li audience="azure"
                                             ><codeph>configsettings_controller.properties</codeph>: Configuration settings for the Azure service controller. <p>The initial installation stores these settings in the <codeph>bssapp</codeph> database. You can change them later using a graphical user interface.</p><p>The <codeph>configsettings_controller.properties</codeph> file specifies the organization ID and user credentials for accessing <ph
                                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                        /> as well as the Azure access ID and key. For security reasons, it is recommended that you delete the file as soon as you have successfully installed and configured the Azure integration software.</p></li>
+                                        />. For security reasons, it is recommended that you delete the file as soon as you have successfully installed and configured the Azure integration software.</p></li>
                             </ul>
                         </p>
                     </li>

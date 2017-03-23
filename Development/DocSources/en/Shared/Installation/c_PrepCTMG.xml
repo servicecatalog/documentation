@@ -37,7 +37,7 @@
                         </ul>
                     </p><p>For details on vCenter, users, and their privileges in vSphere, refer to the vSphere documentation.</p>
                 </li>
-                <li audience="azure">You must have access to Azure ???. <p>???</p></li>
+                <li audience="azure">You must have access to Azure with a corresponding account. </li>
             </ul>
         </section>
     </conbody>

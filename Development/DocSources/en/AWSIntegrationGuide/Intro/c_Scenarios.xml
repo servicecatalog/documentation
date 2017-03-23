@@ -9,10 +9,10 @@
       <p>The <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
         /> AWS integration supports the following usage scenarios: </p>
       <ul compact="no">
-        <li><b>Provisioning of a virtual server</b>: When a customer subscribes to a corresponding service on a <ph
+        <li><b>Provisioning of a virtual server</b>: When a customer subscribes to a corresponding service on a<ph product="oscm_ce">n</ph> <ph
             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
           /> marketplace, the service controller triggers AWS to create an Amazon EC2 instance based on a specific AMI. </li>
-        <li><b>Automatic execution of user-specific configuration data</b>: When a customer subscribes to a corresponding service on a <ph
+        <li><b>Automatic execution of user-specific configuration data</b>: When a customer subscribes to a corresponding service on a<ph product="oscm_ce">n</ph> <ph
             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
           /> marketplace, he has the option of passing user-specific configuration data to the Amazon EC2 instance to be provisioned. The data can be used to modify the static information defined in the underlying AMI. Thus, the customer can, for example, perform automated configuration tasks or run scripts.</li>
         <li><b>Starting and stopping a virtual server</b>: A customer can explicitly start and stop an Amazon EC2 instance by executing a service operation at the corresponding subscription. </li>

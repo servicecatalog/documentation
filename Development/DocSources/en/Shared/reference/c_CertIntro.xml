@@ -24,7 +24,7 @@
             <p>
                 <ul>
                     <li id="BasicAuth"
-                                ><b>Basic authentication</b>:<p>The caller sends the key or ID and password of a <ph
+                        ><b>Basic authentication</b>:<p>The caller sends the key or ID and password of a<ph product="oscm_ce">n</ph> <ph
                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                 /> user. SOAP-based calls address the <ph
                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"

@@ -17,7 +17,7 @@
           >creates or terminates </ph>a subscription for <ph audience="aws">an Amazon EC2 instance in AWS</ph><ph
           audience="ror">a virtual system in ROR</ph><ph audience="os">a virtual system in OpenStack</ph><ph
           audience="tps5">a virtual platform in TPS5</ph><ph audience="vmware">a VM in vSphere</ph><ph audience="azure"
-          >a virtual machine in Azure</ph>, the Subscription service asynchronously triggers the corresponding actions in <ph
+          >one or more virtual machines in Azure</ph>, the Subscription service asynchronously triggers the corresponding actions in <ph
           audience="aws">AWS</ph><ph audience="ror">ROR</ph><ph audience="os">OpenStack</ph><ph audience="tps5"
           >TPS5</ph><ph audience="vmware">vSphere</ph><ph audience="azure"
           >Azure</ph> through the <b>Asynchronous Provisioning Platform (APP)</b> and the <ph audience="aws"
@@ -27,7 +27,7 @@
           ><b>Azure service controller</b></ph>: <ph audience="ror">Virtual platforms or servers</ph><ph audience="aws"
           >Virtual servers</ph><ph audience="os">Virtual systems</ph><ph audience="tps5">Virtual platforms</ph><ph
           audience="vmware">VMs</ph><ph audience="azure"
-          >The virtual machine and - if requested - additional resources</ph> are <ph audience="ror"
+          >The virtual machines and - if requested - additional resources</ph> are <ph audience="ror"
           >created, modified, or deleted </ph><ph audience="aws">created or deleted </ph><ph audience="os"
           >created or deleted </ph><ph audience="tps5">created, modified, or deleted </ph><ph audience="vmware"
           >created, modified, or deleted </ph><ph audience="azure">created or deleted </ph>in <ph audience="aws"

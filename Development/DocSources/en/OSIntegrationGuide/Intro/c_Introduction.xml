@@ -17,7 +17,7 @@
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                         /> includes all components required for connecting an existing <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                        /> installation with OpenStack. This manual describes how to deploy this package and how to create and use services for OpenStack on a <ph
+                                        /> installation with OpenStack. This manual describes how to deploy this package and how to create and use services for OpenStack on a<ph product="oscm_ce">n</ph> <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                 /> marketplace. </p><p>FUJITSU Cloud Service K5 is a cloud platform based on OpenStack and integrated with <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"

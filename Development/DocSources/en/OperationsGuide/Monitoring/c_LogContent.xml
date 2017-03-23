@@ -8,7 +8,7 @@
     <title>Log Entry Format</title>
     <conbody>
         <section>
-            <p>Every entry in a <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+            <p>Every entry in a<ph product="oscm_ce">n</ph> <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> log file has the following format: </p>
             <p><codeph>&lt;YYYY-MM-DD'T'HH:MM:SS z> LogLabel:&lt;label> LogType:&lt;level> MessageID: &lt;MessageID> Message: &lt;Message></codeph></p>
             <p><codeph>LogLabel</codeph> identifies the product that created the log entry. For <ph

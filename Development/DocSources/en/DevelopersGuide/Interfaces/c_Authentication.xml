@@ -27,7 +27,7 @@
                 /> acts as the server, and the client must provide its authenticating data to the server. Three options are available: </p>
             <p>
                 <ul>
-                    <li><b>Basic authentication</b>:<p>The caller sends the key or ID and password of a <ph
+                    <li><b>Basic authentication</b>:<p>The caller sends the key or ID and password of a<ph product="oscm_ce">n</ph> <ph
                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                 /> user. SOAP-based calls address the <ph
                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"

@@ -45,8 +45,7 @@
                                             ><codeph>configsettings_controller.properties</codeph>: Configuration settings for the VMware service controller. <p>The initial installation stores these settings in the <codeph>bssapp</codeph> database, where you can change them later, if required, by means of an update installation. Refer to <xref
                                             href="c_Update.xml"/> for details. </p></li>
                                 <li audience="azure"
-                                            ><codeph>configsettings_controller.properties</codeph>: Configuration settings for the Azure service controller. <p>The initial installation stores these settings in the <codeph>bssapp</codeph> database, where you can change them later, if required, by means of an update installation. Refer to <xref
-                                            href="c_Update.xml"/> for details. </p></li>
+                                            ><codeph>configsettings_controller.properties</codeph>: Configuration settings for the Azure service controller. <p>The initial installation stores these settings in the <codeph>bssapp</codeph> database. You can change them later using a graphical user interface. </p></li>
                             </ul>
                         </p>
                     </li>

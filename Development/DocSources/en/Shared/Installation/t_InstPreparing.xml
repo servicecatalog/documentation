@@ -112,7 +112,7 @@
                     </li>
                     <li audience="azure">
                         <p><codeph><b>samples</b></codeph>: </p>
-                        <p>Templates for the Azure Resource Manager and corresponding technical service samples.</p>
+                        <p>Technical service samples and corresponding templates for the Azure Resource Manager.</p>
                     </li>
                 </ul></p>
         </context>

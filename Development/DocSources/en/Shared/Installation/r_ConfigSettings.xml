@@ -9,14 +9,16 @@
             <p>The configuration settings for <ph audience="app">APP</ph><ph audience="aws"
                     >the AWS integration software</ph><ph audience="ror">the ROR integration software</ph><ph
                     audience="os">the OpenStack integration software</ph><ph audience="tps5"
-                    >the TPS5 integration software</ph><ph audience="vmware"
-                    >the vSphere integration software</ph> are provided in the following files in subfolders of the directory to which you extracted the <ph
+                    >the TPS5 integration software</ph><ph audience="vmware">the vSphere integration software</ph><ph
+                    audience="azure"
+                    >the Azure integration software</ph> are provided in the following files in subfolders of the directory to which you extracted the <ph
                     audience="app"><codeph>oscm-app-install-pack.zip</codeph></ph><ph audience="aws"
                         ><codeph>oscm-aws-install-pack.zip</codeph></ph><ph audience="ror"
                         ><codeph>oscm-ror-install-pack.zip</codeph></ph><ph audience="os"
                         ><codeph>oscm-openstack-install-pack.zip</codeph></ph><ph audience="tps5"
                         ><codeph>oscm-tps5-install-pack.zip</codeph></ph><ph audience="vmware"
-                        ><codeph>oscm-vmware-install-pack.zip</codeph></ph> file (<codeph>&lt;install_pack_dir></codeph>): </p>
+                        ><codeph>oscm-vmware-install-pack.zip</codeph></ph><ph audience="azure"
+                        ><codeph>oscm-azure-install-pack.zip</codeph></ph> file (<codeph>&lt;install_pack_dir></codeph>): </p>
             <p audience="aws"><ul>
                     <li><codeph>domains/app_domain/glassfish.properties</codeph></li>
                     <li><codeph>databases/app_db/db.properties</codeph></li>
@@ -41,6 +43,12 @@
                 <li><codeph>databases/app_db/configsettings.properties</codeph></li>
                 <li><codeph>databases/app_db/configsettings_controller.properties</codeph></li>
             </ul>This appendix describes the settings in detail. </p>
+            <p audience="azure"><ul>
+                    <li><codeph>domains/app_domain/glassfish.properties</codeph></li>
+                    <li><codeph>databases/app_db/db.properties</codeph></li>
+                    <li><codeph>databases/app_db/configsettings.properties</codeph></li>
+                    <li><codeph>databases/app_db/configsettings_controller.properties</codeph></li>
+                </ul>This appendix describes the settings in detail. </p>
             <p audience="vmware"><ul>
                 <li><codeph>domains/app_domain/glassfish.properties</codeph></li>
                 <li><codeph>databases/app_db/db.properties</codeph></li>

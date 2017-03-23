@@ -9,7 +9,7 @@
       <p>The <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
         /> vSphere integration supports the following usage scenarios:</p>
       <ul compact="no">
-        <li><b>Provisioning of a VM</b>: When a customer subscribes to a corresponding service on a <ph
+        <li><b>Provisioning of a VM</b>: When a customer subscribes to a corresponding service on a<ph product="oscm_ce">n</ph> <ph
             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
           /> marketplace, vSphere is triggered to create a VM based on a specific VM template. </li>
         <li><b>Vertical scale-up and scale-down</b>: By changing the corresponding parameters at an existing subscription, customers can trigger vSphere to add resources (disks, CPU, RAM, etc.) to a provisioned VM. In the same way, they can request vSphere to remove resources from a VM. </li>

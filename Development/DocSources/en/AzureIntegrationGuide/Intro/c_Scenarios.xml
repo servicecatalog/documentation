@@ -9,10 +9,11 @@
       <p>The <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
         /> Azure integration supports the following usage scenarios: </p>
       <ul compact="no">
-        <li><b>Provisioning of virtual machines in existing resource groups</b>: When a customer subscribes to a corresponding service on a <ph
-            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+        <li><b>Provisioning of virtual machines in existing resource groups</b>: When a customer subscribes to a corresponding service on a<ph
+            product="oscm_ce">n</ph>
+          <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
           /> marketplace, the service controller triggers the Azure Resource Manager to deploy one or more virtual machines to a given resource group with a complete network configuration. Depending on the service parameters, a new storage account is created or an existing one is used.</li>
-        <li><b>Provisioning of resource groups with virtual machines</b>: When a customer subscribes to a corresponding service on a <ph
+        <li><b>Provisioning of resource groups with virtual machines</b>: When a customer subscribes to a corresponding service on a<ph product="oscm_ce">n</ph> <ph
             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
           /> marketplace, the service controller triggers the Azure Resource Manager to deploy a new resource group with the network configuration, storage account, and virtual machines specified by the service parameters. </li>
         <li><b>Starting and stopping virtual machines</b>: By executing the respective service operation at a subscription, the customer can start and stop the virtual machines created for the subscription. </li>

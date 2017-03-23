@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd" >
+<reference id="Service_Parameters_114">
+  <title>Parameter Definition Files</title>
+  <refbody>
+    <section>
+      <p>Parameter definition files are used to pass variable parameter values to the corresponding Azure Resource Manager template. Like the templates, parameter definition files are in JSON format.</p>
+      <p>The name of a parameter definition file indicates the Resource Manager template it belongs to:</p>
+      <table frame="none">
+        <tgroup cols="2">
+          <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+          <colspec colname="c2" colnum="2" colwidth="2.0*"/>
+          <tbody>
+            <row>
+              <entry>Resouce Manager template:</entry>
+              <entry><codeph>&lt;name>.json</codeph></entry>
+            </row>
+            <row>
+              <entry>Parameter definition file:</entry>
+              <entry><codeph>&lt;name>.parameters.json</codeph></entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <p>The following sections describe the parameters whose values are controlled and used by the Azure integration software. Most of them map to parameters specified in technical service definitions, some are specified in parameter definition files only.</p>
+    </section>
+    <section>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>adminUsername</b></p>
+                <p>The name of the initial administrator for all the virtual machines to be provisioned.</p>
+                <p>This parameter and its value are specified in parameter definition files only, not in technical service definitions. Values cannot be entered by users at subscription time.</p>
+                <p>Example: <codeph>admin</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>adminPassword</b></p>
+                <p>The password of the initial administrator for all the virtual machines to be provisioned.</p>
+                <p>This parameter and its value are specified in parameter definition files only, not in technical service definitions. Values cannot be entered by users at subscription time.</p>
+                <p>Example: <codeph>c9bc3aC9e22d7fa5</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>storageAccountName</b></p>
+                <p>The name of the storage account to be used with the virtual machines. </p>
+                <p>Technical service parameter: <codeph>STORAGE_ACCOUNT_NAME</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>network</b></p>
+                <p>The name of the virtual network to which the virtual machines are to be assigned. </p>
+                <p>Technical service parameter: <codeph>VIRTUAL_NETWORK</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>subnet</b></p>
+                <p>The name of the subnet to which the virtual machines are to be assigned. </p>
+                <p>Technical service parameter: <codeph>SUBNET</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>networkInterface</b></p>
+                <p>The name of the network interface to be used for the virtual machines. </p>
+                <p>This parameter is specified in parameter definition files only, not in technical service definitions. The value cannot be entered by users at subscription time. It is set automatically by the Azure integration software to a string in the following format: </p>
+                <p><codeph>NIC&lt;current system time in milliseconds></codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>imagePublisher</b></p>
+                <p>The identifier of the organization or person who provides the virtual machine image that is to be used as the basis for provisioning the virtual machines. </p>
+                <p>Technical service parameter: first component of <codeph>VIRTUAL_MACHINE_IMAGE_ID</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>imageOffer</b></p>
+                <p>The identifier of the offer including the virtual machine image that is to be used as the basis for provisioning the virtual machines. </p>
+                <p>Technical service parameter: second component of <codeph>VIRTUAL_MACHINE_IMAGE_ID</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>imageSku</b></p>
+                <p>The commercial name (SKU) of the virtual machine image that is to be used as the basis for provisioning the virtual machines. </p>
+                <p>Technical service parameter: third component of <codeph>VIRTUAL_MACHINE_IMAGE_ID</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>vmName</b></p>
+                <p>The name of the virtual machine to be provisioned. If more than one virtual machine is to be created, this name is used for all of them with a consecutive number appended to it, for example, <codeph>mymachine1</codeph>, <codeph>mymachine2</codeph>. </p>
+                <p>Technical service parameter: <codeph>VM_NAME</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>numberOfInstances</b></p>
+                <p>The number of virtual machines to be provisioned. </p>
+                <p>Technical service parameter: <codeph>INSTANCE_COUNT</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+  </refbody>
+</reference>

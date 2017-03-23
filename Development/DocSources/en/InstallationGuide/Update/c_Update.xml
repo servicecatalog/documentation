@@ -166,6 +166,7 @@
       </p>
     </section>
     <section>
+<<<<<<< Upstream, based on origin/master
       <title>Connecting to the BIRT Report Engine</title>
       <p>Adjust the <codeph>REPORT_ENGINEURL</codeph> configuration setting in <ph
           conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> as follows:</p>
@@ -174,6 +175,74 @@
    __report=${reportname}.rptdesign&amp;SessionId=${sessionid}
    &amp;__locale=${locale}&amp;WSDLURL=${wsdlurl}&amp;SOAPEndPoint=${soapendpoint}
    &amp;wsname=Report&amp;wsport=ReportPort</codeblock></p>
+=======
+      <title>Updating the <codeph>bes-domain</codeph> Domain</title>
+      <ol>
+        <li>Start the <codeph>bes-domain</codeph> domain.</li>
+        <li>Undeploy the following applications:<ul
+                            compact="no">
+            <li
+                                product="oscm_ee"><codeph>birt</codeph>, or <codeph>eclipse-birt-runtime</codeph> if you are upgrading from a release prior to V16.0 Fix 4.</li>
+            <li><codeph>oscm</codeph><ph
+                                product="oscm_ee">, or <codeph>fujitsu-bss</codeph> if you are upgrading from a release prior to V15.4 Fix 5.</ph></li>
+            <li><codeph>oscm-portal</codeph><ph
+                                product="oscm_ee">, or <codeph>fujitsu-bss-portal</codeph> if you are upgrading from a release prior to V15.4 Fix 5.</ph></li>
+            <li><codeph>oscm-portal-help</codeph><ph
+                        product="oscm_ee">, or <codeph>fujitsu-bss-portal-help</codeph> if you are upgrading from a release prior to V15.4 Fix 5.</ph></li>
+            <li>Optionally: Your own branding package <codeph>.war</codeph> file, if you have customized the layout of the marketplaces and created your own branding package. </li>
+          </ul></li>
+        <li>Set the following setting in the <b>JVM Options</b> of the application server to <codeph>false</codeph>:<p><codeph>-Dorg.apache.catalina.loader.WebappClassLoader.ENABLE_CLEAR_REFERENCES=false</codeph></p></li>
+        <li>Stop the <codeph>bes-domain</codeph> domain.</li>
+        <li>Check for <codeph>.glassfishStaleFiles</codeph> files. If there are any, delete them. The files are located in<p><codeph>&lt;domain&gt;/applications/&lt;application name&gt;/.glassfishStaleFiles</codeph></p><p>For example: </p><p><codeph>bes-domain/applications/oscm/.glassfishStaleFiles</codeph></p><p
+                        product="oscm_ee">or, when upgrading from a release prior to V15.4 Fix 5:</p><p
+                    product="oscm_ee"><codeph>bes-domain/applications/fujitsu-bss/.glassfishStaleFiles</codeph></p></li>
+        <li>Check for an <codeph>eclipse-birt-runtime</codeph> directory. If there is one, delete it. </li>
+        <li>Delete any existing index directories in the index base of the <codeph>bes-domain</codeph> domain:<p><codeph>bes-domain/slaveIndexBase/*</codeph></p></li>
+        <li
+                            product="oscm_ee">When upgrading from a release prior to V15.4 Fix 5, delete the file <codeph>fujitsu-bss-security.jar</codeph> from the <codeph>&lt;GLASSFISH_HOME&gt;/glassfish/domains/bes-domain/lib</codeph> directory.</li>
+        <li>Copy the <codeph>javax.faces.jar</codeph> file from the <codeph>&lt;install_pack_dir&gt;/install/lib</codeph> directory to the <codeph>&lt;GLASSFISH_HOME&gt;/glassfish/modules</codeph> directory.</li>
+        <li>Copy the <codeph>oscm-security.jar</codeph> and <codeph>commons-codec-1.7.jar</codeph> files from the <codeph>&lt;install_pack_dir&gt;/domains/bes_domain/lib</codeph> directory to the <codeph>lib</codeph> directory of the <codeph>bes-domain</codeph> domain.</li>
+        <li>Start the <codeph>bes-domain</codeph> domain.</li>
+        <li>
+          <p>Deploy the <ph
+                                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> applications located in <codeph>&lt;install_pack_dir&gt;/domains/bes_domain/applications</codeph> in the following sequence: </p>
+          <p>
+            <ol>
+              <li><codeph>oscm</codeph><!--p>Do not forget to activate the <b>Compatibility</b> option for the <codeph>oscm.ear</codeph> file. This is required to support backward compatibility of JAR visibility in GlassFish V2. </p--><p>If you are running <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> in SAML_SP mode, you need to update the WSIT files contained in the <codeph>oscm.ear</codeph> archive. </p><!--p>If you want to update or change STS-related configuration settings, you must change the respective settings in the <codeph>configsettings.properties</codeph> located in <codeph>&lt;install_pack_dir>/databases/bes_db</codeph> file first. </p--><p>Execute the <codeph>build-glassfish.xml</codeph> file in <codeph>&lt;install_pack_dir&gt;/install</codeph> as follows: </p><p>
+                  <codeblock>&lt;ANT_HOME&gt;/bin/ant
+   -DpatchProps.path=../domains/bes_domain/installer 
+   -f build-glassfish.xml patchApplication</codeblock>
+                </p><p>
+                  <note>It may be required to enclose the <codeph>-DpatchProps.path=&lt;path&gt;</codeph> command in double or single quotes depending on the operating system. </note>
+                </p><!--p>The configuration setting values are read from the <codeph><codeph>configsettings.properties</codeph></codeph> file and written to the WSIT files contained in the <codeph>oscm.ear</codeph> archive.<p--><p>During the execution of the above command, a <codeph>tmp</codeph> subdirectory is created in <codeph>&lt;install_pack_dir&gt;/domains/bes_domain</codeph> to which the updated <codeph>oscm.ear</codeph> archive is saved. Proceed with manually deploying the <codeph>tmp/oscm.ear</codeph> archive to the <codeph>bes-domain</codeph> domain.</p></li>
+              <li
+                                    product=" oscm_ee"><codeph>birt</codeph>
+                <p>This archive contains the properties files for the labels and texts used in reports. Be aware that with a new release or fix, new keys may have been added to the system, others may have been changed or deleted.</p><p>Existing texts in English, German, and Japanese are overwritten by an upgrade. If you have customized these texts, merge your customizations into the properties files before deploying the <codeph>birt</codeph> archive. Otherwise they will no longer be available after the upgrade. Refer to the <i>Operator's Guide</i> for details.</p></li>
+              <li><codeph>oscm-portal</codeph>
+                <p>This archive contains the properties files for the user interface resources (user interface and email texts, platform objects). Be aware that with a new release or fix, new keys may have been added to the system, others may have been changed or deleted. </p><p>If you have not customized the texts, existing texts in English, German, and Japanese are overwritten by an upgrade. If you have customized these texts, they are not overwritten. Make sure to have a backup of your changes. After having deployed the <codeph>oscm-portal</codeph>, check whether existing texts, for example, mail messages have changed as compared to the previous release. You may need to customize the texts again.</p><p
+                                    product="oscm_ee">If you are running <ph
+                                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> in SAML_SP mode and upgrading from a release prior to V15.4 Fix 5, the following change is necessary in the IdP: The IdP operator must adapt the URL of the relying party for <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> to reflect the renaming from <codeph>fujitsu-bss</codeph> to <codeph>oscm</codeph>. </p>
+              </li>
+              <li><codeph>oscm-portal-help</codeph>
+                <p>This archive contains the online help and FAQ files in English, German, and Japanese. You can customize these resources. When upgrading the system with a fix for this release, make sure to have a backup of any such customizations. Merge the customized files into the <codeph>oscm-portal-help</codeph> archive, before deploying it again. Otherwise they will no longer be available after the upgrade. </p><p>If you added additional languages to the system, also include the corresponding help and FAQ file structures into the <codeph>oscm-portal-help</codeph> archive before deploying it again. Refer to the <i>Operator's Guide</i> for details. </p></li>
+              <li>Optionally: Your own branding package <codeph>.war</codeph> file</li>
+            </ol>
+          </p>
+        </li>
+        <li
+          product="oscm_ee">If you are upgrading from a<ph product="oscm_ce">n</ph> <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> release prior to V15.4 Fix 5 change the implementation of the login module for the <codeph>bssRealm</codeph> in <codeph>&lt;GLASSFISH_HOME&gt;/glassfish/domains/bes-domain/config/login.conf</codeph> from:<codeblock>bssRealm {
+com.fujitsu.adm.um.security.ADMLoginModule required;
+};</codeblock><p>to</p><codeblock>bssRealm {
+org.oscm.security.ADMLoginModule required;
+};</codeblock></li>
+        <li
+          product="oscm_ee">If you are upgrading from a<ph product="oscm_ce">n</ph> <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> release prior to V15.4 Fix 5 change the implementation class of the <codeph>bss-realm</codeph> in <codeph>&lt;GLASSFISH_HOME&gt;/glassfish/domains/bes-domain/config/domain.xml</codeph> from:<codeblock>&lt;auth-realm name="bss-realm" classname="com.fujitsu.adm.um.security.ADMRealm"&gt;</codeblock><p>to</p><codeblock>&lt;auth-realm name="bss-realm" classname="org.oscm.security.ADMRealm"&gt;</codeblock></li>
+      </ol>
+>>>>>>> 0235287 Azure Integration - draft for review; a"n" for OSCM
     </section>
     <!--section>
       <title>Updating the Command Line Tool</title>

@@ -20,7 +20,7 @@
             <p conref="../../Shared/reference/c_CertProcedures.xml#CertIntProc/certInt3"> </p>
             <p conref="../../Shared/reference/c_CertProcedures.xml#CertIntProc/certInt4"> </p>
             
-            <p>As a <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+            <p>As a<ph product="oscm_ce">n</ph> <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> operator who sets up a secure <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> environment, you need to perform the tasks depicted in white. These tasks are described in detail in the subsequent sections. The tasks of an external organization that wants to make use of certificates are described in the <i>Developer's Guide</i>. </p>

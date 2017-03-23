@@ -7,7 +7,7 @@
 <concept id="concept_1BCF5C425D7D4627AB1C66A085CF6E11" xml:lang="en-us">
         <title>First Steps</title>
         <conbody>
-                <p>This section shows the first steps to be performed for getting started with operating a <ph
+                <p>This section shows the first steps to be performed for getting started with operating a<ph product="oscm_ce">n</ph> <ph
                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                         /> installation: </p>
                 <p>

@@ -8,25 +8,25 @@
         <prodinfo product="oscm_ce">
             <prodname/>
             <vrmlist>
-                <vrm version="16.1.6"/>
+                <vrm version="17.0.0"/>
             </vrmlist>
             <brand/>
-            <prognum>16.1.6</prognum>
+            <prognum>17.0.0</prognum>
             <component/>
             <series>Microsoft Azure Integration (GlassFish)</series>
         </prodinfo>
         <prodinfo product="oscm_ee">
             <prodname>Enterprise Service</prodname>
             <vrmlist>
-                <vrm version="16.1 Fix 6"/>
+                <vrm version="17.0"/>
             </vrmlist>
             <brand>FUJITSU Software</brand>
-            <prognum>Catalog Manager V16.1 Fix 6</prognum>
+            <prognum>Catalog Manager V17.0</prognum>
             <component/>
             <series>Microsoft Azure Integration (GlassFish)</series>
         </prodinfo>
         <bookid>
-            <edition>March 2017</edition>
+            <edition>Draft for Review - March 2017</edition>
             <booknumber product="oscm_ee">???</booknumber>
         </bookid>
         <bookrights product="oscm_ce">
@@ -94,5 +94,6 @@
         <topicref format="dita" href="AzureIntegrationGuide/Appendix/r_ConfigSettingsController.xml" type="reference"/>
     </appendix>
     <appendix format="dita" href="AzureIntegrationGuide/Appendix/r_ServiceParameters.xml" type="reference"/>
+    <appendix format="dita" href="AzureIntegrationGuide/Appendix/r_ParameterDefinitionFiles.xml" type="reference"/>
     <appendix format="dita" href="Shared/glossary/r_Glossary.xml" type="reference"/>
 </bookmap>

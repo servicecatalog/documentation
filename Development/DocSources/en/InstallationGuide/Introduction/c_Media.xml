@@ -20,7 +20,7 @@
                             <p><codeph><b>doc</b></codeph> subdirectory: </p>
                             <p>PDF manuals providing installation and operation instructions, an overview of <ph
                                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                    />, and information on new features and compatibility issues when upgrading a <ph
+                            />, and information on new features and compatibility issues when upgrading a<ph product="oscm_ce">n</ph> <ph
                                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                 /> installation. </p>
                         </li>

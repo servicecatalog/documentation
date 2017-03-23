@@ -94,7 +94,7 @@
             <row>
               <entry>
                 <p><b>REGION</b></p>
-                <p>Mandatory. The full name of the Azure region where the resource groups are or are to be located. </p>
+                <p>Mandatory. The full name of the Azure region where the resource group specified in <codeph>RESOURCE_GROUP</codeph> is or is to be located. </p>
                 <p>Examples: </p>
                 <p><codeph>Central US, Japan East, West Europe</codeph></p>
               </entry>
@@ -221,7 +221,7 @@
             <row>
               <entry>
                 <p><b>TEMPLATE_PARAMETER_NAME</b></p>
-                <p>Mandatory. The name or relative path and name of the parameter definition file to be used for passing the parameter values a user specifies at subscription time to the resource manager template. The file must be in JSON format and contain all the parameters required for provisioning the virtual machines and additional resources. The <codeph>TEMPLATE_PARAMETER_NAME</codeph> is added to the <codeph>TEMPLATE_BASE_URL</codeph>. </p>
+                <p>Mandatory. The name or relative path and name of the parameter definition file to be used for passing the parameter values specified at subscription time to the Resource Manager template. The file must be in JSON format and contain all the parameters required for provisioning the virtual machines and additional resources. The <codeph>TEMPLATE_PARAMETER_NAME</codeph> is added to the <codeph>TEMPLATE_BASE_URL</codeph>. </p>
                 <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers or, in case you specify more than one definition file, have fixed parameter options for selection. </p>
                 <p>Example: <codeph>SampleTemplate.parameters.json</codeph></p>
               </entry>
@@ -253,6 +253,20 @@
                 <p><b>INSTANCE_COUNT</b></p>
                 <p>Mandatory. The number of virtual machines to be provisioned. </p>
                 <p>Default: <codeph>1</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>MAIL_FOR_COMPLETION</b></p>
+                <p>Optional. The address to which emails are to be sent that describe manual steps required to complete an operation. If you specify this parameter, the service controller interrupts the processing of each operation before its completion and waits for a notification about the execution of a manual action. Omit this parameter if you do not want to interrupt the processing. </p>
+                <p>Example: <codeph>info@company.com</codeph></p>
               </entry>
             </row>
           </tbody>
