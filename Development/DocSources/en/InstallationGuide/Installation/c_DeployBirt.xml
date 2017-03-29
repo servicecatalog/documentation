@@ -3,7 +3,7 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
                          "concept.dtd">
 <concept id="Next_Steps_72" xml:lang="en-us">
-        <title>Deploying and Configuring the BIRT Report Engine</title>
+        <title>Deploying the BIRT Report Engine</title>
         <conbody>
                 <section product="oscm_ce">
                         <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
@@ -16,7 +16,7 @@
                         <p><ul>
                                         <li>Oracle GlassFish Server, version 3</li>
                                         <li>Apache Tomcat, version 8</li>
-                                </ul>To be able to generate reports, proceed as follows:</p>
+                                </ul>Proceed as follows:</p>
                         <ol>
                                 <li>Download the latest version of Eclipse BIRT runtime, for example, from http://www.eclipse.org.</li>
                                 <li>Deploy the <codeph>birt.war</codeph> archive to a domain on the GlassFish 3 or Tomcat application server. </li>
@@ -25,17 +25,6 @@
                                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                                         /> report designs and labels are available in the following archive provided for each release: <codeph>oscm-reports.zip</codeph>. Extract the contents of this archive to the root folder of the <codeph>birt</codeph> application:</p><p><codeph>&lt;GLASSFISH3_HOME>/glassfish/domains/&lt;domain>/applications/birt</codeph> or</p><p><codeph>&lt;TOMCAT_HOME>/webapps/birt</codeph>.</p></li>
                                 <li>Restart <codeph>birt</codeph>.</li>
-                                <li>Adjust the <codeph>REPORT_ENGINEURL</codeph> configuration setting in <ph
-                                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> as follows:<ol>
-                                                <li>Log in to the <ph
-                                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                                        /> administration portal with the platform operator user role.</li>
-                                                <li>From the <b>Operation</b> menu, choose <b>Update configuration settings</b>.</li>
-                                                <li>Adjust the host IP address to the one of the application server to which you deployed the report engine. For example:<codeblock>http://<b>&lt;tomcat host IP address></b>:&lt;port>/birt/frameset?
-   __report=${reportname}.rptdesign&amp;SessionId=${sessionid}
-   &amp;__locale=${locale}&amp;WSDLURL=${wsdlurl}&amp;SOAPEndPoint=${soapendpoint}
-   &amp;wsname=Report&amp;wsport=ReportPort</codeblock></li>
-                                        </ol></li>
                         </ol>
                         <p>Each time you install a new release of <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
@@ -57,17 +46,6 @@
                         <ol>
                                 <li>Deploy the <codeph>birt.war</codeph> archive located in <codeph>&lt;install_pack_dir>/domains/bes_domain/applications</codeph> to a domain on the GlassFish 3 or Tomcat application server.</li>
                                 <li>Restart <codeph>birt</codeph>.</li>
-                                <li>Adjust the <codeph>REPORT_ENGINEURL</codeph> configuration setting in <ph
-                                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> as follows:<ol>
-                                                <li>Log in to the <ph
-                                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                                        /> administration portal with the platform operator user role.</li>
-                                                <li>From the <b>Operation</b> menu, choose <b>Update configuration settings</b>.</li>
-                                                <li>Adjust the host IP address to the one of the application server to which you deployed the report engine. For example:<codeblock>http://<b>&lt;tomcat host IP address></b>:&lt;port>/birt/frameset?
-   __report=${reportname}.rptdesign&amp;SessionId=${sessionid}
-   &amp;__locale=${locale}&amp;WSDLURL=${wsdlurl}&amp;SOAPEndPoint=${soapendpoint}
-   &amp;wsname=Report&amp;wsport=ReportPort</codeblock></li>
-                                        </ol></li>
                         </ol>
                 </section>
                 <section><title>Exchanging Certificates</title><p>For secure communication of the BIRT report engine with <ph

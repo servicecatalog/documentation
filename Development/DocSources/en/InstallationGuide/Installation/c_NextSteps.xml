@@ -68,6 +68,17 @@ Proceed as follows:</p>
                         </ul>
                 </section>
                 <section>
+                        <title>Connecting to the BIRT Report Engine</title>
+                        <p>Adjust the <codeph>REPORT_ENGINEURL</codeph> configuration setting in <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> as follows:</p>
+                        <p>In the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        /> administration portal, choose <b>Update configuration settings</b> in the <b>Operation</b> menu. Adjust the host IP address to the one of the application server to which you deployed the report engine. For example:<codeblock>http://<b>&lt;tomcat host IP address></b>:&lt;port>/birt/frameset?
+   __report=${reportname}.rptdesign&amp;SessionId=${sessionid}
+   &amp;__locale=${locale}&amp;WSDLURL=${wsdlurl}&amp;SOAPEndPoint=${soapendpoint}
+   &amp;wsname=Report&amp;wsport=ReportPort</codeblock></p>
+                </section>
+                <section>
                         <title>Creating an Additional Operator Account</title>
                         <p>The creation of an additional operator account for your organization is useful, for example, to be able to delegate operational tasks or to unlock other operator accounts in case the password has been forgotten. Proceed as follows: </p>
                         <p>In the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"

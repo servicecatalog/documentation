@@ -142,6 +142,9 @@
                     </tgroup>
                 </table>
             </p>
+            <p>
+                <note>Make sure that the JMS service type for the domain is set to LOCAL. In a default GlassFish configuration it is set to EMBEDDED. When using the installation scripts for installing OSCM, the service type is set to LOCAL automatically</note>
+            </p>
         </section>
         <section>
             <title>Default File Encoding</title>
