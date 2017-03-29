@@ -121,24 +121,9 @@ C\\:/glassfish/masterSourceBase</codeblock>
                     </p>
                 </li>
                 <li audience="BSS">
-                    <p>The following settings in the <codeph>configsettings.properties</codeph> file are mandatory when installing <ph
+                    <p>Several settings in the <codeph>configsettings.properties</codeph> file are mandatory when installing <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        /> in <b>SAML_SP</b> authentication mode: </p>
-                    <p>
-                        <ul>
-                            <li><codeph>AUTH_MODE</codeph></li>
-                            <li><codeph>SSO_DEFAULT_TENANT_ID</codeph></li>
-                            <li><codeph>SSO_ISSUER_ID</codeph></li>
-                            <li><codeph>SSO_IDP_URL</codeph></li>
-                            <li><codeph>SSO_IDP_AUTHENTICATION_REQUEST_HTTP_METHOD</codeph></li>
-                            <li><codeph>SSO_IDP_SAML_ASSERTION_ISSUER_ID</codeph></li>
-                            <li><codeph>SSO_STS_URL</codeph></li>
-                            <li><codeph>SSO_STS_METADATA_URL</codeph></li>
-                            <li><codeph>SSO_STS_ENCKEY_LEN</codeph></li>
-                            <li><codeph>SSO_IDP_TRUSTSTORE</codeph></li>
-                            <li><codeph>SSO_IDP_TRUSTSTORE_PASSWORD</codeph></li>
-                        </ul>
-                    </p>
+                        /> in <b>SAML_SP</b> authentication mode. Refer to the next section for details. </p>
                 </li>
             </ul>
 

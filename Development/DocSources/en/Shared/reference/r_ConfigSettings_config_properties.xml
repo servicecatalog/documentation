@@ -178,7 +178,7 @@
 </codeblock></p><p>If your installation is configured to use HTTPS access, the required value is: <codeblock>https://&lt;host IP address&gt;:&lt;port&gt;/birt/frameset?
    __report=${reportname}.rptdesign&amp;SessionId=${sessionid}
    &amp;__locale=${locale}&amp;WSDLURL=${wsdlurl}&amp;SOAPEndPoint=${soapendpoint}
-   &amp;wsname=ReportSecure&amp;wsport=ReportSecurePort</codeblock></p><p>The <codeph>&lt;host IP address></codeph> is the IP address of the application server to which the BIRT report engine has been deployed. </p><note>The above value must be used as indicated. Do not change this value. <!--p>If the SSL/HTTPS port is changed and the BIRT report engine is running on the same domain as <ph
+   &amp;wsname=ReportSecure&amp;wsport=ReportSecurePort</codeblock></p><p>The <codeph>&lt;host IP address></codeph> is the IP address of the application server on which the BIRT report engine has been deployed. </p><note>The above value must be used as indicated. Do not change this value. <!--p>If the SSL/HTTPS port is changed and the BIRT report engine is running on the same domain as <ph
                         platform="print"><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                         > </ph></ph><ph platform="help"
                         >the platform</ph>, then this setting must also be updated.</p--></note></section>
@@ -188,19 +188,23 @@
                 platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
                 platform="help"
                 >the platform</ph> will not be able to generate any reports, since the Report Web service cannot be called correctly. <p>If your installation is configured to use HTTP access, the required value is: </p><p><codeph>http://&lt;host IP address&gt;:&lt;port&gt;/Report/ReportingServiceBean</codeph></p><p>If your installation is configured to use HTTPS access, the required value is: </p><p><codeph>https://&lt;host IP address&gt;:&lt;port&gt;/ReportSecure/ReportingServiceSecureBean</codeph>
-                </p><note>The above value must be used as indicated. Do not change this value. <p>If the SSL/HTTPS port is changed and the BIRT report engine is running on the same domain as <ph
+            </p><note>The above value must be used as indicated. Do not change this value. <!--p>If the SSL/HTTPS port is changed and the BIRT report engine is running on the same domain as <ph
                         platform="print"><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                         > </ph></ph><ph platform="help"
-                >the platform</ph>, then this setting must also be updated.</p></note></section>
+                >the platform</ph>, then this setting must also be updated.</p--></note><p>The <codeph>&lt;host IP address></codeph> is the IP address of the application server on which <ph
+                    platform="print"><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    > </ph></ph> has been deployed. </p></section>
         <section><title>REPORT_WSDLURL</title>Mandatory if you want to use the <ph platform="print"><ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
                 >platform's</ph> reports. The URL of the WSDL file of the Report Web service. All report data is retrieved via a call to the Report Web service. If you do not specify a correct value, <ph
                 platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
                 platform="help"
-                    >the platform</ph> will not be able to generate any reports, since the Report Web service cannot be called correctly. <p>If your installation is configured to use HTTP access, the required value is: </p><p><codeph>http://&lt;host IP address&gt;:&lt;port&gt;/Report/ReportingServiceBean?wsdl</codeph></p><p>If your installation is configured to use HTTPS access, the required value is: </p><p><codeph>https://&lt;host IP address&gt;:&lt;port&gt;/ReportSecure/ReportingServiceSecureBean?wsdl</codeph></p><note>The above value must be used as indicated. Do not change this value. <p>If the SSL/HTTPS port is changed and the BIRT report engine is running on the same domain as <ph
+                >the platform</ph> will not be able to generate any reports, since the Report Web service cannot be called correctly. <p>If your installation is configured to use HTTP access, the required value is: </p><p><codeph>http://&lt;host IP address&gt;:&lt;port&gt;/Report/ReportingServiceBean?wsdl</codeph></p><p>If your installation is configured to use HTTPS access, the required value is: </p><p><codeph>https://&lt;host IP address&gt;:&lt;port&gt;/ReportSecure/ReportingServiceSecureBean?wsdl</codeph></p><note>The above value must be used as indicated. Do not change this value. <!--p>If the SSL/HTTPS port is changed and the BIRT report engine is running on the same domain as <ph
                         platform="print"><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                         > </ph></ph><ph platform="help"
-                >the platform</ph>, then this setting must also be updated.</p></note></section>
+                >the platform</ph>, then this setting must also be updated.</p--></note><p>The <codeph>&lt;host IP address></codeph> is the IP address of the application server on which <ph
+                    platform="print"><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    > </ph></ph> has been deployed. </p></section>
         <!--section><title>SEARCH_INDEX_MASTER_FACTORY_NAME</title>Mandatory. The name of the search indexer application's JMS connection factory. Stay with the entry <codeph>jms/bss/masterIndexerQueueFactory</codeph> and do not change it.</section>
         <section><title>SEARCH_INDEX_MASTER_QUEUE_NAME</title>Mandatory. The name of the search indexer application's JMS queue. Stay with the entry <codeph>jms/bss/masterIndexerQueue</codeph> and do not change it.</section-->
         <section><title>SSO_DEFAULT_TENANT_ID</title>Mandatory if you install <ph platform="print"><ph
@@ -224,11 +228,11 @@
         </section>
         <section><title>SSO_IDP_SAML_ASSERTION_ISSUER_ID</title>Mandatory if you install <ph platform="print"><ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
-                >the platform</ph> in SAML_SP authentication mode. <p>The entity ID of the IdP system. This ID is unique for the IdP system and has to be communicated between the platform operator and the IdP administrator. It is required so that the platform can ensure that the authentication information returned from the IdP system actually comes from the IdP system that is configured for authenticating users. </p><p>The IdP administrator can find out the ID by retrieving the federation metadata on his IdP system. </p><b>Examples</b>:<p>On the OpenAM server, the federation metadata can be retrieved in a Web browser as follows: </p><p><codeph>https://&lt;OpenAM_server>/openam/saml2/jsp/exportmetadata.jsp?entityid=</codeph></p><p>On the ADFS server, look for the following file: </p><p><codeph>http://&lt;ADFShost>/FederationMetadata/2007-06/FederationMetadata.xml</codeph></p><p>In the XML file, the issuer ID is known as <codeph>entityID</codeph>, for example; </p><p><codeph>entityID="http://example.adfs.com/adfs/services/trust"</codeph>
+                >the platform</ph> in SAML_SP authentication mode. <p>The entity ID of the IdP system. This ID is unique for the IdP system and has to be communicated between the platform operator and the IdP administrator. It is required so that the platform can ensure that the authentication information returned from the IdP system actually comes from the IdP system that is configured for authenticating users. </p><p>The IdP administrator can find out the ID by retrieving the federation metadata on his IdP system. </p><b>Examples</b>:<p>On an OpenAM server, the federation metadata can be retrieved in a Web browser as follows: </p><p><codeph>https://&lt;OpenAM_server>/openam/saml2/jsp/exportmetadata.jsp?entityid=</codeph></p><p>On an Active Directory Federation Services (ADFS) server, look for the following file: </p><p><codeph>http://&lt;ADFShost>/FederationMetadata/2007-06/FederationMetadata.xml</codeph></p><p>In the XML file, the issuer ID is known as <codeph>entityID</codeph>, for example; </p><p><codeph>entityID="http://example.adfs.com/adfs/services/trust"</codeph>
             </p></section>
         <section><title>SSO_IDP_TRUSTSTORE</title>Mandatory if you install <ph platform="print"><ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
-                >the platform</ph> in SAML_SP authentication mode. The path and file name of the application server truststore file holding the public key certificate of the IdP.<p>Required for Web browser SSO.</p><p>Default: <codeph>&lt;path>/cacerts.jks</codeph></p><p>As soon as another IdP system, for example, OpenAM, Cloudminder, or Active Directory is installed and used, this setting might need to be changed. In this case, you need to restart <ph
+                >the platform</ph> in SAML_SP authentication mode. The path and file name of the application server truststore file holding the public key certificate of the IdP.<p>Required for Web browser SSO.</p><p>Default: <codeph>&lt;path>/cacerts.jks</codeph></p><p>As soon as another IdP system, for example, OpenAM, Cloudminder, or Active Directory Federation Services (ADFS) is installed and used, this setting might need to be changed. In this case, you need to restart <ph
                     platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
                     platform="help">the platform</ph>. </p></section>
         <section><title>SSO_IDP_TRUSTSTORE_PASSWORD</title>Mandatory if you install <ph platform="print"><ph
@@ -277,7 +281,7 @@
                 <li>Communication with Web pages or applications from custom tabs in subscriptions.</li>
                 <li>Logout requests, if <ph platform="print"><ph
                             conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
-                        >the platform</ph> is installed in SAML_SP authentication mode, single logout is configured, and the IdP system's single logout service requires signed requests, as, for example, in Microsoft Active Directory Federation Services. </li>
+                        >the platform</ph> is installed in SAML_SP authentication mode, single logout is configured, and the IdP system's single logout service requires signed requests, as, for example, in Microsoft Active Directory Federation Services (ADFS). </li>
             </ul><p>The application server used for the Web page, Web application, or IdP system needs the corresponding certificate of <ph
                     platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
                     platform="help"

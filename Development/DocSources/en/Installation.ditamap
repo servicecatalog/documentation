@@ -115,6 +115,9 @@
         <topicref format="dita"
             href="Shared/Installation/t_InstConfiguring.xml"
             type="task"/>
+            <topicref format="dita"
+            href="InstallationGuide/Installation/c_ConfigureIDP.xml"
+        type="concept"/>
 						
         <topicref format="dita"
             href="InstallationGuide/Installation/t_InstDB.xml"
@@ -128,9 +131,6 @@
         <topicref format="dita"
             href="InstallationGuide/Installation/c_NextSteps.xml"
             type="concept"/>
-		<topicref format="dita"
-            href="InstallationGuide/Installation/t_ConfigureIDP.xml"
-        type="task"/>
 		
         
     </chapter>

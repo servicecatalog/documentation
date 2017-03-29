@@ -15,7 +15,6 @@
                                         /> organizations using the <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                 /> administration portal. </p>
-<<<<<<< Upstream, based on origin/master
                 </section>
 
                 <section product="oscm_ce">
@@ -42,8 +41,6 @@
                                         />, you should also check for new releases of BIRT and changes in the <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                 /> report designs and labels and update them as required. </p>
-=======
->>>>>>> 0e71b25 First draft updated for GF 4 for review
                 </section>
                 <section>
                         <title>Setting the Context Root</title>
@@ -95,6 +92,17 @@ Proceed as follows:</p>
                                                         /> administration portal (<b>Change Password</b> page in the <uicontrol>Account</uicontrol> menu). </p></li>
                                 <li>SAML_SP: <p>User ID: The ID you specified in the <codeph>ADMIN_USER_ID</codeph> configuration key in the <codeph>sso.properties</codeph> configuration file. </p><p>Password: Password as known in the IdP for the above user. </p></li>
                         </ul>
+                </section>
+                <section>
+                        <title>Connecting to the BIRT Report Engine</title>
+                        <p>Adjust the <codeph>REPORT_ENGINEURL</codeph> configuration setting in <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> as follows:</p>
+                        <p>In the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        /> administration portal, choose <b>Update configuration settings</b> in the <b>Operation</b> menu. Adjust the host IP address to the one of the application server to which you deployed the report engine. For example:<codeblock>http://<b>&lt;tomcat host IP address></b>:&lt;port>/birt/frameset?
+   __report=${reportname}.rptdesign&amp;SessionId=${sessionid}
+   &amp;__locale=${locale}&amp;WSDLURL=${wsdlurl}&amp;SOAPEndPoint=${soapendpoint}
+   &amp;wsname=Report&amp;wsport=ReportPort</codeblock></p>
                 </section>
                 <section>
                         <title>Creating an Additional Operator Account</title>
