@@ -143,7 +143,8 @@
                 </table>
             </p>
             <p>
-                <note>Make sure that the JMS service type for the domain is set to LOCAL. In a default GlassFish configuration it is set to EMBEDDED. When using the installation scripts for installing OSCM, the service type is set to LOCAL automatically</note>
+                <note>Make sure that the JMS service type for the domain is set to LOCAL. In a default GlassFish configuration it is set to EMBEDDED. When using the installation scripts for installing OSCM, the service type is set to LOCAL automatically.<p>If you need to change the service type manually, you can run, for example the following command: </p><p><codeph>asadmin set server.jms-service.type=LOCAL</codeph>
+                    </p></note>
             </p>
         </section>
         <section>
