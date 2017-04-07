@@ -33,7 +33,7 @@
             </p>
             <p>The email address to which email notifications are sent. </p>
         </section>
-        <section><title>APP_KEY_PATH</title>The path to the file containing the key required for encryption and decryption of service parameters with data type <codeph>PWD</codeph> or custom attributes marked for encryption.<p>Upon the start of APP, it is checked whether a key file exists in the location specified in this setting. If this not the case, the key file is automatically generated and stored in the location specified here. If nothing is specified, the file will be generated into the default location and named <codeph>key</codeph>.</p>Default: <p><codeph>./key</codeph> in the <codeph>&lt;GLASSFISH_HOME&gt;/glassfish/domains/app-domain/config</codeph> directory</p><p>
+        <section><title>APP_KEY_PATH</title>The path to the file containing the key required for encryption and decryption of service parameters with data type <codeph>PWD</codeph> or custom attributes marked for encryption.<p>Upon the start of APP, it is checked whether a key file exists in the location specified in this setting. If this not the case, the key file is automatically generated and stored in the location specified here. If nothing is specified, the file will be generated into the default location and named <codeph>key</codeph>.</p>Default: <p><codeph>&lt;GLASSFISH_HOME&gt;/glassfish/domains/app-domain/config</codeph></p><p>
                 <note>Be aware that the key file must not be deleted. Otherwise, encryption and decryption is no longer possible. It is recommended to create a backup of this file once generated.</note>
             </p></section>
         <section>

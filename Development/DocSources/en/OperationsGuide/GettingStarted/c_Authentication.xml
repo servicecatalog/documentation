@@ -112,7 +112,7 @@
                             <entry>User ID<p>Password</p></entry>
                             <entry>
                                 <p>User ID: </p>
-                                <p>The ID you specified in the <codeph>ADMIN_USER_ID</codeph> configuration key in the <codeph>sso.properties</codeph> configuration file. </p>
+                                <p>The ID you specified in the <codeph>ADMIN_USER_ID</codeph> configuration setting in the <codeph>sso.properties</codeph> configuration file. </p>
                                 <p>Password: </p>
                                 <p>Password as known in the IdP for the operator user ID.</p>
                             </entry>
@@ -125,7 +125,7 @@
                             <entry>User ID<p>Password</p></entry>
                             <entry>
                                 <p>User ID: </p>
-                                <p>The ID you specified in the <codeph>ADMIN_USER_ID</codeph> configuration key in the <codeph>sso.properties</codeph> configuration file. </p>
+                                <p>The ID you specified in the <codeph>ADMIN_USER_ID</codeph> configuration setting in the <codeph>sso.properties</codeph> configuration file. </p>
                                 <p>Password: </p>
                                 <p>Password as known in the STS system for the operator user ID.</p>
                             </entry>

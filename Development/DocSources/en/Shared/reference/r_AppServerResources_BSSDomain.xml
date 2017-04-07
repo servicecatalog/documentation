@@ -10,7 +10,7 @@
         <section>
             <p>The following sections give an overview of the resources which must be provided for the <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> domain (<codeph>bes-domain</codeph>) on the application server. They are also available in:</p>
+                    /> domain (<codeph>bes-domain</codeph>) on the application server. The resources are defined in:</p>
             <p>
                 <codeblock>domains\bes-domain\installer\resources-template.xml</codeblock>
             </p>
@@ -150,7 +150,7 @@
                 </table>
             </p>
             <p>
-                <note>Make sure that the JMS service type for the domain is set to LOCAL. In a default GlassFish configuration it is set to EMBEDDED. When using the installation scripts for installing OSCM, the service type is set to LOCAL automatically.<p>If you need to change the service type manually, you can run, for example the following command: </p><p><codeph>asadmin set server.jms-service.type=LOCAL</codeph>
+                <note>Make sure that the JMS service type is set to LOCAL. In a default GlassFish configuration it is set to EMBEDDED. When using the installation scripts for installing OSCM, the service type is set to LOCAL automatically.<p>If you need to change the service type manually, you can run, for example the following command: </p><p><codeph>asadmin set server.jms-service.type=LOCAL</codeph>
                     </p></note>
             </p>
         </section>

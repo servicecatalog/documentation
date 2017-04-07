@@ -34,8 +34,8 @@
                                                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                                             /> services, choose one of the following options</b>: <ul>
                                                             <li><ph
-                                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                                            /> administration portal - Choose <b>Update configuration settings</b> in the <b>Operation</b> menu. <p>The current configuration settings as stored in the database are retrieved. You can check all settings and update them as required by entering a new value for the corresponding configuration key. </p><p>For detailed step-by-step instructions, refer to the online help. </p></li>
+              conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+              /> administration portal - Choose <b>Update configuration settings</b> in the <b>Operation</b> menu. <p>The current configuration settings as stored in the database are retrieved. You can check all settings and update them as required by entering a new value for the corresponding configuration setting. </p><p>For detailed step-by-step instructions, refer to the online help. </p></li>
                                                             <li>Edit the content of the <codeph>configsettings.properties</codeph> file as required. <p>Then execute the <codeph>build-db.xml</codeph> file in <codeph>&lt;install_pack_dir&gt;/install</codeph> as follows: </p><p>
        <codeblock>&lt;ANT_HOME&gt;/bin/ant -f build-db.xml
    UPDATE.configSettings</codeblock>

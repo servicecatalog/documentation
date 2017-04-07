@@ -18,9 +18,8 @@
             <p>Portbase + 80: HTTP listener: <codeph>8080</codeph></p>
             <p>Portbase + 81: HTTP listener: <codeph>8081</codeph></p>
             <p>Portbase + 86: JMX port: <codeph>8086</codeph></p>
-            <p>Portbase + 76: JMS broker port: <codeph>8076</codeph>
-                </p>
-            <p>### What is the relationship with JMS provider port 8076 which needs to be set BEFORE the installation - is this still required? ###</p>
+            <p>Portbase + 76: JMS provider port: <codeph>8076</codeph>
+            </p>
             <p>Portbase + 37: IIOP listener: <codeph>8037</codeph>
                 </p>
             <p>Portbase + 38: IIOP listener: <codeph>8038</codeph>
@@ -68,6 +67,7 @@
                                         /> installation package (<codeph>&lt;install_pack_dir&gt;/domains/bes_domain/lib</codeph>) to the <codeph>lib</codeph> directory of the <codeph>bes-domain</codeph> domain.</li>
                                 <li>The required resources, email settings, JMS queues, data sources are created in the application server. Refer to <xref
                                         href="../../Shared/reference/r_AppServerResources.xml"/> for details.</li>
+                                <li>A key file for encryption and decryption is generated in the location you specified in the <codeph>KEY_FILE_PATH</codeph> setting in the <codeph>configsettings.properties</codeph> file. By default, this file is named <codeph>key</codeph> and located in <p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/bes-domain/config</codeph>.</p></li>
                                 <li>The directory traversal is disabled for both domains, <codeph>bes-domain</codeph> and <codeph>master-indexer-domain</codeph>: The directory listing parameter is set to <codeph>false</codeph> in the <codeph>default-web.xml</codeph> file in the domain directories you are using for <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </li>
                             </ul>

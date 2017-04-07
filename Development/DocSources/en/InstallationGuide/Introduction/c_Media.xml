@@ -75,9 +75,6 @@
             <li><b>vSphere Integration Package, <codeph>oscm-vmware-install-pack.zip</codeph>: </b><p>Contains all the components required for integrating VMware vSphere with <ph
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> as well as the related documentation. </p></li>
-            <li><b>Azure Integration Package, <codeph>oscm-azure-install-pack.zip</codeph>: </b><p>Contains all the components required for integrating Microsoft Azure with <ph
-                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> as well as the related documentation. </p></li>
         </ul>
     </conbody>
 </concept>

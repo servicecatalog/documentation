@@ -37,7 +37,7 @@ Proceed as follows:</p>
                                                 </p></li>
                                         <li> In the <ph
                                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                                        /> administration portal, go to <b>Operation -> Update Configuration Settings</b> and change the <codeph>BASE_URL_HTTPS</codeph> configuration key, and, if specified, the <codeph>BASE_URL</codeph> configuration key, accordingly. See below for details on accessing <ph
+                                                        /> administration portal, go to <b>Operation -> Update Configuration Settings</b> and change the <codeph>BASE_URL_HTTPS</codeph> configuration setting, and, if specified, the <codeph>BASE_URL</codeph> configuration setting, accordingly. See below for details on accessing <ph
                                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                                 />. </li>
                                 </ol>
@@ -64,7 +64,7 @@ Proceed as follows:</p>
                                 <li>INTERNAL: <p>User ID: <codeph>administrator</codeph></p><p>Password: <codeph>admin123</codeph></p><p>It is recommended that you change the initial password in the <ph
                                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                                         /> administration portal (<b>Change Password</b> page in the <uicontrol>Account</uicontrol> menu). </p></li>
-                                <li>SAML_SP: <p>User ID: The ID you specified in the <codeph>ADMIN_USER_ID</codeph> configuration key in the <codeph>sso.properties</codeph> configuration file. </p><p>Password: Password as known in the IdP for the above user. </p></li>
+                                <li>SAML_SP: <p>User ID: The ID you specified in the <codeph>ADMIN_USER_ID</codeph> configuration setting in the <codeph>sso.properties</codeph> configuration file. </p><p>Password: Password as known in the IdP for the above user. </p></li>
                         </ul>
                 </section>
                 <section>
@@ -73,7 +73,7 @@ Proceed as follows:</p>
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                 /> as follows:</p>
                         <p>In the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                        /> administration portal, choose <b>Update configuration settings</b> in the <b>Operation</b> menu. Adjust the host IP address to the one of the application server to which you deployed the report engine. For example:<codeblock>http://<b>&lt;tomcat host IP address></b>:&lt;port>/birt/frameset?
+                                        /> administration portal, choose <b>Update configuration settings</b> in the <b>Operation</b> menu. Change the host IP address and port to the ones of the application server to which you deployed the report engine: <codeblock>http://<b>&lt;host IP address></b>:<b>&lt;port></b>/birt/frameset?
    __report=${reportname}.rptdesign&amp;SessionId=${sessionid}
    &amp;__locale=${locale}&amp;WSDLURL=${wsdlurl}&amp;SOAPEndPoint=${soapendpoint}
    &amp;wsname=Report&amp;wsport=ReportPort</codeblock></p>

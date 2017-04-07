@@ -10,9 +10,9 @@
       <p>Before updating your installation of <ph
                     audience="BSS"
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>, read the <i>Release Notes</i> of the new release. They contain information on compatibility issues, changes and enhancements, and known restrictions. </p>
-      <p>
+      <!--p>
         <note>An update installation cannot change the authentication mode (INTERNAL or SAML_SP). You can only upgrade from an installation in INTERNAL mode to an installation in INTERNAL mode, or an installation in SAML_SP mode to an installation in SAML_SP mode. </note>
-      </p>
+      </p-->
     </section>
     
     
@@ -34,11 +34,14 @@
             </p></li>
           <li>Set the following environment variable for your current session:<p><codeph>DB_INTERPRETER</codeph>: The absolute path and name of the <codeph>psql</codeph> executable of PostgreSQL. The executable is usually located in the <codeph>bin</codeph> subdirectory of the PostgreSQL installation directory.</p><p>Example:</p><codeblock>export DB_INTERPRETER="/opt/PostgreSQL/9.1/bin/psql"</codeblock>
           </li>
-          <li>If you are running <ph
-                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> in SAML_SP mode and want to make use of multiple tenants associated with IdP (Identity Provider) systems: <p>Apart from user IDs, the assertions returned to <ph
-                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> must contain the corresponding tenant ID for each user. This is required for <ph
-                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> to ensure the uniqueness of user IDs. </p><note>
-              <p>Be aware that the SAML assertions returned from the IdP always need at least contain the default tenant ID in case you do not want to make use of the multi-tenancy functionality. </p>
+          <li>If you are upgrading from a release prior to V 16.1, and running <ph
+              conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> in SAML_SP mode, and you want to make use of multiple tenants associated with IdP (Identity Provider) systems: <p>Apart from user IDs, the assertions returned by the IdP to <ph
+                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> must contain the corresponding tenant ID for each user. This is required for <ph
+                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+              /> to ensure the uniqueness of user IDs. </p><note>
+              <p>Be aware that the SAML assertions returned from the IdP always need to contain at least the default tenant ID in case you do not want to make use of the multi-tenancy functionality. </p>
             </note><p>To achieve this, the IdP must be configured such that its assertions contain an <codeph>&lt;Attribute&gt;</codeph> subelement with the <codeph>Name="tenantID"</codeph> property, and the <codeph>&lt;AttributeValue&gt;</codeph> subelement must specify the ID of the tenant associated with the organization the corresponding user belongs to.</p><p>Example: </p><p>
               <codeblock>&lt;saml:Assertion ...&gt;
     ...
@@ -55,47 +58,47 @@
             </p></li>
           <li>Proceed with updating your installation in the following sequence: <p>
               <ol>
-                <li>Update you application server installation.</li>
-                <li>Create backups of configuration and key files, and adjust the configuration settings for the new application server version. </li>
+                <li>Create backups of configuration and key files, and adjust the configuration settings.</li>
+                <li>Install the new application server.</li>
                 <li>Update the database.</li>
-                <li>Update the application server resources. </li>
+                <li>Set up the application server resources. </li>
                 <li>If you are using certificates for authenticating Web service calls, or if you want to run <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> in SAML_SP mode, you need to exchange the corresponding certificates again. Refer to the <i>Operator's Guide</i> for details on certificate handling.</li>
                 <li>Deploy the BIRT report engine to be able to generate reports. Refer to <xref
                     href="../Installation/c_DeployBirt.xml"/> for details.</li>
+                <li>Connect to the BIRT report engine.</li>
               </ol>
             </p><p>See below for details.</p></li>
         </ol>
       </p>
     </section>
-    <section id="must_be_deployed_on_an_appli_concept_conbody_section">
-      <title>Updating the Application Server</title>
-      <p><ph audience="BSS" conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-        /> must be deployed on an application server compatible with Java EE version 7. The following application server is supported:</p>
-      <p id="Oracle_GlassFish_Server_vers_concept_conbody_section_p_2">Oracle GlassFish Server, version 4.1.1.</p>
-      <p audience="app">Proceed as described in <xref href="../../Shared/Installation/c_PrepAppServer.xml"/>. </p>
-    </section>
     <section>
-      <title>Creating Backups and Updating the Configuration Settings</title>
-      <p>Proceed with updating your installation as follows:</p>
+      <title>Backing Up and Updating the Configuration Settings</title>
       <p>
         <ol compact="no">
-          <li>Create a backup of the following files present in your old GlassFish 3 installation:<p>
+          <li>Create a backup of the following files of your existing <ph
+              conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> installation:<p>
               <ul>
                 <li><codeph>configsettings.properties</codeph></li>
                 <li><codeph>db.properties</codeph></li>
-                <li><codeph>glassfish.properties</codeph> of both the <codeph>bes-domain</codeph> and the <codeph>indexer-domain</codeph> domains.</li>
-                <li>Key file required for the encryption and decryption of service parameters with data type <codeph>PWD</codeph> or custom attributes marked for encryption. By default, the file is named <codeph>./key</codeph> and located in the following directory: <codeph>&lt;GLASSFISH3_HOME>/glassfish/domains/bes-domain/config</codeph></li>
+                <li><codeph>glassfish.properties</codeph> of both the <codeph>bes-domain</codeph> and the <codeph>indexer-domain</codeph> domain.</li>
+                <li>Key file required for the encryption and decryption of service parameters with data type <codeph>PWD</codeph> or custom attributes marked for encryption. By default, the file is named <codeph>key</codeph> and located in the following directory: <codeph>&lt;GLASSFISH_HOME>/glassfish/domains/bes-domain/config</codeph></li>
               </ul>
             </p></li>
-          <li>Check whether the <codeph>configsettings.properties</codeph> file contained in the new <ph
+          <li>Based on your existing configuration files, adjust the settings in the configuration files for the new <ph
               conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-            /> installation package to which you want to upgrade contains new, different, or less settings than your copy of the old file. </li>
-          <li>Adjust the settings in the new <codeph>configsettings.properties</codeph> file located in the <codeph>&lt;install_pack_dir>/databases/bes_db</codeph> directory to your environment. Observe that especially the paths need to be adapted for the new application server installation.</li>
-          <li>Copy the key file for encryption and decryption to the location you specified in the <codeph>KEY_FILE_PATH</codeph> setting in the new <codeph>configsettings.properties</codeph>. By default, this is<p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/bes-domain/config</codeph></p></li>
+            /> release. Specifically pay attention to new and changed settings. </li>
+          <li>Save the key file for encryption and decryption. By default, this file is located in<p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/bes-domain/config</codeph>.</p></li>
         </ol>
       </p>
+    </section>
+    <section id="must_be_deployed_on_an_appli_concept_conbody_section">
+      <title>Installing the Application Servers</title>
+      <p>Depending on the <ph audience="BSS" conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+          /> release from which you are upgrading, you need to install a newer version of your application server. Refer to <xref
+          href="../../Shared/Installation/c_PrepAppServer.xml"
+        /> for details on the supported application server versions.</p>
     </section>
     <section>
       <title>Updating the Database</title>
@@ -112,16 +115,9 @@
               <note>Creating a backup of search index data is not required. The index will be automatically rebuilt when <ph
                   conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> is operational again. </note>
             </p></li>
-          <li>Update the following configuration files so that the settings match your current installation:<ul>
-              <li><codeph>db.properties</codeph> located in <codeph>&lt;install_pack_dir&gt;/databases/bes_db</codeph></li>
-              <li><codeph>configsettings.properties</codeph> located in <codeph>&lt;install_pack_dir&gt;/databases/bes_db</codeph></li>
-              <li><codeph>sso.properties</codeph> located in <codeph>&lt;install_pack_dir&gt;/databases/bes_db</codeph></li>
-            </ul></li>
           <li>Start the <codeph>bss</codeph> database.</li>
           <li>Update the schema and configuration settings of the <codeph>bss</codeph> database by executing the <codeph>build-db.xml</codeph> file in <codeph>&lt;install_pack_dir&gt;/install</codeph> as follows:<p>
               <codeblock>&lt;ANT_HOME&gt;/bin/ant -f build-db.xml updateDatabase</codeblock>
-            </p><p>### is it true that the command is now as follows: ??? </p><p>
-              <codeblock>&lt;ANT_HOME&gt;/bin/ant -f build-db.xml UPDATE.dbSchema</codeblock>
             </p><p>
               <note>
                 <p>Make sure that Ant runs in a Java 8 runtime environment when calling the <codeph>build-db.xml</codeph> file. </p>
@@ -132,10 +128,10 @@
       </p>
     </section>
     <section>
-      <title>Updating the Application Server Resources</title>
+      <title>Setting Up the Application Server Resources</title>
       <p>
         <ol>
-          <li>Delete the <codeph>master-indexer-domain</codeph> and the <codeph>master-indexer-domain</codeph> domains.</li>
+          <li>Delete the <codeph>master-indexer-domain</codeph> and the <codeph>master-indexer-domain</codeph> domains of your old application server installation.</li>
           <li>Open the command prompt (Windows) or a terminal session (UNIX/Linux).</li>
           <li>Execute the <codeph>build-glassfish.xml</codeph> file in <codeph>&lt;install_pack_dir&gt;/install</codeph> as follows:<p>
               <codeblock>&lt;ANT_HOME&gt;/bin/ant -f build-glassfish.xml SETUP</codeblock>
@@ -152,14 +148,26 @@
                     href="../../Shared/reference/r_AppServerResources.xml"/> for details.</li>
                 <li>The directory traversal is disabled for both domains, <codeph>bes-domain</codeph> and <codeph>master-indexer-domain</codeph>: The directory listing parameter is set to <codeph>false</codeph> in the <codeph>default-web.xml</codeph> file in the domain directories you are using for <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </li>
+                <li>A key file for encryption and decryption is generated in the location you specified in the <codeph>KEY_FILE_PATH</codeph> setting in the new <codeph>configsettings.properties</codeph> file. By default, this file is named <codeph>key</codeph> and located in <p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/bes-domain/config</codeph>.</p></li>
               </ul></p></li>
+          <li>Copy your backup of the key file for encryption and decryption to the location you specified in the <codeph>KEY_FILE_PATH</codeph> setting in the new <codeph>configsettings.properties</codeph>. By default, this is<p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/bes-domain/config</codeph>.</p></li>
         </ol>
       </p>
     </section>
     <section>
+      <title>Connecting to the BIRT Report Engine</title>
+      <p>Adjust the <codeph>REPORT_ENGINEURL</codeph> configuration setting in <ph
+          conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> as follows:</p>
+      <p>In the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+          /> administration portal, choose <b>Update configuration settings</b> in the <b>Operation</b> menu. Change the host IP address and port to the ones of the application server to which you deployed the report engine: <codeblock>http://<b>&lt;host IP address></b>:<b>&lt;port></b>/birt/frameset?
+   __report=${reportname}.rptdesign&amp;SessionId=${sessionid}
+   &amp;__locale=${locale}&amp;WSDLURL=${wsdlurl}&amp;SOAPEndPoint=${soapendpoint}
+   &amp;wsname=Report&amp;wsport=ReportPort</codeblock></p>
+    </section>
+    <!--section>
       <title>Updating the Command Line Tool</title>
       <p>The current version of the command line tool is provided in the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> installation package, <codeph>oscm-install-pack.zip</codeph>, as <codeph>oscm-operatorclient.zip</codeph>. If you want to use the command line tool with your updated installation, delete and install it again when finished with the update. For details on how to set up the tool, refer to the <i>Operator's Guide</i>.</p>
-    </section>
+    </section-->
     
   </conbody>
 </concept>

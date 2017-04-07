@@ -85,11 +85,11 @@
         <section audience="BSS">
             <title>BIRT Report Engine</title>
             <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-            /> uses BIRT to generate reports. <ph product="oscm_ce">BIRT is not included in the <ph
-                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-            /> packages.</ph><ph product="oscm_ee">BIRT is included in the <ph
-                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-            /> packages.</ph> BIRT needs to be deployed on a different application server than <ph
+                    /> uses BIRT to generate reports. <ph product="oscm_ce">BIRT is not included in the <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> packages.</ph><ph
+                    product="oscm_ee">BIRT is included in the <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> packages.</ph> BIRT needs to be deployed on an application server other than that of <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 />. The following application servers are supported: </p>
             <p>
@@ -99,7 +99,6 @@
                 </ul>
             </p>
             <p>Install the application server as described in its documentation, and configure it as required by your environment.</p>
-            <p>In the subsequent sections, <codeph>&lt;GLASSFISH3_HOME></codeph> is the installation directory of GlassFish, version 3, and <codeph>&lt;TOMCAT_HOME></codeph> is the installation directory of Apache Tomcat, respectively.</p>
         </section>
             </conbody>
 </concept>
