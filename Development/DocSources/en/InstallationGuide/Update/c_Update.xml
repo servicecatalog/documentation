@@ -10,6 +10,9 @@
       <p>Before updating your installation of <ph
                     audience="BSS"
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>, read the <i>Release Notes</i> of the new release. They contain information on compatibility issues, changes and enhancements, and known restrictions. </p>
+      <p>When updating an existing <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+        /> installation, it is recommended to keep your GlassFish 3 installation until the new installation is up and running correctly. This is useful for reference purposes, for example, for comparing the "old" settings in the properties files with the ones included in the new installation package, and for keeping the key file required for encryption and decryption, if any. The GlassFish 3 installation can also be used to deploy the updated BIRT report engine included in this release.</p>
+      <p>Alternatively, create backups of your configuration files and the key file, and copy them to a different location.</p>
       <!--p>
         <note>An update installation cannot change the authentication mode (INTERNAL or SAML_SP). You can only upgrade from an installation in INTERNAL mode to an installation in INTERNAL mode, or an installation in SAML_SP mode to an installation in SAML_SP mode. </note>
       </p-->
@@ -56,20 +59,24 @@
   &lt;/saml:Assertion&gt;
 </codeblock>
             </p></li>
-          <li>Proceed with updating your installation in the following sequence: <p>
+          <li>Proceed with updating your installation as follows:<p>
               <ol>
-                <li>Create backups of configuration and key files, and adjust the configuration settings.</li>
-                <li>Install the new application server.</li>
-                <li>Update the database.</li>
+                <li>Shut down the <codeph>bes-domain</codeph> and the <codeph>master-indexer-domain</codeph> domains.</li>
+                <li>Create a backup of configuration files, the key file for encryption, the <codeph>bss</codeph> database, and all customizations you may have made. See below for details.</li>
+                <li>Install the GlassFish 4.1.1 application server.</li>
+                <li>Extract the contents of the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> installation package, <codeph>oscm-install-pack.zip</codeph>. </li>
+                <li>Update the database. See below for details. </li>
                 <li>Set up the application server resources. </li>
                 <li>If you are using certificates for authenticating Web service calls, or if you want to run <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> in SAML_SP mode, you need to exchange the corresponding certificates again. Refer to the <i>Operator's Guide</i> for details on certificate handling.</li>
-                <li>Deploy the BIRT report engine to be able to generate reports. Refer to <xref
-                    href="../Installation/c_DeployBirt.xml"/> for details.</li>
-                <li>Connect to the BIRT report engine.</li>
+                <li>As is the case with a new installation, deploy the BIRT report engine to an application server different from that of <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    />, for example, to your GlassFish 3 installation, and adjust the <codeph>REPORT_ENGINE_URL</codeph> configuration setting accordingly. See below and section <xref
+                    href="../Installation/c_DeployBirt.xml"> </xref>for details. </li>
               </ol>
-            </p><p>See below for details.</p></li>
+            </p></li>
         </ol>
       </p>
     </section>
@@ -83,22 +90,23 @@
                 <li><codeph>configsettings.properties</codeph></li>
                 <li><codeph>db.properties</codeph></li>
                 <li><codeph>glassfish.properties</codeph> of both the <codeph>bes-domain</codeph> and the <codeph>indexer-domain</codeph> domain.</li>
-                <li>Key file required for the encryption and decryption of service parameters with data type <codeph>PWD</codeph> or custom attributes marked for encryption. By default, the file is named <codeph>key</codeph> and located in the following directory: <codeph>&lt;GLASSFISH_HOME>/glassfish/domains/bes-domain/config</codeph></li>
+                <li>Key file required for the encryption and decryption of service parameters with data type <codeph>PWD</codeph> or custom attributes marked for encryption. By default, the file is named <codeph>key</codeph> and located in the following directory:<p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/bes-domain/config</codeph></p>
+                </li>
               </ul>
             </p></li>
+          <li>Create a backup of the <ph><codeph>bss</codeph></ph> database using the standard PostgreSQL commands. The database backup must be compatible with PostgreSQL 9.1.12. <ph
+              audience="BSS">Make sure to also have a backup of any customizations to marketplaces.</ph>
+            <p>
+              <note>Creating a backup of search index data is not required. The index will be automatically rebuilt when <ph
+                  conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> is operational again. </note>
+            </p></li>
+          <li>The <codeph>oscm-portal.war</codeph> archive contains the properties files for the user interface resources (user interface and email texts, platform objects). Be aware that with a new release or fix, new keys may have been added to the system, others may have been changed or deleted.<p>Make sure to have a backup of any customizations you may have made.</p></li>
+          <li>The <codeph>oscm-portal-help.war</codeph> archive contains the online help and FAQ files in English, German, and Japanese. Make sure to have a backup of any customizations to these files.</li>
           <li>Based on your existing configuration files, adjust the settings in the configuration files for the new <ph
               conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
             /> release. Specifically pay attention to new and changed settings. </li>
-          <li>Save the key file for encryption and decryption. By default, this file is located in<p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/bes-domain/config</codeph>.</p></li>
         </ol>
       </p>
-    </section>
-    <section id="must_be_deployed_on_an_appli_concept_conbody_section">
-      <title>Installing the Application Servers</title>
-      <p>Depending on the <ph audience="BSS" conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-          /> release from which you are upgrading, you need to install a newer version of your application server. Refer to <xref
-          href="../../Shared/Installation/c_PrepAppServer.xml"
-        /> for details on the supported application server versions.</p>
     </section>
     <section>
       <title>Updating the Database</title>
@@ -109,12 +117,6 @@
               <li><codeph>lib</codeph> directory of the <codeph>bes-domain</codeph> domain</li>
               <li><codeph>&lt;GLASSFISH_HOME&gt;/mq/lib/ext</codeph></li>
             </ul><p>If this is not the case, copy the file from the <codeph>&lt;install_pack_dir&gt;/install/lib</codeph> directory to the location where it is missing. </p></li>
-          <li>Create a backup of the <ph><codeph>bss</codeph></ph> database using the standard PostgreSQL commands. The database backup must be compatible with PostgreSQL 9.1.12. <ph
-              audience="BSS">Make sure to also have a backup of any customizations to marketplaces.</ph>
-            <p>
-              <note>Creating a backup of search index data is not required. The index will be automatically rebuilt when <ph
-                  conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> is operational again. </note>
-            </p></li>
           <li>Start the <codeph>bss</codeph> database.</li>
           <li>Update the schema and configuration settings of the <codeph>bss</codeph> database by executing the <codeph>build-db.xml</codeph> file in <codeph>&lt;install_pack_dir&gt;/install</codeph> as follows:<p>
               <codeblock>&lt;ANT_HOME&gt;/bin/ant -f build-db.xml updateDatabase</codeblock>
@@ -131,16 +133,26 @@
       <title>Setting Up the Application Server Resources</title>
       <p>
         <ol>
-          <li>Delete the <codeph>master-indexer-domain</codeph> and the <codeph>master-indexer-domain</codeph> domains of your old application server installation.</li>
-          <li>Open the command prompt (Windows) or a terminal session (UNIX/Linux).</li>
+          <li>Copy your backup of the key file to the installation package of the new release of <ph
+              conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> to the following directory: <p><codeph>oscm-install-pack\domains\bes_domain\installer</codeph></p><p>By default, this file is named <codeph>key</codeph> and located in </p><p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/bes-domain/config</codeph> of your GlassFish 3 installation.</p><p>Make sure that the old key file is named <codeph>key</codeph>. The installation script will then copy the key file to its default location in the new application server domain: </p><p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/bes-domain/config</codeph>.</p></li>
           <li>Execute the <codeph>build-glassfish.xml</codeph> file in <codeph>&lt;install_pack_dir&gt;/install</codeph> as follows:<p>
               <codeblock>&lt;ANT_HOME&gt;/bin/ant -f build-glassfish.xml SETUP</codeblock>
             </p><p>This has the following results:<ul>
                 <li>The <codeph>master-indexer-domain</codeph> domain is created and started. </li>
                 <li>The search indexer application (<codeph>oscm-search.ear</codeph>) is deployed to the <codeph>master-indexer-domain</codeph> domain.</li>
                 <li>The <codeph>bes-domain</codeph> domain is created and started. </li>
-                <li>The following applications are deployed to the <codeph>bes-domain</codeph> domain: <p><codeph>oscm.ear</codeph></p><p><codeph>oscm-portal.war</codeph></p><p><codeph>oscm-portal-help.war</codeph></p><p
-                    product="oscm_ee"><codeph>birt.war</codeph></p></li>
+                <li>The following applications are deployed to the <codeph>bes-domain</codeph> domain: <ul>
+                    <li>
+                      <p><codeph>oscm.ear</codeph></p>
+                    </li>
+                    <li><codeph>oscm-portal.war</codeph><p>This archive contains the properties files for the user interface resources (user interface and email texts, platform objects). Be aware that with a new release or fix, new keys may have been added to the system, others may have been changed or deleted.</p><p>Make sure to have a backup of any customizations you may have made. After having set up the application server resources, check whether existing texts, for example, mail messages have changed as compared to the previous release. You may need to customize the texts again and redeploy the <codeph>oscm-portal.war</codeph> archive.</p></li>
+                    <li>
+                      <p><codeph>oscm-portal-help.war</codeph></p>
+                      <p>This archive contains the online help and FAQ files in English, German, and Japanese. You can customize these resources. When upgrading the system with a fix for this release, make sure to have a backup of any such customizations. Merge the customized files into the <codeph>oscm-portal-help.war</codeph> archive and redeploy the archive. Otherwise they will no longer be available after the upgrade.</p>
+                      <p>If you added additional languages to the system, also include the corresponding help and FAQ file structures into the <codeph>oscm-portal-help.war</codeph> archive before deploying it again. Refer to the <codeph>Operator's Guide</codeph> for details. </p>
+                    </li>
+                  </ul><!--p product="oscm_ee"><codeph>birt.war</codeph></p--></li>
                 <li>The <codeph>oscm-security.jar</codeph>, the <codeph>postgresql-9.1-903.jdbc4.jar</codeph>, and the <codeph>commons-codec-1.7.jar</codeph> files are copied from the directory to which you extracted the <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> installation package (<codeph>&lt;install_pack_dir&gt;/domains/bes_domain/lib</codeph>) to the <codeph>lib</codeph> directory of the <codeph>bes-domain</codeph> domain.</li>
@@ -148,9 +160,7 @@
                     href="../../Shared/reference/r_AppServerResources.xml"/> for details.</li>
                 <li>The directory traversal is disabled for both domains, <codeph>bes-domain</codeph> and <codeph>master-indexer-domain</codeph>: The directory listing parameter is set to <codeph>false</codeph> in the <codeph>default-web.xml</codeph> file in the domain directories you are using for <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </li>
-                <li>A key file for encryption and decryption is generated in the location you specified in the <codeph>KEY_FILE_PATH</codeph> setting in the new <codeph>configsettings.properties</codeph> file. By default, this file is named <codeph>key</codeph> and located in <p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/bes-domain/config</codeph>.</p></li>
               </ul></p></li>
-          <li>Copy your backup of the key file for encryption and decryption to the location you specified in the <codeph>KEY_FILE_PATH</codeph> setting in the new <codeph>configsettings.properties</codeph>. By default, this is<p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/bes-domain/config</codeph>.</p></li>
         </ol>
       </p>
     </section>

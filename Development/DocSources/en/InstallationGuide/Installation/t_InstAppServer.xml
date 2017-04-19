@@ -17,6 +17,7 @@
             <p>Portbase + 48: admin port: <codeph>8048</codeph></p>
             <p>Portbase + 80: HTTP listener: <codeph>8080</codeph></p>
             <p>Portbase + 81: HTTP listener: <codeph>8081</codeph></p>
+            <p>Portbase + 82: HTTP listener: <codeph>8082</codeph></p>
             <p>Portbase + 86: JMX port: <codeph>8086</codeph></p>
             <p>Portbase + 76: JMS provider port: <codeph>8076</codeph>
             </p>
@@ -60,8 +61,8 @@
                                 <li>The <codeph>master-indexer-domain</codeph> domain is created and started. </li>
                                 <li>The search indexer application (<codeph>oscm-search.ear</codeph>) is deployed to the <codeph>master-indexer-domain</codeph> domain.</li>
                                 <li>The <codeph>bes-domain</codeph> domain is created and started. </li>
-                                <li>The following applications are deployed to the <codeph>bes-domain</codeph> domain: <p><codeph>oscm.ear</codeph></p><p><codeph>oscm-portal.war</codeph></p><p><codeph>oscm-portal-help.war</codeph></p><p
-                                        product="oscm_ee"><codeph>birt.war</codeph></p></li>
+                                <li>The following applications are deployed to the <codeph>bes-domain</codeph> domain: <p><codeph>oscm.ear</codeph></p><p><codeph>oscm-portal.war</codeph></p><p><codeph>oscm-portal-help.war</codeph></p><!--p
+                                        product="oscm_ee"><codeph>birt.war</codeph></p--></li>
                                 <li>The <codeph>oscm-security.jar</codeph>, the <codeph>postgresql-9.1-903.jdbc4.jar</codeph>, and the <codeph>commons-codec-1.7.jar</codeph> files are copied from the directory to which you extracted the <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                         /> installation package (<codeph>&lt;install_pack_dir&gt;/domains/bes_domain/lib</codeph>) to the <codeph>lib</codeph> directory of the <codeph>bes-domain</codeph> domain.</li>

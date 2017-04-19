@@ -34,6 +34,10 @@
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                         /> packages. BIRT needs to be deployed on an application server other than <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+                        <p>Be aware of the following: </p>
+                        <p>The <codeph>birt.war</codeph> archive contains the properties files for the labels and texts used in reports. With a new release or fix, nex keys may have been added to the system, others may have been changed or deleted. </p>
+                        <p>Existing texts in English, German, and Japanese are overwritten by an upgrade. If you have customized these texts, merge your customizations into the properties files before deploying the <codeph>birt.war</codeph> archive. Otherwise they will no longer be available after the upgrade. Refer to the <i>Operator's Guide</i> for details. </p>
+                        <p>Proceed as follows: </p>
                         <ol>
                                 <li>Deploy the <codeph>birt.war</codeph> archive located in <codeph>&lt;install_pack_dir>/domains/bes_domain/applications</codeph> to a domain on the application server.</li>
                                 <li>Restart <codeph>birt</codeph>.</li>
