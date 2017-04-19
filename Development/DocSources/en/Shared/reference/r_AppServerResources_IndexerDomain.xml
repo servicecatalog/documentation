@@ -8,7 +8,10 @@
     <title>Search Indexer Application Domain</title>
     <refbody>
         <section>
-            <p>The following sections provide an overview of the resources which must be provided for the search indexer application domain (<codeph>master-indexer-domain</codeph>) on the application server. </p>
+            <p>The following sections provide an overview of the resources which must be provided for the search indexer application domain (<codeph>master-indexer-domain</codeph>) on the application server. The resources are defined in:</p>
+            <p>
+                <codeblock>domains\indexer-domain\installer\resources-template.xml</codeblock>
+            </p>
         </section>
         <section>
             <title>Data Source</title>
@@ -138,6 +141,10 @@
                         </tbody>
                     </tgroup>
                 </table>
+            </p>
+            <p>
+                <note>Make sure that the JMS service type is set to LOCAL. In a default GlassFish configuration it is set to EMBEDDED. When using the installation scripts for installing OSCM, the service type is set to LOCAL automatically.<p>If you need to change the service type manually, you can run, for example the following command: </p><p><codeph>asadmin set server.jms-service.type=LOCAL</codeph>
+                    </p></note>
             </p>
         </section>
         <section>
