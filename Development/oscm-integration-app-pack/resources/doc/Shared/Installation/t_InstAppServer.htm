@@ -46,6 +46,9 @@
 
                             <li>APP (<samp class="codeph">oscm-app.ear</samp>) is deployed to the <samp class="codeph">app-domain</samp> domain.</li>
 
+                            <li>A key file for encryption and decryption is generated in the location you specified in the <samp class="codeph">APP_KEY_PATH</samp> setting in the <samp class="codeph">configsettings.properties</samp> file. By default, this file is named <samp class="codeph">key</samp> and located in <p><samp class="codeph">&lt;GLASSFISH_HOME&gt;/glassfish/domains/app-domain/config</samp>.</p>
+</li>
+
                             
                             
                             
@@ -90,6 +93,9 @@ For example, APP must not use the configured proxy for Web service calls to <spa
 <p><samp class="codeph">https://ror-demo.myServer.com:8014/cfmgapi/endpoint* </samp></p>
 <p>After having configured the proxy server, restart the <samp class="codeph">app-domain</samp>.</p>
 
+            </li>
+<li class="stepexpand">
+                <span><span>Depending on your environment, it may be required to provide separate certificates for external and internal communication between <span>OSCM</span> and APP. In this case, you can use the secure HTTP listener port (default: <samp class="codeph">8082</samp>).</span></span><br />
             </li>
 </ol>
 

@@ -35,18 +35,8 @@
           <li class="liexpand">Make sure that all provisioning operations are complete. Follow the steps as described in <span><a href="../../APPInt/APP/c_HandleProblems.htm">Handling Problems in the Provisioning Process</a></span>.</li>
 
           
-          <li class="liexpand">In the <samp class="codeph">app-domain</samp> application server domain, disable or undeploy the following <span>application</span>:
-            <p><samp class="codeph">oscm-app</samp></p>
-
-            
-            </li>
-
-          <li class="liexpand">Check for <samp class="codeph">.glassfishStaleFiles</samp> files in the <samp class="codeph">app-domain</samp> domain. If there are any, delete them. The files are located in<p><samp class="codeph">app-domain/applications/&lt;application name&gt;/.glassfishStaleFiles</samp></p>
-<p>For example: </p>
-<p><samp class="codeph">app-domain/applications/oscm-app/.glassfishStaleFiles</samp></p>
-
-          </li>
-
+          
+          
           <li class="liexpand">Set the following environment variable for your current session:<p><samp class="codeph">DB_INTERPRETER</samp>: The absolute path and name of the <samp class="codeph">psql</samp> executable of PostgreSQL. The executable is usually located in the <samp class="codeph">bin</samp> subdirectory of the PostgreSQL installation directory.</p>
 <p>Example:</p>
 <pre class="codeblock">export DB_INTERPRETER="/opt/PostgreSQL/9.1/bin/psql"</pre>
@@ -106,7 +96,7 @@
 
             </div>
 <div class="note"><span class="notetitle">Note:</span> 
-              <p>Make sure that Ant runs in a Java 7 runtime environment when calling the <samp class="codeph">build-db.xml</samp> file. </p>
+              <p>Make sure that Ant runs in a Java 8 runtime environment when calling the <samp class="codeph">build-db.xml</samp> file. </p>
 
               
             </div>

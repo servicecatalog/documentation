@@ -112,7 +112,7 @@
 
             </ol>
 <p>Example: </p>
-<p>You want to hide the <span class="uicontrol">Manage VAT rates</span> page. The online help HTML page name is <samp class="codeph">organization_manageVats.htm</samp>. Thus, the respective administration portal page is <samp class="codeph">organization.manageVats</samp>. You need to set the configuration key as follows: </p>
+<p>You want to hide the <span class="uicontrol">Manage VAT rates</span> page. The online help HTML page name is <samp class="codeph">organization_manageVats.htm</samp>. Thus, the respective administration portal page is <samp class="codeph">organization.manageVats</samp>. You need to set the configuration setting as follows: </p>
 <p><samp class="codeph">HIDDEN_UI_ELEMENTS=organization.manageVats</samp></p>
 <p>To hide several pages from the administration portal, separate the entries by a comma. </p>
 <p>Below, you find some more examples of values that can be used to hide a specific page. The list is not complete. </p>
@@ -170,8 +170,9 @@
         
         
         
-        <div class="section"><h4 class="sectiontitle">KEY_FILE_PATH</h4>Optional. The path to the file containing the key required for encryption and decryption of service parameters with data type <samp class="codeph">PWD</samp> or custom attributes marked for encryption.<p>Upon the start of <span>the platform</span>, it is checked whether a key file exists in the location specified in this setting. If this not the case, the key file is automatically generated and stored in the location specified here. If nothing is specified, the file will be generated into the default location and named <samp class="codeph">key</samp>.</p>
-Default: <p><samp class="codeph">./key</samp> in the <samp class="codeph">&lt;GLASSFISH_HOME&gt;/glassfish/domains/bes-domain/config</samp> directory</p>
+        <div class="section"><h4 class="sectiontitle">KEY_FILE_PATH</h4>Optional. The path to the file containing the key required for encryption and decryption of service parameters with data type <samp class="codeph">PWD</samp> and custom attributes marked for encryption.<p>Upon the start of <span>the platform</span>, it is checked whether a key file exists in the location specified in this setting. If this is not the case, the key file is automatically generated and stored in the location specified here. If nothing is specified, the file will be generated into the default location and named <samp class="codeph">key</samp>.</p>
+Default: <p><samp class="codeph">&lt;GLASSFISH_HOME&gt;/glassfish/domains/bes-domain/config</samp>
+            </p>
 <div class="p">
                 <div class="note"><span class="notetitle">Note:</span> Be aware that the key file must not be deleted. Otherwise, encryption and decryption is no longer possible. It is recommended to create a backup of this file once generated.</div>
 
@@ -228,7 +229,7 @@ Default: <p><samp class="codeph">./key</samp> in the <samp class="codeph">&lt;GL
 <p>If you change this setting, you need to restart <span>the platform</span>.</p>
 </div>
 
-        <div class="section"><h4 class="sectiontitle">REPORT_ENGINEURL</h4>Mandatory if you want to use the <span>platform's</span> reports. The URL template of the report engine. If you do not specify a correct URL template, <span>the platform</span> will not be able to generate any reports, since the Report Web service cannot be called correctly. <div class="p">If your installation is configured to use HTTP access, the required value is: <pre class="codeblock">http://&lt;host IP address&gt;:&lt;port&gt;/birt/frameset?
+        <div class="section"><h4 class="sectiontitle">REPORT_ENGINEURL</h4>Mandatory if you want to use the <span>platform's</span> reports. The URL template of the report engine. If you do not specify a correct URL template, <span>the platform</span> will not be able to generate any reports, since the Report Web service cannot be called correctly. <div class="p">If your installation is configured to use HTTP access, the required value is: <pre class="codeblock">http://<samp class="codeph">&lt;host IP address</samp>&gt;:&lt;port&gt;/birt/frameset?
    __report=${reportname}.rptdesign&amp;SessionId=${sessionid}
    &amp;__locale=${locale}&amp;WSDLURL=${wsdlurl}&amp;SOAPEndPoint=${soapendpoint}
    &amp;wsname=Report&amp;wsport=ReportPort
@@ -239,32 +240,32 @@ Default: <p><samp class="codeph">./key</samp> in the <samp class="codeph">&lt;GL
    &amp;__locale=${locale}&amp;WSDLURL=${wsdlurl}&amp;SOAPEndPoint=${soapendpoint}
    &amp;wsname=ReportSecure&amp;wsport=ReportSecurePort</pre>
 </div>
-<div class="note"><span class="notetitle">Note:</span> The above value must be used as indicated. Do not change this value. <p>If the SSL/HTTPS port is changed and the BIRT report engine is running on the same domain as <span>the platform</span>, then this setting must also be updated.</p>
-</div>
+<p>The <samp class="codeph">&lt;host IP address&gt;</samp> and <samp class="codeph">&lt;port&gt;</samp> are the IP address and port of the application server on which the BIRT report engine has been deployed. </p>
+<div class="note"><span class="notetitle">Note:</span> The above value must be used as indicated. Do not change this value. </div>
 </div>
 
         <div class="section"><h4 class="sectiontitle">REPORT_SOAP_ENDPOINT</h4>Mandatory if you want to use the <span>platform's</span> reports. The SOAP end point of the Report Web service. All report data is retrieved via a call to the Report Web service. If you do not specify a correct value, <span>the platform</span> will not be able to generate any reports, since the Report Web service cannot be called correctly. <p>If your installation is configured to use HTTP access, the required value is: </p>
 <p><samp class="codeph">http://&lt;host IP address&gt;:&lt;port&gt;/Report/ReportingServiceBean</samp></p>
 <p>If your installation is configured to use HTTPS access, the required value is: </p>
 <p><samp class="codeph">https://&lt;host IP address&gt;:&lt;port&gt;/ReportSecure/ReportingServiceSecureBean</samp>
-                </p>
-<div class="note"><span class="notetitle">Note:</span> The above value must be used as indicated. Do not change this value. <p>If the SSL/HTTPS port is changed and the BIRT report engine is running on the same domain as <span>the platform</span>, then this setting must also be updated.</p>
-</div>
+            </p>
+<div class="note"><span class="notetitle">Note:</span> The above value must be used as indicated. Do not change this value. </div>
+<p>The <samp class="codeph">&lt;host IP address&gt;</samp> and <samp class="codeph">&lt;port&gt;</samp> are the IP address and port of the application server on which  has been deployed. </p>
 </div>
 
         <div class="section"><h4 class="sectiontitle">REPORT_WSDLURL</h4>Mandatory if you want to use the <span>platform's</span> reports. The URL of the WSDL file of the Report Web service. All report data is retrieved via a call to the Report Web service. If you do not specify a correct value, <span>the platform</span> will not be able to generate any reports, since the Report Web service cannot be called correctly. <p>If your installation is configured to use HTTP access, the required value is: </p>
 <p><samp class="codeph">http://&lt;host IP address&gt;:&lt;port&gt;/Report/ReportingServiceBean?wsdl</samp></p>
 <p>If your installation is configured to use HTTPS access, the required value is: </p>
 <p><samp class="codeph">https://&lt;host IP address&gt;:&lt;port&gt;/ReportSecure/ReportingServiceSecureBean?wsdl</samp></p>
-<div class="note"><span class="notetitle">Note:</span> The above value must be used as indicated. Do not change this value. <p>If the SSL/HTTPS port is changed and the BIRT report engine is running on the same domain as <span>the platform</span>, then this setting must also be updated.</p>
-</div>
+<div class="note"><span class="notetitle">Note:</span> The above value must be used as indicated. Do not change this value. </div>
+<p>The <samp class="codeph">&lt;host IP address&gt;</samp> and <samp class="codeph">&lt;port&gt;</samp> are the IP address and port of the application server on which  has been deployed. </p>
 </div>
 
         
-        <div class="section"><h4 class="sectiontitle">SSO_DEFAULT_TENANT_ID</h4>Mandatory if you install <span>the platform</span> in SAML_SP authentication mode. <p>The unique ID of the default tenant. The default tenant is associated with the IdP that all users registered with <span>the platform</span> are authenticated against when they access a marketplace or the administration portal. </p>
-<p>It must consist of exactly 8 characters. No special characters or blanks are allowed. The platform operator may specify any value in the configuration settings. </p>
-<p>The default tenant ID must be communicated to the IdP administrator. The IdP administrator must set this ID as an attribute for SAML assertions. For example, in OpenAM, where <span>the platform</span> has been registered as Service Provider (SP), the IdP administrator selects this SP, and enters <samp class="codeph">tenantID="&lt;the 8 characters&gt;"</samp> as an assertion processing attribute. </p>
-<p>If you need to change this setting after the first exchange of data between <span>the platform</span> and the IdP, you must change it both in <span>the platform</span> and the IdP system. The IdP administrator must be informed accordingly.</p>
+        <div class="section"><h4 class="sectiontitle">SSO_DEFAULT_TENANT_ID</h4>Mandatory if you install <span>the platform</span> in SAML_SP authentication mode. <p>The unique ID of the default tenant. The default tenant is associated with the IdP to be used after installing <span>the platform</span> in SAML_SP mode. </p>
+<p>The ID must consist of exactly 8 characters. No special characters or blanks are allowed.</p>
+<p>The default tenant ID must be communicated to the IdP operator. The IdP operator must set this ID as an attribute for SAML assertions. For example, in OpenAM, where <span>the platform</span> has been registered as a Service Provider (SP), the IdP operator selects this SP, and enters <samp class="codeph">tenantID="&lt;the 8 characters&gt;"</samp> as an assertion processing attribute. </p>
+<p>If you need to change this setting after the first exchange of data between <span>the platform</span> and the IdP, you must change it both in <span>the platform</span> and the IdP system. The IdP operator must be informed accordingly. He must change the ID in the IdP system.</p>
 </div>
 
         <div class="section"><h4 class="sectiontitle">SSO_IDP_AUTHENTICATION_REQUEST_HTTP_METHOD</h4>Mandatory if you install <span>the platform</span> in SAML_SP authentication mode. The method used for HTTP authentication requests. Depending on the IdP, <samp class="codeph">GET</samp> or <samp class="codeph">POST</samp> requests can be used. <p>Required for Web browser SSO.</p>
@@ -273,20 +274,20 @@ Default: <p><samp class="codeph">./key</samp> in the <samp class="codeph">&lt;GL
 
         </div>
 
-        <div class="section"><h4 class="sectiontitle">SSO_IDP_SAML_ASSERTION_ISSUER_ID</h4>Mandatory if you install <span>the platform</span> in SAML_SP authentication mode. <p>The entity ID of the IdP system. This ID is unique for the IdP system and has to be communicated between the platform operator and the IdP administrator. It is required so that the platform can ensure that the authentication information returned from the IdP system actually comes from the IdP system that is configured for authenticating users. </p>
-<p>The IdP administrator can find out the ID by retrieving the federation metadata on his IdP system. </p>
-<strong>Examples</strong>:<p>On the OpenAM server, the federation metadata can be retrieved in a Web browser as follows: </p>
+        <div class="section"><h4 class="sectiontitle">SSO_IDP_SAML_ASSERTION_ISSUER_ID</h4>Mandatory if you install <span>the platform</span> in SAML_SP authentication mode. <p>The entity ID of the default IdP system. This ID is unique for the IdP system and has to be communicated between the platform operator and the IdP operator. It is required so that the platform can ensure that the authentication information returned from the IdP system actually comes from the IdP system that is configured for authenticating users. </p>
+<p>The IdP operator can find out the ID by retrieving the federation metadata on his IdP system. </p>
+<strong>Examples</strong>:<p>On an OpenAM server, the federation metadata can be retrieved in a Web browser as follows: </p>
 <p><samp class="codeph">https://&lt;OpenAM_server&gt;/openam/saml2/jsp/exportmetadata.jsp?entityid=</samp></p>
-<p>On the ADFS server, look for the following file: </p>
+<p>On an Active Directory Federation Services (ADFS) server, look for the following file: </p>
 <p><samp class="codeph">http://&lt;ADFShost&gt;/FederationMetadata/2007-06/FederationMetadata.xml</samp></p>
-<p>In the XML file, the issuer ID is known as <samp class="codeph">entityID</samp>, for example; </p>
+<p>In the XML file, you find the SAML assertion issuer ID as <samp class="codeph">entityID</samp>. For example: </p>
 <p><samp class="codeph">entityID="http://example.adfs.com/adfs/services/trust"</samp>
             </p>
 </div>
 
         <div class="section"><h4 class="sectiontitle">SSO_IDP_TRUSTSTORE</h4>Mandatory if you install <span>the platform</span> in SAML_SP authentication mode. The path and file name of the application server truststore file holding the public key certificate of the IdP.<p>Required for Web browser SSO.</p>
 <p>Default: <samp class="codeph">&lt;path&gt;/cacerts.jks</samp></p>
-<p>As soon as another IdP system, for example, OpenAM, Cloudminder, or Active Directory is installed and used, this setting might need to be changed. In this case, you need to restart <span>the platform</span>. </p>
+<p>As soon as another IdP system, for example, OpenAM, Cloudminder, or Active Directory Federation Services (ADFS) is installed and used, this setting might need to be changed. In this case, you need to restart <span>the platform</span>. </p>
 </div>
 
         <div class="section"><h4 class="sectiontitle">SSO_IDP_TRUSTSTORE_PASSWORD</h4>Mandatory if you install <span>the platform</span> in SAML_SP authentication mode. The password of the application server truststore holding the public key certificate of the IdP.<p>Required for Web browser SSO.</p>
@@ -312,14 +313,14 @@ Default: <samp class="codeph">CT_MG</samp><p>If you change this setting, you nee
 <p>For security and confidentiality reasons, it is recommended to use the HTTPS protocol.</p>
 <p>Syntax: <samp class="codeph">https://&lt;host&gt;:&lt;port&gt;/&lt;LogoutServiceEndpoint&gt;</samp></p>
 <p>If you change this setting, you need to restart <span>the platform</span>.</p>
-<div class="note"><span class="notetitle">Note:</span> In the IdP system, a URL must be specified to which the response to the logout request is sent and the user is redirected by the logout. We recommend you use the following default marketplace address of <span>the platform</span>: <samp class="codeph">https://&lt;host&gt;:&lt;port&gt;/oscm-portal/marketplace/index.jsf</samp>. In case of problems, the user can be automatically redirected from this page to another one specified in the <samp class="codeph">MP_ERROR_REDIRECT_HTTPS</samp> configuration setting. Note, however, that this URL is used platform-wide. It is not tenant-specific.</div>
+<div class="note"><span class="notetitle">Note:</span> In the IdP system, a URL must be specified to which the response to the logout request is sent and the user is redirected by the logout. We recommend you use the following default marketplace address of <span>the platform</span>: <samp class="codeph">https://&lt;host&gt;:&lt;port&gt;/oscm-portal/marketplace/index.jsf</samp>. In case of problems, the user can be automatically redirected from this page to another one specified in the <samp class="codeph">MP_ERROR_REDIRECT_HTTPS</samp> configuration setting. Note that this URL is used platform-wide. It is not tenant-specific.</div>
 </div>
 
         <div class="section"><h4 class="sectiontitle">SSO_SIGNING_KEY_ALIAS</h4>Mandatory if requests are to be signed by <span>the platform</span>. The alias of the private key of <span>the platform</span> to be used for signing requests. <p>Requests are signed in the following situations: </p>
 <ul>
                 <li class="liexpand">Communication with Web pages or applications from custom tabs in subscriptions.</li>
 
-                <li class="liexpand">Logout requests, if <span>the platform</span> is installed in SAML_SP authentication mode, single logout is configured, and the IdP system's single logout service requires signed requests, as, for example, in Microsoft Active Directory Federation Services. </li>
+                <li class="liexpand">Logout requests, if <span>the platform</span> is installed in SAML_SP authentication mode, single logout is configured, and the IdP system's single logout service requires signed requests, as, for example, in Microsoft Active Directory Federation Services (ADFS). </li>
 
             </ul>
 <p>The application server used for the Web page, Web application, or IdP system needs the corresponding certificate of <span>the platform</span> in its truststore for verifying the signature.</p>
