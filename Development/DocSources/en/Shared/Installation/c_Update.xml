@@ -28,7 +28,7 @@
                     href="../../Shared/concepts/c_ControllerHandleProblems.xml"/></ph><ph audience="app"><xref
                 href="../../APPInt/APP/c_HandleProblems.xml"/></ph>.</li>
           
-          <!--li>In the <codeph>app-domain</codeph> application server domain, disable or undeploy the following <ph
+          <li>In the <codeph>app-domain</codeph> application server domain, disable or undeploy the following <ph
               audience="app">application</ph><ph audience="ror">applications</ph><ph audience="aws">applications</ph><ph
                 audience="os">applications</ph><ph
                   audience="tps5">applications</ph><ph audience="vmware">applications</ph>:
@@ -37,9 +37,9 @@
                   audience="os"><codeph>oscm-app-openstack</codeph></p><p
                     audience="tps5"><codeph>oscm-app-tps5</codeph></p>
             <p
-              audience="vmware"><codeph>oscm-app-vmware</codeph></p></li-->
-          <!--li>Check for <codeph>.glassfishStaleFiles</codeph> files in the <codeph>app-domain</codeph> domain. If there are any, delete them. The files are located in<p><codeph>app-domain/applications/&lt;application name&gt;/.glassfishStaleFiles</codeph></p><p>For example: </p><p><codeph>app-domain/applications/oscm-app/.glassfishStaleFiles</codeph></p>
-          </li-->
+              audience="vmware"><codeph>oscm-app-vmware</codeph></p></li>
+          <li>Check for <codeph>.glassfishStaleFiles</codeph> files in the <codeph>app-domain</codeph> domain. If there are any, delete them. The files are located in<p><codeph>app-domain/applications/&lt;application name&gt;/.glassfishStaleFiles</codeph></p><p>For example: </p><p><codeph>app-domain/applications/oscm-app/.glassfishStaleFiles</codeph></p>
+          </li>
           <li>Set the following environment variable for your current session:<p><codeph>DB_INTERPRETER</codeph>: The absolute path and name of the <codeph>psql</codeph> executable of PostgreSQL. The executable is usually located in the <codeph>bin</codeph> subdirectory of the PostgreSQL installation directory.</p><p>Example:</p><codeblock>export DB_INTERPRETER="/opt/PostgreSQL/9.1/bin/psql"</codeblock>
           </li>
           <li audience="tps5"
@@ -79,7 +79,6 @@
                     </ul>
                   </p>
                 </li>
-                <li/>
               </ol>
             </p></li>
         </ol>
@@ -122,7 +121,7 @@
               <codeblock>&lt;ANT_HOME&gt;/bin/ant -f build-db.xml updateDatabase
    -Ddb.pwd=&lt;password&gt;</codeblock>
             </p--><note>
-              <p>Make sure that Ant runs in a Java 8 runtime environment when calling the <codeph>build-db.xml</codeph> file. </p>
+              <p>Make sure that Ant runs in a Java 7 runtime environment when calling the <codeph>build-db.xml</codeph> file. </p>
               <!--p>It may be required to enclose <codeph>-Ddb.pwd=&lt;password&gt;</codeph> in double or single quotes depending on the operating system. </p-->
             </note>
           </li>

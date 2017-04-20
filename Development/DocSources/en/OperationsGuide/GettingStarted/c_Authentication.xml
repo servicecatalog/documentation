@@ -112,7 +112,7 @@
                             <entry>User ID<p>Password</p></entry>
                             <entry>
                                 <p>User ID: </p>
-                                <p>The ID you specified in the <codeph>ADMIN_USER_ID</codeph> configuration setting in the <codeph>sso.properties</codeph> configuration file. </p>
+                                <p>The ID you specified in the <codeph>ADMIN_USER_ID</codeph> configuration key in the <codeph>sso.properties</codeph> configuration file. </p>
                                 <p>Password: </p>
                                 <p>Password as known in the IdP for the operator user ID.</p>
                             </entry>
@@ -125,7 +125,7 @@
                             <entry>User ID<p>Password</p></entry>
                             <entry>
                                 <p>User ID: </p>
-                                <p>The ID you specified in the <codeph>ADMIN_USER_ID</codeph> configuration setting in the <codeph>sso.properties</codeph> configuration file. </p>
+                                <p>The ID you specified in the <codeph>ADMIN_USER_ID</codeph> configuration key in the <codeph>sso.properties</codeph> configuration file. </p>
                                 <p>Password: </p>
                                 <p>Password as known in the STS system for the operator user ID.</p>
                             </entry>
@@ -153,11 +153,7 @@
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     />, you need to change your password in the <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> administration portal (<b>Change Password</b> page in the <uicontrol>Account</uicontrol> menu). Any additional operator as well as all other users can change their password in the external authentication system only.</p>
-            <p>
-                <note>When operating <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> in SAML_SP mode, every Web service client must run in a separate domain of the application server.</note>
-            </p>
+                    /> administration portal (<b>Change Password</b> page in the <uicontrol>Account</uicontrol> menu). Any additional operator as well as all other users can change their password in the external authentication system only. </p>
         </section>
     </conbody>
 </concept>

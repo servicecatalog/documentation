@@ -91,10 +91,6 @@
                         /> validates the user ID provided with the token, and the requested operation can be executed. </li>
                 </ol>
             </p>
-            <p>
-                <note>When operating <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> in SAML_SP mode, every Web service client must run in a separate domain of the application server.</note>
-            </p>
         </section>
     </conbody>
 </concept>

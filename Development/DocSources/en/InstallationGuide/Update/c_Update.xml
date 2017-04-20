@@ -10,12 +10,9 @@
       <p>Before updating your installation of <ph
                     audience="BSS"
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>, read the <i>Release Notes</i> of the new release. They contain information on compatibility issues, changes and enhancements, and known restrictions. </p>
-      <p>When updating an existing <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-        /> installation, it is recommended to keep your GlassFish 3 installation until the new installation is up and running correctly. This is useful for reference purposes, for example, for comparing the "old" settings in the properties files with the ones included in the new installation package, and for keeping the key file required for encryption and decryption, if any. The GlassFish 3 installation can also be used to deploy the updated BIRT report engine included in this release.</p>
-      <p>Alternatively, create backups of your configuration files and the key file, and copy them to a different location.</p>
-      <!--p>
+      <p>
         <note>An update installation cannot change the authentication mode (INTERNAL or SAML_SP). You can only upgrade from an installation in INTERNAL mode to an installation in INTERNAL mode, or an installation in SAML_SP mode to an installation in SAML_SP mode. </note>
-      </p-->
+      </p>
     </section>
     
     
@@ -37,14 +34,21 @@
             </p></li>
           <li>Set the following environment variable for your current session:<p><codeph>DB_INTERPRETER</codeph>: The absolute path and name of the <codeph>psql</codeph> executable of PostgreSQL. The executable is usually located in the <codeph>bin</codeph> subdirectory of the PostgreSQL installation directory.</p><p>Example:</p><codeblock>export DB_INTERPRETER="/opt/PostgreSQL/9.1/bin/psql"</codeblock>
           </li>
-          <li>If you are upgrading from a release prior to V 16.1, and running <ph
-              conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> in SAML_SP mode, and you want to make use of multiple tenants associated with IdP (Identity Provider) systems: <p>Apart from user IDs, the assertions returned by the IdP to <ph
-                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> must contain the corresponding tenant ID for each user. This is required for <ph
-                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-              /> to ensure the uniqueness of user IDs. </p><note>
-              <p>Be aware that the SAML assertions returned from the IdP always need to contain at least the default tenant ID in case you do not want to make use of the multi-tenancy functionality. </p>
+          <li>If you are upgrading from a release prior to <ph
+                            product="oscm_ce">16.0.5</ph><ph
+                            product="oscm_ee">V16.0 Fix 5</ph>, check and, if necessary, adapt the value of the <codeph>HIDE_PAYMENT_INFORMATION</codeph> configuration setting introduced with this release. By default, it is set to <codeph>false</codeph>. This setting is evaluated only once and cannot be changed anymore after <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> has been started. <p>The setting is made in the <codeph>configsettings.properties</codeph> file located in <codeph>&lt;install_pack_dir&gt;/databases/bes_db</codeph>.</p></li>
+          <li>If you are running <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> in SAML_SP mode:<p>In the <codeph>configsettings.properties</codeph> file located in <codeph>&lt;install_pack_dir&gt;/databases/bes_db</codeph>, add the following configuration parameters and enter appropriate values:</p><p><codeph>SSO_DEFAULT_TENANT_ID</codeph></p><p><codeph>SSO_IDP_SAML_ASSERTION_ISSUER_ID</codeph></p><p>If you do not want to use the default value for the <codeph>KEY_FILE_PATH</codeph> configuration setting (<codeph>&lt;GLASSFISH_HOME&gt;/glassfish/domains/bes-domain/config</codeph>), specify its value accordingly in the <codeph>configsettings.properties</codeph> file.</p>
+          </li>
+          <li>If you are running <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> in SAML_SP mode and want to update or change STS-related configuration settings:<p>In the <codeph>configsettings.properties</codeph> file located in <codeph>&lt;install_pack_dir&gt;/databases/bes_db</codeph>, change the values for the following configuration parameters as required:</p><p><codeph>SSO_STS_ENCKEY_LEN</codeph></p><p><codeph>SSO_STS_METADATA_URL</codeph></p><p><codeph>SSO_STS_URL</codeph></p>
+          </li>
+          <li>If you are running <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> in SAML_SP mode and want to make use of multiple tenants associated with IdP (Identity Provider) systems: <p>Apart from user IDs, the assertions returned to <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> must contain the corresponding tenant ID for each user. This is required for <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> to ensure the uniqueness of user IDs. </p><note>
+              <p>Be aware that the SAML assertions returned from the IdP always need at least contain the default tenant ID in case you do not want to make use of the multi-tenancy functionality. </p>
             </note><p>To achieve this, the IdP must be configured such that its assertions contain an <codeph>&lt;Attribute&gt;</codeph> subelement with the <codeph>Name="tenantID"</codeph> property, and the <codeph>&lt;AttributeValue&gt;</codeph> subelement must specify the ID of the tenant associated with the organization the corresponding user belongs to.</p><p>Example: </p><p>
               <codeblock>&lt;saml:Assertion ...&gt;
     ...
@@ -59,52 +63,18 @@
   &lt;/saml:Assertion&gt;
 </codeblock>
             </p></li>
-          <li>Proceed with updating your installation as follows:<p>
+          <li>If you are running <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> in SAML_SP mode and upgrading from a release prior to <ph
+                            product="oscm_ce">16.0.6</ph><ph
+                    product="oscm_ee">V16.0 Fix 6</ph>: <p>In the <codeph>configsettings.properties</codeph> file located in <codeph>&lt;install_pack_dir&gt;/databases/bes_db</codeph>, specify values for the following configuration parameters in order to support single logout: </p><p><codeph>SSO_LOGOUT_URL</codeph> : mandatory for single logout</p><p><codeph>SSO_SIGNING_KEY_ALIAS</codeph> : mandatory for signed logout requests</p><p><codeph>SSO_SIGNING_KEYSTORE</codeph> : mandatory for signed logout requests</p><p><codeph>SSO_SIGNING_KEYSTORE_PASS</codeph> : mandatory for signed logout requests</p></li>
+          <li>Proceed with updating your installation in the following sequence: <p>
               <ol>
-                <li>Shut down the <codeph>bes-domain</codeph> and the <codeph>master-indexer-domain</codeph> domains.</li>
-                <li>Create a backup of configuration files, the key file for encryption, the <codeph>bss</codeph> database, and all customizations you may have made. See below for details.</li>
-                <li>Install the GlassFish 4.1.1 application server.</li>
-                <li>Extract the contents of the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> installation package, <codeph>oscm-install-pack.zip</codeph>. </li>
-                <li>Update the database. See below for details. </li>
-                <li>Set up the application server resources. </li>
-                <li>If you are using certificates for authenticating Web service calls, or if you want to run <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> in SAML_SP mode, you need to exchange the corresponding certificates again. Refer to the <i>Operator's Guide</i> for details on certificate handling.</li>
-                <li>As is the case with a new installation, deploy the BIRT report engine to an application server different from that of <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    />, for example, to your GlassFish 3 installation, and adjust the <codeph>REPORT_ENGINE_URL</codeph> configuration setting accordingly. See below and section <xref
-                    href="../Installation/c_DeployBirt.xml"> </xref>for details. </li>
+                <li>Update the database.</li>
+                <li>Update the <codeph>master-indexer-domain</codeph> domain.</li>
+                <li>Update the <codeph>bes-domain</codeph> domain.</li>
+                <li>Restart both domains. </li>
               </ol>
-            </p></li>
-        </ol>
-      </p>
-    </section>
-    <section>
-      <title>Backing Up and Updating the Configuration Settings</title>
-      <p>
-        <ol compact="no">
-          <li>Create a backup of the following files of your existing <ph
-              conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> installation:<p>
-              <ul>
-                <li><codeph>configsettings.properties</codeph></li>
-                <li><codeph>db.properties</codeph></li>
-                <li><codeph>glassfish.properties</codeph> of both the <codeph>bes-domain</codeph> and the <codeph>indexer-domain</codeph> domain.</li>
-                <li>Key file required for the encryption and decryption of service parameters with data type <codeph>PWD</codeph> or custom attributes marked for encryption. By default, the file is named <codeph>key</codeph> and located in the following directory:<p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/bes-domain/config</codeph></p>
-                </li>
-              </ul>
-            </p></li>
-          <li>Create a backup of the <ph><codeph>bss</codeph></ph> database using the standard PostgreSQL commands. The database backup must be compatible with PostgreSQL 9.1.12. <ph
-              audience="BSS">Make sure to also have a backup of any customizations to marketplaces.</ph>
-            <p>
-              <note>Creating a backup of search index data is not required. The index will be automatically rebuilt when <ph
-                  conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> is operational again. </note>
-            </p></li>
-          <li>The <codeph>oscm-portal.war</codeph> archive contains the properties files for the user interface resources (user interface and email texts, platform objects). Be aware that with a new release or fix, new keys may have been added to the system, others may have been changed or deleted.<p>Make sure to have a backup of any customizations you may have made.</p></li>
-          <li>The <codeph>oscm-portal-help.war</codeph> archive contains the online help and FAQ files in English, German, and Japanese. Make sure to have a backup of any customizations to these files.</li>
-          <li>Based on your existing configuration files, adjust the settings in the configuration files for the new <ph
-              conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-            /> release. Specifically pay attention to new and changed settings. </li>
+            </p><p>See below for details.</p></li>
         </ol>
       </p>
     </section>
@@ -112,72 +82,129 @@
       <title>Updating the Database</title>
       <p>Proceed with updating the database as follows:</p>
       <p>
-        <ol compact="no">
+        <ol
+                            compact="no">
           <li>Check whether the file <p><codeph>postgresql-9.1-903.jdbc4.jar</codeph></p><p> is contained in the following directories of the application server:</p><ul>
               <li><codeph>lib</codeph> directory of the <codeph>bes-domain</codeph> domain</li>
               <li><codeph>&lt;GLASSFISH_HOME&gt;/mq/lib/ext</codeph></li>
             </ul><p>If this is not the case, copy the file from the <codeph>&lt;install_pack_dir&gt;/install/lib</codeph> directory to the location where it is missing. </p></li>
+          <li>Create a backup of the <ph><codeph>bss</codeph></ph> database using the standard PostgreSQL commands. The database backup must be compatible with PostgreSQL 9.1.12. <ph
+                                    audience="BSS">Make sure to also have a backup of any customizations to marketplaces.</ph>
+            <p>
+              <note>Creating a backup of search index data is not required. The index will be automatically rebuilt when <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> is operational again. </note>
+            </p></li>
+          <li>Update the following configuration files so that the settings match your current installation:<ul>
+              <li><codeph>db.properties</codeph> located in <codeph>&lt;install_pack_dir&gt;/databases/bes_db</codeph></li>
+              <li><codeph>configsettings.properties</codeph> located in <codeph>&lt;install_pack_dir&gt;/databases/bes_db</codeph></li>
+              <li><codeph>sso.properties</codeph> located in <codeph>&lt;install_pack_dir&gt;/databases/bes_db</codeph></li>
+            </ul></li>
           <li>Start the <codeph>bss</codeph> database.</li>
           <li>Update the schema and configuration settings of the <codeph>bss</codeph> database by executing the <codeph>build-db.xml</codeph> file in <codeph>&lt;install_pack_dir&gt;/install</codeph> as follows:<p>
               <codeblock>&lt;ANT_HOME&gt;/bin/ant -f build-db.xml updateDatabase</codeblock>
-            </p><p>
-              <note>
-                <p>Make sure that Ant runs in a Java 8 runtime environment when calling the <codeph>build-db.xml</codeph> file. </p>
-              </note>
+            </p><!--p>If you set a password other than <codeph>postgres</codeph> for the PostgreSQL user account (<codeph>postgres</codeph>) when installing the database management system, you have to specify the password with the call to the <codeph>build-db.xml</codeph> file as follows: </p><p>
+              <codeblock>&lt;ANT_HOME&gt;/bin/ant -f build-db.xml updateDatabase
+   -Ddb.pwd=&lt;password&gt;</codeblock>
+            </p--><p>
+              <note><p>Make sure that Ant runs in a Java 7 runtime environment when calling the <codeph>build-db.xml</codeph> file. </p><!--p>It may be required to enclose <codeph>-Ddb.pwd=&lt;password></codeph> in double or single quotes depending on the operating system.</p--> </note>
             </p>
           </li>
         </ol>
       </p>
     </section>
     <section>
-      <title>Setting Up the Application Server Resources</title>
+      <title>Updating the <codeph>master-indexer-domain</codeph> Domain</title>
       <p>
         <ol>
-          <li>Copy your backup of the key file to the installation package of the new release of <ph
-              conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> to the following directory: <p><codeph>oscm-install-pack\domains\bes_domain\installer</codeph></p><p>By default, this file is named <codeph>key</codeph> and located in </p><p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/bes-domain/config</codeph> of your GlassFish 3 installation.</p><p>Make sure that the old key file is named <codeph>key</codeph>. The installation script will then copy the key file to its default location in the new application server domain: </p><p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/bes-domain/config</codeph>.</p></li>
-          <li>Execute the <codeph>build-glassfish.xml</codeph> file in <codeph>&lt;install_pack_dir&gt;/install</codeph> as follows:<p>
-              <codeblock>&lt;ANT_HOME&gt;/bin/ant -f build-glassfish.xml SETUP</codeblock>
-            </p><p>This has the following results:<ul>
-                <li>The <codeph>master-indexer-domain</codeph> domain is created and started. </li>
-                <li>The search indexer application (<codeph>oscm-search.ear</codeph>) is deployed to the <codeph>master-indexer-domain</codeph> domain.</li>
-                <li>The <codeph>bes-domain</codeph> domain is created and started. </li>
-                <li>The following applications are deployed to the <codeph>bes-domain</codeph> domain: <ul>
-                    <li>
-                      <p><codeph>oscm.ear</codeph></p>
-                    </li>
-                    <li><codeph>oscm-portal.war</codeph><p>This archive contains the properties files for the user interface resources (user interface and email texts, platform objects). Be aware that with a new release or fix, new keys may have been added to the system, others may have been changed or deleted.</p><p>Make sure to have a backup of any customizations you may have made. After having set up the application server resources, check whether existing texts, for example, mail messages have changed as compared to the previous release. You may need to customize the texts again and redeploy the <codeph>oscm-portal.war</codeph> archive.</p></li>
-                    <li>
-                      <p><codeph>oscm-portal-help.war</codeph></p>
-                      <p>This archive contains the online help and FAQ files in English, German, and Japanese. You can customize these resources. When upgrading the system with a fix for this release, make sure to have a backup of any such customizations. Merge the customized files into the <codeph>oscm-portal-help.war</codeph> archive and redeploy the archive. Otherwise they will no longer be available after the upgrade.</p>
-                      <p>If you added additional languages to the system, also include the corresponding help and FAQ file structures into the <codeph>oscm-portal-help.war</codeph> archive before deploying it again. Refer to the <codeph>Operator's Guide</codeph> for details. </p>
-                    </li>
-                  </ul><!--p product="oscm_ee"><codeph>birt.war</codeph></p--></li>
-                <li>The <codeph>oscm-security.jar</codeph>, the <codeph>postgresql-9.1-903.jdbc4.jar</codeph>, and the <codeph>commons-codec-1.7.jar</codeph> files are copied from the directory to which you extracted the <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> installation package (<codeph>&lt;install_pack_dir&gt;/domains/bes_domain/lib</codeph>) to the <codeph>lib</codeph> directory of the <codeph>bes-domain</codeph> domain.</li>
-                <li>The required resources, email settings, JMS queues, data sources are created in the application server. Refer to <xref
-                    href="../../Shared/reference/r_AppServerResources.xml"/> for details.</li>
-                <li>The directory traversal is disabled for both domains, <codeph>bes-domain</codeph> and <codeph>master-indexer-domain</codeph>: The directory listing parameter is set to <codeph>false</codeph> in the <codeph>default-web.xml</codeph> file in the domain directories you are using for <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </li>
-              </ul></p></li>
+          <li>Start the <codeph>master-indexer-domain</codeph> domain.</li>
+          <li>Undeploy the search indexer application, <codeph>oscm-search</codeph>.<ph
+                            product="oscm_ee"> If you are upgrading from a release prior to V15.4 Fix 5, undeploy <codeph>fujitsu-bss-search</codeph>.</ph></li>
+          <li>Set the following setting in the <b>JVM Options</b> of the application server to <codeph>false</codeph>:<p><codeph>-Dorg.apache.catalina.loader.WebappClassLoader.ENABLE_CLEAR_REFERENCES=false</codeph></p></li>
+          <li>Stop the <codeph>master-indexer-domain</codeph> domain.</li>
+          <li>Check for <codeph>.glassfishStaleFiles</codeph> files. If there are any, delete them. The files are located in<p><codeph>&lt;domain&gt;/applications/&lt;application name&gt;/.glassfishStaleFiles</codeph></p><p>For example: </p><p><codeph>master-indexer-domain/applications/oscm-search/.glassfishStaleFiles</codeph></p><p
+                            product="oscm_ee">or, when upgrading from a release prior to V15.4 Fix 5: </p><p
+                        product="oscm_ee"><codeph>master-indexer-domain/applications/fujitsu-bss-search/.glassfishStaleFiles </codeph></p></li>
+          <li>Delete any existing index directories in the index base of the <codeph>master-indexer-domain</codeph> domain: <p><codeph>master-indexer-domain/masterIndexBase/*</codeph></p></li>
+          <li>Start the <codeph>master-indexer-domain</codeph> domain.</li>
+          <li>
+            <p>Deploy the search indexer application (<codeph>oscm-search</codeph> located in <codeph>&lt;install_pack_dir&gt;/domains/indexer_domain/applications</codeph>).</p>
+            <!--p>Do not forget to activate the <b>Compatibility</b> option for <codeph>oscm-search.ear</codeph> file. This is required to support backward compatibility of JAR visibility in GlassFish V2. </p-->
+          </li>
         </ol>
       </p>
     </section>
     <section>
-      <title>Connecting to the BIRT Report Engine</title>
-      <p>Adjust the <codeph>REPORT_ENGINEURL</codeph> configuration setting in <ph
-          conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> as follows:</p>
-      <p>In the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-          /> administration portal, choose <b>Update configuration settings</b> in the <b>Operation</b> menu. Change the host IP address and port to the ones of the application server to which you deployed the report engine: <codeblock>http://<b>&lt;host IP address></b>:<b>&lt;port></b>/birt/frameset?
-   __report=${reportname}.rptdesign&amp;SessionId=${sessionid}
-   &amp;__locale=${locale}&amp;WSDLURL=${wsdlurl}&amp;SOAPEndPoint=${soapendpoint}
-   &amp;wsname=Report&amp;wsport=ReportPort</codeblock></p>
+      <title>Updating the <codeph>bes-domain</codeph> Domain</title>
+      <ol>
+        <li>Start the <codeph>bes-domain</codeph> domain.</li>
+        <li>Undeploy the following applications:<ul
+                            compact="no">
+            <li
+                                product="oscm_ee"><codeph>birt</codeph>, or <codeph>eclipse-birt-runtime</codeph> if you are upgrading from a release prior to V16.0 Fix 4.</li>
+            <li><codeph>oscm</codeph><ph
+                                product="oscm_ee">, or <codeph>fujitsu-bss</codeph> if you are upgrading from a release prior to V15.4 Fix 5.</ph></li>
+            <li><codeph>oscm-portal</codeph><ph
+                                product="oscm_ee">, or <codeph>fujitsu-bss-portal</codeph> if you are upgrading from a release prior to V15.4 Fix 5.</ph></li>
+            <li><codeph>oscm-portal-help</codeph><ph
+                        product="oscm_ee">, or <codeph>fujitsu-bss-portal-help</codeph> if you are upgrading from a release prior to V15.4 Fix 5.</ph></li>
+            <li>Optionally: Your own branding package <codeph>.war</codeph> file, if you have customized the layout of the marketplaces and created your own branding package. </li>
+          </ul></li>
+        <li>Set the following setting in the <b>JVM Options</b> of the application server to <codeph>false</codeph>:<p><codeph>-Dorg.apache.catalina.loader.WebappClassLoader.ENABLE_CLEAR_REFERENCES=false</codeph></p></li>
+        <li>Stop the <codeph>bes-domain</codeph> domain.</li>
+        <li>Check for <codeph>.glassfishStaleFiles</codeph> files. If there are any, delete them. The files are located in<p><codeph>&lt;domain&gt;/applications/&lt;application name&gt;/.glassfishStaleFiles</codeph></p><p>For example: </p><p><codeph>bes-domain/applications/oscm/.glassfishStaleFiles</codeph></p><p
+                        product="oscm_ee">or, when upgrading from a release prior to V15.4 Fix 5:</p><p
+                    product="oscm_ee"><codeph>bes-domain/applications/fujitsu-bss/.glassfishStaleFiles</codeph></p></li>
+        <li>Check for an <codeph>eclipse-birt-runtime</codeph> directory. If there is one, delete it. </li>
+        <li>Delete any existing index directories in the index base of the <codeph>bes-domain</codeph> domain:<p><codeph>bes-domain/slaveIndexBase/*</codeph></p></li>
+        <li
+                            product="oscm_ee">When upgrading from a release prior to V15.4 Fix 5, delete the file <codeph>fujitsu-bss-security.jar</codeph> from the <codeph>&lt;GLASSFISH_HOME&gt;/glassfish/domains/bes-domain/lib</codeph> directory.</li>
+        <li>Copy the <codeph>javax.faces.jar</codeph> file from the <codeph>&lt;install_pack_dir&gt;/install/lib</codeph> directory to the <codeph>&lt;GLASSFISH_HOME&gt;/glassfish/modules</codeph> directory.</li>
+        <li>Copy the <codeph>oscm-security.jar</codeph> and <codeph>commons-codec-1.7.jar</codeph> files from the <codeph>&lt;install_pack_dir&gt;/domains/bes_domain/lib</codeph> directory to the <codeph>lib</codeph> directory of the <codeph>bes-domain</codeph> domain.</li>
+        <li>Start the <codeph>bes-domain</codeph> domain.</li>
+        <li>
+          <p>Deploy the <ph
+                                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> applications located in <codeph>&lt;install_pack_dir&gt;/domains/bes_domain/applications</codeph> in the following sequence: </p>
+          <p>
+            <ol>
+              <li><codeph>oscm</codeph><!--p>Do not forget to activate the <b>Compatibility</b> option for the <codeph>oscm.ear</codeph> file. This is required to support backward compatibility of JAR visibility in GlassFish V2. </p--><p>If you are running <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> in SAML_SP mode, you need to update the WSIT files contained in the <codeph>oscm.ear</codeph> archive. </p><!--p>If you want to update or change STS-related configuration settings, you must change the respective settings in the <codeph>configsettings.properties</codeph> located in <codeph>&lt;install_pack_dir>/databases/bes_db</codeph> file first. </p--><p>Execute the <codeph>build-glassfish.xml</codeph> file in <codeph>&lt;install_pack_dir&gt;/install</codeph> as follows: </p><p>
+                  <codeblock>&lt;ANT_HOME&gt;/bin/ant
+   -DpatchProps.path=../domains/bes_domain/installer 
+   -f build-glassfish.xml patchApplication</codeblock>
+                </p><p>
+                  <note>It may be required to enclose the <codeph>-DpatchProps.path=&lt;path&gt;</codeph> command in double or single quotes depending on the operating system. </note>
+                </p><!--p>The configuration setting values are read from the <codeph><codeph>configsettings.properties</codeph></codeph> file and written to the WSIT files contained in the <codeph>oscm.ear</codeph> archive.<p--><p>During the execution of the above command, a <codeph>tmp</codeph> subdirectory is created in <codeph>&lt;install_pack_dir&gt;/domains/bes_domain</codeph> to which the updated <codeph>oscm.ear</codeph> archive is saved. Proceed with manually deploying the <codeph>tmp/oscm.ear</codeph> archive to the <codeph>bes-domain</codeph> domain.</p></li>
+              <li
+                                    product=" oscm_ee"><codeph>birt</codeph>
+                <p>This archive contains the properties files for the labels and texts used in reports. Be aware that with a new release or fix, new keys may have been added to the system, others may have been changed or deleted.</p><p>Existing texts in English, German, and Japanese are overwritten by an upgrade. If you have customized these texts, merge your customizations into the properties files before deploying the <codeph>birt</codeph> archive. Otherwise they will no longer be available after the upgrade. Refer to the <i>Operator's Guide</i> for details.</p></li>
+              <li><codeph>oscm-portal</codeph>
+                <p>This archive contains the properties files for the user interface resources (user interface and email texts, platform objects). Be aware that with a new release or fix, new keys may have been added to the system, others may have been changed or deleted. </p><p>If you have not customized the texts, existing texts in English, German, and Japanese are overwritten by an upgrade. If you have customized these texts, they are not overwritten. Make sure to have a backup of your changes. After having deployed the <codeph>oscm-portal</codeph>, check whether existing texts, for example, mail messages have changed as compared to the previous release. You may need to customize the texts again.</p><p
+                                    product="oscm_ee">If you are running <ph
+                                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> in SAML_SP mode and upgrading from a release prior to V15.4 Fix 5, the following change is necessary in the IdP: The IdP operator must adapt the URL of the relying party for <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> to reflect the renaming from <codeph>fujitsu-bss</codeph> to <codeph>oscm</codeph>. </p>
+              </li>
+              <li><codeph>oscm-portal-help</codeph>
+                <p>This archive contains the online help and FAQ files in English, German, and Japanese. You can customize these resources. When upgrading the system with a fix for this release, make sure to have a backup of any such customizations. Merge the customized files into the <codeph>oscm-portal-help</codeph> archive, before deploying it again. Otherwise they will no longer be available after the upgrade. </p><p>If you added additional languages to the system, also include the corresponding help and FAQ file structures into the <codeph>oscm-portal-help</codeph> archive before deploying it again. Refer to the <i>Operator's Guide</i> for details. </p></li>
+              <li>Optionally: Your own branding package <codeph>.war</codeph> file</li>
+            </ol>
+          </p>
+        </li>
+        <li
+                        product="oscm_ee">If you are upgrading from a <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> release prior to V15.4 Fix 5 change the implementation of the login module for the <codeph>bssRealm</codeph> in <codeph>&lt;GLASSFISH_HOME&gt;/glassfish/domains/bes-domain/config/login.conf</codeph> from:<codeblock>bssRealm {
+com.fujitsu.adm.um.security.ADMLoginModule required;
+};</codeblock><p>to</p><codeblock>bssRealm {
+org.oscm.security.ADMLoginModule required;
+};</codeblock></li>
+        <li
+                        product="oscm_ee">If you are upgrading from a <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> release prior to V15.4 Fix 5 change the implementation class of the <codeph>bss-realm</codeph> in <codeph>&lt;GLASSFISH_HOME&gt;/glassfish/domains/bes-domain/config/domain.xml</codeph> from:<codeblock>&lt;auth-realm name="bss-realm" classname="com.fujitsu.adm.um.security.ADMRealm"&gt;</codeblock><p>to</p><codeblock>&lt;auth-realm name="bss-realm" classname="org.oscm.security.ADMRealm"&gt;</codeblock></li>
+      </ol>
     </section>
-    <!--section>
+    <section>
       <title>Updating the Command Line Tool</title>
       <p>The current version of the command line tool is provided in the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> installation package, <codeph>oscm-install-pack.zip</codeph>, as <codeph>oscm-operatorclient.zip</codeph>. If you want to use the command line tool with your updated installation, delete and install it again when finished with the update. For details on how to set up the tool, refer to the <i>Operator's Guide</i>.</p>
-    </section-->
+    </section>
     
   </conbody>
 </concept>

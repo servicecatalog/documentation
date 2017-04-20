@@ -40,7 +40,7 @@
                     <p><codeph>orgName=&lt;<i>organization name</i>></codeph>: The name of the organization the user belongs to.</p>
                 </li>
                 <li>
-                    <p><codeph>tenantId=&lt;<i>tenant name</i>></codeph>: The name of the tenant the user belongs to. This entry only appears if the system is set up for a multi-tenancy environment.</p>
+                    <p><codeph>tenantId=&lt;<i>tenant name</i>></codeph>: The name of the tenant the user belongs to. This entry only appears if the system is set up for a multitenancy environment.</p>
                 </li>
                 <li>
                     <p><codeph>&lt;<i>additional name-value pairs</i>></codeph>: Additional name-value pairs specific to the logged operation, separated by vertical bars (|). </p>

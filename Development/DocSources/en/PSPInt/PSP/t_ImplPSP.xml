@@ -60,7 +60,7 @@
                 <li><codeph>paymentTypeId</codeph> - the identifier of the payment type to be set in the payment information at the PSP. </li>
                 <li><codeph>pspIdentifier</codeph> - the ID provided by the PSP for the supplier or reseller organization which offers the service the customer is to be charged for by the PSP.</li>
                 <li><codeph>externalIdentifier</codeph> - the ID provided by the PSP for the payment information of the customer who is to be charged.</li>
-                <li><codeph>List&lt;Property&gt; properties</codeph> - Configuration settings and their values which are needed for the communication with the PSP. The required configuration settings are provided by the PSP. The <ph
+                <li><codeph>List&lt;Property&gt; properties</codeph> - Configuration keys and their values which are needed for the communication with the PSP. The required configuration settings are provided by the PSP. The <ph
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> operator must specify these configuration settings when creating a new PSP. </li>
             </ul>

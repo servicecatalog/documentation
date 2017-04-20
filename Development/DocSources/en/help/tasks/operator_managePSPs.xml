@@ -60,7 +60,7 @@
         </info>
       </step>
       <step>
-        <cmd>Specify the configuration settings and their values needed for communicating with the PSP: Click <b>Add</b> to enter a new key-value pair.</cmd>
+        <cmd>Specify the configuration keys and their values needed for communicating with the PSP: Click <b>Add</b> to enter a new key-value pair.</cmd>
         <info>
           <p>The configuration settings depend on the implementation of the PSP integration adapter. You must be informed about the required settings by the PSP. </p>
         </info>

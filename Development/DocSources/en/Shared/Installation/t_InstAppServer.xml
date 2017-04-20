@@ -32,7 +32,6 @@
                             <li>The <codeph>app-domain</codeph> domain is created and started. </li>
                             <li>The settings and resources for APP are created in the application server.</li>
                             <li>APP (<codeph>oscm-app.ear</codeph>) is deployed to the <codeph>app-domain</codeph> domain.</li>
-                            <li>A key file for encryption and decryption is generated in the location you specified in the <codeph>APP_KEY_PATH</codeph> setting in the <codeph>configsettings.properties</codeph> file. By default, this file is named <codeph>key</codeph> and located in <p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/app-domain/config</codeph>.</p></li>
                             <li audience="ror"
                                     >The ROR service controller (<codeph>oscm-app-ror.ear</codeph>) is deployed to the <codeph>app-domain</codeph> domain.</li>
                             <li audience="aws"
@@ -72,11 +71,6 @@
                             />: </p><p><codeph>-Dhttp.nonProxyHosts=localhost|127.0.0.1|myServer*</codeph></p><p>where <codeph>myServer</codeph> is the host on which <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                         /> is running.</p><p>In case several service controllers are to run in the same APP domain, and only one of them is to communicate via a proxy server, you need to exclude the target systems of the other service controllers, for example, as follows: </p><codeph>-Dhttps.proxyHost=proxy.intern.myserver.com</codeph><p><codeph>-Dhttps.proxyPort=8081</codeph></p><p><codeph>-Dhttp.nonProxyHosts=myServer.com|localhost|127.0.0.1|</codeph></p><p><codeph>http://10.140.18.112*|http://myServer.com:8880/templates/*|</codeph></p><p><codeph>https://ror-demo.myServer.com:8014/cfmgapi/endpoint* </codeph></p><p>After having configured the proxy server, restart the <codeph>app-domain</codeph>.</p></info>
-            </step>
-            <step audience="app">
-                <cmd><ph>Depending on your environment, it may be required to provide separate certificates for external and internal communication between <ph
-                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            /> and APP. In this case, you can use the secure HTTP listener port (default: <codeph>8082</codeph>).</ph></cmd>
             </step>
             
             

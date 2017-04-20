@@ -30,7 +30,7 @@
                                             href="../../APPInt/APP/r_ConfigSettings.xml"/>.</ph>
                                     <p>The initial installation stores these settings in the <ph audience="BSS"
                                                 ><codeph>bss</codeph></ph><ph audience="app"
-                                            ><codeph>bssapp</codeph></ph> database, where you can change them later, if required. An update installation only adds new settings to the database but does not overwrite existing ones. In the case that mandatory settings are missing, an error is thrown, and you need to add these settings manually before executing the installation scripts again. </p></li>
+                                            ><codeph>bssapp</codeph></ph> database, where you can change them later, if required. An update installation only adds new settings to the database but does not overwrite existing ones.</p></li>
                                 <li audience="app"
                                             ><codeph>configsettings_controller.properties</codeph>: In this file, you can specify settings for a service controller which you want to register when installing APP. <p>The initial installation stores these settings in the <codeph>bssapp</codeph> database. You can change them later using a graphical user interface. </p>For details, refer to <xref
                                         href="../../APPInt/APP/t_RegisterAPP.xml"/>. </li>
@@ -123,25 +123,22 @@ C\\:/glassfish/masterSourceBase</codeblock>
                 <li audience="BSS">
                     <p>The following settings in the <codeph>configsettings.properties</codeph> file are mandatory when installing <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        /> in <b>SAML_SP</b> authentication mode:</p>
-                    <ul>
-                        <li><codeph>AUTH_MODE</codeph></li>
-                        <li><codeph>SSO_DEFAULT_TENANT_ID</codeph></li>
-                        <li><codeph>SSO_ISSUER_ID</codeph></li>
-                        <li><codeph>SSO_IDP_TRUSTSTORE</codeph></li>
-                        <li><codeph>SSO_IDP_TRUSTSTORE_PASSWORD</codeph></li>
-                    </ul>
-                    <p>The following settings are also mandatory and require the respective information to be provided by the IdP operator. Refer to <xref
-                            href="../../InstallationGuide/Preparation/c_AuthenticationMode.xml"/> for details.</p>
-                    <ul>
-                        <li><codeph>SSO_IDP_SAML_ASSERTION_ISSUER_ID</codeph></li>
-                        <li><codeph>SSO_STS_ENCKEY_LEN</codeph></li>
-                        <li><codeph>SSO_IDP_AUTHENTICATION_REQUEST_HTTP_METHOD</codeph></li>
-                        <li><codeph>SSO_IDP_URL</codeph></li>
-                        <li><codeph>SSO_LOGOUT_URL</codeph></li>
-                        <li><codeph>SSO_STS_URL</codeph></li>
-                        <li><codeph>SSO_STS_METADATA_URL</codeph></li>
-                    </ul>
+                        /> in <b>SAML_SP</b> authentication mode: </p>
+                    <p>
+                        <ul>
+                            <li><codeph>AUTH_MODE</codeph></li>
+                            <li><codeph>SSO_DEFAULT_TENANT_ID</codeph></li>
+                            <li><codeph>SSO_ISSUER_ID</codeph></li>
+                            <li><codeph>SSO_IDP_URL</codeph></li>
+                            <li><codeph>SSO_IDP_AUTHENTICATION_REQUEST_HTTP_METHOD</codeph></li>
+                            <li><codeph>SSO_IDP_SAML_ASSERTION_ISSUER_ID</codeph></li>
+                            <li><codeph>SSO_STS_URL</codeph></li>
+                            <li><codeph>SSO_STS_METADATA_URL</codeph></li>
+                            <li><codeph>SSO_STS_ENCKEY_LEN</codeph></li>
+                            <li><codeph>SSO_IDP_TRUSTSTORE</codeph></li>
+                            <li><codeph>SSO_IDP_TRUSTSTORE_PASSWORD</codeph></li>
+                        </ul>
+                    </p>
                 </li>
             </ul>
 

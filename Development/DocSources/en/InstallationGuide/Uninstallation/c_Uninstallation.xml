@@ -15,7 +15,6 @@
                 <li>Delete the <codeph>master-indexer-domain</codeph> domain. </li>
                 <li>Delete the shared directory for the master search index. </li>
                 <li>Delete the databases, <codeph>bss</codeph> and <codeph>bssjms</codeph>, and uninstall the database management system and the application server, if you no longer need them for other purposes.</li>
-                <li>Undeploy the BIRT report engine, and uninstall the application server used for BIRT, if you no longer need it for other purposes. </li>
             </ol>
             <p>For details on how to proceed, refer to the documentation of the database management system and the application server. </p>
         </section>

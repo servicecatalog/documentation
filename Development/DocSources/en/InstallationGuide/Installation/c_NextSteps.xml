@@ -8,13 +8,37 @@
                 <section>
                         <p>After you have successfully completed the installation of <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                        />, you can optionally change the URL to be used for accessing the <ph
+                                        />, you can <ph product="oscm_ce">deploy BIRT in order to enable reports and </ph>optionally change the URL to be used for accessing the <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                         /> administration portal and the marketplaces. You can then start to set up the <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                         /> organizations using the <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                 /> administration portal. </p>
+                </section>
+                <section product="oscm_ce">
+                        <title>Deploying BIRT</title>
+                        <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        /> uses BIRT to generate reports. BIRT is not included in the <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> packages. To be able to generate reports, you need to obtain and manually deploy BIRT on your own. </p>
+                        <p>Proceed as follows:</p>
+                        <ol>
+                                <li>Download the latest version of Eclipse BIRT runtime, for example, from http://www.eclipse.org.</li>
+                                <li>Deploy the <codeph>birt.war</codeph> archive to a domain on the application server which you use for <ph
+                                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                />. You can deploy the archive to the <codeph>bes-domain</codeph> domain of OSCM or a separate domain.</li>
+                                <li>Add the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                /> report designs and localized labels to the folder of the <codeph>birt</codeph> application on the application server. <p>The <ph
+                                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                        /> report designs and labels are available in the following archive provided for each release: <codeph>oscm-reports.zip</codeph>. Extract the contents of this archive to the root folder of the <codeph>birt</codeph> application, <codeph>&lt;GLASSFISH_HOME>/glassfish/domains/&lt;domain>/applications/birt</codeph>.</p></li>
+                                <li>Restart <codeph>birt</codeph>.</li>
+                        </ol>
+                        <p>Each time you install a new release of <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        />, you should also check for new releases of BIRT and changes in the <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> report designs and labels and update them as required. </p>
                 </section>
                 <section>
                         <title>Setting the Context Root</title>
@@ -37,7 +61,7 @@ Proceed as follows:</p>
                                                 </p></li>
                                         <li> In the <ph
                                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                                        /> administration portal, go to <b>Operation -> Update Configuration Settings</b> and change the <codeph>BASE_URL_HTTPS</codeph> configuration setting, and, if specified, the <codeph>BASE_URL</codeph> configuration setting, accordingly. See below for details on accessing <ph
+                                                        /> administration portal, go to <b>Operation -> Update Configuration Settings</b> and change the <codeph>BASE_URL_HTTPS</codeph> configuration key, and, if specified, the <codeph>BASE_URL</codeph> configuration key, accordingly. See below for details on accessing <ph
                                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                                 />. </li>
                                 </ol>
@@ -48,35 +72,22 @@ Proceed as follows:</p>
                         </title>
                         <p>You can access the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                 /> administration portal in a Web browser using an URL in the following format: </p>
-                        <p><codeph>https://&lt;server&gt;:&lt;port&gt;/&lt;context-root>/&lt;tenant-id></codeph> or </p>
-                        <p><codeph>http://&lt;server&gt;:&lt;port&gt;/&lt;context-root>/&lt;tenant-id></codeph>
+                        <p><codeph>https://&lt;server&gt;:&lt;port&gt;/&lt;context-root></codeph> or </p>
+                        <p><codeph>http://&lt;server&gt;:&lt;port&gt;/&lt;context-root></codeph>
                         </p>
                         <p><codeph>&lt;server&gt;</codeph> is the host of the application server where <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                         /> has been deployed. <codeph>&lt;port&gt;</codeph> is the port to address the application server (default: <codeph>8080</codeph> for HTTP, <codeph>8081</codeph> for HTTPS). <codeph>&lt;context-root></codeph> is the context root of <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                        /> (default: <codeph>oscm-portal</codeph>). <codeph>&lt;tenant-id></codeph> is the ID of the tenant specified when installing <ph
-                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                /> in SAML_SP mode. If installed in INTERNAL mode, the tenant ID is not appended to the URL.   </p>
+                                        /> (default: <codeph>oscm-portal</codeph>). </p>
                         <p>You are prompted for a user ID and password. </p>
                         <p>Depending on the authentication mode, the initial credentials are the following: </p>
                         <ul>
                                 <li>INTERNAL: <p>User ID: <codeph>administrator</codeph></p><p>Password: <codeph>admin123</codeph></p><p>It is recommended that you change the initial password in the <ph
                                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                                         /> administration portal (<b>Change Password</b> page in the <uicontrol>Account</uicontrol> menu). </p></li>
-                                <li>SAML_SP: <p>User ID: The ID you specified in the <codeph>ADMIN_USER_ID</codeph> configuration setting in the <codeph>sso.properties</codeph> configuration file. </p><p>Password: Password as known in the IdP for the above user. </p></li>
+                                <li>SAML_SP: <p>User ID: The ID you specified in the <codeph>ADMIN_USER_ID</codeph> configuration key in the <codeph>sso.properties</codeph> configuration file. </p><p>Password: Password as known in the IdP for the above user. </p></li>
                         </ul>
-                </section>
-                <section>
-                        <title>Connecting to the BIRT Report Engine</title>
-                        <p>Adjust the <codeph>REPORT_ENGINEURL</codeph> configuration setting in <ph
-                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                /> as follows:</p>
-                        <p>In the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                        /> administration portal, choose <b>Update configuration settings</b> in the <b>Operation</b> menu. Change the host IP address and port to the ones of the application server to which you deployed the report engine: <codeblock>http://<b>&lt;host IP address></b>:<b>&lt;port></b>/birt/frameset?
-   __report=${reportname}.rptdesign&amp;SessionId=${sessionid}
-   &amp;__locale=${locale}&amp;WSDLURL=${wsdlurl}&amp;SOAPEndPoint=${soapendpoint}
-   &amp;wsname=Report&amp;wsport=ReportPort</codeblock></p>
                 </section>
                 <section>
                         <title>Creating an Additional Operator Account</title>

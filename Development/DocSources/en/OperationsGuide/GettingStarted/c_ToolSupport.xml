@@ -33,7 +33,7 @@
                                 /> administration portal (<b>Change Password</b> page in the <b>Account</b> menu). </p></li>
                     <li>
                         <p><b>SAML_SP</b> authentication mode:</p>
-                        <p>User ID: The ID you specified in the <codeph>ADMIN_USER_ID</codeph> configuration setting in the <codeph>sso.properties</codeph> configuration file before installing <ph
+                        <p>User ID: The ID you specified in the <codeph>ADMIN_USER_ID</codeph> configuration key in the <codeph>sso.properties</codeph> configuration file before installing <ph
                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </p>
                         <p>Password: Password as known in the IdP (Identity Provider) for the above user. You can change your password in the external authentication system only. </p>
                     </li>
