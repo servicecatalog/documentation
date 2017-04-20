@@ -105,12 +105,12 @@
                 <li audience="BSS"
                         > If you install everything on the local system, use either the server name or <codeph>localhost</codeph> in all configuration files for all URLs that need to be resolved by <ph
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                />. <p><b>Do not mix the specification of server names and <codeph>localhost</codeph>.</b></p><p>The <codeph>BASE_URL_HTTPS</codeph> setting, and, if specified, the <codeph>BASE_URL</codeph> setting in the <codeph>configsettings.properties</codeph> file must be resolved by clients. They always require the specification of the server name. </p><p>Specify the settings as follows:</p><p>
+                                />. <p><b>Do not mix the specification of server names and <codeph>localhost</codeph>.</b></p><p>The <codeph>BASE_URL_HTTPS</codeph> setting, and, if specified, the <codeph>BASE_URL</codeph> setting in the <codeph>configsettings.properties</codeph> file must be resolved by clients. They always require that the server name be specified. </p><p>Specify the settings as follows:</p><p>
                         <codeblock>BASE_URL_HTTPS=https://&lt;host&gt;:&lt;port&gt;/oscm-portal
 BASE_URL_HTTP=http://&lt;host&gt;:&lt;port&gt;/oscm-portal</codeblock>
                     </p></li>
                 <li audience="app"
-                        >If you install everything on the local system, use either the server name or <codeph>localhost</codeph> in all configuration files for all URLs that need to be resolved by APP. <p><b>Do not mix the specification of server names and <codeph>localhost</codeph>.</b></p><p>The <codeph>APP_BASE_URL</codeph> setting in the <codeph>configsettings.properties</codeph> file must be resolved by clients. They always require the specification of the server name. </p><p>Specify the <codeph>APP_BASE_URL</codeph> setting as follows:</p><p>
+                        >If you install everything on the local system, use either the server name or <codeph>localhost</codeph> in all configuration files for all URLs that need to be resolved by APP. <p><b>Do not mix the specification of server names and <codeph>localhost</codeph>.</b></p><p>The <codeph>APP_BASE_URL</codeph> setting in the <codeph>configsettings.properties</codeph> file must be resolved by clients. They always require that the server name be specified. </p><p>Specify the <codeph>APP_BASE_URL</codeph> setting as follows:</p><p>
                         <codeblock>APP_BASE_URL=http://&lt;host&gt;:&lt;port&gt;/oscm-app</codeblock>
                     </p><p>If you have changed the <codeph>glassfish.domain.portbase</codeph> setting in the <codeph>glassfish.properties</codeph> file, you must change the port here accordingly.</p>
                 </li>

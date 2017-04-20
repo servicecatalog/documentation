@@ -37,6 +37,8 @@
                     >You can deploy the vSphere integration software on the application server you use for <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 />. Alternatively, you can use a separate application server installation.</p>
+            <p>Be aware that when operating <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> in SAML_SP mode, every Web service client must run in a separate domain of the application server.</p>
             <note>Before installing GlassFish, make sure that the <codeph>JAVA_HOME</codeph> environment variable points to a Java Development Kit (JDK), version 8, 64 bit. </note>
             <p>Proceed as follows: </p>
             <ol compact="no">

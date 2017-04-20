@@ -12,6 +12,13 @@
           >the OpenStack integration software</ph><ph audience="tps5">the TPS5 integration software</ph><ph
           audience="vmware"
         >the vSphere integration software</ph>, read the <i>Release Notes</i> of the new release. They contain information on compatibility issues, changes and enhancements, and known restrictions. </p>
+      <p>The platform operator and technology managers must make sure that the following rules are observed: The <ph
+          conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+        /> version must be higher or equal to the APP version. The APP version must be equal to the controller version.</p>
+      <p>Example: If you want to use the <ph audience="app">VMware</ph><ph audience="ror">ROR</ph><ph audience="aws"
+          >AWS</ph><ph audience="os">OpenStack</ph><ph audience="tps5">TPS5</ph><ph audience="vmware"
+          >VMware</ph> service controller included in the V17.0 release, you must upgrade <ph
+          conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> and APP to V17.0 first.</p>
     </section>
     
     
@@ -79,9 +86,9 @@
                     </ul>
                   </p>
                 </li>
-                <li/>
               </ol>
             </p></li>
+          <li>Create a backup of the key file required for the encryption and decryption of service parameters with data type <codeph>PWD</codeph> or custom attributes marked for encryption. By default, the file is named <codeph>key</codeph> and located in the following directory:<p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/app-domain/config</codeph></p><note>For the update installation, make sure that the default path is specified in the <codeph>configsettings.properties</codeph> file (<codeph>APP_KEY_PATH="./key"</codeph>) and that the file is named <codeph>key</codeph>. The installation script expects this default and does not look up the database. </note></li>
         </ol>
       </p>
     </section>
@@ -166,67 +173,131 @@
       <title>Updating the Application Server</title>
       <p>After you have executed the preparation steps:</p>
       <ol>
+        <li>Copy the key file of which you have created a backup copy into the following directory of the extracted installation package: <p><codeph>oscm-app-install-pack\domains\app_domain\installer</codeph></p><p>Make sure that the key file is named <codeph>key</codeph>. The installation script will then copy the key file to is default location in the updated version of the application server: </p><p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/app-domain/config</codeph></p><note>For the update installation, make sure that the default path is specified in the <codeph>configsettings.properties</codeph> file (<codeph>APP_KEY_PATH="./key"</codeph>) and that the file is named <codeph>key</codeph>. The installation script expects this default and does not look up the database. </note></li>
         <li>Redeploy or deploy <codeph>oscm-app</codeph> in the <codeph>app-domain</codeph> domain.</li>
+        <li>Export the certificate of the <codeph>app-domain</codeph> and import it into the <codeph>bes-domain</codeph> application server domain of <ph
+            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.  </li>
         <li>Restart the <codeph>app-domain</codeph> domain.</li>
       </ol>
     </section>
     <section audience="ror">
       <title>Updating the Application Server</title>
-      <p>After you have executed the preparation steps, redeploy or deploy the applications that make up the ROR integration software in the <codeph>app-domain</codeph> domain: </p>
-      <ol>
-        <li><codeph>oscm-app</codeph></li>
-        <li><codeph>oscm-app-ror</codeph>
-        </li>
-      </ol>
-      <p>Restart the <codeph>app-domain</codeph> domain.</p>
+      <p>After you have executed the preparation steps:</p>
+      <p>
+        <ol>
+          <li>Copy the key file of which you have created a backup copy into the following directory of the extracted installation package: <p><codeph>oscm-app-install-pack\domains\app_domain\installer</codeph></p><p>Make sure that the key file is named <codeph>key</codeph>. The installation script will then copy the key file to is default location in the updated version of the application server: </p><p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/app-domain/config</codeph></p><note>For the update installation, make sure that the default path is specified in the <codeph>configsettings.properties</codeph> file (<codeph>APP_KEY_PATH="./key"</codeph>) and that the file is named <codeph>key</codeph>. The installation script expects this default and does not look up the database. </note></li>
+          <li>Redeploy or deploy the applications that make up the ROR integration software in the <codeph>app-domain</codeph> domain:<ol>
+              <li><codeph>oscm-app</codeph></li>
+              <li><codeph>oscm-app-ror</codeph>
+              </li>
+            </ol></li>
+          <li>Exchange the following certificates again: <p>
+              <ul>
+                <li>Import the certificates of <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> and ROR into the truststore of the <codeph>app-domain</codeph> application server domain of the ROR integration software.</li>
+                <li>Export the certificate of the <codeph>app-domain</codeph> and import it into the <codeph>bes-domain</codeph> application server domain of <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.  </li>
+              </ul>
+            </p></li>
+          <li>Restart the <codeph>app-domain</codeph> domain.</li>
+        </ol>
+      </p>
     </section>
     
     <section audience="aws">
       <title>Updating the Application Server</title>
-      <p>After you have executed the preparation steps, redeploy or deploy the applications that make up the AWS integration software in the <codeph>app-domain</codeph> domain: </p>
-      <ol>
-        <li><codeph>oscm-app</codeph></li>
-        <li><codeph>oscm-app-aws</codeph>
-        </li>
-      </ol>
-      <p>Restart the <codeph>app-domain</codeph> domain.</p>
+      <p>After you have executed the preparation steps:</p>
+      <p>
+        <ol>
+          <li>Copy the key file of which you have created a backup copy into the following directory of the extracted installation package: <p><codeph>oscm-app-install-pack\domains\app_domain\installer</codeph></p><p>Make sure that the key file is named <codeph>key</codeph>. The installation script will then copy the key file to is default location in the updated version of the application server: </p><p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/app-domain/config</codeph></p><note>For the update installation, make sure that the default path is specified in the <codeph>configsettings.properties</codeph> file (<codeph>APP_KEY_PATH="./key"</codeph>) and that the file is named <codeph>key</codeph>. The installation script expects this default and does not look up the database. </note></li>
+          <li>Redeploy or deploy the applications that make up the AWS integration software in the <codeph>app-domain</codeph> domain:<ol>
+              <li><codeph>oscm-app</codeph></li>
+              <li><codeph>oscm-app-aws</codeph>
+              </li>
+            </ol></li>
+          <li>Exchange the following certificates again: <p>
+              <ul>
+                <li>Import the certificates of <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> and AWS into the truststore of the <codeph>app-domain</codeph> application server domain of the AWS integration software.</li>
+                <li>Export the certificate of the <codeph>app-domain</codeph> and import it into the <codeph>bes-domain</codeph> application server domain of <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.  </li>
+              </ul>
+            </p></li>
+          <li>Restart the <codeph>app-domain</codeph> domain.</li>
+        </ol>
+      </p>
     </section>
     
     <section audience="os">
       <title>Updating the Application Server</title>
-      <p>After you have executed the preparation steps, redeploy or deploy the applications that make up the OpenStack integration software in the <codeph>app-domain</codeph> domain: </p>
-      <ol>
-        <li><codeph>oscm-app</codeph></li>
-        <li><codeph>oscm-app-openstack</codeph>
-        </li>
-      </ol>
-      <p>Restart the <codeph>app-domain</codeph> domain.</p>
+      <p>After you have executed the preparation steps:</p>
+      <p>
+        <ol>
+          <li>Copy the key file of which you have created a backup copy into the following directory of the extracted installation package: <p><codeph>oscm-app-install-pack\domains\app_domain\installer</codeph></p><p>Make sure that the key file is named <codeph>key</codeph>. The installation script will then copy the key file to is default location in the updated version of the application server: </p><p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/app-domain/config</codeph></p><note>For the update installation, make sure that the default path is specified in the <codeph>configsettings.properties</codeph> file (<codeph>APP_KEY_PATH="./key"</codeph>) and that the file is named <codeph>key</codeph>. The installation script expects this default and does not look up the database. </note></li>
+          <li>Redeploy or deploy the applications that make up the OpenStack integration software in the <codeph>app-domain</codeph> domain:<ol>
+              <li><codeph>oscm-app</codeph></li>
+              <li><codeph>oscm-app-openstack</codeph>
+              </li>
+            </ol></li>
+          <li>Exchange the following certificates again: <p>
+              <ul>
+                <li>Import the certificates of <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> and OpenStack into the truststore of the <codeph>app-domain</codeph> application server domain of the OpenStack integration software.</li>
+                <li>Export the certificate of the <codeph>app-domain</codeph> and import it into the <codeph>bes-domain</codeph> application server domain of <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.  </li>
+              </ul>
+            </p></li>
+          <li>Restart the <codeph>app-domain</codeph> domain.</li>
+        </ol>
+      </p>
     </section>
     
     <section audience="tps5">
       <title>Updating the Application Server</title>
-      <p>After you have executed the preparation steps, redeploy or deploy the applications that make up the TPS5 integration software in the <codeph>app-domain</codeph> domain: </p>
-      <ol>
-        <li><codeph>oscm-app</codeph></li>
-        <li><codeph>oscm-app-tps5</codeph>
-        </li>
-      </ol>
-      <p>Restart the <codeph>app-domain</codeph> domain.</p>
+      <p>After you have executed the preparation steps:</p>
+      <p>
+        <ol>
+          <li>Copy the key file of which you have created a backup copy into the following directory of the extracted installation package: <p><codeph>oscm-app-install-pack\domains\app_domain\installer</codeph></p><p>Make sure that the key file is named <codeph>key</codeph>. The installation script will then copy the key file to is default location in the updated version of the application server: </p><p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/app-domain/config</codeph></p><note>For the update installation, make sure that the default path is specified in the <codeph>configsettings.properties</codeph> file (<codeph>APP_KEY_PATH="./key"</codeph>) and that the file is named <codeph>key</codeph>. The installation script expects this default and does not look up the database. </note></li>
+          <li>Redeploy or deploy the applications that make up the TPS5 integration software in the <codeph>app-domain</codeph> domain:<ol>
+              <li><codeph>oscm-app</codeph></li>
+              <li><codeph>oscm-app-tps5</codeph>
+              </li>
+            </ol></li>
+          <li>Exchange the following certificates again: <p>
+              <ul>
+                <li>Import the certificates of <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> and TPS5 into the truststore of the <codeph>app-domain</codeph> application server domain of the TP5 integration software.</li>
+                <li>Export the certificate of the <codeph>app-domain</codeph> and import it into the <codeph>bes-domain</codeph> application server domain of <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.  </li>
+              </ul>
+            </p></li>
+          <li>Restart the <codeph>app-domain</codeph> domain.</li>
+        </ol>
+      </p>
     </section>
     
     <section audience="vmware">
       <title>Updating the Application Server</title>
-      <p>After you have executed the preparation steps, redeploy or deploy the applications that make up the vSphere integration software in the <codeph>app-domain</codeph> domain: </p>
-      <ol>
-        <li><codeph>oscm-app</codeph></li>
-        <li><codeph>oscm-app-vmware</codeph>
-        </li>
-        <li>Update the data source for the <codeph>vmware</codeph> database in the <codeph>app-domain</codeph> domain as follows:<p>
-            <codeblock>&lt;GLASSFISH_HOME&gt;/bin/asadmin -p 8848 add-resources 
-&lt;install_pack_dir>/domains/app_domain/installer/resources-extension.xml</codeblock>
-          </p></li>
-        <li>Restart the <codeph>app-domain</codeph> domain.</li>
-      </ol>
+      <p>After you have executed the preparation steps:</p>
+      <p>
+        <ol>
+          <li>Copy the key file of which you have created a backup copy into the following directory of the extracted installation package: <p><codeph>oscm-app-install-pack\domains\app_domain\installer</codeph></p><p>Make sure that the key file is named <codeph>key</codeph>. The installation script will then copy the key file to is default location in the updated version of the application server: </p><p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/app-domain/config</codeph></p><note>For the update installation, make sure that the default path is specified in the <codeph>configsettings.properties</codeph> file (<codeph>APP_KEY_PATH="./key"</codeph>) and that the file is named <codeph>key</codeph>. The installation script expects this default and does not look up the database. </note></li>
+          <li>Redeploy or deploy the applications that make up the vSphere integration software in the <codeph>app-domain</codeph> domain:<ol>
+              <li><codeph>oscm-app</codeph></li>
+              <li><codeph>oscm-app-vmware</codeph>
+              </li>
+            </ol></li>
+          <li>Exchange the following certificates again: <p>
+              <ul>
+                <li>Import the certificates of <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> and vSphere into the truststore of the <codeph>app-domain</codeph> application server domain of the vSphere integration software.</li>
+                <li>Export the certificate of the <codeph>app-domain</codeph> and import it into the <codeph>bes-domain</codeph> application server domain of <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.  </li>
+              </ul>
+            </p></li>
+          <li>Restart the <codeph>app-domain</codeph> domain.</li>
+        </ol>
+      </p>
     </section>
     
     <section>
