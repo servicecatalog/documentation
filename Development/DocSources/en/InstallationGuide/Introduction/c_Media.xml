@@ -68,10 +68,10 @@
             <li><b>OpenStack Integration Package, <codeph>oscm-openstack-install-pack.zip</codeph>: </b><p>Contains all the components required for integrating OpenStack services with <ph
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> as well as the related documentation. </p></li>
-            <li product="oscm_ee"
+            <!--li product="oscm_ee"
                         ><b>TPS5 Integration Package, <codeph>oscm-tps5-install-pack.zip</codeph>: </b><p>Contains all the components required for integrating FUJITSU Trusted Public S5 with <ph
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> as well as the related documentation. </p></li>
+                    /> as well as the related documentation. </p></li-->
             <li><b>vSphere Integration Package, <codeph>oscm-vmware-install-pack.zip</codeph>: </b><p>Contains all the components required for integrating VMware vSphere with <ph
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> as well as the related documentation. </p></li>
