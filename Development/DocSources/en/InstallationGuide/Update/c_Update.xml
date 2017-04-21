@@ -74,7 +74,7 @@
                 <li>As is the case with a new installation, deploy the BIRT report engine to an application server different from that of <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     />, for example, to your GlassFish 3 installation, and adjust the <codeph>REPORT_ENGINE_URL</codeph> configuration setting accordingly. See below and section <xref
-                    href="../Installation/c_DeployBirt.xml"> </xref>for details. </li>
+                    href="../Installation/c_DeployBirt.xml"> </xref> for details. </li>
               </ol>
             </p></li>
         </ol>
@@ -145,12 +145,13 @@
                 <li>The following applications are deployed to the <codeph>bes-domain</codeph> domain: <ul>
                     <li>
                       <p><codeph>oscm.ear</codeph></p>
+                      <p>The <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> platform.</p>
                     </li>
                     <li><codeph>oscm-portal.war</codeph><p>This archive contains the properties files for the user interface resources (user interface and email texts, platform objects). Be aware that with a new release or fix, new keys may have been added to the system, others may have been changed or deleted.</p><p>Make sure to have a backup of any customizations you may have made. After having set up the application server resources, check whether existing texts, for example, mail messages have changed as compared to the previous release. You may need to customize the texts again and redeploy the <codeph>oscm-portal.war</codeph> archive.</p></li>
                     <li>
                       <p><codeph>oscm-portal-help.war</codeph></p>
                       <p>This archive contains the online help and FAQ files in English, German, and Japanese. You can customize these resources. When upgrading the system with a fix for this release, make sure to have a backup of any such customizations. Merge the customized files into the <codeph>oscm-portal-help.war</codeph> archive and redeploy the archive. Otherwise they will no longer be available after the upgrade.</p>
-                      <p>If you added additional languages to the system, also include the corresponding help and FAQ file structures into the <codeph>oscm-portal-help.war</codeph> archive before deploying it again. Refer to the <codeph>Operator's Guide</codeph> for details. </p>
+                      <p>If you added additional languages to the system, also include the corresponding help and FAQ file structures into the <codeph>oscm-portal-help.war</codeph> archive before deploying it again. Refer to the <i>Operator's Guide</i> for details. </p>
                     </li>
                   </ul><!--p product="oscm_ee"><codeph>birt.war</codeph></p--></li>
                 <li>The <codeph>oscm-security.jar</codeph>, the <codeph>postgresql-9.1-903.jdbc4.jar</codeph>, and the <codeph>commons-codec-1.7.jar</codeph> files are copied from the directory to which you extracted the <ph
