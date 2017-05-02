@@ -17,32 +17,28 @@
                     <row>
                         <entry colname="col1"><uicontrol>Add</uicontrol>
                         </entry>
-                        <entry colname="col2"
-                            >The names of graphical user interface elements like menu options are shown in boldface.</entry>
+                        <entry colname="col2">Names of graphical user interface elements.</entry>
                     </row>
                     <row>
                         <entry colname="col1"><codeph>init</codeph></entry>
                         <entry colname="col2"
-                            >System names, for example command names and text that is entered from the keyboard, are shown in Courier font. </entry>
+                            >System names, for example command names and text that is entered from the keyboard.</entry>
                     </row>
                     <row>
                         <entry colname="col1"><codeph>&lt;variable&gt;</codeph></entry>
-                        <entry colname="col2"
-                            >Variables for which values must be entered are enclosed in angle brackets. </entry>
+                        <entry colname="col2">Variables for which values must be entered.</entry>
                     </row>
                     <row>
                         <entry colname="col1"><codeph>[option]</codeph></entry>
-                        <entry colname="col2"
-                            >Optional items, for example optional command parameters, are enclosed in square brackets. </entry>
+                        <entry colname="col2">Optional items, for example optional command parameters.</entry>
                     </row>
                     <row>
                         <entry colname="col1"><codeph>one | two</codeph></entry>
-                        <entry colname="col2">Alternative entries are separated by a vertical bar. </entry>
+                        <entry colname="col2">Alternative entries.</entry>
                     </row>
                     <row>
                         <entry colname="col1"><codeph>{one | two}</codeph></entry>
-                        <entry colname="col2"
-                            >Mandatory entries with alternatives are enclosed in curly brackets.</entry>
+                        <entry colname="col2">Mandatory entries with alternatives.</entry>
                     </row>
                 </tbody>
             </tgroup>
