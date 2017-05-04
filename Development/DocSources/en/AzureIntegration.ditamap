@@ -26,8 +26,8 @@
             <series>Microsoft Azure Integration (GlassFish)</series>
         </prodinfo>
         <bookid>
-            <edition>Draft for Review - March 2017</edition>
-            <booknumber product="oscm_ee">???</booknumber>
+            <edition>May 2017</edition>
+<!--             <booknumber product="oscm_ee">???</booknumber> -->
         </bookid>
         <bookrights product="oscm_ce">
             <bookowner name="none"/>

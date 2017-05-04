@@ -25,7 +25,9 @@
                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p></li>
                     <!--li><codeph>oscm-tps5-install-pack.zip</codeph>: <p>Can be used for integrating FUJITSU Cloud IaaS Trusted Public S5 (TPS5) services with <ph
                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p></li-->
-                    <li><codeph>oscm-vmware-install-pack.zip</codeph>: <p>Can be used for integrating virtual machines provisioned on a VMware vSphere server through services with <ph
+                    <li><codeph>oscm-vmware-install-pack.zip</codeph>: <p>Can be used for integrating VMware vSphere with <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p></li>
+<li><codeph>oscm-azure-install-pack.zip</codeph>: <p>Can be used for integrating Microsoft Azure with <ph
                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p></li>
                 </ul>
             </p>
