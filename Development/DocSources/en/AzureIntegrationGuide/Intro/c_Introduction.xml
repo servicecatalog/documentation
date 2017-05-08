@@ -8,7 +8,7 @@
                     <section>
    <p
     conref="../../Shared/concepts/c_WhatIsBES_Controller.xml#concept2311/is_a_set_of_services_which_concept_conbody_p_1"/>
-      <p>Microsoft Azure is a cloud computing service for building, deploying, and managing applications and services through a global network of Microsoft-managed data centers. Apart from Software as a Service and Platform as a Service, it provides Infrastructure as a Service (IaaS) according to your needs and allows you to quickly scale these capacities as your computing requirements change.</p>
+      <p>Microsoft Azure is a cloud computing service for building, deploying, and managing applications and services through a global network of Microsoft-managed data centers. Apart from Software as a Service and Platform as a Service, it provides Infrastructure as a Service (IaaS) according to your needs and allows you to quickly scale these capacities as your requirements change.</p>
                               <p>The integration of Azure with <ph
           conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
           /> provides for an Infrastructure as a Service solution that leverages the features of both products: Through services, which are published on a marketplace in <ph

@@ -6,10 +6,8 @@
             xml:lang="en-us">
     <title>Application Server<ph audience="BSS">s</ph></title>
     <conbody>
-        <section>
-            <title><ph audience="BSS" conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></title>
-        </section>
         <section id="must_be_deployed_on_an_appli_concept_conbody_section">
+            <title><ph audience="BSS" conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></title>
             <p><ph audience="BSS" conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/><ph
                     audience="app">APP</ph><ph audience="ror">The ROR integration software</ph><ph audience="aws"
                     >The AWS integration software</ph><ph audience="os">The OpenStack integration software</ph><ph

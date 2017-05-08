@@ -14,7 +14,7 @@
                     >provisioning</ph><ph audience="vmware">provisioning</ph><ph audience="azure"
                     >provisioning</ph> of a <ph audience="aws">virtual server</ph><ph audience="ror"
                     >virtual system</ph><ph audience="os">virtual system</ph><ph audience="tps5">virtual system</ph><ph
-                    audience="vmware">VM</ph><ph audience="azure">virtual resources</ph> fails on the <ph audience="aws"
+                    audience="vmware">VM</ph><ph audience="azure">virtual resource</ph> fails on the <ph audience="aws"
                     >AWS</ph><ph audience="ror">ROR</ph><ph audience="os">OpenStack</ph><ph audience="tps5">TPS5</ph><ph
                     audience="vmware">vSphere</ph><ph audience="azure"
                     >Azure</ph> side or if there are problems in the communication between the participating systems, the corresponding subscription in <ph

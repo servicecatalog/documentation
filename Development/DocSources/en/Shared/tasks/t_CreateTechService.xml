@@ -60,7 +60,7 @@
                         >The Azure integration package, <codeph>oscm-azure-install-pack.zip</codeph>, includes a technical service as a sample:</p>
                     <p audience="azure"><codeph>samples/TechnicalService_Azure.xml</codeph></p>
                     <p audience="azure"
-                            >The technical service specifies a sample Resource Manager template and parameter definition file as parameter options. These files are available in the same directory. In order to use these files or adapted versions thereof, copy them to a location hat can be accessed from <ph
+                            >The technical service specifies a sample Resource Manager template and parameter definition file as parameter options. These files are available in the same directory. In order to use these files or adapted versions thereof, copy them to a location that can be accessed from <ph
                             conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                             /> and the Azure integration software by HTTP or HTTPS at runtime, for example, the <codeph>docroot/templates</codeph> directory of the <codeph>app-domain</codeph> domain in your application server.</p>
                    <p>In the technical service definition, be sure to specify:</p>

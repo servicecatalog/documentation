@@ -19,7 +19,8 @@
                 <ul>
                     <li>Database<ph audience="vmware">s</ph> (<codeph>bssapp</codeph><ph audience="vmware"
                                 > and <codeph>vmware</codeph></ph>). The frequency of database backups depends on the amount of changes and the availability of time slots with low load. PostgreSQL supports database backups without previous shutdown. For details, refer to the PostgreSQL documentation.<p>Together with the <codeph>bssapp</codeph> database, always back up the file containing the key required for the encryption and decryption of service parameters with data type <codeph>PWD</codeph> and custom attributes marked for encryption. By default, this is:</p><p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/app-domain/config/key</codeph></p><p>The path and name of the key file can be changed using the <codeph>APP_KEY_PATH</codeph> configuration setting.</p></li>
-                    <li>Certificates contained in the truststore of the <codeph>app-domain</codeph> domain (<codeph>cacerts.jks</codeph> file). </li>
+                    <li>Certificates contained in the truststore of the <codeph>app-domain</codeph> domain (<codeph>cacerts.jks</codeph> file).</li>
+                    <li>The keystore containing the domain keys of the <codeph>app-domain</codeph> domain  (<codeph>keystore.jks</codeph> file).</li>
                     <li>Configuration files. </li>
                 </ul>
             </p>
@@ -44,9 +45,9 @@
                     <li>Restore the <codeph>bssapp</codeph><ph audience="vmware"
                             > and <codeph>vmware</codeph></ph> database<ph audience="vmware"
                         >s</ph> from the backup using the relevant PostgreSQL commands.</li>
-                    <li>Make sure that the file containing the key required for encryption and decryption of service parameters with data type <codeph>PWD</codeph> and custom attributes marked for encryption exists in the location specified in the <codeph>APP_KEY_PATH</codeph> configuration setting. By default, this is:<p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/app-domain/config/key</codeph></p><p>If the file is missing, copy it from your backup to the correct location.</p></li>
+                    <li>Make sure that the file containing the key required for encryption and decryption of service parameters with data type <codeph>PWD</codeph> and custom attributes marked for encryption exists in the location specified in the <codeph>APP_KEY_PATH</codeph> configuration setting. By default, this is:<p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/app-domain/config/key</codeph></p><p>The key file must match the state of the <codeph>bssapp</codeph> database. If necessary, copy it from your backup to the correct location.</p></li>
                     <li>Stop the <codeph>app-domain</codeph> domain of the application server.</li>
-                    <li>Restore the certificate truststore of the <codeph>app-domain</codeph> domain (<codeph>cacerts.jks</codeph> file) from the backup.</li>
+                    <li>Restore the certificate truststore and keystore of the <codeph>app-domain</codeph> domain (<codeph>cacerts.jks</codeph> and <codeph>keystore.jks</codeph> files) from the backup.</li>
                     <li>Start the <codeph>app-domain</codeph> domain. </li>
                 </ol>
             </p>

@@ -13,8 +13,8 @@
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     />. It assumes that you have access to an existing <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> installation and that you have an Azure account and subscription. </p>
-            <p>In addition, you should have basic knowledge of the Azure Resource Manager (ARM) and JavaScript Object Notation (JSON) , and you should be familiar with the concepts and administration of <ph
+                /> installation and that you have a valid account and subscription in Azure. </p>
+            <p>In addition, you should have basic knowledge of the Azure Resource Manager (ARM) and JavaScript Object Notation (JSON), and you should be familiar with the concepts and administration of <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
         </section>
     </conbody>

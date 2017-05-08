@@ -91,6 +91,7 @@
               </ol>
             </p></li>
           <li>Create a backup of the key file required for the encryption and decryption of service parameters with data type <codeph>PWD</codeph> and custom attributes marked for encryption. By default, this is: <p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/app-domain/config/key</codeph></p><note>For the update installation, make sure that the default path and name of the key file are specified in the <codeph>configsettings.properties</codeph> file (<codeph>APP_KEY_PATH="./key"</codeph>). The installation script expects this default and does not look up the value in the database. </note></li>
+          <li>Create a backup of the certificate truststore and keystore of the <codeph>app-domain</codeph> domain (<codeph>cacerts.jks</codeph> and <codeph>keystore.jks</codeph> files).</li>
         </ol>
       </p>
     </section>
@@ -180,11 +181,13 @@
       <ol>
         <li>Copy the key file of which you have created a backup copy into the following directory of the extracted installation package: <p><codeph>oscm-app-install-pack\domains\app_domain\installer</codeph></p><p>Make sure that the key file is named <codeph>key</codeph>. The installation script will then copy the key file to is default location in the updated version of the application server: </p><p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/app-domain/config</codeph></p><note>For the update installation, make sure that the default path and name of the key file are specified in the <codeph>configsettings.properties</codeph> file (<codeph>APP_KEY_PATH="./key"</codeph>). The installation script expects this default and does not look up the value in the database. </note></li>
         <li>Redeploy or deploy the <codeph>oscm-app</codeph> application in the <codeph>app-domain</codeph> domain.</li>
-        <li>As required, import the certificates of <ph
-            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-            />, integrated applications, and the IdP system in use for SAML_SP mode into the truststore of the <codeph>app-domain</codeph> application server domain. </li>
-        <li>Export the certificate of the <codeph>app-domain</codeph> and import it into the <codeph>bes-domain</codeph> application server domain of <ph
-            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.  </li>
+        <li>Handle certificates as required, for example, because the <codeph>app-domain</codeph> domain has been re-created:<ul>
+            <li>Restore the truststore of the <codeph>app-domain</codeph> domain (<codeph>cacerts.jks</codeph>) from the backup you created. Alternatively, re-import the certificates of <ph
+                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />, integrated applications, and the IdP system in use for SAML_SP mode into a new truststore of the <codeph>app-domain</codeph> domain. </li>
+            <li>Restore the keystore of the <codeph>app-domain</codeph> domain (<codeph>keystore.jks</codeph>) from the backup you created. Alternatively, re-export the key certificate from a new keystore of the <codeph>app-domain</codeph> domain and import it into the <codeph>bes-domain</codeph> application server domain of <ph
+                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </li>
+          </ul></li>
         <li>Restart the <codeph>app-domain</codeph> domain.</li>
       </ol>
     </section>
@@ -199,14 +202,13 @@
               <li><codeph>oscm-app-ror</codeph>
               </li>
             </ol></li>
-          <li>Exchange the following certificates again as required: <p>
-              <ul>
-                <li>Import the certificates of <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    />, ROR, and the IdP system in use for SAML_SP mode into the truststore of the <codeph>app-domain</codeph> application server domain of the ROR integration software.</li>
-                <li>Export the certificate of the <codeph>app-domain</codeph> and import it into the <codeph>bes-domain</codeph> application server domain of <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </li>
-              </ul>
-            </p></li>
+          <li>Handle certificates as required, for example, because the <codeph>app-domain</codeph> domain has been re-created:<ul>
+              <li>Restore the truststore of the <codeph>app-domain</codeph> domain (<codeph>cacerts.jks</codeph>) from the backup you created. Alternatively, re-import the certificates of <ph
+                  conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                  />, ROR, and the IdP system in use for SAML_SP mode into a new truststore of the <codeph>app-domain</codeph> domain. </li>
+              <li>Restore the keystore of the <codeph>app-domain</codeph> domain (<codeph>keystore.jks</codeph>) from the backup you created. Alternatively, re-export the key certificate from a new keystore of the <codeph>app-domain</codeph> domain and import it into the <codeph>bes-domain</codeph> application server domain of <ph
+                  conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </li>
+            </ul></li>
           <li>Restart the <codeph>app-domain</codeph> domain.</li>
         </ol>
       </p>
@@ -223,14 +225,13 @@
               <li><codeph>oscm-app-aws</codeph>
               </li>
             </ol></li>
-          <li>Exchange the following certificates again as required: <p>
-              <ul>
-                <li>Import the certificates of <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    />, AWS, and the IdP system in use for SAML_SP mode into the truststore of the <codeph>app-domain</codeph> application server domain of the AWS integration software.</li>
-                <li>Export the certificate of the <codeph>app-domain</codeph> and import it into the <codeph>bes-domain</codeph> application server domain of <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </li>
-              </ul>
-            </p></li>
+          <li>Handle certificates as required, for example, because the <codeph>app-domain</codeph> domain has been re-created:<ul>
+              <li>Restore the truststore of the <codeph>app-domain</codeph> domain (<codeph>cacerts.jks</codeph>) from the backup you created. Alternatively, re-import the certificates of <ph
+                  conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                  />, AWS, and the IdP system in use for SAML_SP mode into a new truststore of the <codeph>app-domain</codeph> domain. </li>
+              <li>Restore the keystore of the <codeph>app-domain</codeph> domain (<codeph>keystore.jks</codeph>) from the backup you created. Alternatively, re-export the key certificate from a new keystore of the <codeph>app-domain</codeph> domain and import it into the <codeph>bes-domain</codeph> application server domain of <ph
+                  conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </li>
+            </ul></li>
           <li>Restart the <codeph>app-domain</codeph> domain.</li>
         </ol>
       </p>
@@ -247,14 +248,13 @@
               <li><codeph>oscm-app-openstack</codeph>
               </li>
             </ol></li>
-          <li>Exchange the following certificates again as required: <p>
-              <ul>
-                <li>Import the certificates of <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    />, OpenStack, and the IdP system in use for SAML_SP mode into the truststore of the <codeph>app-domain</codeph> application server domain of the OpenStack integration software.</li>
-                <li>Export the certificate of the <codeph>app-domain</codeph> and import it into the <codeph>bes-domain</codeph> application server domain of <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </li>
-              </ul>
-            </p></li>
+          <li>Handle certificates as required, for example, because the <codeph>app-domain</codeph> domain has been re-created:<ul>
+              <li>Restore the truststore of the <codeph>app-domain</codeph> domain (<codeph>cacerts.jks</codeph>) from the backup you created. Alternatively, re-import the certificates of <ph
+                  conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                  />, OpenStack, and the IdP system in use for SAML_SP mode into a new truststore of the <codeph>app-domain</codeph> domain. </li>
+              <li>Restore the keystore of the <codeph>app-domain</codeph> domain (<codeph>keystore.jks</codeph>) from the backup you created. Alternatively, re-export the key certificate from a new keystore of the <codeph>app-domain</codeph> domain and import it into the <codeph>bes-domain</codeph> application server domain of <ph
+                  conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </li>
+            </ul></li>
           <li>Restart the <codeph>app-domain</codeph> domain.</li>
         </ol>
       </p>
@@ -271,14 +271,13 @@
               <li><codeph>oscm-app-tps5</codeph>
               </li>
             </ol></li>
-          <li>Exchange the following certificates again as required: <p>
-              <ul>
-                <li>Import the certificates of <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    />, TPS5, and the IdP system in use for SAML_SP mode into the truststore of the <codeph>app-domain</codeph> application server domain of the TP5 integration software.</li>
-                <li>Export the certificate of the <codeph>app-domain</codeph> and import it into the <codeph>bes-domain</codeph> application server domain of <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </li>
-              </ul>
-            </p></li>
+          <li>Handle certificates as required, for example, because the <codeph>app-domain</codeph> domain has been re-created:<ul>
+              <li>Restore the truststore of the <codeph>app-domain</codeph> domain (<codeph>cacerts.jks</codeph>) from the backup you created. Alternatively, re-import the certificates of <ph
+                  conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                  />, TPS5, and the IdP system in use for SAML_SP mode into a new truststore of the <codeph>app-domain</codeph> domain. </li>
+              <li>Restore the keystore of the <codeph>app-domain</codeph> domain (<codeph>keystore.jks</codeph>) from the backup you created. Alternatively, re-export the key certificate from a new keystore of the <codeph>app-domain</codeph> domain and import it into the <codeph>bes-domain</codeph> application server domain of <ph
+                  conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </li>
+            </ul></li>
           <li>Restart the <codeph>app-domain</codeph> domain.</li>
         </ol>
       </p>
@@ -295,14 +294,13 @@
               <li><codeph>oscm-app-vmware</codeph>
               </li>
             </ol></li>
-          <li>Exchange the following certificates again as required: <p>
-              <ul>
-                <li>Import the certificates of <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    />, vSphere, and the IdP system in use for SAML_SP mode into the truststore of the <codeph>app-domain</codeph> application server domain of the vSphere integration software.</li>
-                <li>Export the certificate of the <codeph>app-domain</codeph> and import it into the <codeph>bes-domain</codeph> application server domain of <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </li>
-              </ul>
-            </p></li>
+          <li>Handle certificates as required, for example, because the <codeph>app-domain</codeph> domain has been re-created:<ul>
+              <li>Restore the truststore of the <codeph>app-domain</codeph> domain (<codeph>cacerts.jks</codeph>) from the backup you created. Alternatively, re-import the certificates of <ph
+                  conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                  />, vSphere, and the IdP system in use for SAML_SP mode into a new truststore of the <codeph>app-domain</codeph> domain. </li>
+              <li>Restore the keystore of the <codeph>app-domain</codeph> domain (<codeph>keystore.jks</codeph>) from the backup you created. Alternatively, re-export the key certificate from a new keystore of the <codeph>app-domain</codeph> domain and import it into the <codeph>bes-domain</codeph> application server domain of <ph
+                  conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </li>
+            </ul></li>
           <li>Restart the <codeph>app-domain</codeph> domain.</li>
         </ol>
       </p>
@@ -318,14 +316,13 @@
              <li><codeph>oscm-app</codeph></li>
              <li><codeph>oscm-app-azure</codeph></li>
            </ol></li>
-      <li>Exchange the following certificates again as required: <p>
-              <ul>
-                <li>Import the certificates of <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    />, Azure, and the IdP system in use for SAML_SP mode into the truststore of the <codeph>app-domain</codeph> application server domain of the vSphere integration software.</li>
-                <li>Export the certificate of the <codeph>app-domain</codeph> and import it into the <codeph>bes-domain</codeph> application server domain of <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </li>
-              </ul>
-            </p></li>
+          <li>Handle certificates as required, for example, because the <codeph>app-domain</codeph> domain has been re-created:<ul>
+              <li>Restore the truststore of the <codeph>app-domain</codeph> domain (<codeph>cacerts.jks</codeph>) from the backup you created. Alternatively, re-import the certificates of <ph
+                  conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                  />, Azure, and the IdP system in use for SAML_SP mode into a new truststore of the <codeph>app-domain</codeph> domain. </li>
+              <li>Restore the keystore of the <codeph>app-domain</codeph> domain (<codeph>keystore.jks</codeph>) from the backup you created. Alternatively, re-export the key certificate from a new keystore of the <codeph>app-domain</codeph> domain and import it into the <codeph>bes-domain</codeph> application server domain of <ph
+                  conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </li>
+            </ul></li>
       <li>Restart the <codeph>app-domain</codeph> domain.</li>
       </ol>
       </p>
@@ -351,7 +348,7 @@
               >For details, refer to <xref href="../../Shared/Installation/t_InstConfiguringController.xml"/>.</ph><ph
             audience="app">For details, refer to <xref href="../../Shared/Installation/t_InstConfiguring.xml"
           />.</ph></li>
-        <li>Recreate the <codeph>OSCM-wsit.jar</codeph> file with the modified contents.</li>
+        <li>Re-create the <codeph>OSCM-wsit.jar</codeph> file with the modified contents.</li>
         <li>Stop the <codeph>app-domain</codeph> domain.</li>
         <li>Copy the adapted <codeph>OSCM-wsit.jar</codeph> to the following directory: <p><codeph>&lt;GLASSFISH_HOME>/domains/app_domain/lib</codeph></p></li>
         <li>Restart the <codeph>app-domain</codeph> domain.</li>

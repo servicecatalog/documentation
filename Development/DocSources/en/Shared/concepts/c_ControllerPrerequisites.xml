@@ -39,20 +39,23 @@
                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> can be mapped. The vSphere user specified in the configuration settings for the installation must have the necessary permissions to create and configure VMs based on these templates.</li>
                 <li audience="azure">In Azure, the following is required: <ul compact="no">
-                        <li>A subscription on the account of which the virtual machines and additional resources are to be created.</li>
-                        <li>An application (service principal) which acts on behalf of <ph
-                                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                />. You need to know the ID of the Azure Active Directory (tenant ID) hosting the application and the application ID (client ID), and have a valid authentication key. The application needs at least Contributor permissions to the subscription if new resource groups are to be created, or at least Contributor permissions for the resource groups to which new virtual machines are to be added. For details on how to create and obtain these items, refer to the Microsoft documentation on <xref
-                                href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal"
-                                scope="external">creating applications and service principals</xref>.</li>
-                        <li>Appropriate images for the virtual machines to be created. You can use standard images from Microsoft or other providers or your own images which you have made available Azure.</li>
+                        <li>A <b>subscription</b> on the account of which the virtual machines and additional resources are to be created.</li>
+                        <li>An <b>application</b> (service principal) which acts on behalf of <ph
+                                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>. You need to:<ul>
+                                <li>Know the ID of the Azure Active Directory (tenant ID) hosting the application and the application ID (client ID).</li>
+                                <li>Have a valid authentication key for the application. </li>
+                                <li>Assign the application at least Contributor permissions to the subscription if new resource groups are to be created, or at least Contributor permissions for the resource groups to which new virtual machines are to be added. </li>
+                            </ul><p>For details on how to create and obtain these items, refer to the Microsoft documentation on <xref
+                                    href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal"
+                                    scope="external">creating applications and service principals</xref>.</p></li>
+                        <li>Appropriate <b>images</b> for the virtual machines to be created. You can use standard images from Microsoft or other providers or your own images which you have made available in Azure.</li>
                         <li>Optionally, resource groups with an existing network configuration to which virtual machines are to be added.</li>
                         <li>Optionally, storage accounts to be used with the virtual machines to be created.</li>
                     </ul></li>
                 <li audience="azure"
                             >Templates in JSON format for the Azure Resource Manager must exist in the environment of the Azure integration software. A template defines the virtual machines as well as other resources to be deployed and the dependencies between them. <p>For each Resource Manager template, a corresponding parameter definition file in JSON format must exist. It is used to pass the parameter values specified at subscription time to the Resource Manager template. For details on parameter definition files, the supported parameters, and their mapping to technical service parameters, refer to <xref
                             href="../../AzureIntegrationGuide/Appendix/r_ParameterDefinitionFiles.xml"
-                        />.</p><p>The Azure integration package contains sample Resource Manager templates and parameter definition files. You can use these files as a basis and adapt them as required. Additional templates can be defined with Azure Resource Manager. For details, refer to the Microsoft documentation.</p><p>The templates and parameter definition files need to be available in a location hat can be accessed from <ph
+                        />.</p><p>The Azure integration package contains sample Resource Manager templates and parameter definition files. You can use these files as a basis and adapt them as required. Additional templates can be defined with Azure Resource Manager. For details, refer to the Microsoft documentation.</p><p>The templates and parameter definition files need to be available in a location that can be accessed from <ph
                             conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                             /> and the Azure integration software by HTTP or HTTPS at runtime, for example, the <codeph>docroot/templates</codeph> directory of the <codeph>app-domain</codeph> domain in your application server.</p></li>
                 <li>To create marketable services for the <ph audience="aws">AWS</ph><ph audience="ror">ROR</ph><ph

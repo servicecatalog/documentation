@@ -125,7 +125,7 @@
               <entry>
                 <p><b>STORAGE_ACCOUNT</b></p>
                 <p>Mandatory. The name of the storage account to be used with the virtual machines. </p>
-                <p>Storage account names my consist of 3-24 lowercase letters and numbers. They must be unique within Azure. </p>
+                <p>Storage account names may consist of 3-24 lowercase letters and numbers. They must be unique within Azure. </p>
                 <p>Example: <codeph>mycompanyaccount2</codeph></p>
               </entry>
             </row>
@@ -172,7 +172,7 @@
                 <p>Mandatory. The identifier of the virtual machine image that is to be used as the basis for provisioning the virtual machines. The image determines the operating system and other characteristics of the virtual machines.</p>
                 <p>The identifier must have the following format and components, separated by blanks:</p>
                 <p><codeph>&lt;publisher> &lt;offer> &lt;SKU></codeph></p>
-                <p><codeph>&lt;publisher></codeph> is the identifier of the organization or person who provides the virtual machine image, <codeph>&lt;offer></codeph> is the offer by which it is made available, and <codeph>&lt;SKU></codeph> the commercial name of the image.</p>
+                <p><codeph>&lt;publisher></codeph> is the identifier of the organization or person who provides the virtual machine image in Azure, <codeph>&lt;offer></codeph> is the offer by which it is made available, and <codeph>&lt;SKU></codeph> the commercial name of the image.</p>
                 <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers or, in case you specify more than one image, have fixed parameter options for selection. </p>
                 <p>Examples: </p>
                 <p><codeph>MicrosoftWindowsServer WindowsServer 2012-R2-Datacenter</codeph></p>
@@ -191,8 +191,8 @@
                 <p><b>TEMPLATE_BASE_URL</b></p>
                 <p>Mandatory. The URL leading to the Resource Manager templates specified in the <codeph>TEMPLATE_NAME</codeph> and <codeph>TEMPLATE_PARAMETERS_NAME</codeph> parameters. Specify a URL that can be reached from <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> by HTTP or HTTPS. </p>
-                <p> Users should not be able to enter a value for this parameter, i.e. it should not be configurable for customers.</p>
-                <p>Example: <codeph>https://myserver:8880/oscm-app/docroot/templates/</codeph>
+                <p> Users should not be able to enter a value for this parameter. This means it should not be configurable for customers.</p>
+                <p>Example: <codeph>https://myserver:8880/oscm-app/templates/</codeph>
                 </p>
               </entry>
             </row>
