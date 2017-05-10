@@ -116,7 +116,13 @@
                     <li audience="ror">Enter the required settings.</li>
                     <li audience="tps5">Enter the required settings.</li>
                     <li audience="aws">Enter the required settings.</li>
-                    <li audience="os">Enter the required settings.</li>
+                    <li audience="os"
+                            >Enter the required settings. Be aware that some of them can also be set in the technical service definition. In this case, the technical service parameter overrides the setting you specify here. Refer to <xref
+                            href="../../OSIntegrationGuide/Appendix/r_ConfigSettingsController.xml"/> and <xref
+                            href="../../OSIntegrationGuide/Appendix/r_ServiceParameters.xml"
+                                /> for details on the settings and parameters.<p>Apart from updating the configuration settings, you can import templates for the provisioning of VMs into the <codeph>bssapp</codeph> database. Refer to <xref
+                                href="../../OSIntegrationGuide/Administrating/c_ImportTemplates.xml"
+                        /> for details.</p></li>
                     <li audience="vmware">You can change the following settings for accessing the vCenter: <p>
                             <ul>
                                 <li><b>Connection URL</b>: The URL for accessing the vSphere API.</li>

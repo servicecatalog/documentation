@@ -85,6 +85,7 @@
         <topicref format="dita" href="Shared/concepts/c_ControllerHandleCommProblems.xml" type="concept"/>
         <topicref format="dita" href="Shared/Installation/c_Backup.xml" type="concept"/>
         <topicref format="dita" href="Shared/Installation/c_UpdateConfiguration.xml" type="concept"/>
+        <topicref format="dita" href="OSIntegrationGuide/Administrating/c_ImportTemplates.xml" type="concept"/>
         <topicref format="dita" href="Shared/reference/c_LogConfig.xml" type="concept"/>
     </chapter>
     <chapter format="dita" href="Shared/Installation/c_Uninstallation.xml" type="concept"/>
