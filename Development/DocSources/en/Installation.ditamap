@@ -141,10 +141,14 @@
         href="InstallationGuide/Update/c_Update.xml">
 		
         
-		<!--topicref
+		<topicref
             format="dita"
-            href="InstallationGuide/Update/c_UpdateExisting.xml"
-        type="concept"/-->
+            href="InstallationGuide/Update/c_Update_17_0.xml"
+        type="concept"/>
+        <topicref
+            format="dita"
+            href="InstallationGuide/Update/c_Update_GF3.xml"
+        type="concept"/>
         
     </chapter>
     

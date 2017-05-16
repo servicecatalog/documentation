@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_1E0510B5A3A349049FE82D9894E7DE18" xml:lang="en-us">
+        <title>Available Documentation</title>
+        <conbody>
+                <section>
+                        <p><ph id="Apart_from_this_manual_the_f_concept_conbody_section_p_ph"
+                                                >The following documentation on <ph
+                                                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        /> is available:</ph></p>
+                        <ul>
+                                <li><ph id="Overview:_concept_conbody_section_ul_l"
+                                                        ><i>Overview:</i> A PDF manual introducing <ph
+                                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                        />. It is written for everybody interested in <ph
+                                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                /> and does not require any special knowledge.</ph></li>
+                                <li><ph id="Online_Help:_concept_conbody_section_ul_l"
+                                                        ><i>Online Help:</i> Online help pages describing how to work with the administration portal of <ph
+                                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                />. The online help is intended for and available to everybody working with the administration portal.</ph></li>
+                                <li><ph id="Installation_Guide:_concept_conbody_section_ul_l"
+                                                        ><i>Installation Guide (GlassFish):</i> A PDF manual describing how to install and uninstall <ph
+                                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                        />. It is intended for operators who set up and maintain <ph
+                                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                /> in their environment.</ph></li>
+                                <li><ph id="Operation_Guide:_concept_conbody_section_ul_l"
+                                                        ><i>Operator's Guide:</i> A PDF manual for operators describing how to administrate and maintain <ph
+                                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                />. </ph></li>
+                                <li><ph id="Application_Integration_Guide:_concept_conbody_section_ul_l"
+                                                        ><i>Technology Provider's Guide:</i> A PDF manual for technology providers describing how to prepare applications for usage in a SaaS model and how to integrate them with <ph
+                                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                />. </ph></li>
+                                <li><ph id="Supplier_s_Guide:_concept_conbody_section_ul_l"
+                                                        ><i>Supplier's Guide:</i> A PDF manual for suppliers describing how to define and manage service offerings for applications that have been integrated with <ph
+                                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                />. </ph></li>
+                                <li><ph id="Reseller_s_Guide:_concept_conbody_section_ul_l"
+                                                ><i>Reseller's Guide:</i> A PDF manual for resellers describing how to prepare, offer, and sell services defined by suppliers.</ph></li>
+                                <li><ph id="Broker_s_Guide:_concept_conbody_section_ul_l"
+                                                ><i>Broker's Guide:</i> A PDF manual for brokers describing how to support suppliers in establishing relationships to customers by offering their services on a marketplace.</ph></li>
+                                <li><ph><i>Marketplace Owner's Guide:</i> A PDF manual for marketplace owners describing how to administrate and customize marketplaces in <ph
+                                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                />.</ph></li>
+                                <li><ph id="Developer_s_Guide:_concept_conbody_section_ul_l"
+                                                        ><i>Developer's Guide:</i> A PDF manual for application developers describing the public Web services and application programming interfaces of <ph
+                                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                        /> and how to integrate applications and external systems with <ph
+                                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                />.</ph></li>
+                                <li><ph id="ROR_Guide:_concept_conbody_section_ul_l"
+                                                        ><i>ServerView Resource Orchestrator Integration (GlassFish):</i> A PDF manual for operators describing how to offer and use virtual platforms and servers controlled by FUJITSU ServerView Resource Orchestrator through services in <ph
+                                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                />.</ph></li>
+                                <li><ph id="AWS_Guide:_concept_conbody_section_ul_l"
+                                                        ><i>Amazon Web Services Integration (GlassFish):</i> A PDF manual for operators describing how to offer and use virtual servers controlled by the Amazon Elastic Compute Cloud Web service through services in <ph
+                                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                />.</ph></li>
+                                <li><ph id="OS_Guide:_concept_conbody_section_ul_l"
+                                                        ><i>OpenStack Integration (GlassFish):</i> A PDF manual for operators describing how to offer and use virtual systems controlled by OpenStack through services in <ph
+                                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                />.</ph></li>
+                                <!--li product="oscm_ee"><ph id="TPS5_Guide:_concept_conbody_section_ul_l"
+                                                        ><i>Trusted Public S5 Integration (GlassFish):</i> A PDF manual for operators describing how to offer and use virtual systems controlled by FUJITSU Cloud IaaS Trusted Public S5 through services in <ph
+                                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                />.</ph></li-->
+                                <li><ph id="VMWARE_Guide:_concept_conbody_section_ul_l"
+                                                        ><i>VMware vSphere Integration (GlassFish):</i> A PDF manual for operators describing how to offer and use virtual machines provisioned on a VMware vSphere server through services in <ph
+                                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                />.</ph></li>
+                                <!--li product="oscm_ee"
+                                                        ><ph><i>Systemwalker Runbook Automation Integration Guide:</i> A PDF manual for operators describing how to offer and use automated operation processes of Systemwalker Runbook Automation through services in <ph
+                                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                />.</ph></li-->
+                                <li product="oscm_ee"
+                                                        ><ph><i>IaaS Integration Guide:</i> A PDF manual for operators describing how to offer and use virtual systems on different platforms through services in <ph
+                                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                />.</ph></li>
+                                <li><ph id="Javadoc_documentation_on_the_concept_conbody_section_ul_l"
+                                                        >Javadoc and YAML documentation for the public Web services and application programming interfaces of <ph
+                                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                /> and additional resources and utilities for application developers. </ph></li>
+                        </ul>
+                </section>
+        </conbody>
+</concept>
