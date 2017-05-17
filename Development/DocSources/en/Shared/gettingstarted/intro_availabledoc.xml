@@ -78,10 +78,10 @@
                                                         ><ph><i>Systemwalker Runbook Automation Integration Guide:</i> A PDF manual for operators describing how to offer and use automated operation processes of Systemwalker Runbook Automation through services in <ph
                                                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                                                 />.</ph></li-->
-                                <li product="oscm_ee"
+                                <!--li product="oscm_ee"
                                                         ><ph><i>IaaS Integration Guide:</i> A PDF manual for operators describing how to offer and use virtual systems on different platforms through services in <ph
                                                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                                />.</ph></li>
+                                                />.</ph></li-->
                                 <li><ph id="Javadoc_documentation_on_the_concept_conbody_section_ul_l"
                                                         >Javadoc and YAML documentation for the public Web services and application programming interfaces of <ph
                                                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
