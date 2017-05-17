@@ -94,19 +94,48 @@
                                 </ol>
 </div>
 
-                                    <div class="p"><strong>To update the configuration settings for APP:</strong>
-                                <ol>
-                                        <li class="liexpand">Edit the content of the <samp class="codeph">configsettings.properties</samp> file as required. </li>
+                                    <p><strong>To update the configuration settings for APP</strong>, you have the following options: </p>
 
-                                        <li class="liexpand">Execute the <samp class="codeph">build-db.xml</samp> file in <samp class="codeph">&lt;install_pack_dir&gt;/install</samp> as follows:<div class="p">
-                            <pre class="codeblock">&lt;ANT_HOME&gt;/bin/ant -f build-db.xml
+            <div class="p">
+                <ul>
+                    <li class="liexpand"><strong>Running the build script again</strong>: <ol>
+                            <li>Edit the content of the <samp class="codeph">configsettings.properties</samp> file as required.</li>
+
+                            <li>
+                                <p>Execute the <samp class="codeph">build-db.xml</samp> file in <samp class="codeph">&lt;install_pack_dir&gt;/install</samp> as follows:</p>
+
+                                <div class="p">
+                                    <pre class="codeblock">&lt;ANT_HOME&gt;/bin/ant -f build-db.xml
    UPDATE.configSettings</pre>
+
+                                </div>
+
+                            </li>
+
+                        </ol>
+</li>
+
+                    <li class="liexpand"><strong>Using the Web interface of APP</strong>: <div class="p">
+                            <ol>
+                                <li>In a Web browser, access the base URL of APP, for example, <samp class="codeph">http://127.0.0.1:8880/oscm-app</samp>.</li>
+
+                                <li>
+                                    <p>Log in with the ID and password of the user you specified for <samp class="codeph">BSS_USER_KEY</samp> in the APP <a href="r_ConfigSettings.htm">configuration settings</a> or as another administrator of the same organization. </p>
+
+                                </li>
+
+                                <li>Edit the settings as required.</li>
+
+                                <li>Click <span class="uicontrol">Save Configuration</span> to save the settings.</li>
+
+                            </ol>
 
                         </div>
 </li>
 
-                                </ol>
-</div>
+                </ul>
+
+            </div>
 
             <p><strong>To update the configuration settings for a service controller integrated with APP:</strong></p>
 
