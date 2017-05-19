@@ -14,7 +14,8 @@
         /> release which you want to update, the procedure differs:</p>
       <ul>
         <li>
-          <p>Updating from <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> V17.0</p>
+          <p>Updating a <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+            /> V17.0 installation</p>
         </li>
         <li>
           <p>Updating from a <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"

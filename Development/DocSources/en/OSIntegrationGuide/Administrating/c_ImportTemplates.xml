@@ -8,9 +8,7 @@
             <title>Importing Templates for the Provisioning of Resources</title>
             <conbody>
                         <section>
-            <p>Apart from updating the configuration settings on the user interface of the OpenStack service controller, you can import templates for the provisioning of resources such as VMs into the <codeph>bssapp</codeph> database. These templates can be referenced in technical service definitions. This is useful, for example, if <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> is operated in a separate network. The integration of OpenStack with <ph
+            <p>Apart from updating the configuration settings on the user interface of the OpenStack service controller, you can import templates for the provisioning of VMs into the <codeph>bssapp</codeph> database. These templates can be referenced in technical service definitions. The integration of OpenStack with <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> supports the AWS CloudFormation Template and the Heat Orchestration Template. </p>
             <p><b>To import templates: </b></p>
@@ -27,11 +25,11 @@
                 </ol>
             </p>
             <p>If a template with the same name is imported twice, the original (first) one is replaced. </p>
-            <p>The provisioning process looks for the template as follows: </p>
+            <p>The provisioning service looks for the template with the name specified in the technical service definition (<codeph>TEMPLATE_NAME</codeph> service parameter) as follows: </p>
             <p>
                 <ol>
-                    <li>The template with the name specified in the technical service definition (<codeph>TEMPLATE_NAME</codeph> service parameter) is searched for in the database. </li>
-                    <li>If it is not found, the system searches for the template in the location specified in the <codeph>TEMPLATE_BASE_URL</codeph> setting of the controller configuration settings.</li>
+                    <li>The template is searched for in the <codeph>bssapp</codeph> database. </li>
+                    <li>If it is not found, the template is searched for in the location specified in the <codeph>TEMPLATE_BASE_URL</codeph>controller configuration setting.</li>
                 </ol>
             </p>
         </section>

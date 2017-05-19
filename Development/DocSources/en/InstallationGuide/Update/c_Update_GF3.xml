@@ -32,10 +32,13 @@
             </p></li>
           <li>Set the following environment variable for your current session:<p><codeph>DB_INTERPRETER</codeph>: The absolute path and name of the <codeph>psql</codeph> executable of PostgreSQL. The executable is usually located in the <codeph>bin</codeph> subdirectory of the PostgreSQL installation directory.</p><p>Example:</p><codeblock>export DB_INTERPRETER="/opt/PostgreSQL/9.1/bin/psql"</codeblock>
           </li>
-          <li>If you are upgrading from a release prior to V 16.1, and running <ph
-                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> in SAML_SP mode, and you want to make use of multiple tenants associated with IdP (Identity Provider) systems: <p>Apart from user IDs, the assertions returned by the IdP to <ph
-                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> must contain the corresponding tenant ID for each user. This is required for <ph
-                                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> to ensure the uniqueness of user IDs. </p><note>
+          <li>If you are upgrading from a release prior to V16.1, and running <ph
+              conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> in SAML_SP mode, and you want to make use of multiple tenants associated with IdP (Identity Provider) systems: <p>Apart from user IDs, the assertions returned by the IdP to <ph
+                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> must contain the corresponding tenant ID for each user. This is required for <ph
+                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+              /> to ensure the uniqueness of user IDs. </p><note>
               <p>Be aware that the SAML assertions returned from the IdP always need to contain at least the default tenant ID in case you do not want to make use of the multi-tenancy functionality. </p>
             </note><p>To achieve this, the IdP must be configured such that its assertions contain an <codeph>&lt;Attribute&gt;</codeph> subelement with the <codeph>Name="tenantID"</codeph> property, and the <codeph>&lt;AttributeValue&gt;</codeph> subelement must specify the ID of the tenant associated with the organization the corresponding user belongs to.</p><p>Example: </p><p>
               <codeblock>&lt;saml:Assertion ...&gt;
@@ -59,12 +62,13 @@
                 <li>Extract the contents of the <ph
                                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> installation package, <codeph>oscm-install-pack.zip</codeph>. </li>
                 <li>Update the database. See below for details. </li>
-                <li>Set up the application server resources. </li>
+                <li>Set up the application server resources. See below for details.</li>
                 <li>If you are using certificates for authenticating Web service calls, or if you want to run <ph
                                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> in SAML_SP mode, you need to exchange the corresponding certificates again. Refer to the <i>Operator's Guide</i> for details on certificate handling.</li>
                 <li>As is the case with a new installation, deploy the BIRT report engine to an application server different from that of <ph
-                                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>, for example, to your GlassFish 3 installation, and adjust the <codeph>REPORT_ENGINE_URL</codeph> configuration setting accordingly. See below and section <xref
-                    href="../Installation/c_DeployBirt.xml"> </xref> for details. </li>
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    />, for example, to your GlassFish 3 installation, and adjust the <codeph>REPORT_ENGINE_URL</codeph> configuration setting accordingly. See below and section <xref
+                    href="../Installation/c_DeployBirt.xml"/> for details. </li>
               </ol>
             </p></li>
         </ol>
@@ -75,16 +79,17 @@
       <p>
         <ol
                             compact="no">
-          <li>Create a backup of the following files of your existing <ph
-                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> installation:<p>
+          <li>Create a backup of the following configuration files of your existing <ph
+              conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> installation:<p>
               <ul>
                 <li><codeph>configsettings.properties</codeph></li>
                 <li><codeph>db.properties</codeph></li>
                 <li><codeph>glassfish.properties</codeph> of both the <codeph>bes-domain</codeph> and the <codeph>indexer-domain</codeph> domain.</li>
-                <li>Key file required for the encryption and decryption of service parameters with data type <codeph>PWD</codeph> or custom attributes marked for encryption. By default, the file is named <codeph>key</codeph> and located in the following directory:<p><codeph>&lt;GLASSFISH_HOME&gt;/glassfish/domains/bes-domain/config</codeph></p><note>For the update installation, make sure that the default path is specified in the <codeph>configsettings.properties</codeph> file (<codeph>KEY_FILE_PATH="./key"</codeph>). The installation script expects this default and does not look up the database. </note>
-                </li>
               </ul>
-            </p></li>
+            </p><p>Based on your existing configuration files, adjust the settings in the configuration files for the new <ph
+                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+              /> release. Specifically pay attention to new and changed settings.</p></li>
+          <li>Create a backup of the key file required for the encryption and decryption of service parameters with data type <codeph>PWD</codeph> or custom attributes marked for encryption. By default, the file is named <codeph>key</codeph> and located in the following directory:<p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/bes-domain/config</codeph></p><note>For the update installation, make sure that the default path is specified in the <codeph>configsettings.properties</codeph> file (<codeph>KEY_FILE_PATH="./key"</codeph>). The installation script expects this default and does not look up the database. </note></li>
           <li>Create a backup of the <ph><codeph>bss</codeph></ph> database using the standard PostgreSQL commands. The database backup must be compatible with PostgreSQL 9.1.12. <ph
                                     audience="BSS">Make sure to also have a backup of any customizations to marketplaces.</ph>
             <p>

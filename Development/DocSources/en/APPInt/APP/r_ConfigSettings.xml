@@ -25,7 +25,7 @@
             <title>APP_TIMER_REFRESH_SUBSCRIPTIONS</title>
             <p><codeph>APP_TIMER_REFRESH_SUBSCRIPTIONS=86400000</codeph>
             </p>
-            <p>The interval (in milliseconds) at which APP polls the status of instances and updates respective subscription parameters in the <codeph>bssapp</codeph> database, for example the number of virtual machines book with a subscription, and the number of users assigned to the subscriptions.</p>
+            <p>The interval (in milliseconds) at which APP polls the status of instances and updates respective subscription parameters in the <codeph>bssapp</codeph> database, for example the number of virtual machines booked with a subscription, and the number of users assigned to a subscriptions.</p>
             <p>If you do not specify this setting, the default value used is 86400000 (once a day).</p>
         </section>
         <section>
