@@ -24,7 +24,7 @@
 
       <p>The platform operator and technology managers must make sure that the following rules are observed: The <span>OSCM</span> version must be higher or equal to the APP version. The APP version must be equal to the controller version.</p>
 
-      <p>Example: If you want to use the <span>VMware</span> service controller included in the V17.0 release, you must upgrade <span>OSCM</span> and APP to V17.0 first.</p>
+      <p>Example: If you want to use the <span>VMware</span> service controller included in the V17.1 release, you must upgrade <span>OSCM</span> and APP to V17.1 first.</p>
 
     </div>
 
@@ -39,8 +39,19 @@
           <li class="liexpand">Make sure that all provisioning operations are complete. Follow the steps as described in <span><a href="../../APPInt/APP/c_HandleProblems.htm">Handling Problems in the Provisioning Process</a></span>.</li>
 
           
-          
-          
+          <li class="liexpand">If you are upgrading from V17.0: <p>In the <samp class="codeph">app-domain</samp> application server domain, disable or undeploy the following <span>application</span>: </p>
+<p><samp class="codeph">oscm-app</samp></p>
+
+            
+            </li>
+
+          <li class="liexpand">If you are upgrading from V17.0: <p>Check for <samp class="codeph">.glassfishStaleFiles</samp> files in the <samp class="codeph">app-domain</samp> domain. If there are any, delete them. The files are located in</p>
+<p><samp class="codeph">app-domain/applications/&lt;application name&gt;/.glassfishStaleFiles</samp></p>
+<p>For example: </p>
+<p><samp class="codeph">app-domain/applications/oscm-app/.glassfishStaleFiles</samp></p>
+
+          </li>
+
           <li class="liexpand">Set the following environment variable for your current session:<p><samp class="codeph">DB_INTERPRETER</samp>: The absolute path and name of the <samp class="codeph">psql</samp> executable of PostgreSQL. The executable is usually located in the <samp class="codeph">bin</samp> subdirectory of the PostgreSQL installation directory.</p>
 <p>Example:</p>
 <pre class="codeblock">export DB_INTERPRETER="/opt/PostgreSQL/9.1/bin/psql"</pre>
@@ -51,7 +62,6 @@
           
           
           <li class="liexpand">Create a backup of the key file required for the encryption and decryption of service parameters with data type <samp class="codeph">PWD</samp> or custom attributes marked for encryption. By default, the file is named <samp class="codeph">key</samp> and located in the following directory:<p><samp class="codeph">&lt;GLASSFISH_HOME&gt;/glassfish/domains/app-domain/config</samp></p>
-<div class="note"><span class="notetitle">Note:</span> For the update installation, make sure that the default path is specified in the <samp class="codeph">configsettings.properties</samp> file (<samp class="codeph">APP_KEY_PATH="./key"</samp>) and that the file is named <samp class="codeph">key</samp>. The installation script expects this default and does not look up the database. </div>
 </li>
 
         </ol>
@@ -123,15 +133,17 @@
       <p>After you have executed the preparation steps:</p>
 
       <ol>
-        <li>Copy the key file of which you have created a backup copy into the following directory of the extracted installation package: <p><samp class="codeph">oscm-app-install-pack\domains\app_domain\installer</samp></p>
-<p>Make sure that the key file is named <samp class="codeph">key</samp>. The installation script will then copy the key file to is default location in the updated version of the application server: </p>
+        <li>If you are upgrading from a release prior to V17.0:<p>Copy the key file of which you have created a backup copy into the following directory of the extracted installation package: </p>
+<p><samp class="codeph">oscm-app-install-pack\domains\app_domain\installer</samp></p>
+<p>Make sure that the key file is named <samp class="codeph">key</samp>. The installation script will then copy the key file to its default location in the updated version of the application server: </p>
 <p><samp class="codeph">&lt;GLASSFISH_HOME&gt;/glassfish/domains/app-domain/config</samp></p>
 <div class="note"><span class="notetitle">Note:</span> For the update installation, make sure that the default path is specified in the <samp class="codeph">configsettings.properties</samp> file (<samp class="codeph">APP_KEY_PATH="./key"</samp>) and that the file is named <samp class="codeph">key</samp>. The installation script expects this default and does not look up the database. </div>
 </li>
 
         <li>Redeploy or deploy <samp class="codeph">oscm-app</samp> in the <samp class="codeph">app-domain</samp> domain.</li>
 
-        <li>Export the certificate of the <samp class="codeph">app-domain</samp> and import it into the <samp class="codeph">bes-domain</samp> application server domain of <span>OSCM</span>.  </li>
+        <li>If you are upgrading from a release prior to V17.0:<p>Export the certificate of the <samp class="codeph">app-domain</samp> and import it into the <samp class="codeph">bes-domain</samp> application server domain of <span>OSCM</span>. </p>
+</li>
 
         <li>Restart the <samp class="codeph">app-domain</samp> domain.</li>
 
