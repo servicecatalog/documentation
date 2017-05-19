@@ -9,25 +9,25 @@
         <prodinfo product="oscm_ce">
             <prodname/>
             <vrmlist>
-                <vrm version="17.0.0"/>
+                <vrm version="17.1.0"/>
             </vrmlist>
             <brand/>
-            <prognum>17.0.0</prognum>
+            <prognum>17.1.0</prognum>
             <component/>
             <series>Amazon Web Services Integration (GlassFish)</series>
         </prodinfo>
         <prodinfo product="oscm_ee">
             <prodname>Enterprise Service</prodname>
             <vrmlist>
-                <vrm version="17.0"/>
+                <vrm version="17.1"/>
             </vrmlist>
             <brand>FUJITSU Software</brand>
-            <prognum>Catalog Manager V17.0</prognum>
+            <prognum>Catalog Manager V17.1</prognum>
             <component/>
             <series>Amazon Web Services Integration (GlassFish)</series>
         </prodinfo>
         <bookid>
-            <edition>May 2017</edition>
+            <edition>June 2017</edition>
             <booknumber product="oscm_ee">B1WS-1263-02</booknumber>
         </bookid>
         <bookrights product="oscm_ce">
