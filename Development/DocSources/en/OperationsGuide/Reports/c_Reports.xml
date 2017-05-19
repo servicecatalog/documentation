@@ -19,6 +19,7 @@
                     <li conref="../../help/tasks/organization_report.xml#task634/operatorreport6"> </li>
                     <li conref="../../help/tasks/organization_report.xml#task634/operatorreport7"> </li>
                     <li conref="../../help/tasks/organization_report.xml#task634/operatorreport8"> </li>
+                    <li><b>Subscription usage data report</b>: Lists all currently active subscriptions of a customer with the number of virtual machines (VMs) booked in a cloud environment such as OpenStack or Amazon Web Services (AWS), as well as the number of users assigned to the subscriptions. This information can then be passed to suppliers so that they can charge customers for their usage of the VMs. </li>
                 </ul></p>
             <p><b>To create a supplier revenue report, choose one of the following options</b>: <ul>
                     <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
@@ -30,6 +31,25 @@
  &lt;userkey> &lt;password>
  getrevenuelist month=&lt;YYYY-MM></codeblock>
                         </p><p>The command returns a CSV list in the following format: </p><p><codeph>FROM, TO</codeph>: Dates specifying the period for which the billing data have been generated. </p><p><codeph>ID, NAME</codeph>: ID and name of a supplier.</p><p><codeph>AMOUNT</codeph>: For each supplier, total revenue per currency and marketplace. </p><p><codeph>CURRENCY</codeph>: ISO currency code.</p><p><codeph>MARKETPLACE</codeph>: Name of the marketplace in the language specified by the locale setting of the calling user. If not set, the marketplace ID is returned.</p></li>
+                </ul></p>
+            <p><b>To create a subscription usage data report, choose the following option</b>: <ul>
+                    <li>Command line tool - Use the <codeph>getsubscriptionusage</codeph> command with the following syntax: <p>
+                            <codeblock>&lt;JAVA_HOME>/bin/java -jar lib/oscm-operatorsvc-client.jar 
+ &lt;userkey> &lt;password>
+ getsubscriptionusage filename=&lt;output file></codeblock>
+                        </p><p>This command writes the following information to the specified output file in the sequence below:</p><p>
+                            <ul>
+                                <li>Customer organization ID</li>
+                                <li>Customer organization name</li>
+                                <li>Subscription name</li>
+                                <li>Marketable service name </li>
+                                <li>Technical service name </li>
+                                <li>Supplier organization ID</li>
+                                <li>Supplier organization name </li>
+                                <li>Number of users </li>
+                                <li>Number of VMs </li>
+                            </ul>
+                        </p></li>
                 </ul></p>
             <p><b>To create one of the other reports, choose the following option</b>: <ul>
                     <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
