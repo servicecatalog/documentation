@@ -17,6 +17,7 @@
                         href="../../Shared/Installation/t_InstDB.xml"/></li>
                     <li><xref
                             href="../../Shared/Installation/t_InstAppServer.xml"/></li>
+                <li><xref href="../../Shared/Installation/t_InstCertificate.xml"/></li>
             </ol>
         </section>
     </conbody>

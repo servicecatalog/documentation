@@ -8,9 +8,7 @@
             <title>Importing Templates for the Provisioning of Resources</title>
             <conbody>
                         <section>
-            <p>Apart from updating the configuration settings on the user interface of the OpenStack service controller, you can import templates for the provisioning of VMs into the <codeph>bssapp</codeph> database. These templates can be referenced in technical service definitions. The integration of OpenStack with <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> supports the AWS CloudFormation Template and the Heat Orchestration Template. </p>
+            <p>Apart from updating the configuration settings on the user interface of the OpenStack service controller, you can import templates for the provisioning of VMs into the <codeph>bssapp</codeph> database. These templates can be referenced in technical service definitions.</p>
             <p><b>To import templates: </b></p>
             <p>
                 <ol compact="no">
@@ -29,7 +27,7 @@
             <p>
                 <ol>
                     <li>The template is searched for in the <codeph>bssapp</codeph> database. </li>
-                    <li>If it is not found, the template is searched for in the location specified in the <codeph>TEMPLATE_BASE_URL</codeph>controller configuration setting.</li>
+                    <li>If it is not found, the template is searched for in the location specified in the <codeph>TEMPLATE_BASE_URL</codeph> controller configuration setting.</li>
                 </ol>
             </p>
         </section>

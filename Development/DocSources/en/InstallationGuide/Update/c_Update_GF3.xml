@@ -98,8 +98,6 @@
             </p></li>
           <li>The <codeph>oscm-portal.war</codeph> archive contains the properties files for the user interface resources (user interface and email texts, platform objects). Be aware that with a new release or fix, new keys may have been added to the system, others may have been changed or deleted.<p>Make sure to have a backup of any customizations you may have made.</p></li>
           <li>The <codeph>oscm-portal-help.war</codeph> archive contains the online help and FAQ files in English, German, and Japanese. Make sure to have a backup of any customizations to these files.</li>
-          <li>Based on your existing configuration files, adjust the settings in the configuration files for the new <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> release. Specifically pay attention to new and changed settings. </li>
         </ol>
       </p>
     </section>

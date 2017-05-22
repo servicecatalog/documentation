@@ -14,6 +14,7 @@
                         <li><xref href="../../Shared/concepts/c_ControllerHandleCommProblems.xml"/></li>
                         <li><xref href="../../Shared/Installation/c_Backup.xml"/></li>
                         <li><xref href="../../Shared/Installation/c_UpdateConfiguration.xml"/></li>
+                        <li><xref href="c_ImportTemplates.xml"/></li>
                         <li><xref href="../../Shared/reference/c_LogConfig.xml"/></li>
                 </ul>
         </conbody>

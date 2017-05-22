@@ -34,25 +34,6 @@
           </p></li>
           <li>Set the following environment variable for your current session:<p><codeph>DB_INTERPRETER</codeph>: The absolute path and name of the <codeph>psql</codeph> executable of PostgreSQL. The executable is usually located in the <codeph>bin</codeph> subdirectory of the PostgreSQL installation directory.</p><p>Example:</p><codeblock>export DB_INTERPRETER="/opt/PostgreSQL/9.1/bin/psql"</codeblock>
           </li>
-          <li>If you are running <ph
-            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> in SAML_SP mode and want to make use of multiple tenants associated with IdP (Identity Provider) systems: <p>Apart from user IDs, the assertions returned to <ph
-              conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> must contain the corresponding tenant ID for each user. This is required for <ph
-                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> to ensure the uniqueness of user IDs. </p><note>
-                  <p>Be aware that the SAML assertions returned from the IdP always need at least contain the default tenant ID in case you do not want to make use of the multi-tenancy functionality. </p>
-                </note><p>To achieve this, the IdP must be configured such that its assertions contain an <codeph>&lt;Attribute&gt;</codeph> subelement with the <codeph>Name="tenantID"</codeph> property, and the <codeph>&lt;AttributeValue&gt;</codeph> subelement must specify the ID of the tenant associated with the organization the corresponding user belongs to.</p><p>Example: </p><p>
-                  <codeblock>&lt;saml:Assertion ...&gt;
-    ...
-    &lt;saml:AttributeStatement&gt;
-      &lt;saml:Attribute Name="userid"&gt;
-        &lt;saml:AttributeValue&gt;administrator&lt;/saml:AttributeValue&gt;
-      &lt;/saml:Attribute&gt;
-    &lt;saml:Attribute <b>Name="tenantID"</b>&gt;
-        <b>&lt;saml:AttributeValue&gt;34ffd098&lt;/saml:AttributeValue&gt;</b>
-      &lt;/saml:Attribute&gt;
-    &lt;/saml:AttributeStatement&gt;
-  &lt;/saml:Assertion&gt;
-</codeblock>
-                </p></li>
           <li>Proceed with updating your installation in the following sequence: <p>
             <ol>
               <li>Create a backup of configuration files, the key file for encryption, the <codeph>bss</codeph> database, and all customizations you may have made. </li>
@@ -181,7 +162,8 @@
       <ol>
         <li product="oscm_ce"
           >Download the latest version of Eclipse BIRT runtime, for example, from http://www.eclipse.org.</li>
-        <li>Deploy the <codeph>birt.war</codeph> archive to a domain on the application server. </li>
+        <li product="oscm_ce">Deploy the <codeph>birt.war</codeph> archive to a domain on the application server. </li>
+        <li product="oscm_ee">Deploy the <codeph>birt.war</codeph> archive located in <codeph>&lt;install_pack_dir>/domains/bes_domain/applications</codeph> to a domain on the application server.</li>
         <li product="oscm_ce">Add the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
             /> report designs and localized labels to the folder of the <codeph>birt</codeph> application on the application server. <p>The <ph
               conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"

@@ -85,7 +85,7 @@
                                     <p><b>To update the configuration settings for APP</b>, you have the following options: </p>
             <p>
                 <ul compact="no">
-                    <li>Running the build script: <ol>
+                    <li>Run the build script: <ol>
                             <li>Edit the content of the <codeph>configsettings.properties</codeph> file as required.</li>
                             <li>
                                 <p>Execute the <codeph>build-db.xml</codeph> file in <codeph>&lt;install_pack_dir&gt;/install</codeph> as follows:</p>
@@ -95,7 +95,7 @@
                                 </p>
                             </li>
                         </ol></li>
-                    <li>Using the Web interface of APP: <p>
+                    <li>Use the Web interface of APP: <p>
                             <ol>
                                 <li>In a Web browser, access the base URL of APP, for example, <codeph>http://127.0.0.1:8880/oscm-app</codeph>.</li>
                                 <li>

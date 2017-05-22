@@ -19,13 +19,12 @@
           conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
         /> supports the AWS CloudFormation Template and the Heat Orchestration Template.</p>
       <p>A template enables application developers to describe and automate the deployment of infrastructure, services, and applications. Collections of resources (e.g. networks, servers, or storage) can be deployed from a single template. The template serves as an orchestration document that details everything needed to carry out the orchestration. Once instantiated, the resources are also referred to as stacks.</p>
-      <p>There are the following options for providing templates for the provisioning of resources such as Virtual Machines in an OpenStack environment:</p>
+      <p>There are the following options for providing templates for the provisioning of resources such as virtual machines in an OpenStack environment:</p>
       <p>
         <ol>
           <li>A technology manager provides them on an external host.</li>
           <li>The <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-              /> operator provides them on the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-            /> host file system. </li>
+            /> operator provides them on a host whose URL can be reached via HTTP or HTTPS. </li>
           <li>A technology manager imports the templates into the database where the data of the OpenStack integration software is stored.</li>
         </ol>
       </p>

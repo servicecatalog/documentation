@@ -44,8 +44,8 @@
                                 <li>Subscription name</li>
                                 <li>Marketable service name </li>
                                 <li>Technical service name </li>
-                                <li>Supplier organization ID</li>
-                                <li>Supplier organization name </li>
+                                <li>Supplier organization name</li>
+                                <li>Supplier organization ID </li>
                                 <li>Number of users </li>
                                 <li>Number of VMs </li>
                             </ul>
