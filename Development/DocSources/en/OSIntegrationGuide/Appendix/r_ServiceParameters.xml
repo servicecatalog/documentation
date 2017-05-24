@@ -101,7 +101,7 @@
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> by HTTP or HTTPS.  </p>
                 <p>If not specified, the URL is obtained from the controller configuration settings.</p>
                 <note>
-                  <p>In the case that a technology manager has imported templates into the <codeph>bssapp</codeph> database, the database is searched for the template specified with the <codeph>TEMPLATE_NAME</codeph> parameter. Only if it is not found in the database, the <codeph>TEMPLATE_BASE_URL</codeph> setting is evaluated. </p>
+                  <p>First, the <codeph>bssapp</codeph> database is searched for the template specified with the <codeph>TEMPLATE_NAME</codeph> service parameter in the technical service definition. Only if the template is not found in the database, the <codeph>TEMPLATE_BASE_URL</codeph> setting is evaluated. </p>
                 </note>
                 <p>Customers should not be able to enter a value for this parameter, i.e. it should not be configurable.</p>
                 <p>Example: <codeph>https://myserver:8880/oscm-app/docroot/templates/</codeph></p>

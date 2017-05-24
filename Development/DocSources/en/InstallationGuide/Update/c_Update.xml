@@ -10,13 +10,12 @@
       <p>Before updating your installation of <ph
                     audience="BSS"
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>, read the <i>Release Notes</i> of the new release. They contain information on compatibility issues, changes and enhancements, and known restrictions. </p>
-      <p>Depending on the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-          /> release which you want to update, the update installation procedure differs. For example, when updating from a <ph
+      <p>The update installation procedure differs depending on the <ph
           conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-        /> release prior to V17.0, you need to install a new version of the application server. The following sections describe how to </p>
+        /> release from which you are upgrading. The following sections describe how to:</p>
       <ul>
         <li>
-          <p>Update a <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> V17.0 installation</p>
+          <p>Update from <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> V17.0 or later</p>
         </li>
         <li>
           <p>Update from a <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"

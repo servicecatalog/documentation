@@ -17,7 +17,7 @@
         <section>
             <title>JDBC_DRIVER_JAR_NAME</title>
             <p>The name of the PostgreSQL JDBC driver jar file as available after installation.</p>
-            <p>Example: <codeph>postgresql-9.1-903.jdbc4.jar</codeph></p>
+            <p>Example: <codeph>postgresql-9.4-1206-jdbc42.jar</codeph></p>
         </section>
         <section>
             <title>glassfish.domain.portbase</title>

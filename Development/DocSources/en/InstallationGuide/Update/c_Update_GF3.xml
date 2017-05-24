@@ -75,7 +75,7 @@
       </p>
     </section>
     <section>
-      <title>Backing Up and Updating the Configuration Settings</title>
+      <title>Backing Up and Updating Configuration Settings</title>
       <p>
         <ol
                             compact="no">
@@ -89,7 +89,7 @@
             </p><p>Based on your existing configuration files, adjust the settings in the configuration files for the new <ph
                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
               /> release. Specifically pay attention to new and changed settings.</p></li>
-          <li>Create a backup of the key file required for the encryption and decryption of service parameters with data type <codeph>PWD</codeph> or custom attributes marked for encryption. By default, the file is named <codeph>key</codeph> and located in the following directory:<p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/bes-domain/config</codeph></p><note>For the update installation, make sure that the default path is specified in the <codeph>configsettings.properties</codeph> file (<codeph>KEY_FILE_PATH="./key"</codeph>). The installation script expects this default and does not look up the database. </note></li>
+          <li>Create a backup of the key file required for the encryption and decryption of service parameters with data type <codeph>PWD</codeph> and custom attributes marked for encryption. By default, the file is named <codeph>key</codeph> and located in the following directory:<p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/bes-domain/config</codeph></p><note>For the update installation, make sure that the default path and name are specified in the <codeph>configsettings.properties</codeph> file (<codeph>KEY_FILE_PATH="./key"</codeph>). The installation script expects this default and does not look up the database. </note></li>
           <li>Create a backup of the <ph><codeph>bss</codeph></ph> database using the standard PostgreSQL commands. The database backup must be compatible with PostgreSQL 9.1.12. <ph
                                     audience="BSS">Make sure to also have a backup of any customizations to marketplaces.</ph>
             <p>
@@ -107,7 +107,7 @@
       <p>
         <ol
                             compact="no">
-          <li>Check whether the file <p><codeph>postgresql-9.1-903.jdbc4.jar</codeph></p><p> is contained in the following directories of the application server:</p><ul>
+          <li>Check whether the file <p><codeph>postgresql-9.4-1206-jdbc42.jar</codeph></p><p> is contained in the following directories of the application server:</p><ul>
               <li><codeph>lib</codeph> directory of the <codeph>bes-domain</codeph> domain</li>
               <li><codeph>&lt;GLASSFISH_HOME&gt;/mq/lib/ext</codeph></li>
             </ul><p>If this is not the case, copy the file from the <codeph>&lt;install_pack_dir&gt;/install/lib</codeph> directory to the location where it is missing. </p></li>
@@ -128,7 +128,8 @@
       <p>
         <ol>
           <li>Copy your backup of the key file to the installation package of the new release of <ph
-                                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> to the following directory: <p><codeph>oscm-install-pack\domains\bes_domain\installer</codeph></p><p>Make sure that the key file is named <codeph>key</codeph>. The installation script will then copy the key file to is default location in the updated version of the application server: </p><p>By default, this file is named <codeph>key</codeph> and located in </p><p><codeph>&lt;GLASSFISH_HOME&gt;/glassfish/domains/bes-domain/config</codeph> of your GlassFish 3 installation.</p><note>For the update installation, make sure that the default path is specified in the <codeph>configsettings.properties</codeph> file (<codeph>KEY_FILE_PATH="./key"</codeph>) and that the file is named <codeph>key</codeph>. The installation script expects this default and does not look up the database. </note></li>
+              conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> to the following directory: <p><codeph>oscm-install-pack\domains\bes_domain\installer</codeph></p><p>Make sure that the key file is named <codeph>key</codeph>. The installation script will then copy the key file to is default location in the updated version of the application server: </p><p>By default, this file is named <codeph>key</codeph> and located in </p><p><codeph>&lt;GLASSFISH_HOME&gt;/glassfish/domains/bes-domain/config</codeph> of your GlassFish 3 installation.</p><note>For the update installation, make sure that the default path is specified in the <codeph>configsettings.properties</codeph> file (<codeph>KEY_FILE_PATH="./key"</codeph>) and that the file is named <codeph>key</codeph>. The installation script expects this default and does not look up the database. </note></li>
           <li>Execute the <codeph>build-glassfish.xml</codeph> file in <codeph>&lt;install_pack_dir&gt;/install</codeph> as follows:<p>
               <codeblock>&lt;ANT_HOME&gt;/bin/ant -f build-glassfish.xml SETUP</codeblock>
             </p><p>This has the following results:<ul>
@@ -148,8 +149,9 @@
                       <p>If you added additional languages to the system, also include the corresponding help and FAQ file structures into the <codeph>oscm-portal-help.war</codeph> archive before deploying it again. Refer to the <i>Operator's Guide</i> for details. </p>
                     </li>
                   </ul><!--p product="oscm_ee"><codeph>birt.war</codeph></p--></li>
-                <li>The <codeph>oscm-security.jar</codeph>, the <codeph>postgresql-9.1-903.jdbc4.jar</codeph>, and the <codeph>commons-codec-1.7.jar</codeph> files are copied from the directory to which you extracted the <ph
-                                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> installation package (<codeph>&lt;install_pack_dir&gt;/domains/bes_domain/lib</codeph>) to the <codeph>lib</codeph> directory of the <codeph>bes-domain</codeph> domain.</li>
+                <li>The <codeph>oscm-security.jar</codeph>, the <codeph>postgresql-9.4-1206-jdbc42.jar</codeph>, and the <codeph>commons-codec-1.7.jar</codeph> files are copied from the directory to which you extracted the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> installation package (<codeph>&lt;install_pack_dir&gt;/domains/bes_domain/lib</codeph>) to the <codeph>lib</codeph> directory of the <codeph>bes-domain</codeph> domain.</li>
                 <li>The required resources, email settings, JMS queues, data sources are created in the application server. Refer to <xref
                                     href="../../Shared/reference/r_AppServerResources.xml"/> for details.</li>
                 <li>The directory traversal is disabled for both domains, <codeph>bes-domain</codeph> and <codeph>master-indexer-domain</codeph>: The directory listing parameter is set to <codeph>false</codeph> in the <codeph>default-web.xml</codeph> file in the domain directories you are using for <ph

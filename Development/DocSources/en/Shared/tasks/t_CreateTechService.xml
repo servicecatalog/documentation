@@ -44,12 +44,9 @@
                         <li><codeph>samples/template.yaml</codeph> for a template of type Heat Orchestration Template for native OpenStack</li>
                         <li><codeph>samples/template_k5.yaml</codeph> for a template of type Heat Orchestration Template for FUJITSU Cloud Service K5</li>
                         </ul>
-                        <p audience="os">You can use the samples to see how templates are mapped to technical service definitions. Choose one of the following options for providing the templates: <ul>
-                            <li>Copy the sample files to a location of your choice that can be reached from <ph
-                                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                    /> by HTTP or HTTPS. For example, you could copy them to the <codeph>docroot/templates</codeph> directory of the <codeph>app-domain</codeph> domain in your application server.</li>
-                            <li>Import the sample files into the <codeph>bssapp</codeph> database using the graphical user interface of the OpenStack service controller. The URL of the OpenStack service controller can be accessed from a Web browser, for example: <codeph>http://127.0.0.1:8880/oscm-app-openstack</codeph>. </li>
-                        </ul></p>
+                        <p audience="os"
+                            >You can use the samples to see how templates are mapped to technical service definitions. To use the sample templates, make them available in one of the ways described in <xref
+                            href="../../OSIntegrationGuide/Administrating/c_ImportTemplates.xml"/>. </p>
                     
                     <p audience="tps5"
                         >The TPS5 integration package, <codeph>oscm-tps5-install-pack.zip</codeph>, includes a technical service as a sample. Use the sample as a basis for defining your own technical services as required:</p>

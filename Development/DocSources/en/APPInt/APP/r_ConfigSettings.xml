@@ -25,7 +25,7 @@
             <title>APP_TIMER_REFRESH_SUBSCRIPTIONS</title>
             <p><codeph>APP_TIMER_REFRESH_SUBSCRIPTIONS=86400000</codeph>
             </p>
-            <p>The interval (in milliseconds) at which APP polls the status of instances and updates respective subscription parameters in the <codeph>bssapp</codeph> database, for example the number of virtual machines booked with a subscription, and the number of users assigned to a subscriptions.</p>
+            <p>The interval (in milliseconds) at which APP polls the status of instances and updates the number of virtual machines (VMs) provisioned for subscriptions to IaaS services, for example in OpenStack. A platform operator can retrieve the number of VMs using the <codeph>getsubscriptionusagedata</codeph> command from the command line tool.  </p>
             <p>If you do not specify this setting, the default value used is 86400000 (once a day).</p>
         </section>
         <section>
@@ -40,7 +40,7 @@
             </p>
             <p>The email address to which email notifications are sent. </p>
         </section>
-        <section><title>APP_KEY_PATH</title>The path to the file containing the key required for encryption and decryption of service parameters with data type <codeph>PWD</codeph> or custom attributes marked for encryption.<p>Upon the start of APP, it is checked whether a key file exists in the location specified in this setting. If this not the case, the key file is automatically generated and stored in the location specified here. If nothing is specified, the file will be generated into the default location and named <codeph>key</codeph>.</p>Default: <p><codeph>&lt;GLASSFISH_HOME&gt;/glassfish/domains/app-domain/config</codeph></p><p>
+        <section><title>APP_KEY_PATH</title>The path to the file containing the key required for encryption and decryption of service parameters with data type <codeph>PWD</codeph> and custom attributes marked for encryption.<p>Upon the start of APP, it is checked whether a key file exists in the location specified in this setting. If this not the case, the key file is automatically generated and stored in the location specified here. If nothing is specified, the file will be generated into the default location and named <codeph>key</codeph>.</p>Default: <p><codeph>&lt;GLASSFISH_HOME&gt;/glassfish/domains/app-domain/config</codeph></p><p>
                 <note>Be aware that the key file must not be deleted. Otherwise, encryption and decryption is no longer possible. It is recommended to create a backup of this file once generated.</note>
             </p></section>
         <section>

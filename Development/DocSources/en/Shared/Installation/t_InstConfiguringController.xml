@@ -20,7 +20,7 @@
                             <ul compact="no">
                                 <li><codeph>db.properties</codeph>: Settings for the<ph audience="vmware"
                                     > APP</ph> database setup and access.</li>
-                                <li><codeph>configsettings.properties</codeph>: Configuration settings for APP. <p>The initial installation stores these settings in the <codeph>bssapp</codeph> database, where you can change them later, if required. Some settings can also be changed later using the graphical user interface of APP. An update installation only adds new settings to the database, but does not overwrite existing ones. In the case that mandatory settings are missing, an error is thrown, and you need to add these settings manually before executing the installation scripts again.</p></li>
+                                <li><codeph>configsettings.properties</codeph>: Configuration settings for APP. <p>The initial installation stores these settings in the <codeph>bssapp</codeph> database, where you can change them later, if required. An update installation only adds new settings to the database, but does not overwrite existing ones. In the case that mandatory settings are missing, an error is thrown, and you need to add these settings manually before executing the installation scripts again.</p></li>
                                 <li audience="ror"
                                         ><codeph>configsettings_controller.properties</codeph>: Configuration settings for the <ph
                                         audience="ror"

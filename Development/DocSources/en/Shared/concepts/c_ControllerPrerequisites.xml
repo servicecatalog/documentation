@@ -30,12 +30,23 @@
                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                         />. <p>Templates can be provided in one of the following ways: </p><p>
                         <ol>
-                            <li>A technology manager provides them on an external host.</li>
+                            <li>The technology provider organization responsible for the OpenStack service controller provides them on an external host in a location whose URL can be reached from <ph
+                                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> via HTTP or HTTPS.</li>
                             <li>The <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                /> operator provides them on a host whose URL can be reached via HTTP or HTTPS. </li>
-                            <li>A technology manager imports them into the <codeph>bssapp</codeph> database.</li>
+                                    /> operator provides them on the <ph
+                                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    /> host in a location whose URL can be reached from <ph
+                                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> via HTTP or HTTPS.</li>
+                            <li>The technology provider organization responsible for the OpenStack service controller imports the templates into the <codeph>bssapp</codeph> database.</li>
                         </ol>
-                    </p>The user specified in the configuration settings for the installation must have the necessary credentials to create and configure virtual systems for your organization based on these templates in OpenStack.<p> In FUJITSU Cloud Service K5, the <codeph>cpf_systemowner</codeph> role is required.</p></li>
+                    </p>Refer to <xref href="../../OSIntegrationGuide/Administrating/c_ImportTemplates.xml"
+                    /> for details. </li>
+                <li audience="os">
+                    <p>The user specified in the configuration settings for the installation must have the necessary credentials to create and configure virtual systems for your organization based on these templates in OpenStack.</p>
+                    <p>In FUJITSU Cloud Service K5, the <codeph>cpf_systemowner</codeph> role is required.</p>
+                </li>
                 <li audience="tps5"
                         >In TPS5, appropriate system templates for virtual platforms and images for virtual servers must exist, to which the technical services in <ph
                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"

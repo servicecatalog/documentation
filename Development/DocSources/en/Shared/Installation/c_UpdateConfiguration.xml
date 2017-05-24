@@ -85,7 +85,7 @@
                                     <p><b>To update the configuration settings for APP</b>, you have the following options: </p>
             <p>
                 <ul compact="no">
-                    <li>Run the build script: <ol>
+                    <li>Run the installation script: <ol>
                             <li>Edit the content of the <codeph>configsettings.properties</codeph> file as required.</li>
                             <li>
                                 <p>Execute the <codeph>build-db.xml</codeph> file in <codeph>&lt;install_pack_dir&gt;/install</codeph> as follows:</p>
@@ -97,7 +97,7 @@
                         </ol></li>
                     <li>Use the Web interface of APP: <p>
                             <ol>
-                                <li>In a Web browser, access the base URL of APP, for example, <codeph>http://127.0.0.1:8880/oscm-app</codeph>.</li>
+                                <li>In a Web browser, access the base URL of APP, for example:<p><codeph>http://127.0.0.1:8880/oscm-app</codeph></p></li>
                                 <li>
                                     <p>Log in with the ID and password of the user you specified for <codeph>BSS_USER_KEY</codeph> in the APP <xref
                                             href="r_ConfigSettings.xml"
@@ -136,7 +136,7 @@
                     <li audience="tps5">Enter the required settings.</li>
                     <li audience="aws">Enter the required settings.</li>
                     <li audience="os"
-                            >Enter the required settings. Be aware that some of them can also be set in the technical service definition. In this case, the technical service parameter overrides the setting you specify here. Refer to <xref
+                            >Enter the required settings. Be aware that some of them can also be set in technical service definitions. In this case, the technical service parameter overrides the setting you specify here. Refer to <xref
                             href="../../OSIntegrationGuide/Appendix/r_ConfigSettingsController.xml"/> and <xref
                             href="../../OSIntegrationGuide/Appendix/r_ServiceParameters.xml"
                                 /> for details on the settings and parameters.<p>Apart from updating the configuration settings, you can import templates for the provisioning of VMs into the <codeph>bssapp</codeph> database. Refer to <xref
@@ -152,7 +152,7 @@
                     <li>Save the settings.</li>
                                 </ol>
             </p>
-                                    <p>If you want to change the technology provider organization responsible for the <ph
+                                    <p>If you want to <b>change the technology provider</b> organization responsible for the <ph
                     audience="ror">ROR</ph><ph audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph
                     audience="tps5">TPS5</ph><ph audience="vmware"
                 >VMware</ph> service controller, you can use the Web interface of APP: </p>

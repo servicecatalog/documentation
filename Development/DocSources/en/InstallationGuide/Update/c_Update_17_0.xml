@@ -4,12 +4,9 @@
 <!-- Copyright FUJITSU LIMITED 2017 -->
 <concept id="Update"
   xml:lang="en-us">
-  <title>Updating a <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-    /> V17.0 Installation</title>
+  <title>Updating From <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> V17.0 or Later</title>
   <conbody>
     <section>
-      <p>When you are updating a <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-        /> V17.0 installation, you have already upgraded the application server, and thus do not need to reinstall it. </p>
       <p>
         <note>An update installation cannot change the authentication mode (INTERNAL or SAML_SP). You can only upgrade from an installation in INTERNAL mode to an installation in INTERNAL mode, or an installation in SAML_SP mode to an installation in SAML_SP mode. </note>
       </p>
@@ -49,7 +46,7 @@
       </p>
     </section>
     <section>
-      <title>Backing Up and Updating the Configuration Settings</title>
+      <title>Backing Up and Updating Configuration Settings</title>
       <p>
         <ol compact="no">
           <li>Create a backup of the following configuration files of your existing <ph
@@ -62,10 +59,8 @@
             </p><p>Based on your existing configuration files, adjust the settings in the configuration files for the new <ph
                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
               /> release. Specifically pay attention to new and changed settings.</p></li>
-          <li>Create a backup of the key file required for the encryption and decryption of service parameters with data type <codeph>PWD</codeph> or custom attributes marked for encryption. By default, the file is named <codeph>key</codeph> and located in the following directory:<p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/bes-domain/config</codeph></p></li>
-          <li>Create a backup of the <ph><codeph>bss</codeph></ph> database using the standard PostgreSQL commands. The database backup must be compatible with PostgreSQL 9.1.12. <ph
-              audience="BSS">Make sure to also have a backup of any customizations to marketplaces.</ph>
-            <p>
+          <li>Create a backup of the key file required for the encryption and decryption of service parameters with data type <codeph>PWD</codeph> and custom attributes marked for encryption. By default, the file is named <codeph>key</codeph> and located in the following directory:<p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/bes-domain/config</codeph></p></li>
+          <li>Create a backup of the <ph><codeph>bss</codeph></ph> database using the standard PostgreSQL commands. The database backup must be compatible with PostgreSQL 9.1.12.  <p>
               <note>Creating a backup of search index data is not required. The index will be automatically rebuilt when <ph
                   conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> is operational again. </note>
             </p></li>
@@ -80,10 +75,10 @@
       <p>
         <ol
           compact="no">
-          <li>Check whether the file <p><codeph>postgresql-9.1-903.jdbc4.jar</codeph></p><p> is contained in the following directories of the application server:</p><ul>
-            <li><codeph>lib</codeph> directory of the <codeph>bes-domain</codeph> domain</li>
-            <li><codeph>&lt;GLASSFISH_HOME&gt;/mq/lib/ext</codeph></li>
-          </ul><p>If this is not the case, copy the file from the <codeph>&lt;install_pack_dir&gt;/install/lib</codeph> directory to the location where it is missing. </p></li>
+          <li>Check whether the file <p><codeph>postgresql-9.4-1206-jdbc42.jar</codeph></p><p> is contained in the following directories of the application server:</p><ul>
+              <li><codeph>lib</codeph> directory of the <codeph>bes-domain</codeph> domain</li>
+              <li><codeph>&lt;GLASSFISH_HOME&gt;/mq/lib/ext</codeph></li>
+            </ul><p>If this is not the case, copy the file from the <codeph>&lt;install_pack_dir&gt;/install/lib</codeph> directory to the location where it is missing. </p></li>
           <li>Start the <codeph>bss</codeph> database.</li>
           <li>Update the schema and configuration settings of the <codeph>bss</codeph> database by executing the <codeph>build-db.xml</codeph> file in <codeph>&lt;install_pack_dir&gt;/install</codeph> as follows:<p>
               <codeblock>&lt;ANT_HOME&gt;/bin/ant -f build-db.xml updateDatabase</codeblock>
@@ -156,7 +151,7 @@
     </section>
     <section>
       <title>Updating the BIRT Report Engine</title>
-      <p>The BIRT report engine is deployed on an application other than that of <ph
+      <p>The BIRT report engine is deployed on an application server other than that of <ph
           conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
       <p>Proceed as follows: </p>
       <ol>

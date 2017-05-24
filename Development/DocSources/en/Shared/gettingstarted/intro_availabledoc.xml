@@ -54,10 +54,10 @@
                                                         /> and how to integrate applications and external systems with <ph
                                                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                                                 />.</ph></li>
-                                <li><ph id="ROR_Guide:_concept_conbody_section_ul_l"
+                                <!--li><ph id="ROR_Guide:_concept_conbody_section_ul_l"
                                                         ><i>ServerView Resource Orchestrator Integration (GlassFish):</i> A PDF manual for operators describing how to offer and use virtual platforms and servers controlled by FUJITSU ServerView Resource Orchestrator through services in <ph
                                                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                                />.</ph></li>
+                                                />.</ph></li-->
                                 <li><ph id="AWS_Guide:_concept_conbody_section_ul_l"
                                                         ><i>Amazon Web Services Integration (GlassFish):</i> A PDF manual for operators describing how to offer and use virtual servers controlled by the Amazon Elastic Compute Cloud Web service through services in <ph
                                                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"

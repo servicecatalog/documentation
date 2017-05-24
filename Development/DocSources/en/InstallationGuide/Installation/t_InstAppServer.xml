@@ -63,7 +63,7 @@
                                 <li>The <codeph>bes-domain</codeph> domain is created and started. </li>
                                 <li>The following applications are deployed to the <codeph>bes-domain</codeph> domain: <p><codeph>oscm.ear</codeph></p><p><codeph>oscm-portal.war</codeph></p><p><codeph>oscm-portal-help.war</codeph></p><!--p
                                         product="oscm_ee"><codeph>birt.war</codeph></p--></li>
-                                <li>The <codeph>oscm-security.jar</codeph>, the <codeph>postgresql-9.1-903.jdbc4.jar</codeph>, and the <codeph>commons-codec-1.7.jar</codeph> files are copied from the directory to which you extracted the <ph
+                                <li>The <codeph>oscm-security.jar</codeph>, the <codeph>postgresql-9.4-1206-jdbc42.jar</codeph>, and the <codeph>commons-codec-1.7.jar</codeph> files are copied from the directory to which you extracted the <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                         /> installation package (<codeph>&lt;install_pack_dir&gt;/domains/bes_domain/lib</codeph>) to the <codeph>lib</codeph> directory of the <codeph>bes-domain</codeph> domain.</li>
                                 <li>The required resources, email settings, JMS queues, data sources are created in the application server. Refer to <xref
