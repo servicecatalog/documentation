@@ -48,7 +48,7 @@
             <p><samp class="codeph">APP_TIMER_REFRESH_SUBSCRIPTIONS=86400000</samp>
             </p>
 
-            <p>The interval (in milliseconds) at which APP polls the status of instances and updates respective subscription parameters in the <samp class="codeph">bssapp</samp> database, for example the number of virtual machines booked with a subscription, and the number of users assigned to a subscriptions.</p>
+            <p>The interval (in milliseconds) at which APP polls the status of instances and updates the number of virtual machines (VMs) provisioned for subscriptions to IaaS services, for example in OpenStack. A platform operator can retrieve the number of VMs using the <samp class="codeph">getsubscriptionusagedata</samp> command from the command line tool.  </p>
 
             <p>If you do not specify this setting, the default value used is 86400000 (once a day).</p>
 
@@ -73,7 +73,7 @@
 
         </div>
 
-        <div class="section"><h4 class="sectiontitle">APP_KEY_PATH</h4>The path to the file containing the key required for encryption and decryption of service parameters with data type <samp class="codeph">PWD</samp> or custom attributes marked for encryption.<p>Upon the start of APP, it is checked whether a key file exists in the location specified in this setting. If this not the case, the key file is automatically generated and stored in the location specified here. If nothing is specified, the file will be generated into the default location and named <samp class="codeph">key</samp>.</p>
+        <div class="section"><h4 class="sectiontitle">APP_KEY_PATH</h4>The path to the file containing the key required for encryption and decryption of service parameters with data type <samp class="codeph">PWD</samp> and custom attributes marked for encryption.<p>Upon the start of APP, it is checked whether a key file exists in the location specified in this setting. If this not the case, the key file is automatically generated and stored in the location specified here. If nothing is specified, the file will be generated into the default location and named <samp class="codeph">key</samp>.</p>
 Default: <p><samp class="codeph">&lt;GLASSFISH_HOME&gt;/glassfish/domains/app-domain/config</samp></p>
 <div class="p">
                 <div class="note"><span class="notetitle">Note:</span> Be aware that the key file must not be deleted. Otherwise, encryption and decryption is no longer possible. It is recommended to create a backup of this file once generated.</div>

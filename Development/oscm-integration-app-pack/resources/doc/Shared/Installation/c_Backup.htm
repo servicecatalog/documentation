@@ -30,7 +30,7 @@
 
             <div class="p">
                 <ul>
-                    <li>Database (<samp class="codeph">bssapp</samp>). The frequency of database backups depends on the amount of changes and the availability of time slots with low load. PostgreSQL supports database backups without previous shutdown. For details, refer to the PostgreSQL documentation. <p>Make sure to also make a backup of the file containing the key required for encryption and decryption of service parameters with data type <samp class="codeph">PWD</samp> or custom attributes marked for encryption. By default, this file is located in:</p>
+                    <li>Database (<samp class="codeph">bssapp</samp>). The frequency of database backups depends on the amount of changes and the availability of time slots with low load. PostgreSQL supports database backups without previous shutdown. For details, refer to the PostgreSQL documentation. <p>Make sure to also make a backup of the file containing the key required for encryption and decryption of service parameters with data type <samp class="codeph">PWD</samp> and custom attributes marked for encryption. By default, this file is located in:</p>
 <p><samp class="codeph">&lt;GLASSFISH_HOME&gt;/glassfish/domains/app-domain/config/key</samp></p>
 <p>The location of this file can be changed using the <samp class="codeph">APP_KEY_PATH</samp> configuration setting.</p>
 </li>
@@ -58,7 +58,7 @@
                 <ol>
                     <li>Restore the <samp class="codeph">bssapp</samp> database from the backup using the relevant PostgreSQL commands.</li>
 
-                    <li>Make sure that the file containing the key required for encryption and decryption of service parameters with data type <samp class="codeph">PWD</samp> or custom attributes marked for encryption exists in the location specified in the <samp class="codeph">APP_KEY_PATH</samp> configuration setting. By default, this file is to be located in:<p><samp class="codeph">&lt;GLASSFISH_HOME&gt;/glassfish/domains/app-domain/config/key</samp></p>
+                    <li>Make sure that the file containing the key required for encryption and decryption of service parameters with data type <samp class="codeph">PWD</samp> and custom attributes marked for encryption exists in the location specified in the <samp class="codeph">APP_KEY_PATH</samp> configuration setting. By default, this file is to be located in:<p><samp class="codeph">&lt;GLASSFISH_HOME&gt;/glassfish/domains/app-domain/config/key</samp></p>
 Its default name is <samp class="codeph">key</samp>.<p>If the file is missing, copy it from your backup to the correct location.</p>
 </li>
 

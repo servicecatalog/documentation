@@ -62,7 +62,7 @@
                 
             </li>
 <li class="stepexpand">
-                <span>Depending on your environment, it may be required to define a proxy server for the <samp class="codeph">app-domain</samp> domain in the <strong>JVM Options</strong> of the application server. <span>A service controller implemented such that it supports proxy communication</span> can address the corresponding system via the proxy server.</span>
+                <span>Depending on your environment, it may be required to define a proxy server for the <samp class="codeph">app-domain</samp> domain in the <strong>JVM Options</strong> of the application server.</span>
                  To define a proxy server, specify the following JVM options: <ul>
                         <li><samp class="codeph">-Dhttps.proxyHost</samp></li>
 
@@ -79,7 +79,7 @@
                         </ul>
 
                     </div>
-<div class="p">For all direct communication, you need to bypass the proxy server. Specify the hosts which are to be addressed directly and not through the proxy server in the following setting: <ul>
+<div class="p">For all direct communication you need to bypass the proxy server. Specify the hosts which are to be addressed directly and not through the proxy server in the following setting: <ul>
                             <li><samp class="codeph">-Dhttp.nonProxyHosts</samp></li>
 
                         </ul>
@@ -89,8 +89,7 @@ For example, APP must not use the configured proxy for Web service calls to <spa
 <p>In case several service controllers are to run in the same APP domain, and only one of them is to communicate via a proxy server, you need to exclude the target systems of the other service controllers, for example, as follows: </p>
 <samp class="codeph">-Dhttps.proxyHost=proxy.intern.myserver.com</samp><p><samp class="codeph">-Dhttps.proxyPort=8081</samp></p>
 <p><samp class="codeph">-Dhttp.nonProxyHosts=myServer.com|localhost|127.0.0.1|</samp></p>
-<p><samp class="codeph">http://10.140.18.112*|http://myServer.com:8880/templates/*|</samp></p>
-<p><samp class="codeph">https://ror-demo.myServer.com:8014/cfmgapi/endpoint* </samp></p>
+<p><samp class="codeph">http://10.140.18.112*|http://myServer.com:8880/templates/*</samp></p>
 <p>After having configured the proxy server, restart the <samp class="codeph">app-domain</samp>.</p>
 
             </li>

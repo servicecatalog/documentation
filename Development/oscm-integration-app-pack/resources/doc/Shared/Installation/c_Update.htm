@@ -61,7 +61,7 @@
           
           
           
-          <li class="liexpand">Create a backup of the key file required for the encryption and decryption of service parameters with data type <samp class="codeph">PWD</samp> or custom attributes marked for encryption. By default, the file is named <samp class="codeph">key</samp> and located in the following directory:<p><samp class="codeph">&lt;GLASSFISH_HOME&gt;/glassfish/domains/app-domain/config</samp></p>
+          <li class="liexpand">Create a backup of the key file required for the encryption and decryption of service parameters with data type <samp class="codeph">PWD</samp> and custom attributes marked for encryption. By default, the file is named <samp class="codeph">key</samp> and located in the following directory:<p><samp class="codeph">&lt;GLASSFISH_HOME&gt;/glassfish/domains/app-domain/config</samp></p>
 </li>
 
         </ol>
@@ -76,7 +76,7 @@
 
       <div class="p">
         <ol>
-          <li class="liexpand">Check whether the file <p><samp class="codeph">postgresql-9.1-903.jdbc4.jar</samp></p>
+          <li class="liexpand">Check whether the file <p><samp class="codeph">postgresql-9.4-1206-jdbc42.jar</samp></p>
 <p> is contained in the following directories of the application server:</p>
 <ul>
               <li><samp class="codeph">lib</samp> directory of the <samp class="codeph">app-domain</samp> domain</li>
@@ -137,7 +137,7 @@
 <p><samp class="codeph">oscm-app-install-pack\domains\app_domain\installer</samp></p>
 <p>Make sure that the key file is named <samp class="codeph">key</samp>. The installation script will then copy the key file to its default location in the updated version of the application server: </p>
 <p><samp class="codeph">&lt;GLASSFISH_HOME&gt;/glassfish/domains/app-domain/config</samp></p>
-<div class="note"><span class="notetitle">Note:</span> For the update installation, make sure that the default path is specified in the <samp class="codeph">configsettings.properties</samp> file (<samp class="codeph">APP_KEY_PATH="./key"</samp>) and that the file is named <samp class="codeph">key</samp>. The installation script expects this default and does not look up the database. </div>
+<div class="note"><span class="notetitle">Note:</span> For the update installation, make sure that the default path and name are specified in the <samp class="codeph">configsettings.properties</samp> file (<samp class="codeph">APP_KEY_PATH="./key"</samp>). The installation script expects this default and does not look up the database. </div>
 </li>
 
         <li>Redeploy or deploy <samp class="codeph">oscm-app</samp> in the <samp class="codeph">app-domain</samp> domain.</li>
