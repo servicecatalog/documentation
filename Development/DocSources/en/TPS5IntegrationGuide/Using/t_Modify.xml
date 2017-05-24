@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<task id="task_E68E2024B1F6403AAA1130A39B1D4DCD" xml:lang="en-us">
+    <title>Modifying Subscription Parameters</title>
+    <taskbody>
+        <context>
+            <p>By modifying the corresponding service parameters at their subscriptions, customers can change the virtual platforms provisioned in TPS5. </p>
+            <p>The following scenarios are supported by the TPS5 integration software:</p>
+            <ul>
+                <li><b>Horizontal scale-up and scale-down</b>: By changing the corresponding service parameters, customers can trigger TPS5 to add a virtual server to their virtual platform. In the same way, they can request TPS5 to remove a virtual server from the platform.<p>If a subscription is updated successfully, the subscription and the virtual platform are ready to be used with the changed parameters. The IP addresses of the virtual servers on the platform and the initial passwords for accessing them are output in the subscription details. The initial user ID is <codeph>Administrator</codeph> for Microsoft Windows systems, <codeph>root</codeph> for Linux systems. It is strongly recommended that the initial password is changed after the first login. </p></li>
+                <li><b>Vertical scale-up and scale-down</b>: By changing the corresponding service parameters, customers can trigger TPS5 to add disks to each virtual server in their virtual platform. In the same way, they can request TPS5 to remove disks from the virtual servers. <p>If a subscription is updated successfully, the subscription and the virtual platform are ready to be used with the changed parameters. </p></li>
+            </ul>
+            <p>The modifications are carried out in asynchronous mode. As long as the update is not complete, the status of the corresponding subscription is <b>pending update</b>. The status changes to <b>ready</b> as soon as the modification has been finished successfully. </p>
+            <note>If the subscription was <b>suspended</b> before starting the modification, its status changes to <b>suspended update</b> as long as the operation is not complete.</note>
+            <p>In the technical service definition, you can specify an address to which emails are to be sent that notify service users or administrators of customer organizations about a successful modification of a virtual platform.</p>
+            <note>If a customer changes an individual service parameter of a subscription, dependencies to other service parameters must be taken into account. If a request for a subscription update fails with an error, it is necessary to check the configuration of the virtual platform in TPS5. The specification of virtual servers, for example, may no longer match the specified firewall configuration.</note>
+        </context>
+    </taskbody>
+</task>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd">
+<concept id="id_121">
+  <title>Components Involved in the TPS5 Integration</title>
+  <conbody>
+    <section>
+      <p>The following picture provides an overview of the main components involved in the integration of <ph
+          conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> and TPS5:</p>
+      <p>
+        <fig>
+          <image align="left" alt="Components.png" height="171" href="../_images/Components.png" width="400"/>
+        </fig>
+      </p>
+      <p conref="../../Shared/concepts/c_ControllerConcepts.xml#controller/cmp1"/>
+      <p conref="../../Shared/concepts/c_ControllerConcepts.xml#controller/cmp2"/>
+      <p>In TPS5, the basic configurations of virtual platforms for typical usage scenarios are defined by the TPS5 administrators in so-called <b>system templates</b>. Different system templates are available for small, medium, and large scale operation. Virtual images for provisioning the virtual servers on the virtual platforms are provided in a <b>resource pool</b>.</p>
+      <p>Each APP installation supports one TPS5 service controller. This limitation can be overcome by installing APP several times to different application server domains. The need for more than one service controller may arise because multiple TPS5 accounts or technology provider organizations have to be used.</p>
+    </section>
+  </conbody>
+</concept>

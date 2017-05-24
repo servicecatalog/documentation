@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd">
+<concept id="id_112">
+  <title>Usage Scenarios</title>
+  <conbody>
+    <section>
+      <p>The <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+        /> TPS5 integration supports the following usage scenarios:</p>
+      <ul compact="no">
+        <li><b>Provisioning of a virtual platform</b>: When a customer subscribes to a corresponding service on a <ph
+            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+          /> marketplace, TPS5 is triggered to create a virtual platform with one or more virtual servers based on a specific system template.</li>
+                <li><b>Horizontal scale-up and scale-down</b>: By changing the corresponding parameters at an existing subscription, customers can trigger TPS5 to add a virtual server to their virtual platform. In the same way, they can request TPS5 to remove a virtual server from the platform. </li>
+        <li><b>Vertical scale-up and scale-down</b>: By changing the corresponding parameters at an existing subscription, customers can trigger TPS5 to add disks to each virtual server in their virtual platform. In the same way, they can request TPS5 to remove disks from the virtual servers. </li>
+        <li><b>Starting and stopping a virtual platform</b>: A customer can explicitly start and stop a virtual platform in TPS5 by executing a service operation at the corresponding subscription. </li>
+        <li><b>Deletion of a virtual platform</b>: When a customer terminates a subscription for a virtual platform, TPS5 is triggered to delete it. The subscription is terminated independent of whether the deletion is successful.</li>
+      </ul>
+      <p>In TPS5, the virtual platforms created for <ph
+          conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+        /> subscriptions are managed in the same way as other virtual platforms. They can be viewed and monitored with the standard TPS5 tools.</p>
+      <p>For more details on the usage scenarios, refer to <xref href="../Using/c_UsingIntro.xml"/>. </p>
+    </section>
+  </conbody>
+</concept>

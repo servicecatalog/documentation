@@ -66,10 +66,10 @@
                                                         ><i>OpenStack Integration (GlassFish):</i> A PDF manual for operators describing how to offer and use virtual systems controlled by OpenStack through services in <ph
                                                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                                                 />.</ph></li>
-                                <!--li product="oscm_ee"><ph id="TPS5_Guide:_concept_conbody_section_ul_l"
+                                <li><ph id="TPS5_Guide:_concept_conbody_section_ul_l"
                                                         ><i>Trusted Public S5 Integration (GlassFish):</i> A PDF manual for operators describing how to offer and use virtual systems controlled by FUJITSU Cloud IaaS Trusted Public S5 through services in <ph
                                                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                                />.</ph></li-->
+                                                />.</ph></li>
                                 <li><ph id="VMWARE_Guide:_concept_conbody_section_ul_l"
                                                         ><i>VMware vSphere Integration (GlassFish):</i> A PDF manual for operators describing how to offer and use virtual machines provisioned on a VMware vSphere server through services in <ph
                                                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"

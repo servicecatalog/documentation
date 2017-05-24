@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_1BCF5C425D7D4627AB1C66A085CF6E11"
+                    xml:lang="en-us">
+        <title>Administrating the TPS5 Integration</title>
+        <conbody>
+                <p>The following sections describe administration tasks you may need to perform in your role as an operator of the TPS5 integration software:</p>
+                <ul>
+                        <li><xref
+                    href="../../Shared/concepts/c_ControlExecution.xml"/></li>
+                        <li><xref
+                    href="../../Shared/concepts/c_ControllerHandleProblems.xml"/></li>
+                    <li><xref
+                        href="../../Shared/concepts/c_ControllerHandleCommProblems.xml"/></li>
+                        <li><xref
+                    href="../../Shared/Installation/c_Backup.xml"/></li>
+                        <li><xref href="../../Shared/Installation/c_UpdateConfiguration.xml"/></li>
+                    <li><xref href="../../Shared/reference/c_LogConfig.xml"/></li>
+                </ul>
+        </conbody>
+</concept>

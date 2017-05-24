@@ -1,0 +1,20 @@
+<?xml version="1.0"?> 
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd"
+[
+<!ENTITY % entities PUBLIC "-//XDOC//ENTITIES//FujitsuUserDoc" "entities.dtd">
+]>
+
+<concept xml:lang="en-us" id="concept_1BFCE48133EA4E9995DCF7EF8CC6691E">
+    <title>Readers of this Manual</title>
+    <conbody>
+        <section>
+            <p>This manual is intended for operators who want to offer virtual systems controlled by TPS5 through services on a marketplace provided by <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    />. It assumes that you have access to an existing <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> installation and to a TPS5 platform. In addition, you should have basic knowledge of TPS5 and you should be familiar with the concepts and administration of <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+        </section>
+    </conbody>
+</concept>

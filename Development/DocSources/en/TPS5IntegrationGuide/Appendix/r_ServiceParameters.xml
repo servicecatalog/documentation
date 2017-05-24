@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd" >
+<reference id="Service_Parameters_114">
+  <title>Service Parameters and Operations</title>
+  <refbody>
+    <section>
+      <p>The following sections describe the technical service parameters and service operations which are supported by the TPS5 service controller. </p>
+    </section>
+    <section>
+      <title>Service Parameters for Virtual Platform Provisioning and Scaling</title>
+      <p>The following parameters are required for provisioning a virtual platform with one or more virtual servers:</p>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>APP_CONTROLLER_ID</b></p>
+                <p>Mandatory. The ID of the service controller as defined in its implementation.</p>
+                <p>Default (must not be changed): <codeph>ess.tps5</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>INSTANCENAME_PATTERN</b></p>
+                <p>Mandatory. A regular expression specifying a pattern for the virtual platform instance name entered by the users when they subscribe to a corresponding service. If the names do not match the pattern, the subscription is rejected.</p>
+                <p>Example: <codeph>tps5([a-z0-9]){2,25}</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>INSTANCENAME_PREFIX</b></p>
+                <p>Optional. A string to be prepended to the virtual platform instance name entered by the users when they subscribe to a corresponding service. </p>
+                <p>Example: <codeph>tps5</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>INSTANCENAME</b></p>
+                <p>Mandatory. The name of the virtual platform to be instantiated. This name must be specified by the users when they subscribe to a corresponding service. The string given in<codeph> INSTANCENAME_PREFIX</codeph> is prepended to the name. The name including the prefix must match the pattern given in <codeph>INSTANCENAME_PATTERN</codeph>.</p>
+                <p>Example: <codeph>mysystem</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>MAIL_FOR_COMPLETION</b></p>
+                <p>Optional. The address to which emails are to be sent that describe manual steps required to complete an operation. If you specify this parameter, the service controller interrupts the processing of each operation before its completion and waits for a notification about the execution of a manual action. Omit this parameter if you do not want to interrupt the processing. </p>
+                <p>Example: <codeph>info@company.com</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>MAIL_FOR_NOTIFICATION</b></p>
+                <p>Optional. The address to which emails are to be sent that notify service users or administrators of customer organizations about a successful modification of a virtual platform. Such modifications result from changes in the configuration parameters at a corresponding subscription.</p>
+                <p>Example: <codeph>administrators@company.com</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>SYSTEM_TEMPLATE_ID</b></p>
+                <p>Mandatory. The system ID of the TPS5 system template to be used for the virtual platform. </p>
+                <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers or, in case you specify more than one system template, have fixed parameter options for selection.</p>
+                <p><codeph>SYSTEM_TEMPLATE_ID</codeph> must be a one-time parameter, since the modification of this parameter is not supported.</p>
+                <p>Example: <codeph>TPL_f36620_GNQ7WM8J7SOW</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>Service Parameters for Additional Virtual Servers</title>
+      <p>The following parameters are required for instantiating additional virtual servers on a virtual platform: </p>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>VSERVER_&lt;#></b></p>
+                <p>Optional. Boolean specifying whether the additional virtual server is to be instantiated on the virtual platform. Consecutive numbers must be used in the parameter name (<codeph>#</codeph>) to uniquely identify each additional virtual server.</p>
+                <p>Default: <codeph>true</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>VSERVER_&lt;#>_INSTANCENAME</b></p>
+                <p>Mandatory. The name of the virtual server specified in <codeph>VSERVER_&lt;#></codeph>. </p>
+                <p>Example: <codeph>WindowsT1</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>VSERVER_&lt;#>_NETWORK_ID</b></p>
+                <p>Mandatory if the virtual platform to which the virtual server is to be added has more than one network. The ID or name of the network within the virtual platform to which the virtual server specified in <codeph>VSERVER_&lt;#></codeph> is to be added.</p>
+                <p>Users should not be able to enter a value for this parameter. The parameter should define fixed parameter options for selection. </p>
+                <p>Example: <codeph>DMZ</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>VSERVER_&lt;#>_DISKIMG_ID</b></p>
+                <p>Mandatory. The ID of the TPS5 image to be used for the virtual server specified in <codeph>VSERVER_&lt;#></codeph>.</p>
+                <p>Users should not be able to enter a value for this parameter. The parameter should define fixed parameter options for selection. </p>
+                <p>Example: <codeph>IMG0020_Cent64_64_EN_v1_NoSPT</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>VSERVER_&lt;#>_VSERVER_TYPE</b></p>
+                <p>Mandatory. A string describing the type of the virtual server specified in <codeph>VSERVER_&lt;#></codeph>. The string must match one of the server types defined in TPS5.</p>
+                <p>Example: <codeph>economy</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>VSERVER_&lt;#>_VDISK_NAME</b></p>
+                <p>Optional. Name of an additional disk with configurable disk size for the virtual server specified in <codeph>VSERVER_&lt;#></codeph>.</p>
+                <p>Example: <codeph>MyDisk</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>VSERVER_&lt;#>_VDISK_SIZE</b></p>
+                <p>Optional. Size of the additional disk for the virtual server specified in <codeph>VSERVER_&lt;#></codeph>.</p>
+                <p>It is recommended that <codeph>VDISK_SIZE</codeph> is defined as one-time parameter, since the modification of the disk size may lead to a loss of data.</p>
+                <p>Example: <codeph>10 GB</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>Service Parameters for Firewalls</title>
+      <p>The following parameters are required for instantiating a firewall for a virtual platform: </p>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>FIREWALL_CONFIG</b></p>
+                <p>Optional. Configuration setting for managing the communication between the virtual platform and the outside network. A firewall can be configured for each active segment (<codeph>DMZ</codeph>, <codeph>SECURE1</codeph>, and <codeph>SECURE2</codeph>).</p>
+                <p>If more than one firewall rule is required as parameter value, use a semicolon to separate the individual rules. The complete set of rules must not exceed 256 characters. If the parameter value exceeds this maximum length, use <codeph>FIREWALL_CONFIG_&lt;#></codeph> as an additional parameter.</p>
+                <p>Customers should not be able to enter a value for this parameter, i.e. it should not be configurable. Use <codeph>FIREWALL_&lt;VARIABLE></codeph> to define variables instead. </p>
+                <p>Example: <codeph>INTERNET>DMZ("Windows":8080);INTERNET>DMZ("LINUX":443)</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>FIREWALL_CONFIG_&lt;#></b></p>
+                <p>Optional. Additional firewall configuration setting if more than 256 characters are needed for specifying the firewall rules.</p>
+                <p>Use consecutive numbers in the parameter name (<codeph>&lt;#></codeph>) to uniquely identify each additional parameter that is required.</p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>FIREWALL_&lt;VARIABLE></b></p>
+                <p>Mandatory if <codeph>FIREWALL_CONFIG</codeph> or <codeph>FIREWALL_CONFIG_&lt;#></codeph> specify a variable to make a value configurable.</p>
+                <p>Replace <codeph>&lt;VARIABLE></codeph> with the name of the variable as defined in <codeph>FIREWALL_CONFIG</codeph> or <codeph>FIREWALL_CONFIG_&lt;#></codeph>, and enter the required string as parameter value.</p>
+                <p>Example: </p>
+                <p><codeph>FIREWALL_CONFIG=INTERNET(${SIP})>DMZ(:80,443)</codeph></p>
+                <p><codeph>FIREWALL_SIP=85.1.2.0/24:25</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>Service Operations for Virtual Platforms</title>
+      <p>The TPS5 service controller supports the service operations below for virtual platforms. </p>
+      <p>The <codeph>actionURL</codeph> for each operation is:</p>
+      <p><codeph>https://&lt;host>:&lt;port>/OperationService/AsynchronousOperationProxy?wsdl</codeph></p>
+      <p><codeph>&lt;host></codeph> and <codeph>&lt;port></codeph> are the server and port of the <codeph>app-domain</codeph> domain where the TPS5 integration software is deployed.</p>
+      <p>
+        <note>If you provision a virtual platform that does not support start and stop operations, make sure that you remove the service operations from the technical service definition.</note>
+      </p>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>START_VIRTUAL_SYSTEM</b></p>
+                <p>Starts a virtual platform in TPS5 if it was stopped.</p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>STOP_VIRTUAL_SYSTEM</b></p>
+                <p>Stops a virtual platform in TPS5 if it was started.</p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+  </refbody>
+</reference>
