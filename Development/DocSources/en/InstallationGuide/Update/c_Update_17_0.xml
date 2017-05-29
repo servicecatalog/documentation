@@ -151,14 +151,19 @@
     </section>
     <section>
       <title>Updating the BIRT Report Engine</title>
-      <p>The BIRT report engine is deployed on an application server other than that of <ph
-          conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
-      <p>Proceed as follows: </p>
+      <p>Due to an incompatibility issue in the application server version supported by <ph
+          conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+          />, the BIRT report engine cannot be deployed on the same application as <ph
+          conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+        />. Instead, it needs to be deployed on GlassFish Server, version 3, or Apache Tomcat, version 8.  </p>
+      <p>Proceed as follows to optionally update the BIRT report engine: </p>
       <ol>
         <li product="oscm_ce"
           >Download the latest version of Eclipse BIRT runtime, for example, from http://www.eclipse.org.</li>
-        <li product="oscm_ce">Deploy the <codeph>birt.war</codeph> archive to a domain on the application server. </li>
-        <li product="oscm_ee">Deploy the <codeph>birt.war</codeph> archive located in <codeph>&lt;install_pack_dir>/domains/bes_domain/applications</codeph> to a domain on the application server.</li>
+        <li product="oscm_ce"
+            >Deploy the <codeph>birt.war</codeph> archive located in <codeph>&lt;install_pack_dir>/domains/bes_domain/applications</codeph> to a domain on the application server.<p>Be aware of the following: </p><p>The <codeph>birt.war</codeph> archive contains the properties files for the labels and texts used in reports. With a new release or fix, nex keys may have been added to the system, others may have been changed or deleted. </p><p>Existing texts in English, German, and Japanese are overwritten by an upgrade. If you have customized these texts, merge your customizations into the properties files before deploying the <codeph>birt.war</codeph> archive. Otherwise they will no longer be available after the upgrade. Refer to the <i>Operator's Guide</i> for details. </p></li>
+        <li product="oscm_ee"
+            >Deploy the <codeph>birt.war</codeph> archive located in <codeph>&lt;install_pack_dir>/domains/bes_domain/applications</codeph> to the domain on the application server.<p>Be aware of the following: </p><p>The <codeph>birt.war</codeph> archive contains the properties files for the labels and texts used in reports. With a new release or fix, nex keys may have been added to the system, others may have been changed or deleted. </p><p>Existing texts in English, German, and Japanese are overwritten by an upgrade. If you have customized these texts, merge your customizations into the properties files before deploying the <codeph>birt.war</codeph> archive. Otherwise they will no longer be available after the upgrade. Refer to the <i>Operator's Guide</i> for details. </p></li>
         <li product="oscm_ce">Add the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
             /> report designs and localized labels to the folder of the <codeph>birt</codeph> application on the application server. <p>The <ph
               conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
