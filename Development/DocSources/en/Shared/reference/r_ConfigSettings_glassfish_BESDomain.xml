@@ -119,18 +119,18 @@
             <p>Mandatory. The master password required for accessing the keystore and truststore files of the application server domain. </p>
             <p>Default: <codeph>changeit</codeph></p>
         </section>
-        <section audience="BSS">
+        <!--section audience="BSS">
             <title>glassfish.domain.WS_PORT</title>
             <p>The port used for an HTTP listener for Web service connections of the application server. </p>
-            <!--p>Example: <codeph>8182</codeph> for standalone environment, <codeph>8582</codeph> for cluster environment. </p-->
+            <p>Example: <codeph>8182</codeph> for standalone environment, <codeph>8582</codeph> for cluster environment. </p>
             <p>Example: <codeph>8083</codeph></p>
-        </section>
+        </section-->
         <section>
             <title>glassfish.domain.WS_PORT_SECURE</title>
-            <p>The port used for a secure HTTP listener for Web service connections of the application server. </p>
+            <p>The port used for a secure HTTP listener for Web service connections of the application server. The listener uses SSL with the default application server certificate (<codeph>s1as</codeph>). </p>
             <p>In some operational environments it is required to use separate certificates for the SOAP communication between <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> and APP and for Web browser access, i.e. separate certificates for internal and external communication must be provided. </p>
+                /> and APP and for Web browser access, i.e. separate certificates for internal and external communication must be provided.</p>
             <p>Default: <codeph>8082</codeph></p>
         </section>
         <section audience="BSS">
