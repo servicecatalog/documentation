@@ -59,9 +59,9 @@
             <li><b>Integration Package for Asynchronous Provisioning, <codeph>oscm-integration-app-pack.zip</codeph>: </b><p>Contains the asynchronous provisioning platform (APP) as well as samples and documentation. APP is a framework which provides a provisioning service, an operation service, as well as functions, data persistence, and notification features which are always required for integrating applications with <ph
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> in asynchronous mode. </p></li>
-            <li><b>ROR Integration Package, <codeph>oscm-ror-install-pack.zip</codeph>: </b><p>Contains all the components required for integrating FUJITSU ServerView Resource Orchestrator (ROR) with <ph
+            <!--li><b>ROR Integration Package, <codeph>oscm-ror-install-pack.zip</codeph>: </b><p>Contains all the components required for integrating FUJITSU ServerView Resource Orchestrator (ROR) with <ph
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> as well as the related documentation. </p></li>
+                    /> as well as the related documentation. </p></li-->
             <li><b>AWS Integration Package, <codeph>oscm-aws-install-pack.zip</codeph>: </b><p>Contains all the components required for integrating the Amazon Elastic Compute Cloud Web service with <ph
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> as well as the related documentation. </p></li>

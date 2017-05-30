@@ -4,7 +4,7 @@
                          "concept.dtd">
 <concept
                 id="controller">
-  <title>Components Involved in Integrating Controllers (AWS, ROR, etc.)</title>
+  <title>Components Involved in Integrating Controllers (AWS, OpenStack, etc.)</title>
   <conbody>
     <section>
       <p><b>This topic is used for sharing parts for the IaaS controller implementations.</b>
