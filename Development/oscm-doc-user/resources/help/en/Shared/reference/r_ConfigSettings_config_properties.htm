@@ -170,9 +170,9 @@
         
         
         
-        <div class="section"><h4 class="sectiontitle">KEY_FILE_PATH</h4>Optional. The path to the file containing the key required for encryption and decryption of service parameters with data type <samp class="codeph">PWD</samp> and custom attributes marked for encryption.<p>Upon the start of <span>the platform</span>, it is checked whether a key file exists in the location specified in this setting. If this is not the case, the key file is automatically generated and stored in the location specified here. If nothing is specified, the file will be generated into the default location and named <samp class="codeph">key</samp>.</p>
-Default: <p><samp class="codeph">&lt;GLASSFISH_HOME&gt;/glassfish/domains/bes-domain/config</samp>
-            </p>
+        <div class="section"><h4 class="sectiontitle">KEY_FILE_PATH</h4>Optional. The path to the file containing the key required for encryption and decryption of service parameters with data type <samp class="codeph">PWD</samp> and custom attributes marked for encryption.<p>Upon the start of <span>the platform</span>, it is checked whether a key file exists in the location specified in this setting. If this is not the case, the key file is automatically generated and stored in the location specified here. If nothing is specified, the file will be named <samp class="codeph">key</samp> and generated into the following location:</p>
+<p><samp class="codeph">&lt;GLASSFISH_HOME&gt;/glassfish/domains/bes-domain/config</samp></p>
+Default: <p><samp class="codeph">./key</samp></p>
 <div class="p">
                 <div class="note"><span class="notetitle">Note:</span> Be aware that the key file must not be deleted. Otherwise, encryption and decryption is no longer possible. It is recommended to create a backup of this file once generated.</div>
 

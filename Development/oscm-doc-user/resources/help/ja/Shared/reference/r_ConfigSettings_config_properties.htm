@@ -172,8 +172,9 @@
                 
                 
                 
-                <div class="section"><h4 class="sectiontitle">KEY_FILE_PATH</h4>Optional. Der Pfad zu der Datei, die den Schlüssel zum Ver- und Entschlüssen von Werten enthält. Werte von Serviceparametern des Typs <samp class="codeph">PWD</samp> bzw. eigene Attribute mit der Option <strong>Verschlüsselt</strong> können verschlüsselt werden. <p>Beim Starten der Plattform wird überprüft, ob so eine Datei an der angegebenen Stelle existiert. Ist dies nicht der Fall wird die Datei mit dem Schlüssel automatisch generiert und an der Stelle gespeichert, die Sie hier angeben. Geben Sie nichts an, wird die Datei an die folgende Stelle generiert und unter dem Namen <samp class="codeph">key</samp> gespeichert:</p>
-Voreinstellung: <p><samp class="codeph">&lt;GLASSFISH_HOME&gt;/glassfish/domains/bes-domain/config</samp></p>
+                <div class="section"><h4 class="sectiontitle">KEY_FILE_PATH</h4>Optional. Der Pfad zu der Datei, die den Schlüssel zum Ver- und Entschlüssen von Werten enthält. Werte von Serviceparametern des Typs <samp class="codeph">PWD</samp> bzw. eigene Attribute mit der Option <strong>Verschlüsselt</strong> können verschlüsselt werden. <p>Beim Starten der Plattform wird überprüft, ob so eine Datei an der angegebenen Stelle existiert. Ist dies nicht der Fall wird die Datei mit dem Schlüssel automatisch generiert und an der Stelle gespeichert, die Sie hier angeben. Geben Sie nichts an, wird die Datei unter dem Namen <samp class="codeph">key</samp> gespeichert und an die folgende Stelle generiert:</p>
+<p><samp class="codeph">&lt;GLASSFISH_HOME&gt;/glassfish/domains/bes-domain/config</samp></p>
+Voreinstellung: <p><samp class="codeph">./key</samp></p>
 <div class="p">
                                 <div class="note"><span class="notetitle">Hinweis:</span> Die Datei mit dem Schlüssel darf nicht gelöscht werden, ansonsten ist eine Verschlüsselung bzw. Entschlüsselung nicht mehr möglich. Es wird empfohlen, von dieser Datei einen Backup zu erstellen.</div>
 

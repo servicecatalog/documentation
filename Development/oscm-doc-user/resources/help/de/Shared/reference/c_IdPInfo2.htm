@@ -44,10 +44,10 @@
 
                                         <li>Der IdP-Administrator benötigt das Signature-Verification-Zertifikat der Plattform, damit das IdP-System Logout Requests verarbeiten kann. </li>
 
-                                        <li>Die SAML-Assertions, die an die Plattform geschickt werden, müssen Benutzer-IDs und für jeden Benutzer die zugehörige Mandanten-ID enthalten. Nur so kann die Plattform den Benutzern ihre Benutzerrollen (z.B. Administrator, Serviceanbieter, Service-Manager, Marktplatz-Manager) zuordnen und sicherstellen, dass die Bentutzer-IDs eindeutig sind. <p>Deshalb muss das IdP-System so konfiguriert werden, dass die Assertions zwei Elemente des Typs <samp class="codeph">&lt;AttributeStatement&gt;</samp> enthalten. Das erste Unterelement <samp class="codeph">&lt;Attribute&gt;</samp> muss die Eigenschaft <samp class="codeph">Name="userid"</samp> enthalten und das Unterelement <samp class="codeph">&lt;AttributeValue&gt;</samp> muss die Benutzer-ID angeben, die der ID des anfragenden Benutzers in der Plattform entspricht. Das zweite Unterelement <samp class="codeph">&lt;Attribute&gt;</samp> muss die Eigenschaft <samp class="codeph">Name="tenantID"</samp> enthalten und das Unterelement <samp class="codeph">&lt;AttributeValue&gt;</samp> muss die ID des Mandandent angeben, der der Organisation zugeordnet ist, zu der der Benutzer gehört. </p>
+                                        <li>Die SAML-Assertions, die an die Plattform geschickt werden, müssen Benutzer-IDs und für jeden Benutzer die zugehörige Mandanten-ID enthalten. Nur so kann die Plattform den Benutzern ihre Benutzerrollen (z.B. Administrator, Serviceanbieter, Service-Manager, Marktplatz-Manager) zuordnen und sicherstellen, dass die Bentutzer-IDs eindeutig sind. <p>Deshalb muss das IdP-System so konfiguriert werden, dass die Assertions zwei Elemente des Typs <samp class="codeph">&lt;AttributeStatement&gt;</samp> enthalten. Das erste Unterelement <samp class="codeph">&lt;Attribute&gt;</samp> muss die Eigenschaft <samp class="codeph">Name="userid"</samp> enthalten und das Unterelement <samp class="codeph">&lt;AttributeValue&gt;</samp> muss die Benutzer-ID angeben, die der ID des anfragenden Benutzers in der Plattform entspricht. Das zweite Unterelement <samp class="codeph">&lt;Attribute&gt;</samp> muss die Eigenschaft <samp class="codeph">Name="tenantID"</samp> enthalten und das Unterelement <samp class="codeph">&lt;AttributeValue&gt;</samp> muss die ID des Mandanten angeben, der der Organisation zugeordnet ist, zu der der Benutzer gehört. </p>
 <p>Beispiel: </p>
 <div class="p">
-                                                        <pre class="codeblock">&lt;saml:Assertion ...&gt;
+              <pre class="codeblock">&lt;saml:Assertion ...&gt;
     ...
     &lt;saml:AttributeStatement&gt;
       &lt;saml:Attribute <strong>Name="userid"</strong>&gt;
@@ -60,12 +60,12 @@
   &lt;/saml:Assertion&gt;
 </pre>
 
-                                      <div class="note"><span class="notetitle">Note:</span> 
-                                          <p>SAML-Assertions, die vom IdP geschickt werden, müssen zumindest die ID des Standard-Mandanten enthalten, auch wenn Sie die Mehrmandantenfähigkeit des Systems gar nicht ausnutzen möchten. </p>
+              <div class="note"><span class="notetitle">Note:</span> 
+                <p>SAML-Assertions, die vom IdP geschickt werden, müssen zumindest die ID des Standard-Mandanten enthalten, auch wenn Sie die Mehrmandantenfähigkeit des Systems gar nicht ausnutzen möchten. </p>
 
-                                        </div>
+              </div>
 
-                                                </div>
+            </div>
 </li>
 
                                 </ol>
