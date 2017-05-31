@@ -28,7 +28,7 @@
         </prodinfo>
         <bookid>
             <edition>June 2017 </edition>
-            <booknumber product="oscm_ee">B1WS-1281-01</booknumber>
+            <!--booknumber product="oscm_ee">B1WS-1281-01</booknumber-->
         </bookid>
         <bookrights product="oscm_ce">
             <bookowner name="none"/>
