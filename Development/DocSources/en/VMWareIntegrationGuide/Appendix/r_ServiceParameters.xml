@@ -343,7 +343,7 @@
           <tbody>
             <row>
               <entry>
-                <p><b>NIC#_NETWORK_SETTING</b></p>
+                <p><b>NIC#_NETWORK_SETTINGS</b></p>
                 <p>Optional. Determines how the IP address for the NIC with the given number (<codeph>#</codeph>) is set. The following options can be specified: </p>
                 <p>
                   <ul>
@@ -352,7 +352,7 @@
                     <li><codeph>DATABASE</codeph>: The IP address is retrieved from the <codeph>vmware</codeph> database. The first free address is taken. The available IP addresses must have been defined in and imported from the <codeph>ippool.csv</codeph> configuration file.</li>
                   </ul>
                 </p>
-                <p>Example: <codeph>NIC1_NETWORK_SETTING="DHCP"</codeph></p>
+                <p>Example: <codeph>NIC1_NETWORK_SETTINGS="DHCP"</codeph></p>
               </entry>
             </row>
           </tbody>
@@ -365,7 +365,7 @@
             <row>
               <entry>
                 <p><b>NIC#_IP_ADDRESS</b></p>
-                <p>Optional. The IP address for the NIC with the given number (<codeph>#</codeph>). Only useful when the <codeph>NIC#_NETWORK_SETTING</codeph> parameter is set to <codeph>MANUAL</codeph>.</p>
+                <p>Optional. The IP address for the NIC with the given number (<codeph>#</codeph>). Only useful when the <codeph>NIC#_NETWORK_SETTINGS</codeph> parameter is set to <codeph>MANUAL</codeph>.</p>
                 <p>Example: <codeph>NIC1_IP_ADDRESS="172.16.254.1"</codeph></p>
               </entry>
             </row>
@@ -379,7 +379,7 @@
             <row>
               <entry>
                 <p><b>NIC#_SUBNET_MASK</b></p>
-                <p>Optional. The subnet mask for the NIC with the given number (<codeph>#</codeph>). Only useful when the <codeph>NIC#_NETWORK_SETTING</codeph> parameter is set to <codeph>MANUAL</codeph>.</p>
+                <p>Optional. The subnet mask for the NIC with the given number (<codeph>#</codeph>). Only useful when the <codeph>NIC#_NETWORK_SETTINGS</codeph> parameter is set to <codeph>MANUAL</codeph>.</p>
                 <p>Example: <codeph>NIC1_SUBNET_MASK="255.255.252.0"</codeph></p>
               </entry>
             </row>
@@ -393,7 +393,7 @@
             <row>
               <entry>
                 <p><b>NIC#_GATEWAY</b></p>
-                <p>Optional. The gateway for the NIC with the given number (<codeph>#</codeph>). Only useful when the <codeph>NIC#_NETWORK_SETTING</codeph> parameter is set to <codeph>MANUAL</codeph>.</p>
+                <p>Optional. The gateway for the NIC with the given number (<codeph>#</codeph>). Only useful when the <codeph>NIC#_NETWORK_SETTINGS</codeph> parameter is set to <codeph>MANUAL</codeph>.</p>
                 <p>Example: <codeph>NIC1_GATEWAY="192.0.2.254"</codeph></p>
               </entry>
             </row>
@@ -407,7 +407,7 @@
             <row>
               <entry>
                 <p><b>NIC#_DNS_SERVER</b></p>
-                <p>Optional. The DNS server for the NIC with the given number (<codeph>#</codeph>). Only useful when the <codeph>NIC#_NETWORK_SETTING</codeph> parameter is set to <codeph>MANUAL</codeph>.</p>
+                <p>Optional. The DNS server for the NIC with the given number (<codeph>#</codeph>). Only useful when the <codeph>NIC#_NETWORK_SETTINGS</codeph> parameter is set to <codeph>MANUAL</codeph>.</p>
                 <p>Example: <codeph>NIC1_DNS_SERVER="208.67.222.222"</codeph></p>
               </entry>
             </row>
