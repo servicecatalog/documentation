@@ -26,7 +26,7 @@
                         /></p><p><ph
                             conref="../../help/tasks/service_add.xml#task634/Usage_parameters_include_for_task_taskbody_steps_step_3"
                         /></p></li>
-                <li>An external <b>parameter configuration tool</b> that your customers can use for configuring the service parameters when they subscribe to the service on a marketplace.<p>You can integrate a third-party or proprietary parameter configuration tool of your choice with <ph
+                <li>An external <b>parameter configuration tool</b> that your customers can use for configuring the service parameters and for viewing their prices per subscription when they subscribe to the service on a marketplace.<p>You can integrate a third-party or proprietary parameter configuration tool of your choice with <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                             />. During the subscription process, the tool replaces the default user interface for configuring service parameters. To link the tool with <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"

@@ -40,7 +40,7 @@
                     <li>Log in to the <ph conref="../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                         /> administration portal as a supplier.</li>
                     <li>Select <uicontrol>Marketable Service</uicontrol> &gt;
-                                <uicontrol>Define a service</uicontrol>, and create a marketable service. The marketable service may be based on any technical service that defines parameters.<p>Select the <uicontrol>User option</uicontrol> check box for each parameter to offer the parameters to customers who subscribe to the service.</p><p>In the <uicontrol>URL of a parameter configuration tool</uicontrol> field, enter the URL pointing to the sample tool. Enter the URL in the following format:</p><p><codeph>http://&lt;server&gt;:&lt;port&gt;/oscm-parameter-configurator/index.html</codeph></p><p><codeph>&lt;server&gt;</codeph> is the Web/application server where the sample tool has been deployed. <codeph>&lt;port&gt;</codeph> is the port to address the domain on the Web/application server.</p></li>
+                                <uicontrol>Define a service</uicontrol>, and create a marketable service. The marketable service may be based on any technical service that defines parameters.<p>Select the <uicontrol>User option</uicontrol> check box for each parameter to offer the parameters to customers when they subscribe to the service.</p><p>In the <uicontrol>URL of a parameter configuration tool</uicontrol> field, enter the URL pointing to the sample tool. Enter the URL in the following format:</p><p><codeph>http://&lt;server&gt;:&lt;port&gt;/oscm-parameter-configurator/index.html</codeph></p><p><codeph>&lt;server&gt;</codeph> is the Web/application server where the sample tool has been deployed. <codeph>&lt;port&gt;</codeph> is the port to address the domain on the Web/application server.</p></li>
                     <li>Define a price model for the service using the <uicontrol>Define for service</uicontrol> menu option in the <uicontrol>Price model</uicontrol> menu.</li>
                     <li>Select <uicontrol>Marketable Service</uicontrol> &gt;
                             <uicontrol>Define publishing options</uicontrol>, and select the marketplace to which you want to publish the service.</li>
@@ -50,7 +50,8 @@
                     <li>On the <uicontrol>Configuration</uicontrol> page, define the subscription details. In the <uicontrol>Parameters and options</uicontrol> section, click <uicontrol>Configure</uicontrol> to access the sample tool.<p>A modal window is displayed with the sample tool you have integrated. </p><p>If the sample tool is not available at the specified URL, a warning is displayed and the standard <ph
                                 conref="../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>
                             <uicontrol>Service parameter</uicontrol> table is displayed instead.</p></li>
-                    <li>Modify the parameters as required with the sample tool. Click <uicontrol>Configure</uicontrol> in the modal window to finish. <p>The window is closed.</p></li>
+                    <li>Modify the parameters as required with the sample tool. For each parameter, you see its price per subscription. The sample tool does not support prices per user, nor stepped prices.</li>
+                    <li>Click <uicontrol>Configure</uicontrol> in the modal window to finish. <p>The window is closed.</p></li>
                     <li>Finish the subscription process and confirm your subscription.</li>
                 </ol>
             </p>
