@@ -10,7 +10,7 @@
         <section>
             <p>A supplier organization can integrate a third-party or proprietary tool for configuring service parameters with <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                />. The tool can be used by the supplier's customers for defining and updating the parameters of a service. It replaces the default user interface for configuring service parameters on a marketplace.</p>
+                /> and for viewing the prices of parameters per subscription and/or per user. The tool can be used by the supplier's customers for defining and updating the parameters of a service. It replaces the default user interface for configuring service parameters on a marketplace.</p>
             <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> allows for a seamless integration of the tool. A generic JavaScript interface is provided by which supplier organizations can integrate a tool of their choice. The following basic concepts are relevant:</p>
             <ul>
