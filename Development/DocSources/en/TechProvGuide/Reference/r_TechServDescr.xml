@@ -207,7 +207,7 @@
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> and can be set for any marketable service. No implementation effort is required from your side.</p>
             <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> offers an additional predefined parameter, <codeph>VMS_NUMBER</codeph>. This parameter is used to store the number of virtual machines booked in the scope of subscriptions to IaaS services. It must be specified in a technical service definition if the number of VMs is to be retrieved. </p>
+                    /> offers an additional predefined parameter, <codeph>VMS_NUMBER</codeph>. This parameter is used to store the number of virtual machines booked within the scope of subscriptions to IaaS services. It must be specified in a technical service definition if the number of VMs is to be retrieved. </p>
             <p><b>Attributes:</b></p>
             <ul>
                 <li><codeph><b>id</b></codeph> - ID of the parameter. The ID must be unique across the parameters of a technical service.</li>
