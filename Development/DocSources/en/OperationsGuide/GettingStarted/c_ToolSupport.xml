@@ -69,7 +69,7 @@
  &lt;command&gt; &lt;parameter&gt;</codeblock>
             </p>
             <p>where </p>
-            <p><codeph>&lt;JAVA_HOME></codeph> is the installation directory of your JDK (for example <codeph>C:\XXX\jdk1.7.0_09</codeph>).</p>
+            <p><codeph>&lt;JAVA_HOME></codeph> is the installation directory of your JDK (for example <codeph>C:\XXX\jdk1.8.0_80</codeph>).</p>
             <p><codeph>userkey</codeph> is the numeric key of the operator. The key of the initial operator is <codeph>1000</codeph>. </p>
             <p><codeph>password</codeph> is the password of the operator. The initial passwort is <codeph>admin123</codeph>.</p>
             <p><codeph>command</codeph> is the command to be executed.</p>
