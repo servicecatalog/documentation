@@ -28,24 +28,37 @@
                     <codeblock>&lt;ANT_HOME&gt;/bin/ant -f build-glassfish.xml SETUP</codeblock>
                     <p>This has the following results: </p>
                     <p>
-                        <ul>
-                            <li>The <codeph>app-domain</codeph> domain is created and started. </li>
-                            <li>The settings and resources for APP are created in the application server.</li>
-                            <li>APP (<codeph>oscm-app.ear</codeph>) is deployed to the <codeph>app-domain</codeph> domain.</li>
-                            <li>A key file for encryption and decryption is generated in the location you specified in the <codeph>APP_KEY_PATH</codeph> setting in the <codeph>configsettings.properties</codeph> file. By default, this file is named <codeph>key</codeph> and located in <p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/app-domain/config</codeph></p></li>
-                            <li audience="ror"
-                                    >The ROR service controller (<codeph>oscm-app-ror.ear</codeph>) is deployed to the <codeph>app-domain</codeph> domain.</li>
-                            <li audience="aws"
-                                    >The AWS service controller (<codeph>oscm-app-aws.ear</codeph>) is deployed to the <codeph>app-domain</codeph> domain.</li>
-                            <li audience="os"
-                                    >The OpenStack service controller (<codeph>oscm-app-openstack.ear</codeph>) is deployed to the <codeph>app-domain</codeph> domain.</li>
-                            <li audience="tps5"
-                                >The TPS5 service controller (<codeph>oscm-app-tps5.ear</codeph>) is deployed to the <codeph>app-domain</codeph> domain.</li>
-                            <li audience="vmware"
-                                    >The VMware service controller (<codeph>oscm-app-vmware.ear</codeph>) is deployed to the <codeph>app-domain</codeph> domain.</li>
-                            <li audience="vmware"
-                                >A data source for the VMware service controller is created in the application server. </li>
-                        </ul>
+                        <ol>
+                            <li><b>Domains and resources</b>: <p>
+                                    <ul>
+                                        <li>The <codeph>app-domain</codeph> domain is created and started. </li>
+                                        <li>The settings and resources for APP are created in the application server.</li>
+                                        <li>APP (<codeph>oscm-app.ear</codeph>) is deployed to the <codeph>app-domain</codeph> domain.</li>
+                                        <li>A key file for encryption and decryption is generated in the location you specified in the <codeph>APP_KEY_PATH</codeph> setting in the <codeph>configsettings.properties</codeph> file. By default, this file is named <codeph>key</codeph> and located in <p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/app-domain/config</codeph></p></li>
+                                        <li audience="ror"
+                                                >The ROR service controller (<codeph>oscm-app-ror.ear</codeph>) is deployed to the <codeph>app-domain</codeph> domain.</li>
+                                        <li audience="aws"
+                                                >The AWS service controller (<codeph>oscm-app-aws.ear</codeph>) is deployed to the <codeph>app-domain</codeph> domain.</li>
+                                        <li audience="os"
+                                                >The OpenStack service controller (<codeph>oscm-app-openstack.ear</codeph>) is deployed to the <codeph>app-domain</codeph> domain.</li>
+                                        <li audience="tps5"
+                                                >The TPS5 service controller (<codeph>oscm-app-tps5.ear</codeph>) is deployed to the <codeph>app-domain</codeph> domain.</li>
+                                        <li audience="vmware"
+                                                >The VMware service controller (<codeph>oscm-app-vmware.ear</codeph>) is deployed to the <codeph>app-domain</codeph> domain.</li>
+                                        <li audience="vmware"
+                                            >A data source for the VMware service controller is created in the application server. </li>
+                                    </ul>
+                                </p></li>
+                            <li><b>JVM options set for the <codeph>app-domain</codeph> domain</b> during the installation:<p>
+                                    <codeblock>-Dorg.apache.catalina.loader.WebappClassLoader.
+   ENABLE_CLEAR_REFERENCES=false
+-Dfile.encoding=UTF8
+-Dsun.java2d.print.polling=false
+-Dsun.net.inetaddr.ttl=3600
+-XX:MaxMetaspaceSize=512m
+-Dproduct.name=</codeblock>
+                                </p></li>
+                        </ol>
                     </p>
                 </info>
             </step>

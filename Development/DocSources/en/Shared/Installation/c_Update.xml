@@ -172,6 +172,11 @@
       <ol>
         <li>If you are upgrading from a release prior to V17.0:<p>Copy the key file of which you have created a backup copy into the following directory of the extracted installation package: </p><p><codeph>oscm-app-install-pack\domains\app_domain\installer</codeph></p><p>Make sure that the key file is named <codeph>key</codeph>. The installation script will then copy the key file to its default location in the updated version of the application server: </p><p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/app-domain/config</codeph></p><note>For the update installation, make sure that the default path and name are specified in the <codeph>configsettings.properties</codeph> file (<codeph>APP_KEY_PATH="./key"</codeph>). The installation script expects this default and does not look up the database. </note></li>
         <li>Redeploy or deploy <codeph>oscm-app</codeph> in the <codeph>app-domain</codeph> domain.</li>
+        <li>In the <b>JVM Options</b> of the application server:<ol>
+            <li>Set the following setting to <codeph>false</codeph>:<p><codeph>-Dorg.apache.catalina.loader.WebappClassLoader.ENABLE_CLEAR_REFERENCES=false</codeph></p></li>
+            <li>Delete the following setting:<p><codeph>-XX\\:MaxPermSize</codeph></p></li>
+            <li>Add the following setting:<p><codeph>XX\\:MaxMetaspaceSize=512m</codeph></p></li>
+          </ol></li>
         <li>If you are upgrading from a release prior to V17.0:<p>Export the certificate of the <codeph>app-domain</codeph> and import it into the <codeph>bes-domain</codeph> application server domain of <ph
               conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </p></li>
         <li>Restart the <codeph>app-domain</codeph> domain.</li>
@@ -183,6 +188,11 @@
       <p>
         <ol>
           <li>If you are upgrading from a release prior to V17.0:<p>Copy the key file of which you have created a backup copy into the following directory of the extracted installation package:</p><p><codeph>oscm-app-install-pack\domains\app_domain\installer</codeph></p><p>Make sure that the file is named <codeph>key</codeph>. The installation script copies this file to its default location in the updated version of the application server: </p><p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/app-domain/config</codeph></p><note>For the update installation, make sure that the default path and name are specified in the <codeph>configsettings.properties</codeph> file (<codeph>APP_KEY_PATH="./key"</codeph>). The installation script expects this default and does not look up the database. </note></li>
+          <li>In the <b>JVM Options</b> of the application server:<ol>
+              <li>Set the following setting to <codeph>false</codeph>:<p><codeph>-Dorg.apache.catalina.loader.WebappClassLoader.ENABLE_CLEAR_REFERENCES=false</codeph></p></li>
+              <li>Delete the following setting:<p><codeph>-XX\\:MaxPermSize</codeph></p></li>
+              <li>Add the following setting:<p><codeph>XX\\:MaxMetaspaceSize=512m</codeph></p></li>
+            </ol></li>
           <li>Redeploy or deploy the applications that make up the ROR integration software in the <codeph>app-domain</codeph> domain:<ol>
               <li><codeph>oscm-app</codeph></li>
               <li><codeph>oscm-app-ror</codeph>
@@ -207,6 +217,11 @@
       <p>
         <ol>
           <li>If you are upgrading from a release prior to V17.0:<p>Copy the key file of which you have created a backup copy into the following directory of the extracted installation package: </p><p><codeph>oscm-app-install-pack\domains\app_domain\installer</codeph></p><p>Make sure that the key file is named <codeph>key</codeph>. The installation script will then copy the key file to its default location in the updated version of the application server: </p><p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/app-domain/config</codeph></p><note>For the update installation, make sure that the default path and name are specified in the <codeph>configsettings.properties</codeph> file (<codeph>APP_KEY_PATH="./key"</codeph>). The installation script expects this default and does not look up the database. </note></li>
+          <li>In the <b>JVM Options</b> of the application server:<ol>
+              <li>Set the following setting to <codeph>false</codeph>:<p><codeph>-Dorg.apache.catalina.loader.WebappClassLoader.ENABLE_CLEAR_REFERENCES=false</codeph></p></li>
+              <li>Delete the following setting:<p><codeph>-XX\\:MaxPermSize</codeph></p></li>
+              <li>Add the following setting:<p><codeph>XX\\:MaxMetaspaceSize=512m</codeph></p></li>
+            </ol></li>
           <li>Redeploy or deploy the applications that make up the AWS integration software in the <codeph>app-domain</codeph> domain:<ol>
               <li><codeph>oscm-app</codeph></li>
               <li><codeph>oscm-app-aws</codeph>
@@ -229,6 +244,11 @@
       <p>
         <ol>
           <li>If you are upgrading from a release prior to V17.0:<p>Copy the key file of which you have created a backup copy into the following directory of the extracted installation package: </p><p><codeph>oscm-app-install-pack\domains\app_domain\installer</codeph></p><p>Make sure that the key file is named <codeph>key</codeph>. The installation script will then copy the key file to its default location in the updated version of the application server: </p><p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/app-domain/config</codeph></p><note>For the update installation, make sure that the default path and name are specified in the <codeph>configsettings.properties</codeph> file (<codeph>APP_KEY_PATH="./key"</codeph>). The installation script expects this default and does not look up the database. </note></li>
+          <li>In the <b>JVM Options</b> of the application server:<ol>
+              <li>Set the following setting to <codeph>false</codeph>:<p><codeph>-Dorg.apache.catalina.loader.WebappClassLoader.ENABLE_CLEAR_REFERENCES=false</codeph></p></li>
+              <li>Delete the following setting:<p><codeph>-XX\\:MaxPermSize</codeph></p></li>
+              <li>Add the following setting:<p><codeph>XX\\:MaxMetaspaceSize=512m</codeph></p></li>
+            </ol></li>
           <li>Redeploy or deploy the applications that make up the OpenStack integration software in the <codeph>app-domain</codeph> domain:<ol>
               <li><codeph>oscm-app</codeph></li>
               <li><codeph>oscm-app-openstack</codeph>
@@ -253,6 +273,11 @@
       <p>
         <ol>
           <li>If you are upgrading from a release prior to V17.0:<p>Copy the key file of which you have created a backup copy into the following directory of the extracted installation package: </p><p><codeph>oscm-app-install-pack\domains\app_domain\installer</codeph></p><p>Make sure that the key file is named <codeph>key</codeph>. The installation script will then copy the key file to its default location in the updated version of the application server: </p><p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/app-domain/config</codeph></p><note>For the update installation, make sure that the default path and name are specified in the <codeph>configsettings.properties</codeph> file (<codeph>APP_KEY_PATH="./key"</codeph>). The installation script expects this default and does not look up the database. </note></li>
+          <li>In the <b>JVM Options</b> of the application server:<ol>
+              <li>Set the following setting to <codeph>false</codeph>:<p><codeph>-Dorg.apache.catalina.loader.WebappClassLoader.ENABLE_CLEAR_REFERENCES=false</codeph></p></li>
+              <li>Delete the following setting:<p><codeph>-XX\\:MaxPermSize</codeph></p></li>
+              <li>Add the following setting:<p><codeph>XX\\:MaxMetaspaceSize=512m</codeph></p></li>
+            </ol></li>
           <li>Redeploy or deploy the applications that make up the TPS5 integration software in the <codeph>app-domain</codeph> domain:<ol>
               <li><codeph>oscm-app</codeph></li>
               <li><codeph>oscm-app-tps5</codeph>
@@ -277,6 +302,11 @@
       <p>
         <ol>
           <li>If you are upgrading from a release prior to V17.0:<p>Copy the key file of which you have created a backup copy into the following directory of the extracted installation package: </p><p><codeph>oscm-app-install-pack\domains\app_domain\installer</codeph></p><p>Make sure that the key file is named <codeph>key</codeph>. The installation script will then copy the key file to its default location in the updated version of the application server: </p><p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/app-domain/config</codeph></p><note>For the update installation, make sure that the default path and name are specified in the <codeph>configsettings.properties</codeph> file (<codeph>APP_KEY_PATH="./key"</codeph>). The installation script expects this default and does not look up the database. </note></li>
+          <li>In the <b>JVM Options</b> of the application server:<ol>
+              <li>Set the following setting to <codeph>false</codeph>:<p><codeph>-Dorg.apache.catalina.loader.WebappClassLoader.ENABLE_CLEAR_REFERENCES=false</codeph></p></li>
+              <li>Delete the following setting:<p><codeph>-XX\\:MaxPermSize</codeph></p></li>
+              <li>Add the following setting:<p><codeph>XX\\:MaxMetaspaceSize=512m</codeph></p></li>
+            </ol></li>
           <li>Redeploy or deploy the applications that make up the vSphere integration software in the <codeph>app-domain</codeph> domain:<ol>
               <li><codeph>oscm-app</codeph></li>
               <li><codeph>oscm-app-vmware</codeph>

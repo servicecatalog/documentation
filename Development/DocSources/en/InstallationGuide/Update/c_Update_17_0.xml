@@ -98,7 +98,11 @@
         <ol>
           <li>Start the <codeph>master-indexer-domain</codeph> domain.</li>
           <li>Undeploy the search indexer application, <codeph>oscm-search</codeph>.</li>
-          <li>Set the following setting in the <b>JVM Options</b> of the application server to <codeph>false</codeph>:<p><codeph>-Dorg.apache.catalina.loader.WebappClassLoader.ENABLE_CLEAR_REFERENCES=false</codeph></p></li>
+          <li>In the <b>JVM Options</b> of the application server:<ol>
+              <li>Set the following settings to <codeph>false</codeph>:<p><codeph>-Dorg.apache.catalina.loader.WebappClassLoader.ENABLE_CLEAR_REFERENCES=false</codeph></p><p><codeph>-Dcom.sun.metro.soap.dump=false</codeph></p></li>
+              <li>Delete the following setting:<p><codeph>-XX\\:MaxPermSize</codeph></p></li>
+              <li>Add the following setting:<p><codeph>XX\\:MaxMetaspaceSize=512m</codeph></p></li>
+            </ol></li>
           <li>Stop the <codeph>master-indexer-domain</codeph> domain.</li>
           <li>Check for <codeph>.glassfishStaleFiles</codeph> files. If there are any, delete them. The files are located in<p><codeph>&lt;domain&gt;/applications/&lt;application name&gt;/.glassfishStaleFiles</codeph></p><p>For example: </p><p><codeph>master-indexer-domain/applications/oscm-search/.glassfishStaleFiles</codeph></p></li>
           <li>Delete any existing index directories in the index base of the <codeph>master-indexer-domain</codeph> domain: <p><codeph>master-indexer-domain/masterIndexBase/*</codeph></p></li>
@@ -120,7 +124,11 @@
           <li><codeph>oscm-portal-help</codeph></li>
           <li>Optionally: Your own branding package <codeph>.war</codeph> file, if you have customized the layout of the marketplaces and created your own branding package. </li>
         </ul></li>
-        <li>Set the following setting in the <b>JVM Options</b> of the application server to <codeph>false</codeph>:<p><codeph>-Dorg.apache.catalina.loader.WebappClassLoader.ENABLE_CLEAR_REFERENCES=false</codeph></p></li>
+        <li>In the <b>JVM Options</b> of the application server:<ol>
+            <li>Set the following settings to <codeph>false</codeph>:<p><codeph>-Dorg.apache.catalina.loader.WebappClassLoader.ENABLE_CLEAR_REFERENCES=false</codeph></p><p><codeph>-Dcom.sun.metro.soap.dump=false</codeph></p></li>
+            <li>Delete the following setting:<p><codeph>-XX\\:MaxPermSize</codeph></p></li>
+            <li>Add the following setting:<p><codeph>XX\\:MaxMetaspaceSize=512m</codeph></p></li>
+          </ol></li>
         <li>Stop the <codeph>bes-domain</codeph> domain.</li>
         <li>Check for <codeph>.glassfishStaleFiles</codeph> files. If there are any, delete them. The files are located in<p><codeph>&lt;domain&gt;/applications/&lt;application name&gt;/.glassfishStaleFiles</codeph></p><p>For example: </p><p><codeph>bes-domain/applications/oscm/.glassfishStaleFiles</codeph></p></li>
         <li>Delete any existing index directories in the index base of the <codeph>bes-domain</codeph> domain:<p><codeph>bes-domain/slaveIndexBase/*</codeph></p></li>

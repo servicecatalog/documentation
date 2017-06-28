@@ -74,37 +74,43 @@
                             </ul>
                         </p></li>
                     <li><b>JVM options set for the <codeph>master-indexer-domain</codeph> domain</b> during the installation:<p>
-                            <codeblock>-Dfile.encoding=UTF8
+                            <codeblock>-Dorg.apache.catalina.loader.WebappClassLoader.
+   ENABLE_CLEAR_REFERENCES=false
+-Dfile.encoding=UTF8
 -Duser.language=en
 -Dorg.glassfish.jms.EagerStartup=true
--XX:MaxPermSize=512m
+-XX:MaxMetaspaceSize=512m
 -Dhibernate.search.default.directory_provider=
    org.hibernate.search.store.impl.FSMasterDirectoryProvider
--Dhibernate.search.default.indexBase=${com.sun.aas.instanceRoot}/
-   masterIndexBase
--Dhibernate.search.default.sourceBase=${hibernate.search.shared.sourceBase}
--Dhibernate.search.default.refresh=${hibernate.search.default.refresh}
--Dorg.apache.catalina.loader.WebappClassLoader.
-   ENABLE_CLEAR_REFERENCES=false
-</codeblock>
+-Dhibernate.search.default.indexBase=
+   ${com.sun.aas.instanceRoot}/masterIndexBase
+-Dhibernate.search.default.sourceBase=
+   ${hibernate.search.shared.sourceBase}
+-Dhibernate.search.default.refresh=
+   ${hibernate.search.default.refresh}
+-Dproduct.name=
+-Dcom.sun.metro.soap.dump=true</codeblock>
                         </p></li>
                     <li><b>JVM options set for the <codeph>bes-domain</codeph> domain</b> during the installation:<p>
-                            <codeblock>-Dfile.encoding=UTF8
--XX:MaxPermSize=512m
+                            <codeblock>-Dorg.apache.catalina.loader.WebappClassLoader.
+   ENABLE_CLEAR_REFERENCES=false
+-Dfile.encoding=UTF8
+-XX:MaxMetaspaceSize=512m
 -Dsun.java2d.print.polling=false
 -Dsun.net.inetaddr.ttl=3600
 -Duser.language=en
 -Dhibernate.search.default.directory_provider=
    org.hibernate.search.store.impl.FSSlaveDirectoryProvider
 -Dhibernate.search.indexing_strategy=manual
--Dhibernate.search.default.indexBase=${com.sun.aas.instanceRoot}/
-   slaveIndexBase
--Dhibernate.search.default.sourceBase=${hibernate.search.shared.sourceBase}
+-Dhibernate.search.default.indexBase=
+   ${com.sun.aas.instanceRoot}/slaveIndexBase
+-Dhibernate.search.default.sourceBase=
+   ${hibernate.search.shared.sourceBase}
 -Dhibernate.search.default.refresh=${hibernate.search.default.refresh}
--Dorg.apache.catalina.loader.WebappClassLoader.
-   ENABLE_CLEAR_REFERENCES=false
--Dproduct.name=CT-MG
-</codeblock>
+-Dproduct.name=
+-Xmx1024m
+-Dcom.sun.metro.soap.dump=true
+-Dhibernate.search.default.reader.strategy=not-shared</codeblock>
                         </p></li>
                 </ol>
             </p>
