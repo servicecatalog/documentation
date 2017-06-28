@@ -14,10 +14,8 @@
                                                   />, which means that the corresponding methods of the provisioning service are called when assigning a user to a subscription. Thus, price models on a per-user basis and corresponding billing services in <ph
                                                   conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                         /> can be used. </p>
-                              <p>The application login can either be controlled completely by the application, or you can use SAML to provide a single sign-on mechanism. If you use SAML, the required authorization must be performed by the application itself. </p>
                     </section>
                     <section>
-                              <title>Access Without Single Sign-on</title>
                               <p>Users may interact directly with the application without involving <ph
                                                   conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                         /> in any way. </p>
@@ -36,7 +34,7 @@
                                         conref="c_DirectAccess.xml#concept_CD8E7680C60241F8AC117DF04C7589A9/The_application_needs_to_ensu_concept_conbody_section_p_3"
                               />
                     </section>
-                    <section>
+                    <!--section>
                               <title>Access With Single Sign-on Using SAML</title>
                               <p>The Security Assertion Markup Language (SAML) is an XML-based open standard for exchanging authentication and authorization data between security domains, that is between an <b>Identity Provider</b> (a producer of assertions) and a <b>Service Provider</b> (a consumer of assertions). SAML assertions contain statements that Service Providers use to make access control decisions. </p>
                               <p>In <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
@@ -98,6 +96,6 @@
                                                             />.</li>
                                         </ul>
                               </p>
-                    </section>
+                    </section-->
           </conbody>
 </concept>

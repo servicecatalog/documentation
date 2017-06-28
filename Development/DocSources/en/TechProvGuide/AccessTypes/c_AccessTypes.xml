@@ -34,7 +34,7 @@
                 <image align="center" href="../../Shared/_images/MatrixAccessTypes.png" height="159" width="277"
                     placement="break"/>
             </fig>
-            <p>* <i>With user access, the application login can be controlled completely by the application, or SAML 1.1 can be used as a single sign-on mechanism for user authentication. </i></p>
+            <p>* <i>With user access, the application login can be controlled completely by the application.</i></p>
             <!-- note>
                 <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                         /> offers the following additional access types: platform access and proxy access. The usage of these access types is discouraged since time or data-sensitive applications put a considerable load on <ph
