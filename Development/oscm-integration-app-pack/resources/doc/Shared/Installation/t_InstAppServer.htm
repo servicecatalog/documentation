@@ -39,23 +39,42 @@
                     <p>This has the following results: </p>
 
                     <div class="p">
-                        <ul>
-                            <li>The <samp class="codeph">app-domain</samp> domain is created and started. </li>
+                        <ol type="a">
+                            <li><strong>Domains and resources</strong>: <div class="p">
+                                    <ul>
+                                        <li>The <samp class="codeph">app-domain</samp> domain is created and started. </li>
 
-                            <li>The settings and resources for APP are created in the application server.</li>
+                                        <li>The settings and resources for APP are created in the application server.</li>
 
-                            <li>APP (<samp class="codeph">oscm-app.ear</samp>) is deployed to the <samp class="codeph">app-domain</samp> domain.</li>
+                                        <li>APP (<samp class="codeph">oscm-app.ear</samp>) is deployed to the <samp class="codeph">app-domain</samp> domain.</li>
 
-                            <li>A key file for encryption and decryption is generated in the location you specified in the <samp class="codeph">APP_KEY_PATH</samp> setting in the <samp class="codeph">configsettings.properties</samp> file. By default, this file is named <samp class="codeph">key</samp> and located in <p><samp class="codeph">&lt;GLASSFISH_HOME&gt;/glassfish/domains/app-domain/config</samp></p>
+                                        <li>A key file for encryption and decryption is generated in the location you specified in the <samp class="codeph">APP_KEY_PATH</samp> setting in the <samp class="codeph">configsettings.properties</samp> file. By default, this file is named <samp class="codeph">key</samp> and located in <p><samp class="codeph">&lt;GLASSFISH_HOME&gt;/glassfish/domains/app-domain/config</samp></p>
 </li>
 
-                            
-                            
-                            
-                            
-                            
-                            
-                        </ul>
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </ul>
+
+                                </div>
+</li>
+
+                            <li><strong>JVM options set for the <samp class="codeph">app-domain</samp> domain</strong> during the installation:<div class="p">
+                                    <pre class="codeblock">-Dorg.apache.catalina.loader.WebappClassLoader.
+   ENABLE_CLEAR_REFERENCES=false
+-Dfile.encoding=UTF8
+-Dsun.java2d.print.polling=false
+-Dsun.net.inetaddr.ttl=3600
+-XX:MaxMetaspaceSize=512m
+-Dproduct.name=</pre>
+
+                                </div>
+</li>
+
+                        </ol>
 
                     </div>
 
