@@ -100,8 +100,8 @@
           <li>Undeploy the search indexer application, <codeph>oscm-search</codeph>.</li>
           <li>In the <b>JVM Options</b> of the application server:<ol>
               <li>Set the following settings to <codeph>false</codeph>:<p><codeph>-Dorg.apache.catalina.loader.WebappClassLoader.ENABLE_CLEAR_REFERENCES=false</codeph></p><p><codeph>-Dcom.sun.metro.soap.dump=false</codeph></p></li>
-              <li>Delete the following setting:<p><codeph>-XX\\:MaxPermSize</codeph></p></li>
-              <li>Add the following setting:<p><codeph>XX\\:MaxMetaspaceSize=512m</codeph></p></li>
+              <li>Delete the following setting:<p><codeph>-XX:MaxPermSize</codeph></p></li>
+              <li>Add the following setting:<p><codeph>-XX:MaxMetaspaceSize=512m</codeph></p></li>
             </ol></li>
           <li>Stop the <codeph>master-indexer-domain</codeph> domain.</li>
           <li>Check for <codeph>.glassfishStaleFiles</codeph> files. If there are any, delete them. The files are located in<p><codeph>&lt;domain&gt;/applications/&lt;application name&gt;/.glassfishStaleFiles</codeph></p><p>For example: </p><p><codeph>master-indexer-domain/applications/oscm-search/.glassfishStaleFiles</codeph></p></li>
@@ -126,8 +126,8 @@
         </ul></li>
         <li>In the <b>JVM Options</b> of the application server:<ol>
             <li>Set the following settings to <codeph>false</codeph>:<p><codeph>-Dorg.apache.catalina.loader.WebappClassLoader.ENABLE_CLEAR_REFERENCES=false</codeph></p><p><codeph>-Dcom.sun.metro.soap.dump=false</codeph></p></li>
-            <li>Delete the following setting:<p><codeph>-XX\\:MaxPermSize</codeph></p></li>
-            <li>Add the following setting:<p><codeph>XX\\:MaxMetaspaceSize=512m</codeph></p></li>
+            <li>Delete the following setting:<p><codeph>-XX:MaxPermSize</codeph></p></li>
+            <li>Add the following setting:<p><codeph>-XX:MaxMetaspaceSize=512m</codeph></p></li>
           </ol></li>
         <li>Stop the <codeph>bes-domain</codeph> domain.</li>
         <li>Check for <codeph>.glassfishStaleFiles</codeph> files. If there are any, delete them. The files are located in<p><codeph>&lt;domain&gt;/applications/&lt;application name&gt;/.glassfishStaleFiles</codeph></p><p>For example: </p><p><codeph>bes-domain/applications/oscm/.glassfishStaleFiles</codeph></p></li>
