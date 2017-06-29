@@ -24,7 +24,7 @@
 
       <p>The platform operator and technology managers must make sure that the following rules are observed: The <span>OSCM</span> version must be higher or equal to the APP version. The APP version must be equal to the controller version.</p>
 
-      <p>Example: If you want to use the <span>VMware</span> service controller included in the V17.1 release, you must upgrade <span>OSCM</span> and APP to V17.1 first.</p>
+      <p>Example: If you want to use the <span>VMware</span> service controller included in the V17.2 release, you must upgrade <span>OSCM</span> and APP to V17.2 first.</p>
 
     </div>
 
@@ -141,6 +141,19 @@
 </li>
 
         <li>Redeploy or deploy <samp class="codeph">oscm-app</samp> in the <samp class="codeph">app-domain</samp> domain.</li>
+
+        <li>In the <strong>JVM Options</strong> of the application server:<ol type="a">
+            <li>Set the following setting to <samp class="codeph">false</samp>:<p><samp class="codeph">-Dorg.apache.catalina.loader.WebappClassLoader.ENABLE_CLEAR_REFERENCES=false</samp></p>
+</li>
+
+            <li>Delete the following setting:<p><samp class="codeph">-XX\\:MaxPermSize</samp></p>
+</li>
+
+            <li>Add the following setting:<p><samp class="codeph">XX\\:MaxMetaspaceSize=512m</samp></p>
+</li>
+
+          </ol>
+</li>
 
         <li>If you are upgrading from a release prior to V17.0:<p>Export the certificate of the <samp class="codeph">app-domain</samp> and import it into the <samp class="codeph">bes-domain</samp> application server domain of <span>OSCM</span>. </p>
 </li>
