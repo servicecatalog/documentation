@@ -23,7 +23,6 @@ The following documentation is available:
 * [Marketplace Owner's Guide](Development/oscm-doc-user/resources/manuals/integration/en/MPOwner.pdf): A PDF manual for marketplace owners describing how to administrate and customize marketplaces in OSCM.
 * [Developer's Guide](Development/oscm-doc-user/resources/manuals/integration/en/Developer.pdf): A PDF manual for application developers describing the public Web service
 interface of OSCM and how to integrate applications and external systems with OSCM.
-* [ServerView Resource Orchestrator Integration (GlassFish)](Development/oscm-app-ror/doc/en/RORIntegration.pdf) : A PDF manual for operators describing how to offer and use virtual platforms and servers controlled by FUJITSU ServerView Resource Orchestrator through services in OSCM.
 * [Amazon Web Services Integration (GlassFish)](Development/oscm-app-aws/doc/en/AWSIntegration.pdf): A PDF manual for operators describing how to offer and use virtual servers controlled by the Amazon Elastic Compute Cloud Web service through services in OSCM.
 * [OpenStack Integration (GlassFish)](Development/oscm-app-openstack/doc/en/OSIntegration.pdf): A PDF manual for operators describing how to offer and use virtual systems controlled by OpenStack through services in OSCM.
 * [VMware vSphere Integration (GlassFish)](Development/oscm-app-vmware/doc/en/VMWareIntegration.pdf): A PDF manual for operators describing how to offer and use virtual machines provisioned on a VMware vSphere server through services in
