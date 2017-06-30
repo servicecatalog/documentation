@@ -75,10 +75,6 @@
       <p>
         <ol
           compact="no">
-          <li>Check whether the file <p><codeph>postgresql-9.4-1206-jdbc42.jar</codeph></p><p> is contained in the following directories of the application server:</p><ul>
-              <li><codeph>lib</codeph> directory of the <codeph>bes-domain</codeph> domain</li>
-              <li><codeph>&lt;GLASSFISH_HOME&gt;/mq/lib/ext</codeph></li>
-            </ul><p>If this is not the case, copy the file from the <codeph>&lt;install_pack_dir&gt;/install/lib</codeph> directory to the location where it is missing. </p></li>
           <li>Start the <codeph>bss</codeph> database.</li>
           <li>Update the schema and configuration settings of the <codeph>bss</codeph> database by executing the <codeph>build-db.xml</codeph> file in <codeph>&lt;install_pack_dir&gt;/install</codeph> as follows:<p>
               <codeblock>&lt;ANT_HOME&gt;/bin/ant -f build-db.xml updateDatabase</codeblock>
