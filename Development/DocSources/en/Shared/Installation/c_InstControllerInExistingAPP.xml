@@ -69,11 +69,11 @@
                                         </p><p>Instead of importing all <codeph>.csv</codeph> files in one step, you can split the import by executing the <codeph>build-db-import.xml</codeph> file in the following order: </p><p>
                                                 <codeblock>&lt;ANT_HOME&gt;/bin/ant -f build-db-import.xml importVCenter 
    -Ddb.dir=controller_db
+&lt;ANT_HOME&gt;/bin/ant -f build-db-import.xml importDatacenter 
+   -Ddb.dir=controller_db
 &lt;ANT_HOME&gt;/bin/ant -f build-db-import.xml importCluster 
    -Ddb.dir=controller_db
 &lt;ANT_HOME&gt;/bin/ant -f build-db-import.xml importVLAN 
-   -Ddb.dir=controller_db
-&lt;ANT_HOME&gt;/bin/ant -f build-db-import.xml importDomain 
    -Ddb.dir=controller_db
 &lt;ANT_HOME&gt;/bin/ant -f build-db-import.xml importIPPool 
    -Ddb.dir=controller_db</codeblock>
