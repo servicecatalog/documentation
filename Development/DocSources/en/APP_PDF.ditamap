@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN"
+                         "">
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<bookmap id="APPManual"
+            xml:lang="en_US">
+    <title>Asynchronous Provisioning Platform</title>
+    <bookmeta>
+        <prodinfo
+                    product="oscm_ce">
+            <prodname/>
+            <vrmlist>
+                <vrm
+            version="17.2.0"/>
+            </vrmlist>
+            <brand/>
+            <prognum>17.2.0</prognum>
+            <component/>
+            <series>APP Integration Guide</series>
+        </prodinfo>
+        <prodinfo
+                    product="oscm_ee">
+            <prodname>Enterprise Service</prodname>
+            <vrmlist>
+                <vrm
+            version="17.2"/>
+            </vrmlist>
+            <brand>FUJITSU Software</brand>
+            <prognum>Catalog Manager V17.2</prognum>
+            <component/>
+            <series>APP Integration Guide</series>
+        </prodinfo>
+        <bookid>
+            <edition>July 2017 </edition>
+            
+        </bookid>
+        <bookrights
+                product="oscm_ce">
+            <bookowner
+            name="none"/>
+        </bookrights>
+        <bookrights
+                product="oscm_ee">
+            <bookowner
+            name="FUJITSU LIMITED"/>
+        </bookrights>
+    </bookmeta>
+    <frontmatter>
+        <notices
+            href="Shared/Frontmatter/BookInfo.xml"/>
+        <preface
+            format="dita" href="APPInt/About/c_About.xml"
+                type="concept">
+            <topicref format="dita"
+                href="APPInt/About/c_Readers.xml"
+                type="concept"/>
+            <topicref
+                href="Shared/gettingstarted/intro_convent.xml"
+                type="concept"/>
+            <topicref
+                href="APPInt/About/intro_abbrev.xml"
+                type="concept"/>
+            <topicref
+                href="Shared/gettingstarted/intro_availabledoc.xml"
+        type="concept"/>
+        </preface>
+    </frontmatter>
+
+  <chapter
+        format="dita" href="APPInt/APP/c_ImplAPP.xml"
+        type="concept"/>
+   
+    <chapter format="dita"
+        href="APPInt/APP/c_InstAPP.xml" type="concept">
+    	<topicref
+            format="dita" href="Shared/Installation/c_PrepHardware.xml"
+            type="concept"/>
+    	<topicref format="dita"
+            href="Shared/Installation/c_PrepJava.xml"
+            type="concept"/>
+    	<topicref format="dita"
+            href="Shared/Installation/c_PrepAppServer.xml"
+            type="concept"/>
+    	<topicref format="dita"
+            href="Shared/Installation/c_PrepDB.xml"
+            type="concept"/>
+    	<topicref format="dita"
+            href="Shared/Installation/c_PrepMailServer.xml"
+            type="concept"/>
+    	<topicref format="dita"
+            href="APPInt/APP/t_InstPreparing.xml"
+            type="task"/>
+    	<topicref format="dita"
+            href="Shared/Installation/t_InstConfiguring.xml"
+            type="task"/>
+    	<topicref format="dita"
+            href="Shared/Installation/t_InstDB.xml"
+            type="task"/>
+    	<topicref format="dita"
+            href="Shared/Installation/t_InstAppServer.xml"
+            type="task"/>
+    	<topicref format="dita"
+            href="Shared/Installation/t_InstCertificate.xml"
+            type="task"/>
+    	<topicref format="dita"
+            href="Shared/Installation/c_Update.xml"
+        type="concept"/>
+    	</chapter>
+    	
+    <chapter
+        format="dita" href="APPInt/APP/t_ImplAPP.xml"
+            type="task">
+    	<topicref format="dita"
+            href="APPInt/APP/t_RegisterAPP.xml"
+            type="task"/>
+    	<topicref format="dita"
+            href="APPInt/APP/t_DeployController.xml"
+        type="task"/>
+    </chapter>
+    
+    <chapter format="dita"
+        href="APPInt/APP/c_AdministratingIntro.xml"
+            type="concept">
+    	<topicref format="dita"
+            href="APPInt/APP/c_HandleProblems.xml"
+            type="concept"/>
+    	<topicref format="dita"
+            href="Shared/concepts/c_ControllerHandleCommProblems.xml"
+            type="concept"/>
+    	<topicref format="dita"
+            href="Shared/Installation/c_Backup.xml"
+            type="concept"/>
+    	<topicref format="dita"
+            href="Shared/Installation/c_UpdateConfiguration.xml"
+            type="concept"/>
+    	<topicref format="dita"
+            href="APPInt/APP/c_LogConfig.xml"
+        type="concept"/>
+    </chapter>
+    
+    <appendix format="dita"
+        href="APPInt/APP/r_ConfigSettingsIntro.xml"
+            type="reference">
+        <topicref format="dita"
+            href="APPInt/APP/r_ConfigSettings.xml"
+            type="reference"/>
+     	<topicref format="dita"
+            href="Shared/reference/r_ConfigSettings_db.xml"
+            type="reference"/>
+    	<topicref format="dita"
+            href="Shared/reference/r_ConfigSettings_glassfish_BESDomain.xml" type="reference"/>
+     </appendix>
+</bookmap>
