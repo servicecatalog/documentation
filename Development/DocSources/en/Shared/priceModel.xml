@@ -8,8 +8,8 @@
     <context>
       <p>On the <uicontrol>Define for service</uicontrol> page, you define or update the price model for a selected service. </p>
       <p id="concept_price_model"
-          >The price model specifies whether and how much customers subscribing to the service are charged for using a subscription. Click <xref
-          href="reference/r_PriceModelDetails.xml">here</xref> for basic information on price models.</p>
+        >The price model specifies whether and how much customers subscribing to the service are charged for using a subscription.<ph audience="doc"> Click <xref
+          href="reference/r_PriceModelDetails.xml">here</xref> for basic information on price models.</ph></p>
       <p id="concept_service"
             >For each marketable service you want to offer, a price model must have been defined before you can activate the service and thus provide it to customers for subscription. You can define exactly one price model for a service. You can, however, also define customer-specific price models or even subscription-specific ones. For service and customer-specific price models, you can specify the license agreement text that is presented to and needs to be accepted by your customers. The underlying technical service comes with licensing information that you can change when defining the price model. <note>If you edit an existing price model on the <uicontrol>Define for service</uicontrol> page, your changes overwrite the previously defined price model. </note></p>
       <p><b>To define the price model for a service</b>:</p>
@@ -68,8 +68,8 @@
                 <li>Click the plus sign and enter a price per time unit as well as a step limit. The step limit defines the sum of the time units of all user assignments in a billing period up to which the specified price is valid. </li>
                 <li>Proceed with the definition of prices and step limits. Use the plus sign to add a price step, the minus sign to remove a step.</li>
                 <li>The last <uicontrol>Price per time unit</uicontrol> entry field defines the price to be applied for all time units exceeding the number specified in the last <uicontrol>Step limit</uicontrol> field. </li>
-              </ul>Click <xref href="../Shared/reference/r_PriceModelDetails_stepped.xml"
-              >here</xref> for detailed information. </li>
+                  </ul><ph audience="doc">Click <xref href="../Shared/reference/r_PriceModelDetails_stepped.xml"
+              >here</xref> for detailed information.</ph> </li>
           </ul>
         </info>
       </step>
@@ -87,8 +87,8 @@
               <li>Click the plus sign and enter a price per event as well as a step limit. The step limit defines the number of events up to which the price per event is valid.</li>
               <li>Proceed with the definition of prices per event and step limits. Use the plus sign to add a price step, the minus sign to remove a step.</li>
               <li>The last <uicontrol>Price</uicontrol> entry field defines the price to be applied for all events of the selected type exceeding the number specified in the last <uicontrol>Step limit</uicontrol> field. </li>
-            </ul>Click <xref href="../Shared/reference/r_PriceModelDetails_stepped.xml"
-            >here</xref> for detailed information. </p>
+          </ul><ph audience="doc">Click <xref href="../Shared/reference/r_PriceModelDetails_stepped.xml"
+            >here</xref> for detailed information.</ph> </p>
         </info>
       </step>
       <step id="step_params">
@@ -108,8 +108,8 @@
               <li>Click the plus sign and enter a price as well as a step limit. The step limit defines the value up to which the price is valid.</li>
               <li>Proceed with the definition of prices and step limits. Use the plus sign to add a price step, a minus sign to remove a step. </li>
               <li>The last <uicontrol>Price</uicontrol> entry field defines the price to be applied for all parameter values exceeding the number specified in the last <uicontrol>Step limit</uicontrol> field. </li>
-            </ul>Click <xref href="../Shared/reference/r_PriceModelDetails_stepped.xml"
-            >here</xref> for detailed information.</p>
+          </ul><ph audience="doc">Click <xref href="../Shared/reference/r_PriceModelDetails_stepped.xml"
+            >here</xref> for detailed information.</ph></p>
         </info>
       </step>
       <step id="step_license">

@@ -69,11 +69,11 @@
                         <p><codeph>glassfish.properties</codeph></p>
                     </li>
                 </ul>
-            </p><p>Additional configuration files contained in other subdirectories are used internally and must not be changed.</p><p>For details on the configuration settings, refer to <ph><xref
+            </p><p>Additional configuration files contained in other subdirectories are used internally and must not be changed.</p><p audience="doc">For details on the configuration settings, refer to <ph><xref
                         href="../../Shared/Installation/r_ConfigSettings.xml"
-                    /></ph>. For details on updating the configuration settings, refer to <xref
+            /></ph>.<ph audience="doc"> For details on updating the configuration settings, refer to <xref
                     href="c_UpdateConfiguration.xml"
-                />.</p><p>You need to adapt the settings in the files above to your environment. In particular, server names, ports, paths, user IDs, and passwords require adaptation.</p>Proceed as follows to view and adjust the configuration settings:<p
+                />.</ph></p><p>You need to adapt the settings in the files above to your environment. In particular, server names, ports, paths, user IDs, and passwords require adaptation.</p>Proceed as follows to view and adjust the configuration settings:<p
                 id="Steps">
                 <ol>
                     <li>Open each of the configuration files listed above with an editor.</li>

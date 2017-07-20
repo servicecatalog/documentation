@@ -32,8 +32,8 @@
             <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> delivers a sample JavaScript tool that you can integrate with <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> to see how cross-document messaging can be implemented. For information on the resources that support you in integrating a parameter configuration tool, refer to <xref
-                    href="../ConfigTool/c_ConfigToolTasks.xml"/>. </p>
+                    /> to see how cross-document messaging can be implemented. <ph audience="doc">For information on the resources that support you in integrating a parameter configuration tool, refer to <xref
+                    href="../ConfigTool/c_ConfigToolTasks.xml"/></ph>. </p>
         </section>
     </conbody>
 </concept>

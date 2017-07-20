@@ -10,9 +10,13 @@
             <p>A price model can define prices for individual, billable events. <ph
                     id="These_include_for_example_l_reference_refbody_section_1"
                     >These include, for example, login and logout by users to the underlying application, the completion of specific transactions, or the creation or deletion of specific data. It depends on the implementation and integration of the underlying application which events are available.</ph></p>
-            <p>For this type of charge, stepped prices can be applied: Different prices for an event can be defined depending on the number of occurrences per billing period. <ph
+            <p>For this type of charge, stepped prices can be applied: Different prices for an event can be defined depending on the number of occurrences per billing period.</p>
+                <p audience="doc">
+                <ph
                     platform="print">For details, refer to <xref href="r_PriceModelDetails_stepped.xml"/>.</ph><ph
-                    platform="help">Click <xref href="r_PriceModelDetails_stepped.xml">here</xref> for details.</ph></p>
+                    platform="help">Click <xref href="r_PriceModelDetails_stepped.xml">here</xref> for details.</ph>
+                
+                </p>
             <p>The costs for events are independent of the selected calculation option (pro rata, per time unit).</p>
         </section>
         <section>

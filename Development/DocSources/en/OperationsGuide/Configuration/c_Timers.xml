@@ -63,7 +63,7 @@
                     </ul>
                 </li>
             </ul>
-            <p>For a detailed description of the timers, refer to <xref
+            <p audience="doc">For a detailed description of the timers, refer to <xref
                     href="../../Shared/reference/r_ConfigSettings_config_properties.xml"/>. </p>
             <p><b>To configure a timer, choose one of the following options: </b>
                 <ul>

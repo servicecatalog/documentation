@@ -26,10 +26,10 @@
         <cmd>Depending on the billing system that is defined for the underlying technical service, proceed as follows:</cmd>
         <info>
           <ul compact="no">
-            <li>If the platform's native billing system is used, define the price model in the subsequent sections of the page. Click <xref
-                href="priceModel_service_nat.xml">here</xref> for details.</li>
-            <li>If an external billing system is used, import the appropriate price model from this system and specify the license agreement. Click <xref
-                href="priceModel_service_ext.xml">here</xref> for details.</li>
+            <li>If the platform's native billing system is used, define the price model in the subsequent sections of the page.<ph audience="doc"> Click <xref
+                href="priceModel_service_nat.xml">here</xref> for details.</ph></li>
+            <li>If an external billing system is used, import the appropriate price model from this system and specify the license agreement.<ph audience="doc"> Click <xref
+                href="priceModel_service_ext.xml">here</xref> for details.</ph></li>
           </ul>
         </info>
       </step>

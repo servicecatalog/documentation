@@ -24,13 +24,13 @@
                                                 />, you can decide whether the service is free of charge or whether and how the customer will be charged for using it. </p>
                                     <p>If you decide to charge your customers, you can specify the following elements:</p>
                                     <ul>
-                                                <li>A <b>price model description</b> that provides, for example, details of each element the price model consists of. <p>The description is displayed to customers on a marketplace when they request details of the service from the service catalog. It can be specified in one or several languages. For details, refer to <xref
-                                                            href="../PriceModels/c_PMMaintain.xml"/>.</p></li>
-                                                <li>A <b>free trial period</b> if you want to offer the service to your customers for free for a limited period of time. For details, refer to <xref
+                                                <li>A <b>price model description</b> that provides, for example, details of each element the price model consists of. <p>The description is displayed to customers on a marketplace when they request details of the service from the service catalog. It can be specified in one or several languages.<ph audience="doc"> For details, refer to <xref
+                                                            href="../PriceModels/c_PMMaintain.xml"/>.</ph></p></li>
+                                                <li>A <b>free trial period</b> if you want to offer the service to your customers for free for a limited period of time.<ph audience="doc"> For details, refer to <xref
                                                             href="../../Shared/reference/r_PriceModelDetails_freeTrial.xml"
-                                                            />.</li>
-                                                <li><b>Charging conditions</b>, <b>prices for billable events</b>, <b>prices for parameters and options</b>, and <b>prices for roles</b> as described in <xref
-                                                            href="../PriceModels/c_PMElements.xml"/>. </li>
+                                                            />.</ph></li>
+                                                <li><b>Charging conditions</b>, <b>prices for billable events</b>, <b>prices for parameters and options</b>, and <b>prices for roles</b><ph audience="doc"> as described in <xref
+                                                            href="../PriceModels/c_PMElements.xml"/></ph>. </li>
                                     </ul>
                         </section>
                                                 <section>
@@ -49,8 +49,8 @@
                                     <title>License Agreement</title>
                                     <p>For each price model, you have to enter a license agreement. It is presented to customers and needs to be accepted by them. The underlying technical service comes with licensing information specified by the technology provider. You are free to use this information or to update it, if required.</p>
                                     <p>The license agreement is only relevant for service price models and customer price models. A subscription price model automatically uses the license agreement defined for the relevant service price model.</p>
-                                    <p>The license agreement can be specified in one or several languages. For details, refer to <xref
-                                                            href="../PriceModels/c_PMMaintain.xml"/>.</p>
+                                    <p>The license agreement can be specified in one or several languages.<ph audience="doc"> For details, refer to <xref
+                                                            href="../PriceModels/c_PMMaintain.xml"/>.</ph></p>
                         </section>
                         </conbody>
 </concept>

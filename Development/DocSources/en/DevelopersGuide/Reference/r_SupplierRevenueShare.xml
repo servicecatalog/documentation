@@ -19,14 +19,14 @@
             </ul>
             <p>A <codeph>SupplierRevenueShareResult</codeph> element contains the following subelements:</p>
             <ul>
-                <li>An <codeph>OrganizationData</codeph> element specifying the details of the supplier organization (see <xref
+                <li>An <codeph>OrganizationData</codeph> element specifying the details of the supplier organization<ph audience="doc"> (see <xref
                         href="r_RevenueShareCommon.xml#Revenue_Share_Data_265/OrganizationData_reference_refbody_section_4"
-                    />).</li>
-                <li>A <codeph>Period</codeph> element specifying the billing period (see <xref
-                        href="r_RevenueShareCommon.xml#Revenue_Share_Data_265/reference_refbody_section_3"/>).</li>
-                <li>A <codeph>Currency</codeph> element for each currency for which supplier revenue share data is available (see <xref
+                    />)</ph>.</li>
+                <li>A <codeph>Period</codeph> element specifying the billing period<ph audience="doc"> (see <xref
+                        href="r_RevenueShareCommon.xml#Revenue_Share_Data_265/reference_refbody_section_3"/>)</ph>.</li>
+                <li>A <codeph>Currency</codeph> element for each currency for which supplier revenue share data is available<ph audience="doc"> (see <xref
                         href="r_SupplierRevenueShare.xml#Supplier_Revenue_Share_Data_435/Currency_reference_refbody_section_4"
-                    />).</li>
+                    />)</ph>.</li>
             </ul>
             <p><b>Example</b>:</p>
             <p>
@@ -44,12 +44,12 @@
             <p><codeph><b>id</b></codeph> - (required, data type <codeph>string</codeph>) ISO code of the currency. </p>
             <p>A <codeph>Currency</codeph> element contains the following subelements:</p>
             <ul>
-                <li>A <codeph>Marketplace</codeph> element for each marketplace for which revenue share data for the supplier organization is available (see <xref
+                <li>A <codeph>Marketplace</codeph> element for each marketplace for which revenue share data for the supplier organization is available<ph audience="doc"> (see <xref
                         href="r_SupplierRevenueShare.xml#Supplier_Revenue_Share_Data_435/Marketplace_reference_refbody_section_5"
-                    />).</li>
-                <li>A <codeph>SupplierRevenue</codeph> element specifying the detailed revenue share data for the current supplier organization (see <xref
+                    />)</ph>.</li>
+                <li>A <codeph>SupplierRevenue</codeph> element specifying the detailed revenue share data for the current supplier organization<ph audience="doc"> (see <xref
                         href="r_SupplierRevenueShare.xml#Supplier_Revenue_Share_Data_435/SupplierRevenue_reference_refbody_section_5"
-                    />).</li>
+                    />)</ph>.</li>
             </ul>
             <p><b>Example</b>:</p>
             <p>
@@ -69,15 +69,15 @@
             </ul>
             <p>A <codeph>Marketplace</codeph> element contains the following subelements:</p>
             <ul>
-                <li>A <codeph>MarketplaceOwner</codeph> element specifying the marketplace owner in an <codeph>OrganizationData</codeph> subelement (see <xref
+                <li>A <codeph>MarketplaceOwner</codeph> element specifying the marketplace owner in an <codeph>OrganizationData</codeph> subelement<ph audience="doc"> (see <xref
                         href="r_RevenueShareCommon.xml#Revenue_Share_Data_265/OrganizationData_reference_refbody_section_4"
-                    />).</li>
-                <li>A <codeph>Service</codeph> element for each service published on the marketplace for which revenue share data for the supplier is available (see <xref
+                    />)</ph>.</li>
+                <li>A <codeph>Service</codeph> element for each service published on the marketplace for which revenue share data for the supplier is available<ph audience="doc"> (see <xref
                         href="r_SupplierRevenueShare.xml#Supplier_Revenue_Share_Data_435/Service_reference_refbody_section_5"
-                    />).</li>
-                <li>A <codeph>RevenuePerMarketplace</codeph> element summarizing the revenue shares for all organizations involved(see <xref
+                    />)</ph>.</li>
+                <li>A <codeph>RevenuePerMarketplace</codeph> element summarizing the revenue shares for all organizations involved<ph audience="doc"> (see <xref
                         href="r_SupplierRevenueShare.xml#Supplier_Revenue_Share_Data_435/RevenuesPerMarketplace_reference_refbody_section_7"
-                    />).</li>
+                    />)</ph>.</li>
             </ul>
             <p><b>Example</b>:</p>
             <p>
@@ -184,26 +184,26 @@
             </ul>
             <p>A <codeph>Service</codeph> element contains the following subelements:</p>
             <ul>
-                <li>If the service is offered directly by the supplier: A <codeph>Subscription</codeph> element for each subscription to the service for which revenue share data is available (see <xref
+                <li>If the service is offered directly by the supplier: A <codeph>Subscription</codeph> element for each subscription to the service for which revenue share data is available<ph audience="doc"> (see <xref
                         href="r_SupplierRevenueShare.xml#Supplier_Revenue_Share_Data_435/Subscription_reference_refbody_section_6"
-                    />).</li>
+                    />)</ph>.</li>
                 <li>If the service is offered by a broker: <ul>
-                        <li>A <codeph>Subscription</codeph> element for each subscription to the service for which revenue share data is available (see <xref
+                    <li>A <codeph>Subscription</codeph> element for each subscription to the service for which revenue share data is available<ph audience="doc"> (see <xref
                                 href="r_SupplierRevenueShare.xml#Supplier_Revenue_Share_Data_435/Subscription_reference_refbody_section_6"
-                            />).</li>
-                        <li>A <codeph>Broker</codeph> element specifying the broker organization in an <codeph>OrganizationData</codeph> subelement (see <xref
+                            />)</ph>.</li>
+                    <li>A <codeph>Broker</codeph> element specifying the broker organization in an <codeph>OrganizationData</codeph> subelement<ph audience="doc"> (see <xref
                                 href="r_RevenueShareCommon.xml#Revenue_Share_Data_265/OrganizationData_reference_refbody_section_4"
-                            />). </li>
+                            />)</ph>. </li>
                     </ul></li>
                 <li>If the service is offered by a reseller: <ul>
                         <li>A <codeph>SubscriptionsRevenue</codeph> element summarizing the total revenue for all subscriptions to the service in its <codeph>amount</codeph> attribute (required, data type positive <codeph>decimal</codeph>, scale 2).</li>
-                        <li>A <codeph>Reseller</codeph> element specifying the reseller organization in an <codeph>OrganizationData</codeph> subelement (see <xref
+                    <li>A <codeph>Reseller</codeph> element specifying the reseller organization in an <codeph>OrganizationData</codeph> subelement<ph audience="doc"> (see <xref
                                 href="r_RevenueShareCommon.xml#Revenue_Share_Data_265/OrganizationData_reference_refbody_section_4"
-                            />). </li>
+                            />)</ph>. </li>
                     </ul></li>
-                <li>A <codeph>RevenueShareDetails</codeph> element specifying the revenue shares for the service (see <xref
+                <li>A <codeph>RevenueShareDetails</codeph> element specifying the revenue shares for the service<ph audience="doc"> (see <xref
                         href="r_SupplierRevenueShare.xml#Supplier_Revenue_Share_Data_435/ServiceRevenue_reference_refbody_section_7"
-                    />).</li>
+                    />)</ph>.</li>
             </ul>
             <p><b>Examples</b>:</p>
             <p>The service is offered directly by its supplier:</p>
@@ -255,9 +255,9 @@
                 <li><codeph><b>operatorRevenue</b></codeph> - (required, data type <codeph>decimal</codeph>, scale 2) The operator's revenue share for the service in the billing period.</li>
                 <li><codeph><b>amountForSupplier</b></codeph> - (required, data type <codeph>decimal</codeph>, scale 2) The supplier's revenue share for the service in the billing period. This is the remaining value of the total service revenue after subtracting the revenue shares for the operator, marketplace owner, broker, and/or reseller.</li>
             </ul>
-            <p>A <codeph>RevenueShareDetails</codeph> element contains a <codeph>CustomerRevenueShareDetails</codeph> subelement for each customer who used the service (see <xref
+            <p>A <codeph>RevenueShareDetails</codeph> element contains a <codeph>CustomerRevenueShareDetails</codeph> subelement for each customer who used the service<ph audience="doc"> (see <xref
                     href="r_SupplierRevenueShare.xml#Supplier_Revenue_Share_Data_435/CustomerRevenueShareDetails_reference_refbody_section_9"
-                />).</p>
+                />)</ph>.</p>
             <p><b>Examples</b>:</p>
             <p>The service is offered directly by its supplier:</p>
             <p>

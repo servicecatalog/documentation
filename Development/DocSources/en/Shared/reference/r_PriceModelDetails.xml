@@ -34,7 +34,7 @@
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"
                 /> supports all price model scopes. With external billing systems, the scopes may be restricted, depending on the billing system itself and the billing adapter used to integrate it.</p>
         </section>
-        <section>
+        <section audience="doc">
             <title>Price Model Elements</title>
             <p>The elements and options a price model consists of depend on where the price model is defined. </p>
             <p>For services which use an external billing system for cost calculation, the price models are defined in this billing system and must comply with the given rules and structures. The price models are imported from the external billing system to <ph

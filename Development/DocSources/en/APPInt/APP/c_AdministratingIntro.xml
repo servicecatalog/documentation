@@ -10,12 +10,12 @@
         <conbody>
                 <p>The following sections describe administration tasks you may need to perform in your role as an operator of the APP platform:</p>
                 <ul>
-                        <li><xref href="c_HandleProblems.xml"/></li>
-                        <li><xref href="../../Shared/concepts/c_ControllerHandleCommProblems.xml"/></li>
-                        <li><xref href="../../Shared/Installation/c_Backup.xml"/></li>
-                        <li><xref href="../../Shared/Installation/c_UpdateConfiguration.xml"/></li>
-                        <li><xref href="../../Shared/Installation/c_Update.xml"/></li>
-                        <li><xref href="../../APPInt/APP/c_LogConfig.xml"/></li>
+                        <li><ph audience="doc"><xref href="c_HandleProblems.xml"/></ph></li>
+                        <li><ph audience="doc"><xref href="../../Shared/concepts/c_ControllerHandleCommProblems.xml"/></ph></li>
+                        <li><ph audience="doc"><xref href="../../Shared/Installation/c_Backup.xml"/></ph></li>
+                        <li><ph audience="doc"><xref href="../../Shared/Installation/c_UpdateConfiguration.xml"/></ph></li>
+                        <li><ph audience="doc"><xref href="../../Shared/Installation/c_Update.xml"/></ph></li>
+                        <li><ph audience="doc"><xref href="../../APPInt/APP/c_LogConfig.xml"/></ph></li>
                 </ul>
         </conbody>
 </concept>

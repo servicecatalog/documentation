@@ -19,14 +19,14 @@
             </ul>
             <p>A <codeph>MarketplaceOwnerRevenueShareResult</codeph> element contains the following subelements:</p>
             <ul>
-                <li>An <codeph>OrganizationData</codeph> element specifying the details of the marketplace owner organization (see <xref
+                <li>An <codeph>OrganizationData</codeph> element specifying the details of the marketplace owner organization<ph audience="doc"> (see <xref
                         href="r_RevenueShareCommon.xml#Revenue_Share_Data_265/OrganizationData_reference_refbody_section_4"
-                    />).</li>
-                <li>A <codeph>Period</codeph> element specifying the billing period (see <xref
-                        href="r_RevenueShareCommon.xml#Revenue_Share_Data_265/reference_refbody_section_3"/>).</li>
-                <li>A <codeph>Currency</codeph> element for each currency for which marketplace owner revenue share data is available (see <xref
+                    />)</ph>.</li>
+                <li>A <codeph>Period</codeph> element specifying the billing period<ph audience="doc"> (see <xref
+                        href="r_RevenueShareCommon.xml#Revenue_Share_Data_265/reference_refbody_section_3"/>)</ph>.</li>
+                <li>A <codeph>Currency</codeph> element for each currency for which marketplace owner revenue share data is available<ph audience="doc"> (see <xref
                         href="r_MPOwnerRevenueShare.xml#Marketplace_Owner_Revenue_Sha_386/Currency_reference_refbody_section_4"
-                    />).</li>
+                    />)</ph>.</li>
             </ul>
             <p><b>Example</b>:</p>
             <p>
@@ -44,12 +44,12 @@
             <p><codeph><b>id</b></codeph> - (required, data type <codeph>string</codeph>) ISO code of the currency. </p>
             <p>A <codeph>Currency</codeph> element contains the following subelements:</p>
             <ul>
-                <li>A <codeph>Marketplace</codeph> element for each marketplace for which revenue share data for the current marketplace owner organization is available (see <xref
+                <li>A <codeph>Marketplace</codeph> element for each marketplace for which revenue share data for the current marketplace owner organization is available<ph audience="doc"> (see <xref
                         href="r_MPOwnerRevenueShare.xml#Marketplace_Owner_Revenue_Sha_386/Marketplace_reference_refbody_section_5"
-                    />).</li>
-                <li>A <codeph>RevenuesOverAllMarketplaces</codeph> element summarizing the revenue shares across the marketplaces (see <xref
+                    />)</ph>.</li>
+                <li>A <codeph>RevenuesOverAllMarketplaces</codeph> element summarizing the revenue shares across the marketplaces<ph audience="doc"> (see <xref
                         href="r_MPOwnerRevenueShare.xml#Marketplace_Owner_Revenue_Sha_386/RevenuesOverAllMarketplaces_reference_refbody_section_8"
-                    />).</li>
+                    />)</ph>.</li>
             </ul>
             <p><b>Example</b>:</p>
             <p>
@@ -69,12 +69,12 @@
             </ul>
             <p>A <codeph>Marketplace</codeph> element contains the following subelements:</p>
             <ul>
-                <li>A <codeph>Service</codeph> element for each service published on the marketplace for which revenue share data is available (see <xref
+                <li>A <codeph>Service</codeph> element for each service published on the marketplace for which revenue share data is available<ph audience="doc"> (see <xref
                         href="r_MPOwnerRevenueShare.xml#Marketplace_Owner_Revenue_Sha_386/Service_reference_refbody_section_5"
-                    />).</li>
-                <li>A <codeph>RevenuesPerMarketplace</codeph> element summarizing the revenue shares for all organizations involved (see <xref
+                    />)</ph>.</li>
+                <li>A <codeph>RevenuesPerMarketplace</codeph> element summarizing the revenue shares for all organizations involved<ph audience="doc"> (see <xref
                         href="r_MPOwnerRevenueShare.xml#Marketplace_Owner_Revenue_Sha_386/RevenuesPerMarketplace_reference_refbody_section_7"
-                    />).</li>
+                    />)</ph>.</li>
             </ul>
             <p><b>Example</b>:</p>
             <p>
@@ -104,18 +104,18 @@
             </ul>
             <p>A <codeph>Service</codeph> element contains the following subelements:</p>
             <ul>
-                <li>A <codeph>Supplier</codeph> element specifying the supplier organization who defined the service in an <codeph>OrganizationData</codeph> subelement (see <xref
+                <li>A <codeph>Supplier</codeph> element specifying the supplier organization who defined the service in an <codeph>OrganizationData</codeph> subelement<ph audience="doc"> (see <xref
                         href="r_RevenueShareCommon.xml#Revenue_Share_Data_265/OrganizationData_reference_refbody_section_4"
-                    />).</li>
-                <li>If the service is offered by a broker: A <codeph>Broker</codeph> element specifying the broker organization in an <codeph>OrganizationData</codeph> subelement (see <xref
+                    />)</ph>.</li>
+                <li>If the service is offered by a broker: A <codeph>Broker</codeph> element specifying the broker organization in an <codeph>OrganizationData</codeph> subelement<ph audience="doc"> (see <xref
                         href="r_RevenueShareCommon.xml#Revenue_Share_Data_265/OrganizationData_reference_refbody_section_4"
-                    />).</li>
-                <li>If the service is offered by a reseller: A <codeph>Reseller</codeph> element specifying the reseller organization in an <codeph>OrganizationData</codeph> subelement (see <xref
+                    />)</ph>.</li>
+                <li>If the service is offered by a reseller: A <codeph>Reseller</codeph> element specifying the reseller organization in an <codeph>OrganizationData</codeph> subelement<ph audience="doc"> (see <xref
                         href="r_RevenueShareCommon.xml#Revenue_Share_Data_265/OrganizationData_reference_refbody_section_4"
-                    />).</li>
-                <li>A <codeph>RevenueShareDetails</codeph> element specifying the revenue shares for the service (see <xref
+                    />)</ph>.</li>
+                <li>A <codeph>RevenueShareDetails</codeph> element specifying the revenue shares for the service<ph audience="doc"> (see <xref
                         href="r_MPOwnerRevenueShare.xml#Marketplace_Owner_Revenue_Sha_386/ServiceRevenue_reference_refbody_section_7"
-                    />).</li>
+                    />)</ph>.</li>
             </ul>
             <p><b>Examples</b>:</p>
             <p>The service is offered directly by its supplier:</p>

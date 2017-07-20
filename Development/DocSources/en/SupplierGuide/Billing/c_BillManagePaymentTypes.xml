@@ -17,12 +17,12 @@
                         <section id="For_details_refer_to_concept_conbody_section_2">
                                     <p><ph
                                                             conref="../../help/tasks/organization_managePaymentEnablement.xml#task634/Your_operator_is_responsible_task_taskbody_context_p_2_ph"
-                                                            /> For details, refer to <xref
-                                                            href="../Billing/c_BillExportBillingData.xml"/>.</p>
+                                    /><ph audience="doc"> For details, refer to <xref
+                                                            href="../Billing/c_BillExportBillingData.xml"/>.</ph></p>
                                     <p><ph
                                                             conref="../../help/tasks/organization_managePaymentEnablement.xml#task634/If_you_request_a_payment_type_task_taskbody_context_p_3_ph"
-                                                            /> For details, refer to <xref
-                                                            href="../Billing/c_BillUsePSP.xml"/>.</p>
+                                    /><ph audience="doc"> For details, refer to <xref
+                                                            href="../Billing/c_BillUsePSP.xml"/>.</ph></p>
                                     <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                                             /> allows you to specify the payment types for individual customers and individual services used by the customers. <ph
                                                             conref="../../help/tasks/organization_managePaymentEnablement.xml#task634/If_you_decide_to_offer_more_t_task_taskbody_context_p_4_ph"

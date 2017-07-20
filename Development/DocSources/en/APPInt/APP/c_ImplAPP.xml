@@ -72,8 +72,8 @@
             </ul>
             <p>If the provisioning or modification of an application instance fails or if there are problems in the communication between the participating systems, the corresponding subscription in <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> remains pending. APP supports you in recovering from such problems with its instance status interface. For details, refer to <xref
-                    href="c_HandleProblems.xml"/>.</p>
+            /> remains pending. APP supports you in recovering from such problems with its instance status interface. <ph audience="doc">For details, refer to <xref
+                    href="c_HandleProblems.xml"/></ph>.</p>
         </section>
         <section>
             <title>Provisioning by Instance</title>
@@ -102,7 +102,7 @@
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> user interface directly to the service controller for the underlying application. The service controller is responsible for the execution of the operation in the application. </p>
         </section>
-        <section>
+        <section audience="doc">
             <title>Integration Tasks</title>
             <p>Integrating an application with <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> involves the following tasks: </p>

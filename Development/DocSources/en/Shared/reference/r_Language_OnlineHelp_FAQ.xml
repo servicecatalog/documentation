@@ -19,8 +19,8 @@
                                 alt="HelpFAQ.png" width="320" height="287"
                             /></p><p>The languages provided after installation are English (en), German (de), and Japanese (ja). You can update the texts in their respective directories. The procedure is the same as when providing the texts in a different language (see below). </p></li>
                     <li>Copy the <codeph>help/en</codeph> directory and name it <codeph>help/<i>&lt;ISO code></i></codeph>. <p>Copy the <codeph>faq/en</codeph> directory and name it <codeph>faq/<i>&lt;ISO code></i></codeph>.</p><p>The ISO language code denotes the language for which you want to provide translations. For example, add a <codeph>cs</codeph> directory to the <codeph>help</codeph> as well as to the <codeph>faq</codeph> directory. <ph
-                                platform="help">Click <xref href="../../Shared/reference/r_Language_Codes.xml"
-                                    >here</xref> for the list of supported language codes.</ph></p><p>The directory structure now looks as follows: </p><p
+                        platform="help"><ph audience="doc">Click <xref href="../../Shared/reference/r_Language_Codes.xml"
+                                    >here</xref> for the list of supported language codes.</ph></ph></p><p>The directory structure now looks as follows: </p><p
                             platform="help"><image href="../_images/HelpFAQ_sample.png" alt="HelpFAQ_sample.png"
                                 width="415" height="381"/></p><p platform="print"><image
                                 href="../_images/HelpFAQ_sample.png" alt="HelpFAQ_sample.png" width="320" height="293"

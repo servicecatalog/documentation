@@ -108,8 +108,8 @@
                 <info>The <codeph>.cer</codeph> file can be created, for example, in the following way:<p>Open the URL of the vSphere API (<codeph>https://&lt;server>:&lt;port>/sdk/vimService</codeph>) in a Web browser. View the certificate of the page and export it to a file using the standard procedures of the Web browser.</p></info>
             </step>
             <step audience="tps5">
-                <cmd>Obtain the valid TPS5 certificate by exporting it from the <codeph>cacerts.jks</codeph> file. The file is contained in the <codeph>OViSS_JAVASDK/bin/security</codeph> subdirectory of the temporary directory to which you extracted the <codeph>OViSSSDK_*.zip</codeph> file you downloaded from the TPS5 Service Portal. Refer to <xref
-                        href="t_InstPreparing.xml"/> for details.</cmd>
+                <cmd>Obtain the valid TPS5 certificate by exporting it from the <codeph>cacerts.jks</codeph> file. The file is contained in the <codeph>OViSS_JAVASDK/bin/security</codeph> subdirectory of the temporary directory to which you extracted the <codeph>OViSSSDK_*.zip</codeph> file you downloaded from the TPS5 Service Portal.<ph audience="doc"> Refer to <xref
+                        href="t_InstPreparing.xml"/> for details.</ph></cmd>
                 <info>For details on the certificates, refer to the TPS5 documentation.</info>
             </step>
             

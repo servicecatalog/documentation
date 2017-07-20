@@ -34,7 +34,7 @@
                 <cmd id="When_preparing_the_service_de_task_taskbody_steps_step_3"
                     >When preparing the technical service definition, declare the events that your application will send. </cmd>
                 <info>
-                    <p>For details on the technical service definition, refer to <xref
+                    <p audience="doc">For details on the technical service definition, refer to <xref
                             href="../../TechProvGuide/Reference/r_TechServDescr.xml"
                             ><?xm-replace_text xref: "Service Definition Reference"?></xref>. </p>
                 </info>

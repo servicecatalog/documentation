@@ -83,9 +83,9 @@
             <p><b>To register multiple administrators and managers in one operation</b>:</p>
             <p>
                 <ol compact="no">
-                    <li>Create a file containing the required user data. Click <xref
+                    <li>Create a file containing the required user data.<ph audience="doc"> Click <xref
                             href="../../Shared/reference/r_FileFormat_ImportUsers.xml"
-                        >here</xref> for details on the format and content of the file.</li>
+                        >here</xref> for details on the format and content of the file.</ph></li>
                     <li>Import the user data file: <p>
                             <ol compact="no">
                                 <li>Click the <b>File name</b> field or <b>Browse</b>, and select the file containing the user data.</li>

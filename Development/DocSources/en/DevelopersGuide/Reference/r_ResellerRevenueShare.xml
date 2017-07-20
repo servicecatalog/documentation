@@ -21,14 +21,14 @@
             <p id="A_reference_refbody_section_2"
                 >A <codeph>ResellerRevenueShareResult</codeph> element contains the following subelements:</p>
             <ul>
-                <li>An <codeph>OrganizationData</codeph> element specifying the details of the reseller organization (see <xref
+                <li>An <codeph>OrganizationData</codeph> element specifying the details of the reseller organization<ph audience="doc"> (see <xref
                         href="r_RevenueShareCommon.xml#Revenue_Share_Data_265/OrganizationData_reference_refbody_section_4"
-                    />).</li>
-                <li>A <codeph>Period</codeph> element specifying the billing period (see <xref
-                        href="r_RevenueShareCommon.xml#Revenue_Share_Data_265/reference_refbody_section_3"/>).</li>
-                <li>A <codeph>Currency</codeph> element for each currency for which reseller revenue share data is available (see <xref
+                    />)</ph>.</li>
+                <li>A <codeph>Period</codeph> element specifying the billing period<ph audience="doc"> (see <xref
+                        href="r_RevenueShareCommon.xml#Revenue_Share_Data_265/reference_refbody_section_3"/>)</ph>.</li>
+                <li>A <codeph>Currency</codeph> element for each currency for which reseller revenue share data is available<ph audience="doc"> (see <xref
                         href="r_ResellerRevenueShare.xml#Reseller_Revenue_Share_Data_354/Currency_reference_refbody_section_4"
-                    />).</li>
+                    />)</ph>.</li>
             </ul>
             <p><b>Example</b>:</p>
             <p>
@@ -46,9 +46,9 @@
             <p><codeph><b>id</b></codeph> - (required, data type <codeph>string</codeph>) ISO code of the currency. </p>
             <p>A <codeph>Currency</codeph> element contains the following subelements:</p>
             <ul>
-                <li>A <codeph>Supplier</codeph> element for each supplier organization that provides a service for which the current reseller organization receives a revenue share (see <xref
+                <li>A <codeph>Supplier</codeph> element for each supplier organization that provides a service for which the current reseller organization receives a revenue share<ph audience="doc"> (see <xref
                         href="r_ResellerRevenueShare.xml#Reseller_Revenue_Share_Data_354/Supplier_reference_refbody_section_4"
-                    />).</li>
+                    />)</ph>.</li>
                 <li>A <codeph>ResellerRevenue</codeph> element with the following attributes: <p><codeph>totalAmount</codeph> - (optional, data type positive <codeph>decimal</codeph>, scale 2) Overall revenue for the currency.</p><p><codeph>amount</codeph> - (required, data type positive <codeph>decimal</codeph>, scale 2) Overall reseller revenue share.</p><p><codeph>purchasePrice</codeph> - (optional, data type positive <codeph>decimal</codeph>, scale 2) Difference between the <codeph>totalAmount</codeph> and the <codeph>amount</codeph> attribute.</p></li>
             </ul>
             <p><b>Example</b>:</p>
@@ -68,9 +68,9 @@
                 <li>An <codeph>OrganizationData</codeph> element specifying the details of the supplier organization (see <xref
                         href="r_RevenueShareCommon.xml#Revenue_Share_Data_265/OrganizationData_reference_refbody_section_4"
                     />).</li>
-                <li>A <codeph>Service</codeph> element for each service provided by the supplier for which the current reseller organization receives a revenue share (see <xref
+                <li>A <codeph>Service</codeph> element for each service provided by the supplier for which the current reseller organization receives a revenue share<ph audience="doc"> (see <xref
                         href="r_ResellerRevenueShare.xml#Reseller_Revenue_Share_Data_354/Service_reference_refbody_section_5"
-                    />).</li>
+                    />)</ph>.</li>
                 <li>A <codeph>ResellerRevenuePerSupplier</codeph> element with the following attributes: <p><codeph>totalAmount</codeph> - (optional, data type positive <codeph>decimal</codeph>, scale 2) Overall revenue for the supplier.</p><p><codeph>amount</codeph> - (required, data type positive <codeph>decimal</codeph>, scale 2) Overall reseller revenue share for the supplier.</p><p><codeph>purchasePrice</codeph> - (optional, data type positive <codeph>decimal</codeph>, scale 2) Difference between the <codeph>totalAmount</codeph> and the <codeph>amount</codeph> attribute.</p></li>
             </ul>
             <p><b>Example</b>:</p>
@@ -94,12 +94,12 @@
             </ul>
             <p>A <codeph>Service</codeph> element contains the following subelements:</p>
             <ul>
-                <li>A <codeph>Subscription</codeph> element for each subscription to the service offered by the reseller (see <xref
+                <li>A <codeph>Subscription</codeph> element for each subscription to the service offered by the reseller<ph audience="doc"> (see <xref
                         href="r_ResellerRevenueShare.xml#Reseller_Revenue_Share_Data_354/Subscription_reference_refbody_section_6"
-                    />).</li>
-                <li>A <codeph>ServiceRevenue</codeph> element specifying the overall reseller revenue share for the service (see <xref
+                    />)</ph>.</li>
+                <li>A <codeph>ServiceRevenue</codeph> element specifying the overall reseller revenue share for the service<ph audience="doc"> (see <xref
                         href="r_ResellerRevenueShare.xml#Reseller_Revenue_Share_Data_354/ServiceRevenue_reference_refbody_section_7"
-                    />).</li>
+                    />)</ph>.</li>
             </ul>
             <p><b>Example</b>:</p>
             <p>
@@ -121,8 +121,8 @@
                     /></li>
                 <li><codeph><b>revenue</b></codeph> - (required, data type positive <codeph>decimal</codeph>, scale 2) The total revenue for the subscription in the billing period. Note that there is a <codeph>Service</codeph> element for each phase of the subscription if the subscription is upgraded or downgraded.</li>
             </ul>
-            <p>A <codeph>Subscription</codeph> element contains a <codeph>Period</codeph> subelement specifying the applicable billing period (see <xref
-                    href="r_RevenueShareCommon.xml#Revenue_Share_Data_265/reference_refbody_section_3"/>).</p>
+            <p>A <codeph>Subscription</codeph> element contains a <codeph>Period</codeph> subelement specifying the applicable billing period<ph audience="doc"> (see <xref
+                    href="r_RevenueShareCommon.xml#Revenue_Share_Data_265/reference_refbody_section_3"/>)</ph>.</p>
             <p><b>Example</b>:</p>
             <p>
                 <codeblock><b>&lt;Subscription id="Mega Office Basic" key="17005" billingKey="19032" 

@@ -7,8 +7,8 @@
   <taskbody>
     <context>
       <p>On the <uicontrol>Update service definition</uicontrol> page, you can change the descriptive texts of a technical service. The changes are effective for all newly defined marketable services based on the technical service.</p>
-      <p>The texts you enter are stored in the language defined by your user profile. For details on how to edit the user profile, refer to <xref
-          href="organization_edit.xml"/>.</p>
+      <p>The texts you enter are stored in the language defined by your user profile.<ph audience="doc"> For details on how to edit the user profile, refer to <xref
+          href="organization_edit.xml"/>.</ph></p>
       <p><b>To update a technical service definition</b>:</p>
     </context>
     <steps>

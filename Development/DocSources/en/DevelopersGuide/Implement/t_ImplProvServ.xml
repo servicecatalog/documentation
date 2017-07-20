@@ -37,10 +37,10 @@
             <p>To implement a provisioning service, you have two options:</p>
             <p>
                 <ul>
-                    <li>Implementing the service as a <b>Java service</b> (see <xref href="t_ImplProvServJava.xml"
-                        />)</li>
-                    <li>Implementing the service as a <b>non-Java service</b> (see <xref
-                            href="t_ImplProvServNonJava.xml"/>)</li>
+                    <li>Implementing the service as a <b>Java service</b><ph audience="doc"> (see <xref href="t_ImplProvServJava.xml"
+                        />)</ph></li>
+                    <li>Implementing the service as a <b>non-Java service</b><ph audience="doc"> (see <xref
+                            href="t_ImplProvServNonJava.xml"/>)</ph></li>
                 </ul>
             </p>
         </result>

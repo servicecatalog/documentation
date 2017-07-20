@@ -25,19 +25,19 @@
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                             />. They register the applications as technical services in <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</ph>
-                    <p>For details, refer to <xref format="dita" href="../../Overview/Providers/c_ProvIntro.xml"
+                    <p audience="doc">For details, refer to <xref format="dita" href="../../Overview/Providers/c_ProvIntro.xml"
                             type="concept"/>.</p></li>
                 <li><ph id="Suppliers_concept_conbody_section_ol_l"
                             ><b>Suppliers</b> (e.g. independent software vendors or sales organizations) define service offerings, so-called marketable services, for the technical services in <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                         />. They publish the services to a marketplace.</ph>
-                    <p>For details, refer to <xref format="dita" href="../../Overview/Suppliers/c_SuppIntro.xml"
+                    <p audience="doc">For details, refer to <xref format="dita" href="../../Overview/Suppliers/c_SuppIntro.xml"
                             type="concept"/>. </p></li>
                 <li><ph id="Customers_concept_conbody_section_ol_l"
                             ><b>Customers</b> register themselves or are registered by an authorized organization in <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                         /> and subscribe to one or more services. Users appointed by the customers work with the underlying applications under the conditions of the corresponding subscriptions.</ph>
-                    <p>For details, refer to <xref format="dita" href="../../Overview/Customers/c_CustIntro.xml"
+                    <p audience="doc">For details, refer to <xref format="dita" href="../../Overview/Customers/c_CustIntro.xml"
                             type="concept"/>.</p></li>
             </ol>
         </section>
@@ -55,7 +55,7 @@
             <p>Brokers and resellers usually receive their share of a supplier's revenue. <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> provides the means to define these revenue shares and calculate and retrieve the actual amounts from the service usage fees.</p>
-            <p>For details, refer to <xref href="../../Overview/Suppliers/c_SuppIntro.xml"/>.</p>
+            <p audience="doc">For details, refer to <xref href="../../Overview/Suppliers/c_SuppIntro.xml"/>.</p>
         </section>
         <section>
             <title><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> Across Usage Scenarios</title>
@@ -64,13 +64,13 @@
                 /> and the applications integrated with it:</p>
             <ul>
                 <li><ph id="Marketplace_owners_concept_conbody_section_ul_l"
-                        ><b>Marketplace owners</b> are responsible for administrating and customizing the marketplaces to which services are published.</ph> For details, refer to <xref
-                        href="../../Overview/MarketplaceOwners/c_MPLOwnersIntro.xml"/>. </li>
+                    ><b>Marketplace owners</b> are responsible for administrating and customizing the marketplaces to which services are published.</ph><ph audience="doc"> For details, refer to <xref
+                        href="../../Overview/MarketplaceOwners/c_MPLOwnersIntro.xml"/>.</ph> </li>
                 <li><ph id="Operators_concept_conbody_section_ul_l"
                             ><b>Operators</b> are responsible for installing and maintaining <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        />.</ph> For details, refer to <xref format="dita"
-                        href="../../Overview/Operators/c_Operators.xml" type="concept"/>. <p><ph
+                            />.</ph><ph audience="doc"> For details, refer to <xref format="dita"
+                        href="../../Overview/Operators/c_Operators.xml" type="concept"/>.</ph> <p><ph
                             id="is_typically_operated_in_dat_concept_conbody_section_1_p"><ph
                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                             /> is typically operated in data centers on servers providing for optimum performance, scalability, and non-stop operation. </ph><ph
@@ -84,8 +84,8 @@
             </ul>
             <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> offers features and functions which are of relevance for all these participating parties. These include a state-of-the-art user interface, account and identity management, and external process control. Public Web services and application programming interfaces (APIs) are available by which developers can integrate applications and external systems with <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. For details, refer to <xref
-                    format="dita" href="../../Overview/All/c_AllUsersIntro.xml" type="concept"/>. </p>
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.<ph audience="doc"> For details, refer to <xref
+                    format="dita" href="../../Overview/All/c_AllUsersIntro.xml" type="concept"/>.</ph> </p>
         </section>
     </conbody>
 </concept>

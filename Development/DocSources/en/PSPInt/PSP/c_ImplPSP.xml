@@ -56,11 +56,11 @@
                 <li>Implement a PSP integration adapter </li>
                 <li>Implement a callback component</li>
             </ul>
-            <p>These steps are described in detail in the following topics: </p>
+            <p audience="doc">These steps are described in detail in the following topics:
             <ul>
                 <li><xref href="t_ImplPSP.xml"/></li>
                 <li><xref href="t_ImplPSPServlet.xml"/></li>
-            </ul>
+            </ul></p>
             <p>The integration of a PSP involves additional tasks which must be performed by an operator. For details, refer to the <i>Operator's Guide</i>.</p>
         </section>
     </conbody>

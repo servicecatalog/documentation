@@ -12,22 +12,22 @@
             <title>Prerequisites and Preparation</title>
             <p>Consider the following before you install APP:</p>
             <ul>
-                <li><xref href="../../Shared/Installation/c_PrepHardware.xml"/></li>
-                <li><xref href="../../Shared/Installation/c_PrepJava.xml"/></li>
-                <li><xref href="../../Shared/Installation/c_PrepAppServer.xml"/></li>
-                <li><xref href="../../Shared/Installation/c_PrepDB.xml"/></li>
-                <li><xref href="../../Shared/Installation/c_PrepMailServer.xml"/></li>
+                <li><ph audience="doc"><xref href="../../Shared/Installation/c_PrepHardware.xml"/></ph></li>
+                <li><ph audience="doc"><xref href="../../Shared/Installation/c_PrepJava.xml"/></ph></li>
+                <li><ph audience="doc"><xref href="../../Shared/Installation/c_PrepAppServer.xml"/></ph></li>
+                <li><ph audience="doc"><xref href="../../Shared/Installation/c_PrepDB.xml"/></ph></li>
+                <li><ph audience="doc"><xref href="../../Shared/Installation/c_PrepMailServer.xml"/></ph></li>
             </ul>
         </section>
         <section>
             <title>Installation</title>
             <p>The installation of APP consists of the following main steps:</p>
             <ul>
-                <li><xref href="t_InstPreparing.xml"/></li>
-                <li><xref href="../../Shared/Installation/t_InstConfiguring.xml"/></li>
-                <li><xref href="../../Shared/Installation/t_InstDB.xml"/></li>
-                <li><xref href="../../Shared/Installation/t_InstAppServer.xml"/></li>
-                <li><xref href="../../Shared/Installation/t_InstCertificate.xml"/></li>
+                <li><ph audience="doc"><xref href="t_InstPreparing.xml"/></ph></li>
+                <li><ph audience="doc"><xref href="../../Shared/Installation/t_InstConfiguring.xml"/></ph></li>
+                <li><ph audience="doc"><xref href="../../Shared/Installation/t_InstDB.xml"/></ph></li>
+                <li><ph audience="doc"><xref href="../../Shared/Installation/t_InstAppServer.xml"/></ph></li>
+                <li><ph audience="doc"><xref href="../../Shared/Installation/t_InstCertificate.xml"/></ph></li>
             </ul>
             <p>The descriptions assume that you are using the APP setup utilities for setting up the database and the application server resources. </p>
         </section>
@@ -35,7 +35,7 @@
             <title>Update Installation</title>
             <p>For updating your APP installation, read the following: </p>
             <ul>
-                <li><xref href="../../Shared/Installation/c_Update.xml"/></li>
+                <li><ph audience="doc"><xref href="../../Shared/Installation/c_Update.xml"/></ph></li>
                 
             </ul>
         </section>

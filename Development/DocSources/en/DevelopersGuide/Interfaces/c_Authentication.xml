@@ -52,7 +52,7 @@
                                 /> truststore must contain a certificate with a valid signing chain to the certificate presented by the client.</li>
                         </ul><p>Certificate-based authentication can be used in both authentication modes (INTERNAL and SAML_SP). It must be used when integrating a PSP such as Heidelpay. Web services calling PSP-related functions of <ph
                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            /> do not require the specification of a user role. Certificate-based authentication is not supported by the REST APIs. </p><p>Refer to <xref
+                            /> do not require the specification of a user role. Certificate-based authentication is not supported by the REST APIs. </p><p audience="doc">Refer to <xref
                                 href="../../Shared/reference/c_Certificates.xml"
                             /> for details on how to install and handle the certificates required. </p></li>
                     <li>

@@ -41,8 +41,8 @@
                                 /> via HTTP or HTTPS.</li>
                             <li>The technology provider organization responsible for the OpenStack service controller imports the templates into the <codeph>bssapp</codeph> database.</li>
                         </ol>
-                    </p>Refer to <xref href="../../OSIntegrationGuide/Administrating/c_ImportTemplates.xml"
-                    /> for details. </li>
+                        </p><ph audience="doc">Refer to <xref href="../../OSIntegrationGuide/Administrating/c_ImportTemplates.xml"
+                    /> for details.</ph> </li>
                 <li audience="os">
                     <p>The user specified in the configuration settings for the installation must have the necessary credentials to create and configure virtual systems for your organization based on these templates in OpenStack.</p>
                     <p>In FUJITSU Cloud Service K5, the <codeph>cpf_systemowner</codeph> role is required.</p>

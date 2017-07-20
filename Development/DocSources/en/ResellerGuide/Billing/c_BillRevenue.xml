@@ -14,8 +14,8 @@
                 <li>You can view the revenue share that is defined.</li>
                 <li>You can retrieve and export information on the actual revenue.</li>
             </ul>
-            <p>For details, refer to the following sections. You can also use reports for retrieving information on your actual revenue. For details, refer to <xref
-                    format="dita" href="../Reports/c_Reports.xml" type="concept"/>. </p>
+            <p>For details, refer to the following sections. You can also use reports for retrieving information on your actual revenue.<ph audience="doc"> For details, refer to <xref
+                    format="dita" href="../Reports/c_Reports.xml" type="concept"/>.</ph> </p>
         </section>
         <section>
             <title>Viewing the Revenue Share</title>

@@ -25,8 +25,8 @@
                     <li>WSDL URL: Link to the WSDL file containing the PSP integration adapter.  </li>
                     <li>Distinguished name retrieved from the certificate of the Web server on which the PSP integration adapter has been deployed. The integration of a PSP with <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            > </ph> requires the usage of certificates for trusted communication between the platform and the PSP. For details, refer to <xref
-                            href="../../Shared/reference/c_Certificates.xml"/>. </li>
+                        > </ph> requires the usage of certificates for trusted communication between the platform and the PSP.<ph audience="doc"> For details, refer to <xref
+                            href="../../Shared/reference/c_Certificates.xml"/>.</ph> </li>
                 </ul>
             </p>
         </section>

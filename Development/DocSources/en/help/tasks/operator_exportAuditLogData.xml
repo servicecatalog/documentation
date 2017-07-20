@@ -37,8 +37,8 @@
             </step>
         </steps>
         <result>
-            <p>You can choose to view the exported data or save it to a file. Click <xref
-                    href="../../Shared/reference/r_Audit_log.xml">here</xref> for details on the content.</p>
+            <p>You can choose to view the exported data or save it to a file.<ph audience="doc"> Click <xref
+                    href="../../Shared/reference/r_Audit_log.xml">here</xref> for details on the content.</ph></p>
         </result>
     </taskbody>
 </task>

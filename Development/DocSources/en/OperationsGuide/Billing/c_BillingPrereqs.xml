@@ -22,7 +22,7 @@
                                 </li>
                                 <li>
                                         <p conref="../../help/tasks/operator_managePSPs.xml#task634/psp4"> </p>
-                                        <p>For details, refer to <xref href="../../Shared/reference/c_Certificates.xml"
+                                        <p audience="doc">For details, refer to <xref href="../../Shared/reference/c_Certificates.xml"
                                                 />.</p>
                                 </li>
                                 <li>
@@ -34,7 +34,7 @@
                                 <li>
                                         <p conref="../../help/tasks/operator_managePSPs.xml#task634/psp7"> </p>
                                         <p conref="../../help/tasks/operator_managePSPs.xml#task634/psp8"/>
-                                        <p>For details, refer to <xref href="../Configuration/c_UpdateConfiguration.xml"
+                                        <p audience="doc">For details, refer to <xref href="../Configuration/c_UpdateConfiguration.xml"
                                                 />.</p>
                                 </li>
                         </ol>

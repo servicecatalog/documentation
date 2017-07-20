@@ -29,8 +29,8 @@
       <p><b>To register multiple users for an organization</b>:</p>
       <p>
         <ol compact="no">
-          <li>Request the organization's administrator to provide a file containing the user data or create the file yourself. Refer to <xref
-              href="../../Shared/reference/r_FileFormat_ImportUsers.xml"/> for details on the format and content. </li>
+          <li>Request the organization's administrator to provide a file containing the user data or create the file yourself.<ph audience="doc"> Refer to <xref
+              href="../../Shared/reference/r_FileFormat_ImportUsers.xml"/> for details on the format and content.</ph> </li>
           <li>Import the user data file: <p>
               <ol compact="no">
                 <li>Select the organization for which you want to import users. </li>

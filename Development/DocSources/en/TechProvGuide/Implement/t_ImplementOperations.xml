@@ -13,9 +13,9 @@
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> user interface. In a SaaS environment, applications are not installed locally but provisioned as services. Therefore, users cannot access the system resources the applications are using, for example, to perform administrative tasks such as system backup or shutdown. Technical service operations can be used to access the resources of an application and perform administrative tasks without actually opening the application. </p>
             <p><ph id="The_information_about_the_ope_task_taskbody_context_p_2_ph"
-                    >To provide technical service operations, a Web service based on the operation service API must be implemented. The operations, their parameters, and the access information of the Web service must be specified in the technical service definition for the application. </ph>Refer to <xref
+                >To provide technical service operations, a Web service based on the operation service API must be implemented. The operations, their parameters, and the access information of the Web service must be specified in the technical service definition for the application. </ph><ph audience="doc">Refer to <xref
                     href="../Reference/r_TechServDescr.xml"
-                    ><?xm-replace_text xref: "Service Definition Reference"?></xref> for details. </p>
+                    ><?xm-replace_text xref: "Service Definition Reference"?></xref> for details.</ph> </p>
         </context>
         <result>
             <p>For details on how to implement a Web service with technical service operations, refer to the <i>Developer's Guide</i>.</p>

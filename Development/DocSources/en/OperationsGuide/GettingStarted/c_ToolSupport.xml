@@ -40,7 +40,7 @@
                 </ul>
             </p>
             <p>After login, the operator functionality is available in the <b>Operation</b> menu.</p>
-            <p>Refer to <xref href="c_Authentication.xml"/> for details on authentication modes.</p>
+            <p audience="doc">Refer to <xref href="c_Authentication.xml"/> for details on authentication modes.</p>
         </section>
         <section>
             <title>Command Line Tool</title>

@@ -19,7 +19,7 @@
       </ul>
       <p>In vSphere, the VMs created for <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
         /> subscriptions are managed in the same way as other VMs. They can be viewed and monitored with the standard vSphere management tools.</p>
-      <p>For more details on the usage scenarios, refer to <xref href="../Using/c_UsingIntro.xml"/>. </p>
+      <p audience="doc">For more details on the usage scenarios, refer to <xref href="../Using/c_UsingIntro.xml"/>. </p>
     </section>
   </conbody>
 </concept>

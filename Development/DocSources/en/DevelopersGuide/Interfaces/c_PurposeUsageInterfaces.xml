@@ -14,22 +14,22 @@
             <title>Provisioning Service API</title>
             <p>WSDL file: <codeph>ProvisioningService.wsdl</codeph></p>
             <p>This interface must be implemented for providing a provisioning service to integrate an application with <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. For details, refer to <xref
-                    href="../Implement/t_ImplProvServ.xml"/>. </p>
+                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.<ph audience="doc"> For details, refer to <xref
+                    href="../Implement/t_ImplProvServ.xml"/>.</ph> </p>
         </section>
         <section>
             <title>Notification Service API</title>
             <p>WSDL file: <codeph>NotificationService.wsdl</codeph></p>
             <p>REST API: <codeph>notification-rest-api.yaml</codeph></p>
-            <p>This interface must be implemented if you want to integrate an external process control system. For details, refer to <xref
-                    href="../ProcessControl/c_ProcessMgmtIntegration.xml"/>. </p>
+            <p>This interface must be implemented if you want to integrate an external process control system.<ph audience="doc"> For details, refer to <xref
+                    href="../ProcessControl/c_ProcessMgmtIntegration.xml"/>.</ph> </p>
         </section>
         <section>
             <title>Operation Service API</title>
             <p>WSDL file: <codeph>OperationService.wsdl</codeph></p>
             <p>This interface must be implemented for providing additional functions or operations for a technical service that are to be accessible via the <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> user interface. For details, refer to <xref href="../Implement/t_ImplementOperations.xml"/>.</p>
+            /> user interface.<ph audience="doc"> For details, refer to <xref href="../Implement/t_ImplementOperations.xml"/>.</ph></p>
         </section>
     </conbody>
 </concept>

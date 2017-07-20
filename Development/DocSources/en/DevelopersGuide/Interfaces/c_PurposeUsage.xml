@@ -22,8 +22,8 @@
             <p>Operators, suppliers, resellers, brokers, and marketplace owners can export customer billing data and revenue share data from <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> and process it using accounting, billing, and payment facilities that have already been established in their organization. This is useful, for example, to create invoices for customers who decide to pay on receipt of invoice, or for managing the revenue shares of the different organizations involved in offering and selling services. </p>
-            <p>The results of export operations are stored in XML files. For detailed information on the elements of the XML files, refer to <xref
-                    href="../Reference/r_BillingData.xml"/> and <xref href="../Reference/r_RevenueShareIntro.xml"/>.</p>
+            <p>The results of export operations are stored in XML files.<ph audience="doc"> For detailed information on the elements of the XML files, refer to <xref
+                    href="../Reference/r_BillingData.xml"/> and <xref href="../Reference/r_RevenueShareIntro.xml"/>.</ph></p>
         </section>
         <section>
             <title>Categorization Service </title>
@@ -42,7 +42,7 @@
             <p>This service is used for recording events which are generated during the operation of applications that are integrated with <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 />. Events can be used for billing and reporting. Examples of events are the completion of a specific transaction, or the creation or deletion of specific data.</p>
-            <p>For details on how to integrate an application with the <ph
+            <p audience="doc">For details on how to integrate an application with the <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> event management, refer to <xref href="../Implement/t_ImplementEvents.xml"/>.</p>
         </section>
@@ -102,16 +102,16 @@
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> session data. If you need to implement your own token handler and logout listener for an application integrated with <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    />, you have to implement calls to methods of this service. For details, refer to <xref
-                    href="../Implement/t_ImplIdentManag.xml"/>.</p>
+                    />, you have to implement calls to methods of this service.<ph audience="doc"> For details, refer to <xref
+                    href="../Implement/t_ImplIdentManag.xml"/>.</ph></p>
         </section>
         <section>
             <title>Subscription Management Service</title>
             <p>Java interface: <codeph>org.oscm.intf.SubscriptionService</codeph></p>
             <p>This service is used for managing subscriptions. Depending on the instance provisioning mechanism of your applications integrated with <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    />, you may have to implement calls to methods of this service in the provisioning service. For details, refer to <xref
-                    href="../Implement/t_ImplProvServDetails.xml"/>.</p>
+            />, you may have to implement calls to methods of this service in the provisioning service.<ph audience="doc"> For details, refer to <xref
+                    href="../Implement/t_ImplProvServDetails.xml"/>.</ph></p>
         </section>
         <section>
             <title>Tag Service</title>
@@ -125,8 +125,8 @@
             <p>REST API: <codeph>trigger-service-rest-api.yaml</codeph></p>
             <p>This service is used for retrieving and manipulating trigger process data. These data are used in a notification service to approve or reject <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> actions in a process control system. For details on how to integrate external process control systems, refer to <xref
-                    href="../ProcessControl/c_ProcessMgmtIntegration.xml"/> and the online help.</p>
+            /> actions in a process control system.<ph audience="doc"> For details on how to integrate external process control systems, refer to <xref
+                    href="../ProcessControl/c_ProcessMgmtIntegration.xml"/> and the online help.</ph></p>
         </section>
         <section>
             <title>Trigger Definition Service</title>

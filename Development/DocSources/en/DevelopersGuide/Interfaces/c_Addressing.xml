@@ -18,8 +18,8 @@
                 </li>
                 <li>
                     <p>On the <b>Descriptor</b> tab, open the <codeph>META_INF/sun-ejb-jar.xml</codeph> descriptor file of the <codeph>oscm-webservices.jar</codeph> subcomponent. </p>
-                    <p>For every platform service, the endpoint address URI shows the Web service name and whether it is to be addressed through basic authentication (<codeph>BASIC</codeph>), certificate-based authentication (<codeph>CLIENTCERT</codeph>), or a security token service (<codeph>STS</codeph>). Refer to <xref
-                            href="c_Authentication.xml"/> for details on the authentication types. </p>
+                    <p>For every platform service, the endpoint address URI shows the Web service name and whether it is to be addressed through basic authentication (<codeph>BASIC</codeph>), certificate-based authentication (<codeph>CLIENTCERT</codeph>), or a security token service (<codeph>STS</codeph>).<ph audience="doc"> Refer to <xref
+                            href="c_Authentication.xml"/> for details on the authentication types.</ph> </p>
                     <p>The URL pointing to the WSDL definition of a platform service is constructed as follows: </p>
                     <p><codeph>&lt;BASE_URL_HTTPS&gt;/&lt;endpoint-address-uri&gt;?wsdl</codeph></p>
                     <p>where </p>

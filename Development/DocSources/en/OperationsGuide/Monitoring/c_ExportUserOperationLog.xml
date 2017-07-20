@@ -32,8 +32,8 @@
                         </p></li>
                 </ul></p>
             <p id="Export_BillingData3"
-                    >You can choose to view the exported data or save it to a file. For details on the content, refer to <xref
-                    href="../../Shared/reference/r_Audit_log.xml"/>.</p>
+                >You can choose to view the exported data or save it to a file.<ph audience="doc"> For details on the content, refer to <xref
+                    href="../../Shared/reference/r_Audit_log.xml"/>.</ph></p>
         </section>
     </conbody>
 </concept>

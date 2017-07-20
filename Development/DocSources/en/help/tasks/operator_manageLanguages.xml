@@ -8,7 +8,9 @@
     <context>
       <p id="language_intro"><ph platform="print"><ph
             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
-          >The platform</ph> supports multiple languages in which users can work. After installation, English, German, and Japanese language bundles are available. The operator can add additional languages and customize the texts provided in the English, German, and Japanese language bundles. <ph
+          >The platform</ph> supports multiple languages in which users can work. After installation, English, German, and Japanese language bundles are available. The operator can add additional languages and customize the texts provided in the English, German, and Japanese language bundles.</p>
+        <p audience="doc">
+        <ph
           platform="help">Click <xref href="../../Shared/reference/r_Language_Codes.xml"
           >here</xref> for the list of languages that can be added.</ph><ph platform="print">Refer to <xref
             href="../../Shared/reference/r_Language_Codes.xml"/> for the list of languages that can be added.</ph>
@@ -24,19 +26,25 @@
               <ul>
                 <li>
                   <p>The user interface resources are translated or updated in a Microsoft Excel file<ph platform="help"
-                        > generated with the <uicontrol>Export</uicontrol> function on the <uicontrol>Manage languages</uicontrol> page</ph>. <ph
+                        > generated with the <uicontrol>Export</uicontrol> function on the <uicontrol>Manage languages</uicontrol> page</ph>.</p>
+                    <p audience="doc">
+                    <ph
                       platform="print">Refer to <xref href="../../Shared/reference/r_Language_Export_File.xml"
                       /> for details.</ph><ph platform="help">Click <xref
                         href="../../Shared/reference/r_Language_Export_File.xml">here</xref> for details.</ph></p>
                 </li>
                 <li>
-                  <p>The online help and FAQ files are translated or updated directly in the HTML files. <ph
+                  <p>The online help and FAQ files are translated or updated directly in the HTML files.</p>
+                  <p audience="doc">
+                  <ph
                       platform="print">Refer to <xref href="../../Shared/reference/r_Language_OnlineHelp_FAQ.xml"
                       /> for details.</ph><ph platform="help">Click <xref
                         href="../../Shared/reference/r_Language_OnlineHelp_FAQ.xml">here</xref> for details.</ph></p>
                 </li>
                 <li>
-                  <p>The report labels are translated or updated in properties files. <ph platform="print"
+                  <p>The report labels are translated or updated in properties files.</p>
+                  <p audience="doc">
+                  <ph platform="print"
                         >Refer to <xref href="../../Shared/reference/r_Language_ReportLabels.xml"/> for details.</ph><ph
                       platform=" help">Click <xref href="../../Shared/reference/r_Language_ReportLabels.xml"
                       >here</xref> for details.</ph></p>
@@ -75,7 +83,10 @@
         <cmd>In the <uicontrol>ISO language code</uicontrol> field, enter the two-letter ISO code of the language to be added. </cmd>
         <info>For example, enter <codeph>cs</codeph> for the Czech language. <p><ph platform="print"><ph
                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"> </ph></ph><ph platform="help"
-              >The platform</ph> supports left-to-right languages. Right-to-left or top-to-bottom languages as well as variants of languages, such as British and US English, are not supported. <ph
+              >The platform</ph> supports left-to-right languages. Right-to-left or top-to-bottom languages as well as variants of languages, such as British and US English, are not supported.
+          </p>
+          <p audience="doc">
+          <ph
               platform="help">Click <xref href="../../Shared/reference/r_Language_Codes.xml"
               >here</xref> for the list of languages that can be added.</ph></p></info>
       </step>
@@ -90,10 +101,10 @@
         <ol compact="no">
           <li>Exporting the user interface resources and translating them.</li>
           <li>Importing the translated texts and names. </li>
-          <li>Translating online help and FAQ files as well as the report labels and providing them as described in <xref
+          <li>Translating online help and FAQ files as well as the report labels and providing them<ph audience="doc"> as described in <xref
               href="../../Shared/reference/r_Language_OnlineHelp_FAQ.xml"/> and <xref
               href="../../Shared/reference/r_Language_ReportLabels.xml"
-              />. <p>You can also provide a subset of the resources that can be translated. For example, you can decide to have the online help, FAQ, email, and report texts in Hungarian, but leave the user interface in English. When a user then sets Hungarian in his user profile, the user interface will still be in English, but the other texts are shown in Hungarian.</p></li>
+              /></ph>. <p>You can also provide a subset of the resources that can be translated. For example, you can decide to have the online help, FAQ, email, and report texts in Hungarian, but leave the user interface in English. When a user then sets Hungarian in his user profile, the user interface will still be in English, but the other texts are shown in Hungarian.</p></li>
           <li>Activating the new language so that it becomes available to users when selecting their working language. </li>
         </ol>
       </p>
@@ -101,8 +112,8 @@
       <p>
         <ol compact="no">
           <li>Click <uicontrol>Export</uicontrol> and save the resources to a Microsoft Excel file in <codeph>.xls</codeph> format on your file system. </li>
-          <li>Translate the resources as required. Click <xref href="../../Shared/reference/r_Language_Export_File.xml"
-              >here</xref> for details.</li>
+          <li>Translate the resources as required.<ph audience="doc"> Click <xref href="../../Shared/reference/r_Language_Export_File.xml"
+              >here</xref> for details.</ph></li>
           <li>Import the translated Microsoft Excel file: <p>
               <ol compact="no">
                 <li>
@@ -121,8 +132,8 @@
         <ol compact="no">
           <li>Click the line of the language you want to update. <p>You can select any of the available languages including the system default languages (de, en, or jp).</p></li>
           <li>Click <uicontrol>Export</uicontrol> and save the resources to a Microsoft Excel file in <codeph>.xls</codeph> format on your file system. </li>
-          <li>The column headed by the code of the selected language is filled with already existing translations. Edit the strings as required. Click <xref
-              href="../../Shared/reference/r_Language_Export_File.xml">here</xref> for details. </li>
+          <li>The column headed by the code of the selected language is filled with already existing translations. Edit the strings as required.<ph audience="doc"> Click <xref
+              href="../../Shared/reference/r_Language_Export_File.xml">here</xref> for details.</ph> </li>
           <li>Import the updated Microsoft Excel file: <p>
               <ol compact="no">
                 <li>

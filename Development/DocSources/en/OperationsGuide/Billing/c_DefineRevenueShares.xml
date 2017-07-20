@@ -14,8 +14,8 @@
             <note>Revenue shares and discounts are calculated only for services applying the native billing system of <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 />. The costs of services using an external billing system are not included in the share calculation. </note>
-            <p>Suppliers, brokers, resellers, and marketplace owners can generate reports for their revenue shares and export the revenue share data for a specific month. As an operator, you can export the data for all the suppliers, brokers, resellers, or marketplace owners known to your platform installation. The exported data can be forwarded, for example, to an accounting system which continues to process it. For details, refer to <xref
-                    href="../Billing/c_BillingTasks.xml"/>. </p>
+            <p>Suppliers, brokers, resellers, and marketplace owners can generate reports for their revenue shares and export the revenue share data for a specific month. As an operator, you can export the data for all the suppliers, brokers, resellers, or marketplace owners known to your platform installation. The exported data can be forwarded, for example, to an accounting system which continues to process it.<ph audience="doc"> For details, refer to <xref
+                    href="../Billing/c_BillingTasks.xml"/>.</ph> </p>
             <p>As an operator, you are responsible for defining the revenue shares. You can define the following: </p>
             <p>
                 <ul>

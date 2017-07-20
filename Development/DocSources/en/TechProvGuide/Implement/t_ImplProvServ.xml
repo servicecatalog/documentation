@@ -15,8 +15,8 @@
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> when customers subscribe to a service and manage their subscriptions. Additionally, the provisioning service may be called for creating and managing users.</p>
             <p><ph id="You_do_not_have_to_implement_task_taskbody_prereq_p_2_ph"
-                    >You do not need to implement a provisioning service if you have chosen to use the external access type.</ph> For details on access types, refer to <xref
-                    href="../AccessTypes/c_AccessTypes.xml"/>.</p>
+                >You do not need to implement a provisioning service if you have chosen to use the external access type.</ph><ph audience="doc"> For details on access types, refer to <xref
+                    href="../AccessTypes/c_AccessTypes.xml"/>.</ph></p>
         </prereq>
         <context>
             <p id="For_the_implementation_you_n_task_taskbody_context_p"
@@ -43,7 +43,7 @@
                         />. Parameters can be used to define different feature configurations or service restrictions, for example, the maximum number of folders, files, or objects that can be created. Application parameters are specified in the technical service definition.</p><p
                         id="can_pass_parameters_to_your_task_taskbody_context_ul_li"><ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        /> can pass parameters to your application through the instance provisioning call. Any further processing must be carried out by your application. Especially if parameters are used to impose restrictions on service usage, the application needs to ensure that the restrictions are met. For example, if there is a parameter to restrict the maximum number of files created for a subscription, the application needs to track the actual number and ensure that the maximum number is not exceeded.</p><p>For details on how to define parameters in the technical service definition, refer to <xref
+                        /> can pass parameters to your application through the instance provisioning call. Any further processing must be carried out by your application. Especially if parameters are used to impose restrictions on service usage, the application needs to ensure that the restrictions are met. For example, if there is a parameter to restrict the maximum number of files created for a subscription, the application needs to track the actual number and ensure that the maximum number is not exceeded.</p><p audience="doc">For details on how to define parameters in the technical service definition, refer to <xref
                             href="../Reference/r_TechServDescr.xml"/>.</p></li>
                 <li id="User_management_task_taskbody_context_ul_li"><b>User management</b>
                     <p>If users access your application through <ph

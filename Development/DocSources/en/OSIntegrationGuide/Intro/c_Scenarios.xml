@@ -19,8 +19,8 @@
           /> independent of whether the deletion is successful in OpenStack. </li>
       </ul>
       <p>In OpenStack, the virtual systems created for <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> subscriptions are managed in the same way as other virtual systems. They can be viewed and monitored with the available OpenStack tools.</p>
-      <p>Modifying a subscription and thereby triggering modifications of the virtual system in OpenStack is not supported. For more details on the supported usage scenarios, refer to <xref
-          href="../Using/c_UsingIntro.xml"/>.</p>
+      <p>Modifying a subscription and thereby triggering modifications of the virtual system in OpenStack is not supported.<ph audience="doc"> For more details on the supported usage scenarios, refer to <xref
+          href="../Using/c_UsingIntro.xml"/>.</ph></p>
     </section>
   </conbody>
 </concept>

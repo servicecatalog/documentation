@@ -32,10 +32,10 @@
         <cmd>Depending on the seller policy defined for the selected marketplace, proceed as follows:</cmd>
         <info>
           <ul compact="no">
-            <li>Marketplace for authorized sellers: Allow sellers to publish services or exclude sellers from publishing services. Click <xref
-                href="marketplace_manageSuppliers.xml">here</xref> for more details.</li>
-            <li>Open marketplace: Exclude sellers from publishing services or allow excluded sellers to publish services again. Click <xref
-                href="marketplace_manageSuppliers_open.xml">here</xref> for more details.</li>
+            <li>Marketplace for authorized sellers: Allow sellers to publish services or exclude sellers from publishing services.<ph audience="doc"> Click <xref
+                href="marketplace_manageSuppliers.xml">here</xref> for more details.</ph></li>
+            <li>Open marketplace: Exclude sellers from publishing services or allow excluded sellers to publish services again.<ph audience="doc"> Click <xref
+                href="marketplace_manageSuppliers_open.xml">here</xref> for more details.</ph></li>
           </ul>
         </info>
       </step>

@@ -13,8 +13,8 @@
                                         platform="print"><ph
                                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                         /></ph>. </p>
-                        <p>The user data file must be in <codeph>csv</codeph> (comma-separated values) format. For details, refer to <xref
-                                        href="../../Shared/reference/r_FileFormat_ImportUsers.xml"/>. </p>
+                        <p>The user data file must be in <codeph>csv</codeph> (comma-separated values) format.<ph audience="doc"> For details, refer to <xref
+                                        href="../../Shared/reference/r_FileFormat_ImportUsers.xml"/>.</ph> </p>
                         <p><b>To register multiple users for an organization, choose the following option:</b>
                                 <ul>
                                         <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"

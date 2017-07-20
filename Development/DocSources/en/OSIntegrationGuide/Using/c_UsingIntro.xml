@@ -10,7 +10,7 @@
         <conbody>
                 <p>The following sections describe how users can subscribe to and work with the services you have created for OpenStack in <ph
                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                />. You will find details of the supported usage scenarios outlined in <xref
-                                href="../Intro/c_Scenarios.xml"/>. </p>
+                />.<ph audience="doc"> You will find details of the supported usage scenarios outlined in <xref
+                                href="../Intro/c_Scenarios.xml"/>.</ph> </p>
         </conbody>
 </concept>

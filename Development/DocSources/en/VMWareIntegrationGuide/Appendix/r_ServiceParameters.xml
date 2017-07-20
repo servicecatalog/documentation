@@ -78,8 +78,8 @@
                 <p><b>INSTANCENAME</b></p>
                 <p>Mandatory. The name of the VM instance to be provisioned. This name is either generated automatically, or must be specified by customers when they subscribe to a corresponding service. The instance name is used as the host name of the VM in the network configuration. The permitted length of host names depends on the operating system. </p>
                 <p>The string given in <codeph>INSTANCENAME_PREFIX</codeph> is prepended to the name. The name including the prefix must match the pattern given in <codeph>INSTANCENAME_PATTERN</codeph>.</p>
-                <p>For the automatic generation of instance names, the following placeholders are supported. They are filled with the corresponding data from the VMware service controller database when the VM is provisioned. Refer to <xref
-                    href="r_CSVFormat.xml"/> for details. </p>
+                <p>For the automatic generation of instance names, the following placeholders are supported. They are filled with the corresponding data from the VMware service controller database when the VM is provisioned.<ph audience="doc"> Refer to <xref
+                    href="r_CSVFormat.xml"/> for details</ph>.</p>
                 <p>
                   <ul>
                     <li><codeph>${VC}</codeph>: Unique ID of the vCenter derived from the <codeph>vcenter</codeph> database table. Specifies the vSphere server on which the VM is provisioned. </li>
@@ -481,7 +481,7 @@
                     <li><codeph>USERPWD_&lt;organizationID></codeph></li>
                   </ul>
                 </p>
-                <p>For details, refer to <xref href="r_ConfigSettingsController.xml"/>.</p>
+                <p audience="doc">For details, refer to <xref href="r_ConfigSettingsController.xml"/>.</p>
                 <p>A sample script for changing the Linux root password is available in the <codeph>&lt;install_pack_dir>/samples</codeph> directory: <codeph>changeRootPassword.sh</codeph>.</p>
                 <p>Example: <codeph>http://localhost:8080/changeNetworkSettings.sh</codeph></p>
               </entry>

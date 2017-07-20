@@ -40,7 +40,7 @@ Certificate fingerprints:
             <p>
                 <note>When integrating the services of commercial payment service providers (PSPs), the distinguished name must always be set. You set the distinguished name when registering the PSP with <ph
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        />. For details, refer to <xref href="../Billing/c_BillingCreatePSP.xml"/>.</note>
+                />.<ph audience="doc"> For details, refer to <xref href="../Billing/c_BillingCreatePSP.xml"/>.</ph></note>
             </p>
             <p><b>To set the distinguished name for an organization, choose one of the following options:</b>
                 <ul>

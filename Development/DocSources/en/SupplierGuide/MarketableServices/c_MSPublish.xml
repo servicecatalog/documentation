@@ -10,8 +10,8 @@
         <section id="Publishing_marketable_service_concept_conbody_section_1">
             <p>Publishing a marketable service means making it available to customers for subscription on a marketplace of your choice. </p>
             <p>The following prerequisites must be fulfilled for publishing a service: <ul>
-                    <li>A price model must have been defined for the service. For details, refer to <xref
-                            href="../PriceModels/c_PMIntro.xml"/>.</li>
+                <li>A price model must have been defined for the service.<ph audience="doc"> For details, refer to <xref
+                            href="../PriceModels/c_PMIntro.xml"/>.</ph></li>
                     <li>Access to the marketplace and the permission to publish services on it must have been granted by the marketplace owner.</li>
                 </ul></p>
             <p>Publishing a service involves selecting the marketplace, activating the service, and publishing the URL of the marketplace. These tasks are described in more detail in the sections below.</p>

@@ -19,8 +19,8 @@
                                 > In addition, you need to setup the VMware service controller database.</ph> Proceed as follows:</p>
                 <p>
                         <ol>
-                                <li>Check the prerequisites described in <xref
-                        href="c_PrepCTMG.xml"/>. </li>
+                                <li>Check the prerequisites<ph audience="doc"> described in <xref
+                        href="c_PrepCTMG.xml"/></ph>. </li>
                                 <li audience="vmware"
                                                 >Specify the settings for the VMware service controller database setup and access in the <codeph>db.properties</codeph> file located in the <codeph>&lt;install_pack_dir>/databases/controller_db</codeph> directory.</li>
                                 <li audience="vmware"
@@ -108,15 +108,15 @@
                                 <li>Configure the <ph audience="ror">ROR</ph><ph audience="aws">AWS</ph><ph
                                                 audience="os">OpenStack</ph><ph audience="tps5">TPS5</ph><ph
                                                 audience="vmware"
-                                                >VMware</ph> service controller following the instructions in <xref
-                                                href="c_UpdateConfiguration.xml"/>.</li>
+                                                        >VMware</ph> service controller<ph audience="doc"> following the instructions in <xref
+                                                href="c_UpdateConfiguration.xml"/></ph>.</li>
                                 <li audience="tps5"
                                                 >Import the certificate of TPS5 into the truststore of the <codeph>app-domain</codeph> application server domain of the TPS5 integration software: <p>
                                                 <ul>
                                                         <li audience="tps5"
-                                                            >Obtain the valid TPS5 certificate by exporting it from the <codeph>cacerts.jks</codeph> file. The file is contained in the <codeph>OViSS_JAVASDK/bin/security</codeph> subdirectory of the temporary directory to which you extracted the <codeph>OViSSSDK_*.zip</codeph> file you downloaded from the TPS5 Service Portal. Refer to <xref
+                                                                >Obtain the valid TPS5 certificate by exporting it from the <codeph>cacerts.jks</codeph> file. The file is contained in the <codeph>OViSS_JAVASDK/bin/security</codeph> subdirectory of the temporary directory to which you extracted the <codeph>OViSSSDK_*.zip</codeph> file you downloaded from the TPS5 Service Portal.<ph audience="doc"> Refer to <xref
                                                             href="t_InstPreparing.xml"
-                                                            /> for details.<p>For details on the certificates, refer to the TPS5 documentation.</p></li>
+                                                            /> for details.</ph><p>For details on the certificates, refer to the TPS5 documentation.</p></li>
                                                         <li audience="tps5">Import the TPS5 certificate, for example, by executing the following command at the command prompt (Windows) or in a terminal session (UNIX/Linux) on the application server:<p>
                                                             <codeblock>&lt;AppServerJRE>/bin/keytool -import -trustcacerts -alias &lt;alias>
    -file &lt;filename> -storepass &lt;password> -keystore

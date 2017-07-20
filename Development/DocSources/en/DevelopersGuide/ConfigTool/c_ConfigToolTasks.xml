@@ -35,8 +35,8 @@
         </section>
         <section>
             <title>Implementing the Data Structures</title>
-            <p>For the exchange of data, the message and parameter definitions must be implemented in accordance with the predefined syntax. For details, refer to <xref
-                    href="../ConfigTool/c_ConfigToolMessageInt.xml"/>.</p>
+            <p>For the exchange of data, the message and parameter definitions must be implemented in accordance with the predefined syntax. <ph audience="doc">For details, refer to <xref
+                    href="../ConfigTool/c_ConfigToolMessageInt.xml"/></ph>.</p>
             <p>A JavaScript library, <codeph>configurationAPI.js</codeph>, is provided that you can use for implementing the message and parameter definitions. The library is included in the <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> integration package (<codeph>oscm-integration-pack.zip</codeph>). From the <codeph>readme.htm</codeph> file of the integration package, you can directly access the library.</p>

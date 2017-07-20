@@ -9,8 +9,8 @@
     <taskbody>
         <context>
             <p id="1BSS"><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> requires specific settings and resources in the application server, such as a data source and JMS queues. For details on the resources, refer to <xref
-                    href="../../Shared/reference/r_AppServerResources.xml"/>.</p>
+            /> requires specific settings and resources in the application server, such as a data source and JMS queues.<ph audience="doc"> For details on the resources, refer to <xref
+                    href="../../Shared/reference/r_AppServerResources.xml"/>.</ph></p>
             <p>Before starting to install <ph audience="BSS"
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     />, make sure that the application server ports you want to use are available. The GlassFish domain creation reserves some ports using the following rules based on the port base principle. For example, when using port base 8000:</p>
@@ -66,8 +66,8 @@
                                 <li>The <codeph>oscm-security.jar</codeph>, the <codeph>postgresql-9.4-1206-jdbc42.jar</codeph>, and the <codeph>commons-codec-1.7.jar</codeph> files are copied from the directory to which you extracted the <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                         /> installation package (<codeph>&lt;install_pack_dir&gt;/domains/bes_domain/lib</codeph>) to the <codeph>lib</codeph> directory of the <codeph>bes-domain</codeph> domain.</li>
-                                <li>The required resources, email settings, JMS queues, data sources are created in the application server. Refer to <xref
-                                        href="../../Shared/reference/r_AppServerResources.xml"/> for details.</li>
+                                <li>The required resources, email settings, JMS queues, data sources are created in the application server.<ph audience="doc"> Refer to <xref
+                                        href="../../Shared/reference/r_AppServerResources.xml"/> for details.</ph></li>
                                 <li>A key file for encryption and decryption is generated in the location you specified in the <codeph>KEY_FILE_PATH</codeph> setting in the <codeph>configsettings.properties</codeph> file. By default, this file is named <codeph>key</codeph> and located in <p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/bes-domain/config</codeph></p></li>
                                 <li>The directory traversal is disabled for both domains, <codeph>bes-domain</codeph> and <codeph>master-indexer-domain</codeph>: The directory listing parameter is set to <codeph>false</codeph> in the <codeph>default-web.xml</codeph> file in the domain directories you are using for <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </li>

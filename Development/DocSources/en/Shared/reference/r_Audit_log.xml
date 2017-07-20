@@ -46,8 +46,8 @@
                     <p><codeph>&lt;<i>additional name-value pairs</i>></codeph>: Additional name-value pairs specific to the logged operation, separated by vertical bars (|). </p>
                 </li>
             </ul>
-            <p>The log entries are categorized by the role of the user who executed an operation: </p>
-            <p>
+            <p audience="doc">The log entries are categorized by the role of the user who executed an operation: 
+            
                 <ul>
                     <li><xref href="r_Audit_log_User.xml"/></li>
                     <li><xref href="r_Audit_log_Admin.xml"/></li>

@@ -8,7 +8,7 @@
     <conbody>
         <section>
             <p>The installation of the ROR integration software consists of the following main steps:</p>
-            <ul>
+            <ul audience="doc">
                 <li><xref
                         href="../../Shared/Installation/t_InstPreparing.xml"/></li>
                 <li><xref

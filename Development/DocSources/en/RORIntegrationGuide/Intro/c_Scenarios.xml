@@ -23,7 +23,7 @@
       <p>In ROR, the virtual platforms and servers created for <ph
           conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
         /> subscriptions are managed in the same way as other virtual platforms and servers. They can be viewed and monitored with the standard ROR tools.</p>
-      <p>For more details on the usage scenarios, refer to <xref href="../Using/c_UsingIntro.xml"/>. </p>
+      <p audience="doc">For more details on the usage scenarios, refer to <xref href="../Using/c_UsingIntro.xml"/>. </p>
     </section>
   </conbody>
 </concept>

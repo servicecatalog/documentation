@@ -21,7 +21,7 @@
                                 > and registering the TPS5</ph><ph audience="vmware"
                                 >, registering the VMware</ph> service controller<ph audience="vmware"
                                 > and setting up a database for the controller</ph>. </p>
-                <p>If you already have a working APP installation in your environment, proceed as described in <xref
+                <p audience="doc">If you already have a working APP installation in your environment, proceed as described in <xref
                                 href="c_InstControllerInExistingAPP.xml"/>.</p>
 
         </conbody>

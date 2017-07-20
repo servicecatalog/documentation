@@ -51,8 +51,8 @@
                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                             />, every action for which a process trigger has been configured results in a notification to your notification service. A trigger process key is sent for all actions that require a callback from the external system. This key is necessary to approve or reject an action. </p><p>The process triggers are queued and executed asynchronously. They are not called inside the transaction initiated by the user.</p></li>
                     <li>For approval or rejection, the process control system needs to send its response to the trigger service of <ph
-                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> (see <xref
-                            href="../Interfaces/c_PlatformServices.xml"/>). The API of the trigger service is available in the following variants: <ul>
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/><ph audience="doc"> (see <xref
+                            href="../Interfaces/c_PlatformServices.xml"/>)</ph>. The API of the trigger service is available in the following variants: <ul>
                             <li>SOAP-based API, <codeph>org.oscm.intf.TriggerService</codeph>.</li>
                             <li>REST API, described in <codeph>trigger-service-rest-api.yaml</codeph>. </li>
                         </ul><p>As a result of the response, the interrupted action in <ph

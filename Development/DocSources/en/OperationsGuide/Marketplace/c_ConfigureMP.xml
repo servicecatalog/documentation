@@ -18,9 +18,9 @@
                     <li><codeph>TAGGING_MIN_SCORE</codeph>: The minimum number of times a tag must be used in services to be shown in the tag cloud.</li>
                 </ul>
             </p>
-            <p>For details on the settings, refer to <xref
+            <p audience="doc">For details on the settings, refer to <xref
                     href="../../Shared/reference/r_ConfigSettings_config_properties.xml"/>.</p>
-            <p>For details on how to change configuration settings, refer to <xref
+            <p audience="doc">For details on how to change configuration settings, refer to <xref
                     href="../Configuration/c_UpdateConfiguration.xml"/>.</p>
         </section>
     </conbody>

@@ -13,8 +13,8 @@
                     audience="tps5">The TPS5 integration software</ph><ph audience="vmware"
                     >The vSphere integration software</ph> requires specific settings and resources in the application server, such as mail settings or a data source.</p>
             <note audience="app"
-                    >When creating the application server resources, you can also deploy a service controller. For details, refer to <xref
-                    href="../../APPInt/APP/t_DeployController.xml"/>.</note>
+                >When creating the application server resources, you can also deploy a service controller.<ph audience="doc"> For details, refer to <xref
+                    href="../../APPInt/APP/t_DeployController.xml"/>.</ph></note>
             <p>Proceed as follows to create the resources and make the required settings in the application server:</p>
         </context>
         <steps>

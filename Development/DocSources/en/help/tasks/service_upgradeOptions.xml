@@ -19,9 +19,11 @@
           >Be aware of the effects of up/downgrade options on the price model elements that determine how the charges for a customer are calculated when using the <ph
           platform="help">platform's </ph>native billing system <ph platform="print">of <ph platform="print"
             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph>
+        <ph audience="doc">        
+        
         <ph platform="help">(click <xref href="../../Shared/reference/r_PriceModelDetails.xml"
           >here</xref> for more details)</ph><ph platform="print">(see <xref
-            href="../../SupplierGuide/PriceModels/c_PMElements.xml"/> for details)</ph>:</p>
+            href="../../SupplierGuide/PriceModels/c_PMElements.xml"/> for details)</ph>:</ph></p>
       <p id="The_prices_for_using_a_servic_task_taskbody_context_p_9">
         <ul compact="no">
           <li>The prices for using a service may be calculated and charged based on time units. When a customer upgrades or downgrades a subscription with a price calculation based on time units, the costs for the unit in which the subscription is upgraded or downgraded are charged twice.</li>

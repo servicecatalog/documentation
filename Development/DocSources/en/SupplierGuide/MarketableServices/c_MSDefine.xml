@@ -11,12 +11,12 @@
             <p>The general procedure for defining a marketable service in <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> is the following: </p>
             <ol>
-                <li>Create the marketable service. For details, refer to <xref
-                        href="../MarketableServices/c_MSCreate.xml"/>.</li>
-                <li>Define a price model for the service. For details, refer to <xref
-                        href="../PriceModels/c_PMIntro.xml"/>.</li>
-                <li>Define upgrade and downgrade options (optional). For details, refer to <xref
-                        href="../MarketableServices/c_MSUpgrade.xml"/>.</li>
+                <li>Create the marketable service.<ph audience="doc"> For details, refer to <xref
+                        href="../MarketableServices/c_MSCreate.xml"/>.</ph></li>
+                <li>Define a price model for the service.<ph audience="doc"> For details, refer to <xref
+                        href="../PriceModels/c_PMIntro.xml"/>.</ph></li>
+                <li>Define upgrade and downgrade options (optional).<ph audience="doc"> For details, refer to <xref
+                        href="../MarketableServices/c_MSUpgrade.xml"/>.</ph></li>
             </ol>
         </section>
     </conbody>

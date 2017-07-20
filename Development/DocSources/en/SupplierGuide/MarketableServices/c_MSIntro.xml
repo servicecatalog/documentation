@@ -87,8 +87,8 @@
                 <li>Medium space of 200 GB</li>
                 <li>Maximum space of 400 GB</li>
             </ul>
-            <p>You can define different prices for the three options. For details, refer to <xref
-                    href="../PriceModels/c_PMElements.xml"/>.</p>
+            <p>You can define different prices for the three options.<ph audience="doc"> For details, refer to <xref
+                    href="../PriceModels/c_PMElements.xml"/>.</ph></p>
             <p>In the following sections, you will find an overview of the elements that make up the definition of a marketable service and the functions that support you in defining, maintaining, and publishing marketable services. In addition, the sections describe how you can use the support of brokers and resellers. </p>
         </section>
     </conbody>

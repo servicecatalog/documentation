@@ -25,18 +25,18 @@
                                     </p>
                                     <p>For offering a service on a marketplace, the broker needs your explicit permission. You can grant this permission if you have fulfilled the following prerequisites:</p>
                                     <ul>
-                                                <li>The service must be defined, and its parameters, conditions, and restrictions must be specified. For details, refer to <xref
-                                                            href="../MarketableServices/c_MSCreate.xml"/>.</li>
-                                                <li>The price model, including a license agreement, must be defined for the service. For details, refer to <xref
-                                                            href="../PriceModels/c_PMIntro.xml"/>.</li>
+                                                <li>The service must be defined, and its parameters, conditions, and restrictions must be specified.<ph audience="doc"> For details, refer to <xref
+                                                            href="../MarketableServices/c_MSCreate.xml"/>.</ph></li>
+                                                <li>The price model, including a license agreement, must be defined for the service.<ph audience="doc"> For details, refer to <xref
+                                                            href="../PriceModels/c_PMIntro.xml"/>.</ph></li>
                                     </ul>
                                     <p>The broker cannot change the service definition, the price model, and the license agreement. He can view these elements and publish the service to a marketplace of his choice.</p>
-                                    <p>As a supplier, you are responsible for preparing billing and payment for your broker's customers and collecting the payments. For details, refer to <xref
-                                                            href="../Billing/c_BillIntro.xml"/>.</p>
+                                    <p>As a supplier, you are responsible for preparing billing and payment for your broker's customers and collecting the payments.<ph audience="doc"> For details, refer to <xref
+                                                            href="../Billing/c_BillIntro.xml"/>.</ph></p>
                                     <p>A broker usually receives a share of the revenue for the services he offers. <ph
                                                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                                            /> allows a broker to retrieve information on his actual revenue. As a supplier, you can also retrieve information on the revenue accumulated by your brokers. For details, refer to <xref
-                                                            href="../Billing/c_BillIntro.xml"/>.</p>
+                                    /> allows a broker to retrieve information on his actual revenue. As a supplier, you can also retrieve information on the revenue accumulated by your brokers.<ph audience="doc"> For details, refer to <xref
+                                                            href="../Billing/c_BillIntro.xml"/>.</ph></p>
                         </section>
                         <section>
                                     <title>Reseller Usage Scenario</title>
@@ -50,18 +50,18 @@
                                     </p>
                                     <p>For offering a service on a marketplace, the reseller needs your explicit permission. You can grant this permission if you have fulfilled the following prerequisites:</p>
                                     <ul>
-                                                <li>The service must be defined and its parameters, conditions, and restrictions must be specified. For details, refer to <xref
-                                                            href="../MarketableServices/c_MSCreate.xml"/>.</li>
-                                                <li>The price model must be defined for the service. For details, refer to <xref
-                                                            href="../PriceModels/c_PMIntro.xml"/>.</li>
+                                                <li>The service must be defined and its parameters, conditions, and restrictions must be specified.<ph audience="doc"> For details, refer to <xref
+                                                            href="../MarketableServices/c_MSCreate.xml"/>.</ph></li>
+                                                <li>The price model must be defined for the service.<ph audience="doc"> For details, refer to <xref
+                                                            href="../PriceModels/c_PMIntro.xml"/>.</ph></li>
                                     </ul>
                                     <p>The reseller can view the service definition and the price model, but he cannot change them. The contract between him and the customer is based on your prices. The reseller can, however, define his own license agreement. It is up to him whether he uses your license agreement or enters a different one.</p>
                                     <p>A reseller who has been granted your permission can publish the service to a marketplace of his choice.</p>
                                     <p>Since a subscription establishes a contract between the reseller and the customer, you are not involved in billing and payment. The reseller is responsible for preparing billing and payment for his customers and collecting the payments. </p>
                                     <p>A reseller is usually not entitled to keep the entire revenue collected from his customers, but only a certain share thereof. <ph
                                                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                                            /> allows a reseller to retrieve information on his actual revenue. As a supplier, you can also retrieve information on the revenue accumulated by your resellers. For details, refer to <xref
-                                                            href="../Reports/c_Reports.xml"/>.</p>
+                                    /> allows a reseller to retrieve information on his actual revenue. As a supplier, you can also retrieve information on the revenue accumulated by your resellers.<ph audience="doc"> For details, refer to <xref
+                                                            href="../Reports/c_Reports.xml"/>.</ph></p>
                         </section>
                         <section>
                                     <title>Granting Brokers and Resellers the Resale Permission</title>

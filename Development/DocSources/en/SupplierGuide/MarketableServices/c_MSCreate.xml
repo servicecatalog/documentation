@@ -38,8 +38,8 @@
                         />, you have to specify its URL in the service definition.</p></li>
             </ul>
             <p>Additionally, you can specify whether a user subscribing to the service is automatically assigned to the corresponding subscription.</p>
-            <p>The service name for customers, the short description, the description, and the name of the custom tab can be specified in one or several languages. For details, refer to <xref
-                    href="../MarketableServices/c_MSMaintain.xml"/>.</p>
+            <p>The service name for customers, the short description, the description, and the name of the custom tab can be specified in one or several languages.<ph audience="doc"> For details, refer to <xref
+                    href="../MarketableServices/c_MSMaintain.xml"/>.</ph></p>
         </section>
     </conbody>
 </concept>

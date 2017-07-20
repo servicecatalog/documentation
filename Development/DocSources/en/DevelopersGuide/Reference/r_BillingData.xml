@@ -25,18 +25,18 @@
             <p>Top-level container element of a billing data file. For each subscription, a <codeph>BillingDetails</codeph> element is added to the billing data file. </p>
             <p>A <codeph>BillingDetails</codeph> element contains the following subelements:</p>
             <ul>
-                <li><codeph>Period</codeph> (see <xref
+                <li><codeph>Period</codeph><ph audience="doc"> (see <xref
                         href="r_BillingData.xml#reference_25043B5D1DED4B2F9D5E9B099A9AC69C/Period_reference_refbody_section_3"
-                    />)</li>
-                <li><codeph>OrganizationDetails</codeph> (see <xref
+                    />)</ph></li>
+                <li><codeph>OrganizationDetails</codeph><ph audience="doc"> (see <xref
                         href="r_BillingData.xml#reference_25043B5D1DED4B2F9D5E9B099A9AC69C/OrganizationDetails_reference_refbody_section_4"
-                    />)</li>
-                <li><codeph>Subscriptions</codeph> (see <xref
+                    />)</ph></li>
+                <li><codeph>Subscriptions</codeph><ph audience="doc"> (see <xref
                         href="r_BillingData.xml#reference_25043B5D1DED4B2F9D5E9B099A9AC69C/Subscriptions_reference_refbody_section_9"
-                    />)</li>
-                <li><codeph>OverallCosts</codeph> (see <xref
+                    />)</ph></li>
+                <li><codeph>OverallCosts</codeph><ph audience="doc"> (see <xref
                         href="r_BillingData.xml#reference_25043B5D1DED4B2F9D5E9B099A9AC69C/OverallCosts_reference_refbody_section_12"
-                    />)</li>
+                    />)</ph></li>
             </ul>
             <p>A <codeph>BillingDetails</codeph> element has the following attributes: </p>
             <p><codeph><b>key</b></codeph> - (optional, data type <codeph>long</codeph>) <ph
@@ -50,9 +50,9 @@
   <b>startDateIsoFormat="2013-06-01T16:00:00.000Z"</b> ..."/>
 </codeblock>
             </p>
-            <p>The time zone is relevant for price models with costs (see <xref
+            <p>The time zone is relevant for price models with costs<ph audience="doc"> (see <xref
                     href="r_BillingData.xml#reference_25043B5D1DED4B2F9D5E9B099A9AC69C/PriceModel_reference_refbody_section_7"
-                />). </p>
+                />)</ph>. </p>
         </section>
         <section id="Period_reference_refbody_section_3">
             <title>Period</title>
@@ -108,9 +108,9 @@
                 <li><codeph><b>id</b></codeph> - (required, data type <codeph>string</codeph>) Unique subscription name. </li>
                 <li><codeph><b>purchaseOrderNumber</b></codeph> - (data type <codeph>string</codeph>) Optional reference number as specified by the customer when subscribing to a service.</li>
             </ul>
-            <p>A <codeph>Subscription</codeph> element contains a <codeph>PriceModel</codeph> element with the billing data for the price model of the subscription (see <xref
+            <p>A <codeph>Subscription</codeph> element contains a <codeph>PriceModel</codeph> element with the billing data for the price model of the subscription<ph audience="doc"> (see <xref
                 href="r_BillingData.xml#reference_25043B5D1DED4B2F9D5E9B099A9AC69C/PriceModel_reference_refbody_section_7"
-            />). A <codeph>Udas</codeph> element with custom attributes that store additional information on the subscription may also be included (see <xref href="r_BillingData.xml#reference_25043B5D1DED4B2F9D5E9B099A9AC69C/Udas_reference_refbody_section_27" />).</p>
+            />)</ph>. A <codeph>Udas</codeph> element with custom attributes that store additional information on the subscription may also be included<ph audience="doc"> (see <xref href="r_BillingData.xml#reference_25043B5D1DED4B2F9D5E9B099A9AC69C/Udas_reference_refbody_section_27" />)</ph>.</p>
             <p>If a subscription is assigned to an organizational unit at the end of the billing period, the <codeph>Subscription</codeph> element also contains an <codeph>OrganizationalUnit</codeph> element with the following attributes:</p>
             <ul>
                 <li><codeph><b>name</b></codeph> - (required, data type <codeph>string</codeph>) Required name of the organizational unit to which the subscription is assigned.</li>
@@ -166,27 +166,27 @@
             <p>Contains the billing data for a price model used to calculate the utilization charges for a subscription. </p>
             <p>A <codeph>PriceModel</codeph> element is included in every subscription element. It contains the following subelements:</p>
             <ul>
-                <li><codeph>UsagePeriod</codeph> (see <xref
+                <li><codeph>UsagePeriod</codeph><ph audience="doc"> (see <xref
                         href="r_BillingData.xml#reference_25043B5D1DED4B2F9D5E9B099A9AC69C/UsagePeriod_reference_refbody_section_3"
-                    />)</li>
-                <li><codeph>GatheredEvents</codeph> (see <xref
+                    />)</ph></li>
+                <li><codeph>GatheredEvents</codeph><ph audience="doc"> (see <xref
                         href="r_BillingData.xml#reference_25043B5D1DED4B2F9D5E9B099A9AC69C/GatheredEvents_reference_refbody_section_14"
-                    />)</li>
-                <li><codeph>PeriodFee</codeph> (see <xref
+                    />)</ph></li>
+                <li><codeph>PeriodFee</codeph><ph audience="doc"> (see <xref
                         href="r_BillingData.xml#reference_25043B5D1DED4B2F9D5E9B099A9AC69C/PeriodFee_PriceModel_reference_refbody_section_20"
-                    />)</li>
-                <li><codeph>UserAssignmentCosts</codeph> (see <xref
+                    />)</ph></li>
+                <li><codeph>UserAssignmentCosts</codeph><ph audience="doc"> (see <xref
                         href="r_BillingData.xml#reference_25043B5D1DED4B2F9D5E9B099A9AC69C/UserAssignmentCosts_PriceMod_reference_refbody_section_21"
-                    />)</li>
-                <li><codeph>OneTimeFee</codeph> (see <xref
+                    />)</ph></li>
+                <li><codeph>OneTimeFee</codeph><ph audience="doc"> (see <xref
                         href="r_BillingData.xml#reference_25043B5D1DED4B2F9D5E9B099A9AC69C/OneTimeFee_reference_refbody_section_23"
-                    />)</li>
-                <li><codeph>PriceModelCosts</codeph> (see <xref
+                    />)</ph></li>
+                <li><codeph>PriceModelCosts</codeph><ph audience="doc"> (see <xref
                         href="r_BillingData.xml#reference_25043B5D1DED4B2F9D5E9B099A9AC69C/PriceModelCosts_reference_refbody_section_24"
-                    />)</li>
-                <li><codeph>Parameters</codeph> (see <xref
+                    />)</ph></li>
+                <li><codeph>Parameters</codeph><ph audience="doc"> (see <xref
                         href="r_BillingData.xml#reference_25043B5D1DED4B2F9D5E9B099A9AC69C/Parameters_reference_refbody_section_25"
-                    />)</li>
+                    />)</ph></li>
             </ul>
             <p>A <codeph>PriceModel</codeph> element has the following attributes: </p>
             <p><codeph><b>id</b></codeph> - (required, data type <codeph>string</codeph>) Unique name identifying the price model.</p>
@@ -238,9 +238,9 @@
             <p><b>Description</b></p>
             <p>Contains the description of the event. </p>
             <p><b>SingleCost</b></p>
-            <p>Specifies the price for the event as defined in the price model. If an event has stepped prices, this element is omitted. A <codeph>SteppedPrices</codeph> element is included instead (see <xref
+            <p>Specifies the price for the event as defined in the price model. If an event has stepped prices, this element is omitted. A <codeph>SteppedPrices</codeph> element is included instead<ph audience="doc"> (see <xref
                     href="r_BillingData.xml#reference_25043B5D1DED4B2F9D5E9B099A9AC69C/SteppedPrices_reference_refbody_section_26"
-                />). </p>
+                />)</ph>. </p>
             <p>A <codeph>SingleCost</codeph> element has the following attribute:</p>
             <p><codeph><b>amount</b></codeph> - (required, data type <codeph>decimal</codeph>) Price for a single event. </p>
             <p><b>NumberOfOccurence</b></p>
@@ -250,11 +250,11 @@
             <p><b>CostForEventType</b></p>
             <p>Specifies the total costs for the event in the billing period. </p>
             <p>A <codeph>CostForEventType</codeph> element has the following attribute:</p>
-            <p><codeph><b>amount</b></codeph> - (required, data type <codeph>decimal</codeph>) Total costs for the event. The total costs for an event are calculated from the singular costs (<codeph>SingleCost</codeph>) multiplied with the number of occurrences (<codeph>NumberOfOccurence</codeph>). If role-based costs and/or stepped prices are specified for events, these costs are added (see <xref
+            <p><codeph><b>amount</b></codeph> - (required, data type <codeph>decimal</codeph>) Total costs for the event. The total costs for an event are calculated from the singular costs (<codeph>SingleCost</codeph>) multiplied with the number of occurrences (<codeph>NumberOfOccurence</codeph>). If role-based costs and/or stepped prices are specified for events, these costs are added<ph audience="doc"> (see <xref
                     href="r_BillingData.xml#reference_25043B5D1DED4B2F9D5E9B099A9AC69C/RoleCosts_reference_refbody_section_24"
                     /> and <xref
                     href="r_BillingData.xml#reference_25043B5D1DED4B2F9D5E9B099A9AC69C/SteppedPrices_reference_refbody_section_26"
-                />). The value is rounded to two decimal places.</p>
+                />)</ph>. The value is rounded to two decimal places.</p>
             <p><b>GatheredEventsCosts</b></p>
             <p>Specifies the total costs for all events in the current <codeph>GatheredEvents</codeph> element. </p>
             <p>A <codeph>GatheredEventsCosts</codeph> element has the following attribute:</p>
@@ -282,9 +282,9 @@
             <p>Specifies the costs for using the subscription in the given usage period. </p>
             <p
                 conref="../../Shared/reference/r_PriceModelDetails_recurringForSub.xml#reference832/For_each_subscription_a_char_reference_refbody_section_1"/>
-            <p>The calculation of the charges depends on the cost calculation option which was chosen for the price model (see <xref
+            <p>The calculation of the charges depends on the cost calculation option which was chosen for the price model<ph audience="doc"> (see <xref
                     href="r_BillingData.xml#reference_25043B5D1DED4B2F9D5E9B099A9AC69C/PriceModel_reference_refbody_section_7"
-                /> for details). </p>
+                /> for details)</ph>. </p>
             <p>A <codeph>PeriodFee</codeph> element is contained in a <codeph>PriceModel</codeph> element.</p>
             <p>A <codeph>PeriodFee</codeph> element has the following attributes: </p>
             <ul>
@@ -310,9 +310,9 @@
             <p
                 conref="../../Shared/reference/r_PriceModelDetails_recurringForUser.xml#reference832/The_recurring_charge_for_user_reference_refbody_section_1"/>
             <p>For this type of charge, stepped prices can be applied: Recurring charges can be defined that depend on the sum of the time units of all user assignments.</p>
-            <p>The calculation of the charges depends on the cost calculation option which was chosen for the price model (see <xref
+            <p>The calculation of the charges depends on the cost calculation option which was chosen for the price model<ph audience="doc"> (see <xref
                     href="r_BillingData.xml#reference_25043B5D1DED4B2F9D5E9B099A9AC69C/PriceModel_reference_refbody_section_7"
-                /> for details).</p>
+                /> for details)</ph>.</p>
             <p
                 conref="../../Shared/reference/r_PriceModelDetails_recurringForUser.xml#reference832/With_per_time_unit_calculatio_reference_refbody_section_1"/>
             <p>A <codeph>UserAssignmentCosts</codeph> element is contained in a <codeph>PriceModel</codeph> element. </p>
@@ -322,18 +322,18 @@
                 <li><codeph><b>basePrice</b></codeph> - (optional, data type <codeph>decimal</codeph>) Recurring charge for users per base period according to the price model. If the charge for users has stepped prices, this attribute is omitted.</li>
                 <li><codeph><b>factor</b></codeph> - (optional, data type <codeph>decimal</codeph>) Factor used to calculate the costs for the user assignments. The factor is calculated by summing up the factors for each user specified in the <codeph>UserAssignmentCostsByUser</codeph> element. The recurring charge (<codeph>basePrice</codeph>) is multiplied with this factor to calculate the costs (<codeph>price</codeph>). </li>
                 <li><codeph><b>numberOfUsersTotal</b></codeph> - (optional, data type <codeph>long</codeph>) Number of users assigned to the subscription in the usage period. </li>
-                <li><codeph><b>total</b></codeph> - (data type <codeph>decimal</codeph>) Total costs for the user assignments including role-based costs and stepped prices. The value is rounded to two decimal places. For details on role-based costs and stepped prices, refer to <xref
+                <li><codeph><b>total</b></codeph> - (data type <codeph>decimal</codeph>) Total costs for the user assignments including role-based costs and stepped prices. The value is rounded to two decimal places.<ph audience="doc"> For details on role-based costs and stepped prices, refer to <xref
                         href="r_BillingData.xml#reference_25043B5D1DED4B2F9D5E9B099A9AC69C/RoleCosts_reference_refbody_section_24"
                         /> and <xref
                         href="r_BillingData.xml#reference_25043B5D1DED4B2F9D5E9B099A9AC69C/SteppedPrices_reference_refbody_section_26"
-                    />. </li>
+                    />.</ph> </li>
                 <li><codeph><b>price</b></codeph> - (optional, data type <codeph>decimal</codeph>) Costs for the user assignments. This value is calculated from the recurring charge (<codeph>basePrice</codeph>) multiplied with the factor (<codeph>factor</codeph>). The value is rounded to two decimal places.</li>
             </ul>
-            <p>A <codeph>UserAssignmentCosts</codeph> element contains the following subelement. If role-based costs and/or stepped prices are specified, a <codeph>RoleCosts</codeph> element and/or <codeph>SteppedPrices</codeph> element is also present (see <xref
+            <p>A <codeph>UserAssignmentCosts</codeph> element contains the following subelement. If role-based costs and/or stepped prices are specified, a <codeph>RoleCosts</codeph> element and/or <codeph>SteppedPrices</codeph> element is also present<ph audience="doc"> (see <xref
                     href="r_BillingData.xml#reference_25043B5D1DED4B2F9D5E9B099A9AC69C/RoleCosts_reference_refbody_section_24"
                     /> and <xref
                     href="r_BillingData.xml#reference_25043B5D1DED4B2F9D5E9B099A9AC69C/SteppedPrices_reference_refbody_section_26"
-                />).</p>
+                />)</ph>.</p>
             <p><b>UserAssignmentCostsByUser</b></p>
             <p>Specifies the fraction of the usage period a user was assigned to the subscription. </p>
             <p>A <codeph>UserAssignmentCostsByUser</codeph> element has the following attributes:</p>
@@ -404,9 +404,9 @@
             <p>A price can be defined for every parameter and option, and the price can be charged per subscription or per user assigned to the subscription. <ph
                     id="and_specify_whether_this_pric_reference_refbody_section_1"
                         >Numeric parameters are a multiplier for the price. For boolean parameters, the multiplier is <codeph>1</codeph> if the value is <codeph>true</codeph>. In all other cases, the multiplier is <codeph>0</codeph>.</ph></p>
-            <p>The calculation of charges for parameters and options depends on the cost calculation option which was chosen for the price model (see <xref
+            <p>The calculation of charges for parameters and options depends on the cost calculation option which was chosen for the price model<ph audience="doc"> (see <xref
                     href="r_BillingData.xml#reference_25043B5D1DED4B2F9D5E9B099A9AC69C/PriceModel_reference_refbody_section_7"
-                /> for details).</p>
+                /> for details)</ph>.</p>
             <p
                 conref="../../Shared/reference/r_PriceModelDetails_parameters.xml#reference832/If_the_charges_for_a_subscrip_reference_refbody_section_1"/>
             <p><ph
@@ -459,28 +459,28 @@
                 <li><codeph><b>valueFactor</b></codeph> - (required, data type <codeph>float</codeph>) Factor to calculate the total costs for using the parameter depending on the parameter value. The recurring charge (<codeph>basePrice</codeph>) is multiplied with this factor to calculate the costs (<codeph>price</codeph>). This factor is set depending on the data type of the parameter. For numeric parameters it is set to the value of the parameter. For boolean parameters, the factor is set to <codeph>1</codeph> if the value is <codeph>true</codeph>. In all other cases, the factor is set to <codeph>0</codeph>. </li>
             </ul>
             <p><b>UserAssignmentCosts</b></p>
-            <p>Specifies the costs for the parameter related to the user assignments of the subscription based on the price per user for the parameter as defined in the price model. If costs for service roles are defined, a <codeph>RoleCosts</codeph> element is included in the <codeph>UserAssignmentCosts</codeph> element (see <xref
+            <p>Specifies the costs for the parameter related to the user assignments of the subscription based on the price per user for the parameter as defined in the price model. If costs for service roles are defined, a <codeph>RoleCosts</codeph> element is included in the <codeph>UserAssignmentCosts</codeph> element<ph audience="doc"> (see <xref
                     href="r_BillingData.xml#reference_25043B5D1DED4B2F9D5E9B099A9AC69C/RoleCosts_reference_refbody_section_24"
-                /> for details). </p>
+                /> for details)</ph>. </p>
             <p>A <codeph>UserAssignmentCosts</codeph> element has the following attributes:</p>
             <ul>
                 <li><codeph><b>basePeriod</b></codeph> - (required, data type <codeph>string</codeph>) Period on which the charges are based. Can be set to one of the following values: <codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, <codeph>HOUR</codeph>.</li>
                 <li><codeph><b>basePrice</b></codeph> - (required, data type <codeph>decimal</codeph>) Recurring charge for users per base period for the parameter according to the price model. </li>
                 <li><codeph><b>factor</b></codeph> - (required, data type <codeph>decimal</codeph>) Factor used to calculate the costs for using the parameter. The factor is calculated from the parameter usage period divided by the base period (<codeph>basePeriod</codeph>) multiplied with the number of users. The recurring charge (<codeph>basePrice</codeph>) is multiplied with this factor to calculate the costs (<codeph>price</codeph>).</li>
                 <li><codeph><b>price</b></codeph> - (required, data type <codeph>decimal</codeph>) Costs for using the parameter. This value is calculated from the recurring charge (<codeph>basePrice</codeph>) multiplied with the factors (<codeph>factor</codeph> and <codeph>valueFactor</codeph>). The value is rounded to two decimal places. If stepped prices are defined for user assignments, the costs are given in the <codeph>price</codeph> attribute.</li>
-                <li><codeph><b>total</b></codeph> - (data type <codeph>decimal</codeph>) Total costs for using the parameter including role-based costs. The value is rounded to two decimal places. For details on role-based costs, refer to <xref
+                <li><codeph><b>total</b></codeph> - (data type <codeph>decimal</codeph>) Total costs for using the parameter including role-based costs. The value is rounded to two decimal places.<ph audience="doc"> For details on role-based costs, refer to <xref
                         href="r_BillingData.xml#reference_25043B5D1DED4B2F9D5E9B099A9AC69C/RoleCosts_reference_refbody_section_24"
-                    />. </li>
+                    />.</ph> </li>
                 <li><codeph><b>valueFactor</b></codeph> - (required, data type <codeph>float</codeph>) Factor to calculate the total costs for using the parameter depending on the parameter value. The recurring charge (<codeph>basePrice</codeph>) is multiplied with this factor to calculate the costs (<codeph>price</codeph>). This factor is set depending on the data type of the parameter. For numeric parameters it is set to the value of the parameter. For boolean parameters, the factor is set to <codeph>1</codeph> if the value is <codeph>true</codeph>. In all other cases, the factor is set to <codeph>0</codeph>. </li>
             </ul>
             <p><b>ParameterCosts</b></p>
             <p>Specifies the total costs for using the parameter.</p>
             <p>A <codeph>ParameterCosts</codeph> element has the following attribute:</p>
-            <p><codeph><b>amount</b></codeph> - (required, data type <codeph>decimal</codeph>) Total costs for the parameter calculated by summing up the costs specified in the <codeph>PeriodFee</codeph> and the <codeph>UserAssignmentCosts</codeph> element for the parameter and its options. If role-based costs and/or stepped prices are specified for the parameter, these are added (see <xref
+            <p><codeph><b>amount</b></codeph> - (required, data type <codeph>decimal</codeph>) Total costs for the parameter calculated by summing up the costs specified in the <codeph>PeriodFee</codeph> and the <codeph>UserAssignmentCosts</codeph> element for the parameter and its options. If role-based costs and/or stepped prices are specified for the parameter, these are added<ph audience="doc"> (see <xref
                     href="r_BillingData.xml#reference_25043B5D1DED4B2F9D5E9B099A9AC69C/RoleCosts_reference_refbody_section_24"
                     /> and <xref
                     href="r_BillingData.xml#reference_25043B5D1DED4B2F9D5E9B099A9AC69C/SteppedPrices_reference_refbody_section_26"
-                />). The value is rounded to two decimal places.</p>
+                />)</ph>. The value is rounded to two decimal places.</p>
             <p><b>ParametersCosts</b></p>
             <p>Specifies the total costs for all parameters. </p>
             <p>A <codeph>ParametersCosts</codeph> element has the following attribute:</p>
@@ -531,17 +531,17 @@
                 <li><codeph><b>price</b></codeph> - (required, data type <codeph>decimal</codeph>) Costs for the parameter option. This value is calculated from the recurring charge (<codeph>basePrice</codeph>) multiplied with the factor (<codeph>factor</codeph>), and is rounded to two decimal places.</li>
             </ul>
             <p><b>UserAssignmentCosts</b></p>
-            <p>Specifies the costs for the parameter option related to the user assignments of the subscription based on the price per user for the option as defined in the price model. If costs for service roles are defined, a <codeph>RoleCosts</codeph> element is included in the <codeph>UserAssignmentCosts</codeph> element (see <xref
+            <p>Specifies the costs for the parameter option related to the user assignments of the subscription based on the price per user for the option as defined in the price model. If costs for service roles are defined, a <codeph>RoleCosts</codeph> element is included in the <codeph>UserAssignmentCosts</codeph> element<ph audience="doc"> (see <xref
                     href="r_BillingData.xml#reference_25043B5D1DED4B2F9D5E9B099A9AC69C/RoleCosts_reference_refbody_section_24"
-                />). </p>
+                />)</ph>. </p>
             <p>A <codeph>UserAssignmentCosts</codeph> element has the following attributes:</p>
             <ul>
                 <li><codeph><b>basePeriod</b></codeph> - (required, data type <codeph>string</codeph>) Period on which the charges are based. Can be set to one of the following values: <codeph>MONTH</codeph>, <codeph>WEEK</codeph>, <codeph>DAY</codeph>, <codeph>HOUR</codeph>.</li>
                 <li><codeph><b>basePrice</b></codeph> - (required, data type <codeph>decimal</codeph>) Recurring charge for users per base period for the parameter option according to the price model. </li>
                 <li><codeph><b>factor</b></codeph> - (required, data type <codeph>decimal</codeph>) Factor used to calculate the costs for using the parameter option. The factor is calculated from the usage period divided by the base period (<codeph>basePeriod</codeph>). The recurring charge (<codeph>basePrice</codeph>) is multiplied with this factor to calculate the costs (<codeph>price</codeph>). </li>
-                <li><codeph><b>total</b></codeph> - (data type <codeph>decimal</codeph>) Total costs for using the parameter option including role-based costs. The value is rounded to two decimal places. For details on role-based costs, refer to <xref
+                <li><codeph><b>total</b></codeph> - (data type <codeph>decimal</codeph>) Total costs for using the parameter option including role-based costs. The value is rounded to two decimal places.<ph audience="doc"> For details on role-based costs, refer to <xref
                         href="r_BillingData.xml#reference_25043B5D1DED4B2F9D5E9B099A9AC69C/RoleCosts_reference_refbody_section_24"
-                    />. </li>
+                    />.</ph> </li>
                 <li><codeph><b>price</b></codeph> - (required, data type <codeph>decimal</codeph>) Costs for using the parameter option. This value is calculated from the recurring charge (<codeph>basePrice</codeph>) multiplied with the factor (<codeph>factor</codeph>). The value is rounded to two decimal places. If stepped prices are defined for user assignments, the costs are given in the <codeph>price</codeph> attribute.</li>
             </ul>
             <p><b>OptionCosts</b></p>
@@ -571,9 +571,9 @@
             <p
                 conref="../../Shared/reference/r_PriceModelDetails_role.xml#reference832/If_defined_for_the_underlying_reference_refbody_section_1"/>
             <p>For each role, a price can be defined. This price is added to the base price per user in the cost calculation for a billing period.</p>
-            <p>The calculation of the charges for service roles depends on the cost calculation option which was chosen for the price model (see <xref
+            <p>The calculation of the charges for service roles depends on the cost calculation option which was chosen for the price model<ph audience="doc"> (see <xref
                     href="r_BillingData.xml#reference_25043B5D1DED4B2F9D5E9B099A9AC69C/PriceModel_reference_refbody_section_7"
-                /> for details). </p>
+                /> for details)</ph>. </p>
             <p
                 conref="../../Shared/reference/r_PriceModelDetails_role.xml#reference832/If_the_charges_are_calculated_reference_refbody_section_1"/>
             <p
@@ -654,20 +654,20 @@
         <section id="OverallCosts_reference_refbody_section_12">
             <title>OverallCosts</title>
             <p>Contains the total amount of the charges to be paid by a customer for all subscriptions in the current billing period. The costs are given in the currency specified in the price model. </p>
-            <p>If a discount was specified, the net amount of the costs is given in the <codeph>Discount</codeph> element (see <xref
+            <p>If a discount was specified, the net amount of the costs is given in the <codeph>Discount</codeph> element<ph audience="doc"> (see <xref
                     href="r_BillingData.xml#reference_25043B5D1DED4B2F9D5E9B099A9AC69C/Discount_reference_refbody_section_25"
-                    />). If a VAT rate was defined, it is given in the <codeph>VAT</codeph> element (see <xref
+            />)</ph>. If a VAT rate was defined, it is given in the <codeph>VAT</codeph> element<ph audience="doc"> (see <xref
                     href="r_BillingData.xml#reference_25043B5D1DED4B2F9D5E9B099A9AC69C/VAT_reference_refbody_section_26"
-                />).</p>
+                />)</ph>.</p>
             <p>An <codeph>OverallCosts</codeph> element has the following attributes:</p>
             <ul>
-                <li><codeph><b>netAmount</b></codeph> - (required, data type <codeph>decimal</codeph>) Net costs after the net discount has been deducted from the original net costs (see <xref
+                <li><codeph><b>netAmount</b></codeph> - (required, data type <codeph>decimal</codeph>) Net costs after the net discount has been deducted from the original net costs<ph audience="doc"> (see <xref
                         href="r_BillingData.xml#reference_25043B5D1DED4B2F9D5E9B099A9AC69C/Discount_reference_refbody_section_25"
-                    />). The value is rounded to two decimal places.</li>
+                    />)</ph>. The value is rounded to two decimal places.</li>
                 <li><codeph><b>currency</b></codeph> - (required, data type <codeph>string</codeph>) ISO code of the currency in which the costs are calculated. </li>
-                <li><codeph><b>grossAmount</b></codeph> - (required, data type <codeph>decimal</codeph>) Gross amount of the costs, calculated from the net costs (<codeph>netAmount</codeph>) plus VAT (see <xref
+                <li><codeph><b>grossAmount</b></codeph> - (required, data type <codeph>decimal</codeph>) Gross amount of the costs, calculated from the net costs (<codeph>netAmount</codeph>) plus VAT<ph audience="doc"> (see <xref
                         href="r_BillingData.xml#reference_25043B5D1DED4B2F9D5E9B099A9AC69C/VAT_reference_refbody_section_26"
-                    />). The value is rounded to two decimal places.</li>
+                    />)</ph>. The value is rounded to two decimal places.</li>
             </ul>
             <p><b>Example</b>:</p>
             <p>

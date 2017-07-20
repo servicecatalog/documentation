@@ -14,8 +14,8 @@
           id="As_a_marketplace_owner_you_c_task_taskbody_context_p_3_ph"
           >As a marketplace owner, you can create any number of categories for your marketplace. Suppliers, brokers, and resellers can assign these categories to the services they publish to the marketplace. Marketplace visitors can use the categories for browsing the service catalog and filtering the services, provided that you have enabled the display of categories. Categories are also taken into consideration by the full-text search feature on the marketplace.</ph></p>
       <p id="As_a_marketplace_owner_you_c_task_taskbody_context_p_3"
-          >As a marketplace owner, you can decide to use the categories for grouping the services displayed on the marketplace home page. Click <xref
-          href="marketplace_customizeLandingpage.xml">here</xref> for details.</p>
+        >As a marketplace owner, you can decide to use the categories for grouping the services displayed on the marketplace home page.<ph audience="doc"> Click <xref
+          href="marketplace_customizeLandingpage.xml">here</xref> for details.</ph></p>
       <p><ph id="A_category_can_be_provided_in_task_taskbody_context_p_4_ph"
           >A category can be provided in all supported languages. For each category, you define a language-independent ID and the actual term to be displayed in each language.</ph> If a term for a specific language is not found, the English term is displayed by default. If the English term is not defined either, the language-independent category ID is used.</p>
       <p><b>To create a category</b>:</p>

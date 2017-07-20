@@ -26,7 +26,7 @@
                     <choice>Select <uicontrol>Technical Service</uicontrol> &gt;
                             <uicontrol>Register service definition</uicontrol>, and fill in the fields as desired.</choice>
                     <choice>Select <uicontrol>Technical Service</uicontrol> &gt;
-                            <uicontrol>Import service definition</uicontrol>, and import the XML file containing your service definition.<p>For details on how to create a technical service definition, refer to <xref
+                            <uicontrol>Import service definition</uicontrol>, and import the XML file containing your service definition.<p audience="doc">For details on how to create a technical service definition, refer to <xref
                                 href="t_PrepareServDef.xml"/>.</p></choice>
                 </choices>
             </step>

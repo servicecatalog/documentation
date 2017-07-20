@@ -9,8 +9,8 @@
     <conbody>
         <section>
             <p>Customers can give ratings and comments on services to which they have subscribed. You can remove these ratings and comments from your marketplace, if you do not want them to be read by visitors. This enables you to moderate the customer reviews.</p>
-            <note>An alternative to removing individual ratings and comments is to deactivate the display of reviews completely. For details, refer to <xref
-                    href="../Marketplaces/c_MPUpdate.xml"/>.</note>
+            <note>An alternative to removing individual ratings and comments is to deactivate the display of reviews completely.<ph audience="doc"> For details, refer to <xref
+                    href="../Marketplaces/c_MPUpdate.xml"/>.</ph></note>
             <p>When you remove a review from a marketplace, you have to state a reason. <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> automatically notifies the user who wrote the review by email about your intervention and the reason you entered.</p>

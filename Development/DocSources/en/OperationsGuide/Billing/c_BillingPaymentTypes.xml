@@ -24,8 +24,8 @@
  &lt;userkey> &lt;password>
  addavailablepaymenttypes orgid=&lt;organizationID> 
  paymenttypes=&lt;types></codeblock>
-                        </p><p>If several payment types are to be set, separate the entries by a comma without any blank. You can enter any payment type as defined when configuring payment types for a PSP. For details, refer to <xref
-                                href="c_BillingManagePSPs.xml"/>.</p></li>
+                    </p><p>If several payment types are to be set, separate the entries by a comma without any blank. You can enter any payment type as defined when configuring payment types for a PSP.<ph audience="doc"> For details, refer to <xref
+                                href="c_BillingManagePSPs.xml"/>.</ph></p></li>
                 </ul></p>
         </section>
     </conbody>

@@ -32,10 +32,10 @@
             <li>The <uicontrol>Available Services</uicontrol> list contains both activated services (green) and deactivated services (red). On the marketplace home page, visitors see only the activated services. Yet, a deactivated service may become activated at any time, for example because the supplier has finished updating its definition. As soon as it is activated, it becomes visible on the home page.</li>
             <li>The <uicontrol>Available Services</uicontrol> list does not contain services that you have explicitly suspended, for example in the case of an infringement of the terms and conditions by the respective supplier. After deactivating these services on the marketplace, you have to reactivate them to make them available in the <uicontrol>Available Services</uicontrol> list.</li>
             <li>The <uicontrol>Available Services</uicontrol> list does not contain services with a customer-specific price model.</li>
-            <li>The <uicontrol>Available Services</uicontrol> list contains public and non-public services. A public service is visible for anybody accessing the marketplace. A service that has not been marked as public is visible to registered customers only. Click <xref
-                href="service_publish.xml">here</xref> for more details.</li>
-            <li>The <uicontrol>Available Services</uicontrol> list contains services that have been explicitly removed from the service catalog by their respective supplier, broker, or reseller. On the marketplace home page, your customers can see only the services that are to be included in the catalog. Click <xref
-                href="service_activation.xml">here</xref> for more details.</li>
+            <li>The <uicontrol>Available Services</uicontrol> list contains public and non-public services. A public service is visible for anybody accessing the marketplace. A service that has not been marked as public is visible to registered customers only.<ph audience="doc"> Click <xref
+                href="service_publish.xml">here</xref> for more details.</ph></li>
+            <li>The <uicontrol>Available Services</uicontrol> list contains services that have been explicitly removed from the service catalog by their respective supplier, broker, or reseller. On the marketplace home page, your customers can see only the services that are to be included in the catalog.<ph audience="doc"> Click <xref
+                href="service_activation.xml">here</xref> for more details.</ph></li>
           </ul>
         </info>
       </step>

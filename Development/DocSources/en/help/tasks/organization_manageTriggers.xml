@@ -15,11 +15,11 @@
         <b>To manage the triggers of your organization:</b></p>
       <p>
         <ul>
-          <li>To configure a new trigger, click <b>Add</b>. The <xref href="organization_manageTriggerDetails.xml"
-                ><b>Manage trigger</b></xref> page is displayed. Proceed with the definition of the trigger details.</li>
-          <li>To update or delete a trigger, click it in the list. The <xref
+          <li>To configure a new trigger, click <b>Add</b>.<ph audience="doc"> The <xref href="organization_manageTriggerDetails.xml"
+                ><b>Manage trigger</b></xref> page is displayed.</ph> Proceed with the definition of the trigger details.</li>
+          <li>To update or delete a trigger, click it in the list.<ph audience="doc"> The <xref
               href="organization_manageTriggerDetails.xml"
-            ><b>Manage trigger</b></xref> page is displayed. Proceed with updating or deleting the trigger.</li>
+            ><b>Manage trigger</b></xref> page is displayed.</ph> Proceed with updating or deleting the trigger.</li>
         </ul>
       </p>
     </context>

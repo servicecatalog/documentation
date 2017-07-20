@@ -16,12 +16,12 @@
         <li><ph id="The_license_agreement_which_m_task_taskbody_context_ul_li"
             >The license agreement which must be read and accepted by customers when they subscribe to the service.</ph></li>
         <li platform="print"><ph id="The_details_of_the_price_mode_task_taskbody_context_ul_li"
-            >The details of the price model defined by the supplier of the service. The service can be free of charge or with costs. If customers are charged for using the service, you can view the charging conditions and prices.</ph> Click <xref
-            href="service_viewPMDetails.xml">here</xref> for more details.</li>
+          >The details of the price model defined by the supplier of the service. The service can be free of charge or with costs. If customers are charged for using the service, you can view the charging conditions and prices.</ph><ph audience="doc"> Click <xref
+            href="service_viewPMDetails.xml">here</xref> for more details.</ph></li>
         <li platform="help">The details of the price model defined by the supplier of the service: <ul compact="no">
             <li>If an external billing system is used for calculating the charges for the service, you can view the charging conditions and prices as defined in this system in a separate window by clicking <uicontrol>Display</uicontrol>.</li>
-            <li>If the platform's native billing system is used, the service can be free of charge or with costs. If customers are charged for using the service, the charging conditions and prices are shown. Click <xref
-                href="service_viewPMDetails.xml">here</xref> for more details. All prices are without VAT. </li>
+          <li>If the platform's native billing system is used, the service can be free of charge or with costs. If customers are charged for using the service, the charging conditions and prices are shown.<ph audience="doc"> Click <xref
+                href="service_viewPMDetails.xml">here</xref> for more details.</ph> All prices are without VAT. </li>
           </ul></li>
       </ul>
       <p><b>To view the details of a service</b>:</p>

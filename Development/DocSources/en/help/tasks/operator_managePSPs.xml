@@ -45,7 +45,7 @@
                 >the platform</ph>: </p>
             <p id="psp8"
                 ><codeph>PSP_USAGE_ENABLED</codeph>: Set the value to <codeph>true</codeph> in order to enable PSP integration (default: <codeph>false</codeph>).</p>
-            <p>Click <xref href="operator_manageConfiguration.xml">here</xref> for details.</p>
+            <p><ph audience="doc">Click <xref href="operator_manageConfiguration.xml">here</xref> for details.</ph></p>
           </li>
         </ul>
       </p>

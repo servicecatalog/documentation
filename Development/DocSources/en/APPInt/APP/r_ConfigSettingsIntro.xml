@@ -13,9 +13,8 @@
                 <li><codeph>domains/app_domain/glassfish.properties</codeph></li>
                 <li><codeph>databases/app_db/configsettings.properties</codeph></li>
             </ul>
-            <p>The settings are described in detail in </p>
-            <p>
-                <ul>
+            <p audience="doc">The settings are described in detail in 
+            <ul>
                     <li><xref href="../../Shared/reference/r_ConfigSettings_db.xml"/></li>
                     <li><xref href="../../Shared/reference/r_ConfigSettings_glassfish_BESDomain.xml"/></li>
                     <li><xref href="r_ConfigSettings.xml"/></li>

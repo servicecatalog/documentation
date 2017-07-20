@@ -14,9 +14,9 @@
                 <li>The license agreement which must be read and accepted by customers when they subscribe to the service.</li>
                 <li>The details of the price model defined by the supplier of the service: <ul compact="no">
                         <li>If an external billing system is used for calculating the charges for the service, you can view the charging conditions and prices as defined in this system in a separate window by clicking <uicontrol>Display</uicontrol>.</li>
-                        <li>If the platform's native billing system is used, the service can be free of charge or with costs. If customers are charged for using the service, the charging conditions and prices are shown. Click <xref
+                    <li>If the platform's native billing system is used, the service can be free of charge or with costs. If customers are charged for using the service, the charging conditions and prices are shown.<ph audience="doc"> Click <xref
                                 href="service_viewPMDetails.xml"
-                            >here</xref> for more details. All prices are without VAT. </li>
+                            >here</xref> for more details.</ph> All prices are without VAT. </li>
                     </ul></li>
             </ul>
             <p>The information can only be viewed, except for the license agreement. You can update the text for your customers, if required. As a prerequisite, the service must be deactivated. Existing subscriptions of your customers are not affected by the update. Any changes you make are effective for new subscriptions only. To provide the service to customers for subscription, you must activate it.</p>

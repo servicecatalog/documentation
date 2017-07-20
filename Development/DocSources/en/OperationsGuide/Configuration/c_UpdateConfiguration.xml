@@ -14,7 +14,7 @@
      /> configuration settings are provided in the following subdirectories of the directory to which you extracted the <codeph>oscm-install-pack.zip</codeph> file (<codeph>&lt;install_pack_dir&gt;</codeph>) when you installed <ph
      conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>:</p>
    <p conref="../../Shared/Installation/t_InstConfiguring.xml#Configuring/Cfg2"/>
-                                    <p>For details on the individual configuration settings, refer to <xref
+                                    <p audience="doc">For details on the individual configuration settings, refer to <xref
                                                             href="../../Shared/reference/r_ConfigSettings.xml"/>.</p>
                                     <p><b>To update the configuration settings for JMS or the database, proceed as follows</b>: <ol>
                                                             <li>Log in to the administration console of the application server. </li>
@@ -64,7 +64,7 @@
  &lt;userkey> &lt;password>
  getconfigurationsettings </codeblock>
                                                             </p></li>
-                                                </ul></p><p>For details on the individual configuration settings, refer to <xref
+                                                </ul></p><p audience="doc">For details on the individual configuration settings, refer to <xref
                                                             href="../../Shared/reference/r_ConfigSettings.xml"
                                     />.</p></section>
             </conbody>

@@ -13,17 +13,17 @@
             <ul
                         compact="no">
                 <li><b>Tagging</b>: When enabled, the tag cloud is available on the marketplace. Visitors can filter and browse the services by the available tags. Tags are search terms that characterize the services. They are defined by the technology providers of the applications underlying to the services.<p>When you disable this feature, the tag cloud is not displayed on the marketplace. The tags defined for the services are not affected.</p></li>
-                <li><b>Categories</b>: When enabled, categories are shown on the marketplace and can be used by visitors for filtering and browsing the services. The categories are also taken into consideration by the full-text search feature on the marketplace. Categories are defined by marketplace owners and assigned to services by suppliers, brokers, and resellers. Marketplace owners can also use the categories for grouping the services displayed on the marketplace home page. For details, refer to <xref
+                <li><b>Categories</b>: When enabled, categories are shown on the marketplace and can be used by visitors for filtering and browsing the services. The categories are also taken into consideration by the full-text search feature on the marketplace. Categories are defined by marketplace owners and assigned to services by suppliers, brokers, and resellers. Marketplace owners can also use the categories for grouping the services displayed on the marketplace home page.<ph audience="doc"> For details, refer to <xref
                         href="../Marketplaces/c_MPDefCat.xml"/> and <xref
-                        href="../Marketplaces/c_MPDefFeatServ.xml"/>.<p>When you disable this feature, categories are not available to marketplace visitors for searching, filtering, and browsing, but can still be defined and assigned to services. Existing category definitions and assignments are not affected.</p></li>
+                        href="../Marketplaces/c_MPDefFeatServ.xml"/>.</ph><p>When you disable this feature, categories are not available to marketplace visitors for searching, filtering, and browsing, but can still be defined and assigned to services. Existing category definitions and assignments are not affected.</p></li>
                 <li><b>Reviews</b>: <ph
                         conref="../../help/tasks/marketplace_create.xml#task634/When_enabled_customers_who_s_task_taskbody_steps_step_2"/><p>When you disable this feature, ratings and comments are not available on the marketplace. Existing ratings and comments are retained, but they are not visible. They re-appear when you enable the feature again.</p></li>
                 <li><b>Social bookmarks</b>: <ph
                             conref="../../help/tasks/marketplace_create.xml#task634/When_enabled_bookmarks_for_d_task_taskbody_steps_step_2"/>
                     <p><ph
                         conref="../../help/tasks/marketplace_create.xml#task634/With_task_taskbody_steps_step_4"/></p></li>
-                <li><b>Authorized sellers only</b>: When enabled, only authorized suppliers, brokers, and resellers are allowed to publish services to the marketplace. When disabled, the marketplace is open to any seller organization. For details, refer to <xref
-                    href="../Access/c_SuppliersIntro.xml"/>.</li>
+                <li><b>Authorized sellers only</b>: When enabled, only authorized suppliers, brokers, and resellers are allowed to publish services to the marketplace. When disabled, the marketplace is open to any seller organization.<ph audience="doc"> For details, refer to <xref
+                    href="../Access/c_SuppliersIntro.xml"/>.</ph></li>
             </ul>
             <p>
                 <ph

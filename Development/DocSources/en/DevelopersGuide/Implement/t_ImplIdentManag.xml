@@ -19,8 +19,8 @@
             <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> provides resources for J2EE environments that support you in adapting the login/logout implementation of a Java-based Web application. The resources are called <b>integration helpers</b> and contain a ready-to-use token handler and logout listener. </p>
             <p>The integration helpers can be used with any Java-based Web application. The token handler is implemented as a Java servlet and as a JSP; the logout listener is implemented as a session listener. </p>
-            <p>If your application is based on a different technology, you need to implement your own token handler and logout listener by calling the following methods of the platform Session Service (see <xref
-                    href="../Interfaces/c_PlatformServices.xml"/>):</p>
+            <p>If your application is based on a different technology, you need to implement your own token handler and logout listener by calling the following methods of the platform Session Service<ph audience="doc"> (see <xref
+                    href="../Interfaces/c_PlatformServices.xml"/>)</ph>:</p>
             <ul>
                 <li><codeph>resolveUserToken</codeph> for requesting <ph
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"

@@ -25,8 +25,8 @@
         <info/>
       </step>
       <step>
-        <cmd>On the <uicontrol>Add custom attribute</uicontrol> page, enter the required data. Click <xref
-            href="createCustomUda.xml">here</xref> for more details.</cmd>
+        <cmd>On the <uicontrol>Add custom attribute</uicontrol> page, enter the required data.<ph audience="doc"> Click <xref
+            href="createCustomUda.xml">here</xref> for more details.</ph></cmd>
       </step>
       <step>
         <cmd>To save your entries, click <uicontrol>Save</uicontrol> on the <uicontrol>Add custom attribute</uicontrol> page.</cmd>
@@ -41,8 +41,8 @@
       <p>
         <ol compact="no">
           <li>Click the icon in the <uicontrol>Edit</uicontrol> column of the attribute to be edited.</li>
-          <li>On the <uicontrol>Edit custom attribute</uicontrol> page, change the data by editing the fields. Click <xref
-              href="updateCustomUda.xml">here</xref> for more details.</li>
+          <li>On the <uicontrol>Edit custom attribute</uicontrol> page, change the data by editing the fields.<ph audience="doc"> Click <xref
+              href="updateCustomUda.xml">here</xref> for more details.</ph></li>
           <li>To save your entries, click <uicontrol>Save</uicontrol> on the <uicontrol>Edit custom attribute</uicontrol> page.<p>You are returned to the <uicontrol>Manage custom attributes</uicontrol> page. The updated definition is instantly displayed. </p></li>
         </ol>
       </p>

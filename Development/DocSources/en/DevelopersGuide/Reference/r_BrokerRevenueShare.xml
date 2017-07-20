@@ -21,14 +21,14 @@
             <p id="A_reference_refbody_section_2"
                 >A <codeph>BrokerRevenueShareResult</codeph> element contains the following subelements:</p>
             <ul>
-                <li>An <codeph>OrganizationData</codeph> element specifying the details of the broker organization (see <xref
+                <li>An <codeph>OrganizationData</codeph> element specifying the details of the broker organization<ph audience="doc"> (see <xref
                         href="r_RevenueShareCommon.xml#Revenue_Share_Data_265/OrganizationData_reference_refbody_section_4"
-                    />).</li>
-                <li>A <codeph>Period</codeph> element specifying the billing period (see <xref
-                        href="r_RevenueShareCommon.xml#Revenue_Share_Data_265/reference_refbody_section_3"/>).</li>
-                <li>A <codeph>Currency</codeph> element for each currency for which broker revenue share data is available (see <xref
+                    />)</ph>.</li>
+                <li>A <codeph>Period</codeph> element specifying the billing period<ph audience="doc"> (see <xref
+                        href="r_RevenueShareCommon.xml#Revenue_Share_Data_265/reference_refbody_section_3"/>)</ph>.</li>
+                <li>A <codeph>Currency</codeph> element for each currency for which broker revenue share data is available<ph audience="doc"> (see <xref
                         href="r_BrokerRevenueShare.xml#Broker_Revenue_Share_Data_268/Currency_reference_refbody_section_4"
-                    />).</li>
+                    />)</ph>.</li>
             </ul>
             <p><b>Example</b>:</p>
             <p>
@@ -46,9 +46,9 @@
             <p><codeph><b>id</b></codeph> - (required, data type <codeph>string</codeph>) ISO code of the currency. </p>
             <p>A <codeph>Currency</codeph> element contains the following subelements:</p>
             <ul>
-                <li>A <codeph>Supplier</codeph> element for each supplier organization that provides a service for which the current broker organization receives a revenue share (see <xref
+                <li>A <codeph>Supplier</codeph> element for each supplier organization that provides a service for which the current broker organization receives a revenue share<ph audience="doc"> (see <xref
                         href="r_BrokerRevenueShare.xml#Broker_Revenue_Share_Data_268/Supplier_reference_refbody_section_4"
-                    />).</li>
+                    />)</ph>.</li>
                 <li>A <codeph>BrokerRevenue</codeph> element specifying the overall revenue for the currency in its <codeph>totalAmount</codeph> attribute (optional, data type positive <codeph>decimal</codeph>, scale 2), and the overall broker revenue share for the currency in its <codeph>amount</codeph> attribute (required, data type positive <codeph>decimal</codeph>, scale 2).</li>
             </ul>
             <p><b>Example</b>:</p>
@@ -64,12 +64,12 @@
             <p>Contains the broker revenue share data for the services provided by a specific supplier.</p>
             <p>A <codeph>Supplier</codeph> element contains the following subelements:</p>
             <ul>
-                <li>An <codeph>OrganizationData</codeph> element specifying the details of the supplier organization (see <xref
+                <li>An <codeph>OrganizationData</codeph> element specifying the details of the supplier organization<ph audience="doc"> (see <xref
                         href="r_RevenueShareCommon.xml#Revenue_Share_Data_265/OrganizationData_reference_refbody_section_4"
-                    />).</li>
-                <li>A <codeph>Service</codeph> element for each service provided by the supplier for which the current broker organization receives a revenue share (see <xref
+                    />)</ph>.</li>
+                <li>A <codeph>Service</codeph> element for each service provided by the supplier for which the current broker organization receives a revenue share<ph audience="doc"> (see <xref
                         href="r_BrokerRevenueShare.xml#Broker_Revenue_Share_Data_268/Service_reference_refbody_section_5"
-                    />).</li>
+                    />)</ph>.</li>
                 <li>A <codeph>BrokerRevenuePerSupplier</codeph> element specifying the overall revenue for the supplier in its <codeph>totalAmount</codeph> attribute (optional, data type positive <codeph>decimal</codeph>, scale 2), and the overall broker revenue share in its <codeph>amount</codeph> attribute (required, data type positive <codeph>decimal</codeph>, scale 2).</li>
             </ul>
             <p><b>Example</b>:</p>

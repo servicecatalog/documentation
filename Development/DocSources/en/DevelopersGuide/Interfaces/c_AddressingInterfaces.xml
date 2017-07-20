@@ -56,6 +56,6 @@
              <b>wsdl="ProvisioningService.wsdl"</b> />
 &lt;/endpoints>
 </codeblock>
-            </p>Refer to <xref href="../Implement/t_ImplProvServ.xml"/> for details.</section>
+            </p><ph audience="doc">Refer to <xref href="../Implement/t_ImplProvServ.xml"/> for details.</ph></section>
     </conbody>
 </concept>

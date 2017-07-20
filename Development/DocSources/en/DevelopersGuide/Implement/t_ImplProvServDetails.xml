@@ -50,8 +50,8 @@
                 </info>
             </step>
             <step>
-                <cmd>If you are using asynchronous instance provisioning (<codeph>asyncCreateInstance</codeph>), you need to implement calls to the following methods of the subscription management service (see <xref
-                        href="../Interfaces/c_PlatformServices.xml"/>):</cmd>
+                <cmd>If you are using asynchronous instance provisioning (<codeph>asyncCreateInstance</codeph>), you need to implement calls to the following methods of the subscription management service<ph audience="doc"> (see <xref
+                        href="../Interfaces/c_PlatformServices.xml"/>)</ph>:</cmd>
                 <info>
                     <ul>
                         <li>
@@ -64,8 +64,8 @@
                 </info>
             </step>
             <step>
-                <cmd>If you implement the <codeph>asyncModifySubscription</codeph> method, you need to implement calls to the following methods of the subscription management service (see <xref
-                        href="../Interfaces/c_PlatformServices.xml"/>):</cmd>
+                <cmd>If you implement the <codeph>asyncModifySubscription</codeph> method, you need to implement calls to the following methods of the subscription management service<ph audience="doc"> (see <xref
+                        href="../Interfaces/c_PlatformServices.xml"/>)</ph>:</cmd>
                 <info>
                     <ul>
                         <li><codeph>abortAsyncModifySubscription</codeph></li>
@@ -74,8 +74,8 @@
                 </info>
             </step>
             <step>
-                <cmd>If you implement the <codeph>asyncUpgradeSubscription</codeph> method, you need to implement calls to the following methods of the subscription management service (see <xref
-                        href="../Interfaces/c_PlatformServices.xml"/>):</cmd>
+                <cmd>If you implement the <codeph>asyncUpgradeSubscription</codeph> method, you need to implement calls to the following methods of the subscription management service<ph audience="doc"> (see <xref
+                        href="../Interfaces/c_PlatformServices.xml"/>)</ph>:</cmd>
                 <info>
                     <ul>
                         <li><codeph>abortAsyncUpgradeSubscription</codeph></li>

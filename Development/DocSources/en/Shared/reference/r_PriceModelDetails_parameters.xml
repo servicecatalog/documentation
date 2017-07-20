@@ -21,6 +21,8 @@
                                                 >If the charges for a subscription are calculated per time unit and a customer changes a parameter value within a time unit, the affected time unit is charged pro rata. This means that the customer is charged exactly for the time each parameter value is set. </p>
                                     <p><ph id="For_numeric_parameters_stepp_reference_refbody_section_1"
                                                             >For numeric parameters, stepped prices can be applied per subscription: Different prices can be defined depending on the parameter values.</ph>
+                                    </p>
+                                              <p audience="doc">                                      
                                                 <ph platform="print">For details, refer to <xref
                                                             href="r_PriceModelDetails_stepped.xml"/>.</ph><ph
                                                             platform="help">Click <xref

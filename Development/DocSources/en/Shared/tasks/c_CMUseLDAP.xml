@@ -19,8 +19,8 @@
                         <p>To enable access to the customer's LDAP system, you need to perform the following steps:</p>
                         <ol>
                                 <li>Create an LDAP configuration file on your file system. </li>
-                                <li>Define the LDAP connection settings in the file. For a list of the relevant keys, refer to <xref
-                                                href="../reference/r_LDAP_SettingTypes.xml"/>.</li>
+                                <li>Define the LDAP connection settings in the file.<ph audience="doc"> For a list of the relevant keys, refer to <xref
+                                                href="../reference/r_LDAP_SettingTypes.xml"/>.</ph></li>
                                 <li>Activate the LDAP-based authentication when registering the customer, and use the <uicontrol>LDAP settings</uicontrol> option to store the connection settings specified in the configuration file in <ph
                                                 conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                                                         />. <p>If you do not store any organization-specific connection settings in <ph
