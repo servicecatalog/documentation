@@ -21,16 +21,17 @@
                                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                 /> archives.<ph audience="doc"> Refer to <xref href="t_InstAppServer.xml"/>.</ph></li>
                                 <li>When installing <ph
-                                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                /> in SAML_SP authentication mode, additional steps are required.<ph audience="doc"> Refer to <xref
-                                                href="t_ConfigureIDP.xml"/>.</ph></li>
-                                <li>Deploying and configuring the BIRT report engine.<ph audience="doc"> Refer to <xref
-                                                href="../Installation/c_DeployBirt.xml"/>.</ph> </li>
-                                <li>Logging in to <ph
-                                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                                />, creating users, connecting to the BIRT report engine, and checking the configuration of <ph
-                                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                                />.<ph audience="doc"> Refer to <xref href="../Installation/c_NextSteps.xml"/>.</ph> </li>
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> in SAML_SP authentication mode, additional steps are required. Refer to <xref
+                        href="c_ConfigureIDP.xml"/>.</li>
+                <li>Deploying and configuring the BIRT report engine.<ph audience="doc"> Refer to <xref
+                            href="../Installation/c_DeployBirt.xml"/>.</ph>
+                </li>
+                <li>Logging in to <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        />, creating users, connecting to the BIRT report engine, and checking the configuration of <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.<ph audience="doc"
+                            > Refer to <xref href="../Installation/c_NextSteps.xml"/>.</ph>
+                </li>
                         </ol>
                         <p>The descriptions in the subsequent sections assume that you are using the <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> setup utilities for setting up the databases and the application server resources. This is the easiest way and suitable for most environments, particularly when you are using a database management system and application server installation solely for <ph
