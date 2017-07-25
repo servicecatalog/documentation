@@ -142,6 +142,10 @@ C\\:/glassfish/masterSourceBase</codeblock>
                         <li><codeph>SSO_STS_URL</codeph></li>
                         <li><codeph>SSO_STS_METADATA_URL</codeph></li>
                     </ul>
+                    <p>The following setting is optional: </p>
+                    <ul>
+                        <li><codeph>SSO_SIGNING_ALGORITHM</codeph></li>
+                    </ul>
                 </li>
             </ul>
 
