@@ -32,7 +32,7 @@
                             <li>In a Web browser, access the base URL of APP, for example, <samp class="codeph">http://127.0.0.1:8880/oscm-app</samp>.</li>
 
                             <li>
-                                <p>Log in with the ID and password of the user you specified for <samp class="codeph">BSS_USER_KEY</samp> in the APP <a href="r_ConfigSettings.htm">configuration settings</a> or as another administrator of the same organization. </p>
+                                <p>Log in with the ID and password of the user you specified for <samp class="codeph">BSS_USER_KEY</samp> in the APP configuration settings<span> (see <a href="r_ConfigSettings.htm">configuration settings</a></span> or as another administrator of the same organization. </p>
 
                             </li>
 
@@ -46,7 +46,7 @@
 </li>
 
                 
-                <li class="liexpand"><strong>Using a standard table editor or SQL statements</strong>:<p>Connect to the database with the user ID and password specified for the database access in the <samp class="codeph">db.properties</samp> file when <a href="../../Shared/Installation/t_InstConfiguring.htm">configuring APP</a>. In the <samp class="codeph">configurationsetting</samp> table, create the corresponding entries. The SQL statement to do this would be:</p>
+                <li class="liexpand"><strong>Using a standard table editor or SQL statements</strong>:<p>Connect to the database with the user ID and password specified for the database access in the <samp class="codeph">db.properties</samp> file when configuring APP<span> (see <a href="../../Shared/Installation/t_InstConfiguring.htm">configuring APP</a></span>. In the <samp class="codeph">configurationsetting</samp> table, create the corresponding entries. The SQL statement to do this would be:</p>
 <p><samp class="codeph">INSERT INTO configurationsetting (controllerid, settingkey, settingvalue) VALUES ('&lt;controllerID&gt;', 'BSS_ORGANIZATION_ID', '&lt;organizationID&gt;';</samp>
                     </p>
 <p>Example:</p>
