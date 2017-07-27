@@ -58,7 +58,7 @@
               <ol>
                 <li>Shut down the <codeph>bes-domain</codeph> and the <codeph>master-indexer-domain</codeph> domains.</li>
                 <li>Create a backup of configuration files, the key file for encryption, the <codeph>bss</codeph> database, and all customizations you may have made. See below for details.</li>
-                <li>Install the GlassFish 4.1 application server.</li>
+                <li>Install the GlassFish 4.1.2 application server.</li>
                 <li>Extract the contents of the <ph
                                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> installation package, <codeph>oscm-install-pack.zip</codeph>. </li>
                 <li>Update the database. See below for details. </li>
