@@ -272,13 +272,13 @@
                     platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
                     platform="help"
                     >the platform</ph>: <codeph>https://&lt;host>:&lt;port>/oscm-portal/marketplace/index.jsf</codeph>. In case of problems, the user can be automatically redirected from this page to another one specified in the <codeph>MP_ERROR_REDIRECT_HTTPS</codeph> configuration setting. Note that this URL is used platform-wide. It is not tenant-specific.</note></section>
-        <section><title>SSO_SIGNING_ALGORITHM</title>Optional. The secure hash algorithm to be used if requests are to be signed by <ph
+        <!-- section><title>SSO_SIGNING_ALGORITHM</title>Optional. The secure hash algorithm to be used if requests are to be signed by <ph
                 platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
                 platform="help">the platform</ph>. <p>Default: <codeph>SHA1</codeph></p><p><ph platform="print"><ph
                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
                     >the platform</ph> also supports the SHA-256 algorithm (value: <codeph>SHA256</codeph>). </p><p>If you change this setting, you need to restart <ph
                     platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
-                    platform="help">the platform</ph>.</p></section>
+                    platform="help">the platform</ph>.</p></section-->
         <section><title>SSO_SIGNING_KEY_ALIAS</title>Mandatory if requests are to be signed by <ph platform="print"><ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
                 >the platform</ph>. The alias of the private key of <ph platform="print"><ph
