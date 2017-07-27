@@ -17,7 +17,7 @@
             <!--p
                 id="Due_to_a_CORBA_library_change_concept_conbody_section_p_3">Due to a CORBA library change which is incompatible with Oracle GlassFish Server version 3.1.2.2, deployment with JDK 7, Update 55 and higher is not supported. </p-->
             <p id="For_being_able_to_execute_the_concept_conbody_section_p_2"
-                    >In order to be able to execute the installation scripts, you need to install the Apache Ant 1.8 (or higher) open source software. In the subsequent sections, <codeph>&lt;ANT_HOME&gt;</codeph> is the installation directory of Apache Ant. </p>
+                    >In order to be able to execute the installation scripts, you need to install the Apache Ant 1.10 (or higher) open source software. In the subsequent sections, <codeph>&lt;ANT_HOME&gt;</codeph> is the installation directory of Apache Ant. </p>
         </section>
     </conbody>
 </concept>
