@@ -8,20 +8,12 @@
         <title>Managing User Accounts</title>
         <conbody>
                 <section>
-                        <p>
-                                <note>This section is relevant only if <ph
-                                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                /> is installed in INTERNAL authentication mode.<ph audience="doc"> Refer to <xref
-                                                href="../GettingStarted/c_Authentication.xml"
-                                        /> for details on authentication modes.</ph> </note>
-                        </p>
                         <p>As an operator, you can lock the account of a specific user, for example when you assume unauthorized access. You can also unlock an account, for example in case it was locked because the user tried to log in using a wrong password for the configured number of times (default: 3). In addition, you can initiate the generation of a new password for a user. In all cases, the user is notified by email.</p>
                         <p>You can, at any time, view the number of users registered with <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> as well as the configured maximum number of registered users (default: 10). At regular intervals (default: 12 hours), the system checks the number of registered users. You are informed by email when this check returns that the allowed number of registered users is exceeded. </p>
                         <p>
-                                <note>If <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                        /> is installed in INTERNAL authentication mode and an organization uses an external LDAP system for user management, only those fields that are not mapped to settings in the LDAP system can be edited. For example, passwords can only be changed in the LDAP system.</note>
+                                <note>If an organization uses an external LDAP system for user management, only those fields that are not mapped to settings in the LDAP system can be edited. For example, passwords can only be changed in the LDAP system.</note>
                         </p>
                         <p><b>To manage user accounts, choose one of the following options:</b>
                                 <ul>

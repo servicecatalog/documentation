@@ -68,12 +68,12 @@
                         href="../../Overview/MarketplaceOwners/c_MPLOwnersIntro.xml"/>.</ph> </li>
                 <li><ph id="Operators_concept_conbody_section_ul_l"
                             ><b>Operators</b> are responsible for installing and maintaining <ph
-                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            />.</ph><ph audience="doc"> For details, refer to <xref format="dita"
-                        href="../../Overview/Operators/c_Operators.xml" type="concept"/>.</ph> <p><ph
-                            id="is_typically_operated_in_dat_concept_conbody_section_1_p"><ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</ph><ph
+                        audience="doc"> For details, refer to <xref format="dita"
+                            href="../../Overview/Operators/c_Operators.xml" type="concept"/>.</ph>
+                    <p><ph id="is_typically_operated_in_dat_concept_conbody_section_1_p"><ph
                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            /> is typically operated in data centers on servers providing for optimum performance, scalability, and non-stop operation. </ph><ph
+                            /> is typically operated in data centers on Kubernetes clusters providing for optimum performance, scalability, failover, and non-stop operation. </ph><ph
                             id="The_applications_integrated_w_concept_conbody_section_1_p"
                                 >The applications integrated with <ph
                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"

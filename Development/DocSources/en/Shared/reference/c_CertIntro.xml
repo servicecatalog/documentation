@@ -20,54 +20,17 @@
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> or accessing the platform services acts as a Web service client. <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> acts as the server, and the client must provide its authenticating data to the server. Three options are available: </p>
-            <p>
-                <ul>
-                    <li id="BasicAuth"
-                                ><b>Basic authentication</b>:<p>The caller sends the key or ID and password of a <ph
-                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                /> user. SOAP-based calls address the <ph
-                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                /> Web services with the <codeph>BASIC</codeph> suffix. This mechanism does not apply certificates for user authentication. However, certificates are involved because the communication between the client and <ph
-                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            /> must be secured using TLS/SSL and HTTPS. You should also configure your network's firewall to block JNDI lookups from the outside when using basic authentication. </p><p>Basic authentication can only be used if <ph
-                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                /> is installed in INTERNAL authentication mode. It must be used for calling <ph
-                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            /> functions that require the specification of a user role. The user role determines whether the user is allowed to execute the function. </p><p>The REST APIs of <ph
-                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            /> only support basic authentication.</p></li>
-                    <li id="ClientCert"
-                                ><b>Certificate-based authentication</b>:<p>The caller provides a certificate to the <ph
-                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                /> server. SOAP-based calls address the <ph
-                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                /> Web services with the <codeph>CLIENTCERT</codeph> suffix. In this case, the following requirements must be fulfilled:</p><ul>
-                            <li>The distinguished name (DN) of the client's certificate must correspond to the distinguished name (DN) configured and stored in <ph
-                                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                /> for the corresponding organization. </li>
-                            <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                    /> must trust the client's certificate: The <ph
-                                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                /> truststore must contain a certificate with a valid signing chain to the certificate presented by the client.</li>
-                        </ul><p>Certificate-based authentication must be used when integrating a PSP such as Heidelpay. Web services calling PSP-related functions of <ph
-                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            /> do not require the specification of a user role.</p><p>Certificate-based authentication can be used in both authentication modes (INTERNAL and SAML_SP). This chapter describes the certificate integration procedure in detail.</p></li>
-                    <li id="STS">
-                        <p><b>Security token service authentication</b>:</p>
-                        <p>SOAP-based Web service calls address the <ph
-                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                /> Web services with the <codeph>STS</codeph> suffix. </p>
-                        <p>The calls are authenticated by means of a security token service (STS). This is a Web service that issues security tokens as defined in the WS-Security/WS-Trust specification. WS-Security (Web Services Security) is an extension to SOAP to apply security to Web services.</p>
-                        <p>This mechanism does not apply certificates for user authentication. However, certificates are involved because the communication between the client and <ph
-                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            /> must be secured using TLS/SSL and HTTPS. </p>
-                        <p>Security token service authentication can only be used if <ph
-                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            /> is installed in SAML_SP authentication mode.</p>
-                    </li>
-                </ul>
-            </p>
+                /> acts as the server, and the client must provide its authenticating data to the server.</p>
+            <p>The caller sends the key or ID and password of a <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> user. SOAP-based calls address the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> Web services with the <codeph>BASIC</codeph> suffix. This mechanism does not apply certificates for user authentication. However, certificates are involved because the communication between the client and <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> must be secured using TLS/SSL and HTTPS. You should also configure your network's firewall to block JNDI lookups from the outside when using basic authentication. </p>
+            <p>Basic authentication must be used for calling <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> functions that require the specification of a user role. The user role determines whether the user is allowed to execute the function. </p>
             <p id="Note">
                 <note>Both, the server and the client certificates must be created and signed using the same JRE/JDK. Otherwise, the communication may fail.</note>
             </p>

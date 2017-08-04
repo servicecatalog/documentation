@@ -51,11 +51,11 @@
         <topicref format="dita" href="Shared/concepts/c_OrgsRoles.xml" type="concept"/>
     </chapter>
     <chapter href="OperationsGuide/GettingStarted/c_GettingStarted.xml" type="concept">
-        <topicref format="dita" href="OperationsGuide/GettingStarted/c_OverviewTasks.xml" type="concept"/>
+        
         <topicref href="OperationsGuide/GettingStarted/c_FirstSteps.xml" type="concept"/>
         <topicref href="OperationsGuide/GettingStarted/c_StartupShutdown.xml" type="concept"/>
         <topicref href="OperationsGuide/GettingStarted/c_ToolSupport.xml" type="concept"/>
-        <topicref href="OperationsGuide/GettingStarted/c_Authentication.xml" type="concept"/>
+        
     </chapter>
     <chapter href="OperationsGuide/Configuration/c_Configuration.xml" type="concept">
         <topicref href="OperationsGuide/Configuration/c_UpdateConfiguration.xml" type="concept"/>
@@ -71,7 +71,7 @@ topicref href="OperationsGuide/Configuration/c_MoveDB.xml" type="concept"/
 topicref href="OperationsGuide/Configuration/c_MoveMasterIndexerDomain.xml" type="concept"/
 topicref href="OperationsGuide/Configuration/c_LoadBalancing.xml" type="concept"/-->
         <topicref href="OperationsGuide/Configuration/c_LDAPSettings.xml" type="concept"/>
-        <topicref href="OperationsGuide/Configuration/c_Performance.xml" type="concept"/>
+        
     </chapter>
     <chapter href="OperationsGuide/Monitoring/c_RegularIntro.xml" type="concept">
         <topicref href="OperationsGuide/Monitoring/c_Monitoring.xml" type="concept">
@@ -91,10 +91,7 @@ topicref href="OperationsGuide/Configuration/c_LoadBalancing.xml" type="concept"
         <topicref href="OperationsGuide/Organizations/c_OrgAddRole.xml" type="concept"/>
         <topicref href="OperationsGuide/Organizations/c_ManageUsers.xml" type="concept"/>
         <topicref href="OperationsGuide/Organizations/c_ImportUsers.xml" type="concept"/>
-		<topicref href="OperationsGuide/Organizations/c_ManageTenants.xml" type="concept">
-		<topicref href="Shared/reference/c_IdPInfo.xml" type="concept"/>
-		<topicref href="Shared/reference/c_IdPInfo2.xml" type="concept"/>
-		</topicref>
+
     </chapter>
     <chapter href="OperationsGuide/Reports/c_Reports.xml" type="concept"/>
     <chapter format="dita" href="OperationsGuide/Billing/c_BillingPayment.xml" type="concept">
@@ -149,13 +146,10 @@ topicref href="OperationsGuide/Configuration/c_LoadBalancing.xml" type="concept"
         <topicref href="Shared/reference/r_AppServerResources_IndexerDomain.xml" type="reference"/>
     </appendix>
     <appendix href="Shared/reference/r_ConfigSettings.xml" type="reference">
-        <!--topicref href="Shared/reference/r_ConfigSettings_SOP.xml" type="reference"/-->
-        <topicref href="Shared/reference/r_ConfigSettings_glassfish_IndexerDomain.xml" type="reference"/>
-        <topicref href="Shared/reference/r_ConfigSettings_glassfish_BESDomain.xml" type="reference"/>
-        <topicref href="Shared/reference/r_ConfigSettings_glassfishJMS.xml" type="reference"/>
+   
         <topicref href="Shared/reference/r_ConfigSettings_db.xml" type="reference"/>
         <topicref href="Shared/reference/r_ConfigSettings_config_properties.xml" type="reference"/>
-        <topicref href="Shared/reference/r_ConfigSettings_sso_properties.xml" type="reference"/>
+   
     </appendix>
     <appendix href="Shared/reference/r_LDAP_SettingTypes.xml" type="reference"/>
     <appendix href="Shared/reference/r_Audit_log.xml" type="reference">

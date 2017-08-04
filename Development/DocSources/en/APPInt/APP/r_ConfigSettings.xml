@@ -109,15 +109,14 @@
             <title>BSS_WEBSERVICE_URL</title>
             <p><codeph>BSS_WEBSERVICE_URL=https://&lt;server>:&lt;port>/{SERVICE}/BASIC</codeph>
             </p>
-            <p>Mandatory when <codeph>BSS_AUTH_MODE</codeph> is set to <codeph>INTERNAL</codeph> and basic authentication is used. The endpoint of the <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+            <p>Mandatory. The endpoint of the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> Web services to be used. The <codeph>{SERVICE}</codeph> placeholder must not be replaced.</p>
         </section>
         <section>
             <title>BSS_WEBSERVICE_WSDL_URL</title>
             <p><codeph>BSS_WEBSERVICE_WSDL_URL=https://&lt;server>:&lt;port>/oscm/v1.9/{SERVICE}/BASIC?wsdl</codeph>
             </p>
-            <p>Mandatory when <codeph>BSS_AUTH_MODE</codeph> is set to <codeph>INTERNAL</codeph> and basic authentication is used. The URL specifying the version of the <ph
+            <p>Mandatory. The URL specifying the version of the <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> Web services to be used. The <codeph>{SERVICE}</codeph> placeholder must not be replaced.</p>
         </section>
@@ -125,8 +124,7 @@
             <title>BSS_STS_WEBSERVICE_URL</title>
             <p><codeph>BSS_STS_WEBSERVICE_URL=https://&lt;server>:&lt;port>/{SERVICE}/STS</codeph>
             </p>
-            <p>Mandatory when <codeph>BSS_AUTH_MODE</codeph> is set to <codeph>SAML_SP</codeph> and security token based authentication is used. The endpoint of the <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+            <p>Mandatory. The endpoint of the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> Web services to be used. The <codeph>{SERVICE}</codeph> placeholder must not be replaced.</p>
         </section>
         <section>

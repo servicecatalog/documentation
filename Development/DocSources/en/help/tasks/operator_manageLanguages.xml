@@ -8,7 +8,7 @@
     <context>
       <p id="language_intro"><ph platform="print"><ph
             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
-          >The platform</ph> supports multiple languages in which users can work. After installation, English, German, and Japanese language bundles are available. The operator can add additional languages and customize the texts provided in the English, German, and Japanese language bundles.</p>
+          >The platform</ph> supports multiple languages in which users can work. After deployment, English, German, and Japanese language bundles are available. The operator can add additional languages and customize the texts provided in the English, German, and Japanese language bundles.</p>
         <p audience="doc">
         <ph
           platform="help">Click <xref href="../../Shared/reference/r_Language_Codes.xml"

@@ -22,12 +22,7 @@
                                                             </li>
                                                             <li><codeph>user.firstname</codeph>: The administrator's first name.</li>
                                                             <li><codeph>user.identifier</codeph>: User ID of the administrator. User IDs are restricted to 100 characters and must not contain any of the following characters: <p><codeph>! " # $ % &amp; ' * + , / : ; &lt; = > ? \ ^ `</codeph>
-                                                            </p><note>If <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                                            /> is installed in INTERNAL authentication mode and you create an organization with LDAP-based user management, the user ID must match the ID in the external LDAP system. The organization's LDAP configuration determines which additional settings are required. All settings defined in the configuration must be mapped to corresponding values, for example, first name, last name, email address, and language.<p>If <ph
-                                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                                            /> is installed in SAML_SP authentication mode, the user ID must match the ID in the IdP.<ph audience="doc"> Refer to <xref
-                                                            href="../GettingStarted/c_Authentication.xml"
-                                                            /> for details on authentication modes.</ph> Note that the command-line tool can be used for creating an organization using the default IdP only.</p></note></li>
+                                        </p><note>If you create an organization with LDAP-based user management, the user ID must match the ID in the external LDAP system. The organization's LDAP configuration determines which additional settings are required. All settings defined in the configuration must be mapped to corresponding values, for example, first name, last name, email address, and language.</note></li>
                                                             <li><codeph>user.lastname</codeph>: The administrator's last name.</li>
                                                             <li><codeph>user.locale</codeph>: Language in which the administrator will work by default. <p>The user interface, available documentation, and emails will be presented to the administrator in the language specified here. </p><p>The language is specified as ISO language code. The ISO language code of any active language available in the system can be given.</p></li>
                                                             <li><codeph>user.phone</codeph>: Contact telephone or mobile number of the administrator.</li>
@@ -45,11 +40,9 @@
                                                             <li><codeph>marketplaceid</codeph>: ID of the marketplace to which the customer is to be directed. </li>
                                                                 <li><codeph>organization.operatorrevshare</codeph>: Revenue share agreed between the operator and the supplier organization, which the operator is to receive from the supplier for selling services on the marketplaces managed on the operator's platform. The default operator revenue share applies to all services offered by the supplier as long as you do not define a service-specific revenue share. It also applies irrespective of whether the supplier sells his services himself, or uses brokers or resellers for selling them. Discounts granted by a supplier to his customers are deducted from the revenue share.<ph audience="doc"> For details, refer to <xref
                                                             href="../Billing/c_DefineRevenueShares.xml"/>.</ph></li>
-                                                            <li><codeph>organization.settings</codeph>: Applicable only if <ph
-                                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                                            /> is installed in INTERNAL authentication mode. <p>Fully qualified path and name of an LDAP configuration file containing the parameters required for connecting to the organization's LDAP system. If the organization does not use LDAP-based user management, comment this setting out (<codeph>#organization.settings=</codeph>) in the <codeph>org.properties</codeph> file. </p><p>Here is a sample configuration file: </p><p
-                                                            id="LDAPSample">
-                                                            <codeblock>LDAP_BASE_DN=ou\=people,dc\=est,dc\=mycompany,dc\=de
+                                                            <li><codeph>organization.settings</codeph>: Fully qualified path and name of an LDAP configuration file containing the parameters required for connecting to the organization's LDAP system. If the organization does not use LDAP-based user management, comment this setting out (<codeph>#organization.settings=</codeph>) in the <codeph>org.properties</codeph> file. <p>Here is a sample configuration file: </p><p
+                                            id="LDAPSample">
+                                            <codeblock>LDAP_BASE_DN=ou\=people,dc\=est,dc\=mycompany,dc\=de
 LDAP_CONTEXT_FACTORY=com.sun.jndi.ldap.LdapCtxFactory
 LDAP_URL=ldap://myldapserver.lan.est.company.de:389
 LDAP_ATTR_UID=uid
@@ -57,9 +50,8 @@ LDAP_ATTR_LAST_NAME=sn
 LDAP_ATTR_FIRST_NAME=givenName
 LDAP_ATTR_EMAIL=scalixEmailAddress
 LDAP_ATTR_REFERRAL=ignore</codeblock>
-                                                            </p><p audience="doc">For a list of LDAP keys, refer to <xref
-                                                            href="../../Shared/reference/r_LDAP_SettingTypes.xml"
-                                                            /></p></li>
+                                        </p><p audience="doc">For a list of LDAP keys, refer to <xref
+                                                href="../../Shared/reference/r_LDAP_SettingTypes.xml"/></p></li>
                                                             </ul></li>
                                                         <li>Save the <codeph>org.properties</codeph> file in UTF-8 encoding. </li>
                                                         <li>Execute the <codeph>createorganization</codeph> command with the following syntax: <p>

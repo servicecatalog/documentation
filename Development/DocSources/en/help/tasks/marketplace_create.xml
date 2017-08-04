@@ -9,7 +9,7 @@
       <p>On the <uicontrol>Create marketplace</uicontrol> page, you can create a marketplace to be operated on your platform.</p>
       <p>Creating a marketplace includes defining the marketplace features and settings and assigning an organization as the owner. The organization you assign as the owner is automatically assigned the marketplace owner role. All administrators automatically receive the marketplace manager role. The marketplace manager role enables them to administrate and customize the marketplace.</p>
       <p>As a prerequisite for creating a marketplace, the organization to be assigned as the marketplace owner must already exist.</p>
-      <p>If the platform is installed in SAML_SP mode, you can associate a tenant with the marketplace. The tenant defines the Identity Provider (IdP) against which users accessing the marketplace are to be authenticated. </p>
+      <!--p>If the platform is installed in SAML_SP mode, you can associate a tenant with the marketplace. The tenant defines the Identity Provider (IdP) against which users accessing the marketplace are to be authenticated. </p-->
       <p><b>To create a marketplace</b>:</p>
     </context>
     <steps>
