@@ -9,17 +9,17 @@
         <prodinfo product="oscm_ce">
             <prodname/>
             <vrmlist>
-                <vrm version="17.3.0"/>
+                <vrm version="17.4.0"/>
             </vrmlist>
             <brand/>
-            <prognum>17.3.0</prognum>
+            <prognum>17.4.0</prognum>
             <component/>
             <series>ServerView Resource Orchestrator Integration (GlassFish)</series>
         </prodinfo>
         <prodinfo product="oscm_ee">
             <prodname>Enterprise Service</prodname>
             <vrmlist>
-                <vrm version="17.3"/>
+                <vrm version="17.4"/>
             </vrmlist>
             <brand>FUJITSU Software</brand>
             <prognum>Catalog Manager V17.3</prognum>
@@ -27,7 +27,7 @@
             <series>ServerView Resource Orchestrator Integration (GlassFish)</series>
         </prodinfo>
         <bookid>
-            <edition>August 2017 </edition>
+            <edition>September 2017 </edition>
             <!--booknumber product="oscm_ee">B1WS-1262-02</booknumber-->
         </bookid>
         <bookrights product="oscm_ce">
