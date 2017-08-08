@@ -109,7 +109,7 @@ LDAP_ATTR_REFERRAL=ignore</codeblock>
   <related-links>
     <linklist>
       <title>Related topics</title>
-      <link href="../tasks/operator_manageTenants.xml"/>
+      
       <link href="../../Shared/reference/r_LDAP_SettingTypes.xml"/>
       <link href="../tasks/operator_manageLdapSettings.xml"/>
       <link href="operator_manageOperatorRevenueShare.xml"/>

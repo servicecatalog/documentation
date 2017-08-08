@@ -71,7 +71,7 @@
   <related-links>
     <linklist>
       <title>Weitere Themen</title>
-      <link href="operator_manageTenants.xml"/>
+      
       <link href="organization_managePaymentTypes.xml"/>
       <link href="operator_managePSPs.xml"/>
       <link href="operator_createPSP.xml"/>

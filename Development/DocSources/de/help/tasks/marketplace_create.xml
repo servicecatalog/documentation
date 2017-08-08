@@ -9,7 +9,7 @@
       <p>Auf der Seite <uicontrol>Marktplatz anlegen</uicontrol> können Sie einen Marktplatz anlegen, der auf der Plattform betrieben werden soll. </p>
       <p>Beim Anlegen eines Marktplatzes legen Sie dessen Funktionsumfang und Einstellungen fest und geben eine Organisation als Eigentümer an. Dieser Organisation wird automatisch die Rolle Marktplatzeigentümer zugewiesen. Alle Administratoren der Organisation erhalten die Rolle Marktplatz-Manager. Mit dieser Rolle können sie den Marktplatz verwalten und anpassen.</p>
       <p>Die Organisation, die Sie als Marktplatzeigentümer angeben, muss bereits existieren.</p>
-      <p>Wenn die Plattform mit der Authentifizierungsart SAML_SP installiert ist, können Sie dem Marktplatz einen Mandanten zuordnen. Der Mandant legt das Identity-Provider-System fest, über welches Benutzer authentifiziert werden, sobald sie auf den Marktplatz zugreifen. </p>
+      <!--p>Wenn die Plattform mit der Authentifizierungsart SAML_SP installiert ist, können Sie dem Marktplatz einen Mandanten zuordnen. Der Mandant legt das Identity-Provider-System fest, über welches Benutzer authentifiziert werden, sobald sie auf den Marktplatz zugreifen. </p-->
       <p><b>So legen Sie einen Marktplatz an</b>:</p>
     </context>
     <steps>
@@ -54,17 +54,17 @@
           <p>Die Liste stellt alle auf Ihrer Plattform existierenden Organisationen zur Auswahl.</p>
         </info>
       </step>
-      <step>
+      <!--step>
         <cmd>Wenn die Plattform mit der Authentifizierungsart SAML_SP installiert ist, wählen Sie den Mandanten des Identity-Provider-Systems, über das Benutzer authentifiziert werden sollen. Wenn Sie das Feld leer lassen, werden die Benutzer beim Zugriff auf den Marktplatz über das bei der Installation angegebene Identity-Provider-System authentifiziert. </cmd>
         <info>Die Liste stellt alle auf Ihrer Plattform existierenden Mandanten zur Auswahl. </info>
-      </step>
+      </step-->
       <step>
         <cmd>Legen Sie den Marktplatz mit <uicontrol>Speichern</uicontrol> an.</cmd>
       </step>
     </steps>
     <result>
       <p>Die Administratoren der Eigentümerorganisation erhalten die Rolle Marktplatz-Manager. Sie werden per E-Mail über den neuen Marktplatz informiert. Die E-Mail enthält zwei URLs. Die erste URL kann von den Marktplatz-Managern zur Administration und Anpassung des Marktplatzes verwendet werden. Die zweite URL kann für den öffentlichen Zugriff auf den Marktplatz genutzt werden.</p>
-      <p>Sobald Sie einen Marktplatz angelegt haben, können Sie bei Bedarf Marktplätze löschen, deren Eigentümer ändern, oder die Zuordnung eines Mandanten ändern. </p>
+      <p>Sobald Sie einen Marktplatz angelegt haben, können Sie bei Bedarf Marktplätze löschen oder deren Eigentümer ändern.</p>
     </result>
   </taskbody>
   <related-links>
@@ -72,7 +72,7 @@
       <title>Weitere Themen</title>
       <link href="marketplace_update.xml"/>
       <link href="marketplace_delete.xml"/>
-      <link href="operator_manageTenants.xml"/>
+      
     </linklist>
   </related-links>
 </task>
