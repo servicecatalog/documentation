@@ -7,7 +7,6 @@
 <meta content="task" name="DC.Type" />
 <meta name="DC.Title" content="Managing organizations" />
 <meta scheme="URI" name="DC.Relation" content="organization_managePaymentTypes.htm" />
-<meta scheme="URI" name="DC.Relation" content="operator_manageTenants.htm" />
 <meta scheme="URI" name="DC.Relation" content="operator_managePSPs.htm" />
 <meta scheme="URI" name="DC.Relation" content="operator_createPSP.htm" />
 <meta content="XHTML" name="DC.Format" />
@@ -42,10 +41,7 @@
 <p>The process of integrating certificates is described in detail in the <em>Operator's Guide</em>.</p>
 </li>
 
-          <li class="liexpand">If the platform is installed in SAML_SP authentication mode, change or associate a <strong>tenant</strong> with the organization. <p>By associating a tenant with an organization, the emails sent to the users of the organization will contain the URL of a marketplace or an administration portal of this tenant. Tenants must have been created beforehand on the <strong>Manage tenants</strong> page. The <strong>Marketplace</strong> drop-down list then offers all marketplaces associated with the tenant. </p>
-<p>If you leave this field empty, the URL will point to the default tenant.</p>
-</li>
-
+          
           <li class="liexpand">Define the <strong>payment types</strong> that a supplier or reseller organization may offer to its customers for services applying the platform's native billing system.<p>By default, suppliers and resellers can allow customers to pay on invoice so that they can subscribe to a service that is not free of charge. </p>
 <p id="task634__PayTypes2">If a supplier or reseller requests a payment type other than on invoice, he must use the services of a commercial PSP. </p>
 The process of integrating PSP support is described in detail in the <em>Operator's Guide</em>. </li>
@@ -127,16 +123,6 @@ The process of integrating PSP support is described in detail in the <em>Operato
 
       </li>
 <li class="stepexpand">
-        <span>If the platform is installed in SAML_SP authentication mode, the <strong>Tenant</strong> field is shown. </span>
-         By associating a tenant with an organization, the emails sent to the users of the organization will contain the URL of a marketplace or an administration portal of this tenant. <p>Updating the tenant can be used to remove an organization from a tenant, or to associate an organization with another tenant. </p>
-<div class="p">
-            <div class="note"><span class="notetitle">Note:</span> If you associate a different tenant, the IdP administrator must ensure that all users of this organization are properly configured in the IdP system. If users of this organization already exist with the same name in the newly associated IdP system, changing the tenant is not possible. <p>If sellers have the right to publish on a marketplace that is associated with a tenant, this right is removed when a new tenant is associated.</p>
-</div>
-
-          </div>
-
-      </li>
-<li class="stepexpand">
         <span>Define the payment types that the organization can offer to its customers. Click <strong>Add</strong>, and proceed to the <span class="uicontrol">New payment type</span> page. </span>
          Adding payment types is possible for supplier and reseller organizations only. <div class="p">
             <div class="note"><span class="notetitle">Note:</span> You can no longer remove a payment type which has been assigned to a supplier or reseller organization.</div>
@@ -160,7 +146,6 @@ The process of integrating PSP support is described in detail in the <em>Operato
 <div class="linklist"><strong>Related topics</strong><br />
 
 <div><a href="organization_managePaymentTypes.htm">Adding payment types</a></div>
-<div><a href="operator_manageTenants.htm">Managing Tenants</a></div>
 <div><a href="operator_managePSPs.htm">Managing payment service providers</a></div>
 <div><a href="operator_createPSP.htm">Creating a payment service provider</a></div></div>
 </div>
