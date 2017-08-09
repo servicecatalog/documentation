@@ -20,7 +20,7 @@
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> or accessing the platform services acts as a Web service client. <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> acts as the server, and the client must provide its authenticating data to the server.</p>
+                /> acts as the server, and the client must provide its authenticating data to the server: </p>
             <p>The caller sends the key or ID and password of a <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> user. SOAP-based calls address the <ph
@@ -28,9 +28,6 @@
                     /> Web services with the <codeph>BASIC</codeph> suffix. This mechanism does not apply certificates for user authentication. However, certificates are involved because the communication between the client and <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> must be secured using TLS/SSL and HTTPS. You should also configure your network's firewall to block JNDI lookups from the outside when using basic authentication. </p>
-            <p>Basic authentication must be used for calling <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> functions that require the specification of a user role. The user role determines whether the user is allowed to execute the function. </p>
             <p id="Note">
                 <note>Both, the server and the client certificates must be created and signed using the same JRE/JDK. Otherwise, the communication may fail.</note>
             </p>

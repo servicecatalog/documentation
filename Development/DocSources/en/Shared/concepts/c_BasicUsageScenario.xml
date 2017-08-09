@@ -67,7 +67,7 @@
                     ><b>Marketplace owners</b> are responsible for administrating and customizing the marketplaces to which services are published.</ph><ph audience="doc"> For details, refer to <xref
                         href="../../Overview/MarketplaceOwners/c_MPLOwnersIntro.xml"/>.</ph> </li>
                 <li><ph id="Operators_concept_conbody_section_ul_l"
-                            ><b>Operators</b> are responsible for installing and maintaining <ph
+                            ><b>Operators</b> are responsible for deploying and maintaining <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</ph><ph
                         audience="doc"> For details, refer to <xref format="dita"
                             href="../../Overview/Operators/c_Operators.xml" type="concept"/>.</ph>

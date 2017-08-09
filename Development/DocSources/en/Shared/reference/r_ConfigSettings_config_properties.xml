@@ -207,6 +207,156 @@
                     > </ph></ph> has been deployed. </p></section>
         <!--section><title>SEARCH_INDEX_MASTER_FACTORY_NAME</title>Mandatory. The name of the search indexer application's JMS connection factory. Stay with the entry <codeph>jms/bss/masterIndexerQueueFactory</codeph> and do not change it.</section>
         <section><title>SEARCH_INDEX_MASTER_QUEUE_NAME</title>Mandatory. The name of the search indexer application's JMS queue. Stay with the entry <codeph>jms/bss/masterIndexerQueue</codeph> and do not change it.</section-->
+        <section><title>SSO_DEFAULT_TENANT_ID</title>Mandatory if you install <ph platform="print"><ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                >the platform</ph> in SAML_SP authentication mode. <p>The unique ID of the default tenant. The default tenant is associated with the IdP to be used after installing <ph
+                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                    platform="help"
+                >the platform</ph> in SAML_SP mode. </p><p>The ID must consist of exactly 8 characters. No special characters or blanks are allowed.</p><p>The default tenant ID must be communicated to the IdP operator. The IdP operator must set this ID as an attribute for SAML assertions. For example, in OpenAM, where <ph
+                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                    platform="help"
+                    >the platform</ph> has been registered as a Service Provider (SP), the IdP operator selects this SP, and enters <codeph>tenantID="&lt;the 8 characters>"</codeph> as an assertion processing attribute. </p><p>If you need to change this setting after the first exchange of data between <ph
+                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                    platform="help">the platform</ph> and the IdP, you must change it both in <ph platform="print"><ph
+                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                    >the platform</ph> and the IdP system. The IdP operator must be informed accordingly. He must change the ID in the IdP system.</p></section>
+        <section><title>SSO_IDP_AUTHENTICATION_REQUEST_HTTP_METHOD</title>Mandatory if you install <ph platform="print"
+                    ><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                >the platform</ph> in SAML_SP authentication mode. The method used for HTTP authentication requests. Depending on the IdP, <codeph>GET</codeph> or <codeph>POST</codeph> requests can be used. <p>Required for Web browser SSO.</p><p>Default: <codeph>POST</codeph></p><p>If you change this setting, you need to restart <ph
+                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                    platform="help">the platform</ph>.</p>
+        </section>
+        <section><title>SSO_IDP_SAML_ASSERTION_ISSUER_ID</title>Mandatory if you install <ph platform="print"><ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                >the platform</ph> in SAML_SP authentication mode. <p>The entity ID of the default IdP system. This ID is unique for the IdP system and has to be communicated between the platform operator and the IdP operator. It is required so that the platform can ensure that the authentication information returned from the IdP system actually comes from the IdP system that is configured for authenticating users. </p><p>The IdP operator can find out the ID by retrieving the federation metadata on his IdP system. </p><b>Examples</b>:<p>On an OpenAM server, the federation metadata can be retrieved in a Web browser as follows: </p><p><codeph>https://&lt;OpenAM_server>/openam/saml2/jsp/exportmetadata.jsp?entityid=</codeph></p><p>On an Active Directory Federation Services (ADFS) server, look for the following file: </p><p><codeph>http://&lt;ADFShost>/FederationMetadata/2007-06/FederationMetadata.xml</codeph></p><p>In the XML file, you find the SAML assertion issuer ID as <codeph>entityID</codeph>. For example: </p><p><codeph>entityID="http://example.adfs.com/adfs/services/trust"</codeph>
+            </p></section>
+        <section><title>SSO_IDP_TRUSTSTORE</title>Mandatory if you install <ph platform="print"><ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                >the platform</ph> in SAML_SP authentication mode. The path and file name of the application server truststore file holding the public key certificate of the IdP.<p>Required for Web browser SSO.</p><p>Default: <codeph>&lt;path>/cacerts.jks</codeph></p><p>As soon as another IdP system, for example, OpenAM, Cloudminder, or Active Directory Federation Services (ADFS) is installed and used, this setting might need to be changed. In this case, you need to restart <ph
+                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                    platform="help">the platform</ph>. </p></section>
+        <section><title>SSO_IDP_TRUSTSTORE_PASSWORD</title>Mandatory if you install <ph platform="print"><ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                >the platform</ph> in SAML_SP authentication mode. The password of the application server truststore holding the public key certificate of the IdP.<p>Required for Web browser SSO.</p><p>GlassFish default password: <codeph>changeit</codeph></p><p>The spelling of the password is case-sensitive and must be identical to the output of the IdP.</p><p>If you change this setting, you need to restart <ph
+                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                    platform="help">the platform</ph>.</p>
+        </section>
+        <section><title>SSO_IDP_URL</title>Mandatory if you install <ph platform="print"><ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                >the platform</ph> in SAML_SP authentication mode. The SAML Redirect URL for the IdP service endpoint.<p>Required for Web browser SSO.</p><p>For security and confidentiality reasons, it is recommended to use the HTTPS protocol.</p><p>Syntax: <codeph>https://&lt;host>:&lt;port>/&lt;RedirectServiceEndpoint></codeph></p><p>If you change this setting, you need to restart <ph
+                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                    platform="help">the platform</ph>.</p></section>
+        <section><title>SSO_ISSUER_ID</title>Mandatory if you install <ph platform="print"><ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                >the platform</ph> in SAML_SP authentication mode. A unique identifier for <ph platform="print"><ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                >the platform</ph>. The IdP uses this ID for identifying incoming SAML authentication requests from <ph
+                platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                platform="help"
+                    >the platform</ph>.<p>Required for Web browser SSO.</p><p>If you need to change this setting after the first exchange of data between <ph
+                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                    platform="help">the platform</ph> and the IdP, you must change it both in <ph platform="print"><ph
+                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                    >the platform</ph> and the IdP system. It may be required to send a new metadata exchange file to the IdP operator. </p>Default: <codeph>CT_MG</codeph><p>If you change this setting, you need to restart <ph
+                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                    platform="help">the platform</ph>.</p></section>
+        <section><title>SSO_LOGOUT_URL</title>Mandatory if you install <ph platform="print"><ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                >the platform</ph> in SAML_SP authentication mode and want to make use of single logout. <p>The URL of the endpoint of the IdP system's single logout service. Logout and invalidate session requests from <ph
+                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                    platform="help"
+                >the platform</ph> are sent to this address. </p><p>Required for Web browser SSO.</p><p>For security and confidentiality reasons, it is recommended to use the HTTPS protocol.</p><p>Syntax: <codeph>https://&lt;host>:&lt;port>/&lt;LogoutServiceEndpoint></codeph></p><p>If you change this setting, you need to restart <ph
+                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                    platform="help"
+                    >the platform</ph>.</p><note>In the IdP system, a URL must be specified to which the response to the logout request is sent and the user is redirected by the logout. We recommend you use the following default marketplace address of <ph
+                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                    platform="help"
+                    >the platform</ph>: <codeph>https://&lt;host>:&lt;port>/oscm-portal/marketplace/index.jsf</codeph>. In case of problems, the user can be automatically redirected from this page to another one specified in the <codeph>MP_ERROR_REDIRECT_HTTPS</codeph> configuration setting. Note that this URL is used platform-wide. It is not tenant-specific.</note></section>
+        <section><title>SSO_SIGNING_ALGORITHM</title>Optional. The secure hash algorithm to be used if requests are to be signed by <ph
+                platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                platform="help">the platform</ph>. <p>Default: <codeph>SHA1</codeph></p><p><ph platform="print"><ph
+                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                    >the platform</ph> also supports the SHA-256 algorithm (value: <codeph>SHA256</codeph>). </p><p>If you change this setting, you need to restart <ph
+                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                    platform="help">the platform</ph>.</p></section>
+        <section><title>SSO_SIGNING_KEY_ALIAS</title>Mandatory if requests are to be signed by <ph platform="print"><ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                >the platform</ph>. The alias of the private key of <ph platform="print"><ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                >the platform</ph> to be used for signing requests. <p>Requests are signed in the following situations: </p><ul
+                compact="no">
+                <li>Communication with Web pages or applications from custom tabs in subscriptions.</li>
+                <li>Logout requests, if <ph platform="print"><ph
+                            conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                        >the platform</ph> is installed in SAML_SP authentication mode, single logout is configured, and the IdP system's single logout service requires signed requests, as, for example, in Microsoft Active Directory Federation Services (ADFS). </li>
+            </ul><p>The application server used for the Web page, Web application, or IdP system needs the corresponding certificate of <ph
+                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                    platform="help"
+                    >the platform</ph> in its truststore for verifying the signature.</p><p>Default: <codeph>s1as</codeph></p><p>If you change this setting, you need to restart <ph
+                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                    platform="help">the platform</ph>.</p></section>
+        <section><title>SSO_SIGNING_KEYSTORE</title>Mandatory if requests are to be signed by <ph platform="print"><ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                >the platform</ph>. The path and name of the application server's keystore where the private key of <ph
+                platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                platform="help"
+                    >the platform</ph> specified in the <codeph>SSO_SIGNING_KEY_ALIAS</codeph> setting is stored. <p>Default: <codeph>./keystore.jks</codeph></p><p>If you change this setting, you need to restart <ph
+                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                    platform="help">the platform</ph>.</p></section>
+        <section><title>SSO_SIGNING_KEYSTORE_PASS</title>Mandatory if requests are to be signed by <ph platform="print"
+                    ><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                >the platform</ph>. The password for accessing the keystore specified in the <codeph>SSO_SIGNING_KEYSTORE</codeph> setting.<p>Default: <codeph>changeit</codeph></p><p>If you change this setting, you need to restart <ph
+                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                    platform="help">the platform</ph>.</p></section>
+        <section><title>SSO_STS_ENCKEY_LEN</title>Mandatory if you install <ph platform="print"><ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                >the platform</ph> in SAML_SP authentication mode. The length of the encryption key as used by the IdP.<p>Required for STS communication.</p><p>Default: <codeph>128</codeph></p><p>This setting is an installation property and cannot be changed in the administration portal. If you need to change the encryption key length, proceed as follows: </p><p>
+                <ol>
+                    <li>Stop the <codeph>bes-domain</codeph> domain.</li>
+                    <li>Edit the <codeph>configsettings.properties</codeph> file and change the value for <codeph>SSO_STS_ENCKEY_LEN</codeph> as required. </li>
+                    <li>Execute the <codeph>build-glassfish.xml</codeph> file in <codeph audience="BSS"
+                            >&lt;install_pack_dir>/install</codeph> as follows: <p>
+                            <codeblock>&lt;ANT_HOME>/bin/ant 
+   -DpatchProps.path=../domains/bes_domain/installer 
+   -f build-glassfish.xml patchAndRedeployApplication</codeblock>
+                        </p><codeph>&lt;ANT_HOME></codeph> is the installation directory of Apache Ant.<p><note>It may be required to enclose the <codeph>-DpatchProps.path=&lt;path&gt;</codeph> command in double or single quotes depending on the operating system. </note>The modified configuration parameter value is read from the <codeph><codeph>configsettings.properties</codeph></codeph> file and written to the WSIT files contained in the <codeph>oscm.ear</codeph> archive. The updated archive is redeployed to the <codeph>bes-domain</codeph> domain. </p><p>During the execution of the above command, a <codeph>tmp</codeph> subdirectory is created in <codeph>&lt;install_pack_dir>/domains/bes_domain</codeph> to which the updated <codeph>oscm.ear</codeph> archive is saved.</p></li>
+                    <li>Redeploy the <codeph>oscm-portal.war</codeph> file to the <codeph>bes-domain</codeph> domain. </li>
+                    <li>Restart the <codeph>bes-domain</codeph> domain.</li>
+                </ol>
+            </p></section>
+        <section><title>SSO_STS_METADATA_URL</title>Mandatory if you install <ph platform="print"><ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                >the platform</ph> in SAML_SP authentication mode. The URL of the MEX address (Issuer Metadata Exchange) of the STS. <p>Required for STS communication.</p><p>For security and confidentiality reasons, it is recommended to use the HTTPS protocol.</p><p>Syntax: <codeph>https://&lt;host>:&lt;port>/&lt;MEXAddress></codeph></p><p>This setting is an installation property and cannot be changed in the administration portal. If you need to change the URL, proceed as follows: </p><p>
+                <ol>
+                    <li>Stop the <codeph>bes-domain</codeph> domain.</li>
+                    <li>Edit the <codeph>configsettings.properties</codeph> file and change the value for <codeph>SSO_STS_METADATA_URL</codeph> as required. </li>
+                    <li>Execute the <codeph>build-glassfish.xml</codeph> file in <codeph audience="BSS"
+                            >&lt;install_pack_dir>/install</codeph> as follows: <p>
+                            <codeblock>&lt;ANT_HOME>/bin/ant 
+   -DpatchProps.path=../domains/bes_domain/installer 
+   -f build-glassfish.xml patchAndRedeployApplication</codeblock>
+                        </p><p><codeph>&lt;ANT_HOME></codeph> is the installation directory of Apache Ant.</p><note>It may be required to enclose the <codeph>-DpatchProps.path=&lt;path&gt;</codeph> command in double or single quotes depending on the operating system. </note><p>The modified configuration parameter value is read from the <codeph><codeph>configsettings.properties</codeph></codeph> file and written to the WSIT files contained in the <codeph>oscm.ear</codeph> archive. The updated archive is redeployed to the <codeph>bes-domain</codeph> domain. </p><p>During the execution of the above command, a <codeph>tmp</codeph> subdirectory is created in <codeph>&lt;install_pack_dir>/domains/bes_domain</codeph> to which the updated <codeph>oscm.ear</codeph> archive is saved.</p></li>
+                    <li>Redeploy the <codeph>oscm-portal.war</codeph> file to the <codeph>bes-domain</codeph> domain. </li>
+                    <li>Restart the <codeph>bes-domain</codeph> domain.</li>
+                </ol>
+            </p></section>
+        <section><title>SSO_STS_URL</title>Mandatory if you install <ph platform="print"><ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                >the platform</ph> in SAML_SP authentication mode. The URL of the STS endpoint. <p>Required for STS communication.</p><p>For security and confidentiality reasons, it is recommended to use the HTTPS protocol.</p><p>Syntax: <codeph>https://&lt;host>:&lt;port>/&lt;ServiceEndpoint></codeph></p><p>This setting is an installation property and cannot be changed in the administration portal. If you need to change the URL, proceed as follows: </p><p>
+                <ol>
+                    <li>Stop the <codeph>bes-domain</codeph> domain.</li>
+                    <li>Edit the <codeph>configsettings.properties</codeph> file and change the value for <codeph>SSO_STS_URL</codeph> as required. </li>
+                    <li>Execute the <codeph>build-glassfish.xml</codeph> file in <codeph audience="BSS"
+                            >&lt;install_pack_dir>/install</codeph> as follows: <p>
+                            <codeblock>&lt;ANT_HOME>/bin/ant 
+   -DpatchProps.path=../domains/bes_domain/installer 
+   -f build-glassfish.xml patchAndRedeployApplication</codeblock>
+                        </p><p><codeph>&lt;ANT_HOME></codeph> is the installation directory of Apache Ant.</p><note>It may be required to enclose the <codeph>-DpatchProps.path=&lt;path&gt;</codeph> command in double or single quotes depending on the operating system. </note><p>The modified configuration parameter value is read from the <codeph><codeph>configsettings.properties</codeph></codeph> file and written to the WSIT files contained in the <codeph>oscm.ear</codeph> archive. The updated archive is redeployed to the <codeph>bes-domain</codeph> domain. </p><p>During the execution of the above command, a <codeph>tmp</codeph> subdirectory is created in <codeph>&lt;install_pack_dir>/domains/bes_domain</codeph> to which the updated <codeph>oscm.ear</codeph> archive is saved.</p></li>
+                    <li>Redeploy the <codeph>oscm-portal.war</codeph> file to the <codeph>bes-domain</codeph> domain. </li>
+                    <li>Restart the <codeph>bes-domain</codeph> domain.</li>
+                </ol>
+            </p>
+        </section>
         <section><title>SUPPLIER_SETS_INVOICE_AS_DEFAULT</title>Optional. Specifies whether invoice is to be used as the default payment type for all customers. <p>Allowed values: <codeph>true</codeph>, <codeph>false</codeph></p><p>Default: <codeph>false</codeph>
             </p></section>
         <section><title>TAGGING_MAX_TAGS</title>Mandatory. The maximum number of tags composing the tag cloud. <p>The tag cloud is the area of a marketplace containing defined search terms (tags). The more often a tag is used in services, the bigger the characters of the tag are displayed. Customers can use the tags to search for services, provided that the tag cloud is enabled for the marketplace by the marketplace owner.</p><p>Allowed values: Any value between <codeph>0</codeph> and <codeph>2147483647</codeph></p><p>Default: <codeph>20</codeph>

@@ -15,7 +15,7 @@
                 /> or be registered by a supplier, reseller, broker, or operator. In any case, an organization with the customer role is created. Organizations with other roles can also act as customers, i.e. they are implicitly assigned the customer role. These organizations are created and assigned their roles as follows: </p>
             <ul>
                 <li>When <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> is deployed, an organization with the operator role is created.</li>
+                    /> is installed, an organization with the operator role is created.</li>
                 <li>Operators can assign the supplier, reseller, broker, and technology provider role to any existing organization or create new organizations with these roles. <ph
                         audience="detail"
                         >An organization can have both the supplier and the technology provider role. The reseller and broker roles, however, cannot be combined with each other or with the supplier or technology provider role.</ph></li>

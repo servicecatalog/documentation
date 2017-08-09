@@ -9,6 +9,7 @@
             <p>This is a generic topic for sharing information on authentication. </p>
         </section>
         <section id="auth_internal">
+            <title>INTERNAL Authentication Mode</title>
             <p id="auth_internal1"><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> is installed as a platform for public access from anywhere in the Internet. Users are authenticated with <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> and can be managed in <ph

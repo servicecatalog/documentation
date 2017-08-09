@@ -24,7 +24,7 @@
                                                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                                                 />. The online help is intended for and available to everybody working with the administration portal.</ph></li>
                                 <li><ph id="Installation_Guide:_concept_conbody_section_ul_l"
-                                                        ><i>Deployment Guide:</i> A PDF manual describing how to deploy and undeploy <ph
+                                                        ><i>Installation Guide (GlassFish):</i> A PDF manual describing how to install and uninstall <ph
                                                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                                                         />. It is intended for operators who set up and maintain <ph
                                                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
