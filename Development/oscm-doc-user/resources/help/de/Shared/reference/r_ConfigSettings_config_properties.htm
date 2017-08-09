@@ -318,6 +318,12 @@ Voreinstellung: <p><samp class="codeph">./key</samp></p>
 <div class="note"><span class="notetitle">Hinweis:</span> Im IdP-System muss eine URL angegeben werden, zu der die Antwort auf den Request zur Abmeldung geschickt und der Benutzer nach der Abmeldung geleitet wird. Es wird empfohlen, folgende Standard-Marktplatzadresse der Plattform zu verwenden: <samp class="codeph">https://&lt;host&gt;:&lt;port&gt;/oscm-portal/marketplace/index.jsf</samp>. Bei Problemen kann der Benutzer automatisch von dieser Seite auf eine weitere Seite geleitet werden, die in der Konfigurationseinstellung <samp class="codeph">MP_ERROR_REDIRECT_HTTPS</samp> angegeben ist. Beachten Sie aber, dass diese URL systemweit gilt und nicht mandanten-spezifisch ist.</div>
 </div>
 
+                
+                <div class="section"><h4 class="sectiontitle">SSO_SIGNING_ALGORITHM</h4>Optional. Der Secure-Hash-Algorithmus zum Signieren von SAML Requests.  <p>Voreinstellung: <samp class="codeph">SHA1</samp></p>
+<p>Die Plattform unterstützt auch den Algorithmus SHA-256. Der Wert wird als <samp class="codeph">SHA256</samp> angegeben. </p>
+<p>Wenn Sie diese Einstellung ändern, müssen Sie die Plattform neu starten.</p>
+</div>
+
                 <div class="section"><h4 class="sectiontitle">SSO_SIGNING_KEY_ALIAS</h4>Obligatorisch für das Signieren von Requests durch die Plattform. Gibt den Alias des privaten Schlüssels der Plattform an, der zum Signieren von Requests verwendet wird. <p>Requests werden in folgenden Fällen signiert:</p>
 <ul>
                                 <li class="liexpand">Kommunikation mit Web-Seiten und Web-Applikationen aus zusätzlich definierten Tabs in Abonnements.</li>
