@@ -6,6 +6,7 @@
 <meta name="DC.rights.owner" content="(C) Copyright 2005" />
 <meta content="task" name="DC.Type" />
 <meta name="DC.Title" content="Creating an organization" />
+<meta scheme="URI" name="DC.Relation" content="operator_manageTenants.htm" />
 <meta scheme="URI" name="DC.Relation" content="../../Shared/reference/r_LDAP_SettingTypes.htm" />
 <meta scheme="URI" name="DC.Relation" content="operator_manageLdapSettings.htm" />
 <meta scheme="URI" name="DC.Relation" content="operator_manageOperatorRevenueShare.htm" />
@@ -22,28 +23,24 @@
   <h1 class="topictitle1">Creating an organization</h1>
 
   <div>
-    <div class="section">
-      <p id="OrgCreate__On_the_task_taskbody_context_p_1">On the <span class="uicontrol">Create organization</span> page, you can create an organization and specify its role (technology provider, supplier, reseller, broker, or - implicitly - customer only). For every new organization, you must define a user who is to become its first administrator. This user can later register new users and assign roles to them.</p>
+    <div class="section"><p id="OrgCreate__On_the_task_taskbody_context_p_1">On the <span class="uicontrol">Create organization</span> page, you can create an organization and specify its role (technology provider, supplier, reseller, broker, or - implicitly - customer only). For every new organization, you must define a user who is to become its first administrator. This user can later register new users and assign roles to them.</p>
+<p>Depending on the role of the organization to be created, different fields are mandatory. For example, if you create a customer organization by specifying no role at all, this organization must be assigned a marketplace. The marketplace must already exist. For organizations with other roles, no marketplace assignment is required. </p>
+<p><strong>User authentication and management</strong></p>
+The platform supports the following authentication modes:<ul>
+        <li class="liexpand"><strong>INTERNAL</strong> mode - users are authenticated against the <strong>platform</strong>: User IDs and passwords of an organization are created and maintained in the platform or in an existing LDAP system of the organization. <p id="OrgCreate__UserMgmt2">When maintained in the platform, the user data is stored in the platform's database. An organization's administrator can register new users, and, if required, request passwords to be reset by the operator. </p>
+<p id="OrgCreate__UserMgmt3">When using an LDAP system, an organization does not need to register its users manually with the platform. The organization's administrator can import the users from the LDAP system, thus automatically registering them with the platform. The users are managed in the LDAP system. The platform continuously synchronizes its information on the users. Connection settings have to be defined in a configuration file so that the platform can connect to the LDAP system.</p>
+<p id="OrgCreate__UserMgmt4">A mixture of maintaining users in the platform and in the LDAP system is not supported. In addition, the type of user management can no longer be changed once an organization has been created.</p>
+<p id="OrgCreate__UserMgmt5">The operator organization cannot use an external LDAP system. So you can always log in to the platform and change connection settings, for example if the LDAP system of an organization is not available and thus authentication against it is not possible.</p>
+<p id="OrgCreate__UserMgmt6">You can define default LDAP configuration settings for the entire platform. The settings in an organization's LDAP configuration file complement or replace the default settings. </p>
+</li>
 
-      <p>Depending on the role of the organization to be created, different fields are mandatory. For example, if you create a customer organization by specifying no role at all, this organization must be assigned a marketplace. The marketplace must already exist. For organizations with other roles, no marketplace assignment is required. </p>
+        <li class="liexpand"><strong>SAML_SP</strong> mode - users are authenticated against an <strong>external authentication system</strong> (SAML 2.0 IdP): User IDs and passwords of an organization are created and maintained in the IdP. The platform acts as SAML 2.0 service provider.<p>For enabling users to access the platform, they must exist in the IdP and be registered with the same user ID with the platform.</p>
+<p>In addition to using a platform-wide, so-called "default" IdP, you can define tenants to which different IdPs can be associated. By associating a tenant with an organization, the emails sent to the users of the organization will contain the URL of a marketplace or an administration portal of this tenant. By using this URL, users access a tenant-specific marketplace or administration portal, and all users are authenticated authenticated against the IdP of this tenant. Each organization can be associated with one tenant only. Different organizations can be associated with one and the same tenant. </p>
+User IDs must be unique within the scope of the tenant. If no other tenant is defined, user names must be unique within the scope of the default tenant, i.e. platform-wide. </li>
 
-      <p><strong>User authentication and management</strong></p>
-
-      <p>Users are authenticated against the <strong>platform</strong>: User IDs and passwords of an organization are created and maintained in the platform or in an existing LDAP system of the organization.</p>
-
-      <p id="OrgCreate__UserMgmt2">When maintained in the platform, the user data is stored in the platform's database. An organization's administrator can register new users, and, if required, request passwords to be reset by the operator. </p>
-
-      <p id="OrgCreate__UserMgmt3">When using an LDAP system, an organization does not need to register its users manually with the platform. The organization's administrator can import the users from the LDAP system, thus automatically registering them with the platform. The users are managed in the LDAP system. The platform continuously synchronizes its information on the users. Connection settings have to be defined in a configuration file so that the platform can connect to the LDAP system.</p>
-
-      <p id="OrgCreate__UserMgmt4">A mixture of maintaining users in the platform and in the LDAP system is not supported. In addition, the type of user management can no longer be changed once an organization has been created.</p>
-
-      <p id="OrgCreate__UserMgmt5">The operator organization cannot use an external LDAP system. So you can always log in to the platform and change connection settings, for example if the LDAP system of an organization is not available and thus authentication against it is not possible.</p>
-
-      <p id="OrgCreate__UserMgmt6">You can define default LDAP configuration settings for the entire platform. The settings in an organization's LDAP configuration file complement or replace the default settings. </p>
-
-      <p><strong>To create a new organization</strong>:</p>
-
-    </div>
+      </ul>
+<p><strong>To create a new organization</strong>:</p>
+</div>
 
     <ol><li class="stepexpand">
         <span>Enter the following user data for the first administrator of the new organization.</span>
@@ -68,7 +65,8 @@
 
           </ul>
 
-          <div class="note"><span class="notetitle">Note:</span> If you create an organization with LDAP-based user management, the user ID must match an existing ID in the external LDAP system. The organization's LDAP configuration determines which additional settings are required. All settings defined in the configuration must be mapped to corresponding values, for example first name, last name, email address, and language.</div>
+          <div class="note"><span class="notetitle">Note:</span> If the platform is installed in INTERNAL authentication mode and you create an organization with LDAP-based user management, the user ID must match an existing ID in the external LDAP system. The organization's LDAP configuration determines which additional settings are required. All settings defined in the configuration must be mapped to corresponding values, for example first name, last name, email address, and language.<p>If the platform is installed in SAML_SP authentication mode, the user ID must match an existing ID in the IdP. </p>
+</div>
 
         
       </li>
@@ -105,7 +103,13 @@
 
               <li class="liexpand" id="OrgCreate__mp"><span class="uicontrol">Marketplace</span> to which users of this organization are to be directed. You can select one of the marketplaces to which you have been granted access by the marketplace owner.</li>
 
-              
+              <li class="liexpand" id="OrgCreate__mp">
+                <p>If the platform is installed in SAML_SP authentication mode: <strong>Tenant</strong>. By associating a tenant with an organization, the emails sent to the users of the organization will contain the URL of a marketplace or an administration portal of this tenant. Tenants must have been created beforehand on the <strong>Manage tenants</strong> page. The <strong>Marketplace</strong> drop-down list then offers all marketplaces associated with the tenant. </p>
+
+                <p>If you leave this field empty, the URL will point to the default tenant.</p>
+
+              </li>
+
               <li class="liexpand" id="OrgCreate__supp">For a supplier organization: <strong>Default operator rev. share (%)</strong>. This is the revenue share agreed between the operator and the supplier, which the operator is to receive from the supplier for selling services on the marketplaces managed on the operator's platform. The default operator revenue share applies to all services offered by the supplier as long as you do not define a service-specific revenue share using the <strong>Manage operator revenue share</strong> menu option in the <strong>Operation</strong> menu. It also applies irrespective of whether the supplier sells his services himself, or uses brokers or resellers for selling them. Discounts granted by a supplier to his customers are deducted from the revenue share. <div class="note"><span class="notetitle">Note:</span> Revenue shares and discounts are calculated only for services applying the <span>platform's </span>native billing system. Services using an external billing system are not included in the calculation. </div>
 </li>
 
@@ -121,7 +125,11 @@
       </li>
 <li class="stepexpand">
         <span>Define if the organization is to use LDAP-based user management by selecting the corresponding checkbox. </span>
-         When enabled, a table with the LDAP settings defined for the platform is shown. You must then specify the LDAP configuration file containing the settings required for connecting with the organization's LDAP system:<p>Create an LDAP configuration file on your file system, and define the LDAP connection settings in the file. To load the configuration file, click the <span class="uicontrol">LDAP settings</span> entry field or <span class="uicontrol">Browse</span>, and select the file containing the settings. </p>
+         <div class="p">
+            <div class="note"><span class="notetitle">Note:</span> This option is not available if the platform is installed in SAML-SP authentication mode.</div>
+
+          </div>
+When enabled, a table with the LDAP settings defined for the platform is shown. You must then specify the LDAP configuration file containing the settings required for connecting with the organization's LDAP system:<p>Create an LDAP configuration file on your file system, and define the LDAP connection settings in the file. To load the configuration file, click the <span class="uicontrol">LDAP settings</span> entry field or <span class="uicontrol">Browse</span>, and select the file containing the settings. </p>
 <p>Here is a sample configuration file: </p>
 
           <div class="p" id="OrgCreate__LDAPSample">
@@ -167,6 +175,7 @@ LDAP_ATTR_REFERRAL=ignore</pre>
   <div>
 <div class="linklist"><strong>Related topics</strong><br />
 
+<div><a href="operator_manageTenants.htm">Managing Tenants</a></div>
 <div><a href="../../Shared/reference/r_LDAP_SettingTypes.htm">LDAP keys</a></div>
 <div><a href="operator_manageLdapSettings.htm">Managing LDAP settings</a></div>
 <div><a href="operator_manageOperatorRevenueShare.htm">Managing operator revenue share</a></div></div>
