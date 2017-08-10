@@ -51,8 +51,7 @@
             </ul>This appendix describes the settings in detail. </p>
             <p audience="app">
                 <ul>
-                    <li><codeph>domains/app_domain/glassfish.properties</codeph><p audience="doc">Refer to <xref
-                                href="../reference/r_ConfigSettings_glassfish_BESDomain.xml"/> for details.</p></li>
+                    <li><codeph>domains/app_domain/glassfish.properties</codeph></li>
                     <li><codeph>databases/app_db/db.properties</codeph><p audience="doc">Refer to <xref
                                 href="../reference/r_ConfigSettings_db.xml"/> for details.</p></li>
                     <li><codeph>databases/app_db/configsettings.properties</codeph><p audience="doc">Refer to <xref

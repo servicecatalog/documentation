@@ -90,8 +90,7 @@
     </chapter>
     <chapter format="dita" href="Shared/Installation/c_Uninstallation.xml" type="concept"/>
     <appendix format="dita" href="Shared/Installation/r_ConfigSettings.xml" type="reference">
-        <topicref format="dita" href="Shared/reference/r_ConfigSettings_glassfish_BESDomain.xml" type="reference"/>
-        <topicref format="dita" href="Shared/reference/r_ConfigSettings_db.xml" type="reference"/>
+                <topicref format="dita" href="Shared/reference/r_ConfigSettings_db.xml" type="reference"/>
         <topicref format="dita" href="APPInt/APP/r_ConfigSettings.xml" type="reference"/>
         <topicref format="dita" href="RORIntegrationGuide/Appendix/r_ConfigSettingsController.xml" type="reference"/>
     </appendix>

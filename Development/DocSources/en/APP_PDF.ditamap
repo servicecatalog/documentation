@@ -147,7 +147,6 @@
      	<topicref format="dita"
             href="Shared/reference/r_ConfigSettings_db.xml"
             type="reference"/>
-    	<topicref format="dita"
-            href="Shared/reference/r_ConfigSettings_glassfish_BESDomain.xml" type="reference"/>
+    	
      </appendix>
 </bookmap>

@@ -69,8 +69,7 @@
                         <p><codeph><b>domains/app_domain</b></codeph></p>
                         <p>The configuration settings for setting up the application server domain to which APP will be deployed are provided in the following file:</p>
                         <p><codeph>glassfish.properties</codeph></p>
-                        <p><ph audience="app">For details, refer to <xref
-                                    href="../../Shared/reference/r_ConfigSettings_glassfish_BESDomain.xml"/>.</ph></p>
+                        <p></p>
                     </li>
                 </ul>
             </p>
