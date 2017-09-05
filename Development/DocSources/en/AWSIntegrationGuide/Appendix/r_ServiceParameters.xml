@@ -197,6 +197,7 @@
                 <p>Optional. Comma-separated list of security group names for the virtual server to be instantiated. </p>
                 <p>A security group acts as a firewall that controls the traffic to an Amazon EC2 instance. An Amazon EC2 instance can be assigned to one or more security groups. For details on security groups, refer to the user documentation of Amazon Web Services.</p>
                 <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers or, in case you specify more than one security group, have fixed parameter options for selection.</p>
+                <p>Be aware that for the specification of security groups, the specification of the <codeph>SUBNET</codeph> parameter is mandatory. Otherwise the groups will be ignored.</p>
                 <p>Example: <codeph>MySecurityGroup</codeph></p>
               </entry>
             </row>
@@ -212,6 +213,7 @@
                 <p><b>SUBNET</b></p>
                 <p>Optional. The subnet to which the virtual server is to be assigned. </p>
                 <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers or, in case you specify more than one subnet, have fixed parameter options for selection.</p>
+                <p>If you specify security groups, you also need to specify the corresponding subnet. If no subnet parameter is specified, the AWS service controller ignores any specified security groups, and the service instance is created in a default subnet and a default security group is assigned.</p>
                 <p>Example: <codeph>subnet-a77430d0</codeph></p>
               </entry>
             </row>
