@@ -130,6 +130,12 @@
                 >the platform</ph> as a SAML 1.1 IdP. For details on access types, refer to the <i>Technology Provider's Guide</i>.<p>This setting represents the URL to the public certificate in Distinguished Encoding Rules (DER) format (<codeph>.der</codeph> file). This URL is added to the signature of SAML messages by the IdP, so that the application can validate the signature. </p><p>Example: <codeph>/opt/glassfish-3.1.2.2/glassfish/domains/bes-domain/config/cacert.der</codeph></p><p>If you change this setting, you need to restart <ph
                     platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
                     platform="help">the platform</ph>.</p></section-->
+        <section><title>KAFKA_BOOTSTRAP_SERVERS</title>Optional. Comma-separated list of host and port pairs that are the addresses of Kafka brokers. Bootstrap servers provide the initial hosts that act as the starting point for a Kafka client. In <ph
+                platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                platform="help"
+                >the platform</ph>, they are used for event-based provisioning. <p>Default: no value, i.e. empty</p><p>Example: <codeph>localhost:9092</codeph></p><p>
+                <note>Be aware that this setting is provided for future use and is currently only available for testing purposes.</note>
+            </p></section>
         <section><title>KEY_FILE_PATH</title>Optional. The path to the file containing the key required for encryption and decryption of service parameters with data type <codeph>PWD</codeph> and custom attributes marked for encryption.<p>Upon the start of <ph
                     platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
                     platform="help"
