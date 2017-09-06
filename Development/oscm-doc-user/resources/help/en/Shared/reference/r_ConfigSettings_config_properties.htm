@@ -170,6 +170,14 @@
         
         
         
+        <div class="section"><h4 class="sectiontitle">KAFKA_BOOTSTRAP_SERVERS</h4>Optional. Comma-separated list of host and port pairs that are the addresses of Kafka brokers. Bootstrap servers provide the initial hosts that act as the starting point for a Kafka client. In <span>the platform</span>, they are used for event-based provisioning. <p>Default: no value, i.e. empty</p>
+<p>Example: <samp class="codeph">localhost:9092</samp></p>
+<div class="p">
+                <div class="note"><span class="notetitle">Note:</span> Be aware that this setting is provided for future use and is currently only available for testing purposes.</div>
+
+            </div>
+</div>
+
         <div class="section"><h4 class="sectiontitle">KEY_FILE_PATH</h4>Optional. The path to the file containing the key required for encryption and decryption of service parameters with data type <samp class="codeph">PWD</samp> and custom attributes marked for encryption.<p>Upon the start of <span>the platform</span>, it is checked whether a key file exists in the location specified in this setting. If this is not the case, the key file is automatically generated and stored in the location specified here. If nothing is specified, the file will be named <samp class="codeph">key</samp> and generated into the following location:</p>
 <p><samp class="codeph">&lt;GLASSFISH_HOME&gt;/glassfish/domains/bes-domain/config</samp></p>
 Default: <p><samp class="codeph">./key</samp></p>
