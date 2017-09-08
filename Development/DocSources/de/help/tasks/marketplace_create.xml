@@ -20,6 +20,12 @@
         </info>
       </step>
       <step>
+        <cmd>Geben Sie optional eine ID für den Marktplatz ein. </cmd>
+        <info>
+          <p>Diese ID wird an die URL für den Zugriff auf den Marktplatz angehängt. Geben Sie keine ID an, wird sie automatisch generiert. </p>
+        </info>
+      </step>
+      <step>
         <cmd>Markieren Sie die Funktionen und Einstellungen, die Sie für den Marktplatz aktivieren möchten. Die Marktplatz-Manager des Marktplatzeigentümers können diese Einstellungen später ändern.</cmd>
         <info>
           <ul compact="no">
