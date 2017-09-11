@@ -105,11 +105,29 @@
                                                         <li>Click <uicontrol>Save Configuration</uicontrol> to save the settings.</li>
                                                 </ol>
                                         </p></li>
-                                <li>Configure the <ph audience="ror">ROR</ph><ph audience="aws">AWS</ph><ph
-                                                audience="os">OpenStack</ph><ph audience="tps5">TPS5</ph><ph
-                                                audience="vmware"
-                                                        >VMware</ph> service controller<ph audience="doc"> following the instructions in <xref
-                                                href="c_UpdateConfiguration.xml"/></ph>.</li>
+                                <li>Update the following configuration files so that the settings match your current installation:<ul
+                                                compact="no">
+                                                <li><codeph>db.properties</codeph></li>
+                                                <li><codeph>configsettings.properties</codeph></li>
+                                                <li audience="app"
+                                                        ><codeph>configsettings_controller.properties</codeph></li>
+                                                <li audience="ror"
+                                                        ><codeph>configsettings_controller.properties</codeph></li>
+                                                <li audience="aws"
+                                                        ><codeph>configsettings_controller.properties</codeph></li>
+                                                <li audience="os"
+                                                        ><codeph>configsettings_controller.properties</codeph></li>
+                                                <li audience="tps5"
+                                                            ><codeph>configsettings_controller.properties</codeph></li>
+                                                <li audience="vmware"
+                                                            ><codeph>configsettings_controller.properties</codeph></li>
+                                        </ul><p>Particularly take care of settings which have been introduced or changed with the new release to which you are upgrading.</p></li>
+                                <li>Update the schema and configuration settings of the <codeph>bssapp</codeph> database by executing the <codeph>build-db.xml</codeph> file in <codeph>&lt;install_pack_dir&gt;/install</codeph> as follows:<p>
+                                                <codeblock>&lt;ANT_HOME&gt;/bin/ant -f build-db.xml updateDatabase</codeblock>
+                                        </p><note>
+                                                <p>Make sure that Ant runs in a Java 8 runtime environment when calling the <codeph>build-db.xml</codeph> file. </p>
+                                        </note>
+                                </li>
                                 <li audience="tps5"
                                                 >Import the certificate of TPS5 into the truststore of the <codeph>app-domain</codeph> application server domain of the TPS5 integration software: <p>
                                                 <ul>
