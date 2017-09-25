@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd">
+<concept id="concept2311" xml:lang="en-us">
+    <title>Organizations and User Roles</title>
+    <conbody>
+        <section>
+            <p>Each user working in <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> is a member of a specific organization. An organization typically represents a company, but it may also stand for a department of a company or a single person. Each organization in <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> has a unique account and ID as well as one or more of the following roles: <b>operator</b>, <b>technology provider</b>, <b>supplier</b>, <b>reseller</b>, <b>broker</b>, <b>marketplace owner</b>, <b>customer</b>. </p>
+            <p>Customers can register themselves with <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> or be registered by a supplier, reseller, broker, or operator. In any case, an organization with the customer role is created. Organizations with other roles can also act as customers, i.e. they are implicitly assigned the customer role. These organizations are created and assigned their roles as follows: </p>
+            <ul>
+                <li>When <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> is installed, an organization with the operator role is created.</li>
+                <li>Operators can assign the supplier, reseller, broker, and technology provider role to any existing organization or create new organizations with these roles. <ph
+                        audience="detail"
+                        >An organization can have both the supplier and the technology provider role. The reseller and broker roles, however, cannot be combined with each other or with the supplier or technology provider role.</ph></li>
+                <li>When operators create a marketplace, they specify an existing organization as its owner. In this way, the organization is assigned the marketplace owner role.</li>
+            </ul>
+            <p>The roles of an organization determine which features are available to its users at the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> interfaces and which roles the users can be assigned. These user roles control the actions an individual user is allowed to carry out:</p>
+            <p>
+                <ul>
+                    <li>
+                        <ph id="Standard_user_concept_conbody_section_p_4"
+                            ><b>Standard user</b>: Users with this non-privileged role can work with services their organization has subscribed to.</ph> Every user registered in <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> automatically is a standard user. <ph
+                            id="Additional_user_roles_must_be_concept_conbody_section_p_4"
+                            >Additional user roles must be assigned explicitly by an administrator.</ph>
+                    </li>
+                    <li>
+                        <ph id="Administrator_concept_conbody_section_p_4"
+                                ><b>Administrator</b>: Each organization must have at least one user with this role. <ph
+                                id="An_administrator_can_manage_t_concept_conbody_section_p_4"
+                                >An administrator can manage the organization's account and subscriptions as well as its users and their roles. The first administrator of an organization is defined when the organization is created.</ph></ph>
+                    </li>
+                    <li><ph id="OUAdministrator_concept_conbody_section_p_4"
+                            ><b>OU administrator</b>: The users of an organization can be grouped in organizational units (OUs). The OU administrator role allows a user to manage the organizational units for which he has been appointed as an administrator, to create, modify, and terminate subscriptions for these units, as well as generate reports for cost-controlling purposes.</ph></li>
+                    <li><ph id="Subscription_manager_concept_conbody_section_p_4"
+                            ><b>Subscription manager</b>: This role allows a user to subscribe to services and manage his own subscriptions. Unlike administrators, subscription managers are not permitted to work on subscriptions belonging to others or on subscription data related to billing and payment.</ph></li>
+                    <li>
+                        <ph id="Technology_manager_concept_conbody_section_p_4"
+                            ><b>Technology manager</b>: This role allows a user to define technical services. It can be assigned to users of technology provider organizations.</ph>
+                    </li>
+                    <li>
+                        <ph id="Service_manager_concept_conbody_section_p_4"
+                            ><b>Service manager</b>: This role allows a user to define marketable services and price models as well as publish marketable services. It can be assigned to users of supplier organizations.</ph>
+                    </li>
+                    <li>
+                        <ph id="Reseller_concept_conbody_section_p_4"
+                            ><b>Reseller</b>: This role allows a user to publish a supplier's marketable services applying different terms and conditions. It can be assigned to users of reseller organizations.</ph>
+                    </li>
+                    <li>
+                        <ph id="Broker_concept_conbody_section_p_4"
+                            ><b>Broker</b>: This role allows a user to publish a supplier's marketable services without changing the terms and conditions defined by the supplier. It can be assigned to users of broker organizations.</ph>
+                    </li>
+                    <li>
+                        <ph id="Marketplace_manager_concept_conbody_section_p_4"
+                            ><b>Marketplace manager</b>: This role allows a user to define the organizations who are permitted to access a marketplace and publish services to it as well as update and customize a marketplace. This role can be assigned to users of marketplace owner organizations. It is automatically assigned to all administrators of the marketplace owner organization when a marketplace is created.</ph>
+                    </li>
+                    <li>
+                        <ph id="Operator_concept_conbody_section_p_4"
+                            ><b>Operator</b>: This role allows a user to carry out configuration and maintenance tasks, manage organizations, and create marketplaces.</ph> The first operator is created together with its operator organization when <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> is installed. </li>
+                </ul>
+            </p>
+            <p audience="detail">The following illustration provides an overview of how organizations with the different roles are created and related with each other: <fig>
+                    <image alt="Organizations_simple1.png" height="245" href="../_images/Organizations_simple1.png"
+                        width="400"/>
+                </fig></p>
+            <p audience="detail">The following illustration provides an overview of the user roles and the main tasks of users with these roles: <fig>
+                    <image alt="Organizations_simple2.png" height="225" href="../_images/Organizations_simple2.png"
+                        width="435"/>
+                </fig>
+            </p>
+        </section>
+    </conbody>
+</concept>

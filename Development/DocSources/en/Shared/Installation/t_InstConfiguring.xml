@@ -34,12 +34,6 @@
                                 <li audience="app"
                                             ><codeph>configsettings_controller.properties</codeph>: In this file, you can specify settings for a service controller which you want to register when installing APP. <p>The initial installation stores these settings in the <codeph>bssapp</codeph> database. You can change them later using a graphical user interface. </p>For details, refer to <xref
                                         href="../../APPInt/APP/t_RegisterAPP.xml"/>. </li>
-                                <li audience="BSS"
-                                        ><codeph>sso.properties</codeph>: Configuration setting for creating the first platform operator in <ph
-                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                        /> (<codeph>ADMIN_USER_ID</codeph>). Only required when installing <ph
-                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                    /> in SAML_SP authentication mode.</li>
                             </ul>
                         </p>
                     </li>
@@ -74,9 +68,7 @@
                 </ul>
             </p>
             <p>Additional configuration files contained in other subdirectories are used internally and must not be changed.</p>
-            <p><ph>You need to adapt the settings in the files above to your environment. In particular, server names, ports, paths, user IDs, and passwords require adaptation.</ph>
-                <ph id="Cfg7_BSS" audience="BSS"
-                    >If installed in SAML_SP authentication mode, additional settings are required.</ph></p> 
+            <p><ph>You need to adapt the settings in the files above to your environment. In particular, server names, ports, paths, user IDs, and passwords require adaptation.</ph></p> 
                 <p>Proceed as follows to view and adjust the configuration settings:</p>
             </context>
         
@@ -119,62 +111,7 @@ BASE_URL_HTTP=http://&lt;host&gt;:&lt;port&gt;/oscm-portal</codeblock>
 C\\:/glassfish/masterSourceBase</codeblock>
                     </p>
                 </li>
-                <li audience="BSS">
-                    <p>The following settings in the <codeph>configsettings.properties</codeph> file are mandatory when installing <ph
-                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        /> in <b>SAML_SP</b> authentication mode:</p>
-                    <ul>
-                        <li><codeph>AUTH_MODE</codeph></li>
-                        <li><codeph>SSO_DEFAULT_TENANT_ID</codeph></li>
-                        <li><codeph>SSO_ISSUER_ID</codeph></li>
-                        <li><codeph>SSO_IDP_TRUSTSTORE</codeph></li>
-                        <li><codeph>SSO_IDP_TRUSTSTORE_PASSWORD</codeph></li>
-                    </ul>
-                    <p>The following settings are also mandatory and require the respective information to be provided by the IdP operator. Refer to <xref
-                            href="../../InstallationGuide/Preparation/c_AuthenticationMode.xml"/> for details.</p>
-                    <ul>
-                        <li><codeph>SSO_IDP_SAML_ASSERTION_ISSUER_ID</codeph></li>
-                        <li><codeph>SSO_STS_ENCKEY_LEN</codeph></li>
-                        <li><codeph>SSO_IDP_AUTHENTICATION_REQUEST_HTTP_METHOD</codeph></li>
-                        <li><codeph>SSO_IDP_URL</codeph></li>
-                        <li><codeph>SSO_LOGOUT_URL</codeph></li>
-                        <li><codeph>SSO_STS_URL</codeph></li>
-                        <li><codeph>SSO_STS_METADATA_URL</codeph></li>
-                    </ul>
-                    <p>The following setting is optional: </p>
-                    <ul>
-                        <li><codeph>SSO_SIGNING_ALGORITHM</codeph></li>
-                    </ul>
-                </li>
             </ul>
-
-<!-- for APP and ROR only -->
-    
-            <p audience="app"><b>Configuration for SAML_SP authentication mode</b>:</p>
-            <p audience="app">If the <ph
-                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> installation you want to work with is configured for SAML_SP authentication mode, Web service calls to it are secured and authenticated by a Security Token Service (STS). This is a Web service that issues security tokens as defined in the WS-Security/WS-Trust specification. The STS is usually provided by the Identity Provider (IdP) system in use (for example, Active Directory Federation Service, Cloudminder, or OpenAM).</p>
-            <p audience="app"
-                >For using an STS for APP calls, you must perform the following steps before installing APP: </p>
-            <p audience="app">
-                <ol compact="no">
-                    <li>From the IdP or <ph
-                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> operator, obtain a metadata exchange file in WSDL format generated with and for the IdP system in use. The metadata include namespace information required for connecting to the STS. </li>
-                    <li>Save the metadata exchange file to the following file, overwriting the existing empty file:<p><codeph>&lt;install_pack_dir>/domains/app_domain/wsit/STSService.xml</codeph></p></li>
-                    <li>Open the <codeph>STSService.xml</codeph> file and retrieve the value of <codeph>targetNamespace</codeph>, for example:<p>
-                            <codeph>http://schemas.microsoft.com/ws/2008/06/identity/securitytokenservice</codeph></p></li>
-                    <li>Open the following file:<p><codeph>&lt;install_pack_dir>/domains/app_domain/wsit/wsit-client.xml</codeph></p></li>
-                    <li>Replace the placeholder in the <codeph>namespace</codeph> tag of the <codeph>wsit-client.xml</codeph> file with the <codeph>targetNamespace</codeph> value copied from the <codeph>STSService.xml</codeph> file. </li>
-                    <li>Close and save the <codeph>wsit-client.xml</codeph> file to its original location. <p>During the installation process, an <codeph>OSCM-wsit.jar</codeph> file is created containing your adapted <codeph>STSService.xml</codeph> file as well as the <codeph>wsit-client.xml</codeph> file; the <codeph>.jar</codeph> file is then copied to <codeph>&lt;install_pack_dir>/domains/app_domain/lib</codeph>. </p></li>
-                    <li>Make sure to enter correct values for the SAML_SP authentication mode in the <codeph>configsettings.properties</codeph> file in <codeph>&lt;install_pack_dir>/databases/app_db</codeph>: <p>
-                            <ul>
-                                <li><codeph>BSS_AUTH_MODE=SAML_SP</codeph></li>
-                                <li><codeph>BSS_WEBSERVICE_URL_STS_PORT=https://<i>&lt;server></i>:<i>&lt;port></i>/{SERVICE}/STS?wsdl</codeph></li>
-                                <li><codeph>APP_KEYSTORE_PASSWORD=changeit</codeph></li>
-                                <li><codeph>APP_TRUSTSTORE_PASSWORD=changeit</codeph></li>
-                            </ul>
-                        </p></li>
-                </ol>
-            </p>
 
 
         </result>

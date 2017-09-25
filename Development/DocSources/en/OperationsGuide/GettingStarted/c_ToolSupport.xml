@@ -37,7 +37,7 @@
             <title>Command Line Tool</title>
             <p>The command line tool provides a subset of the functions that are available in the <uicontrol>Operation</uicontrol> menu in the <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> administration portal. </p>
-            <p>The command line tool is provided in the <ph
+            <p>The command line tool is provided in the ###? where now? ### <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> installation package, <codeph>oscm-install-pack.zip</codeph>, as <codeph>oscm-operatorclient.zip</codeph>. The contents of this package can be made available in your environment as follows:</p>
             <p>
@@ -67,70 +67,6 @@
             <p>You can change the initial password in the <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> administration portal (<b>Change Password</b> page in the <b>Account</b> menu).</p>
-        </section>
-        <section conref="../../Shared/concepts/c_AuthenticationMode.xml#Auth/auth_internal"/>
-        <section>
-            <table colsep="1" frame="all" rowsep="1">
-                <tgroup cols="4">
-                    <colspec colname="c1" colnum="1"/>
-                    <colspec colname="c2" colnum="2"/>
-                    <colspec colname="c3" colnum="3"/>
-                    <colspec colname="newCol4" colnum="4"/>
-                    <thead>
-                        <row>
-                            <entry>What is accessed?</entry>
-                            <entry>Authentication by</entry>
-                            <entry>Authentication via</entry>
-                            <entry>Initial credentials</entry>
-                        </row>
-                    </thead>
-                    <tbody>
-                        <row>
-                            <entry>Administration portal</entry>
-                            <entry><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></entry>
-                            <entry>User ID<p>Password</p></entry>
-                            <entry>
-                                <p>User ID: <codeph>administrator</codeph></p>
-                                <p>Password: <codeph>admin123</codeph></p>
-                            </entry>
-                        </row>
-                        <row>
-                            <entry>Web service by SOAP/WSDL</entry>
-                            <entry><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></entry>
-                            <entry>User key<p>Password</p></entry>
-                            <entry>
-                                <p>User key: </p>
-                                <p><codeph>1000</codeph></p>
-                                <p>Password: </p>
-                                <p><codeph>admin123</codeph></p>
-                            </entry>
-                        </row>
-                        <row>
-                            <entry>Web service by REST API</entry>
-                            <entry><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></entry>
-                            <entry>User ID<p>Password</p></entry>
-                            <entry>
-                                <p>User ID: <codeph>administrator</codeph></p>
-                                <p>Password: <codeph>admin123</codeph></p>
-                            </entry>
-                        </row>
-                        <row>
-                            <entry>Command line tool</entry>
-                            <entry><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></entry>
-                            <entry>User key<p>Password</p></entry>
-                            <entry>
-                                <p>User key:</p>
-                                <p><codeph>1000</codeph></p>
-                                <p>Password: </p>
-                                <p><codeph>admin123</codeph></p>
-                            </entry>
-                        </row>
-                    </tbody>
-                </tgroup>
-            </table>
-            <p>It is recommended that you change the initial password in the <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> administration portal (<b>Change Password</b> page in the <uicontrol>Account</uicontrol> menu). </p>
         </section>
     </conbody>
 </concept>

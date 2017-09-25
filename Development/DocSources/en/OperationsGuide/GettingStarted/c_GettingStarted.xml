@@ -7,10 +7,31 @@
 <concept id="concept_1BCF5C425D7D4627AB1C66A085CF6E11" xml:lang="en-us">
     <title>Getting Started</title>
     <conbody>
-        <p>This chapter provides an overview of the tasks involved in the operation and maintenance of <ph
+        <p>After having successfully deployed <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />, you can follow the instructions of the <xref format="html"
+                href="https://github.com/servicecatalog/development/wiki/Getting-Started" scope="external"
+                        ><u><i>Getting Started</i></u></xref> page for creating and publishing your first service to a <ph
+                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> marketplace. </p>
+        <p>### Is there a sample service and an organization with all required roles available after deployment?###</p>
+        <p>This chapter summarizes the first steps to be performed for getting started with operating a <ph
+                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> installation. In addition, it introduces the tools that support you in performing operational tasks.  <ol>
+                <li>Configure the platform</li>
+                <li>Add a currency</li>
+                <li>Create organizations</li>
+                <li>Create marketplaces</li>
+                <li>Publish services to marketplaces</li>
+            </ol></p>
+        <p>After the deployment, you have access to the <ph
                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                />. It shows the initial steps to be performed after installing <ph
+                /> administration portal and a command line tool.<ph audience="doc"
+                    > For a description on how to access the available tools, refer to <xref href="c_ToolSupport.xml"
+                />.</ph></p>
+        <p>In order for a supplier to be able to define price models and for the rating and billing engine of <ph
                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-            />, and introduces the tools that support you in performing operational tasks. </p>
+                /> to be able to calculate usage costs, you need to add one or several currencies to the system.<ph
+                audience="doc"> For details, refer to <xref href="../Configuration/c_AddCurrency.xml"/>.</ph></p>
+        <p>In the next step, you can create technology provider and seller organizations (suppliers, resellers, brokers), and set up marketplaces so that services can be offered to customers.<ph
+                audience="doc"> For details, refer to <xref href="../Organizations/c_Organizations.xml"/> and <xref
+                    href="../Marketplace/c_ManageMP.xml"/>.</ph></p>
     </conbody>
 </concept>

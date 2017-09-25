@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_B32294CC9FA643A2A14A74B1DAA49C95" xml:lang="en-us">
+    <title>Authentication</title>
+    <conbody>
+        <section conref="../../Shared/concepts/c_AuthenticationMode.xml#Auth/auth_internal"/>
+        <section>
+            <table colsep="1" frame="all" rowsep="1">
+                <tgroup cols="4">
+                    <colspec colname="c1" colnum="1"/>
+                    <colspec colname="c2" colnum="2"/>
+                    <colspec colname="c3" colnum="3"/>
+                    <colspec colname="newCol4" colnum="4"/>
+                    <thead>
+                        <row>
+                            <entry>What is accessed?</entry>
+                            <entry>Authentication by</entry>
+                            <entry>Authentication via</entry>
+                            <entry>Initial credentials</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry>Administration portal</entry>
+                            <entry><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></entry>
+                            <entry>User ID<p>Password</p></entry>
+                            <entry>
+                                <p>User ID: <codeph>administrator</codeph></p>
+                                <p>Password: <codeph>admin123</codeph></p>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>Web service by SOAP/WSDL</entry>
+                            <entry><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></entry>
+                            <entry>User key<p>Password</p></entry>
+                            <entry>
+                                <p>User key: </p>
+                                <p><codeph>1000</codeph></p>
+                                <p>Password: </p>
+                                <p><codeph>admin123</codeph></p>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>Web service by REST API</entry>
+                            <entry><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></entry>
+                            <entry>User ID<p>Password</p></entry>
+                            <entry>
+                                <p>User ID: <codeph>administrator</codeph></p>
+                                <p>Password: <codeph>admin123</codeph></p>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>Command line tool</entry>
+                            <entry><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></entry>
+                            <entry>User key<p>Password</p></entry>
+                            <entry>
+                                <p>User key:</p>
+                                <p><codeph>1000</codeph></p>
+                                <p>Password: </p>
+                                <p><codeph>admin123</codeph></p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <p>It is recommended that you change the initial password in the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> administration portal (<b>Change Password</b> page in the <uicontrol>Account</uicontrol> menu). </p>
+        </section>
+    </conbody>
+</concept>

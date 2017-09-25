@@ -9,25 +9,25 @@
         <prodinfo product="oscm_ce">
             <prodname/>
             <vrmlist>
-                <vrm version="17.4.0"/>
+                <vrm version="17.5.0"/>
             </vrmlist>
             <brand/>
-            <prognum>17.4.0</prognum>
+            <prognum>17.5.0</prognum>
             <component/>
             <series>Operator's Guide</series>
         </prodinfo>
         <prodinfo product="oscm_ee">
             <prodname>Enterprise Service</prodname>
             <vrmlist>
-                <vrm version="17.4"/>
+                <vrm version="17.5"/>
             </vrmlist>
             <brand>FUJITSU Software</brand>
-            <prognum>Catalog Manager V17.3</prognum>
+            <prognum>Catalog Manager V17.5</prognum>
             <component/>
             <series>Operator's Guide</series>
         </prodinfo>
         <bookid>
-            <edition>September 2017 </edition>
+            <edition>DRAFT - November 2017 </edition>
             <!--booknumber product="oscm_ee">B1WS-1252-02</booknumber-->
         </bookid>
         <bookrights product="oscm_ce">
@@ -55,6 +55,7 @@
         <topicref href="OperationsGuide/GettingStarted/c_FirstSteps.xml" type="concept"/>
         <topicref href="OperationsGuide/GettingStarted/c_StartupShutdown.xml" type="concept"/>
         <topicref href="OperationsGuide/GettingStarted/c_ToolSupport.xml" type="concept"/>
+        <topicref href="OperationsGuide/GettingStarted/c_Authentication.xml" type="concept"/>
         
     </chapter>
     <chapter href="OperationsGuide/Configuration/c_Configuration.xml" type="concept">
@@ -91,10 +92,10 @@ topicref href="OperationsGuide/Configuration/c_LoadBalancing.xml" type="concept"
         <topicref href="OperationsGuide/Organizations/c_OrgAddRole.xml" type="concept"/>
         <topicref href="OperationsGuide/Organizations/c_ManageUsers.xml" type="concept"/>
         <topicref href="OperationsGuide/Organizations/c_ImportUsers.xml" type="concept"/>
-		<topicref href="OperationsGuide/Organizations/c_ManageTenants.xml" type="concept">
-		<topicref href="Shared/reference/c_IdPInfo.xml" type="concept"/>
-		<topicref href="Shared/reference/c_IdPInfo2.xml" type="concept"/>
-		</topicref>
+		<!--topicref href="OperationsGuide/Organizations/c_ManageTenants.xml" type="concept"-->
+		<!--topicref href="Shared/reference/c_IdPInfo.xml" type="concept"/-->
+		<!--topicref href="Shared/reference/c_IdPInfo2.xml" type="concept"/-->
+		<!--/topicref-->
     </chapter>
     <chapter href="OperationsGuide/Reports/c_Reports.xml" type="concept"/>
     <chapter format="dita" href="OperationsGuide/Billing/c_BillingPayment.xml" type="concept">

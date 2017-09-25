@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_1BCF5C425D7D4627AB1C66A085CF6E11" xml:lang="en-us">
+    <title><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> Architecture</title>
+    <conbody>
+        <section>
+            <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> is implemented in Java, using Java Platform, Enterprise Edition (Java EE ) technology. It is deployed on an application server supporting this technology. </p>
+            <p>The following figure provides an overview of the architecture: </p>
+            <p>
+                <fig>
+                    <image href="../_images/Architecture.png" alt="Architecture.png" width="280" height="252"/>
+                </fig>
+            </p>
+            <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> has a three-tier architecture: </p>
+            <ul>
+                <li>The <b>presentation layer</b> in the application server's Web container includes the <b>user interface</b> (administration portal and marketplaces), realized as JavaServer Faces. Users access the user interface in Web browsers. In addition, <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> provides a <b>command line tool</b>, which operators can install to carry out their tasks from a command shell instead of the administration portal.</li>
+                <li>The <b>business logic</b> is implemented in Enterprise JavaBeans (EJB). Both the Enterprise JavaBeans and the <b>public Web services</b> are available in the application server's EJB container. The public Web services and their interfaces are mainly used for integrating applications and external systems with <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        />. However, they can also be employed for accessing <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> functionality from a Web service client. HTTPS must be used for communication with the public Web services. </li>
+                <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /><b> persists</b> its data through the Java Persistence API in <b>relational databases</b>. </li>
+            </ul>
+            <p>For informing users about relevant issues (e.g. their registration or assignment to a subscription), <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> must have access to a mail server.</p>
+        </section>
+    </conbody>
+</concept>

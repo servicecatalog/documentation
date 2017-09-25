@@ -13,14 +13,6 @@
                                                 conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                                         /> is available:</ph></p>
                         <ul>
-                                <li><ph id="Quick_Start_Guide:_concept_conbody_section_ul_l"
-                                        ><i>Quick Start Guide:</i> A PDF manual introducing <ph
-                                                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                        />, describing how to deploy <ph
-                                                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                        />, and how to publish an application to a <ph
-                                                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                        /> marketplace so that customers can subscribe to it.</ph></li>
                                 <li><ph id="Overview:_concept_conbody_section_ul_l"
                                                         ><i>Overview:</i> A PDF manual introducing <ph
                                                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
