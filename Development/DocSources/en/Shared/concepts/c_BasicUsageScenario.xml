@@ -67,17 +67,17 @@
                     ><b>Marketplace owners</b> are responsible for administrating and customizing the marketplaces to which services are published.</ph><ph audience="doc"> For details, refer to <xref
                         href="../../Overview/MarketplaceOwners/c_MPLOwnersIntro.xml"/>.</ph> </li>
                 <li><ph id="Operators_concept_conbody_section_ul_l"
-                            ><b>Operators</b> are responsible for installing and maintaining <ph
-                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            />.</ph><ph audience="doc"> For details, refer to <xref format="dita"
-                        href="../../Overview/Operators/c_Operators.xml" type="concept"/>.</ph> <p><ph
-                            id="is_typically_operated_in_dat_concept_conbody_section_1_p"><ph
+                            ><b>Operators</b> are responsible for deploying and maintaining <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</ph><ph
+                        audience="doc"> For details, refer to <xref format="dita"
+                            href="../../Overview/Operators/c_Operators.xml" type="concept"/>.</ph>
+                    <p><ph id="is_typically_operated_in_dat_concept_conbody_section_1_p"><ph
                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            /> is typically operated in data centers on servers providing for optimum performance, scalability, and non-stop operation. </ph><ph
+                            /> is provided as Docker images and deployed in a container environment such as Kubernetes clusters providing for optimum performance, scalability, failover, and non-stop operation. </ph><ph
                             id="The_applications_integrated_w_concept_conbody_section_1_p"
                                 >The applications integrated with <ph
                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                /> and their data may be hosted in the same data centers as <ph
+                                /> and their data may be hosted in the same containers or Virtual Machines as <ph
                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                             /> or in different locations.</ph>
                     </p></li>

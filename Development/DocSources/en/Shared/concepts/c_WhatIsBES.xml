@@ -12,9 +12,9 @@
                 />) is a set of services which provide all business-related functions and features required for turning on-premise applications and tools into "as a Service" (aaS) offerings and using them in the Cloud. This includes ready-to-use account and subscription management, online service provisioning, billing and payment services, and reporting facilities. </p>
             <p><ph id="With_its_components_concept_conbody_p_2_ph">With its components, <ph
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> covers all the business-related aspects of a Platform as a Service (PaaS) or Cloud platform. It supports software vendors as well as their customers in leveraging the advantages of Cloud Computing</ph>: </p>
+                    /> supports software vendors as well as their customers in leveraging the advantages of Cloud Computing</ph>: </p>
             <ul>
-                <li>Sharing: Through the Internet, many customers use applications which are installed centrally and share a common IT infrastructure. Each customer's security and privacy are not sacrificed, but even improved by the concentration of security means and expertise at the data centers. </li>
+                <li>Sharing: Through the Internet, many customers use applications which are installed centrally and share a common IT infrastructure. Each customer's security and privacy are not sacrificed, but even improved by the concentration of security means and expertise at data centers. </li>
                 <li>Pay-per-use: Software vendors as well as their customers only pay for the services they actually use, without upfront investment or entry costs for both human and non-human resources. Customers simply subscribe to the services they like to use and pay for what they consume. </li>
                 <li>Centralized management: Cloud application providers maintain and operate the applications centrally for all their customers. This substantially reduces installation and maintenance costs for all participants. </li>
             </ul>
@@ -30,7 +30,7 @@
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> provides all the required ways and means to ensure customer privacy and data security.</p>
             <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> is typically operated and used in a SaaS environment. It supports, however, all types of "as-a-Service" environments.</p>
+                /> is typically operated and used in a SaaS environment such as OpenStack. It supports, however, all types of "as-a-Service" environments.</p>
         </section>
     </conbody>
 </concept>

@@ -33,7 +33,7 @@
                             /> identity management, and price models on a per-user basis can be used.</ph></p><p audience="doc">For details on access types, refer to <xref
                             href="../AccessTypes/c_AccessTypes.xml"/>.</p></li>
                 <li><ph id="Implement_a_provisioning_serv_concept_conbody_section_ol_l"
-                        >Implement a provisioning service</ph> (optional).<p><ph
+                        >Implement a provisioning service</ph> (optional). ### Add that a sample implementation of a provisioning service is available on GitHub? ###.<p><ph
                             id="If_your_application_is_to_int_concept_conbody_section_ol_l"
                                 >If an application is to integrate with the subscription management of <ph
                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"

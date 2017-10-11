@@ -38,9 +38,9 @@
                 <li>
                     <p><codeph>orgName=&lt;<i>Organisationsname</i>></codeph>: Name der Organisation, zu der der Benutzer gehört.</p>
                 </li>
-                <li>
+                <!--li>
                     <p><codeph>tenantId=&lt;<i>Mandatenname</i>></codeph>: Name des Mandanten, zu dem der Benutzer gehört. Dieser Eintrag erscheint nur, wenn die Plattform für mehrere Mandanten konfiguriert wurde. </p>
-                </li>
+                </li-->
                    
                 <li>
                     <p><codeph>&lt;<i>Weitere Name/Wert-Paare</i>></codeph>: Weitere durch senkrechten Strich voneinander getrennte Name/Wert-Paare, die abhängig vom Meldungstyp sind. </p>

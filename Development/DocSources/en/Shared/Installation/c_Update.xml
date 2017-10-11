@@ -17,8 +17,8 @@
         /> version must be higher or equal to the APP version. The APP version must be equal to the controller version.</p>
       <p>Example: If you want to use the <ph audience="app">VMware</ph><ph audience="ror">ROR</ph><ph audience="aws"
           >AWS</ph><ph audience="os">OpenStack</ph><ph audience="tps5">TPS5</ph><ph audience="vmware"
-          >VMware</ph> service controller included in the V17.4 release, you must upgrade <ph
-          conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> and APP to V17.4 first.</p>
+          >VMware</ph> service controller included in the V17.3 release, you must upgrade <ph
+          conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> and APP to V17.3 first.</p>
     </section>
     
     

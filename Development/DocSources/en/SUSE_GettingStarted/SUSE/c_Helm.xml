@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd">
+<concept id="concept2311" xml:lang="en-us">
+    <title><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+        /> - Provisioning with Helm Charts</title>
+    <conbody>
+        <section>
+            <title/>
+            <p>Google Cloud Platform (GCP)</p>
+            <p>Helm charts for provisioning <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> on Kubernetes. </p>
+            <p>The <codeph>oscm-demo-helm</codeph> repository contains templates for the deployment of <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> as a platform for managing Kubernetes applications using Helm. </p>
+            <p>Helm helps you manage Kubernetes applications; Helm Charts helps you define, install, and upgrade even the most complex Kubernetes application.</p>
+            <p>The <codeph>oscm-demo-helm</codeph> directory contains:</p>
+            <p><ul>
+                    <li><codeph>kubernetes-templates</codeph>: Kubernetes templates for deploying <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> applications, Kafka (a distributed streaming platform), and Rudder REST Proxy for Helm. (The Kafka REST Proxy provides a RESTful interface to a Kafka cluster. It makes it easy to produce and consume messages, view the state of the cluster, and perform administrative actions without using the native Kafka protocol or clients. Examples of use cases include reporting data to Kafka from any frontend app built in any language, ingesting messages into a stream processing framework that doesn't yet support Kafka, and scripting administrative actions.)Rudder offers a RESTful API for Helm Repositories and the Tiller service.</li>
+                    <li><codeph>oscm-service</codeph>: Sample <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> technical service definition that can be used for installing the WordPress application in a Kubernetes cluster with <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </li>
+                </ul>The same cluster is used for deploying <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> with all necessary applications. It is also used as target cluster for applications managed by <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </p>
+            <p>The deployment can be adapted as needed. For example, you can define different clusters for <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> and for managed applications, or setup different namespaces. The image below shows the deployment in different clusters:</p>
+            <p><image href="../_images/Demo.jpg" alt="Demo.jpg" width="425" height="301"/></p>
+            <p/>
+        </section>
+        <section>
+            <title>Deployment on Google Cloud Platform (GCP)</title>
+            <p><b>Prerequisites</b>: </p>
+            <p>
+                <ul>
+                    <li>Kubernetes cluster with 2 nodes of type "n1-standard-2" (2 CPUs, 7.5 GB) </li>
+                    <li>Gmail account for <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> email notification allowing for access of less secure applications (or another mail server solution)</li>
+                    <li><codeph>gcloud</codeph> SDK with kubectl (alternatively you can use the Kubernetes Dashboard). <codeph>gcloud</codeph> is a tool that provides the primary command-line interface to Google Cloud Platform. You can use this tool to perform many common platform tasks either from the command-line, or in scripts and other automations.</li>
+                </ul>
+            </p>
+            <p>Assuming that the kube configuration has the target cluster in the current context, execute the following installation steps in the given order:</p>
+            <p>
+                <ol>
+                    <li><b>Install Helm</b><p>Helm has two parts: a client (<codeph>helm</codeph>) and a server (<codeph>tiller</codeph>). Tiller runs inside of your Kubernetes cluster and manages releases (installations) of your charts. Download the binaries for your system here:<codeph> https://github.com/kubernetes/helm/releases</codeph>
+                        </p><p>The command <codeph>helm init</codeph> will install the <codeph>tiller</codeph> server in your cluster. </p></li>
+                    <li>Install Rudder<p>The Rudder proxy interfaces the Helm Chart repositories and the Helm Tiller server. The public Kubernetes Charts repository is configured in the <codeph>rudder-repositories.yaml</codeph> file. You can add your own Helm Chart repository to this file. The <codeph>rudder-repositories.yaml</codeph> file is saved as a Kubernetes secret.</p><p>
+                            <ol>
+                                <li><codeph>kubectl create generic rudder-repositories --from-file rudder-repositories.yaml</codeph></li>
+                                <li>Extract the IP and Port of the <codeph>tiller</codeph> pod and adapt it in the <codeph>rudder.yaml</codeph> file via <codeph>kubectl get pod --all-namespaces</codeph></li>
+                                <li><codeph>kubectl create -f rudder.yaml</codeph></li>
+                            </ol>
+                        </p></li>
+                    <li><b>Install Kafka</b><p><codeph>kubectl create -f zookeeper.yaml</codeph></p><p><codeph>kubectl create -f kafka.yaml </codeph></p></li>
+                    <li>Install the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> Applications <p><codeph>kubectl create -f helm-provisioning.yaml</codeph></p><p><codeph>kubectl create -f oscm-db.yaml</codeph></p><p><codeph>kubectl create -f oscm-initdb-jms.yaml</codeph>
+                        </p><p><codeph>kubectl create -f oscm-bes-svc.yaml</codeph>
+                        </p><p>Extract the port of the bes service and adapt it in the <codeph>oscm-initdb-bes.yaml</codeph> file via <codeph>kubectl get svc</codeph>
+                        </p><p><codeph>kubectl create -f oscm-initdb-bes.yaml</codeph>
+                        </p><p><codeph>kubectl create -f oscm-bes-pod.yaml </codeph></p></li>
+                    <li/>
+                </ol>
+            </p>
+        </section>
+        <section>
+            <title>OSCM Service Definition for Helm Charts</title>
+            <p>In order to manage the Kubernetes applications with OSCM, they must be represented in OSCM by corresponding service definitions (technical services in OSCM). The OSCM service definition describes: </p>
+            <p><ul>
+                    <li>The target Kubernetes cluster (URL of the Rudder proxy) where the application will be deployed ( <codeph>target</codeph> parameter)</li>
+                    <li>The target Kubernetes namespace for deployment (<codeph>namespace</codeph> parameter)</li>
+                    <li>The provisioning template (parameters with prefix <codeph>template.</codeph> for chart repository, name and version)</li>
+                    <li>Kubernetes label as identifying attributes for the deployment (<codeph>labels.release</codeph> parameter)</li>
+                    <li>Application parameters (parameters with prefix <codeph>parameters.</codeph> which correspond to the values in  the <codeph>values.yaml</codeph> file from the chart)</li>
+                </ul>A sample service definition for the <codeph>wordpress</codeph> chart from the <codeph>kubeapps</codeph> repository can be found here. </p>
+        </section>
+        <section>
+            <title>Getting Started</title>
+            <p>To start working with OSCM, please see the Getting Started guide. </p>
+            <p>If you use the sample <codeph>wordpress</codeph> service, you can define meaningful configuration for it: </p>
+            <p>
+                <ul>
+                    <li>Let the user specify the WordPress version, administrator credentials, blog name, and/or cluster resources when he subscribes to the service on an OSCM marketplace</li>
+                    <li>Define prices for cluster resources (CPU, memory, storage) </li>
+                </ul>
+                <note>After the subscription is ready to use, it is planned to see the access information (URL or other) in OSCM (issue). Till the issue is solved, the access information can be seen in Kubernetes Dashboard or extracted with kubectl command. </note>
+            </p>
+            <p>The WordPress application can be managed by modifying the corresponding OSCM subscription: </p>
+            <p>
+                <ul>
+                    <li>Upgrade/downgrade using different WordPress versions </li>
+                    <li>Scale up/down by specifying different cluster resources </li>
+                    <li>Delete the application by terminating the OSCM subscription </li>
+                </ul>
+            </p>
+        </section>
+    </conbody>
+</concept>

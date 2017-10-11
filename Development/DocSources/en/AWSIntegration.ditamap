@@ -9,25 +9,25 @@
         <prodinfo product="oscm_ce">
             <prodname/>
             <vrmlist>
-                <vrm version="17.4.0"/>
+                <vrm version="17.5.0"/>
             </vrmlist>
             <brand/>
-            <prognum>17.4.0</prognum>
+            <prognum>17.5.0</prognum>
             <component/>
-            <series>Amazon Web Services Integration (GlassFish)</series>
+            <series>Amazon Web Services Integration</series>
         </prodinfo>
         <prodinfo product="oscm_ee">
             <prodname>Enterprise Service</prodname>
             <vrmlist>
-                <vrm version="17.4"/>
+                <vrm version="17.5"/>
             </vrmlist>
             <brand>FUJITSU Software</brand>
-            <prognum>Catalog Manager V17.4</prognum>
+            <prognum>Catalog Manager V17.5</prognum>
             <component/>
-            <series>Amazon Web Services Integration (GlassFish)</series>
+            <series>Amazon Web Services Integration</series>
         </prodinfo>
         <bookid>
-            <edition>September 2017 </edition>
+            <edition>DRAFT - November 2017 </edition>
             <!--booknumber product="oscm_ee">B1WS-1263-02</booknumber-->
         </bookid>
         <bookrights product="oscm_ce">
@@ -90,7 +90,7 @@
     </chapter>
     <chapter format="dita" href="Shared/Installation/c_Uninstallation.xml" type="concept"/>
     <appendix format="dita" href="Shared/Installation/r_ConfigSettings.xml" type="reference">
-        <topicref format="dita" href="Shared/reference/r_ConfigSettings_glassfish_BESDomain.xml" type="reference"/>
+        
         <topicref format="dita" href="Shared/reference/r_ConfigSettings_db.xml" type="reference"/>
         <topicref format="dita" href="APPInt/APP/r_ConfigSettings.xml" type="reference"/>
         <topicref format="dita" href="AWSIntegrationGuide/Appendix/r_ConfigSettingsController.xml" type="reference"/>

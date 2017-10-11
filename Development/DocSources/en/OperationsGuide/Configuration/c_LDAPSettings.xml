@@ -8,12 +8,6 @@
     <title>Managing LDAP Settings</title>
     <conbody>
         <section>
-            <p>
-                <note>This section is relevant only if <ph
-                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> is installed in INTERNAL authentication mode.<ph audience="doc"> Refer to <xref
-                        href="../GettingStarted/c_Authentication.xml"/> for details on authentication modes.</ph> </note>
-            </p>
             <p>User IDs and passwords of an organization can be created and maintained in the platform or in an existing LDAP system of an organization.</p>
             <p conref="../../help/tasks/operator_createOrganization.xml#OrgCreate/UserMgmt2"> </p>
             <p conref="../../help/tasks/operator_createOrganization.xml#OrgCreate/UserMgmt3"> </p>
