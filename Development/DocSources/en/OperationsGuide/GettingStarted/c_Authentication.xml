@@ -53,17 +53,6 @@
                                 <p>Password: <codeph>admin123</codeph></p>
                             </entry>
                         </row>
-                        <row>
-                            <entry>Command line tool</entry>
-                            <entry><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></entry>
-                            <entry>User key<p>Password</p></entry>
-                            <entry>
-                                <p>User key:</p>
-                                <p><codeph>1000</codeph></p>
-                                <p>Password: </p>
-                                <p><codeph>admin123</codeph></p>
-                            </entry>
-                        </row>
                     </tbody>
                 </tgroup>
             </table>

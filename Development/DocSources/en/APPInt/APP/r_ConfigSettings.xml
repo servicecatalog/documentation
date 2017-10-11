@@ -25,7 +25,7 @@
             <title>APP_TIMER_REFRESH_SUBSCRIPTIONS</title>
             <p><codeph>APP_TIMER_REFRESH_SUBSCRIPTIONS=86400000</codeph>
             </p>
-            <p>The interval (in milliseconds) at which APP polls the status of instances and updates the number of virtual machines (VMs)  provisioned for subscriptions to IaaS services, for example in OpenStack. The number is updated only in case the technical service definition specifies a <codeph>VMS_NUMBER</codeph> parameter. A platform operator can retrieve the number of VMs using the <codeph>getsubscriptionusagedata</codeph> command from the command line tool. </p>
+            <p>The interval (in milliseconds) at which APP polls the status of instances and updates the number of virtual machines (VMs) provisioned for subscriptions to IaaS services, for example in OpenStack. The number is updated only in case the technical service definition specifies a <codeph>VMS_NUMBER</codeph> parameter.</p>
             <p>If you do not specify this setting, the default value used is 86400000 (once a day).</p>
         </section>
         <section>
