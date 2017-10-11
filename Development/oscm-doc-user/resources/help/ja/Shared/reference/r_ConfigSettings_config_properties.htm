@@ -1,545 +1,684 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xml:lang="de-de" lang="de-de">
+<html xml:lang="ja-jp" lang="ja-jp">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <meta name="copyright" content="(C) Copyright 2005" />
 <meta name="DC.rights.owner" content="(C) Copyright 2005" />
 <meta content="reference" name="DC.Type" />
-<meta name="DC.Title" content="Konfigurationseinstellungen" />
+<meta name="DC.Title" content="システム設定" />
 <meta content="XHTML" name="DC.Format" />
 <meta content="reference832" name="DC.Identifier" />
-<meta content="de-de" name="DC.Language" />
+<meta content="ja-jp" name="DC.Language" />
 <link href="../../commonltr.css" type="text/css" rel="stylesheet" />
 <link href="../../book.css" type="text/css" rel="stylesheet" />
-<title>Konfigurationseinstellungen</title>
+<title>システム設定</title>
 </head>
 <body id="reference832">
 
 
-        <h1 class="topictitle1">Konfigurationseinstellungen</h1>
+    <h1 class="topictitle1"><span>システム設定</span></h1>
 
-        <div>
-                <div class="section">
-                        <p>Die Datei <samp class="codeph">configsettings.properties</samp> im Verzeichnis <samp class="codeph">&lt;install_pack_dir&gt;/databases/bes_db</samp> enthält alle für die Plattform-Services erforderlichen Konfigurationseinstellungen. </p>
+    <div>
+        <div class="section">
+            <p><samp class="codeph">&lt;install_pack_dir&gt;/databases/bes_db</samp>にある<samp class="codeph">configsettings.properties</samp>ファイルには、<span>プラットフォーム</span>サービスのシステム設定が含まれます。 </p>
 
-                </div>
+        </div>
 
-                <div class="section"><h4 class="sectiontitle">AUDIT_LOG_ENABLED</h4>
-                        
-                        <p>Optional. Legt fest, ob Benutzeraktionen protokolliert und in der Datenbank gespeichert werden. Es können Aktionen protokolliert werden, die sich auf Abonnements, marktfähige Services und Preismodelle beziehen. Ist die Konfigurationseinstellung auf <samp class="codeph">true</samp> gesetzt, kann der Betreiber die Protokolldaten exportieren und so Informationen zu Benutzeraktionen abrufen. </p>
+        <div class="section"><h4 class="sectiontitle">AUDIT_LOG_ENABLED</h4>
+            
+            <p>オプション項目。購入済サービス、サービス、および料金設定に関連した利用者の操作を記録し、データベースに格納するかどうかを指定します。<samp class="codeph">true</samp>に設定した場合、システム運用管理者は監査ログのデータをエクスポートし、利用者の操作に関する情報を取得することができます。</p>
 
-                        <p>Erlaubte Werte: <samp class="codeph">true</samp>, <samp class="codeph">false</samp></p>
+            <p>指定可能な値： <samp class="codeph">true</samp>, <samp class="codeph">false</samp></p>
 
-                        <p>Voreinstellung: <samp class="codeph">false</samp></p>
+            <p>デフォルト： <samp class="codeph">false</samp></p>
 
-                </div>
+        </div>
 
-                <div class="section"><h4 class="sectiontitle">AUDIT_LOG_MAX_ENTRIES_RETRIEVED</h4>
-                        
-                        <p>Optional. Legt fest, wieviele Protokolleinträge bein einem Export der Protokolldaten abgerufen werden. Wird diese Anzahl überschritten, wird eine Warnung angezeigt und der Betreiber aufgefordert, seine Filterkriterien zu ändern und danach den Export nochmal zu starten. Diese Einstellung ist erforderlich, um die Anzahl von SQL-Anfragen an die Datenbank zu begrenzen. Zu viele Datenbankanfragen können die Leistung des Systems beeinträchtigen. </p>
+        <div class="section"><h4 class="sectiontitle">AUDIT_LOG_MAX_ENTRIES_RETRIEVED</h4>
+            
+            <p>オプション項目。一回の監査ログのエクスポートで、いくつのログのエントリを取得するかを指定します。この値を超えた場合、フィルタ条件を変更して再度エクスポートを実施するように操作者に警告を表示します。この設定は、監査ログをエクスポートする際、データベースへのSQL要求の数を低く抑えるために必要です。要求数が多いと、システムパフォーマンスの低下になります。</p>
 
-                        <p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">1</samp> und <samp class="codeph">1000</samp>
-                        </p>
+            <p>指定可能な値： <samp class="codeph">1</samp>から<samp class="codeph">1000</samp>の間の任意の値
+            </p>
 
-                        <p>Voreinstellung: <samp class="codeph">100</samp></p>
+            <p>デフォルト： <samp class="codeph">100</samp></p>
 
-                </div>
+        </div>
 
-                <div class="section"><h4 class="sectiontitle">AUTH_MODE</h4>
-                        
-                        <p>Obligatorisch. Legt fest, ob die Plattform zur Benutzerauthentifizierung verwendet wird oder ob die Plattform als SAML Service Provider verwendet wird. Diese Einstellung wird beim ersten Starten des Systems ausgewertet. Sie kann nach dem ersten Starten des Systems nicht mehr geändert werden. Die Einstellung läßt sich auch nicht durch eine Upgrade-Installation ändern.</p>
+        <div class="section"><h4 class="sectiontitle">AUTH_MODE</h4>
+            
+            <p>必須項目。 <span>プラットフォーム</span>のユーザー認証を使用するか、それともプラットフォームがSAMLサービス提供者として機能するかを指定します。このシステム設定は、<span>システム</span>を初めて起動した時に評価され、<span>システム</span>が一度でも起動された後には設定を変更することはできません。アップグレードインストールでも設定を変更することはできません。</p>
 
-                        <p>Erlaubte Werte: <samp class="codeph">INTERNAL</samp> für Plattform-Authentifizierung oder <samp class="codeph">SAML_SP</samp>, wenn die Plattform als SAML Service Provider verwendet werden soll und Benutzer über ein Identity-Provider-System (IdP) authentifiziert werden sollen.</p>
+            <p>指定可能な値： <samp class="codeph">INTERNAL</samp> (<span>プラットフォーム</span>のユーザー認証を使用) または <samp class="codeph">SAML_SP</samp> (<span>プラットフォーム</span>はSAMLサービス提供者として機能、また、利用者はアイデンティティプロバイダー(IdP)システムにより認証される)。 </p>
 
-                        <p>Voreinstellung: <samp class="codeph">INTERNAL</samp>
-                        </p>
+            <p>デフォルト： <samp class="codeph">INTERNAL</samp>
+            </p>
 
-                </div>
+        </div>
 
-                <div class="section"><h4 class="sectiontitle">BASE_URL</h4>Optional. Diese URL führt zur Startseite der Plattform, falls die Kommunikation nicht über HTTPS erfolgt. Bleibt das Feld leer, wird der Wert von <samp class="codeph">BASE_URL_HTTPS</samp> verwendet. <p>Syntax: <samp class="codeph">http://&lt;host&gt;:&lt;port&gt;/&lt;context-root&gt;</samp></p>
-<p>Die Voreinstellung für <samp class="codeph">&lt;context-root&gt;</samp> ist <samp class="codeph">oscm-portal</samp>.</p>
+        <div class="section"><h4 class="sectiontitle">BASE_URL</h4>オプション項目。<span>プラットフォーム</span>にてHTTPS通信をする必要がない場合に、<span>プラットフォーム</span>のトップページにアクセスするのにベースURLが使用されます。未入力の場合<samp class="codeph">BASE_URL_HTTPS</samp>が使われます。<p>指定形式： <samp class="codeph"> http://&lt;ホスト&gt;:&lt;ポート&gt;/&lt;コンテキストルート&gt;</samp></p>
+
+                    <p><samp class="codeph">&lt;コンテキストルート&gt;</samp> のデフォルト値は <samp class="codeph">oscm-portal</samp> です。</p>
+
+                    <div class="p">インターネットのドメイン名は以下のルールを満たしている必要があります:<ul>
+                    <li>
+                        <p>文字で始まり、文字または数字で終わる。</p>
+
+                    </li>
+
+                    <li>
+                        <p>文字、数値またはハイフンのみで構成される。特殊文字は使用不可。</p>
+
+                    </li>
+
+                    <li>
+                        <p>最大63文字以内で構成される。</p>
+
+                    </li>
+
+                </ul>
+</div>
 </div>
 
-                <div class="section"><h4 class="sectiontitle">BASE_URL_HTTPS</h4>Obligatorisch. Diese URL führt zur Startseite der Plattform und dient zum Erstellen der URL, um auf Services über HTTPS zuzugreifen. <p>Syntax: <samp class="codeph">https://&lt;host&gt;:&lt;port&gt;/&lt;context-root&gt;</samp></p>
-<p>Die Voreinstellung für <samp class="codeph">&lt;context-root&gt;</samp> ist <samp class="codeph">oscm-portal</samp>.</p>
+                <div class="section"><h4 class="sectiontitle">BASE_URL_HTTPS</h4>必須項目。HTTPSプロトコルで<span>プラットフォーム</span>のホームページにアクセスするため、および、サービスにアクセスするURLを作成するために使われます。<p>指定形式： <samp class="codeph">https://&lt;ホスト&gt;:&lt;ポート&gt;/&lt;コンテキストルート&gt;</samp></p>
+
+                            <p><samp class="codeph">&lt;コンテキストルート&gt;</samp> のデフォルト値は <samp class="codeph">oscm-portal</samp> です。</p>
+
+                            <div class="p">インターネットのドメイン名は以下のルールを満たしている必要があります:<ul>
+                    <li>
+                        <p>文字で始まり、文字または数字で終わる。</p>
+
+                    </li>
+
+                    <li>
+                        <p>文字、数値またはハイフンのみで構成される。特殊文字は使用不可。</p>
+
+                    </li>
+
+                    <li>
+                        <p>最大63文字以内で構成される。</p>
+
+                    </li>
+
+                </ul>
+</div>
 </div>
 
-                <div class="section"><h4 class="sectiontitle">CUSTOMER_SELF_REGISTRATION_ENABLED</h4>
-                        
-                        <p>Optional. Legt fest, ob sich Kunden auf einem Marktplatz selbst registrieren können. Ist der Wert auf <samp class="codeph">false</samp> gesetzt, muss entweder der Betreiber eine Organisation für den Kunden anlegen oder ein Anbieter (Serviceanbieter, Vermittler, Wiederverkäufer) muss den Kunden registrieren. </p>
+        <div class="section"><h4 class="sectiontitle">CUSTOMER_SELF_REGISTRATION_ENABLED</h4>
+            
+            <p>オプション項目。サービスポータルでサービス利用部門の登録が可能かどうかを設定します。<samp class="codeph">false</samp>が設定されている場合、サービス利用部門はすべてシステム運用管理者による登録が必要です。</p>
 
-                        <p>Erlaubte Werte: <samp class="codeph">true</samp>, <samp class="codeph">false</samp></p>
+            <p>設定可能な値： <samp class="codeph">true</samp>、<samp class="codeph">false</samp></p>
 
-                        <p>Voreinstellung: <samp class="codeph">true</samp></p>
+            <p>デフォルト： <samp class="codeph">true</samp></p>
 
-                </div>
+        </div>
 
-                <div class="section"><h4 class="sectiontitle">DECIMAL_PLACES</h4>Optional. Legt die Anzahl der Nachkommastellen fest, die für die Berechnung der Nutzungsgebühren verwendet werden. Diese Einstellung wird nur ausgewertet, wenn Sie von Version 14.1 der Plattform auf eine höhere Version umstellen. <p>Erlaubte Werte: <samp class="codeph">2</samp>, <samp class="codeph">3</samp>, <samp class="codeph">4</samp>, <samp class="codeph">5</samp>, <samp class="codeph">6</samp></p>
-<p>Voreinstellung: <samp class="codeph">2</samp></p>
+        <div class="section"><h4 class="sectiontitle">DECIMAL_PLACES</h4>オプション項目。使用料の計算で使用する小数点数を指定します。この設定は、<span>プラットフォーム</span>を V14.1から上位のバージョンに移行する場合にだけ必要です。 <p>設定可能な値： <samp class="codeph">2</samp>, <samp class="codeph">3</samp>, <samp class="codeph">4</samp>, <samp class="codeph">5</samp>, <samp class="codeph">6</samp></p>
+<p>デフォルト： <samp class="codeph">2</samp></p>
 </div>
 
-                <div class="section"><h4 class="sectiontitle">HIDDEN_UI_ELEMENTS</h4>Optional. Legt fest, welche Elemente der Benutzeroberfläche im Administrationsportal und auf Marktplätzen ausgeblendet werden. Sie können mit dieser Konfigurationseinstellung Elemente im Administrationsportal und gleichzeitig Elemente auf Marktplätzen ausblenden. <p><strong>Marktplätze</strong></p>
-<p>Geben Sie einen der folgenden Werte an, um eine Menüoption im Menü <span class="uicontrol">Benutzerkonto</span> auf Marktplätzen auszublenden: </p>
+        <div class="section"><h4 class="sectiontitle">HIDDEN_UI_ELEMENTS</h4>オプション項目。<span>プラットフォーム</span>の管理ポータルおよびサービスポータルで非表示にするユーザーインターフェース項目を指定します。この設定でユーザーインターフェース要素をサービスポータルや管理ポータルから非表示にすることができます。<p><strong>サービスポータル</strong></p>
+<p>サービスポータルの[アカウント]メニューからオプションを非表示にするには、以下の値のいずれかを入力します。: </p>
 <ul>
-                                <li><samp class="codeph">marketplace.navigation.Profile</samp>: Menü <span class="uicontrol">Profil</span>
-                                </li>
+                <li><samp class="codeph">marketplace.navigation.Profile</samp>:[プロフィール]メニュー </li>
 
-                                <li><samp class="codeph">marketplace.navigation.Payment</samp>: Menü <span class="uicontrol">Bezahlung</span></li>
+                <li><samp class="codeph">marketplace.navigation.Payment</samp>:[支払情報]メニュー</li>
 
-                                <li><samp class="codeph">marketplace.navigation.Subscriptions</samp>: Menü <span class="uicontrol">Abonnements</span>
-                                </li>
+                <li><samp class="codeph">marketplace.navigation.Subscriptions</samp>:[購入済サービス]メニュー</li>
 
-                        <li><samp class="codeph">marketplace.navigation.Users</samp>: Menü <span class="uicontrol">Benutzer &amp; Einheiten</span></li>
+                <li><samp class="codeph">marketplace.navigation.Users</samp>:[利用者]メニュー</li>
 
-                                <li><samp class="codeph">marketplace.navigation.Reports</samp>: Menü <span class="uicontrol">Berichte</span></li>
+                <li><samp class="codeph">marketplace.navigation.Reports</samp>:[レポート]メニュー</li>
 
-                                <li><samp class="codeph">marketplace.navigation.Processes</samp>: Menü <span class="uicontrol">Prozesse</span></li>
+                <li><samp class="codeph">marketplace.navigation.Processes</samp>:[トリガー・プロセス]メニュー</li>
 
-                                <li><samp class="codeph">marketplace.navigation.Operations</samp>: <strong>Operationen</strong> menu</li>
+                      <li><samp class="codeph">marketplace.navigation.Operations</samp>:[操作]メニュー</li>
 
-                        </ul>
-<p>Um mehrere Optionen im Menü <span class="uicontrol">Benutzerkonto</span> auszublenden, trennen Sie die Einträge durch Komma.</p>
-<p><strong>Administrationsportal</strong></p>
-<p>Wenn Sie eine bestimmte Seite vom Administrationsportal ausblenden möchten, müssen Sie zunächst den Wert herausfinden, der zum Ausblenden der Seite angegeben werden muss. Gehen Sie dazu wie folgt vor:</p>
+            </ul>
+<p><span class="uicontrol">アカウント</span>メニューから複数のオプションを非表示にするには、オプションをカンマで区切ります。</p>
+<p><strong>管理ポータル</strong></p>
+<p>特定ページを非表示にするには、以下の方法で非表示にしたいページの設定値を割り出す必要があります。 </p>
 <ol>
-                                <li>Öffnen Sie die entsprechende Seite der Administrationsportals.</li>
+                <li><span>プラットフォーム</span>の管理ポータルで各ページを開きます。</li>
 
-                                <li>Zeigen Sie die Hilfe zu dieser Seite an. </li>
+                <li>このページのオンラインヘルプを表示します。 </li>
 
-                                <li>Sehen Sie sich den Namen der Hilfeseite an. Der Name ist Teil der URL.</li>
+                <li>オンラインヘルプHTMLページの名前を参照します。 </li>
 
-                                <li>Lassen Sie die Dateierweiterung <samp class="codeph">.htm</samp> weg und ersetzen Sie den Unterstrich durch einen Punkt. </li>
+                <li>ファイルの拡張子「<samp class="codeph">.htm</samp>」を省略し、下線をドットに置き換えます。 </li>
 
-                        </ol>
-<p>Beispiel: </p>
-<p>Sie möchten die Seite <span class="uicontrol">Mehrwertsteuersätze bearbeiten</span> ausblenden. Der Name der Hilfeseite ist <samp class="codeph">organization_manageVats.htm</samp>. Dementsprechend heißt die zugehörige Seite des Administrationsportals <samp class="codeph">organization.manageVats</samp>. Die Konfigurationseinstellung muss wie folgt angegeben werden: </p>
+            </ol>
+<p>例： </p>
+<p>[付加価値税率の管理]ページを非表示にするとします。このページに紐付くオンラインヘルプHTMLページ名は<samp class="codeph">organization_manageVats.htm</samp>です。そこから、対応する管理ポータルページの設定値は<samp class="codeph">organization.manageVats</samp>になります。このページを非表示にするためには、以下のようにHIDDEN_UI_ELEMENTSキーを編集する必要があります。 </p>
 <p><samp class="codeph">HIDDEN_UI_ELEMENTS=organization.manageVats</samp></p>
-<p>Um mehrere Seiten vom Administrationsportal auszublenden, trennen Sie die Einträge durch Komma. </p>
-<p>Nachfolgend sehen Sie weitere Beispiele zum Ausblenden bestimmter Seiten. Die Liste ist nicht vollständig. </p>
+<p>管理ポータルから複数ページを非表示にするには、エントリをコンマで区切ります。 </p>
+<p>以下に、特定ページを非表示にするために使用できる値の例を示します。この一覧はすべてを網羅しているわけではありません。 </p>
 <div class="p">
-                                <ul>
-                                        <li><samp class="codeph">organization.edit</samp>: Seite <span class="uicontrol">Profile bearbeiten</span></li>
+                <ul>
+                    <li><samp class="codeph">organization.edit</samp>：[プロフィールの編集]ページ </li>
 
-                                        <li><samp class="codeph">shop.editSkin</samp>: Seite <span class="uicontrol">Layout anpassen</span>
-                                        </li>
+                    <li><samp class="codeph">shop.editSkin</samp>：[レイアウトのカスタマイズ]ページ </li>
 
-                                        <li><samp class="codeph">techService.edit</samp>: Seite <span class="uicontrol">Servicedefinition ändern</span>
-                                        </li>
+                    <li><samp class="codeph">techService.edit</samp>：[技術サービス説明の編集]ページ </li>
 
-                                </ul>
+                </ul>
 
-                        </div>
-<p>Geben Sie einen der folgenden Werte an, um ein ganzes Menü vom Administrationsportal auszublenden: </p>
+            </div>
+<p>メニューを管理ポータルからカテゴリごと非表示にするには、以下の値のいずれかを入力します。 </p>
 <ul>
-                                <li><samp class="codeph">navigation.myAccount</samp>: Menü <span class="uicontrol">Benutzerkonto</span></li>
+                <li><samp class="codeph">navigation.myAccount</samp>：[アカウント]メニュー </li>
 
-                                <li><samp class="codeph">navigation.customer</samp>: Menü <span class="uicontrol">Kunde</span></li>
+                <li><samp class="codeph">navigation.customer</samp>：[サービス利用部門]メニュー</li>
 
-                                <li><samp class="codeph">navigation.operator</samp>: Menü <span class="uicontrol">Betrieb</span></li>
+                <li><samp class="codeph">navigation.operator</samp>：[操作]メニュー</li>
 
-                                <li><samp class="codeph">navigation.techService</samp>: Menü <span class="uicontrol">Technischer Service</span></li>
+                <li><samp class="codeph">navigation.techService</samp>：[技術サービス]メニュー </li>
 
-                                <li><samp class="codeph">navigation.service</samp>: Menü <span class="uicontrol">Marktfähiger Service</span></li>
+                <li><samp class="codeph">navigation.service</samp>：[サービス]メニュー </li>
 
-                                <li><samp class="codeph">navigation.priceModel</samp>: Menü <span class="uicontrol">Preismodell</span></li>
+                <li><samp class="codeph">navigation.priceModel</samp>：[料金設定]メニュー</li>
 
-                                <li><samp class="codeph">navigation.marketplace</samp>: Menü <span class="uicontrol">Marktplatz</span></li>
+                <li><samp class="codeph">navigation.marketplace</samp>：[サービスポータル]メニュー</li>
 
-                        </ul>
-<div class="note"><span class="notetitle">Hinweis:</span> Die Seite <span class="uicontrol">Konfiguration aktualisieren</span> im Menü <span class="uicontrol">Betrieb</span> wird dem Betreiber standardmäßig angezeigt, wenn er sich anmeldet. Wenn Sie die Seite oder das ganze Menü ausblenden, wird Ihnen die Seite trotzdem nach der nächsten Anmeldung angezeigt. Sie können notwendige Änderungen vornehmen.</div>
+            </ul>
+<div class="note"><span class="notetitle">注:</span> <span class="uicontrol">操作</span>メニューの<span class="uicontrol">システム設定の変更</span>ページは、システム運用管理者がログインしたときに転送されるデフォルトページです。このページをメニューから非表示にしたり、メニューそのものを非表示とした場合でも、<span class="uicontrol">システム設定の変更</span>ページに転送され、必要であれば設定を変更することができます。</div>
 </div>
 
-                <div class="section"><h4 class="sectiontitle">HIDE_PAYMENT_INFORMATION</h4>
-                        
-                        <p>Optional. Legt fest, ob Kunden Zahlungsinformationen angeben müssen, um Abonnements für Services abzuschließen, die kostenpflichtig sind und das plattformeigene Abrechnungssystem verwenden. Ist der Wert auf <samp class="codeph">true</samp> gesetzt, werden auf den Marktplätzen alle Dialoge und Optionen zur Angabe von Zahlungsarten und Rechnungsanschriften verborgen, und in Rechnungsberichten und Kostenvorschau erscheinen keine Zahlungsinformationen. Im Administrationsportal können Serviceanbieter und Wiederverkäufer keine Zahlungsarten für ihre Kunden verwalten. Die Einstellung hat keinen Einfluss auf die Berechnung von Nutzungsgebühren und die Verarbeitung von Rechnungsdaten. </p>
+        <div class="section"><h4 class="sectiontitle">HIDE_PAYMENT_INFORMATION</h4>
+            
+            <p>オプション項目。サービス利用部門が 
+              
+              <span>プラットフォームの</span>請求システムを使用する、有料のサービスを購入するときに請求情報の指定を必要とするかどうかを指定します。
+              <span><samp class="codeph">true</samp>に設定した場合、サービスポータルにおいて支払種別と請求先を指定するためのダイアログ、およびオプションが表示されなくなります。また、サービス利用部門の支払情報は、請求・支払プレビューのレポートに表示されません。サービス提供部門およびサービス提供代行部門は、管理ポータルでサービス利用部門に対する支払種別を管理することができません。この設定は請求処理と支払処理には影響しません。</span></p>
 
-                        <p>Die Einstellung wird nur einmalig bei der Installation oder beim Upgrade des Systems ausgewertet. Der Wert kann nach dem Starten des Systems nicht mehr geändert werden, auch nicht durch eine Upgrade-Installation. </p>
+            <p>設定は
+             
+            <span>プラットフォーム</span>をインストール、またはアップデートを行ったときに一度だけ評価されます。設定値は
+             
+            <span>プラットフォーム</span>が起動した後は、アップデートインストールを行っても変更することができません。
+            </p>
 
-                        <p>Erlaubte Werte: <samp class="codeph">true</samp>, <samp class="codeph">false</samp></p>
+            <p>設定可能な値: <samp class="codeph">true</samp>, <samp class="codeph">false</samp></p>
 
-                        <p>Voreinstellung: <samp class="codeph">false</samp></p>
+            <p>デフォルト: <samp class="codeph">false</samp></p>
 
-                </div>
+        </div>
 
-                <div class="section"><h4 class="sectiontitle">HTTP_PROXY</h4>Optional. Proxy für HTTP-Verbindungen zu einem PSP.<p>Beispiel: <samp class="codeph">proxy.domain</samp> oder die IP-Adresse des Proxy-Servers</p>
+        <div class="section"><h4 class="sectiontitle">HTTP_PROXY</h4>オプション項目。プロキシサーバが存在する場合にそのプロキシサーバを指定します。<p>例： <samp class="codeph">proxy.domain</samp>またはプロキシサーバIPアドレス。</p>
 </div>
 
-                <div class="section"><h4 class="sectiontitle">HTTP_PROXY_PORT</h4>Optional. Proxy-Port für HTTP-Verbindungen zu einem PSP. <p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">1</samp> und <samp class="codeph">65535</samp></p>
-<p>Voreinstellung: <samp class="codeph">1080</samp></p>
+        <div class="section"><h4 class="sectiontitle">HTTP_PROXY_PORT</h4>オプション項目。プロキシサーバが存在する場合にそのプロキシサーバに接続するポート番号を指定します。<p>設定可能な値： <samp class="codeph">1</samp>～<samp class="codeph">65535</samp>の範囲の値を指定します。</p>
+<p>デフォルト： <samp class="codeph">1080</samp></p>
 </div>
 
-                
-                
-                
-                
-                <div class="section"><h4 class="sectiontitle">KAFKA_BOOTSTRAP_SERVERS</h4>Optional. Liste von durch Kommas getrennten Host- und Port-Paaren, zum Addressieren von Kafka Brokern. Bootstrap-Server stellen die anfänglichen Hosts, die als Startpunkte für einen Kafka-Client dienen. In <span>der Plattform</span> werden sie für Event-basierte Provisionierung verwendet. <p>Voreinstellung: Kein Wert</p>
-<p>Beispiel: <samp class="codeph">localhost:9092</samp></p>
+        
+        
+        
+        
+        <div class="section"><h4 class="sectiontitle">KEY_FILE_PATH</h4>オプション項目。データタイプが<samp class="codeph">PWD</samp>であるサービスパラメーター、および暗号化が指定されたカスタム属性の暗号化および復号化に必要なキーを含むファイルへのパス<p>
+              
+              <span>プラットフォーム</span>起動時に本設定に指定されたパスにファイルが存在するかが確認されます。当該ファイルが存在しない場合、当該パスに自動的にファイルが作成されます。本設定が行われていない場合、デフォルトのパスに<samp class="codeph">key</samp>という名前で作成されます。</p>
+デフォルトパス: <p><samp class="codeph">&lt;GLASSFISH_HOME&gt;/glassfish/domains/bes-domain/config</samp>ディレクトリ配下、<samp class="codeph">./key</samp></p>
 <div class="p">
-                                <div class="note"><span class="notetitle">Hinweis:</span> Diese Einstellung wird noch nicht im Produkt unterstützt und steht derzeit nur für Testzwecke zur Verfügung. </div>
+                <div class="note"><span class="notetitle">注:</span> キーファイルは削除しないように注意してください。削除した場合、暗号化および復号化を行うことができません。作成されたファイルをバックアップしておくことを推奨します。</div>
 
-                        </div>
+            </div>
 </div>
 
-                <div class="section"><h4 class="sectiontitle">KEY_FILE_PATH</h4>Optional. Der Pfad zu der Datei, die den Schlüssel zum Ver- und Entschlüssen von Werten enthält. Werte von Serviceparametern des Typs <samp class="codeph">PWD</samp> bzw. eigene Attribute mit der Option <strong>Verschlüsselt</strong> können verschlüsselt werden. <p>Beim Starten der Plattform wird überprüft, ob so eine Datei an der angegebenen Stelle existiert. Ist dies nicht der Fall wird die Datei mit dem Schlüssel automatisch generiert und an der Stelle gespeichert, die Sie hier angeben. Geben Sie nichts an, wird die Datei unter dem Namen <samp class="codeph">key</samp> gespeichert und an die folgende Stelle generiert:</p>
-<p><samp class="codeph">&lt;GLASSFISH_HOME&gt;/glassfish/domains/bes-domain/config</samp></p>
-Voreinstellung: <p><samp class="codeph">./key</samp></p>
-<div class="p">
-                                <div class="note"><span class="notetitle">Hinweis:</span> Die Datei mit dem Schlüssel darf nicht gelöscht werden, ansonsten ist eine Verschlüsselung bzw. Entschlüsselung nicht mehr möglich. Es wird empfohlen, von dieser Datei einen Backup zu erstellen.</div>
-
-                        </div>
+        <div class="section"><h4 class="sectiontitle">LDAP_SEARCH_LIMIT</h4>オプション項目。組織が利用者の管理に外部LDAPシステムを使用する場合に、LDAPクエリが返すことができるエントリの最大数。 <p>設定可能な値： <samp class="codeph">1</samp>～<samp class="codeph">9223372036854775807</samp>の範囲の値を指定します。</p>
+<p>デフォルト： <samp class="codeph">100</samp></p>
 </div>
 
-                <div class="section"><h4 class="sectiontitle">LDAP_SEARCH_LIMIT</h4>Optional. Maximale Anzahl Einträge, die eine LDAP-Suchanfrage zurückgibt, wenn eine Organisation ein externes LDAP-System zur Benutzerverwaltung verwendet. <p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">1</samp> und <samp class="codeph">9223372036854775807</samp></p>
-<p>Voreinstellung: <samp class="codeph">100</samp></p>
+        <div class="section"><h4 class="sectiontitle">LOG_CONFIG_FILE</h4>オプション項目。<span>プラットフォーム</span>の<samp class="codeph">log4j</samp>設定ファイルのパス。<p>デフォルト： <samp class="codeph">&lt;GLASSFISH_HOME&gt;/glassfish/domains/bes-domain/config</samp> ディレクトリの <samp class="codeph">./log4j.properties</samp> ファイル。</p>
+
+            </div>
+
+        <div class="section"><h4 class="sectiontitle">LOG_FILE_PATH</h4>必須項目。<span>プラットフォーム</span>のログファイルのパス。<p>デフォルト： <samp class="codeph">../logs</samp> 、すなわち <samp class="codeph">&lt;GLASSFISH_HOME&gt;/glassfish/domains/bes-domain/logs</samp> ディレクトリ。</p>
+
+                <p>この設定を変更した場合、<span>プラットフォーム</span>を再起動する必要があります。</p>
+
+            </div>
+
+        <div class="section"><h4 class="sectiontitle">LOG_LEVEL</h4>オプション項目。<span>プラットフォーム</span>のBSSのログレベル。この設定は<samp class="codeph">log4j.properties</samp>ファイルの設定によって明確に指定されない場合、すべてのログクラスに適用されます。 <p>設定可能な値： <samp class="codeph">ERROR</samp>、<samp class="codeph">WARN</samp>、<samp class="codeph">INFO</samp>、<samp class="codeph">DEBUG</samp></p>
+<p>デフォルト： <samp class="codeph">INFO</samp></p>
+
+                <p>この設定を変更した場合、<span>プラットフォーム</span>を再起動する必要があります。</p>
 </div>
 
-                <div class="section"><h4 class="sectiontitle">LOG_CONFIG_FILE</h4>Optional. Pfad zur Konfigurationsdatei für <samp class="codeph">log4j</samp> der Plattform.<p>Voreinstellung: <samp class="codeph">./log4j.properties</samp> im Verzeichnis <samp class="codeph">&lt;GLASSFISH_HOME&gt;/glassfish/domains/bes-domain/config</samp></p>
+        <div class="section"><h4 class="sectiontitle">MAIL_JA_CHARSET</h4>オプション項目。日本語で送信されるメールの特殊文字エンコーディング。<p>デフォルト： <samp class="codeph">UTF-8</samp></p>
 </div>
 
-                <div class="section"><h4 class="sectiontitle">LOG_FILE_PATH</h4>Obligatorisch. Pfad zu den Logdateien der Plattform.<p>Voreinstellung: <samp class="codeph">../logs</samp>. Dies ist das Verzeichnis <samp class="codeph">&lt;GLASSFISH_HOME&gt;/glassfish/domains/bes-domain/logs</samp>.</p>
-<p>Wenn Sie diese Einstellung ändern, müssen Sie die Plattform neu starten.</p>
+    
+        <div class="section"><h4 class="sectiontitle">MAX_NUMBER_ALLOWED_USERS</h4>必須項目。インストレーションで登録できる最大利用者数。<p>設定可能な値： <samp class="codeph">1</samp>～<samp class="codeph">9223372036854775807</samp>の範囲の値を指定します。</p>
+<p>デフォルト： <samp class="codeph">10</samp></p>
 </div>
 
-                <div class="section"><h4 class="sectiontitle">LOG_LEVEL</h4>Optional. Wichtigkeit für Meldungen, die von den Plattform-Services ausgegeben werden. Diese Einstellung ist für alle Klassen gültig, sofern sie nicht durch den Inhalt der Konfigurationsdatei <samp class="codeph">log4j.properties</samp> überschrieben wird. <p>Erlaubte Werte: <samp class="codeph">ERROR</samp>, <samp class="codeph">WARN</samp>, <samp class="codeph">INFO</samp>, <samp class="codeph">DEBUG</samp></p>
-<p>Voreinstellung: <samp class="codeph">INFO</samp></p>
-<p>Wenn Sie diese Einstellung ändern, müssen Sie die Plattform neu starten.</p>
+        <div class="section"><h4 class="sectiontitle">MAX_NUMBER_LOGIN_ATTEMPTS</h4>オプション項目。<span>プラットフォーム</span>にログインできる最大試行回数。利用者がこの回数でログインできなかった場合、そのアカウントがロックされます。 <p>設定可能な値： <samp class="codeph">1</samp>～<samp class="codeph">9223372036854775807</samp>の範囲の値を指定します。</p>
+<p>デフォルト： <samp class="codeph">3</samp></p>
 </div>
 
-                <div class="section"><h4 class="sectiontitle">MAIL_JA_CHARSET</h4>Optional. Zeichenkodierung für japanische E-Mail-Texte.<p>Voreinstellung: <samp class="codeph">UTF-8</samp></p>
+        <div class="section"><h4 class="sectiontitle">MP_ERROR_REDIRECT_HTTP</h4>オプション項目。有効でないサービスポータルIDを指定してサービスポータルにHTTPでアクセスしようとした場合に表示するWebページのURLです。このWebページがデフォルトのエラーメッセージの代わりに表示されます。この設定はテナントごとではなく、プラットフォーム全体に有効になることに注意してください。<p>指定形式： <samp class="codeph">http://&lt;表示するWebページ&gt;</samp></p>
+<p>255文字以下の有効なURLを指定します。</p>
 </div>
 
-                <div class="section"><h4 class="sectiontitle">MAX_NUMBER_ALLOWED_USERS</h4>Obligatorisch. Maximale Anzahl Benutzer, die für die Plattform registriert werden können.<p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">1</samp> und <samp class="codeph">9223372036854775807</samp></p>
-<p>Voreinstellung: <samp class="codeph">10</samp></p>
+        <div class="section"><h4 class="sectiontitle">MP_ERROR_REDIRECT_HTTPS</h4>オプション項目。有効でないサービスポータルIDを指定してサービスポータルにHTTPSでアクセスしようとした場合に表示するWebページのURLです。このWebページがデフォルトのエラーメッセージの代わりに表示されます。この設定はテナントごとではなく、プラットフォーム全体に有効になることに注意してください。<p>指定形式： <samp class="codeph">https://&lt;表示するWebページ&gt;</samp></p>
+<p>255文字以下の有効なURLを指定します。</p>
 </div>
 
-                <div class="section"><h4 class="sectiontitle">MAX_NUMBER_LOGIN_ATTEMPTS</h4>Optional. Maximale Anzahl erlaubter Versuche, sich bei der Plattform anzumelden. Wenn sich ein Benutzer nach dieser Anzahl von Versuchen nicht erfolgreich angemeldet hat, wird sein Benutzerkonto gesperrt. <p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">1</samp> und <samp class="codeph">9223372036854775807</samp></p>
-<p>Voreinstellung: <samp class="codeph">3</samp></p>
+        <div class="section"><h4 class="sectiontitle">PERMITTED_PERIOD_INACTIVE_ON_BEHALF_USERS</h4>オプション項目。サービス利用部門の代わりにログインした利用者が利用されなかった場合に、システムから削除されるまでのミリ秒の時間。値はミリ秒単位です。<p>設定可能な値： <samp class="codeph">1</samp>～<samp class="codeph">9223372036854775807</samp>の範囲の値を指定します。</p>
+<p>デフォルト： <samp class="codeph">604800000（</samp>7日） </p>
 </div>
 
-                <div class="section"><h4 class="sectiontitle">MP_ERROR_REDIRECT_HTTP</h4>Optional. Diese URL führt zur einer Webseite, die angezeigt wird, wenn HTTP verwendet wird und ein Kunde versucht, mit einer ungültigen ID auf einen Marktplatz zuzugreifen. Diese URL ersetzt die voreingestellte Fehlerseite. Beachten Sie, dass diese URL systemweit gilt und nicht mandanten-spezifisch ist.<p>Syntax: <samp class="codeph">http://&lt;Ihre Webseite&gt;</samp></p>
-<p>Stellen Sie sicher, dass Sie eine gültige URL angeben, die aus maximal 255 Zeichen besteht. </p>
+        <div class="section"><h4 class="sectiontitle">PERMITTED_PERIOD_UNCONFIRMED_ORGANIZATIONS</h4>オプション項目。組織の最初の管理アカウントを承認するまでの最大許容時間。この時間が経過すると、アカウントが削除されます。値はミリ秒単位です。 <p>設定可能な値： <samp class="codeph">1</samp>～<samp class="codeph">9223372036854775807</samp>の範囲の値を指定します。</p>
+<p>デフォルト： <samp class="codeph">604800000（</samp>7日） </p>
 </div>
 
-                <div class="section"><h4 class="sectiontitle">MP_ERROR_REDIRECT_HTTPS</h4>Optional. Diese URL führt zur einer Webseite, die angezeigt wird, wenn HTTPS verwendet wird und ein Kunde versucht, mit einer ungültigen ID auf einen Marktplatz zuzugreifen. Diese URL ersetzt die voreingestellte Fehlerseite.  Beachten Sie, dass diese URL systemweit gilt und nicht mandanten-spezifisch ist.<p>Syntax: <samp class="codeph">https://&lt;Ihre Webseite&gt;</samp></p>
-<p>Stellen Sie sicher, dass Sie eine gültige URL angeben, die aus maximal 255 Zeichen besteht. </p>
+        <div class="section"><h4 class="sectiontitle">PSP_USAGE_ENABLED</h4>必須項目。現在の環境にPSP統合を使用するか指定します。
+            <p>設定可能な値： <samp class="codeph">true</samp>, <samp class="codeph">false</samp></p>
+
+            <p>デフォルト： <samp class="codeph">false</samp></p>
+
+            <p>この設定を変更した場合、<span>プラットフォーム</span>を再起動する必要があります。</p>
 </div>
 
-                <div class="section"><h4 class="sectiontitle">PERMITTED_PERIOD_INACTIVE_ON_BEHALF_USERS</h4>Optional. Zeit in Millisekunden, nach der ein Benutzer, der sich im Namen eines Kunden angemeldet und keine Aktion mehr ausgeführt hat, aus dem System gelöscht wird.<p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">1</samp> und <samp class="codeph">9223372036854775807</samp></p>
-<p>Voreinstellung: <samp class="codeph">604800000</samp> (7 Tage)</p>
-</div>
-
-                <div class="section"><h4 class="sectiontitle">PERMITTED_PERIOD_UNCONFIRMED_ORGANIZATIONS</h4>Optional. Maximale Zeitspanne in Millisekunden, innerhalb der das beim Anlegen einer Organisation eingerichtete Administratorkonto bestätigt werden muss. Nach Ablauf dieser Zeitspanne wird das Konto gelöscht.<p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">1</samp> und <samp class="codeph">9223372036854775807</samp></p>
-<p>Voreinstellung: <samp class="codeph">604800000</samp> (7 Tage)</p>
-</div>
-
-                <div class="section"><h4 class="sectiontitle">PSP_USAGE_ENABLED</h4>Obligatorisch. Definiert, ob in der aktuellen Umgebung ein Zahlungsdienstleister (Payment Service Provider - PSP) integriert ist und verwendet wird.<p>Erlaubte Werte: <samp class="codeph">true</samp>, <samp class="codeph">false</samp></p>
-<p>Voreinstellung: <samp class="codeph">false</samp></p>
-<p>Wenn Sie diese Einstellung ändern, müssen Sie die Plattform neu starten.</p>
-</div>
-
-                <div class="section"><h4 class="sectiontitle">REPORT_ENGINEURL</h4>Obligatorisch, wenn Sie Berichte verwenden möchten. Definiert das URL-Template der Report Engine. Wenn das Template nicht korrekt angegeben wird, kann die Plattform keine Berichte generieren, da der Report Web-Service nicht korrekt aufgerufen werden kann. <div class="p">Wenn HTTP-Zugriff für Ihre Installation konfiguriert ist, muss folgender Wert angegeben werden: <pre class="codeblock">http://&lt;host IP address&gt;:&lt;port&gt;/birt/frameset?
+        <div class="section"><h4 class="sectiontitle">REPORT_ENGINEURL</h4><span>プラットフォーム</span>のレポートを使用する場合には必須。レポートエンジンのURLテンプレート。正しいURLテンプレートを指定しないと、Report Webサービスを正しく呼び出すことができないため、<span>プラットフォーム</span>はレポートを生成できません。 <div class="p">HTTPアクセスを使うように設定している場合の指定形式： <pre class="codeblock">http://&lt;ホストのIPアドレス&gt;:&lt;ポート&gt;/birt/frameset?
    __report=${reportname}.rptdesign&amp;SessionId=${sessionid}
    &amp;__locale=${locale}&amp;WSDLURL=${wsdlurl}&amp;SOAPEndPoint=${soapendpoint}
    &amp;wsname=Report&amp;wsport=ReportPort
 </pre>
 </div>
-<div class="p">Wenn HTTPS-Zugriff für Ihre Installation konfiguriert ist, muss folgender Wert angegeben werden: <pre class="codeblock">https://&lt;host IP address&gt;:&lt;port&gt;/birt/frameset?
+<div class="p">HTTPSアクセスを使うように設定している場合の指定形式: <pre class="codeblock">https://&lt;ホストのIPアドレス&gt;:&lt;ポート&gt;/birt/frameset?
    __report=${reportname}.rptdesign&amp;SessionId=${sessionid}
    &amp;__locale=${locale}&amp;WSDLURL=${wsdlurl}&amp;SOAPEndPoint=${soapendpoint}
    &amp;wsname=ReportSecure&amp;wsport=ReportSecurePort</pre>
 </div>
-<div class="note"><span class="notetitle">Hinweis:</span> Der obige Wert muss wie angegeben verwendet werden. Nehmen Sie keine Änderung vor.<p>Wenn Sie den SSL/HTTPS Port ändern und die BIRT Report Engine in derselben Domäne wie <span>die Plattform</span> läuft, müssen Sie diese Einstellung ebenfalls aktualisieren.</p>
-</div>
-</div>
-
-                <div class="section"><h4 class="sectiontitle">REPORT_SOAP_ENDPOINT</h4>Obligatorisch, wenn Sie Berichte verwenden möchten. Definiert den SOAP-Endpunkt des Report Web-Service. Alle Daten für einen Bericht werden über einen Aufruf des Report Web-Service zusammengestellt. Wenn Sie keinen korrekten Wert angeben, kann die Plattform keine Berichte generieren, da der Report Web-Service nicht korrekt aufgerufen werden kann. <p>Wenn HTTP-Zugriff für Ihre Installation konfiguriert ist, muss folgender Wert angegeben werden: </p>
-<p><samp class="codeph">http://&lt;host IP address&gt;:&lt;port&gt;/Report/ReportingServiceBean</samp></p>
-<p>Wenn HTTPS-Zugriff für Ihre Installation konfiguriert ist, muss folgender Wert angegeben werden:</p>
-<p><samp class="codeph">https://&lt;host IP address&gt;:&lt;port&gt;/ReportSecure/ReportingServiceSecureBean</samp>
-                        </p>
-<div class="note"><span class="notetitle">Hinweis:</span> Der obige Wert muss wie angegeben verwendet werden. Nehmen Sie keine Änderung vor.<p>Wenn Sie den SSL/HTTPS Port ändern und die BIRT Report Engine in derselben Domäne wie <span>die Plattform</span> läuft, müssen Sie diese Einstellung ebenfalls aktualisieren.</p>
-</div>
+<div class="note"><span class="notetitle">注:</span> 上記の値は示されたとおりに使用する必要があります。この値を変更しないでください。</div>
 </div>
 
-                <div class="section"><h4 class="sectiontitle">REPORT_WSDLURL</h4>Obligatorisch, wenn Sie Berichte verwenden möchten. Definiert die URL der WSDL-Datei des Report Web-Service. Alle Daten für einen Bericht werden über einen Aufruf des Report Web-Service zusammengestellt. Wenn Sie keinen korrekten Wert angeben, kann die Plattform keine Berichte generieren, da der Report Web-Service nicht korrekt aufgerufen werden kann.<p>Wenn HTTP-Zugriff für Ihre Installation konfiguriert ist, muss folgender Wert angegeben werden: </p>
-<p><samp class="codeph">http://&lt;host IP address&gt;:&lt;port&gt;/Report/ReportingServiceBean?wsdl</samp></p>
-<p>Wenn HTTPS-Zugriff für Ihre Installation konfiguriert ist, muss folgender Wert angegeben werden: </p>
-<p><samp class="codeph">https://&lt;host IP address&gt;:&lt;port&gt;/ReportSecure/ReportingServiceSecureBean?wsdl</samp></p>
-<div class="note"><span class="notetitle">Hinweis:</span> Der obige Wert muss wie angegeben verwendet werden. Nehmen Sie keine Änderung vor.<p>Wenn Sie den SSL/HTTPS Port ändern und die BIRT Report Engine in derselben Domäne wie <span>die Plattform</span> läuft, müssen Sie diese Einstellung ebenfalls aktualisieren.</p>
-</div>
-</div>
-
-                
-                <div class="section"><h4 class="sectiontitle">SSO_DEFAULT_TENANT_ID</h4>Obligatorisch, wenn die Plattform als SAML Service Provider installiert wird. <p>Eindeutige ID für den Standard-Mandanten. Diesem Mandanten ist das IdP-System zugeordnet, das für die Authentifizierung aller auf der Plattform registrierten Benutzer verwendet wird, wenn diese auf einen Marktplatz oder das Administrationsportal zugreifen.</p>
-<p>Die ID muss exakt 8 Zeichen lang sein und keine Sonderzeichen oder Leerzeichen enthalten. Der Plattformbetreiben kann eine beliebige Zeichenfolge angeben. </p>
-<p>Diese ID muss dem IdP-Administrator mitgeteilt werden. Der IdP-Administrator muss diese ID als Attribute für SAML-Assertions setzen. Zum Beispiel in OpenAM: Die Plattform wurde als Service Provider (SP) registriert, dann wählt der IdP-Administrator diesen SP aus und gibt als Assertion Processing-Attribut folgendes ein: <samp class="codeph">tenantID="&lt;die 8 Zeichen&gt;"</samp>.</p>
-<p>Wenn Sie diese Einstellung nach dem ersten Datenaustausch zwischen der Plattform und dem IdP-System ändern müssen, müssen Sie sie sowohl in den Einstellung der Plattform als auch im IdP-System ändern. Eventuell müssen Sie dem IdP-Administrator eine neue Metadata-Exchange-Datei schicken.</p>
+        <div class="section"><h4 class="sectiontitle">REPORT_SOAP_ENDPOINT</h4><span>プラットフォーム</span>のレポートを使用する場合には必須。Report WebサービスのSOAPエンドポイント。Report Webサービスへの呼び出しによってすべてのレポートデータが取得されます。正しい値を指定しないと、Report Webサービスを正しく呼び出すことができないため、<span>プラットフォーム</span>はレポートを生成できません。 <p>HTTPアクセスを使うように設定している場合の指定形式： </p>
+<p><samp class="codeph">http://&lt;ホストのIPアドレス&gt;:&lt;ポート&gt;/Report/ReportingServiceBean</samp></p>
+<p>HTTPSアクセスを使うように設定している場合の指定形式: </p>
+<p><samp class="codeph">https://&lt;ホストのIPアドレス&gt;:&lt;port&gt;/ReportSecure/ReportingServiceSecureBean</samp>
+            </p>
+<div class="note"><span class="notetitle">注:</span> 上記の値は示されたとおりに使用する必要があります。この値を変更しないでください。</div>
 </div>
 
-                <div class="section"><h4 class="sectiontitle">SSO_IDP_AUTHENTICATION_REQUEST_HTTP_METHOD</h4>Obligatorisch, wenn die Plattform als SAML Service Provider installiert wird. Gibt die Methode an, die für HTTP-Requests zur Authentifizierung verwendet wird. Abhängig vom IdP-System (Identity Provider)können <samp class="codeph">GET</samp>- oder <samp class="codeph">POST</samp>-Requests verwendet werden. <p>Erforderlich für Web Browser Single Sign-On.</p>
-<p>Voreinstellung: <samp class="codeph">POST</samp></p>
-<p>Wenn Sie diese Einstellung ändern, müssen Sie die Plattform neu starten.</p>
-
-                </div>
-
-                <div class="section"><h4 class="sectiontitle">SSO_IDP_SAML_ASSERTION_ISSUER_ID</h4>Obligatorisch, wenn die Plattform als SAML Service Provider installiert wird. <p>Entity-ID des IdP-Systems an. Diese ID ist für das IdP-System eindeutig und muss zwischen dem Plattformbetreiber und dem IdP-Administrator kommuniziert werden. Anhand dieser ID kann die Plattform sicherstellen, dass die Authentifizierungsdaten, die vom IdP-System zurückkommen, eindeutig von dem System stammen, das für die Authentifizierung konfiguriert wurde. </p>
-<p>Der IdP-Administrator kann diese ID beispielsweise über die Federation Medadata auf seinem IdP-System herausfinden. </p>
-<strong>Beispiele</strong>:<p>Auf dem OpenAM-Server können die Federation Metadata wie folgt in einem Web Browser abgerufen werden: </p>
-<p><samp class="codeph">https://&lt;OpenAM_server&gt;/openam/saml2/jsp/exportmetadata.jsp?entityid=</samp></p>
-<p>Auf dem ADFS-Server befinden sich die Daten in folgender Datei: </p>
-<p><samp class="codeph">http://&lt;ADFShost&gt;/FederationMetadata/2007-06/FederationMetadata.xml</samp></p>
-<p>In der XML-Datei heißt die Issuer ID auch <samp class="codeph">entityID</samp>, zu Beispiel:</p>
-<p><samp class="codeph">entityID="http://example.adfs.com/adfs/services/trust"</samp>
-                        </p>
+        <div class="section"><h4 class="sectiontitle">REPORT_WSDLURL</h4><span>プラットフォームの</span>レポートを使用する場合には必須。Report WebサービスのWSDLファイルのURL。Report Webサービスへの呼び出しによってすべてのレポートデータが取得されます。正しい値を指定しないと、Report Webサービスを正しく呼び出すことができないため、<span>プラットフォーム</span>はレポートを生成できません。 <p>HTTPアクセスを使うように設定している場合の指定形式： </p>
+<p><samp class="codeph">http://&lt;ホストのIPアドレス&gt;:&lt;ポート&gt;/Report/ReportingServiceBean?wsdl</samp></p>
+<p>HTTPSアクセスを使うように設定している場合の指定形式: </p>
+<p><samp class="codeph">https://&lt;ホストのIPアドレス&gt;:&lt;ポート&gt;/ReportSecure/ReportingServiceSecureBean?wsdl</samp></p>
+<div class="note"><span class="notetitle">注:</span> 上記の値は示されたとおりに使用する必要があります。この値を変更しないでください。</div>
 </div>
 
-                <div class="section"><h4 class="sectiontitle">SSO_IDP_TRUSTSTORE</h4>Obligatorisch, wenn die Plattform als SAML Service Provider installiert wird. Gibt den Pfad und Namen der Truststore-Datei an, die das Public-Key-Zertifikat des IdP-Systems (Identity Provider) enthalten muss. <p>Erforderlich für Web Browser Single Sign-On.</p>
-<p>Voreinstellung: <samp class="codeph">&lt;path&gt;/cacerts.jks</samp></p>
-<p>Sobald ein anderes Identity Provider System wie beispielsweise OpenAM, Cloudminder oder Active Directory installiert und verwendet wird, müssen Sie diese Einstellung unter Umständen ändern. In diesem Fall müssen Sie die Plattform neu starten.</p>
+        
+        <div class="section"><h4 class="sectiontitle">SSO_DEFAULT_TENANT_ID</h4><span>プラットフォーム</span>をSAML_SP認証モードでインストールした場合に必須。
+            <p>デフォルトテナントのID。デフォルトテナントは<span>プラットフォーム</span>に登録されたすべてのユーザがサービスポータルおよび管理ポータルにアクセスする際認証に使用されるIdPと関連します。</p>
+
+            <p>8文字で記載してください。特殊文字および空白は使用できません。システム運用管理者はシステム設定で任意の値を指定します。</p>
+
+            <p>デフォルトテナントIDシステム運用管理者とIdP管理者間で共有する必要があります。IdP管理者は本IDをSAMLアサーションのための属性として設定する必要があります。たとえば、<span>プラットフォーム</span> ー(SPているOpenAM内で、IdP管理者は本SPを選択し、アサーションプロセス属性として<samp class="codeph">tenantID="&lt;the 8 characters"&gt;</samp>と入力します。</p>
+
+            <p>本設定を<span>プラットフォーム</span>とIdPの間で交換した後に変更する必要がある場合、<span>プラットフォーム</span>とIdPシステム双方の設定を変更する必要があります。それに伴いIdP管理者に変更を知らせる必要があります。</p>
 </div>
 
-                <div class="section"><h4 class="sectiontitle">SSO_IDP_TRUSTSTORE_PASSWORD</h4>Obligatorisch, wenn die Plattform als SAML Service Provider installiert wird. Gibt das Passwort des Truststore mit dem Public-Key-Zertifikat des IdP-Systems (Identity Provider) an. <p>Erforderlich für Web Browser Single Sign-On.</p>
-<p>Standard-Password von GlassFish: <samp class="codeph">changeit</samp></p>
-<p>Das Passwort unterscheidet Groß-/Kleinschreibung. Es muss mit dem Output des IdP-Systems übereinstimmen.</p>
-<p>Wenn Sie diese Einstellung ändern, müssen Sie die Plattform neu starten.</p>
+        <div class="section"><h4 class="sectiontitle">SSO_IDP_AUTHENTICATION_REQUEST_HTTP_METHOD</h4><span>プラットフォーム</span>をSAML_SP認証モードでインストールする場合は必須。 HTTP認証要求で利用する方式。IdPに依存して、<samp class="codeph">GET</samp> または <samp class="codeph">POST</samp> のいずれかのリクエストを使用できます。
+                <p>WebブラウザのSSOのために必要です。</p>
 
-                </div>
+                <p>デフォルト： <samp class="codeph">POST</samp></p>
 
-                <div class="section"><h4 class="sectiontitle">SSO_IDP_URL</h4>Obligatorisch, wenn die Plattform als SAML Service Provider installiert wird. Gibt die URL zum Service Endpoint des IdP-Systems (Identity Provider) an, das verwendet werden soll (SAML Redirect URL). <p>Erforderlich für Web Browser Single Sign-On.</p>
-<p>Aus Sicherheitsgründen wird empfohlen, das HTTPS-Protokoll zu verwenden. </p>
-<p>Syntax: <samp class="codeph">https://&lt;host&gt;:&lt;port&gt;/&lt;RedirectServiceEndpoint&gt;</samp></p>
-<p>Wenn Sie diese Einstellung ändern, müssen Sie die Plattform neu starten.</p>
-</div>
-
-                <div class="section"><h4 class="sectiontitle">SSO_ISSUER_ID</h4>Obligatorisch, wenn die Plattform als SAML Service Provider installiert wird. Gibt eine eindeutige ID für die Plattform an, anhand derer das IdP-System (Identity Provider) eingehende SAML-Authentifizierungs-Requests von der Plattform identifizieren kann. <p>Erforderlich für Web Browser Single Sign-On.</p>
-<p>Wenn Sie diese Einstellung nach dem ersten Datenaustausch zwischen der Plattform und dem IdP-System ändern müssen, müssen Sie sie sowohl in den Einstellung der Plattform als auch im IdP-System ändern. Eventuell müssen Sie dem IdP-Administrator eine neue Metadata-Exchange-Datei schicken.</p>
-<p>Voreinstellung: <samp class="codeph">CT_MG</samp>
-                        </p>
-<p>Wenn Sie diese Einstellung ändern, müssen Sie die Plattform neu starten.</p>
-</div>
-
-                <div class="section"><h4 class="sectiontitle">SSO_LOGOUT_URL</h4>Obligatorisch, wenn die Plattform als SAML Service Provider installiert wird und Single Logout verwendet werden soll. <p>Gibt die URL zum Endpoint des Single Logout Service im IdP-System an. An diese Adresse sendet die Plattform Requests zur Abmeldung und zur Invalidierung von Sessions.</p>
-<p>Erforderlich für Web Browser Single Sign-On.</p>
-<p>Aus Sicherheitsgründen wird empfohlen, das HTTPS-Protokoll zu verwenden. </p>
-<p>Syntax: <samp class="codeph">https://&lt;host&gt;:&lt;port&gt;/&lt;LogoutServiceEndpoint&gt;</samp></p>
-<p>Wenn Sie diese Einstellung ändern, müssen Sie die Plattform neu starten.</p>
-<div class="note"><span class="notetitle">Hinweis:</span> Im IdP-System muss eine URL angegeben werden, zu der die Antwort auf den Request zur Abmeldung geschickt und der Benutzer nach der Abmeldung geleitet wird. Es wird empfohlen, folgende Standard-Marktplatzadresse der Plattform zu verwenden: <samp class="codeph">https://&lt;host&gt;:&lt;port&gt;/oscm-portal/marketplace/index.jsf</samp>. Bei Problemen kann der Benutzer automatisch von dieser Seite auf eine weitere Seite geleitet werden, die in der Konfigurationseinstellung <samp class="codeph">MP_ERROR_REDIRECT_HTTPS</samp> angegeben ist. Beachten Sie aber, dass diese URL systemweit gilt und nicht mandanten-spezifisch ist.</div>
-</div>
-
-                
-                <div class="section"><h4 class="sectiontitle">SSO_SIGNING_ALGORITHM</h4>Optional. Der Secure-Hash-Algorithmus zum Signieren von SAML Requests.  <p>Voreinstellung: <samp class="codeph">SHA1</samp></p>
-<p>Die Plattform unterstützt auch den Algorithmus SHA-256. Der Wert wird als <samp class="codeph">SHA256</samp> angegeben. </p>
-<p>Wenn Sie diese Einstellung ändern, müssen Sie die Plattform neu starten.</p>
-</div>
-
-                <div class="section"><h4 class="sectiontitle">SSO_SIGNING_KEY_ALIAS</h4>Obligatorisch für das Signieren von Requests durch die Plattform. Gibt den Alias des privaten Schlüssels der Plattform an, der zum Signieren von Requests verwendet wird. <p>Requests werden in folgenden Fällen signiert:</p>
-<ul>
-                                <li class="liexpand">Kommunikation mit Web-Seiten und Web-Applikationen aus zusätzlich definierten Tabs in Abonnements.</li>
-
-                                <li class="liexpand">Requests zur Abmeldung, wenn die Plattform als SAML Service Provider installiert wird, Single Logout konfiguriert wird, und der Single Logout Service des IdP-Systms signierte Requests erwartet, wie beispielsweise in Microsoft Active Directory Federation Services.</li>
-
-                        </ul>
-<p>Zur Verifizierung der Signatur muss das entsprechende Zertifikat der Plattform im Truststore des Application Servers hinterlegt werden, auf dem die Web-Seite, die Web-Applikation, oder das IdP-System läuft. </p>
-<p>Voreinstellung: <samp class="codeph">s1as</samp></p>
-<p>Wenn Sie diese Einstellung ändern, müssen Sie die Plattform neu starten.</p>
-</div>
-
-                <div class="section"><h4 class="sectiontitle">SSO_SIGNING_KEYSTORE</h4>Obligatorisch für das Signieren von Requests durch die Plattform. Gibt den Pfad und Namen des Keystores des Application Servers an, in dem der in der Einstellung <samp class="codeph">SSO_SIGNING_KEY_ALIAS</samp> angegebene private Schlüssel gespeichert ist. <p>Voreinstellung: <samp class="codeph">./keystore.jks</samp></p>
-<p>Wenn Sie diese Einstellung ändern, müssen Sie die Plattform neu starten.</p>
-</div>
-
-                <div class="section"><h4 class="sectiontitle">SSO_SIGNING_KEYSTORE_PASS</h4>Obligatorisch für das Signieren von Requests durch die Plattform. Gibt das Passwort für den Keystore des Application Servers an, der in der Einstellung <samp class="codeph">SSO_SIGNING_KEYSTORE</samp> angegeben ist. <p>Voreinstellung: <samp class="codeph">changeit</samp></p>
-<p>Wenn Sie diese Einstellung ändern, müssen Sie die Plattform neu starten.</p>
-</div>
-
-                <div class="section"><h4 class="sectiontitle">SSO_STS_ENCKEY_LEN</h4>Obligatorisch, wenn die Plattform als SAML Service Provider installiert wird. Gibt die Länge des Encryption Key an, wie er von dem IdP-System (Identity Provider) verwendet wird.<p>Erforderlich für die STS-Kommunikation.</p>
-<p>Voreinstellung: <samp class="codeph">128</samp></p>
-<p>Diese Einstellung wird bei der Installation ausgewertet und kann im Administrationsportal nicht geändert werden. Gehen Sie wie folgt vor, wenn Sie die Einstelllung ändern müssen:</p>
-<div class="p">
-                                <ol>
-                                        <li>Stoppen Sie die Domäne <samp class="codeph">bes-domain</samp>.</li>
-
-                                        <li>Bearbeiten Sie die Datei <samp class="codeph">configsettings.properties</samp> und ändern Sie den Wert für die Einstellung <samp class="codeph">SSO_STS_ENCKEY_LEN</samp>.</li>
-
-                                        <li>Führen Sie die Datei <samp class="codeph">build-glassfish.xml</samp> im Verzeichnis <samp class="codeph">&lt;install_pack_dir&gt;/install</samp> wie folgt aus: <div class="p">
-                                                        <pre class="codeblock">&lt;ANT_HOME&gt;/bin/ant 
-   -DpatchProps.path=../domains/bes_domain/installer 
-   -f build-glassfish.xml patchAndRedeployApplication </pre>
-
-                                                </div>
-<p>Ersetzen Sie <samp class="codeph">&lt;ANT_HOME&gt;</samp> durch das Verzeichnis, in dem Apache Ant installiert ist.</p>
-<div class="p"><div class="note"><span class="notetitle">Hinweis:</span> Abhängig vom Betriebssystem müssen Sie den Ausdruck <samp class="codeph">-DpatchProps.path=&lt;Pfad&gt;</samp> in doppelte oder einfache Anführungszeichen setzen.  </div>
-Der geänderte Wert wird aus der Datei <samp class="codeph"><samp class="codeph">configsettings.properties</samp></samp> ausgelesen und in die WSIT-Dateien im Archiv <samp class="codeph">oscm.ear</samp> geschrieben. Das aktualisierte Archiv wird in <samp class="codeph">bes-domain</samp> neu installiert. </div>
-<p>Während der Ausführung des Befehls wird im Verzeichnis <samp class="codeph">&lt;install_pack_dir&gt;/domains/bes_domain</samp> ein Unterverzeichnis <samp class="codeph">/tmp</samp> angelegt, in dem das aktualisierte Archiv <samp class="codeph">oscm.ear</samp> gespeichert wird.</p>
-</li>
-
-                                        <li>Installieren Sie die Datei <samp class="codeph">oscm-portal.war</samp> in der Domäne <samp class="codeph">bes-domain</samp>.</li>
-
-                                        <li>Starten Sie die Domäne <samp class="codeph">bes-domain</samp> neu.</li>
-
-                                </ol>
-
-                        </div>
-</div>
-
-                <div class="section"><h4 class="sectiontitle">SSO_STS_METADATA_URL</h4>Obligatorisch, wenn die Plattform als SAML Service Provider installiert wird. Gibt die URL der MEX-Adresse (Issuer Metadata Exchange) des STS (Security Token System) an. <p>Erforderlich für die STS-Kommunikation.</p>
-<p>Aus Sicherheitsgründen wird empfohlen, das HTTPS-Protokoll zu verwenden.</p>
-<p>Syntax: <samp class="codeph">https://&lt;host&gt;:&lt;port&gt;/&lt;MEXAddress&gt;</samp></p>
-<p>Diese Einstellung wird bei der Installation ausgewertet und kann im Administrationsportal nicht geändert werden. Gehen Sie wie folgt vor, wenn Sie die Einstelllung ändern müssen:</p>
-<div class="p">
-                                <ol>
-                                        <li>Stoppen Sie die Domäne <samp class="codeph">bes-domain</samp>.</li>
-
-                                        <li>Bearbeiten Sie die Datei <samp class="codeph">configsettings.properties</samp> und ändern Sie den Wert für die Einstellung <samp class="codeph">SSO_STS_METADATA_URL</samp>.</li>
-
-                                        <li>Führen Sie die Datei <samp class="codeph">build-glassfish.xml</samp> im Verzeichnis <samp class="codeph">&lt;install_pack_dir&gt;/install</samp> wie folgt aus: <div class="p">
-                                                        <pre class="codeblock">&lt;ANT_HOME&gt;/bin/ant 
-   -DpatchProps.path=../domains/bes_domain/installer 
-   -f build-glassfish.xml patchAndRedeployApplication</pre>
-
-                                                </div>
-<p>Ersetzen Sie <samp class="codeph">&lt;ANT_HOME&gt;</samp> durch das Verzeichnis, in dem Apache Ant installiert ist.</p>
-<div class="note"><span class="notetitle">Hinweis:</span> Abhängig vom Betriebssystem müssen Sie den Ausdruck <samp class="codeph">-DpatchProps.path=&lt;Pfad&gt;</samp> in doppelte oder einfache Anführungszeichen setzen.  </div>
-<p>Der geänderte Wert wird aus der Datei <samp class="codeph"><samp class="codeph">configsettings.properties</samp></samp> ausgelesen und in die WSIT-Dateien im Archiv <samp class="codeph">oscm.ear</samp> geschrieben. Das aktualisierte Archiv wird in <samp class="codeph">bes-domain</samp> neu installiert. </p>
-<p>Während der Ausführung des Befehls wird im Verzeichnis <samp class="codeph">&lt;install_pack_dir&gt;/domains/bes_domain</samp> ein Unterverzeichnis <samp class="codeph">/tmp</samp> angelegt, in dem das aktualisierte Archiv <samp class="codeph">oscm.ear</samp> gespeichert wird.</p>
-</li>
-
-                                        <li>Installieren Sie die Datei <samp class="codeph">oscm-portal.war</samp> in der Domäne <samp class="codeph">bes-domain</samp>.</li>
-
-                                        <li>Starten Sie die Domäne <samp class="codeph">bes-domain</samp> neu.</li>
-
-                                </ol>
-
-                        </div>
-</div>
-
-                <div class="section"><h4 class="sectiontitle">SSO_STS_URL</h4>Obligatorisch, wenn die Plattform als SAML Service Provider installiert wird. Gibt die URL zum Service Endpoint des STS (Security Token System) an.<p>Erforderlich für die STS-Kommunikation.</p>
-<p>Aus Sicherheitsgründen wird empfohlen, das HTTPS-Protokoll zu verwenden.</p>
-<p>Syntax: <samp class="codeph">https://&lt;host&gt;:&lt;port&gt;/&lt;ServiceEndpoint&gt;</samp></p>
-<p>Diese Einstellung wird bei der Installation ausgewertet und kann im Administrationsportal nicht geändert werden. Gehen Sie wie folgt vor, wenn Sie die Einstelllung ändern müssen:</p>
-<div class="p">
-                                <ol>
-                                        <li>Stoppen Sie die Domäne <samp class="codeph">bes-domain</samp>.</li>
-
-                                        <li>Bearbeiten Sie die Datei <samp class="codeph">configsettings.properties</samp> und ändern Sie den Wert für die Einstellung <samp class="codeph">SSO_STS_URL</samp>.</li>
-
-                                        <li>Führen Sie die Datei <samp class="codeph">build-glassfish.xml</samp> im Verzeichnis <samp class="codeph">&lt;install_pack_dir&gt;/install</samp> wie folgt aus: <div class="p">
-                                                        <pre class="codeblock">&lt;ANT_HOME&gt;/bin/ant 
-   -DpatchProps.path=../domains/bes_domain/installer 
-   -f build-glassfish.xml patchAndRedeployApplication</pre>
-
-                                                </div>
-<p>Ersetzen Sie <samp class="codeph">&lt;ANT_HOME&gt;</samp> durch das Verzeichnis, in dem Apache Ant installiert ist.</p>
-<div class="note"><span class="notetitle">Hinweis:</span> Abhängig vom Betriebssystem müssen Sie den Ausdruck <samp class="codeph">-DpatchProps.path=&lt;Pfad&gt;</samp> in doppelte oder einfache Anführungszeichen setzen.  </div>
-<p>Der geänderte Wert wird aus der Datei <samp class="codeph"><samp class="codeph">configsettings.properties</samp></samp> ausgelesen und in die WSIT-Dateien im Archiv <samp class="codeph">oscm.ear</samp> geschrieben. Das aktualisierte Archiv wird in <samp class="codeph">bes-domain</samp> neu installiert. </p>
-<p>Während der Ausführung des Befehls wird im Verzeichnis <samp class="codeph">&lt;install_pack_dir&gt;/domains/bes_domain</samp> ein Unterverzeichnis <samp class="codeph">/tmp</samp> angelegt, in dem das aktualisierte Archiv <samp class="codeph">oscm.ear</samp> gespeichert wird.</p>
-</li>
-
-                                        <li>Installieren Sie die Datei <samp class="codeph">oscm-portal.war</samp> in der Domäne <samp class="codeph">bes-domain</samp>.</li>
-
-                                        <li>Starten Sie die Domäne <samp class="codeph">bes-domain</samp> neu.</li>
-
-                                </ol>
-
-                        </div>
-</div>
-
-                <div class="section"><h4 class="sectiontitle">SUPPLIER_SETS_INVOICE_AS_DEFAULT</h4>Optional. Definiert, ob Zahlung auf Rechnung als Zahlungsart für alle Kunden voreingestellt sein soll. <p>Erlaubte Werte: <samp class="codeph">true</samp>, <samp class="codeph">false</samp></p>
-<p>Voreinstellung: <samp class="codeph">false</samp>
-                        </p>
-</div>
-
-                <div class="section"><h4 class="sectiontitle">TAGGING_MAX_TAGS</h4>Obligatorisch. Maximale Anzahl der Suchwörter, die für die Tag Cloud definiert werden dürfen. <p>Die Tag Cloud ist der Bereich eines Marktplatzes, in dem definierte Suchwörter angezeigt werden. Je öfter ein Suchwort für Services definiert ist, desto größer werden die Buchstaben des Suchworts angezeigt. Kunden können die Wörter nutzen, um Services zu suchen. Voraussetzung dafür ist, dass die Anzeige der Tag Cloud vom Marktplatzeigentümer eingeschaltet wurde.</p>
-<p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">0</samp> und <samp class="codeph">2147483647</samp></p>
-<p>Voreinstellung: <samp class="codeph">20</samp>
-                        </p>
-</div>
-
-                <div class="section"><h4 class="sectiontitle">TAGGING_MIN_SCORE</h4>Obligatorisch. Mindestanzahl, die ein Suchwort für Services angegeben werden muss, damit es in der Tag Cloud angezeigt werden.<p>Die Tag Cloud ist der Bereich eines Marktplatzes, in dem definierte Suchwörter angezeigt werden. Je öfter ein Suchwort für Services definiert ist, desto größer werden die Buchstaben des Suchworts angezeigt. Kunden können die Wörter nutzen, um Services zu suchen. Voraussetzung dafür ist, dass die Anzeige der Tag Cloud vom Marktplatzeigentümer eingeschaltet wurde.</p>
-<p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">1</samp> und <samp class="codeph">2147483647</samp></p>
-<p>Voreinstellung: <samp class="codeph">1</samp>. Dies bedeutet, dass ein Suchwort mindestens einmal für einen Service definiert worden sein muss, damit es in der Tag Cloud angezeigt wird.</p>
-</div>
-
-                <div class="section"><h4 class="sectiontitle">TIME_ZONE_ID</h4>Optional. Zeitzone für die Anzeige.<p>Erlaubte Werte: Alle von Java unterstützten Zeitzonen. Sie können eine Abkürzung angeben (z.B. <samp class="codeph">PST</samp>), einen vollständigen Namen (z.B. <samp class="codeph">America/Los_Angeles</samp>) oder eine ID (z.B. <samp class="codeph">GMT-8:00</samp>). Ausführliche Informationen erhalten Sie in der Java-Klasse <samp class="codeph">java.util.TimeZone</samp>.</p>
-<p>Voreinstellung: <samp class="codeph">GMT</samp></p>
-</div>
-
-                <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_BILLING_OFFSET</h4>Optional. Offset-Wert in Millisekunden für den Timer, der die Neuberechnung von Nutzungsgebühren (Kundenrechnungsdaten) und Umsatzbeteiligungen startet. Das Intervall für diesen Timer ist 1 Tag und kann nicht geändert werden. Wenn kein Offset-Wert definiert ist, wird der Standwert von 4 Tagen verwendet.<p>Die Kundenrechnungsdaten werden für einen Zeitraum von einem Monat berechnet (Abrechnungszeitraum). Serviceanbieter und Wiederverkäufer können festlegen, wann ihr Abrechnungszeitraum anfangen soll. Die Umsatzbeteiligungen werden immer für den vorangegangenen Kalendermonat am ersten Tag des darauffolgenden Monats berechnet.</p>
-<p>Der Offset-Wert für diesen Timer definiert folgendes:</p>
-<div class="p">
-                                <ul>
-                                        <li>Anzahl an Tagen, nach denen die Neuberechnung der Nutzungsgebühren und Umsatzbeteiligungen gestartet wird.</li>
-
-                                        <li>Uhrzeit, wann die Neuberechnung am aktuellen Tag ausgeführt wird.</li>
-
-                                </ul>
-
-                        </div>
-<p>Beispiel:</p>
-<p>Ein Serviceanbieter legt den 10. eines Monats als Startdatum für den Abrechnungszeitraum fest. Der Offset-Wert ist auf 4 Tage und 4 Stunden festgelegt. Die Neuberechnung der Kundenrechnungsdaten für den abgelaufenen Abrechnungszeitraum startet am 14. des Folgemonats um 04:00:00.000 Uhr. Die Umsatzbeteiligungen werden am 5. des Folgemonats um 04:00:00.000 Uhr neu berechnet. Ob das Ende eines Abrechnungszeitraums eines Serviceanbieters erreicht ist, wird täglich um 04:00:00.000 Uhr geprüft.</p>
-<p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">0</samp> und <samp class="codeph">2419200000</samp> (28 Tage)</p>
-<p>Voreinstellung: <samp class="codeph">345600000</samp> (4 Tage)</p>
-</div>
-
-                <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_DISCOUNT_END_NOTIFICATION_OFFSET</h4>Optional. Offset-Wert in Millisekunden für den Timer, der Rabatte aller Organisationen aufhebt. Der Wert des Timers ist ein Tag und kann nicht geändert werden.<p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">0</samp> und <samp class="codeph">9223372036854775807</samp></p>
-<p>Voreinstellung: <samp class="codeph">0</samp></p>
-</div>
-
-                <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_INACTIVE_ON_BEHALF_USERS</h4>Optional. Intervall in Millisekunden, in dem das System auf nicht mehr existierende Benutzer überprüft wird, die im Namen einer anderen Organisation handelten. Der Wert 0 bedeutet, dass der Timer nicht aktiv ist.<p>Für einen technischen Service kann definiert sein, dass eine Organisation im Namen einer anderen Organisation handeln darf (<samp class="codeph">allowingOnBehalfActing</samp>). Die Organisation muss Kunde der anderen Organisation sein. Diese Organisation muss wiederum sowohl die Rolle Hersteller als auch Serviceanbieter haben. Zusätzlich muss die Kundenorganisation der anderen Organisation die Berechtigung erteilt haben, sich in ihrem Namen am System anzumelden. Dies wird durch das Abonnieren eines Service erreicht, für den beim zugrunde liegenden technischen Service das Merkmal <samp class="codeph">allowingOnBehalfActing</samp> auf <samp class="codeph">true</samp> gesetzt ist.</p>
-<p>Wenn eine Organisation im Namen einer anderen Organisation handelt, wird ein künstlicher Benutzername erzeugt.</p>
-<p>Es kann erforderlich sein, die Plattform-Datenbank von Zeit zu Zeit zu bereinigen und Benutzer, die nicht mehr existieren, zu löschen. Es kann nicht sichergestellt werden, dass der technische Service selbst diese Benutzer löscht. </p>
-<p>Erlaubte Werte: <samp class="codeph">0</samp> sowie beliebiger Wert zwischen <samp class="codeph">10000</samp> (10 Sekunden) und <samp class="codeph">9223372036854775807</samp></p>
-<p>Voreinstellung: <samp class="codeph">0</samp></p>
-</div>
-
-                <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_INACTIVE_ON_BEHALF_USERS_OFFSET</h4>Optional. Offset-Wert in Millisekunden für den Timer, der inaktive Benutzer löscht, die im Namen einer anderen Organisation handelten.<p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">0</samp> und <samp class="codeph">9223372036854775807</samp></p>
-<p>Voreinstellung: <samp class="codeph">0</samp></p>
-</div>
-
-                <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_ORGANIZATION</h4>Optional. Intervall in Millisekunden, in dem organisationsbezogene Aufgaben gestartet werden. Der Wert 0 bedeutet, dass der Timer nicht aktiv ist. <p>Erlaubte Werte: <samp class="codeph">0</samp> sowie beliebiger Wert zwischen <samp class="codeph">10000</samp> (10 Sekunden) und <samp class="codeph">9223372036854775807</samp></p>
-<p>Voreinstellung: <samp class="codeph">0</samp></p>
-</div>
-
-                <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_ORGANIZATION_OFFSET</h4>Optional. Offset-Wert in Millisekunden für den Timer, der organisationsbezogene Aufgaben startet.<p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">0</samp> und <samp class="codeph">9223372036854775807</samp></p>
-<p>Voreinstellung: <samp class="codeph">0</samp></p>
-</div>
-
-                <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_SUBSCRIPTION_EXPIRATION</h4>Optional. Intervall in Millisekunden, in dem das System auf abgelaufene Abonnements überprüft wird. Der Timer kann nicht deaktiviert werden, d.h., der Wert kann nicht auf 0 gesetzt werden. <p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">10000</samp> (10 Sekunden) und <samp class="codeph">9223372036854775807</samp></p>
-<p>Voreinstellung: <samp class="codeph">86400000</samp> (1 Tag)</p>
-</div>
-
-                <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_SUBSCRIPTION_EXPIRATION_OFFSET</h4>Optional. Offset-Wert in Millisekunden für den Timer, der das System auf abgelaufene Abonnements überprüft.<p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">0</samp> und <samp class="codeph">9223372036854775807</samp></p>
-<p>Voreinstellung: <samp class="codeph">0</samp></p>
-</div>
-
-                <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_TENANT_PROVISIONING_TIMEOUT</h4>Optional. Intervall in Millisekunden, in dem das System auf Abonnements überprüft wird, die auf ihre Aktivierung warten. Der Wert 0 bedeutet, dass der Timer nicht aktiv ist. <p>Erlaubte Werte: <samp class="codeph">0</samp> sowie beliebiger Wert zwischen <samp class="codeph">10000</samp> (10 Sekunden) und <samp class="codeph">9223372036854775807</samp></p>
-<p>Voreinstellung: <samp class="codeph">0</samp></p>
-</div>
-
-                <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_TENANT_PROVISIONING_TIMEOUT_OFFSET</h4>Optional. Offset-Wert in Millisekunden für den Timer, der das System auf Abonnements überprüft, die auf ihre Aktivierung warten.<p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">0</samp> und <samp class="codeph">9223372036854775807</samp></p>
-<p>Voreinstellung: <samp class="codeph">0</samp></p>
-</div>
-
-                <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_USER_COUNT</h4>
-                        
-                        <p>Obligatorisch. Intervall in Millisekunden, in dem das System auf die Anzahl registrierter Benutzer überprüft wird. Der Timer kann nicht deaktiviert werden, d.h., der Wert kann nicht auf 0 gesetzt werden.</p>
-
-                        <p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">1</samp> und <samp class="codeph">9223372036854775807</samp></p>
-
-                        <p>Default: <samp class="codeph">43200000</samp> (12 Stunden)</p>
-
-                </div>
-
-                <div class="section"><h4 class="sectiontitle">WS_TIMEOUT</h4>Obligatorisch. Zeitspanne in Millisekunden, während der gewartet wird, dass Aufrufe eines Web-Service in einem externen System ausgeführt werden. Nach Ablauf dieser Zeitspanne gibt JAX-WS eine Timeout-Meldung aus. <p>Ein Aufruf eines Web-Service in einem externen System ist ein Aufruf durch die Plattform. Ein typisches Beispiel ist der Aufruf der Methode <samp class="codeph">createUsers</samp> im <samp class="codeph">ProvisioningService</samp> einer Anwendung. Wird der Timeout erreicht, bevor der Aufruf einen Rückgabewert liefert, wird die Operation abgebrochen und eine Exception ausgegeben. </p>
-<p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">1</samp> und <samp class="codeph">9223372036854775807</samp></p>
-<p>Voreinstellung: <samp class="codeph">30000</samp> (30 Sekunden)</p>
-<div class="p">
-                                <div class="note"><span class="notetitle">Hinweis:</span> Achten Sie darauf, dass die Timeout-Einstellungen im GlassFish Application Server nicht mit den Timeout-Einstellungen der Plattform in Konflikt stehen oder diese überschreiben. </div>
-
-                        </div>
-</div>
+                <p>この設定を変更した場合、<span>プラットフォーム</span>を再起動する必要があります。</p>
 
         </div>
+
+        <div class="section"><h4 class="sectiontitle">SSO_IDP_SAML_ASSERTION_ISSUER_ID</h4><span>プラットフォーム</span>をSAML_SP認証モードでインストールする場合は必須。 <p>IdPシステムのエンティティID。本IDはIdPごとに一意であり、システム運用管理者とIdP管理者間で共有する必要があります。本IDは利用者が登録されているIdPシステムから認証情報が返答されていることを確認するために使用します。</p>
+
+            <p>IdP管理者は本IDをIdPシステム内のフェデレーションメタデータから取得することができます。</p>
+
+            <strong>例</strong>:<p>OpenAMサーバーでは、フェデレーションメタデータをWebブラウザから以下のように取得することができます: </p>
+
+            <p><samp class="codeph">https://&lt;OpenAM_server&gt;/openam/saml2/jsp/exportmetadata.jsp?entityid=</samp></p>
+
+            <p>ADFSサーバーでは以下のファイルを確認することでフェデレーションメタデータを取得することができます: </p>
+
+            <p><samp class="codeph">http://&lt;ADFShost&gt;/FederationMetadata/2007-06/FederationMetadata.xml</samp></p>
+
+            <p>XMLファイル内で発行者ID(issuer ID)は<samp class="codeph">entityID</samp>として記載されています。 例; </p>
+
+            <p><samp class="codeph">entityID="http://example.adfs.com/adfs/services/trust"</samp>
+            </p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">SSO_IDP_TRUSTSTORE</h4><span>プラットフォーム</span>をSAML_SP認証モードでインストールする場合は必須。IdPの公開鍵証明書を保持しているトラストストアのファイルへのパスとファイル名。 <p>WebブラウザのSSOのために必要です。</p>
+
+            <p>デフォルト： <samp class="codeph">&lt;path&gt;/cacerts.jks</samp></p>
+
+            <p>ほかのIdPシステム、例えばOpenAM、Cloudminder、またはActive Directoryはインストールされ、利用される次第、この設定を変更する必要があるかもしれません。この設定を変更した場合、<span>プラットフォーム</span>を再起動する必要があります。</p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">SSO_IDP_TRUSTSTORE_PASSWORD</h4><span>プラットフォーム</span>をSAML_SP認証モードでインストールする場合は必須。IdPの公開鍵証明書を保持しているトラストストアのパスワード。
+                <p>WebブラウザのSSOのために必要です。</p>
+
+                <p>GlassFishのデフォルトパスワード： <samp class="codeph">changeit</samp></p>
+
+                <p>パスワードは大文字小文字を区別します。またIdPの出力と一致している必要があります。</p>
+
+                <p>この設定を変更した場合、<span>プラットフォーム</span>を再起動する必要があります。</p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">SSO_IDP_URL</h4><span>プラットフォーム</span>をSAML_SP認証モードでインストールする場合は必須。IdPサービスエンドポイントのためのSAML転送先URL。
+                <p>WebブラウザのSSOのために必要です。</p>
+
+                <p>セキュリティ上および機密性の理由から、HTTPSプロトコルを利用することを推奨します。</p>
+
+                <p>指定形式： <samp class="codeph">https://&lt;ホスト&gt;:&lt;ポート&gt;/&lt;転送先サービスエンドポイント&gt;</samp></p>
+
+                <p>この設定を変更した場合、<span>プラットフォーム</span>を再起動する必要があります。</p>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">SSO_ISSUER_ID</h4><span>プラットフォーム</span>をSAML_SP認証モードでインストールする場合は必須。<span>プラットフォーム</span>を識別する一意な識別子。 IdPは、<span>プラットフォーム</span>からのSAML認証要求を識別するのにこのIDを使います。 <p>WebブラウザのSSOのために必要です。</p>
+
+            <p><span>プラットフォーム</span>とIdPの間で情報の交換が一度でもおこなわれた後にこの設定を変更する場合は、<span>プラットフォーム</span>とIdPの両方を変更する必要があります。IdPの運用管理者に新しいメタデータ交換ファイルを送付する必要がある場合があります。</p>
+
+            <p>デフォルト： <samp class="codeph">CT_MG</samp></p>
+
+            <p>この設定を変更した場合、<span>プラットフォーム</span>を再起動する必要があります。</p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">SSO_LOGOUT_URL</h4>
+           
+          
+          <span>プラットフォーム</span>にSAML_SP認証モードをインストールしシングルログアウトを使用したい場合は必須。
+          <p>IdPシステムのシングルログアウトサービスエンドポイントURL。
+            
+            <span>プラットフォーム</span>からのログアウト・セッション無効化リクエストがこのアドレスに送られます。</p>
+
+          <p>ブラウザのSSOに必要です。</p>
+
+          <p>セキュリティ上および機密性保持の理由からHTTPSプロトコルを使用することを推奨します。</p>
+
+          <p>指定形式: <samp class="codeph">https://&lt;ホスト&gt;:&lt;ポート番号&gt;/&lt;ログアウトサービスエンドポイント&gt;</samp></p>
+
+          <p>この設定を変更した場合、
+            
+            <span>プラットフォーム</span>を再起動する必要があります。</p>
+
+            <div class="note"><span class="notetitle">注:</span> IdPシステムにおいては、ログアウトリクエストに対するレスポンスが送られ、利用者がログアウトによってリダイレクトされるURLを指定する必要があります。この設定には
+             　　　　　　　
+             　　　　　　　<span>プラットフォーム</span>のデフォルトサービスポータルを使用することを推奨します:　
+             <samp class="codeph">https://&lt;host&gt;:&lt;port&gt;/oscm-portal/marketplace/index.jsf</samp>。問題が発生した場合、このページから<samp class="codeph">MP_ERROR_REDIRECT_HTTPS</samp>に指定したページに利用者をリダイレクトすることができます。ただし、この設定はテナントごとではなく、プラットフォーム全体に有効になることに注意してください。
+            </div>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">SSO_SIGNING_KEY_ALIAS</h4>
+          リクエストが
+          
+          <span>プラットフォーム</span>によって署名される場合は必須。署名リクエストに使用される
+          
+          <span>プラットフォーム</span>の秘密鍵のエイリアスです。<p>リクエストは次の場合に署名されます:</p>
+
+            <ul>
+              <li class="liexpand">購入済みサービスのカスタムタブにおけるウェブページ、またはアプリケーションとの通信</li>
+
+              <li class="liexpand">
+                
+                <span>プラットフォーム</span>がSAML_SP認証モードでインストールされ、シングルログアウトが設定され、かつMicrosoft Active Directory Federation Servicesのように、IdPシステムのシングルログアウトサービスが認証リクエストを必要としている場合のログアウトリクエスト。
+              </li>
+
+            </ul>
+
+            <p>ウェブページ、ウェブアプリケーション、またはIdPシステムに使用されるアプリケーションサーバーは、署名の検証のためトラストストアに</p>
+
+                
+                <span>プラットフォーム</span>の証明書が必要です。<p>デフォルト: <samp class="codeph">s1as</samp></p>
+
+                <p>この設定を変更した場合
+                
+                <span>プラットフォーム</span>を再起動する必要があります。
+                </p>
+
+          
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">SSO_SIGNING_KEYSTORE</h4>
+          リクエストが
+          
+          <span>プラットフォーム</span>によって署名される場合は必須。
+          <p><samp class="codeph">SSO_SIGNING_KEY_ALIAS</samp>に指定された
+            
+            <span>プラットフォーム</span>の秘密鍵が存在するアプリケーションサーバのキーストアのパス。</p>
+
+            <p>デフォルト: <samp class="codeph">./keystore.jks</samp>
+            </p>
+
+          <p>この設定を変更した場合 
+            
+            <span>プラットフォーム</span>を再起動する必要があります。</p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">SSO_SIGNING_KEYSTORE_PASS</h4>
+          リクエストが 
+          
+          <span>プラットフォーム</span>によって署名される場合は必須。
+          <p><samp class="codeph">SSO_SIGNING_KEYSTORE</samp>に指定されたキーストアにアクセスするためのパスワード。</p>
+
+          <p>デフォルト: <samp class="codeph">changeit</samp></p>
+
+          <p>この設定を変更した場合
+            
+            <span>プラットフォーム</span>を再起動する必要があります。</p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">SSO_STS_ENCKEY_LEN</h4><span>プラットフォーム</span>をSAML_SP認証モードでインストールする場合は必須。IdPで使われている暗号化キーの長さ。
+                <p>STS通信のために必要です。</p>
+
+                <p>デフォルト： <samp class="codeph">128</samp></p>
+
+                <p>この設定はインストールプロパティであり、管理ポータルからは変更できません。暗号化キーの長さを変更する必要がある場合は、以下の手順を実施します： </p>
+
+                <div class="p">
+                  <ol>
+                    <li><samp class="codeph">bes-domain</samp> ドメインを停止します。</li>
+
+                    <li>ファイル <samp class="codeph">configsettings.properties</samp> を編集し、<samp class="codeph">SSO_STS_ENCKEY_LEN</samp> の値を必要に応じて変更します。</li>
+
+                    <li><samp class="codeph">&lt;install_pack_dir&gt;/install</samp> にあるファイル <samp class="codeph">build-glassfish.xml</samp> を以下のように実行：  
+                        <div class="p"><pre class="codeblock">&lt;ANT_HOME&gt;/bin/ant -DpatchProps.path=../domains/bes_domain/installer 
+   -f build-glassfish.xml patchAndRedeployApplication</pre>
+
+                        </div>
+<samp class="codeph">&lt;ANT_HOME&gt;</samp>はApache Antのインストールディレクトリです。
+                        <div class="p"><div class="note"><span class="notetitle">注:</span> オペレーティングシステムによっては、<samp class="codeph">-DpatchProps.path=&lt;path&gt;</samp> コマンドをダブルクォーテーションまたはシングルクォーテーションで囲む必要がある場合があります。</div>
+変更した設定のパラメーター値は、ファイル <samp class="codeph">configsettings.properties</samp> から読み込まれ、<samp class="codeph">oscm.ear</samp> アーカイブに含まれるWSITファイルに書き込まれます。更新されたアーカイブは <samp class="codeph">bes-domain</samp> ドメインに再配備されます。</div>
+
+                        <p>上記コマンドの実行中にサブディレクトリ <samp class="codeph">/tmp</samp> が作成され、更新された <samp class="codeph">oscm.ear</samp> アーカイブが保存されます。アーカイブの再配備に失敗した場合、<samp class="codeph">/tmp/oscm.ear</samp> アーカイブを手動で再配備することができます。</p>
+</li>
+
+                    <li>ファイル <samp class="codeph">oscm-portal.war</samp> を <samp class="codeph">bes-domain</samp> ドメインに再配備します。</li>
+
+                    <li><samp class="codeph">bes-domain</samp> ドメインを再起動します。</li>
+
+                  </ol>
+
+                </div>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">SSO_STS_METADATA_URL</h4><span>プラットフォーム</span>をSAML_SP認証モードでインストールする場合は必須。STSのMEXアドレス (Issuer Metadata Exchange) のURL。
+                <p>STS通信のために必要です。</p>
+
+                <p>セキュリティ上および機密性の理由から、HTTPSプロトコルを使うことを推奨します。</p>
+
+                <p>指定形式： <samp class="codeph">https://&lt;ホスト&gt;:&lt;ポート&gt;/&lt;MEXアドレス&gt;</samp></p>
+
+                <p>この設定はインストールプロパティであり、管理ポータルからは変更できません。URLを変更する必要がある場合は、以下の手順を実施します: </p>
+
+                <div class="p">
+                  <ol>
+                    <li><samp class="codeph">bes-domain</samp> ドメインを停止します。</li>
+
+                    <li>ファイル <samp class="codeph">configsettings.properties</samp> を編集し、<samp class="codeph">SSO_STS_METADATA_URL</samp> の値を必要に応じて変更します。</li>
+
+                    <li><samp class="codeph">&lt;install_pack_dir&gt;/oscm-setup</samp> にあるファイル <samp class="codeph">build-glassfish.xml</samp> を以下のように実行：  
+                        <div class="p"><pre class="codeblock">&lt;ANT_HOME&gt;/bin/ant 
+   -DpatchProps.path=../domains/bes_domain/installer 
+   -f build-glassfish.xml patchAndRedeployApplication</pre>
+</div>
+
+                        <p><samp class="codeph">&lt;ANT_HOME&gt;</samp>はApache Antのインストールディレクトリです。</p>
+
+                        <p>変更した設定のパラメーター値は、ファイル <samp class="codeph">configsettings.properties</samp> から読み込まれ、<samp class="codeph">oscm.ear</samp> アーカイブに含まれるWSITファイルに書き込まれます。更新されたアーカイブは <samp class="codeph">bes-domain</samp> ドメインに再配備されます。</p>
+
+                        <p>上記コマンドの実行中にサブディレクトリ <samp class="codeph">/tmp</samp> が作成され、更新された <samp class="codeph">oscm.ear</samp> アーカイブが保存されます。アーカイブの再配備に失敗した場合、<samp class="codeph">/tmp/oscm.ear</samp> アーカイブを手動で再配備することができます。</p>
+</li>
+
+                    <li>ファイル <samp class="codeph">oscm-portal.war</samp> を <samp class="codeph">bes-domain</samp> ドメインに再配備します。</li>
+
+                    <li><samp class="codeph">bes-domain</samp> ドメインを再起動します。</li>
+
+                  </ol>
+
+                </div>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">SSO_STS_URL</h4><span>プラットフォーム</span>をSAML_SP認証モードでインストールする場合は必須。STSエンドポイントのURL。
+                <p>セキュリティ上および機密性の理由から、HTTPSプロトコルを使うことを推奨します。</p>
+
+                <p>指定形式： <samp class="codeph">https://&lt;ホスト&gt;:&lt;ポート&gt;/&lt;サービスエンドポイント&gt;</samp></p>
+
+                <p>この設定はインストールプロパティです。管理ポータルで変更することはできません。URLを変更する必要がある場合は、以下の手順を実施します: </p>
+
+                  <ol>
+                    <li><samp class="codeph">bes-domain</samp> ドメインを停止します。</li>
+
+                    <li>ファイル <samp class="codeph">configsettings.properties</samp> を編集し、<samp class="codeph">SSO_STS_URL</samp> の値を必要に応じて変更します。</li>
+
+                    <li><samp class="codeph">&lt;install_pack_dir&gt;/install</samp> にあるファイル <samp class="codeph">build-glassfish.xml</samp> を以下のように実行：  
+                        <div class="p"><pre class="codeblock">&lt;ANT_HOME&gt;/bin/ant 
+   -DpatchProps.path=../domains/bes_domain/installer 
+   -f build-glassfish.xml patchAndRedeployApplication</pre>
+</div>
+
+                        <p><samp class="codeph">&lt;ANT_HOME&gt;</samp>はApache Antのインストールディレクトリです。</p>
+
+                        <p>変更した設定のパラメーター値は、ファイル <samp class="codeph">configsettings.properties</samp> から読み込まれ、<samp class="codeph">oscm.ear</samp> アーカイブに含まれるWSITファイルに書き込まれます。更新されたアーカイブは <samp class="codeph">bes-domain</samp> ドメインに再配備されます。</p>
+
+                        <p>上記コマンドの実行中にサブディレクトリ <samp class="codeph">/tmp</samp> が作成され、更新された <samp class="codeph">oscm.ear</samp> アーカイブが保存されます。アーカイブの再配備に失敗した場合、<samp class="codeph">/tmp/oscm.ear</samp> アーカイブを手動で再配備することができます。</p>
+</li>
+
+                    <li>ファイル <samp class="codeph">oscm-portal.war</samp> を <samp class="codeph">bes-domain</samp> ドメインに再配備します。</li>
+
+                    <li><samp class="codeph">bes-domain</samp> ドメインを再起動します。</li>
+
+                  </ol>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">SUPPLIER_SETS_INVOICE_AS_DEFAULT</h4>オプション項目。請求書がすべてのサービス利用部門のデフォルトの支払種別として使用されるかどうかを指定します。 <p>設定可能な値： <samp class="codeph">true</samp>, <samp class="codeph">false</samp></p>
+<p>デフォルト： <samp class="codeph">false</samp></p>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">TAGGING_MAX_TAGS</h4>必須項目。タグクラウドを構成するタグの最大数。 <p>タグクラウドは、定義された検索用語（タグ）を含むサービスポータルの領域です。サービスでタグを使う頻度が多いほど、タグの文字が大きく表示されます。サービスポータル運用者によってタグクラウドがサービスポータルで有効になっている場合に、サービス利用部門はタグを使用してサービスを検索することができます。</p>
+<p>設定可能な値： <samp class="codeph">0</samp>～<samp class="codeph">2147483647</samp>の範囲の値を指定します。</p>
+<p>デフォルト： <samp class="codeph">20</samp>
+            </p>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">TAGGING_MIN_SCORE</h4>必須項目。タグをタグクラウドで表示させるために必要な最少利用回数。 <p>タグクラウドは、定義された検索用語（タグ）を含むサービスポータルの領域です。サービスでタグを使う頻度が多いほど、タグの文字が大きく表示されます。対応するサービスポータル運用者によってタグクラウドがサービスポータルで有効になっている場合に、サービス利用部門はタグを使用してサービスを検索することができます。</p>
+<p>設定可能な値： <samp class="codeph">1</samp>～<samp class="codeph">2147483647</samp>の範囲の値を指定します。</p>
+<p>デフォルト： <samp class="codeph">1</samp>、タグクラウドで表示するにはタグが最低1回使用される必要があります。 </p>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">TIME_ZONE_ID</h4>オプション項目。表示に使用する時間帯。 <p>設定可能な値：Javaではすべての時間帯がサポートされます。これは<samp class="codeph">PST</samp>のような略称、<samp class="codeph">America/Los_Angeles</samp>のようなフルネーム、<samp class="codeph">GMT-8:00</samp>のようなカスタムIDで指定することができます。使用できるIDの一覧については、<samp class="codeph">java.util.TimeZone</samp>を参照してください。</p>
+<p>デフォルト： <samp class="codeph">GMT</samp></p>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_BILLING_OFFSET</h4>オプション項目。購入済サービスの利用料金（サービス利用部門請求データ）または売上配分用請求データを計算する請求データ作成処理のためのタイマーのオフセット。値はミリ秒単位です。このタイマーの間隔は常に１日間で変更できません。オフセットが設定去れていない場合、デフォルトの値である4日間が適用されます。<p>サービス利用部門請求データは一カ月の期間（請求期間）に対して計算されます。それぞれのサービス提供部門およびサービス提供代行部門は異なる請求期間の開始日を設定できます。売上配分用請求データは毎月1日に過去の月に対して計算されます。</p>
+<p>請求データ作成処理のためのオフセットの設定は以下のとおりです。: </p>
+<div class="p">
+                <ul>
+                    <li>サービス利用部門請求書を計算する日および売上配分用請求データを計算する日を遅らせる日数。</li>
+
+                    <li>毎日の請求データ作成処理の開始を遅らせる時間。</li>
+
+                </ul>
+
+            </div>
+<p>例:</p>
+<p>サービス提供部門が請求期間の開始日を10日に設定し、オフセットに4日と4時間を設定した場合、そのサービス提供部門に関する請求データ作成処理はそれ以降の月の14日の4時に開始されます。売上配分用請求データは4日の4時に計算されます。毎日の請求期間が終了したかどうかの確認は毎日の4時におこなわれます。</p>
+<p>設定可能な値： <samp class="codeph">0</samp>～<samp class="codeph">2419200000</samp>(28日間)の範囲の値を指定します。</p>
+<p>デフォルト： <samp class="codeph">345600000</samp>(4日間)</p>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_DISCOUNT_END_NOTIFICATION_OFFSET</h4>オプション項目。すべての組織に対する割引を解除するタイマーのオフセット。請求処理間隔は1日で、変更できません。オフセットはミリ秒単位で、1月1日の00:00を基準とします。<p>設定可能な値： <samp class="codeph">0</samp>～<samp class="codeph">9223372036854775807</samp>の範囲の値を指定します。</p>
+<p>デフォルト： <samp class="codeph">0</samp></p>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_INACTIVE_ON_BEHALF_USERS</h4>オプション項目。別の組織の代理をおこなっている実在しない利用者の確認が実行される時間間隔。値はミリ秒単位です。0は、このタイマーが無効なことを示します。<p>技術サービス定義には、組織が別の組織名で行動することを示すためのフラグ（<samp class="codeph">allowingOnBehalfActing</samp>)を含めることができます。指定された組織は、別の組織のサービス利用部門でなければなりません。これは技術サービス開発部門およびサービス提供部門ロールを両方有している必要があることを意味します。さらに、サービス利用部門は、別の組織が自らログインすることを許可している必要があります。これは、技術サービスが<samp class="codeph">allowingOnBehalfActing</samp>フラグを<samp class="codeph">true</samp>に設定している購入済サービスによって実現できます。</p>
+<p>組織が別の組織名で行動する場合、疑似利用者IDが生成されます。</p>
+<p>技術サービス自身がこのような利用者を常に削除するようにはできないため、購入済サービスに存在しなくなった利用者を定期的に削除して<span>プラットフォーム</span>のデータベースを整理する必要があります。</p>
+<p>設定可能な値： <samp class="codeph">0</samp>、及び<samp class="codeph">10000</samp>（10秒）～<samp class="codeph">9223372036854775807</samp>の範囲の値を指定します。</p>
+<p>デフォルト： <samp class="codeph">0</samp></p>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_INACTIVE_ON_BEHALF_USERS_OFFSET</h4>オプション項目。非アクティブな「代理の」利用者を削除するタイマーのオフセット。オフセットはミリ秒単位です。<p>設定可能な値： <samp class="codeph">0</samp>～<samp class="codeph">9223372036854775807</samp>の範囲の値を指定します。</p>
+<p>デフォルト： <samp class="codeph">0</samp></p>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_ORGANIZATION</h4>オプション項目。組織関連のタスクを実行する時間間隔。値はミリ秒単位です。0は、このタイマーが無効なことを示します。 <p>設定可能な値： <samp class="codeph">0</samp>、及び<samp class="codeph">10000</samp>（10秒）～<samp class="codeph">9223372036854775807</samp>の範囲の値を指定します。</p>
+<p>デフォルト： <samp class="codeph">0</samp></p>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_ORGANIZATION_OFFSET</h4>オプション項目。組織関連の作業のためのタイマーのオフセット。値はミリ秒単位で、1月1日の00:00を基準とします。<p>設定可能な値： <samp class="codeph">0</samp>～<samp class="codeph">9223372036854775807</samp>の範囲の値を指定します。</p>
+<p>デフォルト： <samp class="codeph">0</samp></p>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_SUBSCRIPTION_EXPIRATION</h4>オプション項目。期限切れの購入済サービスの確認が実行される時間間隔。値はミリ秒単位です。このタイマーは無効にはできません（0には設定できません）。 <p>設定可能な値： <samp class="codeph">0</samp>、及び<samp class="codeph">10000</samp>（10秒）～<samp class="codeph">9223372036854775807</samp>の範囲の値を指定します。</p>
+<p>デフォルト： <samp class="codeph">86400000（</samp>1日） </p>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_SUBSCRIPTION_EXPIRATION_OFFSET</h4>オプション項目。購入済サービス期限切れ確認のためのタイマーのオフセット。値はミリ秒単位す。<p>設定可能な値： <samp class="codeph">0</samp>～<samp class="codeph">9223372036854775807</samp>の範囲の値を指定します。</p>
+<p>デフォルト： <samp class="codeph">0</samp></p>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_TENANT_PROVISIONING_TIMEOUT</h4>オプション項目。タイムアウトの購入済サービスの確認が実行される時間間隔。値はミリ秒単位です。0は、このタイマーが無効なことを示します。<p>設定可能な値： <samp class="codeph">0</samp>、及び<samp class="codeph">10000</samp>（10秒）～<samp class="codeph">9223372036854775807</samp>の範囲の値を指定します。</p>
+<p>デフォルト： <samp class="codeph">0</samp></p>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_TENANT_PROVISIONING_TIMEOUT_OFFSET</h4>オプション項目。保留中の購入済サービス確認のためのタイマーのオフセット。値はミリ秒単位です。<p>設定可能な値： <samp class="codeph">0</samp>～<samp class="codeph">9223372036854775807</samp>の範囲の値を指定します。</p>
+<p>デフォルト： <samp class="codeph">0</samp></p>
+</div>
+
+        
+        <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_USER_COUNT</h4>
+            
+            <p>必須項目。プラトフォームで登録された利用者数を確認する時間間隔。値はミリ秒単位です。このタイマーを無効にすることはできません。つまり、0に設定することはできません。</p>
+
+            <p>設定可能な値：<samp class="codeph">1</samp>～<samp class="codeph">9223372036854775807</samp>の範囲の値を指定します。</p>
+
+            <p>デフォルト：<samp class="codeph">43200000</samp>、つまり12時間。</p>
+
+        </div>
+
+            
+
+        <div class="section"><h4 class="sectiontitle">WS_TIMEOUT</h4>必須項目。外部Webサービス呼び出しのタイムアウト時間をミリ秒で指定します。この時間が経過すると、JAX-WSフレームワークによってタイムアウト例外が発生します。<p>外部Webサービス呼び出しは<span>プラットフォーム</span>から実行される呼び出しです。アプリケーションによって実装される<samp class="codeph">ProvisioningService</samp>インターフェースの<samp class="codeph">createUsers</samp>メソッドの呼び出しが典型的な例です。Webサービス呼び出しが戻る前に本タイムアウト時間に達した場合、操作は中止され、例外が発生します。 </p>
+<p>設定可能な値： <samp class="codeph">1</samp>～<samp class="codeph">9223372036854775807</samp>の範囲の値を指定します。</p>
+<p>デフォルト： <samp class="codeph">30000</samp>（30秒） </p>
+<div class="p">
+                <div class="note"><span class="notetitle">注:</span> リクエストタイムアウトなど、GlassFishアプリケーションサーバで設定されるタイムアウトが、
+                    <span>プラットフォーム</span>の構成設定で定義されるタイムアウトと不整合を起こすことがないようにしてください。 </div>
+
+                </div>
+</div>
+
+    </div>
 
 
 </body>
