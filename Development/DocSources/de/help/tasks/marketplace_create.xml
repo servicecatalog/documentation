@@ -9,7 +9,6 @@
       <p>Auf der Seite <uicontrol>Marktplatz anlegen</uicontrol> können Sie einen Marktplatz anlegen, der auf der Plattform betrieben werden soll. </p>
       <p>Beim Anlegen eines Marktplatzes legen Sie dessen Funktionsumfang und Einstellungen fest und geben eine Organisation als Eigentümer an. Dieser Organisation wird automatisch die Rolle Marktplatzeigentümer zugewiesen. Alle Administratoren der Organisation erhalten die Rolle Marktplatz-Manager. Mit dieser Rolle können sie den Marktplatz verwalten und anpassen.</p>
       <p>Die Organisation, die Sie als Marktplatzeigentümer angeben, muss bereits existieren.</p>
-      <!--p>Wenn die Plattform mit der Authentifizierungsart SAML_SP installiert ist, können Sie dem Marktplatz einen Mandanten zuordnen. Der Mandant legt das Identity-Provider-System fest, über welches Benutzer authentifiziert werden, sobald sie auf den Marktplatz zugreifen. </p-->
       <p><b>So legen Sie einen Marktplatz an</b>:</p>
     </context>
     <steps>
@@ -54,10 +53,6 @@
           <p>Die Liste stellt alle auf Ihrer Plattform existierenden Organisationen zur Auswahl.</p>
         </info>
       </step>
-      <!--step>
-        <cmd>Wenn die Plattform mit der Authentifizierungsart SAML_SP installiert ist, wählen Sie den Mandanten des Identity-Provider-Systems, über das Benutzer authentifiziert werden sollen. Wenn Sie das Feld leer lassen, werden die Benutzer beim Zugriff auf den Marktplatz über das bei der Installation angegebene Identity-Provider-System authentifiziert. </cmd>
-        <info>Die Liste stellt alle auf Ihrer Plattform existierenden Mandanten zur Auswahl. </info>
-      </step-->
       <step>
         <cmd>Legen Sie den Marktplatz mit <uicontrol>Speichern</uicontrol> an.</cmd>
       </step>

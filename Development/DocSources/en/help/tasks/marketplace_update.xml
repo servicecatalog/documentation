@@ -11,7 +11,6 @@
                 <ul compact="no">
                     <li>Assign another owner to the marketplace. This can be done by the platform operator.</li>
                     <li>Define revenue shares for the marketplace and the default revenue shares for broker and reseller organizations. Revenue shares can be defined by the platform operator. </li>
-                    <li>Associate another tenant, for example, to reset the system to use the default Identity Provider (IdP). This can be done by the platform operator and is possible only if the system is installed in SAML_SP mode. Be aware that any existing subscriptions to services published on the marketplace can no longer be accessed if you change the tenant association.</li>
                     <li>Provide a different name for the marketplace. This can be done by a marketplace manager of the organization owning the marketplace. </li>
                     <li>Change the marketplace features and settings. This can be done by a marketplace manager of the organization owning the marketplace. </li>
                 </ul>
@@ -60,17 +59,6 @@
                             id="revenueshare"
                             >The values you enter for revenue share percentages are based on agreed conditions between the operator, marketplace owners, suppliers, resellers, and brokers. You as the operator are responsible for setting correct values. It is possible to set the percentages to a total of over 100%. This might be intentional. For example, a supplier who wants to strongly promote a service for a limited period of time may grant a broker or reseller a revenue share of 80%. In addition, the supplier may need to pay 30% of the revenue to the marketplace owner and 10% to the operator. This results in a total revenue share percentage of 120 and thus in a negative revenue for the supplier. </p></li>
                     <li>To save the revenue shares, click <uicontrol>Save</uicontrol>.<p>The shares are applied when the next billing run is started. The individual shares are calculated and output in the billing data.</p><note>Revenue shares are calculated only for services applying the platform's native billing system. Services using an external billing system are not included in the calculation. </note></li>
-                </ol>
-            </p>
-            <p><b>To change or associate a tenant</b> (operators only, and only if the system is installed in SAML_SP mode):</p>
-            <p>
-                <ol compact="no">
-                    <li>From the <uicontrol>Marketplace</uicontrol> list, select the marketplace for which the tenant is to be changed. <p>The list contains all marketplaces that exist on your platform, or in case the <b>Tenant ID</b> field contains an entry, all marketplaces associated with this tenant. </p></li>
-                    <li>Select a tenant with the desired associated IdP against which users accessing the selected marketplace are to be authorized. If you leave this field empty, the default IdP is used.<p>
-                            <note>Authorized seller assignments will be reset on this marketplace. If there are existing subscriptions to services published on the marketplace, they can no longer be accessed. <p>It is recommended to change the tenant association only during the initial configuration of the marketplace. </p>
-                            </note>
-                        </p></li>
-                    <li>To save your changes, click <uicontrol>Save</uicontrol>.</li>
                 </ol>
             </p>
             <p><b>To rename a marketplace</b> (marketplace managers only):</p>
