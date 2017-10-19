@@ -30,9 +30,7 @@
           <li>
             <p id="psp5"
               >Ein Adapter zur Integration des Zahlungsdienstleisters muss als Web-Service implementiert und auf einem Application Server installiert sein. Sie benötigen die URL, die auf die WSDL-Datei dieses Web-Service zeigt. </p>
-            <p>Detaillierte Informationen zur Implementierung eines Adapters zur Integration eines Zahlungsdienstleisters finden Sie in der Dokumentation, die mit der Datei <codeph>
-              <xref format="html" href="https://github.com/servicecatalog/development/releases" scope="external"
-              ><u><i>oscm-integration-psp-pack.zip</i></u></xref></codeph> ausgeliefert wird.</p>
+            <p>Detaillierte Informationen zur Implementierung eines Adapters zur Integration eines Zahlungsdienstleisters finden Sie in der Dokumentation, die mit der Datei <codeph>oscm-integration-psp-pack.zip</codeph> ausgeliefert wird.</p>
           </li>
           <li>
             <p id="psp6"
@@ -54,10 +52,8 @@
         <cmd>Wählen Sie in der Liste <uicontrol>Zahlungsdienstleister</uicontrol> denjenigen, den Sie konfigurieren möchten. </cmd>
         <info>
           <p>Die Liste enthält alle Zahlungsdienstleister, die auf der Plattform registriert sind. </p>
-          <!--p>Bei der Installation des Systems wird Heidelpay als Beispiel für einen Zahlungsdienstleister angelegt. Nach Auswahl von <b>heidelpay</b> wird die Beispielkonfiguration mit allen Parametern angezeigt, die für die Kommunikation mit Heidelpay erforderlich sind. Wenn Sie Heidelpay als Zahlungsdienstleister verwenden möchten, müssen Sie den Adapter zur Integration neu kompilieren und auf dem Application Server installieren und konfigurieren. Die Implementierung des Adapters wird mit der Datei <codeph><xref format="html" href="https://github.com/servicecatalog/development/releases" scope="external"
-              ><u><i>oscm-integration-psp-pack.zip</i></u></xref></codeph> ausgeliefert. </p>
-          <p>Detaillierte Informationen zur Implementierung des Adapters zur Integration finden Sie in der Dokumentation, die mit der Datei <codeph><xref format="html" href="https://github.com/servicecatalog/development/releases" scope="external"
-              ><u><i>oscm-integration-psp-pack.zip</i></u></xref></codeph> ausgeliefert wird.</p-->
+          <!--p>Bei der Installation des Systems wird Heidelpay als Beispiel für einen Zahlungsdienstleister angelegt. Nach Auswahl von <b>heidelpay</b> wird die Beispielkonfiguration mit allen Parametern angezeigt, die für die Kommunikation mit Heidelpay erforderlich sind. Wenn Sie Heidelpay als Zahlungsdienstleister verwenden möchten, müssen Sie den Adapter zur Integration neu kompilieren und auf dem Application Server installieren und konfigurieren. Die Implementierung des Adapters wird mit der Datei <codeph>oscm-integration-psp-pack.zip</codeph> ausgeliefert. </p>
+          <p>Detaillierte Informationen zur Implementierung des Adapters zur Integration finden Sie in der Dokumentation, die mit der Datei <codeph>oscm-integration-psp-pack.zip</codeph> ausgeliefert wird.</p-->
         </info>
       </step>
       <step>

@@ -9,13 +9,18 @@
             <p>The following prerequisites must be fulfilled before you can create and publish services in <ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>:</p>
             <ul>
-                <li>To create technical services for the <ph audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph
-                        audience="vmware">vSphere</ph> integration in <ph
-                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>, you must have access to <ph
-                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                <li>To create technical services for the <ph audience="aws">AWS</ph><ph audience="ror">ROR</ph><ph
+                        audience="os">OpenStack</ph><ph audience="tps5">TPS5</ph><ph audience="vmware"
+                        >vSphere</ph> integration in <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        />, you must have access to <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                         /> as a technology manager. You must be a member of the technology provider organization responsible for the <ph
-                        audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph audience="vmware"
+                        audience="aws">AWS</ph><ph audience="ror">ROR</ph><ph audience="os">OpenStack</ph><ph
+                        audience="tps5">TPS5</ph><ph audience="vmware"
                     >VMware</ph> service controller as specified in the configuration settings for the installation. </li>
+                <li audience="ror"
+                        >In ROR, appropriate templates for virtual platforms (L-Platforms) and images for virtual servers (Virtual Image Pool) must exist, to which the technical services in <ph
+                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> can be mapped. The ROR user specified in the configuration settings for the installation must have the necessary credentials to create and configure virtual platforms and servers based on these templates and images.<p>The ROR integration package includes technical services as samples. In order to use these samples, the virtual platforms in ROR must allow for configuring clusters consisting of up to 6 servers (1 master, up to 5 slaves). The servers must be operable with up to 4 CPUs.</p></li>
                 <li audience="aws"
                         >In AWS, appropriate AMIs for virtual servers must exist, to which the technical services in <ph
                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
@@ -42,14 +47,18 @@
                     <p>The user specified in the configuration settings for the installation must have the necessary credentials to create and configure virtual systems for your organization based on these templates in OpenStack.</p>
                     <p>In FUJITSU Cloud Service K5, the <codeph>cpf_systemowner</codeph> role is required.</p>
                 </li>
+                <li audience="tps5"
+                        >In TPS5, appropriate system templates for virtual platforms and images for virtual servers must exist, to which the technical services in <ph
+                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> can be mapped. The TSP5 user specified in the configuration settings for the installation must have the necessary credentials to create and configure virtual platforms based on these templates and images.</li>
                 <li audience="vmware"
                         >In vSphere, appropriate templates for the provisioning of VMs must exist, to which the technical services in <ph
                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> can be mapped. The vSphere user specified in the configuration settings for the installation must have the necessary permissions to create and configure VMs based on these templates.</li>
-                <li>To create marketable services for the <ph audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph
-                        audience="vmware">vSphere</ph> integration in <ph
-                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>, you must have access to <ph
-                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                <li>To create marketable services for the <ph audience="aws">AWS</ph><ph audience="ror">ROR</ph><ph
+                        audience="os">OpenStack</ph><ph audience="tps5">TPS5</ph><ph audience="vmware"
+                        >vSphere</ph> integration in <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        />, you must have access to <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> as a service manager of an organization with the supplier role. This may be the same organization as the technology provider organization or a different one.</li>
                 <li>To publish your marketable services, you must have access to an appropriate marketplace in <ph
                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> in your service manager role.</li>

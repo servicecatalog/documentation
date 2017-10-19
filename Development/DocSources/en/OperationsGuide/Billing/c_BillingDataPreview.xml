@@ -12,10 +12,17 @@
                                                 conref="../../help/tasks/operator_exportBillingData.xml#task634/PreviewBillingData"> </p>
                                     <p
                                                 conref="../../help/tasks/operator_exportBillingData.xml#task634/PreviewBillingData3"> </p>
-                                    <p><b>To preview billing data:</b>
-                                    </p>
-                                    <p>In the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                                            /> administration portal, choose <b>Billing data preview</b> in the <b>Operation</b> menu. For detailed step-by-step instructions, refer to the online help. </p>
+                                    <p><b>To preview billing data, choose one of the following options:</b>
+                                                <ul>
+                                                            <li><ph
+                                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                            /> administration portal - Choose <b>Billing data preview</b> in the <b>Operation</b> menu.<p>For detailed step-by-step instructions, refer to the online help. </p></li>
+                                                            <li>Command line tool - Use the <codeph>getbillingdata</codeph> command with the following syntax: <p>
+                                                            <codeblock>&lt;JAVA_HOME>/bin/java -jar lib/oscm-operatorsvc-client.jar 
+ &lt;userkey&gt; &lt;password&gt;
+ getbillingdata orgid=&lt;organizationID&gt; from=&lt;startdate&gt; to=&lt;enddate&gt;</codeblock>
+                                                            </p></li>
+                                                </ul></p>
                                     <p>The billing data is saved to an XML file (<codeph>&lt;date&gt;BillingData.xml</codeph>).</p>
                                     <p>You find a detailed description of the XML file elements in the <i>Developer's Guide</i>.</p>
                         </section>

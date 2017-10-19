@@ -41,6 +41,17 @@
                                 <li><codeph>oscm-openstack-install-pack.zip</codeph>: <p>Can be used for integrating OpenStack services with <ph
                                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                     />.</p></li>
+                                <!--li product="oscm_ee"
+                                            ><codeph>oscm-tps5-install-pack.zip</codeph>: <p>Can be used for integrating FUJITSU Trusted Public S5 with <ph
+                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    />.</p></li-->
+                                <!--li product="oscm_ee"
+                                            ><codeph>oscm-azure-install-pack.zip</codeph>: <p>Can be used for integrating Microsoft Azure with <ph
+                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    />.</p></li-->
+                                <li><codeph>oscm-vmware-install-pack.zip</codeph>: <p>Can be used for integrating VMware vSphere with <ph
+                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    />.</p></li>
                             </ul>
                         </p></li>
                     <li>The application with a remote interface and the application instances, if needed. </li>
@@ -66,7 +77,7 @@
         </section>
         <section>
             <title>Provisioning by Instance</title>
-            <p>The following figure shows details of the communication paths between APP and an application, for example, an OpenStack platform. </p>
+            <p>The following figure shows details of the communication paths between APP and an application, for example, a VMware platform. </p>
             <p>
                 <fig>
                     <image href="../_images/IntegrationAPP_2.png" alt="IntegrationAPP_2.png" width="333" height="263"/>

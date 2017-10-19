@@ -11,7 +11,7 @@
       <p>At the top of the page, you can view the number of users registered with the platform as well as the configured maximum number of registered users (default: 10). At regular intervals (default: 12 hours), the system checks the number of registered users. You are informed by email when this check returns that the allowed number of registered users is exceeded. </p>
       <p>All tasks are executed on request of an organization's administrator who will provide you with the relevant user IDs. </p>
       <p id="LDAPRestrictions">
-        <note>If an organization uses an external LDAP system for user management and authentication, only those fields that are not mapped to settings in the LDAP system can be edited. For example, passwords can be changed only in the external system. </note>
+        <note>If the platform is installed in INTERNAL authentication mode and an organization uses an external LDAP system for user management and authentication, only those fields that are not mapped to settings in the LDAP system can be edited. For example, passwords can be changed only in the external system. <p>If the platform is installed in SAML_SP authentication mode, the <b>Reset Password</b> button is not available. In addition, users can be locked or unlocked only in the platform, not in the Identity Provider (IdP). This means that a user locked in the platform can still log in to the IdP. Passwords must be reset in the IdP system. If users are defined in a user data file, the user IDs must match the ones in the IdP.</p><p>Refer to the <i>Installation Guide</i> for details on authentication modes. </p></note>
       </p>
       <p><b>To reset a password or lock/unlock a user</b>:</p>
     </context>

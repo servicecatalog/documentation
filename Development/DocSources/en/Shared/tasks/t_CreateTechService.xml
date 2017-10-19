@@ -9,8 +9,9 @@
     <taskbody>
         <context>
             <p>The first step in providing <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> services for <ph audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph audience="vmware"
-                    >vSphere</ph> is to create one or more technical services. </p>
+                    /> services for <ph audience="aws">AWS</ph><ph audience="ror">ROR</ph><ph audience="os"
+                    >OpenStack</ph><ph audience="tps5">TPS5</ph><ph audience="vmware"
+                >vSphere</ph> is to create one or more technical services. </p>
             <p>Proceed as follows:</p>
         </context>
         <steps>
@@ -19,6 +20,10 @@
                 <info>
                     <p audience="ror">As a basis, you can use the technical service definitions which are included in the 
                         <codeph>oscm-ror-install-pack.zip</codeph> file:</p>
+                        <ul audience="ror">
+                        <li><codeph>samples/TechnicalService_VirtualPlatform.xml</codeph> for the provisioning of virtual platforms with one or more virtual servers</li>
+                        <li><codeph>samples/TechnicalService_VirtualServer.xml</codeph> for the provisioning of a virtual server on an existing virtual platform</li>
+                    </ul>
                     
                     <p audience="aws"
                         >The AWS integration package, <codeph>oscm-aws-install-pack.zip</codeph>, includes a technical service as a sample. 
@@ -43,21 +48,32 @@
                             >You can use the samples to see how templates are mapped to technical service definitions. To use the sample templates, make them available in one of the ways described in <xref
                             href="../../OSIntegrationGuide/Administrating/c_ImportTemplates.xml"/>. </p>
                     
+                    <p audience="tps5"
+                        >The TPS5 integration package, <codeph>oscm-tps5-install-pack.zip</codeph>, includes a technical service as a sample. Use the sample as a basis for defining your own technical services as required:</p>
+                    <p audience="tps5"><codeph>samples/TechnicalService_VirtualSystem.xml</codeph></p>
+                    
                     <p audience="vmware"
                         >The vSphere integration package, <codeph>oscm-vmware-install-pack.zip</codeph>, includes a technical service as a sample. Use the sample as a basis for defining your own technical services as required:</p>
                     <p audience="vmware"><codeph>samples/TechnicalService_VMware.xml</codeph></p>
                    <p>In the technical service definition, be sure to specify:</p>
                     <ul>
                         <li>The asynchronous provisioning type </li>
+                        <li audience="ror">The direct or user access type  </li>
                         <li audience="aws">The direct access type </li>
                         <li audience="os">The direct access type </li>
+                        <li audience="tps5">The direct access type </li>
                         <li audience="vmware">The direct access type </li>
+                        <li audience="ror"
+                            >Service parameters which represent the virtual platform templates and virtual server images defined in ROR. For details on the supported service parameters, refer to <xref
+                                href="../../RORIntegrationGuide/Appendix/r_ServiceParameters.xml"/>.</li>
                         <li audience="aws"
                             >Service parameters which represent the AMIs defined in Amazon EC2. For details on the supported service parameters, refer to <xref
                                 href="../../AWSIntegrationGuide/Appendix/r_ServiceParameters.xml"/>.</li>
                         <li audience="os"
                                 >Service parameters which correspond to the parameters specified in the template defined in OpenStack. For details on the supported service parameters, refer to <xref
                                 href="../../OSIntegrationGuide/Appendix/r_ServiceParameters.xml"/>.</li>
+                        <li audience="tps5"
+                                >Service parameters which represent the system templates and images defined in TPS5. For details on the supported service parameters, refer to their description in the appendix.</li>
                         <li audience="vmware"
                                 >Service parameters which represent the VM templates defined in vSphere as well as the naming, location, and sizing parameters for the VMs to be provisioned. Service parameters also define the network setup in vSphere and the configuration of the VMs. For details on the supported service parameters, refer to <xref
                                 href="../../VMWareIntegrationGuide/Appendix/r_ServiceParameters.xml"/>.</li>
@@ -66,8 +82,8 @@
                     <p>
                         <note>Make sure that you do not specify the <codeph>baseUrl</codeph> attribute in the technical service definition XML file. It specifies an application's remote interface and is not needed for providing <ph
                                 conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> services for <ph
-                                audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph audience="vmware"
-                                >vSphere</ph>. </note>
+                                audience="ror">ROR</ph><ph audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph
+                                audience="tps5">TPS5</ph><ph audience="vmware">vSphere</ph>. </note>
                     </p>
                 </info>
             </step>

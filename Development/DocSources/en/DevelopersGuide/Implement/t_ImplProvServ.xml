@@ -14,9 +14,8 @@
                 conref="../../TechProvGuide/Implement/t_ImplProvServ.xml#task_E68E2024B1F6403AAA1130A39B1D4DCD/As_a_first_integration_step_task_taskbody_context_p_1"/>
             <p><ph
                     conref="../../TechProvGuide/Implement/t_ImplProvServ.xml#task_E68E2024B1F6403AAA1130A39B1D4DCD/You_do_not_have_to_implement_task_taskbody_prereq_p_2_ph"
-                    /> With this access type, users access an application directly after subscribing to a corresponding service. They are redirected immediately to the underlying application. Any further interaction takes place directly between the user and the application without involving <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> in any way. For details on access types, refer to the <i>Technology Provider's Guide</i>.</p>
+                    /> With this access  type, users access an application directly after subscribing to a corresponding service. They are redirected immediately to the underlying application. Any further interaction takes place directly between the user and the application without involving <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> in any way.</p>
             <p
                 conref="../../TechProvGuide/Implement/t_ImplProvServ.xml#task_E68E2024B1F6403AAA1130A39B1D4DCD/For_the_implementation_you_n_task_taskbody_context_p"/>
             <ul>

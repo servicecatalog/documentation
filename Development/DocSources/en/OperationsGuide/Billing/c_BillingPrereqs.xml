@@ -28,8 +28,7 @@
                                 <li>
                                         <p conref="../../help/tasks/operator_managePSPs.xml#task634/psp5"/>
                                         <p conref="../../help/tasks/operator_managePSPs.xml#task634/psp6"> </p>
-                                        <p>You find a detailed description of the implementation of a PSP integration adapter in the documentation shipped with the <codeph><xref format="html" href="https://github.com/servicecatalog/development/releases" scope="external"
-                                                ><u><i>oscm-integration-psp-pack.zip</i></u></xref></codeph> file. </p>
+                                        <p>You find a detailed description of the implementation of a PSP integration adapter in the documentation shipped with the <codeph>oscm-integration-psp-pack.zip</codeph> file. </p>
                                         <!--p>This package also contains the <codeph>heidelpay-sample-integration.zip</codeph> file. </p-->
                                 </li>
                                 <li>

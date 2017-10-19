@@ -10,7 +10,7 @@
         <section>
             <p>When you have completed the installation of <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> and provided the required resources on the application server as described on the ### respective DockerHub pages ###, the following domains with the following applications are available on the application server: </p>
+                    /> and provided the required resources on the application server as described in the <i>Installation Guide</i>, the following domains with the following applications are available on the application server: </p>
             <p><ul>
                     <li><codeph>bes-domain</codeph> domain with the <codeph>oscm</codeph> Enterprise Application (the <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"

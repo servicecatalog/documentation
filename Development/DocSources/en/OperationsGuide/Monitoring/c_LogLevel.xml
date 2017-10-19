@@ -90,6 +90,10 @@ log4j.logger.sys.org.oscm.identityservice=DEBUG</codeblock>
                                 <entry>org.oscm.reviewservice</entry>
                             </row>
                             <row>
+                                <entry>SAML service</entry>
+                                <entry>org.oscm.credential</entry>
+                            </row>
+                            <row>
                                 <entry>Search service</entry>
                                 <entry>org.oscm.searchservice</entry>
                             </row>

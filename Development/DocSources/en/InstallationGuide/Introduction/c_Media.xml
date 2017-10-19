@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd">
+<concept id="Distribution_Media_58" xml:lang="en-us">
+    <title>Distribution Media</title>
+    <conbody>
+        <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+            /> is distributed in the following packages:</p>
+        <ul>
+            <li><b>Installation Package, <codeph>oscm-install-pack.zip</codeph>:</b>
+                <p>Contains the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> software and documentation for installation and deployment in a data center. The package includes: </p><p><ul>
+                        <li>
+                            <p><codeph><b>databases/bes_db</b></codeph> subdirectory: </p>
+                            <p>Configuration files for setting up the databases used by <ph
+                                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+                        </li>
+                        <li>
+                            <p><codeph><b>doc</b></codeph> subdirectory: </p>
+                            <p>PDF manuals providing installation and operation instructions, an overview of <ph
+                                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    />, and information on new features and compatibility issues when upgrading a <ph
+                                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> installation. </p>
+                        </li>
+                        <li>
+                            <p><codeph><b>domains/bes_domain</b></codeph> subdirectory: </p>
+                            <p>Configuration files for setting up the application server resources for the domain to which <ph
+                                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    /> is to be deployed, as well as the archive files that make up <ph
+                                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </p>
+                        </li>
+                        <li>
+                            <p><codeph><b>domains/indexer_domain</b></codeph> subdirectory: </p>
+                            <p>Configuration files for setting up the application server resources for the domain to which the search indexer application is to be deployed, as well as the archive file that makes up the search indexer application. </p>
+                        </li>
+                        <li>
+                            <p><codeph><b>install</b></codeph> subdirectory: </p>
+                            <p>XML files that support you in setting up the databases and application server resources for <ph
+                                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+                        </li>
+                        <li>
+                            <p><codeph><b>licences</b></codeph> subdirectory: </p>
+                            <p>License files of third-party software used by <ph
+                                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+                        </li>
+                        <li>
+                            <p><codeph><b>oscm-operatorclient.zip</b></codeph>: The command line tool.</p>
+                        </li>
+                    </ul>The subsequent chapters of this manual describe the installation and deployment in detail.</p></li>
+            <li><b>Integration Package,<codeph> oscm-integration-pack.zip</codeph>: </b><p>Contains the public Web services and application programming interfaces of <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        />, their documentation as well as additional resources, templates, samples, and utilities. Developers and technology providers can use this package for integrating applications and external systems with <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        />. This is described in detail in the <i>Technology Provider's Guide</i> and the <i>Developer's Guide</i>. </p></li>
+            <li><b>Payment Service Provider Integration Package,<codeph> oscm-integration-psp-pack.zip</codeph>: </b><p>Contains the public Web service interface as well as additional resources and documentation for integrating a payment service provider (PSP) with <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </p></li>
+            <li><b>Integration Package for Asynchronous Provisioning, <codeph>oscm-integration-app-pack.zip</codeph>: </b><p>Contains the asynchronous provisioning platform (APP) as well as samples and documentation. APP is a framework which provides a provisioning service, an operation service, as well as functions, data persistence, and notification features which are always required for integrating applications with <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> in asynchronous mode. </p></li>
+            <!--li><b>ROR Integration Package, <codeph>oscm-ror-install-pack.zip</codeph>: </b><p>Contains all the components required for integrating FUJITSU ServerView Resource Orchestrator (ROR) with <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> as well as the related documentation. </p></li-->
+            <li><b>AWS Integration Package, <codeph>oscm-aws-install-pack.zip</codeph>: </b><p>Contains all the components required for integrating the Amazon Elastic Compute Cloud Web service with <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> as well as the related documentation. </p></li>
+            <li><b>OpenStack Integration Package, <codeph>oscm-openstack-install-pack.zip</codeph>: </b><p>Contains all the components required for integrating OpenStack services with <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> as well as the related documentation. </p></li>
+            <!--li product="oscm_ee"
+                        ><b>TPS5 Integration Package, <codeph>oscm-tps5-install-pack.zip</codeph>: </b><p>Contains all the components required for integrating FUJITSU Trusted Public S5 with <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> as well as the related documentation. </p></li-->
+            <li><b>vSphere Integration Package, <codeph>oscm-vmware-install-pack.zip</codeph>: </b><p>Contains all the components required for integrating VMware vSphere with <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> as well as the related documentation. </p></li>
+        </ul>
+    </conbody>
+</concept>

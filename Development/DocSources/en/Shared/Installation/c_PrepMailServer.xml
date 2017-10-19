@@ -22,7 +22,8 @@
                     > of APP</ph><ph audience="ror"> of the ROR integration package </ph><ph audience="aws"
                     > of the AWS integration package</ph><ph audience="os"> of the OpenStack integration package</ph><ph
                     audience="tps5"> of the TPS5 integration package</ph><ph audience="vmware"
-                    > of the vSphere integration package</ph>. </p>
+                    > of the vSphere integration package</ph>. <ph audience="BSS">Refer to <xref
+                        href="../reference/r_ConfigSettings_glassfish_BESDomain.xml"/> for details.</ph></p>
         </section>
     </conbody>
 </concept>

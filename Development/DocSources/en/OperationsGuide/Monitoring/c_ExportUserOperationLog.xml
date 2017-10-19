@@ -20,10 +20,17 @@
             </p>
             <p id="Export_BillingData2"
                     >You can specify the start and end date of the time period for which you want to export the log data. The dates must be specified in the format <codeph>YYYY-MM-DD</codeph>. </p>
-            <p><b>To export the audit log:</b>
-            </p>
-            <p>In the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> administration portal, choose <b>Export audit log</b> in the <b>Operation</b> menu. For detailed step-by-step instructions, refer to the online help.</p>
+            <p><b>To export the audit log, choose one of the following options:</b>
+                <ul>
+                    <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> administration portal - Choose <b>Export audit log</b> in the <b>Operation</b> menu. <p>For detailed step-by-step instructions, refer to the online help. </p></li>
+                    <li>Command line tool - Use the <codeph>getuseroperationlog</codeph> command with the following syntax: <p>
+                            <codeblock>&lt;JAVA_HOME>/bin/java -jar lib/oscm-operatorsvc-client.jar 
+ &lt;userkey&gt; &lt;password&gt;
+ getuseroperationlog filename=test.csv
+ from=&lt;startdate> to=&lt;enddate></codeblock>
+                        </p></li>
+                </ul></p>
             <p id="Export_BillingData3"
                 >You can choose to view the exported data or save it to a file.<ph audience="doc"> For details on the content, refer to <xref
                     href="../../Shared/reference/r_Audit_log.xml"/>.</ph></p>

@@ -8,10 +8,12 @@
     <context>
       <p id="language_intro"><ph platform="print"><ph
             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
-          >The platform</ph> supports multiple languages in which users can work. After installation, English, German, and Japanese language bundles are available. The operator can add additional languages and customize the texts provided in the English, German, and Japanese language bundles. <ph audience="doc"><ph
+          >The platform</ph> supports multiple languages in which users can work. After installation, English, German, and Japanese language bundles are available. The operator can add additional languages and customize the texts provided in the English, German, and Japanese language bundles.</p>
+        <p audience="doc">
+        <ph
           platform="help">Click <xref href="../../Shared/reference/r_Language_Codes.xml"
           >here</xref> for the list of languages that can be added.</ph><ph platform="print">Refer to <xref
-            href="../../Shared/reference/r_Language_Codes.xml"/> for the list of languages that can be added.</ph></ph>
+            href="../../Shared/reference/r_Language_Codes.xml"/> for the list of languages that can be added.</ph>
       </p>
       <p id="resources">A language bundle consists of the following resources: <ul compact="no">
           <li><b>User interface resources</b>: All texts that appear on the user interface or in generated emails.</li>
@@ -25,24 +27,27 @@
                 <li>
                   <p>The user interface resources are translated or updated in a Microsoft Excel file<ph platform="help"
                         > generated with the <uicontrol>Export</uicontrol> function on the <uicontrol>Manage languages</uicontrol> page</ph>.</p>
-                  <p audience="doc">
-                    <ph platform="print">Refer to <xref href="../../Shared/reference/r_Language_Export_File.xml"
+                    <p audience="doc">
+                    <ph
+                      platform="print">Refer to <xref href="../../Shared/reference/r_Language_Export_File.xml"
                       /> for details.</ph><ph platform="help">Click <xref
                         href="../../Shared/reference/r_Language_Export_File.xml">here</xref> for details.</ph></p>
                 </li>
                 <li>
                   <p>The online help and FAQ files are translated or updated directly in the HTML files.</p>
                   <p audience="doc">
-                    <ph platform="print">Refer to <xref href="../../Shared/reference/r_Language_OnlineHelp_FAQ.xml"
+                  <ph
+                      platform="print">Refer to <xref href="../../Shared/reference/r_Language_OnlineHelp_FAQ.xml"
                       /> for details.</ph><ph platform="help">Click <xref
                         href="../../Shared/reference/r_Language_OnlineHelp_FAQ.xml">here</xref> for details.</ph></p>
                 </li>
                 <li>
                   <p>The report labels are translated or updated in properties files.</p>
                   <p audience="doc">
-                    <ph platform="print">Refer to <xref href="../../Shared/reference/r_Language_ReportLabels.xml"
-                      /> for details.</ph><ph platform=" help">Click <xref
-                        href="../../Shared/reference/r_Language_ReportLabels.xml">here</xref> for details.</ph></p>
+                  <ph platform="print"
+                        >Refer to <xref href="../../Shared/reference/r_Language_ReportLabels.xml"/> for details.</ph><ph
+                      platform=" help">Click <xref href="../../Shared/reference/r_Language_ReportLabels.xml"
+                      >here</xref> for details.</ph></p>
                 </li>
               </ul>
             </p></li>

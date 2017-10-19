@@ -23,7 +23,12 @@
                                                         ><i>Online Help:</i> Online help pages describing how to work with the administration portal of <ph
                                                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                                                 />. The online help is intended for and available to everybody working with the administration portal.</ph></li>
-                                
+                                <li><ph id="Installation_Guide:_concept_conbody_section_ul_l"
+                                                        ><i>Installation Guide (GlassFish):</i> A PDF manual describing how to install and uninstall <ph
+                                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                        />. It is intended for operators who set up and maintain <ph
+                                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                /> in their environment.</ph></li>
                                 <li><ph id="Operation_Guide:_concept_conbody_section_ul_l"
                                                         ><i>Operator's Guide:</i> A PDF manual for operators describing how to administrate and maintain <ph
                                                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
@@ -49,17 +54,32 @@
                                                         /> and how to integrate applications and external systems with <ph
                                                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                                                 />.</ph></li>
-                                
+                                <!--li><ph id="ROR_Guide:_concept_conbody_section_ul_l"
+                                                        ><i>ServerView Resource Orchestrator Integration (GlassFish):</i> A PDF manual for operators describing how to offer and use virtual platforms and servers controlled by FUJITSU ServerView Resource Orchestrator through services in <ph
+                                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                />.</ph></li-->
                                 <li><ph id="AWS_Guide:_concept_conbody_section_ul_l"
-                                                        ><i>Amazon Web Services Integration:</i> A PDF manual for operators describing how to offer and use virtual servers controlled by the Amazon Elastic Compute Cloud Web service through services in <ph
+                                                        ><i>Amazon Web Services Integration (GlassFish):</i> A PDF manual for operators describing how to offer and use virtual servers controlled by the Amazon Elastic Compute Cloud Web service through services in <ph
                                                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                                                 />.</ph></li>
                                 <li><ph id="OS_Guide:_concept_conbody_section_ul_l"
-                                                        ><i>OpenStack Integration:</i> A PDF manual for operators describing how to offer and use virtual systems controlled by OpenStack through services in <ph
+                                                        ><i>OpenStack Integration (GlassFish):</i> A PDF manual for operators describing how to offer and use virtual systems controlled by OpenStack through services in <ph
                                                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                                                 />.</ph></li>
-                                <!--li><ph id="VMWARE_Guide:_concept_conbody_section_ul_l"
-                                                        ><i>VMware vSphere Integration:</i> A PDF manual for operators describing how to offer and use virtual machines provisioned on a VMware vSphere server through services in <ph
+                                <!--li product="oscm_ee"><ph id="TPS5_Guide:_concept_conbody_section_ul_l"
+                                                        ><i>Trusted Public S5 Integration (GlassFish):</i> A PDF manual for operators describing how to offer and use virtual systems controlled by FUJITSU Cloud IaaS Trusted Public S5 through services in <ph
+                                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                />.</ph></li-->
+                                <li><ph id="VMWARE_Guide:_concept_conbody_section_ul_l"
+                                                        ><i>VMware vSphere Integration (GlassFish):</i> A PDF manual for operators describing how to offer and use virtual machines provisioned on a VMware vSphere server through services in <ph
+                                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                />.</ph></li>
+                                <!--li product="oscm_ee"
+                                                        ><ph><i>Systemwalker Runbook Automation Integration Guide:</i> A PDF manual for operators describing how to offer and use automated operation processes of Systemwalker Runbook Automation through services in <ph
+                                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                />.</ph></li-->
+                                <!--li product="oscm_ee"
+                                                        ><ph><i>IaaS Integration Guide:</i> A PDF manual for operators describing how to offer and use virtual systems on different platforms through services in <ph
                                                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                                                 />.</ph></li-->
                                 <li><ph id="Javadoc_documentation_on_the_concept_conbody_section_ul_l"

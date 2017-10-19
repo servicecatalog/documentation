@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<task id="task_E68E2024B1F6403AAA1130A39B1D4DCD" xml:lang="en-us">
+    <title>Subscribing to Services</title>
+    <taskbody>
+        <context>
+            <p>Users of customer organizations can subscribe to the services you have created for vSphere on the marketplace where you have published them. This results in the provisioning of a VM in vSphere, as defined in the underlying technical service.</p>
+            <p>Depending on the definition of the service, the name of the VM is either generated automatically, or the customer can enter a name for it. The technical service may specify a prefix which is prepended to this name, as well as a pattern against which the name is checked before the provisioning operation is started. The name is used as the host name of the provisioned VM. </p>
+            <p>Depending on the parameters defined for the technical service, the customer can select or enter the number of CPUs, amount of RAM, disk size, additional data disks, and network settings for the VM as well as the vCenter, data center, and cluster in which the VM is to be provisioned. </p>
+            <p>The provisioning operations are carried out in asynchronous mode. As long as the provisioning is not complete, the status of the subscription is <b>pending</b>. The status changes to <b>ready</b> as soon as the provisioning has been finished successfully. </p>
+            <p>As soon as the provisioning is complete, the users assigned to the subscription can access the VM provided by vSphere using the IP address and initial password indicated in the subscription details on the marketplace in <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    />. The initial user ID for accessing the VM is <codeph>Administrator</codeph> for Microsoft Windows systems, <codeph>root</codeph> for Linux systems. It is strongly recommended that the initial password is changed after the first login.</p>
+        </context>
+    </taskbody>
+</task>

@@ -56,6 +56,9 @@
       <step>
         <cmd>If the customer is to use a remote LDAP system for user authentication, select the <uicontrol>Use LDAP-based authentication</uicontrol> check box. </cmd>
         <info>
+          <p>
+            <note>This option is not available if users are authenticated against a SAML 2.0 Identity Provider.</note>
+          </p>
           <p>Create an LDAP configuration file on your file system, and define the LDAP connection settings in the file. To load the configuration file, click the <uicontrol>LDAP settings</uicontrol> entry field or <uicontrol>Browse</uicontrol>, and select the file containing the settings. If you do not specify an organization-specific configuration file, the platform default settings for LDAP connections will be used. </p>
           <p>When using an external LDAP system, your customer does not need to register his users manually. The administrator of the customer organization can import the users from the LDAP system, thus automatically registering basic information for them.</p>
           <p>Here is a sample configuration file: </p>

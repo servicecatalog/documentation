@@ -19,14 +19,44 @@
                     <li conref="../../help/tasks/organization_report.xml#task634/operatorreport6"> </li>
                     <li conref="../../help/tasks/organization_report.xml#task634/operatorreport7"> </li>
                     <li conref="../../help/tasks/organization_report.xml#task634/operatorreport8"> </li>
+                    <li><b>Subscription usage data report</b>: Lists all currently active subscriptions of all customer with the number of virtual machines (VMs) booked in a cloud environment such as OpenStack or Amazon Web Services (AWS), as well as the number of users assigned to the subscriptions. This information can then be passed to suppliers so that they can charge customers for their usage of VMs. The Asynchronous Provisioning Platform (APP) polls the status of instances and updates the number of VMs provisioned for subscriptions to IaaS services at the interval defined with the <codeph>APP_TIMER_REFRESH_INTERVAL</codeph> APP configuration setting.</li>
                 </ul></p>
-            <p><b>To create a report:</b>: </p>
-            <p>In the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> administration portal, choose <b>Create report</b> in the <b>Account</b> menu, and select the supplier revenue report. For detailed step-by-step instructions, refer to the online help. </p>
-            <p>The generated report is instantly displayed at the <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> administration portal. You can choose to print the report or save it in several formats using the icons in the pane where the report is displayed.</p>
-            <p/>
+            <p><b>To create a supplier revenue report, choose one of the following options</b>: <ul>
+                    <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> administration portal - Choose <b>Create report</b> in the <b>Account</b> menu, and select the supplier revenue report.<p>For detailed step-by-step instructions, refer to the online help. </p><p>The generated report is instantly displayed at the <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> administration portal. You can choose to print the report or save it in several formats using the icons in the pane where the report is displayed.</p></li>
+                    <li>Command line tool - Use the <codeph>getrevenuelist</codeph> command with the following syntax: <p>
+                            <codeblock>&lt;JAVA_HOME>/bin/java -jar lib/oscm-operatorsvc-client.jar 
+ &lt;userkey> &lt;password>
+ getrevenuelist month=&lt;YYYY-MM></codeblock>
+                        </p><p>The command returns a CSV list in the following format: </p><p><codeph>FROM, TO</codeph>: Dates specifying the period for which the billing data have been generated. </p><p><codeph>ID, NAME</codeph>: ID and name of a supplier.</p><p><codeph>AMOUNT</codeph>: For each supplier, total revenue per currency and marketplace. </p><p><codeph>CURRENCY</codeph>: ISO currency code.</p><p><codeph>MARKETPLACE</codeph>: Name of the marketplace in the language specified by the locale setting of the calling user. If not set, the marketplace ID is returned.</p></li>
+                </ul></p>
+            <p><b>To create a subscription usage data report, choose the following option</b>: <ul>
+                    <li>Command line tool - Use the <codeph>getsubscriptionusage</codeph> command with the following syntax: <p>
+                            <codeblock>&lt;JAVA_HOME>/bin/java -jar lib/oscm-operatorsvc-client.jar 
+ &lt;userkey> &lt;password>
+ getsubscriptionusage filename=&lt;output file></codeblock>
+                        </p><p>This command writes the following information in the given sequence to the specified output file:</p><p>
+                            <ul>
+                                <li>Customer organization ID</li>
+                                <li>Customer organization name</li>
+                                <li>Subscription name</li>
+                                <li>Marketable service name </li>
+                                <li>Technical service name </li>
+                                <li>Supplier organization name</li>
+                                <li>Supplier organization ID </li>
+                                <li>Number of users </li>
+                                <li>Number of VMs </li>
+                            </ul>
+                        </p></li>
+                </ul></p>
+            <p><b>To create one of the other reports, choose the following option</b>: <ul>
+                    <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> administration portal - Choose <b>Create report</b> in the <b>Account</b> menu, and select the report of your choice.<p>For detailed step-by-step instructions, refer to the online help. </p><p>The generated report is instantly displayed in the <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> administration portal. You can choose to print the report or save it in several formats using the icons in the pane where the report is displayed.</p></li>
+                </ul></p>
             <p>
                 <note>The reporting functionality is available only if you have defined the following configuration parameters: <codeph>REPORT_ENGINEURL</codeph>, <codeph>REPORT_SOAP_ENDPOINT</codeph>, <codeph>REPORT_WSDLURL</codeph>.<ph audience="doc"> For details, refer to <xref
                         href="../../Shared/reference/r_ConfigSettings_config_properties.xml"/>.</ph></note>

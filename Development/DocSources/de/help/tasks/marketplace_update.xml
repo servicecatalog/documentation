@@ -11,6 +11,7 @@
         <ul compact="no">
           <li>Ändern des Marktplatzeigentümers. Hierzu müssen Sie Betreiber der Plattform sein.</li>
           <li>Definieren von Umsatzbeteiligungen für den Marktplatz sowie für Vermittler und Wiederverkäufer. Hierzu müssen Sie Betreiber der Plattform sein. </li>
+          <li>Ändern der Mandantenzuordnung, zum Beispiel, wenn Sie wieder das bei der Installation des System konfigurierte Identity-Provider-System zur Authentifizierung von Benutzern einstellen möchten. Hierzu müssen Sie Betreiber der Plattform sein, und die Plattform muss mit der Authentifizierungsart SAML_SP instaliert sein. Zudem dürfen auf dem Marktplatz noch keine Services abonniert worden sein. </li>
           <li>Umbenennen des Marktplatzes. Hierzu müssen Sie Marktplatz-Manager des Marktplatzeigentümers sein.</li>
           <li>Ändern des Funktionsumfangs und der Einstellungen für den Marktplatz. Hierzu müssen Sie Marktplatz-Manager des Marktplatzeigentümers sein.</li>
         </ul>
@@ -65,6 +66,17 @@
       </p>
       <p>Bei der nächsten Neuberechnung der Nutzungsgebühren werden die Umsatzbeteiligungen berechnet und mit den Rechnungsdaten ausgegeben. </p>
       <note>Umsatzbeteiligungen werden nur für Services errechnet, die das plattformeigene Abrechnungssystem verwenden. Services, die ein externes Abrechnungssystem verwenden, werden nicht berücksichtigt.</note>
+      <p><b>So ändern Sie die Zuordnung eines Mandanten</b> (nur Betreiber, und nur, wenn die Plattform mit der Authentifizierungsart SAML_SP instaliert ist):</p>
+      <p>
+        <ol compact="no">
+          <li>Wählen Sie in der Liste <uicontrol>Marktplatz</uicontrol> den Marktplatz, zu dem Sie einen Mandanten zuordnen oder die Zuordnung ändern möchten.  <p>Die Liste stellt alle Marktplätze zur Auswahl, die auf Ihrer Plattform angelegt wurden, bzw. falls im Feld <b>Mandant</b> ein Eintrag vorhanden ist, alle Marktplätze die diesem Mandanten zugeordnet sind.</p></li>
+          <li>Wählen Sie den Mandanten des Identity-Provider-Systems, über das Benutzer authentifiziert werden sollen. Wenn Sie das Feld leer lassen, werden die Benutzer beim Zugriff auf den Marktplatz über das bei der Installation angegebene Identity-Provider-System authentifiziert. <p>
+              <note>Wenn für diesen Marktplatz bereits Anbieter zugelassen wurden, wird dieses Recht zurückgenommen. Auf bestehende Abonnements für Services, die auf diesem Marktplatz veröffentlicht wurden kann nicht mehr zugegriffen werden. <p>Die Zuordnung eines Mandanten zu einem Marktplatz sollte immer beim Erstellen eines Marktplatzes erfolgen. </p>
+              </note>
+            </p></li>
+          <li>Schließen Sie Ihre Änderungen mit <uicontrol>Speichern</uicontrol> ab.</li>
+        </ol>
+      </p>
       
       <p><b>So benennen Sie einen Marktplatz um</b> (nur Marktplatz-Manager):</p>
       <p>

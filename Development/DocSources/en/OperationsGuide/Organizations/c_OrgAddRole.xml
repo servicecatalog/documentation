@@ -11,10 +11,17 @@
     <conbody>
         <section>
             <p>As an operator, you can add a role to an organization (technology provider, supplier, reseller and/or broker).</p>
-            <p><b>To do so, choose the following option:</b>
-            </p>
-            <p>In the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> administration portal, choose <b>Manage organization</b> in the <b>Operation</b> menu. For detailed step-by-step instructions, refer to the online help. </p>
+            <p><b>To do so, choose one of the following options:</b>
+                <ul>
+                    <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> administration portal - Choose <b>Manage organization</b> in the <b>Operation</b> menu.<p>For detailed step-by-step instructions, refer to the online help. </p></li>
+                    <li>Command line tool - Use the <codeph>addorganizationtorole</codeph> command with the following syntax: <p>
+                            <codeblock>&lt;JAVA_HOME>/bin/java -jar lib/oscm-operatorsvc-client.jar 
+ &lt;userkey> &lt;password>
+ addorganizationtorole orgid=&lt;organizationID> 
+ role={SUPPLIER | TECHNOLOGY_PROVIDER | RESELLER | BROKER}</codeblock>
+                        </p><p>If the organization wants to act, for example, both as a supplier and a technology provider, separate the values by a comma without any blanks. The <codeph>RESELLER</codeph> and <codeph>BROKER</codeph> roles cannot be combined with each other or with the <codeph>TECHNOLOGY_PROVIDER</codeph> or <codeph>SUPPLIER</codeph> role. </p></li>
+                </ul></p>
         </section>
     </conbody>
 </concept>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<reference id="reference832" xml:lang="en-us">
+    <title>Controller Database Configuration Settings</title>
+    <refbody>
+        <section>
+            <p>The <codeph>db.properties</codeph> file located in <codeph>&lt;install_pack_dir>/databases/controller_db</codeph> contains the configuration settings for access to the VMware service controller database. This configuration is used for the initial setup and schema updates. </p>
+        </section>
+        <section>
+            <title>db.driver.class</title>
+            <p>The Java class of the JDBC driver.</p>
+            <p>Default: <codeph>org.postgresql.Driver</codeph></p>
+        </section>
+        <section>
+            <title>db.host</title>
+            <p>The database host. </p>
+            <!--p>Note that in a cluster environment, <codeph>localhost</codeph> must not be used.</p-->
+            <p>Default: <codeph>localhost</codeph></p>
+        </section>
+        <section>
+            <title>db.port</title>
+            <p>The database port. </p>
+            <p>Default: <codeph>5432</codeph></p>
+        </section>
+        <section>
+            <title>db.name</title>
+            <p>The name of the database. </p>
+            <p>Default: <codeph>vmware</codeph></p>
+        </section>
+        <!--section>
+            <title>db.timer.name</title>
+            <p>The name of the database for timers. </p>
+            <p>Default: <codeph>bsstimer</codeph></p>
+        </section-->
+        <section>
+            <title>db.user</title>
+            <p>The name of the user to connect to the database. </p>
+            <p>Default: <codeph>vmwareuser</codeph></p>
+        </section>
+        <section>
+            <title>db.pwd</title>
+            <p>The password of the user to connect to the database. </p>
+            <p>Default: <codeph>vmwareuser</codeph></p>
+        </section>
+        <section>
+            <title>db.type</title>
+            <p>The type of the database. </p>
+            <p>Default: <codeph>postgresql</codeph></p>
+        </section>
+    </refbody>
+</reference>

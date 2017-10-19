@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_1BCF5C425D7D4627AB1C66A085CF6E11"
+                    xml:lang="en-us">
+        <title>Configuring vSphere Load Balancing</title>
+        <conbody>
+        <p>Using the user interface of the VMware service controller, you can configure the integrated load balancer of vSphere. It allows for automatically choosing the vSphere host and storage for a new VM when it is provisioned, based on memory, CPUs, disk space, and number of VMs running on the vSphere host. Load balancing is defined per vSphere cluster.</p>
+        <p>The vSphere host as well as the storage can also be specified in technical service parameters: <codeph>TARGET_HOST</codeph> and <codeph>TARGET_STORAGE</codeph>. In this case, you do not make use of the vSphere load balancing. </p>
+        <p>The default load balancing behavior of vSphere is set automatically when the <codeph>*.csv</codeph> files containing the vSphere configuration are imported. By default, VMs are distributed dynamically over all available hosts and storages.</p>
+        <p>You can change the default behavior as follows: </p>
+        <p>
+            <ol>
+                <li>In a Web browser, access the URL of the VMware service controller, for example:<p><codeph> http://127.0.0.1:8880/oscm-app-vmware</codeph></p></li>
+                <li>Log in with the ID and password of the user specified in the configuration settings for the VMware service controller (<codeph>BSS_USER_ID</codeph> and <codeph>BSS_USER_PWD</codeph>) or as another technology manager registered for the same organization.</li>
+                <li>Select the cluster for which you want to configure load balancing.</li>
+                <li>Choose the load balancing algorithm. You have the following options: <p>
+                        <ul>
+                            <li><b>Distribute VMs equally over all hosts (dynamically)</b>:<p>Default. No additional configuration is required. The hosts and storages are read from vSphere. The target host will be the one with the least VMs running on it. The target storage will be the one with the highest amount of available disk space.</p></li>
+                            <li><b>Distribute VMs equally over all hosts (static configuration)</b>:<p>The target host and the target storage are determined by the criteria that you specify (see below). </p></li>
+                            <li><b>Distribute VMs in the order of the configured hosts</b>:<p>The VMs are provisioned on the available hosts in a round robin fashion. No hosts, storages, or weights need to be specified.</p></li>
+                        </ul>
+                    </p></li>
+                <li>In case of a static configuration: <p>
+                        <ol>
+                            <li>Define the criteria for determining the host (memory, CPUs, and number of VMs that may be provisioned on the host). The weight determines the importance of a criterion in the calculation of the target host. The weight number is in the range of 0 to 1. A value of 0 turns off the evaluation of the parameter. </li>
+                            <li>For each host, define which storages are available and which criteria are used to determine the storage for a VM. You can select one of the following storage balancing algorithms: <p>
+                                    <ul>
+                                        <li>Distribute VMs in the order of the configured storages</li>
+                                        <li>Distribute VMs equally over all storages</li>
+                                    </ul>
+                                </p></li>
+                            <li>For each storage, define the upper limit of disk space that can be used. When this limit is reached, another storage is selected as target storage.</li>
+                        </ol>
+                    </p>
+                </li>
+            </ol>
+        </p>
+        </conbody>
+</concept>

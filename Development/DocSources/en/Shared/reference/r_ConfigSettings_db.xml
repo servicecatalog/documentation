@@ -7,9 +7,11 @@
     <refbody>
         <section>
             <p>The <codeph>db.properties</codeph> file located in <codeph>&lt;install_pack_dir>/databases/<ph
-                        audience="BSS">bes_db</ph><ph audience="app">app_db</ph><ph audience="aws">app_db</ph><ph
-                        audience="os">app_db</ph><ph audience="vmware"
-                >app_db</ph></codeph> contains the configuration settings for database access. This configuration is used for the initial setup and schema updates. </p>
+                        audience="BSS">bes_db</ph><ph audience="app">app_db</ph><ph audience="ror">app_db</ph><ph
+                        audience="aws">app_db</ph><ph audience="os"
+                            >app_db</ph><ph audience="tps5"
+                                >app_db</ph><ph audience="vmware"
+                                    >app_db</ph></codeph> contains the configuration settings for database access. This configuration is used for the initial setup and schema updates. </p>
         </section>
         <section>
             <title>db.driver.class</title>
@@ -19,6 +21,7 @@
         <section>
             <title>db.host</title>
             <p>The database host. </p>
+            <!--p>Note that in a cluster environment, <codeph>localhost</codeph> must not be used.</p-->
             <p>Default: <codeph>localhost</codeph></p>
         </section>
         <section>
@@ -29,9 +32,14 @@
         <section>
             <title>db.name</title>
             <p>The name of the database. </p>
-            <p>Default: <codeph><ph audience="BSS">bss</ph><ph audience="app">bssapp</ph><ph audience="aws"
-                        >bssapp</ph><ph audience="os">bssapp</ph><ph audience="vmware">bssapp</ph></codeph></p>
+            <p>Default: <codeph><ph audience="BSS">bss</ph><ph audience="app">bssapp</ph><ph audience="ror"
+                >bssapp</ph><ph audience="aws">bssapp</ph><ph audience="os">bssapp</ph><ph audience="tps5">bssapp</ph><ph audience="vmware">bssapp</ph></codeph></p>
         </section>
+        <!--section>
+            <title>db.timer.name</title>
+            <p>The name of the database for timers. </p>
+            <p>Default: <codeph>bsstimer</codeph></p>
+        </section-->
         <section>
             <title>db.user</title>
             <p>The name of the user to connect to the database. </p>

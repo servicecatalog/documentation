@@ -6,26 +6,95 @@
     <title>Authentication</title>
     <conbody>
         <section>
-            <p id="auth_internal1"><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> is installed as a platform for public access from anywhere in the Internet. Users are authenticated with <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> and can be managed in <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> or an existing LDAP system of an organization. Web service calls are authenticated in <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> either by providing a user key or ID and a password in their header, or by certificates.</p>
+            <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> can be installed in two modes. The mode determines how users and Web services are authenticated.  </p>
+            <p>The following authentication modes are supported:</p>
+            <p>
+                <ol>
+                    <li>INTERNAL</li>
+                    <li>SAML_SP</li>
+                </ol>
+            </p>
         </section>
+        <section conref="../../Shared/concepts/c_AuthenticationMode.xml#Auth/auth_internal"/>
+        <section conref="../../Shared/concepts/c_AuthenticationMode.xml#Auth/auth_saml"/>
         <section>
             <title>Client Authentication</title>
             <p>Every application integrated with <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> or accessing the platform services acts as a Web service client. <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> acts as the server, and the client must provide its authenticating data to the server: </p>
-            <p>The caller sends the key or ID and password of a <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> user. SOAP-based calls address the <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> Web services with the <codeph>BASIC</codeph> suffix. </p>
+                /> acts as the server, and the client must provide its authenticating data to the server. Three options are available: </p>
+            <p>
+                <ul>
+                    <li><b>Basic authentication</b>:<p>The caller sends the key or ID and password of a <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> user. SOAP-based calls address the <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> Web services with the <codeph>BASIC</codeph> suffix. </p><p>Basic authentication can only be used if <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> is installed in INTERNAL authentication mode. It must be used for calling <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> functions that require the specification of a user role. The user role determines whether the user is allowed to execute the function. </p><p>The REST APIs of <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> only support basic authentication.</p></li>
+                    <li><b>Certificate-based authentication</b>:<p>The caller provides a certificate to the <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> server. SOAP-based calls address the <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> Web services with the <codeph>CLIENTCERT</codeph> suffix. In this case, the following requirements must be fulfilled:</p><ul>
+                            <li>The distinguished name (DN) of the client's certificate must correspond to the distinguished name (DN) configured and stored in <ph
+                                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> for the corresponding organization. </li>
+                            <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    /> must trust the client's certificate: The <ph
+                                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> truststore must contain a certificate with a valid signing chain to the certificate presented by the client.</li>
+                        </ul><p>Certificate-based authentication can be used in both authentication modes (INTERNAL and SAML_SP). It must be used when integrating a PSP such as Heidelpay. Web services calling PSP-related functions of <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> do not require the specification of a user role. Certificate-based authentication is not supported by the REST APIs. </p><p audience="doc">Refer to <xref
+                                href="../../Shared/reference/c_Certificates.xml"
+                            /> for details on how to install and handle the certificates required. </p></li>
+                    <li>
+                        <p><b>Security token service authentication</b>:</p>
+                        <p>SOAP-based Web service calls address the <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> Web services with the <codeph>STS</codeph> suffix. </p>
+                        <p>The calls are authenticated by means of a security token service (STS). This is a Web service that issues security tokens as defined in the WS-Security/WS-Trust specification. WS-Security (Web Services Security) is an extension to SOAP to apply security to Web services. The protocol specifies how integrity and confidentiality can be enforced on messages and allows the communication of various security token formats, such as SAML, Kerberos, and X.509. Its main focus is the use of XML Signature and XML Encryption to provide end-to-end security. WS-Security incorporates security features in the header of a SOAP message. </p>
+                        <p>Security token service authentication can only be used if <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> is installed in SAML_SP authentication mode so that it acts as a SAML 2.0 service provider. It is not supported by the REST APIs. </p>
+                        <p>The following picture illustrates the communication between a Web service client, <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> and an STS: </p>
+                        <p>
+                            <fig>
+                                <image href="../../Shared/_images/WS-Security - Overview.png"
+                                    alt="WS-Security - Overview.png" width="415" height="222"/>
+                            </fig>
+                        </p>
+                    </li>
+                </ul>
+            </p>
+            <p>
+                <ol>
+                    <li>The Web service client connects to <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> and accesses the endpoint of a platform service. In the example above, this is the <codeph>AccountService</codeph>. </li>
+                    <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> returns a WSDL file containing security information. The WSDL file also contains the URL for connecting to the STS.</li>
+                    <li>The Web service client connects to the STS and requests a security token. </li>
+                    <li>The STS returns a SAML token authenticating the calling user.</li>
+                    <li>The STS token is sent to <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            />, the application server validates the token, then <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> validates the user ID provided with the token, and the requested operation can be executed. </li>
+                </ol>
+            </p>
+            <p>
+                <note>When operating <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> in SAML_SP mode, every Web service client must run in a separate domain of the application server.</note>
+            </p>
         </section>
     </conbody>
 </concept>

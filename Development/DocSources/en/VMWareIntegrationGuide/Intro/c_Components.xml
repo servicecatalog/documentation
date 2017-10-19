@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd">
+<concept id="id_121">
+  <title>Components Involved in the vSphere Integration</title>
+  <conbody>
+    <section>
+      <p>The following picture provides an overview of the main components involved in the integration of <ph
+          conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> and vSphere:</p>
+      <p>
+        <fig>
+          <image align="left" alt="Components.png" height="171" href="../_images/Components.png" width="400"/>
+        </fig>
+      </p>
+      <p conref="../../Shared/concepts/c_ControllerConcepts.xml#controller/cmp1"/>
+      <p conref="../../Shared/concepts/c_ControllerConcepts.xml#controller/cmp2"/>
+      <p>In vSphere, the basic configuration of VMs for typical usage scenarios is defined by the vSphere administrators in so-called <b>VM templates</b>. A template defines, for example, the operating system used by the VM to be provisioned. For every template, any number of technical services can be created in <ph
+          conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+        />. On the other hand, a technical service can reference several templates, and a user may choose a template when subscribing to a corresponding service. The technology provider organization is responsible for knowing and providing the correct VM template names. </p>
+      <!-- p>The <b>ESX server</b> is an enterprise-class, type-1 hypervisor developed by VMware for deploying and serving virtual machines. As a type-1 hypervisor, ESX is not a software application that one installs in an operating system; instead, it includes and integrates vital operating system components, such as a kernel.</p-->
+      <p>The vSphere API is contacted by the VMware service controller for triggering actions in vSphere. </p>
+      <!--p>The <b>Storage</b> of vSphere represents VM disk files. In this way, VMs are granted access to their own private datastores. On the other hand, administrators can flexibly create, manage and migrate VM storage as separate, self-contained files that can reside on shared storage equipment.</p-->
+    </section>
+  </conbody>
+</concept>

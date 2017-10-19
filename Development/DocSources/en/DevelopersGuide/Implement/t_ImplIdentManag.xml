@@ -38,12 +38,10 @@
             </fig>
             <p>The integration helpers are contained in the <codeph>integrationhelper</codeph> subfolder of the <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-            /> integration package (<codeph><xref format="html"
-                href="https://github.com/servicecatalog/development/releases" scope="external"
-                ><u><i>oscm-integration-pack.zip</i></u></xref></codeph>):</p>
+                    /> integration package (<codeph>oscm-integration-pack</codeph>):</p>
             <p>
                 <ul>
-                    <li><codeph>oscm-webservices-proxy.jar</codeph>: A library containing a Web service proxy for <codeph>BASIC</codeph> Web service ports of the <ph
+                    <li><codeph>oscm-webservices-proxy.jar</codeph>: A library containing a Web service proxy for <codeph>BASIC</codeph>, <codeph>CLIENTCERT</codeph>, and <codeph>STS</codeph> Web service ports of the <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                             /> platform services. This proxy is implemented in Java and ready to be used. It creates a Web service proxy containing all information required to establish a connection with a <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> Web service.</li>
@@ -122,11 +120,46 @@
                             /> platform services have been deployed.</li>
                         <li>The URL of the WSDL file of the platform's Session Service.<p>The Web service port of a <ph
                                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                    /> platform service is <codeph>BASIC</codeph>. </p></li>
-                        <li>ID or key as well as password of the calling user. The user must have the role of a technology manager in a technology provider organization.</li>
+                                    /> platform service can be <codeph>BASIC</codeph>, <codeph>CLIENTCERT</codeph>, or <codeph>STS</codeph>, so the Web service port to be addressed depends on the authentication mode in which <ph
+                                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> is installed:</p><p>In INTERNAL authentication mode these are the Web services with the <codeph>BASIC</codeph> or <codeph>CLIENTCERT</codeph> suffix, in SAML_SP mode, these are the Web services with the <codeph>STS</codeph> suffix. In SAML_SP mode, the URL may contain the <codeph>tenantID</codeph> parameter, for example: </p><p><codeph>https://myServer:8181/oscm/v1.9/SessionService/STS?wsdl&amp;tenantID=xxxxxxxx</codeph>
+                            </p><p>The platform operator is responsible for configuring tenants and associating an IdP (Identity Provider) system with them. When the system is installed, the operator configures the default tenant. If no tenant is specified when calling the <ph
+                                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> session service, the settings for the default tenant are used. The tenant ID must refer to an existing tenant configured and set up by the platform operator. </p></li>
+                        <li>Depending on the Web service port: ID or key as well as password of the calling user. The user must have the role of a technology manager in a technology provider organization. If the Web service port is <codeph>STS</codeph>, the ID of the tenant (<codeph>tenantID</codeph>) associated with the organization may also be specified. If left empty, the default tenant is used. The platform operator is responsible for associating and configuring the tenant with an IdP (Identity Provider) system.</li>
                         <li>The <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                             /> platform service version.</li>
                     </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>For Web service client applications running on a GlassFish application server and using STS access in SAML_SP authentication mode, you need to configure your Web service client application as follows: </cmd>
+                <info>
+                    <ol>
+                        <li>From the IdP or <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> operator, obtain a federation metadata exchange file in XML format generated with and for the IdP system or systems that are to be used. The metadata include namespace information required for connecting to the STS. In a multi-tenancy environment, you need the data from every IdP system that is to be addressed. </li>
+                        <li>Create a <codeph>wsit-client.xml</codeph> file and specify the federation metadata file to be imported as well as the corresponding namespace. In a multi-tenancy environment, you need to specify the file and namespace for every IdP system to be addressed. For example:<p>
+                                <codeblock>&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;definitions
+  xmlns="http://schemas.xmlsoap.org/wsdl/"
+  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+  name="mainclientconfig">
+  &lt;import
+    location="ADFS_STS_Service.xml"
+    namespace="http://schemas.microsoft.com/ws/2008/06/identity/securitytokenservice"/>
+  &lt;import
+    location="MY_STSService.xml"
+    namespace="http://mysts.service.org/Imports"/>
+&lt;/definitions>
+</codeblock>
+                            </p></li>
+                        <li>Create a <codeph>.jar</codeph> file containing the <codeph>wsit-client.xml</codeph> file as well as the federation metadata file(s). You can choose any name for the <codeph>.jar</codeph> file. </li>
+                        <li>Place the above <codeph>.jar</codeph> file into the <codeph>\lib</codeph> folder of your Web service client application domain. For example: <p><codeph>C:\RunTime\Glassfish\glassfish\domains\my_client_domain\lib</codeph></p>
+                        </li>
+                        <li>Restart the domain for the changes to become effective. </li>
+                    </ol>
                 </info>
             </step>
             <step>
@@ -167,36 +200,41 @@
             <p><b>Servlet-Based Token Handler</b></p>
             <ul>
                 <li><codeph>webserviceclient.properties</codeph>
-                    <codeblock># Machine where OSCM / ESCM is hosted and port to access the web 
+                    <codeblock># Machine where Catalog Manager is hosted and port to access the web 
 # service
 
 cm.host=localhost
 cm.port=8081
 
-# Catalog Manager web services are available on different web
+# Catalog Manager web services are available on 3 different web
 # service ports (endpoints), 
-# depending on the authentication mode.
+# depending on the Catalog Manager authentication mode.
 #
-# Example - Web service port URLs for the OSCM session
+# Example - Web service port URLs for the Catalog Manager session
 # service:
 # https://localhost:8081/SessionService/BASIC?wsdl
 # https://localhost:8081/SessionService/CLIENTCERT?wsdl
+# https://localhost:8081/SessionService/STS?wsdl&amp;tenantID=xxxxxxxx
 #
-# Set the web service port suffix, depending on the 
+# Set the web service port suffix, depending on the Catalog Manager
 # authentication mode:
 # - authentication mode INTERNAL: use BASIC or CLIENTCERT 
+# - authentication mode SAML-SP : use STS
 
 cm.service.port=BASIC
 
-# OSCM web service version
+# Catalog Manager web service version
 
 cm.service.version=v1.9
 
-# User credentials to access the OSCM web service.
-# User key is used for BASIC and CLIENTCERT ports.
+# User credentials to access Catalog Manager web service.
+# User key is used for BASIC and CLIENTCERT ports, and user ID 
+# and tenant ID for STS port.
 
 cm.service.user.key=1000
-cm.service.user.password=&lt;user_password></codeblock></li>
+cm.service.user.id=administrator
+cm.service.user.password=&lt;user_password>
+cm.service.user.tenantID=&lt;tenant_ID></codeblock></li>
                 <li><codeph>tokenhandler.properties</codeph>
                     <codeblock>FORWARD=/Welcome.jsp</codeblock></li>
                 <li>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<task id="Setting_up_the_Application_Se_70" xml:lang="en-us">
+    <title>Setting up the Application Server Resources</title>
+    <taskbody>
+        <context>
+            <p id="1BSS"><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+            /> requires specific settings and resources in the application server, such as a data source and JMS queues.<ph audience="doc"> For details on the resources, refer to <xref
+                    href="../../Shared/reference/r_AppServerResources.xml"/>.</ph></p>
+            <p>Before starting to install <ph audience="BSS"
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    />, make sure that the application server ports you want to use are available. The GlassFish domain creation reserves some ports using the following rules based on the port base principle. For example, when using port base 8000:</p>
+            <p>Portbase + 48: admin port: <codeph>8048</codeph></p>
+            <p>Portbase + 80: HTTP listener: <codeph>8080</codeph></p>
+            <p>Portbase + 81: HTTP listener: <codeph>8081</codeph></p>
+            <p>Portbase + 82: HTTP listener: <codeph>8082</codeph></p>
+            <p>Portbase + 86: JMX port: <codeph>8086</codeph></p>
+            <p>Portbase + 76: JMS provider port: <codeph>8076</codeph>
+            </p>
+            <p>Portbase + 37: IIOP listener: <codeph>8037</codeph>
+                </p>
+            <p>Portbase + 38: IIOP listener: <codeph>8038</codeph>
+                </p>
+            <p>Portbase + 39: IIOP listener: <codeph>8039</codeph>
+                </p>
+            <p>By default, the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> installation assumes the following ports: </p>
+            <p><codeph>8048</codeph>: admin port of the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> domain.</p>
+            <p><codeph>8448</codeph>: admin port of the search indexer application domain.</p>
+            <p>You can specify the port numbers in the <codeph>glassfish.properties</codeph> configuration files. </p>
+            <p>Proceed as follows to create the resources and make the required settings in the application server:</p>
+            
+        </context>
+        <steps>
+            <step>
+                <cmd>Open the command prompt (Windows) or a terminal session (UNIX/Linux).</cmd>
+            </step>
+            <step>
+                <cmd>Execute the <codeph>build-glassfish.xml</codeph> file in <codeph>&lt;install_pack_dir&gt;/install</codeph> as follows: </cmd>
+                <info>
+                    <codeblock>&lt;ANT_HOME&gt;/bin/ant -f build-glassfish.xml SETUP</codeblock>
+                    <p>
+                        <note>The <codeph>&lt;install_pack_dir&gt;/domains</codeph> directory contains a properties file, <codeph>InstallationOrder.properties</codeph>. Do not change the content of this file! The search indexer application domain must always be installed before the <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> domain.</note>
+                    </p>
+                </info>
+            </step>
+        </steps>
+        <result id="If_the_setup_of_the_databases_task_taskbody_result">
+            <p><b>Results of the Build Script Execution</b></p>
+            <p>The execution of the <codeph>SETUP</codeph> target defined in the <codeph>build-glassfish.xml</codeph> file has the following results:  </p>
+            <p>
+                <ol>
+                    <li><b>Domains and resources</b>: <p>
+                            <ul>
+                                <li>The <codeph>master-indexer-domain</codeph> domain is created and started. </li>
+                                <li>The search indexer application (<codeph>oscm-search.ear</codeph>) is deployed to the <codeph>master-indexer-domain</codeph> domain.</li>
+                                <li>The <codeph>bes-domain</codeph> domain is created and started. </li>
+                                <li>The following applications are deployed to the <codeph>bes-domain</codeph> domain: <p><codeph>oscm.ear</codeph></p><p><codeph>oscm-portal.war</codeph></p><p><codeph>oscm-portal-help.war</codeph></p><!--p
+                                        product="oscm_ee"><codeph>birt.war</codeph></p--></li>
+                                <li>The <codeph>oscm-security.jar</codeph>, the <codeph>postgresql-9.4-1206-jdbc42.jar</codeph>, and the <codeph>commons-codec-1.7.jar</codeph> files are copied from the directory to which you extracted the <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        /> installation package (<codeph>&lt;install_pack_dir&gt;/domains/bes_domain/lib</codeph>) to the <codeph>lib</codeph> directory of the <codeph>bes-domain</codeph> domain.</li>
+                                <li>The required resources, email settings, JMS queues, data sources are created in the application server.<ph audience="doc"> Refer to <xref
+                                        href="../../Shared/reference/r_AppServerResources.xml"/> for details.</ph></li>
+                                <li>A key file for encryption and decryption is generated in the location you specified in the <codeph>KEY_FILE_PATH</codeph> setting in the <codeph>configsettings.properties</codeph> file. By default, this file is named <codeph>key</codeph> and located in <p><codeph>&lt;GLASSFISH_HOME>/glassfish/domains/bes-domain/config</codeph></p></li>
+                                <li>The directory traversal is disabled for both domains, <codeph>bes-domain</codeph> and <codeph>master-indexer-domain</codeph>: The directory listing parameter is set to <codeph>false</codeph> in the <codeph>default-web.xml</codeph> file in the domain directories you are using for <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </li>
+                            </ul>
+                        </p></li>
+                    <li><b>JVM options set for the <codeph>master-indexer-domain</codeph> domain</b> during the installation:<p>
+                            <codeblock>-Dorg.apache.catalina.loader.WebappClassLoader.
+   ENABLE_CLEAR_REFERENCES=false
+-Dfile.encoding=UTF8
+-Duser.language=en
+-Dorg.glassfish.jms.EagerStartup=true
+-XX:MaxMetaspaceSize=512m
+-Dhibernate.search.default.directory_provider=
+   org.hibernate.search.store.impl.FSMasterDirectoryProvider
+-Dhibernate.search.default.indexBase=
+   ${com.sun.aas.instanceRoot}/masterIndexBase
+-Dhibernate.search.default.sourceBase=
+   ${hibernate.search.shared.sourceBase}
+-Dhibernate.search.default.refresh=
+   ${hibernate.search.default.refresh}
+-Dproduct.name=
+-Dcom.sun.metro.soap.dump=true</codeblock>
+                        </p></li>
+                    <li><b>JVM options set for the <codeph>bes-domain</codeph> domain</b> during the installation:<p>
+                            <codeblock>-Dorg.apache.catalina.loader.WebappClassLoader.
+   ENABLE_CLEAR_REFERENCES=false
+-Dfile.encoding=UTF8
+-XX:MaxMetaspaceSize=512m
+-Dsun.java2d.print.polling=false
+-Dsun.net.inetaddr.ttl=3600
+-Duser.language=en
+-Dhibernate.search.default.directory_provider=
+   org.hibernate.search.store.impl.FSSlaveDirectoryProvider
+-Dhibernate.search.indexing_strategy=manual
+-Dhibernate.search.default.indexBase=
+   ${com.sun.aas.instanceRoot}/slaveIndexBase
+-Dhibernate.search.default.sourceBase=
+   ${hibernate.search.shared.sourceBase}
+-Dhibernate.search.default.refresh=${hibernate.search.default.refresh}
+-Dproduct.name=
+-Xmx1024m
+-Dcom.sun.metro.soap.dump=true
+-Dhibernate.search.default.reader.strategy=not-shared</codeblock>
+                        </p></li>
+                </ol>
+            </p>
+            <p>After a successful deployment, you have two domains with the following setup:</p>
+            <p><b>1. <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> domain (<codeph>bes-domain</codeph>)</b></p>
+            <p>
+                <fig product="oscm_ee">
+                    <image href="../_images/BSSDomain.png" alt="BSSDomain.png" width="317" height="200"/>
+                </fig>
+                <fig product="oscm_ce">
+                    <image href="../_images/BSSDomain_CE.png" alt="BSSDomain.png" width="317" height="200"/>
+                </fig>
+            </p>
+            <p>Host is the machine where your application server is installed. The <codeph>bes-domain</codeph> domain has a Domain Administration Server (DAS) which is used for domain administration and the hosting of the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> application. Configuration information and actual business data is stored in the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> database (<codeph>bss</codeph>). The JMS broker administers the JMS queues used for processing asynchronous tasks, such as the sending of emails, synchronization of indexing data, or execution of process triggers. The JMS messages are stored in the JMS database. The domain is administered using the standard administration facilities of the application server.</p>
+            <p><b>2. Search indexer application domain (<codeph>master-indexer-domain</codeph>)</b></p>
+            <p>
+                <fig product="oscm_ee">
+                    <image href="../_images/IndexerDomain.png" alt="IndexerDomain.png" width="317" height="200"/>
+                </fig>
+                <fig product="oscm_ce">
+                    <image href="../_images/IndexerDomain_CE.png" alt="IndexerDomain.png" width="317" height="200"/>
+                </fig>
+            </p>
+            <p>Host is the machine where your application server is installed. The <codeph>master-indexer-domain</codeph> domain has a Domain Administration Server (DAS) which is used for domain administration and the hosting of the search indexer application. Data for indexing is read from the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> database (<codeph>bss</codeph>) and written to a shared directory on the file system. This directory hosts the search index for the master indexer node. It is specified by the <codeph>hibernate.search.shared.sourceBase</codeph> configuration setting in the <codeph>glassfish.properties</codeph> files of both domains. The JMS broker administers the JMS queue used for processing indexing jobs. The JMS messages are stored in the JMS database. The domain is administered using the standard administration facilities of the application server.</p>
+            <p><b>If the setup of the application server resources fails with errors, proceed as follows:</b>
+            </p>
+            <p>
+                <ol>
+                    <li>Stop the application server domains related to <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </li>
+                    <li>Delete the <codeph>bes-domain</codeph> domain. </li>
+                    <li>Delete the <codeph>master-indexer-domain</codeph> domain. </li>
+                    <li>Delete the shared directory for the master search index. </li>
+                    <li>Repeat the setup.</li>
+                </ol>
+            </p>
+            <p><b>If you want to set up a single domain:</b></p>
+            <p>Add a parameter indicating which domain you want to set up, and execute the <codeph>build-glassfish.xml</codeph> file in <codeph>&lt;install_pack_dir&gt;/install</codeph> as follows:</p>
+            <p>For setting up the search indexer application domain: </p>
+            <codeblock>&lt;ANT_HOME&gt;/bin/ant -Ddomain.setup=indexer_domain
+   -f build-glassfish.xml SETUP</codeblock>
+            <p>For setting up the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> domain: </p>
+            <codeblock>&lt;ANT_HOME&gt;/bin/ant -Ddomain.setup=bes_domain
+   -f build-glassfish.xml SETUP</codeblock>
+            <p>
+                <note>It may be required to enclose the <codeph>-Ddomain.setup=&lt;domain&gt;</codeph> command in double or single quotes depending on the operating system. </note>
+            </p>
+        </result>
+    </taskbody>
+</task>

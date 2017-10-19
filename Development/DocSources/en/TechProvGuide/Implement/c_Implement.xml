@@ -24,9 +24,7 @@
             <p id="impl1a">These tasks are described in detail in the sections below.</p>
             <p id="impl1">To help you perform these tasks, the <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-            /> integration package (<codeph><xref format="html"
-                href="https://github.com/servicecatalog/development/releases" scope="external"
-                ><u><i>oscm-integration-pack.zip</i></u></xref></codeph> file) with the following artifacts is shipped and provided with <ph
+                    /> integration package (<codeph>oscm-integration-pack.zip</codeph> file) with the following artifacts is shipped and provided with <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>: </p>
             <p id="impl2">
                 <ul>

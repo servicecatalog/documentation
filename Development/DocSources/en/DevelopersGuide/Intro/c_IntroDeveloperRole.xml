@@ -40,9 +40,7 @@
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                         />. These interfaces, their documentation and additional resources, templates, samples, and utilities are provided in the <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                        /> integration package (<codeph><xref format="html"
-                                                href="https://github.com/servicecatalog/development/releases" scope="external"
-                                                ><u><i>oscm-integration-pack.zip</i></u></xref></codeph> file). A detailed documentation for the APIs is provided as Javadoc and in YAML files. By opening the <codeph>readme.htm</codeph> file of the integration package, you can access the available documentation as well as the resources themselves.</p>
+                                        /> integration package (<codeph>oscm-integration-pack.zip</codeph> file). A detailed documentation for the APIs is provided as Javadoc and in YAML files. By opening the <codeph>readme.htm</codeph> file of the integration package, you can access the available documentation as well as the resources themselves.</p>
                         <p>In order to provide for secure communication between <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                 /> and the applications or external systems integrated with it, you can make use of certificates. </p>

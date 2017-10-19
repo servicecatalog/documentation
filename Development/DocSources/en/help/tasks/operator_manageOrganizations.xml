@@ -14,6 +14,7 @@
           <li>Set the <b>Distinguished name</b> for an organization.<p>This is required if the organization wants to use certificates for trusted communication between the organization itself and the platform operator organization.</p><p>The platform checks the distinguished name in a client's certificate. If it matches the one specified here, the caller is assumed to be authorized to connect to the platform. </p><p>You can retrieve the distinguished name of an organization from its certificate with the following call in your Java runtime environment: </p><p>
               <codeblock>&lt;YourJRE>/bin/keytool -printcert -file &lt;filename.crt></codeblock>
             </p><p>The process of integrating certificates is described in detail in the <i>Operator's Guide</i>.</p></li>
+          <li>If the platform is installed in SAML_SP authentication mode, change or associate a <b>tenant</b> with the organization. <p>By associating a tenant with an organization, the emails sent to the users of the organization will contain the URL of a marketplace or an administration portal of this tenant. Tenants must have been created beforehand on the <b>Manage tenants</b> page. The <b>Marketplace</b> drop-down list then offers all marketplaces associated with the tenant. </p><p>If you leave this field empty, the URL will point to the default tenant.</p></li>
           <li>Define the <b>payment types</b> that a supplier or reseller organization may offer to its customers for services applying the platform's native billing system.<p>By default, suppliers and resellers can allow customers to pay on invoice so that they can subscribe to a service that is not free of charge. </p><p
               id="PayTypes2"
               >If a supplier or reseller requests a payment type other than on invoice, he must use the services of a commercial PSP. </p>The process of integrating PSP support is described in detail in the <i>Operator's Guide</i>. </li>
@@ -62,6 +63,12 @@
           </ul><p>Separate the individual elements of the DN with commas.</p></info>
       </step>
       <step>
+        <cmd>If the platform is installed in SAML_SP authentication mode, the <b>Tenant</b> field is shown. </cmd>
+        <info>By associating a tenant with an organization, the emails sent to the users of the organization will contain the URL of a marketplace or an administration portal of this tenant. <p>Updating the tenant can be used to remove an organization from a tenant, or to associate an organization with another tenant. </p><p>
+            <note>If you associate a different tenant, the IdP administrator must ensure that all users of this organization are properly configured in the IdP system. If users of this organization already exist with the same name in the newly associated IdP system, changing the tenant is not possible. <p>If sellers have the right to publish on a marketplace that is associated with a tenant, this right is removed when a new tenant is associated.</p></note>
+          </p></info>
+      </step>
+      <step>
         <cmd>Define the payment types that the organization can offer to its customers. Click <b>Add</b>, and proceed to the <uicontrol>New payment type</uicontrol> page. </cmd>
         <info>Adding payment types is possible for supplier and reseller organizations only. <p>
             <note>You can no longer remove a payment type which has been assigned to a supplier or reseller organization.</note>
@@ -79,7 +86,7 @@
     <linklist>
       <title>Related topics</title>
       <link href="organization_managePaymentTypes.xml"/>
-      <!--link href="operator_manageTenants.xml"/-->
+      <link href="operator_manageTenants.xml"/>
       <link href="operator_managePSPs.xml"/>
       <link href="operator_createPSP.xml"/>
     </linklist>

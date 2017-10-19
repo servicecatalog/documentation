@@ -29,7 +29,10 @@
                             <entry><b>CA</b></entry>
                             <entry>Certification authority</entry>
                         </row>
-                        
+                        <row>
+                            <entry><b>IdP</b></entry>
+                            <entry>SAML Identity Provider</entry>
+                        </row>
                         <row>
                             <entry><b>JAX-WS</b></entry>
                             <entry>Java API for XML - Web Services</entry>

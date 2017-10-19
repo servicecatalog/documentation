@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<reference id="reference832" xml:lang="en-us">
+    <title><ph platform="print">SAML_SP Configuration Setting</ph><ph platform="help"
+        >SAML_SP configuration setting</ph></title>
+    <refbody>
+        <section>
+            <p>The <codeph>sso.properties</codeph> file located in <codeph>&lt;install_pack_dir>/databases/bes_db</codeph> contains the configuration setting for creating the first platform operator in <ph
+                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                    platform="help">the system</ph> when installing <ph platform="print"><ph
+                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                    >the platform</ph> in SAML_SP authentication mode. </p>
+        </section>
+        <section>
+            <title>ADMIN_USER_ID</title>
+            <p>Mandatory if you install <ph platform="print"><ph
+                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                    >the platform</ph> in SAML_SP authentication mode. The ID of the user who is to become the first <ph
+                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                    platform="help"
+                >the platform</ph> operator. This user must relate to an existing user in the IdP.</p>
+            <p>User IDs are restricted to 100 characters and must not contain any of the following characters:</p>
+            <p><codeph>! " # $ % &amp; ' * + , / : ; &lt; = > ? \ ^ `</codeph>
+            </p>
+        </section>
+    </refbody>
+</reference>

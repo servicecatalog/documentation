@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<reference id="reference832" xml:lang="en-us">
+    <title>vSphere Configuration </title>
+    <refbody>
+        <section>
+            <p>The <codeph>.csv</codeph> files located in <codeph>&lt;install_pack_dir>/databases/controller_db/csv</codeph> contain the complete configuration of vSphere for use by the VMware service controller. The <codeph>.csv</codeph> files must be filled with the vSphere configuration of your environment before importing them to the VMware service controller database (<codeph>vmware</codeph>). The files must be UTF-8 encoded. </p>
+            <p>In vSphere, several entities are distinguished. They form the following hierarchy:</p>
+            <p>
+                <fig>
+                    <image align="left" alt="Components.png" height="171" href="../_images/Hierarchy.png" width="400"/>
+                </fig>
+            </p>
+            <p>One vCenter can manage many data centers. Each data center may contain any number of clusters. One cluster may use several VLANs (Virtual Local Area Networks), each having assigned several IP addresses.</p>
+            <p>You need to specify the vSphere configuration in the <codeph>.csv</codeph> files so that the correct entities are used for the provisioning of VMs in vSphere. The following files define the vSphere configuration. They map the hierarchy depicted above: </p>
+            <p><ul>
+                    <li><codeph>vcenter.csv</codeph>: Defines the vSphere installation.</li>
+                    <li><codeph>datacenter.csv</codeph>: Defines one or several data centers of the vSphere installation.</li>
+                    <li><codeph>cluster.csv</codeph>: Defines one or several clusters managed by a data center.</li>
+                    <li><codeph>vlan.csv</codeph>: Defines one or several VLANs for a cluster.</li>
+                    <li><codeph>ippool.csv</codeph>: Defines the list of IP addresses associated with a VLAN.</li>
+                </ul>Below you find a description of the headers in the individual files below which you need to enter the appropriate information. The individual entries must be separated by commas, and be placed into one line without line breaks. If the entries contain a comma or blanks, you need to enclose them in double quotes.</p>
+        </section>
+        <section>
+            <title>vCenter</title>
+            <p>vCenter represents the vSphere installation. The <codeph>vcenter.csv</codeph> file contains the following headers: </p>
+            <p>
+                <table colsep="1" frame="all" rowsep="1">
+                    <tgroup cols="2">
+                        <colspec colname="col2" colnum="1" colwidth="1.0*"/>
+                        <colspec colname="col3" colnum="2" colwidth="1.33*"/>
+                        <thead>
+                            <row>
+                                <entry colname="col2">Header</entry>
+                                <entry colname="col3">Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry colname="col2">TKey</entry>
+                                <entry colname="col3"
+                                    >The technical identifier of the vCenter in the VMware service controller database. It is used internally for identifying the vCenter. The key must be unique and consist of integers only. </entry>
+                            </row>
+                            <row>
+                                <entry colname="col2">Name</entry>
+                                <entry colname="col3">The name of the vCenter running on the vSphere server. </entry>
+                            </row>
+                            <row>
+                                <entry colname="col2">Identifier</entry>
+                                <entry colname="col3"
+                                    >The unique identifier of the vCenter. If specified, this identifier can be used as a placeholder in the naming scheme of the VMs to be provisioned (<codeph>INSTANCENAME</codeph> service parameter). </entry>
+                            </row>
+                            <row>
+                                <entry colname="col2">URL</entry>
+                                <entry colname="col3">The URL for accessing the vSphere API.</entry>
+                            </row>
+                            <row>
+                                <entry colname="col2">UserId</entry>
+                                <entry colname="col3"
+                                    >The ID of the technical user in vSphere for accessing the vSphere API.</entry>
+                            </row>
+                            <row>
+                                <entry colname="col2">Password</entry>
+                                <entry colname="col3"
+                                    >The password of the technical user in vSphere for accessing the vSphere API.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+            <p><b>Example</b>:</p>
+            <p>
+                <codeblock>TKey,Name,Identifier,URL,UserId,Password
+1,myvc1,1,https://myvc1.com/sdk/vimService?wsdl,user,pw123
+</codeblock>
+            </p>
+        </section>
+        <section>
+            <title>Data Center</title>
+            <p>Data centers are managed by a vCenter. For each vCenter, the <codeph>datacenter.csv</codeph> file may contain several entries for several data centers with the following headers: </p>
+            <p>
+                <table colsep="1" frame="all" rowsep="1">
+                    <tgroup cols="2">
+                        <colspec colname="col2" colnum="1" colwidth="1.0*"/>
+                        <colspec colname="col3" colnum="2" colwidth="1.33*"/>
+                        <thead>
+                            <row>
+                                <entry colname="col2">Header</entry>
+                                <entry colname="col3">Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry colname="col2">VCenter</entry>
+                                <entry colname="col3">The name of the vCenter managing the data center.</entry>
+                            </row>
+                            <row>
+                                <entry colname="col2">Datacenter</entry>
+                                <entry colname="col3">The name of the data center.</entry>
+                            </row>
+                            <row>
+                                <entry colname="col2">DatacenterId</entry>
+                                <entry colname="col3"
+                                        >The unique identifier of the data center. The <codeph>${DC}</codeph> placeholder in the <codeph>INSTANCENAME</codeph> service parameter of a technical service definition is replaced by this ID when vSphere instance names are generated.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+            <p><b>Example</b>:</p>
+            <p>
+                <codeblock>VCenter,Datacenter,DatacenterId
+myvc1,datacenter1,1
+myvc1,datacenter2,2
+</codeblock>
+            </p>
+        </section>
+        <section>
+            <title>Clusters</title>
+            <p>One data center can contain many clusters. Each VM is provisioned in a cluster. For one vCenter and each data center managed by this vCenter, the <codeph>cluster.csv</codeph> may contain several entries for several clusters with the following headers: </p>
+            <p>
+                <table colsep="1" frame="all" rowsep="1">
+                    <tgroup cols="2">
+                        <colspec colname="col2" colnum="1" colwidth="1.0*"/>
+                        <colspec colname="col3" colnum="2" colwidth="1.33*"/>
+                        <thead>
+                            <row>
+                                <entry colname="col2">Header</entry>
+                                <entry colname="col3">Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry colname="col2">VCenter</entry>
+                                <entry colname="col3"
+                                    >The name of the vCenter managing the data center where the cluster is located. </entry>
+                            </row>
+                            <row>
+                                <entry colname="col2">Datacenter</entry>
+                                <entry colname="col3"
+                                    >The name of the data center the cluster is associated with.</entry>
+                            </row>
+                            <row>
+                                <entry colname="col2">Clustername</entry>
+                                <entry colname="col3">The name of the cluster. </entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+            <p><b>Example</b>:</p>
+            <p>
+                <codeblock>VCenter,Datacenter,Clustername
+myvc1,datacenter1,cluster1
+myvc1,datacenter1,cluster2
+myvc1,datacenter2,cluster3
+</codeblock>
+            </p>
+        </section>
+        <section>
+            <title>VLAN</title>
+            <p>VLANs (Virtual Local Area Networks) enable a single physical LAN segment to be further subdivided so that groups of ports are isolated from one another as if they were on physically separated segments. VLANs are associated with clusters. The <codeph>vlan.csv</codeph> file contains the following headers for defining VLANs: </p>
+            <p>
+                <table colsep="1" frame="all" rowsep="1">
+                    <tgroup cols="2">
+                        <colspec colname="col2" colnum="1" colwidth="1.0*"/>
+                        <colspec colname="col3" colnum="2" colwidth="1.33*"/>
+                        <thead>
+                            <row>
+                                <entry colname="col2">Header</entry>
+                                <entry colname="col3">Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry colname="col2">VCenter</entry>
+                                <entry colname="col3"
+                                    >The name of the vCenter managing the data center where the cluster is located. </entry>
+                            </row>
+                            <row>
+                                <entry colname="col2">Datacenter</entry>
+                                <entry colname="col3"
+                                    >The name of the data center the cluster is associated with.</entry>
+                            </row>
+                            <row>
+                                <entry colname="col2">Cluster</entry>
+                                <entry colname="col3">The name of the cluster this VLAN is assigned to. </entry>
+                            </row>
+                            <row>
+                                <entry colname="col2">Name</entry>
+                                <entry colname="col3">The name of this VLAN.</entry>
+                            </row>
+                            <row>
+                                <entry colname="col2">Gateway</entry>
+                                <entry colname="col3">The IP address of the gateway of this VLAN.</entry>
+                            </row>
+                            <row>
+                                <entry colname="col2">SubnetMask</entry>
+                                <entry colname="col3">The subnet mask.</entry>
+                            </row>
+                            <row>
+                                <entry colname="col2">DNSServer</entry>
+                                <entry colname="col3">The DNS server for the VLAN. </entry>
+                            </row>
+                            <row>
+                                <entry colname="col2">DNSSuffix</entry>
+                                <entry colname="col3"
+                                    >The DNS suffix for the VLAN. The suffix is used in DNS name registration and resolution.</entry>
+                            </row>
+                            <row>
+                                <entry colname="col2">Enabled</entry>
+                                <entry colname="col3"
+                                        >In order to associate a VLAN with a VM and to activate the VLAN, you need to set this parameter to <codeph>true</codeph>.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+            <p><b>Example</b>:</p>
+            <p>
+                <codeblock>VCenter,Datacenter,Cluster,Name,Gateway,SubnetMask,
+   DNSServer,DNSSuffix,Enabled
+myvc1,datacenter1,cluster1,VLAN1,10.10.1.1,255.255.251.0,
+   10.10.1.11,mycompany1.com,true
+myvc1,datacenter1,cluster1,VLAN2,10.10.1.2,255.255.252.0,
+   10.10.1.22,mycompany2.com,true
+myvc1,datacenter1,cluster1,VM Network,10.10.1.3,255.255.253.0,
+   10.10.1.33,mycompany3.com,true
+</codeblock>
+            </p>
+            <p>The above example is not complete, and it contains line breaks due to text formatting reasons. You need to specify additional values for all clusters defined in the <codeph>cluster.csv</codeph> file. </p>
+        </section>
+        <section>
+            <title>IP Pool</title>
+            <p>An IP pool is a list of IP addresses associated with a VLAN. The <codeph>ippool.csv</codeph> file contains the following headers for defining IP addresses: </p>
+            <p>
+                <table colsep="1" frame="all" rowsep="1">
+                    <tgroup cols="2">
+                        <colspec colname="col2" colnum="1" colwidth="1.0*"/>
+                        <colspec colname="col3" colnum="2" colwidth="1.33*"/>
+                        <thead>
+                            <row>
+                                <entry colname="col2">Header</entry>
+                                <entry colname="col3">Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry colname="col2">VCenter</entry>
+                                <entry colname="col3"
+                                    >The name of the vCenter managing the data center where the cluster is located. </entry>
+                            </row>
+                            <row>
+                                <entry colname="col2">Datacenter</entry>
+                                <entry colname="col3"
+                                    >The name of the data center the cluster is associated with.</entry>
+                            </row>
+                            <row>
+                                <entry colname="col2">Cluster</entry>
+                                <entry colname="col3"
+                                    >The name of the cluster to which this IP address is assigned. </entry>
+                            </row>
+                            <row>
+                                <entry colname="col2">VLAN</entry>
+                                <entry colname="col3">The name of the VLAN this IP address is assigned to. </entry>
+                            </row>
+                            <row>
+                                <entry colname="col2">IPAddress</entry>
+                                <entry colname="col3">The IP address.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+            <p><b>Example</b>:</p>
+            <p>
+                <codeblock>VCenter,Datacenter,Cluster,VLAN,IPAddress
+myvc1,datacenter1,cluster1,VLAN1,169.254.10.1
+myvc1,datacenter1,cluster1,VLAN1,169.254.10.2
+myvc1,datacenter1,cluster1,VLAN1,169.254.10.3
+myvc1,datacenter1,cluster1,VLAN2,169.255.10.1
+myvc1,datacenter1,cluster1,VLAN2,169.255.10.2
+myvc1,datacenter1,cluster1,VLAN2,169.255.10.3
+</codeblock>
+            </p>
+            <p>The above example is not complete. You need to specify additional values for all VLANs defined in the <codeph>vlan.csv</codeph> file. </p>
+        </section>
+    </refbody>
+</reference>

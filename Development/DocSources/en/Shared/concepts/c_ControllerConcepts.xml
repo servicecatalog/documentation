@@ -11,18 +11,24 @@
             </p>
       <p id="cmp1">In <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
           />, customer subscriptions are managed by means of the <b>Subscription service</b>. When a customer <ph
-          audience="aws">creates or terminates </ph><ph audience="os">creates or terminates </ph><ph audience="vmware"
-          >creates, modifies, or terminates </ph>a subscription for <ph audience="aws"
-          >an Amazon EC2 instance in AWS</ph><ph audience="os">a virtual system in OpenStack</ph><ph audience="vmware"
+          audience="ror">creates, modifies, or terminates </ph><ph audience="aws">creates or terminates </ph><ph
+          audience="os">creates or terminates </ph><ph audience="tps5">creates, modifies, or terminates </ph><ph
+          audience="vmware">creates, modifies, or terminates </ph>a subscription for <ph audience="aws"
+          >an Amazon EC2 instance in AWS</ph><ph audience="ror">a virtual system in ROR</ph><ph audience="os"
+          >a virtual system in OpenStack</ph><ph audience="tps5">a virtual platform in TPS5</ph><ph audience="vmware"
           >a VM in vSphere</ph>, the Subscription service asynchronously triggers the corresponding actions in <ph
-          audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph audience="vmware"
+          audience="aws">AWS</ph><ph audience="ror">ROR</ph><ph audience="os">OpenStack</ph><ph audience="tps5"
+          >TPS5</ph><ph audience="vmware"
           >vSphere</ph> through the <b>Asynchronous Provisioning Platform (APP)</b> and the <ph audience="aws"
-            ><b>AWS service controller</b></ph><ph audience="os"><b>OpenStack service controller</b></ph><ph
-          audience="vmware"><b>VMware service controller</b></ph>: <ph audience="aws">Virtual servers</ph><ph
-          audience="os">Virtual systems</ph><ph audience="vmware">VMs</ph> are <ph audience="aws"
-          >created or deleted </ph><ph audience="os">created or deleted </ph><ph audience="vmware"
-          >created, modified, or deleted </ph>in <ph audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph
-          audience="vmware">vSphere</ph>. </p>
+            ><b>AWS service controller</b></ph><ph audience="ror"><b>ROR service controller</b></ph><ph audience="os"
+            ><b>OpenStack service controller</b></ph><ph audience="tps5"><b>TPS5 service controller</b></ph><ph
+          audience="vmware"><b>VMware service controller</b></ph>: <ph audience="ror"
+          >Virtual platforms or servers</ph><ph audience="aws">Virtual servers</ph><ph audience="os"
+          >Virtual systems</ph><ph audience="tps5">Virtual platforms</ph><ph audience="vmware">VMs</ph> are <ph
+          audience="ror">created, modified, or deleted </ph><ph audience="aws">created or deleted </ph><ph audience="os"
+          >created or deleted </ph><ph audience="tps5">created, modified, or deleted </ph><ph audience="vmware"
+          >created, modified, or deleted </ph>in <ph audience="aws">AWS</ph><ph audience="ror">ROR</ph><ph audience="os"
+          >OpenStack</ph><ph audience="tps5">TPS5</ph><ph audience="vmware">vSphere</ph>. </p>
       <p id="cmp2"
           >APP is a framework which provides a provisioning service, an operation service, as well as functions, data persistence, and notification features which are required for integrating applications with <ph
           conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
@@ -30,8 +36,12 @@
           audience="app">For each application, a specific and dedicated service controller is required.</ph>
         <ph audience="aws"
           >APP and the AWS service controller are the main components that make up the AWS integration software.</ph><ph
+          audience="ror"
+          >APP and the ROR service controller are the main components that make up the ROR integration software.</ph><ph
           audience="os"
           >APP and the OpenStack service controller are the main components that make up the OpenStack integration software.</ph><ph
+          audience="tps5"
+          >APP and the TPS5 service controller are the main components that make up the TPS5 integration software.</ph><ph
           audience="vmware"
           >APP and the VMware service controller are the main components that make up the vSphere integration software.</ph>
       </p>

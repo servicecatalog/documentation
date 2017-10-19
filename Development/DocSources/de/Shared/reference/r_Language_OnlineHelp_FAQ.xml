@@ -41,7 +41,7 @@
                             </ul>
                         </p></li>
                     <li>Erstellen Sie eine neue Datei <codeph>oscm-portal-help.war</codeph>, die die zusätzlichen Verzeichnisse für die neue Sprache enthält. </li>
-                    <li>Deinstallieren Sie zunächst und installieren Sie anschließend die neue, geänderte Datei <codeph>oscm-portal-help.war</codeph> in der Domäne <codeph>bes-domain</codeph> auf dem Application Server. <p>Durch die Installation der Datei werden existierende HTML-Dateien überschrieben.</p></li>
+                    <li>Deinstallieren Sie zunächst und installieren Sie anschließend die neue, geänderte Datei <codeph>oscm-portal-help.war</codeph> in der Domäne <codeph>bes-domain</codeph> auf dem Application Server. Weitere Informationen finden Sie im <i>Installation Guide</i>. <p>Durch die Installation der Datei werden existierende HTML-Dateien überschrieben.</p></li>
                 </ol>
             </p>
             <p>

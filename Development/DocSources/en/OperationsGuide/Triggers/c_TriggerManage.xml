@@ -24,10 +24,18 @@
             </p>
         </section>
         <section>
-            <p><b>To manage triggers:</b>
-            </p>
-            <p>In the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> user interface, choose <b>Manage triggers</b> from the <b>Operation</b> menu. For detailed step-by-step instructions, refer to the online help. </p>
+            <p><b>To manage triggers, choose one of the following options:</b>
+                <ul><li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> user interface - Choose <b>Manage triggers</b> from the <b>Operation</b> menu. <p
+                            >For detailed step-by-step instructions, refer to the online help. </p></li><li>Command line tool - Use one of the following commands: <ul><li><codeph>createtriggerdefinition</codeph> for creating a trigger definition: <p><codeblock>java -jar oscm-operatorsvc-client.jar &lt;userkey> &lt;password>
+createtriggerdefinition orgid=&lt;organizationID> type=&lt;type> 
+targettype=WEB_SERVICE target=&lt;wsdlURL> suspendprocess=[true|false]</codeblock></p><p>The parameters may take on the following values: </p><ul><li><codeph>orgid</codeph>: ID of the organization for which the trigger is to be configured. </li><li><codeph>type</codeph>: Action for which the trigger is to be configured. Allowed values are: <ul><li><codeph>MODIFY_SUBSCRIPTION</codeph></li><li><codeph>UPGRADE_SUBSCRIPTION</codeph></li><li><codeph>DEACTIVATE_SERVICE</codeph></li><li><codeph>ADD_REVOKE_USER</codeph></li><li><codeph>SUBSCRIBE_TO_SERVICE</codeph></li><li><codeph>ACTIVATE_SERVICE</codeph></li><li><codeph>REGISTER_CUSTOMER_FOR_SUPPLIER</codeph></li><li><codeph>UNSUBSCRIBE_FROM_SERVICE</codeph></li><li><codeph>SAVE_PAYMENT_CONFIGURATION</codeph></li><li><codeph>START_BILLING_RUN</codeph></li></ul></li><li><codeph>targettype</codeph>: The only type of target currently supported by <ph
+                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                            /> is <codeph>WEB_SERVICE</codeph>. </li><li><codeph
+                                        >target</codeph>: URL of the notification service WSDL file provided by the organization that requested trigger configuration. </li><li><codeph>suspendprocess</codeph>: Flag specifying whether the action is to be suspended until it is confirmed by the external process control system. Allowed values: <codeph>true</codeph> or <codeph>false</codeph>. </li></ul></li><li><codeph>retrievetriggerdefinitions</codeph> for displaying all trigger definitions of an organization: <p><codeblock>java -jar oscm-operatorsvc-client.jar &lt;userkey> &lt;password>
+retrievetriggerdefinitions orgid=&lt;organizationID></codeblock></p><p>The details of all triggers defined for the specified organization are listed. They include the trigger key, trigger type, target, and target type as well as the flag specifying whether the action is to be suspended until it is confirmed by the external process control system. </p></li><li><codeph>updatetriggerdefinition</codeph> for updating a trigger definition: <p><codeblock>java -jar oscm-operatorsvc-client.jar &lt;userkey> &lt;password>
+updatetriggerdefinition orgid=&lt;organizationID> type=&lt;type> targettype=WEB_SERVICE target=&lt;wsdlURL> suspendprocess=[true|false]</codeblock></p></li><li><codeph>deletetriggerdefinition</codeph> for deleting a trigger definition: <p><codeblock>java -jar oscm-operatorsvc-client.jar &lt;userkey> &lt;password>
+deletetriggerdefinition triggerdefinitionkey=&lt;trigger definition key> </codeblock></p><p>The trigger definition key can be obtained using the <codeph>retrievetriggerdefinitions</codeph> method. </p><p><note>A trigger definition can only be deleted if there is no process based on it in the database. </note></p></li></ul></li></ul></p>
         </section>
     </conbody>
 </concept>

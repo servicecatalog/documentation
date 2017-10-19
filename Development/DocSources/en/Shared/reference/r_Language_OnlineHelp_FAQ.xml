@@ -42,7 +42,7 @@
                             </ul>
                         </p></li>
                     <li>Create a new <codeph>oscm-portal-help.war</codeph> file containing the additional subdirectories for the new language. </li>
-                    <li>Undeploy and deploy or redeploy the customized <codeph>oscm-portal-help.war</codeph> file to the <codeph>bes-domain</codeph> domain on your application server.  <p>By deploying the file, existing HTML files are overwritten. </p></li>
+                    <li>Undeploy and deploy or redeploy the customized <codeph>oscm-portal-help.war</codeph> file to the <codeph>bes-domain</codeph> domain on your application server. Refer to the <i>Installation Guide</i> for details. <p>By deploying the file, existing HTML files are overwritten. </p></li>
                 </ol>
             </p>
             <p>

@@ -24,9 +24,7 @@
                 /> to see how cross-document messaging works. The sample demonstrates the key aspects involved in the integration.</p>
             <p>The sample tool is provided in the <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-            /> integration package (<codeph><xref format="html"
-                href="https://github.com/servicecatalog/development/releases" scope="external"
-                ><u><i>oscm-integration-pack.zip</i></u></xref></codeph>). From the <codeph>readme.htm</codeph> file of the integration package, you can download the sample and directly access the description on how to integrate it.</p>
+                    /> integration package (<codeph>oscm-integration-pack.zip</codeph>). From the <codeph>readme.htm</codeph> file of the integration package, you can download the sample and directly access the description on how to integrate it.</p>
         </section>
         <section>
             <title>Implementing JSON Encoding and Decoding</title>
@@ -41,9 +39,7 @@
                     href="../ConfigTool/c_ConfigToolMessageInt.xml"/></ph>.</p>
             <p>A JavaScript library, <codeph>configurationAPI.js</codeph>, is provided that you can use for implementing the message and parameter definitions. The library is included in the <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-            /> integration package (<codeph><xref format="html"
-                href="https://github.com/servicecatalog/development/releases" scope="external"
-                ><u><i>oscm-integration-pack.zip</i></u></xref></codeph>). From the <codeph>readme.htm</codeph> file of the integration package, you can directly access the library.</p>
+                    /> integration package (<codeph>oscm-integration-pack.zip</codeph>). From the <codeph>readme.htm</codeph> file of the integration package, you can directly access the library.</p>
         </section>
         <section>
             <title>Next Steps</title>

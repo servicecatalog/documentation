@@ -18,7 +18,9 @@
             </p>
             <p><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> has a three-tier architecture: </p>
             <ul>
-                <li>The <b>presentation layer</b> in the application server's Web container includes the <b>user interface</b> (administration portal and marketplaces), realized as JavaServer Faces. Users access the user interface in Web browsers. </li>
+                <li>The <b>presentation layer</b> in the application server's Web container includes the <b>user interface</b> (administration portal and marketplaces), realized as JavaServer Faces. Users access the user interface in Web browsers. In addition, <ph
+                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> provides a <b>command line tool</b>, which operators can install to carry out their tasks from a command shell instead of the administration portal.</li>
                 <li>The <b>business logic</b> is implemented in Enterprise JavaBeans (EJB). Both the Enterprise JavaBeans and the <b>public Web services</b> are available in the application server's EJB container. The public Web services and their interfaces are mainly used for integrating applications and external systems with <ph
                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                         />. However, they can also be employed for accessing <ph

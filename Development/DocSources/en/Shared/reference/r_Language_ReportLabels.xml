@@ -50,10 +50,10 @@
                     <li><ph product="oscm_ee"
                             >Create a new <codeph>birt.war</codeph> file containing the additional properties file for the new language.</ph><ph
                             product="oscm_ce"
-                                >Copy the new properties file to the <codeph>WEB-INF</codeph> subfolder of the folder where the BIRT report engine is deployed on the application server, usually <codeph>&lt;GLASSFISH_HOME>/glassfish/domains/&lt;domain>/applications/birt</codeph>.</ph>
+                                >Copy the new properties file to the <codeph>WEB-INF</codeph> subfolder of the folder where the BIRT report engine is deployed on the application server, usually <codeph>&lt;GLASSFISH_HOME>/glassfish/domains/&lt;domain>/applications/birt</codeph>. Refer to the <i>Installation Guide</i> for details.</ph>
                     </li>
                     <li><ph product="oscm_ee"
-                                >Undeploy and deploy or redeploy the customized <codeph>birt.war</codeph> file to the <codeph>bes-domain</codeph> domain on your application server.</ph><ph
+                                >Undeploy and deploy or redeploy the customized <codeph>birt.war</codeph> file to the <codeph>bes-domain</codeph> domain on your application server. Refer to the <i>Installation Guide</i> for details.</ph><ph
                             product="oscm_ce">Restart the BIRT application.</ph>
                     </li>
                 </ol>

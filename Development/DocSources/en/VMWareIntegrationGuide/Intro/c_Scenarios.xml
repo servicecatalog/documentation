@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd">
+<concept id="id_112">
+  <title>Usage Scenarios</title>
+  <conbody>
+    <section>
+      <p>The <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+        /> vSphere integration supports the following usage scenarios:</p>
+      <ul compact="no">
+        <li><b>Provisioning of a VM</b>: When a customer subscribes to a corresponding service on a <ph
+            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+          /> marketplace, vSphere is triggered to create a VM based on a specific VM template. </li>
+        <li><b>Vertical scale-up and scale-down</b>: By changing the corresponding parameters at an existing subscription, customers can trigger vSphere to add resources (disks, CPU, RAM, etc.) to a provisioned VM. In the same way, they can request vSphere to remove resources from a VM. </li>
+        <li><b>Starting and stopping a VM</b>: A customer can explicitly start and stop a VM on vSphere by executing a service operation at the corresponding subscription.</li>
+        <li><b>Creating a snapshot and restoring a VM</b>: A customer can explicitly create a snapshot of a VM on vSphere and restore it by executing a service operation at the corresponding subscription.</li>
+        <li><b>Deletion of a VM</b>: When a customer terminates a subscription for a VM, vSphere is triggered to delete it. The subscription is terminated independent of whether the deletion is successful.</li>
+      </ul>
+      <p>In vSphere, the VMs created for <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+        /> subscriptions are managed in the same way as other VMs. They can be viewed and monitored with the standard vSphere management tools.</p>
+      <p audience="doc">For more details on the usage scenarios, refer to <xref href="../Using/c_UsingIntro.xml"/>. </p>
+    </section>
+  </conbody>
+</concept>

@@ -27,5 +27,5 @@
     <topicref format="dita" href="APPInt/APP/r_ConfigSettings.xml" type="reference"/>
     <topicref format="dita" href="APPInt/APP/c_LogConfig.xml" type="concept"/>
     <topicref format="dita" href="Shared/reference/r_ConfigSettings_db.xml" type="reference"/>
-    
+    <topicref format="dita" href="Shared/reference/r_ConfigSettings_glassfish_BESDomain.xml" type="reference"/>
 </map>
