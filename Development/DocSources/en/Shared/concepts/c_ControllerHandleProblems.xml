@@ -35,10 +35,10 @@
                     >VMware</ph> service controller. </li>
                                                 <li>Invoke the instance status interface of APP for the <ph
                         audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph audience="vmware"
-                                >VMware</ph> service controller by opening the following URL in a Web browser:<p><codeph>https://&lt;server&gt;:&lt;port&gt;/oscm-app/controller/?cid=ess.<ph
+                                >VMware</ph> service controller by opening the following URL in a Web browser:<p><codeph>https://&lt;server&gt;:&lt;port&gt;/oscm-app/controller/?controllerid=ess.<ph
                                 audience="aws">aws</ph><ph audience="os">openstack</ph><ph audience="vmware"
                             >vmware</ph></codeph></p>
-                    <p>For example: </p><p><codeph>https://127.0.0.1:8881/oscm-app/controller/?cid=ess.<ph
+                    <p>For example: </p><p><codeph>https://127.0.0.1:8881/oscm-app/controller/?controllerid=ess.<ph
                                 audience="aws">aws</ph><ph audience="os">openstack</ph><ph audience="vmware"
                             >vmware</ph></codeph></p><p>The Web page shows all subscriptions for <ph audience="aws"
                             >AWS</ph><ph audience="os">OpenStack</ph><ph audience="vmware"
