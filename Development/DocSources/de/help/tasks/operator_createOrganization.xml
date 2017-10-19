@@ -9,23 +9,18 @@
             <p id="On_the_task_taskbody_context_p_1"
                 >Auf der Seite <uicontrol>Organisation anlegen</uicontrol> können Sie eine neue Organisation anlegen und ihre Rolle festlegen (Hersteller, Serviceanbieter, Wiederverkäufer, Vermittler, oder - implizit - Kunde). Für jede neue Organisation muss ein Benutzer definiert werden, der der erste Benutzer mit Administratorrechten sein soll. Dieser Benutzer kann später weitere Benutzer registrieren und Benutzerrollen zuweisen.</p>
             <p>Die Organisationsrolle bestimmt, welche Felder ausgefüllt werden müssen. Wenn Sie beispielsweise eine Kundenorganisation anlegen, indem Sie keine Rolle angeben, muss ein Marktplatz zugewiesen werden. Der Marktplatz muss bereits existieren. Organisationen mit anderen Rollen benötigen keine Marktplatzzuweisung. </p>
-            <p><b>Benutzerverwaltung und -authentifizierung</b></p>
-            <p>Es werden folgende Arten der Authentifizierung unterstützt: </p>
-            <ul compact="no">
-                <li><b>INTERNAL</b> - Benutzer werden in der <b>Plattform</b> authentifiziert: Benutzernamen und Passwörter einer Organisation können in der Plattform oder in einem bestehenden LDAP-System der Organisation verwaltet werden. <p
-                        id="UserMgmt2"
-                        >Wenn sie in der Plattform verwaltet werden, werden die Benutzerdaten in der Datenbank der Plattform gespeichert. Der Administrator einer Organisation kann neue Benutzer registrieren und, falls erforderlich, durch den Betreiber Passwörter zurücksetzen lassen. </p><p
-                        id="UserMgmt3"
-                        >Wird ein LDAP-System verwendet, muss die Organisation ihre Benutzer nicht bei der Plattform registrieren. Der Administrator der Organisation kann Benutzer aus dem LDAP-System importieren, um sie automatisch bei der Plattform zu registrieren. Die Benutzer werden im LDAP-System verwaltet. Die Benutzerinformationen werden kontinuierlich mit der Plattform synchronisiert. Die für die Verbindung zum LDAP-System erforderlichen Einstellungen müssen in einer Konfigurationsdatei hinterlegt sein. </p><p
-                        id="UserMgmt4"
-                        >Benutzer können entweder in der Plattform oder im LDAP-System verwaltet werden. Eine Kombination ist nicht möglich. Die Art der Authentifizierung kann nach dem Anlegen einer Organisation nicht mehr geändert werden.</p><p
-                        id="UserMgmt5"
-                        >Die Betreiberorganisation kann kein LDAP-System verwenden. Das bedeutet, dass Sie immer in der Plattform authentifiziert werden und sich somit immer am System anmelden können. Dies ist beispielsweise erforderlich, um Verbindungseinstellungen zu ändern, wenn das LDAP-System einer Organisation nicht verfügbar ist und somit ihre Benutzer nicht authentifiziert werden können.</p><p
-                        id="UserMgmt6"
-                        >Über die Option <uicontrol>LDAP-Einstellungen verwalten</uicontrol> können Sie systemweite, für die gesamte Plattform geltende, LDAP-Konfigurationseinstellungen festlegen. Die Einstellungen in der LDAP-Konfigurationsdatei einer Organisation ergänzen oder ersetzen die systemweiten Einstellungen. </p></li>
-                <!--li><b>SAML_SP</b> - Benutzer werden in einem <b>externen Authentifizierungssystem</b> (SAML 2.0 Identity Provider) authentifiziert: Benutzernamen und Passwörter einer Organisation werden im Identity-Provider-System verwaltet. Die Plattform ist als SAML 2.0 Service Provider konfiguriert.<p>Damit ein Benutzer auf die Plattform zugreifen kann, muss sein Benutzername im Identity-Provider-System (IdP) existieren. Der Benutzer muss auf der Plattform mit dem gleichen Benutzernamen registriert werden. </p><p>Zusätzlich zur systemweiten Authentifizierung über den sogenannten "Standard-IdP" können Sie Mandanten definieren, denen andere IdP-Systeme zugeordnet werden. Wenn Sie einen Mandanten einer Organisation zuordnen, erhalten die Benutzer der Organisation eine Email mit der Zugangs-URL zum Marktplatz oder Portal, der bzw. das zu diesem Mandanten gehört. Greifen Benutzer über diese URL auf den Marktplatz oder das Portal zu, werden sie über das IdP-System authentifiziert, das diesem Mandanten zugeordnet ist. Jeder Organisation kann genau ein Mandant zugeordnet werden. Mehrere Organisationen können demselben Mandanten zugeordnet werden. </p>Benutzer-IDs müssen innerhalb eines Mandanten eindeutig sein. Falls keine Mandanten definiert und zugeordnet werden, müssen die Benutzer-IDs systemweit eindeutig sein.</li-->
-                
-            </ul>
+            <p><b>Benutzerverwaltung und -authentifizierung</b>:</p>
+            <p>Benutzer werden in der <b>Plattform</b> authentifiziert: Benutzernamen und Passwörter einer Organisation können in der Plattform oder in einem bestehenden LDAP-System der Organisation verwaltet werden. </p>
+            <p id="UserMgmt2"
+                >Wenn sie in der Plattform verwaltet werden, werden die Benutzerdaten in der Datenbank der Plattform gespeichert. Der Administrator einer Organisation kann neue Benutzer registrieren und, falls erforderlich, durch den Betreiber Passwörter zurücksetzen lassen. </p>
+            <p id="UserMgmt3"
+                >Wird ein LDAP-System verwendet, muss die Organisation ihre Benutzer nicht bei der Plattform registrieren. Der Administrator der Organisation kann Benutzer aus dem LDAP-System importieren, um sie automatisch bei der Plattform zu registrieren. Die Benutzer werden im LDAP-System verwaltet. Die Benutzerinformationen werden kontinuierlich mit der Plattform synchronisiert. Die für die Verbindung zum LDAP-System erforderlichen Einstellungen müssen in einer Konfigurationsdatei hinterlegt sein. </p>
+            <p id="UserMgmt4"
+                >Benutzer können entweder in der Plattform oder im LDAP-System verwaltet werden. Eine Kombination ist nicht möglich. Die Art der Authentifizierung kann nach dem Anlegen einer Organisation nicht mehr geändert werden.</p>
+            <p id="UserMgmt5"
+                >Die Betreiberorganisation kann kein LDAP-System verwenden. Das bedeutet, dass Sie immer in der Plattform authentifiziert werden und sich somit immer am System anmelden können. Dies ist beispielsweise erforderlich, um Verbindungseinstellungen zu ändern, wenn das LDAP-System einer Organisation nicht verfügbar ist und somit ihre Benutzer nicht authentifiziert werden können.</p>
+            <p id="UserMgmt6"
+                >Über die Option <uicontrol>LDAP-Einstellungen verwalten</uicontrol> können Sie systemweite, für die gesamte Plattform geltende, LDAP-Konfigurationseinstellungen festlegen. Die Einstellungen in der LDAP-Konfigurationsdatei einer Organisation ergänzen oder ersetzen die systemweiten Einstellungen. </p>
             <p><b>So legen Sie eine Organisation an</b>:</p>
         </context>
         <steps>
@@ -43,8 +38,7 @@
                                 href="operator_manageLanguages.xml">hier</xref>.</li>
                     </ul>
                     <p>
-                        <note>Wenn die Plattform mit der Authentifizierungsart INTERNAL instaliert ist und Sie eine Organisation mit LDAP-basierter Benutzerverwaltung erstellen, muss der Benutzername mit dem Namen im externen LDAP-System übereinstimmen. Die LDAP-Konfigurationsdatei der Organisation legt fest, welche zusätzlichen Einstellungen erforderlich sind. Alle Einstellungen, die in der Konfigurationsdatei definiert werden, müssen auf entsprechende Werte abgebildet werden, beispielsweise Vorname, Nachname, E-Mail-Adresse und Sprache.
-                            <!--p>Wenn die Plattform mit der Authentifizierungsart SAML_SP instaliert ist, muss der Benutzername mit dem Namen im Identity-Provider-System übereinstimmen.</p--></note>
+                        <note>Wenn Sie eine Organisation mit LDAP-basierter Benutzerverwaltung erstellen, muss der Benutzername mit dem Namen im externen LDAP-System übereinstimmen. Die LDAP-Konfigurationsdatei der Organisation legt fest, welche zusätzlichen Einstellungen erforderlich sind. Alle Einstellungen, die in der Konfigurationsdatei definiert werden, müssen auf entsprechende Werte abgebildet werden, beispielsweise Vorname, Nachname, E-Mail-Adresse und Sprache. </note>
                     </p>
                 </info>
             </step>
@@ -68,10 +62,6 @@
                                         conref="service_add.xml#task634/Verwenden_Sie_ausschließlich_task_taskbody_steps_step_2"
                                     /></note></li>
                             <li><uicontrol>Marktplatz</uicontrol>, den der Kunde besuchen soll. Sie können einen der Marktplätze wählen, zu denen Sie Zugang vom jeweiligen Marktplatzeigentümer erhalten haben.</li>
-                            <!--li id="mp">
-                                <p>Wenn die Plattform mit der Authentifizierungsart SAML_SP instaliert ist: <b>Mandant</b>. Durch die Zuordnung eines Mandanten zu einer Organisation, enthält die URL, die an die Benutzer per E-Mail für den Zugriff auf einen Marktplatz oder das Administrationsportal geschickt wird, eine Mandanten-ID. Zuvor müssen Mandaten auf der Seite <b>Mandanten verwalten</b> definiert worden sein. Die Liste <b>Marktplatz</b> stellt dann alle Marktplätze des gewählten Mandanten zur Auswahl.</p>
-                                <p>Lassen Sie das Feld leer, werden Benutzer über den Standard-IdP authentifiziert.</p>
-                            </li-->
                             <li>Für eine Organisation mit der Rolle Serviceanbieter: <b>Umsatzbeteiligung Betreiber</b>. Diese zwischen Betreiber und Serviceanbieter vereinbarte Umsatzbeteiligung erhält der Betreiber vom Serviceanbieter dafür, dass Services über die vom Betreiber bereitgestellten Marktplätze verkauft werden können. Diese vereinbarte Beteiligung gilt für alle Services, die der Serviceanbieter anbietet, sofern Sie nicht eine Umsatzbeteiligung pro Service festlegen (einstellbar über die Menüoption <b>Umsatzbeteilung des Betreibers verwalten</b> im Menü <b>Betrieb</b>). Die Beteiligung ist auch unabhängig davon, ob der Serviceanbieter seine Services selbst verkauft oder die Dienstleistung von Vermittlern oder Wiederverkäufern in Anspruch nimmt. Rabatte, die ein Serviceanbieter mit seinen Kunden vereinbart, wirken sich auf die Umsatzbeteiligung aus.<note>Umsatzbeteiligungen und Rabatte werden nur für Services errechnet, die das plattformeigene Abrechnungssystem verwenden. Services, die ein externes Abrechnungssystem verwenden, werden nicht berücksichtigt.</note></li>
                             <li>Für eine Organisation mit der Rolle Hersteller, Serviceanbieter, Wiederverkäufer und/oder Vermittler: <p><uicontrol>Bild für Profil</uicontrol>: Bild, das einen Anbieter auf einem Marktplatz identifiziert. Kunden sehen dieses Bild zusammen mit den Informationen zu der Organisation, die einen Service anbietet.</p><p>Klicken Sie <uicontrol>Durchsuchen</uicontrol> oder das Feld <uicontrol>Bild hochladen</uicontrol> und wählen Sie die Datei mit dem gewünschten Bild. Folgende Bildformate werden unterstützt: GIF, JPG und PNG. Die maximal unterstützte Größe ist 154 x 154 Pixel. Die empfohlene Größe ist 154 x 60 Pixel.</p></li>
                         </ul>
@@ -81,7 +71,7 @@
             <step>
                 <cmd>Legen Sie über die entsprechende Option fest, ob die Organisation ein LDAP-System zur Benutzerverwaltung verwenden soll. </cmd>
                 <info>
-                    <p><!--note>Wird ein SAML 2.0 Identity Provider verwendet, steht diese Option nicht zur Verfügung.</note-->Nach Markieren der Option wird eine Tabelle mit den systemweiten, für die Plattform definierten, LDAP-Einstellungen angezeigt. Sie müssen nun eine LDAP-Konfigurationsdatei anlegen mit den Einstellungen, die für die Verbindung zum LDAP-System erforderlich sind: </p>
+                    <p>Nach Markieren der Option wird eine Tabelle mit den systemweiten, für die Plattform definierten, LDAP-Einstellungen angezeigt. Sie müssen nun eine LDAP-Konfigurationsdatei anlegen mit den Einstellungen, die für die Verbindung zum LDAP-System erforderlich sind: </p>
                     <p>Legen Sie eine LDAP-Konfigurationsdatei auf Ihrem Rechner an und definieren Sie die LDAP-Verbindungseinstellungen in dieser Datei. Um die Einstellungen zu laden, klicken Sie das Feld <uicontrol>LDAP-Einstellungen</uicontrol> oder <uicontrol>Durchsuchen</uicontrol> und wählen die Datei. Wenn Sie keine Konfigurationsdatei für den Kunden laden, werden die systemweiten LDAP-Konfigurationseinstellungen verwendet.</p>
                     <p>Nachfolgend sehen Sie ein Beispiel für eine LDAP-Konfigurationsdatei:</p>
                     <p id="LDAPSample">

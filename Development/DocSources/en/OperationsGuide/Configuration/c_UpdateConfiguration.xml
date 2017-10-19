@@ -33,9 +33,9 @@
                                     <p><b>To update existing settings for the <ph
                                                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                                             /> services, choose one of the following options</b>: <ul>
-                                                            <li><ph
+                                                            <li>In the <ph
               conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-              /> administration portal - Choose <b>Update configuration settings</b> in the <b>Operation</b> menu. <p>The current configuration settings as stored in the database are retrieved. You can check all settings and update them as required by entering a new value for the corresponding configuration setting. </p><p>For detailed step-by-step instructions, refer to the online help. </p></li>
+              /> administration portal, choose <b>Update configuration settings</b> in the <b>Operation</b> menu. <p>The current configuration settings as stored in the database are retrieved. You can check all settings and update them as required by entering a new value for the corresponding configuration setting. </p><p>For detailed step-by-step instructions, refer to the online help. </p></li>
                                                             <li>Edit the content of the <codeph>configsettings.properties</codeph> file as required. <p>Then execute the <codeph>build-db.xml</codeph> file in <codeph>&lt;install_pack_dir&gt;/install</codeph> as follows: </p><p>
        <codeblock>&lt;ANT_HOME&gt;/bin/ant -f build-db.xml
    UPDATE.configSettings</codeblock>
@@ -45,27 +45,14 @@
          conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
         /> for viewing the updated configuration settings in the administration portal, because the previous settings still exist in the cache. </note>
       </p></li>
-                                                            <li>Command line tool - Use the <codeph>saveconfigurationsetting</codeph> command with the following syntax: <p>
-                                                            <codeblock>&lt;JAVA_HOME>/bin/java -jar lib/oscm-operatorsvc-client.jar 
- &lt;userkey> &lt;password>
- saveconfigurationsetting settingKey=&lt;key of the setting> 
- settingValue=&lt;value>  </codeblock>
-                                                            </p><p>Execute the above command for every configuration setting you want to update. </p></li>
                                                 </ul></p>
                         </section>
                         <section><title>Retrieving the Current Configuration Settings</title>You can at any time view the current configuration settings for the <ph
-                                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                                            /> services. <p><b>To retrieve the current configuration settings, choose one of the following options</b>:<ul>
-                                                            <li><ph
-                                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                                            /> administration portal - Choose <b>Update configuration settings</b> in the <b>Operation</b> menu. <p>For detailed step-by-step instructions, refer to the online help. </p></li>
-                                                            <li>Command line tool - Use the <codeph>getconfigurationsettings</codeph> command with the following syntax: <p>
-                                                            <codeblock>&lt;JAVA_HOME>/bin/java -jar lib/oscm-operatorsvc-client.jar 
- &lt;userkey> &lt;password>
- getconfigurationsettings </codeblock>
-                                                            </p></li>
-                                                </ul></p><p audience="doc">For details on the individual configuration settings, refer to <xref
-                                                            href="../../Shared/reference/r_ConfigSettings.xml"
-                                    />.</p></section>
+        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+          /> services. <p><b>To retrieve the current configuration settings:</b></p><p>In the <ph
+          conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+          /> administration portal, choose <b>Update configuration settings</b> in the <b>Operation</b> menu. For detailed step-by-step instructions, refer to the online help. </p><p
+        audience="doc">For details on the individual configuration settings, refer to <xref
+          href="../../Shared/reference/r_ConfigSettings.xml"/>.</p></section>
             </conbody>
 </concept>

@@ -42,20 +42,10 @@ Certificate fingerprints:
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 />.<ph audience="doc"> For details, refer to <xref href="../Billing/c_BillingCreatePSP.xml"/>.</ph></note>
             </p>
-            <p><b>To set the distinguished name for an organization, choose one of the following options:</b>
-                <ul>
-                    <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            /> administration portal - Choose <b>Manage organization</b> in the <b>Operation</b> menu.<p>For detailed step-by-step instructions, refer to the online help. </p></li>
-                    <li>Command line tool - Use the <codeph>setdistinguishedname</codeph> command with the following syntax: <p>
-                            <codeblock>&lt;JAVA_HOME>/bin/java -jar lib/oscm-operatorsvc-client.jar 
- &lt;userkey&gt; &lt;password&gt;
- setdistinguishedname orgid=&lt;organizationID&gt; 
- distinguishedname=&lt;distinguished name&gt;</codeblock>
-                        </p><p>The DN must exactly match the one as retrieved using the <codeph>keytool</codeph> command (see above). </p><p>Sample DN: </p><p>
-                            <codeblock>CN=test, OU=test, O=Test, L=Test, ST=Test, C=GE
-</codeblock>
-                        </p></li>
-                </ul></p>
+            <p><b>To set the distinguished name for an organization:</b>
+            </p>
+            <p>In the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> administration portal, choose <b>Manage organization</b> in the <b>Operation</b> menu. For detailed step-by-step instructions, refer to the online help. </p>
         </section>
     </conbody>
 </concept>
