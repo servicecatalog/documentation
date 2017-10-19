@@ -23,9 +23,25 @@
             </ol></p>
         <p>After the deployment, you have access to the <ph
                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> administration portal and a command line tool.<ph audience="doc"
-                    > For a description on how to access the available tools, refer to <xref href="c_ToolSupport.xml"
-                />.</ph></p>
+            /> administration portal where you can specify configuration settings that do not match your environment:</p>
+        <p>You can access the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+            /> administration portal in a Web browser using an URL in the following format: </p>
+        <p><codeph>http://&lt;server&gt;:&lt;port&gt;/&lt;context-root></codeph>
+        </p>
+        <p><codeph>&lt;server></codeph> is the application server where <ph
+                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> has been deployed. <codeph>&lt;port></codeph> is the port to address the application server (default: <codeph>8080</codeph> for HTTP, <codeph>8081</codeph> for HTTPS). <codeph>&lt;context-root></codeph> is the context root of <ph
+                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> (default: <codeph>oscm-portal</codeph>). </p>
+        <p>You are prompted for the user ID and password. The initial credentials are as follows: </p>
+        <p>User ID: <codeph>administrator</codeph>
+        </p>
+        <p>Password: <codeph>admin123</codeph>
+        </p>
+        <p>It is recommended that you change the initial password in the <ph
+                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> administration portal (<b>Change Password</b> page in the <b>Account</b> menu). </p>
+        <p>After login, the operator functionality is available in the <b>Operation</b> menu.</p>
         <p>In order for a supplier to be able to define price models and for the rating and billing engine of <ph
                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> to be able to calculate usage costs, you need to add one or several currencies to the system.<ph

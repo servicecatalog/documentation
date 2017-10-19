@@ -47,15 +47,15 @@
         </preface>
     </frontmatter>
     <chapter href="OperationsGuide/Introduction/c_Intro.xml">
+        <topicref href="Shared/gettingstarted/c_BESContainers.xml" type="concept"/>
         <topicref href="Shared/gettingstarted/c_BESArchitecture.xml" type="concept"/>
         <topicref format="dita" href="Shared/concepts/c_OrgsRoles.xml" type="concept"/>
     </chapter>
     <chapter href="OperationsGuide/GettingStarted/c_GettingStarted.xml" type="concept">
         
-        <topicref href="OperationsGuide/GettingStarted/c_FirstSteps.xml" type="concept"/>
         <topicref href="OperationsGuide/GettingStarted/c_StartupShutdown.xml" type="concept"/>
-        <topicref href="OperationsGuide/GettingStarted/c_ToolSupport.xml" type="concept"/>
-        <topicref href="OperationsGuide/GettingStarted/c_Authentication.xml" type="concept"/>
+        
+        
         
     </chapter>
     <chapter href="OperationsGuide/Configuration/c_Configuration.xml" type="concept">
