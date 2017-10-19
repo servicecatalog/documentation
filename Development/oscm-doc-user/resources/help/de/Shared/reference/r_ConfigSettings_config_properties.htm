@@ -47,11 +47,9 @@
 
                 <div class="section"><h4 class="sectiontitle">AUTH_MODE</h4>
                         
-                        <p>Obligatorisch. Legt fest, ob die Plattform zur Benutzerauthentifizierung verwendet wird oder ob die Plattform als SAML Service Provider verwendet wird. Diese Einstellung wird beim ersten Starten des Systems ausgewertet. Sie kann nach dem ersten Starten des Systems nicht mehr geändert werden. Die Einstellung läßt sich auch nicht durch eine Upgrade-Installation ändern.</p>
+                        <p>Obligatorisch. Legt fest, dass die Plattform zur Benutzerauthentifizierung verwendet wird. Diese Einstellung wird beim ersten Starten des Systems ausgewertet. Sie kann nach dem ersten Starten des Systems nicht mehr geändert werden. Die Einstellung läßt sich auch nicht durch eine Upgrade-Installation ändern.</p>
 
-                        <p>Erlaubte Werte: <samp class="codeph">INTERNAL</samp> für Plattform-Authentifizierung oder <samp class="codeph">SAML_SP</samp>, wenn die Plattform als SAML Service Provider verwendet werden soll und Benutzer über ein Identity-Provider-System (IdP) authentifiziert werden sollen.</p>
-
-                        <p>Voreinstellung: <samp class="codeph">INTERNAL</samp>
+                        <p>Erlaubter Werte: <samp class="codeph">INTERNAL</samp>
                         </p>
 
                 </div>
@@ -168,10 +166,6 @@
 <p>Voreinstellung: <samp class="codeph">1080</samp></p>
 </div>
 
-                
-                
-                
-                
                 <div class="section"><h4 class="sectiontitle">KAFKA_BOOTSTRAP_SERVERS</h4>Optional. Liste von durch Kommas getrennten Host- und Port-Paaren, zum Addressieren von Kafka Brokern. Bootstrap-Server stellen die anfänglichen Hosts, die als Startpunkte für einen Kafka-Client dienen. In <span>der Plattform</span> werden sie für Event-basierte Provisionierung verwendet. <p>Voreinstellung: Kein Wert</p>
 <p>Beispiel: <samp class="codeph">localhost:9092</samp></p>
 <div class="p">
@@ -269,8 +263,6 @@ Voreinstellung: <p><samp class="codeph">./key</samp></p>
 </div>
 </div>
 
-                
-                
                 <div class="section"><h4 class="sectiontitle">SUPPLIER_SETS_INVOICE_AS_DEFAULT</h4>Optional. Definiert, ob Zahlung auf Rechnung als Zahlungsart für alle Kunden voreingestellt sein soll. <p>Erlaubte Werte: <samp class="codeph">true</samp>, <samp class="codeph">false</samp></p>
 <p>Voreinstellung: <samp class="codeph">false</samp>
                         </p>
