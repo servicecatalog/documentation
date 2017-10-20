@@ -11,9 +11,6 @@
             <p>Suppliers may involve brokers and resellers in selling their services. The brokers and resellers as well as the platform operator and the owners of the marketplaces on which the services are published, usually receive a share of the revenue for the services. <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> calculates these revenue shares based on the billing data for the customers who use the services. The operator revenue share applies irrespective of whether services are sold by the supplier or by his resellers and brokers. Discounts granted by a supplier to his customers are deducted from the operator revenue share.</p>
-            <note>Revenue shares and discounts are calculated only for services applying the native billing system of <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                />. The costs of services using an external billing system are not included in the share calculation. </note>
             <p>Suppliers, brokers, resellers, and marketplace owners can generate reports for their revenue shares and export the revenue share data for a specific month. As an operator, you can export the data for all the suppliers, brokers, resellers, or marketplace owners known to your platform installation. The exported data can be forwarded, for example, to an accounting system which continues to process it.<ph audience="doc"> For details, refer to <xref
                     href="../Billing/c_BillingTasks.xml"/>.</ph> </p>
             <p>As an operator, you are responsible for defining the revenue shares. You can define the following: </p>
@@ -37,23 +34,21 @@
             </p>
             <p><b>To define operator revenue shares, proceed as follows:</b>
                 <ul>
-                    <li>Default operator revenue share for a supplier organization: <p><ph
+                    <li>Default operator revenue share for a supplier organization: <p>In the <ph
                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                /> administration portal - Choose <b>Create organization</b> in the <b>Operation</b> menu for a new supplier organization or <b>Manage organization</b> in the <b>Operation</b> menu for an existing supplier organization.</p></li>
-                    <li>To define a service-specific operator revenue share: <p><ph
+                                /> administration portal, choose <b>Create organization</b> in the <b>Operation</b> menu for a new supplier organization or <b>Manage organization</b> in the <b>Operation</b> menu for an existing supplier organization.</p></li>
+                    <li>To define a service-specific operator revenue share: <p>In the <ph
                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                /> administration portal - Choose <b>Manage operator revenue share</b> in the <b>Operation</b> menu.</p><p>For detailed step-by-step instructions, refer to the online help. </p></li>
+                                /> administration portal, choose <b>Manage operator revenue share</b> in the <b>Operation</b> menu.</p><p>For detailed step-by-step instructions, refer to the online help. </p></li>
                 </ul></p>
-            <p><b>To define marketplace-specific revenue shares, choose the following option:</b>
-                <ul>
-                    <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            /> administration portal - Choose <b>Update marketplace</b> in the <b>Marketplace</b> menu.<p>For detailed step-by-step instructions, refer to the online help. </p></li>
-                </ul></p>
-            <p><b>To define revenue shares for specific services, brokers, or resellers, choose the following option:</b>
-                <ul>
-                    <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            /> administration portal - Choose <b>Manage broker revenue share</b> or <b>Manage reseller revenue share</b> in the <b>Marketplace</b> menu, respectively.<p>For detailed step-by-step instructions, refer to the online help. </p></li>
-                </ul></p>
+            <p><b>To define marketplace-specific revenue shares:</b>
+            </p>
+            <p>In the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> administration portal, choose <b>Update marketplace</b> in the <b>Marketplace</b> menu. For detailed step-by-step instructions, refer to the online help. </p>
+            <p><b>To define revenue shares for specific services, brokers, or resellers:</b>
+            </p>
+            <p>In the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> administration portal, choose <b>Manage broker revenue share</b> or <b>Manage reseller revenue share</b> in the <b>Marketplace</b> menu, respectively. For detailed step-by-step instructions, refer to the online help.</p>
         </section>
     </conbody>
 </concept>

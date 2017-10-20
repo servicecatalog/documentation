@@ -23,7 +23,7 @@
             <p>You can update the definition of a price model, but not change the service identifier, the customer in the case of a customer price model, and the customer subscription in the case of a subscription price model. </p>
             <p>The update options depend on the billing system with which the price model is defined and used:</p>
             <ul>
-                <li><b>Native billing system</b>: You can update all elements of a price model definition in <ph
+                <li>You can update all elements of a price model definition in <ph
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                         />. Be aware of the following: <p
                         conref="../../Shared/reference/r_PriceModelDetails.xml#reference832/costcalc3"
@@ -31,9 +31,6 @@
                             conref="../../help/tasks/priceModel_subscription.xml#task634/the_modified_settings_are_val_task_taskbody_context_p_2_ph"
                         />
                     </p></li>
-                <li><b>External billing system</b>: The price model definitions are maintained in the external billing system. After an update, you can re-import a price model into <ph
-                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> for information purposes.</li>
             </ul>
             <p>For updating a service price model or a customer price model, the corresponding marketable service must be deactivated. Changing a service price model or a customer price model does not affect existing subscriptions. The changes will only take effect for new subscriptions after the service has been activated again. Usually, you will change a customer price model only in agreement with the relevant customer.</p>
             <p>To update a service price model, use the <uicontrol>Define for service</uicontrol> menu option in the <uicontrol>Price model</uicontrol> menu of the <ph
@@ -45,13 +42,8 @@
         </section>
         <section>
             <title>Localizing Elements of a Price Model</title>
-            <p>You can localize elements of a price model to make them available in all languages supported by <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                />. The elements you can localize depend on the billing system with which the price model is defined and used:</p>
-            <ul>
-                <li><b>Native billing system</b>: description and license agreement.</li>
-                <li><b>External billing system</b>: license agreement.</li>
-            </ul>
+            <p>You can localize the description and license agreement of a price model to make them available in all languages supported by <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </p>
             <p>For localizing these elements, the corresponding marketable service must be deactivated. Existing subscriptions are not affected by the localization. Any changes you make are effective for new subscriptions only.</p>
             <p>To localize the elements:</p>
             <ol>

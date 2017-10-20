@@ -19,9 +19,6 @@
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> using the <ph
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> user interface.</li>
             </ul>
-            <p>When registering an application as a technical service, the technology provider can decide which billing system to use for calculating the charges: the native one of <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> or an external one integrated with the platform.</p>
             <p>After registering an application, a technology provider has to appoint one or more suppliers who are to be able to create service offerings based on the technical service. The suppliers must be known to <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 />, i.e. they must have been previously registered by the operator. A supplier can be an entirely independent organization, yet a technology provider can also act as his own supplier. </p>

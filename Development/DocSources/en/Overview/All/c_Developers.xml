@@ -18,8 +18,6 @@
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> to interact with an external process control system.</li>
                 <li><b>Operation API</b>: Resources for implementing the interface for calling operations for a technical service, such as backup and restore. </li>
-                <li><b>Billing Plug-in API</b>: Resources for integrating an external billing system with <ph
-                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</li>
                 <li><b>Payment Service API</b>: Resources for integrating a payment service provider (PSP) with <ph
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</li>
                 <li><b>Integration Helpers</b>: A Web application package that supports application developers in adapting the login/logout implementation of a Java-based Web application.</li>

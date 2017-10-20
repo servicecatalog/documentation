@@ -10,13 +10,6 @@
     <title>Billing and Payment</title>
     <conbody>
         <section>
-            <p>
-                <note>The technical services, which are the basis for the marketable services you publish, specify whether the native billing system of <ph
-                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        /> or an external billing system is to be used for cost calculation. The information in this chapter only applies to services using the native billing system of <ph
-                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    />. For services using an external billing system, any cost and revenue share calculations, billing, and payment must be covered by this system. </note>
-            </p>
             <p
                 conref="../../SupplierGuide/Billing/c_BillIntro.xml#concept_3413BBD173324104B42FB714974CABE7/As_users_work_with_the_servic_concept_conbody_section_p_1"/>
             <p

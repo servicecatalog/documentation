@@ -9,11 +9,10 @@
     <conbody>
         <section>
             <p>Before an organization can use the services of a commercial PSP, you need to specify the parameter values required for communicating with the PSP and define the payment types offered by the PSP. </p>
-            <p><b>To configure a PSP and define the payment types offered by the PSP, you have the following option: </b>
-                <ul>
-                    <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            /> administration portal - Choose <b>Manage payment service provider</b> in the <b>Operation</b> menu. <p>For detailed step-by-step instructions, refer to the online help. </p></li>
-                </ul></p>
+            <p><b>To configure a PSP and define the payment types offered by the PSP:</b>
+            </p>
+            <p>In the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> administration portal, choose <b>Manage payment service provider</b> in the <b>Operation</b> menu. For detailed step-by-step instructions, refer to the online help.</p>
         </section>
     </conbody>
 </concept>

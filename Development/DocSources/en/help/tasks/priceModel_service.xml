@@ -6,7 +6,7 @@
   <title>Defining a service price model</title>
   <taskbody>
     <context>
-      <p>On the <uicontrol>Define for service</uicontrol> page, you can define or update the price model for a service that uses the platform's native billing system, or import a new or changed price model for a service that applies an external billing system.  </p>
+      <p>On the <uicontrol>Define for service</uicontrol> page, you can define or update the price model for a service. </p>
       <p conref="../../Shared/priceModel.xml#PriceModelTopic/concept_price_model"/>
       <p>For each marketable service, a service price model must have been defined before you can activate the service and thus offer it to customers for subscription. You can define exactly one price model for a service. You can, however, also define customer-specific price models or even subscription-specific ones. </p>
       <p>For updating a service price model on the <uicontrol>Define for service</uicontrol> page, the relevant marketable service must be deactivated. If you update an existing price model, your changes overwrite the previous values. The update does not affect existing subscriptions. The changes only take effect for new subscriptions after the service has been activated again. </p>
@@ -23,15 +23,8 @@
         <cmd/>
       </step>
       <step>
-        <cmd>Depending on the billing system that is defined for the underlying technical service, proceed as follows:</cmd>
-        <info>
-          <ul compact="no">
-            <li>If the platform's native billing system is used, define the price model in the subsequent sections of the page.<ph audience="doc"> Click <xref
-                href="priceModel_service_nat.xml">here</xref> for details.</ph></li>
-            <li>If an external billing system is used, import the appropriate price model from this system and specify the license agreement.<ph audience="doc"> Click <xref
-                href="priceModel_service_ext.xml">here</xref> for details.</ph></li>
-          </ul>
-        </info>
+        <cmd>Define the price model in the subsequent sections of the page.<ph audience="doc"> Click <xref
+              href="priceModel_service_nat.xml">here</xref> for details.</ph></cmd>
       </step>
     </steps>
     <result>

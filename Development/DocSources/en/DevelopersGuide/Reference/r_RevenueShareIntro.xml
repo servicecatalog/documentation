@@ -10,8 +10,6 @@
             <p>In extended usage scenarios, suppliers may involve brokers and resellers in selling their services. The brokers and resellers as well as the platform operator and the owners of the marketplaces on which the services are published, usually receive a share of the revenue for the services. <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> calculates these revenue shares based on the billing data for the customers who use the services.</p>
-            <p>In <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                />, the billing and revenue share data is calculated for the services that use the native billing system. Services that apply an external billing system are not taken into account. </p>
             <p id="A_supplier_can_export_the_bil_reference_refbody_section_p"
                 >Suppliers, brokers, resellers, and marketplace owners can generate reports for their revenue shares and export the revenue share data for a specific time. Operators can export the data for all the suppliers, brokers, resellers, or marketplace owners known to their platform installation. The exported data can be forwarded, for example, to an accounting system for further processing. </p>
             <p>The result of the export is stored in an XML file, the revenue data file. The file conforms to one of the following schemas, depending on the type of the revenue share data: </p>

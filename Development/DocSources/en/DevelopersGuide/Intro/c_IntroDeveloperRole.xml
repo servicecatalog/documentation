@@ -30,11 +30,6 @@
                                 <li>Supplier: You can integrate an external tool for configuring service parameters with <ph
                                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                         />. The tool can be used by the supplier's customers instead of the default user interface for configuring service parameters on a marketplace. </li>
-                                <li>Supplier: You can integrate <ph
-                                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                                /> with one or more external billing systems which are to be used instead of the native billing system for specific services. This involves implementing a billing adapter that connects the external billing system with <ph
-                                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                        /> and provides price models for services and subscriptions.</li>
                         </ul>
                         <p>For performing these tasks, you use the public Web services and APIs of <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"

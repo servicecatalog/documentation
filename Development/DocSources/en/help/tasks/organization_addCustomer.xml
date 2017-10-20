@@ -76,7 +76,7 @@
           <li>If the user ID of the administrator already exists in the platform, his email address (e.g. <codeph>userSmith@organization.com</codeph>) is used as user ID for logging in to the system. If yet another customer organization is registered and the user ID of the administrator is again identical, the new user ID is constructed using the existing ID followed by the "at" sign (@) and the ID of the customer organization (e.g. <codeph>userSmith@abcdefg</codeph>). The administrator is sent an email with the respective user ID.</li>
         </ul>
       </p>
-      <p>As a supplier or reseller, your next step is typically to specify the payment types available for the customer so that he can choose his preferred way of paying for his subscriptions. Payment types as well as billing addresses are relevant for services that use the platform's native billing system and are not free of charge. Even for these services, however, your operator may deactivate any possibilities for customers to enter such payment information. If this is the case, the definition of payment types is not possible.</p>
+      <p>As a supplier or reseller, your next step is typically to specify the payment types available for the customer so that he can choose his preferred way of paying for his subscriptions. Payment types as well as billing addresses are relevant for services that are not free of charge. Even for these services, however, your operator may deactivate any possibilities for customers to enter such payment information. If this is the case, the definition of payment types is not possible.</p>
     </result>
   </taskbody>
   <related-links>

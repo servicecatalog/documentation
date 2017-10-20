@@ -10,9 +10,7 @@
     <title>Deactivating Payment Information Options</title>
     <conbody>
         <section>
-            <p>For subscriptions to services that are not free of charge and use the native billing system of <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    />, customers usually have to specify a payment type and billing address. In specific scenarios, this information may not be required, for example, if <ph
+            <p>For subscriptions to services that are not free of charge, customers usually have to specify a payment type and billing address. In specific scenarios, this information may not be required, for example, if <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> is not used for payment collection, or in an enterprise set-up, where costs are captured only for transparency reasons but no payments are collected at all. </p>
             <p>For these scenarios, <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"

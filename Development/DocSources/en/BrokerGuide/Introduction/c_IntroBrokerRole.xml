@@ -19,9 +19,7 @@
             <p>For subscribing to services you offer, customers need to register with <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 />, or you can register them. The customers can register or import any number of users who work with the services. As a broker, you can view the customer subscriptions, but you cannot change or terminate them.</p>
-            <p>Brokers usually receive a share of the revenue for the services they offer. This revenue share is defined by the operator. It may be different for each marketplace where you offer services or even for individual services. For services applying the native billing system of <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                />, you can at any time retrieve billing data and information on your actual revenue depending on the usage of the services. The data can be used as the basis for collecting the shares from the suppliers or marketplace owners, depending on who is responsible for paying you according to your contracts.</p>
+            <p>Brokers usually receive a share of the revenue for the services they offer. This revenue share is defined by the operator. It may be different for each marketplace where you offer services or even for individual services. You can at any time retrieve billing data and information on your actual revenue depending on the usage of the services. The data can be used as the basis for collecting the shares from the suppliers or marketplace owners, depending on who is responsible for paying you according to your contracts.</p>
             <p>If required, you can also act as a customer in <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 />. As a broker, you are automatically privileged to subscribe to services and work with the services you have subscribed to. </p>

@@ -9,7 +9,6 @@
       <p>On the <uicontrol>Manage operator revenue share</uicontrol> page, you can define a revenue share for individual services which a supplier offers on the marketplaces operated on your platform. The service-specific revenue share overrules the default operator revenue share defined for a supplier organization when creating or updating the organization. </p>
       <p>The service-specific revenue share applies irrespective of whether the supplier sells his services himself, or uses brokers or resellers for selling them. Discounts granted by a supplier to his customers are deducted from the operator revenue share. </p>
       <p>On the <uicontrol>Manage operator revenue share</uicontrol> page, you can also update the revenue share for services for which the resale permission has already been revoked and for services which have already been deleted by a supplier. There might still be active subscriptions for these services, therefore it might be necessary for you to update the revenue share.</p>
-      <note>Revenue shares and discounts are calculated based on the billing data for the customers who use the services. The data is only calculated for services using the platform's native billing system. The costs of services using an external billing system are not included in the calculation. </note>
       <p><b>To define the service-specific operator revenue share</b>:</p>
     </context>
     <steps>

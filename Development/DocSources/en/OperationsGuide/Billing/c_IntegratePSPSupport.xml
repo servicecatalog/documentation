@@ -8,9 +8,7 @@
     <title><ph platform="print">Integrating PSP Support</ph><ph platform="help">Integrating PSP support</ph></title>
     <conbody>
         <section>
-            <p>For payment collection for services applying the native billing system of <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    />, a supplier or reseller organization can use the facilities of a commercial payment service provider (PSP). <ph
+            <p>For payment collection, a supplier or reseller organization can use the facilities of a commercial payment service provider (PSP). <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> provides a Web service interface (payment service) to enable operator organizations to integrate payment service providers (PSPs) with <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"> </ph>. The following figure illustrates the communication paths between the components involved in PSP integration:<fig>

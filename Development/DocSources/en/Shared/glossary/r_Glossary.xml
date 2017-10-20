@@ -19,9 +19,7 @@
         </section>
         <section>
             <title>Billing System</title>
-            <p>A system responsible for calculating the charges for using a service. <ph
-                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> comes with a native billing system, but can also be integrated with external ones.</p>
+            <p>A system responsible for calculating the charges for using a service.</p>
         </section>
         <section>
             <title>Broker</title>

@@ -11,11 +11,10 @@
         <section>
             <p>Before an organization can use the services of a commercial PSP, you need to register the PSP with <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"> </ph>. </p>
-            <p><b>To register a PSP, you have the following option: </b>
-                <ul>
-                    <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            /> administration portal - Choose <b>Create payment service provider</b> in the <b>Operation</b> menu. <p>For detailed step-by-step instructions, refer to the online help. </p></li>
-                </ul></p>
+            <p><b>To register a PSP:</b>
+            </p>
+            <p>In the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> administration portal , choose <b>Create payment service provider</b> in the <b>Operation</b> menu. For detailed step-by-step instructions, refer to the online help.</p>
             <p>You need to provide the following information: </p>
             <p>
                 <ul>

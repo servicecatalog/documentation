@@ -19,9 +19,7 @@
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> administration portal. You can choose to print the report or save it in several formats.</p>
             <p>
-                <note>Contact your platform operator if the reporting functionality is not available. He is responsible for defining the respective configuration parameters.<p>Revenue shares are calculated only for services applying the native billing system of <ph
-                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        />. The costs of services using an external billing system are not included in the calculation.</p></note>
+                <note>Contact your platform operator if the reporting functionality is not available. He is responsible for defining the respective configuration parameters.</note>
             </p>
         </section>
     </conbody>

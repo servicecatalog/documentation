@@ -101,11 +101,11 @@ topicref href="OperationsGuide/Configuration/c_LoadBalancing.xml" type="concept"
     <chapter format="dita" href="OperationsGuide/Billing/c_BillingPayment.xml" type="concept">
         <topicref format="dita" href="OperationsGuide/Billing/c_BillingRun.xml" type="concept"/>
         <topicref format="dita" href="OperationsGuide/Billing/c_DefineRevenueShares.xml" type="concept"/>
-        <topicref format="dita" href="OperationsGuide/Billing/c_IntegrateBillingSystem.xml" type="concept">
+        <!--topicref format="dita" href="OperationsGuide/Billing/c_IntegrateBillingSystem.xml" type="concept">
             <topicref format="dita" href="OperationsGuide/Billing/c_ExtBillingPrereqs.xml" type="concept"/>
             <topicref format="dita" href="OperationsGuide/Billing/c_BillingRegisterSystem.xml" type="concept"/>
             <topicref format="dita" href="OperationsGuide/Billing/c_BillingSetDefaultSystem.xml" type="concept"/>
-        </topicref>
+        </topicref-->
         <topicref href="OperationsGuide/Billing/c_IntegratePSPSupport.xml" type="concept">
             <topicref href="OperationsGuide/Billing/c_BillingPrereqs.xml" type="concept"/>
             <topicref format="dita" href="OperationsGuide/Billing/c_BillingCreatePSP.xml" type="concept"/>
@@ -145,10 +145,10 @@ topicref href="OperationsGuide/Configuration/c_LoadBalancing.xml" type="concept"
         <topicref href="OperationsGuide/Marketplace/c_ConfigureMP.xml" type="concept"/>
         <topicref href="OperationsGuide/Marketplace/c_UpdateSearchIndex.xml" type="concept"/>
     </chapter>
-    <appendix href="Shared/reference/r_AppServerResources.xml" type="reference">
+    <!--appendix href="Shared/reference/r_AppServerResources.xml" type="reference">
         <topicref href="Shared/reference/r_AppServerResources_BSSDomain.xml" type="reference"/>
         <topicref href="Shared/reference/r_AppServerResources_IndexerDomain.xml" type="reference"/>
-    </appendix>
+    </appendix-->
     <appendix href="Shared/reference/r_ConfigSettings.xml" type="reference">
         <!--topicref href="Shared/reference/r_ConfigSettings_SOP.xml" type="reference"/-->
         <topicref href="Shared/reference/r_ConfigSettings_db.xml" type="reference"/>

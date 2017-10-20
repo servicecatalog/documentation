@@ -20,7 +20,7 @@
                     <li conref="../../help/tasks/organization_report.xml#task634/operatorreport7"> </li>
                     <li conref="../../help/tasks/organization_report.xml#task634/operatorreport8"> </li>
                 </ul></p>
-            <p><b>To create a report:</b>: </p>
+            <p><b>To create a report:</b></p>
             <p>In the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> administration portal, choose <b>Create report</b> in the <b>Account</b> menu, and select the supplier revenue report. For detailed step-by-step instructions, refer to the online help. </p>
             <p>The generated report is instantly displayed at the <ph

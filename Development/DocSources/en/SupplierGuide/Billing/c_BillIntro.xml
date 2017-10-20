@@ -8,9 +8,6 @@
         <title>Billing and Payment</title>
         <conbody>
                 <section>
-                        <note>The information in this chapter only applies to services using the native billing system of <ph
-                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                />. For services using an external billing system, any cost and revenue share calculations, billing, and payment must be covered by this system. </note>
                         <p id="As_users_work_with_the_servic_concept_conbody_section_p_1"
                                         >As users work with the services, <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"

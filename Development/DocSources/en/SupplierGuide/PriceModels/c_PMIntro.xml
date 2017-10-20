@@ -23,14 +23,6 @@
                         >It depends on the implementation of the underlying application and on its integration with <ph
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> whether fees for events or parameters can be defined.</ph></p>
-            <p>The technical services on which you base your marketable services specify whether the native billing system of <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> or an external billing system is to be used for cost calculation. Price models for services applying the native billing system of <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> are defined and maintained in <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    />. When using an external billing system, the price models are created and managed in this system and imported to <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> for information purposes.</p>
             <p>In the following sections, you will find detailed information on the price model scope and the price model elements. In addition, you will find an overview of the functions that support you in defining and maintaining price models.</p>
         </section>
     </conbody>

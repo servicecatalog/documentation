@@ -20,9 +20,6 @@
       </ul>
       <p>The exported data can be saved to an XML file or opened in an editor of your choice. You can edit the data and work with it as required. For example, you can forward the data to an accounting system.</p>
       <note>
-        <p>Billing data and revenue share data is calculated only for services applying the native billing system<ph
-            platform="print"> of <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-          /></ph>. The costs of services using an external billing system are not included in the calculation. </p>
         <p><ph id="For_a_detailed_description_of_task_taskbody_context_note_p"
               >For a detailed description of the elements and attributes that may occur in the generated XML file, refer to the <i>Developer's Guide</i>.</ph></p>
       </note>

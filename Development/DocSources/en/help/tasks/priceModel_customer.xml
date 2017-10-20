@@ -6,7 +6,7 @@
   <title>Defining a customer price model</title>
   <taskbody>
     <context>
-      <p>On the <uicontrol>Define for customer</uicontrol> page, you can define or update the price model for a selected service and customer. For a service using the platform's native billing system, you can edit the price model directly on this page. For a service using an external billing system, you can import a new or changed price model from the external system. </p>
+      <p>On the <uicontrol>Define for customer</uicontrol> page, you can define or update the price model for a selected service and customer. </p>
       <p>The customer price model you define or update takes priority over the original service price model.<ph audience="doc"> Click <xref
           href="../../Shared/reference/r_PriceModelDetails.xml">here</xref> for basic information on price models.</ph></p>
       <p>Usually, you change a customer price model only in agreement with the relevant customer. For updating a customer price model, the relevant marketable service must be deactivated. Your changes overwrite the previous values. The update does not affect existing subscriptions. The changes only take effect for new subscriptions of the customer after the service has been activated again. </p>
@@ -23,15 +23,8 @@
         <cmd conref="../../Shared/priceModel.xml#PriceModelTopic/From_the_task_taskbody_steps_step_1"/>
       </step>
       <step>
-        <cmd>Depending on the billing system that is defined for the underlying technical service, proceed as follows:</cmd>
-        <info>
-          <ul compact="no">
-            <li>If the platform's native billing system is used, define the price model in the subsequent sections of the page.<ph audience="doc"> Click <xref
-                href="priceModel_customer_nat.xml">here</xref> for details.</ph></li>
-            <li>If an external billing system is used, import the appropriate price model from this system and specify the license agreement.<ph audience="doc"> Click <xref
-                href="priceModel_customer_ext.xml">here</xref> for details.</ph></li>
-          </ul>
-        </info>
+        <cmd>Define the price model in the subsequent sections of the page.<ph audience="doc"> Click <xref
+              href="priceModel_customer_nat.xml">here</xref> for details.</ph></cmd>
       </step>
     </steps>
     <result>After activating the service, the price model is available to the selected customer. It takes effect for all new subscriptions of the customer.</result>

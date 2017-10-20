@@ -22,9 +22,6 @@
                                 /> automatically creates a marketable service for this specific customer only. </p>
                         <p><ph>For even greater flexibility, you can define <b>subscription price models</b>. A subscription price model is specific to one subscription of an individual customer. It is not available for any other subscriptions of the same or a different customer.</ph>
                         </p>
-                        <p>The native billing system of <ph
-                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                /> supports all price model scopes. With external billing systems, the scopes may be restricted, depending on the billing system itself and the billing adapter used to integrate it.</p>
                 </section>
         </conbody>
 </concept>

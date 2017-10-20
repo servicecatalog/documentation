@@ -7,9 +7,10 @@
             /> Configuration Settings</ph><ph platform="help">Configuration settings</ph></title>
     <refbody>
         <section>
-            <p>The <codeph>configsettings.properties</codeph> file located in <codeph>&lt;install_pack_dir>/databases/bes_db</codeph> contains the configuration settings for the <ph
-                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
-                    platform="help">platform</ph> services.</p>
+            <p platform="print">The <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> configuration settings can be viewed and (partially) changed in the <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> administration portal. The default settings are specified in the ### Docker files ### as used during the deployment. </p>
         </section>
         <section>
             <title>AUDIT_LOG_ENABLED</title>
@@ -88,10 +89,7 @@
             </ul><note>The <uicontrol>Update configuration settings</uicontrol> page in the <uicontrol>Operation</uicontrol> menu is the default page the operator is directed to when logging in. If you hide the page from the menu or hide the complete menu, you are still directed to the <uicontrol>Update configuration settings</uicontrol> page where you can make changes, if required.</note></section>
         <section>
             <title>HIDE_PAYMENT_INFORMATION</title>
-            <p>Optional. Determines whether customers need to specify payment information for subscribing to services that use the <ph
-                    platform="help">platform's </ph>native billing system <ph platform="print">of <ph
-                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>
-                </ph>and are not free of charge. <ph>If set to <codeph>true</codeph>, the dialogs and options for specifying payment types and billing addresses are hidden on the marketplaces, and customer payment information does not appear in billing and payment preview reports. In the administration portal, suppliers and resellers cannot manage payment types for their customers. Billing runs and payment processing are not affected by the setting. </ph></p>
+            <p>Optional. Determines whether customers need to specify payment information for subscribing to services that are not free of charge. <ph>If set to <codeph>true</codeph>, the dialogs and options for specifying payment types and billing addresses are hidden on the marketplaces, and customer payment information does not appear in billing and payment preview reports. In the administration portal, suppliers and resellers cannot manage payment types for their customers. Billing runs and payment processing are not affected by the setting. </ph></p>
             <p>The setting is evaluated only once when <ph platform="help">the platform</ph><ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"
                     /> is installed or updated. The value can no longer be changed after <ph platform="help"

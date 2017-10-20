@@ -30,21 +30,11 @@
                 </ul>
             </p>
             <p>The service price model defines the prices to which brokers and resellers are bound if they offer and sell a service.</p>
-            <p>The native billing system of <ph platform="help">the platform</ph><ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"
-                /> supports all price model scopes. With external billing systems, the scopes may be restricted, depending on the billing system itself and the billing adapter used to integrate it.</p>
         </section>
         <section audience="doc">
             <title>Price Model Elements</title>
-            <p>The elements and options a price model consists of depend on where the price model is defined. </p>
-            <p>For services which use an external billing system for cost calculation, the price models are defined in this billing system and must comply with the given rules and structures. The price models are imported from the external billing system to <ph
-                    platform="help">the platform</ph><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    platform="print"/> at the corresponding services and subscriptions and cannot be changed there.</p>
             <p><ph id="Each_price_model_consists_of_reference_refbody_section_p"
-                    >Price models for services applying the <ph platform="help"
-                        >platform's </ph>native billing system <ph platform="print">of <ph
-                            conref="../Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"/>
-                    </ph>consist of the following elements that determine how the charges are calculated:</ph></p>
+                    >Price models consist of the following elements that determine how the charges are calculated:</ph></p>
             <ul>
                 <li>
                     <xref href="r_PriceModelDetails_onetime.xml"/>
@@ -74,10 +64,8 @@
         <section>
             <title><ph platform="help">Cost calculation options</ph><ph platform="print"
                 >Cost Calculation Options</ph></title>
-            <p id="costcalc1">The charges for a service using the <ph platform="help"
-                    >platform's </ph>native billing system <ph platform="print">of <ph
-                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"/>
-                </ph>can be calculated pro rata or per time unit. This affects the recurring charges for subscriptions and users as well as the charges for parameters, options, and service roles. The one-time fee and event prices are not affected. </p>
+            <p id="costcalc1"
+                >The charges for a service can be calculated pro rata or per time unit. This affects the recurring charges for subscriptions and users as well as the charges for parameters, options, and service roles. The one-time fee and event prices are not affected. </p>
             <p id="costcalc2">
                 <ul compact="no">
                     <li>

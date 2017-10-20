@@ -16,10 +16,6 @@
             </ul>
             <p>Revenue shares are defined by the operator. They may be different for individual marketplaces, specific services, and individual supplier, broker and reseller organizations. </p>
             <p>Suppliers, resellers, and brokers can at any time retrieve and export information on the revenue shares for the services they offer. They can use the data for charging or paying the other participating parties depending on the existing contracts.</p>
-            <p>
-                <note><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> calculates revenue shares only for services applying its native billing system. The costs of services using an external billing system are not included in the calculation. </note>
-            </p>
         </section>
     </conbody>
 </concept>
