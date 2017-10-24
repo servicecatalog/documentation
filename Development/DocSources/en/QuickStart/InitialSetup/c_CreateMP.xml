@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<concept id="concept_3413BBD173324104B42FB714974CABE7"
+                    xml:lang="en-us">
+    <title>Creating a Marketplace</title>
+    <conbody>
+        <section>
+            <p>You are responsible for creating marketplaces for the organizations that want to authorize suppliers, brokers, and resellers to publish their services using the facilities of <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. Creating a marketplace includes defining the marketplace properties and assigning an organization as the owner of the marketplace. All administrators of the assigned owner organization automatically receive the marketplace manager role. The marketplace manager role enables them to administrate and customize the marketplace.</p>
+            <p>As a prerequisite for creating a marketplace, the organization to be assigned as the marketplace owner must already exist.</p>
+        </section>
+        <section>
+            <p><b>To create a marketplace, you have the following option:</b>
+            </p>
+            <ul>
+                <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> administration portal - Choose <uicontrol>Create marketplace</uicontrol> in the <uicontrol>Marketplace</uicontrol> menu.<p>For detailed step-by-step instructions, refer to the online help. </p></li>
+            </ul>
+        </section>
+    </conbody>
+</concept>
