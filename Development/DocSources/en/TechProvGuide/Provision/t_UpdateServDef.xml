@@ -19,8 +19,7 @@
         <steps>
             <step>
                 <cmd>Log in to the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        /> administration portal using the login information provided by <ph
-                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</cmd>
+                    /> administration portal.</cmd>
             </step>
             <step>
                 <cmd>Select <uicontrol>Technical Service</uicontrol> &gt;
@@ -32,8 +31,7 @@
             <p>
                 <ol>
                     <li>Log in to the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            /> administration portal using the login information provided by <ph
-                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</li>
+                        /> administration portal.</li>
                     <li>Select <uicontrol>Technical Service</uicontrol> &gt;
                             <uicontrol>Import service definition</uicontrol>.</li>
                 </ol>
@@ -57,8 +55,7 @@
             <p>
                 <ol>
                     <li>Log in to the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            /> administration portal using the login information provided by <ph
-                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</li>
+                        /> administration portal.</li>
                     <li>Select <uicontrol>Technical Service</uicontrol> &gt;
                             <uicontrol>Delete service definition</uicontrol>. </li>
                 </ol>

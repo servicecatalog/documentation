@@ -55,11 +55,11 @@
                                 <entry>Describes the reports available for technology providers in <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </entry>
                             </row>
-                            <row>
+                            <!--row>
                                 <entry colname="col2"><xref href="../Reference/r_MenuOptions.xml"/></entry>
                                 <entry colname="col3"
                                     >Gives an overview of the menu options relevant for technology providers.</entry>
-                            </row>
+                            </row-->
                             <row>
                                 <entry colname="col2"><xref href="../Reference/r_TechServDescr.xml"/></entry>
                                 <entry colname="col3">Describes the elements of a technical service definition.</entry>

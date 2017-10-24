@@ -14,10 +14,18 @@
                         /> components as shown in the following illustration. The <ph
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> components are colored in dark grey:</ph></p>
-            <fig>
-                <image align="center" height="268" href="../../Shared/_images/Integration.png" placement="break"
-                    width="374"/>
-            </fig>
+            <p product="oscm_ce">
+                <fig>
+                    <image align="center" height="268" href="../../Shared/_images/Integration_OSCM.png" placement="break"
+                        width="374"/>
+                </fig>
+            </p>
+            <p product="oscm_ee">
+                <fig>
+                    <image align="center" height="268" href="../../Shared/_images/Integration_ESCM.png" placement="break"
+                        width="374"/>
+                </fig>
+            </p>
             <p><ph id="Depending_on_your_requirement_concept_conbody_section_p_2"
                     >Depending on your requirements, the integration involves the following tasks:</ph></p>
             <ol>

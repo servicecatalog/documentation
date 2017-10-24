@@ -8,10 +8,11 @@
     <title>Getting Started</title>
     <conbody>
         <p>After having successfully deployed <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                />, you can follow the instructions of the <xref format="html"
-                href="https://github.com/servicecatalog/development/wiki/Getting-Started" scope="external"
-                        ><u><i>Getting Started</i></u></xref> page for creating and publishing your first service to a <ph
-                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> marketplace. </p>
+                                />, you can follow the instructions on the <xref format="html"
+                                href="https://github.com/servicecatalog/development/wiki/Getting-Started"
+                                scope="external"
+                                ><u><i>Getting Started</i></u></xref> page for creating and publishing your first service to a <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> marketplace. </p>
         <p>### Is there a sample service and an organization with all required roles available after deployment?###</p>
         <p>This chapter summarizes the first steps to be performed for getting started with operating a <ph
                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> installation. In addition, it introduces the tools that support you in performing operational tasks.  <ol>
@@ -26,13 +27,13 @@
             /> administration portal where you can specify configuration settings that do not match your environment:</p>
         <p>You can access the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
             /> administration portal in a Web browser using an URL in the following format: </p>
-        <p><codeph>http://&lt;server&gt;:&lt;port&gt;/&lt;context-root></codeph>
-        </p>
-        <p><codeph>&lt;server></codeph> is the application server where <ph
-                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> has been deployed. <codeph>&lt;port></codeph> is the port to address the application server (default: <codeph>8080</codeph> for HTTP, <codeph>8081</codeph> for HTTPS). <codeph>&lt;context-root></codeph> is the context root of <ph
-                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> (default: <codeph>oscm-portal</codeph>). </p>
+        <p><codeph>https://&lt;server&gt;:&lt;port&gt;/&lt;context-root></codeph>
+                </p>
+                <p><codeph>&lt;server></codeph> is the machine where <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> has been deployed. <codeph>&lt;port></codeph> is by default <codeph>8080</codeph> for HTTP, <codeph>8081</codeph> for HTTPS. <codeph>&lt;context-root></codeph> is the context root of <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> (default: <codeph>oscm-portal</codeph>). </p>
         <p>You are prompted for the user ID and password. The initial credentials are as follows: </p>
         <p>User ID: <codeph>administrator</codeph>
         </p>

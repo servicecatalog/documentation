@@ -83,7 +83,7 @@ topicref href="OperationsGuide/Configuration/c_LoadBalancing.xml" type="concept"
         </topicref>
         <topicref href="OperationsGuide/Monitoring/c_ExportUserOperationLog.xml" type="concept"/>
         <topicref href="OperationsGuide/Monitoring/c_Backup.xml" type="concept"/>
-        <topicref href="OperationsGuide/Monitoring/c_CheckJMS.xml" type="concept"/>
+        <!--topicref href="OperationsGuide/Monitoring/c_CheckJMS.xml" type="concept"/-->
     </chapter>
     <chapter href="OperationsGuide/Organizations/c_Organizations.xml" type="concept">
         <topicref href="OperationsGuide/Organizations/c_OrgCreateOrg.xml" type="concept"/>

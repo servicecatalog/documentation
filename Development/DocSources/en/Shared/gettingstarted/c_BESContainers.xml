@@ -22,7 +22,7 @@
             <p>The following figure provides an overview of the container communication on a Docker Host (a Virtual Machine (VM)):</p>
             <p>
                 <fig>
-                    <image href="../_images/ContainerCommunication.png" alt="Architecture.png" width="280" height="252"/>
+                    <image href="../_images/ContainerCommunication.png" alt="ContainerCommunication.png" width="280" height="252"/>
                 </fig>
             </p>
             <p>The host-internal communication always relies on the HTTP protocol, whereas calls from outside of the host are secured via HTTPS.</p>

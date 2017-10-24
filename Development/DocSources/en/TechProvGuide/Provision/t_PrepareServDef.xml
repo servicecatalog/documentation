@@ -9,7 +9,7 @@
    <taskbody>
       <context>
          <p id="Each_application_to_be_integr_task_taskbody_context_p_1"
-            >You can define a technical service in an XML file. The file contains a description of the service's purpose, the license agreement, application parameters, options, events, service roles, and operations. </p>
+            >An XML file defining a technical service contains a description of the service's purpose, the license agreement, application parameters, options, events, service roles, and operations. </p>
          <p id="A_service_definition_must_con_task_taskbody_context_p_2"
             >A service definition must conform to the <codeph>TechnicalServices.xsd</codeph> XML schema.<ph audience="doc"> For detailed information on the elements and attributes, refer to <xref
                format="dita" href="../Reference/r_TechServDescr.xml"/>.</ph> </p>
@@ -31,8 +31,7 @@
             </info>
          </step>
          <step>
-            <cmd>If you have configured basic user authentication (authentication without certificates) and since <ph
-                  conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+            <cmd>Since <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                /> is the only application allowed to access your provisioning service, specify the following information:</cmd>
             <info>
                <ul>
@@ -50,11 +49,6 @@
                      conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                      /> (login access), fill in the <codeph>loginPath</codeph> attribute. </choice>
             </choices>
-         </step>
-         <step>
-            <cmd>If a billing system other than the default one set for <ph
-                  conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                  /> is to be used for providing price models and calculating charges for the service, fill in the <codeph>billingIdentifier</codeph> attribute.</cmd>
          </step>
          <step>
             <cmd>If there are any parameters that are to be passed to your application by an instance provisioning call, declare them in the <codeph>ParameterDefinition</codeph> sections.</cmd>

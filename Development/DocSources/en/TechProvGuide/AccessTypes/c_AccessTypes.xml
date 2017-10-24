@@ -11,9 +11,9 @@
             <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> offers various ways of integrating and accessing your application. The interaction takes place between the following components:</p>
             <ul>
-                <li>The client which in fact is the user who accesses a service using a Web browser or a Web service</li>
-                <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></li>
-                <li>The application which is accessed by the user</li>
+                <li>The client which in fact is the user who accesses a service using a Web browser or a Web service.</li>
+                <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</li>
+                <li>The application which is accessed by the user.</li>
             </ul>
             <p>There are some criteria to be considered before you decide to use a specific access type. The following decision diagram helps you in deciding which access type to use according to your environment and requirements:</p>
             <fig>
