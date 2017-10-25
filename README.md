@@ -1,4 +1,4 @@
-<p align="center"><h1><img height="52" src="logo.png" alt="FUJITSU Software Enterprise Service Catalog Manager"/>&nbsp;ESCM Documentation</h1></p> 
+<p align="center"><h1>FUJITSU Software Enterprise Service Catalog Manager Documentation</h1></p> 
 
 Welcome to the documentation of FUJITSU Software Enterprise Service Catalog Manager (ESCM)!
 
