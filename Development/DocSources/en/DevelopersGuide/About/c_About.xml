@@ -10,12 +10,10 @@
         <section>
             <p>This manual describes the public Web services and application programming interfaces (APIs) of <ph
                     product="oscm_ce"><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Name"/> (<ph
-                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>)</ph><ph
-                    product="oscm_ee"
-                        > FUJITSU Software Enterprise Service Catalog Manager - hereafter referred to as <ph
-                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Name"/> (<ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph>) <ph
+                    product="oscm_ee">FUJITSU Software Enterprise Service Catalog Manager, hereafter referred to as <ph
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    />) -</ph> and how to integrate applications and external systems with <ph
+                    /></ph>, and how to integrate applications and external systems with <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </p>
             <p>The manual is structured as follows: </p>
             <p>

@@ -10,11 +10,9 @@
         <section>
             <p>This manual describes the basic tasks involved in the operation and maintenance of <ph product="oscm_ce"
                         ><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Name"/> (<ph
-                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>)</ph><ph
-                    product="oscm_ee"
-                        > FUJITSU Software Enterprise Service Catalog Manager - hereafter referred to as <ph
-                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Name"/> (<ph
-                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>)</ph>.</p>
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph>) <ph
+                    product="oscm_ee">FUJITSU Software Enterprise Service Catalog Manager, hereafter referred to as <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph>.</p>
             <p>The manual is structured as follows: </p>
             <p>
                 <table colsep="1" frame="all" rowsep="1">

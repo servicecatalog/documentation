@@ -10,10 +10,8 @@
         <section>
             <p>This manual describes the integration of the Amazon Elastic Compute Cloud Web service (Amazon EC2), a major component of Amazon Web Services (AWS), with <ph
                     product="oscm_ce"><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Name"/> (<ph
-                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>)</ph><ph
-                    product="oscm_ee"
-                        > FUJITSU Software Enterprise Service Catalog Manager - hereafter referred to as <ph
-                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Name"/> or <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph>) <ph
+                    product="oscm_ee">FUJITSU Software Enterprise Service Catalog Manager, hereafter referred to as <ph
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph>.</p>
             <p>This manual is structured as follows: </p>
             <p>
