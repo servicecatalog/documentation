@@ -54,9 +54,9 @@
             href="QuickStart/InitialSetup/c_NextSteps.xml">
 			<topicref format="dita" href="QuickStart/InitialSetup/c_FirstSteps.xml" type="concept"/>
 			<topicref format="dita" href="QuickStart/InitialSetup/c_ToolSupport.xml" type="concept"/>
-			<topicref format="dita" href="QuickStart/InitialSetup/c_AddCurrency.xml" type="concept"/>
+			<!--topicref format="dita" href="QuickStart/InitialSetup/c_AddCurrency.xml" type="concept"/>
 			<topicref format="dita" href="QuickStart/InitialSetup/c_OrgAddRole.xml" type="concept"/>
-			<topicref format="dita" href="QuickStart/InitialSetup/c_CreateMP.xml" type="concept"/>
+			<topicref format="dita" href="QuickStart/InitialSetup/c_CreateMP.xml" type="concept"/-->
     </chapter>
     
     <chapter
