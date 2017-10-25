@@ -47,9 +47,11 @@
 
                 <div class="section"><h4 class="sectiontitle">AUTH_MODE</h4>
                         
-                        <p>Obligatorisch. Legt fest, dass die Plattform zur Benutzerauthentifizierung verwendet wird. Diese Einstellung wird beim ersten Starten des Systems ausgewertet. Sie kann nach dem ersten Starten des Systems nicht mehr geändert werden. Die Einstellung läßt sich auch nicht durch eine Upgrade-Installation ändern.</p>
+                        <p>Obligatorisch. Legt fest, ob die Plattform zur Benutzerauthentifizierung verwendet wird oder ob die Plattform als SAML Service Provider verwendet wird. Diese Einstellung wird beim ersten Starten des Systems ausgewertet. Sie kann nach dem ersten Starten des Systems nicht mehr geändert werden. Die Einstellung läßt sich auch nicht durch eine Upgrade-Installation ändern.</p>
 
-                        <p>Erlaubter Werte: <samp class="codeph">INTERNAL</samp>
+                        <p>Erlaubte Werte: <samp class="codeph">INTERNAL</samp> für Plattform-Authentifizierung oder <samp class="codeph">SAML_SP</samp>, wenn die Plattform als SAML Service Provider verwendet werden soll und Benutzer über ein Identity-Provider-System (IdP) authentifiziert werden sollen.</p>
+
+                        <p>Voreinstellung: <samp class="codeph">INTERNAL</samp>
                         </p>
 
                 </div>
@@ -166,6 +168,10 @@
 <p>Voreinstellung: <samp class="codeph">1080</samp></p>
 </div>
 
+                
+                
+                
+                
                 <div class="section"><h4 class="sectiontitle">KAFKA_BOOTSTRAP_SERVERS</h4>Optional. Liste von durch Kommas getrennten Host- und Port-Paaren, zum Addressieren von Kafka Brokern. Bootstrap-Server stellen die anfänglichen Hosts, die als Startpunkte für einen Kafka-Client dienen. In <span>der Plattform</span> werden sie für Event-basierte Provisionierung verwendet. <p>Voreinstellung: Kein Wert</p>
 <p>Beispiel: <samp class="codeph">localhost:9092</samp></p>
 <div class="p">
@@ -261,6 +267,181 @@ Voreinstellung: <p><samp class="codeph">./key</samp></p>
 <p><samp class="codeph">https://&lt;host IP address&gt;:&lt;port&gt;/ReportSecure/ReportingServiceSecureBean?wsdl</samp></p>
 <div class="note"><span class="notetitle">Hinweis:</span> Der obige Wert muss wie angegeben verwendet werden. Nehmen Sie keine Änderung vor.<p>Wenn Sie den SSL/HTTPS Port ändern und die BIRT Report Engine in derselben Domäne wie <span>die Plattform</span> läuft, müssen Sie diese Einstellung ebenfalls aktualisieren.</p>
 </div>
+</div>
+
+                
+                <div class="section"><h4 class="sectiontitle">SSO_DEFAULT_TENANT_ID</h4>Obligatorisch, wenn die Plattform als SAML Service Provider installiert wird. <p>Eindeutige ID für den Standard-Mandanten. Diesem Mandanten ist das IdP-System zugeordnet, das für die Authentifizierung aller auf der Plattform registrierten Benutzer verwendet wird, wenn diese auf einen Marktplatz oder das Administrationsportal zugreifen.</p>
+<p>Die ID muss exakt 8 Zeichen lang sein und keine Sonderzeichen oder Leerzeichen enthalten. Der Plattformbetreiben kann eine beliebige Zeichenfolge angeben. </p>
+<p>Diese ID muss dem IdP-Administrator mitgeteilt werden. Der IdP-Administrator muss diese ID als Attribute für SAML-Assertions setzen. Zum Beispiel in OpenAM: Die Plattform wurde als Service Provider (SP) registriert, dann wählt der IdP-Administrator diesen SP aus und gibt als Assertion Processing-Attribut folgendes ein: <samp class="codeph">tenantID="&lt;die 8 Zeichen&gt;"</samp>.</p>
+<p>Wenn Sie diese Einstellung nach dem ersten Datenaustausch zwischen der Plattform und dem IdP-System ändern müssen, müssen Sie sie sowohl in den Einstellung der Plattform als auch im IdP-System ändern. Eventuell müssen Sie dem IdP-Administrator eine neue Metadata-Exchange-Datei schicken.</p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">SSO_IDP_AUTHENTICATION_REQUEST_HTTP_METHOD</h4>Obligatorisch, wenn die Plattform als SAML Service Provider installiert wird. Gibt die Methode an, die für HTTP-Requests zur Authentifizierung verwendet wird. Abhängig vom IdP-System (Identity Provider)können <samp class="codeph">GET</samp>- oder <samp class="codeph">POST</samp>-Requests verwendet werden. <p>Erforderlich für Web Browser Single Sign-On.</p>
+<p>Voreinstellung: <samp class="codeph">POST</samp></p>
+<p>Wenn Sie diese Einstellung ändern, müssen Sie die Plattform neu starten.</p>
+
+                </div>
+
+                <div class="section"><h4 class="sectiontitle">SSO_IDP_SAML_ASSERTION_ISSUER_ID</h4>Obligatorisch, wenn die Plattform als SAML Service Provider installiert wird. <p>Entity-ID des IdP-Systems an. Diese ID ist für das IdP-System eindeutig und muss zwischen dem Plattformbetreiber und dem IdP-Administrator kommuniziert werden. Anhand dieser ID kann die Plattform sicherstellen, dass die Authentifizierungsdaten, die vom IdP-System zurückkommen, eindeutig von dem System stammen, das für die Authentifizierung konfiguriert wurde. </p>
+<p>Der IdP-Administrator kann diese ID beispielsweise über die Federation Medadata auf seinem IdP-System herausfinden. </p>
+<strong>Beispiele</strong>:<p>Auf dem OpenAM-Server können die Federation Metadata wie folgt in einem Web Browser abgerufen werden: </p>
+<p><samp class="codeph">https://&lt;OpenAM_server&gt;/openam/saml2/jsp/exportmetadata.jsp?entityid=</samp></p>
+<p>Auf dem ADFS-Server befinden sich die Daten in folgender Datei: </p>
+<p><samp class="codeph">http://&lt;ADFShost&gt;/FederationMetadata/2007-06/FederationMetadata.xml</samp></p>
+<p>In der XML-Datei heißt die Issuer ID auch <samp class="codeph">entityID</samp>, zu Beispiel:</p>
+<p><samp class="codeph">entityID="http://example.adfs.com/adfs/services/trust"</samp>
+                        </p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">SSO_IDP_TRUSTSTORE</h4>Obligatorisch, wenn die Plattform als SAML Service Provider installiert wird. Gibt den Pfad und Namen der Truststore-Datei an, die das Public-Key-Zertifikat des IdP-Systems (Identity Provider) enthalten muss. <p>Erforderlich für Web Browser Single Sign-On.</p>
+<p>Voreinstellung: <samp class="codeph">&lt;path&gt;/cacerts.jks</samp></p>
+<p>Sobald ein anderes Identity Provider System wie beispielsweise OpenAM, Cloudminder oder Active Directory installiert und verwendet wird, müssen Sie diese Einstellung unter Umständen ändern. In diesem Fall müssen Sie die Plattform neu starten.</p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">SSO_IDP_TRUSTSTORE_PASSWORD</h4>Obligatorisch, wenn die Plattform als SAML Service Provider installiert wird. Gibt das Passwort des Truststore mit dem Public-Key-Zertifikat des IdP-Systems (Identity Provider) an. <p>Erforderlich für Web Browser Single Sign-On.</p>
+<p>Standard-Password von GlassFish: <samp class="codeph">changeit</samp></p>
+<p>Das Passwort unterscheidet Groß-/Kleinschreibung. Es muss mit dem Output des IdP-Systems übereinstimmen.</p>
+<p>Wenn Sie diese Einstellung ändern, müssen Sie die Plattform neu starten.</p>
+
+                </div>
+
+                <div class="section"><h4 class="sectiontitle">SSO_IDP_URL</h4>Obligatorisch, wenn die Plattform als SAML Service Provider installiert wird. Gibt die URL zum Service Endpoint des IdP-Systems (Identity Provider) an, das verwendet werden soll (SAML Redirect URL). <p>Erforderlich für Web Browser Single Sign-On.</p>
+<p>Aus Sicherheitsgründen wird empfohlen, das HTTPS-Protokoll zu verwenden. </p>
+<p>Syntax: <samp class="codeph">https://&lt;host&gt;:&lt;port&gt;/&lt;RedirectServiceEndpoint&gt;</samp></p>
+<p>Wenn Sie diese Einstellung ändern, müssen Sie die Plattform neu starten.</p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">SSO_ISSUER_ID</h4>Obligatorisch, wenn die Plattform als SAML Service Provider installiert wird. Gibt eine eindeutige ID für die Plattform an, anhand derer das IdP-System (Identity Provider) eingehende SAML-Authentifizierungs-Requests von der Plattform identifizieren kann. <p>Erforderlich für Web Browser Single Sign-On.</p>
+<p>Wenn Sie diese Einstellung nach dem ersten Datenaustausch zwischen der Plattform und dem IdP-System ändern müssen, müssen Sie sie sowohl in den Einstellung der Plattform als auch im IdP-System ändern. Eventuell müssen Sie dem IdP-Administrator eine neue Metadata-Exchange-Datei schicken.</p>
+<p>Voreinstellung: <samp class="codeph">CT_MG</samp>
+                        </p>
+<p>Wenn Sie diese Einstellung ändern, müssen Sie die Plattform neu starten.</p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">SSO_LOGOUT_URL</h4>Obligatorisch, wenn die Plattform als SAML Service Provider installiert wird und Single Logout verwendet werden soll. <p>Gibt die URL zum Endpoint des Single Logout Service im IdP-System an. An diese Adresse sendet die Plattform Requests zur Abmeldung und zur Invalidierung von Sessions.</p>
+<p>Erforderlich für Web Browser Single Sign-On.</p>
+<p>Aus Sicherheitsgründen wird empfohlen, das HTTPS-Protokoll zu verwenden. </p>
+<p>Syntax: <samp class="codeph">https://&lt;host&gt;:&lt;port&gt;/&lt;LogoutServiceEndpoint&gt;</samp></p>
+<p>Wenn Sie diese Einstellung ändern, müssen Sie die Plattform neu starten.</p>
+<div class="note"><span class="notetitle">Hinweis:</span> Im IdP-System muss eine URL angegeben werden, zu der die Antwort auf den Request zur Abmeldung geschickt und der Benutzer nach der Abmeldung geleitet wird. Es wird empfohlen, folgende Standard-Marktplatzadresse der Plattform zu verwenden: <samp class="codeph">https://&lt;host&gt;:&lt;port&gt;/oscm-portal/marketplace/index.jsf</samp>. Bei Problemen kann der Benutzer automatisch von dieser Seite auf eine weitere Seite geleitet werden, die in der Konfigurationseinstellung <samp class="codeph">MP_ERROR_REDIRECT_HTTPS</samp> angegeben ist. Beachten Sie aber, dass diese URL systemweit gilt und nicht mandanten-spezifisch ist.</div>
+</div>
+
+                
+                <div class="section"><h4 class="sectiontitle">SSO_SIGNING_ALGORITHM</h4>Optional. Der Secure-Hash-Algorithmus zum Signieren von SAML Requests.  <p>Voreinstellung: <samp class="codeph">SHA1</samp></p>
+<p>Die Plattform unterstützt auch den Algorithmus SHA-256. Der Wert wird als <samp class="codeph">SHA256</samp> angegeben. </p>
+<p>Wenn Sie diese Einstellung ändern, müssen Sie die Plattform neu starten.</p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">SSO_SIGNING_KEY_ALIAS</h4>Obligatorisch für das Signieren von Requests durch die Plattform. Gibt den Alias des privaten Schlüssels der Plattform an, der zum Signieren von Requests verwendet wird. <p>Requests werden in folgenden Fällen signiert:</p>
+<ul>
+                                <li class="liexpand">Kommunikation mit Web-Seiten und Web-Applikationen aus zusätzlich definierten Tabs in Abonnements.</li>
+
+                                <li class="liexpand">Requests zur Abmeldung, wenn die Plattform als SAML Service Provider installiert wird, Single Logout konfiguriert wird, und der Single Logout Service des IdP-Systms signierte Requests erwartet, wie beispielsweise in Microsoft Active Directory Federation Services.</li>
+
+                        </ul>
+<p>Zur Verifizierung der Signatur muss das entsprechende Zertifikat der Plattform im Truststore des Application Servers hinterlegt werden, auf dem die Web-Seite, die Web-Applikation, oder das IdP-System läuft. </p>
+<p>Voreinstellung: <samp class="codeph">s1as</samp></p>
+<p>Wenn Sie diese Einstellung ändern, müssen Sie die Plattform neu starten.</p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">SSO_SIGNING_KEYSTORE</h4>Obligatorisch für das Signieren von Requests durch die Plattform. Gibt den Pfad und Namen des Keystores des Application Servers an, in dem der in der Einstellung <samp class="codeph">SSO_SIGNING_KEY_ALIAS</samp> angegebene private Schlüssel gespeichert ist. <p>Voreinstellung: <samp class="codeph">./keystore.jks</samp></p>
+<p>Wenn Sie diese Einstellung ändern, müssen Sie die Plattform neu starten.</p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">SSO_SIGNING_KEYSTORE_PASS</h4>Obligatorisch für das Signieren von Requests durch die Plattform. Gibt das Passwort für den Keystore des Application Servers an, der in der Einstellung <samp class="codeph">SSO_SIGNING_KEYSTORE</samp> angegeben ist. <p>Voreinstellung: <samp class="codeph">changeit</samp></p>
+<p>Wenn Sie diese Einstellung ändern, müssen Sie die Plattform neu starten.</p>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">SSO_STS_ENCKEY_LEN</h4>Obligatorisch, wenn die Plattform als SAML Service Provider installiert wird. Gibt die Länge des Encryption Key an, wie er von dem IdP-System (Identity Provider) verwendet wird.<p>Erforderlich für die STS-Kommunikation.</p>
+<p>Voreinstellung: <samp class="codeph">128</samp></p>
+<p>Diese Einstellung wird bei der Installation ausgewertet und kann im Administrationsportal nicht geändert werden. Gehen Sie wie folgt vor, wenn Sie die Einstelllung ändern müssen:</p>
+<div class="p">
+                                <ol>
+                                        <li>Stoppen Sie die Domäne <samp class="codeph">bes-domain</samp>.</li>
+
+                                        <li>Bearbeiten Sie die Datei <samp class="codeph">configsettings.properties</samp> und ändern Sie den Wert für die Einstellung <samp class="codeph">SSO_STS_ENCKEY_LEN</samp>.</li>
+
+                                        <li>Führen Sie die Datei <samp class="codeph">build-glassfish.xml</samp> im Verzeichnis <samp class="codeph">&lt;install_pack_dir&gt;/install</samp> wie folgt aus: <div class="p">
+                                                        <pre class="codeblock">&lt;ANT_HOME&gt;/bin/ant 
+   -DpatchProps.path=../domains/bes_domain/installer 
+   -f build-glassfish.xml patchAndRedeployApplication </pre>
+
+                                                </div>
+<p>Ersetzen Sie <samp class="codeph">&lt;ANT_HOME&gt;</samp> durch das Verzeichnis, in dem Apache Ant installiert ist.</p>
+<div class="p"><div class="note"><span class="notetitle">Hinweis:</span> Abhängig vom Betriebssystem müssen Sie den Ausdruck <samp class="codeph">-DpatchProps.path=&lt;Pfad&gt;</samp> in doppelte oder einfache Anführungszeichen setzen.  </div>
+Der geänderte Wert wird aus der Datei <samp class="codeph"><samp class="codeph">configsettings.properties</samp></samp> ausgelesen und in die WSIT-Dateien im Archiv <samp class="codeph">oscm.ear</samp> geschrieben. Das aktualisierte Archiv wird in <samp class="codeph">bes-domain</samp> neu installiert. </div>
+<p>Während der Ausführung des Befehls wird im Verzeichnis <samp class="codeph">&lt;install_pack_dir&gt;/domains/bes_domain</samp> ein Unterverzeichnis <samp class="codeph">/tmp</samp> angelegt, in dem das aktualisierte Archiv <samp class="codeph">oscm.ear</samp> gespeichert wird.</p>
+</li>
+
+                                        <li>Installieren Sie die Datei <samp class="codeph">oscm-portal.war</samp> in der Domäne <samp class="codeph">bes-domain</samp>.</li>
+
+                                        <li>Starten Sie die Domäne <samp class="codeph">bes-domain</samp> neu.</li>
+
+                                </ol>
+
+                        </div>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">SSO_STS_METADATA_URL</h4>Obligatorisch, wenn die Plattform als SAML Service Provider installiert wird. Gibt die URL der MEX-Adresse (Issuer Metadata Exchange) des STS (Security Token System) an. <p>Erforderlich für die STS-Kommunikation.</p>
+<p>Aus Sicherheitsgründen wird empfohlen, das HTTPS-Protokoll zu verwenden.</p>
+<p>Syntax: <samp class="codeph">https://&lt;host&gt;:&lt;port&gt;/&lt;MEXAddress&gt;</samp></p>
+<p>Diese Einstellung wird bei der Installation ausgewertet und kann im Administrationsportal nicht geändert werden. Gehen Sie wie folgt vor, wenn Sie die Einstelllung ändern müssen:</p>
+<div class="p">
+                                <ol>
+                                        <li>Stoppen Sie die Domäne <samp class="codeph">bes-domain</samp>.</li>
+
+                                        <li>Bearbeiten Sie die Datei <samp class="codeph">configsettings.properties</samp> und ändern Sie den Wert für die Einstellung <samp class="codeph">SSO_STS_METADATA_URL</samp>.</li>
+
+                                        <li>Führen Sie die Datei <samp class="codeph">build-glassfish.xml</samp> im Verzeichnis <samp class="codeph">&lt;install_pack_dir&gt;/install</samp> wie folgt aus: <div class="p">
+                                                        <pre class="codeblock">&lt;ANT_HOME&gt;/bin/ant 
+   -DpatchProps.path=../domains/bes_domain/installer 
+   -f build-glassfish.xml patchAndRedeployApplication</pre>
+
+                                                </div>
+<p>Ersetzen Sie <samp class="codeph">&lt;ANT_HOME&gt;</samp> durch das Verzeichnis, in dem Apache Ant installiert ist.</p>
+<div class="note"><span class="notetitle">Hinweis:</span> Abhängig vom Betriebssystem müssen Sie den Ausdruck <samp class="codeph">-DpatchProps.path=&lt;Pfad&gt;</samp> in doppelte oder einfache Anführungszeichen setzen.  </div>
+<p>Der geänderte Wert wird aus der Datei <samp class="codeph"><samp class="codeph">configsettings.properties</samp></samp> ausgelesen und in die WSIT-Dateien im Archiv <samp class="codeph">oscm.ear</samp> geschrieben. Das aktualisierte Archiv wird in <samp class="codeph">bes-domain</samp> neu installiert. </p>
+<p>Während der Ausführung des Befehls wird im Verzeichnis <samp class="codeph">&lt;install_pack_dir&gt;/domains/bes_domain</samp> ein Unterverzeichnis <samp class="codeph">/tmp</samp> angelegt, in dem das aktualisierte Archiv <samp class="codeph">oscm.ear</samp> gespeichert wird.</p>
+</li>
+
+                                        <li>Installieren Sie die Datei <samp class="codeph">oscm-portal.war</samp> in der Domäne <samp class="codeph">bes-domain</samp>.</li>
+
+                                        <li>Starten Sie die Domäne <samp class="codeph">bes-domain</samp> neu.</li>
+
+                                </ol>
+
+                        </div>
+</div>
+
+                <div class="section"><h4 class="sectiontitle">SSO_STS_URL</h4>Obligatorisch, wenn die Plattform als SAML Service Provider installiert wird. Gibt die URL zum Service Endpoint des STS (Security Token System) an.<p>Erforderlich für die STS-Kommunikation.</p>
+<p>Aus Sicherheitsgründen wird empfohlen, das HTTPS-Protokoll zu verwenden.</p>
+<p>Syntax: <samp class="codeph">https://&lt;host&gt;:&lt;port&gt;/&lt;ServiceEndpoint&gt;</samp></p>
+<p>Diese Einstellung wird bei der Installation ausgewertet und kann im Administrationsportal nicht geändert werden. Gehen Sie wie folgt vor, wenn Sie die Einstelllung ändern müssen:</p>
+<div class="p">
+                                <ol>
+                                        <li>Stoppen Sie die Domäne <samp class="codeph">bes-domain</samp>.</li>
+
+                                        <li>Bearbeiten Sie die Datei <samp class="codeph">configsettings.properties</samp> und ändern Sie den Wert für die Einstellung <samp class="codeph">SSO_STS_URL</samp>.</li>
+
+                                        <li>Führen Sie die Datei <samp class="codeph">build-glassfish.xml</samp> im Verzeichnis <samp class="codeph">&lt;install_pack_dir&gt;/install</samp> wie folgt aus: <div class="p">
+                                                        <pre class="codeblock">&lt;ANT_HOME&gt;/bin/ant 
+   -DpatchProps.path=../domains/bes_domain/installer 
+   -f build-glassfish.xml patchAndRedeployApplication</pre>
+
+                                                </div>
+<p>Ersetzen Sie <samp class="codeph">&lt;ANT_HOME&gt;</samp> durch das Verzeichnis, in dem Apache Ant installiert ist.</p>
+<div class="note"><span class="notetitle">Hinweis:</span> Abhängig vom Betriebssystem müssen Sie den Ausdruck <samp class="codeph">-DpatchProps.path=&lt;Pfad&gt;</samp> in doppelte oder einfache Anführungszeichen setzen.  </div>
+<p>Der geänderte Wert wird aus der Datei <samp class="codeph"><samp class="codeph">configsettings.properties</samp></samp> ausgelesen und in die WSIT-Dateien im Archiv <samp class="codeph">oscm.ear</samp> geschrieben. Das aktualisierte Archiv wird in <samp class="codeph">bes-domain</samp> neu installiert. </p>
+<p>Während der Ausführung des Befehls wird im Verzeichnis <samp class="codeph">&lt;install_pack_dir&gt;/domains/bes_domain</samp> ein Unterverzeichnis <samp class="codeph">/tmp</samp> angelegt, in dem das aktualisierte Archiv <samp class="codeph">oscm.ear</samp> gespeichert wird.</p>
+</li>
+
+                                        <li>Installieren Sie die Datei <samp class="codeph">oscm-portal.war</samp> in der Domäne <samp class="codeph">bes-domain</samp>.</li>
+
+                                        <li>Starten Sie die Domäne <samp class="codeph">bes-domain</samp> neu.</li>
+
+                                </ol>
+
+                        </div>
 </div>
 
                 <div class="section"><h4 class="sectiontitle">SUPPLIER_SETS_INVOICE_AS_DEFAULT</h4>Optional. Definiert, ob Zahlung auf Rechnung als Zahlungsart für alle Kunden voreingestellt sein soll. <p>Erlaubte Werte: <samp class="codeph">true</samp>, <samp class="codeph">false</samp></p>

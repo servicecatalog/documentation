@@ -8,6 +8,7 @@
 <meta name="DC.Title" content="Marktplatz anlegen" />
 <meta scheme="URI" name="DC.Relation" content="marketplace_update.htm" />
 <meta scheme="URI" name="DC.Relation" content="marketplace_delete.htm" />
+<meta scheme="URI" name="DC.Relation" content="operator_manageTenants.htm" />
 <meta content="XHTML" name="DC.Format" />
 <meta content="task634" name="DC.Identifier" />
 <meta content="de-de" name="DC.Language" />
@@ -28,6 +29,8 @@
 
       <p>Die Organisation, die Sie als Marktplatzeigentümer angeben, muss bereits existieren.</p>
 
+      <p>Wenn die Plattform mit der Authentifizierungsart SAML_SP installiert ist, können Sie dem Marktplatz einen Mandanten zuordnen. Der Mandant legt das Identity-Provider-System fest, über welches Benutzer authentifiziert werden, sobald sie auf den Marktplatz zugreifen. </p>
+
       <p><strong>So legen Sie einen Marktplatz an</strong>:</p>
 
     </div>
@@ -36,6 +39,13 @@
         <span>Geben Sie einen Namen für den Marktplatz ein.</span>
          
           <p>Unter diesem Namen wird der Marktplatz den Marktplatz-Managern zur Auswahl angeboten, wenn sie den Marktplatz verwalten und anpassen.</p>
+
+        
+      </li>
+<li class="stepexpand">
+        <span>Geben Sie optional eine ID für den Marktplatz ein. </span>
+         
+          <p>Diese ID wird an die URL für den Zugriff auf den Marktplatz angehängt. Geben Sie keine ID an, wird sie automatisch generiert. </p>
 
         
       </li>
@@ -79,6 +89,10 @@
         
       </li>
 <li class="stepexpand">
+        <span>Wenn die Plattform mit der Authentifizierungsart SAML_SP installiert ist, wählen Sie den Mandanten des Identity-Provider-Systems, über das Benutzer authentifiziert werden sollen. Wenn Sie das Feld leer lassen, werden die Benutzer beim Zugriff auf den Marktplatz über das bei der Installation angegebene Identity-Provider-System authentifiziert. </span>
+         Die Liste stellt alle auf Ihrer Plattform existierenden Mandanten zur Auswahl. 
+      </li>
+<li class="stepexpand">
         <span>Legen Sie den Marktplatz mit <span class="uicontrol">Speichern</span> an.</span>
       </li>
 </ol>
@@ -86,7 +100,7 @@
     <div class="section">
       <p>Die Administratoren der Eigentümerorganisation erhalten die Rolle Marktplatz-Manager. Sie werden per E-Mail über den neuen Marktplatz informiert. Die E-Mail enthält zwei URLs. Die erste URL kann von den Marktplatz-Managern zur Administration und Anpassung des Marktplatzes verwendet werden. Die zweite URL kann für den öffentlichen Zugriff auf den Marktplatz genutzt werden.</p>
 
-      <p>Sobald Sie einen Marktplatz angelegt haben, können Sie bei Bedarf Marktplätze löschen oder deren Eigentümer ändern.</p>
+      <p>Sobald Sie einen Marktplatz angelegt haben, können Sie bei Bedarf Marktplätze löschen, deren Eigentümer ändern, oder die Zuordnung eines Mandanten ändern. </p>
 
     </div>
 
@@ -96,7 +110,8 @@
 <div class="linklist"><strong>Weitere Themen</strong><br />
 
 <div><a href="marketplace_update.htm">Marktplatzeigenschaften ändern</a></div>
-<div><a href="marketplace_delete.htm">Marktplatz löschen</a></div></div>
+<div><a href="marketplace_delete.htm">Marktplatz löschen</a></div>
+<div><a href="operator_manageTenants.htm">Mandanten verwalten</a></div></div>
 </div>
 
 </body>
