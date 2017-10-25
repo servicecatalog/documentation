@@ -11,10 +11,20 @@
             <p>For payment collection, a supplier or reseller organization can use the facilities of a commercial payment service provider (PSP). <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> provides a Web service interface (payment service) to enable operator organizations to integrate payment service providers (PSPs) with <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"> </ph>. The following figure illustrates the communication paths between the components involved in PSP integration:<fig>
-                    <image href="../../Shared/_images/IntegrationPSP.png" alt="IntegrationPSP.png" width="290"
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                > </ph>. The following figure illustrates the communication paths between the components involved in PSP integration:</p>
+            <p product="oscm_ce">
+                <fig>
+                    <image href="../../Shared/_images/IntegrationPSP_CE.png" alt="IntegrationPSP.png" width="290"
                         height="232"/>
-                </fig></p>
+                </fig>
+            </p>
+            <p product="oscm_ee">
+                <fig>
+                    <image href="../../Shared/_images/IntegrationPSP_EE.png" alt="IntegrationPSP.png" width="290"
+                        height="232"/>
+                </fig>
+            </p>
             <p>The process of integrating PSP support for a supplier or reseller organization and the tasks to be performed by an operator are as follows:</p>
             <p>
                 <fig>

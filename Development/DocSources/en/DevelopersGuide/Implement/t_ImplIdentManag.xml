@@ -173,7 +173,7 @@
 cm.host=localhost
 cm.port=8081
 
-# Catalog Manager web services are available on different web
+# ESCM web services are available on different web
 # service ports (endpoints), 
 # depending on the authentication mode.
 #
@@ -243,33 +243,33 @@ cm.service.user.password=&lt;user_password></codeblock></li>
             </p>
             <ul>
                 <li><codeph>webserviceclient.properties</codeph>
-                    <codeblock># Machine where Catalog Manager is hosted and port to access the 
+                    <codeblock># Machine where ESCM is hosted and port to access the 
 # web service
 cm.host=localhost
 cm.port=8081
 
-# Catalog Manager web services are available on 3 different web
+# ESCM web services are available on 3 different web
 # service ports (endpoints),  
-# depending on the Catalog Manager authentication mode.
+# depending on the ESCM authentication mode.
 #
-# Example - Web service port URLs for the Catalog Manager session
+# Example - Web service port URLs for the ESCM session
 # service:
 # https://localhost:8081/SessionService/BASIC?wsdl
 # https://localhost:8081/SessionService/CLIENTCERT?wsdl
 # https://localhost:8081/SessionService/STS?wsdl&amp;tenantID=xxxxxxxx
 #
-# Set the web service port suffix, depending on the Catalog Manager
+# Set the web service port suffix, depending on the ESCM
 # authentication mode:
 # - authentication mode INTERNAL: use BASIC or CLIENTCERT 
 # - authentication mode SAML-SP : use STS
 
 cm.service.port=BASIC
 
-# Catalog Manager web service version
+# ESCM web service version
 
 cm.service.version=v1.9
 
-# User credentials to access Catalog Manager web service.  
+# User credentials to access ESCM web service.  
 # User key is used for BASIC and CLIENTCERT ports, and user ID 
 # and tenant ID for STS port.
 

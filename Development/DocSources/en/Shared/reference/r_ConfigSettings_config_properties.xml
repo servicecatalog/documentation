@@ -249,18 +249,12 @@
                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
                     >the platform</ph> also supports the SHA-256 algorithm (value: <codeph>SHA256</codeph>). </p><p>If you change this setting, you need to restart <ph
                     platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
-                    platform="help">the platform</ph>.</p></section>
+                    platform="help">the platform</ph>.</p></section-->
         <section><title>SSO_SIGNING_KEY_ALIAS</title>Mandatory if requests are to be signed by <ph platform="print"><ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
                 >the platform</ph>. The alias of the private key of <ph platform="print"><ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
-                >the platform</ph> to be used for signing requests. <p>Requests are signed in the following situations: </p><ul
-                compact="no">
-                <li>Communication with Web pages or applications from custom tabs in subscriptions.</li>
-                <li>Logout requests, if <ph platform="print"><ph
-                            conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
-                        >the platform</ph> is installed in SAML_SP authentication mode, single logout is configured, and the IdP system's single logout service requires signed requests, as, for example, in Microsoft Active Directory Federation Services (ADFS). </li>
-            </ul><p>The application server used for the Web page, Web application, or IdP system needs the corresponding certificate of <ph
+                >the platform</ph> to be used for signing requests. <p>Requests are signed for the communication with Web pages or applications from custom tabs in subscriptions. The application server used for the Web page or Web application needs the corresponding certificate of <ph
                     platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
                     platform="help"
                     >the platform</ph> in its truststore for verifying the signature.</p><p>Default: <codeph>s1as</codeph></p><p>If you change this setting, you need to restart <ph
@@ -279,7 +273,7 @@
                 >the platform</ph>. The password for accessing the keystore specified in the <codeph>SSO_SIGNING_KEYSTORE</codeph> setting.<p>Default: <codeph>changeit</codeph></p><p>If you change this setting, you need to restart <ph
                     platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
                     platform="help">the platform</ph>.</p></section>
-        <section><title>SSO_STS_ENCKEY_LEN</title>Mandatory if you install <ph platform="print"><ph
+        <!--section><title>SSO_STS_ENCKEY_LEN</title>Mandatory if you install <ph platform="print"><ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
                 >the platform</ph> in SAML_SP authentication mode. The length of the encryption key as used by the IdP.<p>Required for STS communication.</p><p>Default: <codeph>128</codeph></p><p>This setting is an installation property and cannot be changed in the administration portal. If you need to change the encryption key length, proceed as follows: </p><p>
                 <ol>
