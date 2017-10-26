@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<cs:cspec xmlns:cs="http://www.eclipse.org/buckminster/CSpec-1.0" name="FujitsuUserDoc" componentType="buckminster" version="1.0" versionType="String">
-    <cs:dependencies>
-        <cs:dependency name="Fujitsu_Model" versionDesignator="[1.0,2.0)" versionType="String"/>
-    </cs:dependencies>
-</cs:cspec>

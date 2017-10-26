@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="ASCII"?>
-<com.go.dita.reuse:ReuseContainer xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.go.dita.reuse="http://go.com/dita/reuse">
-  <reuseElements xsi:type="com.go.dita.reuse:ConrefReuseElement" name="EN_Product_Name" value="/DocSources/en/Shared/Product_Name.xml" description="" conref="ProductNameTopic/Product_Name"/>
-  <reuseElements xsi:type="com.go.dita.reuse:ConrefReuseElement" name="EN_Product_Abbr" value="/DocSources/en/Shared/Product_Name.xml" description="" conref="ProductNameTopic/Product_Abbr"/>
-  <reuseElements xsi:type="com.go.dita.reuse:ConrefReuseElement" name="DE_Product_Name" value="/DocSources/de/Shared/Product_Name.xml" description="" conref="ProductNameTopic/Product_Name"/>
-  <reuseElements xsi:type="com.go.dita.reuse:ConrefReuseElement" name="DE_Product_Abbr" value="/DocSources/de/Shared/Product_Name.xml" description="" conref="ProductNameTopic/Product_Abbr"/>
-</com.go.dita.reuse:ReuseContainer>
