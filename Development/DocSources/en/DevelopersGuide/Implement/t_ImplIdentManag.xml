@@ -45,10 +45,10 @@
                 <ul>
                     <li><codeph>oscm-webservices-proxy.jar</codeph>: A library containing a Web service proxy for <codeph>BASIC</codeph> Web service ports of the <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            /> platform services. This proxy is implemented in Java and ready to be used. It creates a Web service proxy containing all information required to establish a connection with a <ph
+                            /> platform services. This proxy is implemented in Java and ready to be used. It creates a Web service proxy containing all information required to establish a connection with an <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> Web service.</li>
                     <li><codeph>Integrationhelper.jar</codeph>: A library containing a token handler and logout listener. They are also implemented in Java and ready to be used.</li>
-                    <li><codeph>oscm-api-client-handler.jar</codeph>: A library containing a SOAP handler for adding a service version number to the outbound SOAP messages of a <ph
+                    <li><codeph>oscm-api-client-handler.jar</codeph>: A library containing a SOAP handler for adding a service version number to the outbound SOAP messages of an <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                             /> Web service client. The service version can be found in the <codeph>&lt;documentation></codeph> tag included in the WSDL files.  </li>
                     <li><codeph>Integrationhelper.war</codeph>: A Web archive including the above integration helpers and additional resources required by them.</li>
@@ -120,7 +120,7 @@
                         <li>Server and port where the <ph
                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                             /> platform services have been deployed.</li>
-                        <li>The URL of the WSDL file of the platform's Session Service.<p>The Web service port of a <ph
+                        <li>The URL of the WSDL file of the platform's Session Service.<p>The Web service port of an <ph
                                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                     /> platform service is <codeph>BASIC</codeph>. </p></li>
                         <li>ID or key as well as password of the calling user. The user must have the role of a technology manager in a technology provider organization.</li>

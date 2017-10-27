@@ -5,33 +5,17 @@
 ]>
 
 <concept id="concept_1BCF5C425D7D4627AB1C66A085CF6E11" xml:lang="en-us">
-    <title><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> Containers</title>
+    <title><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> Container Communication</title>
     <conbody>
         <section>
-            <p>The Docker images provided for <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> are the following:</p>
-            <ul>
-                <li><codeph>oscm-core</codeph>: The main <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> application.  </li>
-                <li><codeph>oscm-app</codeph>: The Asynchronous Provisioning Platform (APP) together with the OpenStack and the Amazon Web Services (AWS) service controllers. </li>
-                <li><codeph>oscm-birt</codeph>: The report engine that <ph
-                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> uses for generating reports. </li>
-                <li><codeph>oscm-branding</codeph>: A branding package that can be customized by marketplace owners for designing the look and feel of <ph
-                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> marketplaces. </li>
-            </ul>
             <p>The following figure provides an overview of the container communication on a Docker Host (a Virtual Machine (VM)):</p>
+            <p>### TODO: Add help container and Cinder volumes ###</p>
             <p>
                 <fig>
                     <image href="../_images/ContainerCommunication.png" alt="ContainerCommunication.png" width="280" height="252"/>
                 </fig>
             </p>
             <p>The host-internal communication always relies on the HTTP protocol, whereas calls from outside of the host are secured via HTTPS.</p>
-            <p>In addition to the above Docker images, there are additional ones available: </p>
-            <ul>
-                <li><codeph>oscm-db</codeph> and <codeph>oscm-initdb</codeph>: Temporary database container and several database initialization containers. By this, the initial database schemas required for running <ph
-                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> are created. </li>
-                <li><codeph>oscm-proxy</codeph>: A static Web server providing reverse proxy functionality. </li>
-            </ul>
         </section>
     </conbody>
 </concept>

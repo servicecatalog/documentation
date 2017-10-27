@@ -53,7 +53,7 @@
     </chapter>
     <chapter href="OperationsGuide/GettingStarted/c_GettingStarted.xml" type="concept">
         
-        <topicref href="OperationsGuide/GettingStarted/c_StartupShutdown.xml" type="concept"/>
+        <!--topicref href="OperationsGuide/GettingStarted/c_StartupShutdown.xml" type="concept"/-->
         
         
         
