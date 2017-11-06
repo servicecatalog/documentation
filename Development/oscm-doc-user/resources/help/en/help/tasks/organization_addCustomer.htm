@@ -100,11 +100,6 @@
 <li class="stepexpand">
         <span>If the customer is to use a remote LDAP system for user authentication, select the <span class="uicontrol">Use LDAP-based authentication</span> check box. </span>
          
-          <div class="p">
-            <div class="note"><span class="notetitle">Note:</span> This option is not available if users are authenticated against a SAML 2.0 Identity Provider.</div>
-
-          </div>
-
           <p>Create an LDAP configuration file on your file system, and define the LDAP connection settings in the file. To load the configuration file, click the <span class="uicontrol">LDAP settings</span> entry field or <span class="uicontrol">Browse</span>, and select the file containing the settings. If you do not specify an organization-specific configuration file, the platform default settings for LDAP connections will be used. </p>
 
           <p>When using an external LDAP system, your customer does not need to register his users manually. The administrator of the customer organization can import the users from the LDAP system, thus automatically registering basic information for them.</p>
@@ -147,7 +142,7 @@ LDAP_ATTR_REFERRAL=ignore</pre>
 
       </div>
 
-      <p>As a supplier or reseller, your next step is typically to specify the payment types available for the customer so that he can choose his preferred way of paying for his subscriptions. Payment types as well as billing addresses are relevant for services that use the platform's native billing system and are not free of charge. Even for these services, however, your operator may deactivate any possibilities for customers to enter such payment information. If this is the case, the definition of payment types is not possible.</p>
+      <p>As a supplier or reseller, your next step is typically to specify the payment types available for the customer so that he can choose his preferred way of paying for his subscriptions. Payment types as well as billing addresses are relevant for services that are not free of charge. Even for these services, however, your operator may deactivate any possibilities for customers to enter such payment information. If this is the case, the definition of payment types is not possible.</p>
 
     </div>
 
