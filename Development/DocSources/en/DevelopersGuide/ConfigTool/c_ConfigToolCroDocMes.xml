@@ -11,9 +11,14 @@
             <p>The following illustration shows how <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> uses cross-document messaging for the communication with a parameter configuration tool:</p>
-            <p>
+            <p product="oscm_ce">
                 <fig>
-                    <image href="../_images/CrossDoc.png" alt="IntExtTool.png" width="374" height="200"/>
+                    <image href="../_images/CrossDoc_CE.png" alt="CrossDoc.png" width="374" height="200"/>
+                </fig>
+            </p> 
+            <p product="oscm_ee">
+                <fig>
+                    <image href="../_images/CrossDoc_EE.png" alt="CrossDoc.png" width="374" height="200"/>
                 </fig>
             </p>
             <p>Cross-document messaging is a JavaScript API which enables communication between documents from different origins or source domains. With the methods of this API, scripts can interact across domain boundaries and send plain text messages from one domain to another. Cross-document messaging can be used in all Web browsers supported by the <ph

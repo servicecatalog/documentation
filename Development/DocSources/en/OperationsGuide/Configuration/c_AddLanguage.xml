@@ -11,12 +11,10 @@
         <section>
             <p conref="../../help/tasks/operator_manageLanguages.xml#Language/language_intro"> </p>
             <p conref="../../help/tasks/operator_manageLanguages.xml#Language/AddingLanguage"> </p>
-            <p><b>To add a language, you have the following option: </b>
-                <ul>
-                    <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            /> administration portal - Choose <b>Manage languages</b> in the <b>Operation</b> menu. <p>For detailed step-by-step instructions, refer to the online help. </p></li>
-                </ul></p>
-            <p> </p>
+            <p><b>To add a language:</b>
+            </p>
+            <p>In the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> administration portal, choose <b>Manage languages</b> in the <b>Operation</b> menu. For detailed step-by-step instructions, refer to the online help. </p>
         </section>
     </conbody>
 </concept>

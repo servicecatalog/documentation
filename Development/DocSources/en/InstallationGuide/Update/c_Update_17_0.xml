@@ -128,7 +128,6 @@
         <li>Stop the <codeph>bes-domain</codeph> domain.</li>
         <li>Check for <codeph>.glassfishStaleFiles</codeph> files. If there are any, delete them. The files are located in<p><codeph>&lt;domain&gt;/applications/&lt;application name&gt;/.glassfishStaleFiles</codeph></p><p>For example: </p><p><codeph>bes-domain/applications/oscm/.glassfishStaleFiles</codeph></p></li>
         <li>Delete any existing index directories in the index base of the <codeph>bes-domain</codeph> domain:<p><codeph>bes-domain/slaveIndexBase/*</codeph></p></li>
-        <li>Copy the <codeph>oscm-security.jar</codeph> and <codeph>commons-codec-1.7.jar</codeph> files from the <codeph>&lt;install_pack_dir>/domains/bes_domain/lib</codeph> directory to the <codeph>lib</codeph> directory of the <codeph>bes-domain</codeph> domain.</li>
         <li>Start the <codeph>bes-domain</codeph> domain.</li>
         <li>
           <p>Deploy the <ph

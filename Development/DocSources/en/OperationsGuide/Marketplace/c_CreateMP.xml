@@ -14,12 +14,9 @@
             <p>As a prerequisite for creating a marketplace, the organization to be assigned as the marketplace owner must already exist.</p>
         </section>
         <section>
-            <p><b>To create a marketplace, you have the following option:</b>
-            </p>
-            <ul>
-                <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        /> administration portal - Choose <uicontrol>Create marketplace</uicontrol> in the <uicontrol>Marketplace</uicontrol> menu.<p>For detailed step-by-step instructions, refer to the online help. </p></li>
-            </ul>
+            <p><b>To create a marketplace:</b></p>
+            <p>In the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> administration portal, choose <uicontrol>Create marketplace</uicontrol> in the <uicontrol>Marketplace</uicontrol> menu. For detailed step-by-step instructions, refer to the online help.</p>
         </section>
     </conbody>
 </concept>

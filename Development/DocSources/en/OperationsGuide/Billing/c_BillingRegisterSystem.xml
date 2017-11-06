@@ -11,11 +11,10 @@
                 <section>
                         <p>An external billing system needs to be registered in <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> before it can be used. </p>
-                        <p><b>To register an external billing system, you have the following option: </b>
-                                <ul>
-                                        <li><ph
-                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> administration portal - Choose <b>Manage billing systems</b> in the <b>Operation</b> menu. <p>For detailed step-by-step instructions, refer to the online help. </p></li>
-                                </ul></p>
+                        <p><b>To register an external billing system:</b>
+                        </p>
+                        <p>In the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        /> administration portal, choose <b>Manage billing systems</b> in the <b>Operation</b> menu. For detailed step-by-step instructions, refer to the online help.</p>
                         <p>You need to provide the following information: </p>
                         <ul>
                                 <li>Billing system ID. This ID uniquely identifies the billing system in <ph

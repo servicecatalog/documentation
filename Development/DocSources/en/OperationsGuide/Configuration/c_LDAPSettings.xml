@@ -8,12 +8,6 @@
     <title>Managing LDAP Settings</title>
     <conbody>
         <section>
-            <p>
-                <note>This section is relevant only if <ph
-                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> is installed in INTERNAL authentication mode.<ph audience="doc"> Refer to <xref
-                        href="../GettingStarted/c_Authentication.xml"/> for details on authentication modes.</ph> </note>
-            </p>
             <p>User IDs and passwords of an organization can be created and maintained in the platform or in an existing LDAP system of an organization.</p>
             <p conref="../../help/tasks/operator_createOrganization.xml#OrgCreate/UserMgmt2"> </p>
             <p conref="../../help/tasks/operator_createOrganization.xml#OrgCreate/UserMgmt3"> </p>
@@ -33,22 +27,22 @@
         <section>
             <title>Defining Default LDAP Settings</title>
             <p>Defining default LDAP settings for the entire platform is useful if settings are to be reused for several organizations. If organization-specific LDAP settings exist, they overrule the default LDAP settings. </p>
-            <p><b>To define default LDAP settings, choose the following option:</b>
-                <ul>
-                    <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> administration portal - Choose <b>Manage LDAP settings</b> in the <b>Operation</b> menu.<p>For detailed step-by-step instructions, refer to the online help.<ph audience="doc"> For a list of LDAP keys, refer to <xref
-                                href="../../Shared/reference/r_LDAP_SettingTypes.xml"/>.</ph> </p></li>
-                </ul></p>
+            <p><b>To define default LDAP settings:</b>
+            </p>
+            <p>In the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> administration portal, choose <b>Manage LDAP settings</b> in the <b>Operation</b> menu. For detailed step-by-step instructions, refer to the online help.<ph
+                    audience="doc"> For a list of LDAP keys, refer to <xref
+                        href="../../Shared/reference/r_LDAP_SettingTypes.xml"/>.</ph></p>
         </section>
         <section>
             <title>Checking the Connection to an LDAP System</title>
             <p>If for some reason an organization's LDAP system cannot be reached, you can check and restore the connection so that user authentication is possible again. </p>
-            <p><b>To check an LDAP connection, choose the following option:</b>
-                <ul>
-                    <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> administration portal - Choose <b>Manage LDAP settings</b> in the <b>Operation</b> menu.<p>For detailed step-by-step instructions, refer to the online help.<ph audience="doc"> For a list of LDAP keys, refer to <xref
-                                href="../../Shared/reference/r_LDAP_SettingTypes.xml"/>.</ph> </p></li>
-                </ul></p>
+            <p><b>To check an LDAP connection:</b>
+            </p>
+            <p>In the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> administration portal, choose <b>Manage LDAP settings</b> in the <b>Operation</b> menu. For detailed step-by-step instructions, refer to the online help.<ph
+                    audience="doc"> For a list of LDAP keys, refer to <xref
+                        href="../../Shared/reference/r_LDAP_SettingTypes.xml"/>.</ph></p>
         </section>
     </conbody>
 </concept>

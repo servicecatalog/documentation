@@ -13,17 +13,10 @@
                     />. These currencies will be available to suppliers when defining the price models for marketable services. The selected currencies are used by the integrated rating and billing engine of <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> when calculating subscription usage charges. </p>
-            <p><b>To add a currency, choose one of the following options: </b>
-                <ul>
-                    <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            /> administration portal - Choose <b>Manage currencies</b> in the <b>Operation</b> menu. <p>For detailed step-by-step instructions, refer to the online help. </p></li>
-                    <li>Command line tool - Use the <codeph>addcurrency</codeph> command with the following syntax: <p>
-                            <codeblock>&lt;JAVA_HOME>/bin/java -jar lib/oscm-operatorsvc-client.jar 
- &lt;userkey> &lt;password> 
- addcurrency currencyISOCode=&lt;ISO Code> </codeblock>
-                        </p></li>
-                </ul></p>
-            <p> </p>
+            <p><b>To add a currency:</b>
+            </p>
+            <p>In the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> administration portal, choose <b>Manage currencies</b> in the <b>Operation</b> menu. For detailed step-by-step instructions, refer to the online help. </p>
         </section>
     </conbody>
 </concept>

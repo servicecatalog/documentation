@@ -23,7 +23,7 @@
                 /> (inbound calls). No code generation is required. Both call directions can be deployed in Java EE environments. </p>
             <p>The available REST APIs are described in YAML files which are shipped with <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    />. With appropriate tools such as Swagger Editor, you can view the descriptions and collect experience with the APIs.</p>
+                    />. With appropriate tools such as Swagger Editor, you can view the descriptions and collect experience with the APIs. </p>
         </section>
     </conbody>
 </concept>

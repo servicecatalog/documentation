@@ -1,36 +1,34 @@
-<?xml version="1.0" encoding="UTF-8"?>  
-<!-- Copyright FUJITSU LIMITED 2017 -->
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
                          "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
 ]>
-
-<concept id="concept_B32294CC9FA643A2A14A74B1DAA49C95" xml:lang="en-us">
-    <title>Tool Support for Operating <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></title>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<concept id="concept_B32294CC9FA643A2A14A74B1DAA49C95"
+            xml:lang="en-us">
+    <title>Tool Support for Operating <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></title>
     <conbody>
         <section>
-            <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> provides operator functions in its administration portal that support you in performing on-demand maintenance and operation tasks. For some functions, you can also use the operator client, which is available as a command line tool.</p>
+            <p><ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> provides operator functions in its administration portal that support you in performing on-demand maintenance and operation tasks. For some functions, you can also use the operator client, which is available as a command line tool.</p>
         </section>
         <section>
-            <title><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> Administration Portal</title>
-            <p>You can access the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> administration portal in a Web browser using an URL in the following format: </p>
-            <p><codeph>http://&lt;server&gt;:&lt;port&gt;/&lt;context-root></codeph>
+            <title><ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> Administration Portal</title>
+            <p>You can access the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> administration portal in a Web browser using an URL in the following format: </p>
+            <p><codeph>http://&lt;server&gt;:&lt;port&gt;/&lt;context-root&gt;</codeph>
             </p>
-            <p><codeph>&lt;server></codeph> is the application server where <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> has been deployed. <codeph>&lt;port></codeph> is the port to address the application server (default: <codeph>8080</codeph> for HTTP, <codeph>8081</codeph> for HTTPS). <codeph>&lt;context-root></codeph> is the context root of <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> (default: <codeph>oscm-portal</codeph>). </p>
+            <p><codeph>&lt;server&gt;</codeph> is the application server where <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> has been deployed. <codeph>&lt;port&gt;</codeph> is the port to address the application server (default: <codeph>8080</codeph> for HTTP, <codeph>8081</codeph> for HTTPS). <codeph>&lt;context-root&gt;</codeph> is the context root of <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> (default: <codeph>oscm-portal</codeph>). </p>
             <p>You are prompted for the user ID and password. The initial credentials are as follows: </p>
             <p>User ID: <codeph>administrator</codeph>
             </p>
             <p>Password: <codeph>admin123</codeph>
             </p>
             <p>It is recommended that you change the initial password in the <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> administration portal (<b>Change Password</b> page in the <b>Account</b> menu). </p>
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> administration portal (<b>Change Password</b> page in the <b>Account</b> menu). </p>
             <p>After login, the operator functionality is available in the <b>Operation</b> menu.</p>
         </section>
         <section>
@@ -38,13 +36,11 @@
             <p>The command line tool provides a subset of the functions that are available in the <uicontrol>Operation</uicontrol> menu in the <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> administration portal. </p>
             <p>The command line tool is provided in the <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> installation package, <codeph>oscm-install-pack.zip</codeph>, as <codeph>oscm-operatorclient.zip</codeph>. The contents of this package can be made available in your environment as follows:</p>
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> installation package, <codeph>oscm-install-pack.zip</codeph>, as <codeph>oscm-operatorclient.zip</codeph>. The contents of this package can be made available in your environment as follows:</p>
             <p>
                 <ol>
                     <li>Extract the contents of the <codeph>oscm-operatorclient.zip</codeph> file to a separate directory on the system where you have installed <ph
-                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        />. The directory contains the required configuration files, jar files, and scripts. </li>
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. The directory contains the required configuration files, jar files, and scripts. </li>
                     <li>Set the <codeph>GLASSFISH_HOME</codeph> environment variable to the directory where you have installed the application server. </li>
                     <li>Run the <codeph>prepareCP.cmd</codeph> script located in the directory to which you extracted the <codeph>oscm-operatorclient.zip</codeph> file. This script copies the required <codeph>.jar</codeph> files from the application server installation directory.</li>
                     <li>Adapt the settings in the <codeph>env.properties</codeph> file to your environment. This file is located in the directory to which you extracted the <codeph>oscm-operatorclient.zip</codeph> file. </li>
@@ -54,19 +50,17 @@
             <p><b>Command Syntax</b>:</p>
             <p>The syntax of all available commands is as follows: </p>
             <p>
-                <codeblock>&lt;JAVA_HOME>/bin/java -jar lib/oscm-operatorsvc-client.jar 
+                <codeblock>&lt;JAVA_HOME&gt;/bin/java -jar lib/oscm-operatorsvc-client.jar 
  &lt;userkey&gt; &lt;password&gt;
  &lt;command&gt; &lt;parameter&gt;</codeblock>
             </p>
             <p>where </p>
-            <p><codeph>&lt;JAVA_HOME></codeph> is the installation directory of your JDK (for example <codeph>C:\XXX\jdk1.8.0_121</codeph>).</p>
+            <p><codeph>&lt;JAVA_HOME&gt;</codeph> is the installation directory of your JDK (for example <codeph>C:\XXX\jdk1.8.0_121</codeph>).</p>
             <p><codeph>userkey</codeph> is the numeric key of the operator. The key of the initial operator is <codeph>1000</codeph>. </p>
             <p><codeph>password</codeph> is the password of the operator. The initial passwort is <codeph>admin123</codeph>.</p>
             <p><codeph>command</codeph> is the command to be executed.</p>
             <p><codeph>parameter</codeph> is a command parameter to be set.</p>
-            <p>You can change the initial password in the <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> administration portal (<b>Change Password</b> page in the <b>Account</b> menu).</p>
+            <p>You can change the initial password in the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> administration portal (<b>Change Password</b> page in the <b>Account</b> menu).</p>
         </section>
     </conbody>
 </concept>

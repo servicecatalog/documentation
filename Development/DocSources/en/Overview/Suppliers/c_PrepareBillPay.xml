@@ -7,14 +7,11 @@
     <title>Managing Billing and Payment</title>
     <conbody>
         <section>
-            <p>As users work with services applying the native billing system, <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+            <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> automatically calculates the fees based on the related price models. It aggregates all the events, users, and configuration data associated with a subscription and rates them according to the applicable price model. At regular intervals <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> generates billing data that can be used for creating invoices. </p>
-            <p>For services using an external billing system, the billing and payment rules and conditions of this system apply. Billing data and invoices are generated and handled outside of <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
-            <p>With services applying the native billing system, suppliers  and resellers are responsible for preparing the billing and payment for their customers, creating invoices, and collecting payments. This includes the following tasks: </p>
+            <p>Suppliers and resellers are responsible for preparing the billing and payment for their customers, creating invoices, and collecting payments. This includes the following tasks: </p>
             <ul>
                 <li>Specify the types of payment to be offered to customers.</li>
                 <li>Define the VAT rates to be used for calculating the customer charges.</li>

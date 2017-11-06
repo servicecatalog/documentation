@@ -11,10 +11,10 @@
             <prodname/>
             <vrmlist>
                 <vrm
-            version="17.4.0"/>
+            version="17.3.0"/>
             </vrmlist>
             <brand/>
-        	<prognum>17.4.0</prognum>
+        	<prognum>17.3.0</prognum>
             <component/>
             <series>Installation Guide (GlassFish)</series>
         </prodinfo>
@@ -23,15 +23,15 @@
             <prodname>Enterprise Service</prodname>
             <vrmlist>
                 <vrm
-                version="17.4"/>
+                version="17.3"/>
             </vrmlist>
             <brand>FUJITSU Software</brand>
-            <prognum>Catalog Manager V17.4</prognum>
+            <prognum>Catalog Manager V17.3</prognum>
             <component/>
             <series>Installation Guide (GlassFish)</series>
         </prodinfo>
         <bookid>
-            <edition>September 2017 </edition>
+            <edition>August 2017 </edition>
             <!--booknumber
             product="oscm_ee">B1WS-1261-02</booknumber-->
         </bookid>
@@ -174,22 +174,12 @@
 		
 			
 		<!--topicref href="Shared/reference/r_ConfigSettings_SOP.xml" type="reference"/-->
-		<topicref
-            href="Shared/reference/r_ConfigSettings_glassfish_IndexerDomain.xml"
-            type="reference"/>
-			<topicref
-            href="Shared/reference/r_ConfigSettings_glassfish_BESDomain.xml"
-            type="reference"/>
-		<topicref
-            href="Shared/reference/r_ConfigSettings_glassfishJMS.xml"
-            type="reference"/>
 			<topicref
             href="Shared/reference/r_ConfigSettings_db.xml"
             type="reference"/>
 		<topicref
             href="Shared/reference/r_ConfigSettings_config_properties.xml"
             type="reference"/>
-			<topicref
-            href="Shared/reference/r_ConfigSettings_sso_properties.xml" type="reference"/>
+		
 		</appendix>
 </bookmap>

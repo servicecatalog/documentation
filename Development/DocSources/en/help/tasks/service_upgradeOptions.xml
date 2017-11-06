@@ -16,14 +16,10 @@
       <p id="When_a_customer_upgrades_or_d_task_taskbody_context_p_7"
         >When a customer upgrades or downgrades a subscription, the price model of the new service is instantly applied for calculating the charges. Users assigned to the subscription, service roles assigned to the users, or application data already stored for the old service are retained. All parameters and their options as well as the payment information are automatically applied to the new service, unless explicitly changed during the upgrade or downgrade.</p>
       <p id="When_a_customer_upgrades_or_d_task_taskbody_context_p_4"
-          >Be aware of the effects of up/downgrade options on the price model elements that determine how the charges for a customer are calculated when using the <ph
-          platform="help">platform's </ph>native billing system <ph platform="print">of <ph platform="print"
-            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph>
-        <ph audience="doc">        
-        
-        <ph platform="help">(click <xref href="../../Shared/reference/r_PriceModelDetails.xml"
-          >here</xref> for more details)</ph><ph platform="print">(see <xref
-            href="../../SupplierGuide/PriceModels/c_PMElements.xml"/> for details)</ph>:</ph></p>
+          >Be aware of the effects of up/downgrade options on the price model elements that determine how the charges for a customer are calculated<ph
+          audience="doc"><ph platform="help">(click <xref href="../../Shared/reference/r_PriceModelDetails.xml"
+              >here</xref> for more details)</ph><ph platform="print">(see <xref
+              href="../../SupplierGuide/PriceModels/c_PMElements.xml"/> for details)</ph>:</ph></p>
       <p id="The_prices_for_using_a_servic_task_taskbody_context_p_9">
         <ul compact="no">
           <li>The prices for using a service may be calculated and charged based on time units. When a customer upgrades or downgrades a subscription with a price calculation based on time units, the costs for the unit in which the subscription is upgraded or downgraded are charged twice.</li>

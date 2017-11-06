@@ -15,9 +15,7 @@
             <p><b>Account Management</b> provides for the registration of organizations and the management of the organization accounts. The individual users of <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     />, their accounts, roles, and logins are handled by the <b>Identity Management</b> component. As users work with the services and underlying applications, <b>Event Management</b> collects specific events, which serve as the basis for reporting and billing. </p>
-            <p>The <b>Billing</b> and <b>Payment</b> components are involved when it comes to calculating the charges for the customers depending on the services their users have consumed and to preparing the creation of invoices and payment collection. These components also serve to calculate the revenue shares of all participating parties. <ph
-                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> includes a native billing system of its own but also allows for the integration and usage of one or more external systems.</p>
+            <p>The <b>Billing</b> and <b>Payment</b> components are involved when it comes to calculating the charges for the customers depending on the services their users have consumed and to preparing the creation of invoices and payment collection. These components also serve to calculate the revenue shares of all participating parties.</p>
             <p><b>Process Control</b> allows for integrating organization-specific processes. Usually, such processes include approval processes and are modeled and automated with a process control system. </p>
             <p id="The_concept_conbody_section_p_6">The <b>Reporting</b> facilities offer <ph
                     id="comprehensive_reports_for_dif_concept_conbody_section_p_6"

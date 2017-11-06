@@ -18,7 +18,7 @@
                     <li>How to update the search index.</li>
                 </ul>
             </p>
-            <p>For details on administrating and customizing your own or tenant-specific marketplaces, refer to the <i>Marketplace Owner's Guide</i>.</p>
+            <p>For details on administrating and customizing marketplaces, refer to the <i>Marketplace Owner's Guide</i>.</p>
             <p>Use the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
             /> reporting facilities, for example, to retrieve information on the services published to your marketplace.<ph audience="doc"> For details, refer to <xref
                     href="../Reports/c_Reports.xml"/>.</ph></p>

@@ -31,7 +31,7 @@
         </section>
         <section>
             <title>Web Service Versions</title>
-            <p>The current version of a <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+            <p>The current version of an <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> Web service is provided in a <codeph>&lt;documentation&gt;</codeph> tag in the service's WSDL file.</p>
             <p>A compatibility layer ensures that SOAP messages received from a Web service client are analyzed, and, if required, converted to the newest format. In addition, outgoing SOAP messages from <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"

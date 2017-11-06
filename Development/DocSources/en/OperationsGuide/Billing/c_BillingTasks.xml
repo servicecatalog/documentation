@@ -9,12 +9,6 @@
             <conbody>
                         <section>
                                     <p>This section describes how you can check whether billing runs have failed, re-invoke payment processes, or explicitly start a billing run. In addition, you can preview customer billing data for a specific period or export revenue share data to an XML file. </p>
-                                    <note id="Billing_runs_apply_to_the_nat_task_taskbody_context_note"
-                                                            >Billing runs and payment processes apply to the native billing system of <ph
-                                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                                            />. They do not take into account any costs and data in external billing systems integrated with <ph
-                                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                                />. These are controlled and managed solely in the external billing system. </note>
                                     <p>Use the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                     /> reporting facilities to retrieve detailed information on all billing-relevant data of the suppliers, resellers, brokers, and marketplace owners managed on your platform.<ph audience="doc"> For details, refer to <xref
                                                             href="../Reports/c_Reports.xml"/>.</ph></p>

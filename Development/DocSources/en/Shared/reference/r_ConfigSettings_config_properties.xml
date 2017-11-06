@@ -7,9 +7,10 @@
             /> Configuration Settings</ph><ph platform="help">Configuration settings</ph></title>
     <refbody>
         <section>
-            <p>The <codeph>configsettings.properties</codeph> file located in <codeph>&lt;install_pack_dir>/databases/bes_db</codeph> contains the configuration settings for the <ph
-                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
-                    platform="help">platform</ph> services.</p>
+            <p platform="print">The <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> configuration settings can be viewed and (partially) changed in the <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> administration portal. The default settings are specified in the ### Docker files ### as used during the deployment. </p>
         </section>
         <section>
             <title>AUDIT_LOG_ENABLED</title>
@@ -26,18 +27,11 @@
         </section>
         <section>
             <title>AUTH_MODE</title>
-            <p>Mandatory. Specifies whether <ph platform="print"><ph
+            <p>Mandatory. Specifies that <ph platform="print"><ph
                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
-                    >the platform</ph> is used for user authentication or whether it acts as a SAML service provider. This configuration setting is evaluated at the first startup of <ph
+                    >the platform</ph> is used for user authentication. This configuration setting is evaluated at the first startup of <ph
                     platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
-                    platform="help">the system</ph> and can no longer be changed after <ph platform="print"><ph
-                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
-                    >the system</ph> has been started for the first time. It cannot be changed by an upgrade installation either. </p>
-            <p>Allowed values: <codeph>INTERNAL</codeph> (<ph platform="print"><ph
-                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
-                    >platform</ph> user authentication is used) or <codeph>SAML_SP</codeph> (<ph platform="print"><ph
-                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
-                    >the platform</ph> shall act as SAML service provider, and users are to be authenticated against an Identity Provider (IdP) system. </p>
+                    platform="help">the system</ph> and cannot be changed.</p>
             <p>Default: <codeph>INTERNAL</codeph>
             </p>
         </section>
@@ -95,10 +89,7 @@
             </ul><note>The <uicontrol>Update configuration settings</uicontrol> page in the <uicontrol>Operation</uicontrol> menu is the default page the operator is directed to when logging in. If you hide the page from the menu or hide the complete menu, you are still directed to the <uicontrol>Update configuration settings</uicontrol> page where you can make changes, if required.</note></section>
         <section>
             <title>HIDE_PAYMENT_INFORMATION</title>
-            <p>Optional. Determines whether customers need to specify payment information for subscribing to services that use the <ph
-                    platform="help">platform's </ph>native billing system <ph platform="print">of <ph
-                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>
-                </ph>and are not free of charge. <ph>If set to <codeph>true</codeph>, the dialogs and options for specifying payment types and billing addresses are hidden on the marketplaces, and customer payment information does not appear in billing and payment preview reports. In the administration portal, suppliers and resellers cannot manage payment types for their customers. Billing runs and payment processing are not affected by the setting. </ph></p>
+            <p>Optional. Determines whether customers need to specify payment information for subscribing to services that are not free of charge. <ph>If set to <codeph>true</codeph>, the dialogs and options for specifying payment types and billing addresses are hidden on the marketplaces, and customer payment information does not appear in billing and payment preview reports. In the administration portal, suppliers and resellers cannot manage payment types for their customers. Billing runs and payment processing are not affected by the setting. </ph></p>
             <p>The setting is evaluated only once when <ph platform="help">the platform</ph><ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"
                     /> is installed or updated. The value can no longer be changed after <ph platform="help"
@@ -109,27 +100,6 @@
         </section>
         <section><title>HTTP_PROXY</title>Optional. The proxy to be used for PSP-related HTTP connections, if any.<p>Example: <codeph>proxy.domain</codeph> or the proxy server IP address.</p></section>
         <section><title>HTTP_PROXY_PORT</title>Optional. The proxy port to be used for PSP-related HTTP connections, if any.<p>Allowed values: Any value between <codeph>1</codeph> and <codeph>65535</codeph></p><p>Default: <codeph>1080</codeph></p></section>
-        <!--section><title>IDP_ASSERTION_EXPIRATION</title>Deprecated. <p>
-        Mandatory if a technical service is defined with the <b>user access type</b> and uses <ph
-                platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
-                platform="help"
-                >the platform</ph> as a SAML 1.1 IdP. For details on access types, refer to the <i>Technology Provider's Guide</i>.<p>This setting represents the number of milliseconds an assertion generated by the SAML IdP is valid. It is the difference between the <codeph>NotAfterOrOn</codeph> and <codeph>IssueInstant</codeph> attributes of the assertion. </p><p>Allowed values: Any value between <codeph>1</codeph> and <codeph>9223372036854775807</codeph></p><p>Default: <codeph>1800000</codeph> milliseconds (30 minutes)</p></section-->
-        <!--section><title>IDP_ASSERTION_VALIDITY_TOLERANCE</title>Deprecated. <p>Mandatory if a technical service is defined with the <b>user access type</b> and uses <ph
-                platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
-                platform="help"
-                >the platform</ph> as a SAML 1.1 IdP. For details on access types, refer to the <i>Technology Provider's Guide</i>.<p>This setting represents the number of milliseconds an assertion generated by the SAML IdP was valid in the past. It is used to avoid synchronization problems between servers. The number is the difference between the <codeph>IssueInstant</codeph> and <codeph>NotBefore</codeph> attributes of the assertion. </p><p>Allowed values: Any value between <codeph>1</codeph> and <codeph>9223372036854775807</codeph></p><p>Default: <codeph>600000</codeph> milliseconds (10 minutes)</p></section-->
-        <!--section><title>IDP_PRIVATE_KEY_FILE_PATH</title>Deprecated. <p>Mandatory if a technical service is defined with the <b>user access type</b> and uses <ph
-                platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
-                platform="help"
-                >the platform</ph> as a SAML 1.1 IdP. For details on access types, refer to the <i>Technology Provider's Guide</i>.<p>This setting represents the URL to the private key in Distinguished Encoding Rules (DER) format (<codeph>.der</codeph> file). This URL is used by the IdP to sign SAML messages. </p><p>Example: <codeph>/opt/glassfish-3.1.2.2/glassfish/domains/bes-domain/config/cakey.der</codeph></p><p>If you change this setting, you need to restart <ph
-                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
-                    platform="help">the platform</ph>.</p></section-->
-        <!--section><title>IDP_PUBLIC_CERTIFICATE_FILE_PATH</title>Deprecated. <p>Mandatory if a technical service is defined with the <b>user access type</b> and uses <ph
-                platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
-                platform="help"
-                >the platform</ph> as a SAML 1.1 IdP. For details on access types, refer to the <i>Technology Provider's Guide</i>.<p>This setting represents the URL to the public certificate in Distinguished Encoding Rules (DER) format (<codeph>.der</codeph> file). This URL is added to the signature of SAML messages by the IdP, so that the application can validate the signature. </p><p>Example: <codeph>/opt/glassfish-3.1.2.2/glassfish/domains/bes-domain/config/cacert.der</codeph></p><p>If you change this setting, you need to restart <ph
-                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
-                    platform="help">the platform</ph>.</p></section-->
         <section><title>KAFKA_BOOTSTRAP_SERVERS</title>Optional. Comma-separated list of host and port pairs that are the addresses of Kafka brokers. Bootstrap servers provide the initial hosts that act as the starting point for a Kafka client. In <ph
                 platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
                 platform="help"
@@ -165,8 +135,8 @@
                 platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
                 platform="help"
                     >the platform</ph>. If a user does not log in successfully with this number of attempts, his account is locked. <p>Allowed values: Any value between <codeph>1</codeph> and <codeph>9223372036854775807</codeph></p><p>Default: <codeph>3</codeph></p></section>
-        <section><title>MP_ERROR_REDIRECT_HTTP</title>Optional. The URL of a Web page that is to be displayed in case a visitor tries to access a marketplace without a valid marketplace ID by HTTP. This Web page will be shown instead of the default error message. Note that this URL is used platform-wide. It is not tenant-specific.<p>Syntax: <codeph>http://&lt;your Web page></codeph></p><p>Make sure to specify a valid URL that does not exceed a maximum of 255 characters. </p></section>
-        <section><title>MP_ERROR_REDIRECT_HTTPS</title>Optional. The URL of a Web page that is to be displayed in case a visitor tries to access a marketplace without a valid marketplace ID by HTTPS. This Web page will be shown instead of the default error message. Note that this URL is used platform-wide. It is not tenant-specific.<p>Syntax: <codeph>https://&lt;your Web page></codeph></p><p>Make sure to specify a valid URL that does not exceed a maximum of 255 characters. </p></section>
+        <section><title>MP_ERROR_REDIRECT_HTTP</title>Optional. The URL of a Web page that is to be displayed in case a visitor tries to access a marketplace without a valid marketplace ID by HTTP. This Web page will be shown instead of the default error message. Note that this URL is used platform-wide.<p>Syntax: <codeph>http://&lt;your Web page></codeph></p><p>Make sure to specify a valid URL that does not exceed a maximum of 255 characters. </p></section>
+        <section><title>MP_ERROR_REDIRECT_HTTPS</title>Optional. The URL of a Web page that is to be displayed in case a visitor tries to access a marketplace without a valid marketplace ID by HTTPS. This Web page will be shown instead of the default error message. Note that this URL is used platform-wide. <p>Syntax: <codeph>https://&lt;your Web page></codeph></p><p>Make sure to specify a valid URL that does not exceed a maximum of 255 characters. </p></section>
         <section><title>PERMITTED_PERIOD_INACTIVE_ON_BEHALF_USERS</title>Optional. The time in milliseconds after which a user who logged in on behalf of a customer and was inactive will be removed from the system. <p>Allowed values: Any value between <codeph>1</codeph> and <codeph>9223372036854775807</codeph></p><p>Default: <codeph>604800000</codeph>, i.e. 7 days </p></section>
         <section><title>PERMITTED_PERIOD_UNCONFIRMED_ORGANIZATIONS</title>Optional. The maximum time in milliseconds until an organization's initial administrative account must be confirmed. When this time has passed, the account is removed. <p>Allowed values: Any value between <codeph>1</codeph> and <codeph>9223372036854775807</codeph></p><p>Default: <codeph>604800000</codeph>, i.e. 7 days </p></section>
         <section><title>PSP_USAGE_ENABLED</title>Mandatory. Specifies whether PSP integration is used for the current environment.<p>Allowed values: <codeph>true</codeph>, <codeph>false</codeph></p><p>Default: <codeph>false</codeph></p><p>If you change this setting, you need to restart <ph
@@ -205,15 +175,10 @@
                 >platform's</ph> reports. The URL of the WSDL file of the Report Web service. All report data is retrieved via a call to the Report Web service. If you do not specify a correct value, <ph
                 platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
                 platform="help"
-                >the platform</ph> will not be able to generate any reports, since the Report Web service cannot be called correctly. <p>If your installation is configured to use HTTP access, the required value is: </p><p><codeph>http://&lt;host IP address&gt;:&lt;port&gt;/Report/ReportingServiceBean?wsdl</codeph></p><p>If your installation is configured to use HTTPS access, the required value is: </p><p><codeph>https://&lt;host IP address&gt;:&lt;port&gt;/ReportSecure/ReportingServiceSecureBean?wsdl</codeph></p><note>The above value must be used as indicated. Do not change this value. <!--p>If the SSL/HTTPS port is changed and the BIRT report engine is running on the same domain as <ph
-                        platform="print"><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        > </ph></ph><ph platform="help"
-                >the platform</ph>, then this setting must also be updated.</p--></note><p>The <codeph>&lt;host IP address></codeph> and <codeph>&lt;port></codeph> are the IP address and port of the application server on which <ph
+                >the platform</ph> will not be able to generate any reports, since the Report Web service cannot be called correctly. <p>If your installation is configured to use HTTP access, the required value is: </p><p><codeph>http://&lt;host IP address&gt;:&lt;port&gt;/Report/ReportingServiceBean?wsdl</codeph></p><p>If your installation is configured to use HTTPS access, the required value is: </p><p><codeph>https://&lt;host IP address&gt;:&lt;port&gt;/ReportSecure/ReportingServiceSecureBean?wsdl</codeph></p><note>The above value must be used as indicated. Do not change this value. </note><p>The <codeph>&lt;host IP address></codeph> and <codeph>&lt;port></codeph> are the IP address and port of the application server on which <ph
                     platform="print"><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     > </ph></ph> has been deployed. </p></section>
-        <!--section><title>SEARCH_INDEX_MASTER_FACTORY_NAME</title>Mandatory. The name of the search indexer application's JMS connection factory. Stay with the entry <codeph>jms/bss/masterIndexerQueueFactory</codeph> and do not change it.</section>
-        <section><title>SEARCH_INDEX_MASTER_QUEUE_NAME</title>Mandatory. The name of the search indexer application's JMS queue. Stay with the entry <codeph>jms/bss/masterIndexerQueue</codeph> and do not change it.</section-->
-        <section><title>SSO_DEFAULT_TENANT_ID</title>Mandatory if you install <ph platform="print"><ph
+        <!--section><title>SSO_DEFAULT_TENANT_ID</title>Mandatory if you install <ph platform="print"><ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
                 >the platform</ph> in SAML_SP authentication mode. <p>The unique ID of the default tenant. The default tenant is associated with the IdP to be used after installing <ph
                     platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
@@ -284,18 +249,12 @@
                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
                     >the platform</ph> also supports the SHA-256 algorithm (value: <codeph>SHA256</codeph>). </p><p>If you change this setting, you need to restart <ph
                     platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
-                    platform="help">the platform</ph>.</p></section>
+                    platform="help">the platform</ph>.</p></section-->
         <section><title>SSO_SIGNING_KEY_ALIAS</title>Mandatory if requests are to be signed by <ph platform="print"><ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
                 >the platform</ph>. The alias of the private key of <ph platform="print"><ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
-                >the platform</ph> to be used for signing requests. <p>Requests are signed in the following situations: </p><ul
-                compact="no">
-                <li>Communication with Web pages or applications from custom tabs in subscriptions.</li>
-                <li>Logout requests, if <ph platform="print"><ph
-                            conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
-                        >the platform</ph> is installed in SAML_SP authentication mode, single logout is configured, and the IdP system's single logout service requires signed requests, as, for example, in Microsoft Active Directory Federation Services (ADFS). </li>
-            </ul><p>The application server used for the Web page, Web application, or IdP system needs the corresponding certificate of <ph
+                >the platform</ph> to be used for signing requests. <p>Requests are signed for the communication with Web pages or applications from custom tabs in subscriptions. The application server used for the Web page or Web application needs the corresponding certificate of <ph
                     platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
                     platform="help"
                     >the platform</ph> in its truststore for verifying the signature.</p><p>Default: <codeph>s1as</codeph></p><p>If you change this setting, you need to restart <ph
@@ -314,7 +273,7 @@
                 >the platform</ph>. The password for accessing the keystore specified in the <codeph>SSO_SIGNING_KEYSTORE</codeph> setting.<p>Default: <codeph>changeit</codeph></p><p>If you change this setting, you need to restart <ph
                     platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
                     platform="help">the platform</ph>.</p></section>
-        <section><title>SSO_STS_ENCKEY_LEN</title>Mandatory if you install <ph platform="print"><ph
+        <!--section><title>SSO_STS_ENCKEY_LEN</title>Mandatory if you install <ph platform="print"><ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
                 >the platform</ph> in SAML_SP authentication mode. The length of the encryption key as used by the IdP.<p>Required for STS communication.</p><p>Default: <codeph>128</codeph></p><p>This setting is an installation property and cannot be changed in the administration portal. If you need to change the encryption key length, proceed as follows: </p><p>
                 <ol>
@@ -362,7 +321,7 @@
                     <li>Restart the <codeph>bes-domain</codeph> domain.</li>
                 </ol>
             </p>
-        </section>
+        </section-->
         <section><title>SUPPLIER_SETS_INVOICE_AS_DEFAULT</title>Optional. Specifies whether invoice is to be used as the default payment type for all customers. <p>Allowed values: <codeph>true</codeph>, <codeph>false</codeph></p><p>Default: <codeph>false</codeph>
             </p></section>
         <section><title>TAGGING_MAX_TAGS</title>Mandatory. The maximum number of tags composing the tag cloud. <p>The tag cloud is the area of a marketplace containing defined search terms (tags). The more often a tag is used in services, the bigger the characters of the tag are displayed. Customers can use the tags to search for services, provided that the tag cloud is enabled for the marketplace by the marketplace owner.</p><p>Allowed values: Any value between <codeph>0</codeph> and <codeph>2147483647</codeph></p><p>Default: <codeph>20</codeph>

@@ -11,22 +11,11 @@
     <conbody>
         <section>
             <p id="PayTypes"
-                    >You are responsible for setting up the payment types that suppliers and resellers can offer to their customers. These are only relevant for services that use the native billing system of <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                />. By default, suppliers and resellers can allow customers to pay on invoice so that they can subscribe to a service that is not free of charge. </p>
+                >You are responsible for setting up the payment types that suppliers and resellers can offer to their customers. By default, suppliers and resellers can allow customers to pay on invoice so that they can subscribe to a service that is not free of charge. </p>
             <p conref="../../help/tasks/operator_manageOrganizations.xml#task634/PayTypes2"> </p>
-            <p><b>To set the payment types for a supplier or reseller, choose one of the following options:</b>
-                <ul>
-                    <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            /> administration portal - Choose <b>Manage organization</b> in the <b>Operation</b> menu.<p>For detailed step-by-step instructions, refer to the online help. </p></li>
-                    <li>Command line tool - Use the <codeph>addavailablepaymenttypes</codeph> command with the following syntax: <p>
-                            <codeblock>&lt;JAVA_HOME>/bin/java -jar lib/oscm-operatorsvc-client.jar 
- &lt;userkey> &lt;password>
- addavailablepaymenttypes orgid=&lt;organizationID> 
- paymenttypes=&lt;types></codeblock>
-                    </p><p>If several payment types are to be set, separate the entries by a comma without any blank. You can enter any payment type as defined when configuring payment types for a PSP.<ph audience="doc"> For details, refer to <xref
-                                href="c_BillingManagePSPs.xml"/>.</ph></p></li>
-                </ul></p>
+            <p><b>To set the payment types for a supplier or reseller:</b></p>
+            <p>In the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> administration portal, choose <b>Manage organization</b> in the <b>Operation</b> menu. For detailed step-by-step instructions, refer to the online help. </p>
         </section>
     </conbody>
 </concept>

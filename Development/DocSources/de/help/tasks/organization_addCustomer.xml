@@ -51,7 +51,6 @@
             <step>
                 <cmd>Markieren Sie <uicontrol>LDAP-basierte Nutzerverwaltung</uicontrol>, wenn der Kunde ein LDAP-System zur Benutzerauthentifizierung verwendet. </cmd>
                 <info>
-                    <note>Wird ein SAML 2.0 Identity Provider verwendet, steht diese Option nicht zur Verfügung. </note>
                     <p>Legen Sie eine LDAP-Konfigurationsdatei auf Ihrem Rechner an und definieren Sie die LDAP-Verbindungseinstellungen in dieser Datei. Um die Einstellungen zu laden, klicken Sie das Feld <uicontrol>LDAP-Einstellungen</uicontrol> oder <uicontrol>Durchsuchen</uicontrol> und wählen die Datei. Wenn Sie keine Konfigurationsdatei für den Kunden laden, werden die systemweiten LDAP-Konfigurationseinstellungen verwendet.</p>
                     <p>Wenn ein LDAP-System verwendet wird, muss Ihr Kunde seine Benutzer nicht manuell auf der Plattform registrieren. Der Administrator des Kunden kann die Benutzer aus dem LDAP-System importieren und sie so automatisch auf der Plattform registrieren.</p>
                     <p>Nachfolgend sehen Sie ein Beispiel für eine LDAP-Konfigurationsdatei:</p>

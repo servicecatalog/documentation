@@ -29,9 +29,9 @@
             <p>To log in to the administration portal where you will perform your tasks:</p>
             <p>
                 <ol>
-                    <li>Click the link provided in the email, or type the access URL in your Web browser's address bar. <p>The access URL has the following format: </p><p><codeph>http://&lt;server&gt;:&lt;port&gt;/&lt;context-root></codeph></p><p
-                            audience="int"
-                                ><codeph>&lt;server&gt;</codeph> is the Web/application server where the Web application has been deployed. <codeph>&lt;port&gt;</codeph> is the port to address the Web/application server (default: <codeph>80</codeph> for HTTP, <codeph>443</codeph> for HTTPS). <codeph>&lt;context-root></codeph> is the context root of <ph
+                    <li>Click the link provided in the email, or type the access URL in your Web browser's address bar. <p>The access URL has the following format: </p><p><codeph>https://&lt;server&gt;:&lt;port&gt;/&lt;context-root></codeph></p><p><codeph>&lt;server></codeph> is the machine where <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> has been deployed. <codeph>&lt;port></codeph> is by default <codeph>8080</codeph> for HTTP, <codeph>8081</codeph> for HTTPS. <codeph>&lt;context-root></codeph> is the context root of <ph
                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                 /> as set by the platform operator (default: <codeph>oscm-portal</codeph>). </p></li>
                     <li>On the <uicontrol>Login</uicontrol> page, type your user ID and password.</li>

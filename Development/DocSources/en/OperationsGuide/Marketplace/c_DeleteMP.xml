@@ -9,12 +9,10 @@
     <conbody>
         <section>
             <p>When deleting a marketplace with activated services, these services are automatically deactivated. Customers can no longer subscribe to them. Existing subscriptions, however, are not affected. </p>
-            <p><b>To delete a marketplace, you have the following option:</b>
+            <p><b>To delete a marketplace:</b>
             </p>
-            <ul>
-                <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        /> administration portal - Choose <uicontrol>Delete marketplace</uicontrol> in the <uicontrol>Marketplace</uicontrol> menu.<p>For detailed step-by-step instructions, refer to the online help. </p></li>
-            </ul>
+            <p>In the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> administration portal, choose <uicontrol>Delete marketplace</uicontrol> in the <uicontrol>Marketplace</uicontrol> menu. For detailed step-by-step instructions, refer to the online help.</p>
         </section>
     </conbody>
 </concept>

@@ -337,14 +337,14 @@
                 <ph platform="help">プラットフォーム</ph>がSAML_SP認証モードでインストールされ、シングルログアウトが設定され、かつMicrosoft Active Directory Federation Servicesのように、IdPシステムのシングルログアウトサービスが認証リクエストを必要としている場合のログアウトリクエスト。
               </li>
             </ul>
-            <p>ウェブページ、ウェブアプリケーション、またはIdPシステムに使用されるアプリケーションサーバーは、署名の検証のためトラストストアに
+            <p>ウェブページ、ウェブアプリケーション、またはIdPシステムに使用されるアプリケーションサーバーは、署名の検証のためトラストストアに</p>
                 <ph platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph>
                 <ph platform="help">プラットフォーム</ph>の証明書が必要です。<p>デフォルト: <codeph>s1as</codeph></p>
                 <p>この設定を変更した場合
                 <ph platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph>
                 <ph platform="help">プラットフォーム</ph>を再起動する必要があります。
                 </p>
-            </p>
+          
         </section>
         <section>
           <title>SSO_SIGNING_KEYSTORE</title>リクエストが

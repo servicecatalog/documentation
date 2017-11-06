@@ -22,7 +22,7 @@
             </fig>
             <p>When a user logs in to <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> in order to use a service, he is authenticated by <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> and a <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> and an <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> session is created. <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> creates a user token and returns it to the client together with a redirect to the application. The client, in turn, sends the login request with the user token to the application, which must be publicly visible. To be able to log the user in, the application sends a login request to <ph

@@ -48,7 +48,7 @@
                     <li product="oscm_ee"
                         >Erstellen Sie eine neue WAR-Datei, <codeph>birt.war</codeph>, die die Konfigurationsdatei für die neue Sprache enthält.</li>
                     <li product="oscm_ee"
-                            >Deinstallieren Sie zunächst und installieren Sie anschließend die geänderte Datei <codeph>birt.war</codeph> in der Domäne <codeph>bes-domain</codeph> auf Ihrem Application Server. Weitere Informationen finden Sie im <i>Installation Guide</i>. </li>
+                            >Deinstallieren Sie zunächst und installieren Sie anschließend die geänderte Datei <codeph>birt.war</codeph> in der Domäne <codeph>bes-domain</codeph> auf Ihrem Application Server. </li>
                     <li product="oscm_ce"
                             >Kopieren Sie die neue Konfigurationsdatei in das Unterverzeichnis <codeph>WEB-INF</codeph> des Verzeichnisses auf dem Application Server, in dem die BIRT Report-Engine installiert ist. Standardmäßig ist dies <codeph>&lt;GLASSFISH_HOME>/glassfish/domains/&lt;domain>/applications/birt</codeph>.</li>
                     <li product="oscm_ce">Starten Sie BIRT neu auf dem Application Server. </li>

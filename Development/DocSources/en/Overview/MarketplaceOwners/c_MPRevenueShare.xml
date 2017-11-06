@@ -9,10 +9,6 @@
         <section>
             <p>Marketplace owners usually receive a share of the revenue for the services which are offered on their marketplaces by suppliers, brokers, and resellers. This revenue share is defined by the operator. It may differ for individual marketplaces, brokers or resellers, or even specific services.</p>
             <p>A marketplace owner can at any time retrieve information on his revenue share depending on the usage of the offered services. This data can be used as the basis for charging the suppliers, resellers, and brokers. The data can also be used as the basis for paying the platform operators, depending on the existing contracts.</p>
-            <p>
-                <note><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> calculates revenue shares only for services applying its native billing system. The costs of services using an external billing system are not included in the calculation. </note>
-            </p>
         </section>
     </conbody>
 </concept>

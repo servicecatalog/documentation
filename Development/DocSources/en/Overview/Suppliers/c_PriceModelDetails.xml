@@ -19,13 +19,6 @@
                     conref="../../SupplierGuide/PriceModels/c_PMIntro.xml#concept_3413BBD173324104B42FB714974CABE7/It_depends_on_the_implementat_concept_conbody_section_p_2"
                 />
             </p>
-            <p>For marketable services which are based on technical services using the native billing system of <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    />, price models are defined and maintained in <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    />. When using an external billing system, the price models are created and managed in this system and imported to <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> for information purposes. </p>
         </section>
         <section>
             <title>Price Model Scope</title>
@@ -47,7 +40,7 @@
         <section>
             <title>Price Model Elements</title>
             <p>Each price model defined in <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> for use with the native billing system - independent of its scope - consists of different elements that determine how the charges for a service are calculated. The following elements can be defined:</p>
+                /> - independent of its scope - consists of different elements that determine how the charges for a service are calculated. The following elements can be defined:</p>
             <p>
                 <ul>
                     <li>One-time fee</li>

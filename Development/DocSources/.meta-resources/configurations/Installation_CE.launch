@@ -17,13 +17,13 @@
 <mapEntry key="customization.dir" value="/DocModel12/pdf.customization"/>
 <mapEntry key="dita.ant.catalog" value="${dita.ant.catalog}"/>
 <mapEntry key="dita.dir" value="${dita.dir}"/>
-<mapEntry key="dita.input.valfile" value="DocSources/.meta-resources/profiles/Installation_CE.ditaval"/>
+<mapEntry key="dita.input.valfile" value="DocSources/.meta-resources/profiles\Installation_CE.ditaval"/>
 <mapEntry key="dita.temp.dir" value="${dita.temp.dir}"/>
 <mapEntry key="dita.xml.catalog" value="${dita.xml.catalog}"/>
 <mapEntry key="generate.copy.outer" value="2"/>
 <mapEntry key="output.dir" value="/DocSources/Output/CE/en/Installation"/>
 <mapEntry key="realtranstype" value="pdf"/>
-<mapEntry key="transtype" value="Fujitsu PDF"/>
+<mapEntry key="transtype" value="Fujitsu RTF"/>
 </mapAttribute>
 <stringAttribute key="org.eclipse.ui.externaltools.ATTR_LOCATION" value="${dita.dir}\build.xml"/>
 <mapAttribute key="resolvedLinks"/>

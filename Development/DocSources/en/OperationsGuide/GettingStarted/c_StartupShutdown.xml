@@ -5,35 +5,54 @@
 ]>
 
 <concept id="concept_B32294CC9FA643A2A14A74B1DAA49C95" xml:lang="en-us">
-    <title>Startup and Shutdown</title>
+    <title>Getting Started</title>
     <conbody>
         <section>
+            <p>After having successfully deployed <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    />, you can follow the instructions on the <xref format="html"
+                    href="https://github.com/servicecatalog/development/wiki/Getting-Started" scope="external"
+                            ><u><i>Getting Started</i></u></xref> page for creating and publishing your first service to an <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> marketplace. </p>
+        </section>
+        <section>
+            <title>Accessing <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></title>
+            <p>After the deployment, you have access to the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> administration portal where you can specify configuration settings that do not match your environment:</p>
+            <p>You can access the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> administration portal in a Web browser using an URL in the following format: </p>
+            <p><codeph>https://&lt;server&gt;:&lt;port&gt;/&lt;context-root></codeph>
+            </p>
+            <p><codeph>&lt;server></codeph> is the machine where <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> has been deployed. <codeph>&lt;port></codeph> is by default <codeph>8080</codeph> for HTTP, <codeph>8081</codeph> for HTTPS. <codeph>&lt;context-root></codeph> is the context root of <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> (default: <codeph>oscm-portal</codeph>). </p>
+            <p>You are prompted for the user ID and password. The initial credentials are as follows: </p>
+            <p>User ID: <codeph>administrator</codeph>
+            </p>
+            <p>Password: <codeph>admin123</codeph>
+            </p>
+            <p>It is recommended that you change the initial password in the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> administration portal (<b>Change Password</b> page in the <b>Account</b> menu). </p>
+            <p>After login, the operator functionality is available in the <b>Operation</b> menu.</p>
+            <p>In order for a supplier to be able to define price models and for the rating and billing engine of <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> to be able to calculate usage costs, you need to add one or several currencies to the system.<ph
+                    audience="doc"> For details, refer to <xref href="../Configuration/c_AddCurrency.xml"/>.</ph></p>
+            <p>In the next step, you can create technology provider and seller organizations (suppliers, resellers, brokers), and set up marketplaces so that services can be offered to customers.<ph
+                    audience="doc"> For details, refer to <xref href="../Organizations/c_Organizations.xml"/> and <xref
+                        href="../Marketplace/c_ManageMP.xml"/>.</ph></p>
+        </section>
+        <section>
+            <title>Startup and Shutdown</title>
             <p>When you have completed the installation of <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> and provided the required resources on the application server as described in the <i>Installation Guide</i>, the following domains with the following applications are available on the application server: </p>
-            <p><ul>
-                    <li><codeph>bes-domain</codeph> domain with the <codeph>oscm</codeph> Enterprise Application (the <ph
-                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            /> core software) and the <codeph>oscm-portal</codeph> application for accessing the <ph
-                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        /> administration portal and marketplaces.</li>
-                    <li><codeph>master-indexer-domain</codeph> domain with the <codeph>oscm-search</codeph> Enterprise Application of the search indexer application. </li>
-                </ul>The domains and applications can be started and accessed using the standard utilities of the application server. </p>
-            <p>A shutdown of the domains and applications is also performed using the standard functionality of the application server.</p>
-            <p>When stopping the domains, always stick to the following sequence: </p>
-            <p>
-                <ol>
-                    <li>Stop the <codeph>bes-domain</codeph> domain. </li>
-                    <li>Stop the <codeph>master-indexer-domain</codeph> domain. </li>
-                </ol>
-            </p>
-            <p>When restarting the domains, always stick to the following sequence: </p>
-            <p>
-                <ol>
-                    <li>Restart the <codeph>master-indexer-domain</codeph> domain. </li>
-                    <li>Restart the <codeph>bes-domain</codeph> domain. </li>
-                </ol>
-            </p>
+                /> and provided the required resources ???</p>
+            <p>The containers and applications can be started and accessed using the standard utilities of ???</p>
+            <p>###Any sequence to be observed???</p>
             <p> </p>
         </section>
     </conbody>

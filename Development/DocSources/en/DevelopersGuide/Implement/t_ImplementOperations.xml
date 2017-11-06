@@ -19,7 +19,7 @@
             <step>
                 <cmd>Implement the <codeph>executeServiceOperation()</codeph> and the <codeph>getParameterValues()</codeph> methods in a Web service definition using the <codeph>OperationService</codeph> interface of the operation API, which is part of the <ph
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> integration package. </cmd>
+                    /> integration package.</cmd>
                 <info>The following information is provided as parameter settings for the <codeph>executeServiceOperation()</codeph> method: <p>
                         <ul>
                             <li>The user identifier. This ID is unique in the instance context and allows the technical service to perform built-in security checks. </li>

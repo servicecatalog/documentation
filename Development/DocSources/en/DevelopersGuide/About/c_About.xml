@@ -10,12 +10,10 @@
         <section>
             <p>This manual describes the public Web services and application programming interfaces (APIs) of <ph
                     product="oscm_ce"><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Name"/> (<ph
-                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>)</ph><ph
-                    product="oscm_ee"
-                        > FUJITSU Software Enterprise Service Catalog Manager - hereafter referred to as <ph
-                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Name"/> (<ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph>) <ph
+                    product="oscm_ee">FUJITSU Software Enterprise Service Catalog Manager, hereafter referred to as <ph
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    />) -</ph> and how to integrate applications and external systems with <ph
+                    /></ph>, and how to integrate applications and external systems with <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </p>
             <p>The manual is structured as follows: </p>
             <p>
@@ -54,11 +52,6 @@
                             <row>
                                 <entry><xref href="../ConfigTool/c_ConfigToolIntegration.xml"/></entry>
                                 <entry>Describes how to integrate an external parameter configuration tool with <ph
-                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</entry>
-                            </row>
-                            <row>
-                                <entry><xref href="../ExternalBilling/c_ExtBillingIntro.xml"/></entry>
-                                <entry>Describes how to integrate an external billing system with <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</entry>
                             </row>
                             <row>

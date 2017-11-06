@@ -14,10 +14,18 @@
                         /> components as shown in the following illustration. The <ph
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> components are colored in dark grey:</ph></p>
-            <fig>
-                <image align="center" height="268" href="../../Shared/_images/Integration.png" placement="break"
-                    width="374"/>
-            </fig>
+            <p product="oscm_ce">
+                <fig>
+                    <image align="center" height="268" href="../../Shared/_images/Integration_OSCM.png" placement="break"
+                        width="374"/>
+                </fig>
+            </p>
+            <p product="oscm_ee">
+                <fig>
+                    <image align="center" height="268" href="../../Shared/_images/Integration_ESCM.png" placement="break"
+                        width="374"/>
+                </fig>
+            </p>
             <p><ph id="Depending_on_your_requirement_concept_conbody_section_p_2"
                     >Depending on your requirements, the integration involves the following tasks:</ph></p>
             <ol>
@@ -33,7 +41,7 @@
                             /> identity management, and price models on a per-user basis can be used.</ph></p><p audience="doc">For details on access types, refer to <xref
                             href="../AccessTypes/c_AccessTypes.xml"/>.</p></li>
                 <li><ph id="Implement_a_provisioning_serv_concept_conbody_section_ol_l"
-                        >Implement a provisioning service</ph> (optional).<p><ph
+                        >Implement a provisioning service</ph> (optional). ### Add that a sample implementation of a provisioning service is available on GitHub? ###.<p><ph
                             id="If_your_application_is_to_int_concept_conbody_section_ol_l"
                                 >If an application is to integrate with the subscription management of <ph
                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
@@ -74,18 +82,6 @@
                         />. Afterwards, you appoint suppliers for your services, who can then define service offerings.</p><p audience="doc">For details, refer to <xref
                             href="../Provision/c_Provision.xml"/>.</p></li>
             </ol>
-            <p>An additional issue to think of when integrating an application with <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> is the billing system to be used for providing price models and calculating charges for the corresponding services. <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> comes with its own, native billing system. However, it can also be integrated with one or more external billing systems.  An external billing system is usually closely related to the application provided as a service in <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    />. For integrating an external billing system with <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    />, a billing adapter needs to be implemented (for details, refer to the <i>Developer's Guide</i>) and registered in <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> by the operator. The billing system to be used for an application is specified in the technical service definition.</p><p audience="doc"> For details, refer to <xref
-                    href="../Reference/r_TechServDescr.xml"/>.</p>
         </section>
     </conbody>
 </concept>

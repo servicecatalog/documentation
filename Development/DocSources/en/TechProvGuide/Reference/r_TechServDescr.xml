@@ -42,7 +42,7 @@
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                             />. Subsequent interactions take place directly between the client and the application without involving <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            />.</p><p>Use <codeph>USER</codeph> if the user-specific methods of the provisioning service should be used. With this access type, the application login can be controlled completely by the application, or SAML can be used as a single sign-on mechanism. </p><p>Use <codeph>EXTERNAL</codeph> if users should be able to access an application directly via the URL specified in the <codeph>baseUrl</codeph> attribute. The application ID (<codeph>id</codeph> attribute) is appended to the URL when accessing the service.</p><p>For details on access types, refer to <xref
+                            />.</p><p>Use <codeph>USER</codeph> if the user-specific methods of the provisioning service should be used. With this access type, the application login can be controlled completely by the application.</p><p>Use <codeph>EXTERNAL</codeph> if users should be able to access an application directly via the URL specified in the <codeph>baseUrl</codeph> attribute. The application ID (<codeph>id</codeph> attribute) is appended to the URL when accessing the service.</p><p>For details on access types, refer to <xref
                             href="../AccessTypes/c_AccessTypes.xml"
                     />.</p><!-- p><ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
@@ -355,8 +355,9 @@
         </section>
         <section><b>Example</b>: <p>
                 <codeblock>&lt;Operation id="SNAPSHOT"
-      actionURL="https://myserver:8091/OperationService/
-                                       AsynchronousOperationProxy?wsdl">
+      actionURL="https://oscm-app:8880/oscm-app/
+                         webservices/oscm-app/oscm-app/
+                         org.oscm.app.v2_0.service.AsynchronousOperationProxy?wsdl">
       &lt;LocalizedName locale="en">Create snapshot&lt;/LocalizedName> 
       &lt;LocalizedDescription locale="en"&gt;
         Creates a snapshot of the system.

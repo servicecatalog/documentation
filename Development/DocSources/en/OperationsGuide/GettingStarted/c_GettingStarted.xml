@@ -5,12 +5,76 @@
 ]>
 
 <concept id="concept_1BCF5C425D7D4627AB1C66A085CF6E11" xml:lang="en-us">
-    <title>Getting Started</title>
-    <conbody>
-        <p>This chapter provides an overview of the tasks involved in the operation and maintenance of <ph
-                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                />. It shows the initial steps to be performed after installing <ph
-                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-            />, and introduces the tools that support you in performing operational tasks. </p>
-    </conbody>
-</concept>
+
+                <title>Getting Started</title>
+                <conbody>
+                        <section>
+                                <p>After having successfully deployed <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                />, you can follow the instructions on the <xref format="html"
+                                        href="https://github.com/servicecatalog/development/wiki/Getting-Started" scope="external"
+                                        ><u><i>Getting Started</i></u></xref> page for creating and publishing your first service to an <ph
+                                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> marketplace. </p>
+                        </section>
+                <section>
+                        <title>Accessing <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /></title>
+                        <p>After the deployment, you have access to the <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> administration portal where you can specify configuration settings that do not match your environment:</p>
+                        <p>You can access the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> administration portal in a Web browser using an URL in the following format: </p>
+                        <p><codeph>https://&lt;server&gt;:&lt;port&gt;/&lt;context-root></codeph>
+                        </p>
+                        <p><codeph>&lt;server></codeph> is the machine where <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        /> has been deployed. <codeph>&lt;port></codeph> is by default <codeph>8080</codeph> for HTTP, <codeph>8081</codeph> for HTTPS. <codeph>&lt;context-root></codeph> is the context root of <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        /> (default: <codeph>oscm-portal</codeph>). </p>
+                        <p>You are prompted for the user ID and password. The initial credentials are as follows: </p>
+                        <p>User ID: <codeph>administrator</codeph>
+                        </p>
+                        <p>Password: <codeph>admin123</codeph>
+                        </p>
+                        <p>It is recommended that you change the initial password in the <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        /> administration portal (<b>Change Password</b> page in the <b>Account</b> menu). </p>
+                        <p>After login, the operator functionality is available in the <b>Operation</b> menu.</p>
+                </section>
+                <section>
+                        <title>Next  Steps</title>
+                        <p>In order for a supplier to be able to define price models and for the rating and billing engine of <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        /> to be able to calculate usage costs, you need to add one or several currencies to the system.<ph
+                                        audience="doc"> For details, refer to <xref
+                                                href="../Configuration/c_AddCurrency.xml"/>.</ph></p>
+                        <p>In the next step, you can create technology provider and seller organizations (suppliers, resellers, brokers), and set up marketplaces so that services can be offered to customers.<ph
+                                        audience="doc"> For details, refer to <xref
+                                                href="../Organizations/c_Organizations.xml"/> and <xref
+                                                href="../Marketplace/c_ManageMP.xml"/>.</ph></p>
+                </section>
+                        <section>
+                                <title>Startup and Shutdown</title>
+                                <p>The <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> containers can be started, stopped, removed, and restarted using the standard utilities of Docker. </p>
+                                <p>To <b>stop</b> a container, use the following command on your Docker host:</p>
+                        <p><codeblock>stop &lt;container-name></codeblock> For example: </p>
+                        <p>
+                                <codeblock>stop oscm-core</codeblock>
+                        </p>
+                                <p>To <b>delete</b> a container:  </p>
+                        <p>
+                                <codeblock>docker-compose -f docker-compose-oscm.yml rm &lt;container-name></codeblock>
+                        </p>
+                        <p>To <b>create and start</b> a container:  </p>
+                        <p>
+                                <codeblock>docker-compose up -d docker-compose-oscm.yml &lt;container-name></codeblock>
+                        </p>
+                        <p>To <b>restart</b> a container:  </p>
+                        <p>
+                                <codeblock>start &lt;container-name></codeblock>
+                        </p>
+                        <p>When shutting down the containers, the <codeph>oscm-db</codeph> container must be stopped as last one. When starting or restarting the containers, make sure that the <codeph>oscm-db</codeph> container is first.  </p>
+                        </section>
+                </conbody>
+        </concept>

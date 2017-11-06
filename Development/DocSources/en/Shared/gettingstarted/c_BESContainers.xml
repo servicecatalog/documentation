@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_1BCF5C425D7D4627AB1C66A085CF6E11" xml:lang="en-us">
+    <title><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> Container Communication</title>
+    <conbody>
+        <section>
+            <p>The following figure provides an overview of the container communication on a Docker Host (a Virtual Machine (VM)):</p>
+            <p>### TODO: Add help container and Cinder volumes ###</p>
+            <p>
+                <fig>
+                    <image href="../_images/ContainerCommunication.png" alt="ContainerCommunication.png" width="280" height="252"/>
+                </fig>
+            </p>
+            <p>The host-internal communication always relies on the HTTP protocol, whereas calls from outside of the host are secured via HTTPS.</p>
+        </section>
+    </conbody>
+</concept>

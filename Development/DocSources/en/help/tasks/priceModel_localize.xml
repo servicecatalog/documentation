@@ -6,11 +6,7 @@
   <title>Localizing price model elements</title>
   <taskbody>
     <context>
-      <p>On the <uicontrol>Localize price model description</uicontrol> page, you can provide and save price model elements in any of the supported languages: </p>
-      <ul compact="no">
-        <li>If you define the price model for a marketable service that is charged for using the platform's native billing system, you can localize the description and the license agreement.</li>
-        <li>If you define the price model for a marketable service that is charged for using an external billing system, you can localize the license agreement only. Additional price model elements must be localized in the external system.</li>
-      </ul>
+      <p>On the <uicontrol>Localize price model description</uicontrol> page, you can provide and save the description and the license agreement defined in a price model.</p>
       <p>If you do not localize the price model elements, the English texts are displayed to customers.</p>
       <p>You can only localize the elements if the marketable service for which you provide the translations is deactivated. Existing subscriptions are not affected by the localization. Any changes you make are visible to customers for new subscriptions only.</p>
       <p id="Brokers_you_have_granted_the_task_taskbody_context_p_4"

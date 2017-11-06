@@ -1,17 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>  
-<!-- Copyright FUJITSU LIMITED 2017 -->
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
                          "concept.dtd">
+<!-- Copyright FUJITSU LIMITED 2017 -->
 <concept id="concept2311" xml:lang="en-us">
-    <title><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> in SUSE OpenStack Cloud</title>
+    <title><ph
+                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> in SUSE OpenStack Cloud</title>
     <conbody>
-        <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-            /> is installed as a workload in the SUSE Openstack Cloud (SOC). </p>
+        <p><ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> is installed as a workload in the SUSE Openstack Cloud (SOC). </p>
         <p>The OSCM installation on SOC consists of the following main steps: </p>
         <p>
             <ul>
-                <li>Create OpenStack resources for <ph
-                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></li>
+                <li>Create OpenStack resources for <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></li>
                 <li>Pull Docker images (oscm, app and database) from specified repository, configure and run containers. </li>
             </ul>
         </p>
@@ -52,10 +52,10 @@ updated_time="2017-04-18T07:56:24Z"</codeblock> [[!StackResources.PNG!]] [Click 
         <p>OSCM uses https for communication but also for client authentication (APP). [[!ssl.png!]] </p>
         <p>The default s1as certificates of oscm and app domains are used for the https between the containers. From security point of view it is acceptable, since it is not public network. Nevertheless, the s1as certificates are generated for each container installation (otherwise each OSCM container in the world would use the same certificates!) This is done in scripts for cloud init. </p>
         <p>For the web part, the cloud administrator can choose if http or https is required at installation time. In case of https, it has a possibility to specify secure certificates (not self-signed s1as that the scripts generate). </p>
-        <p>In the development/test environment we are using the floating IP for accessing the web part of OSCM. In production environment, there are domain names, for which also the secure certificates are signed (CN=&lt;domain name>). </p>
+        <p>In the development/test environment we are using the floating IP for accessing the web part of OSCM. In production environment, there are domain names, for which also the secure certificates are signed (CN=&lt;domain name&gt;). </p>
         <p>Since APP uses the client_auth for SOAP with certificates, the CN in the certificate must match the app host name (it is specified to be "app" docker host, for oscm the docker host is "web"). This means the secure certificates with real domain name cannot be used for the https for SOAP. </p>
         <p>So separate http listeners by glassfish server will be used for SOAP with s1as as certificate (at least for APP), and if secure certificates used for web, this certificate will be applied for the http listeners for web part. </p>
-        <p>It can be configurated in domain.xml -> secure http listener, cert-nick). </p>
+        <p>It can be configurated in domain.xml -&gt; secure http listener, cert-nick). </p>
         <p>However SOAP API is also public as the UI, but for now there is no plan for some SOAP integration in SUSE environment.</p>
     </conbody>
 </concept>

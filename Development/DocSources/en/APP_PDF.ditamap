@@ -11,10 +11,10 @@
             <prodname/>
             <vrmlist>
                 <vrm
-            version="17.4.0"/>
+            version="17.5.0 alpha"/>
             </vrmlist>
             <brand/>
-            <prognum>17.4.0</prognum>
+            <prognum>17.5.0 alpha</prognum>
             <component/>
             <series>APP Integration Guide</series>
         </prodinfo>
@@ -23,15 +23,15 @@
             <prodname>Enterprise Service</prodname>
             <vrmlist>
                 <vrm
-            version="17.4"/>
+            version="17.5 alpha"/>
             </vrmlist>
             <brand>FUJITSU Software</brand>
-            <prognum>Catalog Manager V17.4</prognum>
+            <prognum>Catalog Manager V17.5 alpha</prognum>
             <component/>
             <series>APP Integration Guide</series>
         </prodinfo>
         <bookid>
-            <edition>September 2017 </edition>
+            <edition>December 2017 </edition>
             
         </bookid>
         <bookrights
@@ -147,7 +147,6 @@
      	<topicref format="dita"
             href="Shared/reference/r_ConfigSettings_db.xml"
             type="reference"/>
-    	<topicref format="dita"
-            href="Shared/reference/r_ConfigSettings_glassfish_BESDomain.xml" type="reference"/>
+    	
      </appendix>
 </bookmap>

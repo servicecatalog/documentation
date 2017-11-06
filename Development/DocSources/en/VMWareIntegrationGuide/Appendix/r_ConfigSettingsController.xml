@@ -78,7 +78,7 @@
         <section>
             <title>USERID_&lt;organizationId></title>
             <p><codeph>USERID_&lt;organizationId>=&lt;userId></codeph></p>
-            <p>Optional. The identifier of a service manager of a supplier organization providing a service on a <ph
+            <p>Optional. The identifier of a service manager of a supplier organization providing a service on an <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> marketplace for provisioning VMs. This identifier must be specified in case a shell script with service parameter placeholders is to be executed during the provisioning process.</p>
             <p>Replace <codeph>&lt;organizationId></codeph> and the <codeph>&lt;userId></codeph> with the corresponding IDs.</p>

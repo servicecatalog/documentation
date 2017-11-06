@@ -17,15 +17,9 @@
             <p>The service controller sample included in the integration package is a fully functional implementation of a service controller. The following packages also include ready-to-use service controllers: </p>
             <p>
                 <ul>
-                    <!--li><codeph>oscm-ror-install-pack.zip</codeph><p>Can be used for integrating FUJITSU ServerView Resource Orchestrator (ROR) with <ph
-                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p></li-->
                     <li><codeph>oscm-aws-install-pack.zip</codeph>: <p>Can be used for integrating the Amazon Elastic Compute Cloud Web service with <ph
                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p></li>
                     <li><codeph>oscm-openstack-install-pack.zip</codeph>: <p>Can be used for integrating OpenStack services with <ph
-                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p></li>
-                    <!--li><codeph>oscm-tps5-install-pack.zip</codeph>: <p>Can be used for integrating FUJITSU Cloud IaaS Trusted Public S5 (TPS5) services with <ph
-                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p></li-->
-                    <li><codeph>oscm-vmware-install-pack.zip</codeph>: <p>Can be used for integrating virtual machines provisioned on a VMware vSphere server through services with <ph
                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p></li>
                 </ul>
             </p>

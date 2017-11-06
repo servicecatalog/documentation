@@ -9,7 +9,6 @@
             <p>This is a generic topic for sharing information on authentication. </p>
         </section>
         <section id="auth_internal">
-            <title>INTERNAL Authentication Mode</title>
             <p id="auth_internal1"><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> is installed as a platform for public access from anywhere in the Internet. Users are authenticated with <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> and can be managed in <ph
@@ -29,7 +28,7 @@
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 />. The client sends a request for a SAML assertion. The IdP returns an assertion authenticating the calling user. </p>
             <p id="When_a_user_logs_out_of_a_concept_conbody_section_3_p"
-                    >Single logout support can also be configured: When a user logs out of a <ph
+                    >Single logout support can also be configured: When a user logs out of an <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> marketplace or the administration portal, a <codeph>logout</codeph> request is sent to the single logout service of the IdP system and the sessions in <ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"

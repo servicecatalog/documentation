@@ -65,45 +65,26 @@
             </ul>
             <p audience="doc">For a detailed description of the timers, refer to <xref
                     href="../../Shared/reference/r_ConfigSettings_config_properties.xml"/>. </p>
-            <p><b>To configure a timer, choose one of the following options: </b>
-                <ul>
-                    <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            /> administration portal - Choose <b>Update configuration settings</b> in the <b>Operation</b> menu. <p>For detailed step-by-step instructions, refer to the online help. </p></li>
-                    <li>Command line tool - Use the <codeph>saveconfigurationsetting</codeph> command with the following syntax: <p>
-                            <codeblock>&lt;JAVA_HOME>/bin/java -jar lib/oscm-operatorsvc-client.jar 
- &lt;userkey> &lt;password>
- saveconfigurationsetting settingKey=&lt;key of the setting> 
- settingValue=&lt;value>  </codeblock>
-                        </p></li>
-                </ul></p>
+            <p><b>To configure a timer:</b>
+            </p>
+            <p>In the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> administration portal, choose <b>Update configuration settings</b> in the <b>Operation</b> menu. For detailed step-by-step instructions, refer to the online help. </p>
         </section>
         <section>
             <title>Retrieving Expiration Times</title>
             <p>You can check when the currently registered timers expire. </p>
-            <p><b>To retrieve the expiration times, choose one of the following options:</b>
-                <ul>
-                    <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            /> administration portal - Choose <b>Manage timers</b> in the <b>Operation</b> menu. <p>For detailed step-by-step instructions, refer to the online help. </p></li>
-                    <li>Command line tool - Use the <codeph>retrievetimerexpirations</codeph> command with the following syntax: <p>
-                            <codeblock>&lt;JAVA_HOME>/bin/java -jar lib/oscm-operatorsvc-client.jar 
- &lt;userkey> &lt;password>
- retrievetimerexpirations</codeblock>
-                        </p></li>
-                </ul></p>
+            <p><b>To retrieve the expiration times:</b>
+            </p>
+            <p>In the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> administration portal, choose <b>Manage timers</b> in the <b>Operation</b> menu. For detailed step-by-step instructions, refer to the online help. </p>
         </section>
         <section>
             <title>Re-Initializing Timers</title>
             <p>When you set a timer or update the settings for a timer, you need to re-initialize the timers in order to start them. </p>
-            <p><b>To re-initialize the timers, choose one of the following options:</b>
-                <ul>
-                    <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            /> administration portal - Choose <b>Manage timers</b> in the <b>Operation</b> menu. <p>For detailed step-by-step instructions, refer to the online help. </p></li>
-                    <li>Command line tool - Use the <codeph>reinittimers</codeph> command with the following syntax: <p>
-                            <codeblock>&lt;JAVA_HOME>/bin/java -jar lib/oscm-operatorsvc-client.jar 
- &lt;userkey> &lt;password>
- reinittimers</codeblock>
-                        </p></li>
-                </ul></p>
+            <p><b>To re-initialize the timers:</b>
+            </p>
+            <p>In the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> administration portal, choose <b>Manage timers</b> in the <b>Operation</b> menu. For detailed step-by-step instructions, refer to the online help. </p>
         </section>
     </conbody>
 </concept>

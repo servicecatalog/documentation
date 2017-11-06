@@ -19,7 +19,6 @@
               >Define a customer-specific VAT rate, for example, in case a customer organization has a subsidiary located in another country than its parent organization.</ph></li>
         </ul>
       </p>
-      <note>The VAT rate settings apply only to the costs for services using the platform's native billing system.</note>
       <p><ph id="The_VAT_rate_settings_have_th_task_taskbody_context_p_3_ph"
           >The VAT rate settings have the following effects on the cost calculation for a customer: </ph></p>
       <ul compact="no">

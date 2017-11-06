@@ -18,8 +18,6 @@
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> to interact with an external process control system.</li>
                 <li><b>Operation API</b>: Resources for implementing the interface for calling operations for a technical service, such as backup and restore. </li>
-                <li><b>Billing Plug-in API</b>: Resources for integrating an external billing system with <ph
-                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</li>
                 <li><b>Payment Service API</b>: Resources for integrating a payment service provider (PSP) with <ph
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</li>
                 <li><b>Integration Helpers</b>: A Web application package that supports application developers in adapting the login/logout implementation of a Java-based Web application.</li>
@@ -28,7 +26,8 @@
                     /> using provisioning services that work in asynchronous mode.</li>
             </ul>
             <p>While the platform services and most of the APIs are based on SOAP (Simple Object Access Protocol) and WSDL (Web Services Description Language), some components provide a REST (Representational State Transfer) API in addition or a pure Java API. </p>
-            <p>For a description of the basic concepts and usage of the public Web services, APIs, and additional resources and samples that are provided for developers, refer to the <i>Developer's Guide</i>. For a description of the resources for integrating a PSP, refer to the documentation shipped with the <codeph>oscm-integration-psp-pack.zip</codeph> file. </p>
+            <p>For a description of the basic concepts and usage of the public Web services, APIs, and additional resources and samples that are provided for developers, refer to the <i>Developer's Guide</i>. For a description of the resources for integrating a PSP, refer to the documentation shipped with the <codeph><xref format="html" href="https://github.com/servicecatalog/development/releases" scope="external"
+                ><u><i>oscm-integration-psp-pack.zip</i></u></xref></codeph> file. </p>
         </section>
     </conbody>
 </concept>

@@ -8,8 +8,6 @@
                         <title>Billing Runs</title>
                         <conbody>
                                                 <section>
-<note
-                conref="../../help/tasks/operator_executeBillingTasks.xml#task634/Billing_runs_apply_to_the_nat_task_taskbody_context_note"/>
             <p conref="../../help/tasks/operator_executeBillingTasks.xml#task634/Billing_Intro"> </p>
             <p conref="../../help/tasks/operator_executeBillingTasks.xml#task634/Billing_Introx"/>
 <p conref="../../help/tasks/operator_executeBillingTasks.xml#task634/Billing_Intro1"> </p>

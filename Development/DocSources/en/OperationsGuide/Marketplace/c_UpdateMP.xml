@@ -9,12 +9,10 @@
     <conbody>
         <section>
             <p>The owner of a marketplace is responsible for administrating and customizing the marketplace to which suppliers, brokers, and resellers can publish their services. Assigning a new owner to a marketplace may remove the marketplace owner role from the previous owner organization and the marketplace manager role from its users. This is the case if the marketplace for which you change the owner is the last one owned by the organization. </p>
-            <p><b>To assign another owner to a marketplace, you have the following option:</b>
+            <p><b>To assign another owner to a marketplace:</b>
             </p>
-            <ul>
-                <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        /> administration portal - Choose <uicontrol>Update marketplace</uicontrol> in the <uicontrol>Marketplace</uicontrol> menu.<p>For detailed step-by-step instructions, refer to the online help. </p></li>
-            </ul>
+            <p>In the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> administration portal, choose <uicontrol>Update marketplace</uicontrol> in the <uicontrol>Marketplace</uicontrol> menu. For detailed step-by-step instructions, refer to the online help.</p>
         </section>
     </conbody>
 </concept>

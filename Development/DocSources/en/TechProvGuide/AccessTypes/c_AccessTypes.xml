@@ -11,14 +11,21 @@
             <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> offers various ways of integrating and accessing your application. The interaction takes place between the following components:</p>
             <ul>
-                <li>The client which in fact is the user who accesses a service using a Web browser or a Web service</li>
-                <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></li>
-                <li>The application which is accessed by the user</li>
+                <li>The client which in fact is the user who accesses a service using a Web browser or a Web service.</li>
+                <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</li>
+                <li>The application which is accessed by the user.</li>
             </ul>
             <p>There are some criteria to be considered before you decide to use a specific access type. The following decision diagram helps you in deciding which access type to use according to your environment and requirements:</p>
-            <fig>
-                <image href="../_images/AccessDecision.png" height="254" width="261"/>
-            </fig>
+            <p product="oscm_ee">
+                <fig>
+                    <image href="../_images/AccessDecision_EE.png" height="254" width="261"/>
+                </fig>
+            </p>
+            <p product="oscm_ce">
+                <fig>
+                    <image href="../_images/AccessDecision_CE.png" height="254" width="261"/>
+                </fig>
+            </p>
             <p>The decision you make is reversible. If the basic requirements of your system are changing, you can, of course, also change the access type.</p>
             <p>The access type determines </p>
             <ul>
