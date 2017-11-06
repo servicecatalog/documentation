@@ -263,6 +263,20 @@ Default: <p><samp class="codeph">./key</samp></p>
 </div>
 
         
+        <div class="section"><h4 class="sectiontitle">SSO_SIGNING_KEY_ALIAS</h4>Mandatory if requests are to be signed by <span>the platform</span>. The alias of the private key of <span>the platform</span> to be used for signing requests. <p>Requests are signed for the communication with Web pages or applications from custom tabs in subscriptions. The application server used for the Web page or Web application needs the corresponding certificate of <span>the platform</span> in its truststore for verifying the signature.</p>
+<p>Default: <samp class="codeph">s1as</samp></p>
+<p>If you change this setting, you need to restart <span>the platform</span>.</p>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">SSO_SIGNING_KEYSTORE</h4>Mandatory if requests are to be signed by <span>the platform</span>. The path and name of the application server's keystore where the private key of <span>the platform</span> specified in the <samp class="codeph">SSO_SIGNING_KEY_ALIAS</samp> setting is stored. <p>Default: <samp class="codeph">./keystore.jks</samp></p>
+<p>If you change this setting, you need to restart <span>the platform</span>.</p>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">SSO_SIGNING_KEYSTORE_PASS</h4>Mandatory if requests are to be signed by <span>the platform</span>. The password for accessing the keystore specified in the <samp class="codeph">SSO_SIGNING_KEYSTORE</samp> setting.<p>Default: <samp class="codeph">changeit</samp></p>
+<p>If you change this setting, you need to restart <span>the platform</span>.</p>
+</div>
+
+        
         <div class="section"><h4 class="sectiontitle">SUPPLIER_SETS_INVOICE_AS_DEFAULT</h4>Optional. Specifies whether invoice is to be used as the default payment type for all customers. <p>Allowed values: <samp class="codeph">true</samp>, <samp class="codeph">false</samp></p>
 <p>Default: <samp class="codeph">false</samp>
             </p>
