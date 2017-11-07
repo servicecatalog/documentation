@@ -16,8 +16,8 @@ The following documentation is available:
 * [Marketplace Owner's Guide](Manuals/MPOwner.pdf): A PDF manual for marketplace owners describing how to administrate and customize marketplaces in ESCM.
 * [Developer's Guide](Manuals/Developer.pdf): A PDF manual for application developers describing the public Web service
 interface of ESCM and how to integrate applications and external systems with ESCM.
-* [Amazon Web Services Integration (GlassFish)](Manuals/AWSIntegration.pdf): A PDF manual for operators describing how to offer and use virtual servers controlled by the Amazon Elastic Compute Cloud Web service through services in ESCM.
-* [OpenStack Integration (GlassFish)](Manuals/OSIntegration.pdf): A PDF manual for operators describing how to offer and use virtual systems controlled by OpenStack through services in ESCM.
+* [Amazon Web Services Integration](Manuals/AWSIntegration.pdf): A PDF manual for operators describing how to offer and use virtual servers controlled by the Amazon Elastic Compute Cloud Web service through services in ESCM.
+* [OpenStack Integration](Manuals/OSIntegration.pdf): A PDF manual for operators describing how to offer and use virtual systems controlled by OpenStack through services in ESCM.
 * Javadoc documentation for the public Web service interfaces of ESCM and additional resources
 and utilities for application developers. You can best access these from readme.htm files in the ESCM integration packages to which they belong.
 * Online help pages describing how to work with the administration portal of ESCM. The online help is intended for and available to everybody working with the administration portal.
