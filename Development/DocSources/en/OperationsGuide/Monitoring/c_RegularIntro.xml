@@ -5,7 +5,7 @@
 ]>
 
 <concept id="concept_1BCF5C425D7D4627AB1C66A085CF6E11" xml:lang="en-us">
-    <title>###Monitoring, Backup and Recovery###? How does this work now?###</title>
+    <title>Monitoring, Backup and Recovery</title>
     <conbody>
         <p>Regular system operation and maintenance includes the monitoring of the system and its processes as well as the backup of the databases, configuration settings, and log files. </p>
         <p>This chapter describes: </p>
@@ -17,7 +17,6 @@
             <li>How to maintain the log files.</li>
             <li>How to export audit log data.</li>
             <li>The backup of the databases, configuration settings, encryption key file, and log files.</li>
-            <li>The monitoring of the JMS queues. </li>
         </ul>
     </conbody>
 </concept>

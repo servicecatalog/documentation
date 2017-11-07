@@ -12,7 +12,9 @@
         <context>
             <p>The <ph audience="BSS" conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/><ph
                     audience="app"
-                    >APP</ph> software and setup utilities require a number of settings. These settings are provided in the following subdirectories and files of <codeph>&lt;install_pack_dir&gt;</codeph>:</p>
+                    >APP</ph> software requires a number of settings. These settings are provided in environment variables in Docker files when deploying the <ph
+                    audience="BSS" conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/><ph
+                    audience="app">APP</ph> containers. </p>
             <p id="Cfg2">
                 <ul compact="no">
                     <li>
