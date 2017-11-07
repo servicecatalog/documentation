@@ -1,4 +1,7 @@
-<p align="center"><h1>FUJITSU Software Enterprise Service Catalog Manager Documentation</h1></p> 
+![image](https://raw.githubusercontent.com/servicecatalog/documentation/master/Development/DocSources/en/Shared/_images/fujitsu_logo_200.png)
+
+# Software Enterprise Service Catalog Manager
+# Documentation 
 
 Welcome to the documentation of FUJITSU Software Enterprise Service Catalog Manager (ESCM)!
 
