@@ -1,3 +1,5 @@
+# THE ESCM DOCUMENTATION IS CURRENTLY UNDER CONSTRUCTION!
+
 ![image](https://raw.githubusercontent.com/servicecatalog/documentation/master/Development/DocSources/en/Shared/_images/fujitsu_logo_200.png)
 
 # Software Enterprise Service Catalog Manager
