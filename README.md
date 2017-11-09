@@ -1,3 +1,5 @@
+# THE OSCM DOCUMENTATION IS CURRENTLY UNDER CONSTRUCTION!
+
 <p align="center"><h1><img height="52" src="https://avatars0.githubusercontent.com/u/14330878" alt="Open Service Catalog Manager"/>&nbsp;OSCM Documentation</h1></p> 
 
 Welcome to the documentation of Open Service Catalog Manager (OSCM)!
