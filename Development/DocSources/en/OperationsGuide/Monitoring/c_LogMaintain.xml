@@ -5,11 +5,21 @@
 ]>
 
 <concept id="concept_3413BBD173324104B42FB714974CABE7" xml:lang="en-us">
-    <title>Maintaining the Log Files</title>
+    <title>Retrieving Logging Information</title>
     <conbody>
         <section>
-            <p>New messages are continually appended to the log files at runtime. When a file reaches a size of 10 MB, a new one is created; the number 1 is appended to the old one. When the second log file reaches 10 MB in size, the number 2 is appended to it, and a third log file is created. When the maximum number of 5 log files is reached, the first one is overwritten. </p>
-            <p>It is recommended to check the log files and their sizes from time to time and to create a backup when you see that the maximum number of files will be reached. </p>
+            <p>For each running container, <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> writes its logging information into dedicated log files on the Cinder logs volume for each container. New messages are continually appended to the log file at runtime.</p>
+            <p>To show all running containers, execute the following command on the VM where <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> has been deployed: </p>
+            <p>
+                <codeblock>docker ps</codeblock>
+            </p>
         </section>
+        <section>To show the logs of a specific container: <p>
+                <codeblock>docker logs -f &lt;container name></codeblock>
+            </p><p>For example: </p><p>
+                <codeblock>docker logs -f oscm-core</codeblock>
+            </p></section>
     </conbody>
 </concept>

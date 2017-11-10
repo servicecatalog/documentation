@@ -9,25 +9,25 @@
         <prodinfo product="oscm_ce">
             <prodname/>
             <vrmlist>
-                <vrm version="17.5.0 alpha"/>
+                <vrm version="V17.5.0"/>
             </vrmlist>
             <brand/>
-            <prognum>17.5.0 alpha</prognum>
+            <prognum>V17.5.0</prognum>
             <component/>
             <series>Operator's Guide</series>
         </prodinfo>
         <prodinfo product="oscm_ee">
             <prodname>Enterprise Service</prodname>
             <vrmlist>
-                <vrm version="17.5 alpha"/>
+                <vrm version="V17.5.0"/>
             </vrmlist>
             <brand>FUJITSU Software</brand>
-            <prognum>Catalog Manager V17.5 alpha</prognum>
+            <prognum>Catalog Manager V17.5.0</prognum>
             <component/>
             <series>Operator's Guide</series>
         </prodinfo>
         <bookid>
-            <edition>December 2017 </edition>
+            <edition>December 2017 - Initial draft </edition>
             <!--booknumber product="oscm_ee">B1WS-1252-02</booknumber-->
         </bookid>
         <bookrights product="oscm_ce">
@@ -76,10 +76,11 @@ topicref href="OperationsGuide/Configuration/c_LoadBalancing.xml" type="concept"
     </chapter>
     <chapter href="OperationsGuide/Monitoring/c_RegularIntro.xml" type="concept">
         <topicref href="OperationsGuide/Monitoring/c_Monitoring.xml" type="concept">
-            <topicref href="OperationsGuide/Monitoring/c_LogTypes.xml" type="concept"/>
+        <topicref href="OperationsGuide/Monitoring/c_LogMaintain.xml" type="concept"/>
+            <!--topicref href="OperationsGuide/Monitoring/c_LogTypes.xml" type="concept"/-->
             <topicref href="OperationsGuide/Monitoring/c_LogLevel.xml" type="concept"/>
             <topicref href="OperationsGuide/Monitoring/c_LogContent.xml" type="concept"/>
-            <topicref href="OperationsGuide/Monitoring/c_LogMaintain.xml" type="concept"/>
+            <!--topicref href="OperationsGuide/Monitoring/c_LogMaintain.xml" type="concept"/-->
         </topicref>
         <topicref href="OperationsGuide/Monitoring/c_ExportUserOperationLog.xml" type="concept"/>
         <topicref href="OperationsGuide/Monitoring/c_Backup.xml" type="concept"/>
@@ -143,7 +144,7 @@ topicref href="OperationsGuide/Configuration/c_LoadBalancing.xml" type="concept"
         <topicref href="OperationsGuide/Marketplace/c_UpdateMP.xml" type="concept"/>
         <topicref href="OperationsGuide/Marketplace/c_DeleteMP.xml" type="concept"/>
         <topicref href="OperationsGuide/Marketplace/c_ConfigureMP.xml" type="concept"/>
-        <topicref href="OperationsGuide/Marketplace/c_UpdateSearchIndex.xml" type="concept"/>
+        <!--topicref href="OperationsGuide/Marketplace/c_UpdateSearchIndex.xml" type="concept"/-->
     </chapter>
     <!--appendix href="Shared/reference/r_AppServerResources.xml" type="reference">
         <topicref href="Shared/reference/r_AppServerResources_BSSDomain.xml" type="reference"/>
@@ -151,8 +152,10 @@ topicref href="OperationsGuide/Configuration/c_LoadBalancing.xml" type="concept"
     </appendix-->
     <appendix href="Shared/reference/r_ConfigSettings.xml" type="reference">
         <!--topicref href="Shared/reference/r_ConfigSettings_SOP.xml" type="reference"/-->
-        <topicref href="Shared/reference/r_ConfigSettings_db.xml" type="reference"/>
-        <topicref href="Shared/reference/r_ConfigSettings_config_properties.xml" type="reference"/>
+        <!--topicref href="Shared/reference/r_ConfigSettings_db.xml" type="reference"/-->
+        <!--topicref href="Shared/reference/r_ConfigSettings_config_properties.xml" type="reference"/-->
+        <topicref href="Shared/reference/r_ConfigSettings_initial.xml" type="reference"/>
+        <topicref href="Shared/reference/r_ConfigSettings_UI.xml" type="reference"/>
         
     </appendix>
     <appendix href="Shared/reference/r_LDAP_SettingTypes.xml" type="reference"/>

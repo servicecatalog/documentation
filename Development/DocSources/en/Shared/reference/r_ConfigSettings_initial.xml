@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<reference id="reference832" xml:lang="en-us">
+    <title><ph platform="print">Initial Configuration Settings</ph><ph platform="help"
+            >Initial configuration settings</ph></title>
+    <refbody>
+        <section>
+            <p platform="print">The configuration settings that must be set before deploying <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> are defined in environment variable files that are used by the Docker Compose command for initializing the <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> containers. For details, refer to ### link to deploy container readme ###. They are described in detail below. </p>
+        </section>
+        <section>
+            <title>DB_PORT_CORE</title>
+            <p>The port of the PostgreSQL database (<codeph>bss</codeph>) where the configuration settings for the <codeph>oscm-core</codeph> container are stored. </p>
+            <p>Must be set to <codeph>5432</codeph>.</p>
+        </section>
+        <section>
+            <title>DB_PORT_JMS</title>
+            <p>The port of the PostgreSQL database (<codeph>bssjms</codeph>) where the JMS messages are stored. </p>
+            <p>Must be set to <codeph>5432</codeph>.</p>
+        </section>
+        <section>
+            <title> DB_PORT_APP</title>
+            <p>The port of the PostgreSQL database (<codeph>app</codeph>) where the configuration settings for the <codeph>oscm-app</codeph> container are stored. </p>
+            <p>Must be set to <codeph>5432</codeph>.</p>
+        </section>
+        <section>
+            <title> DB_PWD_CORE</title>
+            <p>The password of the user to connect to the <codeph>bss</codeph> database. </p>
+            <p>Default: <codeph>bssuser</codeph></p>
+        </section>
+        <section>
+            <title> DB_PWD_APP</title>
+            <p>The password of the user to connect to the <codeph>app</codeph> database. </p>
+            <p>Default: <codeph>###???</codeph></p>
+        </section>
+        <section>
+            <title> DB_SUPERPWD</title>
+            <p>The password of the PostgreSQL database superuser.</p>
+            <p>Default: <codeph>###???</codeph></p>
+        </section>
+        <section>
+            <title>SMTP_HOST</title>
+            <p>The host name or IP address of your mail server used for notifications by <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+        </section>
+        <section>
+            <title>SMTP_PORT</title>
+            <p>The port used by your mail server. </p>
+        </section>
+        <section>
+            <title>SMTP_FROM</title>
+            <p>The email address used for emails sent by <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />.</p>
+        </section>
+        <section>
+            <title>SMTP_USER</title>
+            <p>If your mail server requires authentication, the name of the user allowed to access the mail server. If no authentication is required, set to <codeph>none</codeph>.</p>
+        </section>
+        <section>
+            <title>SMTP_PWD</title>
+            <p>If your mail server requires authentication, the password of the user allowed to access the mail server. If no authentication is required, set to <codeph>none</codeph>.</p>
+        </section>
+        <section>
+            <title>SMTP_AUTH</title>
+            <p>Defines whether your mail server requires authentication. Can be set to <codeph>true</codeph> or <codeph>false</codeph>. </p>
+        </section>
+        <section>
+            <title>SMTP_TLS</title>
+            <p>Defines if TLS (Transport Layer Security) is to be used for mail server communication. Can be set to <codeph>true</codeph> or <codeph>false</codeph>. </p>
+        </section>
+        <section>
+            <title>APP_ADMIN_MAIL_ADDRESS</title>
+            <p>The email address used for emails sent by the Asynchronous Provisioning Platform (APP).</p>
+        </section>
+        <section>
+            <title>KEY_SECRET</title>
+            <p>A string which will be used in the <codeph>bss</codeph> database as a seed for encryption and decryption of service parameters with data type <codeph>PWD</codeph> and custom attributes marked for encryption. Make sure not to forget this string so that your database is persisted. </p>
+            <note>Be aware that you must use the same key when updating the database. Otherwise, encryption and decryption is no longer possible after an update. </note>
+        </section>
+        <section>
+            <title>HOST_FQDN</title>
+            <p>The fully qualified domain name or the IP address of the host to be used to access <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </p>
+        </section>
+        <section>
+            <title>REPORT_ENGINEURL</title>
+            <p>The URL of the report engine used to generate the <ph platform="print"><ph
+                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                    >platform's</ph> reports. If you do not specify a correct URL template, <ph platform="print"><ph
+                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                    >the platform</ph> will not be able to generate any reports, since the Report Web service cannot be called correctly.</p>
+            <p>The setting must be as follows:   </p>
+            <codeblock>https://${HOST_FQDN}:8681/birt/frameset?
+   __report=\${reportname}.rptdesign&amp;SessionId=\${sessionid}&amp;
+   __locale=\${locale}&amp;WSDLURL=\${wsdlurl}&amp;SOAPEndPoint=\
+   ${soapendpoint}&amp;wsname=Report&amp;wsport=ReportPort</codeblock>
+            <p>Replace <codeph>HOST_FQDN</codeph> with the value entered above for <codeph>HOST_FQDN</codeph> setting. The other values must not be changed. </p>
+        </section>
+        <section>
+            <title>TOMEE_DEBUG</title>
+            <p>Defines if the application server is to generate log files for <ph platform="print"><ph
+                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                    >the platform</ph>. Can be set to <codeph>true</codeph> or <codeph>false</codeph>. </p>
+        </section>
+    </refbody>
+</reference>

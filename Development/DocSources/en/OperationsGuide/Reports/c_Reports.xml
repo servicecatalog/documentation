@@ -26,11 +26,6 @@
             <p>The generated report is instantly displayed at the <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> administration portal. You can choose to print the report or save it in several formats using the icons in the pane where the report is displayed.</p>
-            <p/>
-            <p>
-                <note>The reporting functionality is available only if you have defined the following configuration parameters: <codeph>REPORT_ENGINEURL</codeph>, <codeph>REPORT_SOAP_ENDPOINT</codeph>, <codeph>REPORT_WSDLURL</codeph>.<ph audience="doc"> For details, refer to <xref
-                        href="../../Shared/reference/r_ConfigSettings_config_properties.xml"/>.</ph></note>
-            </p>
         </section>
     </conbody>
 </concept>

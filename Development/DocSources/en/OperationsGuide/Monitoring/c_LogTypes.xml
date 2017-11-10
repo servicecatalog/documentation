@@ -8,16 +8,9 @@
     <title>Log Types and Location of Log Files</title>
     <conbody>
         <section>
-            <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> writes its logging information into the following log files: <ul>
-                    <li><b><codeph>system.log</codeph></b>: System status, errors, warnings, and debug information. </li>
-                    <li><b><codeph>access.log</codeph></b>: User logins. </li>
-                    <li><b><codeph>audit.log</codeph></b>: System security status. </li>
-                </ul></p>
-            <p>The log files are stored in the location defined by the <codeph>LOG_FILE_PATH</codeph> configuration setting. By default, they are located in the following directory: </p>
-            <p><codeph>&lt;GLASSFISH_HOME&gt;/glassfish/domains/bes-domain/logs</codeph>
-            </p>
-            <p>In addition to the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        />-specific log files, the application server log file (<b><codeph>server.log</codeph></b>) is another source for tracking system usage and possible errors.</p>
+            <p>On the Docker instance we configure rsyslog to write container logs to dedicated log files on the Cinder logs volume. But currently the container logs are also written to /var/log/messages which is redundant and fills the instance's file system. We must disable container logging to the messages file.</p>
+            <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> writes its logging information into the standard output directory of Docker messages. </p>
         </section>
     </conbody>
 </concept>

@@ -19,7 +19,12 @@
       <p>In the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
           /> administration portal, choose <b>Update configuration settings</b> in the <b>Operation</b> menu. </p>
       <p>The current configuration settings as stored in the database are retrieved. You can check all settings and update them as required by entering a new value for the corresponding configuration setting. </p>
-      <p>For detailed step-by-step instructions, refer to the online help. </p>
+      <p>For detailed step-by-step instructions, refer to the online help.</p>
+            <p>###SUSE: With the current implementation, Chef run will always trigger the deployment script even without changes. The effect is that the ESCM services are restarted periodically. Inject a configuration files which contains the current configuration and the version of deployment script. Solution: The script copies the applied configuration before exit. At the next start the new configuration is compared to the current one. The ESCM is updated only if difference is found.</p>
+            <p>After initial installation, the user should be able to change the configuration (e.g mail settings, proxy settings, certificates..) The barclamp should be able to deal with the reconfiguration of the oscm service.###</p>
+            <p><b>To update the database</b>:### </p>
+            <p>Databases are not purged by updating OSCM. Only the schema is upgraded to latest model version from the init scripts invoked on container start. The user mounts his persistence volumes in the database container at a defined location. For an update he pulls the containers from the registry and starts them or runs the provided deployer script for this purpose. In any case the contained data is preserved throughout the OSCM life-cycle.</p>
+            <p>initdb does not overwrite or purge data. It updates the database schema and - this is the only exception - overwrites the config settings. The latter is intended. I think this can be closed.</p>
                         </section>
     <section>###TODO: What is the difference between updating the env variables in the docker files and updating the cfg settings in the admin portal? ###<p>How is ESCM updated? How is the database updated? Do we need to be able to update JMS or the database or TomEE???</p></section>
             </conbody>
