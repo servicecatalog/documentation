@@ -36,12 +36,10 @@
         <section>
             <title> DB_PWD_APP</title>
             <p>The password of the user to connect to the <codeph>app</codeph> database. </p>
-            <p>Default: <codeph>###???</codeph></p>
         </section>
         <section>
             <title> DB_SUPERPWD</title>
             <p>The password of the PostgreSQL database superuser.</p>
-            <p>Default: <codeph>###???</codeph></p>
         </section>
         <section>
             <title>SMTP_HOST</title>
@@ -95,11 +93,11 @@
                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
                     >the platform</ph> will not be able to generate any reports, since the Report Web service cannot be called correctly.</p>
             <p>The setting must be as follows:   </p>
-            <codeblock>https://${HOST_FQDN}:8681/birt/frameset?
+            <codeblock>https://&lt;HOST_FQDN>:8681/birt/frameset?
    __report=\${reportname}.rptdesign&amp;SessionId=\${sessionid}&amp;
    __locale=\${locale}&amp;WSDLURL=\${wsdlurl}&amp;SOAPEndPoint=\
    ${soapendpoint}&amp;wsname=Report&amp;wsport=ReportPort</codeblock>
-            <p>Replace <codeph>HOST_FQDN</codeph> with the value entered above for <codeph>HOST_FQDN</codeph> setting. The other values must not be changed. </p>
+            <p>Replace <codeph>&lt;HOST_FQDN></codeph> with the value entered above for the <codeph>HOST_FQDN</codeph> setting. The other values must not be changed. </p>
         </section>
         <section>
             <title>TOMEE_DEBUG</title>

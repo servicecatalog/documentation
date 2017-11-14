@@ -137,9 +137,9 @@ log4j.logger.sys.org.oscm.identityservice=DEBUG</codeblock>
                             /> administration portal, choose <b>Update configuration settings</b> in the <b>Operation</b> menu. </li>
                     <li>Set the <b>LOG_LEVEL</b> parameter to <codeph>INFO</codeph>, <codeph>DEBUG</codeph>, or <codeph>WARNING</codeph>, respectively.<p>The setting applies to all <ph
                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            /> containers. ### true?</p></li>
+                        /> containers.</p></li>
                     <li>Restart all <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            /> containers using the following command: <p>###???</p></li>
+                        /> containers using the following command: ###?###</li>
                 </ol>
             </p>
         </section>

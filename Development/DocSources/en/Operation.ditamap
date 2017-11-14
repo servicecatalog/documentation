@@ -79,7 +79,7 @@ topicref href="OperationsGuide/Configuration/c_LoadBalancing.xml" type="concept"
         <topicref href="OperationsGuide/Monitoring/c_LogMaintain.xml" type="concept"/>
             <!--topicref href="OperationsGuide/Monitoring/c_LogTypes.xml" type="concept"/-->
             <topicref href="OperationsGuide/Monitoring/c_LogLevel.xml" type="concept"/>
-            <topicref href="OperationsGuide/Monitoring/c_LogContent.xml" type="concept"/>
+            <!--topicref href="OperationsGuide/Monitoring/c_LogContent.xml" type="concept"/-->
             <!--topicref href="OperationsGuide/Monitoring/c_LogMaintain.xml" type="concept"/-->
         </topicref>
         <topicref href="OperationsGuide/Monitoring/c_ExportUserOperationLog.xml" type="concept"/>

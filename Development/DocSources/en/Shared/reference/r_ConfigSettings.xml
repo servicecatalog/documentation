@@ -8,7 +8,11 @@
         <section>
             <p>Several configuration settings for <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> are to be provided initially before starting the deployment of the containers.  Additional ones and some of the initial settings can be set and/or changed after the deployment using the administration portal. </p>
+                    /> are to be provided initially for setting up the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> container environmnet before starting the deployment of the containers. Configuration settings for the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> services can be set and/or changed after the deployment using the administration portal. </p>
             <p>This appendix describes the settings in detail. </p>
         </section>
     </refbody>

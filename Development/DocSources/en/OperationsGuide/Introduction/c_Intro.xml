@@ -17,7 +17,5 @@
                 /><ph
                 conref="../../Shared/concepts/c_BasicUsageScenario.xml#concept2311/The_applications_integrated_w_concept_conbody_section_1_p"
             /></p>
-        <p conref="../../Shared/concepts/c_BasicUsageScenario.xml#concept2311/container"/>
-        <p>For each container, a storage is mounted so that data is kept persistent when starting or stopping the containers. </p>
     </conbody>
 </concept>

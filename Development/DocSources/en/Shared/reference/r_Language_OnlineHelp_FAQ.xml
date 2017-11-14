@@ -8,12 +8,11 @@
     <refbody>
         <section>
             <p>In the administration portal, online help is available in the language the user has set in his profile. The same applies to the FAQs that can be opened on a marketplace. </p>
-            <p>The online help and FAQ files are provided after installation in a separate <codeph>.war</codeph> file contained in the <codeph>oscm-install-pack.zip</codeph> file: </p>
-            <p><codeph>&lt;install_pack_dir>/domains/bes_domain/oscm-portal-help.war</codeph>. </p>
+            <p>The online help and FAQ files are provided after installation in a separate container: <codeph>oscm-help</codeph>.</p>
             <p>You can update the existing online help and FAQ files and/or provide the files in another language: </p>
             <p>
                 <ol compact="no">
-                    <li>Extract the content of the <codeph>oscm-portal-help.war</codeph> file to a separate directory on your file system. <p>You see the following directory structure: </p><p
+                    <li>Extract the content of ###??? the <codeph>oscm-portal-help.war</codeph> ### file to a separate directory on your file system. <p>You see the following directory structure: </p><p
                             platform="help"><image href="../_images/HelpFAQ.png" alt="HelpFAQ.png" width="415"
                                 height="372"/></p><p platform="print"><image href="../_images/HelpFAQ.png"
                                 alt="HelpFAQ.png" width="320" height="287"
@@ -41,8 +40,8 @@
                                     </p></li>
                             </ul>
                         </p></li>
-                    <li>Create a new <codeph>oscm-portal-help.war</codeph> file containing the additional subdirectories for the new language. </li>
-                    <li>Undeploy and deploy or redeploy the customized <codeph>oscm-portal-help.war</codeph> file to the <codeph>bes-domain</codeph> domain on your application server.  <p>By deploying the file, existing HTML files are overwritten. </p></li>
+                    <li>Create a new ###<codeph>oscm-portal-help.war</codeph>### file containing the additional subdirectories for the new language. </li>
+                    <li>### how can the changes be uploaded/imported???'### Undeploy and deploy or redeploy the customized <codeph>oscm-help</codeph> container. <p>By the deployment, existing HTML files are overwritten. </p></li>
                 </ol>
             </p>
             <p>

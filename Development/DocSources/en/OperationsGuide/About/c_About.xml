@@ -30,28 +30,29 @@
                                 <entry colname="col2"><xref href="../Introduction/c_Intro.xml"> </xref></entry>
                                 <entry colname="col3">Describes <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                    /> and its architecture, its organizations and users.</entry>
+                                    />, its containers and their communication, its architecture, its organizations, users, and roles.</entry>
                             </row>
                             <row>
                                 <entry colname="col2"><xref href="../GettingStarted/c_GettingStarted.xml"/></entry>
-                                <entry colname="col3"
-                                        >Provides an overview of the tasks involved in the operation and maintenance of <ph
+                                <entry colname="col3">Describes how to access the <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                        />, shows the initial steps to be performed after installing <ph
+                                        /> administration portal, lists the initial steps to be performed after installing <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                    />, and introduces the tools that support you in performing operational tasks. </entry>
+                                        />, and shows how to start and stop the <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    /> containers.</entry>
                             </row>
                             <row>
                                 <entry><xref href="../Configuration/c_Configuration.xml"/></entry>
                                 <entry>Describes how to maintain the <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                    /> configuration settings, how to tune system performance, how to add a currency and a language, and how to use and configure timers for automatic task processing.</entry>
+                                    /> configuration settings, how to add a currency and a language, how to use and configure timers for automatic task processing, as well as how to manage platform-wide LDAP settings.</entry>
                             </row>
                             <row>
                                 <entry colname="col2"><xref href="../Monitoring/c_RegularIntro.xml"/></entry>
-                                <entry colname="col3">Describes the <ph
+                                <entry colname="col3">Describes how to retrieve <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                    /> log files and log entry types, how to configure the log level, as well as which data is subject to regular backups. In addition, it describes how to export the audit log data and how to monitor the JMS queues.</entry>
+                                    /> logging information, how to configure the log level, as well as which data is subject to regular backups. In addition, it describes how to export the audit log data.</entry>
                             </row>
                             <row>
                                 <entry colname="col2"><xref href="../Organizations/c_Organizations.xml"/></entry>
@@ -78,13 +79,6 @@
                             <row>
                                 <entry><xref href="../Marketplace/c_ManageMP.xml"/></entry>
                                 <entry>Describes how to create, update, and delete marketplaces. </entry>
-                            </row>
-                            <row>
-                                <entry colname="col2"><xref href="../../Shared/reference/r_AppServerResources.xml"
-                                    /></entry>
-                                <entry colname="col3">Describes the resources required for <ph
-                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                    /> on the application server.</entry>
                             </row>
                             <row>
                                 <entry><xref href="../../Shared/reference/r_ConfigSettings.xml"/></entry>

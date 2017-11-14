@@ -17,24 +17,25 @@
             <p>
                 <ul>
                     <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            /> database (<codeph>bss</codeph>). The frequency of database backups depends on the amount of changes and on the availability of time slots with low load. PostgreSQL supports database backups without previous shutdown. For details, refer to the PostgreSQL documentation. </li>
+                            /> databases (<codeph>bss</codeph>, <codeph>bssapp</codeph><codeph>bssjms</codeph>). The frequency of database backups depends on the amount of changes and on the availability of time slots with low load. PostgreSQL supports database backups without previous shutdown. For details, refer to the PostgreSQL documentation. </li>
                     <li>Certificates (<codeph>keystore.jks</codeph> and <codeph>cacerts.jks</codeph> files). </li>
                     <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        /> log files located in the configured directory. ###???</li>
-                    <li>Configuration files. ???</li>
+                            /> log files located in the configured directory. By default, they are located in <codeph>/&lt;path_to_docker>/var/lib/portgresql/data</codeph> on the maching running the VM with <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</li>
                     <li>Customizations made to marketplaces, especially style sheets and localized texts presented at the user interface. </li>
                 </ul>
             </p>
             <p>
                 <note>When preparing for an update installation of your current <ph
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> release, always create a backup of all data mentioned above. </note>
+                    /> release, always create a backup of all data mentioned above. ### any other data that need to be backed up? ###</note>
             </p>
         </section>
         <section>
             <title>Recovery</title>
             <p>If you need to recover your <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> installation, the recommended procedure is as follows: ###???</p>
+                /> installation, the recommended procedure is as follows: </p>
+            <p>###???</p>
         </section>
     </conbody>
 </concept>

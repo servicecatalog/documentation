@@ -15,7 +15,7 @@
             <li>The format of the log entries.</li>
             <li>How to maintain the log files.</li>
             <li>How to export audit log data.</li>
-            <li>The backup of the databases, configuration settings, encryption key file, and log files.</li>
+            <li>The backup of the databases, configuration settings, and log files.</li>
         </ul>
         <p>### Is the monitoring of JMS queues still possible?###</p>
     </conbody>

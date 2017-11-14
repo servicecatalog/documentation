@@ -11,7 +11,7 @@
     <conbody>
         <section>
             <p>As an operator, you can add a role to an organization (technology provider, supplier, reseller and/or broker).</p>
-            <p><b>To do so:</b></p>
+            <p><b>To add a role:</b></p>
             <p>In the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> administration portal, choose <b>Manage organization</b> in the <b>Operation</b> menu. For detailed step-by-step instructions, refer to the online help. </p>
         </section>

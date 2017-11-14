@@ -103,12 +103,12 @@
                 >the platform</ph>, they are used for event-based provisioning. <p>Default: no value, i.e. empty</p><p>Example: <codeph>localhost:9092</codeph></p><p>
                 <note>Be aware that this setting is provided for future use and is currently only available for testing purposes.</note>
             </p></section>
-        <section><title>KEY_FILE_PATH</title>Optional. The path to the file containing the key required for encryption and decryption of service parameters with data type <codeph>PWD</codeph> and custom attributes marked for encryption.<p>Upon the start of <ph
+        <!--section><title>KEY_FILE_PATH</title>Optional. The path to the file containing the key required for encryption and decryption of service parameters with data type <codeph>PWD</codeph> and custom attributes marked for encryption.<p>Upon the start of <ph
                     platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
                     platform="help"
                     >the platform</ph>, it is checked whether a key file exists in the location specified in this setting. If this is not the case, the key file is automatically generated and stored in the location specified here. If nothing is specified, the file will be named <codeph>key</codeph> and generated into the following location:</p><p><codeph>&lt;GLASSFISH_HOME&gt;/glassfish/domains/bes-domain/config</codeph></p>Default: <p><codeph>./key</codeph></p><p>
                 <note>Be aware that the key file must not be deleted. Otherwise, encryption and decryption is no longer possible. It is recommended to create a backup of this file once generated.</note>
-            </p></section>
+            </p></section-->
         <section><title>LDAP_SEARCH_LIMIT</title>Optional. The maximum number of entries that will be returned by an LDAP query in case an organization uses an external LDAP system for user management. <p>Allowed values: Any value between <codeph>1</codeph> and <codeph>9223372036854775807</codeph></p><p>Default: <codeph>100</codeph></p></section>
         <section><title>LOG_LEVEL</title>Optional. The log level for <ph platform="print"><ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
