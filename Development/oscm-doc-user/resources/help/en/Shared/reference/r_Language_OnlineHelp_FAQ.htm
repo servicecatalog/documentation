@@ -23,15 +23,13 @@
         <div class="section">
             <p>In the administration portal, online help is available in the language the user has set in his profile. The same applies to the FAQs that can be opened on a marketplace. </p>
 
-            <p>The online help and FAQ files are provided after installation in a separate <samp class="codeph">.war</samp> file contained in the <samp class="codeph">oscm-install-pack.zip</samp> file: </p>
-
-            <p><samp class="codeph">&lt;install_pack_dir&gt;/domains/bes_domain/oscm-portal-help.war</samp>. </p>
+            <p>The online help and FAQ files are provided after installation in a separate container: <samp class="codeph">oscm-help</samp>.</p>
 
             <p>You can update the existing online help and FAQ files and/or provide the files in another language: </p>
 
             <div class="p">
                 <ol>
-                    <li class="liexpand">Extract the content of the <samp class="codeph">oscm-portal-help.war</samp> file to a separate directory on your file system. <p>You see the following directory structure: </p>
+                    <li class="liexpand">Extract the content of ###??? the <samp class="codeph">oscm-portal-help.war</samp> ### file to a separate directory on your file system. <p>You see the following directory structure: </p>
 <p><img src="../_images/HelpFAQ.png" width="415" height="372" alt="HelpFAQ.png" /><br /></p>
 <p>The languages provided after installation are English (en), German (de), and Japanese (ja). You can update the texts in their respective directories. The procedure is the same as when providing the texts in a different language (see below). </p>
 </li>
@@ -72,9 +70,9 @@
                         </div>
 </li>
 
-                    <li class="liexpand">Create a new <samp class="codeph">oscm-portal-help.war</samp> file containing the additional subdirectories for the new language. </li>
+                    <li class="liexpand">Create a new ###<samp class="codeph">oscm-portal-help.war</samp>### file containing the additional subdirectories for the new language. </li>
 
-                    <li class="liexpand">Undeploy and deploy or redeploy the customized <samp class="codeph">oscm-portal-help.war</samp> file to the <samp class="codeph">bes-domain</samp> domain on your application server.  <p>By deploying the file, existing HTML files are overwritten. </p>
+                    <li class="liexpand">### how can the changes be uploaded/imported???'### Undeploy and deploy or redeploy the customized <samp class="codeph">oscm-help</samp> container. <p>By the deployment, existing HTML files are overwritten. </p>
 </li>
 
                 </ol>
