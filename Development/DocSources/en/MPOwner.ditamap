@@ -70,6 +70,6 @@
         <topicref href="MPOwnerGuide/Customizing/c_CustLayout.xml" type="concept"/>
     </chapter>
     <chapter href="MPOwnerGuide/Billing/c_BillingIntro.xml"/>
-    <appendix href="MPOwnerGuide/Reference/r_MenuOptions.xml"/>
+    <!--appendix href="MPOwnerGuide/Reference/r_MenuOptions.xml"/-->
     <appendix href="Shared/glossary/r_Glossary.xml"/>
 </bookmap>

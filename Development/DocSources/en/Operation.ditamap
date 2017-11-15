@@ -144,6 +144,7 @@ topicref href="OperationsGuide/Configuration/c_LoadBalancing.xml" type="concept"
         <topicref href="OperationsGuide/Marketplace/c_UpdateMP.xml" type="concept"/>
         <topicref href="OperationsGuide/Marketplace/c_DeleteMP.xml" type="concept"/>
         <topicref href="OperationsGuide/Marketplace/c_ConfigureMP.xml" type="concept"/>
+        <topicref href="OperationsGuide/Marketplace/c_CustomizeMP.xml" type="concept"/>
         <!--topicref href="OperationsGuide/Marketplace/c_UpdateSearchIndex.xml" type="concept"/-->
     </chapter>
     <!--appendix href="Shared/reference/r_AppServerResources.xml" type="reference">

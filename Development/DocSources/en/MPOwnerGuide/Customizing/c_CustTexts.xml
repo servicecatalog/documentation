@@ -45,7 +45,7 @@
                                 /> administration portal.</p>
                         <p>
                                 <note>
-                                        <p>When an operator upgrades to a new release of the platform, new keys may have been added to the system, others may have been changed or deleted. Your customized texts are not overwritten by the upgrade. However, be aware that you need to check for changes, and it may be necessary to update your customizations. </p>
+                                        <p>When an operator upgrades to a new release of the platform, new keys may have been added to the system, others may have been changed or deleted. ### is this true ### Your customized texts are not overwritten by the upgrade. However, be aware that you need to check for changes, and it may be necessary to update your customizations. </p>
                                         <p>Make sure to have a backup of your changes. After the upgrade, export the texts again and save them to a new file. Compare the new file with the one containing your previous customizations and make the necessary changes. Then import your customized file again. </p>
                                 </note>
                         </p>

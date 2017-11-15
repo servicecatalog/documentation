@@ -34,11 +34,11 @@
             <p>Default: <codeph>INTERNAL</codeph>
             </p>
         </section>
-        <section><title>BASE_URL</title>Optional. The base URL is used to access the <ph platform="print"><ph
+        <!--section><title>BASE_URL</title>Optional. The base URL is used to access the <ph platform="print"><ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
                 >platform's</ph> home page if <ph platform="print"><ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
-                >the platform</ph> does not require HTTPS for communication. If left empty, the <codeph>BASE_URL_HTTPS</codeph> setting is used. <p>Syntax: <codeph>http://&lt;host&gt;:&lt;port&gt;/&lt;context-root></codeph></p><p>The default for <codeph>&lt;context-root></codeph> is <codeph>oscm-portal</codeph>.</p><note>If the SSL/HTTPS port was changed, then this setting must also be updated.</note></section>
+                >the platform</ph> does not require HTTPS for communication. If left empty, the <codeph>BASE_URL_HTTPS</codeph> setting is used. <p>Syntax: <codeph>http://&lt;host&gt;:&lt;port&gt;/&lt;context-root></codeph></p><p>The default for <codeph>&lt;context-root></codeph> is <codeph>oscm-portal</codeph>.</p><note>If the SSL/HTTPS port was changed, then this setting must also be updated.</note></section-->
         <section><title>BASE_URL_HTTPS</title>Mandatory. The base URL is used to access the <ph platform="print"><ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
                     >platform's</ph> home page and to create the URL for accessing services via HTTPS. <p>Syntax: <codeph>https://&lt;host&gt;:&lt;port&gt;/&lt;context-root></codeph></p><p>The default for <codeph>&lt;context-root></codeph> is <codeph>oscm-portal</codeph>.</p><note>If the SSL/HTTPS port was changed, then this setting must also be updated.</note></section>

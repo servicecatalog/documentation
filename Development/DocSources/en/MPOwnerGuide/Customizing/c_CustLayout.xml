@@ -15,8 +15,18 @@
                 /></p>
             <p
                 conref="../../help/tasks/shop_customizeBrand.xml#task55550/The_platform_s_default_style_task_taskbody_context_p_2"/>
-            <p>To download the branding package and specify the URL of your customized style sheet for a marketplace, use the <uicontrol>Customize layout</uicontrol> menu option in the <uicontrol>Marketplace</uicontrol> menu of the <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> administration portal.</p>
+            <p>Proceed as follows: </p>
+            <p>
+                <ol>
+                    <li>Download the branding package by using the <uicontrol>Customize layout</uicontrol> menu option in the <uicontrol>Marketplace</uicontrol> menu of the <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> administration portal. The branding package is provided as a ZIP file. </li>
+                    <li>Extract the ZIP file to a local directory.</li>
+                    <li>Adapt the files as desired. </li>
+                    <li>Create an archive (ZIP or TAR) containing your customized files.</li>
+                    <li>Provide this archive to the platform operator so that he can apply your changes to the system. As soon as the platform operator has loaded your changes, they are applied to the marketplace referenced by the URL specified on the <uicontrol>Customize layout</uicontrol> page.</li>
+                </ol>
+            </p>
         </section>
     </conbody>
 </concept>
