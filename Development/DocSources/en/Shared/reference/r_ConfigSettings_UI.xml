@@ -86,7 +86,7 @@
                 <li><codeph>navigation.priceModel</codeph>: <uicontrol>Price model</uicontrol> menu</li>
                 <li><codeph>navigation.marketplace</codeph>: <uicontrol>Marketplace</uicontrol> menu</li>
             </ul><note>The <uicontrol>Update configuration settings</uicontrol> page in the <uicontrol>Operation</uicontrol> menu is the default page the operator is directed to when logging in. If you hide the page from the menu or hide the complete menu, you are still directed to the <uicontrol>Update configuration settings</uicontrol> page where you can make changes, if required.</note></section>
-        <section>
+        <!--section>
             <title>HIDE_PAYMENT_INFORMATION</title>
             <p>Optional. Determines whether customers need to specify payment information for subscribing to services that are not free of charge. <ph>If set to <codeph>true</codeph>, the dialogs and options for specifying payment types and billing addresses are hidden on the marketplaces, and customer payment information does not appear in billing and payment preview reports. In the administration portal, suppliers and resellers cannot manage payment types for their customers. Billing runs and payment processing are not affected by the setting. </ph></p>
             <p>The setting is evaluated only once when <ph platform="help">the platform</ph><ph
@@ -96,7 +96,7 @@
                     platform="print"/> has been started, not even with a further update installation.</p>
             <p>Allowed values: <codeph>true</codeph>, <codeph>false</codeph></p>
             <p>Default: <codeph>false</codeph></p>
-        </section>
+        </section-->
         <section><title>KAFKA_BOOTSTRAP_SERVERS</title>Optional. Comma-separated list of host and port pairs that are the addresses of Kafka brokers. Bootstrap servers provide the initial hosts that act as the starting point for a Kafka client. In <ph
                 platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
                 platform="help"
@@ -127,9 +127,9 @@
         <section><title>MP_ERROR_REDIRECT_HTTPS</title>Optional. The URL of a Web page that is to be displayed in case a visitor tries to access a marketplace without a valid marketplace ID by HTTPS. This Web page will be shown instead of the default error message. Note that this URL is used platform-wide. <p>Syntax: <codeph>https://&lt;your Web page></codeph></p><p>Make sure to specify a valid URL that does not exceed a maximum of 255 characters. </p></section>
         <section><title>PERMITTED_PERIOD_INACTIVE_ON_BEHALF_USERS</title>Optional. The time in milliseconds after which a user who logged in on behalf of a customer and was inactive will be removed from the system. <p>Allowed values: Any value between <codeph>1</codeph> and <codeph>9223372036854775807</codeph></p><p>Default: <codeph>604800000</codeph>, i.e. 7 days </p></section>
         <section><title>PERMITTED_PERIOD_UNCONFIRMED_ORGANIZATIONS</title>Optional. The maximum time in milliseconds until an organization's initial administrative account must be confirmed. When this time has passed, the account is removed. <p>Allowed values: Any value between <codeph>1</codeph> and <codeph>9223372036854775807</codeph></p><p>Default: <codeph>604800000</codeph>, i.e. 7 days </p></section>
-        <section><title>PSP_USAGE_ENABLED</title>Mandatory. Specifies whether PSP integration is used for the current environment.<p>Allowed values: <codeph>true</codeph>, <codeph>false</codeph></p><p>Default: <codeph>false</codeph></p><p>If you change this setting, you need to restart <ph
+        <!--section><title>PSP_USAGE_ENABLED</title>Mandatory. Specifies whether PSP integration is used for the current environment.<p>Allowed values: <codeph>true</codeph>, <codeph>false</codeph></p><p>Default: <codeph>false</codeph></p><p>If you change this setting, you need to restart <ph
                     platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
-                    platform="help">the platform</ph>.</p></section>
+                    platform="help">the platform</ph>.</p></section-->
         <section>
             <title>REPORT_ENGINEURL</title>
             <p>The URL of the report engine used to generate the <ph platform="print"><ph

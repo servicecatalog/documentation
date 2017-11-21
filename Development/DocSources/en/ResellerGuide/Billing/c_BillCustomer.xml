@@ -15,7 +15,7 @@
                 <li>Specify the payment types to be offered to customers. </li>
                 <li>Define your own billing period.</li>
                 <li>Export billing data to make it available to external accounting systems.</li>
-                <li>Integrate and use the facilities of a commercial payment service provider (PSP).</li>
+                <!--li>Integrate and use the facilities of a commercial payment service provider (PSP).</li-->
             </ul>
         </section>
         <section>
@@ -54,11 +54,11 @@
                     conref="../../help/tasks/user_exportBillingData.xml#task634/For_a_detailed_description_of_task_taskbody_context_note_p"
                 /></p>
         </section>
-        <section>
+        <!--section>
             <title>Integrating PSP Support</title>
         </section>
         <section
             conref="../../SupplierGuide/Billing/c_BillUsePSP.xml#concept_3413BBD173324104B42FB714974CABE7/enables_you_to_use_the_facil_concept_conbody_section"
-        />
+        /-->
     </conbody>
 </concept>

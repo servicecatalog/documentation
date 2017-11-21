@@ -34,10 +34,10 @@
                             <entry><b>PaaS</b></entry>
                             <entry>Platform as a Service</entry>
                         </row>
-                        <row>
+                        <!--row>
                             <entry><b>PSP</b></entry>
                             <entry>Payment service provider</entry>
-                        </row>
+                        </row-->
                         <row>
                             <entry><b>SaaS</b>
                             </entry>

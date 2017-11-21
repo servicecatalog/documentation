@@ -84,10 +84,10 @@
         <section>
             <p>A privileged user role within an organization allowing a user to manage the organizational units for which he has been appointed as an administrator, and to create, modify, and terminate subscriptions for these units.</p>
         </section>
-        <section>
+        <!--section>
             <title>Payment Service Provider (PSP)</title>
             <p>A company that offers suppliers or resellers online services for accepting electronic payments by a variety of payment methods including credit card or bank-based payments such as direct debit or bank transfer. Suppliers and resellers can use the services of a PSP for the creation of invoices and payment collection. </p>
-        </section>
+        </section-->
         <section>
             <title>Payment Type</title>
             <p>A specification of how a customer may pay for the usage of his subscriptions. The operator defines the payment types available in <ph

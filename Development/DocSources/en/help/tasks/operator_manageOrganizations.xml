@@ -14,9 +14,9 @@
           <li>Set the <b>Distinguished name</b> for an organization.<p>This is required if the organization wants to use certificates for trusted communication between the organization itself and the platform operator organization.</p><p>The platform checks the distinguished name in a client's certificate. If it matches the one specified here, the caller is assumed to be authorized to connect to the platform. </p><p>You can retrieve the distinguished name of an organization from its certificate with the following call in your Java runtime environment: </p><p>
               <codeblock>&lt;YourJRE>/bin/keytool -printcert -file &lt;filename.crt></codeblock>
             </p><p>The process of integrating certificates is described in detail in the <i>Operator's Guide</i>.</p></li>
-          <li>Define the <b>payment types</b> that a supplier or reseller organization may offer to its customers for services applying the platform's billing system.<p>By default, suppliers and resellers can allow customers to pay on invoice so that they can subscribe to a service that is not free of charge. </p><p
+          <li>Define the <b>payment types</b> that a supplier or reseller organization may offer to its customers for services applying the platform's billing system.<p>By default, suppliers and resellers can allow customers to pay on invoice so that they can subscribe to a service that is not free of charge. </p><!--p
               id="PayTypes2"
-              >If a supplier or reseller requests a payment type other than on invoice, he must use the services of a commercial PSP. </p>The process of integrating PSP support is described in detail in the <i>Operator's Guide</i>. </li>
+              >If a supplier or reseller requests a payment type other than on invoice, he must use the services of a commercial PSP. </p><p>The process of integrating PSP support is described in detail in the <i>Operator's Guide</i>.</p--> </li>
         </ul>
       </p>
       <p><b>To manage an organization</b>:</p>
@@ -75,13 +75,13 @@
       <p>The organization's administrators are notified by email about any changes you made.</p>
     </result>
   </taskbody>
-  <related-links>
+  <!--related-links>
     <linklist>
       <title>Related topics</title>
       <link href="organization_managePaymentTypes.xml"/>
-      <!--link href="operator_manageTenants.xml"/-->
+      <link href="operator_manageTenants.xml"/>
       <link href="operator_managePSPs.xml"/>
       <link href="operator_createPSP.xml"/>
     </linklist>
-  </related-links>
+  </related-links-->
 </task>

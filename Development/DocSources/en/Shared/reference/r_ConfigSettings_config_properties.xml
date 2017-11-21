@@ -98,8 +98,8 @@
             <p>Allowed values: <codeph>true</codeph>, <codeph>false</codeph></p>
             <p>Default: <codeph>false</codeph></p>
         </section>
-        <section><title>HTTP_PROXY</title>Optional. The proxy to be used for PSP-related HTTP connections, if any.<p>Example: <codeph>proxy.domain</codeph> or the proxy server IP address.</p></section>
-        <section><title>HTTP_PROXY_PORT</title>Optional. The proxy port to be used for PSP-related HTTP connections, if any.<p>Allowed values: Any value between <codeph>1</codeph> and <codeph>65535</codeph></p><p>Default: <codeph>1080</codeph></p></section>
+        <!--section><title>HTTP_PROXY</title>Optional. The proxy to be used for PSP-related HTTP connections, if any.<p>Example: <codeph>proxy.domain</codeph> or the proxy server IP address.</p></section>
+        <section><title>HTTP_PROXY_PORT</title>Optional. The proxy port to be used for PSP-related HTTP connections, if any.<p>Allowed values: Any value between <codeph>1</codeph> and <codeph>65535</codeph></p><p>Default: <codeph>1080</codeph></p></section-->
         <section><title>KAFKA_BOOTSTRAP_SERVERS</title>Optional. Comma-separated list of host and port pairs that are the addresses of Kafka brokers. Bootstrap servers provide the initial hosts that act as the starting point for a Kafka client. In <ph
                 platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
                 platform="help"
@@ -139,9 +139,9 @@
         <section><title>MP_ERROR_REDIRECT_HTTPS</title>Optional. The URL of a Web page that is to be displayed in case a visitor tries to access a marketplace without a valid marketplace ID by HTTPS. This Web page will be shown instead of the default error message. Note that this URL is used platform-wide. <p>Syntax: <codeph>https://&lt;your Web page></codeph></p><p>Make sure to specify a valid URL that does not exceed a maximum of 255 characters. </p></section>
         <section><title>PERMITTED_PERIOD_INACTIVE_ON_BEHALF_USERS</title>Optional. The time in milliseconds after which a user who logged in on behalf of a customer and was inactive will be removed from the system. <p>Allowed values: Any value between <codeph>1</codeph> and <codeph>9223372036854775807</codeph></p><p>Default: <codeph>604800000</codeph>, i.e. 7 days </p></section>
         <section><title>PERMITTED_PERIOD_UNCONFIRMED_ORGANIZATIONS</title>Optional. The maximum time in milliseconds until an organization's initial administrative account must be confirmed. When this time has passed, the account is removed. <p>Allowed values: Any value between <codeph>1</codeph> and <codeph>9223372036854775807</codeph></p><p>Default: <codeph>604800000</codeph>, i.e. 7 days </p></section>
-        <section><title>PSP_USAGE_ENABLED</title>Mandatory. Specifies whether PSP integration is used for the current environment.<p>Allowed values: <codeph>true</codeph>, <codeph>false</codeph></p><p>Default: <codeph>false</codeph></p><p>If you change this setting, you need to restart <ph
+        <!--section><title>PSP_USAGE_ENABLED</title>Mandatory. Specifies whether PSP integration is used for the current environment.<p>Allowed values: <codeph>true</codeph>, <codeph>false</codeph></p><p>Default: <codeph>false</codeph></p><p>If you change this setting, you need to restart <ph
                     platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
-                    platform="help">the platform</ph>.</p></section>
+                    platform="help">the platform</ph>.</p></section-->
         <section><title>REPORT_ENGINEURL</title>Mandatory if you want to use the <ph platform="print"><ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
                 >platform's</ph> reports. The URL template of the report engine. If you do not specify a correct URL template, <ph

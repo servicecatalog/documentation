@@ -9,10 +9,10 @@
         <prodinfo product="oscm_ce">
             <prodname/>
             <vrmlist>
-                <vrm version="V17.5.0"/>
+                <vrm version="V17.6.0"/>
             </vrmlist>
             <brand/>
-            <prognum>V17.5.0</prognum>
+            <prognum>V17.6.0</prognum>
             <component/>
             <series>Getting Started with OSCM</series>
         </prodinfo>

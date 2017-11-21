@@ -9,7 +9,7 @@
     <conbody>
         <section>
             <p id="cert1">Web service calls coming from <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> (e.g. for provisioning application instances for services, or for integrating a process control system) or sent to it (e.g. by an application such as a PSP system) can be secured with SSL. SSL is used for authentication and for encryption at the transport level.</p>
+                /> (e.g. for provisioning application instances for services, or for integrating a process control system) or sent to it <!--ph>(e.g. by an application such as a PSP system)</ph--> can be secured with SSL. SSL is used for authentication and for encryption at the transport level.</p>
             <p id="cert2">Every HTTPS connection involves a client and a server. Depending on the calling direction, <ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> can act as a server (Web service calls to <ph

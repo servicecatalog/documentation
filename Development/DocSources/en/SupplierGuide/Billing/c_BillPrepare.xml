@@ -16,7 +16,7 @@
                 <li>Define the VAT rates to be used for calculating the charges.</li>
                 <li>Define your own billing period.</li>
                 <li>Export billing data to make it available to external accounting systems.</li>
-                <li>Integrate and use the facilities of a commercial payment service provider (PSP).</li>
+                <!--li>Integrate and use the facilities of a commercial payment service provider (PSP).</li-->
             </ul>
         </section>
     </conbody>

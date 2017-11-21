@@ -14,9 +14,10 @@
           <li>Den <b>Distinguished Name</b> für die Organisation festlegen.<p>Dies ist erforderlich, wenn eine Organisation Zertifikate für die vertrauenswürdige Kommunikation zwischen der Betreiberorganisation und sich selbst verwenden will. </p><p>Die Plattform überprüft den Distinguished Name im Client-Zertifikat. Falls er mit dem hier festgelegten übereinstimmt, ist der Aufrufer berechtigt, eine Verbindung zur Plattform herzustellen. </p><p>Den Distinguished Name einer Organisation können Sie aus ihrem Zertifikat mit folgendem Aufruf in Ihrer Java-Laufzeitumgebung ermitteln: </p><p>
               <codeblock>&lt;IhrJRE>/bin/keytool -printcert -file &lt;Dateiname.crt></codeblock>
             </p><p>Detaillierte Informationen zur Verwendung von Zertifikaten finden Sie im <i>Operator's Guide</i>.</p></li>
-          <li><b>Zahlungsarten</b> festlegen, die Serviceanbieter oder Wiederverkäufer ihren Kunden für Services anbieten können, die das plattformeigene Abrechnungssystem verwenden. <p>Standardmäßig kann jeder Kunde auf Rechnung bezahlen. Somit ist gewährleistet, dass Kunden jederzeit kostenpflichtige Services abonnieren können.</p><p
+          <li><b>Zahlungsarten</b> festlegen, die Serviceanbieter oder Wiederverkäufer ihren Kunden für Services anbieten können, die das plattformeigene Abrechnungssystem verwenden. <p>Standardmäßig kann jeder Kunde auf Rechnung bezahlen. Somit ist gewährleistet, dass Kunden jederzeit kostenpflichtige Services abonnieren können.</p>
+            <!--p
               id="PayTypes2"
-              >Wenn ein Serviceanbieter oder Wiederverkäufer eine weitere Zahlungsart anbieten will, muss er einen Vertrag mit einem kommerziellen Zahlungsdienstleister (PSP) abschließen.</p><p>Detaillierte Informationen zur Integration eines Zahlungsdienstleister finden Sie im <i>Operator's Guide</i>. </p></li>
+              >Wenn ein Serviceanbieter oder Wiederverkäufer eine weitere Zahlungsart anbieten will, muss er einen Vertrag mit einem kommerziellen Zahlungsdienstleister (PSP) abschließen.</p><p>Detaillierte Informationen zur Integration eines Zahlungsdienstleister finden Sie im <i>Operator's Guide</i>. </p--></li>
         </ul>
       </p>
       <p><b>So verwalten Sie eine Organisation</b>:</p>
@@ -68,7 +69,7 @@
       <p>Die Administratoren der Organisation werden per E-Mail über Ihre Änderungen informiert.</p>
     </result>
   </taskbody>
-  <related-links>
+  <!--related-links>
     <linklist>
       <title>Weitere Themen</title>
       <link href="operator_manageTenants.xml"/>
@@ -76,5 +77,5 @@
       <link href="operator_managePSPs.xml"/>
       <link href="operator_createPSP.xml"/>
     </linklist>
-  </related-links>
+  </related-links-->
 </task>

@@ -17,7 +17,7 @@
                 <li>Define the VAT rates to be used for calculating the customer charges.</li>
                 <li>Define the period for which billing data is generated.</li>
                 <li>Export the generated billing data to make it available to external accounting systems.</li>
-                <li>Integrate and use the facilities of a commercial payment service provider (PSP).</li>
+                <!--li>Integrate and use the facilities of a commercial payment service provider (PSP).</li-->
             </ul>
             <p>Brokers are not involved in these tasks, because subscriptions to services they offer are contracts between the customers and the suppliers of the services. The suppliers are responsible for preparing the billing and payment as well as collecting the payments from the brokers' customers. </p>
         </section>
@@ -44,7 +44,7 @@
             <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> allows suppliers and resellers to export the billing data for one or several customers for a specific time frame. The exported data can, for example, be forwarded to an accounting system which processes the data and generates the corresponding invoices. In this way, suppliers and resellers can use billing and payment processes that have been established in their organization.</p>
         </section>
-        <section>
+        <!--section>
             <title>Integrating PSP Support</title>
             <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> supports suppliers and resellers in using the facilities of a commercial payment service provider (PSP) for the creation of invoices and payment collection. The billing data generated in <ph
@@ -54,6 +54,6 @@
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     />, the services of any PSP can be integrated with <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
-        </section>
+        </section-->
     </conbody>
 </concept>

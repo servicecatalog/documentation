@@ -24,10 +24,10 @@
                             <entry><b>CA</b></entry>
                             <entry>Certification authority</entry>
                         </row>
-                        <row>
+                        <!--row>
                             <entry><b>PSP</b></entry>
                             <entry>Payment service provider</entry>
-                        </row>
+                        </row-->
                         <row>
                             <entry><b>SaaS</b>
                             </entry>

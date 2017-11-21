@@ -9,7 +9,7 @@
         /></title>
     <conbody>
         <section>
-            <p>For the provisioning of application instances and for integrating external process control or PSP systems, <ph
+            <p>For the provisioning of application instances and for integrating external process control<!--ph> or PSP systems</ph-->, <ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> calls other Web services which can be addressed by HTTPS. In this scenario, <ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"

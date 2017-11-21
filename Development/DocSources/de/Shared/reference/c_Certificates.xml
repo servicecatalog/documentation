@@ -10,7 +10,7 @@
         <p>Certificates are required for <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> to authenticate a calling client and to allow for trusted communication between <ph
                 conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-            /> and an application underlying a technical service or the integrated services provided by a payment service provider (PSP). </p>
+            /> and an application underlying a technical service.</p>
         <p>The following organizations are involved in handling certificates: </p>
         <ul>
             <li>Operator</li>
@@ -18,9 +18,9 @@
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></li>
             <li>Any other organization using Web service calls to or from <ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></li>
-            <li>PSPs whose services are to be integrated with <ph
+            <!--li>PSPs whose services are to be integrated with <ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> for billing, invoicing, and payment collection. </li>
+                /> for billing, invoicing, and payment collection. </li-->
         </ul>
     </conbody>
 </concept>

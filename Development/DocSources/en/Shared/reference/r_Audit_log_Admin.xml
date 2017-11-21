@@ -395,7 +395,7 @@
                                             <p><codeph>subscriptionName=<i>&lt;subscription name></i></codeph>: The name of a subscription as entered when subscribing to a service. </p>
                                         </li>
                                         <li><codeph>paymentName=<i>&lt;display name></i></codeph>: The name of the payment type as shown to the user. </li>
-                                        <li><codeph>paymentType=<i>&lt;payment type></i></codeph>: The payment type name as offered by the supplier or PSP.</li>
+                                        <li><codeph>paymentType=<i>&lt;payment type></i></codeph>: The payment type name as offered by the supplier<!--ph> or PSP</ph-->.</li>
                                     </ul>
                                 </p>
                             </entry>

@@ -9,20 +9,20 @@
         <prodinfo product="oscm_ce">
             <prodname/>
             <vrmlist>
-                <vrm version="V17.5.0"/>
+                <vrm version="V17.6.0"/>
             </vrmlist>
             <brand/>
-            <prognum>V17.5.0</prognum>
+            <prognum>V17.6.0</prognum>
             <component/>
             <series>Operator's Guide</series>
         </prodinfo>
         <prodinfo product="oscm_ee">
             <prodname>Enterprise Service</prodname>
             <vrmlist>
-                <vrm version="V17.5.0"/>
+                <vrm version="V17.6.0"/>
             </vrmlist>
             <brand>FUJITSU Software</brand>
-            <prognum>Catalog Manager V17.5.0</prognum>
+            <prognum>Catalog Manager V17.6.0</prognum>
             <component/>
             <series>Operator's Guide</series>
         </prodinfo>
@@ -107,17 +107,17 @@ topicref href="OperationsGuide/Configuration/c_LoadBalancing.xml" type="concept"
             <topicref format="dita" href="OperationsGuide/Billing/c_BillingRegisterSystem.xml" type="concept"/>
             <topicref format="dita" href="OperationsGuide/Billing/c_BillingSetDefaultSystem.xml" type="concept"/>
         </topicref-->
-        <topicref href="OperationsGuide/Billing/c_IntegratePSPSupport.xml" type="concept">
+        <!--topicref href="OperationsGuide/Billing/c_IntegratePSPSupport.xml" type="concept">
             <topicref href="OperationsGuide/Billing/c_BillingPrereqs.xml" type="concept"/>
             <topicref format="dita" href="OperationsGuide/Billing/c_BillingCreatePSP.xml" type="concept"/>
             <topicref href="OperationsGuide/Billing/c_BillingManagePSPs.xml" type="concept"/>
-            <!--topicref href="PSPInt_Heidelpay/BuildConfigure/r_ConfigSettings_Heidelpay.xml" type="reference"/-->
+            <topicref href="PSPInt_Heidelpay/BuildConfigure/r_ConfigSettings_Heidelpay.xml" type="reference"/>
             <topicref href="OperationsGuide/Billing/c_BillingPSPID.xml" type="concept"/>
-        </topicref>
+        </topicref-->
         <topicref href="OperationsGuide/Billing/c_BillingPaymentTypes.xml" type="concept"/>
         <topicref href="OperationsGuide/Billing/c_BillingTasks.xml" type="concept">
             <topicref href="OperationsGuide/Billing/c_StartBillingRun.xml" type="concept"/>
-            <topicref href="OperationsGuide/Billing/c_StartPaymentProcessing.xml" type="concept"/>
+            <!--topicref href="OperationsGuide/Billing/c_StartPaymentProcessing.xml" type="concept"/-->
             <topicref href="OperationsGuide/Billing/c_RetryFailedPaymentProcesses.xml" type="concept"/>
             <topicref href="OperationsGuide/Billing/c_BillingDataPreview.xml" type="concept"/>
             <topicref href="OperationsGuide/Billing/c_BillingDataExport.xml" type="concept"/>

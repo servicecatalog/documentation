@@ -22,9 +22,9 @@
             <p>Apart from offering services to customers, your role as a reseller involves the following tasks:</p>
             <ul>
                 <li>Managing your customers. This includes, for example, explicitly terminating a customer's subscription.</li>
-                <li>Preparing billing and payment for the customers. As users work with a service, the usage charges are calculated based on the fees defined in the related price model. This billing data can be used for generating invoices. You are responsible for the processing of the billing data and for the payment collection. <ph
+                <li>Preparing billing and payment for the customers. As users work with a service, the usage charges are calculated based on the fees defined in the related price model. This billing data can be used for generating invoices. You are responsible for the processing of the billing data and for the payment collection. <!--p><ph
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> enables you to integrate and use the facilities of a commercial payment service provider (PSP) for this purpose.</li>
+                    /> enables you to integrate and use the facilities of a commercial payment service provider (PSP) for this purpose.</p--></li>
                 <li>Handling revenue shares. As a reseller, you are usually not entitled to keep the entire revenue collected from your customers, but only a certain share thereof. This revenue share is defined by the operator. It may be different for each marketplace where you offer services or even for individual services. Depending on your contracts with the operator, marketplace owner, and suppliers, you have to pay them their respective shares or they will collect their shares from you. You can at any time retrieve billing data and information on the actual revenues depending on the usage of the services. </li>
             </ul>
             <p>If required, you can also act as a customer in <ph

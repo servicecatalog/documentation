@@ -10,7 +10,7 @@
     <conbody>
         <section>
             <p><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> provides Web services (platform services) that can be called by other systems, such as an external process control or a PSP system. In this scenario, <ph
+                    /> provides Web services (platform services) that can be called by other systems, such as an external process control<!--ph> or a PSP system</ph-->. In this scenario, <ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> is the HTTPS server while the other system is a Web service client. The following requirements must be met to establish a connection to <ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>:</p>

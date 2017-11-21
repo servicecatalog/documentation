@@ -5,9 +5,9 @@
 ]>
 
 <concept id="concept_1BCF5C425D7D4627AB1C66A085CF6E11" xml:lang="en-us">
-    <title>Installing and Configuring APP</title>
+    <title>Configuring APP</title>
     <conbody>
-        <p>The following sections describe the installation and configuration of APP, as well as the preparations you need to take before.</p>
+        <p>APP comes with a default configuration that can be adjusted BEFORE deployment; it can still be changed once the oscm-app container has been deployed. </p>
         <section>
             <title>Prerequisites and Preparation</title>
             <p>Consider the following before you install APP:</p>

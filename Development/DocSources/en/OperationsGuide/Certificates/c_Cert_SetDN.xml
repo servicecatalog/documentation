@@ -37,11 +37,11 @@ Certificate fingerprints:
          SHA1: 8A:A6:B9:44:FE:E5:18:0B:92:FD:04:D4:4E:69:0F:09:FB:7B:02:34
 </codeblock>
             </p>
-            <p>
+            <!--p>
                 <note>When integrating the services of commercial payment service providers (PSPs), the distinguished name must always be set. You set the distinguished name when registering the PSP with <ph
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 />.<ph audience="doc"> For details, refer to <xref href="../Billing/c_BillingCreatePSP.xml"/>.</ph></note>
-            </p>
+            </p-->
             <p><b>To set the distinguished name for an organization:</b>
             </p>
             <p>In the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"

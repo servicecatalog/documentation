@@ -25,12 +25,12 @@
                 <li>Add additional language support so that users can work in other languages than the default ones available after installation (English, German, Japanese). The operator can customize or translate the default user interface and email texts, platform objects such as event and parameter names, labels and texts used in reports, as well as the online help topics for the administration portal and the FAQs for the marketplaces.</li>
                 <li>Execute billing tasks. This includes the explicit start of billing runs or the manual retry of payment processing when, for example, communication problems caused the automatic payment processing for an organization to fail.</li>
                 <li>Register, update, and remove external  billing systems. This includes choosing the default billing system.</li>
-                <li>Set up a commercial payment service provider (PSP) for a supplier or reseller. This includes setting up the payment types and specifying the communication settings.</li>
+                <!--li>Set up a commercial payment service provider (PSP) for a supplier or reseller. This includes setting up the payment types and specifying the communication settings.</li-->
                 <li>Create certificates for trusted communication, import and sign them. Certificates are required for <ph
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                         /> to authenticate a calling client and to allow for trusted communication between <ph
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> and an application underlying a technical service, a PSP, or an external process control system.</li>
+                    /> and an application underlying a technical service, or an external process control system.</li>
             </ul>
             <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> provides the following facilities to support the operators in performing their tasks:</p>

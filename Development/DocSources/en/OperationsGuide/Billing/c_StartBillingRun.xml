@@ -8,7 +8,8 @@
             <title>Start Billing Run</title>
             <conbody>
                         <section>
-                                    <p>You can explicitly start a billing run for calculating the customer billing data for a billing period. The billing period for which the data is generated depends on the day when you start the billing run and on the <codeph>TIMER_INTERVAL_BILLING_OFFSET</codeph> configuration setting. Explicitly starting a billing run is useful, for example, if you want to check the payment processing of billing data by a PSP test system, and you do not want to wait for the automatic calculation of the data.</p>
+                                    <p>You can explicitly start a billing run for calculating the customer billing data for a billing period. The billing period for which the data is generated depends on the day when you start the billing run and on the <codeph>TIMER_INTERVAL_BILLING_OFFSET</codeph> configuration setting. 
+                                                <!--p>Explicitly starting a billing run is useful, for example, if you want to check the payment processing of billing data by a PSP test system, and you do not want to wait for the automatic calculation of the data.</p--></p>
                                     <p>If you start a billing run on the first day of a month plus the day(s) defined in the <codeph>TIMER_INTERVAL_BILLING_OFFSET</codeph> setting, the revenue share data is also calculated and stored. </p>
                                     <p><b>To start a billing run:</b>
                                     </p>

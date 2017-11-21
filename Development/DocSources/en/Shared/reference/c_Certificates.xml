@@ -10,15 +10,15 @@
         <p>Certificates are required for <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> to allow for trusted communication between <ph
                 conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-            /> and an application underlying a technical service, a payment service provider (PSP), an Identity Provider (IdP) or a Security Token Service (STS).</p>
+            /> and an application underlying a technical service. <!--ph>a payment service provider (PSP), an Identity Provider (IdP) or a Security Token Service (STS).</ph--></p>
         <p>The following organizations are involved when using certificates: </p>
         <ul>
             <li>Platform operator</li>
             <li>Technology providers integrating their applications with <ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</li>
-            <li>PSPs whose services are to be integrated with <ph
+            <!--li>PSPs whose services are to be integrated with <ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> for invoicing and payment collection. </li>
+                /> for invoicing and payment collection. </li-->
             <li>Organizations integrating an external process control system.</li>
             <li>Any other organization using Web service calls to or from <ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></li>
