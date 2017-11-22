@@ -6,7 +6,7 @@
 <concept id="concept_3413BBD173324104B42FB714974CABE7" xml:lang="en-us">
             <title>Managing Payment Types</title>
             <conbody>
-                        <p>
+
                                     <section>
                                                 <p>You are responsible for specifying how your customers and the customers of your brokers may pay for their subscriptions:</p>
                                                 <ul>
@@ -15,7 +15,7 @@
                                                             <li>By direct debit.</li>
                                                 </ul>
                                     </section>
-                        </p>
+                        
                         <section id="For_details_refer_to_concept_conbody_section_2">
                                     <p><ph
                                                             conref="../../help/tasks/organization_managePaymentEnablement.xml#task634/Your_operator_is_responsible_task_taskbody_context_p_2_ph"
