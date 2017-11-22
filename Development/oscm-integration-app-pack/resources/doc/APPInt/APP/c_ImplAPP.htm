@@ -45,15 +45,19 @@
                     <li class="liexpand">APP including the provisioning service, a database, a notification handler, and an API to enable the communication between the application instances and <span>OSCM</span>.</li>
 
                     <li class="liexpand">A service controller for communication with the application. A service controller must be implemented for each application. <p>To implement a service controller, you use the API provided with the integration package for asynchronous provisioning. Samples included in the package show how a service controller can be implemented. A detailed documentation for the API is provided as Javadoc.</p>
-<p>The following packages include ready-to-use service controllers: </p>
+<p>The following ready-to-use service controllers are included in and initialized when deploying the <samp class="codeph">oscm-app</samp> container: </p>
 <div class="p">
                             <ul>
                                 
-                                <li><samp class="codeph">oscm-aws-install-pack.zip</samp>: <p>Can be used for integrating the Amazon Elastic Compute Cloud Web service with <span>OSCM</span>.</p>
-</li>
+                                <li>
+                                    <p>AWS service controller: Can be used for integrating the Amazon Elastic Compute Cloud Web service with <span>OSCM</span>.</p>
 
-                                <li><samp class="codeph">oscm-openstack-install-pack.zip</samp>: <p>Can be used for integrating OpenStack services with <span>OSCM</span>.</p>
-</li>
+                                </li>
+
+                                <li>
+                                    <p>OpenStack service controller: Can be used for integrating OpenStack services with <span>OSCM</span>.</p>
+
+                                </li>
 
                             </ul>
 
@@ -127,7 +131,7 @@
             <p>Integrating an application with <span>OSCM</span> involves the following tasks: </p>
 
             <ul>
-                <li><a href="c_InstAPP.htm">Installing and Configuring APP</a></li>
+                <li><a href="c_InstAPP.htm">Configuring APP</a></li>
 
                 <li><a href="t_ImplAPP.htm">Implementing a Service Controller</a></li>
 

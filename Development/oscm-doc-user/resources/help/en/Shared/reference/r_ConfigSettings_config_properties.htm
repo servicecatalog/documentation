@@ -156,13 +156,7 @@
 
         </div>
 
-        <div class="section"><h4 class="sectiontitle">HTTP_PROXY</h4>Optional. The proxy to be used for PSP-related HTTP connections, if any.<p>Example: <samp class="codeph">proxy.domain</samp> or the proxy server IP address.</p>
-</div>
-
-        <div class="section"><h4 class="sectiontitle">HTTP_PROXY_PORT</h4>Optional. The proxy port to be used for PSP-related HTTP connections, if any.<p>Allowed values: Any value between <samp class="codeph">1</samp> and <samp class="codeph">65535</samp></p>
-<p>Default: <samp class="codeph">1080</samp></p>
-</div>
-
+        
         <div class="section"><h4 class="sectiontitle">KAFKA_BOOTSTRAP_SERVERS</h4>Optional. Comma-separated list of host and port pairs that are the addresses of Kafka brokers. Bootstrap servers provide the initial hosts that act as the starting point for a Kafka client. In <span>the platform</span>, they are used for event-based provisioning. <p>Default: no value, i.e. empty</p>
 <p>Example: <samp class="codeph">localhost:9092</samp></p>
 <div class="p">
@@ -225,11 +219,7 @@ Default: <p><samp class="codeph">./key</samp></p>
 <p>Default: <samp class="codeph">604800000</samp>, i.e. 7 days </p>
 </div>
 
-        <div class="section"><h4 class="sectiontitle">PSP_USAGE_ENABLED</h4>Mandatory. Specifies whether PSP integration is used for the current environment.<p>Allowed values: <samp class="codeph">true</samp>, <samp class="codeph">false</samp></p>
-<p>Default: <samp class="codeph">false</samp></p>
-<p>If you change this setting, you need to restart <span>the platform</span>.</p>
-</div>
-
+        
         <div class="section"><h4 class="sectiontitle">REPORT_ENGINEURL</h4>Mandatory if you want to use the <span>platform's</span> reports. The URL template of the report engine. If you do not specify a correct URL template, <span>the platform</span> will not be able to generate any reports, since the Report Web service cannot be called correctly. <div class="p">If your installation is configured to use HTTP access, the required value is: <pre class="codeblock">http://<samp class="codeph">&lt;host IP address</samp>&gt;:&lt;port&gt;/birt/frameset?
    __report=${reportname}.rptdesign&amp;SessionId=${sessionid}
    &amp;__locale=${locale}&amp;WSDLURL=${wsdlurl}&amp;SOAPEndPoint=${soapendpoint}

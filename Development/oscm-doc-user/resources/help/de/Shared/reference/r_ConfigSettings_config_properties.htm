@@ -159,13 +159,7 @@
 
                 </div>
 
-                <div class="section"><h4 class="sectiontitle">HTTP_PROXY</h4>Optional. Proxy für HTTP-Verbindungen zu einem PSP.<p>Beispiel: <samp class="codeph">proxy.domain</samp> oder die IP-Adresse des Proxy-Servers</p>
-</div>
-
-                <div class="section"><h4 class="sectiontitle">HTTP_PROXY_PORT</h4>Optional. Proxy-Port für HTTP-Verbindungen zu einem PSP. <p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">1</samp> und <samp class="codeph">65535</samp></p>
-<p>Voreinstellung: <samp class="codeph">1080</samp></p>
-</div>
-
+                
                 <div class="section"><h4 class="sectiontitle">KAFKA_BOOTSTRAP_SERVERS</h4>Optional. Liste von durch Kommas getrennten Host- und Port-Paaren, zum Addressieren von Kafka Brokern. Bootstrap-Server stellen die anfänglichen Hosts, die als Startpunkte für einen Kafka-Client dienen. In <span>der Plattform</span> werden sie für Event-basierte Provisionierung verwendet. <p>Voreinstellung: Kein Wert</p>
 <p>Beispiel: <samp class="codeph">localhost:9092</samp></p>
 <div class="p">
@@ -226,11 +220,7 @@ Voreinstellung: <p><samp class="codeph">./key</samp></p>
 <p>Voreinstellung: <samp class="codeph">604800000</samp> (7 Tage)</p>
 </div>
 
-                <div class="section"><h4 class="sectiontitle">PSP_USAGE_ENABLED</h4>Obligatorisch. Definiert, ob in der aktuellen Umgebung ein Zahlungsdienstleister (Payment Service Provider - PSP) integriert ist und verwendet wird.<p>Erlaubte Werte: <samp class="codeph">true</samp>, <samp class="codeph">false</samp></p>
-<p>Voreinstellung: <samp class="codeph">false</samp></p>
-<p>Wenn Sie diese Einstellung ändern, müssen Sie die Plattform neu starten.</p>
-</div>
-
+                
                 <div class="section"><h4 class="sectiontitle">REPORT_ENGINEURL</h4>Obligatorisch, wenn Sie Berichte verwenden möchten. Definiert das URL-Template der Report Engine. Wenn das Template nicht korrekt angegeben wird, kann die Plattform keine Berichte generieren, da der Report Web-Service nicht korrekt aufgerufen werden kann. <div class="p">Wenn HTTP-Zugriff für Ihre Installation konfiguriert ist, muss folgender Wert angegeben werden: <pre class="codeblock">http://&lt;host IP address&gt;:&lt;port&gt;/birt/frameset?
    __report=${reportname}.rptdesign&amp;SessionId=${sessionid}
    &amp;__locale=${locale}&amp;WSDLURL=${wsdlurl}&amp;SOAPEndPoint=${soapendpoint}
