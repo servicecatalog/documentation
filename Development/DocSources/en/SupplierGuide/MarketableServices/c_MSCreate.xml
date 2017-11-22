@@ -32,7 +32,7 @@
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                         />, you have to specify the URL of the tool in the service definition.</p><p><ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            /> provides a generic interface by which you can integrate the tool. For details on the integration, refer to the <i>Developer's Guide</i>.</p></li>
+                            /> provides a generic interface by which you can integrate the tool. <!--ph>For details on the integration, refer to the <i>Developer's Guide</i>.</ph--></p></li>
                 <li>A <b>custom tab</b> for integrating a Web page or Web application for providing detailed information on a service and its operation to your customers. Customers may open the custom tab when they display details on a subscription on a marketplace. Particularly users of IaaS services are interested in additional details on the service and the operation of the service they subscribed to. Using a custom tab, you can provide the information needed for accessing provisioned instances, such as IP addresses, network information, or user credentials.<p>To link the Web page or Web application with <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                         />, you have to specify its URL in the service definition.</p></li>

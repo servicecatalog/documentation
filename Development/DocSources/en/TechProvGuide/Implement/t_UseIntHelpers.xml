@@ -39,8 +39,8 @@
          </p>
          
       </context>
-      <result>
+      <!--result>
          <p>For details on how to adapt the login/logout implementation, refer to the <i>Developer's Guide</i>.</p>
-      </result>
+      </result-->
    </taskbody>
 </task>

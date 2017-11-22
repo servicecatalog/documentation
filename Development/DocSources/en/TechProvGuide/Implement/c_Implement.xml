@@ -43,7 +43,7 @@
                 <li>Notification API for implementing a notification service</li>
                 <li>Operation API for implementing service operations</li>
             </ul></p>
-            <p>For a detailed description of the Web services and the usage of the utilities, refer to the <i>Developer's Guide</i>.</p>
+            <!--p>For a detailed description of the Web services and the usage of the utilities, refer to the <i>Developer's Guide</i>.</p-->
         </section>
         <section>
             <title>Prerequisites</title>

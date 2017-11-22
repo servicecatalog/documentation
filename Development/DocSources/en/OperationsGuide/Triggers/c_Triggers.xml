@@ -20,7 +20,7 @@
                     <image href="../_images/OPProcessControl.png" alt="OPProcessControl.png" width="435" height="567"/>
                 </fig>
             </p>
-            <p>The operator tasks are described in detail in the subsequent sections. The tasks of the organization that wants to integrate an external process control system are described in the <i>Developer's Guide</i>. </p>
+            <p>The operator tasks are described in detail in the subsequent sections.<!--ph> The tasks of the organization that wants to integrate an external process control system are described in the <i>Developer's Guide</i>. </ph--></p>
         </section>
     </conbody>
 </concept>

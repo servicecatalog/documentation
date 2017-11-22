@@ -78,6 +78,11 @@
                                     href="../Reference/r_MenuOptions.xml"/></entry>
                                 <entry colname="col3">Gives an overview of the menu options relevant for marketplace owners.</entry>
                             </row>
+                            <row>
+                                <entry colname="col2"><xref href="../../DevelopersGuide/Reference/r_BillingData.xml"/></entry>
+                                <entry colname="col3"
+                                    >Describes the elements of an XML file created by exporting customer billing data.</entry>
+                            </row>
                         </tbody>
                     </tgroup>
                 </table>

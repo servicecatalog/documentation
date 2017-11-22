@@ -26,9 +26,9 @@
             <step>
                 <cmd>Implement the sending of events to <ph
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</cmd>
-                <info>
+                <!--info>
                     <p>For details, refer to the <i>Developer's Guide</i>.</p>
-                </info>
+                </info-->
             </step>
             <step>
                 <cmd id="When_preparing_the_service_de_task_taskbody_steps_step_3"

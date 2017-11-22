@@ -17,7 +17,8 @@
                                     <p>In the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                                             /> administration portal, choose <b>Billing data preview</b> in the <b>Operation</b> menu. For detailed step-by-step instructions, refer to the online help. </p>
                                     <p>The billing data is saved to an XML file (<codeph>&lt;date&gt;BillingData.xml</codeph>).</p>
-                                    <p>You find a detailed description of the XML file elements in the <i>Developer's Guide</i>.</p>
+                                    <p>Refer to <xref href="../../../en/DevelopersGuide/Reference/r_BillingData.xml"
+                                                /> for a detailed description of the XML file elements.</p>
                         </section>
             </conbody>
 </concept>

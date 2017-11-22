@@ -63,5 +63,6 @@
     <chapter href="BrokerGuide/Reports/c_Reports.xml"/>
     <appendix href="BrokerGuide/Reference/r_MenuOptions.xml"/>
     <appendix format="dita" href="Shared/reference/r_LDAP_SettingTypes.xml" type="reference"/>
+        <appendix format="dita" href="DevelopersGuide/Reference/r_BillingData.xml" type="reference"/>
     <appendix href="Shared/glossary/r_Glossary.xml"/>
 </bookmap>

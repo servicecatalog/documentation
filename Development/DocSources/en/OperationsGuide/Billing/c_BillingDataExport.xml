@@ -16,7 +16,8 @@
                                     <p>In the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                                             /> administration portal, choose <b>Export billing data</b> in the <b>Account</b> menu. For detailed step-by-step instructions, refer to the online help.</p>
                                     <p>The billing data can be saved to an XML file (<codeph>&lt;date&gt;BillingData.xml</codeph>) and opened in an editor of your choice. You can edit the data and work with it as required. </p>
-                                    <p>For a detailed description of the elements and attributes that may occur in the XML file, refer to the <i>Developer's Guide</i>.</p>
+                                    <p>Refer to <xref href="../../../en/DevelopersGuide/Reference/r_BillingData.xml"
+                                                            >hier</xref> for a detailed description of the elements and attributes that may occur in the XML file.</p>
                         </section>
             </conbody>
 </concept>

@@ -17,8 +17,8 @@
                     href="../Reference/r_TechServDescr.xml"
                     ><?xm-replace_text xref: "Service Definition Reference"?></xref> for details.</ph> </p>
         </context>
-        <result>
+        <!--result>
             <p>For details on how to implement a Web service with technical service operations, refer to the <i>Developer's Guide</i>.</p>
-        </result>
+        </result-->
     </taskbody>
 </task>

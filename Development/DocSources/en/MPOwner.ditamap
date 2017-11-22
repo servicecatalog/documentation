@@ -71,5 +71,6 @@
     </chapter>
     <chapter href="MPOwnerGuide/Billing/c_BillingIntro.xml"/>
     <!--appendix href="MPOwnerGuide/Reference/r_MenuOptions.xml"/-->
+        <appendix format="dita" href="DevelopersGuide/Reference/r_BillingData.xml" type="reference"/>
     <appendix href="Shared/glossary/r_Glossary.xml"/>
 </bookmap>

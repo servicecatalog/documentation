@@ -21,7 +21,8 @@
       <p>Die Rechnungsdaten können in einer XML-Datei gespeichert oder in einem Editor Ihrer Wahl angezeigt werden. Sie können die Rechnungsdaten nach Bedarf bearbeiten und zum Beispiel an ein Buchhaltungssystem weiterleiten.</p>
       <note>
         <p>Umsatzbeteiligungen werden nur für Services errechnet, die das plattformeigene Abrechnungssystem verwenden. Services, die ein externes Abrechnungssystem verwenden, werden nicht berücksichtigt.</p>
-        <p>Eine detaillierte Beschreibung der XML-Elemente finden Sie im Handbuch <i>Developer's Guide</i>.</p>
+        <p>Eine detaillierte Beschreibung der XML-Elemente finden Sie <xref
+            href="../../../en/DevelopersGuide/Reference/r_BillingData.xml">hier</xref>.</p>
       </note>
       <p><b>So exportieren Sie Rechnungsdaten von Kunden</b>:</p>
     </context>

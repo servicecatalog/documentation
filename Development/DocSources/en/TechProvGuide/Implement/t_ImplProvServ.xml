@@ -53,8 +53,8 @@
                         />, or when user profiles are updated. Your application may take corresponding actions, for example, create corresponding user accounts in its own user management system.</p></li>
             </ul>
         </context>
-        <result>
+        <!--result>
             <p>For details on how to implement a provisioning service, refer to the <i>Developer's Guide</i>.</p>
-        </result>
+        </result-->
     </taskbody>
 </task>

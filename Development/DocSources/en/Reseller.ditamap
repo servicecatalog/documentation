@@ -66,5 +66,6 @@
     <chapter href="ResellerGuide/Reports/c_Reports.xml"/>
     <appendix href="ResellerGuide/Reference/r_MenuOptions.xml"/>
     <appendix href="Shared/reference/r_LDAP_SettingTypes.xml"/>
+    <appendix format="dita" href="DevelopersGuide/Reference/r_BillingData.xml" type="reference"/>
     <appendix href="Shared/glossary/r_Glossary.xml"/>
 </bookmap>

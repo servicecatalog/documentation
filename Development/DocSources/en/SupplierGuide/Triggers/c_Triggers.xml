@@ -26,7 +26,7 @@
                     <image href="../_images/OPProcessControl.png" alt="OPProcessControl.png" width="435" height="567"/>
                 </fig>
             </p>
-            <p>For details on the implementation of a notification service, refer to the <i>Developer's Guide</i>. Checking the load on the JMS queue is a platform operator task and therefore described in the <i>Operator's Guide</i>. </p>
+            <!--p>For details on the implementation of a notification service, refer to the <i>Developer's Guide</i>. Checking the load on the JMS queue is a platform operator task and therefore described in the <i>Operator's Guide</i>. </p-->
         </section>
         <section>
             <title>Creating a Process Trigger</title>

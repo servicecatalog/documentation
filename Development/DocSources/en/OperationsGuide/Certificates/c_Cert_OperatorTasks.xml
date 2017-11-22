@@ -23,7 +23,7 @@
             <p>As an <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> operator who sets up a secure <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> environment, you need to perform the tasks depicted in white. These tasks are described in detail in the subsequent sections. The tasks of an external organization that wants to make use of certificates are described in the <i>Developer's Guide</i>. </p>
+                    /> environment, you need to perform the tasks depicted in white. These tasks are described in detail in the subsequent sections. <!--ph>The tasks of an external organization that wants to make use of certificates are described in the <i>Developer's Guide</i>. </ph--></p>
         </section>
         <section>
             <title>Prerequisites</title>

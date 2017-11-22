@@ -172,6 +172,16 @@ topicref href="OperationsGuide/Configuration/c_LoadBalancing.xml" type="concept"
         <topicref href="Shared/reference/r_Language_Codes.xml" type="reference"/>
     </appendix>
     <appendix href="Shared/reference/r_FileFormat_ImportUsers.xml" type="reference"/>
+    <appendix format="dita" href="DevelopersGuide/Reference/r_BillingData.xml" type="reference"/>
+    <appendix format="dita" href="DevelopersGuide/Reference/r_RevenueShareIntro.xml" type="reference">
+        <topicref format="dita" href="DevelopersGuide/Reference/r_RevenueShareCommon.xml" type="reference"/>
+        <topicref format="dita" href="DevelopersGuide/Reference/r_BrokerRevenueShare.xml" type="reference"/>
+        <topicref format="dita" href="DevelopersGuide/Reference/r_ResellerRevenueShare.xml" type="reference"/>
+        <topicref format="dita" href="DevelopersGuide/Reference/r_MPOwnerRevenueShare.xml" type="reference"/>
+        <topicref format="dita" href="DevelopersGuide/Reference/r_SupplierRevenueShare.xml" type="reference"/>
+    </appendix>
+    
     <appendix href="OperationsGuide/Reference/r_UserRolesMenuOptions.xml" type="reference"/>
+        
     <appendix href="Shared/glossary/r_Glossary.xml" type="reference"/>
 </bookmap>

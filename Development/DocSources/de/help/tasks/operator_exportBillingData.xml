@@ -32,7 +32,8 @@
             </step>
         </steps>
         <result>
-            <p>Eine detaillierte Beschreibung der Elemente und Attribute in der erzeugten XML-Datei finden Sie im Handbuch <i>Developer's Guide</i>. </p>
+            <p>Eine detaillierte Beschreibung der Elemente und Attribute in der erzeugten XML-Datei finden Sie <xref
+                    href="../../../en/DevelopersGuide/Reference/r_BillingData.xml">hier</xref>.</p>
         </result>
     </taskbody>
 </task>

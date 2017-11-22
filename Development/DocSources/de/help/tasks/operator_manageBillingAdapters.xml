@@ -24,7 +24,7 @@
         <cmd>Stellen Sie sicher, dass folgende Voraussetzungen erfüllt sind:</cmd>
         <info>
           <ul>
-            <li>Ein Billing-Adapter wurde implementiert, der die Plattform mit dem externen Abrechnungssystem verbindet. Die Implementierung erfolgt durch einen Entwickler in enger Zusammenarbeit mit dem Anbieter der Services, für die das Abrechnungssystem verwendet werden soll. Ausführliche Informationen dazu finden Sie im <i>Developer's Guide</i>.</li>
+            <li>Ein Billing-Adapter wurde implementiert, der die Plattform mit dem externen Abrechnungssystem verbindet. Die Implementierung erfolgt durch einen Entwickler in enger Zusammenarbeit mit dem Anbieter der Services, für die das Abrechnungssystem verwendet werden soll. Ausführliche Informationen dazu finden Sie im Handbuch <i>Developer's Guide</i>.</li>
             <li>Die Verantwortlichen haben den Billing-Adapter auf einem Application Server installiert und die Kommunikation mit der Plattform auf der einen Seite und dem Abrechnungssystem auf der anderen Seite sichergestellt.</li>
             <li>Sie kennen die Parameter, die zur Adressierung des Remote Interface des Billing-Adapters über JNDI Lookup benötigt werden.</li>
           </ul>

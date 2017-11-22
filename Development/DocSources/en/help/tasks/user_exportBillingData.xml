@@ -21,7 +21,7 @@
       <p>The exported data can be saved to an XML file or opened in an editor of your choice. You can edit the data and work with it as required. For example, you can forward the data to an accounting system.</p>
       <note>
         <p><ph id="For_a_detailed_description_of_task_taskbody_context_note_p"
-              >For a detailed description of the elements and attributes that may occur in the generated XML file, refer to the <i>Developer's Guide</i>.</ph></p>
+            >Refer to the <i>Operator's Guide</i> for a detailed description of the elements and attributes that may occur in the generated XML file.</ph></p>
       </note>
       <p><b>To export billing data for customers</b> (suppliers and resellers): </p>
     </context>

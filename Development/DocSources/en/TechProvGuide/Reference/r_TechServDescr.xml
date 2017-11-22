@@ -32,9 +32,9 @@
                 <li><codeph><b>provisioningVersion</b></codeph> - Version number of your provisioning service (optional).</li>
                 <li><codeph><b>provisioningUsername</b></codeph> - Name of the user who is authorized to access the provisioning service (optional). <p>Only required if you secure your provisioning service by basic user authentication (authentication with user ID and password without certificates). Basic user authentication must ensure that the provisioning service can be called by <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            /> only.</p><p>For details on securing the communication between <ph
+                            /> only.</p><!--p>For details on securing the communication between <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            /> and the provisioning service and for details on authentication methods, refer to the <i>Developer's Guide</i>.</p></li>
+                            /> and the provisioning service and for details on authentication methods, refer to the <i>Developer's Guide</i>.</p--></li>
                 <li><codeph><b>provisioningPassword</b></codeph> - Password of the user specified in <codeph>provisioningUserName</codeph> (optional).</li>
                 <li><codeph><b>accessType</b></codeph> - Specifies how users access your application (required). <p>Use <codeph>DIRECT</codeph> if users log in directly to your application without involving <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"

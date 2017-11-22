@@ -40,10 +40,10 @@
       <p
                     id="The_integration_and_usage_of_concept_conbody_section_p_5">The integration and usage of an external billing system involves the following basic tasks:</p>
       <ol>
-        <li
+        <!--li
                         id="Development_and_deployment_of_concept_conbody_section_ol_l"><ph
                             id="Development_and_deployment_ph_1"><b>Development and deployment of a billing adapter</b> that connects <ph
-                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> with the external billing system. This task is carried out by a developer in tight cooperation with the supplier of the services that are to use the external billing system.</ph> For details, refer to the <i>Developer's Guide</i>.</li>
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> with the external billing system. This task is carried out by a developer in tight cooperation with the supplier of the services that are to use the external billing system.</ph> For details, refer to the <i>Developer's Guide</i>.</li-->
         <li
           id="Registration_of_the_billing_a_concept_conbody_section_ol_l"><ph id="Registration_of_the_billing_ph_1"><b>Registration of the billing adapter</b> in <ph
                             conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>. This task is carried out by the operator of <ph

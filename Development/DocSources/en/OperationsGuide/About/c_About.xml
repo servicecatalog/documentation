@@ -101,6 +101,16 @@
                                 <entry>Describes the content and format of a user data file for importing multiple users in one operation.</entry>
                             </row>
                             <row>
+                                <entry colname="col2"><xref href="../../DevelopersGuide/Reference/r_BillingData.xml"/></entry>
+                                <entry colname="col3"
+                                    >Describes the elements of an XML file created by exporting customer billing data.</entry>
+                            </row>
+                            <row>
+                                <entry colname="col2"><xref href="../../DevelopersGuide/Reference/r_RevenueShareIntro.xml"/></entry>
+                                <entry colname="col3"
+                                    >Describes the elements of XML files created by exporting revenue share data.</entry>
+                            </row>
+                            <row>
                                 <entry><xref href="../Reference/r_UserRolesMenuOptions.xml"/></entry>
                                 <entry>Gives an overview of the <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
