@@ -81,26 +81,6 @@
                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                             /> or in different locations.</ph></p></li>
             </ul>
-            <p id="container">The following <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> Docker images are available: <ul>
-                    <li><codeph>oscm-core</codeph>: The <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        /> core application. </li>
-                    <li><codeph>oscm-birt</codeph>: The report engine that <ph
-                            conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        /> uses for generating reports. </li>
-                    <li><codeph>oscm-branding</codeph>: A static Web server providing an empty directory structure for customizing the layout and branding of <ph
-                            conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> marketplaces.</li>
-                    <li><codeph>oscm-help</codeph>: A static Web server providing the online help for the <ph
-                            conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> administration portal. </li>
-                    <li><codeph>oscm-app</codeph>: The Asynchronous Provisioning Platform (APP) together with the OpenStack and the Amazon Web Services (AWS) service controllers. </li>
-                    <li><codeph>oscm-db</codeph>: Database SQL server providing for the database schema required for running <ph
-                            conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        /> and APP. For each container, a volume for persistent storage is mounted during the deployment process. The databases write to these volumes so that data is preserved in case of database updates.</li>
-                    <li><codeph>oscm-proxy</codeph>: A static Web server providing reverse proxy functionality. </li>
-                    <li><codeph>oscm-help</codeph>: A static Web server providing the online help for the <ph
-                            conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> administration portal. </li>
-                    <li><codeph>oscm-initdb</codeph>: Temporary database container for initializing the databases required for <ph
-                            conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> and APP.</li>
-                </ul>The Docker images and the deployment of corresponding containers on a Docker host is described in detail on <b>###DockerHub/GitHub link to oscm-core ###</b>.</p>
             <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> offers features and functions which are of relevance for all these participating parties. These include a state-of-the-art user interface, account and identity management, and external process control. Public Web services and application programming interfaces (APIs) are available by which developers can integrate applications and external systems with <ph
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.<ph audience="doc"> For details, refer to <xref

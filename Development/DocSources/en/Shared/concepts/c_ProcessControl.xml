@@ -12,9 +12,9 @@
             <p>Users can see all pending actions at the <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> user interface, cancel them, or delete aborted ones.</p>
-            <p>For a complete list of the actions that may be subject to process control and for a description of how to integrate an external process control system with <ph
+            <!--p>For a complete list of the actions that may be subject to process control and for a description of how to integrate an external process control system with <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    />, refer to the <i>Developer's Guide</i>. </p>
+                    />, refer to the <i>Developer's Guide</i>. </p-->
         </section>
     </conbody>
 </concept>

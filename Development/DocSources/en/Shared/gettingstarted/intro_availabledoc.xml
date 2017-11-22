@@ -19,10 +19,6 @@
                                                         />. It is written for everybody interested in <ph
                                                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                                                 /> and does not require any special knowledge.</ph></li>
-                                <li><ph id="Online_Help:_concept_conbody_section_ul_l"
-                                                        ><i>Online Help:</i> Online help pages describing how to work with the administration portal of <ph
-                                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                                />. The online help is intended for and available to everybody working with the administration portal.</ph></li>
                                 
                                 <li><ph id="Operation_Guide:_concept_conbody_section_ul_l"
                                                         ><i>Operator's Guide:</i> A PDF manual for operators describing how to administrate and maintain <ph
@@ -43,29 +39,32 @@
                                 <li><ph><i>Marketplace Owner's Guide:</i> A PDF manual for marketplace owners describing how to administrate and customize marketplaces in <ph
                                                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                                                 />.</ph></li>
-                                <li><ph id="Developer_s_Guide:_concept_conbody_section_ul_l"
+                                <!--li><ph id="Developer_s_Guide:_concept_conbody_section_ul_l"
                                                         ><i>Developer's Guide:</i> A PDF manual for application developers describing the public Web services and application programming interfaces of <ph
                                                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                                                         /> and how to integrate applications and external systems with <ph
                                                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                                />.</ph></li>
-                                
-                                <li><ph id="AWS_Guide:_concept_conbody_section_ul_l"
-                                                        ><i>Amazon Web Services Integration:</i> A PDF manual for operators describing how to offer and use virtual servers controlled by the Amazon Elastic Compute Cloud Web service through services in <ph
-                                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                                />.</ph></li>
+                                                />.</ph></li-->
                                 <li><ph id="OS_Guide:_concept_conbody_section_ul_l"
                                                         ><i>OpenStack Integration:</i> A PDF manual for operators describing how to offer and use virtual systems controlled by OpenStack through services in <ph
                                                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                                                 />.</ph></li>
+                                <li><ph id="AWS_Guide:_concept_conbody_section_ul_l"
+                                                        ><i>Amazon Web Services Integration:</i> A PDF manual for operators describing how to offer and use virtual servers controlled by the Amazon Elastic Compute Cloud Web service through services in <ph
+                                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                />.</ph></li>
+                                <li><ph id="Online_Help:_concept_conbody_section_ul_l"
+                                                        ><i>Online Help:</i> Online help pages describing how to work with the administration portal of <ph
+                                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                />. The online help is intended for and available to everybody working with the administration portal.</ph></li>
                                 <!--li><ph id="VMWARE_Guide:_concept_conbody_section_ul_l"
                                                         ><i>VMware vSphere Integration:</i> A PDF manual for operators describing how to offer and use virtual machines provisioned on a VMware vSphere server through services in <ph
                                                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                                                 />.</ph></li-->
-                                <li><ph id="Javadoc_documentation_on_the_concept_conbody_section_ul_l"
+                                <!--li><ph id="Javadoc_documentation_on_the_concept_conbody_section_ul_l"
                                                         >Javadoc and YAML documentation for the public Web services and application programming interfaces of <ph
                                                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                                /> and additional resources and utilities for application developers. </ph></li>
+                                                /> and additional resources and utilities for application developers. </ph></li-->
                         </ul>
                 </section>
         </conbody>
