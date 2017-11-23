@@ -39,13 +39,13 @@ The ESCM barclamp creates instance and volume stacks using predefined Heat templ
 
 The settings for the Heat templates are not exposed in the barclamp graphical interface, but available only in _Raw_ mode:
 
- ![Deployment Guide_files/image001.png]
+ ![](Deployment Guide_files/image001.png)
 
 An exception is the public part of the OpenStack SSH keypair for accessing the instance. The keypair is available in the graphical interface. An OpenStack SSH keypair with the specified public part will be created and assigned to the instance, so you can access it later using the corresponding private key. Setting a public key is mandatory.
 
 OpenStack Settings: Public Key
 
-![Deployment Guide_files/image002.png]
+![](Deployment Guide_files/image002.png)
 
 
 ## 3. ESCM Settings
@@ -68,7 +68,7 @@ The ESCM settings are available in the barclamp graphical interface (_Custom_ mo
 
 **Password** : Password for SMTP authentication
 
-![Deployment Guide_files/image003.png]
+![](Deployment Guide_files/image003.png)
 
 
 #### Docker Registry
@@ -89,7 +89,7 @@ DockerHub is configured as a registry for the ESCM software by default. If it is
 
 **Registry Port** : Docker registry port
 
-![Deployment Guide_files/image004.png]
+![](Deployment Guide_files/image004.png)
 
 
 #### Proxy Settings
@@ -114,7 +114,7 @@ These settings are used for the Docker engine environment which needs access to 
 
 **Password** : Password for proxy authentication
 
-![Deployment Guide_files/image005.png]
+![](Deployment Guide_files/image005.png)
 
 
 #### SSL Settings
@@ -133,7 +133,7 @@ You must specify the locations for the certificate key pair files which the appl
 
 **SSL CA Certificates File** : Location of your SSL intermediates certificate (&quot;chain&quot;) file on the OpenStack Control Node, if you wish to provide your own. The certificate must be in PEM format. This setting is optional.
 
-![Deployment Guide_files/image006.png]
+![](Deployment Guide_files/image006.png)
 
 
 ## 4. Operations and Troubleshooting
