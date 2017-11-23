@@ -50,7 +50,7 @@
         <topicref format="dita" href="AWSIntegrationGuide/Intro/c_Components.xml" type="concept"/>
         <topicref format="dita" href="AWSIntegrationGuide/Intro/c_Scenarios.xml" type="concept"/>
     </chapter>
-    <chapter format="dita" href="Shared/Installation/c_InstIntro.xml" type="concept">
+    <!--chapter format="dita" href="Shared/Installation/c_InstIntro.xml" type="concept">
         <topicref format="dita" href="AWSIntegrationGuide/Installation/c_Preparation.xml" type="concept">
             <topicref format="dita" href="Shared/Installation/c_PrepCTMG.xml" type="concept"/>
             <topicref format="dita" href="Shared/Installation/c_PrepHardware.xml" type="concept"/>
@@ -68,7 +68,7 @@
         </topicref>
         <topicref format="dita" href="Shared/Installation/c_InstControllerInExistingAPP.xml" type="concept"/>
         <topicref format="dita" href="Shared/Installation/c_Update.xml" type="concept"/>
-    </chapter>
+    </chapter-->
     <chapter format="dita" href="AWSIntegrationGuide/Services/c_ServicesIntro.xml" type="concept">
         <topicref format="dita" href="Shared/concepts/c_ControllerPrerequisites.xml" type="concept"/>
         <topicref format="dita" href="Shared/tasks/t_CreateTechService.xml" type="task"/>

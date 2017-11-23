@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<task id="task_E68E2024B1F6403AAA1130A39B1D4DCD"
+                xml:lang="en-us">
+    <title>Application Parameters</title>
+    <taskbody>
+        <context>
+            <p id="An_application_may_have_param_task_taskbody_context_ul_li"
+                    >An application may have parameters that are of relevance for the service provisioning in <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />. Parameters can be used to define different feature configurations or service restrictions, for example, the maximum number of folders, files, or objects that can be created. Application parameters are specified in the technical service definition.</p>
+            <p id="can_pass_parameters_to_your_task_taskbody_context_ul_li"><ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> can pass parameters to your application through the instance provisioning call. Any further processing must be carried out by your application. Especially if parameters are used to impose restrictions on service usage, the application needs to ensure that the restrictions are met. For example, if there is a parameter to restrict the maximum number of files created for a subscription, the application needs to track the actual number and ensure that the maximum number is not exceeded.</p>
+            <p audience="doc"
+                    >For details on how to define parameters in the technical service definition, refer to <xref
+                    href="../Reference/r_TechServDescr.xml"/>.</p>
+        </context>
+    </taskbody>
+</task>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<task id="task_E68E2024B1F6403AAA1130A39B1D4DCD"
+                xml:lang="en-us">
+    <title>User Management</title>
+    <taskbody>
+        <context>
+            <p>If users access your application through <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    />, you need to implement user management operations. These operations are called when users are assigned to or deassigned from a subscription in <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />, or when user profiles are updated. Your application may take corresponding actions, for example, create corresponding user accounts in its own user management system.</p>
+        </context>
+    </taskbody>
+</task>

@@ -22,36 +22,12 @@
             <p id="For_the_implementation_you_n_task_taskbody_context_p"
                 >For the implementation of a provisioning service, you need to consider the following:</p>
             <ul>
-                <li id="Instance_provisioning_task_taskbody_context_ul_li"
-                            ><b>Instance provisioning</b><p>When a customer subscribes to a service, the underlying application is supposed to perform specific steps required for the subscription and return an identifier to <ph
-                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        /> for future reference. The term 'instance' denotes all the items that the application has provisioned for a subscription.</p><p>The actions to be performed and the items to be created, if any, depend entirely on the concepts and functionality of your application. For example, if a customer creates and stores data when using your application, your application may create a separate workspace in a data container or a separate database instance.</p></li>
-                <li id="Provisioning_mode_task_taskbody_context_ul_li"
-                        ><b>Provisioning mode</b><p>Instance provisioning can be performed in synchronous or asynchronous mode.</p><p><b>Synchronous mode</b> is used if provisioning can be completed right away. The provisioning service triggers the application to perform all the required actions and confirms the operation as complete. <ph
-                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        /> then sets the subscription to active, which means that the service is ready to be used by the customer. </p><p><b>Asynchronous mode</b> is used if provisioning operations take a long time because long-running processes or manual steps are involved, or when huge amounts of data or virtual machines need to be set up. In this case, the provisioning service notifies <ph
-                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            /> that the provisioning is pending. Required actions may have started on the application side, but have not been completed yet. The provisioning service needs to notify <ph
-                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        /> using the subscription management service when provisioning is either complete or cannot be completed. </p><p><ph
-                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            /> supports the development of asynchronous provisioning services with the asynchronous provisioning platform (APP). This is a framework which provides a provisioning service as well as functions, data persistence, and notification features which are always required for integrating applications in asynchronous mode. The framework, samples, and documentation are provided in the integration package for asynchronous provisioning (<codeph>oscm-integration-app-pack.zip</codeph> file). </p></li>
-                <li><b>Application parameters</b>
-                    <p id="An_application_may_have_param_task_taskbody_context_ul_li"
-                            >An application may have parameters that are of relevance for the service provisioning in <ph
-                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        />. Parameters can be used to define different feature configurations or service restrictions, for example, the maximum number of folders, files, or objects that can be created. Application parameters are specified in the technical service definition.</p><p
-                        id="can_pass_parameters_to_your_task_taskbody_context_ul_li"><ph
-                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        /> can pass parameters to your application through the instance provisioning call. Any further processing must be carried out by your application. Especially if parameters are used to impose restrictions on service usage, the application needs to ensure that the restrictions are met. For example, if there is a parameter to restrict the maximum number of files created for a subscription, the application needs to track the actual number and ensure that the maximum number is not exceeded.</p><p audience="doc">For details on how to define parameters in the technical service definition, refer to <xref
-                            href="../Reference/r_TechServDescr.xml"/>.</p></li>
-                <li id="User_management_task_taskbody_context_ul_li"><b>User management</b>
-                    <p>If users access your application through <ph
-                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            />, you need to implement user management operations. These operations are called when users are assigned to or deassigned from a subscription in <ph
-                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        />, or when user profiles are updated. Your application may take corresponding actions, for example, create corresponding user accounts in its own user management system.</p></li>
+                <li id="Instance_provisioning_task_taskbody_context_ul_li">Instance provisioning</li>
+                <li id="Provisioning_mode_task_taskbody_context_ul_li">Provisioning mode</li>
+                <li>Application parameters </li>
+                <li id="User_management_task_taskbody_context_ul_li">User management </li>
             </ul>
+            <p>These topics are described in detail in the following sections.</p>
         </context>
         <!--result>
             <p>For details on how to implement a provisioning service, refer to the <i>Developer's Guide</i>.</p>

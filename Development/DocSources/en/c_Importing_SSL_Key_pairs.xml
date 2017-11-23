@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd">
+<concept id="Importing_SSL_Key_pairs_277">
+  <title>Importing SSL Key pairs</title>
+  <conbody>
+    <section>
+      <p>If you want to use your own SSL key pairs that your application is to use, replace the default key pair by your PEM files in the following directories on your Docker host: </p>
+      <p>Private key: <codeph>/docker/config/&lt;CONTAINER_NAME>/ssl/privkey</codeph>
+      </p>
+      <p>Certificate: <codeph>/docker/config/&lt;CONTAINER_NAME>/ssl/cert</codeph></p>
+      <p>Intermediates / chain (optional): <codeph><codeph>/docker/config/&lt;CONTAINER_NAME>/ssl/chain</codeph></codeph>
+      </p>
+      <p><codeph>/docker</codeph> is the directory where Docker is installed, and replace <codeph>&lt;CONTAINER_NAME></codeph> with the name of the respective <ph
+          conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+          /> container, for example, <codeph>oscm-core</codeph> or <codeph>oscm-app</codeph>. </p>
+    </section>
+
+  </conbody>
+</concept>

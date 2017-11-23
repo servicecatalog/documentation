@@ -12,7 +12,7 @@
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> provides a log file of its own that helps you detect problems and identify, for example, illegal access to the system. </p>
             <p>The logging of <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> is based on the <codeph>log4j</codeph> tool. </p>
+                    /> is based on the <codeph>log4j</codeph> tool.</p>
         </section>
     </conbody>
 </concept>

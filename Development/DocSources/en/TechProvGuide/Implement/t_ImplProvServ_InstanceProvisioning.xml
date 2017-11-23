@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<task id="task_E68E2024B1F6403AAA1130A39B1D4DCD"
+                xml:lang="en-us">
+    <title>Instance Provisioning</title>
+    <taskbody>
+        <context>
+            <p>When a customer subscribes to a service, the underlying application is supposed to perform specific steps required for the subscription and return an identifier to <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> for future reference. The term 'instance' denotes all the items that the application has provisioned for a subscription.</p>
+            <p>The actions to be performed and the items to be created, if any, depend entirely on the concepts and functionality of your application. For example, if a customer creates and stores data when using your application, your application may create a separate workspace in a data container or a separate database instance.</p>
+        </context>
+    </taskbody>
+</task>

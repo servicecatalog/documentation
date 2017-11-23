@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<task id="task_E68E2024B1F6403AAA1130A39B1D4DCD"
+                xml:lang="en-us">
+    <title>Provisioning Mode</title>
+    <taskbody>
+        <context>
+            <p>Instance provisioning can be performed in synchronous or asynchronous mode.</p>
+            <p><b>Synchronous mode</b> is used if provisioning can be completed right away. The provisioning service triggers the application to perform all the required actions and confirms the operation as complete. <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> then sets the subscription to active, which means that the service is ready to be used by the customer. </p>
+            <p><b>Asynchronous mode</b> is used if provisioning operations take a long time because long-running processes or manual steps are involved, or when huge amounts of data or virtual machines need to be set up. In this case, the provisioning service notifies <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> that the provisioning is pending. Required actions may have started on the application side, but have not been completed yet. The provisioning service needs to notify <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> using the subscription management service when provisioning is either complete or cannot be completed. </p>
+            <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> supports the development of asynchronous provisioning services with the asynchronous provisioning platform (APP). This is a framework which provides a provisioning service as well as functions, data persistence, and notification features which are always required for integrating applications in asynchronous mode. The framework, samples, and documentation are provided in the integration package for asynchronous provisioning (<codeph>oscm-integration-app-pack.zip</codeph> file). </p>
+        </context>
+    </taskbody>
+</task>
