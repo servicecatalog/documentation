@@ -1,6 +1,6 @@
 # ESCM Deployment Guide
 
-FUJITSU Software Enterprise Service Catalog Manager (ESCM) is cloud services management software, licensed as &quot;OpenStack Compatible&quot;. It offers ready-to-use service provisioning adapters for cloud service providers like Amazon Web Services (AWS) and OpenStack, but is also open for integrating other platforms.
+FUJITSU Software Enterprise Service Catalog Manager (ESCM) is a cloud services management software, licensed as &quot;OpenStack Compatible&quot;. It offers ready-to-use service provisioning adapters for cloud service providers like Amazon Web Services (AWS) and OpenStack, but is also open for integrating other platforms.
 
 The ESCM software is available as Docker images, deployed as a cloud application using Heat templates and configured to interact with the SUSE OpenStack Cloud.
 
@@ -23,11 +23,13 @@ For installing ESCM in SUSE OpenStack Cloud, the following OpenStack services mu
 
 #### SLES Image
 
-The ESCM barclamp expects a SLES image in the Glance image registry of the SUSE OpenStack Cloud. The image must contain Docker and Docker Compose. A ready-to-use image in qcow2 format can be downloaded from SUSE Studio Express (TODO Link) and imported in glance as a public image with the image name sles12-sp3.
+The ESCM barclamp expects a SLES image in the Glance image registry of the SUSE OpenStack Cloud. The image must contain Docker and Docker Compose. A ready-to-use image in qcow2 format can be downloaded from SUSE Studio Express (TODO Link) and imported in Glance as a public image with the image name sles12-sp3:
+
+![](CreateImage.png)
 
 #### Network Settings
 
-Be aware that ESCM uses external hosts (mail, proxy, Docker registry) at deployment or run time. Depending on the environment, you can specify an IP address, host name or FQDN for the host setting.
+Be aware that ESCM uses external hosts (mail, proxy, Docker registry) at deployment or run time. Depending on your environment, you can specify an IP address, host name or FQDN for the host setting.
 
 #### Mail Notification
 
@@ -35,7 +37,7 @@ ESCM relies on an external mail server for mail notification. This setting is ma
 
 ## 2. ESCM OpenStack Resources
 
-The ESCM barclamp creates instance and volume stacks using predefined Heat templates. The ESCM Docker containers are hosted on the provisioned instance and use Cinder volumes for persisting data (logs and data).
+The ESCM barclamp creates instance and volume stacks using predefined Heat templates. The ESCM Docker containers are hosted on the provisioned instance (Docker host) and use Cinder volumes for persisting data (logs and data).
 
 The settings for the Heat templates are not exposed in the barclamp graphical interface, but available only in _Raw_ mode:
 
@@ -47,22 +49,27 @@ OpenStack Settings: Public Key
 
 ![](image003.png)
 
+To generate a public key: 
+1. Login to the admin node of your SUSE OpenStack Cloud installation. 
+2. Run ```cat ~/.ssh/id_rsa.pub```
+3. Copy everything from root in the base system to the barclamp graphical interface.
+
 
 ## 3. ESCM Settings
 
-The ESCM settings are available in the barclamp graphical interface (_Custom_ mode).
+The ESCM settings are specified in the barclamp graphical interface (_Custom_ mode).
 
 #### Mail Settings
 
-**Mail Host** : Host of the mail server to be used
+**Mail Host** : Host of the mail server to be used. This setting is mandatory.
 
-**SMTP Port** : SMTP port of the mail server
+**SMTP Port** : SMTP port of the mail server.
 
-**Enable TLS** : true if the mail server requires a secure connection, false otherwise
+**Enable TLS** : true if the mail server requires a secure connection, false otherwise. 
 
-**ESCM Email Address** : The email address used by ESCM for sending email notifications
+**ESCM Email Address** : The email address used by ESCM for sending email notifications.
 
-**Authentication Required** : true if the server requires authentication, false otherwise
+**Authentication Required** : true if the server requires authentication, false otherwise. 
 
 **User** : User name for SMTP authentication
 
@@ -73,13 +80,13 @@ The ESCM settings are available in the barclamp graphical interface (_Custom_ mo
 
 #### Docker Registry
 
-DockerHub is configured as a registry for the ESCM software by default. If it is necessary to use a custom registry, its configuration can be specified. Depending on the registry, authentication can also be configured.
+By default, DockerHub is configured as a registry for the ESCM software. If it is necessary to use a custom registry, its configuration can be specified. Depending on the registry, authentication can also be configured.
 
 **Use Docker Hub** : true if you use the official ESCM Docker images as provided on Docker Hub, false otherwise.
 
-**Authentication Required** : true if the registry requires authentication, or if you want to use authentication, false otherwise.
+**Authentication Required** : true if the registry requires authentication or if you want to use authentication, false otherwise.
 
-**User** : Login registry authentication
+**User** : User name for login registry authentication
 
 **Password** : Password for registry authentication
 
@@ -125,7 +132,7 @@ You must specify the locations for the certificate key pair files which the appl
 
 **Generate self-signed certificates** : true if you wish to let the system automatically generate and use self-signed certificates, false if you wish you provide your own certificate and key files.
 
-**Host FQDN/IP address** : Automatic certificates will be generated with the floating IP address of the instance as the Common Name. You can override the floating IP address with your own IP address or host name.
+**Host FQDN/IP address** : If you leave this field empty, certificates will be automatically generated with the floating IP address of the instance as the Common Name. You can override the floating IP address with your own IP address or host name.
 
 **SSL Certificate File** : Location of your SSL public certificate file on the OpenStack Control Node, if you wish to provide your own. The certificate must be in PEM format.
 
