@@ -4,7 +4,7 @@
 <concept id="Importing_SSL_Key_pairs_277">
   <title>Importing Trusted SSL Certificates</title>
   <conbody>
-    <section>If you want your application to trust certain, possibly self-signed SSL certificates, put them in PEM format in the following directory on your Docker host: <p><codeph>/docker/config/certs</codeph></p><p><codeph>/docker</codeph> is the directory where Docker is installed.</p>This directory is shared by all containers. By default, if you use your own SSL key pairs, you must also place all the public certificate files here.  </section>
+    <section>If you want your application to trust certain, possibly self-signed SSL certificates, put them in PEM format in the following directory on your Docker host: <p><codeph>/docker/config/certs</codeph></p><p>Replace <codeph>/docker</codeph> with the directory where Docker is installed.</p>The <codeph>/docker/config/certs</codeph> directory is shared by all containers. By default, if you use your own SSL key pairs, you must also place all the public certificate files here. </section>
 
   </conbody>
 </concept>

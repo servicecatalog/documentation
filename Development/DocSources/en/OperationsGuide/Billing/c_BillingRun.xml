@@ -10,8 +10,6 @@
                                                 <section>
             <p conref="../../help/tasks/operator_executeBillingTasks.xml#task634/Billing_Intro"> </p>
             <p conref="../../help/tasks/operator_executeBillingTasks.xml#task634/Billing_Introx"/>
-<p conref="../../help/tasks/operator_executeBillingTasks.xml#task634/Billing_Intro1"> </p>
-            <p conref="../../help/tasks/operator_executeBillingTasks.xml#task634/Billing_Intro2"> </p>
             <p id="Billing_Intro3"
                 >You should check at regular intervals whether billing runs or payment processing fail, and, if yes, explicitly execute them.</p>
 </section>

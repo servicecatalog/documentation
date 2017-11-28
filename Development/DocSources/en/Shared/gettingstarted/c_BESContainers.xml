@@ -8,12 +8,16 @@
     <title><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> Containers</title>
     <conbody>
         <section>
-            <p conref="../../Shared/concepts/c_BasicUsageScenario.xml#concept2311/container"/>
+            <p id="container"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> is provided as Docker images and deployed in a container environment such as OpenStack or Kubernetes clusters providing for optimum performance, scalability, failover, and non-stop operation. The applications integrated with <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> and their data may be hosted in the same containers or Virtual Machines as <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> or in different locations.</p>
             <p>Below is a summary of the available  containers when they are deployed on a Docker host, for example, a Compute node in an OpenStack environment.</p>
             <p>
                 <fig>
-                    <image href="../_images/Containers.png" alt="Containers.png" width="280"
-                        height="252"/>
+                    <image href="../_images/Containers.png" alt="Containers.png" width="400" height="166"/>
                 </fig>
             </p>
             <p>By default, data is persisted in the following directory on the machine hosting the VM where  is deployed: </p>
@@ -25,8 +29,8 @@
             <p>### TODO: Add help container and Cinder volumes - are the ports correct? How is the oscm-db container integrated? ###</p>
             <p>
                 <fig>
-                    <image href="../_images/ContainerCommunication.png" alt="ContainerCommunication.png" width="280"
-                        height="252"/>
+                    <image href="../_images/ContainerCommunication.png" alt="ContainerCommunication.png" width="400"
+                        height="303"/>
                 </fig>
             </p>
             <p>The host-internal communication always relies on the HTTP protocol, whereas calls from outside of the host are secured via HTTPS. The platform operator is responsible for opening the indicated ports, which can either be addressed using the FQDN or the floating IP address of the respective container. </p>

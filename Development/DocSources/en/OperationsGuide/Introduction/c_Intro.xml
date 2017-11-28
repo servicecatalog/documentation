@@ -12,10 +12,13 @@
         <p conref="../../Shared/concepts/c_WhatIsBES.xml#concept2311/is_a_set_of_services_which_concept_conbody_p_1"/>
         <p><ph conref="../../Shared/concepts/c_WhatIsBES.xml#concept2311/With_its_components_concept_conbody_p_2_ph"
             />.</p>
-        <p><ph
-                conref="../../Shared/concepts/c_BasicUsageScenario.xml#concept2311/is_typically_operated_in_dat_concept_conbody_section_1_p"
-                /><ph
-                conref="../../Shared/concepts/c_BasicUsageScenario.xml#concept2311/The_applications_integrated_w_concept_conbody_section_1_p"
-            /></p>
+        <p><ph id="is_typically_operated_in_dat_concept_conbody_section_1_p"><ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> is provided as Docker images and deployed in a container environment such as OpenStack or Kubernetes clusters.</ph><ph
+                id="The_applications_integrated_w_concept_conbody_section_1_p">The applications integrated with <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> and their data may be hosted in the same containers or Virtual Machines as <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> or in different locations.</ph></p>
     </conbody>
 </concept>

@@ -7,7 +7,17 @@
           <conbody>
                     <section><p
                                 conref="../../Shared/concepts/c_WhatIsBES_Controller.xml#concept2311/is_a_set_of_services_which_concept_conbody_p_1"
-                                /><p>OpenStack is an open-source cloud operating system that controls large pools of processing, storage, and networking resources throughout a data center. It is managed by the OpenStack Foundation. </p><p>OpenStack allows users to deploy virtual systems which handle different tasks for managing a cloud environment. It makes horizontal scaling easy, which means that tasks which benefit from running concurrently can easily serve users by spinning up more resources. For example, a mobile application which needs to communicate with a remote server might be able to divide the work of communicating with each user across many different resources, all communicating with one another but scaling quickly and easily as the application gains more users.</p>The integration of OpenStack with <ph
+                                        /><p>When integrating applications with <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                />, the instance provisioning can be done in two provisioning modes: synchronous or asynchronous mode.</p><p>Asynchronous provisioning is required if provisioning operations take a long time because long-running processes or manual steps are involved. This is the case, for example, when provisioning virtual machines on a virtual machine server. <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> supports the integration of such applications with its asynchronous provisioning platform (APP). This is a framework which provides a provisioning service as well as functions, data persistence, and notification features which are always required for integrating applications in asynchronous mode.</p><p>APP also includes the operation service interface for executing technical service operations on the integrated applications from the <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> user interface.</p><p id="container">When deploying <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        />, a service controller for communication with the application is preconfigured and registered. This service controller can be used for integrating OpenStack services with <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                />. </p><p>OpenStack is an open-source cloud operating system that controls large pools of processing, storage, and networking resources throughout a data center. It is managed by the OpenStack Foundation. </p><p>OpenStack allows users to deploy virtual systems which handle different tasks for managing a cloud environment. It makes horizontal scaling easy, which means that tasks which benefit from running concurrently can easily serve users by spinning up more resources. For example, a mobile application which needs to communicate with a remote server might be able to divide the work of communicating with each user across many different resources, all communicating with one another but scaling quickly and easily as the application gains more users.</p>The integration of OpenStack with <ph
                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                 /> provides for an Infrastructure as a Service (IaaS) solution that leverages the features of both products: Through services, which are published on a marketplace in <ph
                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
@@ -17,7 +27,7 @@
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                         /> includes all components required for connecting an existing <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                        /> installation with OpenStack. This manual describes how to deploy this package and how to create and use services for OpenStack on an <ph
+                                        /> installation with OpenStack. This manual describes how to create and use services for OpenStack on an <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                 /> marketplace. </p><p>FUJITSU Cloud Service K5 is a cloud platform based on OpenStack and integrated with <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"

@@ -89,12 +89,13 @@
         <topicref format="dita" href="Shared/reference/c_LogConfig.xml" type="concept"/>
     </chapter>
     <chapter format="dita" href="Shared/Installation/c_Uninstallation.xml" type="concept"/>
-    <appendix format="dita" href="Shared/Installation/r_ConfigSettings.xml" type="reference">
+    <!--appendix format="dita" href="Shared/Installation/r_ConfigSettings.xml" type="reference">
         
         <topicref format="dita" href="Shared/reference/r_ConfigSettings_db.xml" type="reference"/>
         <topicref format="dita" href="APPInt/APP/r_ConfigSettings.xml" type="reference"/>
         <topicref format="dita" href="OSIntegrationGuide/Appendix/r_ConfigSettingsController.xml" type="reference"/>
-    </appendix>
+    </appendix-->
+    <appendix format="dita" href="OSIntegrationGuide/Appendix/r_ConfigSettingsController.xml" type="reference"/>
     <appendix format="dita" href="OSIntegrationGuide/Appendix/r_ServiceParameters.xml" type="reference"/>
     <appendix format="dita" href="Shared/glossary/r_Glossary.xml" type="reference"/>
 </bookmap>

@@ -124,10 +124,10 @@ topicref href="OperationsGuide/Configuration/c_LoadBalancing.xml" type="concept"
     </chapter>
     <chapter href="Shared/reference/c_Certificates.xml" type="concept">
         <!--topicref href="Shared/reference/c_CertIntro.xml" type="concept"/>
-        <!--topicref href="Shared/reference/c_CertPrivate_Signing.xml" type="concept"/-->
+        <topicref href="Shared/reference/c_CertPrivate_Signing.xml" type="concept"/>
         <topicref href="Shared/reference/c_CertReqsFromBSS.xml" type="concept"/>
         <topicref href="Shared/reference/c_CertReqsToBSS.xml" type="concept"/>
-        <!-- topicref href="Shared/reference/c_CertPrivate_ImplStrategies.xml" type="concept"/-->
+        <topicref href="Shared/reference/c_CertPrivate_ImplStrategies.xml" type="concept"/>
         <topicref href="OperationsGuide/Certificates/c_Cert_OperatorTasks.xml" type="concept">
             <topicref href="OperationsGuide/Certificates/c_Cert_CreateRootCA.xml" type="concept"/>
             <topicref href="OperationsGuide/Certificates/c_Cert_CreateSelf.xml" type="concept"/>
