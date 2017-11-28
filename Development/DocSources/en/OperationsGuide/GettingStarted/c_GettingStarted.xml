@@ -11,9 +11,11 @@
                         <section>
                                 <p>After having successfully deployed <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                />, you can follow the instructions on the <xref format="html"
-                                        href="https://github.com/servicecatalog/development/wiki/Getting-Started" scope="external"
-                                        ><u><i>Getting Started</i></u></xref> page for creating and publishing your first service to an <ph
+                                />, you can follow the instructions 
+                                        
+                                        <ph product="oscm_ce">on the <xref format="html"
+                                        href="https://github.com/servicecatalog/oscm/wiki/Getting-Started" scope="external"
+                                                ><u><i>Getting Started</i></u></xref> page</ph><ph audience="oscm_ee">in the <i>QuickStart Guide</i></ph> for creating and publishing your first service to an <ph
                                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> marketplace. </p>
                         </section>
                 <section>
@@ -21,7 +23,7 @@
                                 /></title>
                         <p>After the deployment, you have access to the <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                /> administration portal where you can specify configuration settings that do not match your environment.</p>
+                                        /> administration portal where you can start with creating organizations, specifying configuration settings, etc. ### <i>Is there now a default organization with all required roles for accessing ESCM, APP, OS controller ALWAYS available? Is there a technical service that is always published by default? If yes, what are the names and the login data?</i> ###</p>
                         <p>Access the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                 /> administration portal in a Web browser using an URL in the following format: </p>
                         <p><codeph>https://hostname.fqdn:8081/oscm-portal/ </codeph></p>
@@ -43,7 +45,7 @@
                         <title>Next  Steps</title>
                         <p>In order for a supplier to be able to define price models and for the rating and billing engine of <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                        /> to be able to calculate usage costs, you need to add one or several currencies to the system.<ph
+                                        /> to be able to calculate usage costs, you need to add one or several currencies to the system. ### is there now a default currency already defined?<ph
                                         audience="doc"> For details, refer to <xref
                                                 href="../Configuration/c_AddCurrency.xml"/>.</ph></p>
                         <p>In the next step, you can create technology provider and seller organizations (suppliers, resellers, brokers), and set up marketplaces so that services can be offered to customers.<ph
@@ -56,9 +58,9 @@
                                 <p>The <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                 /> containers can be started, stopped, removed, and restarted using the standard utilities of Docker. </p>
                                 <p>To <b>stop</b> a container, use the following command on your Docker host:</p>
-                        <p><codeblock>stop &lt;container-name></codeblock> For example: </p>
+                        <p><codeblock>docker stop &lt;container-name></codeblock> For example: </p>
                         <p>
-                                <codeblock>stop oscm-core</codeblock>
+                                <codeblock>docker stop oscm-core</codeblock>
                         </p>
                                 <p>To <b>delete</b> a container:  </p>
                         <p>
@@ -70,7 +72,7 @@
                         </p>
                         <p>To <b>restart</b> a container:  </p>
                         <p>
-                                <codeblock>start &lt;container-name></codeblock>
+                                <codeblock>docker-compose start &lt;container-name></codeblock>
                         </p>
                         <p>When shutting down the containers, the <codeph>oscm-db</codeph> container must be stopped as last one. When starting or restarting the containers, make sure that the <codeph>oscm-db</codeph> container is first.  </p>
                         </section>

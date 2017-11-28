@@ -12,15 +12,43 @@
                     /> software requires a number of settings for setting up the container environment for running <ph
                     audience="BSS" conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 />. These settings are provided in environment variables in Docker files when deploying the containers. Before the deployment, you needed to adapt the initial settings to your environment, in particular server names, ports, paths, and user IDs.</p>
-            <p>In a Docker environment, you do this by editing the <codeph>.var</codeph> file before running the first deployment command as described in ### link to oscm-deployer container ###. In a SUSE OpenStack Cloud environment, the initial settings are specified when running the Barclamp installer for <ph
-                    audience="BSS" conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    />. For details, refer to the <i>SUSE Deployment Guide</i>. </p>
+                            <p>You do this by editing the following configuration files in the <codeph>/docker</codeph> directory:</p>
+            <p>
+                <ol>
+                    <li>
+                        <p><codeph>.env</codeph>: Configuration for Docker, such as images and the base data directory</p>
+                    </li>
+                    <li><codeph>var.env</codeph>: Configuration for <ph audience="BSS"
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        />, such as mail server, database and other settings.</li>
+                </ol>
+            </p>
+            <p>For details refer to the <ph product="oscm_ee"
+                        ><i>QuickStart Guide</i> or, in a SUSE OpenStack Cloud environment, to the <i>SUSE Deployment Guide</i></ph><ph
+                        product="oscm_ce"><i>Readme</i> file on DockerHub ### link###</ph>.</p>
                                     <p audience="doc"
                     >The initial configuration settings are described in detail in <xref
-                    href="../../Shared/reference/r_ConfigSettings.xml"/>.</p>
-            <p>There are additional configuration settings that are used for the <ph
+                    href="../../Shared/reference/r_ConfigSettings_initial.xml"/>.</p>
+            <p><b>To update the initial settings</b>: </p>
+            <p>
+                <ol>
+                    <li>On your Docker host, edit the <codeph>.var</codeph> and <codeph>env.var</codeph> files located in the <codeph>/docker</codeph> directory as required. </li>
+                    <li>Execute the following command: <p>
+                            <codeblock>docker run --name deployer2 --rm -v /docker:/target 
+    -v /var/run/docker.sock:/var/run/docker.sock 
+    -e INITDB=true -e STARTUP=true servicecatalog/oscm-deployer</codeblock>
+                        </p>
+                    </li>
+                </ol>
+            </p>
+            <p>
+                <note>This command updates the database schema as well. Be aware that any changes to configuration settings you made in the <ph
+                        audience="BSS" conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> administration portal (see below) are overwritten by the default settings!</note>
+            </p>
+            <p>The configuration settings for the <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> services. Their values have initial defaults that can be viewed and updated using the <ph
+                    /> services, marketplaces, etc. have initial default values that can be viewed and updated using the <ph
                     audience="BSS" conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> administration portal.</p>
                                     <p><b>To update existing settings for the <ph
@@ -29,11 +57,7 @@
           /> administration portal, choose <b>Update configuration settings</b> in the <b>Operation</b> menu. </p>
       <p>The current configuration settings as stored in the database are retrieved. You can check all settings and update them as required by entering a new value for the corresponding configuration setting. </p>
       <p>For detailed step-by-step instructions, refer to the online help.</p>
-            <p><b>To update the database schema</b>: </p>
-            <p>### How to do this? ###</p>
-            <p>Comments from issues: Databases are not purged by updating OSCM. Only the schema is upgraded to latest model version from the init scripts invoked on container start. The user mounts his persistence volumes in the database container at a defined location. For an update he pulls the containers from the registry and starts them or runs the provided deployer script for this purpose. In any case the contained data is preserved throughout the OSCM life-cycle.</p>
-            <p>initdb does not overwrite or purge data. It updates the database schema and - this is the only exception - overwrites the config settings. The latter is intended. I think this can be closed.</p>
+            <p>### Do we need to be able to update JMS or the database or TomEE???</p>
                         </section>
-    <section>###TODO: What is the difference between updating the env variables in the docker files and updating the cfg settings in the admin portal? ###<p>How is ESCM updated? How is the database updated? Do we need to be able to update JMS or the database or TomEE???###</p></section>
             </conbody>
 </concept>
