@@ -38,10 +38,7 @@
                                                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                                 /> administration portal. </p>
                                     <p>The data can be saved to an XML file or opened in an editor of your choice. You can edit it and work with it as required. The data can, for example, be forwarded to an accounting system. You can use it as the basis for collecting your revenue share or paying others, depending on your contracts with the seller organizations and the operator.</p>
-                                    <p><ph id="You_find_a_detailed_descripti_concept_conbody_section_p_5"
-                                                            >For a detailed description of the elements and attributes that may occur in the XML file, refer to <xref
-                                                            href="../../../en/DevelopersGuide/Reference/r_BillingData.xml"
-                                                            />.</ph></p>
+                                    <p><ph id="You_find_a_detailed_descripti_concept_conbody_section_p_5">For a detailed description of the elements and attributes that may occur in the XML file, refer to <xref href="../../DevelopersGuide/Reference/r_BillingData.xml"/>.</ph></p>
                         </section>
             </conbody>
 </concept>
