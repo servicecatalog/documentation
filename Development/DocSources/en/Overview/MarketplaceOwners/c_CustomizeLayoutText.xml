@@ -19,9 +19,7 @@
                                                 /> allows marketplace owners to provide a separate stage for each of the supported languages. </p>
                                     <p>To adapt the layout and branding of a marketplace to his organization's requirements, the marketplace owner can customize the colors, fonts, background images, and logos displayed to the marketplace visitors. The layout and branding is defined in a style sheet and in files and images referenced by it. <ph
                                                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                                            /> provides a default style sheet that can be used as a basis and adapted as required. Next, an archive containing the modified files needs to be created and provided to the platform operator. The operator will upload the changes so that they are applied to the marketplaces of the owner organization. The customized style sheet must be configured by the marketplace owner in <ph
-                                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                                /> to become effective for the marketplace visitors.</p>
+                                                /> provides a default style sheet that can be used as a basis and adapted as required. An archive containing the modified files needs to be created and provided to the platform operator. The operator will upload the files and thus make them available online to the marketplace owner. The marketplace owner then can configure for the marketplace to make it effective for the marketplace visitors.</p>
                         </section>
             </conbody>
 </concept>

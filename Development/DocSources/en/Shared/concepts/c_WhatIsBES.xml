@@ -30,7 +30,7 @@
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> provides all the required ways and means to ensure customer privacy and data security.</p>
             <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> is typically operated and used in a SaaS environment such as OpenStack. It supports, however, all types of "as-a-Service" environments.</p>
+                /> is typically operated and used in an IaaS environment such as OpenStack. It supports, however, all types of "as-a-Service" environments.</p>
         </section>
     </conbody>
 </concept>

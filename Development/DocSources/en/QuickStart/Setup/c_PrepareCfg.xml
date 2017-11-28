@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<concept id="concept_1BCF5C425D7D4627AB1C66A085CF6E11"
+            xml:lang="en-us">
+    <title>Preparing Configuration Files</title>
+    <conbody>
+        <section>
+            <p>A deployment container is available which can be run to prepare configuration file templates.</p>
+            <p>Use <codeph>-v</codeph> to mount the directory you created earlier to <codeph>/target</codeph> in the container:</p>
+            <p>
+                <codeblock>docker run --name deployer1 --rm -v /docker:/target servicecatalog/oscm-deployer</codeblock>
+            </p>
+            <p>This command creates two configuration files in the <codeph>/docker</codeph> directory:</p>
+            <p>
+                <ol>
+                    <li>
+                        <p><codeph>.env</codeph>: Configuration for Docker, such as images and the base data directory</p>
+                    </li>
+                    <li><codeph>var.env</codeph>: Configuration for ESCM, such as mail server, database and other settings. Refer to the <i>Operator's Guide</i> for details on the configuration settings.  </li>
+                </ol>
+            </p>
+            <p>Edit both files and adjust the configuration settings to your environment. </p>
+        </section>
+    </conbody>
+</concept>

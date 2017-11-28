@@ -14,7 +14,7 @@
             <ul>
                 <li><b>Provisioning API</b>: Resources for implementing a provisioning service which is necessary for integrating an application with the subscription management of <ph
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </li>
-                <li><b>Notification API and Trigger API</b>: Resources for implementing a notification service which must be provided to enable <ph
+                <li><b>Notification API and Trigger API</b>: Resources for implementing and using a notification service which must be provided to enable <ph
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> to interact with an external process control system.</li>
                 <li><b>Operation API</b>: Resources for implementing the interface for calling operations for a technical service, such as backup and restore. </li>

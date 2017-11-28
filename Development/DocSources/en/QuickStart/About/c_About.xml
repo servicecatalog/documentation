@@ -8,11 +8,12 @@
     <title>About this Manual</title>
     <conbody>
         <section>
-            <p>This manual describes how to get started with <ph product="oscm_ce"><ph
-                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Name"/> (<ph
-                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph>) <ph
-                    product="oscm_ee">FUJITSU Software Enterprise Service Catalog Manager, hereafter referred to as <ph
-                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph>.</p>
+            <p>This manual describes how to get started with <ph product="oscm_ee"
+                        >FUJITSU Software Enterprise Service Catalog Manager, hereafter referred to as <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /></ph>. This is a quick start guide intended to help you start up a basic installation of <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> with Docker and Docker Compose as quickly as possible. For more advanced configuration and usage, refer to the individual Docker containers' documentation on DockerHub. ### insert link to fest on DockerHub. </p>
             <p>The manual is structured as follows: </p>
             <p>
                 <table

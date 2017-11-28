@@ -7,7 +7,8 @@
     <title>Managing Billing and Payment</title>
     <conbody>
         <section>
-            <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+            <p>As users of customers work with services, <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> automatically calculates the fees based on the related price models. It aggregates all the events, users, and configuration data associated with a subscription and rates them according to the applicable price model. At regular intervals <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> generates billing data that can be used for creating invoices. </p>

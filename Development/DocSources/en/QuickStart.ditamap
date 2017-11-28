@@ -2,66 +2,88 @@
 <!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN"
                          "">
 <!-- Copyright FUJITSU LIMITED 2017 -->
-
-<bookmap id="QuickStart" xml:lang="en_US">
+<bookmap id="QuickStart"
+            xml:lang="en_US">
     <title>Getting Started with OSCM</title>
     <bookmeta>
-        <prodinfo product="oscm_ce">
+        <prodinfo
+                    product="oscm_ce">
             <prodname/>
             <vrmlist>
-                <vrm version="V17.6.0"/>
+                <vrm
+            version="V17.6.0"/>
             </vrmlist>
             <brand/>
             <prognum>V17.6.0</prognum>
             <component/>
-            <series>Getting Started with OSCM</series>
+            <series>Getting Started with ESCM</series>
         </prodinfo>
         <bookid>
             <edition>December 2017 - Initial draft </edition>
             <!--booknumber product="oscm_ee"></booknumber-->
         </bookid>
-        <bookrights product="oscm_ce">
-            <bookowner name="none"/>
+        <bookrights
+                product="oscm_ce">
+            <bookowner
+            name="none"/>
         </bookrights>
-        <bookrights product="oscm_ee">
-            <bookowner name="FUJITSU LIMITED"/>
+        <bookrights
+                product="oscm_ee">
+            <bookowner
+            name="FUJITSU LIMITED"/>
         </bookrights>
     </bookmeta>
     <frontmatter>
-        <notices href="QuickStart/About/BookInfo.xml"/>
-        <preface format="dita" href="QuickStart/About/c_About.xml" type="concept">
-            <topicref href="QuickStart/About/c_Readers.xml" type="concept"/>
-            <topicref href="QuickStart/About/intro_abbrev.xml" type="concept"/>
+        <notices
+            href="QuickStart/About/BookInfo.xml"/>
+        <preface
+            format="dita" href="QuickStart/About/c_About.xml"
+                type="concept">
+            <topicref
+                href="QuickStart/About/c_Readers.xml"
+                type="concept"/>
+            <topicref
+                href="QuickStart/About/intro_abbrev.xml"
+        type="concept"/>
             
         </preface>
     </frontmatter>
     	<chapter
-            href="QuickStart/Intro/c_Introduction.xml">
-			<topicref format="dita" href="QuickStart/Intro/c_WhatIs.xml" type="concept"/>
-			<topicref format="dita" href="QuickStart/Intro/c_BasicUsageScenario.xml" type="concept"/>
-			<topicref format="dita" href="QuickStart/Intro/c_BESArchitecture.xml" type="concept"/>
-			<topicref format="dita" href="QuickStart/Intro/c_OrgsRoles.xml" type="concept"/>
+        href="QuickStart/Intro/c_Prerequisites.xml">
+			
     </chapter>
+    
+    <chapter
+            href="QuickStart/Setup/c_Setup.xml">
+    	<topicref
+            format="dita"
+            href="QuickStart/Setup/c_PrepareDir.xml"/>
+    	<topicref
+            format="dita"
+            href="QuickStart/Setup/c_PrepareCfg.xml"/>
+    	<topicref
+            format="dita"
+            href="QuickStart/Setup/c_PrepareDC.xml"/>
+    </chapter>
+    
 	<chapter
-            href="QuickStart/Deploy/c_Introduction.xml">
-			<topicref format="dita" href="QuickStart/Deploy/c_Deploy.xml" type="concept"/>
-			<topicref format="dita" href="QuickStart/Deploy/c_Configure.xml" type="concept"/>
-			<topicref format="dita" href="QuickStart/Deploy/c_Results.xml" type="concept"/>
-			
+            href="QuickStart/Usage/c_Usage.xml">
+			<topicref
+            format="dita" href="QuickStart/Usage/c_Access.xml"
+            type="concept"/>
+			<topicref format="dita"
+            href="QuickStart/Usage/c_LoginApp.xml"
+            type="concept"/>
     </chapter>
     
-    <chapter
-            href="QuickStart/InitialSetup/c_NextSteps.xml">
-			<!--topicref format="dita" href="QuickStart/InitialSetup/c_FirstSteps.xml" type="concept"/-->
-			<topicref format="dita" href="QuickStart/InitialSetup/c_ToolSupport.xml" type="concept"/>
-			<!--topicref format="dita" href="QuickStart/InitialSetup/c_AddCurrency.xml" type="concept"/>
-			<topicref format="dita" href="QuickStart/InitialSetup/c_OrgAddRole.xml" type="concept"/>
-			<topicref format="dita" href="QuickStart/InitialSetup/c_CreateMP.xml" type="concept"/-->
+    <chapter href="Shared/reference/c_Certificates.xml" type="concept">
+		<topicref href="OperationsGuide/Certificates/c_Importing_SSL_Key_pairs.xml" type="concept"/>
+		<topicref href="OperationsGuide/Certificates/c_Importing_Trusted_Certs.xml" type="concept"/>
+		
     </chapter>
     
-    <chapter
-            href="QuickStart/SUSE/c_OSCMinSUSE.xml">
+    <!--chapter href="QuickStart/SUSE/c_OSCMinSUSE.xml">
 			
-    </chapter>
+    </chapter-->
     
 </bookmap>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<concept id="concept_1BCF5C425D7D4627AB1C66A085CF6E11"
+            xml:lang="en-us">
+    <title>Preparing the Installation Directory</title>
+    <conbody>
+        <section>
+            <p>On the Docker host, you need to create a directory which holds various data, such as persistent database data or configuration data. In this document, this directory is referred to as <codeph>/docker</codeph>:</p>
+            <p>On the Docker host, execute the following command: </p>
+            <p>
+                <codeblock>mkdir /docker</codeblock>
+            </p>
+        </section>
+    </conbody>
+</concept>
