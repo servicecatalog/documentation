@@ -1,0 +1,1065 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="copyright" content="(C) Copyright 2005" />
+<meta name="DC.rights.owner" content="(C) Copyright 2005" />
+<meta content="reference" name="DC.Type" />
+<meta name="DC.Title" content="Customer Billing Data" />
+<meta content="XHTML" name="DC.Format" />
+<meta content="reference_25043B5D1DED4B2F9D5E9B099A9AC69C" name="DC.Identifier" />
+<meta content="en-us" name="DC.Language" />
+<link href="../../commonltr.css" type="text/css" rel="stylesheet" />
+<link href="../../book.css" type="text/css" rel="stylesheet" />
+<title>Customer Billing Data</title>
+</head>
+<body id="reference_25043B5D1DED4B2F9D5E9B099A9AC69C">
+
+
+    <h1 class="topictitle1">Customer Billing Data</h1>
+
+    <div>
+        <div class="section">
+            <p>The charges for the usage of a service in <span>OSCM</span> are calculated based on the price model defined for the service, customer, or subscription. </p>
+
+            <p id="reference_25043B5D1DED4B2F9D5E9B099A9AC69C__A_supplier_can_export_the_bil_reference_refbody_section_p">A supplier or reseller can export the billing data for one or several of his customers for a specific time. Suppliers also have access to the billing data of customers of broker organizations that sell their services. The exported data can be forwarded, for example, to an accounting system for further processing.</p>
+
+            <p>The result of the export is stored in an XML file, the customer billing data file. The billing data file conforms to the XML schema <samp class="codeph">BillingResult.xsd</samp>, which can be found in the <span>OSCM</span> integration package. </p>
+
+            <p>The billing data file is named <samp class="codeph">&lt;date&gt;BillingData.xml</samp>, where <samp class="codeph">&lt;date&gt;</samp> represents the creation date.</p>
+
+            <p>This appendix describes the meaning of the elements and attributes that may occur in a billing data file. </p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">BillingDetails</h4>
+            
+            <p>Top-level container element of a billing data file. For each subscription, a <samp class="codeph">BillingDetails</samp> element is added to the billing data file. </p>
+
+            <p>A <samp class="codeph">BillingDetails</samp> element contains the following subelements:</p>
+
+            <ul>
+                <li><samp class="codeph">Period</samp><span> (see <a href="r_BillingData.htm#reference_25043B5D1DED4B2F9D5E9B099A9AC69C__Period_reference_refbody_section_3">Period</a>)</span></li>
+
+                <li><samp class="codeph">OrganizationDetails</samp><span> (see <a href="r_BillingData.htm#reference_25043B5D1DED4B2F9D5E9B099A9AC69C__OrganizationDetails_reference_refbody_section_4">OrganizationDetails</a>)</span></li>
+
+                <li><samp class="codeph">Subscriptions</samp><span> (see <a href="r_BillingData.htm#reference_25043B5D1DED4B2F9D5E9B099A9AC69C__Subscriptions_reference_refbody_section_9">Subscriptions</a>)</span></li>
+
+                <li><samp class="codeph">OverallCosts</samp><span> (see <a href="r_BillingData.htm#reference_25043B5D1DED4B2F9D5E9B099A9AC69C__OverallCosts_reference_refbody_section_12">OverallCosts</a>)</span></li>
+
+            </ul>
+
+            <p>A <samp class="codeph">BillingDetails</samp> element has the following attributes: </p>
+
+            <p><samp class="codeph"><strong>key</strong></samp> - (optional, data type <samp class="codeph">long</samp>) <span id="reference_25043B5D1DED4B2F9D5E9B099A9AC69C__Unique_identifier_allowing_f_reference_refbody_section_2"><span id="reference_25043B5D1DED4B2F9D5E9B099A9AC69C__Unique_identifier_allowing_f_reference_refbody_sub_2">Unique identifier allowing, for example, accounting systems to relate billing data to an invoice. The billing data key is printed on the invoice.</span> Suppliers and customers may use the billing data key to create a detailed billing report for an existing invoice or subscription. A supplier can retrieve the key from a billing report, a customer gets the billing data key from the corresponding invoice.</span></p>
+
+            <p><samp class="codeph"><strong>timezone</strong></samp> - (required, data type <samp class="codeph">string</samp>) Time zone based on the UTC time standard. It reflects the standard server time without daylight saving time. For example, 18:00:00 o'clock on June 1st in Berlin (UTC+1) will be output as follows in the XML file: </p>
+
+            <div class="p">
+                <pre class="codeblock">&lt;BillingDetails <strong>timezone="UTC+01:00"</strong> key="31122"&gt;
+  &lt;Period startDate="1370106000000" 
+  <strong>startDateIsoFormat="2013-06-01T16:00:00.000Z"</strong> ..."/&gt;
+</pre>
+
+            </div>
+
+            <p>The time zone is relevant for price models with costs<span> (see <a href="r_BillingData.htm#reference_25043B5D1DED4B2F9D5E9B099A9AC69C__PriceModel_reference_refbody_section_7">PriceModel</a>)</span>. </p>
+
+        </div>
+
+        <div class="section" id="reference_25043B5D1DED4B2F9D5E9B099A9AC69C__Period_reference_refbody_section_3"><h4 class="sectiontitle">Period</h4>
+            
+            <p>Specifies the billing period for which the data is exported. The start and end time of the billing period are output according to the start day of the billing period which was defined by the supplier or reseller.</p>
+
+            <p>A <samp class="codeph">Period</samp> element has the following attributes: </p>
+
+            <ul id="reference_25043B5D1DED4B2F9D5E9B099A9AC69C__startDate_reference_refbody_section_3">
+                <li><samp class="codeph"><strong>startDate</strong></samp> - (data type <samp class="codeph">long</samp>) Start time of the period. The start time is specified in milliseconds, the starting point for the calculation is <samp class="codeph">1970-01-01</samp>, <samp class="codeph">00:00</samp>. </li>
+
+                <li><samp class="codeph"><strong>startDateIsoFormat</strong></samp> - (optional, data type <samp class="codeph">dateTime</samp>) Same as <samp class="codeph">startDate</samp>, but specified in ISO 8601 format (<samp class="codeph">YYYY-MM-DDThh:mm:ss.fffZ</samp>) . </li>
+
+                <li><samp class="codeph"><strong>endDate</strong></samp> - (data type <samp class="codeph">long</samp>) End time of the period. The end time is specified in milliseconds, the starting point for the calculation is <samp class="codeph">1970-01-01</samp>, <samp class="codeph">00:00</samp>. </li>
+
+                <li><samp class="codeph"><strong>endDateIsoFormat</strong></samp> - (optional, data type <samp class="codeph">dateTime</samp>) Same as <samp class="codeph">endDate</samp>, but specified in ISO 8601 format (<samp class="codeph">YYYY-MM-DDThh:mm:ss.fffZ</samp>). </li>
+
+            </ul>
+
+            <p><strong>Example</strong>:</p>
+
+            <div class="p">
+                <pre class="codeblock"><strong>&lt;Period startDateIsoFormat="2012-08-31T22:00:00.000Z" 
+  startDate="1346450400000" 
+  endDateIsoFormat="2012-09-30T22:00:00.000Z" 
+  endDate="1349042400000"/&gt;
+</strong></pre>
+
+            </div>
+
+        </div>
+
+        <div class="section" id="reference_25043B5D1DED4B2F9D5E9B099A9AC69C__OrganizationDetails_reference_refbody_section_4"><h4 class="sectiontitle">OrganizationDetails</h4>
+            
+            <p>Provides details of the customer for which the billing data have been exported. The details may include a <samp class="codeph">Udas</samp> element with custom attributes that store additional information on the customer organization.</p>
+
+            <p>An <samp class="codeph">OrganizationDetails</samp> element contains the following subelements:</p>
+
+            <p><strong>Email</strong></p>
+
+            <p>Specifies the email address of the organization (data type <samp class="codeph">string</samp>).</p>
+
+            <p><strong>Name</strong></p>
+
+            <p>Specifies the name of the organization (data type <samp class="codeph">string</samp>).</p>
+
+            <p><strong>Address</strong></p>
+
+            <p>Specifies the address of the organization (data type <samp class="codeph">string</samp>).</p>
+
+            <p><strong>Paymenttype</strong></p>
+
+            <p>Specifies the payment type used for subscriptions of the organization (data type <samp class="codeph">string</samp>).</p>
+
+            <p><strong>Example</strong>:</p>
+
+            <div class="p">
+                <pre class="codeblock">&lt;BillingDetails key="10002" timezone="UTC+01:00"&gt;
+...
+<strong>  &lt;OrganizationDetails&gt;
+    &lt;Email&gt;info@company.com&lt;/Email&gt;
+    &lt;Name&gt;company&lt;/Name&gt;
+    &lt;Address&gt;Street&lt;/Address&gt;
+    &lt;Paymenttype&gt;INVOICE&lt;/Paymenttype&gt;
+  &lt;/OrganizationDetails&gt;
+</strong>...
+&lt;/BillingDetails&gt;</pre>
+
+            </div>
+
+        </div>
+
+        <div class="section" id="reference_25043B5D1DED4B2F9D5E9B099A9AC69C__Subscriptions_reference_refbody_section_9"><h4 class="sectiontitle">Subscriptions</h4>
+            
+            <p>Contains the billing data for the subscriptions of the customer which are relevant for the current billing period. </p>
+
+            <p>For every subscription of an organization, the <samp class="codeph">Subscriptions</samp> element contains a <samp class="codeph">Subscription</samp> element. In this element, the costs of the affected subscription are specified. </p>
+
+            <p>A <samp class="codeph">Subscription</samp> element has the following attributes:</p>
+
+            <ul>
+                <li><samp class="codeph"><strong>id</strong></samp> - (required, data type <samp class="codeph">string</samp>) Unique subscription name. </li>
+
+                <li><samp class="codeph"><strong>purchaseOrderNumber</strong></samp> - (data type <samp class="codeph">string</samp>) Optional reference number as specified by the customer when subscribing to a service.</li>
+
+            </ul>
+
+            <p>A <samp class="codeph">Subscription</samp> element contains a <samp class="codeph">PriceModel</samp> element with the billing data for the price model of the subscription<span> (see <a href="r_BillingData.htm#reference_25043B5D1DED4B2F9D5E9B099A9AC69C__PriceModel_reference_refbody_section_7">PriceModel</a>)</span>. A <samp class="codeph">Udas</samp> element with custom attributes that store additional information on the subscription may also be included<span> (see <a href="r_BillingData.htm#reference_25043B5D1DED4B2F9D5E9B099A9AC69C__Udas_reference_refbody_section_27">Udas</a>)</span>.</p>
+
+            <p>If a subscription is assigned to an organizational unit at the end of the billing period, the <samp class="codeph">Subscription</samp> element also contains an <samp class="codeph">OrganizationalUnit</samp> element with the following attributes:</p>
+
+            <ul>
+                <li><samp class="codeph"><strong>name</strong></samp> - (required, data type <samp class="codeph">string</samp>) Required name of the organizational unit to which the subscription is assigned.</li>
+
+                <li><samp class="codeph"><strong>referenceID</strong></samp> - (optional, data type <samp class="codeph">string</samp>) Optional reference ID of the organizational unit to which the subscription is assigned.</li>
+
+            </ul>
+
+            <p>Be aware that the organizational units to which the subscription may have been assigned before the generation of the billing data are not shown.</p>
+
+            <p><strong>Example</strong>:</p>
+
+            <div class="p">
+                <pre class="codeblock">&lt;BillingDetails key="10002" timezone="UTC+01:00"&gt;
+...
+<strong>  &lt;Subscriptions&gt;
+    &lt;Subscription id="Mega Office Basic" purchaseOrderNumber="12345"&gt;
+      &lt;OrganizationalUnit name="ProjectTeam" referenceID="123abc"/&gt;
+      &lt;PriceModels&gt;
+        &lt;PriceModel calculationMode="PRO_RATA" id="14001"&gt;
+...
+        &lt;/PriceModel&gt;
+      &lt;/PriceModels&gt;      
+    &lt;/Subscription&gt;
+  &lt;/Subscriptions&gt;
+</strong>...
+&lt;/BillingDetails&gt;</pre>
+
+            </div>
+
+        </div>
+
+        <div class="section" id="reference_25043B5D1DED4B2F9D5E9B099A9AC69C__Udas_reference_refbody_section_27"><h4 class="sectiontitle">Udas</h4>
+            
+            <p>Contains custom attributes that store additional information on an organization or subscription. This could be, for example, the profit center to which a customer's revenue is to be accounted. </p>
+
+            <p>A <samp class="codeph">Udas</samp> element may be included in an <samp class="codeph">OrganizationDetails</samp> or a <samp class="codeph">Subscription</samp> element.</p>
+
+            <p>For every custom attribute, a <samp class="codeph">Uda</samp> element is included in the <samp class="codeph">Udas</samp> element. </p>
+
+            <p>A <samp class="codeph">Uda</samp> element has the following attributes:</p>
+
+            <ul>
+                <li><samp class="codeph"><strong>id</strong></samp> - (required, data type <samp class="codeph">string</samp>) ID of the custom attribute. </li>
+
+                <li><samp class="codeph"><strong>value</strong></samp> - (required, data type <samp class="codeph">string</samp>) Value of the custom attribute. </li>
+
+            </ul>
+
+            <p><strong>Example</strong>:</p>
+
+            <div class="p">
+                <pre class="codeblock">&lt;BillingDetails key="10002" timezone="UTC+01:00"&gt;
+...
+  &lt;Subscriptions&gt;
+    &lt;Subscription id="Mega Office Basic" purchaseOrderNumber="12345"&gt;
+...
+<strong>      &lt;Udas&gt;
+        &lt;Uda id="Profit Center" value="My Company"/&gt;
+      &lt;/Udas&gt;
+    &lt;/Subscription&gt;
+  &lt;/Subscriptions&gt;</strong>
+...
+&lt;/BillingDetails&gt;</pre>
+
+            </div>
+
+        </div>
+
+        <div class="section" id="reference_25043B5D1DED4B2F9D5E9B099A9AC69C__PriceModel_reference_refbody_section_7"><h4 class="sectiontitle">PriceModel</h4>
+            
+            <p>Contains the billing data for a price model used to calculate the utilization charges for a subscription. </p>
+
+            <p>A <samp class="codeph">PriceModel</samp> element is included in every subscription element. It contains the following subelements:</p>
+
+            <ul>
+                <li><samp class="codeph">UsagePeriod</samp><span> (see <a href="r_BillingData.htm#reference_25043B5D1DED4B2F9D5E9B099A9AC69C__UsagePeriod_reference_refbody_section_3">UsagePeriod</a>)</span></li>
+
+                <li><samp class="codeph">GatheredEvents</samp><span> (see <a href="r_BillingData.htm#reference_25043B5D1DED4B2F9D5E9B099A9AC69C__GatheredEvents_reference_refbody_section_14">GatheredEvents</a>)</span></li>
+
+                <li><samp class="codeph">PeriodFee</samp><span> (see <a href="r_BillingData.htm#reference_25043B5D1DED4B2F9D5E9B099A9AC69C__PeriodFee_PriceModel_reference_refbody_section_20">PeriodFee</a>)</span></li>
+
+                <li><samp class="codeph">UserAssignmentCosts</samp><span> (see <a href="r_BillingData.htm#reference_25043B5D1DED4B2F9D5E9B099A9AC69C__UserAssignmentCosts_PriceMod_reference_refbody_section_21">UserAssignmentCosts</a>)</span></li>
+
+                <li><samp class="codeph">OneTimeFee</samp><span> (see <a href="r_BillingData.htm#reference_25043B5D1DED4B2F9D5E9B099A9AC69C__OneTimeFee_reference_refbody_section_23">OneTimeFee</a>)</span></li>
+
+                <li><samp class="codeph">PriceModelCosts</samp><span> (see <a href="r_BillingData.htm#reference_25043B5D1DED4B2F9D5E9B099A9AC69C__PriceModelCosts_reference_refbody_section_24">PriceModelCosts</a>)</span></li>
+
+                <li><samp class="codeph">Parameters</samp><span> (see <a href="r_BillingData.htm#reference_25043B5D1DED4B2F9D5E9B099A9AC69C__Parameters_reference_refbody_section_25">Parameters</a>)</span></li>
+
+            </ul>
+
+            <p>A <samp class="codeph">PriceModel</samp> element has the following attributes: </p>
+
+            <p><samp class="codeph"><strong>id</strong></samp> - (required, data type <samp class="codeph">string</samp>) Unique name identifying the price model.</p>
+
+            <p><samp class="codeph"><strong>calculationMode</strong></samp> - (required, data type <samp class="codeph">string</samp>) Cost calculation option of the price model. Can be set to one of the following values: <samp class="codeph">FREE_OF_CHARGE</samp> (the service is free of charge), <samp class="codeph">PRO_RATA</samp> (the costs are calculated exactly for the time a service is used, based on milliseconds), <samp class="codeph">PER_UNIT</samp> (the costs are calculated based on fixed time units).</p>
+
+        </div>
+
+        <div class="section" id="reference_25043B5D1DED4B2F9D5E9B099A9AC69C__UsagePeriod_reference_refbody_section_3"><h4 class="sectiontitle">UsagePeriod</h4>
+            
+            <p>Specifies the actual period in which a price model is used for calculating the charges of a subscription. </p>
+
+            <p>A usage period usually begins when a customer subscribes to a service and ends when the subscription is terminated. In case a free trial period is defined for the service, the usage period begins when the free trial period has ended. When the customer upgrades or downgrades the subscription, a new usage period is started in which the price model of the new service is applied. If the customer changes elements that determine how the charges for the service are calculated (e.g. the number of assigned users, the service roles of the assigned users, or the parameter values), a new usage period is started in which the updated elements are applied.</p>
+
+            <p>A <samp class="codeph">UsagePeriod</samp> element is contained in a <samp class="codeph">PriceModel</samp> element.</p>
+
+            <p>A <samp class="codeph">UsagePeriod</samp> element has the following attributes: </p>
+
+            <ul>
+                <li><samp class="codeph"><strong>startDate</strong></samp> - (data type <samp class="codeph">long</samp>) Start time of the period. The start time is specified in milliseconds, the starting point for the calculation is <samp class="codeph">1970-01-01</samp>, <samp class="codeph">00:00</samp>. </li>
+
+                <li><samp class="codeph"><strong>startDateIsoFormat</strong></samp> - (optional, data type <samp class="codeph">dateTime</samp>) Same as <samp class="codeph">startDate</samp>, but specified in ISO 8601 format (<samp class="codeph">YYYY-MM-DDThh:mm:ss.fffZ</samp>) . </li>
+
+                <li><samp class="codeph"><strong>endDate</strong></samp> - (data type <samp class="codeph">long</samp>) End time of the period. The end time is specified in milliseconds, the starting point for the calculation is <samp class="codeph">1970-01-01</samp>, <samp class="codeph">00:00</samp>. </li>
+
+                <li><samp class="codeph"><strong>endDateIsoFormat</strong></samp> - (optional, data type <samp class="codeph">dateTime</samp>) Same as <samp class="codeph">endDate</samp>, but specified in ISO 8601 format (<samp class="codeph">YYYY-MM-DDThh:mm:ss.fffZ</samp>). </li>
+
+            </ul>
+
+            <p><strong>Example</strong>:</p>
+
+            <div class="p">
+                <pre class="codeblock">&lt;PriceModel calculationMode="PRO_RATA" id="14001"&gt;
+<strong>  &lt;UsagePeriod endDate="1306879200000" 
+   endDateIsoFormat="2011-05-31T22:00:00.000Z" 
+   startDate="1304755088065" 
+   startDateIsoFormat="2011-05-07T07:58:08.065Z"/&gt;
+</strong>...
+&lt;/PriceModel&gt;</pre>
+
+            </div>
+
+        </div>
+
+        <div class="section" id="reference_25043B5D1DED4B2F9D5E9B099A9AC69C__GatheredEvents_reference_refbody_section_14"><h4 class="sectiontitle">GatheredEvents</h4>
+            
+            <p>Specifies the costs for all chargeable events that occurred in the current usage period of the subscription. <span>These include, for example, login and logout by users to the underlying application, the completion of specific transactions, or the creation or deletion of specific data. It depends on the implementation and integration of the underlying application which events are available.</span></p>
+
+            <p>A <samp class="codeph">GatheredEvents</samp> element is contained in a <samp class="codeph">PriceModel</samp> element. </p>
+
+            <p>A <samp class="codeph">GatheredEvents</samp> element contains the following subelements:</p>
+
+            <ul>
+                <li><samp class="codeph">Event</samp></li>
+
+                <li><samp class="codeph">GatheredEventsCosts</samp></li>
+
+            </ul>
+
+            <p><strong>Event</strong></p>
+
+            <p>For every event, an <samp class="codeph">Event</samp> element is included in the <samp class="codeph">GatheredEvents</samp> element. </p>
+
+            <p>An <samp class="codeph">Event</samp> element has the following attribute:</p>
+
+            <p><samp class="codeph"><strong>id</strong></samp> - (required, data type <samp class="codeph">string</samp>) Event ID as specified in the technical service definition.</p>
+
+            <p> An <samp class="codeph">Event</samp> element contains the following subelements:</p>
+
+            <ul>
+                <li><samp class="codeph">Description</samp></li>
+
+                <li><samp class="codeph">SingleCost</samp>
+                </li>
+
+                <li><samp class="codeph">NumberOfOccurence</samp></li>
+
+                <li><samp class="codeph">CostForEventType</samp></li>
+
+            </ul>
+
+            <p><strong>Description</strong></p>
+
+            <p>Contains the description of the event. </p>
+
+            <p><strong>SingleCost</strong></p>
+
+            <p>Specifies the price for the event as defined in the price model. If an event has stepped prices, this element is omitted. A <samp class="codeph">SteppedPrices</samp> element is included instead<span> (see <a href="r_BillingData.htm#reference_25043B5D1DED4B2F9D5E9B099A9AC69C__SteppedPrices_reference_refbody_section_26">SteppedPrices</a>)</span>. </p>
+
+            <p>A <samp class="codeph">SingleCost</samp> element has the following attribute:</p>
+
+            <p><samp class="codeph"><strong>amount</strong></samp> - (required, data type <samp class="codeph">decimal</samp>) Price for a single event. </p>
+
+            <p><strong>NumberOfOccurence</strong></p>
+
+            <p>Specifies how often the event occurred.</p>
+
+            <p>A <samp class="codeph">NumberOfOccurence</samp> element has the following attribute:</p>
+
+            <p><samp class="codeph"><strong>amount</strong></samp> - (required, data type <samp class="codeph">long</samp>) Number of times the event occurred.</p>
+
+            <p><strong>CostForEventType</strong></p>
+
+            <p>Specifies the total costs for the event in the billing period. </p>
+
+            <p>A <samp class="codeph">CostForEventType</samp> element has the following attribute:</p>
+
+            <p><samp class="codeph"><strong>amount</strong></samp> - (required, data type <samp class="codeph">decimal</samp>) Total costs for the event. The total costs for an event are calculated from the singular costs (<samp class="codeph">SingleCost</samp>) multiplied with the number of occurrences (<samp class="codeph">NumberOfOccurence</samp>). If role-based costs and/or stepped prices are specified for events, these costs are added<span> (see <a href="r_BillingData.htm#reference_25043B5D1DED4B2F9D5E9B099A9AC69C__RoleCosts_reference_refbody_section_24">RoleCosts</a> and <a href="r_BillingData.htm#reference_25043B5D1DED4B2F9D5E9B099A9AC69C__SteppedPrices_reference_refbody_section_26">SteppedPrices</a>)</span>. The value is rounded to two decimal places.</p>
+
+            <p><strong>GatheredEventsCosts</strong></p>
+
+            <p>Specifies the total costs for all events in the current <samp class="codeph">GatheredEvents</samp> element. </p>
+
+            <p>A <samp class="codeph">GatheredEventsCosts</samp> element has the following attribute:</p>
+
+            <p><samp class="codeph"><strong>amount</strong></samp> - (required, data type <samp class="codeph">decimal</samp>) Total costs for events. The value is rounded to two decimal places.</p>
+
+            <p><strong>Example</strong>:</p>
+
+            <div class="p">
+                <pre class="codeblock">&lt;PriceModel calculationMode="PRO_RATA" id="14001"&gt;
+...
+<strong>  &lt;GatheredEvents&gt;
+    &lt;Event id="USER_LOGOUT_FROM_SERVICE"&gt;
+      &lt;Description xml:lang="en"&gt;Logout from the service.&lt;/Description&gt;
+      &lt;SingleCost amount="100.00"/&gt;
+      &lt;NumberOfOccurrence amount="3"/&gt;
+      &lt;CostForEventType amount="300.00"/&gt;
+    &lt;/Event&gt;
+...
+    &lt;GatheredEventsCosts amount="1200.00"/&gt;
+  &lt;/GatheredEvents&gt;
+</strong>...
+&lt;/PriceModel&gt;</pre>
+
+            </div>
+
+        </div>
+
+        <div class="section" id="reference_25043B5D1DED4B2F9D5E9B099A9AC69C__PeriodFee_PriceModel_reference_refbody_section_20"><h4 class="sectiontitle">PeriodFee </h4>
+            
+            <p>Specifies the costs for using the subscription in the given usage period. </p>
+
+            <p>For each subscription, a charge can be defined that a customer has to pay on a recurring basis. Monthly, weekly, daily, or hourly periods are supported. The recurring charge for a subscription is independent of the amount of users, events, or other usage data. </p>
+
+            <p>The calculation of the charges depends on the cost calculation option which was chosen for the price model<span> (see <a href="r_BillingData.htm#reference_25043B5D1DED4B2F9D5E9B099A9AC69C__PriceModel_reference_refbody_section_7">PriceModel</a> for details)</span>. </p>
+
+            <p>A <samp class="codeph">PeriodFee</samp> element is contained in a <samp class="codeph">PriceModel</samp> element.</p>
+
+            <p>A <samp class="codeph">PeriodFee</samp> element has the following attributes: </p>
+
+            <ul>
+                <li><samp class="codeph"><strong>basePeriod</strong></samp> - (required, data type <samp class="codeph">string</samp>) Period on which the charges are based. Can be set to one of the following values: <samp class="codeph">MONTH</samp>, <samp class="codeph">WEEK</samp>, <samp class="codeph">DAY</samp>, <samp class="codeph">HOUR</samp>.</li>
+
+                <li><samp class="codeph"><strong>basePrice</strong></samp> - (required, data type <samp class="codeph">decimal</samp>) Recurring charge per base period according to the price model. </li>
+
+                <li><samp class="codeph"><strong>factor</strong></samp> - (required, data type <samp class="codeph">decimal</samp>) Factor used to calculate the period fee for the subscription. The factor is calculated from the usage period of the subscription divided by the base period (<samp class="codeph">basePeriod</samp>). The recurring charge is multiplied with this factor to calculate the total costs (<samp class="codeph">price</samp>).</li>
+
+                <li><samp class="codeph"><strong>price</strong></samp> - (required, data type <samp class="codeph">decimal</samp>) Total period fee for the subscription. This value is calculated from the recurring charge (<samp class="codeph">basePrice</samp>) multiplied with the factor (<samp class="codeph">factor</samp>). The value is rounded to two decimal places.</li>
+
+            </ul>
+
+            <p><strong>Example</strong>:</p>
+
+            <div class="p">
+                <pre class="codeblock">&lt;PriceModel calculationMode="PRO_RATA" id="14001"&gt;
+...
+<strong>  &lt;PeriodFee basePeriod="MONTH" basePrice="10.00" factor="0.4020212567204301" price="4.02"/&gt;
+</strong>...
+&lt;/PriceModel&gt;</pre>
+
+            </div>
+
+        </div>
+
+        <div class="section" id="reference_25043B5D1DED4B2F9D5E9B099A9AC69C__UserAssignmentCosts_PriceMod_reference_refbody_section_21"><h4 class="sectiontitle">UserAssignmentCosts </h4>
+            
+            <p>Specifies the costs for the user assignments to the subscription.</p>
+
+            <p>For the users assigned to a subscription, a charge can be defined that a customer has to pay on a recurring basis. Monthly, weekly, daily, or hourly periods are supported. The charge depends on the amount of time units one or more users are assigned to the subscription. This type of charge can only be defined for services with the login or user access type.</p>
+
+            <p>The recurring charge for users is independent of the recurring charge per subscription or other usage data.</p>
+
+            <p>For this type of charge, stepped prices can be applied: Recurring charges can be defined that depend on the sum of the time units of all user assignments.</p>
+
+            <p>The calculation of the charges depends on the cost calculation option which was chosen for the price model<span> (see <a href="r_BillingData.htm#reference_25043B5D1DED4B2F9D5E9B099A9AC69C__PriceModel_reference_refbody_section_7">PriceModel</a> for details)</span>.</p>
+
+            <p>With per time unit calculation, the costs for a time unit in which a user is assigned to a subscription are always fully charged. There is no difference in the costs between a user who is assigned from the start until the end of the time unit and a user who is assigned for a part of the time unit only. A time unit is charged only once if a user is deassigned from and re-assigned to a subscription within the same time unit. Yet, canceling an assignment, deleting the user, and then creating a new user with the same user ID is treated as if two different users are assigned to the subscription. The time unit is charged twice, accordingly.</p>
+
+            <p>A <samp class="codeph">UserAssignmentCosts</samp> element is contained in a <samp class="codeph">PriceModel</samp> element. </p>
+
+            <p>A <samp class="codeph">UserAssignmentCosts</samp> element has the following attributes: </p>
+
+            <ul>
+                <li><samp class="codeph"><strong>basePeriod</strong></samp> - (optional, data type <samp class="codeph">string</samp>) Period on which the charges are based. Can be set to one of the following values: <samp class="codeph">MONTH</samp>, <samp class="codeph">WEEK</samp>, <samp class="codeph">DAY</samp>, <samp class="codeph">HOUR</samp>.</li>
+
+                <li><samp class="codeph"><strong>basePrice</strong></samp> - (optional, data type <samp class="codeph">decimal</samp>) Recurring charge for users per base period according to the price model. If the charge for users has stepped prices, this attribute is omitted.</li>
+
+                <li><samp class="codeph"><strong>factor</strong></samp> - (optional, data type <samp class="codeph">decimal</samp>) Factor used to calculate the costs for the user assignments. The factor is calculated by summing up the factors for each user specified in the <samp class="codeph">UserAssignmentCostsByUser</samp> element. The recurring charge (<samp class="codeph">basePrice</samp>) is multiplied with this factor to calculate the costs (<samp class="codeph">price</samp>). </li>
+
+                <li><samp class="codeph"><strong>numberOfUsersTotal</strong></samp> - (optional, data type <samp class="codeph">long</samp>) Number of users assigned to the subscription in the usage period. </li>
+
+                <li><samp class="codeph"><strong>total</strong></samp> - (data type <samp class="codeph">decimal</samp>) Total costs for the user assignments including role-based costs and stepped prices. The value is rounded to two decimal places.<span> For details on role-based costs and stepped prices, refer to <a href="r_BillingData.htm#reference_25043B5D1DED4B2F9D5E9B099A9AC69C__RoleCosts_reference_refbody_section_24">RoleCosts</a> and <a href="r_BillingData.htm#reference_25043B5D1DED4B2F9D5E9B099A9AC69C__SteppedPrices_reference_refbody_section_26">SteppedPrices</a>.</span> </li>
+
+                <li><samp class="codeph"><strong>price</strong></samp> - (optional, data type <samp class="codeph">decimal</samp>) Costs for the user assignments. This value is calculated from the recurring charge (<samp class="codeph">basePrice</samp>) multiplied with the factor (<samp class="codeph">factor</samp>). The value is rounded to two decimal places.</li>
+
+            </ul>
+
+            <p>A <samp class="codeph">UserAssignmentCosts</samp> element contains the following subelement. If role-based costs and/or stepped prices are specified, a <samp class="codeph">RoleCosts</samp> element and/or <samp class="codeph">SteppedPrices</samp> element is also present<span> (see <a href="r_BillingData.htm#reference_25043B5D1DED4B2F9D5E9B099A9AC69C__RoleCosts_reference_refbody_section_24">RoleCosts</a> and <a href="r_BillingData.htm#reference_25043B5D1DED4B2F9D5E9B099A9AC69C__SteppedPrices_reference_refbody_section_26">SteppedPrices</a>)</span>.</p>
+
+            <p><strong>UserAssignmentCostsByUser</strong></p>
+
+            <p>Specifies the fraction of the usage period a user was assigned to the subscription. </p>
+
+            <p>A <samp class="codeph">UserAssignmentCostsByUser</samp> element has the following attributes:</p>
+
+            <ul>
+                <li><samp class="codeph"><strong>factor</strong></samp> - (required, data type <samp class="codeph">decimal</samp>) Fraction of the usage period the given user was assigned to the subscription. The factors of the single user assignments are summed up to calculate the total costs for the user assignments.</li>
+
+                <li><samp class="codeph"><strong>userId</strong></samp> - (required, data type <samp class="codeph">string</samp>) User ID.</li>
+
+            </ul>
+
+            <p><strong>Example</strong>:</p>
+
+            <div class="p">
+                <pre class="codeblock">&lt;PriceModel calculationMode="PRO_RATA" id="18000"&gt;
+...
+<strong>  &lt;UserAssignmentCosts basePeriod="MONTH" basePrice="19.00" 
+   factor="0.5337726052867383" numberOfUsersTotal="2" 
+   total ="50.00" price="10.14"&gt;
+     &lt;UserAssignmentCostsByUser factor="1.0499215949820788E-4" 
+     userId="admin"/&gt;
+     &lt;UserAssignmentCostsByUser factor="0.5336676131272401" 
+     userId="miller"/&gt;
+   &lt;/UserAssignmentCosts&gt;
+</strong>...
+&lt;/PriceModel&gt;</pre>
+
+            </div>
+
+        </div>
+
+        <div class="section" id="reference_25043B5D1DED4B2F9D5E9B099A9AC69C__OneTimeFee_reference_refbody_section_23"><h4 class="sectiontitle">OneTimeFee</h4>
+            
+            <p>Specifies the one-time fee for the subscription.</p>
+
+            <p>A one-time fee defines the amount a customer has to pay for a subscription in the first billing period of the subscription. It is added to the total charges for the first billing period. It is independent of the number of users, events, or other usage data.</p>
+
+            <p>If a one-time fee is defined for a service to which a customer upgrades or downgrades a subscription, it is added to the total charges for the customer, even if the service from which the customer migrates also defines a one-time fee.</p>
+
+            <p>A <samp class="codeph">OneTimeFee</samp> element is contained in a <samp class="codeph">PriceModel</samp> element.</p>
+
+            <p>A <samp class="codeph">OneTimeFee</samp> element has the following attributes: </p>
+
+            <ul>
+                <li><samp class="codeph"><strong>amount</strong></samp> - (required, data type <samp class="codeph">decimal</samp>) Total costs for the one-time fee. The value is rounded to two decimal places.</li>
+
+                <li><samp class="codeph"><strong>baseAmount</strong></samp> - (required, data type <samp class="codeph">decimal</samp>) One-time fee as defined in the price model.</li>
+
+                <li><samp class="codeph"><strong>factor</strong></samp> - (required, data type <samp class="codeph">long</samp>) Factor used for calculating the one-time fee. Since this charge occurs only once, the factor is 1 for the first billing period, and 0 in case the one-time fee has already been charged in a previous billing period. </li>
+
+            </ul>
+
+            <p><strong>Example</strong>:</p>
+
+            <div class="p">
+                <pre class="codeblock">&lt;PriceModel calculationMode="PRO_RATA" id="14001"&gt;
+...
+<strong>  &lt;OneTimeFee amount="10.00" baseAmount="10.00" factor="1"/&gt;
+</strong>...
+&lt;/PriceModel&gt;</pre>
+
+            </div>
+
+        </div>
+
+        <div class="section" id="reference_25043B5D1DED4B2F9D5E9B099A9AC69C__PriceModelCosts_reference_refbody_section_24"><h4 class="sectiontitle">PriceModelCosts</h4>
+            
+            <p>Specifies the total costs for the subscription in the current usage period. </p>
+
+            <p>A <samp class="codeph">PriceModelCosts</samp> element is contained in a <samp class="codeph">PriceModel</samp> element.</p>
+
+            <p>A <samp class="codeph">PriceModelCosts</samp> element has the following attributes: </p>
+
+            <ul>
+                <li><samp class="codeph"><strong>currency</strong></samp> - (required, data type <samp class="codeph">string</samp>) ISO code of the currency in which the costs are calculated. </li>
+
+                <li><samp class="codeph"><strong>amount</strong></samp> - (required, data type <samp class="codeph">decimal</samp>) Total amount of the costs for the subscription. The value is rounded to two decimal places.</li>
+
+            </ul>
+
+            <p><strong>Example</strong>:</p>
+
+            <div class="p">
+                <pre class="codeblock">&lt;PriceModel calculationMode="PRO_RATA" id="14001"&gt;
+...
+<strong>  &lt;PriceModelCosts currency="EUR" amount="990.00"/&gt;
+</strong>&lt;/PriceModel&gt;</pre>
+
+            </div>
+
+        </div>
+
+        <div class="section" id="reference_25043B5D1DED4B2F9D5E9B099A9AC69C__Parameters_reference_refbody_section_25"><h4 class="sectiontitle">Parameters</h4>
+            
+            <p>Specifies the costs for parameters defined for the service underlying the subscription. </p>
+
+            <p>A price model can define prices for service parameters and options. <span id="reference_25043B5D1DED4B2F9D5E9B099A9AC69C__NB0029">It depends on the implementation and integration of the underlying application whether and which parameters and options are available.</span>
+                                    </p>
+
+            <p>A price can be defined for every parameter and option, and the price can be charged per subscription or per user assigned to the subscription. <span id="reference_25043B5D1DED4B2F9D5E9B099A9AC69C__and_specify_whether_this_pric_reference_refbody_section_1">Numeric parameters are a multiplier for the price. For boolean parameters, the multiplier is <samp class="codeph">1</samp> if the value is <samp class="codeph">true</samp>. In all other cases, the multiplier is <samp class="codeph">0</samp>.</span></p>
+
+            <p>The calculation of charges for parameters and options depends on the cost calculation option which was chosen for the price model<span> (see <a href="r_BillingData.htm#reference_25043B5D1DED4B2F9D5E9B099A9AC69C__PriceModel_reference_refbody_section_7">PriceModel</a> for details)</span>.</p>
+
+            <p>If the charges for a subscription are calculated per time unit and a customer changes a parameter value within a time unit, the affected time unit is charged pro rata. This means that the customer is charged exactly for the time each parameter value is set. </p>
+
+            <p><span>For numeric parameters, stepped prices can be applied per subscription: Different prices can be defined depending on the parameter values.</span></p>
+
+            <p>The prices for parameters and options are independent of other price model elements. </p>
+
+            <p>A <samp class="codeph">Parameters</samp> element is contained in a <samp class="codeph">PriceModel</samp> element. </p>
+
+            <p>A <samp class="codeph">Parameters</samp> element contains the following subelements:</p>
+
+            <ul>
+                <li><samp class="codeph">Parameter</samp></li>
+
+                <li><samp class="codeph">ParametersCosts</samp></li>
+
+            </ul>
+
+            <p><strong>Parameter</strong></p>
+
+            <p>For every parameter, a <samp class="codeph">Parameter</samp> element is included in the <samp class="codeph">Parameters</samp> element. </p>
+
+            <p>A <samp class="codeph">Parameter</samp> element has the following attribute:</p>
+
+            <p><samp class="codeph"><strong>id</strong></samp> - (required, data type <samp class="codeph">string</samp>) Parameter ID.</p>
+
+            <p>A <samp class="codeph">Parameter</samp> element contains the following subelements:</p>
+
+            <ul>
+                <li><samp class="codeph">ParameterUsagePeriod</samp></li>
+
+                <li><samp class="codeph">ParameterValue</samp></li>
+
+                <li><samp class="codeph">PeriodFee</samp></li>
+
+                <li><samp class="codeph">UserAssignmentCosts</samp></li>
+
+                <li><samp class="codeph">ParameterCosts</samp></li>
+
+                <li><samp class="codeph">Options</samp></li>
+
+            </ul>
+
+            <p><strong>ParameterUsagePeriod</strong></p>
+
+            <p>Specifies the actual usage period for the parameter. </p>
+
+            <p>The usage period for a parameter begins when a customer subscribes to the service with the given parameter definition in the price model and ends when the subscription is terminated. </p>
+
+            <p>In case a free trial period is defined for the service, the usage period for the subscription begins when the free trial period has ended. If a parameter value is changed, a new usage period is started in which the updated value is applied for calculating the costs.</p>
+
+            <p>A <samp class="codeph">ParameterUsagePeriod</samp> element has the following attributes:</p>
+
+            <ul>
+                <li><samp class="codeph"><strong>startDate</strong></samp> - (data type <samp class="codeph">long</samp>) Start time of the period. The start time is specified in milliseconds, the starting point for the calculation is <samp class="codeph">1970-01-01</samp>, <samp class="codeph">00:00</samp>. </li>
+
+                <li><samp class="codeph"><strong>startDateIsoFormat</strong></samp> - (optional, data type <samp class="codeph">dateTime</samp>) Same as <samp class="codeph">startDate</samp>, but specified in ISO 8601 format (<samp class="codeph">YYYY-MM-DDThh:mm:ss.fffZ</samp>) . </li>
+
+                <li><samp class="codeph"><strong>endDate</strong></samp> - (data type <samp class="codeph">long</samp>) End time of the period. The end time is specified in milliseconds, the starting point for the calculation is <samp class="codeph">1970-01-01</samp>, <samp class="codeph">00:00</samp>. </li>
+
+                <li><samp class="codeph"><strong>endDateIsoFormat</strong></samp> - (optional, data type <samp class="codeph">dateTime</samp>) Same as <samp class="codeph">endDate</samp>, but specified in ISO 8601 format (<samp class="codeph">YYYY-MM-DDThh:mm:ss.fffZ</samp>). </li>
+
+            </ul>
+
+            <p><strong>ParameterValue</strong></p>
+
+            <p>Specifies the costs and data type for the parameter.</p>
+
+            <p>A <samp class="codeph">ParameterValue</samp> element has the following attributes:</p>
+
+            <ul>
+                <li><samp class="codeph"><strong>amount</strong></samp> - (required, data type <samp class="codeph">string</samp>) Costs for the parameter as defined in the price model. </li>
+
+                <li><samp class="codeph"><strong>type</strong></samp> - (required, data type <samp class="codeph">string</samp>) Data type of the parameter. Can be set to one of the following values: <samp class="codeph">BOOLEAN</samp>, <samp class="codeph">INTEGER</samp>, <samp class="codeph">LONG</samp>, <samp class="codeph">STRING</samp>, <samp class="codeph">ENUMERATION</samp>, <samp class="codeph">DURATION</samp>.</li>
+
+            </ul>
+
+            <p><strong>PeriodFee</strong></p>
+
+            <p>Specifies the costs for using the parameter in the given usage period. If a parameter has stepped prices, a <samp class="codeph">SteppedPrices</samp> element is included in the <samp class="codeph">PeriodFee</samp> element.</p>
+
+            <p>A <samp class="codeph">PeriodFee</samp> element has the following attributes:</p>
+
+            <ul>
+                <li><samp class="codeph"><strong>basePeriod</strong></samp> - (required, data type <samp class="codeph">string</samp>) Period on which the charges are based. Can be set to one of the following values: <samp class="codeph">MONTH</samp>, <samp class="codeph">WEEK</samp>, <samp class="codeph">DAY</samp>, <samp class="codeph">HOUR</samp>.</li>
+
+                <li><samp class="codeph"><strong>basePrice</strong></samp> - (optional, data type <samp class="codeph">decimal</samp>) Recurring charge per base period according to the price model. If a parameter has stepped prices, this attribute is omitted.</li>
+
+                <li><samp class="codeph"><strong>factor</strong></samp> - (required, data type <samp class="codeph">decimal</samp>) Factor used to calculate the costs for using the parameter. The factor is calculated from the usage period divided by the base period (<samp class="codeph">basePeriod</samp>). The recurring charge (<samp class="codeph">basePrice</samp>) is multiplied with this factor to calculate the costs (<samp class="codeph">price</samp>).</li>
+
+                <li><samp class="codeph"><strong>price</strong></samp> - (required, data type <samp class="codeph">decimal</samp>) Costs for using the parameter. This value is calculated from the recurring charge (<samp class="codeph">basePrice</samp>) multiplied with the factors (<samp class="codeph">factor</samp> and <samp class="codeph">valueFactor</samp>). The value is rounded to two decimal places.</li>
+
+                <li><samp class="codeph"><strong>valueFactor</strong></samp> - (required, data type <samp class="codeph">float</samp>) Factor to calculate the total costs for using the parameter depending on the parameter value. The recurring charge (<samp class="codeph">basePrice</samp>) is multiplied with this factor to calculate the costs (<samp class="codeph">price</samp>). This factor is set depending on the data type of the parameter. For numeric parameters it is set to the value of the parameter. For boolean parameters, the factor is set to <samp class="codeph">1</samp> if the value is <samp class="codeph">true</samp>. In all other cases, the factor is set to <samp class="codeph">0</samp>. </li>
+
+            </ul>
+
+            <p><strong>UserAssignmentCosts</strong></p>
+
+            <p>Specifies the costs for the parameter related to the user assignments of the subscription based on the price per user for the parameter as defined in the price model. If costs for service roles are defined, a <samp class="codeph">RoleCosts</samp> element is included in the <samp class="codeph">UserAssignmentCosts</samp> element<span> (see <a href="r_BillingData.htm#reference_25043B5D1DED4B2F9D5E9B099A9AC69C__RoleCosts_reference_refbody_section_24">RoleCosts</a> for details)</span>. </p>
+
+            <p>A <samp class="codeph">UserAssignmentCosts</samp> element has the following attributes:</p>
+
+            <ul>
+                <li><samp class="codeph"><strong>basePeriod</strong></samp> - (required, data type <samp class="codeph">string</samp>) Period on which the charges are based. Can be set to one of the following values: <samp class="codeph">MONTH</samp>, <samp class="codeph">WEEK</samp>, <samp class="codeph">DAY</samp>, <samp class="codeph">HOUR</samp>.</li>
+
+                <li><samp class="codeph"><strong>basePrice</strong></samp> - (required, data type <samp class="codeph">decimal</samp>) Recurring charge for users per base period for the parameter according to the price model. </li>
+
+                <li><samp class="codeph"><strong>factor</strong></samp> - (required, data type <samp class="codeph">decimal</samp>) Factor used to calculate the costs for using the parameter. The factor is calculated from the parameter usage period divided by the base period (<samp class="codeph">basePeriod</samp>) multiplied with the number of users. The recurring charge (<samp class="codeph">basePrice</samp>) is multiplied with this factor to calculate the costs (<samp class="codeph">price</samp>).</li>
+
+                <li><samp class="codeph"><strong>price</strong></samp> - (required, data type <samp class="codeph">decimal</samp>) Costs for using the parameter. This value is calculated from the recurring charge (<samp class="codeph">basePrice</samp>) multiplied with the factors (<samp class="codeph">factor</samp> and <samp class="codeph">valueFactor</samp>). The value is rounded to two decimal places. If stepped prices are defined for user assignments, the costs are given in the <samp class="codeph">price</samp> attribute.</li>
+
+                <li><samp class="codeph"><strong>total</strong></samp> - (data type <samp class="codeph">decimal</samp>) Total costs for using the parameter including role-based costs. The value is rounded to two decimal places.<span> For details on role-based costs, refer to <a href="r_BillingData.htm#reference_25043B5D1DED4B2F9D5E9B099A9AC69C__RoleCosts_reference_refbody_section_24">RoleCosts</a>.</span> </li>
+
+                <li><samp class="codeph"><strong>valueFactor</strong></samp> - (required, data type <samp class="codeph">float</samp>) Factor to calculate the total costs for using the parameter depending on the parameter value. The recurring charge (<samp class="codeph">basePrice</samp>) is multiplied with this factor to calculate the costs (<samp class="codeph">price</samp>). This factor is set depending on the data type of the parameter. For numeric parameters it is set to the value of the parameter. For boolean parameters, the factor is set to <samp class="codeph">1</samp> if the value is <samp class="codeph">true</samp>. In all other cases, the factor is set to <samp class="codeph">0</samp>. </li>
+
+            </ul>
+
+            <p><strong>ParameterCosts</strong></p>
+
+            <p>Specifies the total costs for using the parameter.</p>
+
+            <p>A <samp class="codeph">ParameterCosts</samp> element has the following attribute:</p>
+
+            <p><samp class="codeph"><strong>amount</strong></samp> - (required, data type <samp class="codeph">decimal</samp>) Total costs for the parameter calculated by summing up the costs specified in the <samp class="codeph">PeriodFee</samp> and the <samp class="codeph">UserAssignmentCosts</samp> element for the parameter and its options. If role-based costs and/or stepped prices are specified for the parameter, these are added<span> (see <a href="r_BillingData.htm#reference_25043B5D1DED4B2F9D5E9B099A9AC69C__RoleCosts_reference_refbody_section_24">RoleCosts</a> and <a href="r_BillingData.htm#reference_25043B5D1DED4B2F9D5E9B099A9AC69C__SteppedPrices_reference_refbody_section_26">SteppedPrices</a>)</span>. The value is rounded to two decimal places.</p>
+
+            <p><strong>ParametersCosts</strong></p>
+
+            <p>Specifies the total costs for all parameters. </p>
+
+            <p>A <samp class="codeph">ParametersCosts</samp> element has the following attribute:</p>
+
+            <p><samp class="codeph"><strong>amount</strong></samp> - (required, data type <samp class="codeph">decimal</samp>) Total costs for the parameters calculated by summing up the costs of the individual parameters as specified in the <samp class="codeph">ParameterCosts</samp> elements. The value is rounded to two decimal places.</p>
+
+            <p><strong>Example</strong>:</p>
+
+            <div class="p">
+                <pre class="codeblock">&lt;Parameters&gt;
+...
+<strong>  &lt;Parameter id="MAX_FOLDER_NUMBER2"&gt;
+    &lt;ParameterUsagePeriod endDate="1306879200000" 
+     endDateIsoFormat="2011-05-31T22:00:00.000Z" 
+     startDate="1304755088065" 
+     startDateIsoFormat="2011-05-07T07:58:08.065Z"/&gt;
+    &lt;ParameterValue amount="200" type="INTEGER"/&gt;
+    &lt;PeriodFee basePeriod="MONTH" basePrice="0.00" 
+     factor="0.5337789669205496" price="0.00" valueFactor="200.0"/&gt;
+    &lt;UserAssignmentCosts basePeriod="MONTH" basePrice="0.00" 
+     factor="0.5337726052867383" total ="0.00" 
+     price="0.00" valueFactor="200.0"/&gt;
+    &lt;ParameterCosts amount="0.00"/&gt;
+  &lt;/Parameter&gt;
+
+...
+  &lt;ParametersCosts amount="600.00"/&gt;
+</strong>&lt;/Parameters&gt;</pre>
+
+            </div>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">Options</h4>
+            
+            <p>Specifies the costs for parameter options. </p>
+
+            <p>An <samp class="codeph">Options</samp> element is contained in a <samp class="codeph">Parameter</samp> element.</p>
+
+            <p>For every option, an <samp class="codeph">Option</samp> element is included in the <samp class="codeph">Options</samp> element.</p>
+
+            <p>An <samp class="codeph">Option</samp> element has the following attribute: </p>
+
+            <p><samp class="codeph"><strong>id</strong></samp> - (required, data type <samp class="codeph">string</samp>) Option ID.</p>
+
+            <p>An <samp class="codeph">Option</samp> element contains the following subelements:</p>
+
+            <ul>
+                <li><samp class="codeph">PeriodFee</samp></li>
+
+                <li><samp class="codeph">UserAssignmentCosts</samp></li>
+
+                <li><samp class="codeph">OptionCosts</samp></li>
+
+            </ul>
+
+            <p><strong>PeriodFee</strong></p>
+
+            <p>Specifies the costs for using the parameter option in the given usage period. </p>
+
+            <p>A <samp class="codeph">PeriodFee</samp> element has the following attributes:</p>
+
+            <ul>
+                <li><samp class="codeph"><strong>basePeriod</strong></samp> - (required, data type <samp class="codeph">string</samp>) Period on which the charges are based. Can be set to one of the following values: <samp class="codeph">MONTH</samp>, <samp class="codeph">WEEK</samp>, <samp class="codeph">DAY</samp>, <samp class="codeph">HOUR</samp>.</li>
+
+                <li><samp class="codeph"><strong>basePrice</strong></samp> - (required, data type <samp class="codeph">decimal</samp>) Recurring charge per base period according to the price model. </li>
+
+                <li><samp class="codeph"><strong>factor</strong></samp> - (required, data type <samp class="codeph">decimal</samp>) Factor used to calculate the costs for using the parameter option. The factor is calculated from the usage period divided by the base period (<samp class="codeph">basePeriod</samp>). The recurring charge (<samp class="codeph">basePrice</samp>) is multiplied with this factor to calculate the total costs (<samp class="codeph">price</samp>).</li>
+
+                <li><samp class="codeph"><strong>price</strong></samp> - (required, data type <samp class="codeph">decimal</samp>) Costs for the parameter option. This value is calculated from the recurring charge (<samp class="codeph">basePrice</samp>) multiplied with the factor (<samp class="codeph">factor</samp>), and is rounded to two decimal places.</li>
+
+            </ul>
+
+            <p><strong>UserAssignmentCosts</strong></p>
+
+            <p>Specifies the costs for the parameter option related to the user assignments of the subscription based on the price per user for the option as defined in the price model. If costs for service roles are defined, a <samp class="codeph">RoleCosts</samp> element is included in the <samp class="codeph">UserAssignmentCosts</samp> element<span> (see <a href="r_BillingData.htm#reference_25043B5D1DED4B2F9D5E9B099A9AC69C__RoleCosts_reference_refbody_section_24">RoleCosts</a>)</span>. </p>
+
+            <p>A <samp class="codeph">UserAssignmentCosts</samp> element has the following attributes:</p>
+
+            <ul>
+                <li><samp class="codeph"><strong>basePeriod</strong></samp> - (required, data type <samp class="codeph">string</samp>) Period on which the charges are based. Can be set to one of the following values: <samp class="codeph">MONTH</samp>, <samp class="codeph">WEEK</samp>, <samp class="codeph">DAY</samp>, <samp class="codeph">HOUR</samp>.</li>
+
+                <li><samp class="codeph"><strong>basePrice</strong></samp> - (required, data type <samp class="codeph">decimal</samp>) Recurring charge for users per base period for the parameter option according to the price model. </li>
+
+                <li><samp class="codeph"><strong>factor</strong></samp> - (required, data type <samp class="codeph">decimal</samp>) Factor used to calculate the costs for using the parameter option. The factor is calculated from the usage period divided by the base period (<samp class="codeph">basePeriod</samp>). The recurring charge (<samp class="codeph">basePrice</samp>) is multiplied with this factor to calculate the costs (<samp class="codeph">price</samp>). </li>
+
+                <li><samp class="codeph"><strong>total</strong></samp> - (data type <samp class="codeph">decimal</samp>) Total costs for using the parameter option including role-based costs. The value is rounded to two decimal places.<span> For details on role-based costs, refer to <a href="r_BillingData.htm#reference_25043B5D1DED4B2F9D5E9B099A9AC69C__RoleCosts_reference_refbody_section_24">RoleCosts</a>.</span> </li>
+
+                <li><samp class="codeph"><strong>price</strong></samp> - (required, data type <samp class="codeph">decimal</samp>) Costs for using the parameter option. This value is calculated from the recurring charge (<samp class="codeph">basePrice</samp>) multiplied with the factor (<samp class="codeph">factor</samp>). The value is rounded to two decimal places. If stepped prices are defined for user assignments, the costs are given in the <samp class="codeph">price</samp> attribute.</li>
+
+            </ul>
+
+            <p><strong>OptionCosts</strong></p>
+
+            <p>Specifies the total costs for using the parameter option.</p>
+
+            <p>An <samp class="codeph">OptionCosts</samp> element has the following attribute:</p>
+
+            <p><samp class="codeph"><strong>amount</strong></samp> - (required, data type <samp class="codeph">decimal</samp>) Total costs for the parameter option calculated by summing up the costs specified in the <samp class="codeph">PeriodFee</samp> and the <samp class="codeph">UserAssignmentCosts</samp> element. The value is rounded to two decimal places.</p>
+
+            <p><strong>Example</strong>:</p>
+
+            <div class="p">
+                <pre class="codeblock">&lt;Parameter id="MEMORY_STORAGE"&gt;
+...
+<strong>  &lt;Options&gt;
+    &lt;Option id="2"&gt;
+      &lt;PeriodFee basePeriod="MONTH" basePrice="100.00" 
+       factor="1.0" price="100.00"/&gt;
+      &lt;UserAssignmentCosts basePeriod="MONTH" basePrice="0.00" 
+       factor="1.0" total ="0.00" price="0.00"/&gt;
+      &lt;OptionCosts amount="100.00"/&gt;
+    &lt;/Option&gt;
+  &lt;/Options&gt;
+</strong>...
+&lt;/Parameter&gt;</pre>
+
+            </div>
+
+        </div>
+
+        <div class="section" id="reference_25043B5D1DED4B2F9D5E9B099A9AC69C__RoleCosts_reference_refbody_section_24"><h4 class="sectiontitle">RoleCosts</h4>
+            
+            <p>Specifies the costs for service roles. </p>
+
+            <p>If defined for the underlying application, roles can be used to grant specific privileges to different users. The roles are specified in the technical service definition as service roles. Service roles can be mapped to corresponding permissions in the application. </p>
+
+            <p>For each role, a price can be defined. This price is added to the base price per user in the cost calculation for a billing period.</p>
+
+            <p>The calculation of the charges for service roles depends on the cost calculation option which was chosen for the price model<span> (see <a href="r_BillingData.htm#reference_25043B5D1DED4B2F9D5E9B099A9AC69C__PriceModel_reference_refbody_section_7">PriceModel</a> for details)</span>. </p>
+
+            <p>If the charges are calculated per time unit and the role assignment of a user is changed within a time unit, the affected time unit is charged pro rata. This means that the customer is charged exactly for the time each user role is assigned.</p>
+
+            <p>If the charges are calculated per time unit and a user with a specific role is removed from the subscription and assigned to it again with a different role in the same time unit, the customer is also charged for the time during which the user is not assigned to the subscription. This means that he is charged with the price for the first service role until the user is assigned to the subscription with the second service role. </p>
+
+            <p>A <samp class="codeph">RoleCosts</samp> element is contained in a <samp class="codeph">UserAssignmentCosts</samp> element (as subelement of the <samp class="codeph">PriceModel</samp>, <samp class="codeph">Parameters</samp>, or <samp class="codeph">Option</samp> element).</p>
+
+            <p>A <samp class="codeph">RoleCosts</samp> element has the following attribute: </p>
+
+            <p><samp class="codeph"><strong>total</strong></samp> - (required, data type <samp class="codeph">decimal</samp>) Total amount of costs for the service roles. The value is rounded to two decimal places.</p>
+
+            <p>For every service role, a <samp class="codeph">RoleCost</samp> element is included in the <samp class="codeph">RoleCosts</samp> element. </p>
+
+            <p>A <samp class="codeph">RoleCost</samp> element has the following attributes:</p>
+
+            <ul>
+                <li><samp class="codeph"><strong>id</strong></samp> - (required, data type <samp class="codeph">string</samp>) ID of the service role.</li>
+
+                <li><samp class="codeph"><strong>basePrice</strong></samp> - (required, data type <samp class="codeph">decimal</samp>) Recurring charge for the service role according to the price model.</li>
+
+                <li><samp class="codeph"><strong>factor</strong></samp> - (required, data type <samp class="codeph">decimal</samp>) Factor used to calculate the costs for the service role. The factor is calculated as a fraction of the actual usage period. The recurring charge (<samp class="codeph">basePrice</samp>) is multiplied with this factor to calculate the costs (<samp class="codeph">price</samp>). </li>
+
+                <li><samp class="codeph"><strong>price</strong></samp> - (required, data type <samp class="codeph">decimal</samp>) Costs for the service role. This value is calculated from the recurring charge (<samp class="codeph">basePrice</samp>) multiplied with the factor (<samp class="codeph">factor</samp>). The value is rounded to two decimal places.</li>
+
+            </ul>
+
+            <p><strong>Example</strong>:</p>
+
+            <div class="p">
+                <pre class="codeblock">&lt;Parameter id="MEMORY_STORAGE"&gt;
+...
+<strong>  &lt;RoleCosts total="0.00"&gt;
+    &lt;RoleCost basePrice="0.00" factor="0.4020087753882915" 
+     id="USER" price="0.00"/&gt;
+    &lt;RoleCost basePrice="0.00" factor="0.8040175186678614" 
+     id="ADMIN" price="0.00"/&gt;
+  &lt;/RoleCosts&gt;
+</strong>...
+&lt;/Parameter&gt;</pre>
+
+            </div>
+
+        </div>
+
+        <div class="section" id="reference_25043B5D1DED4B2F9D5E9B099A9AC69C__SteppedPrices_reference_refbody_section_26"><h4 class="sectiontitle">SteppedPrices</h4>
+            
+            <p>Specifies the stepped prices for a user assignment, event, or parameter. </p>
+
+            <p><span>Stepped prices allow for the definition of ranges for which different price factors apply. Step limits, i.e. the upper limits of ranges, can be set for:</span></p>
+
+            <ul>
+                <li>The<strong> sum of the time units</strong> users are assigned and work with a subscription in a billing period. For example, up to 10 hours one user is assigned to a subscription cost 10.00 € per hour, every additional hour the user is assigned costs 8.00 €.</li>
+
+                <li>The <strong>number of events</strong> occurring in the usage of a subscription. For example, up to 10 file downloads cost 1.00 € per download, any additional download costs 0.50 €. </li>
+
+                <li><strong>Values of numeric parameters</strong>. For example, uploading up to 100 files costs 1.00 € per file, any additional upload costs 0.50 € per file. </li>
+
+            </ul>
+
+            <p>Stepped prices are independent of any other price model elements.</p>
+
+            <p>A <samp class="codeph">SteppedPrices</samp> element is contained in <samp class="codeph">UserAssignmentCosts</samp> (as subelement of the <samp class="codeph">PriceModel</samp> element), <samp class="codeph">Event</samp>, and <samp class="codeph">PeriodFee</samp> (as subelement of the <samp class="codeph">Parameters</samp> element) elements. </p>
+
+            <p>A <samp class="codeph">SteppedPrices</samp> element has the following attribute: </p>
+
+            <p><samp class="codeph"><strong>amount</strong></samp> - (required, data type <samp class="codeph">decimal</samp>) Summed up costs for all steps including the last one. </p>
+
+            <p>For every price step, a <samp class="codeph">SteppedPrice</samp> element is included in a <samp class="codeph">SteppedPrices</samp> element. </p>
+
+            <p>A <samp class="codeph">SteppedPrice</samp> element has the following attributes: </p>
+
+            <ul>
+                <li><samp class="codeph"><strong>additionalPrice</strong></samp> - (required, data type <samp class="codeph">decimal</samp>) Summed up costs for the previous steps. The costs are calculated from the <samp class="codeph">limit</samp>, <samp class="codeph">freeAmount</samp> and <samp class="codeph">basePrice</samp> attributes of the previous step (<samp class="codeph">(limit - freeAmount) * price</samp>). The <samp class="codeph">additionalPrice</samp> attribute of the first step always has a value of <samp class="codeph">0</samp>. The value is rounded to two decimal places.</li>
+
+                <li><samp class="codeph"><strong>basePrice</strong></samp> - (required, data type <samp class="codeph">decimal</samp>) Costs for the current step according to the price model. </li>
+
+                <li><samp class="codeph"><strong>freeAmount</strong></samp> - (required, data type <samp class="codeph">long</samp>) Amount of units for the current step that are considered as a fixed discount, for example, the number of users that are free of charge. The value corresponds to the value of the <samp class="codeph">limit</samp> attribute in the previous step. The <samp class="codeph">freeAmount</samp> attribute of the first step always has a value of <samp class="codeph">0</samp>.</li>
+
+                <li><samp class="codeph"><strong>limit</strong></samp> - (required, data type <samp class="codeph">string</samp>) Step limit as defined in the price model.</li>
+
+                <li><samp class="codeph"><strong>stepAmount</strong></samp> - (optional, data type <samp class="codeph">decimal</samp>) Summed up costs for the current step. These costs are calculated from the <samp class="codeph">basePrice</samp> and <samp class="codeph">stepEntityCount</samp> attributes of the current step. The value is rounded to two decimal places.</li>
+
+                <li><samp class="codeph"><strong>stepEntityCount</strong></samp> - (optional, data type <samp class="codeph">decimal</samp>) Factor used to calculate the costs for the current step. </li>
+
+            </ul>
+
+            <p><strong>Example</strong>:</p>
+
+            <div class="p">
+                <pre class="codeblock">&lt;PriceModel calculationMode="PRO_RATA" id="350001"&gt;
+...
+  &lt;UserAssignmentCosts basePeriod="MONTH" factor="2.707940780619112" numberOfUsersTotal="4" price="1283.18"&gt;
+<strong>    &lt;SteppedPrices amount="1283.18"&gt;
+      &lt;SteppedPrice additionalPrice="0.00" basePrice="500.00" 
+       freeAmount="0" limit="2" stepAmount="1000.00" stepEntityCount="2"/&gt;
+      &lt;SteppedPrice additionalPrice="1000.00" basePrice="400.00" 
+       freeAmount="2" limit="3" stepAmount="283.18" 
+       stepEntityCount="0.707940780619112"/&gt;
+      &lt;SteppedPrice additionalPrice="1400.00" basePrice="300.00" 
+       freeAmount="3" limit="null" stepAmount="0.00" stepEntityCount="0"/&gt;
+    &lt;/SteppedPrices&gt;</strong>
+  &lt;/UserAssignmentCosts&gt;
+...
+&lt;/PriceModel&gt;</pre>
+
+            </div>
+
+        </div>
+
+        <div class="section" id="reference_25043B5D1DED4B2F9D5E9B099A9AC69C__OverallCosts_reference_refbody_section_12"><h4 class="sectiontitle">OverallCosts</h4>
+            
+            <p>Contains the total amount of the charges to be paid by a customer for all subscriptions in the current billing period. The costs are given in the currency specified in the price model. </p>
+
+            <p>If a discount was specified, the net amount of the costs is given in the <samp class="codeph">Discount</samp> element<span> (see <a href="r_BillingData.htm#reference_25043B5D1DED4B2F9D5E9B099A9AC69C__Discount_reference_refbody_section_25">Discount</a>)</span>. If a VAT rate was defined, it is given in the <samp class="codeph">VAT</samp> element<span> (see <a href="r_BillingData.htm#reference_25043B5D1DED4B2F9D5E9B099A9AC69C__VAT_reference_refbody_section_26">VAT</a>)</span>.</p>
+
+            <p>An <samp class="codeph">OverallCosts</samp> element has the following attributes:</p>
+
+            <ul>
+                <li><samp class="codeph"><strong>netAmount</strong></samp> - (required, data type <samp class="codeph">decimal</samp>) Net costs after the net discount has been deducted from the original net costs<span> (see <a href="r_BillingData.htm#reference_25043B5D1DED4B2F9D5E9B099A9AC69C__Discount_reference_refbody_section_25">Discount</a>)</span>. The value is rounded to two decimal places.</li>
+
+                <li><samp class="codeph"><strong>currency</strong></samp> - (required, data type <samp class="codeph">string</samp>) ISO code of the currency in which the costs are calculated. </li>
+
+                <li><samp class="codeph"><strong>grossAmount</strong></samp> - (required, data type <samp class="codeph">decimal</samp>) Gross amount of the costs, calculated from the net costs (<samp class="codeph">netAmount</samp>) plus VAT<span> (see <a href="r_BillingData.htm#reference_25043B5D1DED4B2F9D5E9B099A9AC69C__VAT_reference_refbody_section_26">VAT</a>)</span>. The value is rounded to two decimal places.</li>
+
+            </ul>
+
+            <p><strong>Example</strong>:</p>
+
+            <div class="p">
+                <pre class="codeblock">&lt;BillingDetails key="10002" timezone="UTC+01:00"&gt;
+...
+<strong>&lt;OverallCosts netAmount="900.00" currency="EUR" grossAmount="1053.00"/&gt;    
+&lt;/OverallCosts&gt;</strong>
+&lt;/BillingDetails&gt;</pre>
+
+            </div>
+
+        </div>
+
+        <div class="section" id="reference_25043B5D1DED4B2F9D5E9B099A9AC69C__VAT_reference_refbody_section_26"><h4 class="sectiontitle">VAT</h4>
+            
+            <p>Specifies the VAT rate to be applied.</p>
+
+            <p>A supplier can define a basic VAT rate that applies by default to all prices for his customers. In addition to this basic VAT rate, country-specific or even customer-specific VAT rates can be defined. You can:</p>
+
+            <div class="p">
+                <ul>
+                    <li>Enable VAT rate support for your organization. </li>
+
+                    <li>Define a default VAT rate that applies to all prices for all customers.</li>
+
+                    <li><span>Define a country-specific VAT rate for every country where you want to sell your services.</span></li>
+
+                    <li><span>Define a customer-specific VAT rate, for example, in case a customer organization has a subsidiary located in another country than its parent organization.</span></li>
+
+                </ul>
+
+            </div>
+
+            <p><span>The VAT rate settings have the following effects on the cost calculation for a customer: </span></p>
+
+            <ul>
+                <li><span>If VAT rate support is disabled, prices are calculated as net prices; no VAT is added to the overall costs.</span></li>
+
+                <li><span>A customer-specific VAT rate takes priority over any default or country-specific VAT rate.</span></li>
+
+                <li><span>The country-specific VAT rate for the country where the customer organization is located is applied to the cost calculation when no customer-specific VAT rate is defined.</span></li>
+
+                <li><span>The default VAT rate is used in all other cases.</span></li>
+
+            </ul>
+
+            <p><span>The VAT rate does not affect any price model elements. The calculated VAT amount is added to the overall costs and results in the gross price to be paid by a customer. </span></p>
+
+            <p>A <samp class="codeph">VAT</samp> element is contained in the <samp class="codeph">OverallCosts</samp> element. </p>
+
+            <p>A <samp class="codeph">VAT</samp> element has the following attributes: </p>
+
+            <ul>
+                <li><samp class="codeph"><strong>percent</strong></samp> - (required, data type <samp class="codeph">float</samp>) VAT rate in percent, specified as a decimal number. </li>
+
+                <li><samp class="codeph"><strong>amount</strong></samp> - (required, data type <samp class="codeph">decimal</samp>) Net amount of VAT to be added to the net costs (<samp class="codeph">netAmount</samp> attribute of the <samp class="codeph">OverallCosts</samp> element). The value is rounded to two decimal places.</li>
+
+            </ul>
+
+            <p><strong>Example</strong>:</p>
+
+            <div class="p">
+                <pre class="codeblock">&lt;BillingDetails key="10002" timezone="UTC+01:00"&gt;
+...
+  &lt;OverallCosts netAmount="900.00" currency="EUR" grossAmount="1053.00"&gt;
+    <strong>&lt;VAT percent="17.0" amount="153.00"/&gt;</strong>
+  &lt;/OverallCosts&gt;
+&lt;/BillingDetails&gt;</pre>
+
+            </div>
+
+        </div>
+
+        <div class="section" id="reference_25043B5D1DED4B2F9D5E9B099A9AC69C__Discount_reference_refbody_section_25"><h4 class="sectiontitle">Discount</h4>
+            
+            <p>Specifies the discount granted to the customer. </p>
+
+            <p><span>A discount can be defined for a customer which applies to all subscriptions of the customer to services. A discount may be valid as of the current or a future month. It can be restricted to a certain period of time. Before the time expires, the customer is notified by email so that he can react and contact the supplier.</span></p>
+
+            <p><span>The discount is defined as a percentage that is subtracted from the regular total price for a subscription. It is granted for all costs of a customer that incur in a billing period in which the discount is valid. It does not matter whether the discount is valid for the whole billing period or only a part of it.</span></p>
+
+            
+            <p>A <samp class="codeph">Discount</samp> element is contained in the <samp class="codeph">OverallCosts</samp> element.</p>
+
+            <p>A <samp class="codeph">Discount</samp> element has the following attributes: </p>
+
+            <ul>
+                <li><samp class="codeph"><strong>percent</strong></samp> - (required, data type <samp class="codeph">float</samp>) Percentage of costs to be deducted from the net costs, specified as a decimal number. </li>
+
+                <li><samp class="codeph"><strong>discountNetAmount</strong></samp> - (required, data type <samp class="codeph">decimal</samp>) Net discount to be deducted from the original net costs (<samp class="codeph">netAmountBeforeDiscount</samp>). The value is rounded to two decimal places.</li>
+
+                <li><samp class="codeph"><strong>netAmountAfterDiscount</strong></samp> - (required, data type <samp class="codeph">decimal</samp>) Net costs after the net discount (<samp class="codeph">discountNetAmount</samp>) has been deducted from the original net costs (<samp class="codeph">netAmountBeforeDiscount</samp>). The value is rounded to two decimal places.</li>
+
+                <li><samp class="codeph"><strong>netAmountBeforeDiscount</strong></samp> - (required, data type <samp class="codeph">decimal</samp>) Net costs before the net discount (<samp class="codeph">discountNetAmount</samp>) has been deducted. The value is rounded to two decimal places.</li>
+
+            </ul>
+
+            <p><strong>Example</strong>:</p>
+
+            <div class="p">
+                <pre class="codeblock">&lt;BillingDetails key="10002" timezone="UTC+01:00"&gt;
+...
+  &lt;OverallCosts netAmount="900.00" currency="EUR" grossAmount="1053.00"&gt;
+<strong>    &lt;Discount percent="10.00" discountNetAmount="100.00" 
+     netAmountAfterDiscount="900.00"
+     netAmountBeforeDiscount="1000.00" /&gt;</strong>
+    &lt;VAT percent="17.0" amount="153.00"/&gt;
+  &lt;/OverallCosts&gt;
+&lt;/BillingDetails&gt;</pre>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>

@@ -54,12 +54,9 @@
 
                 </div>
 
-                <div class="section"><h4 class="sectiontitle">BASE_URL</h4>Optional. Diese URL führt zur Startseite der Plattform, falls die Kommunikation nicht über HTTPS erfolgt. Bleibt das Feld leer, wird der Wert von <samp class="codeph">BASE_URL_HTTPS</samp> verwendet. <p>Syntax: <samp class="codeph">http://&lt;host&gt;:&lt;port&gt;/&lt;context-root&gt;</samp></p>
-<p>Die Voreinstellung für <samp class="codeph">&lt;context-root&gt;</samp> ist <samp class="codeph">oscm-portal</samp>.</p>
-</div>
-
-                <div class="section"><h4 class="sectiontitle">BASE_URL_HTTPS</h4>Obligatorisch. Diese URL führt zur Startseite der Plattform und dient zum Erstellen der URL, um auf Services über HTTPS zuzugreifen. <p>Syntax: <samp class="codeph">https://&lt;host&gt;:&lt;port&gt;/&lt;context-root&gt;</samp></p>
-<p>Die Voreinstellung für <samp class="codeph">&lt;context-root&gt;</samp> ist <samp class="codeph">oscm-portal</samp>.</p>
+                
+                <div class="section"><h4 class="sectiontitle">BASE_URL_HTTPS</h4>Obligatorisch. Diese URL führt zur Startseite der Plattform und dient zum Erstellen der URL, um auf Services über HTTPS zuzugreifen. <p>Syntax: <samp class="codeph">https://&lt;hostname.fqdn&gt;:8081/oscm-portal</samp></p>
+<p><samp class="codeph">&lt;hostname.fqdn&gt;</samp> ist der Name und FQDN des Servers, auf dem <span>OSCM</span> installiert wurde. <samp class="codeph">8081</samp> ist die Voreinstellung des Ports für HTTPS-Zugriffe, <samp class="codeph">oscm-portal</samp> ist die Voreinstellung für den Zugriff <span>OSCM</span>. Diese kann nicht geändert werden. </p>
 </div>
 
                 <div class="section"><h4 class="sectiontitle">CUSTOMER_SELF_REGISTRATION_ENABLED</h4>

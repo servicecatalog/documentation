@@ -21,13 +21,11 @@
 
     <div>
         <div class="section">
-            <p>Reports are generated in the language the user has set in his profile. The texts used in the reports are <span>available in properties files contained in the following archive which is provided for each release: </span>
-            </p>
+            <p>Reports are generated in the language the user has set in his profile. The texts used in the reports are provided after installation in properties files contained in a separate archive file in the <samp class="codeph">oscm-birt</samp> container. </p>
 
-            <p><span><samp class="codeph">oscm-reports.zip</samp></span>
-            </p>
+            <p><samp class="codeph">oscm-reports.zip</samp> ### true? ###</p>
 
-            <p>The <span><samp class="codeph">oscm-reports.zip</samp></span> archive comes with the following properties files: </p>
+            <p>It contains the following properties files: </p>
 
             <div class="p">
                 <ul>
@@ -47,7 +45,7 @@
 
             <div class="p">
                 <ol>
-                    <li class="liexpand">Extract the <span><samp class="codeph">oscm-reports.zip</samp></span> file to a local directory. </li>
+                    <li class="liexpand">Extract the <samp class="codeph">oscm-reports.zip</samp> file to a local directory. </li>
 
                     <li class="liexpand">Go to the <samp class="codeph">WEB-INF</samp> subdirectory. </li>
 
@@ -84,11 +82,11 @@
                         </div>
 </li>
 
-                    <li class="liexpand"><span>Copy the new properties file to the <samp class="codeph">WEB-INF</samp> subfolder of the folder where the BIRT report engine is deployed on the application server, usually <samp class="codeph">&lt;GLASSFISH_HOME&gt;/glassfish/domains/&lt;domain&gt;/applications/birt</samp>.</span>
-                    </li>
+                    <li class="liexpand">Create a new <samp class="codeph">oscm-reports.zip</samp> file containing the additional properties file for the new language.</li>
 
-                    <li class="liexpand"><span>Restart the BIRT application.</span>
-                    </li>
+                    <li class="liexpand">### how is the new file imported and made availble ?### </li>
+
+                    <li class="liexpand">### which container must be stopped / restarted? How?</li>
 
                 </ol>
 

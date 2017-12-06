@@ -22,7 +22,7 @@
 
     <div>
         <div class="section">
-            <p id="task55550__On_the_task_taskbody_context_p_1">On the <span class="uicontrol">Customize layout</span> page, you can specify a style sheet that defines the branding and layout of a marketplace, i.e. the colors, fonts, background images, and logos. <span id="task55550__The_best_way_to_create_an_app_task_taskbody_context_p_1_ph">The best way to create an appropriate style sheet is to use the platform's default style sheet as a basis and adapt it as required. You then provide the customized style sheet and the files it references to the platform operator so that he can make them available on the <span>OSCM</span>Web server. Its URL can then be specified <span>on the <span class="uicontrol">Customize layout</span> page</span>. ### is this still true?### If no URL is set, the default style sheet is used.</span>
+            <p id="task55550__On_the_task_taskbody_context_p_1">On the <span class="uicontrol">Customize layout</span> page, you can specify a style sheet that defines the branding and layout of a marketplace, i.e. the colors, fonts, background images, and logos. <span id="task55550__The_best_way_to_create_an_app_task_taskbody_context_p_1_ph">The best way to create an appropriate style sheet is to use the platform's default style sheet as a basis and adapt it as required. You then provide the customized style sheet and the files it references to the platform operator so that he can make them available in the <samp class="codeph">oscm-branding</samp> container. When the operator is finished, he can provide the URL to the style sheet that can then be specified <span>on the <span class="uicontrol">Customize layout</span> page</span>. If no URL is set, the default style sheet is used.</span>
             </p>
 
             <p id="task55550__The_platform_s_default_style_task_taskbody_context_p_2">The platform's default style sheet <span>(<samp class="codeph">mp.css</samp>) </span>and the files and images it references are provided in the branding package, a ZIP file which you can download <span>on the <span class="uicontrol">Customize layout</span> page</span>. The branding package also includes sample HTML pages of a marketplace. You can use these HTML pages to preview and test your customizations. In the style sheet, you can find comments and descriptions of the relevant elements of the HTML pages as well as information on which elements you must not customize in order to ensure that the page layout does not get broken.</p>
@@ -30,7 +30,7 @@
             <p id="task55550__Be_aware_of_the_following:_task_taskbody_context_p_3">Be aware of the following:</p>
 
             <ul id="task55550__Your_organization_is_responsi_task_taskbody_context_ul">
-                <li class="liexpand">Your organization is responsible for hosting and providing the correct version of the customized style sheet and all referenced files. </li>
+                <li class="liexpand">Your organization is responsible for providing the correct version of the customized style sheet and all referenced files to the platform operator. </li>
 
                 <li class="liexpand">If the server hosting the style sheet cannot be reached, the behavior depends on the Web browser used to access the marketplace. For example, the browser could freeze or show the content without any style. <p>In order to reduce this risk to a minimum, the platform operator must ensure that the customized style sheet is stored in a location that is always available.</p>
 </li>
@@ -39,8 +39,7 @@
 
                 <li class="liexpand">A new layout becomes effective as soon as the platform operator has loaded your changes to the system. They are then effective for a user the next time he logs in. Anonymous users need to close and reopen their Web browser. Thus, make sure that the previous style sheet is still available for some time when you update it to a newer version. </li>
 
-                <li class="liexpand">You need to ensure that any Web browser accessing your marketplace is forced to retrieve the style sheet and the referenced files from the server when a new version is available and accessible from the Internet. <p>You can achieve this by adding version information to the style sheet URL, for example: </p>
-<p><samp class="codeph">http://&lt;your_host&gt;/Version1.1/StyleSheets/Customized.css</samp></p>
+                <li class="liexpand">You need to ensure that any Web browser accessing your marketplace is forced to retrieve the style sheet and the referenced files from the server when a new version is available and accessible from the Internet. <p>You can achieve this by adding version information to the style sheet URL.</p>
 <p>Every time you provide a new version of the style sheet, you change the version information and thus the URL. </p>
 <p>Another way is to use entity tags (ETags), which are part of HTTP. ETags are a mechanism that HTTP provides for Web cache validation. They allow a client to make conditional requests. A Web server does not need to send a full response if the content has not changed. </p>
 </li>
