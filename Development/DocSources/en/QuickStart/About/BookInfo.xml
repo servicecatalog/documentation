@@ -1,5 +1,5 @@
 <?xml version="1.0"?> 
-<!-- Copyright FUJITSU LIMITED 2017 -->
+<!-- Copyright FUJITSU LIMITED 2018 -->
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd"
 [
 <!ENTITY % entities PUBLIC "-//XDOC//ENTITIES//FujitsuUserDoc" "entities.dtd">
@@ -35,7 +35,7 @@
             <entry colname="col2"/>
           </row>
           <row product="oscm_ee">
-            <entry colname="col1">Copyright FUJITSU LIMITED 2017</entry>
+            <entry colname="col1">Copyright FUJITSU LIMITED 2018</entry>
             <entry colname="col2"
               >All rights reserved, including those of translation into other languages. No part of this manual may be reproduced in any form whatsoever without the written permission of FUJITSU LIMITED.</entry>
           </row>
@@ -45,7 +45,7 @@
         <colspec colnum="1" colname="col1" colwidth="*"/>
         <tbody>
           <row>
-            <entry colname="col1">Copyright FUJITSU LIMITED 2017</entry>
+            <entry colname="col1">Copyright FUJITSU LIMITED 2018</entry>
           </row>
         </tbody>
       </tgroup>
