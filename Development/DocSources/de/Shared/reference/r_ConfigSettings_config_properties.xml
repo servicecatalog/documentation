@@ -27,8 +27,12 @@
                         <p>Erlaubter Werte: <codeph>INTERNAL</codeph>
                         </p>
                 </section>
-                <section><title>BASE_URL</title>Optional. Diese URL führt zur Startseite der Plattform, falls die Kommunikation nicht über HTTPS erfolgt. Bleibt das Feld leer, wird der Wert von <codeph>BASE_URL_HTTPS</codeph> verwendet. <p>Syntax: <codeph>http://&lt;host&gt;:&lt;port&gt;/&lt;context-root></codeph></p><p>Die Voreinstellung für <codeph>&lt;context-root></codeph> ist <codeph>oscm-portal</codeph>.</p></section>
-                <section><title>BASE_URL_HTTPS</title>Obligatorisch. Diese URL führt zur Startseite der Plattform und dient zum Erstellen der URL, um auf Services über HTTPS zuzugreifen. <p>Syntax: <codeph>https://&lt;host&gt;:&lt;port&gt;/&lt;context-root></codeph></p><p>Die Voreinstellung für <codeph>&lt;context-root></codeph> ist <codeph>oscm-portal</codeph>.</p></section>
+                <!--section><title>BASE_URL</title>Optional. Diese URL führt zur Startseite der Plattform, falls die Kommunikation nicht über HTTPS erfolgt. Bleibt das Feld leer, wird der Wert von <codeph>BASE_URL_HTTPS</codeph> verwendet. <p>Syntax: <codeph>http://&lt;host&gt;:&lt;port&gt;/&lt;context-root></codeph></p><p>Die Voreinstellung für <codeph>&lt;context-root></codeph> ist <codeph>oscm-portal</codeph>.</p></section-->
+                <section><title>BASE_URL_HTTPS</title>Obligatorisch. Diese URL führt zur Startseite der Plattform und dient zum Erstellen der URL, um auf Services über HTTPS zuzugreifen. <p>Syntax: <codeph>https://&lt;hostname.fqdn>:8081/oscm-portal</codeph></p><p><codeph>&lt;hostname.fqdn></codeph> ist der Name und FQDN des Servers, auf dem <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        /> installiert wurde. <codeph>8081</codeph> ist die Voreinstellung des Ports für HTTPS-Zugriffe, <codeph>oscm-portal</codeph> ist die Voreinstellung für den Zugriff <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                />. Diese kann nicht geändert werden. </p></section>
                 <section>
                         <title>CUSTOMER_SELF_REGISTRATION_ENABLED</title>
                         <p>Optional. Legt fest, ob sich Kunden auf einem Marktplatz selbst registrieren können. Ist der Wert auf <codeph>false</codeph> gesetzt, muss entweder der Betreiber eine Organisation für den Kunden anlegen oder ein Anbieter (Serviceanbieter, Vermittler, Wiederverkäufer) muss den Kunden registrieren. </p>

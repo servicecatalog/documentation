@@ -13,12 +13,18 @@
                                                 conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                                         /> is available:</ph></p>
                         <ul>
+                                <li product="oscm_ee"><ph id="Overview:_concept_conbody_section_ul_l"
+                                                        ><i>QuickStart Guide:</i> A PDF manual describing the basic steps to setup, deploy, and start using <ph
+                                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                        />. It is written for everybody interested quickly starting to try out <ph
+                                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                />.</ph></li>
                                 <li><ph id="Overview:_concept_conbody_section_ul_l"
-                                                        ><i>Overview:</i> A PDF manual introducing <ph
-                                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                                        />. It is written for everybody interested in <ph
-                                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                                /> and does not require any special knowledge.</ph></li>
+                                        ><i>Overview:</i> A PDF manual introducing <ph
+                                                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        />. It is written for everybody interested in <ph
+                                                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        /> and does not require any special knowledge.</ph></li>
                                 
                                 <li><ph id="Operation_Guide:_concept_conbody_section_ul_l"
                                                         ><i>Operator's Guide:</i> A PDF manual for operators describing how to administrate and maintain <ph

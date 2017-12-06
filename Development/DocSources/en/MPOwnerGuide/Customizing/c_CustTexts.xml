@@ -36,16 +36,16 @@
                                         />. As soon as you have saved the file contents in <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                 />, the changes are visible.</p>
-                        <note><ph
+                        <!--note><ph
                                         conref="../../help/tasks/shop_translations.xml#task634/The_customized_texts_of_the_u_task_taskbody_result_note_ph"
                                 />
-                        </note>
+                        </note-->
                         <p>To export and later import the texts, use the <uicontrol>Customize texts</uicontrol> menu option in the <uicontrol>Marketplace</uicontrol> menu of the <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                 /> administration portal.</p>
                         <p>
                                 <note>
-                                        <p>When an operator upgrades to a new release of the platform, new keys may have been added to the system, others may have been changed or deleted. ### is this true ### Your customized texts are not overwritten by the upgrade. However, be aware that you need to check for changes, and it may be necessary to update your customizations. </p>
+                                        <p>When an operator upgrades to a new release of the platform, new keys may have been added to the system, others may have been changed or deleted. Your customized texts are not overwritten by the upgrade. However, be aware that you need to check for changes, and it may be necessary to update your customizations. </p>
                                         <p>Make sure to have a backup of your changes. After the upgrade, export the texts again and save them to a new file. Compare the new file with the one containing your previous customizations and make the necessary changes. Then import your customized file again. </p>
                                 </note>
                         </p>

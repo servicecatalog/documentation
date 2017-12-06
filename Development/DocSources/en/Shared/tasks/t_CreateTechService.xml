@@ -27,13 +27,13 @@
                        </p>
                     
                     <p audience="os"
-                        >The OpenStack integration package, <codeph>oscm-openstack-install-pack.zip</codeph>, includes technical services as samples:</p>
+                        >After deployment, technical services as samples are available: ### where are they located? Are there really samples?###</p>
                     <ul audience="os">
                         <li><codeph>samples/TechnicalService_OpenStack.xml</codeph> for native OpenStack</li>
                         <li><codeph>samples/TechnicalService_K5.xml</codeph> for FUJITSU Cloud Service K5</li>
                     </ul>
                         <p audience="os"
-                            >The technical services specify sample templates as parameter options. The sample templates are also included in the <codeph>oscm-openstack-install-pack.zip</codeph> file:</p>
+                            >The technical services specify sample templates as parameter options. ### The sample templates are also included in the <codeph>oscm-openstack-install-pack.zip</codeph> file: ### see above ###</p>
                         <ul audience="os">
                         <li><codeph>samples/template.json</codeph> for a template of type AWS CloudFormation for native OpenStack</li>
                         <li><codeph>samples/template.yaml</codeph> for a template of type Heat Orchestration Template for native OpenStack</li>
@@ -63,12 +63,12 @@
                                 href="../../VMWareIntegrationGuide/Appendix/r_ServiceParameters.xml"/>.</li>
                         
                     </ul>
-                    <p>
+                    <!--p>
                         <note>Make sure that you do not specify the <codeph>baseUrl</codeph> attribute in the technical service definition XML file. It specifies an application's remote interface and is not needed for providing <ph
                                 conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> services for <ph
                                 audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph audience="vmware"
                                 >vSphere</ph>. </note>
-                    </p>
+                    </p-->
                 </info>
             </step>
             <step>

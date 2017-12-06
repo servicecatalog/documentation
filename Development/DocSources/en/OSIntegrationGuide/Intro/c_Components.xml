@@ -19,7 +19,8 @@
           conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
         /> supports the AWS CloudFormation Template and the Heat Orchestration Template.</p>
       <p>A template enables application developers to describe and automate the deployment of infrastructure, services, and applications. Collections of resources (e.g. networks, servers, or storage) can be deployed from a single template. The template serves as an orchestration document that details everything needed to carry out the orchestration. Once instantiated, the resources are also referred to as stacks.</p>
-      <p>Each APP installation supports one OpenStack service controller. This limitation can be overcome by installing APP several times to different application server domains. The need for more than one service controller may arise because multiple OpenStack accounts or technology provider organizations have to be used.</p>
+      <p>When APP is deployed, an OpenStack service controller is also deployed, registered, and initialized. </p>
+      <p>###This limitation can be overcome by installing APP several times to different application server domains. The need for more than one service controller may arise because multiple OpenStack accounts or technology provider organizations have to be used.### is it still possible to have multiple controllers? If yes, how? ###</p>
     </section>
   </conbody>
 </concept>

@@ -29,8 +29,7 @@
                         /> administration portal and marketplaces. </li>
                     <li><codeph>oscm-app</codeph>: The Asynchronous Provisioning Platform (APP) together with an OpenStack and Amazon Web Services (AWS) service controller. </li>
                     <li><codeph>oscm-db</codeph>: Database SQL server providing the database schema required for running <ph
-                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        /> and APP. ###For each container (true?)###, a volume for persistent storage is mounted during the deployment process. The databases write to these volumes so that data is preserved in case of database updates.</li>
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> and APP. </li>
                     <li><codeph>oscm-proxy</codeph>: A static Web server providing reverse proxy functionality. </li>
                 </ul></p>
             <p>
@@ -38,21 +37,18 @@
                     <image href="../_images/Containers.png" alt="Containers.png" width="400" height="194"/>
                 </fig>
             </p>
-            <p>By default, data is persisted in the following directory on the machine hosting the VM where  is deployed: </p>
-            <p><codeph>&lt;Path_to_docker>/data/oscm-db/data:/var/lib/postgresql/data</codeph></p>
+            <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> and APP store their data in PostgreSQL databases. For each database, a volume for persistent storage is mounted during the deployment process. The databases write to these volumes so that data is preserved in case of database updates. By default, data is persisted in the following directory on the machine hosting the VM where <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> is deployed (the Docker host): </p>
+            <p><codeph>&lt;docker>/data/oscm-db/data:/var/lib/postgresql/data</codeph></p>
+            <p>where <codeph>&lt;docker></codeph> is the base directory where Docker is installed and where data is persisted. Hereafter, this directory is referred to as <codeph>/docker</codeph>. </p>
         </section>
-        <section>
-            <title>Container Communication</title>
-            <p>The following figure provides an overview of the container communication on a Docker host (a VM):</p>
-            <p>### Are the ports correct? What are the ports for the help and db containers?</p>
-            <p>### How is the oscm-db container integrated?</p>
-            <p>
-                <fig>
-                    <image href="../_images/ContainerCommunication.png" alt="ContainerCommunication.png" width="415"
-                        height="248"/>
-                </fig>
-            </p>
-            <p>The host-internal communication always relies on the HTTP protocol, whereas calls from outside of the host are always secured via HTTPS. The platform operator is responsible for opening the indicated ports, which can either be addressed using the FQDN or the floating IP address of the respective container. </p>
-        </section>
+        <section><title>Container Communication</title><p>The following figure provides an overview of the container communication on a Docker host (a VM):</p><p><image
+                    href="../_images/ContainerCommunication.png" alt="ContainerCommunication.png" width="400"
+                    height="255"
+                /></p><p>The host-internal communication always relies on the HTTP protocol, whereas calls from outside of the host are always secured via HTTPS. The platform operator is responsible for opening the indicated ports, which can either be addressed using the FQDN or the floating IP address of the respective container. </p>To look inside a container, you can use the following command for logging in: <p>
+                <codeblock>docker exec -it &lt;container name> /bin/bash</codeblock>
+            </p></section>
     </conbody>
 </concept>

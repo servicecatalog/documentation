@@ -14,7 +14,7 @@
       <p id="resources">Ein Sprachpaket setzt sich wie folgt zusammen: <ul compact="no">
           <li><b>Benutzeroberfläche</b>: Alle Texte der Benutzeroberfläche und Texte in von der Plattform generierten E-Mails. </li>
           <li><uicontrol>Online-Hilfe</uicontrol> und <uicontrol>FAQ-Datei</uicontrol> im HTML-Format: Die Online-Hilfe wird im Administrationsportal, die FAQ-Datei als Hilfe zum Marktplatz angezeigt. </li>
-          <li><uicontrol>Texte in Berichten</uicontrol>: Texte in von der Plattform generierten Berichten. </li>
+          <!--li><uicontrol>Texte in Berichten</uicontrol>: Texte in von der Plattform generierten Berichten. </li-->
         </ul></p>
       <p id="AddingLanguage"
           >Um eine Sprache hinzuzufügen oder existierende Texte zu ändern, sind folgende Schritte erforderlich: <ol
@@ -29,16 +29,16 @@
                   <p>Die Online-Hilfe und FAQs können direkt in den HTML-Dateien übersetzt oder aktualisiert werden. Weitere Informationen erhalten Sie <xref
                       href="../../Shared/reference/r_Language_OnlineHelp_FAQ.xml">hier</xref>.</p>
                 </li>
-                <li>
+                <!--li>
                   <p>Texte in Berichten werden in Konfigurationsdateien übersetzt oder aktualisiert. Weitere Informationen erhalten Sie <xref
                       href="../../Shared/reference/r_Language_ReportLabels.xml">hier</xref>.</p>
-                </li>
+                </li-->
               </ul>
             </p></li>
           <li>Eine neue Sprache muss auf der Seite <uicontrol>Sprachen verwalten</uicontrol> registriert werden.</li>
           <li>Importieren Sie die übersetzte oder aktualisierte Microsoft Excel-Datei.</li>
           <li>Installieren Sie die übersetzten oder aktualisierten Online-Hilfe- und FAQ-Dateien. </li>
-          <li>Installieren Sie die übersetzten oder aktualisierten Texte in Berichten. </li>
+          <!--li>Installieren Sie die übersetzten oder aktualisierten Texte in Berichten. </li-->
           <li>Eine neue Sprache muss auf der Seite <uicontrol>Sprachen verwalten</uicontrol> aktiviert werden. Benutzer können jede aktivierte Sprache in Ihrem Benutzerprofil einstellen. </li>
         </ol></p>
       <p>Die Seite <b>Sprachen verwalten</b> verwenden Sie für folgende Aufgaben: </p>
@@ -70,10 +70,10 @@
         <ol compact="no">
           <li>Exportieren Sie die Texte der Benutzeroberfläche und übersetzen Sie sie. </li>
           <li>Importieren Sie die Texte. </li>
-          <li>Übersetzen Sie die Online-Hilfe- und FAQ-Dateien sowie die Texte in Berichten und installieren Sie sie. Informationen zu Online-Hilfe- und FAQ-Dateien erhalten Sie <xref
-              href="../../Shared/reference/r_Language_OnlineHelp_FAQ.xml">hier</xref>, zu Texten in Berichten <xref
+          <li>Übersetzen Sie die Online-Hilfe- und FAQ-Dateien<!--ph> sowie die Texte in Berichten</ph--> und installieren Sie sie. Informationen zu Online-Hilfe- und FAQ-Dateien erhalten Sie <xref
+              href="../../Shared/reference/r_Language_OnlineHelp_FAQ.xml">hier</xref><!--ph>, zu Texten in Berichten <xref
               href="../../Shared/reference/r_Language_ReportLabels.xml"
-              >hier</xref>. <p>Sie können auch nur einen Teil der Texte übersetzen. Zum Beispiel können Sie nur die Online-Hilfe, FAQs, Texte in E-Mails und Berichten auf Ungarisch zur Verfügung stellen, die Benutzeroberfläche aber auf Englisch beibehalten. Wählt ein Benutzer Ungarisch in seinem Benutzerprofil, sieht er die Benutzeroberfläche auf Englisch, alle weiteren Texte auf Ungarisch. </p></li>
+              >hier</xref></ph>ph-->. <p>Sie können auch nur einen Teil der Texte übersetzen. Zum Beispiel können Sie nur die Online-Hilfe und FAQs, sowie Texte in E-Mails<!--ph> und Berichten</ph--> auf Ungarisch zur Verfügung stellen, die Benutzeroberfläche aber auf Englisch beibehalten. Wählt ein Benutzer Ungarisch in seinem Benutzerprofil, sieht er die Benutzeroberfläche auf Englisch, alle weiteren Texte auf Ungarisch. </p></li>
           <li>Aktivieren Sie die neue Sprache, damit Benutzer sie auswählen können. </li>
         </ol>
       </p>

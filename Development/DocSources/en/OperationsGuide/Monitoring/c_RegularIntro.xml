@@ -12,11 +12,9 @@
         <ul>
             <li>The monitoring of <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</li>
             <li>How to configure the log level.</li>
-            <li>The format of the log entries.</li>
-            <li>How to maintain the log files.</li>
             <li>How to export audit log data.</li>
             <li>The backup of the databases, configuration settings, and log files.</li>
+            <li>The monitoring of the JMS queues.</li>
         </ul>
-        <p>### Is the monitoring of JMS queues still possible?###</p>
     </conbody>
 </concept>

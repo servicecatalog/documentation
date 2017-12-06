@@ -22,14 +22,10 @@
             <title>Components and Communication Paths</title>
             <p>The following figure illustrates the components and communication paths involved when using APP to integrate an application with <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
-            <p product="oscm_ce">
-                <fig>
-                    <image href="../_images/IntegrationAPP_CE.png" alt="IntegrationAPP.png" width="483" height="344"/>
-                </fig></p>
-            <p product="oscm_ee">
-                <fig>
-                    <image href="../_images/IntegrationAPP_EE.png" alt="IntegrationAPP.png" width="483" height="344"/>
-                </fig></p>
+            <p product="oscm_ce"><image href="../_images/IntegrationAPP_CE.png" alt="IntegrationAPP_CE.png" width="400"
+                    height="284"/></p>
+            <p product="oscm_ee"><image href="../_images/IntegrationAPP_EE.png" alt="IntegrationAPP_EE.png" width="400"
+                    height="284"/></p>
             <p>The following components are involved:<ul compact="no">
                     <li><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                         /> with the subscription service handling the provisioning tasks.</li>

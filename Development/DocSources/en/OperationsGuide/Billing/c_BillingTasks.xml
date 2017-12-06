@@ -12,8 +12,6 @@
                                     <p>Use the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                     /> reporting facilities to retrieve detailed information on all billing-relevant data of the suppliers, resellers, brokers, and marketplace owners managed on your platform.<ph audience="doc"> For details, refer to <xref
                                                             href="../Reports/c_Reports.xml"/>.</ph></p>
-                                    <p audience="doc">The definition of revenue shares is described in detail in <xref
-                                                            href="../Billing/c_DefineRevenueShares.xml"/>.</p>
                         </section>
             </conbody>
 </concept>

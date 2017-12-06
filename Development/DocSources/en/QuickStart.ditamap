@@ -4,7 +4,7 @@
 <!-- Copyright FUJITSU LIMITED 2017 -->
 <bookmap id="QuickStart"
             xml:lang="en_US">
-    <title>Getting Started with OSCM</title>
+    <title>QuickStart Guide</title>
     <bookmeta>
         <prodinfo
                     product="oscm_ce">
@@ -16,10 +16,10 @@
             <brand/>
             <prognum>V17.6.0</prognum>
             <component/>
-            <series>Getting Started with ESCM</series>
+            <series>QuickStart Guide</series>
         </prodinfo>
         <bookid>
-            <edition>December 2017 - Initial draft </edition>
+            <edition>December 2017 - Draft for review </edition>
             <!--booknumber product="oscm_ee"></booknumber-->
         </bookid>
         <bookrights
@@ -38,15 +38,15 @@
             href="QuickStart/About/BookInfo.xml"/>
         <preface
             format="dita" href="QuickStart/About/c_About.xml"
-                type="concept">
-            <topicref
+                type="concept"/>
+            <!--topicref
                 href="QuickStart/About/c_Readers.xml"
                 type="concept"/>
             <topicref
                 href="QuickStart/About/intro_abbrev.xml"
         type="concept"/>
             
-        </preface>
+        </preface-->
     </frontmatter>
     	<chapter
         href="QuickStart/Intro/c_Prerequisites.xml">

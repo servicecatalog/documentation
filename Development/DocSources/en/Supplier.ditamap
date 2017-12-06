@@ -27,7 +27,7 @@
             <series>Supplier's Guide</series>
         </prodinfo>
         <bookid>
-            <edition>December 2017 - Initial draft </edition>
+            <edition>December 2017 - Draft for review </edition>
             <!--booknumber product="oscm_ee">B1WS-1256-02</booknumber-->
         </bookid>
         <bookrights product="oscm_ce" >
@@ -94,7 +94,7 @@
     </chapter>
     <chapter format="dita" href="SupplierGuide/Reports/c_Reports.xml" type="concept"/>
     <chapter href="SupplierGuide/Triggers/c_Triggers.xml" type="concept"/>
-    <appendix href="SupplierGuide/Reference/r_MenuOptions.xml"/>
+    <!--appendix href="SupplierGuide/Reference/r_MenuOptions.xml"/-->
     <appendix href="Shared/reference/r_LDAP_SettingTypes.xml"/>
         <appendix format="dita" href="DevelopersGuide/Reference/r_BillingData.xml" type="reference"/>
     <appendix href="Shared/glossary/r_Glossary.xml"/>

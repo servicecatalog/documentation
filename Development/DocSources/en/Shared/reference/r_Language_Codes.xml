@@ -7,7 +7,7 @@
     </title>
     <refbody>
         <section>
-            <p>Below is the list of languages and their codes that can be used for user interface and email texts, parameter and event names, report labels, as well as online help and FAQs: </p>
+            <p>Below is the list of languages and their codes that can be used for user interface and email texts, parameter and event names,<!--ph> report labels,</ph--> as well as online help and FAQs: </p>
             <p>
                 <table colsep="1" frame="all" rowsep="1">
                     <tgroup cols="2">

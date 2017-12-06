@@ -27,7 +27,7 @@
             <series>OpenStack Integration</series>
         </prodinfo>
         <bookid>
-            <edition>December 2017 - Initial draft </edition>
+            <edition>December 2017 - Draft for review </edition>
             <!--booknumber product="oscm_ee">B1WS-1264-02</booknumber-->
         </bookid>
         <bookrights product="oscm_ce">
@@ -83,7 +83,7 @@
         <topicref format="dita" href="Shared/concepts/c_ControlExecution.xml" type="concept"/>
         <topicref format="dita" href="Shared/concepts/c_ControllerHandleProblems.xml" type="concept"/>
         <topicref format="dita" href="Shared/concepts/c_ControllerHandleCommProblems.xml" type="concept"/>
-        <topicref format="dita" href="Shared/Installation/c_Backup.xml" type="concept"/>
+        <!--topicref format="dita" href="Shared/Installation/c_Backup.xml" type="concept"/-->
         <topicref format="dita" href="Shared/Installation/c_UpdateConfiguration.xml" type="concept"/>
         <topicref format="dita" href="OSIntegrationGuide/Administrating/c_ImportTemplates.xml" type="concept"/>
         <topicref format="dita" href="Shared/reference/c_LogConfig.xml" type="concept"/>

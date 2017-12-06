@@ -42,13 +42,12 @@
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> via email when the marketplace is created. </p>
             <p>The URL has the following format: </p>
-            <p><codeph>http://&lt;server&gt;:&lt;port&gt;/&lt;context-root>/marketplace?mId=&lt;mID&gt;</codeph>
-            </p>
-            <p><codeph>&lt;server&gt;</codeph> is the Web/application server where <ph
+            <p><codeph>https://&lt;hostname.fqdn>:&lt;port>/oscm-portal?marketplaceId=&lt;mId></codeph></p>
+            <p><codeph>&lt;hostname.fqdn></codeph> is the name and the fully qualified domain name of the machine where <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> has been deployed. <codeph>&lt;port&gt;</codeph> is the port to address the Web/application server (default: <codeph>8080</codeph> for HTTP, <codeph>8081</codeph> for HTTPS). <codeph>&lt;context-root></codeph> is the context root of <ph
+                    /> has been deployed. <codeph>&lt;port></codeph> is the port to address the machine (default <codeph>8081</codeph>), <codeph>oscm-portal</codeph> is the default context root of <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> as set by the platform operator (default: <codeph>oscm-portal</codeph>). <codeph>&lt;mId&gt;</codeph> is the ID of the marketplace.</p>
+                    /> and cannot be changed. <codeph>&lt;marketplaceId></codeph> is the ID of the marketplace.</p>
             <p>People who use the URL for accessing a marketplace can view all services that are marked as public. When subscribing to a service, they are either redirected to the registration Web page or they can log in to <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> directly, provided they are already registered as a customer. </p>
@@ -58,13 +57,7 @@
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 />. Registered customers can see all services, no matter whether they are marked as public or not. A registered customer is sent an email with the login data and an initial password to be used for the first login.</p>
             <p>The URL of the registration Web page has the following format: </p>
-            <p><codeph>http://&lt;server&gt;:&lt;port&gt;/&lt;context-root>/marketplace/registration.jsf?mId=&lt;mID&gt;</codeph>
-            </p>
-            <p><codeph>&lt;server&gt;</codeph> is the Web/application server where <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> has been deployed. <codeph>&lt;port&gt;</codeph> is the port to address the Web/application server (default: <codeph>8080</codeph> for HTTP, <codeph>8081</codeph> for HTTPS). <codeph>&lt;context-root></codeph> is the context root of <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> as set by the platform operator (default: <codeph>oscm-portal</codeph>). <codeph>&lt;mId&gt;</codeph> is the ID of the marketplace.</p>
+            <p><codeph>https://&lt;hostname.fqdn>:&lt;port>/oscm-portal/marketplace/registration.jsf?marketplaceId=&lt;mId></codeph></p>
             <note>The marketplace owner may restrict the access to a marketplace to the users of specific organizations. <ph
                     conref="../../help/tasks/marketplace_manageAccess.xml#task634/When_a_marketplace_small2_ph"/></note>
         </section>

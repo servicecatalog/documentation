@@ -16,7 +16,7 @@
       <p id="resources">A language bundle consists of the following resources: <ul compact="no">
           <li><b>User interface resources</b>: All texts that appear on the user interface or in generated emails.</li>
           <li><uicontrol>Online help</uicontrol> and <uicontrol>FAQ</uicontrol> HTML files: The online help topics are available in the administration portal, the FAQs are available on the marketplaces. </li>
-          <li><uicontrol>Report labels</uicontrol>: The labels and texts for the content of generated reports. </li>
+          <!--li><uicontrol>Report labels</uicontrol>: The labels and texts for the content of generated reports. </li-->
         </ul></p>
       <p id="AddingLanguage">Adding a language or customizing existing texts comprises the following steps: <ol
           compact="no">
@@ -37,13 +37,13 @@
                       /> for details.</ph><ph platform="help">Click <xref
                         href="../../Shared/reference/r_Language_OnlineHelp_FAQ.xml">here</xref> for details.</ph></p>
                 </li>
-                <li>
+                <!--li>
                   <p>The report labels are translated or updated in properties files.</p>
                   <p audience="doc">
                     <ph platform="print">Refer to <xref href="../../Shared/reference/r_Language_ReportLabels.xml"
                       /> for details.</ph><ph platform=" help">Click <xref
                         href="../../Shared/reference/r_Language_ReportLabels.xml">here</xref> for details.</ph></p>
-                </li>
+                </li-->
               </ul>
             </p></li>
           <li>For a new language: Registering the language with <ph platform="print"><ph
@@ -51,7 +51,7 @@
               >the platform</ph><ph platform="help"> on the <uicontrol>Manage languages</uicontrol> page</ph>. </li>
           <li>Importing the translated or updated Microsoft Excel file.</li>
           <li>Deploying the translated or updated online help and FAQ files. </li>
-          <li>Deploying the translated or updated report labels. </li>
+          <!--li>Deploying the translated or updated report labels. </li-->
           <li>For a new language: Activating the language in <ph platform="print"><ph
                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"> </ph></ph><ph platform="help"
               >the platform</ph><ph platform="help"
@@ -96,10 +96,10 @@
         <ol compact="no">
           <li>Exporting the user interface resources and translating them.</li>
           <li>Importing the translated texts and names. </li>
-          <li>Translating online help and FAQ files as well as the report labels and providing them<ph audience="doc"> as described in <xref
-              href="../../Shared/reference/r_Language_OnlineHelp_FAQ.xml"/> and <xref
+          <li>Translating online help and FAQ files and providing them<ph audience="doc"> as described in <xref
+              href="../../Shared/reference/r_Language_OnlineHelp_FAQ.xml"/>.</ph><!--ph> and <xref
               href="../../Shared/reference/r_Language_ReportLabels.xml"
-              /></ph>. <p>You can also provide a subset of the resources that can be translated. For example, you can decide to have the online help, FAQ, email, and report texts in Hungarian, but leave the user interface in English. When a user then sets Hungarian in his user profile, the user interface will still be in English, but the other texts are shown in Hungarian.</p></li>
+              /></ph--> <p>You can also provide a subset of the resources that can be translated. For example, you can decide to have the online help, FAQ, and email<!--ph>, and report texts</ph--> in Hungarian, but leave the user interface in English. When a user then sets Hungarian in his user profile, the user interface will still be in English, but the other texts are shown in Hungarian.</p></li>
           <li>Activating the new language so that it becomes available to users when selecting their working language. </li>
         </ol>
       </p>

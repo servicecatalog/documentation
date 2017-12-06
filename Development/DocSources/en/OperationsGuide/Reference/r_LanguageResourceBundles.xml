@@ -12,7 +12,7 @@
                 <ul>
                     <li><xref href="../../Shared/reference/r_Language_Export_File.xml"/></li>
                     <li><xref href="../../Shared/reference/r_Language_OnlineHelp_FAQ.xml"/></li>
-                    <li><xref href="../../Shared/reference/r_Language_ReportLabels.xml"/></li>
+                    <!--li><xref href="../../Shared/reference/r_Language_ReportLabels.xml"/></li-->
                 </ul>
             </p>
         </section>

@@ -76,7 +76,7 @@
                             </row>
                             <row>
                                 <entry><xref href="../Marketplace/c_ManageMP.xml"/></entry>
-                                <entry>Describes how to create, update, and delete marketplaces. </entry>
+                                <entry>Describes how to create, update, delete, and customize marketplaces. </entry>
                             </row>
                             <row>
                                 <entry><xref href="../../Shared/reference/r_ConfigSettings.xml"/></entry>

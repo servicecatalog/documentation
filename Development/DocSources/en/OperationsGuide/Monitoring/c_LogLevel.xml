@@ -130,7 +130,7 @@ log4j.logger.sys.org.oscm.identityservice=DEBUG</codeblock>
             <p>
                 <codeblock>log4j.logger.sys.org.oscm=DEBUG</codeblock>
             </p-->
-            <p><b>To change the log level</b>:</p>
+            <p><b>To change the log level</b>: ### TODO: Change description as soon as issue https://github.com/servicecatalog/oscm/issues/50 is fixed ###</p>
             <p>
                 <ol>
                     <li>In the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
@@ -139,7 +139,7 @@ log4j.logger.sys.org.oscm.identityservice=DEBUG</codeblock>
                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                         /> containers.</p></li>
                     <li>Restart all <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        /> containers using the following command: ###Since the UI cfg settings are overwritten by a new initdb, how can the log level be changed?###</li>
+                        /> containers.</li>
                 </ol>
             </p>
         </section>

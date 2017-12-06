@@ -27,7 +27,7 @@
             <series>Operator's Guide</series>
         </prodinfo>
         <bookid>
-            <edition>December 2017 - Initial draft </edition>
+            <edition>December 2017 - Draft for review </edition>
             <!--booknumber product="oscm_ee">B1WS-1252-02</booknumber-->
         </bookid>
         <bookrights product="oscm_ce">
@@ -84,7 +84,7 @@ topicref href="OperationsGuide/Configuration/c_LoadBalancing.xml" type="concept"
         </topicref>
         <topicref href="OperationsGuide/Monitoring/c_ExportUserOperationLog.xml" type="concept"/>
         <topicref href="OperationsGuide/Monitoring/c_Backup.xml" type="concept"/>
-        <!--topicref href="OperationsGuide/Monitoring/c_CheckJMS.xml" type="concept"/-->
+        <topicref href="OperationsGuide/Monitoring/c_CheckJMS.xml" type="concept"/>
     </chapter>
     <chapter href="OperationsGuide/Organizations/c_Organizations.xml" type="concept">
         <topicref href="OperationsGuide/Organizations/c_OrgCreateOrg.xml" type="concept"/>
@@ -171,7 +171,7 @@ topicref href="OperationsGuide/Configuration/c_LoadBalancing.xml" type="concept"
     <appendix href="OperationsGuide/Reference/r_LanguageResourceBundles.xml" type="reference">
         <topicref href="Shared/reference/r_Language_Export_File.xml" type="reference"/>
         <topicref href="Shared/reference/r_Language_OnlineHelp_FAQ.xml" type="reference"/>
-        <topicref href="Shared/reference/r_Language_ReportLabels.xml" type="reference"/>
+        <!--topicref href="Shared/reference/r_Language_ReportLabels.xml" type="reference"/-->
         <topicref href="Shared/reference/r_Language_Codes.xml" type="reference"/>
     </appendix>
     <appendix href="Shared/reference/r_FileFormat_ImportUsers.xml" type="reference"/>

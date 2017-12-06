@@ -28,11 +28,11 @@
             <p>To log in to the administration portal where you will perform most of your tasks:</p>
             <p>
                 <ol>
-                    <li>Click the link provided in the email, or type the access URL in your Web browser's address bar. <p>The access URL has the following format: </p><p><codeph>http://&lt;server&gt;:&lt;port&gt;/&lt;context-root></codeph></p><p><codeph>&lt;server></codeph> is the Web/application server where <ph
+                    <li>Click the link provided in the email, or type the access URL in your Web browser's address bar. <p>The access URL has the following format: </p><p><codeph>https://&lt;hostname.fqdn>:&lt;port>/oscm-portal</codeph></p><p><codeph>&lt;hostname.fqdn></codeph> is the name and the fully qualified domain name of the machine where <ph
                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                /> has been deployed. <codeph>&lt;port></codeph> is the port to address the Web/application server (default: <codeph>8080</codeph> for HTTP, <codeph>8081</codeph> for HTTPS). <codeph>&lt;context-root></codeph> is the context root of <ph
+                                /> has been deployed. <codeph>&lt;port></codeph> is the port to address the machine (default <codeph>8081</codeph>), <codeph>oscm-portal</codeph> is the default context root of <ph
                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                /> as set by the platform operator (default: <codeph>oscm-portal</codeph>). </p></li>
+                            /> and cannot be changed. </p></li>
                     <li>On the <uicontrol>Login</uicontrol> page, type your user ID and password.</li>
                     <li>Click <uicontrol>Login</uicontrol>, or press <uicontrol>Return</uicontrol>.</li>
                 </ol>

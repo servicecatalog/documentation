@@ -23,9 +23,7 @@
                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                 />, users can request and use virtual systems in OpenStack. The usage costs can be calculated and charged by means of the <ph
                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                        /> billing and payment services. <p>The OpenStack integration package provided with <ph
-                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                        /> includes all components required for connecting an existing <ph
+                                        /> billing and payment services. <p>The OpenStack service controller is provided with the <codeph>oscm-app</codeph> container. It includes all components required for connecting an existing <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                         /> installation with OpenStack. This manual describes how to create and use services for OpenStack on an <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"

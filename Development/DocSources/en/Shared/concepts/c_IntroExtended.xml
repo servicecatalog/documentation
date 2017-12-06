@@ -22,11 +22,8 @@
         <li><ph conref="c_BasicUsageScenario.xml#concept2311/Marketplace_owners_concept_conbody_section_ul_l"/>
         </li>
         <li><ph conref="c_BasicUsageScenario.xml#concept2311/Operators_concept_conbody_section_ul_l"/>
-          <p><ph
-              conref="../../Shared/concepts/c_BasicUsageScenario.xml#concept2311/is_typically_operated_in_dat_concept_conbody_section_1_p"
-              /><ph
-              conref="../../Shared/concepts/c_BasicUsageScenario.xml#concept2311/The_applications_integrated_w_concept_conbody_section_1_p"
-            /></p></li>
+          <p conref="../../Shared/concepts/c_BasicUsageScenario.xml#concept2311/container"/>
+              </li>
       </ul>
       <p>In extended usage scenarios, the <ph
           conref="c_BasicUsageScenario.xml#concept2311/suppliers_who_define_marketab_concept_conbody_section_3_p"/>:</p>

@@ -25,14 +25,14 @@
             </ol>
         </p>
         <p>Now you are able to login to the APP:</p>
-        <p><codeph>http://hostname.fqdn:8880/oscm-app/</codeph>
+        <p><codeph>http://&lt;hostname.fqdn>:8880/oscm-app/</codeph>
         </p>
         <p>User name: <codeph>administrator</codeph>
         </p>
         <p>Password: <codeph>admin123</codeph>
         </p>
         <p>You can also login to the OpenStack service controller: </p>
-        <p><codeph>http://hostname.fqdn:8880/oscm-app-openstack/</codeph>
+        <p><codeph>http://&lt;hostname.fqdn>:8880/oscm-app-openstack/</codeph>
         </p>
         <p>User name: <codeph>administrator</codeph>
         </p>

@@ -23,7 +23,7 @@
 <mapEntry key="generate.copy.outer" value="2"/>
 <mapEntry key="output.dir" value="/DocSources/Output/CE/en/Installation"/>
 <mapEntry key="realtranstype" value="pdf"/>
-<mapEntry key="transtype" value="Fujitsu RTF"/>
+<mapEntry key="transtype" value="Fujitsu PDF"/>
 </mapAttribute>
 <stringAttribute key="org.eclipse.ui.externaltools.ATTR_LOCATION" value="${dita.dir}\build.xml"/>
 <mapAttribute key="resolvedLinks"/>

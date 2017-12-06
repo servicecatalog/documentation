@@ -7,103 +7,102 @@
             >Initial configuration settings</ph></title>
     <refbody>
         <section>
-            <p platform="print">The configuration settings that must be set before deploying <ph
-                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> are defined in environment variable files that are used by the Docker Compose command for initializing the <ph
-                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> containers. For details, refer to ### link to deploy container readme ###. They are described in detail below. </p>
+            <title>.env File</title>
+            <p platform="print"
+                >The configuration settings that must be set in the <codeph>.env</codeph> file are by default: </p>
+            <p platform="print">
+                <ul>
+                    <li>Which Docker images to use and from which registry they are to be fetched:<ul>
+                            <li><codeph>IMAGE_DB</codeph>: image for the <codeph>oscm-db</codeph> container</li>
+                            <li><codeph>IMAGE_CORE</codeph>: image for the <codeph>oscm-core</codeph> container</li>
+                            <li><codeph>IMAGE_APP</codeph>: image for the <codeph>oscm-app</codeph> container</li>
+                            <li><codeph>IMAGE_BIRT</codeph>: image for the <codeph>oscm-birt</codeph> container</li>
+                            <li><codeph>IMAGE_BRANDING</codeph>: image for the <codeph>oscm-branding</codeph> container</li>
+                            <li><codeph>IMAGE_INITDB</codeph>: image for the temporary <codeph>oscm-initdb</codeph> container</li>
+                            <li><codeph>IMAGE_PROXY</codeph>: image for the <codeph>oscm-proxy</codeph> container</li>
+                            <li><codeph>IMAGE_HELP</codeph>: image for the <codeph>oscm-help</codeph> container</li>
+                        </ul>
+                    </li>
+                    <li>The base directory where data is persisted on your Docker host. The default directory is <codeph>/docker</codeph> as defined with the <codeph>DOCKER_PATH</codeph> configuration setting. </li>
+                </ul>
+            </p>
         </section>
         <section>
-            <title>DB_PORT_CORE</title>
-            <p>The port of the PostgreSQL database (<codeph>bss</codeph>) where the configuration settings for the <codeph>oscm-core</codeph> container are stored. </p>
-            <p>Must be set to <codeph>5432</codeph>.</p>
+            <title>var.env File</title>
+            <p platform="print"
+                >The configuration settings that must be set in the <codeph>var.env</codeph> file described in detail below.</p>
         </section>
         <section>
-            <title>DB_PORT_JMS</title>
-            <p>The port of the PostgreSQL database (<codeph>bssjms</codeph>) where the JMS messages are stored. </p>
-            <p>Must be set to <codeph>5432</codeph>.</p>
+            <title>Settings for Connecting to the Databases</title>
+            <p>
+                <ul>
+                    <li><codeph>DB_PORT_CORE</codeph><p>The port of the PostgreSQL database (<codeph>bss</codeph>) where the configuration settings for the <codeph>oscm-core</codeph> container are stored. </p><p>Must be set to <codeph>5432</codeph>.</p></li>
+                    <li><codeph>DB_PORT_JMS</codeph><p>The port of the PostgreSQL database (<codeph>bssjms</codeph>) where the JMS messages are stored. </p><p>Must be set to <codeph>5432</codeph>.</p></li>
+                    <li><codeph>DB_PORT_APP</codeph><p>The port of the PostgreSQL database (<codeph>bssapp</codeph>) where the configuration settings for the <codeph>oscm-app</codeph> container are stored. </p><p>Must be set to <codeph>5432</codeph>.</p></li>
+                    <li><codeph>DB_PWD_CORE</codeph><p>The password of the user to connect to the <codeph>bss</codeph> database. </p><p>Default: <codeph>bssuser</codeph></p></li>
+                    <li><codeph>DB_PWD_APP</codeph><p>The password of the user to connect to the <codeph>bssapp</codeph> database. </p>Default: <codeph>bssappuser</codeph></li>
+                    <li><codeph>DB_SUPERPWD</codeph><p>The password of the PostgreSQL database superuser.</p>Default: <codeph>postgres</codeph></li>
+                </ul>
+            </p>
         </section>
         <section>
-            <title> DB_PORT_APP</title>
-            <p>The port of the PostgreSQL database (<codeph>app</codeph>) where the configuration settings for the <codeph>oscm-app</codeph> container are stored. </p>
-            <p>Must be set to <codeph>5432</codeph>.</p>
+            <title>Settings for Connecting to the Mail Server</title>
+            <p>
+                <ul>
+                    <li><codeph>SMTP_HOST</codeph><p>The host name or IP address of your mail server used for notifications by <ph
+                                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p></li>
+                    <li><codeph>SMTP_PORT</codeph><p>The port used by your mail server. </p></li>
+                    <li><codeph>SMTP_FROM</codeph><p>The email address to be used for emails sent by <ph
+                                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p></li>
+                    <li><codeph>SMTP_USER</codeph><p>If your mail server requires authentication, the name of the user allowed to access the mail server. If no authentication is required, set to <codeph>none</codeph>.</p></li>
+                    <li><codeph>SMTP_PWD</codeph><p>If your mail server requires authentication, the password of the user allowed to access the mail server. If no authentication is required, set to <codeph>none</codeph>.</p></li>
+                    <li><codeph>SMTP_AUTH</codeph><p>Defines whether your mail server requires authentication. Can be set to <codeph>true</codeph> or <codeph>false</codeph>. </p></li>
+                    <li><codeph>SMTP_TLS</codeph><p>Defines if TLS (Transport Layer Security) is to be used for mail server communication. Can be set to <codeph>true</codeph> or <codeph>false</codeph>. </p></li>
+                    <li><codeph>APP_ADMIN_MAIL_ADDRESS</codeph><p>The email address used for emails sent by the Asynchronous Provisioning Platform (APP). For example, when APP is integrated with the OpenStack service controller, this is the email address of the administrator of the technology provider organization responsible for the OpenStack service controller. </p></li>
+                </ul>
+            </p>
         </section>
         <section>
-            <title> DB_PWD_CORE</title>
-            <p>The password of the user to connect to the <codeph>bss</codeph> database. </p>
-            <p>Default: <codeph>bssuser</codeph></p>
+            <title>Settings for Connecting to the OpenStack Service Controller</title>
+            <p>
+                <ul>
+                    <li><codeph>CONTROLLER_ID</codeph><p>The identifier of the service controller to be configured. Currently, the OpenStack and the AWS service controllers can be configured with the following identifiers: <codeph>ess.openstack</codeph> or <codeph>ess.aws</codeph>. ### TODO: change description as soon as https://github.com/servicecatalog/oscm/issues/58 is fixed. </p></li>
+                    <li><codeph>CONTROLLER_ORG_ID</codeph><p>The ID of the organization in <ph
+                                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> responsible for the service controller. The organization must have the technology provider role.</p><p>Before the first deployment, the setting's value must be set to <codeph><codeph>PLATFORM_OPERATOR</codeph></codeph>. The operator can then log in to the service controller and define the technology provider organization that is to be responsible. </p></li>
+                    <li><codeph>CONTROLLER_USER_KEY</codeph><p>The identifier of the user for accessing the service controller. </p><p>Before the first deployment, the setting's value must be set to <codeph><codeph>1000</codeph></codeph>.</p></li>
+                    <li><codeph>CONTROLLER_USER_NAME</codeph><p>The name of the user for accessing the service controller. The user specified here must have the technology manager role in <ph
+                                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> and belong to the organization specified in the <codeph>CONTROLLER_ORG_ID</codeph> setting. It is recommended that the user account is used only for carrying out actions on behalf of the service controller in <ph
+                                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    />.</p><p>Before the first deployment, the setting's value must be set to <codeph><codeph>administrator</codeph></codeph>.</p></li>
+                    <li><codeph>CONTROLLER_USER_PASS</codeph><p>The password of the user for accessing the service controller. The password is encrypted when it is stored in the database. </p><p>Before the first deployment, the setting's value must be set to <codeph><codeph>admin123</codeph></codeph>.</p></li>
+                </ul>
+            </p>
         </section>
         <section>
-            <title> DB_PWD_APP</title>
-            <p>The password of the user to connect to the <codeph>app</codeph> database. </p>
-        </section>
-        <section>
-            <title> DB_SUPERPWD</title>
-            <p>The password of the PostgreSQL database superuser.</p>
-        </section>
-        <section>
-            <title>SMTP_HOST</title>
-            <p>The host name or IP address of your mail server used for notifications by <ph
-                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
-        </section>
-        <section>
-            <title>SMTP_PORT</title>
-            <p>The port used by your mail server. </p>
-        </section>
-        <section>
-            <title>SMTP_FROM</title>
-            <p>The email address used for emails sent by <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                />.</p>
-        </section>
-        <section>
-            <title>SMTP_USER</title>
-            <p>If your mail server requires authentication, the name of the user allowed to access the mail server. If no authentication is required, set to <codeph>none</codeph>.</p>
-        </section>
-        <section>
-            <title>SMTP_PWD</title>
-            <p>If your mail server requires authentication, the password of the user allowed to access the mail server. If no authentication is required, set to <codeph>none</codeph>.</p>
-        </section>
-        <section>
-            <title>SMTP_AUTH</title>
-            <p>Defines whether your mail server requires authentication. Can be set to <codeph>true</codeph> or <codeph>false</codeph>. </p>
-        </section>
-        <section>
-            <title>SMTP_TLS</title>
-            <p>Defines if TLS (Transport Layer Security) is to be used for mail server communication. Can be set to <codeph>true</codeph> or <codeph>false</codeph>. </p>
-        </section>
-        <section>
-            <title>APP_ADMIN_MAIL_ADDRESS</title>
-            <p>The email address used for emails sent by the Asynchronous Provisioning Platform (APP).</p>
-        </section>
-        <section>
-            <title>KEY_SECRET</title>
-            <p>A string which will be used in the <codeph>bss</codeph> database as a seed for encryption and decryption of service parameters with data type <codeph>PWD</codeph> and custom attributes marked for encryption. Make sure not to forget this string so that your database is persisted. </p>
-            <note>Be aware that you must use the same key when updating the database. Otherwise, encryption and decryption is no longer possible after an update. </note>
-        </section>
-        <section>
-            <title>HOST_FQDN</title>
-            <p>The fully qualified domain name or the IP address of the host to be used to access <ph
-                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </p>
-        </section>
-        <section>
-            <title>REPORT_ENGINEURL</title>
-            <p>The URL of the report engine used to generate the <ph platform="print"><ph
-                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
-                    >platform's</ph> reports. If you do not specify a correct URL template, <ph platform="print"><ph
-                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
-                    >the platform</ph> will not be able to generate any reports, since the Report Web service cannot be called correctly.</p>
-            <p>The setting must be as follows:   </p>
-            <codeblock>https://&lt;HOST_FQDN>:8681/birt/frameset?
+            <title>Additional Settings</title>
+            <p>
+                <ul>
+                    <li><codeph>KEY_SECRET</codeph><p>A string which will be used in the <codeph>bss</codeph> database as a seed for encryption and decryption of service parameters with data type <codeph>PWD</codeph> and custom attributes marked for encryption. Make sure not to forget this string so that your database is persisted. </p><note>Be aware that you must use the same key when updating the database. Otherwise, encryption and decryption is no longer possible after an update. </note></li>
+                    <li><codeph>HOST_FQDN</codeph><p>The fully qualified domain name or the IP address of the host to be used to access <ph
+                                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </p></li>
+                    <li><codeph>REPORT_ENGINEURL</codeph><p>The URL of the report engine used to generate the <ph
+                                platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /></ph><ph platform="help"
+                                >platform's</ph> reports. If you do not specify a correct URL template, <ph
+                                platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /></ph><ph platform="help"
+                            >the platform</ph> will not be able to generate any reports, since the Report Web service cannot be called correctly.</p><p>The setting must be as follows: </p><codeblock>https://&lt;HOST_FQDN>:8681/birt/frameset?
    __report=\${reportname}.rptdesign&amp;SessionId=\${sessionid}&amp;
    __locale=\${locale}&amp;WSDLURL=\${wsdlurl}&amp;SOAPEndPoint=\
-   ${soapendpoint}&amp;wsname=Report&amp;wsport=ReportPort</codeblock>
-            <p>Replace <codeph>&lt;HOST_FQDN></codeph> with the value entered above for the <codeph>HOST_FQDN</codeph> setting. The other values must not be changed. </p>
-        </section>
-        <section>
-            <title>TOMEE_DEBUG</title>
-            <p>Defines if the application server is to generate log files for <ph platform="print"><ph
-                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
-                    >the platform</ph>. Can be set to <codeph>true</codeph> or <codeph>false</codeph>. </p>
+   ${soapendpoint}&amp;wsname=Report&amp;wsport=ReportPort</codeblock><p>Replace <codeph>&lt;HOST_FQDN></codeph> with the value entered above for the <codeph>HOST_FQDN</codeph> setting. The other values must not be changed. </p></li>
+                    <li><codeph>TOMEE_DEBUG</codeph><p>Defines if the application server is to generate log files for <ph
+                                platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /></ph><ph platform="help"
+                                >the platform</ph>. Can be set to <codeph>true</codeph> or <codeph>false</codeph>. </p></li>
+                </ul>
+            </p>
         </section>
     </refbody>
 </reference>

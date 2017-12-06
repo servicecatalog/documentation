@@ -27,7 +27,7 @@
             <series>Broker's Guide</series>
         </prodinfo>
         <bookid>
-            <edition>December 2017 - Initial draft </edition>
+            <edition>December 2017 - Draft for review </edition>
             <!--booknumber product="oscm_ee">B1WS-1258-02</booknumber--> 
         </bookid>
         <bookrights product="oscm_ce" >
@@ -61,7 +61,7 @@
     </chapter>
     <chapter href="BrokerGuide/Billing/c_BillIntro.xml"/>
     <chapter href="BrokerGuide/Reports/c_Reports.xml"/>
-    <appendix href="BrokerGuide/Reference/r_MenuOptions.xml"/>
+    <!--appendix href="BrokerGuide/Reference/r_MenuOptions.xml"/-->
     <appendix format="dita" href="Shared/reference/r_LDAP_SettingTypes.xml" type="reference"/>
         <appendix format="dita" href="DevelopersGuide/Reference/r_BillingData.xml" type="reference"/>
     <appendix href="Shared/glossary/r_Glossary.xml"/>

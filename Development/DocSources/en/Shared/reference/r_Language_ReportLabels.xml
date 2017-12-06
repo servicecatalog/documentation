@@ -7,17 +7,9 @@
     </title>
     <refbody>
         <section>
-            <p>Reports are generated in the language the user has set in his profile. The texts used in the reports are <ph
-                    product="oscm_ee"
-                        >provided after installation in properties files contained in a separate <codeph>.war</codeph> file contained in the <codeph>oscm-install-pack.zip</codeph> file:</ph><ph
-                    product="oscm_ce"
-                    >available in properties files contained in the following archive which is provided for each release: </ph>
-            </p>
-            <p><ph product="oscm_ee"><codeph>&lt;install_pack_dir>/domains/bes_domain/birt.war</codeph>.</ph><ph
-                    product="oscm_ce"><codeph>oscm-reports.zip</codeph></ph>
-            </p>
-            <p>The <ph product="oscm_ee"><codeph>birt.war</codeph></ph><ph product="oscm_ce"
-                        ><codeph>oscm-reports.zip</codeph></ph> archive comes with the following properties files: </p>
+            <p>Reports are generated in the language the user has set in his profile. The texts used in the reports are provided after installation in properties files contained in a separate archive file in the <codeph>oscm-birt</codeph> container. </p>
+            <p><codeph>oscm-reports.zip</codeph> ### true? ###</p>
+            <p>It contains the following properties files: </p>
             <p>
                 <ul>
                     <li><codeph>reportLabels.properties</codeph> (default language English)</li>
@@ -29,8 +21,7 @@
             <p>Proceed as follows to have reports generated in another language: </p>
             <p>
                 <ol compact="no">
-                    <li>Extract the <ph product="oscm_ee"><codeph>birt.war</codeph></ph><ph product="oscm_ce"
-                                ><codeph>oscm-reports.zip</codeph></ph> file to a local directory. </li>
+                    <li>Extract the <codeph>oscm-reports.zip</codeph> file to a local directory. </li>
                     <li>Go to the <codeph>WEB-INF</codeph> subdirectory. </li>
                     <li>Copy the English properties file, <codeph>reportLabels.properties</codeph>, and name it <codeph>reportLabels_<i>&lt;ISO code></i>.properties</codeph>.<p>The ISO code denotes the language for which you want to provide translations. For example, add a <codeph>reportLabels_cs.properties</codeph> file to the <codeph>WEB-INF</codeph> subdirectory.</p></li>
                     <li>Open the new properties file in a text editor. <p>The lines in the file are in the following format: </p><p>
@@ -47,15 +38,9 @@
                                 <li>Save the file in UTF-8 encoding.</li>
                             </ul>
                         </p></li>
-                    <li><ph product="oscm_ee"
-                            >Create a new <codeph>birt.war</codeph> file containing the additional properties file for the new language.</ph><ph
-                            product="oscm_ce"
-                                >Copy the new properties file to the <codeph>WEB-INF</codeph> subfolder of the folder where the BIRT report engine is deployed on the application server, usually <codeph>&lt;GLASSFISH_HOME>/glassfish/domains/&lt;domain>/applications/birt</codeph>.</ph>
-                    </li>
-                    <li><ph product="oscm_ee"
-                                >Undeploy and deploy or redeploy the customized <codeph>birt.war</codeph> file to the <codeph>bes-domain</codeph> domain on your application server.</ph><ph
-                            product="oscm_ce">Restart the BIRT application.</ph>
-                    </li>
+                    <li>Create a new <codeph>oscm-reports.zip</codeph> file containing the additional properties file for the new language.</li>
+                    <li>### how is the new file imported and made availble ?### </li>
+                    <li>### which container must be stopped / restarted? How?</li>
                 </ol>
             </p>
             <p>With this, existing report labels are overwritten. </p>

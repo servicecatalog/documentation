@@ -13,6 +13,7 @@
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> in their environment. </p>
             <p>It assumes that you are familiar with the following:</p>
             <ul>
+                <li>Container technology, particularly Docker and Docker Compose.</li>
                 <li>Administration of the operating systems in use, including the adaption and execution of batch files or shell scripts. </li>
                 <li>Java EE technology, particularly as to the deployment on application servers. </li>
                 <li>Relational databases and their administration, in particular the PostgreSQL database.</li>
@@ -20,7 +21,6 @@
                         /> concepts as explained in the <i>Overview</i> manual.</li>
                 <li>Web services concepts.</li>
                 <li>Installation and administration of Web servers.</li>
-                <li>Installation and administration of the GlassFish application server.</li>
                 <li>Certificate-based authentication and communication.</li>
             </ul>
         </section>
