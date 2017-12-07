@@ -62,7 +62,7 @@
     <chapter format="dita" href="TechProvGuide/Implement/c_Implement.xml" type="concept">
         <topicref format="dita" href="TechProvGuide/Implement/t_ImplProvServ.xml" type="task">
         	<topicref format="dita" href="TechProvGuide/Implement/t_ImplProvServ_InstanceProvisioning.xml" type="task"/>
-        	<topicref format="dita" href="TechProvGuide/Implement/c_ImplProvServ_ProvisioningMode.xml" type="task"/>
+        	<topicref format="dita" href="TechProvGuide/Implement/c_ImplProvServ_ProvisioningMode.xml" type="concept"/>
         	<topicref format="dita" href="TechProvGuide/Implement/t_ImplProvServ_AppParams.xml" type="task"/>
         	<topicref format="dita" href="TechProvGuide/Implement/t_ImplProvServ_UserMgmt.xml" type="task"/>
         </topicref>
