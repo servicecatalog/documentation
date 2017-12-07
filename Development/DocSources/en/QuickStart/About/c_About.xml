@@ -9,16 +9,16 @@
         <section>
             <p>This manual describes how to get started with <ph product="oscm_ee"
                         >FUJITSU Software Enterprise Service Catalog Manager, hereafter referred to as <ph
-                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /></ph>. This is a quick start guide intended to help you start up a basic installation of <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> with Docker and Docker Compose as quickly as possible. For more advanced configuration and usage, refer to the individual Docker containers' documentation on DockerHub. ### insert link to fest ### on DockerHub. </p>
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph>. </p>
         </section>
         <section>
             <title>Readers of this Manual </title>
-            <p>This manual is directed to operators who deploy, configure, use, and setup <ph
+            <p>This manual is directed to operators who want to quickly set up a basic installation of <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> on a Docker host. It assumes that you are familiar with the following:</p>
+                    /> with Docker and Docker Compose. For more detailed information on configuration and usage, refer to the official <xref
+                    format="html" href="https://github.com/servicecatalog/documentation/tree/ESCM" scope="external">
+                    <u><i><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> documentation</i></u></xref>. It assumes that you are familiar with the following:</p>
             <p>
                 <ul>
                     <li>Administration of the operating systems in use, including the adaption and execution of batch files or shell scripts.</li>

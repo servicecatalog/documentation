@@ -19,10 +19,10 @@
         <prodinfo product="oscm_ee">
             <prodname>Enterprise Service</prodname>
             <vrmlist>
-                <vrm version="V17.6.0"/>
+                <vrm version="V17.6"/>
             </vrmlist>
             <brand>FUJITSU Software</brand>
-            <prognum>Catalog Manager V17.6.0</prognum>
+            <prognum>Catalog Manager V17.6</prognum>
             <component/>
             <series>Amazon Web Services Integration</series>
         </prodinfo>

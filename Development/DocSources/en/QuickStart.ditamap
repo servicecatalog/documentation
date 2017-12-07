@@ -18,6 +18,16 @@
             <component/>
             <series>QuickStart Guide</series>
         </prodinfo>
+        <prodinfo product="oscm_ee">
+            <prodname>Enterprise Service</prodname>
+            <vrmlist>
+                <vrm version="V17.6"/>
+            </vrmlist>
+            <brand>FUJITSU Software</brand>
+            <prognum>Catalog Manager V17.6</prognum>
+            <component/>
+            <series>QuickStart Guide</series>
+        </prodinfo>
         <bookid>
             <edition>December 2017 - Draft for review </edition>
             <!--booknumber product="oscm_ee"></booknumber-->
@@ -48,11 +58,9 @@
             
         </preface-->
     </frontmatter>
-    	<chapter
-        href="QuickStart/Intro/c_Prerequisites.xml">
-			
-    </chapter>
-    
+    <chapter href="Shared/gettingstarted/c_BESContainers.xml" type="concept"/>
+    <chapter href="QuickStart/Intro/c_Prerequisites.xml"/>
+	
     <chapter
             href="QuickStart/Setup/c_Setup.xml">
     	<topicref

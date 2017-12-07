@@ -8,7 +8,7 @@
     <title>Preparing the Installation Directory</title>
     <conbody>
         <section>
-            <p>On the Docker host, you need to create a directory which holds various data, such as persistent database data or configuration data. In this document, this directory is referred to as <codeph>/docker</codeph>:</p>
+            <p>On the Docker host, you need to create a directory where various data can be stored, such as persistent database data or configuration files. Hereafter, this directory is referred to as <codeph>/docker</codeph>:</p>
             <p>On the Docker host, execute the following command: </p>
             <p>
                 <codeblock>mkdir /docker</codeblock>

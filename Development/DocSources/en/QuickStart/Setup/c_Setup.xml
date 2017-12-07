@@ -5,11 +5,19 @@
 <!-- Copyright FUJITSU LIMITED 2018 -->
 <concept id="concept_1BCF5C425D7D4627AB1C66A085CF6E11"
             xml:lang="en-us">
-    <title>Setup</title>
+    <title>Installation</title>
     <conbody>
         <section>
-            <p>This chapter describes the installation and configuration of <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </p>
+            <p>The installation of <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> consists of the following main steps: </p>
+            <p>
+                <ol>
+                    <li>Preparing the installation directory on the Docker host. </li>
+                    <li>Preparing configuration files. </li>
+                    <li>Preparing Docker compose files and starting <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</li>
+                </ol>
+            </p>
         </section>
     </conbody>
 </concept>

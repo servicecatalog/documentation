@@ -11,10 +11,10 @@
             <p>A second deployment container is available which you can run to do the following: </p>
             <p>
                 <ol>
-                    <li>Create the necessary Docker Compose files </li>
-                    <li>Create the necessary subdirectories </li>
-                    <li>Initialize the application databases </li>
-                    <li>Start the application containers  </li>
+                    <li>Create the necessary Docker Compose files.</li>
+                    <li>Create the necessary subdirectories.</li>
+                    <li>Initialize the application databases.</li>
+                    <li>Start the application containers.</li>
                 </ol>
             </p>
             <p>Execute the following command on your Docker host: </p>
