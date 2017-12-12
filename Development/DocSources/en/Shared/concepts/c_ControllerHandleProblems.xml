@@ -89,8 +89,8 @@
             <p>The instance status interface provides the following additional functionality that is useful for problem-solving purposes:</p>
             <ul>
                 <li>You can display service instance details for each subscription by clicking the corresponding entry in the table. This displays all subscription-related information that is stored in the <codeph>bssapp</codeph> database.</li>
-                <li>The <b>Run with timer</b> column indicates whether the timer for the interval at which APP polls the status of instances is running. You can reset the timer, if required.<ph audience="doc"> For details on the timer setting, refer to <xref
-                            href="../../Shared/Installation/r_ConfigSettings.xml"/></ph>.</li>
+                <!--li>The <b>Run with timer</b> column indicates whether the timer for the interval at which APP polls the status of instances is running. You can reset the timer, if required.<ph audience="doc"> For details on the timer setting, refer to <xref
+                            href="../../Shared/Installation/r_ConfigSettings.xml"/></ph>.</li-->
             </ul>
                         </section>
             </conbody>

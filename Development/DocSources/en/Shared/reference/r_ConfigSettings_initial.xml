@@ -58,12 +58,12 @@
                     <li><codeph>SMTP_PWD</codeph><p>If your mail server requires authentication, the password of the user allowed to access the mail server. If no authentication is required, set to <codeph>none</codeph>.</p></li>
                     <li><codeph>SMTP_AUTH</codeph><p>Defines whether your mail server requires authentication. Can be set to <codeph>true</codeph> or <codeph>false</codeph>. </p></li>
                     <li><codeph>SMTP_TLS</codeph><p>Defines if TLS (Transport Layer Security) is to be used for mail server communication. Can be set to <codeph>true</codeph> or <codeph>false</codeph>. </p></li>
-                    <li><codeph>APP_ADMIN_MAIL_ADDRESS</codeph><p>The email address used for emails sent by the Asynchronous Provisioning Platform (APP). For example, when APP is integrated with the OpenStack service controller, this is the email address of the administrator of the technology provider organization responsible for the OpenStack service controller. </p></li>
+                    <li><codeph>APP_ADMIN_MAIL_ADDRESS</codeph><p>The email address used for emails sent by the Asynchronous Provisioning Platform (APP). For example, this is the email address of the administrator of the technology provider organization responsible for the OpenStack service controller. </p></li>
                 </ul>
             </p>
         </section>
         <section>
-            <title>Settings for Connecting to the OpenStack Service Controller</title>
+            <title>Settings for Connecting to the Service Controllers</title>
             <p>
                 <ul>
                     <li><codeph>CONTROLLER_ID</codeph><p>The identifier of the service controller to be configured. Currently, the OpenStack and the AWS service controllers can be configured with the following identifiers: <codeph>ess.openstack</codeph> or <codeph>ess.aws</codeph>. ### TODO: change description as soon as https://github.com/servicecatalog/oscm/issues/58 is fixed. </p></li>

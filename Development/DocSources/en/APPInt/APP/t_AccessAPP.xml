@@ -8,20 +8,17 @@
     <title>Accessing APP</title>
     <taskbody>
         <context>
-            <p>Each service controller is registered with APP. Registration means entering the controller with its ID and its responsible organization in the <codeph>bssapp</codeph> database. </p>
-            <p>After the initial deployment of the <codeph>oscm-app</codeph> container, the platform operator can access APP and define the organization responsible for the service controller. This is usually your own organization. However, it may also be another organization with the technology provider role registered with <ph
+            <p>The OpenStack and AWS service controllers are automatically registered with APP when the <codeph>oscm-app</codeph> container is deployed. Registration means entering the controller with its ID and its responsible organization in the <codeph>bssapp</codeph> database. Initially, this is the platform operator organization. </p>
+            <p>The platform operator can access APP and define the organization responsible for the service controller. This is usually your own organization as a technology provider. However, it may also be another organization with the technology provider role registered with <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </p>
-            <p>You can access the Web interface of APP as follows: </p>
+            <p>Proceed as follows: </p>
             <ol compact="no">
-                <li>In a Web browser, access the base URL of APP, for example, <codeph>http://127.0.0.1:8880/oscm-app</codeph>.</li>
-                <li>
-                    <p>Log in with the ID and password of the user which you received with the confirmation email for your user account or as another administrator of the same organization. </p>
-                </li>
-                <li>Specify the IDs of the service controller (<codeph>ess.openstack</codeph> or <codeph>ess.aws</codeph>) and of the responsible organization.</li>
+                <li>Access the Web interface (base URL) of APP in the following format:<p>
+                        <codeblock>https://&lt;hostname.fqdn&gt;:&lt;port&gt;/oscm-app</codeblock>
+                    </p><p><codeph>&lt;hostname.fqdn&gt;</codeph> is the name and the fully qualified domain name of the machine where APP has been deployed. <codeph>&lt;port&gt;</codeph> is the port to address the machine (default 8881), <codeph>oscm-app</codeph> is the default context root of APP and cannot be changed.</p></li>
+                <li>Log in with the ID and password of the user which you received with the confirmation email for your user account or as another administrator of the same organization. </li>
+                <li>Specify the ID of the technology provider organization that is to be responsible for the respective service controller (<codeph>ess.openstack</codeph> or <codeph>ess.aws</codeph>).</li>
                 <li>Click <uicontrol>Save Configuration</uicontrol> to save the settings.</li>
-                <!--li><b>When setting up the database for APP</b>:<p>Before starting the setup, fill in the <codeph>configsettings_controller.properties</codeph> file in the <codeph>&lt;install_pack_dir>/databases/app_db</codeph> directory. At least the following settings are required:</p><p><codeph>CONTROLLER_ID=&lt;controllerID></codeph></p><p><codeph>BSS_ORGANIZATION_ID=&lt;organizationID></codeph></p><p>You can specify additional settings for the service controller which you want to store in the <codeph>bssapp</codeph> database. </p><p>Execute the <codeph>build-db.xml</codeph> file in <codeph>&lt;install_pack_dir&gt;/install</codeph> as follows:</p><p>
-                        <codeblock>&lt;ANT_HOME&gt;/bin/ant -f build-db.xml initDB</codeblock>
-                    </p></li-->
             </ol>
         </context>
     </taskbody>

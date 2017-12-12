@@ -15,6 +15,7 @@
                 <li>Add a role to an organization.</li>
                 <li>Manage user accounts: lock and unlock user accounts, and reset the password for a user.</li>
                 <li>Register users for organizations.</li>
+                <li>Enable access to the Asynchronous Provisioning Platform (APP)and service controllers.</li>
             </ul>
         </section>
     </conbody>

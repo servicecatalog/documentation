@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd">
+<concept
+                    id="Configuring_and_Enabling_Acce_278">
+  <title>Configuring and Enabling Access to APP and Service Controllers</title>
+  <conbody>
+    <section>
+            <p>When integrating applications with <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>, the instance provisioning can be done in two provisioning modes: synchronous or asynchronous mode. </p>
+            <p>Asynchronous provisioning is required if provisioning operations take a long time because long-running processes or manual steps are involved. This is the case, for example, when provisioning virtual machines on a virtual machine server. <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> supports the integration of such applications with its asynchronous provisioning platform (APP). This is a framework which provides a provisioning service as well as functions, data persistence, and notification features which are always required for integrating applications in asynchronous mode.</p>
+            <p>Having deployed the <codeph>oscm-app</codeph> container, the following service controllers are available, registered, and initialized: </p>
+            <ul>
+                <li>
+                    <p>AWS service controller: Can be used for integrating the Amazon Elastic Compute Cloud Web service with <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+                </li>
+                <li>
+                    <p>OpenStack service controller: Can be used for integrating OpenStack services with <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+                </li>
+            </ul>
+            <p>Before technology providers can use the service controllers, they must be entered as responsible organizations in APP as well as in the service controllers.</p>
+            <p>Proceed as follows: </p>
+            <p>
+                <ol>
+                    <li>Login to the <ph conref="../../../de/Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> administration portal, and choose <b>Create organization</b> in the <b>Operation</b> menu.<p>Make sure to set the <b>Technology provider</b> role for the organization. Refer to the online help for details.</p>
+                    </li>
+                    <li>Access the Web interface (base URL) of APP in the following format:<p>
+                            <codeblock>https://&lt;hostname.fqdn&gt;:&lt;port&gt;/oscm-app</codeblock>
+                        </p><p><codeph>&lt;hostname.fqdn&gt;</codeph> is the name and the fully qualified domain name of the machine where APP has been deployed. <codeph>&lt;port&gt;</codeph> is the port to address the machine (default 8881), <codeph>oscm-app</codeph> is the default context root of APP and cannot be changed.</p></li>
+                    <li>Log in with your user ID and password (initially: <codeph>administrator</codeph>, <codeph>admin123</codeph>). <p>The initial credentials have been set during the deployment in the following environment variables in the <codeph><codeph>var.env</codeph></codeph> file: <codeph>CONTROLLER_USER_NAME</codeph> and <codeph>CONTROLLER_USER_PASS</codeph>.</p></li>
+                    <li>Specify the ID of the technology provider organization that is to be responsible for the respective service controller (<codeph>ess.openstack</codeph> or <codeph>ess.aws</codeph>).</li>
+                    <li>Click <uicontrol>Save Configuration</uicontrol> to save the settings.</li>
+                </ol>
+            </p>
+        </section>
+
+  </conbody>
+</concept>

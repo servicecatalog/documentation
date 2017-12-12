@@ -7,8 +7,8 @@
 <concept id="concept_1BCF5C425D7D4627AB1C66A085CF6E11" xml:lang="en-us">
         <title>Administrating the OpenStack Integration</title>
         <conbody>
-                <p>The following sections describe administration tasks you may need to perform in your role as an operator of the OpenStack integration software:</p>
-                <ul audience="doc">
+                <p>The following sections describe administration tasks you may need to perform in your role as an operator of the OpenStack service controller.</p>
+                <!--ul audience="doc">
                         <li><xref href="../../Shared/concepts/c_ControlExecution.xml"/></li>
                         <li><xref href="../../Shared/concepts/c_ControllerHandleProblems.xml"/></li>
                         <li><xref href="../../Shared/concepts/c_ControllerHandleCommProblems.xml"/></li>
@@ -16,6 +16,6 @@
                         <li><xref href="../../Shared/Installation/c_UpdateConfiguration.xml"/></li>
                         <li><xref href="c_ImportTemplates.xml"/></li>
                         <li><xref href="../../Shared/reference/c_LogConfig.xml"/></li>
-                </ul>
+                </ul-->
         </conbody>
 </concept>

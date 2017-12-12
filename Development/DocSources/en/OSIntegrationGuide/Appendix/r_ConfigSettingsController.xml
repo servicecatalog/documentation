@@ -6,7 +6,7 @@
     <title>Controller Configuration Settings</title>
     <refbody>
         <section>
-            <p>The <codeph>configsettings_controller.properties</codeph> file located in <codeph>&lt;install_pack_dir>/databases/app_db</codeph> contains the configuration settings for the OpenStack service controller. This configuration is used for the initial setup and stored in the APP database.</p>
+            <p>When deployed, several configuration settings are written to the <codeph>bssapp</codeph> database. This configuration is used for the initial setup and stored in the APP database.</p>
             <p conref="../../AWSIntegrationGuide/Appendix/r_ConfigSettingsController.xml#reference832/cfg"/>
             <p conref="../../AWSIntegrationGuide/Appendix/r_ConfigSettingsController.xml#reference832/cfg2"/>
             <p conref="../../AWSIntegrationGuide/Appendix/r_ConfigSettingsController.xml#reference832/cfg3"/>
@@ -21,53 +21,51 @@
         <section>
             <title>CONTROLLER_ID</title>
             <p><codeph>CONTROLLER_ID=ess.openstack</codeph></p>
-            <p>The identifier of the service controller.</p>
+            <p>The identifier of the service controller. This setting cannot be changed.</p>
         </section>
         <section>
             <title>BSS_ORGANIZATION_ID</title>
             <p><codeph>BSS_ORGANIZATION_ID=&lt;organizationID></codeph></p>
             <p>The ID of the organization in <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> responsible for the service controller. The organization must have the technology provider role.</p>
+                /> responsible for the service controller. The organization must have the technology provider role. It is created and assigned to the OpenStack service controller by the platform operator.</p>
         </section>
         <section>
             <title>BSS_USER_ID</title>
             <p><codeph>BSS_USER_ID=&lt;userId></codeph>
             </p>
-            <p>The identifier of the user specified in <codeph>BSS_USER_KEY</codeph> for accessing <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
-            <p>Replace <codeph>&lt;userId></codeph> with the user ID.</p>
+            <p>The identifier of the user responsible for the OpenStack service controller. </p>
         </section>
         <section>
             <title>BSS_USER_KEY</title>
             <p><codeph>BSS_USER_KEY=&lt;userKey></codeph>
             </p>
             <p>The user key for accessing <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                />.</p>
-            <p>Replace <codeph>&lt;userKey></codeph> with the user key which you receive with the confirmation email for your user account. </p>
-            <p>The user specified here must have the technology manager role in <ph
+                    />. You receive this key with the confirmation email for your user account. The user must have the technology manager role in <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> and belong to the organization specified in the <codeph>BSS_ORGANIZATION_ID</codeph> setting. </p>
+                /> and belong to the technology provider organization responsible for the service controller. </p>
             <p>It is recommended that the user account is used only for carrying out actions on behalf of the service controller in <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
         </section>
         <section>
             <title>BSS_USER_PWD</title>
             <p><codeph>BSS_USER_PWD=_crypt:&lt;password></codeph></p>
-            <p>The password of the user specified in <codeph>BSS_USER_KEY</codeph> for accessing <ph
+            <p>The password of the user for accessing <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
-            <p>Replace <codeph>&lt;password></codeph> with the plain text password. The password is encrypted when it is stored in the database. </p>
+            <p>Replace <codeph>&lt;password></codeph> with the plain text password. The password is stored encryptedly in the database. </p>
         </section>
         <section>
             <title>API_USER_NAME</title>
             <p><codeph>API_USER_NAME=&lt;userName></codeph></p>
             <p>The user name to be used to access the tenant for your organization in OpenStack. Once authenticated, this user is authorized to access the Heat API.</p>
             <p>The user must have the necessary credentials to create and configure virtual systems for the tenant.  In FUJITSU Cloud Service K5, the <codeph>cpf_systemowner</codeph> role is required.</p>
+            <p>###???</p>
         </section>
         <section>
             <title>API_USER_PWD</title>
             <p><codeph>API_USER_PWD=_crypt:&lt;password></codeph></p>
             <p>The password of the user for accessing the tenant in OpenStack.</p>
             <p>Replace <codeph>&lt;password></codeph> with the plain text password which is valid for the user given in <codeph>API_USER_NAME</codeph>. The password is encrypted when it is stored in the database.</p>
+            <p>###???</p>
         </section>
         <section>
             <title>KEYSTONE_API_URL</title>

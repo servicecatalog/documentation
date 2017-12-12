@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2018 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd">
+<concept id="Prerequisites_and_Preparation_59" xml:lang="en-us">
+    <title>Prerequisites and Preparation</title>
+    <conbody>
+        <section>The following prerequisites must be fulfilled before you can use the OpenStack service controller: <ul>
+                <li>You must have access to a fully functional <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> installation. You can deploy the <codeph>oscm-app</codeph> container in the same environment or on a different server. ### true?### </li>
+                <li>
+                    <p>You must have access to <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> as an administrator and as a technology manager of an organization that has at least the technology provider role.</p>
+                </li>
+                <li audience="os"
+                        >You must have access to a fully functional OpenStack installation. <p>The OpenStack integration requires the following API versions:</p><p>Orchestration API (Heat) v1</p><p>Compute API (Nova) v2.1</p><p>Identity API (Keystone) v3</p><p>For secure connections, the OpenStack integration supports the Transport Layer Security (TLS) protocol, v1.2.</p></li>
+            </ul></section>
+    </conbody>
+</concept>

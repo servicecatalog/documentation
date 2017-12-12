@@ -28,12 +28,6 @@
           conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
           /> in asynchronous mode. The actual communication with the applications is carried out by service controllers. <ph
           audience="app">For each application, a specific and dedicated service controller is required.</ph>
-        <ph audience="aws"
-          >APP and the AWS service controller are the main components that make up the AWS integration software.</ph><ph
-          audience="os"
-          >APP and the OpenStack service controller are the main components that make up the OpenStack integration software.</ph><ph
-          audience="vmware"
-          >APP and the VMware service controller are the main components that make up the vSphere integration software.</ph>
       </p>
      
     </section>

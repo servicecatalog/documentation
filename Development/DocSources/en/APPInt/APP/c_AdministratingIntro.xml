@@ -8,14 +8,17 @@
                     xml:lang="en-us">
         <title>Administrating APP</title>
         <conbody>
-                <p>The following sections describe administration tasks you may need to perform in your role as an operator of the APP platform:</p>
-                <ul>
+                <p>The following sections describe administration tasks you may need to perform in your role as an operator of APP.
+                        
+                        </p>
+                <!--ul>
+                        <li><ph audience="doc"><xref href="t_AccessAPP.xml"/></ph></li>
                         <li><ph audience="doc"><xref href="c_HandleProblems.xml"/></ph></li>
                         <li><ph audience="doc"><xref href="../../Shared/concepts/c_ControllerHandleCommProblems.xml"/></ph></li>
                         <li><ph audience="doc"><xref href="../../Shared/Installation/c_Backup.xml"/></ph></li>
                         <li><ph audience="doc"><xref href="../../Shared/Installation/c_UpdateConfiguration.xml"/></ph></li>
                         <li><ph audience="doc"><xref href="../../Shared/Installation/c_Update.xml"/></ph></li>
                         <li><ph audience="doc"><xref href="../../APPInt/APP/c_LogConfig.xml"/></ph></li>
-                </ul>
+                </ul-->
         </conbody>
 </concept>

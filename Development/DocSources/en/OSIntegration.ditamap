@@ -49,6 +49,7 @@
     <chapter format="dita" href="OSIntegrationGuide/Intro/c_Introduction.xml" type="concept">
         <topicref format="dita" href="OSIntegrationGuide/Intro/c_Components.xml" type="concept"/>
         <topicref format="dita" href="OSIntegrationGuide/Intro/c_Scenarios.xml" type="concept"/>
+        <topicref format="dita" href="OSIntegrationGuide/Intro/c_PrepCTMG.xml" type="concept"/>
     </chapter>
     <!--chapter format="dita" href="Shared/Installation/c_InstIntro.xml" type="concept">
         <topicref format="dita" href="OSIntegrationGuide/Installation/c_Preparation.xml" type="concept">
@@ -82,9 +83,9 @@
     <chapter format="dita" href="OSIntegrationGuide/Administrating/c_AdministratingIntro.xml" type="concept">
         <topicref format="dita" href="Shared/concepts/c_ControlExecution.xml" type="concept"/>
         <topicref format="dita" href="Shared/concepts/c_ControllerHandleProblems.xml" type="concept"/>
-        <topicref format="dita" href="Shared/concepts/c_ControllerHandleCommProblems.xml" type="concept"/>
+        <!--topicref format="dita" href="Shared/concepts/c_ControllerHandleCommProblems.xml" type="concept"/-->
         <!--topicref format="dita" href="Shared/Installation/c_Backup.xml" type="concept"/-->
-        <topicref format="dita" href="Shared/Installation/c_UpdateConfiguration.xml" type="concept"/>
+        <topicref format="dita" href="OSIntegrationGuide/Administrating/c_UpdateConfiguration.xml" type="concept"/>
         <topicref format="dita" href="OSIntegrationGuide/Administrating/c_ImportTemplates.xml" type="concept"/>
         <topicref format="dita" href="Shared/reference/c_LogConfig.xml" type="concept"/>
     </chapter>

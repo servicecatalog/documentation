@@ -8,9 +8,14 @@
     <section>
       <p>The following picture provides an overview of the main components involved in the integration of <ph
           conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> and OpenStack:</p>
-      <p>
+      <p product="oscm_ee">
         <fig>
-          <image align="left" alt="Components.png" height="171" href="../_images/Components.png" width="400"/>
+          <image href="../_images/Components_EE.png" alt="Components_EE.png" width="400" height="171"/>
+        </fig>
+      </p>
+      <p product="oscm_ce">
+        <fig>
+          <image href="../_images/Components_CE.png" alt="Components_CE.png" width="400" height="171"/>
         </fig>
       </p>
       <p conref="../../Shared/concepts/c_ControllerConcepts.xml#controller/cmp1"/>
