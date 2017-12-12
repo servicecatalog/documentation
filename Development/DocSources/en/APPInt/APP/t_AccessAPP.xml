@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2018 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<task id="task_E68E2024B1F6403AAA1130A39B1D4DCD" xml:lang="en-us">
+    <title>Accessing APP</title>
+    <taskbody>
+        <context>
+            <p>Each service controller is registered with APP. Registration means entering the controller with its ID and its responsible organization in the <codeph>bssapp</codeph> database. </p>
+            <p>After the initial deployment of the <codeph>oscm-app</codeph> container, the platform operator can access APP and define the organization responsible for the service controller. This is usually your own organization. However, it may also be another organization with the technology provider role registered with <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </p>
+            <p>You can access the Web interface of APP as follows: </p>
+            <ol compact="no">
+                <li>In a Web browser, access the base URL of APP, for example, <codeph>http://127.0.0.1:8880/oscm-app</codeph>.</li>
+                <li>
+                    <p>Log in with the ID and password of the user which you received with the confirmation email for your user account or as another administrator of the same organization. </p>
+                </li>
+                <li>Specify the IDs of the service controller (<codeph>ess.openstack</codeph> or <codeph>ess.aws</codeph>) and of the responsible organization.</li>
+                <li>Click <uicontrol>Save Configuration</uicontrol> to save the settings.</li>
+                <!--li><b>When setting up the database for APP</b>:<p>Before starting the setup, fill in the <codeph>configsettings_controller.properties</codeph> file in the <codeph>&lt;install_pack_dir>/databases/app_db</codeph> directory. At least the following settings are required:</p><p><codeph>CONTROLLER_ID=&lt;controllerID></codeph></p><p><codeph>BSS_ORGANIZATION_ID=&lt;organizationID></codeph></p><p>You can specify additional settings for the service controller which you want to store in the <codeph>bssapp</codeph> database. </p><p>Execute the <codeph>build-db.xml</codeph> file in <codeph>&lt;install_pack_dir&gt;/install</codeph> as follows:</p><p>
+                        <codeblock>&lt;ANT_HOME&gt;/bin/ant -f build-db.xml initDB</codeblock>
+                    </p></li-->
+            </ol>
+        </context>
+    </taskbody>
+</task>

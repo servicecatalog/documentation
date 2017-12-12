@@ -25,7 +25,7 @@
                     /> log files, you can find application server-specific log entries by logging in to the individual containers. Be aware that these are available only if you set the <codeph>TOMEE_DEBUG</codeph> configuration setting in the <codeph>.env</codeph> configuration file to <codeph>true</codeph>. To view the logs, log in to the respective container as follows: </p><p>
                 <codeblock>docker exec -it &lt;container name> /bin/bash</codeblock>
             </p><p>For example:</p><p>
-                <codeblock>docker exec -it oscm-core</codeblock>
+                <codeblock>docker exec -it oscm-core /bin/bash</codeblock>
             </p><p>You find the logs in the following directory: </p><p><codeph>/opt/apache-tomee/logs</codeph></p></section>
     </conbody>
 </concept>

@@ -8,9 +8,9 @@
             <title>Updating Configuration Settings</title>
             <conbody>
                         <section>
-                                    <p>The <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+            <p>The <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> software requires a number of settings for configuring its container environment. These settings are provided as environment variables in Docker files when deploying the containers. Before the deployment, you needed to adapt the initial settings to your environment, in particular server names, ports, paths, and user IDs.</p>
-                            <p>You do this by editing the following configuration files in the <codeph>/docker</codeph> directory:</p>
+            <p>You do this by editing the following configuration files in the <codeph>/docker</codeph> directory:</p>
             <p>
                 <ol>
                     <li>
@@ -21,13 +21,13 @@
                         />, such as mail server, database and other settings.</li>
                 </ol>
             </p>
-                            <p>For details refer to the <ph product="oscm_ee"><i>QuickStart Guide</i> or the <xref
-                        format="html" href="https://github.com/servicecatalog/oscm-dockerbuild/blob/v17.5.0/README.md"
-                        scope="external"><u><i>Readme</i></u></xref> file on GitHub</ph><ph product="oscm_ce"
-                        >to the <xref format="html" href="https://github.com/servicecatalog/oscm-dockerbuild"
-                        scope="external"><u><i>Readme</i></u></xref> file on GitHub</ph>. </p>
-                                    <p audience="doc"
-                    >The initial configuration settings are described in detail in <xref
+            <p><b>For details refer to the <ph product="oscm_ee"><i>QuickStart Guide</i> or the <xref format="html"
+                            href="https://github.com/servicecatalog/oscm-dockerbuild/blob/v17.5.0/README.md"
+                            scope="external"><u><i>Readme</i></u></xref> file on GitHub</ph><ph product="oscm_ce"
+                            >to the <xref format="html" href="https://github.com/servicecatalog/oscm-dockerbuild"
+                            scope="external"><u><i>Readme</i></u></xref> file on GitHub</ph>.</b>
+            </p>
+            <p audience="doc">The initial configuration settings are described in detail in <xref
                     href="../../Shared/reference/r_ConfigSettings_initial.xml"/>.</p>
             <p><b>To update the initial settings</b>: </p>
             <p>
@@ -51,12 +51,12 @@
                     /> services, marketplaces, etc. have initial default values that can be viewed and updated using the <ph
                     audience="BSS" conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> administration portal.</p>
-                                    <p><b>To update existing settings for the <ph
-            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> services</b>: </p>
-      <p>In the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-          /> administration portal, choose <b>Update configuration settings</b> in the <b>Operation</b> menu. </p>
-      <p>The current configuration settings as stored in the database are retrieved. You can check all settings and update them as required by entering a new value for the corresponding configuration setting. </p>
-      <p>For detailed step-by-step instructions, refer to the online help.</p>
-                        </section>
+            <p><b>To update existing settings for the <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> services</b>: </p>
+            <p>In the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> administration portal, choose <b>Update configuration settings</b> in the <b>Operation</b> menu. </p>
+            <p>The current configuration settings as stored in the database are retrieved. You can check all settings and update them as required by entering a new value for the corresponding configuration setting. </p>
+            <p>For detailed step-by-step instructions, refer to the online help.</p>
+        </section>
             </conbody>
 </concept>

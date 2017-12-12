@@ -6,7 +6,7 @@
 
 <concept id="concept_1BCF5C425D7D4627AB1C66A085CF6E11" xml:lang="en-us">
     <title>Integrating Applications with <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-        /> Using the Asynchronous Provisioning Platform</title>
+        /> Using APP</title>
     <conbody>
         <section>
             <p>When integrating applications with <ph
@@ -31,7 +31,9 @@
                         /> with the subscription service handling the provisioning tasks.</li>
                     <li>APP including the provisioning service, a database, a notification handler, and an API to enable the communication between the application instances and <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</li>
-                    <li>A service controller for communication with the application. A service controller must be implemented for each application. <p>To implement a service controller, you use the API provided with the integration package for asynchronous provisioning. Samples included in the package show how a service controller can be implemented. A detailed documentation for the API is provided as Javadoc.</p><p>The following ready-to-use service controllers are included in and initialized when deploying the <codeph>oscm-app</codeph> container: </p><p>
+                    <li>A service controller for communication with the application. <!--li>A service controller must be implemented for each application. <p>To implement a service controller, you use the API provided with the integration package for asynchronous provisioning. Samples included in the package show how a service controller can be implemented. A detailed documentation for the API is provided as Javadoc.</p>
+                            </li-->
+                        <p>The following ready-to-use service controllers are available, registered, and initialized ### true for both controllers? ### when deploying the <codeph>oscm-app</codeph> container: </p><p>
                             <ul>
                                 <!--li><codeph>oscm-ror-install-pack.zip</codeph><p>Can be used for integrating FUJITSU ServerView Resource Orchestrator (ROR) with <ph
                                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
@@ -94,7 +96,7 @@
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> user interface directly to the service controller for the underlying application. The service controller is responsible for the execution of the operation in the application. </p>
         </section>
-        <section audience="doc">
+        <!--section audience="doc">
             <title>Integration Tasks</title>
             <p>Integrating an application with <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> involves the following tasks: </p>
@@ -116,6 +118,6 @@
                 <li><xref href="../../Shared/Installation/c_Update.xml"/></li>
                 <li><xref href="../../APPInt/APP/c_LogConfig.xml"/></li>
             </ul>
-        </section>
+        </section-->
     </conbody>
 </concept>

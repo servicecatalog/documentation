@@ -86,6 +86,7 @@
     		<topicref format="dita" href="APPInt/APP/t_DeployController.xml" type="task"/>
     		</topicref>
     	<topicref format="dita" href="APPInt/APP/c_AdministratingIntro.xml" type="concept">
+    	<topicref format="dita" href="APPInt/APP/t_AccessAPP.xml" type="task"/>
     		<topicref format="dita" href="APPInt/APP/c_HandleProblems.xml" type="concept"/>
     		<topicref format="dita" href="Shared/concepts/c_ControllerHandleCommProblems.xml" type="concept"/>
     		<topicref format="dita" href="Shared/Installation/c_Backup.xml" type="concept"/>

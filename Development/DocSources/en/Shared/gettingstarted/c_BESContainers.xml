@@ -47,8 +47,17 @@
         <section><title>Container Communication</title><p>The following figure provides an overview of the container communication on a Docker host (a VM):</p><p><image
                     href="../_images/ContainerCommunication.png" alt="ContainerCommunication.png" width="400"
                     height="255"
-                /></p><p>The host-internal communication always relies on the HTTP protocol, whereas calls from outside of the host are always secured via HTTPS. The platform operator is responsible for opening the indicated ports, which can either be addressed using the FQDN or the floating IP address of the respective container. </p>To look inside a container, you can use the following command for logging in: <p>
-                <codeblock>docker exec -it &lt;container name> /bin/bash</codeblock>
+                /></p><p>The host-internal communication always relies on the HTTP protocol, whereas calls from outside of the host are always secured via HTTPS. The platform operator is responsible for opening the indicated ports, which can either be addressed using the FQDN or the floating IP address of the respective container. </p>To look inside a container:<p>
+                <ol>
+                    <li>List all containers (even stopped ones) to show the container names:<p>
+                            <codeblock>docker ps -a </codeblock>
+                        </p></li>
+                    <li>Log in to a container using the following command:<p>
+                            <codeblock>docker exec -it &lt;container name> /bin/bash</codeblock>
+                        </p><p>For example: </p><p>
+                            <codeblock>docker exec -it oscm-core /bin/bash</codeblock>
+                        </p></li>
+                </ol>
             </p></section>
     </conbody>
 </concept>

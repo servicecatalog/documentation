@@ -67,7 +67,7 @@
                         </p>
                                 <p>To <b>delete</b> a container:  </p>
                         <p>
-                                <codeblock>docker-compose -f docker-compose-oscm.yml rm &lt;container-name></codeblock>
+                                <codeblock>docker-compose rm -f docker-compose-oscm.yml &lt;container-name></codeblock>
                         </p>
                         <p>To <b>create and start</b> a container:  </p>
                         <p>
@@ -75,9 +75,9 @@
                         </p>
                         <p>To <b>restart</b> a container:  </p>
                         <p>
-                                <codeblock>docker-compose start &lt;container-name></codeblock>
+                                <codeblock>docker-compose restart &lt;container-name></codeblock>
                         </p>
-                        <p>When shutting down the containers, the <codeph>oscm-db</codeph> container must be stopped as last one. When starting or restarting the containers, make sure that the <codeph>oscm-db</codeph> container is first.  </p>
+                        <p>When shutting down the containers, the <codeph>oscm-db</codeph> container must be the last one to be stopped. When starting or restarting the containers, make sure that the <codeph>oscm-db</codeph> container is first. </p>
                         </section>
                 </conbody>
         </concept>

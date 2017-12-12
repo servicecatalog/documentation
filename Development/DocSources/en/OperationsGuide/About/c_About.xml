@@ -33,6 +33,12 @@
                                     />, its containers and their communication, its architecture, its organizations, users, and roles.</entry>
                             </row>
                             <row>
+                                <entry><xref href="../Configuration/c_Configuration.xml"/></entry>
+                                <entry>Describes how to maintain the <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    /> configuration settings, how to add a currency and a language, how to use and configure timers for automatic task processing, as well as how to manage platform-wide LDAP settings.</entry>
+                            </row>
+                            <row>
                                 <entry colname="col2"><xref href="../GettingStarted/c_GettingStarted.xml"/></entry>
                                 <entry colname="col3">Describes how to access the <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
@@ -41,12 +47,6 @@
                                         />, and shows how to start and stop the <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                     /> containers.</entry>
-                            </row>
-                            <row>
-                                <entry><xref href="../Configuration/c_Configuration.xml"/></entry>
-                                <entry>Describes how to maintain the <ph
-                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                    /> configuration settings, how to add a currency and a language, how to use and configure timers for automatic task processing, as well as how to manage platform-wide LDAP settings.</entry>
                             </row>
                             <row>
                                 <entry colname="col2"><xref href="../Monitoring/c_RegularIntro.xml"/></entry>
