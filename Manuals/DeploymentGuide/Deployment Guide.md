@@ -21,9 +21,9 @@ For installing ESCM in SUSE OpenStack Cloud, the following OpenStack services mu
 
 #### SLES Image
 
-The ESCM barclamp expects a SLES image in the Glance image registry of the SUSE OpenStack Cloud. The image must contain Docker and Docker Compose. A ready-to-use image in qcow2 format can be downloaded from [here](https://build.opensuse.org/package/show/isv:fujitsu:fest:Images:slesescm/sles12sp3) and imported in Glance as a public image with the image name sles12-sp3:
+The ESCM barclamp expects a SLES image in the Glance image registry of the SUSE OpenStack Cloud. The image must contain Docker and Docker Compose. A ready-to-use image in raw format can be downloaded from [here](https://build.opensuse.org/package/show/isv:fujitsu:fest:Images:slesescm/sles12sp3) and imported in Glance as a public image with the image name sles12-sp3:
 
-![](CreateImage.png)
+![TODO](CreateImage.png)
 
 #### Network Settings
 
