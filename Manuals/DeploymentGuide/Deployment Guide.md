@@ -23,7 +23,7 @@ For installing ESCM in SUSE OpenStack Cloud, the following OpenStack services mu
 
 #### SLES Image
 
-The ESCM barclamp expects a SLES image in the Glance image registry of the SUSE OpenStack Cloud. The image must contain Docker and Docker Compose. A ready-to-use image in qcow2 format can be downloaded from SUSE Studio Express (TODO Link) and imported in Glance as a public image with the image name sles12-sp3:
+The ESCM barclamp expects a SLES image in the Glance image registry of the SUSE OpenStack Cloud. The image must contain Docker and Docker Compose. A ready-to-use image in qcow2 format can be downloaded from [here](https://build.opensuse.org/package/show/isv:fujitsu:fest:Images:slesescm/sles12sp3) and imported in Glance as a public image with the image name sles12-sp3:
 
 ![](CreateImage.png)
 
@@ -80,7 +80,7 @@ The ESCM settings are specified in the barclamp graphical interface (_Custom_ mo
 
 #### Docker Registry
 
-By default, DockerHub is configured as a registry for the ESCM software. If it is necessary to use a custom registry, its configuration can be specified. Depending on the registry, authentication can also be configured.
+By default, DockerHub is configured as the registry for the ESCM software. If it is necessary to use a custom registry, its configuration can be specified. Depending on the registry, authentication can also be configured.
 
 **Use Docker Hub** : true if you use the official ESCM Docker images as provided on Docker Hub, false otherwise.
 
@@ -101,7 +101,7 @@ By default, DockerHub is configured as a registry for the ESCM software. If it i
 
 #### Proxy Settings
 
-Depending on the environment, it may be necessary to specify proxy settings for the OpenStack instance hosting the ESCM Docker images.
+Depending on your environment, it may be necessary to specify proxy settings for the OpenStack instance hosting the ESCM Docker images.
 
 These settings are used for the Docker engine environment which needs access to the Docker registry and ESCM Docker containers which access the internet.
 
@@ -113,7 +113,7 @@ These settings are used for the Docker engine environment which needs access to 
 
 **HTTPS Proxy Port** : The HTTPS proxy port
 
-**No Proxy** : Host names, IP addresses or FQDNs for which the proxy should be bypassed in a comma separated list. This already contains localhost, 127.0.0.1 and the floating IP address of the instance by default. Set additional ones if necessary.
+**No Proxy** : Host names, IP addresses or FQDNs for which the proxy should be bypassed in a comma-separated list. By default, this list already contains localhost, 127.0.0.1 and the floating IP address of the instance. Specify additional ones, if necessary.
 
 **Authentication Required** : true if the proxy server requires authentication, false otherwise
 
@@ -122,7 +122,6 @@ These settings are used for the Docker engine environment which needs access to 
 **Password** : Password for proxy authentication
 
 ![](image009.png)
-
 
 #### SSL Settings
 
@@ -147,21 +146,122 @@ You must specify the locations for the certificate key pair files which the appl
 
 After having applied the ESCM proposal, it may take some minutes until the ESCM services are available, although a message might be displayed that ESCM has been deployed successfully. You may log in to the ESCM instance where the ESCM containers are running at any time, either to do operational tasks or to check the status. You may use the floating IP of the instance and the OpenStack SSH public key you provided.
 
-##### How to access the ESCM instance
+#### How to Access the ESCM Instance
 
-TODO
+Open the OpenStack Dashboard on your control node and navigate to **System -> Instances**. There you will see the deployed ESCM instance. Note its Floating IP address.
 
-##### How to see the deployment progress
+![](image012.png)
 
-TODO
+You may connect to this Floating IP address via SSH, using the SSH public key you specified when you provisioned the ESCM barclamp.
+```
+ssh root@<floating_ip>
+```
 
-##### Where to find the ESCM logs
+#### Where to Find the ESCM Logs
 
-TODO
+The deployment logs are in two log files: 
+1. ESCM instance setup log: 	`/var/log/setup-cloud.log`
+2. ESCM container setup log: `/docker/logs/setup-machine-<date>.log` (rotated daily)
 
-##### How to backup/restore the ESCM database
+The main application logs are saved to separate log files, depending on the Docker container the respective component runs in. In general the log file location is: 
 
-TODO
+`/docker/logs/<container name>/<container name>.out.log`
 
-....
+Below is a list of main component log files: 
 
+- Database: `/docker/logs/oscm-db/oscm-db.out.log`
+- ESCM CORE: `/docker/logs/oscm-core/oscm-core.out.log`
+- ESCM APP: `/docker/logs/oscm-app/oscm-app.out.log`
+- ESCM Reporting:`/docker/logs/oscm-birt/oscm-birt.out.log`
+- Branding: `/docker/logs/oscm-branding/oscm-branding.out.log`
+- Online help: `/docker/logs/oscm-help/oscm-help.out.log`
+
+For advanced troubleshooting, it can be necessary to check additional application server (Tomcat) logs. They can be found in the following directories: 
+
+- ESCM CORE: `/docker/logs/oscm-core/tomcat`
+- ESCM APP: `/docker/logs/oscm-app/tomcat`
+- ESCM Reporting: `/docker/logs/oscm-birt/tomcat`
+
+### How to Backup/Restore the ESCM Databases
+
+Below you find example procedures. 
+
+#### Backup
+```
+# Access the ESCM instance via SSH
+ssh root@<floating_ip>
+
+# Access the ESCM configuration file and note the database superuser password
+less /docker/var.env
+# -> DB_SUPERPWD=<random string>
+
+# Create a directory to hold the database backups
+mkdir /docker/data/backup
+
+# Start a temporary Docker container with access to the database from which you can create the backups
+# Note: If you use a custom Docker registry, please substitute the 
+# servicecatalog/oscm-db:latest image name with your image name.
+# You may list the local image names with the command 'docker images'
+docker run -it --name dbbackup --rm --network docker_default -v /docker/data/backup:/backup servicecatalog/oscm-db:latest /bin/bash
+
+# Export the database superuser password in the environment
+export PGPASSWORD="<your DB_SUPERPWD>"
+
+# Create the SQL dump backups
+pg_dumpall -g -c --if-exists -f /backup/globals.sql -h oscm-db -U postgres
+pg_dump -c --if-exists -C --quote-all-identifiers -f /backup/bss.sql -h oscm-db -U postgres bss
+pg_dump -c --if-exists -C --quote-all-identifiers -f /backup/bssapp.sql -h oscm-db -U postgres bssapp
+pg_dump -c --if-exists -C --quote-all-identifiers -f /backup/bssjms.sql -h oscm-db -U postgres bssjms
+
+# Exit the temporary Docker container
+exit
+```
+
+#### Restore
+
+```
+# Access the ESCM instance via SSH
+ssh root@<floating_ip>
+
+# Access the ESCM configuration file and note the database superuser password
+less /docker/var.env
+# -> DB_SUPERPWD=<random string>
+
+# Enter the Docker Compose directory
+cd /docker
+
+# Stop and remove any running containers
+docker-compose -f docker-compose-oscm.yml stop
+docker-compose -f docker-compose-oscm.yml rm -f
+
+# Optional: Completely delete the existing database
+rm -rf /docker/data/oscm-db/data ; mkdir /docker/data/oscm-db/data
+
+# Start only the database Docker container
+docker-compose -f docker-compose-oscm.yml up -d oscm-db
+
+# Start a temporary Docker container with access to the database from which you can create the backups.
+# Note: If you use a custom Docker registry, please substitute the 
+# servicecatalog/oscm-db:latest image name with your image name.
+# You may list the local image names with the command 'docker images'
+docker run -it --name dbrestore --rm --network docker_default -v /docker/data/backup:/backup servicecatalog/oscm-db:latest /bin/bash
+
+# Export the database superuser password in the environment
+export PGPASSWORD="<your DB_SUPERPWD>"
+
+# Restore the SQL dump backups
+psql -h oscm-db -U postgres < /backup/globals.sql
+psql -h oscm-db -U postgres < /backup/bss.sql
+psql -h oscm-db -U postgres < /backup/bssapp.sql
+psql -h oscm-db -U postgres < /backup/bssjms.sql
+
+# Exit the temporary Docker container
+exit
+
+# Enter the Docker Compose directory
+cd /docker
+
+# Start all application Docker containers
+docker-compose -f docker-compose-oscm.yml up -d
+
+```
