@@ -25,7 +25,7 @@
             <p>Proceed as follows: </p>
             <p>
                 <ol>
-                    <li>Login to the <ph conref="../../../de/Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    <li>Login to the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                             /> administration portal, and choose <b>Create organization</b> in the <b>Operation</b> menu.<p>Make sure to set the <b>Technology provider</b> role for the organization. Refer to the online help for details.</p>
                     </li>
                     <li>Access the Web interface (base URL) of APP in the following format:<p>

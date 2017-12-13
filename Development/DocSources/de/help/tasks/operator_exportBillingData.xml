@@ -31,9 +31,9 @@
                 <cmd>Entscheiden Sie, ob Sie die Daten in einer Datei speichern (<codeph>&lt;datum>BillingData.xml</codeph>) oder direkt in einem Editor Ihrer Wahl anzeigen lassen.</cmd>
             </step>
         </steps>
-        <result>
+        <!--result>
             <p>Eine detaillierte Beschreibung der Elemente und Attribute in der erzeugten XML-Datei finden Sie <xref
-                    href="../../../en/DevelopersGuide/Reference/r_BillingData.xml">hier</xref>.</p>
-        </result>
+                    href="DevelopersGuide/Reference/r_BillingData.xml">hier</xref>.</p>
+        </result-->
     </taskbody>
 </task>

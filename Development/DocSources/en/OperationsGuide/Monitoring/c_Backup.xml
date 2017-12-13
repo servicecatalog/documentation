@@ -30,6 +30,103 @@
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> release, always create a backup of all data mentioned above.</note>
             </p>
+            <p>Below you find some<b> example procedures </b>for backing up and restoring the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> databases. </p>
+        </section>
+        <section>
+            <title>Backup</title>
+            <p>
+                <ol>
+                    <li>Login to the Docker host where <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> is deployed via SSH using the floating IP address of the VM. <p>
+                            <codeblock> ssh root@&lt;floating_ip></codeblock>
+                        </p></li>
+                    <li>Access the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> configuration file and note down the database superuser password set with the <codeph>DB_SUPERPWD</codeph> variable:<p>
+                            <codeblock>less /docker/var.env</codeblock>
+                        </p></li>
+                    <li>Create a directory where the database backups are to be stored. For example: <p>
+                            <codeblock>mkdir /docker/data/backup</codeblock>
+                        </p></li>
+                    <li>Start a temporary Docker container with access to the databases for which you want to create backups. For example: <p>
+                            <codeblock>docker run -it --name dbbackup --rm --network docker_default -v 
+   /docker/data/backup:/backup servicecatalog/oscm-db:latest /bin/bash</codeblock>
+                        </p><p>If you use a custom Docker registry, you need to replace the <codeph>servicecatalog/oscm-db:latest</codeph> image name with your image name.</p><p>To list the local image names, execute the following command:</p><p>
+                            <codeblock>docker images</codeblock>
+                        </p></li>
+                    <li>Export the database superuser password in your environment:<p>
+                            <codeblock>export PGPASSWORD="&lt;your DB_SUPERPWD>"</codeblock>
+                        </p></li>
+                    <li>Create the SQL dumps of the <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> databases:<p>
+                            <codeblock>pg_dumpall -g -c --if-exists -f /backup/globals.sql -h 
+   oscm-db -U postgres
+
+pg_dump -c --if-exists -C --quote-all-identifiers -f /backup/bss.sql -h 
+   oscm-db -U postgres bss 
+
+pg_dump -c --if-exists -C --quote-all-identifiers -f /backup/bssapp.sql -h 
+   oscm-db -U postgres bssapp 
+
+pg_dump -c --if-exists -C --quote-all-identifiers -f /backup/bssjms.sql -h
+   oscm-db -U postgres bssjms</codeblock>
+                        </p></li>
+                    <li>Exit the temporary Docker container:<p>
+                            <codeblock>exit</codeblock>
+                        </p></li>
+                </ol>
+            </p>
+        </section>
+        <section>
+            <title>Restore</title>
+            <p>
+                <ol>
+                    <li>Login to the Docker host where <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> is deployed via SSH using the floating IP address of the VM. <p>
+                            <codeblock> ssh root@&lt;floating_ip></codeblock>
+                        </p></li>
+                    <li>Access the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> configuration file and note down the database superuser password set with the <codeph>DB_SUPERPWD</codeph> variable:<p>
+                            <codeblock>less /docker/var.env</codeblock>
+                        </p></li>
+                    <li>Go to your Docker base directory: <p>
+                            <codeblock>cd /docker</codeblock>
+                        </p></li>
+                    <li>Stop and remove all running containers:<p>
+                            <codeblock>docker-compose -f docker-compose-oscm.yml stop 
+docker-compose -f docker-compose-oscm.yml rm -f </codeblock>
+                        </p><p>Optionally completely delete the existing database:</p><p>
+                            <codeblock>rm -rf /docker/data/oscm-db/data ; mkdir /docker/data/oscm-db/data</codeblock>
+                        </p></li>
+                    <li>Start the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> database container:<p>
+                            <codeblock>docker-compose -f docker-compose-oscm.yml up -d oscm-db</codeblock>
+                        </p></li>
+                    <li>Start a temporary Docker container with access to the database from which you can restore the data. For example: <p>
+                            <codeblock>docker run -it --name dbrestore --rm --network docker_default -v 
+   /docker/data/backup:/backup servicecatalog/oscm-db:latest /bin/bash</codeblock>
+                        </p><p>If you use a custom Docker registry, you need to replace the <codeph>servicecatalog/oscm-db:latest</codeph> image name with your image name.</p><p>To list the local image names, execute the following command:</p><p>
+                            <codeblock>docker images</codeblock>
+                        </p></li>
+                    <li>Export the database superuser password in your environment:<p>
+                            <codeblock>export PGPASSWORD="&lt;your DB_SUPERPWD>"</codeblock>
+                        </p></li>
+                    <li>Restore the SQL dumps:<p>
+                            <codeblock>psql -h oscm-db -U postgres &lt; /backup/globals.sql 
+psql -h oscm-db -U postgres &lt; /backup/bss.sql 
+psql -h oscm-db -U postgres &lt; /backup/bssapp.sql 
+psql -h oscm-db -U postgres &lt; /backup/bssjms.sql </codeblock>
+                        </p></li>
+                    <li>Exit the temporary Docker container:<p>
+                            <codeblock>exit</codeblock>
+                        </p></li>
+                    <li>Go to your Docker base directory: <p>
+                            <codeblock>cd /docker</codeblock>
+                        </p></li>
+                    <li>Start all <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> containers:<p>
+                            <codeblock>docker-compose -f docker-compose-oscm.yml up -d</codeblock>
+                        </p></li>
+                </ol>
+            </p>
         </section>
     </conbody>
 </concept>
