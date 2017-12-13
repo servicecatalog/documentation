@@ -6,8 +6,6 @@ The ESCM software is available as Docker images, deployed as a cloud application
 
 The complete documentation can be found [here](https://github.com/servicecatalog/documentation/tree/ESCM).
 
-TODO: where to find more about escm docker containers, insert link
-
 ## 1. Prerequisites
 
 #### OpenStack Services
