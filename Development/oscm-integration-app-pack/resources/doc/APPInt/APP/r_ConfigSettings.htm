@@ -20,7 +20,7 @@
 
     <div>
         <div class="section">
-            <p>The <samp class="codeph">configsettings.properties</samp> file located in <samp class="codeph">&lt;install_pack_dir&gt;/databases/app_db</samp> contains the configuration settings for APP.</p>
+            <p>This section describes the configuration settings that are written to the <samp class="codeph">bssapp</samp> database during deployment. </p>
 
         </div>
 
@@ -37,9 +37,9 @@
             <p><samp class="codeph">APP_TIMER_INTERVAL=15000</samp>
             </p>
 
-            <p>The interval (in milliseconds) at which APP polls the status of instances. If you increase the value, provisioning takes longer. If you decrease it, more load is put on the system. We strongly recommend that you do not set a value of more than 180000 milliseconds (3 minutes), although the maximum value is much higher (922337203685477580).</p>
+            <p>The interval (in milliseconds) at which APP polls the status of instances.</p>
 
-            <p>If you do not specify this setting at all, the default value used is 15000.</p>
+            <p>Default: <samp class="codeph">15000</samp>.</p>
 
         </div>
 
@@ -50,20 +50,11 @@
 
             <p>The interval (in milliseconds) at which APP polls the status of instances and updates the number of virtual machines (VMs) provisioned for subscriptions to IaaS services, for example in OpenStack. The number is updated only in case the technical service definition specifies a <samp class="codeph">VMS_NUMBER</samp> parameter.</p>
 
-            <p>If you do not specify this setting, the default value used is 86400000 (once a day).</p>
+            <p>Default: <samp class="codeph">86400000</samp> (once a day).</p>
 
         </div>
 
-        <div class="section"><h4 class="sectiontitle">APP_MAIL_RESOURCE</h4>
-            
-            <p><samp class="codeph">APP_MAIL_RESOURCE=mail/APPMail</samp></p>
-
-            <p>The JNDI name of the GlassFish mail resource used to send emails. </p>
-
-            <p>The resource <samp class="codeph">mail/APPMail</samp> is created during setup with the parameters defined in the <samp class="codeph">glassfish.properties</samp> file. This setting needs to be changed only if you want to use a different mail resource. </p>
-
-        </div>
-
+        
         <div class="section"><h4 class="sectiontitle">APP_ADMIN_MAIL_ADDRESS</h4>
             
             <p><samp class="codeph">APP_ADMIN_MAIL_ADDRESS=admin@example.com</samp>
@@ -73,59 +64,14 @@
 
         </div>
 
-        <div class="section"><h4 class="sectiontitle">APP_KEY_PATH</h4>The path to the file containing the key required for encryption and decryption of service parameters with data type <samp class="codeph">PWD</samp> and custom attributes marked for encryption.<p>Upon the start of APP, it is checked whether a key file exists in the location specified in this setting. If this not the case, the key file is automatically generated and stored in the location specified here. If nothing is specified, the file will be named <samp class="codeph">key</samp> and generated into the following location:</p>
-<p><samp class="codeph">&lt;GLASSFISH_HOME&gt;/glassfish/domains/app-domain/config</samp></p>
-Default: <p><samp class="codeph">./key</samp></p>
-<div class="p">
-                <div class="note"><span class="notetitle">Note:</span> Be aware that the key file must not be deleted. Otherwise, encryption and decryption is no longer possible. It is recommended to create a backup of this file once generated.</div>
-
-            </div>
-</div>
-
-        <div class="section"><h4 class="sectiontitle">APP_KEYSTORE_PASSWORD</h4>
-            
-            <p><samp class="codeph">APP_KEYSTORE_PASSWORD=changeit</samp></p>
-
-            <p>The password required to access the keystore of the domain used for APP in the application server. </p>
-
-        </div>
-
-        <div class="section"><h4 class="sectiontitle">APP_TRUSTSTORE</h4>
-            
-            <p><samp class="codeph">APP_TRUSTSTORE=./cacerts.jks</samp></p>
-
-            <p>The path and file name of the truststore of the application server domain used for APP. The certificate of <span>OSCM</span> is stored in this truststore.</p>
-
-        </div>
-
-        <div class="section"><h4 class="sectiontitle">APP_TRUSTSTORE_BSS_ALIAS</h4>
-            
-            <p><samp class="codeph">APP_TRUSTSTORE_PASSWORD=bes-s1as</samp></p>
-
-            <p>The alias of the certificate of <span>OSCM</span> as stored in the truststore of the application server domain used for APP. </p>
-
-        </div>
-
-        <div class="section"><h4 class="sectiontitle">APP_TRUSTSTORE_PASSWORD</h4>
-            
-            <p><samp class="codeph">APP_TRUSTSTORE_PASSWORD=changeit</samp></p>
-
-            <p>The password required to access the truststore of the application server domain used for APP.</p>
-
-        </div>
-
-        <div class="section"><h4 class="sectiontitle">BSS_AUTH_MODE</h4><p><samp class="codeph">BSS_AUTH_MODE=INTERNAL</samp>
-            </p>
-<p>Specifies that <span>OSCM</span> is used for user authentication.</p>
-Possible value: <samp class="codeph">INTERNAL</samp>
-        </div>
-
+        
+        
         <div class="section"><h4 class="sectiontitle">BSS_USER_KEY</h4>
             
             <p><samp class="codeph">BSS_USER_KEY=&lt;userKey&gt;</samp>
             </p>
 
-            <p>The user key for accessing <span>OSCM</span>. </p>
+            <p>###?### The user key for accessing <span>OSCM</span>. </p>
 
             <p>Replace <samp class="codeph">&lt;userKey&gt;</samp> with the user key which you receive with the confirmation email for your user account. </p>
 
@@ -154,24 +100,7 @@ Possible value: <samp class="codeph">INTERNAL</samp>
 
         </div>
 
-        <div class="section"><h4 class="sectiontitle">BSS_WEBSERVICE_URL</h4>
-            
-            <p><samp class="codeph">BSS_WEBSERVICE_URL=https://&lt;server&gt;:&lt;port&gt;/{SERVICE}/BASIC</samp>
-            </p>
-
-            <p>Mandatory when <samp class="codeph">BSS_AUTH_MODE</samp> is set to <samp class="codeph">INTERNAL</samp> and basic authentication is used. The endpoint of the <span>OSCM</span> Web services to be used. The <samp class="codeph">{SERVICE}</samp> placeholder must not be replaced.</p>
-
-        </div>
-
-        <div class="section"><h4 class="sectiontitle">BSS_WEBSERVICE_WSDL_URL</h4>
-            
-            <p><samp class="codeph">BSS_WEBSERVICE_WSDL_URL=https://&lt;server&gt;:&lt;port&gt;/oscm/v1.9/{SERVICE}/BASIC?wsdl</samp>
-            </p>
-
-            <p>Mandatory when <samp class="codeph">BSS_AUTH_MODE</samp> is set to <samp class="codeph">INTERNAL</samp> and basic authentication is used. The URL specifying the version of the <span>OSCM</span> Web services to be used. The <samp class="codeph">{SERVICE}</samp> placeholder must not be replaced.</p>
-
-        </div>
-
+        
         
     </div>
 
