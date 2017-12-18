@@ -37,11 +37,13 @@
             <p>As an alternative, you can proceed as follows:</p>
 
             <ol>
-                <li class="liexpand">In a Web browser, access the base URL of APP, for example: <p><samp class="codeph">https://127.0.0.1:8881/oscm-app</samp>
-                    </p>
+                <li class="liexpand">In a Web browser, access the Web interface (base URL) of APP, for example: <div class="p">
+                        <pre class="codeblock">https://127.0.0.1:8881/oscm-app</pre>
+
+                    </div>
 </li>
 
-                <li class="liexpand">Log in with the ID and password of the user and organization defined in the <samp class="codeph">CONTROLLER_USER_NAME</samp> and <samp class="codeph">CONTROLLER_USER_PASS</samp> settings during the deployment.<p>A message is shown that APP has been suspended due to a communication problem with <span>OSCM</span>. </p>
+                <li class="liexpand">Log in with the ID and password of the user and organization defined by the platform operator in the <samp class="codeph">BSS_USER_ID</samp> and <samp class="codeph">BSS_USER_PWD</samp> configuration settings (default: <samp class="codeph">administrator</samp>, <samp class="codeph">admin123</samp>).<p>A message is shown that APP has been suspended due to a communication problem with <span>OSCM</span>. </p>
 </li>
 
                 <li class="liexpand">Click <strong>Restart</strong>.<p>APP is restarted instantly. In the APP database, the <samp class="codeph">APP_SUSPEND</samp> key is set to <samp class="codeph">false</samp>. </p>
