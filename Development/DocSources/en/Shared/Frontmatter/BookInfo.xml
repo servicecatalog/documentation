@@ -30,11 +30,7 @@
       </tgroup>
       <tgroup product="oscm_ce" cols="1">
         <colspec colnum="1" colname="col1" colwidth="*"/>
-        <tbody>
-          <row>
-            <entry colname="col1">Copyright FUJITSU LIMITED 2018</entry>
-          </row>
-        </tbody>
+        <tbody/>
       </tgroup>
       <tgroup cols="1">
         <colspec colnum="1" colname="col1" colwidth="*"/>
