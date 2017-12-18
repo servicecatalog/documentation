@@ -44,7 +44,7 @@
                         <result>
                                     <p>Ihre Anpassungen werden gespeichert und sind für Marktplatzbesucher sofort sichtbar. Um Ihre Änderungen rückgängig zu machen und die Benutzeroberfläche wieder im Lieferzustand anzuzeigen, klicken Sie <uicontrol>Zurücksetzen</uicontrol>.</p>
                                     <p>
-                                                <note>Die geänderten Texte der Benutzeroberfläche sind nur im Kontext des Marktplatzes sichtbar, für den Sie die Änderungen durchgeführt haben. Wenn Sie sich mit der URL zur Verwaltung eines bestimmten Marktplatzes anmelden (<codeph>http://&lt;server&gt;:&lt;port&gt;/&lt;context-root>?mId=&lt;mId&gt;</codeph>), können Sie keine Änderungen für einen anderen Marktplatz sehen. Wenn Sie sich ohne einen Marktplatzkontext anmelden (<codeph>http://&lt;server&gt;:&lt;port&gt;/&lt;context-root></codeph>), können Sie überhaupt keine angepassten Texte sehen.</note>
+                                                <note>Die geänderten Texte der Benutzeroberfläche sind nur im Kontext des Marktplatzes sichtbar, für den Sie die Änderungen durchgeführt haben. Wenn Sie sich mit der URL zur Verwaltung eines bestimmten Marktplatzes anmelden (<codeph>https://&lt;server&gt;:8081/oscm-portal?mId=&lt;mId&gt;</codeph>), können Sie keine Änderungen für einen anderen Marktplatz sehen. Wenn Sie sich ohne einen Marktplatzkontext anmelden (<codeph>https://&lt;server&gt;:8081/oscm-portal</codeph>), können Sie überhaupt keine angepassten Texte sehen.</note>
                                     </p>
                         </result>
                         <example><p><b>So geben Sie die Allgemeinen Geschäftsbedingungen und die Datenschutzerklärung ein</b>:</p><ol

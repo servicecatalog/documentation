@@ -229,7 +229,7 @@
                 <p><b>USERDATA_URL</b></p>
                 <p>Optional. URL to access the user data scripts or <codeph>cloud-init</codeph> directives for the automatic execution of user-specific configuration data. This URL must be accessible for APP.</p>
                 <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers or, in case you specify more than one URL, have fixed parameter options for selection.</p>
-                <p>Example: <codeph> http://127.0.0.1:8880/cloud-init/LAMP.script</codeph> (if the file was created under <codeph>&lt;appdomain>/docroot/cloud-init/LAMP.script</codeph>)</p>
+                <p>Example: <codeph> https://127.0.0.1:8881/cloud-init/LAMP.script</codeph> (### if the file was created under <codeph>&lt;appdomain>/docroot/cloud-init/LAMP.script</codeph> ### where must such a file now be located?)</p>
               </entry>
             </row>
           </tbody>

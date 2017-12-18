@@ -30,8 +30,8 @@
                     </li>
                     <li>Access the Web interface (base URL) of APP in the following format:<p>
                             <codeblock>https://&lt;hostname.fqdn&gt;:&lt;port&gt;/oscm-app</codeblock>
-                        </p><p><codeph>&lt;hostname.fqdn&gt;</codeph> is the name and the fully qualified domain name of the machine where APP has been deployed. <codeph>&lt;port&gt;</codeph> is the port to address the machine (default 8881), <codeph>oscm-app</codeph> is the default context root of APP and cannot be changed.</p></li>
-                    <li>Log in with your user ID and password (initially: <codeph>administrator</codeph>, <codeph>admin123</codeph>). <p>The initial credentials have been set during the deployment in the following environment variables in the <codeph><codeph>var.env</codeph></codeph> file: <codeph>CONTROLLER_USER_NAME</codeph> and <codeph>CONTROLLER_USER_PASS</codeph>.</p></li>
+                        </p><p><codeph>&lt;hostname.fqdn&gt;</codeph> is the name and the fully qualified domain name of the machine where APP has been deployed. <codeph>&lt;port&gt;</codeph> is the port to address the machine (default: <codeph>8881</codeph>), <codeph>oscm-app</codeph> is the default context root of APP and cannot be changed.</p></li>
+                    <li>Log in with your user ID and password (default: <codeph>administrator</codeph>, <codeph>admin123</codeph>). </li>
                     <li>Specify the ID of the technology provider organization that is to be responsible for the respective service controller (<codeph>ess.openstack</codeph> or <codeph>ess.aws</codeph>).</li>
                     <li>Click <uicontrol>Save Configuration</uicontrol> to save the settings.</li>
                 </ol>

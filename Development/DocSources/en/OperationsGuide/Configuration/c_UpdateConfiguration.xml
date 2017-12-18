@@ -9,54 +9,54 @@
             <conbody>
                         <section>
             <p>The <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> software requires a number of settings for configuring its container environment. These settings are provided as environment variables in Docker files when deploying the containers. Before the deployment, you needed to adapt the initial settings to your environment, in particular server names, ports, paths, and user IDs.</p>
-            <p>You do this by editing the following configuration files in the <codeph>/docker</codeph> directory:</p>
+                /> software requires a number of settings for configuring its container runtime environment. The mandatory settings must be specified in the environment variables in Docker files before deploying the containers. Usually, you need to adapt the initial settings to your environment, in particular server names, ports, paths, and user IDs.</p>
+            <p>You do this by editing the following configuration files in the <codeph>/docker</codeph> directory, where <codeph>/docker</codeph> is the directory on the Docker host where all <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>-specific data is located:</p>
             <p>
                 <ol>
                     <li>
-                        <p><codeph>.env</codeph>: Configuration for Docker, such as images and the base data directory</p>
+                        <p><codeph>.env</codeph>: Configuration settings for Docker, such as images and the base data directory (default: <codeph>/docker</codeph>)</p>
                     </li>
-                    <li><codeph>var.env</codeph>: Configuration for <ph audience="BSS"
+                    <li><codeph>var.env</codeph>: Configuration settings for <ph audience="BSS"
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                         />, such as mail server, database and other settings.</li>
                 </ol>
             </p>
-            <p><b>For details refer to the <ph product="oscm_ee"><i>QuickStart Guide</i> or the <xref format="html"
-                            href="https://github.com/servicecatalog/oscm-dockerbuild/blob/v17.5.0/README.md"
-                            scope="external"><u><i>Readme</i></u></xref> file on GitHub</ph><ph product="oscm_ce"
-                            >to the <xref format="html" href="https://github.com/servicecatalog/oscm-dockerbuild"
-                            scope="external"><u><i>Readme</i></u></xref> file on GitHub</ph>.</b>
-            </p>
-            <p audience="doc">The initial configuration settings are described in detail in <xref
+            <p audience="doc">The initial, mandatory settings are described in detail in <xref
                     href="../../Shared/reference/r_ConfigSettings_initial.xml"/>.</p>
-            <p><b>To update the initial settings</b>: </p>
+            <p>There are additional configuration settings whose keys are also stored in the <codeph>bss</codeph> database. The settings have default values that can be viewed and partially be changed in the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> administration portal (<b>Update configuration settings</b> in the <b>Operation</b> menu). Be aware that changing the settings in the administration portal should only be used for testing purposes. Your changes will be lost as soon as <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> is restarted. </p>
+            <p>If you want to permanently update configuration settings in the <codeph>bss</codeph> database, proceed as follows:</p>
             <p>
                 <ol>
                     <li>On your Docker host, edit the <codeph>.var</codeph> and <codeph>env.var</codeph> files located in the <codeph>/docker</codeph> directory as required. </li>
-                    <li>Execute the following command: <p>
-                            <codeblock>docker run --name deployer2 --rm -v /docker:/target 
-    -v /var/run/docker.sock:/var/run/docker.sock 
-    -e INITDB=true -e STARTUP=true servicecatalog/oscm-deployer</codeblock>
-                        </p>
-                    </li>
+                    <li>If you want to change a configuration setting that is not included <codeph>env.var</codeph> file yet, add its key and the value it shall take on to the <codeph>env.var</codeph> file. Look up the keys on the <b>Update configuration settings</b> page. They are described in detail in <xref
+                            href="../../Shared/reference/r_ConfigSettings_UI.xml"
+                                />. For example: <p><codeph>TIMER_INTERVAL_SUBSCRIPTION_EXPIRATION=345600000</codeph></p></li>
+                    <li>Save the <codeph>env.var</codeph> file to its original location: <p><codeph>/docker/env.var</codeph></p></li>
+                    <li>Stop and remove all <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"><ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph> containers:<p>
+                            <codeblock>docker-compose -f docker-compose-oscm.yml stop
+docker-compose -f docker-compose-oscm.yml rm -f </codeblock>
+                        </p></li>
+                    <li>Start the container for initializing the database and delete the finished containers: <p>
+                            <codeblock>
+docker-compose -f docker-compose-initdb.yml up -d oscm-db 
+docker-compose -f docker-compose-initdb.yml up oscm-initdb-core 
+docker-compose -f docker-compose-initdb.yml up oscm-initdb-jms 
+docker-compose -f docker-compose-initdb.yml up oscm-initdb-app 
+docker-compose -f docker-compose-initdb.yml up oscm-initdb-controller-openstack
+docker-compose -f docker-compose-initdb.yml up oscm-initdb-controller-aws 
+docker-compose -f docker-compose-initdb.yml stop 
+docker-compose -f docker-compose-initdb.yml rm -f</codeblock>
+                        </p></li>
+                    <li>Restart all application containers:<p>
+                            <codeblock>docker-compose -f docker-compose-oscm.yml up -d</codeblock>
+                        </p></li>
                 </ol>
             </p>
-            <p>
-                <note>This command updates the database schema as well. Be aware that any changes to configuration settings you made in the <ph
-                        audience="BSS" conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> administration portal (see below) are overwritten by the default settings!</note>
-            </p>
-            <p>The configuration settings for the <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> services, marketplaces, etc. have initial default values that can be viewed and updated using the <ph
-                    audience="BSS" conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> administration portal.</p>
-            <p><b>To update existing settings for the <ph
-                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> services</b>: </p>
-            <p>In the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> administration portal, choose <b>Update configuration settings</b> in the <b>Operation</b> menu. </p>
-            <p>The current configuration settings as stored in the database are retrieved. You can check all settings and update them as required by entering a new value for the corresponding configuration setting. </p>
-            <p>For detailed step-by-step instructions, refer to the online help.</p>
         </section>
             </conbody>
 </concept>

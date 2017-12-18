@@ -20,7 +20,7 @@
                         <li>Wenn der Server, auf dem das Stylesheet abgelegt ist, nicht zu erreichen ist, hängt das weitere Verhalten von dem Browser ab, mit dem auf den Marktplatz zugegriffen wird. Zum Beispiel könnten Seiten blockieren oder den Inhalt ohne irgendein Layout anzeigen.<p>Um dieses Risiko zu minimieren, sollten Sie das Stylesheet an einem Ort speichern, der ständig und ohne Unterbrechung erreichbar ist. </p></li>
                         <li>Wenn Sie die Einstellung des Stylesheets auf der Seite <uicontrol>Layout anpassen</uicontrol> speichern, wird geprüft, ob der angegebene Server erreichbar ist und beim Zugriff auf die URL Text oder CSS-Inhalt bereitgestellt wird. Beachten Sie jedoch, dass diese Prüfung nicht Dateien und Bilder umfasst, die im Stylesheet referenziert werden. </li>
                         <li>Benutzer sehen ein neues Layout, wenn sie sich das nächste Mal anmelden. Anonyme Benutzer müssen ihren Browser schließen und wieder öffnen. Wenn Sie eine neue Version eines Stylesheets aktivieren, sollten Sie daher sicherstellen, dass die alte Version noch für eine gewisse Übergangszeit zur Verfügung steht. </li>
-                        <li>Stellen Sie sicher, dass die Browser, mit denen Benutzer auf den Marktplatz zugreifen, gezwungen werden, das Stylesheet und die darin referenzierten Dateien vom Server zu holen, wenn eine neue Version bereitgestellt wird. <p>Dies können Sie erreichen, indem Sie in der URL des Stylesheets eine Versionsangabe einbauen, zum Beispiel:</p><p><codeph>http://&lt;server&gt;/Version1.1/StyleSheets/Customized.css</codeph>. </p><p>Mit jeder neuen Fassung des Stylesheets ändern Sie die Versionsangabe und damit die URL. </p><p>Eine andere Möglichkeit ist die Verwendung von Entity Tags (ETags), die Bestandteil von HTTP sind. ETags werden in HTTP zur Validierung von Caches verwendet. Sie erlauben es einem Client, konditionale Abfragen zu stellen. Der Web-Server muss nicht die komplette Antwort schicken, wenn sich der Inhalt nicht geändert hat. </p></li>
+                        <li>Stellen Sie sicher, dass die Browser, mit denen Benutzer auf den Marktplatz zugreifen, gezwungen werden, das Stylesheet und die darin referenzierten Dateien vom Server zu holen, wenn eine neue Version bereitgestellt wird. <p>Dies können Sie erreichen, indem Sie in der URL des Stylesheets eine Versionsangabe einbauen, zum Beispiel:</p><p><codeph>https://&lt;server&gt;/Version1.1/StyleSheets/Customized.css</codeph>. </p><p>Mit jeder neuen Fassung des Stylesheets ändern Sie die Versionsangabe und damit die URL. </p></li>
                   </ul>
                   <p id="The_branding_of_a_marketplace_task_taskbody_context_p_4"
                               >Das Branding eines Marktplatzes umfasst auch das Werbebanner und die verwendeten Texte (für Elemente der Benutzeroberfläche, E-Mails, usw.). Zum Anpassen des Werbebanners, also des Bereiches zur Platzierung von Werbung, Firmenlogos und weiteren Informationen, verwenden Sie die Option <uicontrol>Werbebanner anpassen</uicontrol> im Menü <uicontrol>Marktplatz</uicontrol>. Die Texte können Sie über die Option <uicontrol>Texte anpassen</uicontrol> im Menü <uicontrol>Marktplatz</uicontrol> ändern.</p>
@@ -45,7 +45,7 @@
                         </info>
                   </step>
                   <step>
-                        <cmd>Stellen Sie das angepasste Stylesheet und die darin referenzierten Dateien, Bilder und Schritarten auf einem Web-Server bereit, der im Internet über HTTP oder HTTPS erreichbar ist. </cmd>
+                        <cmd>Stellen Sie das angepasste Stylesheet und die darin referenzierten Dateien, Bilder und Schritarten auf einem Web-Server bereit, der im Internet über HTTPS erreichbar ist. </cmd>
                         <info>
                               <p>
                                     <note>Verwenden Sie keinen FTP-Server.</note>
@@ -66,7 +66,7 @@
                         <info>
                               <p>Beispiel:</p>
                               <p>
-                                    <codeph>http://&lt;server&gt;/Version1.1/CustomizedStyleSheet/mp.css</codeph>
+                                    <codeph>https://&lt;server&gt;/Version1.1/CustomizedStyleSheet/mp.css</codeph>
                               </p>
                         </info>
                   </step>

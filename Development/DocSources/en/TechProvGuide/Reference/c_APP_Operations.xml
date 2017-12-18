@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2018 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_1BCF5C425D7D4627AB1C66A085CF6E11" xml:lang="en-us">
+    <title>Service Operations</title>
+    <conbody>
+        <section>
+            <p>APP also includes the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> operation service interface for executing technical service operations on the integrated applications from the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> user interface. </p>
+            <p>Technical service operations can be used to access the resources of an application and perform administrative tasks without actually opening the application. The operations and the access information of the operation service must be specified in the technical service definition for the application. </p>
+            <p>APP passes service operation calls from the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> user interface directly to the service controller for the underlying application. The service controller is responsible for the execution of the operation in the application. </p>
+        </section>
+    </conbody>
+</concept>

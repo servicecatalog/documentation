@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<!-- Copyright FUJITSU LIMITED 2018 -->
+<reference id="reference832" xml:lang="en-us">
+    <title>APP Configuration Settings</title>
+    <refbody>
+        <section>
+            <p>This section describes the configuration settings that are written to the <codeph>bssapp</codeph> database during deployment. </p>
+        </section>
+        <section>
+            <title>APP_BASE_URL</title>
+            <p>The URL for accessing the Web interface of APP</p>
+            <p>Syntax: <codeph>https://&lt;hostname.fqdn>:&lt;port>/oscm-app</codeph></p>
+            <p><codeph>&lt;hostname.fqdn></codeph> is the name and the fully qualified domain name of the machine where <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> has been deployed. <codeph>&lt;port></codeph> is the port to address the machine (default <codeph>8881</codeph>), <codeph>oscm-app</codeph> is the default context root of <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> and cannot be changed. </p>
+        </section>
+        <section>
+            <title>APP_TIMER_INTERVAL</title>
+            <p>The interval (in milliseconds) at which APP polls the status of instances.</p>
+            <p>Default: <codeph>15000</codeph>.</p>
+        </section>
+        <section>
+            <title>APP_TIMER_REFRESH_SUBSCRIPTIONS</title>
+            <p>The interval (in milliseconds) at which APP polls the status of instances and updates the number of virtual machines (VMs) provisioned for subscriptions to IaaS services, for example in OpenStack. The number is updated only in case the technical service definition specifies a <codeph>VMS_NUMBER</codeph> parameter.</p>
+            <p>Default: <codeph>86400000</codeph> (once a day).</p>
+        </section>
+        <section>
+            <title>APP_ADMIN_MAIL_ADDRESS</title>
+            <p>The email address to which email notifications are sent. </p>
+        </section>
+        <section>
+            <title>BSS_USER_KEY</title>
+            <p>The user key for accessing <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />. </p>
+            <p>The user specified here must have the administrator role for a technology provider organization in <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    />. The user account is used for carrying out actions on behalf of APP in <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </p>
+            <p>Default: <codeph>1000</codeph></p>
+        </section>
+        <section>
+            <title>BSS_USER_ID</title>
+            <p>The identifier of the user specified in <codeph>BSS_USER_KEY</codeph> for accessing <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+            <p>Default: <codeph>administrator</codeph></p>
+        </section>
+        <section>
+            <title>BSS_USER_PWD</title>
+            <p>The password of the user specified in <codeph>BSS_USER_KEY</codeph> for accessing <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+            <p>Default: <codeph>admin123</codeph></p>
+        </section>
+        <!--section>
+            <title>BSS_WEBSERVICE_URL</title>
+            <p><codeph>BSS_WEBSERVICE_URL=https://&lt;server>:&lt;port>/{SERVICE}/BASIC</codeph>
+            </p>
+            <p>Mandatory when <codeph>BSS_AUTH_MODE</codeph> is set to <codeph>INTERNAL</codeph> and basic authentication is used. The endpoint of the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> Web services to be used. The <codeph>{SERVICE}</codeph> placeholder must not be replaced.</p>
+        </section>
+        <section>
+            <title>BSS_WEBSERVICE_WSDL_URL</title>
+            <p><codeph>BSS_WEBSERVICE_WSDL_URL=https://&lt;server>:&lt;port>/oscm/v1.9/{SERVICE}/BASIC?wsdl</codeph>
+            </p>
+            <p>Mandatory when <codeph>BSS_AUTH_MODE</codeph> is set to <codeph>INTERNAL</codeph> and basic authentication is used. The URL specifying the version of the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> Web services to be used. The <codeph>{SERVICE}</codeph> placeholder must not be replaced.</p>
+        </section-->
+        <!-- section>
+            <title>BSS_STS_WEBSERVICE_URL</title>
+            <p><codeph>BSS_STS_WEBSERVICE_URL=https://&lt;server>:&lt;port>/{SERVICE}/STS</codeph>
+            </p>
+            <p>Mandatory when <codeph>BSS_AUTH_MODE</codeph> is set to <codeph>SAML_SP</codeph> and security token based authentication is used. The endpoint of the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> Web services to be used. The <codeph>{SERVICE}</codeph> placeholder must not be replaced.</p>
+        </section>
+        <section>
+            <title>BSS_STS_WEBSERVICE_WSDL_URL</title>
+            <p><codeph>BSS_STS_WEBSERVICE_WSDL_URL=https://&lt;server>:&lt;port>/oscm/v1.9/{SERVICE}/STS?wsdl</codeph>
+            </p>
+            <p>Mandatory when <codeph>BSS_AUTH_MODE</codeph> is set to <codeph>SAML_SP</codeph>. The URL specifying the version of the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> Web services to be used. The <codeph>{SERVICE}</codeph> placeholder must not be replaced.</p>
+        </section-->
+    </refbody>
+</reference>

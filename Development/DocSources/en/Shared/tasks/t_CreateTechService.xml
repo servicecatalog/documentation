@@ -23,8 +23,7 @@
                     <p audience="aws"
                         >The AWS integration package, <codeph>oscm-aws-install-pack.zip</codeph>, includes a technical service as a sample. 
                         Use the sample as a basis for defining your own technical services as required:</p>
-                       <p audience="aws"><codeph>samples/TechnicalService_AWS.xml</codeph>
-                       </p>
+                       <p audience="aws"><codeph>samples/TechnicalService_AWS.xml</codeph> ### where is it located? </p>
                     
                     <p audience="os"
                         >After deployment, technical services as samples are available: ### where are they located? Are there really samples?###</p>

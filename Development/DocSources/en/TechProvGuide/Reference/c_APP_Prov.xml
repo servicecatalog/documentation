@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2018 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_1BCF5C425D7D4627AB1C66A085CF6E11" xml:lang="en-us">
+    <title>Provisioning by Instance</title>
+    <conbody>
+        <section>
+            <p>The following figure shows details of the communication paths between APP and an application, for example, an OpenStack platform. </p>
+            <p>
+                <fig>
+                    <image href="../_images/IntegrationAPP_2.png" alt="IntegrationAPP_2.png" width="333" height="263"/>
+                </fig>
+            </p>
+            <p>Besides communicating with the application's general remote interface via the service controller, APP can forward the provisioning calls directly to the application instance in question. </p>
+            <p>Each provisioning operation first invokes the service controller, which in turn triggers the relevant actions in the application's general remote interface. When the controller returns with an appropriate status setting, APP calls the provisioning service of the application instance in question. This provisioning service must implement the standard <codeph>ProvisioningService</codeph> interface and work in synchronous mode. </p>
+            <p>This feature is useful if not all provisioning operations can be executed via the application's general remote interface. For example, the general remote interface of a virtual machine server allows you to provision virtual machines, but you usually cannot create or manage users within these virtual machines. To do this, you have to address the virtual machine itself. </p>
+            <p>For proper operation, the application's remote interface needs to support the following network connectivity:</p>
+            <ul compact="no">
+                <li>HTTPS/SOAP requests from APP to the application instances within the application.</li>
+                <li>HTTPS/SOAP calls from an application instance to APP (in specific scenarios).</li>
+            </ul>
+        </section>
+    </conbody>
+</concept>

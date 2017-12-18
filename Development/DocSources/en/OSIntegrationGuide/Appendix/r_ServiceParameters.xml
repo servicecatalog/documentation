@@ -98,13 +98,13 @@
               <entry>
                 <p><b>TEMPLATE_BASE_URL</b></p>
                 <p>Optional. The URL leading to the template file or files specified in the <codeph>TEMPLATE_NAME</codeph> parameter. Specify a URL that can be reached from <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> by HTTP or HTTPS.  </p>
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> by HTTPS. </p>
                 <p>If not specified, the URL is obtained from the controller configuration settings.</p>
                 <note>
                   <p>First, the <codeph>bssapp</codeph> database is searched for the template specified with the <codeph>TEMPLATE_NAME</codeph> service parameter in the technical service definition. Only if the template is not found in the database, the <codeph>TEMPLATE_BASE_URL</codeph> setting is evaluated. </p>
                 </note>
                 <p>Customers should not be able to enter a value for this parameter, i.e. it should not be configurable.</p>
-                <p>Example: <codeph>https://myserver:8880/oscm-app/docroot/templates/</codeph></p>
+                <p>Example: <codeph>https://myserver:8881/oscm-app/docroot/templates/</codeph></p>
               </entry>
             </row>
           </tbody>
@@ -151,8 +151,8 @@
                 <p><b>KEYSTONE_API_URL</b></p>
                 <p>Optional. The URL of the Keystone API for authenticating the user specified to access the tenant for your organization in OpenStack. Keystone is the identity service used by OpenStack.</p>
                 <p>Specify the URL according to the following format:</p>
-                <p><codeph>http[s]://&lt;keystone endpoint>/&lt;version>/auth</codeph></p>
-                <p><codeph>&lt;keystone endpoint></codeph> is the URL leading to the Keystone API, <codeph>&lt;version></codeph> the API version to use, currently <codeph>v3</codeph>. HTTP and HTTPS are supported. </p>
+                <p><codeph>https://&lt;keystone endpoint>/&lt;version>/auth</codeph></p>
+                <p><codeph>&lt;keystone endpoint></codeph> is the URL leading to the Keystone API, <codeph>&lt;version></codeph> the API version to use, currently <codeph>v3</codeph>. </p>
                 <p>If not specified, the URL is obtained from the controller configuration settings. </p>
                 <p>Customers should not be able to enter a value for this parameter, i.e. it should not be configurable.</p>
                 <p>Example: <codeph>https://my.keystone.com:5000/v3/auth</codeph></p>
@@ -244,7 +244,8 @@
       <title>Service Operations for OpenStack Instances</title>
       <p>The OpenStack service controller supports the service operations below for the OpenStack instances.</p>
       <p>The <codeph>actionURL</codeph> for each operation is:</p>
-      <p><codeph>http://oscm-app:8880/oscm-app/webservices/oscm-app/oscm-app/org.oscm.app.v2_0.service.AsynchronousOperationProxy?wsdl</codeph></p>
+      <p><codeph>https://oscm-app:8881/oscm-app/webservices/oscm-app/</codeph></p>
+      <p><codeph>   oscm-app/org.oscm.app.v2_0.service.AsynchronousOperationProxy?wsdl</codeph></p>
       <p><codeph>&lt;oscm-app></codeph> and <codeph>&lt;8880></codeph> are the server and port of the container where the OpenStack service controller is deployed.</p>
       <table frame="top">
         <tgroup cols="1">

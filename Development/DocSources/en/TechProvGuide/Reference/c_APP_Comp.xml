@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+<!-- Copyright FUJITSU LIMITED 2018 -->
+<concept id="concept_1BCF5C425D7D4627AB1C66A085CF6E11"
+            xml:lang="en-us">
+    <title>Components and Communication Paths</title>
+    <conbody>
+        <section>
+            <p>The following figure illustrates the components and communication paths involved when using APP to integrate an application with <ph
+                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+            <p
+                    product="oscm_ce"><image alt="IntegrationAPP_CE.png"
+                    height="284" href="../_images/IntegrationAPP_CE.png"
+                width="400"/></p>
+            <p
+                    product="oscm_ee"><image alt="IntegrationAPP_EE.png"
+                    height="284" href="../_images/IntegrationAPP_EE.png"
+                    width="400"/></p>
+            <p>The following components are involved:<ul
+                            compact="no">
+                    <li><ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> with the subscription service handling the provisioning tasks.</li>
+                    <li>APP including the provisioning service, a database, a notification handler, and an API to enable the communication between the application instances and <ph
+                                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</li>
+                    <li>A service controller for communication with the application. <!--li>A service controller must be implemented for each application. <p>To implement a service controller, you use the API provided with the integration package for asynchronous provisioning. Samples included in the package show how a service controller can be implemented. A detailed documentation for the API is provided as Javadoc.</p>
+                            </li-->
+                        <p>The following ready-to-use service controllers are available, registered, and initialized ### true for both controllers? ### when deploying the <codeph>oscm-app</codeph> container: </p><p>
+                            <ul>
+                                <!--li><codeph>oscm-ror-install-pack.zip</codeph><p>Can be used for integrating FUJITSU ServerView Resource Orchestrator (ROR) with <ph
+                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    />.</p></li-->
+                                <li>
+                                    <p>AWS service controller: Can be used for integrating the Amazon Elastic Compute Cloud Web service with <ph
+                                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+                                </li>
+                                <li>
+                                    <p>OpenStack service controller: Can be used for integrating OpenStack services with <ph
+                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+                                </li>
+                            </ul>
+                        </p></li>
+                    <li>The application with a remote interface and the application instances, if needed. </li>
+                </ul></p>
+            <p>The communication paths are as follows:</p>
+            <ul
+                        compact="no">
+                <li>When a subscription is created, deleted, or modified in <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>, the provisioning service of APP triggers the service controller to execute all the tasks required on the application side. </li>
+                <li>It is recommended to divide long-running provisioning operations into several steps using the polling feature of APP. For example, when creating an application instance, the controller could immediately return the instance ID, report the instance status as "not ready", and request APP to poll the status at regular intervals. Only after the instance has actually been set up at the application side, the controller would report its status as "ready" upon the next polling by APP. </li>
+                <li>All intermediate artefacts of the tasks are stored in the database of APP. </li>
+                <li>When the provisioning operation for a subscription has been successfully completed, <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> receives an appropriate message, and the status of the subscription is set to <codeph>COMPLETE</codeph>. When deleting a subscription, <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> does not expect a response. The task is completed immediately.</li>
+                <li>Specific tasks may require manual steps. In this case, the service controller can request the automatic execution to be paused and then send an email notification to the responsible person providing a link to continue the automatic processing. As soon as the link contained in the email is clicked, the task execution is continued. </li>
+            </ul>
+            <p>If the provisioning or modification of an application instance fails or if there are problems in the communication between the participating systems, the corresponding subscription in <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> remains pending. APP supports you in recovering from such problems with its instance status interface. <ph
+                        audience="doc">For details, refer to <xref
+                        href="c_HandleProblems.xml"/></ph>.</p>
+        </section>
+    </conbody>
+</concept>

@@ -13,7 +13,7 @@
                 <ul>
                     <li>Which action is to be subject to process control?</li>
                     <li>For which organization is trigger processing to be configured (organization ID)?</li>
-                    <li>How can the notification service of the external process control system be reached? You need the URL of the notification service WSDL file, for example: <codeph>http://myServer:8280/NotificationService?wsdl</codeph>
+                    <li>How can the notification service of the external process control system be reached? You need the URL of the notification service WSDL file, for example: <codeph>https://myServer:8280/NotificationService?wsdl</codeph>
                     </li>
                     <li>Is the action to be suspended until it is approved? If not, it will be executed in <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"

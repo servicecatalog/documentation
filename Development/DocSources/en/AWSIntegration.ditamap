@@ -83,18 +83,18 @@
     <chapter format="dita" href="AWSIntegrationGuide/Administrating/c_AdministratingIntro.xml" type="concept">
         <topicref format="dita" href="Shared/concepts/c_ControlExecution.xml" type="concept"/>
         <topicref format="dita" href="Shared/concepts/c_ControllerHandleProblems.xml" type="concept"/>
-        <topicref format="dita" href="Shared/concepts/c_ControllerHandleCommProblems.xml" type="concept"/>
-        <topicref format="dita" href="Shared/Installation/c_Backup.xml" type="concept"/>
-        <topicref format="dita" href="Shared/Installation/c_UpdateConfiguration.xml" type="concept"/>
-        <topicref format="dita" href="Shared/reference/c_LogConfig.xml" type="concept"/>
+        <!--topicref format="dita" href="Shared/concepts/c_ControllerHandleCommProblems.xml" type="concept"/-->
+        <!--topicref format="dita" href="Shared/Installation/c_Backup.xml" type="concept"/-->
+        <topicref format="dita" href="AWSIntegrationGuide/Administrating/c_UpdateConfiguration.xml" type="concept"/>
+        <!--topicref format="dita" href="Shared/reference/c_LogConfig.xml" type="concept"/-->
     </chapter>
-    <chapter format="dita" href="Shared/Installation/c_Uninstallation.xml" type="concept"/>
-    <appendix format="dita" href="Shared/Installation/r_ConfigSettings.xml" type="reference">
+    <!--chapter format="dita" href="Shared/Installation/c_Uninstallation.xml" type="concept"/-->
+    <appendix format="dita" href="AWSIntegrationGuide/Appendix/r_ConfigSettingsController.xml" type="reference"/>
         
-        <topicref format="dita" href="Shared/reference/r_ConfigSettings_db.xml" type="reference"/>
+        <!--topicref format="dita" href="Shared/reference/r_ConfigSettings_db.xml" type="reference"/>
         <topicref format="dita" href="APPInt/APP/r_ConfigSettings.xml" type="reference"/>
         <topicref format="dita" href="AWSIntegrationGuide/Appendix/r_ConfigSettingsController.xml" type="reference"/>
-    </appendix>
+    </appendix-->
     <appendix format="dita" href="AWSIntegrationGuide/Appendix/r_ServiceParameters.xml" type="reference"/>
     <appendix format="dita" href="Shared/glossary/r_Glossary.xml" type="reference"/>
 </bookmap>

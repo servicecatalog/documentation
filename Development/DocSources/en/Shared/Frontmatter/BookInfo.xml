@@ -27,17 +27,16 @@
           <row>
             <entry colname="col1">Trademarks</entry>
             <entry colname="col2"
-                >LINUX is a registered trademark of Linus Torvalds.<p>Microsoft and Windows are either registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries.</p><p>Open Service Catalog Manager is a registered trademark of FUJITSU LIMITED.</p><p>Oracle, Java, and all Java-based trademarks and logos are trademarks or registered trademarks of Oracle Corporation and/or its affiliates.</p><p>Apache Ant, Ant, Apache Tomcat, Tomcat, and Apache are trademarks of The Apache Software Foundation. </p><p>UNIX is a registered trademark of the Open Group in the United States and in other countries.</p><!--p>VMware vSphere is a registered trademark of VMware in the United States and in other countries.</p--><p>Other company names and product names are trademarks or registered trademarks of their respective owners.</p>
-            </entry>
+                >LINUX is a registered trademark of Linus Torvalds. <p>Open Service Catalog Manager is a registered trademark of FUJITSU LIMITED. </p><p>The OpenStack Word Mark and OpenStack logo are registered trademarks/service marks or trademarks/service marks of the OpenStack Foundation in the United States and other countries and are used with the OpenStack Foundation's permission. FUJITSU LIMITED is not endorsed or sponsored by the OpenStack Foundation, or the OpenStack community. </p><p>Apache Tomcat, Tomcat, and Apache are trademarks of The Apache Software Foundation.</p><p>Java is a registered trademark of Oracle and/or its affiliates. </p><p>UNIX is a registered trademark of the Open Group in the United States and in other countries. </p><p>Other company names and product names are trademarks or registered trademarks of their respective owners.  </p></entry>
           </row>
           <row>
             <entry colname="col1"/>
             <entry colname="col2"/>
           </row>
           <row product="oscm_ee">
-            <entry colname="col1">Copyright FUJITSU LIMITED 2018</entry>
+            <entry colname="col1">Copyright FUJITSU ENABLING SOFTWARE  TECHNOLOGY GMBH 2018</entry>
             <entry colname="col2"
-              >All rights reserved, including those of translation into other languages. No part of this manual may be reproduced in any form whatsoever without the written permission of FUJITSU LIMITED.</entry>
+              >All rights reserved, including those of translation into other languages. No part of this manual may be reproduced in any form whatsoever without the written permission of FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH.</entry>
           </row>
         </tbody>
       </tgroup>

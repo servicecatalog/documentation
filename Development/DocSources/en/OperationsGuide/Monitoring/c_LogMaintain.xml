@@ -10,6 +10,10 @@
         <section>
             <p>For each running container, <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> writes its logging information into a dedicated log file on the storage volume for each container. New messages are continually appended to the log file at runtime.</p>
+            <p>
+                <note>The <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> deployer creates empty log files in a dedicated directory on the Docker host: <p><codeph>/docker/logs/&lt;container_name>/&lt;container_name>.out.log</codeph></p>Log information is, however, only written to these files if you configure <codeph>docker-compose</codeph> and <codeph>syslog</codeph> on your Docker host to write the container logs to these files. By default, Docker uses the <codeph>json-file</codeph> driver to record the logs of your containers. The log output in JSON format can be found in <codeph>/var/lib/docker/containers/&lt;container-id>/&lt;container-id>-json.log.</codeph> For more information on log handling, refer to the Docker documentation.</note>
+            </p>
             <p>To show all running containers, execute the following command on the VM where <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> has been deployed: </p>
             <p>

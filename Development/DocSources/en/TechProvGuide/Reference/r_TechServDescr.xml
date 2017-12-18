@@ -49,7 +49,7 @@
                             /> offers the following additional access types: <codeph>PLATFORM</codeph> and <codeph>PROXY</codeph>. The usage of these access types is discouraged since time or data-sensitive applications put a considerable load on <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                         /> and cause a significant resource consumption. If you want to use platform or proxy access nevertheless, contact your platform operator.</p--></li>
-                <li><codeph><b>baseUrl</b></codeph> - URL of the remote interface of your application. Users are forwarded to this URL for service access. <p>Required for the <codeph>LOGIN</codeph> and <codeph>EXTERNAL</codeph> access type. For the <codeph>EXTERNAL</codeph> access type, you specify the external URL here. In the sample below (<codeph>baseUrl="http://myserver:7777/myservice"</codeph>), your Web application is running on <codeph>myserver</codeph> at port <codeph>7777</codeph>.</p><p>Optional for the <codeph>DIRECT</codeph> and <codeph>USER</codeph> access type. At the <ph
+                <li><codeph><b>baseUrl</b></codeph> - URL of the remote interface of your application. Users are forwarded to this URL for service access. <p>Required for the <codeph>LOGIN</codeph> and <codeph>EXTERNAL</codeph> access type. For the <codeph>EXTERNAL</codeph> access type, you specify the external URL here. In the sample below (<codeph>baseUrl="https://myserver:7777/myservice"</codeph>), your Web application is running on <codeph>myserver</codeph> at port <codeph>7777</codeph>.</p><p>Optional for the <codeph>DIRECT</codeph> and <codeph>USER</codeph> access type. At the <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                 /> administration portal, a marketplace owner can define featured services for his marketplace home page. If a marketplace owner decides to display services and subscriptions grouped by category on his home page, the specification of the <codeph><b>baseUrl</b></codeph> is recommended. It allows the home page visitor to directly use the service if his organization has subscribed to it.</p><p>Your application should provide some default content for the base URL, since this URL specifies the application's remote interface. </p><p>Be aware that internet domain names must follow the following rules: <ul>
                             <li>
@@ -79,13 +79,13 @@
         <section><b>Example</b>: <p>
                 <codeblock>&lt;TechnicalService   
    accessType="LOGIN" 
-   baseUrl="http://myserver:7777/myservice"
+   baseUrl="https://myserver:7777/myservice"
    build="25.01.2010"
    id="SampleService"   
    loginPath="/login"
   provisioningType="SYNCHRONOUS"   
    provisioningUrl=
-       "http://myserver:8090/axis/services/MyProvisioningService?wsdl"
+       "https://myserver:8090/axis/services/MyProvisioningService?wsdl"
    onlyOneSubscriptionPerUser="false"&gt;</codeblock>
             </p></section>
         <section>
@@ -355,7 +355,7 @@
         </section>
         <section><b>Example</b>: <p>
                 <codeblock>&lt;Operation id="SNAPSHOT"
-      actionURL="https://oscm-app:8880/oscm-app/
+      actionURL="https://oscm-app:8881/oscm-app/
                          webservices/oscm-app/oscm-app/
                          org.oscm.app.v2_0.service.AsynchronousOperationProxy?wsdl">
       &lt;LocalizedName locale="en">Create snapshot&lt;/LocalizedName> 

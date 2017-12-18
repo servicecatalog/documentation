@@ -8,8 +8,10 @@
     <refbody>
         <section>
             <p platform="print">The following <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> configuration settings can be viewed and (partially) changed in the <ph
-                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> administration portal.</p>
+                    /> configuration settings can be viewed and (partially) be updated temporarily in the <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> administration portal. Section <xref
+                    href="../../OperationsGuide/Configuration/c_UpdateConfiguration.xml"
+                /> describes how to permanently change a configuration setting. </p>
         </section>
         <section>
             <title>AUDIT_LOG_ENABLED</title>
@@ -26,8 +28,8 @@
         </section>
         <section>
             <title>AUTH_MODE</title>
-            <p>Mandatory. Specifies that <ph platform="print"><ph
-                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+            <p>Specifies that <ph platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /></ph><ph platform="help"
                     >the platform</ph> is used for user authentication. This configuration setting is evaluated at the first startup of <ph
                     platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
                     platform="help">the system</ph> and cannot be changed.</p>
@@ -39,7 +41,7 @@
                 >platform's</ph> home page if <ph platform="print"><ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
                 >the platform</ph> does not require HTTPS for communication. If left empty, the <codeph>BASE_URL_HTTPS</codeph> setting is used. <p>Syntax: <codeph>http://&lt;host&gt;:&lt;port&gt;/&lt;context-root></codeph></p><p>The default for <codeph>&lt;context-root></codeph> is <codeph>oscm-portal</codeph>.</p><note>If the SSL/HTTPS port was changed, then this setting must also be updated.</note></section-->
-        <section><title>BASE_URL_HTTPS</title>Mandatory. The base URL is used to access the <ph platform="print"><ph
+        <section><title>BASE_URL_HTTPS</title>The base URL is used to access the <ph platform="print"><ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
                     >platform's</ph> home page and to create the URL for accessing services via HTTPS. <p>Syntax: <codeph>https://&lt;hostname.fqdn>:&lt;port>/oscm-portal</codeph></p><p><codeph>&lt;hostname.fqdn></codeph> is the name and the fully qualified domain name of the machine where <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
@@ -101,35 +103,28 @@
             <p>Allowed values: <codeph>true</codeph>, <codeph>false</codeph></p>
             <p>Default: <codeph>false</codeph></p>
         </section-->
-        <section><title>KAFKA_BOOTSTRAP_SERVERS</title>Optional. Comma-separated list of host and port pairs that are the addresses of Kafka brokers. Bootstrap servers provide the initial hosts that act as the starting point for a Kafka client. In <ph
+        <!--section><title>KAFKA_BOOTSTRAP_SERVERS</title>Optional. Comma-separated list of host and port pairs that are the addresses of Kafka brokers. Bootstrap servers provide the initial hosts that act as the starting point for a Kafka client. In <ph
                 platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
                 platform="help"
                 >the platform</ph>, they are used for event-based provisioning. <p>Default: no value, i.e. empty</p><p>Example: <codeph>localhost:9092</codeph></p><p>
                 <note>Be aware that this setting is provided for future use and is currently only available for testing purposes.</note>
-            </p></section>
-        <!--section><title>KEY_FILE_PATH</title>Optional. The path to the file containing the key required for encryption and decryption of service parameters with data type <codeph>PWD</codeph> and custom attributes marked for encryption.<p>Upon the start of <ph
-                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
-                    platform="help"
-                    >the platform</ph>, it is checked whether a key file exists in the location specified in this setting. If this is not the case, the key file is automatically generated and stored in the location specified here. If nothing is specified, the file will be named <codeph>key</codeph> and generated into the following location:</p><p><codeph>&lt;GLASSFISH_HOME&gt;/glassfish/domains/bes-domain/config</codeph></p>Default: <p><codeph>./key</codeph></p><p>
-                <note>Be aware that the key file must not be deleted. Otherwise, encryption and decryption is no longer possible. It is recommended to create a backup of this file once generated.</note>
             </p></section-->
-        <section><title>LDAP_SEARCH_LIMIT</title>Optional. The maximum number of entries that will be returned by an LDAP query in case an organization uses an external LDAP system for user management. <p>Allowed values: Any value between <codeph>1</codeph> and <codeph>9223372036854775807</codeph></p><p>Default: <codeph>100</codeph></p></section>
-        <section><title>LOG_LEVEL</title>Optional. The log level for <ph platform="print"><ph
+        <section><title>KEY_FILE_PATH</title>The path to the file containing the key required for encryption and decryption of service parameters with data type <codeph>PWD</codeph> and custom attributes marked for encryption: <codeph>/opt/apache-tomee/bin/key</codeph><p>This setting cannot be changed.</p></section>
+        <!--section><title>LDAP_SEARCH_LIMIT</title>Optional. The maximum number of entries that will be returned by an LDAP query in case an organization uses an external LDAP system for user management. <p>Allowed values: Any value between <codeph>1</codeph> and <codeph>9223372036854775807</codeph></p><p>Default: <codeph>100</codeph></p></section-->
+        <section><title>LOG_LEVEL</title>The log level for <ph platform="print"><ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
-                >the platform</ph>. <p>Allowed values: <codeph>ERROR</codeph>, <codeph>WARN</codeph>, <codeph>INFO</codeph>, <codeph>DEBUG</codeph></p><p>Default: <codeph>INFO</codeph></p><p>If you change this setting, you need to restart <ph
-                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
-                    platform="help">the platform</ph>.</p></section>
+                >the platform</ph>. <p>Allowed values: <codeph>ERROR</codeph>, <codeph>WARN</codeph>, <codeph>INFO</codeph>, <codeph>DEBUG</codeph></p><p>Default: <codeph>INFO</codeph></p></section>
         <section><title>MAIL_JA_CHARSET</title>Optional. Special character encoding for emails sent in Japanese.<p>Default: <codeph>UTF-8</codeph></p></section>
-        <section><title>MAX_NUMBER_ALLOWED_USERS</title>Mandatory. The maximum number of users that can be registered within the <ph
+        <section><title>MAX_NUMBER_ALLOWED_USERS</title>The maximum number of users that can be registered within the <ph
                 platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /></ph> installation.<p>Allowed values: Any value between <codeph>1</codeph> and <codeph>9223372036854775807</codeph></p><p>Default: <codeph>1000</codeph></p></section>
         <section><title>MAX_NUMBER_LOGIN_ATTEMPTS</title>Optional. The maximum number of allowed login attempts to <ph
                 platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
                 platform="help"
                     >the platform</ph>. If a user does not log in successfully with this number of attempts, his account is locked. <p>Allowed values: Any value between <codeph>1</codeph> and <codeph>9223372036854775807</codeph></p><p>Default: <codeph>3</codeph></p></section>
-        <section><title>MP_ERROR_REDIRECT_HTTP</title>Optional. The URL of a Web page that is to be displayed in case a visitor tries to access a marketplace without a valid marketplace ID by HTTP. This Web page will be shown instead of the default error message. Note that this URL is used platform-wide.<p>Syntax: <codeph>http://&lt;your Web page></codeph></p><p>Make sure to specify a valid URL that does not exceed a maximum of 255 characters. </p></section>
+        <!--section><title>MP_ERROR_REDIRECT_HTTP</title>Optional. The URL of a Web page that is to be displayed in case a visitor tries to access a marketplace without a valid marketplace ID by HTTP. This Web page will be shown instead of the default error message. Note that this URL is used platform-wide.<p>Syntax: <codeph>http://&lt;your Web page></codeph></p><p>Make sure to specify a valid URL that does not exceed a maximum of 255 characters. </p></section-->
         <section><title>MP_ERROR_REDIRECT_HTTPS</title>Optional. The URL of a Web page that is to be displayed in case a visitor tries to access a marketplace without a valid marketplace ID by HTTPS. This Web page will be shown instead of the default error message. Note that this URL is used platform-wide. <p>Syntax: <codeph>https://&lt;your Web page></codeph></p><p>Make sure to specify a valid URL that does not exceed a maximum of 255 characters. </p></section>
-        <section><title>PERMITTED_PERIOD_INACTIVE_ON_BEHALF_USERS</title>Optional. The time in milliseconds after which a user who logged in on behalf of a customer and was inactive will be removed from the system. <p>Allowed values: Any value between <codeph>1</codeph> and <codeph>9223372036854775807</codeph></p><p>Default: <codeph>604800000</codeph>, i.e. 7 days </p></section>
+        <section><title>PERMITTED_PERIOD_INACTIVE_ON_BEHALF_USERS</title>The time in milliseconds after which a user who logged in on behalf of a customer and was inactive will be removed from the system: <codeph>604800000</codeph>,  i.e. 7 days.<p>This setting cannot be changed.</p><!--p>Allowed values: Any value between <codeph>1</codeph> and <codeph>9223372036854775807</codeph></p><p>Default: <codeph>604800000</codeph>, i.e. 7 days </p--></section>
         <section><title>PERMITTED_PERIOD_UNCONFIRMED_ORGANIZATIONS</title>Optional. The maximum time in milliseconds until an organization's initial administrative account must be confirmed. When this time has passed, the account is removed. <p>Allowed values: Any value between <codeph>1</codeph> and <codeph>9223372036854775807</codeph></p><p>Default: <codeph>604800000</codeph>, i.e. 7 days </p></section>
         <!--section><title>PSP_USAGE_ENABLED</title>Mandatory. Specifies whether PSP integration is used for the current environment.<p>Allowed values: <codeph>true</codeph>, <codeph>false</codeph></p><p>Default: <codeph>false</codeph></p><p>If you change this setting, you need to restart <ph
                     platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
@@ -146,52 +141,35 @@
    __report=\${reportname}.rptdesign&amp;SessionId=\${sessionid}&amp;
    __locale=\${locale}&amp;WSDLURL=\${wsdlurl}&amp;SOAPEndPoint=\
    ${soapendpoint}&amp;wsname=Report&amp;wsport=ReportPort</codeblock>
-            <p>Replace <codeph>HOST_FQDN</codeph> with the value entered above for <codeph>HOST_FQDN</codeph> setting. The other values must not be changed. </p>
+            <p>Replace <codeph>HOST_FQDN</codeph> with the fully qualified name of the Docker host where <ph
+                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /></ph> is deployed. </p>
         </section>
-        <section><title>REPORT_SOAP_ENDPOINT</title>Mandatory if you want to use the <ph platform="print"><ph
-                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
-                >platform's</ph> reports. The SOAP end point of the Report Web service. All report data is retrieved via a call to the Report Web service. If you do not specify a correct value, <ph
+        <section><title>REPORT_SOAP_ENDPOINT</title>The SOAP end point of the Report Web service. All report data is retrieved via a call to the Report Web service. If you do not specify a correct value, <ph
                 platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
                 platform="help"
-                >the platform</ph> will not be able to generate any reports, since the Report Web service cannot be called correctly. <p>The required value is: </p><p><codeph>https://oscm-core:8080/oscm-reporting/ReportingServiceBean</codeph></p><note>The above value must be used as indicated. Do not change this value. <!--p>If the SSL/HTTPS port is changed and the BIRT report engine is running on the same domain as <ph
-                        platform="print"><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        > </ph></ph><ph platform="help"
-                >the platform</ph>, then this setting must also be updated.</p--></note></section>
-        <section><title>REPORT_WSDLURL</title>Mandatory if you want to use the <ph platform="print"><ph
-                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
-                >platform's</ph> reports. The URL of the WSDL file of the Report Web service. All report data is retrieved via a call to the Report Web service. If you do not specify a correct value, <ph
+                >the platform</ph> will not be able to generate any reports, since the Report Web service cannot be called correctly. <p>The required value is: </p><p><codeph>https://oscm-core:8081/oscm-reporting/ReportingServiceBean</codeph></p><p>This setting cannot be changed.</p></section>
+        <section><title>REPORT_WSDLURL</title>All report data is retrieved via a call to the Report Web service. If you do not specify a correct value, <ph
                 platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
                 platform="help"
-                >the platform</ph> will not be able to generate any reports, since the Report Web service cannot be called correctly. <p>The required value is: </p><p><codeph>http://oscm-core:8080/oscm-reporting/ReportingServiceBean?wsdl</codeph></p><note>The above value must be used as indicated. Do not change this value. </note></section>
-        <section><title>SSO_SIGNING_KEY_ALIAS</title>Mandatory if requests are to be signed by <ph platform="print"><ph
-                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
-                >the platform</ph>. The alias of the private key of <ph platform="print"><ph
+                >the platform</ph> will not be able to generate any reports, since the Report Web service cannot be called correctly. <p>The required value is: </p><p><codeph>https://oscm-core:8081/oscm-reporting/ReportingServiceBean?wsdl</codeph></p><p>This setting cannot be changed.</p></section>
+        <section><title>SSO_SIGNING_KEY_ALIAS</title>The alias of the private key of <ph platform="print"><ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
                 >the platform</ph> to be used for signing requests. <p>Requests are signed for the communication with Web pages or applications from custom tabs in subscriptions. The application server used for the Web page or Web application needs the corresponding certificate of <ph
                     platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
                     platform="help"
-                    >the platform</ph> in its truststore for verifying the signature.</p><p>Default: <codeph>s1as</codeph></p><p>If you change this setting, you need to restart <ph
-                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
-                    platform="help">the platform</ph>.</p></section>
-        <section><title>SSO_SIGNING_KEYSTORE</title>Mandatory if requests are to be signed by <ph platform="print"><ph
-                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
-                >the platform</ph>. The path and name of the application server's keystore where the private key of <ph
+                    >the platform</ph> in its truststore for verifying the signature.</p><p>Default: <codeph>s1as</codeph></p><p>This setting cannot be changed.</p></section>
+        <section><title>SSO_SIGNING_KEYSTORE</title>The path and name of the application server's keystore where the private key of <ph
                 platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
                 platform="help"
-                    >the platform</ph> specified in the <codeph>SSO_SIGNING_KEY_ALIAS</codeph> setting is stored. <p>Default: <codeph>./keystore.jks</codeph></p><p>If you change this setting, you need to restart <ph
-                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
-                    platform="help">the platform</ph>.</p></section>
-        <section><title>SSO_SIGNING_KEYSTORE_PASS</title>Mandatory if requests are to be signed by <ph platform="print"
-                    ><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
-                >the platform</ph>. The password for accessing the keystore specified in the <codeph>SSO_SIGNING_KEYSTORE</codeph> setting.<p>Default: <codeph>changeit</codeph></p><p>If you change this setting, you need to restart <ph
-                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
-                    platform="help">the platform</ph>.</p></section>
-        <section><title>SUPPLIER_SETS_INVOICE_AS_DEFAULT</title>Optional. Specifies whether invoice is to be used as the default payment type for all customers. <p>Allowed values: <codeph>true</codeph>, <codeph>false</codeph></p><p>Default: <codeph>false</codeph>
+                    >the platform</ph> specified in the <codeph>SSO_SIGNING_KEY_ALIAS</codeph> setting is stored. <p>Default: <codeph>./keystore.jks</codeph></p><p>This setting cannot be changed.</p></section>
+        <section><title>SSO_SIGNING_KEYSTORE_PASS</title>The password for accessing the keystore specified in the <codeph>SSO_SIGNING_KEYSTORE</codeph> setting.<p>Default: <codeph>changeit</codeph></p><p>This setting cannot be changed.</p></section>
+        <section><title>SUPPLIER_SETS_INVOICE_AS_DEFAULT</title>Specifies whether invoice is to be used as the default payment type for all customers.<p>Default: <codeph>false</codeph>
+            </p><p>This setting cannot be changed.</p></section>
+        <section><title>TAGGING_MAX_TAGS</title>The maximum number of tags composing the tag cloud. <p>The tag cloud is the area of a marketplace containing defined search terms (tags). The more often a tag is used in services, the bigger the characters of the tag are displayed. Customers can use the tags to search for services, provided that the tag cloud is enabled for the marketplace by the marketplace owner.</p><p>Allowed values: Any value between <codeph>0</codeph> and <codeph>2147483647</codeph></p><p>Default: <codeph>20</codeph>
             </p></section>
-        <section><title>TAGGING_MAX_TAGS</title>Mandatory. The maximum number of tags composing the tag cloud. <p>The tag cloud is the area of a marketplace containing defined search terms (tags). The more often a tag is used in services, the bigger the characters of the tag are displayed. Customers can use the tags to search for services, provided that the tag cloud is enabled for the marketplace by the marketplace owner.</p><p>Allowed values: Any value between <codeph>0</codeph> and <codeph>2147483647</codeph></p><p>Default: <codeph>20</codeph>
-            </p></section>
-        <section><title>TAGGING_MIN_SCORE</title>Mandatory. The minimum number of times a tag must be used in services to be shown in the tag cloud. <p>The tag cloud is the area of a marketplace containing defined search terms (tags). The more often a tag is used in services, the bigger the characters of the tag are displayed. Customers can use the tags to search for services, provided that the tag cloud is enabled for the marketplace by the marketplace owner.</p><p>Allowed values: Any value between <codeph>1</codeph> and <codeph>2147483647</codeph></p><p>Default: <codeph>1</codeph>, i.e. a tag must have been used at least once so that it is shown in the tag cloud. </p></section>
-        <section><title>TIME_ZONE_ID</title>Optional. The time zone to be used for display. <p>Allowed values: All time zones supported by Java. This can be an abbreviation such as <codeph>PST</codeph>, a full name such as <codeph>America/Los_Angeles</codeph>, or a custom ID such as <codeph>GMT-8:00</codeph>. For a list of IDs, refer to <codeph>java.util.TimeZone</codeph>.</p><p>Default: <codeph>GMT</codeph></p></section>
+        <section><title>TAGGING_MIN_SCORE</title>The minimum number of times a tag must be used in services to be shown in the tag cloud. <p>The tag cloud is the area of a marketplace containing defined search terms (tags). The more often a tag is used in services, the bigger the characters of the tag are displayed. Customers can use the tags to search for services, provided that the tag cloud is enabled for the marketplace by the marketplace owner.</p><p>Allowed values: Any value between <codeph>1</codeph> and <codeph>2147483647</codeph></p><p>Default: <codeph>1</codeph>, i.e. a tag must have been used at least once so that it is shown in the tag cloud. </p></section>
+        <section><title>TIME_ZONE_ID</title>Specifies that the <codeph>GMT</codeph> time zone is used for display. <p>This setting cannot be changed.</p><!--p>Allowed values: All time zones supported by Java. This can be an abbreviation such as <codeph>PST</codeph>, a full name such as <codeph>America/Los_Angeles</codeph>, or a custom ID such as <codeph>GMT-8:00</codeph>. For a list of IDs, refer to <codeph>java.util.TimeZone</codeph>.</p><p>Default: <codeph>GMT</codeph></p--></section>
         <section><title>TIMER_INTERVAL_BILLING_OFFSET</title>Optional. The offset in milliseconds for the timer for billing runs calculating subscription usage costs (customer billing data) or revenue share data. The interval for this timer is one day and cannot be changed. If no offset is defined, the default offset of 4 days is applied. <p>Customer billing data is calculated for a period of one month (billing period). Suppliers and resellers can define individual start days for their billing periods. Revenue share data is always calculated for the past month on the first day of a month. </p><p>The offset for the billing run timer defines the following: </p><p>
                 <ul>
                     <li>Number of days after which the billing run calculating the customer billing data or the revenue share data is executed. </li>
@@ -212,11 +190,11 @@
         <section><title>TIMER_INTERVAL_TENANT_PROVISIONING_TIMEOUT_OFFSET</title>Optional. The offset in milliseconds for the timer for pending subscription checks. <p>Allowed values: Any value between <codeph>0</codeph> and <codeph>9223372036854775807</codeph></p><p>Default: <codeph>0</codeph></p></section>
         <section>
             <title>TIMER_INTERVAL_USER_COUNT</title>
-            <p>Mandatory. The time interval in milliseconds at which the amount of users registered with the platform is checked. This timer cannot be disabled, i.e. it cannot be set to 0.</p>
+            <p>The time interval in milliseconds at which the amount of users registered with the platform is checked. This timer cannot be disabled, i.e. it cannot be set to 0.</p>
             <p>Allowed values: Any value between <codeph>1</codeph> and <codeph>9223372036854775807</codeph></p>
             <p>Default: <codeph>43200000</codeph>, i.e. 12 hours</p>
         </section>
-        <section><title>WS_TIMEOUT</title>Mandatory. The timeout for outgoing Web service calls in milliseconds. After this time has passed, a timeout exception is thrown by the JAX-WS framework.<p>An outgoing Web service call is a call initiated by <ph
+        <section><title>WS_TIMEOUT</title>The timeout for outgoing Web service calls in milliseconds. After this time has passed, a timeout exception is thrown by the JAX-WS framework.<p>An outgoing Web service call is a call initiated by <ph
                     platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
                     platform="help"
                     >the platform</ph>. A typical example is the invocation of the <codeph>createUsers</codeph> method of the <codeph>ProvisioningService</codeph> interface, which is implemented by an application. If the timeout is reached before the Web service call returns, the operation is aborted and an exception is thrown. </p><p>Allowed values: Any value between <codeph>1</codeph> and <codeph>9223372036854775807</codeph></p><p>Default: <codeph>30000</codeph>, i.e. 30 seconds </p></section>

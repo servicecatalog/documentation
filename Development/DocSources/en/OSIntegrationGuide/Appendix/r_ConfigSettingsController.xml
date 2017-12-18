@@ -6,17 +6,8 @@
     <title>Controller Configuration Settings</title>
     <refbody>
         <section>
-            <p>When deployed, several configuration settings are written to the <codeph>bssapp</codeph> database. This configuration is used for the initial setup and stored in the APP database.</p>
-            <p conref="../../AWSIntegrationGuide/Appendix/r_ConfigSettingsController.xml#reference832/cfg"/>
-            <p conref="../../AWSIntegrationGuide/Appendix/r_ConfigSettingsController.xml#reference832/cfg2"/>
-            <p conref="../../AWSIntegrationGuide/Appendix/r_ConfigSettingsController.xml#reference832/cfg3"/>
-            <p conref="../../AWSIntegrationGuide/Appendix/r_ConfigSettingsController.xml#reference832/cfg4"/>
-            <!--p>For changing the settings, use the graphical user interface provided by the controller: </p>
-            <p>In a Web browser, access the URL of the <ph audience="ror">ROR</ph><ph audience="aws">AWS</ph><ph
-                    audience="os">OpenStack</ph> service controller, for example, <ph audience="ror"
-                        ><codeph>http://127.0.0.1:8880/oscm-app-ror</codeph></ph><ph audience="aws"
-                        ><codeph>http://127.0.0.1:8880/oscm-app-aws</codeph></ph><ph audience="os"
-                        ><codeph>http://127.0.0.1:8880/oscm-app-openstack</codeph></ph>. </p-->
+            <p>This appendix describes the controller configuration settings as stored in the  <codeph>bssapp</codeph> database. For details on how to update them, refer to <xref
+                    href="../Administrating/c_UpdateConfiguration.xml"/>.</p>
         </section>
         <section>
             <title>CONTROLLER_ID</title>
@@ -27,13 +18,14 @@
             <title>BSS_ORGANIZATION_ID</title>
             <p><codeph>BSS_ORGANIZATION_ID=&lt;organizationID></codeph></p>
             <p>The ID of the organization in <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> responsible for the service controller. The organization must have the technology provider role. It is created and assigned to the OpenStack service controller by the platform operator.</p>
+                /> responsible for the service controller. The organization must have the technology provider role. It is created and initially assigned to the OpenStack service controller by the platform operator.</p>
         </section>
         <section>
             <title>BSS_USER_ID</title>
             <p><codeph>BSS_USER_ID=&lt;userId></codeph>
             </p>
-            <p>The identifier of the user responsible for the OpenStack service controller. </p>
+            <p>The identifier of the user specified in <codeph>BSS_USER_KEY</codeph> for accessing <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
         </section>
         <section>
             <title>BSS_USER_KEY</title>
@@ -51,28 +43,25 @@
             <p><codeph>BSS_USER_PWD=_crypt:&lt;password></codeph></p>
             <p>The password of the user for accessing <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
-            <p>Replace <codeph>&lt;password></codeph> with the plain text password. The password is stored encryptedly in the database. </p>
         </section>
         <section>
             <title>API_USER_NAME</title>
             <p><codeph>API_USER_NAME=&lt;userName></codeph></p>
             <p>The user name to be used to access the tenant for your organization in OpenStack. Once authenticated, this user is authorized to access the Heat API.</p>
             <p>The user must have the necessary credentials to create and configure virtual systems for the tenant.  In FUJITSU Cloud Service K5, the <codeph>cpf_systemowner</codeph> role is required.</p>
-            <p>###???</p>
         </section>
         <section>
             <title>API_USER_PWD</title>
             <p><codeph>API_USER_PWD=_crypt:&lt;password></codeph></p>
             <p>The password of the user for accessing the tenant in OpenStack.</p>
             <p>Replace <codeph>&lt;password></codeph> with the plain text password which is valid for the user given in <codeph>API_USER_NAME</codeph>. The password is encrypted when it is stored in the database.</p>
-            <p>###???</p>
         </section>
         <section>
             <title>KEYSTONE_API_URL</title>
             <p><codeph>KEYSTONE_API_URL=https://&lt;keystone endpoint>/&lt;version>/auth</codeph></p>
             <p>The URL of the Keystone API for authenticating the user specified in <codeph>API_USER_NAME</codeph>. Keystone is the identity service used by OpenStack.</p>
             <p>Replace <codeph>&lt;keystone endpoint></codeph> with the URL leading to the Keystone API. Replace <codeph>&lt;version></codeph> with the API version to use, currently <codeph>v3</codeph>. HTTP and HTTPS are supported.</p>
-            <p>The URL of the Keystone API can also be specified as a parameter in technical service definitions. The technical service parameter overrides the setting you specify here. </p>
+            <p>The URL of the Keystone API can also be specified as a parameter in technical service definitions. The technical service parameter overrides the setting you specify here.</p>
         </section>
         <section>
             <title>TEMPLATE_BASE_URL</title>
@@ -83,7 +72,8 @@
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> by HTTP or HTTPS. </p>
             <p>The template URL can also be specified as a parameter in technical service definitions. The technical service parameter overrides the setting you specify here. </p>
             <note>
-                <p>First, the <codeph>bssapp</codeph> database is searched for the template specified with the <codeph>TEMPLATE_NAME</codeph> service parameter in the technical service definition. Only if the template is not found in the database, the <codeph>TEMPLATE_BASE_URL</codeph> setting is evaluated. </p>
+                <p>First, the <codeph>bssapp</codeph> database is searched for the template specified with the <codeph>TEMPLATE_NAME</codeph> service parameter in the technical service definition. Only if the template is not found in the database, the <codeph>TEMPLATE_BASE_URL</codeph> setting is evaluated.</p>
+                <p>### still required - I can select the service templates from the file system? ### </p>
             </note>
         </section>
         <section>
@@ -91,6 +81,7 @@
             <p><codeph>TENANT_ID=&lt;tenant></codeph></p>
             <p>The identifier of the tenant for your organization in OpenStack. The tenant is specified in each request to the Heat API.</p>
             <p>The tenant ID can also be specified as a parameter in technical service definitions. The technical service parameter overrides the setting you specify here. </p>
+            <p>### missing in template file  ???</p>
         </section>
         <section>
             <title>DOMAIN_NAME</title>
@@ -105,6 +96,7 @@
             <p><codeph>READY_TIMEOUT=300000</codeph></p>
             <p>Optional. The number of milliseconds to wait for the completion of an operation to start or stop the servers in a stack. If the operation is not completed within the given time, it is aborted with a timeout error. The administrators of the customer organization owning the subscription from which the operation was started are informed by email. After the problem has been sorted out, the start or stop operation can be repeated by the customer. </p>
             <p>If the setting is not specified or the given value is not a number, it is ignored, and start and stop operations never time out. </p>
+            <p>### Still valid? Not available on GUI???</p>
         </section>
     </refbody>
 </reference>
