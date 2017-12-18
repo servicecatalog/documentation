@@ -13,9 +13,13 @@
         <colspec colnum="2" colname="col2" colwidth="2.04*"/>
         <tbody valign="top">
           <row>
+            <entry colname="col1"/>
+            <entry colname="col2"/>
+          </row>
+          <row>
             <entry colname="col1">Trademarks</entry>
             <entry colname="col2"
-                >LINUX is a registered trademark of Linus Torvalds. <p>Open Service Catalog Manager is a registered trademark of FUJITSU LIMITED. </p><p>The OpenStack Word Mark and OpenStack logo are registered trademarks/service marks or trademarks/service marks of the OpenStack Foundation in the United States and other countries and are used with the OpenStack Foundation's permission. FUJITSU LIMITED is not endorsed or sponsored by the OpenStack Foundation, or the OpenStack community. </p><p>Apache Tomcat, Tomcat, and Apache are trademarks of The Apache Software Foundation.</p><p>Java is a registered trademark of Oracle and/or its affiliates. </p><p>UNIX is a registered trademark of the Open Group in the United States and in other countries. </p><p>Other company names and product names are trademarks or registered trademarks of their respective owners.  </p></entry>
+                >LINUX is a registered trademark of Linus Torvalds. <p>Open Service Catalog Manager is a registered trademark of FUJITSU LIMITED. </p><p>The OpenStack Word Mark and OpenStack logo are registered trademarks/service marks or trademarks/service marks of the OpenStack Foundation in the United States and other countries and are used with the OpenStack Foundation's permission.</p><p>Apache Tomcat, Tomcat, and Apache are trademarks of The Apache Software Foundation.</p><p>Java is a registered trademark of Oracle and/or its affiliates. </p><p>UNIX is a registered trademark of the Open Group in the United States and in other countries. </p><p>Other company names and product names are trademarks or registered trademarks of their respective owners. </p></entry>
           </row>
           <row>
             <entry colname="col1"/>
@@ -30,7 +34,11 @@
       </tgroup>
       <tgroup product="oscm_ce" cols="1">
         <colspec colnum="1" colname="col1" colwidth="*"/>
-        <tbody/>
+        <tbody>
+          <row>
+            <entry colname="col1"/>
+          </row>
+        </tbody>
       </tgroup>
       <tgroup cols="1">
         <colspec colnum="1" colname="col1" colwidth="*"/>
