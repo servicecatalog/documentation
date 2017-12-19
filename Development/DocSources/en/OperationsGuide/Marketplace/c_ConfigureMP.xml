@@ -19,7 +19,7 @@
                 </ul>
             </p>
             <p audience="doc">For details on the settings, refer to <xref
-                    href="../../Shared/reference/r_ConfigSettings_config_properties.xml"/>.</p>
+                    href="../../Shared/reference/r_ConfigSettings_UI.xml"/>.</p>
             <p audience="doc">For details on how to change configuration settings, refer to <xref
                     href="../Configuration/c_UpdateConfiguration.xml"/>.</p>
         </section>
