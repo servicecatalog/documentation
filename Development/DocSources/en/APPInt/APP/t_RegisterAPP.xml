@@ -16,7 +16,7 @@
             <ul compact="no">
                 <li><b>Using the Web interface of APP</b>: <p>
                         <ol>
-                            <li>In a Web browser, access the base URL of APP, for example, <codeph>http://127.0.0.1:8880/oscm-app</codeph>.</li>
+                            <li>In a Web browser, access the base URL of APP, for example, <codeph>https://127.0.0.1:8880/oscm-app</codeph>.</li>
                             <li>
                                 <p>Log in with the ID and password of the user you specified for <codeph>BSS_USER_KEY</codeph> in the APP configuration settings<ph audience="doc"> (see <xref
                                         href="r_ConfigSettings.xml"

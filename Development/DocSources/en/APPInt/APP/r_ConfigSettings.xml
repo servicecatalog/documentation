@@ -11,22 +11,20 @@
         </section>
         <section>
             <title>APP_BASE_URL</title>
-            <p><codeph>APP_BASE_URL=http://&lt;server>:&lt;port>/oscm-app</codeph></p>
-            <p>The URL used to access APP. </p>
+            <p><codeph>APP_BASE_URL=https://&lt;server>:&lt;port>/oscm-app</codeph></p>
+            <p>The URL used to access APP. The default port is <codeph>8881</codeph>. </p>
         </section>
         <section>
             <title>APP_TIMER_INTERVAL</title>
             <p><codeph>APP_TIMER_INTERVAL=15000</codeph>
             </p>
-            <p>The interval (in milliseconds) at which APP polls the status of instances.</p>
-            <p>Default: <codeph>15000</codeph>.</p>
+            <p>The interval (in milliseconds) at which APP polls the status of instances. This setting cannot be changed.</p>
         </section>
         <section>
             <title>APP_TIMER_REFRESH_SUBSCRIPTIONS</title>
-            <p><codeph>APP_TIMER_REFRESH_SUBSCRIPTIONS=86400000</codeph>
-            </p>
+            <p><codeph>APP_TIMER_REFRESH_SUBSCRIPTIONS=86400000</codeph> (once a day)</p>
             <p>The interval (in milliseconds) at which APP polls the status of instances and updates the number of virtual machines (VMs) provisioned for subscriptions to IaaS services, for example in OpenStack. The number is updated only in case the technical service definition specifies a <codeph>VMS_NUMBER</codeph> parameter.</p>
-            <p>Default: <codeph>86400000</codeph> (once a day).</p>
+            <p>This setting cannot be changed.</p>
         </section>
         <!--section>
             <title>APP_MAIL_RESOURCE</title>
@@ -74,9 +72,9 @@
             <title>BSS_USER_KEY</title>
             <p><codeph>BSS_USER_KEY=&lt;userKey></codeph>
             </p>
-            <p>###?### The user key for accessing <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </p>
-            <p>Replace <codeph>&lt;userKey></codeph> with the user key which you receive with the confirmation email for your user account. </p>
+            <p>The user key for accessing <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />. </p>
+            <p>You receive this key with the confirmation email for your user account. </p>
             <p>The user specified here must have the administrator role for your organization in <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     />. The user account is used for carrying out actions on behalf of APP in <ph
@@ -89,14 +87,13 @@
             </p>
             <p>The identifier of the user specified in <codeph>BSS_USER_KEY</codeph> for accessing <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
-            <p>Replace <codeph>&lt;userId></codeph> with the user ID.</p>
         </section>
         <section>
             <title>BSS_USER_PWD</title>
             <p><codeph>BSS_USER_PWD=_crypt:&lt;password></codeph></p>
             <p>The password of the user specified in <codeph>BSS_USER_KEY</codeph> for accessing <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
-            <p>Replace <codeph>&lt;password></codeph> with the plain text password. The password is encrypted when it is stored in the database. </p>
+            <p>The password is encrypted when it is stored in the database. </p>
         </section>
         <!--section>
             <title>BSS_WEBSERVICE_URL</title>

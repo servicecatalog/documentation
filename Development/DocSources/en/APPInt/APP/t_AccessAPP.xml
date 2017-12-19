@@ -14,7 +14,7 @@
             <p>Proceed as follows: </p>
             <ol compact="no">
                 <li>In a Web browser, access the Web interface (base URL) of APP in the following format:<p>
-                        <codeblock>https://&lt;hostname.fqdn&gt;:&lt;port&gt;/oscm-app</codeblock>
+                        <codeph>https://&lt;hostname.fqdn&gt;:&lt;port&gt;/oscm-app</codeph>
                     </p><p><codeph>&lt;hostname.fqdn&gt;</codeph> is the fully qualified domain name of the machine where APP has been deployed. <codeph>&lt;port&gt;</codeph> is the port to address the machine (default 8881), <codeph>oscm-app</codeph> is the default context root of APP and cannot be changed.</p></li>
                 <li>Log in with the ID and password of the user which you received with the confirmation email for your user account or as another administrator of the same organization. </li>
                 <li>Specify the ID of the technology provider organization that is to be responsible for the respective service controller (<codeph>ess.openstack</codeph> or <codeph>ess.aws</codeph>).</li>

@@ -18,9 +18,9 @@
                                     <p><b>To update the configuration settings for APP</b>, use the Web interface of APP:</p>
             <p>
                 <ol>
-                    <li>In a Web browser, access the base URL of APP, for example:<p><codeph>https://127.0.0.1:8881/oscm-app</codeph></p></li>
+                    <li>In a Web browser, access the Web interface (base URL) of APP.<p>The access URL has the following format: </p><p><codeph>https://&lt;hostname.fqdn>:&lt;port>/oscm-app</codeph></p><p><codeph>&lt;hostname.fqdn></codeph> is the name and the fully qualified domain name of the machine where the <codeph>oscm-app</codeph> container has been deployed, <codeph>&lt;port></codeph> is the port to address the machine (default <codeph>8881</codeph>), <codeph>oscm-app</codeph> is the default context root of APP and cannot be changed. </p></li>
                     <li>
-                        <p>Log in with the ID and password of the administrator specified by platform operator (default: <codeph>administrator</codeph>, <codeph>admin123</codeph>).</p>
+                        <p>Log in with the ID and password of the administrator of the technology provider organization specified by the  platform operator.</p>
                     </li>
                     <li>Edit the settings as required.</li>
                     <li>Click <uicontrol>Save Configuration</uicontrol> to save the settings.</li>
@@ -35,19 +35,22 @@
             <p audience="vmware"><b>To update the settings of the vSphere configuration:</b></p>
             <p>
                 <ol compact="no">
-                                        <li>In a Web browser, access the URL of the <ph audience="ror">ROR </ph><ph
-                            audience="aws">AWS </ph><ph audience="os">OpenStack </ph><ph audience="tps5">TPS5 </ph><ph
-                            audience="vmware">VMware </ph>service controller, for example: <ph audience="app"
-                                ><codeph>https://127.0.0.1:8881/oscm-app-aws</codeph></ph><ph audience="ror"
-                                ><codeph>https://127.0.0.1:8881/oscm-app-ror</codeph></ph><ph audience="aws"
-                                ><codeph>https://127.0.0.1:8881/oscm-app-aws</codeph></ph><ph audience="os"
-                                ><codeph>https://127.0.0.1:8881/oscm-app-openstack</codeph></ph><ph audience="tps5"
-                                ><codeph>https://127.0.0.1:8881/oscm-app-tps5</codeph></ph><ph audience="vmware"
-                                ><codeph>https://127.0.0.1:8881/oscm-app-vmware/vcenter.jsf</codeph></ph>.</li>
+                    <li>Invoke the instance status interface of APP for the <ph audience="aws">AWS </ph><ph
+                            audience="os">OpenStack </ph><ph audience="vmware"
+                            >VMware </ph> service controller by opening it's URL in a Web browser. <p>The access URL has the following format: </p><p><codeph>https://&lt;hostname.fqdn>:&lt;port>/<ph
+                                    audience="os">oscm-app-openstack</ph><ph audience="aws">oscm-app-aws</ph><ph
+                                    audience="app"
+                                ><codeph>&lt;controller-id></codeph></ph></codeph></p><p><codeph>&lt;hostname.fqdn></codeph> is the name and the fully qualified domain name of the machine where the <codeph>oscm-app</codeph> container has been deployed, <codeph>&lt;port></codeph> is the port to address the machine (default <codeph>8881</codeph>), <ph
+                                audience="os"
+                                ><codeph>oscm-app-openstack</codeph>  is the default context root of the service controller and cannot be changed</ph><ph
+                                audience="aws"
+                                ><codeph>oscm-app-aws</codeph>  is the default context root of the service controller and cannot be changed</ph><ph
+                                audience="app"
+                                    ><codeph>&lt;controller-id></codeph> is the default context root of the service controller (<codeph>oscm-app-aws</codeph> or <codeph>oscm-app-openstack</codeph>)</ph>. </p></li>
                     <li>Log in with the ID and password of the user specified in the configuration settings for the <ph
                             audience="ror">ROR</ph><ph audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph
                             audience="tps5">TPS5</ph><ph audience="vmware"
-                            >VMware</ph> service controller (<codeph>CONTROLLER_USER_NAME</codeph> and <codeph>CONTROLLER_USER_PASS</codeph> settings during the deployment) ### or as another technology manager registered for the same organization.###</li>
+                            >VMware</ph> service controller (<codeph>CONTROLLER_USER_NAME</codeph> and <codeph>CONTROLLER_USER_PASS</codeph> settings during the deployment) or as another administrator registered for the same organization.</li>
                     <li audience="app">Enter the required settings.</li>
                     <li audience="ror">Enter the required settings.</li>
                     <li audience="tps5">Enter the required settings.</li>
@@ -69,6 +72,7 @@
                     <li>Save the settings.</li>
                                 </ol>
             </p>
+            <p/>
                                     <p>If you want to <b>change the technology provider</b> organization responsible for the <ph
                     audience="ror">ROR</ph><ph audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph
                     audience="tps5">TPS5</ph><ph audience="vmware"

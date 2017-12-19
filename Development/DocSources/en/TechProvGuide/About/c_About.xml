@@ -62,6 +62,10 @@
                                 <entry colname="col2"><xref href="../Reference/r_TechServDescr.xml"/></entry>
                                 <entry colname="col3">Describes the elements of a technical service definition.</entry>
                             </row>
+                            <row>
+                                <entry colname="col2"><xref href="../../APPInt/APP/c_ImplAPP.xml"/></entry>
+                                <entry colname="col3">Describes the Asynchronous Provisioning Platform (APP).</entry>
+                            </row>
                         </tbody>
                     </tgroup>
                 </table>

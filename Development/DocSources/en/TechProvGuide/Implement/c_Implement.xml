@@ -22,7 +22,7 @@
                 <li id="Implement_service_operations_concept_conbody_section_ul_1">Implement service operations </li>
             </ul>
             <p id="impl1a">These tasks are described in detail in the sections below.</p>
-            <p id="impl1">To help you perform these tasks, the <ph
+            <!--p id="impl1">To help you perform these tasks, the <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                         /> integration package (<codeph><xref format="html"
                         href="https://github.com/servicecatalog/development/releases" scope="external"
@@ -42,8 +42,10 @@
                 <li>Provisioning API for implementing a provisioning service</li>
                 <li>Notification API for implementing a notification service</li>
                 <li>Operation API for implementing service operations</li>
-            </ul></p>
+            </ul></p-->
             <!--p>For a detailed description of the Web services and the usage of the utilities, refer to the <i>Developer's Guide</i>.</p-->
+            <p product="oscm_ee"
+                >A package with integration samples including source code is available on demand. Contact FUJITSU Enabling Software Technology GmbH at sales@est.fujitsu.com.</p>
         </section>
         <section>
             <title>Prerequisites</title>

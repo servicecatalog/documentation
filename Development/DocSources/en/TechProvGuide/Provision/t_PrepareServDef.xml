@@ -11,8 +11,13 @@
          <p id="Each_application_to_be_integr_task_taskbody_context_p_1"
             >An XML file defining a technical service contains a description of the service's purpose, the license agreement, application parameters, options, events, service roles, and operations. </p>
          <p id="A_service_definition_must_con_task_taskbody_context_p_2"
-            >A service definition must conform to the <codeph>TechnicalServices.xsd</codeph> XML schema.<ph audience="doc"> For detailed information on the elements and attributes, refer to <xref
-               format="dita" href="../Reference/r_TechServDescr.xml"/>.</ph> </p>
+               >A service definition must conform to the <codeph>TechnicalServices.xsd</codeph> XML schema. The schema can be downloaded from 
+            <xref format="html"
+               href="https://github.com/servicecatalog/oscm/releases/" scope="external"
+               ><u><i>https://github.com/servicecatalog/oscm/releases/</i></u></xref>. <ph
+               audience="doc"> For detailed information on the elements and attributes, refer to <xref format="dita"
+                  href="../Reference/r_TechServDescr.xml"/>.</ph>
+         </p>
          <p>To prepare a service definition in an XML file:</p>
       </context>
       <steps>

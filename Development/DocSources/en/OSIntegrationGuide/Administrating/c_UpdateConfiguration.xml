@@ -9,47 +9,54 @@
             <title>Updating Service Controller Settings in the Database</title>
             <conbody>
         <section>During deployment, several configuration settings are written to the <codeph>bssapp</codeph> database. This configuration is used for the initial setup of the OpenStack service controller and its registration with APP. It is up to the platform operator for taking care that the initial settings are correct. <p
-                conref="../../AWSIntegrationGuide/Appendix/r_ConfigSettingsController.xml#reference832/cfg"/><p
-                conref="../../AWSIntegrationGuide/Appendix/r_ConfigSettingsController.xml#reference832/cfg2"/><p
-                conref="../../AWSIntegrationGuide/Appendix/r_ConfigSettingsController.xml#reference832/cfg3"/><p
-                conref="../../AWSIntegrationGuide/Appendix/r_ConfigSettingsController.xml#reference832/cfg4"/><p
-                audience="os"><b>To update the controller settings in the APP database:</b></p><p>
-                <ol compact="no">
-                    <li>In a Web browser, access the URL of the <ph audience="os"
-                            >OpenStack </ph>service controller, for example: <ph audience="os"
-                                ><codeph>https://127.0.0.1:8881/oscm-app-openstack</codeph></ph>.</li>
-                    <li>Log in with the ID and password of the user specified in the configuration settings for the <ph
-                            audience="os"
-                            >OpenStack</ph> service controller by the platform operator in the <codeph>BSS_USER_ID</codeph> and <codeph>BSS_USER_PWD</codeph> configuration settings, or as another technology manager registered for the same organization (default: <codeph>administrator</codeph>, <codeph>admin123</codeph>).</li>
-                    <li audience="os">The following settings can be changed:<p>
-                            <ul>
-                                <li><b>User ID</b>: The identifier of the user responsible for the OpenStack service controller.</li>
-                                <li><b>User Key</b>: The user key for accessing <ph
-                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                        />. You receive this key with the confirmation email for your user account. The user must have the technology manager role in <ph
-                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                            /> and belong to the technology provider organization responsible for the service controller. <p>It is recommended that the user account is used only for carrying out actions on behalf of the service controller in <ph
-                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                    />.</p></li>
-                                <li><b>Password</b>: The password of the user for accessing <ph
-                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</li>
-                                <li><b>API User</b>: The user name to be used to access the tenant for your organization in OpenStack. Once authenticated, this user is authorized to access the Heat API.<p>The user must have the necessary credentials to create and configure virtual systems for the tenant. In FUJITSU Cloud Service K5, the <codeph>cpf_systemowner</codeph> role is required.</p></li>
-                                <li><b>API Password</b>: The password of the user for accessing the tenant in OpenStack.</li>
-                                <li><b>Keystone API URL</b>: The URL of the Keystone API for authenticating the user specified in <codeph>API_USER_NAME</codeph>. Keystone is the identity service used by OpenStack. <p>The URL of the Keystone API can also be specified as a parameter in technical service definitions. The technical service parameter overrides the setting you specify here.</p></li>
-                                <li><b>Tenant ID</b>: The identifier of the tenant for your organization in OpenStack. The tenant is specified in each request to the Heat API.<p>The tenant ID can also be specified as a parameter in technical service definitions. The technical service parameter overrides the setting you specify here. </p></li>
-                                <li><b>Domain Name</b>: The name of the Keystone domain to use. A domain is a container for projects, users, and groups in the OpenStack environment. If not specified, the default Keystone domain is used (name: <codeph>default</codeph>). <p
-                                        product="oscm_ee"
-                                        >In FUJITSU Cloud Service K5, the domain name corresponds to the contract number.</p><p>The domain name can also be specified as a parameter in technical service definitions. The technical service parameter overrides the setting you specify here. </p></li>
-                                <li><b>Template Base URL</b>: The URL leading to the templates that are mapped to technical service definitions. The file names of the templates to be used are specified when customers subscribe to a corresponding service on an <ph
-                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                        /> marketplace.<p>The template URL can also be specified as a parameter in technical service definitions. The technical service parameter overrides the setting you specify here. </p></li>
-                                <li><b>Service templates</b>: Click <b>Browse</b> and import the template files to be used for the provisioning of virtual resources into the <codeph>bssapp</codeph> database.  Refer to <xref
-                                        href="../../OSIntegrationGuide/Administrating/c_ImportTemplates.xml"
-                                    /> for details.</li>
-                            </ul>
-                        </p></li>
-                    <li>Save the settings.</li>
-                </ol>
-            </p></section>
+                                id="cfg"
+                                        >A technology provider can define service parameters in the technical service definition. If such a parameter has the same ID as a controller configuration setting stored in the APP database, it overrules the configuration setting in the database when the marketable service based on such a technical service is subscribed to. By default the values in the controller configuration settings are used. Refer to the <i>Technology Provider's Guide</i> for details on defining technical services. </p><p
+                                id="cfg2"
+                                >In addition, a supplier can define custom attributes for subscriptions and for customers. If such an attribute has the same ID as a controller configuration setting stored in the APP database as well as a corresponding technical service parameter, it overrules the technical service parameter as well as the configuration setting in the database when the marketable service based on such a technical service is subscribed to.</p><p
+                                id="cfg3">The controller configuration settings are evaluated as follows: </p><p
+                                id="cfg4">
+                                <ol>
+                                        <li>Configuration setting as stored in the APP database. </li>
+                                        <li>Technical service parameter. If defined, it overrules 1. </li>
+                                        <li>Custom attribute for customer. If defined, it overrules 1. and 2.</li>
+                                        <li>Custom attribute for subscription. If defined, it overrules 1. and 2. and 3. </li>
+                                </ol>
+                        </p><p audience="os"><b>To update the controller settings in the APP database:</b></p><p>
+                                <ol compact="no">
+                                        <li>Invoke the instance status interface of APP for the OpenStack service controller of the application by opening it's URL in a Web browser. <p>The access URL has the following format: </p><p><codeph>https://&lt;hostname.fqdn>:&lt;port>/oscm-app-openstack</codeph></p><p><codeph>&lt;hostname.fqdn></codeph> is the name and the fully qualified domain name of the machine where the <codeph>oscm-app</codeph> container has been deployed, <codeph>&lt;port></codeph> is the port to address the machine (default <codeph>8881</codeph>), <codeph>oscm-app-openstack</codeph> is the default context root of the service controller and cannot be changed. </p></li>
+                                        <li>Log in with the ID and password of the user specified in the configuration settings for the <ph
+                                                        audience="os"
+                                                        >OpenStack</ph> service controller by the platform operator in the <codeph>BSS_USER_ID</codeph> and <codeph>BSS_USER_PWD</codeph> configuration settings, or as another technology manager registered for the same organization (default: <codeph>administrator</codeph>, <codeph>admin123</codeph>).</li>
+                                        <li audience="os">The following settings can be changed:<p>
+                                                        <ul>
+                                                            <li><b>User ID</b>: The identifier of the user responsible for the OpenStack service controller.</li>
+                                                            <li><b>User Key</b>: The user key for accessing <ph
+                                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                            />. You receive this key with the confirmation email for your user account. The user must have the technology manager role in <ph
+                                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                            /> and belong to the technology provider organization responsible for the service controller. <p>It is recommended that the user account is used only for carrying out actions on behalf of the service controller in <ph
+                                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                            />.</p></li>
+                                                            <li><b>Password</b>: The password of the user for accessing <ph
+                                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                            />.</li>
+                                                            <li><b>API User</b>: The user name to be used to access the tenant for your organization in OpenStack. Once authenticated, this user is authorized to access the Heat API.<p>The user must have the necessary credentials to create and configure virtual systems for the tenant. In FUJITSU Cloud Service K5, the <codeph>cpf_systemowner</codeph> role is required.</p></li>
+                                                            <li><b>API Password</b>: The password of the user for accessing the tenant in OpenStack.</li>
+                                                            <li><b>Keystone API URL</b>: The URL of the Keystone API for authenticating the user specified in <codeph>API_USER_NAME</codeph>. Keystone is the identity service used by OpenStack. <p>The URL of the Keystone API can also be specified as a parameter in technical service definitions. The technical service parameter overrides the setting you specify here.</p></li>
+                                                            <li><b>Tenant ID</b>: The identifier of the tenant for your organization in OpenStack. The tenant is specified in each request to the Heat API.<p>The tenant ID can also be specified as a parameter in technical service definitions. The technical service parameter overrides the setting you specify here. </p></li>
+                                                            <li><b>Domain Name</b>: The name of the Keystone domain to use. A domain is a container for projects, users, and groups in the OpenStack environment. If not specified, the default Keystone domain is used (name: <codeph>default</codeph>). <p
+                                                            product="oscm_ee"
+                                                            >In FUJITSU Cloud Service K5, the domain name corresponds to the contract number.</p><p>The domain name can also be specified as a parameter in technical service definitions. The technical service parameter overrides the setting you specify here. </p></li>
+                                                            <li><b>Template Base URL</b>: The URL leading to the templates that are mapped to technical service definitions. The file names of the templates to be used are specified when customers subscribe to a corresponding service on an <ph
+                                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                            /> marketplace.<p>The template URL can also be specified as a parameter in technical service definitions. The technical service parameter overrides the setting you specify here. </p></li>
+                                                            <li><b>Service templates</b>: Click <b>Browse</b> and import the template files to be used for the provisioning of virtual resources into the <codeph>bssapp</codeph> database. Refer to <xref
+                                                            href="../../OSIntegrationGuide/Administrating/c_ImportTemplates.xml"
+                                                            /> for details.</li>
+                                                        </ul>
+                                                </p></li>
+                                        <li>Save the settings.</li>
+                                </ol>
+                        </p></section>
     </conbody>
 </concept>

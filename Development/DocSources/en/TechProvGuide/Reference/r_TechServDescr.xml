@@ -30,12 +30,12 @@
                 <li><codeph><b>provisioningTimeout</b></codeph> - Specifies the time in milliseconds after which an asynchronous provisioning operation is considered to have failed (optional). By default, no timeout occurs. </li>
                 <li><codeph><b>provisioningUrl</b></codeph> - URL of the WSDL document that defines the provisioning service you implemented for your application (optional for the <codeph>EXTERNAL</codeph> access type, otherwise required). <p>Be aware that for asynchronous provisioning, you need to use the HTTPS protocol. </p></li>
                 <li><codeph><b>provisioningVersion</b></codeph> - Version number of your provisioning service (optional).</li>
-                <li><codeph><b>provisioningUsername</b></codeph> - Name of the user who is authorized to access the provisioning service (optional). <p>Only required if you secure your provisioning service by basic user authentication (authentication with user ID and password without certificates). Basic user authentication must ensure that the provisioning service can be called by <ph
+                <!--li><codeph><b>provisioningUsername</b></codeph> - Name of the user who is authorized to access the provisioning service (optional). <p>Only required if you secure your provisioning service by basic user authentication (authentication with user ID and password without certificates). Basic user authentication must ensure that the provisioning service can be called by <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            /> only.</p><!--p>For details on securing the communication between <ph
+                            /> only.</p><p>For details on securing the communication between <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            /> and the provisioning service and for details on authentication methods, refer to the <i>Developer's Guide</i>.</p--></li>
-                <li><codeph><b>provisioningPassword</b></codeph> - Password of the user specified in <codeph>provisioningUserName</codeph> (optional).</li>
+                            /> and the provisioning service and for details on authentication methods, refer to the <i>Developer's Guide</i>.</p></li>
+                <li><codeph><b>provisioningPassword</b></codeph> - Password of the user specified in <codeph>provisioningUserName</codeph> (optional).</li-->
                 <li><codeph><b>accessType</b></codeph> - Specifies how users access your application (required). <p>Use <codeph>DIRECT</codeph> if users log in directly to your application without involving <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                             />.</p><p>Use <codeph>LOGIN</codeph> if users log in to your application through <ph
@@ -337,7 +337,7 @@
             <p>Declares an operation that can be executed on a technical service. </p>
             <p
                 conref="../../TechProvGuide/Implement/t_ImplementOperations.xml#task_7867C3B8F2DB44B9A0965F23E1AAC43C/You_may_wish_that_your_techni_task_taskbody_context_p_1"/>
-            <p>To provide for technical service operations, a Web service based on the operation service API must be implemented. Refer to the <i>Developer's Guide</i> for details. </p>
+            <p>To provide for technical service operations, a Web service based on the operation service API must be implemented. </p>
             <p><b>Attributes:</b></p>
             <ul>
                 <li><codeph><b>id</b></codeph> - ID of the operation. The ID must be unique across the operations of a technical service.</li>
@@ -356,8 +356,8 @@
         <section><b>Example</b>: <p>
                 <codeblock>&lt;Operation id="SNAPSHOT"
       actionURL="https://oscm-app:8881/oscm-app/
-                         webservices/oscm-app/oscm-app/
-                         org.oscm.app.v2_0.service.AsynchronousOperationProxy?wsdl">
+                  webservices/oscm-app/oscm-app/
+                  org.oscm.app.v2_0.service.AsynchronousOperationProxy?wsdl">
       &lt;LocalizedName locale="en">Create snapshot&lt;/LocalizedName> 
       &lt;LocalizedDescription locale="en"&gt;
         Creates a snapshot of the system.

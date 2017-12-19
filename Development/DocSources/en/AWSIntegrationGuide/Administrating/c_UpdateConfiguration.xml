@@ -9,20 +9,23 @@
             <title>Updating Service Controller Settings in the Database</title>
             <conbody>
         <section>During deployment, several configuration settings are written to the <codeph>bssapp</codeph> database. This configuration is used for the initial setup of the AWS service controller and its registration with APP. It is up to the platform operator for taking care that the initial settings are correct. <p
-                                conref="../../AWSIntegrationGuide/Appendix/r_ConfigSettingsController.xml#reference832/cfg"
-                                /><p
-                                conref="../../AWSIntegrationGuide/Appendix/r_ConfigSettingsController.xml#reference832/cfg2"
-                                /><p
-                                conref="../../AWSIntegrationGuide/Appendix/r_ConfigSettingsController.xml#reference832/cfg3"
-                                /><p
-                                conref="../../AWSIntegrationGuide/Appendix/r_ConfigSettingsController.xml#reference832/cfg4"
-                                /><p audience="os"><b>To update the controller settings in the APP database:</b></p><p>
+                                id="cfg"
+                                        >A technology provider can define service parameters in the technical service definition. If such a parameter has the same ID as a controller configuration setting stored in the APP database, it overrules the configuration setting in the database when the marketable service based on such a technical service is subscribed to. By default the values in the controller configuration settings are used. Refer to the <i>Technology Provider's Guide</i> for details on defining technical services. </p><p
+                                id="cfg2"
+                                >In addition, a supplier can define custom attributes for subscriptions and for customers. If such an attribute has the same ID as a controller configuration setting stored in the APP database as well as a corresponding technical service parameter, it overrules the technical service parameter as well as the configuration setting in the database when the marketable service based on such a technical service is subscribed to.</p><p
+                                id="cfg3">The controller configuration settings are evaluated as follows: </p><p
+                                id="cfg4">
+                                <ol>
+                                        <li>Configuration setting as stored in the APP database. </li>
+                                        <li>Technical service parameter. If defined, it overrules 1. </li>
+                                        <li>Custom attribute for customer. If defined, it overrules 1. and 2.</li>
+                                        <li>Custom attribute for subscription. If defined, it overrules 1. and 2. and 3. </li>
+                                </ol>
+                        </p><p><b>To update the controller settings in the APP database:</b></p><p>
                                 <ol compact="no">
-                                        <li>In a Web browser, access the URL of the AWS service controller, for example: <ph
-                                                        audience="os"
-                                                            ><codeph>https://127.0.0.1:8881/oscm-app-aws</codeph></ph>.</li>
+                                        <li>Invoke the instance status interface of APP for the AWS service controller of the application by opening it's URL in a Web browser. <p>The access URL has the following format: </p><p><codeph>https://&lt;hostname.fqdn>:&lt;port>/oscm-app-aws</codeph></p><p><codeph>&lt;hostname.fqdn></codeph> is the name and the fully qualified domain name of the machine where the <codeph>oscm-app</codeph> container has been deployed, <codeph>&lt;port></codeph> is the port to address the machine (default <codeph>8881</codeph>), <codeph>oscm-app-aws</codeph> is the default context root of the service controller and cannot be changed. </p></li>
                                         <li>Log in with the ID and password of the user specified in the configuration settings for the AWS service controller by the platform operator in the <codeph>BSS_USER_ID</codeph> and <codeph>BSS_USER_PWD</codeph> configuration settings, or as another technology manager registered for the same organization (default: <codeph>administrator</codeph>, <codeph>admin123</codeph>).</li>
-                                        <li audience="os">The following settings can be changed:<p>
+                                        <li>The following settings can be changed:<p>
                                                         <ul>
                                                             <li><b>User ID</b>: The identifier of the user responsible for the AWS service controller.</li>
                                                             <li><b>User Key</b>: The user key for accessing <ph
