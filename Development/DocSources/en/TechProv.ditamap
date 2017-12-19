@@ -27,7 +27,7 @@
             <series>Technology Provider's Guide</series>
         </prodinfo>
         <bookid>
-            <edition>December 2017 - Draft for review </edition>
+            <edition>January 2018 </edition>
             <!--booknumber product="oscm_ee">B1WS-1255-02</booknumber-->
         </bookid>
         <bookrights product="oscm_ce" >
@@ -88,10 +88,10 @@
     		<topicref format="dita" href="APPInt/APP/c_HandleProblems.xml" type="concept"/>
     		<topicref format="dita" href="Shared/concepts/c_ControllerHandleCommProblems.xml" type="concept"/>
     		<!--topicref format="dita" href="Shared/Installation/c_Backup.xml" type="concept"/-->
-    		<topicref format="dita" href="Shared/Installation/c_UpdateConfiguration.xml" type="concept"/>
+    		<topicref format="dita" href="TechProvGuide/Reference/c_UpdateConf.xml" type="concept"/>
     		<!--topicref format="dita" href="APPInt/APP/c_LogConfig.xml" type="concept"/-->
     	   	<!--topicref format="dita" href="APPInt/APP/r_ConfigSettingsIntro.xml" type="reference"-->
-        	<topicref format="dita" href="APPInt/APP/r_ConfigSettings.xml" type="reference"/>
+        	<!--topicref format="dita" href="APPInt/APP/r_ConfigSettings.xml" type="reference"/-->
      		<!--topicref format="dita" href="Shared/reference/r_ConfigSettings_db.xml" type="reference"/>
      	</topicref-->
      </appendix>

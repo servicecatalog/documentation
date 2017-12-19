@@ -58,9 +58,9 @@
                 <li>Specific tasks may require manual steps. In this case, the service controller can request the automatic execution to be paused and then send an email notification to the responsible person providing a link to continue the automatic processing. As soon as the link contained in the email is clicked, the task execution is continued. </li>
             </ul>
             <p>If the provisioning or modification of an application instance fails or if there are problems in the communication between the participating systems, the corresponding subscription in <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> remains pending. APP supports you in recovering from such problems with its instance status interface. <ph
-                        audience="doc">For details, refer to <xref
-                        href="c_HandleProblems.xml"/></ph>.</p>
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> remains pending. APP supports you in recovering from such problems with its instance status interface. <ph
+                    audience="doc">For details, refer to <xref href="../../APPInt/APP/c_HandleProblems.xml"/></ph>.</p>
         </section>
     </conbody>
 </concept>
