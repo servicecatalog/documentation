@@ -29,10 +29,9 @@
                                     <ol>
                                                 <li class="liexpand">Work as a technology manager of the technology provider organization which is responsible for the relevant service controller. </li>
 
-                                                <li class="liexpand">Invoke the instance status interface of APP for the service controller of the application by opening the following URL in a Web browser, for example:<div class="p">
-                                                            <pre class="codeblock">https://127.0.0.1:8881/oscm-app/controller/?ess.openstack</pre>
-
-                                                            </div>
+                                                <li class="liexpand">Invoke the instance status interface of APP for the service controller of the application by opening it's URL in a Web browser. <p>The access URL has the following format: </p>
+<p><samp class="codeph">https://&lt;hostname.fqdn&gt;:&lt;port&gt;/oscm-app/controller/?ess.openstack</samp></p>
+<p><samp class="codeph">&lt;hostname.fqdn&gt;</samp> is the name and the fully qualified domain name of the machine where the <samp class="codeph">oscm-app</samp> container has been deployed, <samp class="codeph">&lt;port&gt;</samp> is the port to address the machine (default <samp class="codeph">8881</samp>), <samp class="codeph">oscm-app/controller/?ess.openstack</samp> is the default context root of the service controller and cannot be changed. </p>
 <p>The Web page shows all subscriptions for the application, including detailed information such as the customer organization, the ID of the related application instance, and the provisioning status. </p>
 </li>
 
