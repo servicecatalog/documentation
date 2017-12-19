@@ -6,7 +6,6 @@
   <title>Deleting organizations</title>
   <taskbody>
     <context>
-      <p>### Check when GUI is available ###</p>
       <p>On the <uicontrol>Delete organization</uicontrol> page, you can permanently delete an organization account. The following prerequisites must be fulfilled: </p>
       <p>
         <ul compact="no">

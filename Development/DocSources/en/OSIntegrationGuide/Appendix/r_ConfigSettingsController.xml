@@ -73,7 +73,6 @@
             <p>The template URL can also be specified as a parameter in technical service definitions. The technical service parameter overrides the setting you specify here. </p>
             <note>
                 <p>First, the <codeph>bssapp</codeph> database is searched for the template specified with the <codeph>TEMPLATE_NAME</codeph> service parameter in the technical service definition. Only if the template is not found in the database, the <codeph>TEMPLATE_BASE_URL</codeph> setting is evaluated.</p>
-                <p>### still required - I can select the service templates from the file system? ### </p>
             </note>
         </section>
         <section>
@@ -81,7 +80,6 @@
             <p><codeph>TENANT_ID=&lt;tenant></codeph></p>
             <p>The identifier of the tenant for your organization in OpenStack. The tenant is specified in each request to the Heat API.</p>
             <p>The tenant ID can also be specified as a parameter in technical service definitions. The technical service parameter overrides the setting you specify here. </p>
-            <p>### missing in template file  ???</p>
         </section>
         <section>
             <title>DOMAIN_NAME</title>
@@ -91,12 +89,10 @@
                 >In FUJITSU Cloud Service K5, the domain name corresponds to the contract number.</p>
             <p>The domain name can also be specified as a parameter in technical service definitions. The technical service parameter overrides the setting you specify here. </p>
         </section>
-        <section>
+        <!--section>
             <title>READY_TIMEOUT</title>
             <p><codeph>READY_TIMEOUT=300000</codeph></p>
-            <p>Optional. The number of milliseconds to wait for the completion of an operation to start or stop the servers in a stack. If the operation is not completed within the given time, it is aborted with a timeout error. The administrators of the customer organization owning the subscription from which the operation was started are informed by email. After the problem has been sorted out, the start or stop operation can be repeated by the customer. </p>
-            <p>If the setting is not specified or the given value is not a number, it is ignored, and start and stop operations never time out. </p>
-            <p>### Still valid? Not available on GUI???</p>
-        </section>
+            <p>The number of milliseconds to wait for the completion of an operation to start or stop the servers in a stack. If the operation is not completed within the given time, it is aborted with a timeout error. The administrators of the customer organization owning the subscription from which the operation was started are informed by email. After the problem has been sorted out, the start or stop operation can be repeated by the customer. This setting cannot be changed. </p>
+        </section-->
     </refbody>
 </reference>

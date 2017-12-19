@@ -20,7 +20,7 @@
                     <li>Specify another technology provider organization for a service controller, <codeph>ess.aws</codeph> or <codeph>ess.openstack</codeph>).<p>Any technology manager registered for the technology provider organization you specified can log in to the graphical user interface for updating the controller configuration settings (see above). At least the ID and password of the user to be used for accessing <ph
                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                             /> must be changed in the controller configuration settings.</p><p>
-                            <note>### issue https://github.com/servicecatalog/oscm/issues/46</note>
+                            <note>When changing a password for a technology provider responsible for a service controller, make sure to change it first on the APP Web interface, and second in the administration portal. Otherwise, he can no longer in to the service controller interface to change it there.</note>
                         </p></li>
                     <li>Click <uicontrol>Save</uicontrol> to save the settings.</li>
                 </ol>

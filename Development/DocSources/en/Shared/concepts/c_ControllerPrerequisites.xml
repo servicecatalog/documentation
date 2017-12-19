@@ -27,7 +27,7 @@
                         <ol>
                             <li>The technology provider organization responsible for the OpenStack service controller provides them on an external host in a location whose URL can be reached from <ph
                                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                /> via HTTP or HTTPS.</li>
+                                /> via HTTPS.</li>
                             <li>The <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                     /> operator provides them on the <ph
                                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"

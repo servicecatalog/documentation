@@ -30,7 +30,7 @@
                     <li>Login to the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                             /> administration portal, and choose <b>Create organization</b> in the <b>Operation</b> menu.<p>Make sure to set the <b>Technology provider</b> role for the organization. Refer to the online help for details.</p>
                     </li>
-                    <li>Access the Web interface (base URL) of APP in the following format:<p>
+                    <li>Access the Web interface (base URL) of APP with an URL in the following format:<p>
                             <codeph>https://&lt;hostname.fqdn&gt;:&lt;port&gt;/oscm-app</codeph>
                         </p><p><codeph>&lt;hostname.fqdn&gt;</codeph> is the name and the fully qualified domain name of the machine where APP has been deployed. <codeph>&lt;port&gt;</codeph> is the port to address the machine (default: <codeph>8881</codeph>), <codeph>oscm-app</codeph> is the default context root of APP and cannot be changed.</p></li>
                     <li>Log in with your user ID and password (default: <codeph>administrator</codeph>, <codeph>admin123</codeph>). </li>
@@ -38,7 +38,6 @@
                     <li>Click <uicontrol>Save Configuration</uicontrol> to save the settings.</li>
                 </ol>
             </p>
-            <p><b>To update the APP configuration settings</b>: </p>
         </section>
 
   </conbody>
