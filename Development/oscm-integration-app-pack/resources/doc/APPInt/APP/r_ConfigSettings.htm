@@ -26,9 +26,9 @@
 
         <div class="section"><h4 class="sectiontitle">APP_BASE_URL</h4>
             
-            <p><samp class="codeph">APP_BASE_URL=http://&lt;server&gt;:&lt;port&gt;/oscm-app</samp></p>
+            <p><samp class="codeph">APP_BASE_URL=https://&lt;server&gt;:&lt;port&gt;/oscm-app</samp></p>
 
-            <p>The URL used to access APP. </p>
+            <p>The URL used to access APP. The default port is <samp class="codeph">8881</samp>. </p>
 
         </div>
 
@@ -37,20 +37,17 @@
             <p><samp class="codeph">APP_TIMER_INTERVAL=15000</samp>
             </p>
 
-            <p>The interval (in milliseconds) at which APP polls the status of instances.</p>
-
-            <p>Default: <samp class="codeph">15000</samp>.</p>
+            <p>The interval (in milliseconds) at which APP polls the status of instances. This setting cannot be changed.</p>
 
         </div>
 
         <div class="section"><h4 class="sectiontitle">APP_TIMER_REFRESH_SUBSCRIPTIONS</h4>
             
-            <p><samp class="codeph">APP_TIMER_REFRESH_SUBSCRIPTIONS=86400000</samp>
-            </p>
+            <p><samp class="codeph">APP_TIMER_REFRESH_SUBSCRIPTIONS=86400000</samp> (once a day)</p>
 
             <p>The interval (in milliseconds) at which APP polls the status of instances and updates the number of virtual machines (VMs) provisioned for subscriptions to IaaS services, for example in OpenStack. The number is updated only in case the technical service definition specifies a <samp class="codeph">VMS_NUMBER</samp> parameter.</p>
 
-            <p>Default: <samp class="codeph">86400000</samp> (once a day).</p>
+            <p>This setting cannot be changed.</p>
 
         </div>
 
@@ -71,9 +68,9 @@
             <p><samp class="codeph">BSS_USER_KEY=&lt;userKey&gt;</samp>
             </p>
 
-            <p>###?### The user key for accessing <span>OSCM</span>. </p>
+            <p>The user key for accessing <span>OSCM</span>. </p>
 
-            <p>Replace <samp class="codeph">&lt;userKey&gt;</samp> with the user key which you receive with the confirmation email for your user account. </p>
+            <p>You receive this key with the confirmation email for your user account. </p>
 
             <p>The user specified here must have the administrator role for your organization in <span>OSCM</span>. The user account is used for carrying out actions on behalf of APP in <span>OSCM</span>. In addition, the user is allowed to register service controllers in APP.</p>
 
@@ -86,8 +83,6 @@
 
             <p>The identifier of the user specified in <samp class="codeph">BSS_USER_KEY</samp> for accessing <span>OSCM</span>.</p>
 
-            <p>Replace <samp class="codeph">&lt;userId&gt;</samp> with the user ID.</p>
-
         </div>
 
         <div class="section"><h4 class="sectiontitle">BSS_USER_PWD</h4>
@@ -96,7 +91,7 @@
 
             <p>The password of the user specified in <samp class="codeph">BSS_USER_KEY</samp> for accessing <span>OSCM</span>.</p>
 
-            <p>Replace <samp class="codeph">&lt;password&gt;</samp> with the plain text password. The password is encrypted when it is stored in the database. </p>
+            <p>The password is encrypted when it is stored in the database. </p>
 
         </div>
 
