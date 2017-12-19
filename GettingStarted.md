@@ -1,35 +1,28 @@
 # Getting Started with ESCM
 
-After having successfully deployed OSCM, an empty database has been created, as well as a platform operator organization with one user having administrative rights. There are no marketplaces or other organizations and users.
+After having successfully deployed ESCM, ESCM is in a pre-configured status: 
 
-In order to start working with OSCM, the database must contain some more basic data. 
-This guide describes a simple scenario for demo purposes using the existing organization and user.  
+* The ESCM platform is configured using the administration portal which can be accessed using an URL in the following format:
 
-The complete OSCM documentation can be found [here](https://github.com/servicecatalog/documentation).  
+  `https://<hostname.fqdn>:<port>/oscm-portal`
+  `<hostname.fqdn>` is the name and the fully qualified domain name of the machine where ESCM has been deployed (the Docker host). `<port>` is the port to address the machine (default 8081), `oscm-portal` is the default context root of ESCM and cannot be changed.
+  
+* Several sample organizations have been created, as well as a technical service and a marketable service based on it. The marketable service has been published to a sample marketplace. 
 
-The OSCM platform is configured using the administration portal which can be accessed using an URL in the following format:
+* ESCM provides access to the BIRT reporting engine.
 
-`https:\\<host>:<port>\oscm-portal`
-
-Login to the portal using the operator credentials that you setup by the installation  
-(default: `administrator`, `admin123`)
+* The first user to access ESCM is the platform operator. 
 
 ## Configuration Settings
 
-Check if the values for the configuration settings are correct for your environment: 
+* Login to the portal using the operator credentials that you setup by the installation  
+  (default: `administrator`, `admin123`) 
 
-Go to the `Update configuration settings` menu option in the `Operation` menu.  
+* Check if the values for the configuration settings are correct for your environment: 
+  Go to the `Update configuration settings` menu option in the `Operation` menu.  
 
-The most important configuration settings are the following:  
-- `BASE_URL`: URL used to access the OSCM home page if OSCM does not require HTTPS for communication. If left empty, the BASE_URL_HTTPS setting is used. The base URL is provided in emails as a link for accessing OSCM.
-- `REPORT_*` settings, if you want to test the reporting with the Birt engine.
-- `KAFKA_BOOTSTRAP_SERVERS`, if you test event-based provisioning with Kafka (available as a prototype since `v17.4.0`).
-
-## Adding a Currency
-
-If you want to offer services that are not free of charge on a marketplace, you must add at least one currency (e.g EUR):
-
-Go to the `Manage currencies` menu option in the `Operation` menu.
+  The most important configuration settings is the following:  
+  * `BASE_URL_HTTPS`: URL used to access the ESCM home page. The base URL is provided in emails as a link for accessing OSCM.
 
 ## Adding Email Notification
 
@@ -37,9 +30,31 @@ Go to the `Edit profile` menu option in the `Account` menu.
 
 Enter a valid email address to which notification from the system are to be sent, and fill in the other mandatory fields for the platform operator. 
 
+## Sample Organizations and Their Roles
+
+In a productive environment, different organizations or departments are responsible for managing the ESCM platform, managing marketplaces, publishing services, subscribing to services etc. For a simple demo or testing environment, several sample organizations having the required roles have been created. When an organization is created, a first user is also created having the administrator role for this organization. 
+
+You can check which organizations are already in the database: 
+In the administration portal, go to **Operation -> Manage users**.
+
+* The `techproviderorg` organization has the Technology Provider and the Supplier roles, the `techprovider` user the Technology Manager and Service Manager roles. This user can register technical services which form the basis of marketable services that are published to marketplaces thus making them available to customers for subscription. 
+
+  Initial credentials: `techprovider`, `techprovider`.
+
+* The `supplierorg` organization has the Supplier and Marketplace Owner roles, the `supplier` user the Service Manager and Marketplace Owner roles. This user can customize a marketplace, create and publish marketable services to a marketplace. 
+
+  Initial credentials: `supplier`, `supplier`.
+
+* The `customerorg` organization has the Customer role, the `customer` user has only the Administrator role. 
+
+  Initial credentials: `customer`, `customer`.
+
+## Sample Service
+
+
+
 ## Adding Organization Roles
 
-In a productive environment, different organizations or departments are responsible for managing the OSCM platform, managing marketplaces, publishing services, subscribing to services etc. For a simple demo or testing environment, the platform operator organization created during the installation can be changed so that you as the platform operator can perform any operation: 
 
 Go to the `Manage organization` menu option in the `Operation` menu.
 
@@ -126,3 +141,7 @@ Select the marketplace and click the `Go to` button. You are redirected to the m
 
 Click the `Get it now` button to subscribe. The subscription wizard will guide you through the subscription process.
 
+
+
+
+The complete OSCM documentation can be found [here](https://github.com/servicecatalog/documentation).  
