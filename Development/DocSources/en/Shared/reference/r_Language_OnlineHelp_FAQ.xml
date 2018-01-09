@@ -9,9 +9,10 @@
         <section>
             <p>In the administration portal, online help is available in the language the user has set in his profile. The same applies to the FAQs that can be opened on a marketplace. </p>
             <p>The online help and FAQ files are provided after installation in a separate container: <codeph>oscm-help</codeph>.</p>
-            <p>You can update the existing online help and FAQ files and/or provide the files in another language. Refer to <xref
-                    href="../Configuration/c_AddLanguage.xml"/> for details on how to add a language to <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </p>
+            <p>You can update the existing online help and FAQ files and/or provide the files in another language. <ph
+                    platform="print">Refer to <xref href="../../OperationsGuide/Configuration/c_AddLanguage.xml"
+                        /> for details on how to add a language to <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </ph></p>
             <ol>
                 <li>Log in to the Docker host where <ph
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> is deployed. </li>

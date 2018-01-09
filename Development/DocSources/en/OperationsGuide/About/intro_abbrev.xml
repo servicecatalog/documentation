@@ -20,6 +20,10 @@
                             <entry><b>API</b></entry>
                             <entry>Application Programming Interface</entry>
                         </row>
+                        <row>
+                            <entry><b>APP</b></entry>
+                            <entry>Asynchronous Provisioning Platform</entry>
+                        </row>
                         <row product="oscm_ee">
                             <entry><b><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></b>
                             </entry>

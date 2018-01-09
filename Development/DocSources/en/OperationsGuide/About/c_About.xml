@@ -33,12 +33,6 @@
                                     />, its containers and their communication, its architecture, its organizations, users, and roles.</entry>
                             </row>
                             <row>
-                                <entry><xref href="../Configuration/c_Configuration.xml"/></entry>
-                                <entry>Describes how to maintain the <ph
-                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                    /> configuration settings, how to add a currency and a language, how to use and configure timers for automatic task processing, as well as how to manage platform-wide LDAP settings.</entry>
-                            </row>
-                            <row>
                                 <entry colname="col2"><xref href="../GettingStarted/c_GettingStarted.xml"/></entry>
                                 <entry colname="col3">Describes how to access the <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
@@ -49,10 +43,16 @@
                                     /> containers.</entry>
                             </row>
                             <row>
+                                <entry><xref href="../Configuration/c_Configuration.xml"/></entry>
+                                <entry>Describes how to update the <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    /> and APP configuration settings, how to add a currency and a language, how to use and configure timers for automatic task processing, as well as how to manage platform-wide LDAP settings.</entry>
+                            </row>
+                            <row>
                                 <entry colname="col2"><xref href="../Monitoring/c_RegularIntro.xml"/></entry>
                                 <entry colname="col3">Describes how to retrieve <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                    /> logging information, how to configure the log level, as well as which data is subject to regular backups. In addition, it describes how to export the audit log data.</entry>
+                                    /> logging information, how to configure the log level, as well as which data is subject to regular backups. In addition, it describes how to export the audit log data and how to check the load on the JMS queues.</entry>
                             </row>
                             <row>
                                 <entry colname="col2"><xref href="../Organizations/c_Organizations.xml"/></entry>
@@ -82,7 +82,7 @@
                                 <entry><xref href="../../Shared/reference/r_ConfigSettings.xml"/></entry>
                                 <entry>Describes the <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                    /> configuration settings.</entry>
+                                    /> and APP configuration settings.</entry>
                             </row>
                             <row>
                                 <entry><xref href="../../Shared/reference/r_LDAP_SettingTypes.xml"/></entry>
