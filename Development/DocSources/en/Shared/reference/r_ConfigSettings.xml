@@ -7,25 +7,22 @@
     <refbody>
         <section>
             <p>The <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> software requires a number of settings for setting up the container environment for running <ph
-                    audience="BSS" conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                />. These settings are provided in environment variables in Docker files when deploying the containers. Before the deployment, you needed to adapt the initial settings to your environment, in particular server names, ports, paths, and user IDs.</p>
-            <p>You do this by editing the following configuration files in the <codeph>/docker</codeph> directory:</p>
+                /> software as well as the Asynchronous Provisioning Platform (APP) require a number of settings for configuring their container runtime environment. The mandatory settings have already been specified in environment variables in Docker files before deploying the containers. Usually, you needed to adapt the initial settings to your environment, in particular server names, ports, paths, and user IDs.</p>
+            <p>After the deployment, you can update the configuration settings by editing the following configuration files in the <codeph>/docker</codeph> directory, where <codeph>/docker</codeph> is the directory on the Docker host where all <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />- and APP-specific data is located:</p>
             <p>
                 <ol>
                     <li>
-                        <p><codeph>.env</codeph>: Configuration for Docker, such as images and the base data directory</p>
+                        <p><codeph>.env</codeph>: Configuration settings for Docker, such as images and the base data directory (default: <codeph>/docker</codeph>)</p>
                     </li>
-                    <li><codeph>var.env</codeph>: Configuration for <ph audience="BSS"
+                    <li><codeph>var.env</codeph>: Configuration settings for <ph audience="BSS"
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        />, such as mail server, database and other settings.</li>
+                        /> and APP, such as mail server, database and other settings.</li>
                 </ol>
             </p>
-            <p>There are also configuration settings for the <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> services, timers, marketplaces, etc. that can be set and adjusted using the <ph audience="BSS"
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> administration portal.</p>
-            <p>This appendix describes all settings in detail. </p>
+            <p>Refer to <xref href="../../OperationsGuide/Configuration/c_UpdateConfiguration.xml"/> for details.</p>
+            <p>This appendix describes all settings that can be specified in detail. </p>
         </section>
     </refbody>
 </reference>

@@ -7,11 +7,8 @@
             /> Configuration Settings</ph><ph platform="help">Configuration settings</ph></title>
     <refbody>
         <section>
-            <p platform="print">The following <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> configuration settings can be viewed and (partially) be updated temporarily in the <ph
-                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> administration portal. Section <xref
-                    href="../../OperationsGuide/Configuration/c_UpdateConfiguration.xml"
-                /> describes how to permanently change a configuration setting. </p>
+            <p platform="print">This section describes the <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> configuration settings.</p>
         </section>
         <section>
             <title>AUDIT_LOG_ENABLED</title>

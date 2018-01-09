@@ -42,7 +42,7 @@
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> is deployed (the Docker host): </p>
             <p><codeph>&lt;docker>/data/oscm-db/data:/var/lib/postgresql/data</codeph></p>
-            <p>where <codeph>&lt;docker></codeph> is the base directory where Docker is installed and where data is persisted. Hereafter, this directory is referred to as <codeph>/docker</codeph>. </p>
+            <p>Hereafter, the <codeph>&lt;docker></codeph> directory is referred to as <codeph>/docker</codeph>. </p>
         </section>
         <section><title>Container Communication</title><p>The following figure provides an overview of the container communication on a Docker host (a VM):</p><p><image
                     href="../_images/ContainerCommunication.png" alt="ContainerCommunication.png" width="400"

@@ -8,10 +8,11 @@
             <title>Updating <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
         /> and APP Configuration Settings</title>
             <conbody>
-                        <section>
+        <section>
+            <title>Initial Settings</title>
             <p>The <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> software as well as the Asynchronous Provisioning Platform (APP) require a number of settings for configuring their container runtime environment. The mandatory settings must be specified in the environment variables in Docker files before deploying the containers. Usually, you need to adapt the initial settings to your environment, in particular server names, ports, paths, and user IDs.</p>
-            <p>You do this by editing the following configuration files in the <codeph>/docker</codeph> directory, where <codeph>/docker</codeph> is the directory on the Docker host where all <ph
+                /> software as well as the Asynchronous Provisioning Platform (APP) require a number of settings for configuring their container runtime environment. The mandatory settings have already been specified in environment variables in Docker files before deploying the containers. Usually, you needed to adapt the initial settings to your environment, in particular server names, ports, paths, and user IDs.</p>
+            <p>After the deployment, you can update the configuration settings by editing the following configuration files in the <codeph>/docker</codeph> directory, where <codeph>/docker</codeph> is the directory on the Docker host where all <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 />- and APP-specific data is located:</p>
             <p>
@@ -24,33 +25,50 @@
                         /> and APP, such as mail server, database and other settings.</li>
                 </ol>
             </p>
-            <p audience="doc">The initial, mandatory settings are described in detail in <xref
+            <p>The initial, mandatory settings are stored in the <codeph>bss</codeph> and <codeph>bssapp</codeph> databases. They are described in detail in <xref
                     href="../../Shared/reference/r_ConfigSettings_initial.xml"/>.</p>
+        </section>
+        <section>
+            <title>Optional Settings for <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /></title>
             <p>There are additional configuration settings whose keys are also stored in the <codeph>bss</codeph> database. The settings have default values that can be viewed and partially be changed in the <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> administration portal (<b>Update configuration settings</b> in the <b>Operation</b> menu). Be aware that changing the settings in the administration portal should only be used for testing purposes. Your changes will be lost as soon as <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> is restarted. </p>
-            <p>For APP, the settings are stored in the <codeph>bssapp</codeph> database. You can view and change the settings using the Web interface of APP. To access this interface, use an URL in the following format:</p>
+                    /> administration portal (<b>Update configuration settings</b> in the <b>Operation</b> menu).</p>
+            <p>
+                <note>Be aware that changing the settings in the administration portal should only be used for testing purposes. Your changes will be lost as soon as <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> is restarted. </note>
+            </p>
+            <p>The <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> configuration settings are described in detail in <xref
+                    href="../../Shared/reference/r_ConfigSettings_UI.xml"/>.</p>
+        </section>
+        <section>
+            <title>Optional Settings for APP</title>
+            <p>For APP, the configuration settings are stored in the <codeph>bssapp</codeph> database. You can view and change the settings using the Web interface of APP. To access this interface, use an URL in the following format:</p>
             <p>
                 <codeph>https://&lt;hostname.fqdn&gt;:&lt;port&gt;/oscm-app</codeph>
             </p>
             <p><codeph>&lt;hostname.fqdn&gt;</codeph> is the name and the fully qualified domain name of the machine where APP has been deployed. <codeph>&lt;port&gt;</codeph> is the port to address the machine (default: <codeph>8881</codeph>), <codeph>oscm-app</codeph> is the default context root of APP and cannot be changed.</p>
-            <p>If you want to permanently update configuration settings in the <codeph>bss</codeph> or <codeph>bssapp</codeph> database, proceed as follows:</p>
+            <p>The APP configuration settings are described in detail in <xref
+                    href="../../Shared/reference/r_ConfigSettings_APP.xml"/>.</p>
+        </section>
+        <section>
+            <title>Persistently Updating Configuration Settings</title>
+            <p>If you want to persistently update configuration settings in the <codeph>bss</codeph> or <codeph>bssapp</codeph> database, proceed as follows:</p>
             <p>
                 <ol>
                     <li>On your Docker host, edit the <codeph>.var</codeph> and <codeph>env.var</codeph> files located in the <codeph>/docker</codeph> directory as required. </li>
-                    <li>If you want to change a configuration setting that is not included <codeph>env.var</codeph> file yet, add its key and the value it shall take on to the <codeph>env.var</codeph> file. Look up the keys on the <b>Update configuration settings</b> page or in the APP Web interface. They are described in detail in <xref
-                            href="../../Shared/reference/r_ConfigSettings_UI.xml"/> and <xref
-                            href="../../Shared/reference/r_ConfigSettings_APP.xml"
-                                />. For example: <p><codeph>TIMER_INTERVAL_SUBSCRIPTION_EXPIRATION=345600000</codeph></p></li>
+                    <li>If you want to change the default value of a configuration setting that is not included <codeph>env.var</codeph> file yet:<p>Add the key and the value the setting shall take on to the <codeph>env.var</codeph> file. </p><p>You can find the keys of the settings on the <b>Update configuration settings</b> page or in the APP Web interface. They are described in detail in <xref
+                                href="../../Shared/reference/r_ConfigSettings_UI.xml"/> and <xref
+                                href="../../Shared/reference/r_ConfigSettings_APP.xml"
+                                />. For example: </p><p><codeph>TIMER_INTERVAL_SUBSCRIPTION_EXPIRATION=345600000</codeph></p></li>
                     <li>Save the <codeph>env.var</codeph> file to its original location: <p><codeph>/docker/env.var</codeph></p></li>
                     <li>Stop and remove all <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> containers:<p>
                             <codeblock>docker-compose -f docker-compose-oscm.yml stop
 docker-compose -f docker-compose-oscm.yml rm -f </codeblock>
                         </p></li>
                     <li>Start the container for initializing the database and delete the finished containers: <p>
-                            <codeblock>
-docker-compose -f docker-compose-initdb.yml up -d oscm-db 
+                            <codeblock>docker-compose -f docker-compose-initdb.yml up -d oscm-db 
 docker-compose -f docker-compose-initdb.yml up oscm-initdb-core 
 docker-compose -f docker-compose-initdb.yml up oscm-initdb-jms 
 docker-compose -f docker-compose-initdb.yml up oscm-initdb-app 
@@ -65,5 +83,5 @@ docker-compose -f docker-compose-initdb.yml rm -f</codeblock>
                 </ol>
             </p>
         </section>
-            </conbody>
+    </conbody>
 </concept>

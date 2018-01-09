@@ -12,7 +12,7 @@
                 /> does not offer integrated backup and recovery mechanisms. Use the standard file system, application server, and database mechanisms instead. </p>
         </section>
         <section>
-            <p>It is recommended to create a regular backup of all persisted data on the Docker host from the mounted directory (<codeph>/docker</codeph>):</p>
+            <p>It is recommended to create a regular backup of all persisted data on the Docker host from the mounted storage volume (default: <codeph>/docker</codeph> directory on the Docker host):</p>
             <p>
                 <ul>
                     <li><codeph>/config</codeph>: Certificates, customized brandings, etc. </li>
@@ -31,7 +31,7 @@
                     /> release, always create a backup of all data mentioned above.</note>
             </p>
             <p>Below you find some<b> example procedures </b>for backing up and restoring the <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> databases. </p>
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> and APP databases. </p>
         </section>
         <section>
             <title>Backup</title>
@@ -62,14 +62,14 @@
                             <codeblock>pg_dumpall -g -c --if-exists -f /backup/globals.sql -h 
    oscm-db -U postgres
 
-pg_dump -c --if-exists -C --quote-all-identifiers -f /backup/bss.sql -h 
-   oscm-db -U postgres bss 
+pg_dump -c --if-exists -C --quote-all-identifiers -f 
+   /backup/bss.sql -h oscm-db -U postgres bss 
 
-pg_dump -c --if-exists -C --quote-all-identifiers -f /backup/bssapp.sql -h 
-   oscm-db -U postgres bssapp 
+pg_dump -c --if-exists -C --quote-all-identifiers -f 
+   /backup/bssapp.sql -h oscm-db -U postgres bssapp 
 
-pg_dump -c --if-exists -C --quote-all-identifiers -f /backup/bssjms.sql -h
-   oscm-db -U postgres bssjms</codeblock>
+pg_dump -c --if-exists -C --quote-all-identifiers -f 
+   /backup/bssjms.sql -h oscm-db -U postgres bssjms</codeblock>
                         </p></li>
                     <li>Exit the temporary Docker container:<p>
                             <codeblock>exit</codeblock>
@@ -95,7 +95,7 @@ pg_dump -c --if-exists -C --quote-all-identifiers -f /backup/bssjms.sql -h
                     <li>Stop and remove all running containers:<p>
                             <codeblock>docker-compose -f docker-compose-oscm.yml stop 
 docker-compose -f docker-compose-oscm.yml rm -f </codeblock>
-                        </p><p>Optionally completely delete the existing database:</p><p>
+                        </p><p>Optionally, completely delete the existing database:</p><p>
                             <codeblock>rm -rf /docker/data/oscm-db/data ; mkdir /docker/data/oscm-db/data</codeblock>
                         </p></li>
                     <li>Start the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> database container:<p>

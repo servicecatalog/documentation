@@ -67,8 +67,10 @@
                     href="../../Shared/reference/r_ConfigSettings_config_properties.xml"/>. </p>
             <p><b>To configure a timer:</b>
             </p>
-            <p>In the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> administration portal, choose <b>Update configuration settings</b> in the <b>Operation</b> menu. For detailed step-by-step instructions, refer to the online help. </p>
+            <p>To view the current settings for the available timers, choose <b>Update configuration settings</b> in the <b>Operation</b> menu in the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> administration portal. To persistently update the setting of a timer, proceed as described in <xref
+                    href="c_UpdateConfiguration.xml"/>. </p>
         </section>
         <section>
             <title>Retrieving Expiration Times</title>

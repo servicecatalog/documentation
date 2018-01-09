@@ -8,15 +8,16 @@
     <title>Customizing the Layout of Marketplaces</title>
     <conbody>
         <section>
-            <p>When initially deployed, <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> provides a neutral branding. Marketplace owners can download the source files of this branding as a <codeph>zip</codeph> package and use this as a basis for customizing the layout and branding of their marketplaces. This includes the colors, fonts, background images, and logos displayed to the marketplace visitors. </p>
-            <p>You are responsible for uploading their changes to the <codeph>oscm-branding</codeph> container such that a customized layout is applied. For this, the marketplace owners need to provide a TAR archive with the structure as available when downloading the default branding package using the <b>Customize layout</b> menu option in the <b>Marketplace</b> menu of the <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> administration portal.</p>
-            <p>To apply changes to the marketplace layout, you need to proceed as follows: </p>
+            <p>After deployment, <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> provides a neutral branding for marketplaces. Marketplace owners can download the source files of this branding as a <codeph>branding-package.zip</codeph> file and use this as a basis for customizing the layout and branding of their marketplaces. This includes the colors, fonts, background images, and logos displayed to the marketplace visitors. </p>
+            <p>Once a marketplace owner or you is finished with customizing the branding of a marketplace, you are responsible for uploading the changes to the <codeph>oscm-branding</codeph> container. In this way the customized layout is applied. </p>
+            <p>The customized branding must be in the same structure as the <codeph>branding-package.zip</codeph> file. However, it must be provided as a <codeph>*.tar</codeph> archive.</p>
+            <p>To apply changes to the marketplace layout, proceed as follows: </p>
             <p>
                 <ol>
                     <li>Log in to the Docker host as user root. </li>
-                    <li>Change the format of the provided archive file to <codeph>.tar.gz</codeph> using the <codeph>gzip</codeph> tool and put the <codeph>.tar.gz</codeph> file into the following directory on your Docker host: <p><codeph><codeph>/docker/config/oscm-branding/brandings</codeph></codeph></p></li>
+                    <li>Change the format of the archive file to <codeph>.tar.gz</codeph> using the <codeph>gzip</codeph> tool.</li>
+                    <li>Put the <codeph>.tar.gz</codeph> file into the following directory on your Docker host: <p><codeph><codeph>/docker/config/oscm-branding/brandings</codeph></codeph></p></li>
                     <li>To load the customized layout: <ol>
                             <li>Stop the <codeph>oscm-branding</codeph> container: <p>
                                     <codeblock>docker stop oscm-branding</codeblock>

@@ -132,7 +132,7 @@ log4j.logger.sys.org.oscm.identityservice=DEBUG</codeblock>
             </p-->
             <p><b>To change the log level</b>: </p>
             <p>Proceed as described in <xref href="../Configuration/c_UpdateConfiguration.xml"
-                    /> and add the <codeph>LOG_LEVEL</codeph> configuration setting to the <codeph>var.env</codeph> file. You can set its value to <codeph>INFO</codeph>, <codeph>DEBUG</codeph>, or <codeph>WARNING</codeph>, respectively.</p>
+                    /> and add the <codeph>LOG_LEVEL</codeph> configuration setting to the <codeph>var.env</codeph> file. You can set its value to <codeph>INFO</codeph>, <codeph>DEBUG</codeph>, <codeph>WARNING</codeph>, or <codeph>ERROR</codeph> respectively.</p>
         </section>
     </conbody>
 </concept>

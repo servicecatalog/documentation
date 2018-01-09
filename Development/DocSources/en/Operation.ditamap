@@ -77,6 +77,14 @@
             href="Shared/concepts/c_OrgsRoles.xml"
         type="concept"/>
     </chapter>
+    
+    <chapter
+        href="OperationsGuide/GettingStarted/c_GettingStarted.xml"
+        type="concept">
+        
+        <!--topicref href="OperationsGuide/GettingStarted/c_StartupShutdown.xml" type="concept"/-->
+    </chapter>
+    
     <chapter
         href="OperationsGuide/Configuration/c_Configuration.xml"
             type="concept">
@@ -106,12 +114,7 @@ topicref href="OperationsGuide/Configuration/c_LoadBalancing.xml" type="concept"
         
         
     </chapter>
-    <chapter
-        href="OperationsGuide/GettingStarted/c_GettingStarted.xml"
-        type="concept">
-        
-        <!--topicref href="OperationsGuide/GettingStarted/c_StartupShutdown.xml" type="concept"/-->
-    </chapter>
+    
     
     <chapter
         href="OperationsGuide/Monitoring/c_RegularIntro.xml"

@@ -7,14 +7,16 @@
     <refbody>
         <section>
             <p conref="../../help/tasks/operator_manageLanguages.xml#Language/resources"> </p>
-            <p>This appendix provides details on how to translate the language resources and how to provide them to the system so that a new language is available to users to set it in their user profile:</p>
-            <p audience="doc">
+            <p>This appendix provides details on how to translate the language resources and how to provide them to the system so that a new language is available to users to set it in their user profile. Refer to <xref
+                    href="../Configuration/c_AddLanguage.xml"/> for details on how to add a language to <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+            <!--p audience="doc">
                 <ul>
                     <li><xref href="../../Shared/reference/r_Language_Export_File.xml"/></li>
                     <li><xref href="../../Shared/reference/r_Language_OnlineHelp_FAQ.xml"/></li>
-                    <!--li><xref href="../../Shared/reference/r_Language_ReportLabels.xml"/></li-->
+                    <li><xref href="../../Shared/reference/r_Language_ReportLabels.xml"/></li>
                 </ul>
-            </p>
+            </p-->
         </section>
     </refbody>
 </reference>
