@@ -37,11 +37,7 @@ In a productive environment, different organizations or departments are responsi
 You can check which organizations are already in the database: 
 In the administration portal, go to **Operation -> Manage users**.
 
-* The `techproviderorg` organization has the Technology Provider and the Supplier roles, the `techprovider` user the Technology Manager and Service Manager roles. This user can register technical services which form the basis of marketable services that are published to marketplaces thus making them available to customers for subscription. 
-
-  Initial credentials: `techprovider`, `techprovider`.
-
-* The `supplierorg` organization has the Supplier and Marketplace Owner roles, the `supplier` user the Service Manager and Marketplace Owner roles. This user can customize a marketplace, create and publish marketable services to a marketplace. 
+* The `supplierorg` organization has the Technology Provider, Supplier and Marketplace Owner roles, the `supplier` user the Service Manager and Marketplace Owner roles. This user can customize a marketplace, register technical services which form the basis of marketable services that are published to marketplaces, create and publish marketable services to a marketplace. 
 
   Initial credentials: `supplier`, `supplier`.
 
