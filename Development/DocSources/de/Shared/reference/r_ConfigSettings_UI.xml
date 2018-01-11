@@ -42,7 +42,7 @@
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
                     >platform's</ph> home page and to create the URL for accessing services via HTTPS. <p>Syntax: <codeph>https://&lt;hostname.fqdn>:&lt;port>/oscm-portal</codeph></p><p><codeph>&lt;hostname.fqdn></codeph> is the name and the fully qualified domain name of the machine where <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> has been deployed. <codeph>&lt;port></codeph> is the port to address the machine (default: <codeph>8081</codeph>), <codeph>oscm-portal</codeph> is the default context root of <ph
+                    /> has been deployed. <codeph>&lt;port></codeph> is the port to address the machine (default <codeph>8081</codeph>), <codeph>oscm-portal</codeph> is the default context root of <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> and cannot be changed. </p><note>If the SSL/HTTPS port was changed, then this setting must also be updated.</note></section>
         <section>

@@ -57,12 +57,12 @@
       </step>
     </steps>
     <result><b>To reset a user's password</b>:<p>
-        <ol>
+        <ol compact="no">
           <li>In the list in the upper page area, select the user whose password you want to reset. You can only reset a user's password if the user is logged out.</li>
           <li>Click <uicontrol>Reset Password</uicontrol>.</li>
         </ol>
       </p><p>The password is instantly reset. The user is sent an email with a new initial password to be used for the next login.</p><p><b>To delete a user</b>:</p><p>
-        <ol>
+        <ol compact="no">
           <li>In the list in the upper page area, select the user you want to delete. The following prerequisites must be fulfilled for deleting a user:<ul
               compact="no">
               <li>The user is not assigned to a subscription.</li>

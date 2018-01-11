@@ -357,7 +357,7 @@
 			<topicref
             href="Shared/reference/r_Audit_log_Supplier.xml"/>
         <topicref
-        href="Shared/reference/r_ConfigSettings_config_properties.xml"/>
+        href="Shared/reference/r_ConfigSettings_UI.xml"/>
     </chapter>
     <chapter
         href="Shared/concepts/c_Marketplace.xml"

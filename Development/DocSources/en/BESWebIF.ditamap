@@ -377,12 +377,12 @@
         <topicref format="dita"
             href="help/tasks/operator_exportAuditLogData.xml"
             type="task"/>
-        <topicref format="dita"
+        <!--topicref format="dita"
             href="help/tasks/operator_createPSP.xml"
-            type="task"/>
-        <topicref format="dita"
+            type="task"/-->
+        <!--topicref format="dita"
             href="help/tasks/operator_managePSPs.xml"
-            type="task"/>
+            type="task"/-->
         <topicref format="dita"
             href="help/tasks/psp_managePaymentTypes.xml"
             type="task"/>
@@ -410,9 +410,9 @@
         type="task"/>
 		   <topicref href="Shared/reference/c_IdPInfo.xml" type="concept"/>
 		<topicref href="Shared/reference/c_IdPInfo2.xml" type="concept"/>
-		<topicref format="dita"
+		<!--topicref format="dita"
             href="help/tasks/operator_manageIndexes.xml"
-        type="concept"/>
+        type="concept"/-->
 		
     </topichead>
     <topichead linking="none"

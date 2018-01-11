@@ -193,9 +193,9 @@ topicref href="OperationsGuide/Configuration/c_LoadBalancing.xml" type="concept"
             <topicref href="PSPInt_Heidelpay/BuildConfigure/r_ConfigSettings_Heidelpay.xml" type="reference"/>
             <topicref href="OperationsGuide/Billing/c_BillingPSPID.xml" type="concept"/>
         </topicref-->
-        <topicref
+        <!--topicref
             href="OperationsGuide/Billing/c_BillingPaymentTypes.xml"
-            type="concept"/>
+            type="concept"/-->
         <topicref
             href="OperationsGuide/Billing/c_BillingTasks.xml"
                 type="concept">

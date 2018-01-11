@@ -6,7 +6,7 @@
   <title>Managing payment types</title>
   <taskbody>
     <context>
-      <p>On the <uicontrol>Manage payment types</uicontrol> page, you specify how customers may pay for their subscriptions, for example, on receipt of invoice, with credit card, or by direct debit. You can specify the payment types for individual customers and services. </p>
+      <p>On the <uicontrol>Manage payment types</uicontrol> page, you specify how customers may pay for their subscriptions, for example, on receipt of invoice, with credit card, or by direct debit. You can specify the payment types for individual customers and services. By default, suppliers and resellers can allow customers to pay on invoice so that they can subscribe to a service that is not free of charge. </p>
       <note>Payment types as well as billing addresses are relevant for services that are not free of charge. Even for these services, however, your operator may deactivate any possibilities for customers to enter such payment information. If this is the case, the <uicontrol>Manage payment types</uicontrol> page is not available and the definition of payment types is not possible.</note>
       <p><ph id="Your_operator_is_responsible_task_taskbody_context_p_2_ph"
           >Your operator is responsible for configuring the payment types you can offer. Payment on receipt of invoice is automatically set up for all suppliers and resellers. This means that you can always allow your customers to pay on receipt of invoice without additional preparations by your operator. Payment on receipt of invoice implies that you are responsible for creating invoices and collecting payments.</ph></p>

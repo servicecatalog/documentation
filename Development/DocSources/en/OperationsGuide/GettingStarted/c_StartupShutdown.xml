@@ -25,7 +25,7 @@
             <p><codeph>https://&lt;hostname.fqdn>:&lt;port>/oscm-portal</codeph></p>
             <p><codeph>&lt;hostname.fqdn></codeph> is the name and the fully qualified domain name of the machine where <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> has been deployed. <codeph>&lt;port></codeph> is the port to address the machine (default <codeph>8081</codeph>), <codeph>oscm-portal</codeph> is the default context root of <ph
+                    /> has been deployed. <codeph>&lt;port></codeph> is the port to address the machine (default: <codeph>8081</codeph>), <codeph>oscm-portal</codeph> is the default context root of <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> and cannot be changed. </p>
             <p>You are prompted for the user ID and password. The initial credentials are as follows: </p>
             <p>User ID: <codeph>administrator</codeph>

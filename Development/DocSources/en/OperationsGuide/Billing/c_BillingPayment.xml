@@ -14,7 +14,7 @@
                     <li>Define revenue shares.</li>
                     <!--li>Integrate the services of a PSP with <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</li-->
-                    <li>Assign payment types to suppliers and resellers.</li>
+                    <!--li>Assign payment types to suppliers and resellers.</li-->
                     <li>Handle billing data, including how to manually start a billing run or payment processing and retry failed payment processes, as well as how to preview or export billing data to an XML file.</li>
                 </ul>
             </p>

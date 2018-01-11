@@ -22,18 +22,7 @@
                 >The initial expiration time of a timer for which a time interval is defined is calculated based on January 1st, 00:00:00.000, of the current year. For example, if you specify an interval of one week for a timer on January 5th, 14:30:00, the timer will expire for the first time on January 8th at 00:00:00.000, next on the 15th, the 22nd, etc. Or, if you specify an interval of one month for a timer on August 4th, 17:00:00, the timer will expire for the first time on September 1st at 00:00:00.000, next on October 1st, November 1st, etc. To avoid the expiration of several timers at the same time, which would result in heavy load on the system, there is an additional setting: An <b>offset</b> for each timer. The offset is added to the expiration time. </p>
         <p>For a detailed description of the available timers, refer to the <i>Operator's Guide</i>. </p>
         <p>On the <uicontrol>Manage timers</uicontrol> page, you can check when the currently registered timers expire. When you define a new timer or update the settings for a timer, you need to re-intialize the timers in order to start them. </p>
-        <p><b>To configure a new timer or update an existing timer</b>: </p>
-        <p>
-            <ol>
-                <li>Add or change the configuration settings for the timer on the <uicontrol>Update configuration settings</uicontrol> page. </li>
-                <li>Click <uicontrol>Reinitialize timers</uicontrol> on the <uicontrol>Manage timers</uicontrol> page. </li>
-            </ol>
-        </p>
+        <p>On the <uicontrol>Update configuration settings</uicontrol> page you can view the current settings for the available timers. To persistently update the setting of a timer, proceed as described in <ph
+                audience="doc"><xref href="operator_manageConfiguration.xml"/></ph>.</p>
     </conbody>
-    <related-links>
-        <linklist>
-            <title>Related topics</title>
-            <link href="operator_manageConfiguration.xml"/>
-        </linklist>
-    </related-links>
 </concept>

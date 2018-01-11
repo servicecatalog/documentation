@@ -13,7 +13,7 @@
                                     <p>You can <b>view the configuration settings </b>on the Web interface of APP, where you can also <b>change the organization that is to be responsible for a service controller</b>: </p>
             <p>
                 <ol>
-                    <li>In a Web browser, access the Web interface (base URL) of APP.<p>The access URL has the following format: </p><p><codeph>https://&lt;hostname.fqdn&gt;:&lt;port&gt;/oscm-app</codeph></p><p><codeph>&lt;hostname.fqdn&gt;</codeph> is the name and the fully qualified domain name of the machine where the <codeph>oscm-app</codeph> container has been deployed, <codeph>&lt;port&gt;</codeph> is the port to address the machine (default <codeph>8881</codeph>), <codeph>oscm-app</codeph> is the default context root of APP and cannot be changed. </p></li>
+                    <li>In a Web browser, access the Web interface (base URL) of APP.<p>The access URL has the following format: </p><p><codeph>https://&lt;hostname.fqdn&gt;:&lt;port&gt;/oscm-app</codeph></p><p><codeph>&lt;hostname.fqdn&gt;</codeph> is the name and the fully qualified domain name of the machine where the <codeph>oscm-app</codeph> container has been deployed, <codeph>&lt;port&gt;</codeph> is the port to address the machine (default: <codeph>8881</codeph>), <codeph>oscm-app</codeph> is the default context root of APP and cannot be changed. </p></li>
                     <li>
                         <p>Log in with the ID and password of the administrator of the technology provider organization specified by the  platform operator.</p>
                     </li>

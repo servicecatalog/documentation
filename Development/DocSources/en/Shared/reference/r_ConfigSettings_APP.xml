@@ -14,7 +14,7 @@
             <p>Syntax: <codeph>https://&lt;hostname.fqdn>:&lt;port>/oscm-app</codeph></p>
             <p><codeph>&lt;hostname.fqdn></codeph> is the name and the fully qualified domain name of the machine where <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> has been deployed. <codeph>&lt;port></codeph> is the port to address the machine (default <codeph>8881</codeph>), <codeph>oscm-app</codeph> is the default context root of <ph
+                    /> has been deployed. <codeph>&lt;port></codeph> is the port to address the machine (default: <codeph>8881</codeph>), <codeph>oscm-app</codeph> is the default context root of <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> and cannot be changed. </p>
         </section>
         <section>

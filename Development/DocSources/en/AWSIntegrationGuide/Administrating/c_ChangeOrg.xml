@@ -10,7 +10,7 @@
             <conbody>
         <section>You can change the technology provider organization responsible for the OpenStack service controller using the Web interface of APP: <ol
                 compact="no">
-                <li>In a Web browser, access the Web interface (base URL) of APP.<p>The access URL has the following format: </p><p><codeph>https://&lt;hostname.fqdn>:&lt;port>/oscm-app</codeph></p><p><codeph>&lt;hostname.fqdn></codeph> is the name and the fully qualified domain name of the machine where the <codeph>oscm-app</codeph> container has been deployed, <codeph>&lt;port></codeph> is the port to address the machine (default <codeph>8881</codeph>), <codeph>oscm-app</codeph> is the default context root of APP and cannot be changed. </p></li>
+                <li>In a Web browser, access the Web interface (base URL) of APP.<p>The access URL has the following format: </p><p><codeph>https://&lt;hostname.fqdn>:&lt;port>/oscm-app</codeph></p><p><codeph>&lt;hostname.fqdn></codeph> is the name and the fully qualified domain name of the machine where the <codeph>oscm-app</codeph> container has been deployed, <codeph>&lt;port></codeph> is the port to address the machine (default: <codeph>8881</codeph>), <codeph>oscm-app</codeph> is the default context root of APP and cannot be changed. </p></li>
                 <li>Log in with the ID and password of the user specified for <codeph>BSS_USER_KEY</codeph> in the configuration settings for APP or as another administrator of the same organization. </li>
                 <li>Specify the technology provider organization for the  AWS service controller, <codeph>ess.aws</codeph>.</li>
                 <li>Save the settings.</li>

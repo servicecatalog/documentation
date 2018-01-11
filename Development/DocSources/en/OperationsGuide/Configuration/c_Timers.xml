@@ -64,7 +64,7 @@
                 </li>
             </ul>
             <p audience="doc">For a detailed description of the timers, refer to <xref
-                    href="../../Shared/reference/r_ConfigSettings_config_properties.xml"/>. </p>
+                    href="../../Shared/reference/r_ConfigSettings_UI.xml"/>. </p>
             <p><b>To configure a timer:</b>
             </p>
             <p>To view the current settings for the available timers, choose <b>Update configuration settings</b> in the <b>Operation</b> menu in the <ph

@@ -11,9 +11,11 @@
         <ul compact="no">
           <li>Add another <b>role</b> to the organization (technology provider, supplier, reseller, broker)</li>
           <li><b>Update</b> the address and contact <b>data</b> of the organization. </li>
-          <li>Set the <b>Distinguished name</b> for an organization.<p>This is required if the organization wants to use certificates for trusted communication between the organization itself and the platform operator organization.</p><p>The platform checks the distinguished name in a client's certificate. If it matches the one specified here, the caller is assumed to be authorized to connect to the platform. </p><p>You can retrieve the distinguished name of an organization from its certificate with the following call in your Java runtime environment: </p><p>
+          <li>Set the <b>Distinguished name</b> for an organization.<p>This is required if the organization wants to use certificates for trusted communication between the organization itself and the platform operator organization.</p><p>The platform checks the distinguished name in a client's certificate. If it matches the one specified here, the caller is assumed to be authorized to connect to the platform. </p>
+            
+            <!--p>You can retrieve the distinguished name of an organization from its certificate with the following call in your Java runtime environment: </p><p>
               <codeblock>&lt;YourJRE>/bin/keytool -printcert -file &lt;filename.crt></codeblock>
-            </p><p>The process of integrating certificates is described in detail in the <i>Operator's Guide</i>.</p></li>
+            </p--><p>The process of integrating certificates is described in detail in the <i>Operator's Guide</i>.</p></li>
           <li>Define the <b>payment types</b> that a supplier or reseller organization may offer to its customers for services applying the platform's billing system.<p>By default, suppliers and resellers can allow customers to pay on invoice so that they can subscribe to a service that is not free of charge. </p><!--p
               id="PayTypes2"
               >If a supplier or reseller requests a payment type other than on invoice, he must use the services of a commercial PSP. </p><p>The process of integrating PSP support is described in detail in the <i>Operator's Guide</i>.</p--> </li>
@@ -61,12 +63,12 @@
             <li>C (country)</li>
           </ul><p>Separate the individual elements of the DN with commas.</p></info>
       </step>
-      <step>
+      <!--step>
         <cmd>Define the payment types that the organization can offer to its customers. Click <b>Add</b>, and proceed to the <uicontrol>New payment type</uicontrol> page. </cmd>
         <info>Adding payment types is possible for supplier and reseller organizations only. <p>
             <note>You can no longer remove a payment type which has been assigned to a supplier or reseller organization.</note>
           </p></info>
-      </step>
+      </step-->
       <step>
         <cmd>To save your entries, click <uicontrol>Save</uicontrol>.</cmd>
       </step>

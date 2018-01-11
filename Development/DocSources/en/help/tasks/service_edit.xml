@@ -81,7 +81,7 @@
           <p>You can set the URL for accessing the custom tab in the following format: </p>
           <p><codeph>https://&lt;app-host-name>:8881/&lt;service controller name>/serverInformation.jsf</codeph></p>
           <p>For example: </p>
-          <p><codeph>https://MyAPPHost:8881/oscm-app-openstack/serverInformation.jsf</codeph></p>
+          <p><codeph>https://oscm-app-host:8881/oscm-app-openstack/serverInformation.jsf</codeph></p>
         </info>
       </step>
       <step>

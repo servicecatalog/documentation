@@ -57,12 +57,12 @@
             <p>If you want to persistently update configuration settings in the <codeph>bss</codeph> or <codeph>bssapp</codeph> database, proceed as follows:</p>
             <p>
                 <ol>
-                    <li>On your Docker host, edit the <codeph>.var</codeph> and <codeph>env.var</codeph> files located in the <codeph>/docker</codeph> directory as required. </li>
-                    <li>If you want to change the default value of a configuration setting that is not included <codeph>env.var</codeph> file yet:<p>Add the key and the value the setting shall take on to the <codeph>env.var</codeph> file. </p><p>You can find the keys of the settings on the <b>Update configuration settings</b> page or in the APP Web interface. They are described in detail in <xref
+                    <li>On your Docker host, edit the <codeph>.var</codeph> and <codeph>var.env</codeph> files located in the <codeph>/docker</codeph> directory as required. </li>
+                    <li>If you want to change the default value of a configuration setting that is not included in the <codeph>var.env</codeph> file yet:<p>Add the key and the value the setting shall take on to the <codeph>var.env</codeph> file. </p><p>You can find the keys of the settings on the <b>Update configuration settings</b> page or in the APP Web interface. They are described in detail in <xref
                                 href="../../Shared/reference/r_ConfigSettings_UI.xml"/> and <xref
                                 href="../../Shared/reference/r_ConfigSettings_APP.xml"
                                 />. For example: </p><p><codeph>TIMER_INTERVAL_SUBSCRIPTION_EXPIRATION=345600000</codeph></p></li>
-                    <li>Save the <codeph>env.var</codeph> file to its original location: <p><codeph>/docker/env.var</codeph></p></li>
+                    <li>Save the <codeph>var.env</codeph> file to its original location: <p><codeph>/docker/var.env</codeph></p></li>
                     <li>Stop and remove all <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> containers:<p>
                             <codeblock>docker-compose -f docker-compose-oscm.yml stop
 docker-compose -f docker-compose-oscm.yml rm -f </codeblock>

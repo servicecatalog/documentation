@@ -19,7 +19,7 @@
         <info>
           <p>The list contains all actions for which triggers can be configured. </p>
           <p>For any type of organization, the following triggers can be configured: </p>
-          <ul>
+          <ul compact="no">
             <li>A subscription is to be changed, for example, renamed (<codeph>Modify subscription</codeph>). </li>
             <li>A billing run is completed, and the billing data for a billing period is calculated (<codeph>Billing run finished</codeph>). </li>
             <li>A subscription is to be added (<codeph>Subscribe to service</codeph>). </li>
@@ -29,7 +29,7 @@
             <li>A user is to be registered (<codeph>Register user</codeph>).<p>Triggers can only be configured for registering single users. The import of multiple users in one operation from an LDAP system or a user data file cannot be executed under process control.</p></li>
           </ul>
           <p>For <b>suppliers</b>, the following additional triggers can be configured: </p>
-          <ul>
+          <ul compact="no">
             <li>A customer is to be registered (<codeph>Register customer</codeph>). </li>
             <li>The payment types for a customer are to be changed (<codeph>Manage payment types for customer</codeph>). </li>
             <li>A marketable service is to be activated (<codeph>Activate service</codeph>). </li>
@@ -74,13 +74,13 @@
       </step>
     </steps>
     <result><b>To update a trigger definition</b>:<p>
-        <ol>
+        <ol compact="no">
           <li>Change the trigger definition as required. See above for details on the individual fields.<p>If the trigger to be updated has already started corresponding processes in the process control system, you can only change the name for the trigger. You have to abort the corresponding processes before you can update the other elements of the trigger definition.</p>
           </li>
           <li>To store the updated trigger definition, click <uicontrol>Save</uicontrol>.</li>
         </ol>
       </p><p>You are returned to the <b>Process triggers</b> page, where you can click <uicontrol>Add</uicontrol> to configure another trigger, or select an existing trigger to update or delete it. </p><p><b>To delete a trigger definition</b>:</p><p>
-        <ol>
+        <ol compact="no">
           <li>Click <uicontrol>Delete</uicontrol>.</li>
           <li>Confirm the deletion. </li>
         </ol>

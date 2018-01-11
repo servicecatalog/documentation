@@ -67,9 +67,9 @@
     <linklist>
       <title>Related topics</title>
       <link href="techService_edit.xml"/>
-      <link href="organization_manageSuppliers.xml"/>
       <link href="techService_export.xml"/>
       <link href="techService_import.xml"/>
+      <link href="organization_manageSuppliers.xml"/>
     </linklist>
   </related-links>
 </task>
