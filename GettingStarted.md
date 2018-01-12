@@ -1,143 +1,111 @@
 # Getting Started with ESCM
 
-After having successfully deployed ESCM, ESCM is in a pre-configured status: 
+In a productive environment, different organizations or departments are responsible for managing the ESCM platform, managing marketplaces, publishing services, subscribing to services etc. For a simple demo or testing environment, several sample organizations having the required roles have been created. When an organization is created, a first user is also created having the administrator role for this organization. 
 
-* The ESCM platform is configured using the administration portal which can be accessed using an URL in the following format:
+After having successfully deployed ESCM, ESCM can be used to subscribe to a service which will provision an instance in the SUSE OpenStack Cloud (SOC). The following sample organizations and users as well as sample data is available and stored in the ESCM databases: 
+ 
 
-  `https://<hostname.fqdn>:<port>/oscm-portal`
-  `<hostname.fqdn>` is the name and the fully qualified domain name of the machine where ESCM has been deployed (the Docker host). `<port>` is the port to address the machine (default 8081), `oscm-portal` is the default context root of ESCM and cannot be changed.
-  
-* Several sample organizations have been created, as well as a technical service and a marketable service based on it. The marketable service has been published to a sample marketplace. 
+* **Platform operator** organization with the initial operator user. Whenver ESCM is deployed, this organization is created automatically. The operator works with the ESCM administration portal and can also access the marketplace.
+    User name: `administrator`, password: `admin123`
+
+* An organization having the **Technology Provider**, **Supplier** and **Marketplace Owner** roles (`supplierorg`). The administrator can work with the ESCM administration portal as Technology Manager, Service Manager, and Marketplace Manager. He can also access the marketplace.
+    User name: `supplier`, password: `supplier`
+
+* A **customer** (`customerorg`) organization with a corresponding administrative user having the right to suscribe to services on a marketplace. This is a customer of the `supplier` organization. Customers access ESCM via a marketplace. 
+
+    User name: `customer`, password: `customer`
+
+* A **technical service** (`ESCM_Sample`) which is the basis for a **marketable service** (`ESCM SOC Sample Service`) that the customer organization can subscribe to. 
+
+* A **marketplace** (`Sample Marketplace`) owned by the `supplier` organization. The `ESCM SOC Sample Service` has been published to this marketplace.
 
 * ESCM provides access to the BIRT reporting engine.
 
-* The first user to access ESCM is the platform operator. 
+You can now start playing around with ESCM and work as a user having one of the roles:
 
-## Configuration Settings
+* Platform operator
+* Technology provider and/or supplier
+* Customer
 
-* Login to the portal using the operator credentials that you setup by the installation  
-  (default: `administrator`, `admin123`) 
+The first user to access ESCM is the platform operator because he is responsible for specifiying a correct email address. 
 
-* Check if the values for the configuration settings are correct for your environment: 
-  Go to the `Update configuration settings` menu option in the `Operation` menu.  
+ENJOY!
 
-  The most important configuration settings is the following:  
-  * `BASE_URL_HTTPS`: URL used to access the ESCM home page. The base URL is provided in emails as a link for accessing OSCM.
+## Accessing the ESCM Administration Portal
 
-## Adding Email Notification
+The ESCM platform is configured using the administration portal which can be accessed using an URL in the following format:
 
-Go to the `Edit profile` menu option in the `Account` menu.
+  `https://<hostname.fqdn>:<port>/oscm-portal`
 
-Enter a valid email address to which notification from the system are to be sent, and fill in the other mandatory fields for the platform operator. 
+  `<hostname.fqdn>` is the name and the fully qualified domain name of the machine where ESCM has been deployed (the Docker host). 
 
-## Sample Organizations and Their Roles
+  `<port>` is the port to address the machine (default: 8081), 
 
-In a productive environment, different organizations or departments are responsible for managing the ESCM platform, managing marketplaces, publishing services, subscribing to services etc. For a simple demo or testing environment, several sample organizations having the required roles have been created. When an organization is created, a first user is also created having the administrator role for this organization. 
+  `oscm-portal` is the default context root of ESCM and cannot be changed.
+  
 
-You can check which organizations are already in the database: 
-In the administration portal, go to **Operation -> Manage users**.
+## Working as a Platform Operator
 
-* The `supplierorg` organization has the Technology Provider, Supplier and Marketplace Owner roles, the `supplier` user the Service Manager and Marketplace Owner roles. This user can customize a marketplace, register technical services which form the basis of marketable services that are published to marketplaces, create and publish marketable services to a marketplace. 
+* Login to the administration portal using the operator credentials.
 
-  Initial credentials: `supplier`, `supplier`.
+* Go to `Operation --> Update configuration settings` to check if the values for the configuration settings are correct for your environment: 
+  
 
-* The `customerorg` organization has the Customer role, the `customer` user has only the Administrator role. 
+    The most important configuration setting is the following:  
+   `BASE_URL_HTTPS`: URL used to access the ESCM administration portal and the marketplace home page. The base URL is provided in emails as a link for accessing ESCM.
 
-  Initial credentials: `customer`, `customer`.
+* Go to `Account --> Edit profile` to for adding an email address. 
 
-## Sample Service
+    Enter a valid email address to which notifications from the system are to be sent, and fill in the other mandatory fields for the platform operator. 
 
+* Go to `Operation --> Manage users` to check which organizations are already in the database.
 
+  
+* Take a tour through the `Operation` menu and have a look at the features. You find detailed information in the [Operator's Guide](https://github.com/servicecatalog/documentation/blob/ESCM/Manuals/Operation.pdf).
 
-## Adding Organization Roles
+## Working as a Technology Manager, Service Manager, and Marketplace Owner
 
+The administrator of the `supplierorg` organization can customize a marketplace, register technical services which form the basis of marketable services that are published to marketplaces, create and publish marketable services to a marketplace, register customers, etc.  
 
-Go to the `Manage organization` menu option in the `Operation` menu.
+* Login to the administration portal using the `supplier` credentials.
 
-Select the `PLATFORM_OPERATOR` organization ID and select the `Supplier` and `Technology provider` organization roles. Some additional fields requiring input will be shown. Fill them and save the changes. 
-The platform operator organization can now manage services (import service definitions, prepare and publish services on marketplace). However, you as the platform operator user must also have the corresponding user roles. 
- 
-## Adding User Roles
+* Go to `Technical service --> Export service definition` to take a look at the sample service. You find detailed information on technical services in the [Technology Provider Guide](https://github.com/servicecatalog/documentation/blob/ESCM/Manuals/TechProv.pdf). 
+  
 
-Go to the `Manage users` menu option in the `Account` menu.
+* Go to `Marketable service --> Update service` to take a look at the sample service published to the marketplace. You find detailed information on marketable services in the [Supplier Guide](https://github.com/servicecatalog/documentation/blob/ESCM/Manuals/Supplier.pdf). 
 
-Select the `administrator` user and select the `Technology manager` and `Service manager` user roles. Save the changes.
+* Go to `Marketplace --> Update marketplace` to take a look at the sample marketplace. You find detailed information on marketplaces in the [Marketplace Owner's Guide](https://github.com/servicecatalog/documentation/blob/ESCM/Manuals/MPOwner.pdf). 
 
-In order for the roles to become effective, you (the `administrator` user) must logout and login to the administration portal again. 
-You can see now additional menus (`Technical Service`, `Marketable Service`, `Price Model`) which contain options for preparing the services for their publishing on a marketplace.
+* Take a tour through the menus and have a look at the available features. 
 
-## Creating a Marketplace
+* Click the `Go to Marketplace` link above the menus in the administration portal. Select the marketplace and click the `Go to` button. You are redirected to the marketplace portal where the published service is visible. 
 
-Go to the `Create marketplace` menu option in the `Marketplace` menu.
+    Every organization is also assigned the `customer`role. Therefore you can now continue working as a customer. The steps are the same as when logging in with the `customer` credentials (see below).
 
-Specify a marketplace name (if you leave the ID blank, it will be generated by the system), stay with the the default settings, and select the platform operator organization as marketplace owner. Save the marketplace.
+## Working as a Customer
 
-## Specifying the Provisioning Service
+As customer of the `supplierorg` organization, you have access to the sample marketplace using the `customer` credentials.  
 
-OSCM can be integrated with a service provisioning system via SOAP API or Kafka (since `v17.4.0`). There are some ready-to-use sample provisioning systems, which can be found in [OSCM releases](https://github.com/servicecatalog/development/releases):
-- `oscm-integrationtests-pack.zip`
-- `oscm-integration-app-pack.zip`
+### Accessing the Marketplace
 
-The packages contain web applications - mocks for SOAP-based provisioning systems. The corresponding service definitions (`TechnicalService.xml`) to be imported in OSCM are also included. 
+The marketplace is accessed using an URL in the following format:
 
-In addition, there is a provisioning microservice, event-based with Kafka, packaged as Docker image on DockerHub.
-- [`servicecatalog/provisioning-service`](https://hub.docker.com/r/servicecatalog/provisioning-service/)  
-A sample service definition for this service can be found [here](https://github.com/servicecatalog/oscm-helm/blob/master/oscm-demo-helm/oscm-service/TechnicalServicesHelmWordPress.xml). 
+  `https://<hostname.fqdn>:<port>/oscm-portal?marketplaceId=<mid>`
 
- 
+  `<hostname.fqdn>` is the name and the fully qualified domain name of the machine where ESCM has been deployed (the Docker host). 
 
-## Importing Technical Service Definitions
+  `<port>` is the port to address the machine (default: 8081), 
 
-The service definitions are to be prepared as XML files which are then imported into the system. They depend on the provisioning system they represent in OSCM. For testing, you can adapt and use one of the XML files mentioned above.  
-The XML schema for service definitions can be found [here](https://github.com/servicecatalog/oscm/blob/master/oscm-serviceprovisioning/javares/TechnicalServices.xsd). More details on how to write service definitions can be found in the [Technology Provider Guide](https://github.com/servicecatalog/documentation/blob/master/Development/oscm-doc-user/resources/manuals/integration/en/TechProv.pdf).
+  `oscm-portal` is the default context root of ESCM and cannot be changed.
+  
+  `<mid>` is the ID of the marketplace.
 
-
-Go to the `Import service definition` menu option in the `Technical service` menu.
-
-Select the XML file which contains the service definition(s) and import it. The imported service(s) are listed. By clicking on a service, you can see its parameters and check whether it can connect with the provisioning service it represents.
-
-## Preparing a Service for a Marketplace
-
-Go to the `Define service` menu option in the `Marketable service` menu.
-
-Select the technical service definition imported in the previous step. Fill in the mandatory fields and decide which parameters will be configurable by the user when subscribing to this service (select the `User option` check box for such parameters). 
-Save the marketable service. 
-
-Before you can publish this service on a marketplace, you need to define a price model:
-
-Go to the `Define for service` menu item in the `Price model` menu.
-
-Select the marketable service and choose `Free of charge`. Be aware that free services can only be subscribed to once per organization.
-
-*Optional:*
-
-If you want to create more subscriptions for the same service and organization, you must choose one of the paid price models (`pro rata` or `per time unit`). In this case, you must set the payment type for the service and/or customer:
-
-Go to the `Manage payment types` menu option in the `Customer` menu. 
-
-A table is shown with the default payment type `Invoice` for new and existing services and organizations.
-Select all `Invoice` check boxes and save the changes.
-
-
-## Publishing a Service on a Marketplace
-
-Go to the `Define publishing options` menu option in the `Marketable service` menu.
-
-Select the marketable service and the marketplace created previously. Save the changes.
-
-Go to the `Activate or deactivate services` menu option in the `Marketable service` menu.
-
-The marketable service is listed in a table. Select the check box in the `Active` column for this service and save the changes. If the provisioning service specified in the technical service definition is accessible, the service is activated and visible on the marketplace.
-
-## Subscribe to Service
-
-Click the `Go to Marketplace` link above the menus in the administration portal.
-
-Select the marketplace and click the `Go to` button. You are redirected to the marketplace portal where the published service should be visible. 
-
-Click the `Get it now` button to subscribe. The subscription wizard will guide you through the subscription process.
+### Subscribing to the Sample Service
 
 
 
 
-The complete OSCM documentation can be found [here](https://github.com/servicecatalog/documentation).  
+
+
+
+The complete ESCM documentation can be found [here](https://github.com/servicecatalog/documentation/tree/ESCM).  
