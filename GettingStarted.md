@@ -102,10 +102,33 @@ The marketplace is accessed using an URL in the following format:
 
 ### Subscribing to the Sample Service
 
+For using the sample service, the customer must subscribe to it:
+
+* Click the `ESCM SOC Sample Service` and then `Get it now`.
+
+* The `ESCM SOC Sample Service` is configured so that all parameters that are mandatory for instantiating an OpenStack instance are already defined. You can view them and, if required, change them: 
+  * Validation patter for the stack name (regex)
+  * Pattern for access information
+  * Instance type (flavor)
+  * Public network name
+
+* You need to provide values for the following parameters: 
+  * OpenStack instance name
+  * Image ID: The ID of one of the images defined in SOC
+  * OpenStack project ID: The ID of one of the projects defined in SOC 
+
+* Click `Next` and accept the license agreement by clicking `Confirm`. 
+
+    The subscription to the `ESCM SOC Sample Service` is created. It may take some time for asynchronous background tasks to complete, please wait for the subscription be ready. 
+
+* Register yourself and assign you to the subscription once it is ready to be used. 
+
+* You can check in SOC the ESCM resources once the sample service has started.   
+    
 
 
 
-
-
+## Additional Information
 
 The complete ESCM documentation can be found [here](https://github.com/servicecatalog/documentation/tree/ESCM).  
+
