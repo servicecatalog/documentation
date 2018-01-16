@@ -21,18 +21,17 @@
                         <codeph>oscm-ror-install-pack.zip</codeph> file:</p>
                     
                     <p audience="aws"
-                        >The AWS integration package, <codeph>oscm-aws-install-pack.zip</codeph>, includes a technical service as a sample. 
-                        Use the sample as a basis for defining your own technical services as required:</p>
-                       <p audience="aws"><codeph>samples/TechnicalService_AWS.xml</codeph> ### where is it located? </p>
+                        >After deployment, a technical service as a sample is available. Use the sample as a basis for defining your own technical services as required:</p>
+                       <p audience="aws"><codeph>samples/TechnicalService_AWS.xml</codeph></p>
                     
                     <p audience="os"
-                        >After deployment, technical services as samples are available: ### where are they located? Are there really samples?###</p>
+                        >After deployment, technical services as samples are available. Use the samples as a basis for defining your own technical services as required:</p>
                     <ul audience="os">
                         <li><codeph>samples/TechnicalService_OpenStack.xml</codeph> for native OpenStack</li>
                         <li><codeph>samples/TechnicalService_K5.xml</codeph> for FUJITSU Cloud Service K5</li>
                     </ul>
                         <p audience="os"
-                            >The technical services specify sample templates as parameter options. ### The sample templates are also included in the <codeph>oscm-openstack-install-pack.zip</codeph> file: ### see above ###</p>
+                        >The technical services specify sample templates as parameter options. The sample templates are also available:</p>
                         <ul audience="os">
                         <li><codeph>samples/template.json</codeph> for a template of type AWS CloudFormation for native OpenStack</li>
                         <li><codeph>samples/template.yaml</codeph> for a template of type Heat Orchestration Template for native OpenStack</li>
