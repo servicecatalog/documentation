@@ -117,7 +117,7 @@ On the sample marketplace, you find the `ESCM SOC Sample Service` which is ready
 * You need to provide values for the following parameters: 
 
   * OpenStack instance name
-  * Image ID: The ID of one of the images defined in SOC
+  * Image ID: The ID of one of the images defined in SOC. There can be several images delivered with SO. This image will be the base image of the OpenStack instance that will be created by the subscription. 
   * OpenStack project ID: The ID of one of the projects defined in SOC 
 
 * Click `Next` and accept the license agreement by clicking `Confirm`. 
