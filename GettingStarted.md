@@ -95,9 +95,9 @@ As customer of the `supplierorg` organization, you have access to the sample mar
 
 ### Accessing the Marketplace
 
-The marketplace is accessed using an URL in the following format:
+The marketplace can be accessed using an URL in the following format:
 
-  `https://<floating_IP>:8081/oscm-portal?marketplaceId=<mid>`
+  `https://<floating_IP>:8081/oscm-portal?marketplaceId=959c9bf7`
 
 ### Subscribing to the Sample Service
 
@@ -126,7 +126,7 @@ On the sample marketplace, you find the `ESCM SOC Sample Service` which is ready
 
 * Register yourself and assign you to the subscription once it is ready to be used. 
 
-* You can check in SOC the instantiated OpenStack resources once the sample service has started, and use them for further actions.
+* As soon as the subscription is created (no longer pending), a new instance is created inside the SOC. You can check for it in SOC, and use it for further actions.
 
 
 
