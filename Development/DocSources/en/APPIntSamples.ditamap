@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN"
                      "">
-<!-- Copyright FUJITSU LIMITED 2018 -->
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2018 -->
 
 <map title="APP Samples" xml:lang="en_US">
     <topicref format="dita" href="APPIntSamples/Simple/APPSamplesSimple.xml" type="concept"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
                          "concept.dtd">
-<!-- Copyright FUJITSU LIMITED 2018 -->
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2018 -->
 <concept id="Update"
                     xml:lang="en-us">
   <title>Updating from a <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"

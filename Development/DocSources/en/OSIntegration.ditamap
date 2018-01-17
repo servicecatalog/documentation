@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN"
                          "">
-<!-- Copyright FUJITSU LIMITED 2018 -->
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2018 -->
 
 <bookmap id="OpenStackIntegrationGuide" xml:lang="en_US">
     <title>OpenStack Integration</title>
