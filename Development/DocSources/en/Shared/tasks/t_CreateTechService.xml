@@ -20,25 +20,25 @@
                     <p audience="ror">As a basis, you can use the technical service definitions which are included in the 
                         <codeph>oscm-ror-install-pack.zip</codeph> file:</p>
                     
-                    <p audience="aws"
+                    <!--p audience="aws"
                         >After deployment, a technical service as a sample is available. Use the sample as a basis for defining your own technical services as required:</p>
-                       <p audience="aws"><codeph>samples/TechnicalService_AWS.xml</codeph></p>
+                       <p audience="aws"><codeph>samples/TechnicalService_AWS.xml</codeph></p-->
                     
-                    <p audience="os"
+                    <!--p audience="os"
                         >After deployment, technical services as samples are available. Use the samples as a basis for defining your own technical services as required:</p>
                     <ul audience="os">
                         <li><codeph>samples/TechnicalService_OpenStack.xml</codeph> for native OpenStack</li>
                         <li><codeph>samples/TechnicalService_K5.xml</codeph> for FUJITSU Cloud Service K5</li>
-                    </ul>
-                        <p audience="os"
+                    </ul-->
+                        <!--p audience="os"
                         >The technical services specify sample templates as parameter options. The sample templates are also available:</p>
                         <ul audience="os">
                         <li><codeph>samples/template.json</codeph> for a template of type AWS CloudFormation for native OpenStack</li>
                         <li><codeph>samples/template.yaml</codeph> for a template of type Heat Orchestration Template for native OpenStack</li>
                         <li><codeph>samples/template_k5.yaml</codeph> for a template of type Heat Orchestration Template for FUJITSU Cloud Service K5</li>
-                        </ul>
+                        </ul-->
                         <p audience="os"
-                            >You can use the samples to see how templates are mapped to technical service definitions. To use the sample templates, make them available in one of the ways described in <xref
+                            >Templates can be specified as parameter options in the technical service definitions. You need to make them available as described in <xref
                             href="../../OSIntegrationGuide/Administrating/c_ImportTemplates.xml"/>. </p>
                     
                     <p audience="vmware"

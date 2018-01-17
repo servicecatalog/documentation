@@ -25,7 +25,7 @@
             <p>As an alternative, you can proceed as follows:</p>
             <ol compact="no">
                 <li>In a Web browser, access the Web interface (base URL) of APP.<p>The access URL has the following format: </p><p><codeph>https://&lt;hostname.fqdn>:&lt;port>/oscm-app</codeph></p><p><codeph>&lt;hostname.fqdn></codeph> is the name and the fully qualified domain name of the machine where the <codeph>oscm-app</codeph> container has been deployed, <codeph>&lt;port></codeph> is the port to address the machine (default: <codeph>8881</codeph>), <codeph>oscm-app</codeph> is the default context root of APP and cannot be changed. </p></li>
-                <li>Log in with the ID and password of the user and organization defined by the platform operator in the <codeph>BSS_USER_ID</codeph> and <codeph>BSS_USER_PWD</codeph> configuration settings (default: <codeph>administrator</codeph>, <codeph>admin123</codeph>).<p>A message is shown that APP has been suspended due to a communication problem with <ph
+                <li>Log in with the ID and password of the user and organization defined by the platform operator in the <codeph>BSS_USER_ID</codeph> and <codeph>BSS_USER_PWD</codeph> configuration settings.<p>A message is shown that APP has been suspended due to a communication problem with <ph
                             conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </p></li>
                 <li>Click <b>Restart</b>.<p>APP is restarted instantly. In the APP database, the <codeph>APP_SUSPEND</codeph> key is set to <codeph>false</codeph>. </p></li>
             </ol>

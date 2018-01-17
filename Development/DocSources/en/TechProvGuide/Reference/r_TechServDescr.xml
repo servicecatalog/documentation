@@ -10,7 +10,9 @@
         <section>
             <p>A service definition contains the information required to register an application as a technical service in <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    />. It is specified in an XML file which needs to conform to the <codeph>TechnicalServices.xsd</codeph> XML schema.</p>
+                    />. It is specified in an XML file which needs to conform to the <codeph>TechnicalServices.xsd</codeph> XML schema. The schema can be downloaded from <xref
+                    format="html" href="https://github.com/servicecatalog/oscm/releases/" scope="external"
+                            ><u><i>https://github.com/servicecatalog/oscm/releases/</i></u></xref>.</p>
             <p>This section describes the meaning of the elements and attributes that can be defined. For information on the syntax, refer to the <codeph>TechnicalServices.xsd</codeph> schema.</p>
         </section>
         <section>
@@ -63,11 +65,11 @@
                             </li>
                         </ul></p></li>
                 <li><codeph><b>loginPath</b></codeph> - Path to the token handler, a module of your application that handles login requests containing a user token (optional). Required for the <codeph>LOGIN</codeph> access type. <p>The path must be relative to the URL specified as <codeph>baseUrl</codeph> and start with a<codeph> /</codeph>.</p></li>
-                <li><codeph><b>billingIdentifier</b></codeph> - Identifier of the billing system which is to be used for providing price models and calculating charges for the service (optional). If not specified, the default billing system is used. <p>The <ph
+                <!--li><codeph><b>billingIdentifier</b></codeph> - Identifier of the billing system which is to be used for providing price models and calculating charges for the service (optional). If not specified, the default billing system is used. <p>The <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                             /> operator defines the available billing systems and sets the default one. As a technology manager, you can view the available billing systems, their identifiers, and details at the <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            /> administration portal (<b>View billing systems</b> option in the <b>Technical service</b> menu). </p></li>
+                            /> administration portal (<b>View billing systems</b> option in the <b>Technical service</b> menu). </p></li-->
                 <li><codeph><b>onlyOneSubscriptionPerUser</b></codeph> - Defines whether an organization can subscribe only once to a service. Can be set to <codeph>true</codeph> or <codeph>false</codeph>. If set to <codeph>false</codeph> (default), an organization can subscribe to several marketable services based on your technical service. If set to <codeph>true</codeph>, an organization can subscribe to one marketable service based on your technical service only. In this case, the supplier can still define several marketable services, but as soon as a customer subscribes to one of these services, the other marketable services will no longer be available to him for subscription.<p>At the <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                 /> administration portal, a marketplace owner can define featured services for his marketplace home page. If a marketplace owner decides to display services and subscriptions grouped by category on his home page, it is recommended that you set <codeph><b>onlyOneSubscriptionPerUser</b></codeph> to <codeph>true</codeph>. This allows the home page visitor to start using the service directly from the marketplace home page without the need to select the subscription from the list of existing subscriptions.</p></li>

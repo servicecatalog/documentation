@@ -35,7 +35,7 @@
                </ul>
             </info>
          </step>
-         <step>
+         <!--step>
             <cmd>Since <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                /> is the only application allowed to access your provisioning service, specify the following information:</cmd>
             <info>
@@ -44,7 +44,7 @@
                   <li><codeph>provisioningPassword</codeph></li>
                </ul>
             </info>
-         </step>
+         </step-->
          <step>
             <cmd>Do one of the following:</cmd>
             <choices>

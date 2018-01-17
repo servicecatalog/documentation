@@ -17,7 +17,7 @@
                 /> using the subscription management service when provisioning is either complete or cannot be completed. </p>
             <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> supports the development of asynchronous provisioning services with the asynchronous provisioning platform (APP). This is a framework which provides a provisioning service as well as functions, data persistence, and notification features which are always required for integrating applications in asynchronous mode. Refer to <xref
-                    href="../../APPInt/APP/c_ImplAPP.xml"/> for details on APP.</p>
+                    href="../Reference/c_APP.xml"/> for details on APP.</p>
         </section>
     </conbody>
 </concept>

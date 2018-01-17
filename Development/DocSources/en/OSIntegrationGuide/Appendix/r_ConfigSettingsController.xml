@@ -68,8 +68,9 @@
             <p><codeph>TEMPLATE_BASE_URL=https://&lt;app>/templates/</codeph></p>
             <p>The URL leading to the templates that are mapped to technical service definitions. The file names of the templates to be used are specified when customers subscribe to a corresponding service on an <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> marketplace.</p>
-            <p>Replace <codeph>&lt;app></codeph> with the URL used to access the <codeph>app-domain</codeph> domain in your application server or another URL that can be reached from <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> by HTTP or HTTPS. </p>
+            <p>Replace <codeph>&lt;app></codeph> with an URL that can be reached from <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> by HTTP or HTTPS (when stored on an external host).</p>
             <p>The template URL can also be specified as a parameter in technical service definitions. The technical service parameter overrides the setting you specify here. </p>
             <note>
                 <p>First, the <codeph>bssapp</codeph> database is searched for the template specified with the <codeph>TEMPLATE_NAME</codeph> service parameter in the technical service definition. Only if the template is not found in the database, the <codeph>TEMPLATE_BASE_URL</codeph> setting is evaluated.</p>
