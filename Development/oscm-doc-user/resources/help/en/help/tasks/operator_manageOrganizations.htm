@@ -30,12 +30,9 @@
 
           <li class="liexpand">Set the <strong>Distinguished name</strong> for an organization.<p>This is required if the organization wants to use certificates for trusted communication between the organization itself and the platform operator organization.</p>
 <p>The platform checks the distinguished name in a client's certificate. If it matches the one specified here, the caller is assumed to be authorized to connect to the platform. </p>
-<p>You can retrieve the distinguished name of an organization from its certificate with the following call in your Java runtime environment: </p>
-<div class="p">
-              <pre class="codeblock">&lt;YourJRE&gt;/bin/keytool -printcert -file &lt;filename.crt&gt;</pre>
 
-            </div>
-<p>The process of integrating certificates is described in detail in the <em>Operator's Guide</em>.</p>
+            
+            <p>The process of integrating certificates is described in detail in the <em>Operator's Guide</em>.</p>
 </li>
 
           <li class="liexpand">Define the <strong>payment types</strong> that a supplier or reseller organization may offer to its customers for services applying the platform's billing system.<p>By default, suppliers and resellers can allow customers to pay on invoice so that they can subscribe to a service that is not free of charge. </p>
@@ -114,14 +111,6 @@
 
           </ul>
 <p>Separate the individual elements of the DN with commas.</p>
-
-      </li>
-<li class="stepexpand">
-        <span>Define the payment types that the organization can offer to its customers. Click <strong>Add</strong>, and proceed to the <span class="uicontrol">New payment type</span> page. </span>
-         Adding payment types is possible for supplier and reseller organizations only. <div class="p">
-            <div class="note"><span class="notetitle">Note:</span> You can no longer remove a payment type which has been assigned to a supplier or reseller organization.</div>
-
-          </div>
 
       </li>
 <li class="stepexpand">

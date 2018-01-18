@@ -28,28 +28,28 @@
             <p>You can update the existing online help and FAQ files and/or provide the files in another language. </p>
 
             <ol>
-                <li>Log in to the Docker host where <span>OSCM</span> is deployed. </li>
+                <li class="liexpand">Log in to the Docker host where <span>the platform</span> is deployed. </li>
 
-                <li>Log in to the <samp class="codeph">oscm-help</samp> container:<div class="p">
+                <li class="liexpand">Log in to the <samp class="codeph">oscm-help</samp> container:<div class="p">
                         <pre class="codeblock">docker exec –it oscm-help /bin/bash </pre>
 
                     </div>
 </li>
 
-                <li>Copy the <samp class="codeph">/opt/oscm-portal-help.war</samp> archive file to a temporary directory on the Docker host. </li>
+                <li class="liexpand">Copy the <samp class="codeph">/opt/oscm-portal-help.war</samp> archive file to a temporary directory on the Docker host. </li>
 
-                <li>Extract the <samp class="codeph">oscm-portal-help.war</samp> file on the Docker host. <p>You see the following directory structure: </p>
+                <li class="liexpand">Extract the <samp class="codeph">oscm-portal-help.war</samp> file on the Docker host. <p>You see the following directory structure: </p>
 <p><img src="../_images/HelpFAQ.png" width="415" height="372" alt="HelpFAQ.png" /><br /></p>
 <p>The languages provided after installation are English (en), German (de), and Japanese (ja). You can update the texts in their respective directories. The procedure is the same as when providing the texts in a different language (see below). </p>
 </li>
 
-                <li>Copy the <samp class="codeph">help/en</samp> directory and name it <samp class="codeph">help/<em>&lt;ISO code&gt;</em></samp>. <p>Copy the <samp class="codeph">faq/en</samp> directory and name it <samp class="codeph">faq/<em>&lt;ISO code&gt;</em></samp>.</p>
+                <li class="liexpand">Copy the <samp class="codeph">help/en</samp> directory and name it <samp class="codeph">help/<em>&lt;ISO code&gt;</em></samp>. <p>Copy the <samp class="codeph">faq/en</samp> directory and name it <samp class="codeph">faq/<em>&lt;ISO code&gt;</em></samp>.</p>
 <p>The ISO language code denotes the language for which you want to provide translations. For example, add a <samp class="codeph">cs</samp> directory to the <samp class="codeph">help</samp> as well as to the <samp class="codeph">faq</samp> directory. <span><span>Click <a href="r_Language_Codes.htm">here</a> for the list of supported language codes.</span></span></p>
 <p>The directory structure now looks as follows: </p>
 <p><img src="../_images/HelpFAQ_sample.png" width="415" height="381" alt="HelpFAQ_sample.png" /><br /></p>
 </li>
 
-                <li>Translate the HTML files. <p>Be aware of the following: </p>
+                <li class="liexpand">Translate the HTML files. <p>Be aware of the following: </p>
 <div class="p">
                         <ul>
                             <li class="liexpand">Make sure not to change any style sheet or icon. </li>
@@ -78,22 +78,22 @@
                     </div>
 </li>
 
-                <li>Create a zipped archive file named <samp class="codeph">oscm-portal-help.tar.gz</samp> containing the additional subdirectories for the new language, and copy this archive to the following directory on the Docker host: <p><samp class="codeph">/docker/config/oscm-help</samp></p>
+                <li class="liexpand">Create a zipped archive file named <samp class="codeph">oscm-portal-help.tar.gz</samp> containing the additional subdirectories for the new language, and copy this archive to the following directory on the Docker host: <p><samp class="codeph">/docker/config/oscm-help</samp></p>
 </li>
 
-                <li>Stop the <samp class="codeph">oscm-help</samp> container: <div class="p">
+                <li class="liexpand">Stop the <samp class="codeph">oscm-help</samp> container: <div class="p">
                         <pre class="codeblock">docker stop oscm- help</pre>
 
                     </div>
 </li>
 
-                <li>Remove the <samp class="codeph">oscm-help</samp> container: <div class="p">
+                <li class="liexpand">Remove the <samp class="codeph">oscm-help</samp> container: <div class="p">
                         <pre class="codeblock">docker-compose -f docker-compose-oscm.yml rm oscm-help</pre>
 
                     </div>
 </li>
 
-                <li>Recreate and restart the <samp class="codeph">oscm-help</samp> container: <div class="p">
+                <li class="liexpand">Recreate and restart the <samp class="codeph">oscm-help</samp> container: <div class="p">
                         <pre class="codeblock">docker-compose -f docker-compose--oscm.yml up -d oscm-help</pre>
 
                     </div>

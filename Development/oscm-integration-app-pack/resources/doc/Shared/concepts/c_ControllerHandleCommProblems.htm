@@ -39,10 +39,10 @@
             <ol>
                 <li class="liexpand">In a Web browser, access the Web interface (base URL) of APP.<p>The access URL has the following format: </p>
 <p><samp class="codeph">https://&lt;hostname.fqdn&gt;:&lt;port&gt;/oscm-app</samp></p>
-<p><samp class="codeph">&lt;hostname.fqdn&gt;</samp> is the name and the fully qualified domain name of the machine where the <samp class="codeph">oscm-app</samp> container has been deployed, <samp class="codeph">&lt;port&gt;</samp> is the port to address the machine (default <samp class="codeph">8881</samp>), <samp class="codeph">oscm-app</samp> is the default context root of APP and cannot be changed. </p>
+<p><samp class="codeph">&lt;hostname.fqdn&gt;</samp> is the name and the fully qualified domain name of the machine where the <samp class="codeph">oscm-app</samp> container has been deployed, <samp class="codeph">&lt;port&gt;</samp> is the port to address the machine (default: <samp class="codeph">8881</samp>), <samp class="codeph">oscm-app</samp> is the default context root of APP and cannot be changed. </p>
 </li>
 
-                <li class="liexpand">Log in with the ID and password of the user and organization defined by the platform operator in the <samp class="codeph">BSS_USER_ID</samp> and <samp class="codeph">BSS_USER_PWD</samp> configuration settings (default: <samp class="codeph">administrator</samp>, <samp class="codeph">admin123</samp>).<p>A message is shown that APP has been suspended due to a communication problem with <span>OSCM</span>. </p>
+                <li class="liexpand">Log in with the ID and password of the user and organization defined by the platform operator in the <samp class="codeph">BSS_USER_ID</samp> and <samp class="codeph">BSS_USER_PWD</samp> configuration settings.<p>A message is shown that APP has been suspended due to a communication problem with <span>OSCM</span>. </p>
 </li>
 
                 <li class="liexpand">Click <strong>Restart</strong>.<p>APP is restarted instantly. In the APP database, the <samp class="codeph">APP_SUSPEND</samp> key is set to <samp class="codeph">false</samp>. </p>
