@@ -64,7 +64,7 @@
         </ol>
       </p>
       <p>Bei der nächsten Neuberechnung der Nutzungsgebühren werden die Umsatzbeteiligungen berechnet und mit den Rechnungsdaten ausgegeben. </p>
-      <note>Umsatzbeteiligungen werden nur für Services errechnet, die das plattformeigene Abrechnungssystem verwenden. Services, die ein externes Abrechnungssystem verwenden, werden nicht berücksichtigt.</note>
+      <!--note>Umsatzbeteiligungen werden nur für Services errechnet, die das plattformeigene Abrechnungssystem verwenden. Services, die ein externes Abrechnungssystem verwenden, werden nicht berücksichtigt.</note-->
       
       <p><b>So benennen Sie einen Marktplatz um</b> (nur Marktplatz-Manager):</p>
       <p>

@@ -14,7 +14,7 @@
             <p id="When_a_customer_upgrades_or_d_task_taskbody_context_p_7"
                 >Sobald ein Kunde ein Abonnement umstellt, gilt das Preismodell des neuen Service für die Kostenabrechnung. Dem Abonnement zugeordnete Benutzer und Servicerollen oder bereits gespeicherte Anwendungsdaten bleiben erhalten. Alle Parameter und Optionen sowie die Zahlungsinformationen werden automatisch dem neuen Service zugeordnet, außer sie werden bei der Umstellung explizit geändert.</p>
             <p id="When_a_customer_upgrades_or_d_task_taskbody_context_p_4"
-                    >Beachten Sie, wie sich Up-/Downgrade-Optionen auf die Berechnung der Nutzungsgebühren auswirken, wenn das plattformeigene Abrechnungssystem verwendet wird <ph
+                    >Beachten Sie, wie sich Up-/Downgrade-Optionen auf die Berechnung der Nutzungsgebühren auswirken <ph
                     platform="help">(Details zu den Preismodellelementen finden Sie <xref
                         href="../../Shared/reference/r_PriceModelDetails.xml">hier</xref>)</ph>:</p>
             <p id="The_prices_for_using_a_servic_task_taskbody_context_p_9">

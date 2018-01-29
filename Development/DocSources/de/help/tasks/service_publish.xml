@@ -19,7 +19,7 @@
       <step>
         <cmd>Wählen Sie im Feld <uicontrol>Service-ID</uicontrol> den Service, für den Sie den Marktplatz festlegen oder ändern möchten.</cmd>
         <info>
-          <p>Wenn Sie Serviceanbieter sind, enthält die Liste alle Services, die Sie definiert haben. Bei Services, die das plattformeigene Abrechnungssystem verwenden, wird die Umsatzbeteiligung angezeigt, die der Betreiber erhält, wenn Sie oder ein Vermittler oder Wiederverkäufer den gewählten Service verkauft. </p>
+          <p>Wenn Sie Serviceanbieter sind, enthält die Liste alle Services, die Sie definiert haben. Es wird die Umsatzbeteiligung angezeigt, die der Betreiber erhält, wenn Sie oder ein Vermittler oder Wiederverkäufer den gewählten Service verkauft. </p>
           <p>Wenn Sie Vermittler oder Wiederverkäufer sind, enthält die Liste alle Services, für die Sie die Berechtigung zum Wiederverkauf haben.</p>
         </info>
       </step>
@@ -46,7 +46,7 @@
       <p>
         <ol compact="no">
           <li>Wählen Sie im Feld <uicontrol>Service-ID</uicontrol> den Service, für den Sie die Berechtigung zum Wiederverkauf erteilen oder entziehen möchten.<p>Die Liste enthält alle Services, die Sie definiert haben.</p></li>
-          <li>Wählen Sie einen Marktplatz, für den der Betreiber die mit Ihnen vertraglich vereinbarten Umsatzbeteiligungen definiert hat (für den Betreiber, den Marktplatzeigentümer, die Vermittler und die Wiederverkäufer). Die für den gewählten Marktplatz definierten Umsatzbeteiligungen werden angezeigt, wenn der gewählte Service das plattformeigene Abrechnungssystem verwendet.<p>Diese Umsatzbeteiligungen gelten für alle Vermittler und Wiederverkäufer, die Sie zum Wiederverkauf berechtigen, sofern keine Umsatzbeteiligung pro Service oder Organisation definiert ist. Beachten Sie, dass dies unabhängig von dem Marktplatz ist, auf dem ein Vermittler oder Wiederverkäufer den Service veröffentlicht. </p><p>Unterhalb der Anzeige der Umsatzbeteiligungen werden alle Vermittler und Wiederverkäufer, die auf der Plattform existieren, mit ihren aktuell geltenden Umsatzbeteiligungen angezeigt. </p></li>
+          <li>Wählen Sie einen Marktplatz, für den der Betreiber die mit Ihnen vertraglich vereinbarten Umsatzbeteiligungen definiert hat (für den Betreiber, den Marktplatzeigentümer, die Vermittler und die Wiederverkäufer). Die für den gewählten Marktplatz definierten Umsatzbeteiligungen werden angezeigt. <!--, wenn der gewählte Service das plattformeigene Abrechnungssystem verwendet.--><p>Diese Umsatzbeteiligungen gelten für alle Vermittler und Wiederverkäufer, die Sie zum Wiederverkauf berechtigen, sofern keine Umsatzbeteiligung pro Service oder Organisation definiert ist. Beachten Sie, dass dies unabhängig von dem Marktplatz ist, auf dem ein Vermittler oder Wiederverkäufer den Service veröffentlicht. </p><p>Unterhalb der Anzeige der Umsatzbeteiligungen werden alle Vermittler und Wiederverkäufer, die auf der Plattform existieren, mit ihren aktuell geltenden Umsatzbeteiligungen angezeigt. </p></li>
           <li>Um einen Vermittler oder Wiederverkäufer zum Wiederverkauf des Service zu berechtigen, markieren Sie diesen in der Liste. Um die Berechtigung wieder zu entziehen, entfernen Sie die Markierung. </li>
           <li>Schließen Sie Ihre Änderungen mit <uicontrol>Speichern</uicontrol> ab.</li>
         </ol>

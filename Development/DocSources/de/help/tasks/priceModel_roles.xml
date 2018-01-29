@@ -8,7 +8,7 @@
     <context>
       <p>Auf der Seite <uicontrol>Rollenspezifische Preise definieren</uicontrol> können Sie für jede Servicerolle, die im zugrunde liegenden technischen Service definiert ist, eine zusätzliche Gebühr festlegen. Servicerollen können dazu verwendet werden, Benutzern bestimmte Privilegien zu gewähren. In der zugrunde liegenden Anwendung werden diese Servicerollen dann auf die entsprechenden Rechte abgebildet.</p>
       <p>Für jede Servicerolle können Sie einen Preis definieren. Der Preis wird bei der Berechnung der Nutzungsgebühren für einen Abrechnungszeitraum zum Grundpreis für Benutzer addiert.</p>
-      <note>Rollenspezifische Preise sind nur für Preismodelle von Services relevant, für deren Kostenberechnung das plattformeigene Abrechnungssystem verwendet wird. Preismodelle von externen Abrechnungssystemen definieren ihre eigenen Elemente, auf deren Basis die Kosten für einen Services berechnet werden.</note>
+      <!--<note>Rollenspezifische Preise sind nur für Preismodelle von Services relevant, für deren Kostenberechnung das plattformeigene Abrechnungssystem verwendet wird. Preismodelle von externen Abrechnungssystemen definieren ihre eigenen Elemente, auf deren Basis die Kosten für einen Services berechnet werden.</note>-->
       <p><b>So definieren Sie Preise für Servicerollen</b>:</p>
     </context>
     <steps>

@@ -6,7 +6,7 @@
     <title>Service-Preismodell definieren</title>
     <taskbody>
         <context>
-            <p>Auf der Seite <uicontrol>Service-Preismodell definieren</uicontrol> können Sie ein Preismodell für einen ausgewählten Service definieren oder ändern. Wenn der Service das plattformeigene Abrechnungssystem verwendet, können Sie das Preismodell direkt auf dieser Seite bearbeiten. Verwendet der Service ein externes Abrechnungssystem, können Sie ein neues oder geändertes Preismodell von diesem System importieren.</p>
+            <p>Auf der Seite <uicontrol>Service-Preismodell definieren</uicontrol> können Sie ein Preismodell für einen ausgewählten Service definieren oder ändern.<!-- Wenn der Service das plattformeigene Abrechnungssystem verwendet, können Sie das Preismodell direkt auf dieser Seite bearbeiten. Verwendet der Service ein externes Abrechnungssystem, können Sie ein neues oder geändertes Preismodell von diesem System importieren.--></p>
             <p conref="../../Shared/priceModel.xml#PriceModelTopic/concept_price_model"/>
             <p>Für jeden marktfähigen Service müssen Sie ein Preismodell definieren, bevor Sie den Service aktivieren und so Kunden zum Abonnieren zur Verfügung stellen können. Für jeden Service können Sie genau ein Service-Preismodell definieren. Zusätzlich können Sie jedoch kundenspezifische oder abospezifische Preismodelle definieren. </p>
             <p>Wenn Sie auf der Seite <uicontrol>Service-Preismodell definieren</uicontrol> ein Service-Preismodell ändern möchten, muss der entsprechende marktfähige Service deaktiviert sein. Ihre Änderungen überschreiben die vorherigen Werte. Sie wirken sich nicht auf laufende Abonnements aus, sondern nur auf nach erneuter Aktivierung des Service angelegte Abonnements. </p>
@@ -22,15 +22,8 @@
                 <cmd/>
             </step>
             <step>
-                <cmd>Abhängig von dem Abrechnungssystem, das für den zugrunde liegenden technischen Service definiert ist, fahren Sie wie folgt fort:</cmd>
-                <info>
-                    <ul compact="no">
-                        <li>Wenn das plattformeigene Abrechnungssystem verwendet wird, definieren Sie das Preismodell in den weiteren Bereichen auf der Seite. Detaillierte Informationen dazu finden Sie <xref
-                                href="priceModel_service_nat.xml">hier</xref>.</li>
-                        <li>Wenn ein externes Abrechnungssystem verwendet wird, importieren Sie das Preismodell von diesem System und geben die Lizenzvereinbarung an. Detaillierte Informationen dazu finden Sie <xref
-                                href="priceModel_service_ext.xml">hier</xref>.</li>
-                    </ul>
-                </info>
+                <cmd>Definieren Sie das Preismodell in den weiteren Bereichen auf der Seite. Detaillierte Informationen dazu finden Sie <xref
+                        href="priceModel_service_nat.xml">hier</xref>.</cmd>
             </step>
         </steps>
         <result>

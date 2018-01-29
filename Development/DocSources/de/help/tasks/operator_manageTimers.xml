@@ -15,18 +15,9 @@
         <p>Die Zeit bis zur nächsten Ausführung eines Timers wird ausgehend vom 1. Januar, 00:00:00.000 Uhr, des aktuellen Kalenderjahres berechnet. Wenn Sie beispielsweise am 5. Januar, 14:30:00 Uhr, ein Zeitintervall von einer Woche für einen Timer definieren, läuft der Timer zum ersten Mal am 8. Januar, 00:00:00.000 Uhr, ab, danach am 15., 22. usw. Wenn Sie am 4. August, 17:00:00 Uhr, ein Zeitintervall von einem Monat für einen Timer definieren, läuft dieser Timer zum ersten Mal am 1. September, 00:00:00.000 Uhr, ab, danach am 1. Oktober, 1. November usw. Um die gleichzeitige Ausführung mehrerer Timer und damit eine hohe Systemauslastung zu umgehen, gibt es eine weitere Einstellung: den <b>Offset</b> für jeden Timer. Der Offset wird zum Ablaufzeitpunkt des Timers hinzugerechnet. </p>
         <p>Ausführliche Informationen zu Timern finden Sie im <i>Operator's Guide</i>. </p>
         <p>Auf der Seite <uicontrol>Timer verwalten</uicontrol> können Sie überprüfen, wann die konfigurierten Timer ausgeführt werden. Sobald Sie einen Timer neu definieren oder aktualisieren, müssen Sie die Timer reinitialisieren, damit sie zum definierten Zeitpunkt gestartet werden. </p>
-        <p><b>So konfigurieren Sie einen neuen Timer oder ändern einen bestehenden</b>: </p>
-        <p>
-            <ol>
-                <li>Legen Sie die Einstellungen für den Timer auf der Seite <uicontrol>Konfiguration aktualisieren</uicontrol> fest. </li>
-                <li>Klicken Sie <uicontrol>Timer reinitialisieren</uicontrol> auf der Seite <uicontrol>Timer verwalten</uicontrol>. </li>
-            </ol>
-        </p>
+        <p>On the <uicontrol>Konfiguration ändern</uicontrol> können Sie die aktuellen Einstellungen ansehen. Um Einstellungen dauerhaft zu ändern, gehen Sie wie 
+            
+            <ph
+                audience="doc"><xref href="operator_manageConfiguration.xml">hier </xref></ph> beschrieben vor. </p>
     </conbody>
-    <related-links>
-        <linklist>
-            <title>Weitere Themen</title>
-            <link href="operator_manageConfiguration.xml"/>
-        </linklist>
-    </related-links>
 </concept>

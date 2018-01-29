@@ -6,16 +6,42 @@
   <title>Konfiguration aktualisieren</title>
   <taskbody>
     <context>
+      <p>Die Plattform-Software benötigt einige Konfigurationseinstellungen, um die Runtime-Umgebung mit Containern funktionsfähig zu machen. Vor dem Deployment der Container wurden die obligatorischen Einstellungen bereits in Umgebungsvariablen in Docker-Dateien gesetzt. </p>
       <p>Auf der Seite <uicontrol>Konfiguration aktualisieren</uicontrol> sehen Sie die aktuellen Konfigurationseinstellungen, die in der Datenbank gespeichert sind. Während der Installation haben Sie die Einstellungen an Ihre Umgebung angepasst, vor allem Servernamen, Ports, Pfade und Benutzernamen. Sie können die aktuellen Einstellungen jederzeit aktualisieren und ändern.</p>
-      <p>Die Konfigurationseinstellungen sind auch in der Datei <codeph>configsettings.properties</codeph> gespeichert. Diese Datei befindet sich in dem Unterverzeichnis, in das Sie die Datei <codeph>oscm-install-pack.zip</codeph> zur Installation extrahiert haben: </p>
-      <p><codeph>&lt;install_pack_dir>/databases/bes_db</codeph>
+      <p>
+        <note>Beachten Sie, dass im Portal nur Änderungen für Testzwecke gemacht werden sollten. Ihre Änderungen werden verworfen, sobald die Container neu gestartet werden.  </note>
+      </p>
+      <p>Möchten Sie Konfigurationseinstellungen dauerhaft in der Datenbank ändern, gehen Sie wie folgt vor: </p>
+      <p>
+        <ol>
+          <li>Bearbeiten Sie die Datei <codeph>var.env</codeph> im Verzeichnis <codeph>/docker</codeph> auf Ihrem Docker-Host entsprechend.  </li>
+          <li>Wenn Sie den voreingestellten Wert einer Einstellung ändern möchten, die noch nicht in der Datei <codeph>var.env</codeph> enthalten ist: <p>Fügen Sie den Schlüssel und seinen Wert, den die Einstellung annehmen soll, zu der Datei <codeph>var.env</codeph> hinzu.</p><p>Die Schlüssel finden Sie auf der Seite <uicontrol>Konfiguration aktualisieren</uicontrol>. Beispiel: </p><p><codeph>TIMER_INTERVAL_SUBSCRIPTION_EXPIRATION=345600000</codeph></p></li>
+          <li>Speicher Sie die Datei <codeph>var.env</codeph> im ursprünglichen Verzeichnis:<p><codeph>/docker/var.env</codeph></p></li>
+          <li>Stoppen und löschen Sie alle <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>-Container:<p>
+              <codeblock>docker-compose -f docker-compose-oscm.yml stop
+docker-compose -f docker-compose-oscm.yml rm -f </codeblock>
+            </p></li>
+          <li>Starten Sie den Container zur Datenbank-Initialisierung und löschen Sie die beendeten Container:<p>
+              <codeblock>docker-compose -f docker-compose-initdb.yml up -d oscm-db 
+docker-compose -f docker-compose-initdb.yml up oscm-initdb-core 
+docker-compose -f docker-compose-initdb.yml up oscm-initdb-jms 
+docker-compose -f docker-compose-initdb.yml up oscm-initdb-app 
+docker-compose -f docker-compose-initdb.yml up oscm-initdb-controller-openstack
+docker-compose -f docker-compose-initdb.yml up oscm-initdb-controller-aws 
+docker-compose -f docker-compose-initdb.yml stop 
+docker-compose -f docker-compose-initdb.yml rm -f</codeblock>
+            </p></li>
+          <li>Starten Sie alle Container der Anwenung neu:<p>
+              <codeblock>docker-compose -f docker-compose-oscm.yml up -d</codeblock>
+            </p></li>
+        </ol>
       </p>
     </context>
   </taskbody>
   <related-links>
     <linklist>
       <title>Weitere Themen</title>
-      <link href=../../Shared/reference/r_ConfigSettings_UI.xml"/>
+      <link href="../../Shared/reference/r_ConfigSettings_UI.xml"/>
     </linklist>
   </related-links>
 </task>

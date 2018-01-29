@@ -84,7 +84,7 @@
                     <p>Die URL zum Zugriff auf einen solchen eigenen Tab muss im folgenden Format eingegeben werden: </p>
                     <p><codeph>https://&lt;app-host-name>:8881/&lt;service controller name>/serverInformation.jsf</codeph></p>
                     <p>Beispiel: </p>
-                    <p><codeph>https://MyAPPHost:8881/oscm-app-openstack/serverInformation.jsf</codeph></p>
+                    <p><codeph>https://oscm-app-host:8881/oscm-app-openstack/serverInformation.jsf</codeph></p>
                 </info>
             </step>
             <step>

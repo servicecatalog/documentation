@@ -71,7 +71,7 @@
                     <li>Existiert der Benutzername des Administrators bereits im System, wird seine E-Mail-Adresse (z.B. <codeph>Schmitt@organisation.com</codeph>) als Benutzername verwendet, um sich am System anzumelden. Wird eine weitere Kundenorganisation registriert und der Benutzername des Administrators ist wiederum identisch, wird der neue Benutzername aus dem Benutzernamen, gefolgt vom "AT"-Zeichen (@) und der ID der Kundenorganisation (z.B. <codeph>Schmitt@abcdefg</codeph>)zusammengesetzt. Der Administrator erhält eine E-Mail mit dem entsprechenden Benutzernamen.</li>
                 </ul>
             </p>
-            <p>Als Serviceanbieter oder Wiederverkäufer legen Sie üblicherweise als nächstes die Zahlungsarten für den Kunden fest, damit er beim Abonnieren von Services eine Zahlungsart auswählen kann. Dies ist für Services notwendig, die kostenpflichtig sind und das plattformeigene Abrechnungssystem verwenden. Selbst für diese Services kann der Plattform-Betreiber jedoch alle Möglichkeiten für den Kunden zum Angeben solcher Zahlungsinformationen deaktivieren. Falls dies der Fall ist, ist die Definition von Zahlungsarten ist nicht möglich.</p>
+            <p>Als Serviceanbieter oder Wiederverkäufer legen Sie üblicherweise als nächstes die Zahlungsarten für den Kunden fest, damit er beim Abonnieren von Services eine Zahlungsart auswählen kann. Dies ist für Services notwendig, die kostenpflichtig sind. Selbst für diese Services kann der Plattform-Betreiber jedoch alle Möglichkeiten für den Kunden zum Angeben solcher Zahlungsinformationen deaktivieren. Falls dies der Fall ist, ist die Definition von Zahlungsarten ist nicht möglich.</p>
         </result>
     </taskbody>
     <related-links>

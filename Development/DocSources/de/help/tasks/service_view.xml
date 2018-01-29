@@ -21,11 +21,8 @@
             ><b>Lizenzvereinbarung</b>. Diese muss von den Kunden gelesen und akzeptiert werden, wenn sie den Service abonnieren.</ph></li>
         <li id="Details_zum_Preismodell._Dies_task_taskbody_context_ul_li"><ph
             id="The_details_of_the_price_mode_task_taskbody_context_ul_li"
-            ><b>Details zum Preismodell</b>. Diese werden vom Serviceanbieter festgelegt. </ph><ul compact="no">
-            <li>Wenn für die Kostenberechnung für den Service ein externes Abrechnungssystem verwendet wird, können Sie die dort definierten Abrechnungsbedingungen und Preise über <uicontrol>Anzeigen</uicontrol> ansehen.</li>
-            <li>Wenn für die Kostenberechnung für den Service das plattformeigene Abrechnungssystem verwendet wird, kann der Service kostenlos oder kostenpflichtig sein. Wenn für die Nutzung des Service Kosten anfallen, können Sie hier die Abrechnungsbedingungen und Preise sehen. Details dazu finden Sie <xref
-                href="service_viewPMDetails.xml">hier</xref>. Alle Preise sind netto ohne Mehrwertsteuer.</li>
-          </ul></li>
+              ><b>Details zum Preismodell</b>. Diese werden vom Serviceanbieter festgelegt. Wenn für die Nutzung des Service Kosten anfallen, können Sie hier die Abrechnungsbedingungen und Preise sehen. Details dazu finden Sie <xref
+              href="service_viewPMDetails.xml">hier</xref>. Alle Preise sind netto ohne Mehrwertsteuer.</ph></li>
       </ul>
       <p><b>So zeigen Sie die Eigenschaften eines Service an</b>:</p>
     </context>

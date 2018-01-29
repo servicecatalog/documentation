@@ -11,9 +11,7 @@
         <ul compact="no">
           <li>Der Organisation eine weitere <b>Rolle</b> zuweisen (Hersteller, Serviceanbieter, Wiederverkäufer, Vermittler).</li>
           <li>Adress- und Kontaktdaten der Organisation aktualisieren.</li>
-          <li>Den <b>Distinguished Name</b> für die Organisation festlegen.<p>Dies ist erforderlich, wenn eine Organisation Zertifikate für die vertrauenswürdige Kommunikation zwischen der Betreiberorganisation und sich selbst verwenden will. </p><p>Die Plattform überprüft den Distinguished Name im Client-Zertifikat. Falls er mit dem hier festgelegten übereinstimmt, ist der Aufrufer berechtigt, eine Verbindung zur Plattform herzustellen. </p><p>Den Distinguished Name einer Organisation können Sie aus ihrem Zertifikat mit folgendem Aufruf in Ihrer Java-Laufzeitumgebung ermitteln: </p><p>
-              <codeblock>&lt;IhrJRE>/bin/keytool -printcert -file &lt;Dateiname.crt></codeblock>
-            </p><p>Detaillierte Informationen zur Verwendung von Zertifikaten finden Sie im <i>Operator's Guide</i>.</p></li>
+          <li>Den <b>Distinguished Name</b> für die Organisation festlegen.<p>Dies ist erforderlich, wenn eine Organisation Zertifikate für die vertrauenswürdige Kommunikation zwischen der Betreiberorganisation und sich selbst verwenden will. </p><p>Die Plattform überprüft den Distinguished Name im Client-Zertifikat. Falls er mit dem hier festgelegten übereinstimmt, ist der Aufrufer berechtigt, eine Verbindung zur Plattform herzustellen. </p><!--<p>Den Distinguished Name einer Organisation können Sie aus ihrem Zertifikat mit folgendem Aufruf in Ihrer Java-Laufzeitumgebung ermitteln: </p><p><codeblock>&lt;IhrJRE>/bin/keytool -printcert -file &lt;Dateiname.crt></codeblock></p>--><p>Detaillierte Informationen zur Verwendung von Zertifikaten finden Sie im <i>Operator's Guide</i>.</p></li>
           <li><b>Zahlungsarten</b> festlegen, die Serviceanbieter oder Wiederverkäufer ihren Kunden für Services anbieten können, die das plattformeigene Abrechnungssystem verwenden. <p>Standardmäßig kann jeder Kunde auf Rechnung bezahlen. Somit ist gewährleistet, dass Kunden jederzeit kostenpflichtige Services abonnieren können.</p>
             <!--p
               id="PayTypes2"
@@ -52,15 +50,7 @@
           <p>Die einzelnen Elemente müssen durch Komma getrennt werden. </p>
         </info>
       </step>
-      <step>
-        <cmd>Legen Sie die Zahlungsarten fest, die die Organisation ihren Kunden anbieten kann. Klicken Sie <b>Hinzufügen</b> und fahren Sie auf der Seite <uicontrol>Neue Zahlungsart</uicontrol> fort.</cmd>
-        <info>
-          <p>Das Hinzufügen von Zahlungsarten ist nur für Serviceanbieter oder Wiederverkäufer möglich.</p>
-          <p>
-            <note>Eine einmal hinzugefügte Zahlungsart kann nicht mehr entfernt werden.</note>
-          </p>
-        </info>
-      </step>
+      <!--<step><cmd>Legen Sie die Zahlungsarten fest, die die Organisation ihren Kunden anbieten kann. Klicken Sie <b>Hinzufügen</b> und fahren Sie auf der Seite <uicontrol>Neue Zahlungsart</uicontrol> fort.</cmd><info><p>Das Hinzufügen von Zahlungsarten ist nur für Serviceanbieter oder Wiederverkäufer möglich.</p><p><note>Eine einmal hinzugefügte Zahlungsart kann nicht mehr entfernt werden.</note></p></info></step>-->
       <step>
         <cmd>Schließen Sie Ihre Eingaben mit <uicontrol>Speichern</uicontrol> ab.</cmd>
       </step>

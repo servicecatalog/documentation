@@ -6,11 +6,8 @@
     <title>Preismodellelemente lokalisieren</title>
     <taskbody>
         <context>
-            <p>Auf der Seite <uicontrol>Preismodellbeschreibung lokalisieren</uicontrol> können Sie Preismodellelemente in allen unterstützten Sprachen hinterlegen: </p>
-            <ul compact="no">
-                <li>Wenn Sie ein Preismodell für einen Service definieren, für dessen Kostenberechnung das plattformeigene Abrechnungssystem verwendet wird, können Sie die Beschreibung und die Lizenzvereinbarung lokalisieren.</li>
-                <li>Wenn Sie ein Preismodell für einen Service definieren, für dessen Kostenberechnung ein externes Abrechnungssystem verwendet wird, können Sie nur die Lizenzvereinbarung lokalisieren. Weitere Preismodellelemente müssen im externen System lokalisiert werden. </li>
-            </ul>
+            <p>On the <uicontrol>Localize price model description</uicontrol> page, you can provide and save the description and the license agreement defined in a price model.</p>
+            <p>Auf der Seite <uicontrol>Preismodellbeschreibung lokalisieren</uicontrol> können Sie die Beschreibung und Lizenzvereinbarung in allen unterstützten.: </p>
             <p>Wenn Sie Preismodellelemente nicht lokalisieren, werden den Kunden die englischen Texte angezeigt.</p>
             <p>Um die Texte zu lokalisieren, muss der jeweilige marktfähige Service deaktiviert sein. Ihre Lokalisierung wirkt sich nicht auf laufende Abonnements aus. Ihre Änderungen sind nur für Abonnements sichtbar, die nach erneuter Aktivierung des Service abgeschlossen werden.</p>
             <p>Vermittler mit Berechtigung zum Wiederverkauf und deren Kunden können die Preismodellelemente sofort in den von Ihnen hinterlegten Sprachen sehen. Laufende Abonnements sind von der Lokalisierung nicht betroffen. Sie gilt nur für neue Abonnements. </p>

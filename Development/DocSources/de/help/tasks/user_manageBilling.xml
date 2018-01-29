@@ -7,7 +7,7 @@
           <taskbody>
                     <context>
                               <p>Auf der Seite <uicontrol>Abrechnungszeitraum festlegen</uicontrol> definieren Sie den Anfangstag für Abrechnungszeiträume. </p>
-                              <p>Ein Abrechnungszeitraum ist die Zeitspanne, für die die Abrechnungsdaten der Kundenabonnements für Services erzeugt werden, die das plattformeigene Abrechnungssystem verwenden. Die Länge des Abrechnungszeitraums ist immer ein Monat.</p>
+                              <p>Ein Abrechnungszeitraum ist die Zeitspanne, für die die Abrechnungsdaten der Kundenabonnements für Services erzeugt werden.<!--, die das plattformeigene Abrechnungssystem verwenden.--> Die Länge des Abrechnungszeitraums ist immer ein Monat.</p>
                               <p>Standardmäßig beginnt ein Abrechnungszeitraum am erstem Tag eines Monats um 00:00:00.000 Uhr und endet am letzten Tag eines Monats um 23:59:59.999 Uhr. Dieser Abrechnungszeitraum ist aber im Geschäftsumfeld nicht immer geeignet. Deshalb können Sie den Anfangstag des Abrechnungszeitraums nach Wunsch festlegen. Wenn Sie zum Beispiel den Anfangstag auf den achten eines Monats legen, beginnt der Abrechnungszeitraum am achten des Monats um 00:00:00.000 Uhr und endet am siebten des Folgemonats um 23:59:59.999 Uhr.</p>
                               <p>Wenn Sie den Anfangstag des Abrechnungszeitraums ändern, wirkt sich das auf alle Abonnements aus, die danach neu erstellt oder wieder aktiviert werden. Bestehende Abonnements sind davon nicht betroffen.</p>
                               <p>Die Anfangs- und Endezeiten eines Abrechnungszeitraums erscheinen in folgenden Berichten:</p>

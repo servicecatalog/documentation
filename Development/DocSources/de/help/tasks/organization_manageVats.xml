@@ -15,7 +15,7 @@
           <li>Sie können einen kundenspezifischen Mehrwertsteuersatz definieren. Dies ist beispielsweise erforderlich, wenn eine Kundenorganisation eine Niederlassung in einem anderen Land hat als Ihre Hauptverwaltung.</li>
         </ul>
       </p>
-      <note>Die Mehrwertsteuersätze gelten nur für die Nutzungsgebühren für Services, die das plattformeigene Abrechnungssystem verwenden.</note>
+      <!--<note>Die Mehrwertsteuersätze gelten nur für die Nutzungsgebühren für Services, die das plattformeigene Abrechnungssystem verwenden.</note>-->
       <p>Die Mehrwertsteuersätze wirken sich wie folgt auf die Berechnung der Nutzungsgebühren für einen Kunden aus:</p>
       <ul compact="no">
         <li>Wenn Sie die Berechnung mit Mehrwertsteuer deaktivieren, werden die Preise netto berechnet. Es wird keine Mehrwertsteuer auf die Gesamtkosten erhoben.</li>
