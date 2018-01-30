@@ -51,10 +51,7 @@
             <p>Allowed values: <codeph>true</codeph>, <codeph>false</codeph></p>
             <p>Default: <codeph>false</codeph></p>
         </section>
-        <section><title>DECIMAL_PLACES</title>Optional. Specifies the number of decimal places in which usage charges are calculated. This setting is needed only when migrating from <ph
-                platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
-                platform="help"
-                    >the platform</ph> V14.1 to a higher version. <p>Allowed values: <codeph>2</codeph>, <codeph>3</codeph>, <codeph>4</codeph>, <codeph>5</codeph>, <codeph>6</codeph></p><p>Default: <codeph>2</codeph></p></section>
+        <section><title>DECIMAL_PLACES</title>Optional. Specifies the number of decimal places in which usage charges are calculated.<p>Allowed values: <codeph>2</codeph>, <codeph>3</codeph>, <codeph>4</codeph>, <codeph>5</codeph>, <codeph>6</codeph></p><p>Default: <codeph>2</codeph></p></section>
         <section><title>HIDDEN_UI_ELEMENTS</title>Optional. Specifies user interface elements to be hidden from the <ph
                 platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
                 platform="help"
@@ -146,7 +143,7 @@
                 platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
                 platform="help"
                 >the platform</ph> will not be able to generate any reports, since the Report Web service cannot be called correctly. <p>The required value is: </p><p><codeph>https://oscm-core:8081/oscm-reporting/ReportingServiceBean</codeph></p><p>This setting cannot be changed.</p></section>
-        <section><title>REPORT_WSDLURL</title>All report data is retrieved via a call to the Report Web service. If you do not specify a correct value, <ph
+        <section><title>REPORT_WSDLURL</title>URL of the WSDL file of the Report Web service. All report data is retrieved via a call to the Report Web service. If you do not specify a correct value, <ph
                 platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
                 platform="help"
                 >the platform</ph> will not be able to generate any reports, since the Report Web service cannot be called correctly. <p>The required value is: </p><p><codeph>https://oscm-core:8081/oscm-reporting/ReportingServiceBean?wsdl</codeph></p><p>This setting cannot be changed.</p></section>

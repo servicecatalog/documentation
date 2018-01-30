@@ -7,12 +7,18 @@
     <refbody>
         <section>
             <p>Im Administrationsportal steht Online-Hilfe zu den einzelnen Seiten in der Sprache zur Verfügung, die der jeweilige Benutzer in seinem Profil eingestellt hat. Dies gilt auch für die FAQ-Datei, die als Hilfe zum Marktplatz angezeigt werden kann.</p>
-            <p>Die Online-Hilfe und die FAQ-Datei stehen nach der Installation in einer separaten <codeph>.war</codeph>-Datei im Installation Package (<codeph>oscm-install-pack.zip</codeph>) zur Verfügung:</p>
-            <p><codeph>&lt;install_pack_dir>/domains/bes_domain/oscm-portal-help.war</codeph>. </p>
+            <p>Die Online-Hilfe und die FAQ-Datei stehen nach der Installation in einem separaten Container zur Verfügung: <codeph>oscm-help</codeph>.</p>
             <p>Sie können die vorhandene Online-Hilfe und die FAQ-Datei ändern und die Dateien in einer weiteren Sprache zur Verfügung stellen: </p>
             <p>
                 <ol compact="no">
-                    <li>Extrahieren Sie den Inhalt der <codeph>oscm-portal-help.war</codeph>-Datei in ein separates Verzeichnis in Ihrem Dateisystem.<p>Die Verzeichnisstruktur ist wie folgt: </p><p
+                    <li>Melden Sie sich an dem Docker-Host an, auf dem <ph platform="help">die Plattform</ph><ph
+                            platform="print"><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /></ph> installiert ist. </li>
+                    <li>Melden Sie sich am Container <codeph>oscm-help</codeph> an:<p>
+                            <codeblock>docker exec –it oscm-help /bin/bash </codeblock>
+                        </p></li>
+                    <li>Kopieren Sie den Inhalt der <codeph>oscm-portal-help.war</codeph>-Datei in ein separates Verzeichnis in Ihrem Dateisystem.</li>
+                    <li>Extrahieren Sie den Inhalt der <codeph>oscm-portal-help.war</codeph>-Datei.<p>Die Verzeichnisstruktur ist wie folgt: </p><p
                             platform="help"><image href="../_images/HelpFAQ.png" alt="HelpFAQ.png" width="415"
                                 height="372"/></p><p platform="print"><image href="../_images/HelpFAQ.png"
                                 alt="HelpFAQ.png" width="300" height="269"
@@ -34,14 +40,22 @@
                                 <li>Die in der Online-Hilfe verwendeten Bilder können Sie wie folgt übersetzen: <p>
                                         <ol>
                                             <li>Erstellen Sie das Bild mit einem Zeichenprogramm. </li>
-                                            <li>Speichern Sie das Bild unter dem Dateinamen, der auf der zugehörigen HTML-Seite referenziert wird, im Verzeichnis <codeph>Shared\_images</codeph>. </li>
+                                            <li>Speichern Sie das Bild unter dem Dateinamen, der auf der zugehörigen HTML-Seite referenziert wird, im Verzeichnis <codeph>Shared/_images</codeph>. </li>
                                             <li>Überprüfen Sie die Größe des Bildes in der HTML-Datei und passen Sie sie gegebenenfalls an. </li>
                                         </ol>
                                     </p></li>
                             </ul>
                         </p></li>
-                    <li>Erstellen Sie eine neue Datei <codeph>oscm-portal-help.war</codeph>, die die zusätzlichen Verzeichnisse für die neue Sprache enthält. </li>
-                    <li>Deinstallieren Sie zunächst und installieren Sie anschließend die neue, geänderte Datei <codeph>oscm-portal-help.war</codeph> in der Domäne <codeph>bes-domain</codeph> auf dem Application Server. <p>Durch die Installation der Datei werden existierende HTML-Dateien überschrieben.</p></li>
+                    <li>Erstellen Sie eine Archivdatei mit dem Namen <codeph>oscm-portal-help.tar.gz</codeph>, die die zusätzlichen Verzeichnisse für die neue Sprache enthält, und kopieren Sie diese Archivdatei in folgendes Verzeichnis auf dem Docker-Host:<p><codeph>/docker/config/oscm-help</codeph></p></li>
+                    <li>Stoppen Sie den Container <codeph>oscm-help</codeph>: <p>
+                            <codeblock>docker stop oscm- help</codeblock>
+                        </p></li>
+                    <li>Entfernen Sie den Container <codeph>oscm-help</codeph>: <p>
+                            <codeblock>docker-compose -f docker-compose-oscm.yml rm oscm-help</codeblock>
+                        </p></li>
+                    <li>Erstellen Sie den Container <codeph>oscm-help</codeph> erneute und starten Sie ihn: <p>
+                            <codeblock>docker-compose -f docker-compose--oscm.yml up -d oscm-help</codeblock>
+                        </p><p>Beachten Sie, dass so bestehende HTML-Dateien überschrieben werden.</p></li>
                 </ol>
             </p>
             <p>

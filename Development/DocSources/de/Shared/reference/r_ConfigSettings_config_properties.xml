@@ -6,7 +6,7 @@
         <title>Konfigurationseinstellungen</title>
         <refbody>
                 <section>
-                        <p>Die Datei <codeph>configsettings.properties</codeph> im Verzeichnis <codeph>&lt;install_pack_dir>/databases/bes_db</codeph> enthält alle für die Plattform-Services erforderlichen Konfigurationseinstellungen. </p>
+                        <p>Nachfolgend finden Sie eine Beschreibung aller für die Plattform-Services verfügbaren Konfigurationseinstellungen. </p>
                 </section>
                 <section>
                         <title>AUDIT_LOG_ENABLED</title>
@@ -30,7 +30,7 @@
                 <!--section><title>BASE_URL</title>Optional. Diese URL führt zur Startseite der Plattform, falls die Kommunikation nicht über HTTPS erfolgt. Bleibt das Feld leer, wird der Wert von <codeph>BASE_URL_HTTPS</codeph> verwendet. <p>Syntax: <codeph>http://&lt;host&gt;:&lt;port&gt;/&lt;context-root></codeph></p><p>Die Voreinstellung für <codeph>&lt;context-root></codeph> ist <codeph>oscm-portal</codeph>.</p></section-->
                 <section><title>BASE_URL_HTTPS</title>Obligatorisch. Diese URL führt zur Startseite der Plattform und dient zum Erstellen der URL, um auf Services über HTTPS zuzugreifen. <p>Syntax: <codeph>https://&lt;hostname.fqdn>:8081/oscm-portal</codeph></p><p><codeph>&lt;hostname.fqdn></codeph> ist der Name und FQDN des Servers, auf dem <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                        /> installiert wurde. <codeph>8081</codeph> ist die Voreinstellung des Ports für HTTPS-Zugriffe, <codeph>oscm-portal</codeph> ist die Voreinstellung für den Zugriff <ph
+                                        /> installiert wurde. <codeph>8081</codeph> ist die Voreinstellung des Ports für HTTPS-Zugriffe, <codeph>oscm-portal</codeph> ist die Voreinstellung für den Zugriff auf <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                 />. Diese kann nicht geändert werden. </p></section>
                 <section>
@@ -39,7 +39,7 @@
                         <p>Erlaubte Werte: <codeph>true</codeph>, <codeph>false</codeph></p>
                         <p>Voreinstellung: <codeph>true</codeph></p>
                 </section>
-                <section><title>DECIMAL_PLACES</title>Optional. Legt die Anzahl der Nachkommastellen fest, die für die Berechnung der Nutzungsgebühren verwendet werden. Diese Einstellung wird nur ausgewertet, wenn Sie von Version 14.1 der Plattform auf eine höhere Version umstellen. <p>Erlaubte Werte: <codeph>2</codeph>, <codeph>3</codeph>, <codeph>4</codeph>, <codeph>5</codeph>, <codeph>6</codeph></p><p>Voreinstellung: <codeph>2</codeph></p></section>
+                <section><title>DECIMAL_PLACES</title>Optional. Legt die Anzahl der Nachkommastellen fest, die für die Berechnung der Nutzungsgebühren verwendet werden.<p>Erlaubte Werte: <codeph>2</codeph>, <codeph>3</codeph>, <codeph>4</codeph>, <codeph>5</codeph>, <codeph>6</codeph></p><p>Voreinstellung: <codeph>2</codeph></p></section>
                 <section><title>HIDDEN_UI_ELEMENTS</title>Optional. Legt fest, welche Elemente der Benutzeroberfläche im Administrationsportal und auf Marktplätzen ausgeblendet werden. Sie können mit dieser Konfigurationseinstellung Elemente im Administrationsportal und gleichzeitig Elemente auf Marktplätzen ausblenden. <p><b>Marktplätze</b></p><p>Geben Sie einen der folgenden Werte an, um eine Menüoption im Menü <uicontrol>Benutzerkonto</uicontrol> auf Marktplätzen auszublenden: </p><ul>
                                 <li><codeph>marketplace.navigation.Profile</codeph>: Menü <uicontrol>Profil</uicontrol>
                                 </li>

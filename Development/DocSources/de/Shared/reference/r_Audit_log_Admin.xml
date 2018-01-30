@@ -412,7 +412,7 @@
                                             <p><codeph>subscriptionName=<i>&lt;Abo-Name></i></codeph>: Name des Abonnements, wie er beim Abonnieren angegeben wurde. </p>
                                         </li>
                                         <li><codeph>paymentName=<i>&lt;Name></i></codeph>: Name der Zahlungsart, wie sie Benutzern zur Auswahl angezeigt wird. </li>
-                                        <li><codeph>paymentType=<i>&lt;Zahlungsart></i></codeph>: Name der Zahlungsart, wie sie von einem Serviceanbieter oder Payment Service Provider zur Verfügung gestellt wird. </li>
+                                        <li><codeph>paymentType=<i>&lt;Zahlungsart></i></codeph>: Name der Zahlungsart, wie sie von einem Serviceanbieter<!-- oder Payment Service Provider--> zur Verfügung gestellt wird. </li>
                                     </ul>
                                 </p>
                             </entry>

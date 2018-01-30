@@ -7,30 +7,25 @@
             /> Configuration Settings</ph><ph platform="help">Configuration settings</ph></title>
     <refbody>
         <section>
-            <p platform="print">This section describes the <ph
-                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> configuration settings.</p>
+            <p>Nachfolgend finden Sie eine Beschreibung aller für die Plattform-Services verfügbaren Konfigurationseinstellungen. </p>
         </section>
         <section>
             <title>AUDIT_LOG_ENABLED</title>
-            <p>Optional. Specifies whether user operations related to subscriptions, marketable services, and price models are logged and stored in the database. If set to <codeph>true</codeph>, the operator can export audit log data to retrieve information on the user operations. </p>
-            <p>Allowed values: <codeph>true</codeph>, <codeph>false</codeph></p>
-            <p>Default: <codeph>false</codeph></p>
+            <p>Optional. Legt fest, ob Benutzeraktionen protokolliert und in der Datenbank gespeichert werden. Es können Aktionen protokolliert werden, die sich auf Abonnements, marktfähige Services und Preismodelle beziehen. Ist die Konfigurationseinstellung auf <codeph>true</codeph> gesetzt, kann der Betreiber die Protokolldaten exportieren und so Informationen zu Benutzeraktionen abrufen. </p>
+            <p>Erlaubte Werte: <codeph>true</codeph>, <codeph>false</codeph></p>
+            <p>Voreinstellung: <codeph>false</codeph></p>
         </section>
         <section>
             <title>AUDIT_LOG_MAX_ENTRIES_RETRIEVED</title>
-            <p>Optional. Specifies how many log entries are retrieved in one export of audit log data. If this number is exceeded, a warning is displayed asking the operator to change his filter criteria and start the export again. This setting is required to keep the number of SQL requests to the database low when audit log data is exported. Too many requests may lead to a decrease in system performance. </p>
-            <p>Allowed values: Any value between <codeph>1</codeph> and <codeph>1000</codeph>
+            <p>Optional. Legt fest, wieviele Protokolleinträge bein einem Export der Protokolldaten abgerufen werden. Wird diese Anzahl überschritten, wird eine Warnung angezeigt und der Betreiber aufgefordert, seine Filterkriterien zu ändern und danach den Export nochmal zu starten. Diese Einstellung ist erforderlich, um die Anzahl von SQL-Anfragen an die Datenbank zu begrenzen. Zu viele Datenbankanfragen können die Leistung des Systems beeinträchtigen. </p>
+            <p>Erlaubte Werte: Beliebiger Wert zwischen <codeph>1</codeph> und <codeph>1000</codeph>
             </p>
-            <p>Default: <codeph>100</codeph></p>
+            <p>Voreinstellung: <codeph>100</codeph></p>
         </section>
         <section>
             <title>AUTH_MODE</title>
-            <p>Specifies that <ph platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /></ph><ph platform="help"
-                    >the platform</ph> is used for user authentication. This configuration setting is evaluated at the first startup of <ph
-                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
-                    platform="help">the system</ph> and cannot be changed.</p>
-            <p>Default: <codeph>INTERNAL</codeph>
+            <p>Obligatorisch. Legt fest, dass die Plattform zur Benutzerauthentifizierung verwendet wird. Diese Einstellung wird beim ersten Starten des Systems ausgewertet. Sie kann nach dem ersten Starten des Systems nicht mehr geändert werden.</p>
+            <p>Erlaubter Werte: <codeph>INTERNAL</codeph>
             </p>
         </section>
         <!--section><title>BASE_URL</title>Optional. The base URL is used to access the <ph platform="print"><ph
@@ -38,57 +33,50 @@
                 >platform's</ph> home page if <ph platform="print"><ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
                 >the platform</ph> does not require HTTPS for communication. If left empty, the <codeph>BASE_URL_HTTPS</codeph> setting is used. <p>Syntax: <codeph>http://&lt;host&gt;:&lt;port&gt;/&lt;context-root></codeph></p><p>The default for <codeph>&lt;context-root></codeph> is <codeph>oscm-portal</codeph>.</p><note>If the SSL/HTTPS port was changed, then this setting must also be updated.</note></section-->
-        <section><title>BASE_URL_HTTPS</title>The base URL is used to access the <ph platform="print"><ph
-                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
-                    >platform's</ph> home page and to create the URL for accessing services via HTTPS. <p>Syntax: <codeph>https://&lt;hostname.fqdn>:&lt;port>/oscm-portal</codeph></p><p><codeph>&lt;hostname.fqdn></codeph> is the name and the fully qualified domain name of the machine where <ph
+        <section><title>BASE_URL_HTTPS</title>Obligatorisch. Diese URL führt zur Startseite der Plattform und dient zum Erstellen der URL, um auf Services über HTTPS zuzugreifen. <p>Syntax: <codeph>https://&lt;hostname.fqdn>:8081/oscm-portal</codeph></p><p><codeph>&lt;hostname.fqdn></codeph> ist der Name und FQDN des Servers, auf dem <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> has been deployed. <codeph>&lt;port></codeph> is the port to address the machine (default <codeph>8081</codeph>), <codeph>oscm-portal</codeph> is the default context root of <ph
+                    /> installiert wurde. <codeph>8081</codeph> ist die Voreinstellung des Ports für HTTPS-Zugriffe, <codeph>oscm-portal</codeph> ist die Voreinstellung für den Zugriff auf <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> and cannot be changed. </p><note>If the SSL/HTTPS port was changed, then this setting must also be updated.</note></section>
+                />. Diese kann nicht geändert werden. </p></section>
         <section>
             <title>CUSTOMER_SELF_REGISTRATION_ENABLED</title>
-            <p>Optional. Specifies whether customer organizations can register on a marketplace. If set to <codeph>false</codeph>, the operator needs to create an organization for the customer who wants to register, or a seller (supplier, broker, reseller) needs to register the customer. </p>
-            <p>Allowed values: <codeph>true</codeph>, <codeph>false</codeph></p>
-            <p>Default: <codeph>false</codeph></p>
+            <p>Optional. Legt fest, ob sich Kunden auf einem Marktplatz selbst registrieren können. Ist der Wert auf <codeph>false</codeph> gesetzt, muss entweder der Betreiber eine Organisation für den Kunden anlegen oder ein Anbieter (Serviceanbieter, Vermittler, Wiederverkäufer) muss den Kunden registrieren. </p>
+            <p>Erlaubte Werte: <codeph>true</codeph>, <codeph>false</codeph></p>
+            <p>Voreinstellung: <codeph>true</codeph></p>
         </section>
-        <section><title>DECIMAL_PLACES</title>Optional. Specifies the number of decimal places in which usage charges are calculated. This setting is needed only when migrating from <ph
-                platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
-                platform="help"
-                    >the platform</ph> V14.1 to a higher version. <p>Allowed values: <codeph>2</codeph>, <codeph>3</codeph>, <codeph>4</codeph>, <codeph>5</codeph>, <codeph>6</codeph></p><p>Default: <codeph>2</codeph></p></section>
-        <section><title>HIDDEN_UI_ELEMENTS</title>Optional. Specifies user interface elements to be hidden from the <ph
-                platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
-                platform="help"
-                    >platform's</ph> administration portal and the marketplaces operated on your platform. You can use this setting to hide user interface elements both from the marketplaces and the administration portal.<p><b>Marketplaces</b></p><p>If you want to hide a menu option from the <uicontrol>Account</uicontrol> menu of the marketplaces operated on your platform, enter one of the following values: </p><ul>
-                <li><codeph>marketplace.navigation.Profile</codeph>: <uicontrol>Profile</uicontrol> menu </li>
-                <li><codeph>marketplace.navigation.Payment</codeph>: <uicontrol>Payment</uicontrol> menu</li>
-                <li><codeph>marketplace.navigation.Subscriptions</codeph>: <uicontrol>Subscriptions</uicontrol> menu </li>
-                <li><codeph>marketplace.navigation.Users</codeph>: <uicontrol>Users &amp; Units</uicontrol> menu </li>
-                <li><codeph>marketplace.navigation.Reports</codeph>: <uicontrol>Reports</uicontrol> menu</li>
-                <li><codeph>marketplace.navigation.Processes</codeph>: <uicontrol>Processes</uicontrol> menu</li>
-                <li><codeph>marketplace.navigation.Operations</codeph>: <b>Operations</b> menu</li>
-            </ul><p>To hide several options from the <uicontrol>Account</uicontrol> menu, separate the options by a comma. </p><p><b>Administration Portal</b></p><p>If you want to hide a specific page from the <ph
-                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
-                    platform="help"
-                >platform's</ph> administration portal, you can find out which value needs to be specified here as follows: </p><ol>
-                <li>Open the respective page at the administration portal.</li>
-                <li>Display the online help for this page. </li>
-                <li>Have a look at the name of the online help HTML page. </li>
-                <li>Omit the file extension <codeph>.htm</codeph> and replace the underscore by a dot. </li>
-            </ol><p>Example: </p><p>You want to hide the <uicontrol>Manage VAT rates</uicontrol> page. The online help HTML page name is <codeph>organization_manageVats.htm</codeph>. Thus, the respective administration portal page is <codeph>organization.manageVats</codeph>. You need to set the configuration setting as follows: </p><p><codeph>HIDDEN_UI_ELEMENTS=organization.manageVats</codeph></p><p>To hide several pages from the administration portal, separate the entries by a comma. </p><p>Below, you find some more examples of values that can be used to hide a specific page. The list is not complete. </p><p>
+        <section><title>DECIMAL_PLACES</title>Optional. Legt die Anzahl der Nachkommastellen fest, die für die Berechnung der Nutzungsgebühren verwendet werden.<p>Erlaubte Werte: <codeph>2</codeph>, <codeph>3</codeph>, <codeph>4</codeph>, <codeph>5</codeph>, <codeph>6</codeph></p><p>Voreinstellung: <codeph>2</codeph></p></section>
+        <section><title>HIDDEN_UI_ELEMENTS</title>Optional. Legt fest, welche Elemente der Benutzeroberfläche im Administrationsportal und auf Marktplätzen ausgeblendet werden. Sie können mit dieser Konfigurationseinstellung Elemente im Administrationsportal und gleichzeitig Elemente auf Marktplätzen ausblenden. <p><b>Marktplätze</b></p><p>Geben Sie einen der folgenden Werte an, um eine Menüoption im Menü <uicontrol>Benutzerkonto</uicontrol> auf Marktplätzen auszublenden: </p><ul>
+                <li><codeph>marketplace.navigation.Profile</codeph>: Menü <uicontrol>Profil</uicontrol>
+                </li>
+                <li><codeph>marketplace.navigation.Payment</codeph>: Menü <uicontrol>Bezahlung</uicontrol></li>
+                <li><codeph>marketplace.navigation.Subscriptions</codeph>: Menü <uicontrol>Abonnements</uicontrol>
+                </li>
+                <li><codeph>marketplace.navigation.Users</codeph>: Menü <uicontrol>Benutzer &amp; Einheiten</uicontrol></li>
+                <li><codeph>marketplace.navigation.Reports</codeph>: Menü <uicontrol>Berichte</uicontrol></li>
+                <li><codeph>marketplace.navigation.Processes</codeph>: Menü <uicontrol>Prozesse</uicontrol></li>
+                <li><codeph>marketplace.navigation.Operations</codeph>: <b>Operationen</b> menu</li>
+            </ul><p>Um mehrere Optionen im Menü <uicontrol>Benutzerkonto</uicontrol> auszublenden, trennen Sie die Einträge durch Komma.</p><p><b>Administrationsportal</b></p><p>Wenn Sie eine bestimmte Seite vom Administrationsportal ausblenden möchten, müssen Sie zunächst den Wert herausfinden, der zum Ausblenden der Seite angegeben werden muss. Gehen Sie dazu wie folgt vor:</p><ol>
+                <li>Öffnen Sie die entsprechende Seite der Administrationsportals.</li>
+                <li>Zeigen Sie die Hilfe zu dieser Seite an. </li>
+                <li>Sehen Sie sich den Namen der Hilfeseite an. Der Name ist Teil der URL.</li>
+                <li>Lassen Sie die Dateierweiterung <codeph>.htm</codeph> weg und ersetzen Sie den Unterstrich durch einen Punkt. </li>
+            </ol><p>Beispiel: </p><p>Sie möchten die Seite <uicontrol>Mehrwertsteuersätze bearbeiten</uicontrol> ausblenden. Der Name der Hilfeseite ist <codeph>organization_manageVats.htm</codeph>. Dementsprechend heißt die zugehörige Seite des Administrationsportals <codeph>organization.manageVats</codeph>. Die Konfigurationseinstellung muss wie folgt angegeben werden: </p><p><codeph>HIDDEN_UI_ELEMENTS=organization.manageVats</codeph></p><p>Um mehrere Seiten vom Administrationsportal auszublenden, trennen Sie die Einträge durch Komma. </p><p>Nachfolgend sehen Sie weitere Beispiele zum Ausblenden bestimmter Seiten. Die Liste ist nicht vollständig. </p><p>
                 <ul>
-                    <li><codeph>organization.edit</codeph>: <uicontrol>Edit profile</uicontrol> page </li>
-                    <li><codeph>shop.editSkin</codeph>: <uicontrol>Customize layout</uicontrol> page </li>
-                    <li><codeph>techService.edit</codeph>: <uicontrol>Update service definition</uicontrol> page </li>
+                    <li><codeph>organization.edit</codeph>: Seite <uicontrol>Profile bearbeiten</uicontrol></li>
+                    <li><codeph>shop.editSkin</codeph>: Seite <uicontrol>Layout anpassen</uicontrol>
+                    </li>
+                    <li><codeph>techService.edit</codeph>: Seite <uicontrol>Servicedefinition ändern</uicontrol>
+                    </li>
                 </ul>
-            </p><p>To hide a complete menu from the administration portal, enter one of the following values: </p><ul>
-                <li><codeph>navigation.myAccount</codeph>: <uicontrol>Account</uicontrol> menu </li>
-                <li><codeph>navigation.customer</codeph>: <uicontrol>Customer</uicontrol> menu</li>
-                <li><codeph>navigation.operator</codeph>: <uicontrol>Operation</uicontrol> menu</li>
-                <li><codeph>navigation.techService</codeph>: <uicontrol>Technical service</uicontrol> menu </li>
-                <li><codeph>navigation.service</codeph>: <uicontrol>Marketable service</uicontrol> menu </li>
-                <li><codeph>navigation.priceModel</codeph>: <uicontrol>Price model</uicontrol> menu</li>
-                <li><codeph>navigation.marketplace</codeph>: <uicontrol>Marketplace</uicontrol> menu</li>
-            </ul><note>The <uicontrol>Update configuration settings</uicontrol> page in the <uicontrol>Operation</uicontrol> menu is the default page the operator is directed to when logging in. If you hide the page from the menu or hide the complete menu, you are still directed to the <uicontrol>Update configuration settings</uicontrol> page where you can make changes, if required.</note></section>
+            </p><p>Geben Sie einen der folgenden Werte an, um ein ganzes Menü vom Administrationsportal auszublenden: </p><ul>
+                <li><codeph>navigation.myAccount</codeph>: Menü <uicontrol>Benutzerkonto</uicontrol></li>
+                <li><codeph>navigation.customer</codeph>: Menü <uicontrol>Kunde</uicontrol></li>
+                <li><codeph>navigation.operator</codeph>: Menü <uicontrol>Betrieb</uicontrol></li>
+                <li><codeph>navigation.techService</codeph>: Menü <uicontrol>Technischer Service</uicontrol></li>
+                <li><codeph>navigation.service</codeph>: Menü <uicontrol>Marktfähiger Service</uicontrol></li>
+                <li><codeph>navigation.priceModel</codeph>: Menü <uicontrol>Preismodell</uicontrol></li>
+                <li><codeph>navigation.marketplace</codeph>: Menü <uicontrol>Marktplatz</uicontrol></li>
+            </ul><note>Die Seite <uicontrol>Konfiguration aktualisieren</uicontrol> im Menü <uicontrol>Betrieb</uicontrol> wird dem Betreiber standardmäßig angezeigt, wenn er sich anmeldet. Wenn Sie die Seite oder das ganze Menü ausblenden, wird Ihnen die Seite trotzdem nach der nächsten Anmeldung angezeigt. Sie können notwendige Änderungen vornehmen.</note></section>
         <!--section>
             <title>HIDE_PAYMENT_INFORMATION</title>
             <p>Optional. Determines whether customers need to specify payment information for subscribing to services that are not free of charge. <ph>If set to <codeph>true</codeph>, the dialogs and options for specifying payment types and billing addresses are hidden on the marketplaces, and customer payment information does not appear in billing and payment preview reports. In the administration portal, suppliers and resellers cannot manage payment types for their customers. Billing runs and payment processing are not affected by the setting. </ph></p>
@@ -106,94 +94,70 @@
                 >the platform</ph>, they are used for event-based provisioning. <p>Default: no value, i.e. empty</p><p>Example: <codeph>localhost:9092</codeph></p><p>
                 <note>Be aware that this setting is provided for future use and is currently only available for testing purposes.</note>
             </p></section-->
-        <section><title>KEY_FILE_PATH</title>The path to the file containing the key required for encryption and decryption of service parameters with data type <codeph>PWD</codeph> and custom attributes marked for encryption: <codeph>/opt/apache-tomee/bin/key</codeph><p>This setting cannot be changed.</p></section>
+        <section><title>KEY_FILE_PATH</title>Der Pfad zu der Datei, die den Schlüssel zum Ver- und Entschlüsseln von Werten enthält. Werte von Serviceparametern des Typs <codeph>PWD</codeph> bzw. eigene Attribute mit der Option <b>Verschlüsselt</b> können verschlüsselt werden: <codeph>/opt/apache-tomee/bin/key</codeph><p>Diese Einstellung kann nicht geändert werden. </p></section>
         <!--section><title>LDAP_SEARCH_LIMIT</title>Optional. The maximum number of entries that will be returned by an LDAP query in case an organization uses an external LDAP system for user management. <p>Allowed values: Any value between <codeph>1</codeph> and <codeph>9223372036854775807</codeph></p><p>Default: <codeph>100</codeph></p></section-->
-        <section><title>LOG_LEVEL</title>The log level for <ph platform="print"><ph
-                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
-                >the platform</ph>. <p>Allowed values: <codeph>ERROR</codeph>, <codeph>WARN</codeph>, <codeph>INFO</codeph>, <codeph>DEBUG</codeph></p><p>Default: <codeph>INFO</codeph></p></section>
-        <section><title>MAIL_JA_CHARSET</title>Optional. Special character encoding for emails sent in Japanese.<p>Default: <codeph>UTF-8</codeph></p></section>
-        <section><title>MAX_NUMBER_ALLOWED_USERS</title>The maximum number of users that can be registered within the <ph
-                platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /></ph> installation.<p>Allowed values: Any value between <codeph>1</codeph> and <codeph>9223372036854775807</codeph></p><p>Default: <codeph>1000</codeph></p></section>
-        <section><title>MAX_NUMBER_LOGIN_ATTEMPTS</title>Optional. The maximum number of allowed login attempts to <ph
-                platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
-                platform="help"
-                    >the platform</ph>. If a user does not log in successfully with this number of attempts, his account is locked. <p>Allowed values: Any value between <codeph>1</codeph> and <codeph>9223372036854775807</codeph></p><p>Default: <codeph>3</codeph></p></section>
+        <section><title>LOG_LEVEL</title>Wichtigkeit für Meldungen, die von Plattform-Services ausgegeben werden. <p>Erlaubte Werte: <codeph>ERROR</codeph>, <codeph>WARN</codeph>, <codeph>INFO</codeph>, <codeph>DEBUG</codeph></p><p>Voreinstellung: <codeph>INFO</codeph></p></section>
+        <section><title>MAIL_JA_CHARSET</title>Optional. Zeichenkodierung für japanische E-Mail-Texte.<p>Voreinstellung: <codeph>UTF-8</codeph></p></section>
+        <section><title>MAX_NUMBER_ALLOWED_USERS</title>Maximale Anzahl Benutzer, die für die Plattform registriert werden können.<p>Erlaubte Werte: Beliebiger Wert zwischen <codeph>1</codeph> und <codeph>9223372036854775807</codeph></p><p>Voreinstellung: <codeph>10</codeph></p></section>
+        <section><title>MAX_NUMBER_LOGIN_ATTEMPTS</title>Optional. Maximale Anzahl erlaubter Versuche, sich bei der Plattform anzumelden. Wenn sich ein Benutzer nach dieser Anzahl von Versuchen nicht erfolgreich angemeldet hat, wird sein Benutzerkonto gesperrt. <p>Erlaubte Werte: Beliebiger Wert zwischen <codeph>1</codeph> und <codeph>9223372036854775807</codeph></p><p>Voreinstellung: <codeph>3</codeph></p></section>
         <!--section><title>MP_ERROR_REDIRECT_HTTP</title>Optional. The URL of a Web page that is to be displayed in case a visitor tries to access a marketplace without a valid marketplace ID by HTTP. This Web page will be shown instead of the default error message. Note that this URL is used platform-wide.<p>Syntax: <codeph>http://&lt;your Web page></codeph></p><p>Make sure to specify a valid URL that does not exceed a maximum of 255 characters. </p></section-->
-        <section><title>MP_ERROR_REDIRECT_HTTPS</title>Optional. The URL of a Web page that is to be displayed in case a visitor tries to access a marketplace without a valid marketplace ID by HTTPS. This Web page will be shown instead of the default error message. Note that this URL is used platform-wide. <p>Syntax: <codeph>https://&lt;your Web page></codeph></p><p>Make sure to specify a valid URL that does not exceed a maximum of 255 characters. </p></section>
-        <section><title>PERMITTED_PERIOD_INACTIVE_ON_BEHALF_USERS</title>The time in milliseconds after which a user who logged in on behalf of a customer and was inactive will be removed from the system: <codeph>604800000</codeph>,  i.e. 7 days.<p>This setting cannot be changed.</p><!--p>Allowed values: Any value between <codeph>1</codeph> and <codeph>9223372036854775807</codeph></p><p>Default: <codeph>604800000</codeph>, i.e. 7 days </p--></section>
-        <section><title>PERMITTED_PERIOD_UNCONFIRMED_ORGANIZATIONS</title>Optional. The maximum time in milliseconds until an organization's initial administrative account must be confirmed. When this time has passed, the account is removed. <p>Allowed values: Any value between <codeph>1</codeph> and <codeph>9223372036854775807</codeph></p><p>Default: <codeph>604800000</codeph>, i.e. 7 days </p></section>
+        <section><title>MP_ERROR_REDIRECT_HTTPS</title>Optional. Diese URL führt zur einer Webseite, die angezeigt wird, wenn HTTPS verwendet wird und ein Kunde versucht, mit einer ungültigen ID auf einen Marktplatz zuzugreifen. Diese URL ersetzt die voreingestellte Fehlerseite. Beachten Sie, dass diese URL systemweit gilt und nicht mandanten-spezifisch ist.<p>Syntax: <codeph>https://&lt;Ihre Webseite></codeph></p><p>Stellen Sie sicher, dass Sie eine gültige URL angeben, die aus maximal 255 Zeichen besteht. </p></section>
+        <section><title>PERMITTED_PERIOD_INACTIVE_ON_BEHALF_USERS</title>Zeit in Millisekunden, nach der ein Benutzer, der sich im Namen eines Kunden angemeldet und keine Aktion mehr ausgeführt hat, aus dem System gelöscht wird: <codeph>604800000</codeph> (7 Tage). <p>Diese Einstellung kann nicht geändert werden.</p><!--p>Allowed values: Any value between <codeph>1</codeph> and <codeph>9223372036854775807</codeph></p><p>Default: <codeph>604800000</codeph>, i.e. 7 days </p--></section>
+        <section><title>PERMITTED_PERIOD_UNCONFIRMED_ORGANIZATIONS</title>Optional. Maximale Zeitspanne in Millisekunden, innerhalb der das beim Anlegen einer Organisation eingerichtete Administratorkonto bestätigt werden muss. Nach Ablauf dieser Zeitspanne wird das Konto gelöscht.<p>Erlaubte Werte: Beliebiger Wert zwischen <codeph>1</codeph> und <codeph>9223372036854775807</codeph></p><p>Voreinstellung: <codeph>604800000</codeph> (7 Tage)</p></section>
         <!--section><title>PSP_USAGE_ENABLED</title>Mandatory. Specifies whether PSP integration is used for the current environment.<p>Allowed values: <codeph>true</codeph>, <codeph>false</codeph></p><p>Default: <codeph>false</codeph></p><p>If you change this setting, you need to restart <ph
                     platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
                     platform="help">the platform</ph>.</p></section-->
         <section>
             <title>REPORT_ENGINEURL</title>
-            <p>The URL of the report engine used to generate the <ph platform="print"><ph
-                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
-                    >platform's</ph> reports. If you do not specify a correct URL template, <ph platform="print"><ph
-                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
-                    >the platform</ph> will not be able to generate any reports, since the Report Web service cannot be called correctly.</p>
-            <p>The setting must be as follows:   </p>
+            <p>URL-Template der Report Engine. Wenn das Template nicht korrekt angegeben wird, kann die Plattform keine Berichte generieren, da der Report Web-Service nicht korrekt aufgerufen werden kann.</p>
+            <p>Der Wert muss wie folgt angegeben sein: </p>
             <codeblock>https://${HOST_FQDN}:8681/birt/frameset?
    __report=\${reportname}.rptdesign&amp;SessionId=\${sessionid}&amp;
    __locale=\${locale}&amp;WSDLURL=\${wsdlurl}&amp;SOAPEndPoint=\
    ${soapendpoint}&amp;wsname=Report&amp;wsport=ReportPort</codeblock>
-            <p>Replace <codeph>HOST_FQDN</codeph> with the fully qualified name of the Docker host where <ph
-                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /></ph> is deployed. </p>
+            <p>Ersetzen Sie <codeph>HOST_FQDN</codeph> mit dem FQDN des Docker-Hosts, auf dem <ph platform="print"><ph
+                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph> installiert ist.</p>
         </section>
-        <section><title>REPORT_SOAP_ENDPOINT</title>The SOAP end point of the Report Web service. All report data is retrieved via a call to the Report Web service. If you do not specify a correct value, <ph
-                platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
-                platform="help"
-                >the platform</ph> will not be able to generate any reports, since the Report Web service cannot be called correctly. <p>The required value is: </p><p><codeph>https://oscm-core:8081/oscm-reporting/ReportingServiceBean</codeph></p><p>This setting cannot be changed.</p></section>
-        <section><title>REPORT_WSDLURL</title>All report data is retrieved via a call to the Report Web service. If you do not specify a correct value, <ph
-                platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
-                platform="help"
-                >the platform</ph> will not be able to generate any reports, since the Report Web service cannot be called correctly. <p>The required value is: </p><p><codeph>https://oscm-core:8081/oscm-reporting/ReportingServiceBean?wsdl</codeph></p><p>This setting cannot be changed.</p></section>
-        <section><title>SSO_SIGNING_KEY_ALIAS</title>The alias of the private key of <ph platform="print"><ph
+        <section><title>REPORT_SOAP_ENDPOINT</title>SOAP-Endpunkt des Report Web-Service. Alle Daten für einen Bericht werden über einen Aufruf des Report Web-Service zusammengestellt. Wenn Sie keinen korrekten Wert angeben, kann die Plattform keine Berichte generieren, da der Report Web-Service nicht korrekt aufgerufen werden kann.  <p>Der Wert muss wie folgt angegeben sein: </p><p><codeph>https://oscm-core:8081/oscm-reporting/ReportingServiceBean</codeph></p><p>Diese Einstellung kann nicht geändert werden.</p></section>
+        <section><title>REPORT_WSDLURL</title>URL der WSDL-Datei des Report Web-Service. Alle Daten für einen Bericht werden über einen Aufruf des Report Web-Service zusammengestellt. Wenn Sie keinen korrekten Wert angeben, kann die Plattform keine Berichte generieren, da der Report Web-Service nicht korrekt aufgerufen werden kann. <p>Der Wert muss wie folgt angegeben sein: </p><p><codeph>https://oscm-core:8081/oscm-reporting/ReportingServiceBean?wsdl</codeph></p><p>Diese Einstellung kann nicht geändert werden.</p></section>
+        <section><title>SSO_SIGNING_KEY_ALIAS</title>Alias des Private Key von <ph platform="print"><ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
-                >the platform</ph> to be used for signing requests. <p>Requests are signed for the communication with Web pages or applications from custom tabs in subscriptions. The application server used for the Web page or Web application needs the corresponding certificate of <ph
+                >der Plattform</ph>, der zum Signieren von Requests verwendet werden soll. <p>Für die Kommunikation mit Web-Seiten bzw. Applikationen, die aus eigenen Tabs in Abonnements aufgerufen werden, ist es erforderlich, dass Requests signiert sind. Zur Verifiziertung der Signatur benötigt der Application Server, der für die Darstellung der Web-Seite bzw. der Applikation verwendet wird, das entsprechende Zertifikat von <ph
                     platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
                     platform="help"
-                    >the platform</ph> in its truststore for verifying the signature.</p><p>Default: <codeph>s1as</codeph></p><p>This setting cannot be changed.</p></section>
-        <section><title>SSO_SIGNING_KEYSTORE</title>The path and name of the application server's keystore where the private key of <ph
+                    >der Plattform</ph> in seinem Truststore. </p><p>Voreinstellung: <codeph>s1as</codeph></p><p>Diese Einstellung kann nicht geändert werden.</p></section>
+        <section><title>SSO_SIGNING_KEYSTORE</title>Pfad und Name des Application Server's Keystore, wo sich der private Schlüssel von <ph
                 platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
                 platform="help"
-                    >the platform</ph> specified in the <codeph>SSO_SIGNING_KEY_ALIAS</codeph> setting is stored. <p>Default: <codeph>./keystore.jks</codeph></p><p>This setting cannot be changed.</p></section>
-        <section><title>SSO_SIGNING_KEYSTORE_PASS</title>The password for accessing the keystore specified in the <codeph>SSO_SIGNING_KEYSTORE</codeph> setting.<p>Default: <codeph>changeit</codeph></p><p>This setting cannot be changed.</p></section>
-        <section><title>SUPPLIER_SETS_INVOICE_AS_DEFAULT</title>Specifies whether invoice is to be used as the default payment type for all customers.<p>Default: <codeph>false</codeph>
-            </p><p>This setting cannot be changed.</p></section>
-        <section><title>TAGGING_MAX_TAGS</title>The maximum number of tags composing the tag cloud. <p>The tag cloud is the area of a marketplace containing defined search terms (tags). The more often a tag is used in services, the bigger the characters of the tag are displayed. Customers can use the tags to search for services, provided that the tag cloud is enabled for the marketplace by the marketplace owner.</p><p>Allowed values: Any value between <codeph>0</codeph> and <codeph>2147483647</codeph></p><p>Default: <codeph>20</codeph>
+                >der Plattform</ph> befindet, wie in der Einstellung <codeph>SSO_SIGNING_KEY_ALIAS</codeph> angegeben.<p>Voreinstellung: <codeph>./keystore.jks</codeph></p><p>Diese Einstellung kann nicht geändert werden.</p></section>
+        <section><title>SSO_SIGNING_KEYSTORE_PASS</title>Passwort für den Zugriff auf den Keystore, wie in der Einstellung <codeph>SSO_SIGNING_KEY_ALIAS</codeph> angegeben.<p>Voreinstellung: <codeph>changeit</codeph></p><p>Diese Einstellung kann nicht geändert werden.</p></section>
+        <section><title>SUPPLIER_SETS_INVOICE_AS_DEFAULT</title>Definiert, ob Zahlung auf Rechnung als Zahlungsart für alle Kunden voreingestellt sein soll. <p>Voreinstellung: <codeph>false</codeph>
+            </p><p>Diese Einstellung kann nicht geändert werden.</p></section>
+        <section><title>TAGGING_MAX_TAGS</title>Maximale Anzahl der Suchwörter, die für die Tag Cloud definiert werden dürfen. <p>Die Tag Cloud ist der Bereich eines Marktplatzes, in dem definierte Suchwörter angezeigt werden. Je öfter ein Suchwort für Services definiert ist, desto größer werden die Buchstaben des Suchworts angezeigt. Kunden können die Wörter nutzen, um Services zu suchen. Voraussetzung dafür ist, dass die Anzeige der Tag Cloud vom Marktplatzeigentümer eingeschaltet wurde.</p><p>Erlaubte Werte: Beliebiger Wert zwischen <codeph>0</codeph> und <codeph>2147483647</codeph></p><p>Voreinstellung: <codeph>20</codeph>
             </p></section>
-        <section><title>TAGGING_MIN_SCORE</title>The minimum number of times a tag must be used in services to be shown in the tag cloud. <p>The tag cloud is the area of a marketplace containing defined search terms (tags). The more often a tag is used in services, the bigger the characters of the tag are displayed. Customers can use the tags to search for services, provided that the tag cloud is enabled for the marketplace by the marketplace owner.</p><p>Allowed values: Any value between <codeph>1</codeph> and <codeph>2147483647</codeph></p><p>Default: <codeph>1</codeph>, i.e. a tag must have been used at least once so that it is shown in the tag cloud. </p></section>
-        <section><title>TIME_ZONE_ID</title>Specifies that the <codeph>GMT</codeph> time zone is used for display. <p>This setting cannot be changed.</p><!--p>Allowed values: All time zones supported by Java. This can be an abbreviation such as <codeph>PST</codeph>, a full name such as <codeph>America/Los_Angeles</codeph>, or a custom ID such as <codeph>GMT-8:00</codeph>. For a list of IDs, refer to <codeph>java.util.TimeZone</codeph>.</p><p>Default: <codeph>GMT</codeph></p--></section>
-        <section><title>TIMER_INTERVAL_BILLING_OFFSET</title>Optional. The offset in milliseconds for the timer for billing runs calculating subscription usage costs (customer billing data) or revenue share data. The interval for this timer is one day and cannot be changed. If no offset is defined, the default offset of 4 days is applied. <p>Customer billing data is calculated for a period of one month (billing period). Suppliers and resellers can define individual start days for their billing periods. Revenue share data is always calculated for the past month on the first day of a month. </p><p>The offset for the billing run timer defines the following: </p><p>
+        <section><title>TAGGING_MIN_SCORE</title>Mindestanzahl, die ein Suchwort für Services angegeben werden muss, damit es in der Tag Cloud angezeigt werden.<p>Die Tag Cloud ist der Bereich eines Marktplatzes, in dem definierte Suchwörter angezeigt werden. Je öfter ein Suchwort für Services definiert ist, desto größer werden die Buchstaben des Suchworts angezeigt. Kunden können die Wörter nutzen, um Services zu suchen. Voraussetzung dafür ist, dass die Anzeige der Tag Cloud vom Marktplatzeigentümer eingeschaltet wurde.</p><p>Erlaubte Werte: Beliebiger Wert zwischen <codeph>1</codeph> und <codeph>2147483647</codeph></p><p>Voreinstellung: <codeph>1</codeph>. Dies bedeutet, dass ein Suchwort mindestens einmal für einen Service definiert worden sein muss, damit es in der Tag Cloud angezeigt wird.</p></section>
+        <section><title>TIME_ZONE_ID</title>Zeitzone für die Anzeige.<p>Diese Einstellung kann nicht geändert werden.</p><!--p>Allowed values: All time zones supported by Java. This can be an abbreviation such as <codeph>PST</codeph>, a full name such as <codeph>America/Los_Angeles</codeph>, or a custom ID such as <codeph>GMT-8:00</codeph>. For a list of IDs, refer to <codeph>java.util.TimeZone</codeph>.</p><p>Default: <codeph>GMT</codeph></p--></section>
+        <section><title>TIMER_INTERVAL_BILLING_OFFSET</title>Optional. Offset-Wert in Millisekunden für den Timer, der die Neuberechnung von Nutzungsgebühren (Kundenrechnungsdaten) und Umsatzbeteiligungen startet. Das Intervall für diesen Timer ist 1 Tag und kann nicht geändert werden. Wenn kein Offset-Wert definiert ist, wird der Standwert von 4 Tagen verwendet.<p>Die Kundenrechnungsdaten werden für einen Zeitraum von einem Monat berechnet (Abrechnungszeitraum). Serviceanbieter und Wiederverkäufer können festlegen, wann ihr Abrechnungszeitraum anfangen soll. Die Umsatzbeteiligungen werden immer für den vorangegangenen Kalendermonat am ersten Tag des darauffolgenden Monats berechnet.</p><p>Der Offset-Wert für diesen Timer definiert folgendes:</p><p>
                 <ul>
-                    <li>Number of days after which the billing run calculating the customer billing data or the revenue share data is executed. </li>
-                    <li>Time the timer for the daily billing runs expires on the current day. </li>
+                    <li>Anzahl an Tagen, nach denen die Neuberechnung der Nutzungsgebühren und Umsatzbeteiligungen gestartet wird.</li>
+                    <li>Uhrzeit, wann die Neuberechnung am aktuellen Tag ausgeführt wird.</li>
                 </ul>
-            </p><p>Example:</p><p>A supplier defines the 10th of a month as the billing period start date. The offset is set to 4 days and 4 hours. The billing run that calculates the customer billing data for the past billing period of this supplier is started on the 14th of the following month at 04:00:00.000. The revenue share data is calculated on the 5th of the following month at 04:00:00.000. The daily check whether a billing period of any supplier has ended is started at 04:00:00.000 every day.</p><p>Allowed values: Any value between <codeph>0</codeph> and <codeph>2419200000</codeph> (28 days)</p><p>Default: <codeph>345600000</codeph>, i.e. 4 days. </p></section>
-        <section><title>TIMER_INTERVAL_DISCOUNT_END_NOTIFICATION_OFFSET</title>Optional. The offset in milliseconds for the timer for terminating the discounts for all organizations. The timer interval is one day and cannot be changed. <p>Allowed values: Any value between <codeph>0</codeph> and <codeph>9223372036854775807</codeph></p><p>Default: <codeph>0</codeph></p></section>
-        <section><title>TIMER_INTERVAL_INACTIVE_ON_BEHALF_USERS</title>Optional. The time interval in milliseconds at which a check for non-existing users acting on behalf of another organization is executed. A value of 0 indicates that this timer is disabled.<p>A technical service definition may contain a flag (<codeph>allowingOnBehalfActing</codeph>) to indicate that an organization can act in the name of another organization. The organization must be a customer of the other organization, which must have both the technology provider and supplier role. Additionally, the customer organization must have allowed the other organization to log in on its behalf. This is achieved via a subscription whose underlying technical service has the <codeph>allowingOnBehalfActing</codeph> flag set to <codeph>true</codeph>.</p><p>When an organization acts in the name of another organization, an artificial user ID is generated. </p><p>Cleaning up the <ph
-                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
-                    platform="help"
-                >platform's</ph> database from time to time to remove such users who no longer exist might be required since it cannot be ensured that a technical service always removes such users itself.</p><p>Allowed values: <codeph>0</codeph> and any value between <codeph>10000</codeph> (10 seconds) and <codeph>9223372036854775807</codeph></p><p>Default: <codeph>0</codeph></p></section>
-        <section><title>TIMER_INTERVAL_INACTIVE_ON_BEHALF_USERS_OFFSET</title>Optional. The offset in milliseconds for the timer for removing inactive "on behalf" users. <p>Allowed values: Any value between <codeph>0</codeph> and <codeph>9223372036854775807</codeph></p><p>Default: <codeph>0</codeph></p></section>
-        <section><title>TIMER_INTERVAL_ORGANIZATION</title>Optional. The time interval in milliseconds at which tasks related to organizations are executed. A value of 0 indicates that this timer is disabled. <p>Allowed values: <codeph>0</codeph> and any value between <codeph>10000</codeph> (10 seconds) and <codeph>9223372036854775807</codeph></p><p>Default: <codeph>0</codeph></p></section>
-        <section><title>TIMER_INTERVAL_ORGANIZATION_OFFSET</title>Optional. The offset in milliseconds for the timer for organization-related tasks. <p>Allowed values: Any value between <codeph>0</codeph> and <codeph>9223372036854775807</codeph></p><p>Default: <codeph>0</codeph></p></section>
-        <section><title>TIMER_INTERVAL_SUBSCRIPTION_EXPIRATION</title>Optional. The time interval in milliseconds at which a check for expired subscriptions is executed. This timer cannot be disabled, i.e. it cannot be set to 0. <p>Allowed values: Any value between <codeph>10000</codeph> (10 seconds) and <codeph>9223372036854775807</codeph></p><p>Default: <codeph>86400000</codeph>, i.e. 1 day</p></section>
-        <section><title>TIMER_INTERVAL_SUBSCRIPTION_EXPIRATION_OFFSET</title>Optional. The offset in milliseconds for the timer for subscription expiration checks. <p>Allowed values: Any value between <codeph>0</codeph> and <codeph>9223372036854775807</codeph></p><p>Default: <codeph>0</codeph></p></section>
-        <section><title>TIMER_INTERVAL_TENANT_PROVISIONING_TIMEOUT</title>Optional. The time interval in milliseconds at which a check for timed-out subscriptions is executed. A value of 0 indicates that this timer is disabled.<p>Allowed values: <codeph>0</codeph> and any value between <codeph>10000</codeph> (10 seconds) and <codeph>9223372036854775807</codeph></p><p>Default: <codeph>0</codeph></p></section>
-        <section><title>TIMER_INTERVAL_TENANT_PROVISIONING_TIMEOUT_OFFSET</title>Optional. The offset in milliseconds for the timer for pending subscription checks. <p>Allowed values: Any value between <codeph>0</codeph> and <codeph>9223372036854775807</codeph></p><p>Default: <codeph>0</codeph></p></section>
+            </p><p>Beispiel:</p><p>Ein Serviceanbieter legt den 10. eines Monats als Startdatum für den Abrechnungszeitraum fest. Der Offset-Wert ist auf 4 Tage und 4 Stunden festgelegt. Die Neuberechnung der Kundenrechnungsdaten für den abgelaufenen Abrechnungszeitraum startet am 14. des Folgemonats um 04:00:00.000 Uhr. Die Umsatzbeteiligungen werden am 5. des Folgemonats um 04:00:00.000 Uhr neu berechnet. Ob das Ende eines Abrechnungszeitraums eines Serviceanbieters erreicht ist, wird täglich um 04:00:00.000 Uhr geprüft.</p><p>Erlaubte Werte: Beliebiger Wert zwischen <codeph>0</codeph> und <codeph>2419200000</codeph> (28 Tage)</p><p>Voreinstellung: <codeph>345600000</codeph> (4 Tage)</p></section>
+        <section><title>TIMER_INTERVAL_DISCOUNT_END_NOTIFICATION_OFFSET</title>Optional. Offset-Wert in Millisekunden für den Timer, der Rabatte aller Organisationen aufhebt. Der Wert des Timers ist ein Tag und kann nicht geändert werden.<p>Erlaubte Werte: Beliebiger Wert zwischen <codeph>0</codeph> und <codeph>9223372036854775807</codeph></p><p>Voreinstellung: <codeph>0</codeph></p></section>
+        <section><title>TIMER_INTERVAL_INACTIVE_ON_BEHALF_USERS</title>Optional. Intervall in Millisekunden, in dem das System auf nicht mehr existierende Benutzer überprüft wird, die im Namen einer anderen Organisation handelten. Der Wert 0 bedeutet, dass der Timer nicht aktiv ist.<p>Für einen technischen Service kann definiert sein, dass eine Organisation im Namen einer anderen Organisation handeln darf (<codeph>allowingOnBehalfActing</codeph>). Die Organisation muss Kunde der anderen Organisation sein. Diese Organisation muss wiederum sowohl die Rolle Hersteller als auch Serviceanbieter haben. Zusätzlich muss die Kundenorganisation der anderen Organisation die Berechtigung erteilt haben, sich in ihrem Namen am System anzumelden. Dies wird durch das Abonnieren eines Service erreicht, für den beim zugrunde liegenden technischen Service das Merkmal <codeph>allowingOnBehalfActing</codeph> auf <codeph>true</codeph> gesetzt ist.</p><p>Wenn eine Organisation im Namen einer anderen Organisation handelt, wird ein künstlicher Benutzername erzeugt.</p><p>Es kann erforderlich sein, die Plattform-Datenbank von Zeit zu Zeit zu bereinigen und Benutzer, die nicht mehr existieren, zu löschen. Es kann nicht sichergestellt werden, dass der technische Service selbst diese Benutzer löscht. </p><p>Erlaubte Werte: <codeph>0</codeph> sowie beliebiger Wert zwischen <codeph>10000</codeph> (10 Sekunden) und <codeph>9223372036854775807</codeph></p><p>Voreinstellung: <codeph>0</codeph></p></section>
+        <section><title>TIMER_INTERVAL_INACTIVE_ON_BEHALF_USERS_OFFSET</title>Optional. Offset-Wert in Millisekunden für den Timer, der inaktive Benutzer löscht, die im Namen einer anderen Organisation handelten.<p>Erlaubte Werte: Beliebiger Wert zwischen <codeph>0</codeph> und <codeph>9223372036854775807</codeph></p><p>Voreinstellung: <codeph>0</codeph></p></section>
+        <section><title>TIMER_INTERVAL_ORGANIZATION</title>Optional. Intervall in Millisekunden, in dem organisationsbezogene Aufgaben gestartet werden. Der Wert 0 bedeutet, dass der Timer nicht aktiv ist. <p>Erlaubte Werte: <codeph>0</codeph> sowie beliebiger Wert zwischen <codeph>10000</codeph> (10 Sekunden) und <codeph>9223372036854775807</codeph></p><p>Voreinstellung: <codeph>0</codeph></p></section>
+        <section><title>TIMER_INTERVAL_ORGANIZATION_OFFSET</title>Optional. Offset-Wert in Millisekunden für den Timer, der organisationsbezogene Aufgaben startet.<p>Erlaubte Werte: Beliebiger Wert zwischen <codeph>0</codeph> und <codeph>9223372036854775807</codeph></p><p>Voreinstellung: <codeph>0</codeph></p></section>
+        <section><title>TIMER_INTERVAL_SUBSCRIPTION_EXPIRATION</title>Optional. Intervall in Millisekunden, in dem das System auf abgelaufene Abonnements überprüft wird. Der Timer kann nicht deaktiviert werden, d.h., der Wert kann nicht auf 0 gesetzt werden. <p>Erlaubte Werte: Beliebiger Wert zwischen <codeph>10000</codeph> (10 Sekunden) und <codeph>9223372036854775807</codeph></p><p>Voreinstellung: <codeph>86400000</codeph> (1 Tag)</p></section>
+        <section><title>TIMER_INTERVAL_SUBSCRIPTION_EXPIRATION_OFFSET</title>Optional. Offset-Wert in Millisekunden für den Timer, der das System auf abgelaufene Abonnements überprüft.<p>Erlaubte Werte: Beliebiger Wert zwischen <codeph>0</codeph> und <codeph>9223372036854775807</codeph></p><p>Voreinstellung: <codeph>0</codeph></p></section>
+        <section><title>TIMER_INTERVAL_TENANT_PROVISIONING_TIMEOUT</title>Optional. Intervall in Millisekunden, in dem das System auf Abonnements überprüft wird, die auf ihre Aktivierung warten. Der Wert 0 bedeutet, dass der Timer nicht aktiv ist. <p>Erlaubte Werte: <codeph>0</codeph> sowie beliebiger Wert zwischen <codeph>10000</codeph> (10 Sekunden) und <codeph>9223372036854775807</codeph></p><p>Voreinstellung: <codeph>0</codeph></p></section>
+        <section><title>TIMER_INTERVAL_TENANT_PROVISIONING_TIMEOUT_OFFSET</title>Optional. Offset-Wert in Millisekunden für den Timer, der das System auf Abonnements überprüft, die auf ihre Aktivierung warten.<p>Erlaubte Werte: Beliebiger Wert zwischen <codeph>0</codeph> und <codeph>9223372036854775807</codeph></p><p>Voreinstellung: <codeph>0</codeph></p></section>
         <section>
             <title>TIMER_INTERVAL_USER_COUNT</title>
-            <p>The time interval in milliseconds at which the amount of users registered with the platform is checked. This timer cannot be disabled, i.e. it cannot be set to 0.</p>
-            <p>Allowed values: Any value between <codeph>1</codeph> and <codeph>9223372036854775807</codeph></p>
-            <p>Default: <codeph>43200000</codeph>, i.e. 12 hours</p>
+            <p>Intervall in Millisekunden, in dem das System auf die Anzahl registrierter Benutzer überprüft wird. Der Timer kann nicht deaktiviert werden, d.h., der Wert kann nicht auf 0 gesetzt werden.</p>
+            <p>Erlaubte Werte: Beliebiger Wert zwischen <codeph>1</codeph> und <codeph>9223372036854775807</codeph></p>
+            <p>Default: <codeph>43200000</codeph> (12 Stunden)</p>
         </section>
-        <section><title>WS_TIMEOUT</title>The timeout for outgoing Web service calls in milliseconds. After this time has passed, a timeout exception is thrown by the JAX-WS framework.<p>An outgoing Web service call is a call initiated by <ph
-                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
-                    platform="help"
-                    >the platform</ph>. A typical example is the invocation of the <codeph>createUsers</codeph> method of the <codeph>ProvisioningService</codeph> interface, which is implemented by an application. If the timeout is reached before the Web service call returns, the operation is aborted and an exception is thrown. </p><p>Allowed values: Any value between <codeph>1</codeph> and <codeph>9223372036854775807</codeph></p><p>Default: <codeph>30000</codeph>, i.e. 30 seconds </p></section>
+        <section><title>WS_TIMEOUT</title>Zeitspanne in Millisekunden, während der gewartet wird, dass Aufrufe eines Web-Service in einem externen System ausgeführt werden. Nach Ablauf dieser Zeitspanne gibt JAX-WS eine Timeout-Meldung aus. <p>Ein Aufruf eines Web-Service in einem externen System ist ein Aufruf durch die Plattform. Ein typisches Beispiel ist der Aufruf der Methode <codeph>createUsers</codeph> im <codeph>ProvisioningService</codeph> einer Anwendung. Wird der Timeout erreicht, bevor der Aufruf einen Rückgabewert liefert, wird die Operation abgebrochen und eine Exception ausgegeben. </p><p>Erlaubte Werte: Beliebiger Wert zwischen <codeph>1</codeph> und <codeph>9223372036854775807</codeph></p><p>Voreinstellung: <codeph>30000</codeph> (30 Sekunden)</p></section>
     </refbody>
 </reference>

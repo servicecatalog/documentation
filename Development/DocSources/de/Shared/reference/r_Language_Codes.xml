@@ -6,7 +6,7 @@
     <title>Unterstützte Sprachcodes </title>
     <refbody>
         <section>
-            <p>Die folgende Tabelle listet alle Sprachen mit den zugehörigen Sprachcodes auf, die für Texte der Benutzeroberfläche, E-Mails, Parameter- und Ereignisnamen, Texte in Berichten sowie für Online-Hilfetexte und FAQs verwendet werden können:</p>
+            <p>Die folgende Tabelle listet alle Sprachen mit den zugehörigen Sprachcodes auf, die für Texte der Benutzeroberfläche, E-Mails, Parameter- und Ereignisnamen<!--, Texte in Berichten--> sowie für Online-Hilfetexte und FAQs verwendet werden können:</p>
             <p>
                 <table colsep="1" frame="all" rowsep="1">
                     <tgroup cols="2">
