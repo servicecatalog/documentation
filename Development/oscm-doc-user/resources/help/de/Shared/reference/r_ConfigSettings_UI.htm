@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="copyright" content="(C) Copyright 2005" />
+<meta name="DC.rights.owner" content="(C) Copyright 2005" />
+<meta content="reference" name="DC.Type" />
+<meta name="DC.Title" content="Configuration settings" />
+<meta content="XHTML" name="DC.Format" />
+<meta content="reference832" name="DC.Identifier" />
+<meta content="en-us" name="DC.Language" />
+<link href="../../commonltr.css" type="text/css" rel="stylesheet" />
+<link href="../../book.css" type="text/css" rel="stylesheet" />
+<title>Configuration settings</title>
+</head>
+<body id="reference832">
+
+
+    <h1 class="topictitle1"><span>Configuration settings</span></h1>
+
+    <div>
+        <div class="section">
+            <p>Nachfolgend finden Sie eine Beschreibung aller für die Plattform-Services verfügbaren Konfigurationseinstellungen. </p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">AUDIT_LOG_ENABLED</h4>
+            
+            <p>Optional. Legt fest, ob Benutzeraktionen protokolliert und in der Datenbank gespeichert werden. Es können Aktionen protokolliert werden, die sich auf Abonnements, marktfähige Services und Preismodelle beziehen. Ist die Konfigurationseinstellung auf <samp class="codeph">true</samp> gesetzt, kann der Betreiber die Protokolldaten exportieren und so Informationen zu Benutzeraktionen abrufen. </p>
+
+            <p>Erlaubte Werte: <samp class="codeph">true</samp>, <samp class="codeph">false</samp></p>
+
+            <p>Voreinstellung: <samp class="codeph">false</samp></p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">AUDIT_LOG_MAX_ENTRIES_RETRIEVED</h4>
+            
+            <p>Optional. Legt fest, wieviele Protokolleinträge bein einem Export der Protokolldaten abgerufen werden. Wird diese Anzahl überschritten, wird eine Warnung angezeigt und der Betreiber aufgefordert, seine Filterkriterien zu ändern und danach den Export nochmal zu starten. Diese Einstellung ist erforderlich, um die Anzahl von SQL-Anfragen an die Datenbank zu begrenzen. Zu viele Datenbankanfragen können die Leistung des Systems beeinträchtigen. </p>
+
+            <p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">1</samp> und <samp class="codeph">1000</samp>
+            </p>
+
+            <p>Voreinstellung: <samp class="codeph">100</samp></p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">AUTH_MODE</h4>
+            
+            <p>Obligatorisch. Legt fest, dass die Plattform zur Benutzerauthentifizierung verwendet wird. Diese Einstellung wird beim ersten Starten des Systems ausgewertet. Sie kann nach dem ersten Starten des Systems nicht mehr geändert werden.</p>
+
+            <p>Erlaubter Werte: <samp class="codeph">INTERNAL</samp>
+            </p>
+
+        </div>
+
+        
+        <div class="section"><h4 class="sectiontitle">BASE_URL_HTTPS</h4>Obligatorisch. Diese URL führt zur Startseite der Plattform und dient zum Erstellen der URL, um auf Services über HTTPS zuzugreifen. <p>Syntax: <samp class="codeph">https://&lt;hostname.fqdn&gt;:8081/oscm-portal</samp></p>
+<p><samp class="codeph">&lt;hostname.fqdn&gt;</samp> ist der Name und FQDN des Servers, auf dem <span>OSCM</span> installiert wurde. <samp class="codeph">8081</samp> ist die Voreinstellung des Ports für HTTPS-Zugriffe, <samp class="codeph">oscm-portal</samp> ist die Voreinstellung für den Zugriff auf <span>OSCM</span>. Diese kann nicht geändert werden. </p>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">CUSTOMER_SELF_REGISTRATION_ENABLED</h4>
+            
+            <p>Optional. Legt fest, ob sich Kunden auf einem Marktplatz selbst registrieren können. Ist der Wert auf <samp class="codeph">false</samp> gesetzt, muss entweder der Betreiber eine Organisation für den Kunden anlegen oder ein Anbieter (Serviceanbieter, Vermittler, Wiederverkäufer) muss den Kunden registrieren. </p>
+
+            <p>Erlaubte Werte: <samp class="codeph">true</samp>, <samp class="codeph">false</samp></p>
+
+            <p>Voreinstellung: <samp class="codeph">true</samp></p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">DECIMAL_PLACES</h4>Optional. Legt die Anzahl der Nachkommastellen fest, die für die Berechnung der Nutzungsgebühren verwendet werden.<p>Erlaubte Werte: <samp class="codeph">2</samp>, <samp class="codeph">3</samp>, <samp class="codeph">4</samp>, <samp class="codeph">5</samp>, <samp class="codeph">6</samp></p>
+<p>Voreinstellung: <samp class="codeph">2</samp></p>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">HIDDEN_UI_ELEMENTS</h4>Optional. Legt fest, welche Elemente der Benutzeroberfläche im Administrationsportal und auf Marktplätzen ausgeblendet werden. Sie können mit dieser Konfigurationseinstellung Elemente im Administrationsportal und gleichzeitig Elemente auf Marktplätzen ausblenden. <p><strong>Marktplätze</strong></p>
+<p>Geben Sie einen der folgenden Werte an, um eine Menüoption im Menü <span class="uicontrol">Benutzerkonto</span> auf Marktplätzen auszublenden: </p>
+<ul>
+                <li><samp class="codeph">marketplace.navigation.Profile</samp>: Menü <span class="uicontrol">Profil</span>
+                </li>
+
+                <li><samp class="codeph">marketplace.navigation.Payment</samp>: Menü <span class="uicontrol">Bezahlung</span></li>
+
+                <li><samp class="codeph">marketplace.navigation.Subscriptions</samp>: Menü <span class="uicontrol">Abonnements</span>
+                </li>
+
+                <li><samp class="codeph">marketplace.navigation.Users</samp>: Menü <span class="uicontrol">Benutzer &amp; Einheiten</span></li>
+
+                <li><samp class="codeph">marketplace.navigation.Reports</samp>: Menü <span class="uicontrol">Berichte</span></li>
+
+                <li><samp class="codeph">marketplace.navigation.Processes</samp>: Menü <span class="uicontrol">Prozesse</span></li>
+
+                <li><samp class="codeph">marketplace.navigation.Operations</samp>: <strong>Operationen</strong> menu</li>
+
+            </ul>
+<p>Um mehrere Optionen im Menü <span class="uicontrol">Benutzerkonto</span> auszublenden, trennen Sie die Einträge durch Komma.</p>
+<p><strong>Administrationsportal</strong></p>
+<p>Wenn Sie eine bestimmte Seite vom Administrationsportal ausblenden möchten, müssen Sie zunächst den Wert herausfinden, der zum Ausblenden der Seite angegeben werden muss. Gehen Sie dazu wie folgt vor:</p>
+<ol>
+                <li>Öffnen Sie die entsprechende Seite der Administrationsportals.</li>
+
+                <li>Zeigen Sie die Hilfe zu dieser Seite an. </li>
+
+                <li>Sehen Sie sich den Namen der Hilfeseite an. Der Name ist Teil der URL.</li>
+
+                <li>Lassen Sie die Dateierweiterung <samp class="codeph">.htm</samp> weg und ersetzen Sie den Unterstrich durch einen Punkt. </li>
+
+            </ol>
+<p>Beispiel: </p>
+<p>Sie möchten die Seite <span class="uicontrol">Mehrwertsteuersätze bearbeiten</span> ausblenden. Der Name der Hilfeseite ist <samp class="codeph">organization_manageVats.htm</samp>. Dementsprechend heißt die zugehörige Seite des Administrationsportals <samp class="codeph">organization.manageVats</samp>. Die Konfigurationseinstellung muss wie folgt angegeben werden: </p>
+<p><samp class="codeph">HIDDEN_UI_ELEMENTS=organization.manageVats</samp></p>
+<p>Um mehrere Seiten vom Administrationsportal auszublenden, trennen Sie die Einträge durch Komma. </p>
+<p>Nachfolgend sehen Sie weitere Beispiele zum Ausblenden bestimmter Seiten. Die Liste ist nicht vollständig. </p>
+<div class="p">
+                <ul>
+                    <li><samp class="codeph">organization.edit</samp>: Seite <span class="uicontrol">Profile bearbeiten</span></li>
+
+                    <li><samp class="codeph">shop.editSkin</samp>: Seite <span class="uicontrol">Layout anpassen</span>
+                    </li>
+
+                    <li><samp class="codeph">techService.edit</samp>: Seite <span class="uicontrol">Servicedefinition ändern</span>
+                    </li>
+
+                </ul>
+
+            </div>
+<p>Geben Sie einen der folgenden Werte an, um ein ganzes Menü vom Administrationsportal auszublenden: </p>
+<ul>
+                <li><samp class="codeph">navigation.myAccount</samp>: Menü <span class="uicontrol">Benutzerkonto</span></li>
+
+                <li><samp class="codeph">navigation.customer</samp>: Menü <span class="uicontrol">Kunde</span></li>
+
+                <li><samp class="codeph">navigation.operator</samp>: Menü <span class="uicontrol">Betrieb</span></li>
+
+                <li><samp class="codeph">navigation.techService</samp>: Menü <span class="uicontrol">Technischer Service</span></li>
+
+                <li><samp class="codeph">navigation.service</samp>: Menü <span class="uicontrol">Marktfähiger Service</span></li>
+
+                <li><samp class="codeph">navigation.priceModel</samp>: Menü <span class="uicontrol">Preismodell</span></li>
+
+                <li><samp class="codeph">navigation.marketplace</samp>: Menü <span class="uicontrol">Marktplatz</span></li>
+
+            </ul>
+<div class="note"><span class="notetitle">Note:</span> Die Seite <span class="uicontrol">Konfiguration aktualisieren</span> im Menü <span class="uicontrol">Betrieb</span> wird dem Betreiber standardmäßig angezeigt, wenn er sich anmeldet. Wenn Sie die Seite oder das ganze Menü ausblenden, wird Ihnen die Seite trotzdem nach der nächsten Anmeldung angezeigt. Sie können notwendige Änderungen vornehmen.</div>
+</div>
+
+        
+        
+        <div class="section"><h4 class="sectiontitle">KEY_FILE_PATH</h4>Der Pfad zu der Datei, die den Schlüssel zum Ver- und Entschlüsseln von Werten enthält. Werte von Serviceparametern des Typs <samp class="codeph">PWD</samp> bzw. eigene Attribute mit der Option <strong>Verschlüsselt</strong> können verschlüsselt werden: <samp class="codeph">/opt/apache-tomee/bin/key</samp><p>Diese Einstellung kann nicht geändert werden. </p>
+</div>
+
+        
+        <div class="section"><h4 class="sectiontitle">LOG_LEVEL</h4>Wichtigkeit für Meldungen, die von Plattform-Services ausgegeben werden. <p>Erlaubte Werte: <samp class="codeph">ERROR</samp>, <samp class="codeph">WARN</samp>, <samp class="codeph">INFO</samp>, <samp class="codeph">DEBUG</samp></p>
+<p>Voreinstellung: <samp class="codeph">INFO</samp></p>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">MAIL_JA_CHARSET</h4>Optional. Zeichenkodierung für japanische E-Mail-Texte.<p>Voreinstellung: <samp class="codeph">UTF-8</samp></p>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">MAX_NUMBER_ALLOWED_USERS</h4>Maximale Anzahl Benutzer, die für die Plattform registriert werden können.<p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">1</samp> und <samp class="codeph">9223372036854775807</samp></p>
+<p>Voreinstellung: <samp class="codeph">10</samp></p>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">MAX_NUMBER_LOGIN_ATTEMPTS</h4>Optional. Maximale Anzahl erlaubter Versuche, sich bei der Plattform anzumelden. Wenn sich ein Benutzer nach dieser Anzahl von Versuchen nicht erfolgreich angemeldet hat, wird sein Benutzerkonto gesperrt. <p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">1</samp> und <samp class="codeph">9223372036854775807</samp></p>
+<p>Voreinstellung: <samp class="codeph">3</samp></p>
+</div>
+
+        
+        <div class="section"><h4 class="sectiontitle">MP_ERROR_REDIRECT_HTTPS</h4>Optional. Diese URL führt zur einer Webseite, die angezeigt wird, wenn HTTPS verwendet wird und ein Kunde versucht, mit einer ungültigen ID auf einen Marktplatz zuzugreifen. Diese URL ersetzt die voreingestellte Fehlerseite. Beachten Sie, dass diese URL systemweit gilt und nicht mandanten-spezifisch ist.<p>Syntax: <samp class="codeph">https://&lt;Ihre Webseite&gt;</samp></p>
+<p>Stellen Sie sicher, dass Sie eine gültige URL angeben, die aus maximal 255 Zeichen besteht. </p>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">PERMITTED_PERIOD_INACTIVE_ON_BEHALF_USERS</h4>Zeit in Millisekunden, nach der ein Benutzer, der sich im Namen eines Kunden angemeldet und keine Aktion mehr ausgeführt hat, aus dem System gelöscht wird: <samp class="codeph">604800000</samp> (7 Tage). <p>Diese Einstellung kann nicht geändert werden.</p>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">PERMITTED_PERIOD_UNCONFIRMED_ORGANIZATIONS</h4>Optional. Maximale Zeitspanne in Millisekunden, innerhalb der das beim Anlegen einer Organisation eingerichtete Administratorkonto bestätigt werden muss. Nach Ablauf dieser Zeitspanne wird das Konto gelöscht.<p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">1</samp> und <samp class="codeph">9223372036854775807</samp></p>
+<p>Voreinstellung: <samp class="codeph">604800000</samp> (7 Tage)</p>
+</div>
+
+        
+        <div class="section"><h4 class="sectiontitle">REPORT_ENGINEURL</h4>
+            
+            <p>URL-Template der Report Engine. Wenn das Template nicht korrekt angegeben wird, kann die Plattform keine Berichte generieren, da der Report Web-Service nicht korrekt aufgerufen werden kann.</p>
+
+            <p>Der Wert muss wie folgt angegeben sein: </p>
+
+            <pre class="codeblock">https://${HOST_FQDN}:8681/birt/frameset?
+   __report=\${reportname}.rptdesign&amp;SessionId=\${sessionid}&amp;
+   __locale=\${locale}&amp;WSDLURL=\${wsdlurl}&amp;SOAPEndPoint=\
+   ${soapendpoint}&amp;wsname=Report&amp;wsport=ReportPort</pre>
+
+            <p>Ersetzen Sie <samp class="codeph">HOST_FQDN</samp> mit dem FQDN des Docker-Hosts, auf dem  installiert ist.</p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">REPORT_SOAP_ENDPOINT</h4>SOAP-Endpunkt des Report Web-Service. Alle Daten für einen Bericht werden über einen Aufruf des Report Web-Service zusammengestellt. Wenn Sie keinen korrekten Wert angeben, kann die Plattform keine Berichte generieren, da der Report Web-Service nicht korrekt aufgerufen werden kann.  <p>Der Wert muss wie folgt angegeben sein: </p>
+<p><samp class="codeph">https://oscm-core:8081/oscm-reporting/ReportingServiceBean</samp></p>
+<p>Diese Einstellung kann nicht geändert werden.</p>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">REPORT_WSDLURL</h4>URL der WSDL-Datei des Report Web-Service. Alle Daten für einen Bericht werden über einen Aufruf des Report Web-Service zusammengestellt. Wenn Sie keinen korrekten Wert angeben, kann die Plattform keine Berichte generieren, da der Report Web-Service nicht korrekt aufgerufen werden kann. <p>Der Wert muss wie folgt angegeben sein: </p>
+<p><samp class="codeph">https://oscm-core:8081/oscm-reporting/ReportingServiceBean?wsdl</samp></p>
+<p>Diese Einstellung kann nicht geändert werden.</p>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">SSO_SIGNING_KEY_ALIAS</h4>Alias des Private Key von <span>der Plattform</span>, der zum Signieren von Requests verwendet werden soll. <p>Für die Kommunikation mit Web-Seiten bzw. Applikationen, die aus eigenen Tabs in Abonnements aufgerufen werden, ist es erforderlich, dass Requests signiert sind. Zur Verifiziertung der Signatur benötigt der Application Server, der für die Darstellung der Web-Seite bzw. der Applikation verwendet wird, das entsprechende Zertifikat von <span>der Plattform</span> in seinem Truststore. </p>
+<p>Voreinstellung: <samp class="codeph">s1as</samp></p>
+<p>Diese Einstellung kann nicht geändert werden.</p>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">SSO_SIGNING_KEYSTORE</h4>Pfad und Name des Application Server's Keystore, wo sich der private Schlüssel von <span>der Plattform</span> befindet, wie in der Einstellung <samp class="codeph">SSO_SIGNING_KEY_ALIAS</samp> angegeben.<p>Voreinstellung: <samp class="codeph">./keystore.jks</samp></p>
+<p>Diese Einstellung kann nicht geändert werden.</p>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">SSO_SIGNING_KEYSTORE_PASS</h4>Passwort für den Zugriff auf den Keystore, wie in der Einstellung <samp class="codeph">SSO_SIGNING_KEY_ALIAS</samp> angegeben.<p>Voreinstellung: <samp class="codeph">changeit</samp></p>
+<p>Diese Einstellung kann nicht geändert werden.</p>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">SUPPLIER_SETS_INVOICE_AS_DEFAULT</h4>Definiert, ob Zahlung auf Rechnung als Zahlungsart für alle Kunden voreingestellt sein soll. <p>Voreinstellung: <samp class="codeph">false</samp>
+            </p>
+<p>Diese Einstellung kann nicht geändert werden.</p>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">TAGGING_MAX_TAGS</h4>Maximale Anzahl der Suchwörter, die für die Tag Cloud definiert werden dürfen. <p>Die Tag Cloud ist der Bereich eines Marktplatzes, in dem definierte Suchwörter angezeigt werden. Je öfter ein Suchwort für Services definiert ist, desto größer werden die Buchstaben des Suchworts angezeigt. Kunden können die Wörter nutzen, um Services zu suchen. Voraussetzung dafür ist, dass die Anzeige der Tag Cloud vom Marktplatzeigentümer eingeschaltet wurde.</p>
+<p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">0</samp> und <samp class="codeph">2147483647</samp></p>
+<p>Voreinstellung: <samp class="codeph">20</samp>
+            </p>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">TAGGING_MIN_SCORE</h4>Mindestanzahl, die ein Suchwort für Services angegeben werden muss, damit es in der Tag Cloud angezeigt werden.<p>Die Tag Cloud ist der Bereich eines Marktplatzes, in dem definierte Suchwörter angezeigt werden. Je öfter ein Suchwort für Services definiert ist, desto größer werden die Buchstaben des Suchworts angezeigt. Kunden können die Wörter nutzen, um Services zu suchen. Voraussetzung dafür ist, dass die Anzeige der Tag Cloud vom Marktplatzeigentümer eingeschaltet wurde.</p>
+<p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">1</samp> und <samp class="codeph">2147483647</samp></p>
+<p>Voreinstellung: <samp class="codeph">1</samp>. Dies bedeutet, dass ein Suchwort mindestens einmal für einen Service definiert worden sein muss, damit es in der Tag Cloud angezeigt wird.</p>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">TIME_ZONE_ID</h4>Zeitzone für die Anzeige.<p>Diese Einstellung kann nicht geändert werden.</p>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_BILLING_OFFSET</h4>Optional. Offset-Wert in Millisekunden für den Timer, der die Neuberechnung von Nutzungsgebühren (Kundenrechnungsdaten) und Umsatzbeteiligungen startet. Das Intervall für diesen Timer ist 1 Tag und kann nicht geändert werden. Wenn kein Offset-Wert definiert ist, wird der Standwert von 4 Tagen verwendet.<p>Die Kundenrechnungsdaten werden für einen Zeitraum von einem Monat berechnet (Abrechnungszeitraum). Serviceanbieter und Wiederverkäufer können festlegen, wann ihr Abrechnungszeitraum anfangen soll. Die Umsatzbeteiligungen werden immer für den vorangegangenen Kalendermonat am ersten Tag des darauffolgenden Monats berechnet.</p>
+<p>Der Offset-Wert für diesen Timer definiert folgendes:</p>
+<div class="p">
+                <ul>
+                    <li>Anzahl an Tagen, nach denen die Neuberechnung der Nutzungsgebühren und Umsatzbeteiligungen gestartet wird.</li>
+
+                    <li>Uhrzeit, wann die Neuberechnung am aktuellen Tag ausgeführt wird.</li>
+
+                </ul>
+
+            </div>
+<p>Beispiel:</p>
+<p>Ein Serviceanbieter legt den 10. eines Monats als Startdatum für den Abrechnungszeitraum fest. Der Offset-Wert ist auf 4 Tage und 4 Stunden festgelegt. Die Neuberechnung der Kundenrechnungsdaten für den abgelaufenen Abrechnungszeitraum startet am 14. des Folgemonats um 04:00:00.000 Uhr. Die Umsatzbeteiligungen werden am 5. des Folgemonats um 04:00:00.000 Uhr neu berechnet. Ob das Ende eines Abrechnungszeitraums eines Serviceanbieters erreicht ist, wird täglich um 04:00:00.000 Uhr geprüft.</p>
+<p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">0</samp> und <samp class="codeph">2419200000</samp> (28 Tage)</p>
+<p>Voreinstellung: <samp class="codeph">345600000</samp> (4 Tage)</p>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_DISCOUNT_END_NOTIFICATION_OFFSET</h4>Optional. Offset-Wert in Millisekunden für den Timer, der Rabatte aller Organisationen aufhebt. Der Wert des Timers ist ein Tag und kann nicht geändert werden.<p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">0</samp> und <samp class="codeph">9223372036854775807</samp></p>
+<p>Voreinstellung: <samp class="codeph">0</samp></p>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_INACTIVE_ON_BEHALF_USERS</h4>Optional. Intervall in Millisekunden, in dem das System auf nicht mehr existierende Benutzer überprüft wird, die im Namen einer anderen Organisation handelten. Der Wert 0 bedeutet, dass der Timer nicht aktiv ist.<p>Für einen technischen Service kann definiert sein, dass eine Organisation im Namen einer anderen Organisation handeln darf (<samp class="codeph">allowingOnBehalfActing</samp>). Die Organisation muss Kunde der anderen Organisation sein. Diese Organisation muss wiederum sowohl die Rolle Hersteller als auch Serviceanbieter haben. Zusätzlich muss die Kundenorganisation der anderen Organisation die Berechtigung erteilt haben, sich in ihrem Namen am System anzumelden. Dies wird durch das Abonnieren eines Service erreicht, für den beim zugrunde liegenden technischen Service das Merkmal <samp class="codeph">allowingOnBehalfActing</samp> auf <samp class="codeph">true</samp> gesetzt ist.</p>
+<p>Wenn eine Organisation im Namen einer anderen Organisation handelt, wird ein künstlicher Benutzername erzeugt.</p>
+<p>Es kann erforderlich sein, die Plattform-Datenbank von Zeit zu Zeit zu bereinigen und Benutzer, die nicht mehr existieren, zu löschen. Es kann nicht sichergestellt werden, dass der technische Service selbst diese Benutzer löscht. </p>
+<p>Erlaubte Werte: <samp class="codeph">0</samp> sowie beliebiger Wert zwischen <samp class="codeph">10000</samp> (10 Sekunden) und <samp class="codeph">9223372036854775807</samp></p>
+<p>Voreinstellung: <samp class="codeph">0</samp></p>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_INACTIVE_ON_BEHALF_USERS_OFFSET</h4>Optional. Offset-Wert in Millisekunden für den Timer, der inaktive Benutzer löscht, die im Namen einer anderen Organisation handelten.<p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">0</samp> und <samp class="codeph">9223372036854775807</samp></p>
+<p>Voreinstellung: <samp class="codeph">0</samp></p>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_ORGANIZATION</h4>Optional. Intervall in Millisekunden, in dem organisationsbezogene Aufgaben gestartet werden. Der Wert 0 bedeutet, dass der Timer nicht aktiv ist. <p>Erlaubte Werte: <samp class="codeph">0</samp> sowie beliebiger Wert zwischen <samp class="codeph">10000</samp> (10 Sekunden) und <samp class="codeph">9223372036854775807</samp></p>
+<p>Voreinstellung: <samp class="codeph">0</samp></p>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_ORGANIZATION_OFFSET</h4>Optional. Offset-Wert in Millisekunden für den Timer, der organisationsbezogene Aufgaben startet.<p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">0</samp> und <samp class="codeph">9223372036854775807</samp></p>
+<p>Voreinstellung: <samp class="codeph">0</samp></p>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_SUBSCRIPTION_EXPIRATION</h4>Optional. Intervall in Millisekunden, in dem das System auf abgelaufene Abonnements überprüft wird. Der Timer kann nicht deaktiviert werden, d.h., der Wert kann nicht auf 0 gesetzt werden. <p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">10000</samp> (10 Sekunden) und <samp class="codeph">9223372036854775807</samp></p>
+<p>Voreinstellung: <samp class="codeph">86400000</samp> (1 Tag)</p>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_SUBSCRIPTION_EXPIRATION_OFFSET</h4>Optional. Offset-Wert in Millisekunden für den Timer, der das System auf abgelaufene Abonnements überprüft.<p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">0</samp> und <samp class="codeph">9223372036854775807</samp></p>
+<p>Voreinstellung: <samp class="codeph">0</samp></p>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_TENANT_PROVISIONING_TIMEOUT</h4>Optional. Intervall in Millisekunden, in dem das System auf Abonnements überprüft wird, die auf ihre Aktivierung warten. Der Wert 0 bedeutet, dass der Timer nicht aktiv ist. <p>Erlaubte Werte: <samp class="codeph">0</samp> sowie beliebiger Wert zwischen <samp class="codeph">10000</samp> (10 Sekunden) und <samp class="codeph">9223372036854775807</samp></p>
+<p>Voreinstellung: <samp class="codeph">0</samp></p>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_TENANT_PROVISIONING_TIMEOUT_OFFSET</h4>Optional. Offset-Wert in Millisekunden für den Timer, der das System auf Abonnements überprüft, die auf ihre Aktivierung warten.<p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">0</samp> und <samp class="codeph">9223372036854775807</samp></p>
+<p>Voreinstellung: <samp class="codeph">0</samp></p>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_USER_COUNT</h4>
+            
+            <p>Intervall in Millisekunden, in dem das System auf die Anzahl registrierter Benutzer überprüft wird. Der Timer kann nicht deaktiviert werden, d.h., der Wert kann nicht auf 0 gesetzt werden.</p>
+
+            <p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">1</samp> und <samp class="codeph">9223372036854775807</samp></p>
+
+            <p>Default: <samp class="codeph">43200000</samp> (12 Stunden)</p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">WS_TIMEOUT</h4>Zeitspanne in Millisekunden, während der gewartet wird, dass Aufrufe eines Web-Service in einem externen System ausgeführt werden. Nach Ablauf dieser Zeitspanne gibt JAX-WS eine Timeout-Meldung aus. <p>Ein Aufruf eines Web-Service in einem externen System ist ein Aufruf durch die Plattform. Ein typisches Beispiel ist der Aufruf der Methode <samp class="codeph">createUsers</samp> im <samp class="codeph">ProvisioningService</samp> einer Anwendung. Wird der Timeout erreicht, bevor der Aufruf einen Rückgabewert liefert, wird die Operation abgebrochen und eine Exception ausgegeben. </p>
+<p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">1</samp> und <samp class="codeph">9223372036854775807</samp></p>
+<p>Voreinstellung: <samp class="codeph">30000</samp> (30 Sekunden)</p>
+</div>
+
+    </div>
+
+
+</body>
+</html>

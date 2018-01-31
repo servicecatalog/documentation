@@ -22,7 +22,7 @@
 
       <div>
             <div class="section">
-                  <p id="task634__On_the_task_taskbody_context_p_1">Auf der Seite <span class="uicontrol">Layout anpassen</span> können Sie ein Stylesheet angeben, das das Branding und Layout eines Marktplatzes definiert, also die Farben, Schriften, Hintergrundbilder und Logos. <span id="task634__The_best_way_to_create_an_app_task_taskbody_context_p_1_ph">Ein geeignetes Stylesheet erstellen Sie am besten, indem Sie das Standard-Stylesheet der Plattform als Basis verwenden und es Ihren Anforderungen entsprechend anpassen. Dann stellen Sie das angepasste Stylesheet und die darin referenzierten Dateien auf einem Web-Server bereit und geben die URL des Stylesheets auf der Seite <span class="uicontrol">Layout anpassen</span> an. Wenn keine URL angegeben ist, wird das Standard-Stylesheet verwendet. </span>
+                  <p id="task634__On_the_task_taskbody_context_p_1">Auf der Seite <span class="uicontrol">Layout anpassen</span> können Sie ein Stylesheet angeben, das das Branding und Layout eines Marktplatzes definiert, also die Farben, Schriften, Hintergrundbilder und Logos. <span id="task634__The_best_way_to_create_an_app_task_taskbody_context_p_1_ph">Ein geeignetes Stylesheet erstellen Sie am besten, indem Sie das Standard-Stylesheet der Plattform als Basis verwenden und es Ihren Anforderungen entsprechend anpassen. Dann stellen Sie das angepasste Stylesheet und die darin referenzierten Dateien dem Plattformbetreiber zur Verfügung. Dieser kann die Änderungen dann in den Container <samp class="codeph">oscm-branding</samp> einspielen. Wenn keine URL angegeben ist, wird das Standard-Stylesheet verwendet. </span>
                   </p>
 
                   <p id="task634__The_platform_s_default_style_task_taskbody_context_p_2">Das Standard-Stylesheet der Plattform <span>(<samp class="codeph">mp.css</samp>)</span> und die darin referenzierten Dateien und Bilder werden im Branding-Paket zur Verfügung gestellt. Dabei handelt es sich um eine ZIP-Datei, die Sie auf der Seite <span class="uicontrol">Layout anpassen</span> herunterladen können. Das Branding-Paket enthält auch einige HTML-Beispieldateien eines Marktplatzes. Diese können Sie benutzen, um Ihre Anpassungen vorab zu visualisieren und zu testen. Im Stylesheet finden Sie Kommentare und Beschreibungen der relevanten Elemente in den HTML-Dateien sowie Informationen darüber, welche Elemente im Hinblick auf ein fehlerfreies Seitenlayout nicht angepasst werden dürfen.</p>
@@ -30,17 +30,16 @@
                   <p id="task634__Be_aware_of_the_following:_task_taskbody_context_p_3">Beachten Sie folgendes:</p>
 
                   <ul id="task634__Your_organization_is_responsi_task_taskbody_context_ul">
-                        <li class="liexpand">Ihre Organisation ist für die Speicherung und Bereitstellung der richtigen Version des angepassten Stylesheets und der darin referenzierten Dateien verantwortlich. </li>
+                        <li class="liexpand">Ihre Organisation ist für die Bereitstellung der richtigen Version des angepassten Stylesheets und der darin referenzierten Dateien an den Plattformbetreiber verantwortlich. </li>
 
-                        <li class="liexpand">Wenn der Server, auf dem das Stylesheet abgelegt ist, nicht zu erreichen ist, hängt das weitere Verhalten von dem Browser ab, mit dem auf den Marktplatz zugegriffen wird. Zum Beispiel könnten Seiten blockieren oder den Inhalt ohne irgendein Layout anzeigen.<p>Um dieses Risiko zu minimieren, sollten Sie das Stylesheet an einem Ort speichern, der ständig und ohne Unterbrechung erreichbar ist. </p>
+                        <li class="liexpand">Wenn der Server, auf dem das Stylesheet abgelegt ist, nicht zu erreichen ist, hängt das weitere Verhalten von dem Browser ab, mit dem auf den Marktplatz zugegriffen wird. Zum Beispiel könnten Seiten blockieren oder den Inhalt ohne irgendein Layout anzeigen.<p>Um dieses Risiko zu minimieren, muss der Plattformbetreiber das Stylesheet an einem Ort speichern, der ständig und ohne Unterbrechung erreichbar ist. </p>
 </li>
 
                         <li class="liexpand">Wenn Sie die Einstellung des Stylesheets auf der Seite <span class="uicontrol">Layout anpassen</span> speichern, wird geprüft, ob der angegebene Server erreichbar ist und beim Zugriff auf die URL Text oder CSS-Inhalt bereitgestellt wird. Beachten Sie jedoch, dass diese Prüfung nicht Dateien und Bilder umfasst, die im Stylesheet referenziert werden. </li>
 
-                        <li class="liexpand">Benutzer sehen ein neues Layout, wenn sie sich das nächste Mal anmelden. Anonyme Benutzer müssen ihren Browser schließen und wieder öffnen. Wenn Sie eine neue Version eines Stylesheets aktivieren, sollten Sie daher sicherstellen, dass die alte Version noch für eine gewisse Übergangszeit zur Verfügung steht. </li>
+                        <li class="liexpand">Benutzer sehen ein neues Layout, wenn der Plattformbetreiber die Änderungen eingespielt hat und sie sich das nächste Mal anmelden. Anonyme Benutzer müssen ihren Browser schließen und wieder öffnen. Wenn Sie eine neue Version eines Stylesheets aktivieren, sollten Sie daher sicherstellen, dass die alte Version noch für eine gewisse Übergangszeit zur Verfügung steht. </li>
 
-                        <li class="liexpand">Stellen Sie sicher, dass die Browser, mit denen Benutzer auf den Marktplatz zugreifen, gezwungen werden, das Stylesheet und die darin referenzierten Dateien vom Server zu holen, wenn eine neue Version bereitgestellt wird. <p>Dies können Sie erreichen, indem Sie in der URL des Stylesheets eine Versionsangabe einbauen, zum Beispiel:</p>
-<p><samp class="codeph">https://&lt;server&gt;/Version1.1/StyleSheets/Customized.css</samp>. </p>
+                        <li class="liexpand">Stellen Sie sicher, dass die Browser, mit denen Benutzer auf den Marktplatz zugreifen, gezwungen werden, das Stylesheet und die darin referenzierten Dateien vom Server zu holen, wenn eine neue Version bereitgestellt wird. <p>Dies können Sie erreichen, indem Sie in der URL des Stylesheets eine Versionsangabe einbauen.</p>
 <p>Mit jeder neuen Fassung des Stylesheets ändern Sie die Versionsangabe und damit die URL. </p>
 </li>
 
@@ -72,17 +71,14 @@
                         
                   </li>
 <li class="stepexpand">
-                        <span>Stellen Sie das angepasste Stylesheet und die darin referenzierten Dateien, Bilder und Schritarten auf einem Web-Server bereit, der im Internet über HTTPS erreichbar ist. </span>
+                        <span>Übermitteln Sie das angepasste Stylesheet und die darin referenzierten Dateien, Bilder und Schritarten an den Plattformbetreiber (als ZIP- oder TAR-Archiv) und bitten Sie ihn, diese Änderungen einzuspielen. </span>
                          
-                              <div class="p">
-                                    <div class="note"><span class="notetitle">Hinweis:</span> Verwenden Sie keinen FTP-Server.</div>
-
-                              </div>
+                              <p>Das Archiv mit den Änderungen muss genauso aufgebaut sein wie die Datei <samp class="codeph">branding-package.zip</samp>. </p>
 
                         
                   </li>
 <li class="stepexpand">
-                        <span>Wechseln Sie auf die Seite <span class="uicontrol">Layout anpassen</span>.</span>
+                        <span>Sobald Sie vom Plattformbetreiber informiert werden, dass die Änderungen eingespielt sind, wechseln Sie auf die Seite <span class="uicontrol">Layout anpassen</span>.</span>
                   </li>
 <li class="stepexpand">
                         <span>Wählen Sie in der Liste <span class="uicontrol">Marktplatz</span> den Marktplatz aus, dessen Layout Sie anpassen möchten. </span>
@@ -93,14 +89,9 @@
                   </li>
 <li class="stepexpand">
                         <span>Geben Sie im Feld <span class="uicontrol">URL des Stylesheets</span> die URL Ihres angepassten Stylesheets an.</span>
-                         
-                              <p>Beispiel:</p>
-
-                              <p>
-                                    <samp class="codeph">https://&lt;server&gt;/Version1.1/CustomizedStyleSheet/mp.css</samp>
-                              </p>
-
-                        
+                         <p>Standardmäßig ist die URL wie folgt: </p>
+<p><samp class="codeph">https://&lt;hostname.fqdn&gt;:8443/branding-package/css/mp.css</samp></p>
+<samp class="codeph">&lt;hostname.fqdn&gt;</samp> ist ther Name und FQDN des Hosts, über den auf <span>OSCM</span> zugegriffen wird, und <samp class="codeph">branding-package</samp> ist der Name des Archivs mit den Änderungen.
                   </li>
 <li class="stepexpand">
                         <span>Klicken Sie <span class="uicontrol">Speichern</span>, um das neue Layout und Branding auf dem Marktplatz zu aktivieren. </span>

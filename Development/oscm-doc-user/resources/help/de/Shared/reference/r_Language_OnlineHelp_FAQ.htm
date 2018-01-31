@@ -22,15 +22,23 @@
         <div class="section">
             <p>Im Administrationsportal steht Online-Hilfe zu den einzelnen Seiten in der Sprache zur Verfügung, die der jeweilige Benutzer in seinem Profil eingestellt hat. Dies gilt auch für die FAQ-Datei, die als Hilfe zum Marktplatz angezeigt werden kann.</p>
 
-            <p>Die Online-Hilfe und die FAQ-Datei stehen nach der Installation in einer separaten <samp class="codeph">.war</samp>-Datei im Installation Package (<samp class="codeph">oscm-install-pack.zip</samp>) zur Verfügung:</p>
-
-            <p><samp class="codeph">&lt;install_pack_dir&gt;/domains/bes_domain/oscm-portal-help.war</samp>. </p>
+            <p>Die Online-Hilfe und die FAQ-Datei stehen nach der Installation in einem separaten Container zur Verfügung: <samp class="codeph">oscm-help</samp>.</p>
 
             <p>Sie können die vorhandene Online-Hilfe und die FAQ-Datei ändern und die Dateien in einer weiteren Sprache zur Verfügung stellen: </p>
 
             <div class="p">
                 <ol>
-                    <li class="liexpand">Extrahieren Sie den Inhalt der <samp class="codeph">oscm-portal-help.war</samp>-Datei in ein separates Verzeichnis in Ihrem Dateisystem.<p>Die Verzeichnisstruktur ist wie folgt: </p>
+                    <li class="liexpand">Melden Sie sich an dem Docker-Host an, auf dem <span>die Plattform</span> installiert ist. </li>
+
+                    <li class="liexpand">Melden Sie sich am Container <samp class="codeph">oscm-help</samp> an:<div class="p">
+                            <pre class="codeblock">docker exec –it oscm-help /bin/bash </pre>
+
+                        </div>
+</li>
+
+                    <li class="liexpand">Kopieren Sie den Inhalt der <samp class="codeph">oscm-portal-help.war</samp>-Datei in ein separates Verzeichnis in Ihrem Dateisystem.</li>
+
+                    <li class="liexpand">Extrahieren Sie den Inhalt der <samp class="codeph">oscm-portal-help.war</samp>-Datei.<p>Die Verzeichnisstruktur ist wie folgt: </p>
 <p><img src="../_images/HelpFAQ.png" width="415" height="372" alt="HelpFAQ.png" /><br /></p>
 <p>Durch die Installation sind standardmäßig folgende Sprachen vorhanden: Englisch (en), Deutsch (de) und Japanisch (ja). Sie können die Texte in den jeweiligen Unterverzeichnissen bearbeiten. Hierzu gehen Sie genauso vor, wie wenn Sie die Texte in einer neuen Sprache zur Verfügung stellen (siehe unten).</p>
 </li>
@@ -57,7 +65,7 @@
                                         <ol type="a">
                                             <li>Erstellen Sie das Bild mit einem Zeichenprogramm. </li>
 
-                                            <li>Speichern Sie das Bild unter dem Dateinamen, der auf der zugehörigen HTML-Seite referenziert wird, im Verzeichnis <samp class="codeph">Shared\_images</samp>. </li>
+                                            <li>Speichern Sie das Bild unter dem Dateinamen, der auf der zugehörigen HTML-Seite referenziert wird, im Verzeichnis <samp class="codeph">Shared/_images</samp>. </li>
 
                                             <li>Überprüfen Sie die Größe des Bildes in der HTML-Datei und passen Sie sie gegebenenfalls an. </li>
 
@@ -71,9 +79,26 @@
                         </div>
 </li>
 
-                    <li class="liexpand">Erstellen Sie eine neue Datei <samp class="codeph">oscm-portal-help.war</samp>, die die zusätzlichen Verzeichnisse für die neue Sprache enthält. </li>
+                    <li class="liexpand">Erstellen Sie eine Archivdatei mit dem Namen <samp class="codeph">oscm-portal-help.tar.gz</samp>, die die zusätzlichen Verzeichnisse für die neue Sprache enthält, und kopieren Sie diese Archivdatei in folgendes Verzeichnis auf dem Docker-Host:<p><samp class="codeph">/docker/config/oscm-help</samp></p>
+</li>
 
-                    <li class="liexpand">Deinstallieren Sie zunächst und installieren Sie anschließend die neue, geänderte Datei <samp class="codeph">oscm-portal-help.war</samp> in der Domäne <samp class="codeph">bes-domain</samp> auf dem Application Server. <p>Durch die Installation der Datei werden existierende HTML-Dateien überschrieben.</p>
+                    <li class="liexpand">Stoppen Sie den Container <samp class="codeph">oscm-help</samp>: <div class="p">
+                            <pre class="codeblock">docker stop oscm- help</pre>
+
+                        </div>
+</li>
+
+                    <li class="liexpand">Entfernen Sie den Container <samp class="codeph">oscm-help</samp>: <div class="p">
+                            <pre class="codeblock">docker-compose -f docker-compose-oscm.yml rm oscm-help</pre>
+
+                        </div>
+</li>
+
+                    <li class="liexpand">Erstellen Sie den Container <samp class="codeph">oscm-help</samp> erneute und starten Sie ihn: <div class="p">
+                            <pre class="codeblock">docker-compose -f docker-compose--oscm.yml up -d oscm-help</pre>
+
+                        </div>
+<p>Beachten Sie, dass so bestehende HTML-Dateien überschrieben werden.</p>
 </li>
 
                 </ol>

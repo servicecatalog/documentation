@@ -1,57 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xml:lang="en-us" lang="en-us">
+<html xml:lang="de-de" lang="de-de">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <meta name="copyright" content="(C) Copyright 2005" />
 <meta name="DC.rights.owner" content="(C) Copyright 2005" />
 <meta content="task" name="DC.Type" />
-<meta name="DC.Title" content="Updating configuration settings" />
+<meta name="DC.Title" content="Konfiguration aktualisieren" />
 <meta scheme="URI" name="DC.Relation" content="../../Shared/reference/r_ConfigSettings_UI.htm" />
 <meta content="XHTML" name="DC.Format" />
 <meta content="task634" name="DC.Identifier" />
-<meta content="en-us" name="DC.Language" />
+<meta content="de-de" name="DC.Language" />
 <link href="../../commonltr.css" type="text/css" rel="stylesheet" />
 <link href="../../book.css" type="text/css" rel="stylesheet" />
-<title>Updating configuration settings</title>
+<title>Konfiguration aktualisieren</title>
 </head>
 <body id="task634">
 
 
-  <h1 class="topictitle1">Updating configuration settings</h1>
+  <h1 class="topictitle1">Konfiguration aktualisieren</h1>
 
   <div>
     <div class="section">
-      <p>The <span>OSCM</span> software requires a number of settings for configuring its container runtime environment. The mandatory settings have already been specified in environment variables in Docker files before deploying the containers. Usually, you needed to adapt the initial settings to your environment, in particular server names, ports, paths, and user IDs.</p>
+      <p>Die Plattform-Software benötigt einige Konfigurationseinstellungen, um die Runtime-Umgebung mit Containern funktionsfähig zu machen. Vor dem Deployment der Container wurden die obligatorischen Einstellungen bereits in Umgebungsvariablen in Docker-Dateien gesetzt. </p>
 
-      <p>On the <span class="uicontrol">Update configuration settings</span> page, you see a list of the current configuration settings for the platform as stored in the database. In the installation, you adapted the settings to your environment, in particular server names, ports, paths, and user IDs. You can update and edit the current settings as required.</p>
+      <p>Auf der Seite <span class="uicontrol">Konfiguration aktualisieren</span> sehen Sie die aktuellen Konfigurationseinstellungen, die in der Datenbank gespeichert sind. Während der Installation haben Sie die Einstellungen an Ihre Umgebung angepasst, vor allem Servernamen, Ports, Pfade und Benutzernamen. Sie können die aktuellen Einstellungen jederzeit aktualisieren und ändern.</p>
 
       <div class="p">
-        <div class="note"><span class="notetitle">Note:</span> Be aware that changing the settings in the administration portal should only be used for testing purposes. Your changes will be lost as soon as the platform's containers are restarted. </div>
+        <div class="note"><span class="notetitle">Hinweis:</span> Beachten Sie, dass im Portal nur Änderungen für Testzwecke gemacht werden sollten. Ihre Änderungen werden verworfen, sobald die Container neu gestartet werden.  </div>
 
       </div>
 
-      <p>If you want to persistently update configuration settings in the database, proceed as follows:</p>
+      <p>Möchten Sie Konfigurationseinstellungen dauerhaft in der Datenbank ändern, gehen Sie wie folgt vor: </p>
 
       <div class="p">
         <ol>
-          <li>On your Docker host, edit the <samp class="codeph">var.env</samp> file located in the <samp class="codeph">/docker</samp> directory as required. </li>
+          <li>Bearbeiten Sie die Datei <samp class="codeph">var.env</samp> im Verzeichnis <samp class="codeph">/docker</samp> auf Ihrem Docker-Host entsprechend.  </li>
 
-          <li>If you want to change the default value of a configuration setting that is not included in the <samp class="codeph">var.env</samp> file yet:<p>Add the key and the value the setting shall take on to the <samp class="codeph">var.env</samp> file. </p>
-<p>You can find the keys of the settings on the <strong>Update configuration settings</strong> page. For example: </p>
+          <li>Wenn Sie den voreingestellten Wert einer Einstellung ändern möchten, die noch nicht in der Datei <samp class="codeph">var.env</samp> enthalten ist: <p>Fügen Sie den Schlüssel und seinen Wert, den die Einstellung annehmen soll, zu der Datei <samp class="codeph">var.env</samp> hinzu.</p>
+<p>Die Schlüssel finden Sie auf der Seite <span class="uicontrol">Konfiguration aktualisieren</span>. Beispiel: </p>
 <p><samp class="codeph">TIMER_INTERVAL_SUBSCRIPTION_EXPIRATION=345600000</samp></p>
 </li>
 
-          <li>Save the <samp class="codeph">var.env</samp> file to its original location: <p><samp class="codeph">/docker/var.env</samp></p>
+          <li>Speicher Sie die Datei <samp class="codeph">var.env</samp> im ursprünglichen Verzeichnis:<p><samp class="codeph">/docker/var.env</samp></p>
 </li>
 
-          <li>Stop and remove all <span>OSCM</span> containers:<div class="p">
+          <li>Stoppen und löschen Sie alle <span>OSCM</span>-Container:<div class="p">
               <pre class="codeblock">docker-compose -f docker-compose-oscm.yml stop
 docker-compose -f docker-compose-oscm.yml rm -f </pre>
 
             </div>
 </li>
 
-          <li>Start the container for initializing the database and delete the finished containers: <div class="p">
+          <li>Starten Sie den Container zur Datenbank-Initialisierung und löschen Sie die beendeten Container:<div class="p">
               <pre class="codeblock">docker-compose -f docker-compose-initdb.yml up -d oscm-db 
 docker-compose -f docker-compose-initdb.yml up oscm-initdb-core 
 docker-compose -f docker-compose-initdb.yml up oscm-initdb-jms 
@@ -64,7 +64,7 @@ docker-compose -f docker-compose-initdb.yml rm -f</pre>
             </div>
 </li>
 
-          <li>Restart all application containers:<div class="p">
+          <li>Starten Sie alle Container der Anwenung neu:<div class="p">
               <pre class="codeblock">docker-compose -f docker-compose-oscm.yml up -d</pre>
 
             </div>
@@ -79,7 +79,7 @@ docker-compose -f docker-compose-initdb.yml rm -f</pre>
   </div>
 
   <div>
-<div class="linklist"><strong>Related topics</strong><br />
+<div class="linklist"><strong>Weitere Themen</strong><br />
 
 <div><a href="../../Shared/reference/r_ConfigSettings_UI.htm">Configuration settings</a></div></div>
 </div>
