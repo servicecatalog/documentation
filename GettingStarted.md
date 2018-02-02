@@ -37,13 +37,11 @@ ENJOY!
 
 The ESCM platform is configured using the administration portal which can be accessed using an URL in the following format:
 
-  `https://<hostname.fqdn>:<port>/oscm-portal`
+  `https://<hostname.fqdn>:8081/oscm-portal`
 
-  `<hostname.fqdn>` is the name and the fully qualified domain name of the machine where ESCM has been deployed (the Docker host). 
+  `<hostname.fqdn>` is the name and the fully qualified domain name of the machine where ESCM has been deployed (the Docker host).
 
-  `<port>` is the port to address the machine (default: 8081), 
-
-  `oscm-portal` is the default context root of ESCM and cannot be changed.
+  `8081/oscm-portal is the default port to address the machine and the default context root of ESCM. They both cannot be changed.
 
    In SOC, you can get the base URL of ESCM as follows:
    Open the OpenStack Dashboard on your control node and navigate to `System -> Instances`. There you will see the deployed ESCM instance. **Note its Floating IP address**.
@@ -105,28 +103,32 @@ On the sample marketplace, you find the `ESCM SOC Sample Service` which is ready
 
 * Click the `ESCM SOC Sample Service` and then `Get it now`.
 
-* You can enter a name for the subscription. By default, the name is the marketable service name.
+* Enter a name for the subscription. By default, the name is the marketable service name.
 
-* The `ESCM SOC Sample Service` is configured so that all parameters that are mandatory for instantiating an OpenStack instance are already defined. You can view them, and, if required, change them: 
+* Specify the **OpenStack project ID** that is used for ESCM. To find out the ID, log in to you SOC environment, and go to `Identity -> Projects`and look for `escm`:
+  
+    ![](ProjectID.PNG)
 
-  * Validation pattern for the stack name (regex) in OpenStack
-  * Pattern for access information
-  * Instance type (flavor)
-  * Public network name
+* Specify a name for the **OpenStack instance**. 
 
-* You need to provide values for the following parameters: 
+* Specify the **Image ID**. This is the ID of one of the images defined in SOC. This image will be the base image of the OpenStack instance that will be created by the subscription. You can use an existing image or upload your own image. Make sure that the flavor defined for the subscription is suitable for the sample service. 
 
-  * OpenStack instance name
-  * Image ID: The ID of one of the images defined in SOC. There can be several images delivered with SO. This image will be the base image of the OpenStack instance that will be created by the subscription. 
-  * OpenStack project ID: The ID of one of the projects defined in SOC 
+* The `ESCM SOC Sample Service` is configured so that all parameters that are also mandatory for instantiating an OpenStack instance are already defined. You can view them, and, if required, change them: 
+
+  * **Validation pattern for the stack name (regex)** in OpenStack
+  * **Pattern for access information**
+  * **Instance type (flavor)**
+  * **Public network name**
+
+  ![](SampleSubscription.PNG)
 
 * Click `Next` and accept the license agreement by clicking `Confirm`. 
 
     The subscription to the `ESCM SOC Sample Service` is created. It may take some time for asynchronous background tasks to complete, please wait for the subscription be ready. 
 
-* Register yourself and assign you to the subscription once it is ready to be used. 
+* You are notified by email that the subscription is created. Assign you to the subscription once it is ready to be used. 
 
-* As soon as the subscription is created (no longer pending), a new instance is created inside the SOC. You can check for it in SOC, and use it for further actions.
+As soon as the subscription is created (no longer pending), a new instance is created inside the SOC. You can check for it in SOC, and use it for further actions.
 
 
 
