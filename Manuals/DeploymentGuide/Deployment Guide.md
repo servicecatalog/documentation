@@ -21,7 +21,7 @@ For installing ESCM in SUSE OpenStack Cloud, the following OpenStack services mu
 
 #### SLES Image
 
-The ESCM barclamp expects a SLES image in the Glance image registry of the SUSE OpenStack Cloud. The image must contain Docker and Docker Compose. A ready-to-use image in raw format can be downloaded from [here](https://build.opensuse.org/package/show/isv:fujitsu:fest:Images:slesescm/sles12sp3) and imported in Glance as a public image with the image name sles12-sp3:
+The ESCM barclamp expects a SLES image in the Glance image registry of the SUSE OpenStack Cloud. The image must contain Docker and Docker Compose. A ready-to-use image in raw format can be downloaded from [here](https://build.opensuse.org/package/show/isv:fujitsu:fest:Images:slesescm/sles12sp3) and imported in Glance as a public image with the image name ``sles12-sp3``.
 
 ![](CreateImage.png)
 
@@ -41,9 +41,9 @@ The settings for the Heat templates are not exposed in the barclamp graphical in
 
  ![](image001.png)
 
-An exception is the public part of the OpenStack SSH keypair for accessing the instance. The keypair is available in the graphical interface. An OpenStack SSH keypair with the specified public part will be created and assigned to the instance, so you can access it later using the corresponding private key. Setting a public key is mandatory.
+**OpenStack Settings: Public Key**
 
-OpenStack Settings: Public Key
+An exception is the public part of the OpenStack SSH keypair for accessing the instance. The keypair is available in the graphical interface. An OpenStack SSH keypair with the specified public part will be created and assigned to the instance, so you can access it later using the corresponding private key. Setting a public key is mandatory.
 
 ![](image003.png)
 
@@ -59,7 +59,7 @@ The ESCM settings are specified in the barclamp graphical interface (_Custom_ mo
 
 #### Mail Settings
 
-**Mail Host** : Host of the mail server to be used. This setting is mandatory.
+**Mail Host** : Host of the mail server to be used. This setting is mandatory. 
 
 **SMTP Port** : SMTP port of the mail server.
 
@@ -67,7 +67,7 @@ The ESCM settings are specified in the barclamp graphical interface (_Custom_ mo
 
 **ESCM Email Address** : The email address used by ESCM for sending email notifications.
 
-**Authentication Required** : true if the server requires authentication, false otherwise. 
+**Authentication Required** : true if the mail server requires authentication, false otherwise. 
 
 **User** : User name for SMTP authentication
 
@@ -78,13 +78,13 @@ The ESCM settings are specified in the barclamp graphical interface (_Custom_ mo
 
 #### Docker Registry
 
-By default, DockerHub is configured as the registry for the ESCM software. If it is necessary to use a custom registry, its configuration can be specified. Depending on the registry, authentication can also be configured.
+By default, DockerHub is configured as the registry for the ESCM software. If it is required to use a custom registry, you can specify its configuration. Depending on the registry, authentication can also be configured.
 
-**Use Docker Hub** : true if you use the official ESCM Docker images as provided on Docker Hub, false otherwise.
+**Use Docker Hub** : true if you use the official ESCM Docker images as provided on DockerHub, false otherwise.
 
 **Authentication Required** : true if the registry requires authentication or if you want to use authentication, false otherwise.
 
-**User** : User name for login registry authentication
+**User** : User name for registry authentication
 
 **Password** : Password for registry authentication
 
@@ -101,7 +101,7 @@ By default, DockerHub is configured as the registry for the ESCM software. If it
 
 Depending on your environment, it may be necessary to specify proxy settings for the OpenStack instance hosting the ESCM Docker images.
 
-These settings are used for the Docker engine environment which needs access to the Docker registry and ESCM Docker containers which access the internet.
+These settings are used for the Docker engine environment which needs access to the Docker registry as well as for the ESCM Docker containers which access the Internet.
 
 **HTTP Proxy Host** : The HTTP proxy host
 
@@ -111,7 +111,7 @@ These settings are used for the Docker engine environment which needs access to 
 
 **HTTPS Proxy Port** : The HTTPS proxy port
 
-**No Proxy** : Host names, IP addresses or FQDNs for which the proxy should be bypassed in a comma-separated list. By default, this list already contains localhost, 127.0.0.1 and the floating IP address of the instance. Specify additional ones, if necessary.
+**No Proxy** : Host names, IP addresses, or FQDNs for which the proxy should be bypassed in a comma-separated list. By default, this list already contains localhost, 127.0.0.1 and the floating IP address of the ESCM instance. Specify additional ones, if necessary.
 
 **Authentication Required** : true if the proxy server requires authentication, false otherwise
 
@@ -127,9 +127,9 @@ You must specify the locations for the certificate key pair files which the appl
 
 **Protocol** : HTTPS (ESCM always uses HTTPS)
 
-**Generate self-signed certificates** : true if you wish to let the system automatically generate and use self-signed certificates, false if you wish you provide your own certificate and key files.
+**Generate self-signed certificates** : true if you want the system to automatically generate and use self-signed certificates, false if you want to provide your own certificate and key files.
 
-**Host FQDN/IP address** : If you leave this field empty, certificates will be automatically generated with the floating IP address of the instance as the Common Name. You can override the floating IP address with your own IP address or host name.
+**Host FQDN/IP address** : If you leave this field empty, certificates will be automatically generated with the floating IP address of the ESCM instance as the Common Name. You can override the floating IP address with your own IP address or host name.
 
 **SSL Certificate File** : Location of your SSL public certificate file on the OpenStack Control Node, if you wish to provide your own. The certificate must be in PEM format.
 
@@ -142,7 +142,7 @@ You must specify the locations for the certificate key pair files which the appl
 
 ## 4. Operations and Troubleshooting
 
-After having applied the ESCM proposal, it may take some minutes until the ESCM services are available, although a message might be displayed that ESCM has been deployed successfully. You may log in to the ESCM instance where the ESCM containers are running at any time, either to do operational tasks or to check the status. You may use the floating IP of the instance and the OpenStack SSH public key you provided.
+After having applied the ESCM proposal, it may take some minutes until the ESCM services are available on the selected compute node, although a message might be displayed that ESCM has been deployed successfully. You may log in to the ESCM instance where the ESCM containers are running at any time, either to do operational tasks or to check the status. You may use the floating IP of the instance and the OpenStack SSH public key you provided.
 
 #### How to Access the ESCM Instance
 
