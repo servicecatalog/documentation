@@ -18,7 +18,7 @@
                             <li><codeph>IMAGE_APP</codeph>: image for the <codeph>oscm-app</codeph> container</li>
                             <li><codeph>IMAGE_BIRT</codeph>: image for the <codeph>oscm-birt</codeph> container</li>
                             <li><codeph>IMAGE_BRANDING</codeph>: image for the <codeph>oscm-branding</codeph> container</li>
-                            <li><codeph>IMAGE_INITDB</codeph>: image for the temporary <codeph>oscm-initdb</codeph> container</li>
+                            <li><codeph>IMAGE_INITDB</codeph>: image for the temporary, stateless <codeph>oscm-initdb</codeph> container</li>
                             <li><codeph>IMAGE_PROXY</codeph>: image for the <codeph>oscm-proxy</codeph> container</li>
                             <li><codeph>IMAGE_HELP</codeph>: image for the <codeph>oscm-help</codeph> container</li>
                         </ul>
@@ -101,6 +101,29 @@
                                 platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                                 /></ph><ph platform="help"
                                 >the platform</ph>. Can be set to <codeph>true</codeph> or <codeph>false</codeph>. </p></li>
+                </ul>
+            </p>
+        </section>
+        <section>
+            <title>Application Server Settings</title>
+            <p>
+                <ul compact="no">
+                    <li><codeph>CONTAINER_CALLBACK_THREADS</codeph><p>The number of threads for constructing and destroying beans. Required for the stateless <codeph>init-db</codeph> container.</p><p>Default: <codeph>50</codeph></p></li>
+                    <li><codeph>CONTAINER_MAX_SIZE</codeph><p>The size of the instance pool for the stateless <codeph>init-db</codeph> container.</p><p>Default: <codeph>50</codeph></p></li>
+                </ul>
+            </p>
+            <p>The following settings are used for the Docker engine environment which needs access to the Docker registry as well as for the <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        > containers which access the Internet. They are used for the <codeph>oscm-app</codeph> container, meaning that each HTTP request made from APP is processed using these settings. </ph></p>
+            <p>
+                <ul compact="no">
+                    <li><codeph>PROXY_ENABLED</codeph><p>Defines whether the proxy is enabled in the container. Can be set to <codeph>true</codeph> or <codeph>false</codeph>.  </p></li>
+                    <li><codeph>PROXY_HTTP_HOST</codeph><p>Host of the proxy used for HTTP connections</p></li>
+                    <li><codeph>PROXY_HTTP_PORT</codeph><p>Port of the proxy used for HTTP connections</p></li>
+                    <li><codeph>PROXY_HTTPS_HOST</codeph><p>Host of the proxy used for HTTPS connections</p></li>
+                    <li><codeph>PROXY_HTTPS_PORT</codeph><p>Port of the proxy used for HTTPS connections</p></li>
+                    <li><codeph>PROXY_NOPROXY</codeph><p>Pipe-separated list of hosts for which the proxy is to be bypassed. By default, this list already contains localhost, 127.0.0.1, and the floating IP address of the <ph
+                                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> instance.</p></li>
                 </ul>
             </p>
         </section>
