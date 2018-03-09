@@ -4,7 +4,7 @@ FUJITSU Software Enterprise Service Catalog Manager (ESCM) is a cloud services m
 
 The ESCM software is available as Docker images, deployed as a cloud application using Heat templates and configured to interact with the SUSE OpenStack Cloud.
 
-The complete documentation can be found [here](https://github.com/servicecatalog/documentation/tree/ESCM).
+The complete documentation can be found [here](https://github.com/servicecatalog/documentation/blob/ESCM/README.md).
 
 ## 1. Prerequisites
 
