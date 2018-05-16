@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN"
+                         "">
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2018 -->
+<bookmap id="BESAppIntegrationGuide"
+            xml:lang="en_US">
+    <title>QuickStart Guide</title>
+    <bookmeta>
+        <prodinfo
+                    product="oscm_ce">
+            <prodname/>
+            <vrmlist>
+                <vrm
+            version="V17.6.0"/>
+            </vrmlist>
+            <brand/>
+            <prognum>V17.6.0</prognum>
+            <component/>
+            <series>QuickStart Guide</series>
+        </prodinfo>
+        <prodinfo
+                    product="oscm_ee">
+            <prodname>Enterprise Service</prodname>
+            <vrmlist>
+                <vrm
+            version="V17.6"/>
+            </vrmlist>
+            <brand>FUJITSU Software</brand>
+            <prognum>Catalog Manager V17.6</prognum>
+            <component/>
+            <series>QuickStart Guide</series>
+        </prodinfo>
+        <bookid>
+            <edition>January 2018 </edition>
+            <!--booknumber product="oscm_ee">B1WS-1252-02</booknumber-->
+        </bookid>
+        <bookrights
+                product="oscm_ce">
+            <bookowner
+            name="none"/>
+        </bookrights>
+        <bookrights
+                product="oscm_ee">
+            <bookowner
+            name="FUJITSU LIMITED"/>
+        </bookrights>
+    </bookmeta>
+    <frontmatter>
+        <notices
+            href="Shared/Frontmatter/BookInfo.xml"/>
+        <preface
+            format="dita" href="QuickStart/About/c_About.xml"
+                type="concept">
+            
+        </preface>
+    </frontmatter>
+    
+    <chapter
+            href="Shared/gettingstarted/c_BESContainers.xml"
+            type="concept"/>
+        
+    
+    <chapter
+        href="QuickStart/GettingStarted/c_Prereqs.xml"
+        type="concept"/>
+        
+    
+    <chapter
+        href="QuickStart/Configuration/c_Installation.xml"
+            type="concept">
+        <topicref
+            href="QuickStart/Configuration/c_PrepDir.xml"
+            type="concept"/>
+        <topicref
+            href="QuickStart/Configuration/c_PrepCfg.xml"
+            type="concept"/>
+        <topicref
+            href="QuickStart/Configuration/c_PrepDocker.xml"
+            type="concept"/>
+   </chapter>
+    
+    <chapter
+        href="QuickStart/GettingStarted/c_Usage.xml"
+        type="concept">
+        <topicref
+            href="QuickStart/GettingStarted/c_Access.xml"
+                type="concept"/>
+                <topicref
+            href="QuickStart/GettingStarted/c_EnableLogin.xml"
+                type="concept"/>
+        </chapter>
+    
+    
+    <chapter
+        href="Shared/reference/c_Certificates.xml"
+            type="concept">
+		<topicref
+            href="QuickStart/Certificates/c_Importing_SSL_Key_pairs.xml"
+            type="concept"/>
+		<topicref
+            href="QuickStart/Certificates/c_Importing_Trusted_Certs.xml"
+        type="concept"/>
+		
+    </chapter>
+   
+    <appendix
+        href="Shared/reference/r_ConfigSettings_initial.xml"
+            type="reference">
+    </appendix>
+</bookmap>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2018 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_1BCF5C425D7D4627AB1C66A085CF6E11" xml:lang="en-us">
+
+                <title>Accessing the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> Administration Portal</title>
+                <conbody>
+                <section>
+                        <p>After having run the second deployment container, <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        /> will take several minutes to start up. The less CPU power you have, the longer it will take. Once everything has started, you may access the <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        /> administration portal in your Web browser using the FQDN or IP address you specified earlier in the <codeph>var.env</codeph> file. </p>
+                        <p>Access the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> administration portal in a Web browser using an URL in the following format: </p>
+                        <p><codeph>https://&lt;hostname.fqdn>:&lt;port>/oscm-portal</codeph></p>
+                        <p><codeph>&lt;hostname.fqdn></codeph> is the name and the fully qualified domain name of the machine where <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        /> has been deployed. <codeph>&lt;port></codeph> is the port to address the machine (default: <codeph>8081</codeph>), <codeph>oscm-portal</codeph> is the default context root of <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> and cannot be changed. </p>
+                        <p>You are prompted for the user ID and password. The initial credentials are as follows: </p>
+                        <p>User ID: <codeph>administrator</codeph>
+                        </p>
+                        <p>Password: <codeph>admin123</codeph>
+                        </p>
+                        <p>It is recommended that you change the initial password in the <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        /> administration portal (<b>Change Password</b> page in the <b>Account</b> menu). </p>
+                        <p>After login, the operator functionality is available in the <b>Operation</b> menu.</p>
+                </section>
+                </conbody>
+        </concept>

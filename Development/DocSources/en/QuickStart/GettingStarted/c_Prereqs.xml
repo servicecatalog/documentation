@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2018 -->
+<concept id="concept_1BCF5C425D7D4627AB1C66A085CF6E11"
+                xml:lang="en-us">
+        <title>Prequisites and Preparation</title>
+        <conbody>
+                <p>For getting started with the setup of <ph
+                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+            />, a Linux system is required with the following software installed: </p>
+        <p>
+            <ol>
+                <li>Docker</li>
+                <li>Docker Compose</li>
+            </ol>
+        </p>
+        <p>This system is hereafter referred to a the <i>Docker host</i>. </p>
+        <p>The following system resources are recommended for the Docker host: </p>
+        <p>
+            <ol>
+                <li>2 CPU cores</li>
+                <li>8 GB of RAM</li>
+                <li>20 GB of disk space</li>
+            </ol>
+        </p>
+        <p>
+            <note>This is a minimum configuration for testing purposes only. It is not suitable for production use. </note>
+        </p>
+        </conbody>
+</concept>

@@ -10,6 +10,7 @@
  <prop action="exclude" att="audience" val="os"/>
  <prop action="exclude" att="audience" val="tps5"/>
  <prop action="exclude" att="audience" val="vmware"/>
+ <prop action="include" att="audience" val="doc"/>
  <prop action="exclude" att="platform" val="help"/>
  <prop action="include" att="platform" val="print"/>
  <prop action="include" att="product" val="sqa"/>

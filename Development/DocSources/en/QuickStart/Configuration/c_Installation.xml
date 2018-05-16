@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2018 -->
+<concept id="concept_1BCF5C425D7D4627AB1C66A085CF6E11"
+            xml:lang="en-us">
+    <title>Installation</title>
+    <conbody>
+        <section>
+            <p>The installation of <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> consists of the following main steps: </p>
+            <p>
+                <ol>
+                    <li>Preparing the installation directory on the Docker host. </li>
+                    <li>Preparing configuration files.</li>
+                    <li>Preparing Docker Compose files and starting <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</li>
+                </ol>
+            </p>
+        </section>
+    </conbody>
+</concept>

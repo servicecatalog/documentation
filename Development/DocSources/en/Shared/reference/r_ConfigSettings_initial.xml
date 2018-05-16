@@ -39,9 +39,9 @@
                     <li><codeph>DB_PORT_CORE</codeph><p>The port of the PostgreSQL database (<codeph>bss</codeph>) where the configuration settings for the <codeph>oscm-core</codeph> container are stored. </p><p>Must be set to <codeph>5432</codeph>.</p></li>
                     <li><codeph>DB_PORT_JMS</codeph><p>The port of the PostgreSQL database (<codeph>bssjms</codeph>) where the JMS messages are stored. </p><p>Must be set to <codeph>5432</codeph>.</p></li>
                     <li><codeph>DB_PORT_APP</codeph><p>The port of the PostgreSQL database (<codeph>bssapp</codeph>) where the configuration settings for the <codeph>oscm-app</codeph> container are stored. </p><p>Must be set to <codeph>5432</codeph>.</p></li>
-                    <li><codeph>DB_PWD_CORE</codeph><p>The password of the user to connect to the <codeph>bss</codeph> database. </p><p>Default: <codeph>bssuser</codeph></p></li>
-                    <li><codeph>DB_PWD_APP</codeph><p>The password of the user to connect to the <codeph>bssapp</codeph> database. </p>Default: <codeph>bssappuser</codeph></li>
-                    <li><codeph>DB_SUPERPWD</codeph><p>The password of the PostgreSQL database superuser.</p>Default: <codeph>postgres</codeph></li>
+                    <li><codeph>DB_PWD_CORE</codeph><p>Specify the password of the user to connect to the <codeph>bss</codeph> database. </p><p>Default: <codeph>bssuser</codeph></p></li>
+                    <li><codeph>DB_PWD_APP</codeph><p>Specify the password of the user to connect to the <codeph>bssapp</codeph> database. </p>Default: <codeph>bssappuser</codeph></li>
+                    <li><codeph>DB_SUPERPWD</codeph><p>Specify the password of the PostgreSQL database superuser.</p>Default: <codeph>postgres</codeph></li>
                 </ul>
             </p>
         </section>
