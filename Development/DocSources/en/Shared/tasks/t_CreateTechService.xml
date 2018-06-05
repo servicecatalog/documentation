@@ -37,9 +37,17 @@
                         <li><codeph>samples/template.yaml</codeph> for a template of type Heat Orchestration Template for native OpenStack</li>
                         <li><codeph>samples/template_k5.yaml</codeph> for a template of type Heat Orchestration Template for FUJITSU Cloud Service K5</li>
                         </ul-->
-                        <p audience="os"
-                            >Templates can be specified as parameter options in the technical service definitions. You need to make them available as described in <xref
+                        <p audience="os">As a basis, you can use the technical services samples provided on <xref
+                            href="https://github.com/servicecatalog/oscm/tree/master/oscm-app-openstack/resources"
+                            scope="external"
+                                ><u>https://github.com/servicecatalog/oscm/tree/master/oscm-app-openstack/resources</u></xref>. </p>
+                    <p audience="os"
+                            >The technical services specify sample templates as parameter options. You need to make them available as described in <xref
                             href="../../OSIntegrationGuide/Administrating/c_ImportTemplates.xml"/>. </p>
+                    <p audience="aws">As a basis, you can use the technical service sample provided on <xref
+                            href="https://github.com/servicecatalog/oscm/tree/master/oscm-app-aws/resources"
+                            scope="external"
+                                ><u>https://github.com/servicecatalog/oscm/tree/master/oscm-app-aws/resources</u></xref>. </p>
                     
                     <p audience="vmware"
                         >The vSphere integration package, <codeph>oscm-vmware-install-pack.zip</codeph>, includes a technical service as a sample. Use the sample as a basis for defining your own technical services as required:</p>
