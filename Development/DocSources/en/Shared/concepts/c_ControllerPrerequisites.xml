@@ -23,7 +23,7 @@
                 <li audience="os"
                         >Templates for the virtual systems to be provisioned must exist. They form the basis for the technical services in <ph
                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        />. <p>Templates can be provided by the technology provider organization responsible for the OpenStack service controller by importing the templates into the &lt;codeph>bssapp&lt;/codeph> database.</p><p><!--ol>
+                            />. <p>Templates can be provided by the technology provider organization responsible for the OpenStack service controller by importing the templates into the <codeph>bssapp</codeph> database.</p><p><!--ol>
                             <li>The technology provider organization responsible for the OpenStack service controller provides them on an external host in a location whose URL can be reached from <ph
                                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                 /> via HTTPS.</li>
