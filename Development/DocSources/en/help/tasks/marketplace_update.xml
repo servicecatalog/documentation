@@ -81,10 +81,7 @@
                                 conref="marketplace_create.xml#task634/When_enabled_customers_who_s_task_taskbody_steps_step_2"
                             /></ph><p><ph conref="marketplace_create.xml#task634/With_task_taskbody_steps_step_3"
                             /> Existing ratings and comments are retained, but they are not visible. They re-appear when you enable the feature again.</p></li>
-                    <li>Change the <uicontrol>Social bookmarks</uicontrol> feature for the marketplace, if required. <ph><ph
-                                conref="marketplace_create.xml#task634/When_enabled_bookmarks_for_d_task_taskbody_steps_step_2"
-                            /></ph><p><ph conref="marketplace_create.xml#task634/With_task_taskbody_steps_step_4"
-                        /></p></li>
+                    <!--li>Change the <uicontrol>Social bookmarks</uicontrol> feature for the marketplace, if required. <ph><ph conref="marketplace_create.xml#task634/When_enabled_bookmarks_for_d_task_taskbody_steps_step_2"/></ph><p><ph conref="marketplace_create.xml#task634/With_task_taskbody_steps_step_4"/></p></li-->
                     <li>Change the <uicontrol>Authorized sellers only</uicontrol> feature for the marketplace, if required. When enabled, only authorized supplier, broker, and reseller organizations are allowed to publish services to the marketplace. As a marketplace manager of the marketplace owner organization, you are responsible for defining these sellers. <p><ph
                                 conref="marketplace_create.xml#task634/Select_task_taskbody_steps_step_5"/></p><p><ph
                                 id="When_you_switch_from_an_open_task_taskbody_result_p_5_ol"

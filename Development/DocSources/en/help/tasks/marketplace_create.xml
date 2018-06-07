@@ -34,13 +34,7 @@
               <p><ph id="With_task_taskbody_steps_step_3"
                   >When you disable this feature, ratings and comments are not available on the marketplace.</ph></p>
             </li>
-            <li>
-              <p><uicontrol>Social bookmarks</uicontrol>: <ph
-                  id="When_enabled_bookmarks_for_d_task_taskbody_steps_step_2"
-                  >When enabled, bookmarks for direct access to social networks and communication services are provided with the services on the marketplace. Visitors can use these bookmarks, for example, to recommend a service to a social network.</ph></p>
-              <p><ph id="With_task_taskbody_steps_step_4"
-                  >When you disable this feature, social bookmarks are not available.</ph></p>
-            </li>
+            <!--li><p><uicontrol>Social bookmarks</uicontrol>: <ph id="When_enabled_bookmarks_for_d_task_taskbody_steps_step_2">When enabled, bookmarks for direct access to social networks and communication services are provided with the services on the marketplace. Visitors can use these bookmarks, for example, to recommend a service to a social network.</ph></p><p><ph id="With_task_taskbody_steps_step_4">When you disable this feature, social bookmarks are not available.</ph></p></li-->
             <li>
               <p><uicontrol>Authorized sellers only</uicontrol>: <ph
                   id="When_enabled_only_authorized_task_taskbody_steps_step_2"

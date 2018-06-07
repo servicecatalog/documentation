@@ -30,10 +30,7 @@
                 >Mit dieser Einstellung können Kunden die von ihnen abonnierten Services bewerten und Kommentare dazu abgeben. Andere Marktplatzbesucher können die Bewertungen und Kommentare sehen.</ph>
               <p><ph id="Ohne_review_stehen_task_taskbody_steps_step_2"
                   >Ohne diese Einstellung stehen Bewertungen und Kommentare auf dem Marktplatz nicht zur Verfügung.</ph></p></li>
-            <li><uicontrol>Social Bookmarks</uicontrol>:<ph id="Mit_bookmarks_werde_task_taskbody_steps_step_2"
-                > Mit dieser Einstellung werden bei den Services auf dem Marktplatz Lesezeichen zum direkten Zugang zu sozialen Netzwerken und Kommunikationsdiensten angeboten. Marktplatzbesucher können diese Lesezeichen beispielsweise nutzen, um Services in einem sozialen Netzwerk zu empfehlen.</ph>
-              <p id="Ohne_bookmarks_werden_task_taskbody_steps_step_2"
-                >Ohne diese Einstellung werden auf dem Marktplatz keine Social Bookmarks angezeigt. </p></li>
+            <!--li><uicontrol>Social Bookmarks</uicontrol>:<ph id="Mit_bookmarks_werde_task_taskbody_steps_step_2"> Mit dieser Einstellung werden bei den Services auf dem Marktplatz Lesezeichen zum direkten Zugang zu sozialen Netzwerken und Kommunikationsdiensten angeboten. Marktplatzbesucher können diese Lesezeichen beispielsweise nutzen, um Services in einem sozialen Netzwerk zu empfehlen.</ph> <p id="Ohne_bookmarks_werden_task_taskbody_steps_step_2">Ohne diese Einstellung werden auf dem Marktplatz keine Social Bookmarks angezeigt. </p></li-->
             <li><uicontrol>Nur zugelassene Anbieter</uicontrol>: <ph id="Mit_supplier_können_task_taskbody_steps_step_2"
                 >Mit dieser Einstellung können nur explizit zugelassene Anbieter ihre Services auf dem Marktplatz veröffentlichen. Für das Zulassen der Anbieter sind die Marktplatz-Manager des Marktplatzeigentümers verantwortlich.</ph>
               <p id="Ohne_supplier_werden_task_taskbody_steps_step_2"

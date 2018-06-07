@@ -16,7 +16,7 @@
                 <li>The marketplace is open to any seller or only to sellers authorized by the marketplace owner. </li>
                 <li>The services can be organized and searched for by categories and tags of a tag cloud.</li>
                 <li>Customers can rate services, and write comments.</li>
-                <li>Social bookmarks are available, for example, for recommending a service to a social network.</li>
+                <!--li>Social bookmarks are available, for example, for recommending a service to a social network.></li-->
             </ul>
             <p>These settings can be changed later at any time by the marketplace owner.</p>
             <p>The operator also defines revenue shares for marketplace owners, brokers, and resellers. The revenue shares define how the entire revenue collected from the customers is shared between all participating parties: the marketplace owner, the operator, brokers, resellers, and suppliers. The revenue shares may differ for individual marketplaces, suppliers, brokers or resellers, or even specific services.</p>

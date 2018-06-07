@@ -17,7 +17,7 @@
                     <li>Search for services in the service catalog using a full-text search feature.</li>
                     <li>Filter the services by terms from a tag cloud or by categories.</li>
                     <li>Rate and comment on services.</li>
-                    <li>Bookmark services and share them in social networks.</li>
+                    <!--li>Bookmark services and share them in social networks.</li-->
                 </ul></p>
             <p>Administrators of customer organizations can restrict the visibility of services on marketplaces to specific organizational units. A unit can, for example, represent a department in a company, an individual project, a cost center, or a single person. The OU administrators of each unit can further restrict the list of services visible to the other unit members.</p>
         </section>

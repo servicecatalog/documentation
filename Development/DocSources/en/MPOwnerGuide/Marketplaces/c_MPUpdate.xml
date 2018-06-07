@@ -18,10 +18,7 @@
                         href="../Marketplaces/c_MPDefFeatServ.xml"/>.</ph><p>When you disable this feature, categories are not available to marketplace visitors for searching, filtering, and browsing, but can still be defined and assigned to services. Existing category definitions and assignments are not affected.</p></li>
                 <li><b>Reviews</b>: <ph
                         conref="../../help/tasks/marketplace_create.xml#task634/When_enabled_customers_who_s_task_taskbody_steps_step_2"/><p>When you disable this feature, ratings and comments are not available on the marketplace. Existing ratings and comments are retained, but they are not visible. They re-appear when you enable the feature again.</p></li>
-                <li><b>Social bookmarks</b>: <ph
-                            conref="../../help/tasks/marketplace_create.xml#task634/When_enabled_bookmarks_for_d_task_taskbody_steps_step_2"/>
-                    <p><ph
-                        conref="../../help/tasks/marketplace_create.xml#task634/With_task_taskbody_steps_step_4"/></p></li>
+                <!--li><b>Social bookmarks</b>: <ph conref="../../help/tasks/marketplace_create.xml#task634/When_enabled_bookmarks_for_d_task_taskbody_steps_step_2"/> <p><ph conref="../../help/tasks/marketplace_create.xml#task634/With_task_taskbody_steps_step_4"/></p></li-->
                 <li><b>Authorized sellers only</b>: When enabled, only authorized suppliers, brokers, and resellers are allowed to publish services to the marketplace. When disabled, the marketplace is open to any seller organization.<ph audience="doc"> For details, refer to <xref
                     href="../Access/c_SuppliersIntro.xml"/>.</ph></li>
             </ul>

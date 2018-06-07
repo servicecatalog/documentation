@@ -85,9 +85,7 @@
             conref="marketplace_create.xml#task634/Mit_reviews_können_task_taskbody_steps_step_2"/>
           <p><ph conref="marketplace_create.xml#task634/Ohne_review_stehen_task_taskbody_steps_step_2"
             /> Existierende Bewertungen und Kommentare bleiben erhalten, sind jedoch nicht sichtbar. Sie werden angezeigt, wenn Sie die Einstellung wieder aktivieren.</p></li>
-        <li>Ändern Sie die Einstellung <uicontrol>Social Bookmarks</uicontrol>, falls erforderlich. <ph
-            conref="marketplace_create.xml#task634/Mit_bookmarks_werde_task_taskbody_steps_step_2"/>
-          <p conref="marketplace_create.xml#task634/Ohne_bookmarks_werden_task_taskbody_steps_step_2"/></li>
+        <!--li>Ändern Sie die Einstellung <uicontrol>Social Bookmarks</uicontrol>, falls erforderlich. <ph conref="marketplace_create.xml#task634/Mit_bookmarks_werde_task_taskbody_steps_step_2"/> <p conref="marketplace_create.xml#task634/Ohne_bookmarks_werden_task_taskbody_steps_step_2"/></li-->
         <li>Ändern Sie die Einstellung <uicontrol>Nur zugelassene Serviceanbieter</uicontrol>, falls erforderlich. Mit dieser Einstellung können nur explizit zugelassene Anbieter ihre Services auf dem Marktplatz veröffentlichen. Für das Zulassen der Anbieter sind die Marktplatz-Manager des Marktplatzeigentümers verantwortlich. <p
             conref="marketplace_create.xml#task634/Ohne_supplier_werden_task_taskbody_steps_step_2"
             /><p>Wenn Sie einen offenen Marktplatz in einen Marktplatz nur für zugelassene Anbieter ändern, werden automatisch alle Anbieter zugelassen, die bereits Services veröffentlicht haben. Auch die schwarze Liste des Marktplatzes bleibt erhalten. Das bedeutet, dass Anbieter, die Sie gesperrt haben, weiterhin gesperrt sind, wenn Sie den Marktplatz später wieder zu einem offenen Marktplatz machen.</p><p>Analoges gilt in die andere Richtung: Die Liste der zugelassenen Anbieter bleibt erhalten, wenn Sie einen Marktplatz in einen offenen ändern. Die Services der zugelassenen Anbieter bleiben auf dem Marktplatz veröffentlicht, außer wenn die Anbieter auf der schwarzen Liste des Marktplatzes stehen.</p></li>
