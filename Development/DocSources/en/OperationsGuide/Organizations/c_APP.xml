@@ -23,6 +23,11 @@
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                             />. Refer to the <i>OpenStack</i> Integration guide for details.</p>
                 </li>
+                <li>
+                    <p>VMware service controller: Can be used for integrating VMware vSphere services and using virtual machines provisioned on a VMware vSphere server with <ph
+                            conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            />. Refer to the <i>VMware vSphere </i> Integration guide for details.</p>
+                </li>
             </ul>
             <p>Before technology providers can use the service controllers, they must be entered as responsible organizations in APP as well as in the service controllers.</p>
             <p><b>To register an organization that is to be responsible for a service controller: </b></p>
@@ -35,7 +40,7 @@
                             <codeph>https://&lt;hostname.fqdn&gt;:&lt;port&gt;/oscm-app</codeph>
                         </p><p><codeph>&lt;hostname.fqdn&gt;</codeph> is the name and the fully qualified domain name of the machine where APP has been deployed. <codeph>&lt;port&gt;</codeph> is the port to address the machine (default: <codeph>8881</codeph>), <codeph>oscm-app</codeph> is the default context root of APP and cannot be changed.</p></li>
                     <li>Log in with your user ID and password (default: <codeph>administrator</codeph>, <codeph>admin123</codeph>). </li>
-                    <li>Specify the ID of the technology provider organization that is to be responsible for the respective service controller (<codeph>ess.openstack</codeph> or <codeph>ess.aws</codeph>).</li>
+                    <li>Specify the ID of the technology provider organization that is to be responsible for the respective service controller (<codeph>ess.openstack</codeph>, <codeph>ess.aws</codeph>, or <codeph>ess.vmware</codeph>).</li>
                     <li>Click <uicontrol>Save Configuration</uicontrol> to save the settings.</li>
                 </ol>
             </p>

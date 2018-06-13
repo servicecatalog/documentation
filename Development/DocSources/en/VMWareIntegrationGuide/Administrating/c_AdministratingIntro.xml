@@ -8,18 +8,6 @@
                     xml:lang="en-us">
         <title>Administrating the vSphere Integration</title>
         <conbody>
-                <p>The following sections describe administration tasks you may need to perform in your role as an operator of the vSphere integration software:</p>
-                <ul>
-                        <li><xref
-                    href="../../Shared/concepts/c_ControlExecution.xml"/></li>
-                        <li><xref
-                    href="../../Shared/concepts/c_ControllerHandleProblems.xml"/></li>
-                    <li><xref
-                        href="../../Shared/concepts/c_ControllerHandleCommProblems.xml"/></li>
-                        <li><xref
-                    href="../../Shared/Installation/c_Backup.xml"/></li>
-                        <li><xref href="../../Shared/Installation/c_UpdateConfiguration.xml"/></li>
-            <li><xref href="../../Shared/reference/c_LogConfig.xml"/></li>
-                </ul>
+                <p>The following sections describe administration tasks you may need to perform in your role as an operator of the vSphere integration software.</p>
         </conbody>
 </concept>

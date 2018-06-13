@@ -12,10 +12,10 @@
             <prodname/>
             <vrmlist>
                 <vrm
-            version="V17.6.0"/>
+            version="V17.7.0"/>
             </vrmlist>
             <brand/>
-        	<prognum>V17.6.0</prognum>
+        	<prognum>V17.7.0</prognum>
             <component/>
             <series>Online Help Topics</series>
         </prodinfo>
@@ -24,15 +24,15 @@
             <prodname>Enterprise Service</prodname>
             <vrmlist>
                 <vrm
-            version="V17.6.0"/>
+            version="V17.7.0"/>
             </vrmlist>
             <brand>FUJITSU Software</brand>
-            <prognum>Catalog Manager V17.6.0</prognum>
+            <prognum>Catalog Manager V17.7.0</prognum>
             <component/>
             <series>Online Help Topics</series>
         </prodinfo>
         <bookid>
-            <edition>January 2018 </edition>
+            <edition>June 2018 </edition>
             <booknumber/>
         </bookid>
         <bookrights

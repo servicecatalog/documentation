@@ -66,7 +66,7 @@
             <title>Settings for Connecting to the Service Controllers</title>
             <p>
                 <ul>
-                    <li><codeph>CONTROLLER_ID</codeph><p>The identifier of the service controller to be configured. Currently, the OpenStack and the AWS service controllers can be configured with the following identifiers: <codeph>ess.openstack</codeph> or <codeph>ess.aws</codeph>.</p></li>
+                    <li><codeph>CONTROLLER_ID</codeph><p>The identifier of the service controller to be configured. Currently, the OpenStack, the AWS, and the VMware service controllers can be configured with the following identifiers: <codeph>ess.openstack</codeph>, <codeph>ess.aws</codeph>, or <codeph>ess.vmware</codeph>, respectively.</p></li>
                     <li><codeph>CONTROLLER_ORG_ID</codeph><p>The ID of the organization in <ph
                                 conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                             /> responsible for the service controller. The organization must have the technology provider role.</p><p>Before the first deployment, the setting's value must be set to <codeph><codeph>PLATFORM_OPERATOR</codeph></codeph>. The operator can then log in to the service controller and define the technology provider organization that is to be responsible. </p></li>
@@ -79,6 +79,17 @@
                     <li><codeph>CONTROLLER_USER_PASS</codeph><p>The password of the user for accessing the service controller. The password is encrypted when it is stored in the database. </p><p>Before the first deployment, the setting's value must be set to <codeph><codeph>admin123</codeph></codeph>.</p></li>
                 </ul>
             </p>
+        </section>
+        <section>
+            <title>Settings for Connecting to the VMware Service Controller</title>
+            <p>The VMware service controller requires additional settings. <ul>
+                    <li><codeph>DB_USER_VMWARE</codeph><p>The name of the user to connect to the <codeph>vmware</codeph> database. This database stores the vSphere configuration.</p></li>
+                    <li><codeph>DB_PWD_VMWARE</codeph><p>The password of the user to connect to the <codeph>vmware</codeph> database. This database stores the vSphere configuration.</p></li>
+                    <li><codeph>VCENTER_NAME</codeph><p>The name of the vCenter running on the vSphere server. </p></li>
+                    <li><codeph>DATACENTER_NAME</codeph><p>The name of data center managed by the vCenter specified above. </p></li>
+                    <li><codeph>CLUSTER_NAME</codeph><p>The name of the cluster where VMs are to be provisioned. </p></li>
+                    <li><codeph>LOADBALANCER_NAME</codeph><p>The name of the load balancer used by vSphere. Usually, you can use the name of the VM Network in vSphere. </p></li>
+                </ul></p>
         </section>
         <section>
             <title>Additional Settings</title>

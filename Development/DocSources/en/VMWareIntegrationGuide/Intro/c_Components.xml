@@ -8,9 +8,14 @@
     <section>
       <p>The following picture provides an overview of the main components involved in the integration of <ph
           conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> and vSphere:</p>
-      <p>
+      <p product="oscm_ce">
         <fig>
-          <image align="left" alt="Components.png" height="171" href="../_images/Components.png" width="400"/>
+          <image href="../_images/Components_CE.png" alt="Components_CE.png" width="400" height="171"/>
+        </fig>
+      </p>
+      <p product="oscm_ee">
+        <fig>
+          <image href="../_images/Components_EE.png" alt="Components_EE.png" width="400" height="171"/>
         </fig>
       </p>
       <p conref="../../Shared/concepts/c_ControllerConcepts.xml#controller/cmp1"/>
@@ -19,7 +24,8 @@
           conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
         />. On the other hand, a technical service can reference several templates, and a user may choose a template when subscribing to a corresponding service. The technology provider organization is responsible for knowing and providing the correct VM template names. </p>
       <!-- p>The <b>ESX server</b> is an enterprise-class, type-1 hypervisor developed by VMware for deploying and serving virtual machines. As a type-1 hypervisor, ESX is not a software application that one installs in an operating system; instead, it includes and integrates vital operating system components, such as a kernel.</p-->
-      <p>The vSphere API is contacted by the VMware service controller for triggering actions in vSphere. </p>
+      <p>The vSphere API is contacted by the VMware service controller for triggering actions in vSphere.</p>
+      <p>When APP is deployed, a VMware service controller is also deployed, registered, and initialized. </p>
       <!--p>The <b>Storage</b> of vSphere represents VM disk files. In this way, VMs are granted access to their own private datastores. On the other hand, administrators can flexibly create, manage and migrate VM storage as separate, self-contained files that can reside on shared storage equipment.</p-->
     </section>
   </conbody>

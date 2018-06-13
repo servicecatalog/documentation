@@ -9,25 +9,25 @@
         <prodinfo product="oscm_ce">
             <prodname/>
             <vrmlist>
-                <vrm version="17.6.0"/>
+                <vrm version="17.7.0"/>
             </vrmlist>
             <brand/>
-            <prognum>17.6.0</prognum>
+            <prognum>17.7.0</prognum>
             <component/>
             <series>VMware vSphere Integration</series>
         </prodinfo>
         <prodinfo product="oscm_ee">
             <prodname>Enterprise Service</prodname>
             <vrmlist>
-                <vrm version="17.6"/>
+                <vrm version="17.7"/>
             </vrmlist>
             <brand>FUJITSU Software</brand>
-            <prognum>Catalog Manager V17.6</prognum>
+            <prognum>Catalog Manager V17.7</prognum>
             <component/>
             <series>VMware vSphere Integration</series>
         </prodinfo>
         <bookid>
-            <edition>DRAFT - November 2017 </edition>
+            <edition>June 2017 </edition>
             <!--booknumber product="oscm_ee">B1WS-1281-01</booknumber-->
         </bookid>
         <bookrights product="oscm_ce">
@@ -50,7 +50,7 @@
         <topicref format="dita" href="VMWareIntegrationGuide/Intro/c_Components.xml" type="concept"/>
         <topicref format="dita" href="VMWareIntegrationGuide/Intro/c_Scenarios.xml" type="concept"/>
     </chapter>
-    <chapter format="dita" href="Shared/Installation/c_InstIntro.xml" type="concept">
+    <!--chapter format="dita" href="Shared/Installation/c_InstIntro.xml" type="concept">
         <topicref format="dita" href="VMWareIntegrationGuide/Installation/c_Preparation.xml" type="concept">
             <topicref format="dita" href="Shared/Installation/c_PrepCTMG.xml" type="concept"/>
             <topicref format="dita" href="Shared/Installation/c_PrepHardware.xml" type="concept"/>
@@ -68,7 +68,7 @@
         </topicref>
         <topicref format="dita" href="Shared/Installation/c_InstControllerInExistingAPP.xml" type="concept"/>
         <topicref format="dita" href="Shared/Installation/c_Update.xml" type="concept"/>
-    </chapter>
+    </chapter-->
     <chapter format="dita" href="VMWareIntegrationGuide/Services/c_ServicesIntro.xml" type="concept">
         <topicref format="dita" href="Shared/concepts/c_ControllerPrerequisites.xml" type="concept"/>
         <topicref format="dita" href="Shared/tasks/t_CreateTechService.xml" type="task"/>
@@ -83,25 +83,26 @@
     <chapter format="dita" href="VMWareIntegrationGuide/Administrating/c_AdministratingIntro.xml" type="concept">
         <topicref format="dita" href="Shared/concepts/c_ControlExecution.xml" type="concept"/>
         <topicref format="dita" href="Shared/concepts/c_ControllerHandleProblems.xml" type="concept"/>
-        <topicref format="dita" href="Shared/concepts/c_ControllerHandleCommProblems.xml" type="concept"/>
-        <topicref format="dita" href="Shared/Installation/c_Backup.xml" type="concept"/>
-        <topicref format="dita" href="Shared/Installation/c_UpdateConfiguration.xml" type="concept"/>
+        <!--topicref format="dita" href="Shared/concepts/c_ControllerHandleCommProblems.xml" type="concept"/-->
+        <!--topicref format="dita" href="Shared/Installation/c_Backup.xml" type="concept"/-->
+        <topicref format="dita" href="VMWareIntegrationGuide/Administrating/c_UpdateConfiguration.xml" type="concept"/>
         <!--topicref format="dita" href="VMWareIntegrationGuide/Administrating/c_LoadBalancing.xml" type="concept"/-->
-		<topicref format="dita" href="Shared/reference/c_LogConfig.xml" type="concept"/>
+		<!--topicref format="dita" href="Shared/reference/c_LogConfig.xml" type="concept"/-->
+		<topicref format="dita" href="VMWareIntegrationGuide/Administrating/c_ChangeOrg.xml" type="concept"/>
 		
     </chapter>
-    <chapter format="dita" href="Shared/Installation/c_Uninstallation.xml" type="concept"/>
-    <appendix format="dita" href="Shared/Installation/r_ConfigSettings.xml" type="reference">
-                <topicref format="dita" href="VMWareIntegrationGuide/Appendix/r_ConfigSettings_db.xml" type="reference"/>
+    <!--chapter format="dita" href="Shared/Installation/c_Uninstallation.xml" type="concept"/-->
+    
+    
+    <appendix format="dita" href="VMWareIntegrationGuide/Appendix/r_ConfigSettingsController.xml" type="reference"/>
+    <appendix format="dita" href="VMWareIntegrationGuide/Appendix/r_CSVFormat.xml" type="reference"/>
+        <!--topicref format="dita" href="VMWareIntegrationGuide/Appendix/r_ConfigSettings_db.xml" type="reference"/>
         <topicref format="dita" href="APPInt/APP/r_ConfigSettings.xml" type="reference"/>
-		
-
-		<topicref format="dita" href="VMWareIntegrationGuide/Appendix/r_ConfigSettings_dbController.xml" type="reference"/>
+	    <topicref format="dita" href="VMWareIntegrationGuide/Appendix/r_ConfigSettings_dbController.xml" type="reference"/>
 		<topicref format="dita" href="VMWareIntegrationGuide/Appendix/r_CSVFormat.xml" type="reference"/>
-
         <topicref format="dita" href="VMWareIntegrationGuide/Appendix/r_ConfigSettingsController.xml" type="reference"/>
-		<!--topicref format="dita" href="VMWareIntegrationGuide/Appendix/r_Resource_extension.xml" type="reference"/-->
-    </appendix>
+		
+    </appendix-->
     <appendix format="dita" href="VMWareIntegrationGuide/Appendix/r_ServiceParameters.xml" type="reference"/>
     <appendix format="dita" href="Shared/glossary/r_Glossary.xml" type="reference"/>
 </bookmap>

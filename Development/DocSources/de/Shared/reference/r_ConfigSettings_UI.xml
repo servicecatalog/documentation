@@ -4,7 +4,7 @@
                            "reference.dtd">
 <reference id="reference832" xml:lang="en-us">
     <title><ph platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-            /> Configuration Settings</ph><ph platform="help">Configuration settings</ph></title>
+            />-Konfigurationseinstellungen</ph><ph platform="help">-Konfigurationseinstellungen</ph></title>
     <refbody>
         <section>
             <p>Nachfolgend finden Sie eine Beschreibung aller für die Plattform-Services verfügbaren Konfigurationseinstellungen. </p>

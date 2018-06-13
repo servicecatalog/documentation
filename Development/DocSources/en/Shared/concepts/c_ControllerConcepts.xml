@@ -22,12 +22,13 @@
           audience="os">Virtual systems</ph><ph audience="vmware">VMs</ph> are <ph audience="aws"
           >created or deleted </ph><ph audience="os">created or deleted </ph><ph audience="vmware"
           >created, modified, or deleted </ph>in <ph audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph
-          audience="vmware">vSphere</ph>. Refer to the <i>Technology Provider's Guide</i> for details on APP.</p>
+          audience="vmware">vSphere</ph>. </p>
       <p id="cmp2"
           >APP is a framework which provides a provisioning service, an operation service, as well as functions, data persistence, and notification features which are required for integrating applications with <ph
           conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
           /> in asynchronous mode. The actual communication with the applications is carried out by service controllers. <ph
-          audience="app">For each application, a specific and dedicated service controller is required.</ph>
+          audience="app"
+            >For each application, a specific and dedicated service controller is required. Refer to the <i>Technology Provider's Guide</i> for details on APP.</ph>
       </p>
      
     </section>

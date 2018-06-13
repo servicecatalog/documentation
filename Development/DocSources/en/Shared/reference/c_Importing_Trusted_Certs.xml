@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd">
+<concept id="Importing_SSL_Key_pairs_277">
+  <title>Importing Trusted SSL Certificates</title>
+  <conbody>
+    <section>If you want your application to trust certain, possibly self-signed SSL certificates, put them in PEM format in the following directory on your Docker host: <p><codeph>/docker/config/certs</codeph></p><p>Replace <codeph>/docker</codeph> with the base directory on the Docker host that you use for persisting data.</p>For example, if you want to use the VMware service controller, you need to export the vSphere certificate in PEM format, and copy it to the <codeph>/docker/config/certs</codeph> directory. Since the VMware service controller is running in the <codeph>oscm-app</codeph> container, a restart of this container is required.</section>
+
+  </conbody>
+</concept>

@@ -6,6 +6,12 @@
   <refbody>
     <section>
       <p>The following sections describe the technical service parameters and service operations which are supported by the VMware service controller. </p>
+      <p audience="vmware">You find a sample service on GitHub: <xref
+          href="https://github.com/servicecatalog/oscm/tree/master/oscm-app-vmware/resources" scope="external"
+            ><u>https://github.com/servicecatalog/oscm/tree/master/oscm-app-vmware/resources</u></xref>.</p>
+      <p>
+        <note>All parameters defined in the technical service definition must be one-time parameters, since the modification of parameters is not supported. Be sure to set their <codeph>modificationType</codeph> to <codeph>ONE_TIME</codeph>. </note>
+      </p>
     </section>
     <section>
       <title>General Parameters</title>
@@ -140,7 +146,7 @@
             <row>
               <entry>
                 <p><b>TARGET_VCENTER_SERVER</b></p>
-                <p>Optional. The site where vSphere is installed. vCenter is the centralized management tool for the vSphere suite. Together with the <codeph>TARGET_DATACENTER</codeph> and <codeph>TARGET_CLUSTER</codeph> parameters, this parameter is used to specify the location of the provisioned VM instances. The vCenter must be contained in the <codeph>vmware</codeph> database after the import of the <codeph>vcenter.csv</codeph> configuration file.</p>
+                <p>Optional. The site where vSphere is installed. vCenter is the centralized management tool for the vSphere suite. Together with the <codeph>TARGET_DATACENTER</codeph> and <codeph>TARGET_CLUSTER</codeph> parameters, this parameter is used to specify the location of the provisioned VM instances. The vCenter must be contained in the <codeph>vmware</codeph> database.</p>
               </entry>
             </row>
           </tbody>
@@ -153,7 +159,7 @@
             <row>
               <entry>
                 <p><b>TARGET_DATACENTER</b></p>
-                <p>Optional. The data center where the VM instances will be provisioned. Together with the <codeph>TARGET_VCENTER_SERVER</codeph> and <codeph>TARGET_CLUSTER</codeph> parameters, this parameter is used to determine the location of the provisioned VM instances. The data center must be contained in the <codeph>vmware</codeph> database after the import of the <codeph>datacenter.csv</codeph> configuration file.</p>
+                <p>Optional. The data center where the VM instances will be provisioned. Together with the <codeph>TARGET_VCENTER_SERVER</codeph> and <codeph>TARGET_CLUSTER</codeph> parameters, this parameter is used to determine the location of the provisioned VM instances. The data center must be contained in the <codeph>vmware</codeph> database.</p>
               </entry>
             </row>
           </tbody>
@@ -166,7 +172,7 @@
             <row>
               <entry>
                 <p><b>TARGET_CLUSTER</b></p>
-                <p>Optional. The cluster where the VM instances will be provisioned. A cluster is a group of hosts. Together with the <codeph>TARGET_VCENTER_SERVER</codeph> and <codeph>TARGET_DATACENTER</codeph> parameters, this parameter is used to determine the location of the provisoned VM instances. The cluster must be contained in the <codeph>vmware</codeph> database after the import of the <codeph>cluster.csv</codeph> configuration file. </p>
+                <p>Optional. The cluster where the VM instances will be provisioned. A cluster is a group of hosts. Together with the <codeph>TARGET_VCENTER_SERVER</codeph> and <codeph>TARGET_DATACENTER</codeph> parameters, this parameter is used to determine the location of the provisoned VM instances. The cluster must be contained in the <codeph>vmware</codeph> database.</p>
               </entry>
             </row>
           </tbody>
@@ -641,8 +647,11 @@
       <title>Service Operations for VMs</title>
       <p>The VMware service controller supports the service operations below for VMs. </p>
       <p>The <codeph>actionURL</codeph> for each operation is:</p>
-      <p><codeph>https://&lt;host>:&lt;port>/OperationService/AsynchronousOperationProxy?wsdl</codeph></p>
-      <p><codeph>&lt;host></codeph> and <codeph>&lt;port></codeph> are the server and port of the <codeph>app-domain</codeph> domain where the vSphere integration software is deployed.</p>
+      <p>
+        <codeblock>https://oscm-app:8881/oscm-app/webservices/oscm-app/oscm-app
+         /org.oscm.app.v2_0.service.AsynchronousOperationProxy?wsdl</codeblock>
+      </p>
+      <p><codeph>&lt;oscm-app></codeph> and <codeph>&lt;8881></codeph> are the server and port of the container where the VMware service controller is deployed.</p>
       <table frame="top">
         <tgroup cols="1">
           <colspec colname="c1" colnum="1"/>

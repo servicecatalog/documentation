@@ -6,6 +6,9 @@
   <refbody>
     <section>
       <p>The following sections describe the technical service parameters and service operations which are supported by the OpenStack service controller. </p>
+      <p audience="os">You find several sample services on GitHub: <xref
+          href="https://github.com/servicecatalog/oscm/tree/master/oscm-app-openstack/resources" scope="external"
+            ><u>https://github.com/servicecatalog/oscm/tree/master/oscm-app-openstack/resources</u></xref>. </p>
     </section>
     <section>
       <title>Service Parameters</title>
@@ -245,9 +248,11 @@
       <title>Service Operations for OpenStack Instances</title>
       <p>The OpenStack service controller supports the service operations below for the OpenStack instances.</p>
       <p>The <codeph>actionURL</codeph> for each operation is:</p>
-      <p><codeph>https://oscm-app:8881/oscm-app/webservices/oscm-app/</codeph></p>
-      <p><codeph>   oscm-app/org.oscm.app.v2_0.service.AsynchronousOperationProxy?wsdl</codeph></p>
-      <p><codeph>&lt;oscm-app></codeph> and <codeph>&lt;8880></codeph> are the server and port of the container where the OpenStack service controller is deployed.</p>
+      <p>
+        <codeblock>https://oscm-app:8881/oscm-app/webservices/oscm-app/oscm-app
+         /org.oscm.app.v2_0.service.AsynchronousOperationProxy?wsdl</codeblock>
+      </p>
+      <p><codeph>&lt;oscm-app></codeph> and <codeph>&lt;8881></codeph> are the server and port of the container where the OpenStack service controller is deployed.</p>
       <table frame="top">
         <tgroup cols="1">
           <colspec colname="c1" colnum="1"/>

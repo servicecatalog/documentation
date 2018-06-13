@@ -49,9 +49,10 @@
                             scope="external"
                                 ><u>https://github.com/servicecatalog/oscm/tree/master/oscm-app-aws/resources</u></xref>. </p>
                     
-                    <p audience="vmware"
-                        >The vSphere integration package, <codeph>oscm-vmware-install-pack.zip</codeph>, includes a technical service as a sample. Use the sample as a basis for defining your own technical services as required:</p>
-                    <p audience="vmware"><codeph>samples/TechnicalService_VMware.xml</codeph></p>
+                    <p audience="vmware">As a basis, you can use the technical services samples provided on <xref
+                            href="https://github.com/servicecatalog/oscm/tree/master/oscm-app-vmware/resources"
+                            scope="external"
+                                ><u>https://github.com/servicecatalog/oscm/tree/master/oscm-app-vmware/resources</u></xref>.</p>
                    <p>In the technical service definition, be sure to specify:</p>
                     <ul>
                         <li>The asynchronous provisioning type </li>

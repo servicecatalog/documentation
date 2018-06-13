@@ -63,10 +63,10 @@
                                                         ><i>Online Help:</i> Online help pages describing how to work with the administration portal of <ph
                                                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                                                 />. The online help is intended for and available to everybody working with the administration portal.</ph></li>
-                                <!--li><ph id="VMWARE_Guide:_concept_conbody_section_ul_l"
+                                <li><ph id="VMWARE_Guide:_concept_conbody_section_ul_l"
                                                         ><i>VMware vSphere Integration:</i> A PDF manual for operators describing how to offer and use virtual machines provisioned on a VMware vSphere server through services in <ph
                                                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                                />.</ph></li-->
+                                                />.</ph></li>
                                 <!--li><ph id="Javadoc_documentation_on_the_concept_conbody_section_ul_l"
                                                         >Javadoc and YAML documentation for the public Web services and application programming interfaces of <ph
                                                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"

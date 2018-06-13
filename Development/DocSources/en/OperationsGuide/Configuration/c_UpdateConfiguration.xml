@@ -73,7 +73,8 @@ docker-compose -f docker-compose-initdb.yml up oscm-initdb-core
 docker-compose -f docker-compose-initdb.yml up oscm-initdb-jms 
 docker-compose -f docker-compose-initdb.yml up oscm-initdb-app 
 docker-compose -f docker-compose-initdb.yml up oscm-initdb-controller-openstack
-docker-compose -f docker-compose-initdb.yml up oscm-initdb-controller-aws 
+docker-compose -f docker-compose-initdb.yml up oscm-initdb-controller-aws
+docker-compose -f docker-compose-initdb.yml up oscm-initdb-controller-vmware 
 docker-compose -f docker-compose-initdb.yml stop 
 docker-compose -f docker-compose-initdb.yml rm -f</codeblock>
                         </p></li>

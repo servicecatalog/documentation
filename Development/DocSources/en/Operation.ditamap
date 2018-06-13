@@ -11,10 +11,10 @@
             <prodname/>
             <vrmlist>
                 <vrm
-            version="V17.6.0"/>
+            version="V17.7.0"/>
             </vrmlist>
             <brand/>
-            <prognum>V17.6.0</prognum>
+            <prognum>V17.7.0</prognum>
             <component/>
             <series>Operator's Guide</series>
         </prodinfo>
@@ -23,15 +23,15 @@
             <prodname>Enterprise Service</prodname>
             <vrmlist>
                 <vrm
-            version="V17.6"/>
+            version="V17.7"/>
             </vrmlist>
             <brand>FUJITSU Software</brand>
-            <prognum>Catalog Manager V17.6</prognum>
+            <prognum>Catalog Manager V17.7</prognum>
             <component/>
             <series>Operator's Guide</series>
         </prodinfo>
         <bookid>
-            <edition>January 2018 </edition>
+            <edition>June 2018 </edition>
             <!--booknumber product="oscm_ee">B1WS-1252-02</booknumber-->
         </bookid>
         <bookrights
@@ -111,6 +111,9 @@ topicref href="OperationsGuide/Configuration/c_LoadBalancing.xml" type="concept"
         <topicref
             href="OperationsGuide/Configuration/c_LDAPSettings.xml"
         type="concept"/>
+        <topicref
+            href="OperationsGuide/Organizations/c_APP.xml"
+        type="concept"/>
         
         
     </chapter>
@@ -165,9 +168,7 @@ topicref href="OperationsGuide/Configuration/c_LoadBalancing.xml" type="concept"
 		<!--topicref href="Shared/reference/c_IdPInfo.xml" type="concept"/-->
 		<!--topicref href="Shared/reference/c_IdPInfo2.xml" type="concept"/-->
 		<!--/topicref-->
-		<topicref
-            href="OperationsGuide/Organizations/c_APP.xml"
-        type="concept"/>
+		
     </chapter>
     <chapter
         href="OperationsGuide/Reports/c_Reports.xml"
@@ -232,10 +233,10 @@ topicref href="OperationsGuide/Configuration/c_LoadBalancing.xml" type="concept"
             <topicref href="OperationsGuide/Certificates/c_Cert_SetDN.xml" type="concept"/>
         </topicref-->
 		<topicref
-            href="OperationsGuide/Certificates/c_Importing_SSL_Key_pairs.xml"
+            href="Shared/reference/c_Importing_SSL_Key_pairs.xml"
             type="concept"/>
 		<topicref
-            href="OperationsGuide/Certificates/c_Importing_Trusted_Certs.xml"
+            href="Shared/reference/c_Importing_Trusted_Certs.xml"
         type="concept"/>
 		
     </chapter>

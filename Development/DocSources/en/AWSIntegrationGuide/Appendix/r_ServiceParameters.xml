@@ -6,6 +6,9 @@
   <refbody>
     <section>
       <p>The following sections describe the technical service parameters and service operations which are supported by the AWS service controller. </p>
+      <p audience="aws">You find a sample service on GitHub: <xref
+          href="https://github.com/servicecatalog/oscm/tree/master/oscm-app-aws/resources" scope="external"
+            ><u>https://github.com/servicecatalog/oscm/tree/master/oscm-app-aws/resources</u></xref>. </p>
     </section>
     <section>
       <title>Service Parameters</title>
@@ -240,9 +243,9 @@
       <title>Service Operations for Virtual Servers</title>
       <p>The AWS service controller supports the service operations below for virtual servers. </p>
       <p>The <codeph>actionURL</codeph> for each operation is:</p>
-      <p><codeblock>https://oscm-app:8880/oscm-app/webservices/oscm-app/oscm-app
+      <p><codeblock>https://oscm-app:8881/oscm-app/webservices/oscm-app/oscm-app
          /org.oscm.app.v2_0.service.AsynchronousOperationProxy?wsdl</codeblock></p>
-      <p><codeph>&lt;oscm-app></codeph> and <codeph>&lt;8880></codeph> are the server and port of the container where the AWS integration software is deployed.</p>
+      <p><codeph>&lt;oscm-app></codeph> and <codeph>&lt;8881></codeph> are the server and port of the container where the AWS integration software is deployed.</p>
       <p>
         <note>If you provision a virtual server that does not support start and stop operations, make sure that you remove the service operations from the technical service definition. </note>
       </p>

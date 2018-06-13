@@ -11,10 +11,10 @@
             <prodname/>
             <vrmlist>
                 <vrm
-            version="V17.6.0"/>
+            version="V17.7.0"/>
             </vrmlist>
             <brand/>
-            <prognum>V17.6.0</prognum>
+            <prognum>V17.7.0</prognum>
             <component/>
             <series>QuickStart Guide</series>
         </prodinfo>
@@ -23,7 +23,7 @@
             <prodname>Enterprise Service</prodname>
             <vrmlist>
                 <vrm
-            version="V17.6"/>
+            version="V17.7"/>
             </vrmlist>
             <brand>FUJITSU Software</brand>
             <prognum>Catalog Manager V17.6</prognum>
@@ -31,7 +31,7 @@
             <series>QuickStart Guide</series>
         </prodinfo>
         <bookid>
-            <edition>January 2018 </edition>
+            <edition>June 2018 </edition>
             <!--booknumber product="oscm_ee">B1WS-1252-02</booknumber-->
         </bookid>
         <bookrights
@@ -95,10 +95,10 @@
         href="Shared/reference/c_Certificates.xml"
             type="concept">
 		<topicref
-            href="QuickStart/Certificates/c_Importing_SSL_Key_pairs.xml"
+            href="Shared/reference/c_Importing_SSL_Key_pairs.xml"
             type="concept"/>
 		<topicref
-            href="QuickStart/Certificates/c_Importing_Trusted_Certs.xml"
+            href="Shared/reference/c_Importing_Trusted_Certs.xml"
         type="concept"/>
 		
     </chapter>
