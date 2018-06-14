@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2018 -->
+<concept id="concept_1BCF5C425D7D4627AB1C66A085CF6E11"
+                xml:lang="en-us">
+            <title>Configuring the vSphere Integration Software</title>
+            <conbody>
+        <section>
+                        <p>The vSphere integration software requires and stores in the <codeph>bssapp</codeph> relationa database, Another relational database, <codeph>vmware</codeph>, is used to store the vSphere configuration for use by the VMware service controller. The vSphere configuration must be imported into the <codeph>vmware</codeph> database. Usually, you do not need to change these settings once they have been imported into the database. </p>
+                        <p>The vSphere configuration is defined in <codeph>.csv</codeph> files:</p>
+                        <p><ul>
+                                        <li><codeph>vcenter.csv</codeph>: Defines the URL and user credentials for accessing the vSphere server. For security reasons, it is recommended to delete the file as soon as you have successfully installed and configured the vSphere integration software. </li>
+                                        <li><codeph>datacenter.csv</codeph>: Defines one or several data centers of the vSphere installation.</li>
+                                        <li><codeph>cluster.csv</codeph>: Defines one or several clusters managed by a data center. </li>
+                                        <li><codeph>vlan.csv</codeph>: Defines one or more VLANs for a cluster. </li>
+                                        <li><codeph>ippool.csv</codeph>: Defines the list of IP addresses associated with a VLAN. </li>
+                                </ul>Refer to <xref href="../Appendix/r_CSVFormat.xml"/> for details.</p>
+                        <p><b>To import the vSphere configuration settings into the <codeph>vmware</codeph> database: </b></p>
+                        <p>
+                                <ol compact="no">
+                                        <li>Invoke the instance status interface of APP for the VMware service controller by opening its URL in a Web browser. <p>The access URL has the following format: </p><p><codeph>https://&lt;hostname.fqdn&gt;:&lt;port&gt;/oscm-app-vmware</codeph></p><p><codeph>&lt;hostname.fqdn&gt;</codeph> is the name and the fully qualified domain name of the machine where the <codeph>oscm-app</codeph> container has been deployed, <codeph>&lt;port&gt;</codeph> is the port to address the machine (default: <codeph>8881</codeph>), <codeph>oscm-app-vmware</codeph> is the default context root of the service controller and cannot be changed. </p></li>
+                                        <li>Log in with the ID and password of the user specified in the configuration settings for the VMware service controller by the platform operator in the <codeph>BSS_USER_ID</codeph> and <codeph>BSS_USER_PWD</codeph> configuration settings, or as another technology manager registered for the same organization.</li>
+                                        <li>Set the following vSphere-specific settings: <p>
+                                                        <ul>
+                                                            <li><b><b>Connection URL</b></b>: The URL for accessing the vSphere API.</li>
+                                                            <li><b>User ID</b>: The ID of the technical user in vSphere for accessing the vSphere API.</li>
+                                                            <li><b>Password</b>: The password of the technical user in vSphere for accessing the vSphere API.</li>
+                                                        </ul>
+                                                </p></li>
+                                        <li>Import the <codeph>.csv</codeph> files into the controller database by ....### doing the following ###</li>
+                                        <li>Save the settings.</li>
+                                </ol>
+                        </p>
+                </section>
+    </conbody>
+</concept>

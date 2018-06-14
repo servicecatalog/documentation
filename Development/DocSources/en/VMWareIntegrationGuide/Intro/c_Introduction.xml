@@ -6,8 +6,9 @@
           <title>Introduction</title>
           <conbody>
                     <section>
-                              <p conref="../../Shared/concepts/c_WhatIsBES_Controller.xml#concept2311/is_a_set_of_services_which_concept_conbody_p_1"/>
-   <p>VMware vSphere is a server and infrastructure virtualization platform that allows for running multiple operating systems and applications on a single server, the vSphere server. It gives you on-demand access to fully configured virtual machines (VMs) that are provisioned by cloning VM templates provided in vSphere. The provisioning of computing resources in the Cloud allows you to rapidly scale and flex your infrastructure to support new business initiatives or roll out services. </p>
+                              <p
+                                        conref="../../Shared/concepts/c_WhatIsBES_Controller.xml#concept2311/is_a_set_of_services_which_concept_conbody_p_1"/>
+                              <p>VMware vSphere is a server and infrastructure virtualization platform that allows for running multiple operating systems and applications on a single server, the vSphere server. It gives you on-demand access to fully configured virtual machines (VMs) that are provisioned by cloning VM templates provided in vSphere. The provisioning of computing resources in the Cloud allows you to rapidly scale and flex your infrastructure to support new business initiatives or roll out services. </p>
                               <p>When integrating applications with <ph
                                                   conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                         />, the instance provisioning can be done in two provisioning modes: synchronous or asynchronous mode.</p>
@@ -15,29 +16,22 @@
                                                   conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                         /> supports the integration of such applications with its asynchronous provisioning platform (APP). This is a framework which provides a provisioning service as well as functions, data persistence, and notification features which are always required for integrating applications in asynchronous mode.</p>
                               <p>The integration of <ph
-                                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                                            /> and vSphere provides for an Infrastructure as a Service (IaaS) solution that leverages the features of both products: Through services, which are published on a marketplace in <ph
-                                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                                            />, users can request and use VMs on a vSphere server. The usage costs can be calculated and charged by means of the <ph
-                                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                                            /> billing and payment services.</p>
-                              <p>When deploying the <codeph>oscm-vmware</codeph> container provided with <ph
+                                                  conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                  /> and vSphere provides for an Infrastructure as a Service (IaaS) solution that leverages the features of both products: Through services, which are published on a marketplace in <ph
+                                                  conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                  />, users can request and use VMs on a vSphere server. The usage costs can be calculated and charged by means of the <ph
+                                                  conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        /> billing and payment services.</p>
+                              <p>When deploying the <codeph>oscm-app</codeph> container provided with <ph
                                                   conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                                   />, a VMware service controller is preconfigured and registered with the asynchronous provisioning platform (APP). This service controller can be used for integrating vSphere services with <ph
                                                   conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                         />. </p>
                               <p>The VMware service controller includes all components required for connecting an existing <ph
                                                   conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                                  /> installation with a vSphere server. This manual describes how to create and use Virtual Machines on a vSphere server on an <ph
-                                                  conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                        /> marketplace. </p>
-                              <p>The vSphere integration package provided with <ph
-                                                  conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                                  /> includes all the components required for connecting an existing <ph
-                                                  conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                                  /> installation with vSphere. This manual describes how to deploy this package and how to create and use services for vSphere on an <ph
-                                                  conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                        /> marketplace. </p>
+                                                  /> installation with a vSphere server. This manual describes how to offer and use virtual machines provisioned on a VMware vSphere server through services on an <ph
+                                                  conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        /> marketplace.  </p>
                     </section>
           </conbody>
 </concept>
