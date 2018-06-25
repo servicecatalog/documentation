@@ -60,6 +60,11 @@
                                     >Describes the configuration settings for the vSphere integration software. </entry>
                             </row>
                             <row>
+                                <entry colname="col2"><xref href="../Appendix/r_CSVFormat.xml"/></entry>
+                                <entry colname="col3"
+                                    >Describes the configuration settings for the vSphere server. </entry>
+                            </row>
+                            <row>
                                 <entry colname="col2"><xref href="../Appendix/r_ServiceParameters.xml"/></entry>
                                 <entry colname="col3"
                                     >Describes the technical service parameters and service operations which are supported by the vSphere service controller.</entry>

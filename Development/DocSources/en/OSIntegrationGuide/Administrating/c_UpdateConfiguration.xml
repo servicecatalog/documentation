@@ -8,7 +8,7 @@
                     xml:lang="en-us">
             <title>Updating Service Controller Settings in the Database</title>
             <conbody>
-        <section>During deployment, several configuration settings are written to the <codeph>bssapp</codeph> database. This configuration is used for the initial setup of the OpenStack service controller and its registration with APP. It is up to the platform operator for taking care that the initial settings are correct. <p
+        <section>During deployment, several configuration settings are written to the <codeph>bssapp</codeph> database. This configuration is used for the initial setup of the OpenStack service controller and its registration with APP. It is up to the platform operator for taking care that the initial settings are correct. Refer to the <i>Operator's Guide</i> for details on the initial configuration using a <codeph>var.env</codeph> file.<p
                                 id="cfg"
                                         >A technology provider can define service parameters in the technical service definition. If such a parameter has the same ID as a controller configuration setting stored in the APP database, it overrules the configuration setting in the database when the marketable service based on such a technical service is subscribed to. By default the values in the controller configuration settings are used. Refer to the <i>Technology Provider's Guide</i> for details on defining technical services. </p><p
                                 id="cfg2"

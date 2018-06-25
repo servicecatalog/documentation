@@ -80,18 +80,6 @@
    </chapter>
     
     <chapter
-        href="QuickStart/GettingStarted/c_Usage.xml"
-        type="concept">
-        <topicref
-            href="QuickStart/GettingStarted/c_Access.xml"
-                type="concept"/>
-                <topicref
-            href="QuickStart/GettingStarted/c_EnableLogin.xml"
-                type="concept"/>
-        </chapter>
-    
-    
-    <chapter
         href="Shared/reference/c_Certificates.xml"
             type="concept">
 		<topicref
@@ -103,6 +91,19 @@
 		
     </chapter>
    
+    <chapter
+        href="QuickStart/GettingStarted/c_Usage.xml"
+        type="concept">
+        <topicref
+            href="QuickStart/GettingStarted/c_Access.xml"
+                type="concept"/>
+                <topicref
+            href="QuickStart/GettingStarted/c_EnableLogin.xml"
+                type="concept"/>
+        </chapter>
+    
+    
+    
     <appendix
         href="Shared/reference/r_ConfigSettings_initial.xml"
             type="reference">

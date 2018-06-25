@@ -16,7 +16,7 @@
           /> container, for example, <codeph>oscm-core</codeph> or <codeph>oscm-app</codeph>. </p>
       <p>The custom certificates must also be placed into the following trusted directory so that a trusted relationship between the containers is established: </p>
       <p><codeph>/docker/config/certs </codeph></p>
-      <p>This directory is shared by all containers. By default, if you use your own SSL key pairs, you must also place all the public certificate files here. </p>
+      <p>The <codeph>/docker/config/certs</codeph> directory is shared by all containers. By default, if you use your own SSL key pairs, you must also place all the public certificate files here. </p>
       <p>For example, if you have a custom SSL keypair for the <codeph>oscm-core</codeph> container, you need to place the private key into the <codeph>/docker/config/oscm-core/ssl/privkey</codeph> directory, and the public certificate into the <codeph>/docker/config/oscm-core/ssl/cert</codeph> directory. Additionally, you need to place the public certificate into the <codeph>/docker/config/certs</codeph> directory on your Docker host. In this case, a restart of the <codeph>oscm-core</codeph> and <codeph>oscm-app</codeph> containers is required. </p>
         </section>
 

@@ -8,7 +8,7 @@
                     xml:lang="en-us">
             <title>Updating Service Controller Settings in the Database</title>
             <conbody>
-        <section>During deployment, several configuration settings are written to the <codeph>bssapp</codeph> database. This configuration is used for the initial setup of the VMware service controller and its registration with APP. It is up to the platform operator for taking care that the initial settings are correct. <p
+        <section>During deployment, several configuration settings are written to the <codeph>bssapp</codeph> database. This configuration is used for the initial setup of the VMware service controller and its registration with APP. It is up to the platform operator for taking care that the initial settings are correct. Refer to the <i>Operator's Guide</i> for details on the initial configuration using a <codeph>var.env</codeph> file. <p
                                 id="cfg"
                                         >A technology provider can define service parameters in the technical service definition. If such a parameter has the same ID as a controller configuration setting stored in the APP database, it overrules the configuration setting in the database when the marketable service based on such a technical service is subscribed to. By default the values in the controller configuration settings are used. Refer to the <i>Technology Provider's Guide</i> for details on defining technical services. </p><p
                                 id="cfg2"
@@ -25,7 +25,7 @@
                                 <ol compact="no">
                                         <li>Invoke the instance status interface of APP for the VMware service controller of the application by opening it's URL in a Web browser. <p>The access URL has the following format: </p><p><codeph>https://&lt;hostname.fqdn>:&lt;port>/oscm-app-vmware</codeph></p><p><codeph>&lt;hostname.fqdn></codeph> is the name and the fully qualified domain name of the machine where the <codeph>oscm-app</codeph> container has been deployed, <codeph>&lt;port></codeph> is the port to address the machine (default: <codeph>8881</codeph>), <codeph>oscm-app-vmware</codeph> is the default context root of the service controller and cannot be changed. </p></li>
                                         <li>Log in with the ID and password of the user specified in the configuration settings for the VMware service controller by the platform operator in the <codeph>BSS_USER_ID</codeph> and <codeph>BSS_USER_PWD</codeph> configuration settings, or as another technology manager registered for the same organization.</li>
-                                        <li audience="os">The following <b>general controller settings</b> can be changed:<p>
+                                        <li>The following <b>general controller settings</b> can be changed:<p>
                                                         <ul>
                                                             <li><b>User ID</b>: The identifier of the user responsible for the VMware service controller.</li>
                                                             <li><b>User Key</b>: The user key for accessing <ph
@@ -40,13 +40,14 @@
                                                             />.</li>
                                                         </ul>
                                                 </p></li>
-                                        <li>The following <b>vSphere-specific settings</b> must be defined and can be changed later on: <p>
+                                        <li>The following <b>VMware controller-specific settings</b> must be defined and can be changed later on: <p>
                                                         <ul>
                                                             <li><b><b>Connection URL</b></b>: The URL for accessing the vSphere API.</li>
                                                             <li><b>User ID</b>: The ID of the technical user in vSphere for accessing the vSphere API.</li>
                                                             <li><b>Password</b>: The password of the technical user in vSphere for accessing the vSphere API.</li>
                                                         </ul>
-                                                </p></li>
+                                                </p><p>You can setup a complete vSphere configuration by importing <codeph>.csv</codeph> files. Refer to <xref
+                                                            href="../Appendix/r_CSVFormat.xml"/> for details. </p></li>
                                         <li>Save the settings.</li>
                                 </ol>
                         </p></section>

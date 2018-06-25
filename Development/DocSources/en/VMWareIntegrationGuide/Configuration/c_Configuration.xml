@@ -8,7 +8,16 @@
             <title>Configuring the vSphere Integration Software</title>
             <conbody>
         <section>
-                        <p>The vSphere integration software requires and stores in the <codeph>bssapp</codeph> relationa database, Another relational database, <codeph>vmware</codeph>, is used to store the vSphere configuration for use by the VMware service controller. The vSphere configuration must be imported into the <codeph>vmware</codeph> database. Usually, you do not need to change these settings once they have been imported into the database. </p>
+                        <p>The vSphere integration software requires and stores its data in the <codeph>bssapp</codeph> relational database. Another relational database, <codeph>vmware</codeph>, is used to store the vSphere configuration. The initial setup used when deploying the <codeph>oscm-app</codeph> container configures at least the following: </p>
+                        <p>
+                                <ul>
+                                        <li><codeph>VCENTER_NAME</codeph>: The name of the vCenter running on the vSphere server. </li>
+                                        <li><codeph>DATACENTER_NAME</codeph>: The name of data center managed by the vCenter specified above. </li>
+                                        <li><codeph>CLUSTER_NAME</codeph>: The name of the cluster where VMs are to be provisioned.</li>
+                                        <li><codeph>LOADBALANCER_NAME</codeph>: The name of the load balancer used by vSphere. Usually, you can use the name of the VM Network in vSphere.</li>
+                                </ul>
+                        </p>
+                        <p>The vSphere configuration must be imported into the <codeph>vmware</codeph> database. Usually, you do not need to change these settings once they have been imported into the database. </p>
                         <p>The vSphere configuration is defined in <codeph>.csv</codeph> files:</p>
                         <p><ul>
                                         <li><codeph>vcenter.csv</codeph>: Defines the URL and user credentials for accessing the vSphere server. For security reasons, it is recommended to delete the file as soon as you have successfully installed and configured the vSphere integration software. </li>

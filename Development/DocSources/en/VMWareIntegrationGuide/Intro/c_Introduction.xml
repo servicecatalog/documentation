@@ -30,7 +30,7 @@
                               <p>The VMware service controller includes all components required for connecting an existing <ph
                                                   conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                                   /> installation with a vSphere server. This manual describes how to offer and use virtual machines provisioned on a VMware vSphere server through services on an <ph
-                                                  conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                  conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                         /> marketplace.  </p>
                     </section>
           </conbody>

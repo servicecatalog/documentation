@@ -21,6 +21,7 @@
                     <li>How to use and configure timers in <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</li>
                     <li>How to define and manage system-wide LDAP connection settings.</li>
+                    <li>How to enable access to the Asynchronous Provisioning Platform (APP) and service controllers.</li>
                 </ul>
             </p>
         </section>

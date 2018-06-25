@@ -110,9 +110,9 @@ topicref href="OperationsGuide/Configuration/c_MoveMasterIndexerDomain.xml" type
 topicref href="OperationsGuide/Configuration/c_LoadBalancing.xml" type="concept"/-->
         <topicref
             href="OperationsGuide/Configuration/c_LDAPSettings.xml"
-        type="concept"/>
+            type="concept"/>
         <topicref
-            href="OperationsGuide/Organizations/c_APP.xml"
+            href="OperationsGuide/Configuration/c_APP.xml"
         type="concept"/>
         
         
@@ -163,7 +163,7 @@ topicref href="OperationsGuide/Configuration/c_LoadBalancing.xml" type="concept"
             type="concept"/>
         <topicref
             href="OperationsGuide/Organizations/c_ImportUsers.xml"
-            type="concept"/>
+        type="concept"/>
 		<!--topicref href="OperationsGuide/Organizations/c_ManageTenants.xml" type="concept"-->
 		<!--topicref href="Shared/reference/c_IdPInfo.xml" type="concept"/-->
 		<!--topicref href="Shared/reference/c_IdPInfo2.xml" type="concept"/-->
@@ -275,7 +275,7 @@ topicref href="OperationsGuide/Configuration/c_LoadBalancing.xml" type="concept"
             type="reference"/>
         <topicref
             href="Shared/reference/r_ConfigSettings_UI.xml"
-        type="reference"/>
+            type="reference"/>
         <topicref
             href="Shared/reference/r_ConfigSettings_APP.xml"
         type="reference"/>

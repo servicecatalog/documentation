@@ -31,7 +31,7 @@
             <series>VMware vSphere Integration</series>
         </prodinfo>
         <bookid>
-            <edition>June 2017 </edition>
+            <edition>Draft for Review - June 2017 </edition>
             <!--booknumber product="oscm_ee">B1WS-1281-01</booknumber-->
         </bookid>
         <bookrights
@@ -75,7 +75,7 @@
             href="VMWareIntegrationGuide/Intro/c_Scenarios.xml"
         type="concept"/>
     </chapter>
-    <chapter format="dita" href="VMWareIntegrationGuide/Configuration/c_Configuration.xml" type="concept"/>
+    <!--chapter format="dita" href="VMWareIntegrationGuide/Configuration/c_Configuration.xml" type="concept"/-->
     
     <!--chapter format="dita" href="Shared/Installation/c_InstIntro.xml" type="concept">
         <topicref format="dita" href="VMWareIntegrationGuide/Installation/c_Preparation.xml" type="concept">
@@ -164,7 +164,7 @@
 	    <topicref format="dita" href="VMWareIntegrationGuide/Appendix/r_ConfigSettings_dbController.xml" type="reference"/>
 		<topicref format="dita" href="VMWareIntegrationGuide/Appendix/r_CSVFormat.xml" type="reference"/>
         <topicref format="dita" href="VMWareIntegrationGuide/Appendix/r_ConfigSettingsController.xml" type="reference"/>
-		
+        		
     </appendix-->
     <appendix
         format="dita"

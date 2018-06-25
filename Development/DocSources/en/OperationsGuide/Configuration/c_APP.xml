@@ -9,32 +9,28 @@
             <p>When integrating applications with <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>, the instance provisioning can be done in two provisioning modes: synchronous or asynchronous mode. </p>
             <p>Asynchronous provisioning is required if provisioning operations take a long time because long-running processes or manual steps are involved. This is the case, for example, when provisioning virtual machines on a virtual machine server. <ph
-                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> supports the integration of such applications with its asynchronous provisioning platform (APP). This is a framework which provides a provisioning service as well as functions, data persistence, and notification features which are always required for integrating applications in asynchronous mode.</p>
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> supports the integration of such applications with its asynchronous provisioning platform (APP). This is a framework which provides a provisioning service as well as functions, data persistence, and notification features which are always required for integrating applications in asynchronous mode.</p>
             <p>Having deployed the <codeph>oscm-app</codeph> container, the following service controllers are registered with <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> and initialized: </p>
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> and initialized: </p>
             <ul>
                 <li>
                     <p>AWS service controller: Can be used for integrating the Amazon Elastic Compute Cloud Web service with <ph
-                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            />. Refer to the <i>AWS Integration</i> guide for details. </p>
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. Refer to the <i>AWS Integration</i> guide for details. </p>
                 </li>
                 <li>
                     <p>OpenStack service controller: Can be used for integrating OpenStack services with <ph
-                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            />. Refer to the <i>OpenStack</i> Integration guide for details.</p>
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. Refer to the <i>OpenStack</i> Integration guide for details.</p>
                 </li>
                 <li>
                     <p>VMware service controller: Can be used for integrating VMware vSphere services and using virtual machines provisioned on a VMware vSphere server with <ph
-                            conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            />. Refer to the <i>VMware vSphere </i> Integration guide for details.</p>
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. Refer to the <i>VMware vSphere </i> Integration guide for details.</p>
                 </li>
             </ul>
             <p>Before technology providers can use the service controllers, they must be entered as responsible organizations in APP as well as in the service controllers.</p>
             <p><b>To register an organization that is to be responsible for a service controller: </b></p>
             <p>
                 <ol>
-                    <li>Login to the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            /> administration portal, and choose <b>Create organization</b> in the <b>Operation</b> menu.<p>Make sure to set the <b>Technology provider</b> role for the organization. Refer to the online help for details.</p>
+                    <li>Login to the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> administration portal, and choose <b>Create organization</b> in the <b>Operation</b> menu.<p>Make sure to set the <b>Technology provider</b> role for the organization. Refer to the online help for details.</p>
                     </li>
                     <li>Access the Web interface (base URL) of APP. The URL has the following format:<p>
                             <codeph>https://&lt;hostname.fqdn&gt;:&lt;port&gt;/oscm-app</codeph>

@@ -7,7 +7,8 @@
     <refbody>
         <section>
             <p>This appendix describes the controller configuration settings as stored in the <codeph>bssapp</codeph> database. For details on how to update them, refer to <xref
-                    href="../Administrating/c_UpdateConfiguration.xml"/>. </p>
+                    href="../Administrating/c_UpdateConfiguration.xml"/> and <xref
+                    href="../Administrating/c_ChangeOrg.xml"/>. </p>
         </section>
         <section>
             <title>CONTROLLER_ID</title>
