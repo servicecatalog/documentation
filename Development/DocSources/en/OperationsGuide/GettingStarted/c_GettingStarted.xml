@@ -55,7 +55,7 @@
                         </p>
                                 <p>To <b>delete</b> a container:  </p>
                         <p>
-                                <codeblock>docker-compose rm -f docker-compose-oscm.yml &lt;container-name></codeblock>
+                                <codeblock>docker-compose -f docker-compose-oscm.yml &lt;container-name> rm</codeblock>
                         </p>
                         <p>To <b>create and start</b> a container:  </p>
                         <p>
