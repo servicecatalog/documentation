@@ -13,6 +13,7 @@ All contributions are welcome - Open Service Catalog Manager uses the Apache 2.0
 The following documentation is available:
 
 * [Overview](Development/oscm-doc-user/resources/manuals/common/en/Overview.pdf): A PDF manual introducing OSCM. It is written for everybody interested in OSCM and does not require any special knowledge.
+* [QuickStart Guide](Development/oscm-doc-user/resources/manuals/installation+operation/en/QuickStart.pdf): A PDF manual for operators describing how to quickly install and setup OSCM using Docker and Docker Compose. 
 * [Operator's Guide](Development/oscm-doc-user/resources/manuals/installation+operation/en/Operation.pdf): A PDF manual for operators describing how to administrate and maintain OSCM.
 * [Technology Provider's Guide](Development/oscm-doc-user/resources/manuals/integration/en/TechProv.pdf): A PDF manual for technology providers describing how to prepare applications for usage in a SaaS model and how to integrate them with OSCM.
 * [Supplier's Guide](Development/oscm-doc-user/resources/manuals/integration/en/Supplier.pdf): A PDF manual for suppliers describing how to define and manage service offerings for applications that have been integrated with OSCM.
