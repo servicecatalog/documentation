@@ -13,31 +13,26 @@
                         <ol>
                                 <li>Choose <b>Manage organization</b> in the <b><b>Operation</b></b> menu. </li>
                                 <li>Enter <codeph>PLATFORM_OPERATOR</codeph> in the <b>Organization ID</b> field. </li>
-                                <li>Enable the following organization roles: <b>Supplier</b> and <b>Technology provider </b></li>
-                                <li>Fill in the mandatory fields (red asterisks) </li>
-                                <li>Click <b>Save</b>
-                                </li>
-                                <li>Go to the <b>Account</b> menu and choose <b>Manage users</b>
-                                </li>
-                                <li>Click on <codeph>administrator</codeph>
-                                </li>
-                                <li>Enter your Email address </li>
+                                <li>Enable the following organization roles: <b>Supplier</b> and <b>Technology provider</b>.</li>
+                                <li>Fill in the mandatory fields (red asterisks).</li>
+                                <li>Click <b>Save</b>.</li>
+                                <li>Go to the <b>Account</b> menu and choose <b>Manage users</b>.</li>
+                                <li>Click on <codeph>administrator</codeph>.</li>
+                                <li>Enter your email address.</li>
                                 <li>Enable all user roles. </li>
-                                <li>Click <b><b>Save</b></b>
-                                </li>
-                                <li>Logout of the administration portal and login again to enable the changes. </li>
+                                <li>Click <b><b>Save</b></b>.</li>
+                                <li>Log out of the administration portal and log in again to enable the changes.</li>
+                                <li>Now you can log in to APP and change APP-specific settings: <p><codeph>https://&lt;hostname.fqdn>:8881/oscm-app/ </codeph></p><p>User name: <codeph>administrator</codeph>
+                                        </p><p>Password: <codeph>admin123 </codeph></p></li>
+                                <li>You can also login to the instance status interface of each service controller: <p><codeph>https://&lt;hostname.fqdn>:8881/oscm-app-&lt;controller-name>/ </codeph></p><p>User name: <codeph>administrator</codeph>
+                                        </p><p>Password: <codeph>admin123 </codeph></p><p><codeph>&lt;controller-name></codeph> is either <codeph>openstack</codeph>, <codeph>aws</codeph>, or <codeph>vmware</codeph>. </p><p>For the VMware controller, for example, it is required to specify the following: </p><p>
+                                                <ul>
+                                                        <li><b>Connection URL</b>: The URL for accessing the vSphere API.</li>
+                                                        <li><b>User ID</b>: The ID of the technical user in vSphere for accessing the vSphere API.</li>
+                                                        <li><b>Password</b>: The password of the technical user in vSphere for accessing the vSphere API.</li>
+                                                </ul>
+                                        </p></li>
                         </ol>
-                        <p>Now you are able to login to APP: </p>
-                        <p><codeph>http://&lt;hostname.fqdn>:8880/oscm-app/ </codeph></p>
-                        <p>User name: <codeph>administrator</codeph>
-                        </p>
-                        <p>Password: <codeph>admin123 </codeph></p>
-                        <p>You can also login to the instance status interface of the service controllers: </p>
-                        <p><codeph>http://&lt;hostname.fqdn>:8880/oscm-app-&lt;controller-name>/ </codeph></p>
-                        <p>User name: <codeph>administrator</codeph>
-                        </p>
-                        <p>Password: <codeph>admin123 </codeph></p>
-                        <p><codeph>&lt;controller-name></codeph> can be <codeph>openstack</codeph>, <codeph>aws</codeph>, or <codeph>vmware</codeph>. </p>
                         </section>
                 </conbody>
         </concept>

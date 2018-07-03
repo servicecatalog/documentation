@@ -12,13 +12,9 @@
                     <li><codeph>VCENTER_NAME</codeph>: The name of the vCenter running on the vSphere server. </li>
                     <li><codeph>DATACENTER_NAME</codeph>: The name of data center managed by the vCenter specified above. </li>
                     <li><codeph>CLUSTER_NAME</codeph>: The name of the cluster where VMs are to be provisioned.</li>
-                    <li><codeph>LOADBALANCER_NAME</codeph>: The name of the load balancer used by vSphere. Usually, you can use the name of the VM Network in vSphere.</li>
+                    <li><codeph>LOADBALANCER_NAME</codeph>: The name of the load balancer used by vSphere. Usually, you can use the name of the VM Network in vSphere: <codeph>VM Network</codeph>.</li>
                 </ul>
             </p>
-            <p>The vSphere configuration must be imported into the <codeph>vmware</codeph> database. Usually, you do not need to change these settings once they have been imported into the database. </p>
-            <p>The complete configuration of vSphere for use by the VMware service controller is defined in <codeph>.csv</codeph> files. They must be filled with the vSphere configuration of your environment before importing them to the <codeph>vmware</codeph> database using the  instance status interface of APP for the VMware service controller:</p>
-            <p><codeph>https://&lt;hostname.fqdn>:&lt;port>/oscm-app-vmware</codeph></p>
-            <p>The files must be UTF-8 encoded. </p>
             <p>In vSphere, several entities are distinguished. They form the following hierarchy:</p>
             <p>
                 <fig>
@@ -26,16 +22,20 @@
                 </fig>
             </p>
             <p>One vCenter can manage many data centers. Each data center may contain any number of clusters. One cluster may use several VLANs (Virtual Local Area Networks), each having assigned several IP addresses.</p>
-            <p>You need to specify the vSphere configuration in the <codeph>.csv</codeph> files so that the correct entities are used for the provisioning of VMs in vSphere. The following files define the vSphere configuration. They map the hierarchy depicted above: </p>
-            <p>
-                <ul>
-                    <li><codeph>vcenter.csv</codeph>: Defines the URL and user credentials for accessing the vSphere server. For security reasons, it is recommended to delete the file as soon as you have successfully installed and configured the vSphere integration software. </li>
-                    <li><codeph>datacenter.csv</codeph>: Defines one or several data centers of the vSphere installation.</li>
-                    <li><codeph>cluster.csv</codeph>: Defines one or several clusters managed by a data center. </li>
-                    <li><codeph>vlan.csv</codeph>: Defines one or more VLANs for a cluster. </li>
-                    <li><codeph>ippool.csv</codeph>: Defines the list of IP addresses associated with a VLAN. </li>
-                </ul>
-            </p>
+            <p>You need to specify the vSphere configuration in the <codeph>.csv</codeph> files so that the correct entities are used for the provisioning of VMs in vSphere. </p>
+            <p>There are the following types of <codeph>.csv</codeph> files. They map the hierarchy depicted above: <ul>
+                    <li><codeph>vCenter</codeph>: Defines the URL and user credentials for accessing the vSphere server. For security reasons, it is recommended to delete the file as soon as you have successfully installed and configured the vSphere integration software. </li>
+                    <li><codeph>DataCenter</codeph>: Defines one or several data centers of the vSphere installation.</li>
+                    <li><codeph>Cluster</codeph>: Defines one or several clusters managed by a data center. </li>
+                    <li><codeph>VLAN</codeph>: Defines one or more VLANs for a cluster. </li>
+                    <li><codeph>IPPool</codeph>: Defines the list of IP addresses associated with a VLAN. </li>
+                </ul></p>
+            <p audience="vmware">You find samples of the above files <xref
+                    href="https://github.com/servicecatalog/oscm/tree/master/oscm-app-vmware/resources" scope="external"
+                        ><u>here</u></xref>.</p>
+            <p>You can upload the files to the <codeph>vmware</codeph> database using the instance status interface of APP for the VMware service controller:</p>
+            <p><codeph>https://&lt;hostname.fqdn>:&lt;port>/oscm-app-vmware</codeph></p>
+            <p>The files must be UTF-8 encoded. </p>
             <p>Below you find a description of the headers in the individual files below which you need to enter the appropriate information. The individual entries must be separated by commas, and be placed into one line without line breaks. If the entries contain a comma or blanks, you need to enclose them in double quotes.</p>
         </section>
         <section>

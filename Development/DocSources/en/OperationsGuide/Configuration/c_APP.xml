@@ -19,11 +19,13 @@
                 </li>
                 <li>
                     <p>OpenStack service controller: Can be used for integrating OpenStack services with <ph
-                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. Refer to the <i>OpenStack</i> Integration guide for details.</p>
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            />. Refer to the <i>OpenStack Integration</i> guide for details.</p>
                 </li>
                 <li>
                     <p>VMware service controller: Can be used for integrating VMware vSphere services and using virtual machines provisioned on a VMware vSphere server with <ph
-                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. Refer to the <i>VMware vSphere </i> Integration guide for details.</p>
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            />. Refer to the <i>VMware vSphere  Integration</i> guide for details.</p>
                 </li>
             </ul>
             <p>Before technology providers can use the service controllers, they must be entered as responsible organizations in APP as well as in the service controllers.</p>

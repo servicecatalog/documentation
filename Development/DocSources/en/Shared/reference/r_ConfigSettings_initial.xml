@@ -81,15 +81,15 @@
             </p>
         </section>
         <section>
-            <title>Settings for Connecting to the VMware Service Controller</title>
-            <p>The VMware service controller requires additional settings. <ul>
+            <title>Settings for Connecting the VMware Service Controller with the vSphere Server</title>
+            <p>The VMware service controller requires the following additional settings: <ul>
                     <li><codeph>DB_USER_VMWARE</codeph><p>The name of the user to connect to the <codeph>vmware</codeph> database. This database stores the vSphere configuration.</p></li>
                     <li><codeph>DB_PWD_VMWARE</codeph><p>The password of the user to connect to the <codeph>vmware</codeph> database. This database stores the vSphere configuration.</p></li>
                     <li><codeph>VCENTER_NAME</codeph><p>The name of the vCenter running on the vSphere server. </p></li>
                     <li><codeph>DATACENTER_NAME</codeph><p>The name of data center managed by the vCenter specified above. </p></li>
                     <li><codeph>CLUSTER_NAME</codeph><p>The name of the cluster where VMs are to be provisioned. </p></li>
-                    <li><codeph>LOADBALANCER_NAME</codeph><p>The name of the load balancer used by vSphere. Usually, you can use the name of the VM Network in vSphere. </p></li>
-                </ul></p>
+                    <li><codeph>LOADBALANCER_NAME</codeph><p>The name of the load balancer used by vSphere. Usually, you can use the name of the VM Network in vSphere: <codeph>VM Network</codeph>. </p></li>
+                </ul><note>Be aware that the configuration of an entire vSphere environment including, for example, various data centers and clusters, requires the uploading of <codeph>.csv</codeph> files using the instance status interface of the VMware service controller. Refer to the <i>VMware vSphere Integration</i> guide for details. The initial configuration settings specified in the <codeph>var.env</codeph> file setup a connection to one vSphere vCenter, with one data center and one cluster only where the VMs will be provisioned.  </note></p>
         </section>
         <section>
             <title>Additional Settings</title>

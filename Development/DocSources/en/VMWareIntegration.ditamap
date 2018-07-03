@@ -31,7 +31,7 @@
             <series>VMware vSphere Integration</series>
         </prodinfo>
         <bookid>
-            <edition>Draft for Review - June 2017 </edition>
+            <edition>July 2018 </edition>
             <!--booknumber product="oscm_ee">B1WS-1281-01</booknumber-->
         </bookid>
         <bookrights
@@ -96,6 +96,8 @@
         <topicref format="dita" href="Shared/Installation/c_InstControllerInExistingAPP.xml" type="concept"/>
         <topicref format="dita" href="Shared/Installation/c_Update.xml" type="concept"/>
     </chapter-->
+    <chapter format="dita" href="VMWareIntegrationGuide/Configuration/c_Configuration.xml" type="concept"/>
+    
     <chapter
         format="dita"
         href="VMWareIntegrationGuide/Services/c_ServicesIntro.xml"

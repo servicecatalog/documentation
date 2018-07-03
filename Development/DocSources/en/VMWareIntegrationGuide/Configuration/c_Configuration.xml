@@ -14,21 +14,26 @@
                                         <li><codeph>VCENTER_NAME</codeph>: The name of the vCenter running on the vSphere server. </li>
                                         <li><codeph>DATACENTER_NAME</codeph>: The name of data center managed by the vCenter specified above. </li>
                                         <li><codeph>CLUSTER_NAME</codeph>: The name of the cluster where VMs are to be provisioned.</li>
-                                        <li><codeph>LOADBALANCER_NAME</codeph>: The name of the load balancer used by vSphere. Usually, you can use the name of the VM Network in vSphere.</li>
+                                        <li><codeph>LOADBALANCER_NAME</codeph>: The name of the load balancer used by vSphere. Usually, you can use the name of the VM Network in vSphere: <codeph>VM Network</codeph>.</li>
                                 </ul>
                         </p>
-                        <p>The vSphere configuration must be imported into the <codeph>vmware</codeph> database. Usually, you do not need to change these settings once they have been imported into the database. </p>
-                        <p>The vSphere configuration is defined in <codeph>.csv</codeph> files:</p>
-                        <p><ul>
-                                        <li><codeph>vcenter.csv</codeph>: Defines the URL and user credentials for accessing the vSphere server. For security reasons, it is recommended to delete the file as soon as you have successfully installed and configured the vSphere integration software. </li>
-                                        <li><codeph>datacenter.csv</codeph>: Defines one or several data centers of the vSphere installation.</li>
-                                        <li><codeph>cluster.csv</codeph>: Defines one or several clusters managed by a data center. </li>
-                                        <li><codeph>vlan.csv</codeph>: Defines one or more VLANs for a cluster. </li>
-                                        <li><codeph>ippool.csv</codeph>: Defines the list of IP addresses associated with a VLAN. </li>
-                                </ul>Refer to <xref href="../Appendix/r_CSVFormat.xml"/> for details.</p>
+                        <p>In addition, you can upload <codeph>.csv</codeph> files containing an entire vSphere configuration matching your environment, for example, if you want to use several databases or clusters for the provisioning of VMs, into the <codeph>vmware</codeph> database. Usually, you do not need to change these settings once they have been imported into the database. </p>
+                        <p>There are the following types of <codeph>.csv</codeph> files: <ul>
+                                        <li><codeph>vCenter</codeph>: Defines the URL and user credentials for accessing the vSphere server. For security reasons, it is recommended to delete the file as soon as you have successfully installed and configured the vSphere integration software. </li>
+                                        <li><codeph>DataCenter</codeph>: Defines one or several data centers of the vSphere installation.</li>
+                                        <li><codeph>Cluster</codeph>: Defines one or several clusters managed by a data center. </li>
+                                        <li><codeph>VLAN</codeph>: Defines one or more VLANs for a cluster. </li>
+                                        <li><codeph>IPPool</codeph>: Defines the list of IP addresses associated with a VLAN. </li>
+                                </ul></p>
+                        <p audience="vmware">You find samples of the above files <xref
+                                        href="https://github.com/servicecatalog/oscm/tree/master/oscm-app-vmware/resources"
+                                        scope="external"><u>here</u></xref>. Refer to <xref
+                                        href="../Appendix/r_CSVFormat.xml"
+                                /> for details on the content of the files.</p>
                         <p><b>To import the vSphere configuration settings into the <codeph>vmware</codeph> database: </b></p>
                         <p>
                                 <ol compact="no">
+                                        <li>Prepare the <codeph>.csv</codeph> files so that the configuration matches your environment. </li>
                                         <li>Invoke the instance status interface of APP for the VMware service controller by opening its URL in a Web browser. <p>The access URL has the following format: </p><p><codeph>https://&lt;hostname.fqdn&gt;:&lt;port&gt;/oscm-app-vmware</codeph></p><p><codeph>&lt;hostname.fqdn&gt;</codeph> is the name and the fully qualified domain name of the machine where the <codeph>oscm-app</codeph> container has been deployed, <codeph>&lt;port&gt;</codeph> is the port to address the machine (default: <codeph>8881</codeph>), <codeph>oscm-app-vmware</codeph> is the default context root of the service controller and cannot be changed. </p></li>
                                         <li>Log in with the ID and password of the user specified in the configuration settings for the VMware service controller by the platform operator in the <codeph>BSS_USER_ID</codeph> and <codeph>BSS_USER_PWD</codeph> configuration settings, or as another technology manager registered for the same organization.</li>
                                         <li>Set the following vSphere-specific settings: <p>
@@ -38,7 +43,7 @@
                                                             <li><b>Password</b>: The password of the technical user in vSphere for accessing the vSphere API.</li>
                                                         </ul>
                                                 </p></li>
-                                        <li>Import the <codeph>.csv</codeph> files into the controller database by ....### doing the following ###</li>
+                                        <li>Upload the prepared <codeph>.csv</codeph> files into the database.</li>
                                         <li>Save the settings.</li>
                                 </ol>
                         </p>
