@@ -100,6 +100,9 @@
                 <topicref
             href="QuickStart/GettingStarted/c_EnableLogin.xml"
                 type="concept"/>
+                <topicref
+            href="QuickStart/GettingStarted/c_StartUsing.xml"
+                type="concept"/>
         </chapter>
     
     
