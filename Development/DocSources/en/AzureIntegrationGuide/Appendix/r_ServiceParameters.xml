@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd" >
+<reference id="Service_Parameters_114">
+  <title>Service Parameters and Operations</title>
+  <refbody>
+    <section>
+      <p>The following sections describe the technical service parameters and service operations which are supported by the Azure service controller. </p>
+      <p audience="os">You find a sample service on GitHub: <xref
+          href="https://github.com/servicecatalog/oscm/tree/master/oscm-app-azure/resources" scope="external"
+            ><u>https://github.com/servicecatalog/oscm/tree/master/oscm-app-azure/resources</u></xref>. </p>
+    </section>
+    <section>
+      <title>Service Parameters</title>
+      <p>The Azure service controller supports the parameters below.</p>
+      <p>
+        <note>All parameters defined in the technical service definition must be one-time parameters, since the modification of parameters is not supported. Be sure to set their <codeph>modificationType</codeph> to <codeph>ONE_TIME</codeph>. </note>
+      </p>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>APP_CONTROLLER_ID</b></p>
+                <p>Mandatory. The ID of the service controller as defined in its implementation. The ID is set during the installation of the Azure integration software.</p>
+                <p>Default (must not be changed): <codeph>ess.azure</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>SUBSCRIPTION_ID</b></p>
+                <p>Mandatory. The ID of the subscription in Azure on the account of which the virtual machines and other resources are to be created. </p>
+                <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers.</p>
+                <p>Example: <codeph>1234a5d6-a7c8-909a-912b-34cd56e78901</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>TENANT_ID</b></p>
+                <p>Mandatory. The ID of the tenant in Azure on the account of which the virtual machines and other resources are to be created. This is the directory ID of the Active Directory of the user or organization who owns the subscription specified in <codeph>SUBSCRIPTION_ID</codeph>.</p>
+                <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers.</p>
+                <p>Example: <codeph>9e8d7cb6-5432-1098-7654-3210a9876f54</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>CLIENT_ID</b></p>
+                <p>Mandatory. The application ID of the application used to carry out the resource operations in Azure. For creating new resource groups, the application must have at least the Contributor role for the subscription specified in <codeph>SUBSCRIPTION_ID</codeph>. For creating virtual machines in existing resource groups, at least the Contributor role for these resource groups is required. </p>
+                <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers.</p>
+                <p>Example: <codeph>3cd456e7-890f-12ab-3c4d-5efa6b789c01 </codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>CLIENT_SECRET</b></p>
+                <p>Mandatory. The authentication key generated in Azure for the application specified in <codeph>SUBSCRIPTION_ID</codeph>. The key is only visible at the time it is created. </p>
+                <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers.</p>
+                <p>Example: <codeph>XaNvrzqRRVFkjV5pVBG4CEwOPFERfakZaP2kKZf67t9</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>REGION</b></p>
+                <p>Mandatory. The full name of the Azure region where the resource groups are or are to be located. </p>
+                <p>Examples: </p>
+                <p><codeph>Central US, Japan East, West Europe</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>RESOURCE_GROUP</b></p>
+                <p>Mandatory. The name of the resource group that is to be created or in which virtual machines are to be deployed. In the latter case, the resource group must exist with a complete network configuration in Azure and be associated with the subscription specified in <codeph>SUBSCRIPTION_ID</codeph>.</p>
+                <p>Resource group names may consist of up to 64 alphanumeric characters, hyphen (-), and underscore (_).</p>
+                <p>Example: <codeph>myservice-context-rg</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>STORAGE_ACCOUNT</b></p>
+                <p>Mandatory. The name of the storage account to be used with the virtual machines. </p>
+                <p>Storage account names my consist of 3-24 lowercase letters and numbers. They must be unique within Azure. </p>
+                <p>Example: <codeph>mycompanyaccount2</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>VIRTUAL_NETWORK</b></p>
+                <p>Mandatory. The name of the virtual network within the resource group specified in <codeph>RESOURCE_GROUP</codeph> to which the virtual machines are to be assigned. </p>
+                <p>Virtual network names are case-insensitive. They may consist of 2-64 alphanumeric characters, hyphen (-), underscore (_), and period (.).</p>
+                <p>Example: <codeph>myservice.vnet</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>SUBNET</b></p>
+                <p>Mandatory. The name of the subnet within the virtual network specified in <codeph>VIRTUAL_NETWORK</codeph> to which the virtual machines are to be assigned. </p>
+                <p>Subnet names are case-insensitive. They may consist of 2-80 alphanumeric characters, hyphen (-), underscore (_), and period (.).</p>
+                <p>Example: <codeph>myservice-vnet-subnet1</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>VIRTUAL_MACHINE_IMAGE_ID</b></p>
+                <p>Mandatory. The identifier of the virtual machine image that is to be used as the basis for provisioning the virtual machines. The image determines the operating system and other characteristics of the virtual machines.</p>
+                <p>The identifier must have the following format and components, separated by blanks:</p>
+                <p><codeph>&lt;publisher> &lt;offer> &lt;SKU></codeph></p>
+                <p><codeph>&lt;publisher></codeph> is the identifier of the organization or person who provides the virtual machine image, <codeph>&lt;offer></codeph> is the offer by which it is made available, and <codeph>&lt;SKU></codeph> the commercial name of the image.</p>
+                <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers or, in case you specify more than one image, have fixed parameter options for selection. </p>
+                <p>Examples: </p>
+                <p><codeph>MicrosoftWindowsServer WindowsServer 2012-R2-Datacenter</codeph></p>
+                <p><codeph>RedHat RHEL Red Hat Enterprise Linux 7.3</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>TEMPLATE_BASE_URL</b></p>
+                <p>Mandatory. The URL leading to the Resource Manager templates specified in the <codeph>TEMPLATE_NAME</codeph> and <codeph>TEMPLATE_PARAMETERS_NAME</codeph> parameters. Specify a URL that can be reached from <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> by HTTP or HTTPS. </p>
+                <p> Users should not be able to enter a value for this parameter, i.e. it should not be configurable for customers.</p>
+                <p>Example: <codeph>https://myserver:8880/oscm-app/docroot/templates/</codeph>
+                </p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>TEMPLATE_NAME</b></p>
+                <p>Mandatory. The name or relative path and name of the template to be used by Azure Resource Manager for provisioning the virtual machines and additional resources. The template must be in JSON format and detail everything needed to carry out the resource orchestration in Azure. The <codeph>TEMPLATE_NAME</codeph> is added to the <codeph>TEMPLATE_BASE_URL</codeph>. </p>
+                <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers or, in case you specify more than one template, have fixed parameter options for selection. </p>
+                <p>Example: <codeph>SampleTemplate.json</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>TEMPLATE_PARAMETER_NAME</b></p>
+                <p>Mandatory. The name or relative path and name of the parameter definition file to be used for passing the parameter values a user specifies at subscription time to the resource manager template. The file must be in JSON format and contain all the parameters required for provisioning the virtual machines and additional resources. The <codeph>TEMPLATE_PARAMETER_NAME</codeph> is added to the <codeph>TEMPLATE_BASE_URL</codeph>. </p>
+                <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers or, in case you specify more than one definition file, have fixed parameter options for selection. </p>
+                <p>Example: <codeph>SampleTemplate.parameters.json</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>VM_NAME</b></p>
+                <p>Mandatory. The name of the virtual machine to be provisioned. If more than one virtual machine is to be created, this name is used for all of them with a consecutive number appended to it, for example, <codeph>mymachine1</codeph>, <codeph>mymachine2</codeph>. </p>
+                <p>The name must be specified by customers when they subscribe to a corresponding service. It may consist of up to 15 alphanumeric characters, hyphen (-), and underscore (_).</p>
+                <p>Example: <codeph>mymachine</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>INSTANCE_COUNT</b></p>
+                <p>Mandatory. The number of virtual machines to be provisioned. </p>
+                <p>Default: <codeph>1</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>Service Operations</title>
+      <p>The Azure service controller supports the service operations below for virtual machines. </p>
+      <p>The <codeph>actionURL</codeph> for each operation is:</p>
+      <p><codeph>https://&lt;host>:&lt;port>/OperationService/AsynchronousOperationProxy?wsdl</codeph></p>
+      <p><codeph>&lt;host></codeph> and <codeph>&lt;port></codeph> are the server and port of the <codeph>app-domain</codeph> domain where the Azure integration software is deployed.</p>
+      <p>
+        <note>If you provision a virtual machine that does not support start and stop operations, make sure that you remove the service operations from the technical service definition. </note>
+      </p>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>START_VIRTUAL_SYSTEM</b></p>
+                <p>Starts all virtual machines created for a subscription if they were stopped.</p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>STOP_VIRTUAL_SYSTEM</b></p>
+                <p>Stops all virtual machines created for a subscription if they were started.</p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+  </refbody>
+</reference>

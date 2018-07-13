@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2018 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd">
+<concept id="Prerequisites_and_Preparation_59" xml:lang="en-us">
+    <title>Prerequisites and Preparation</title>
+    <conbody>
+        <section>
+            <p>The following sections describe the prerequisites that must be fulfilled and the preparations you need to take before installing and deploying the OpenStack integration software. </p>
+        </section>
+    </conbody>
+</concept>

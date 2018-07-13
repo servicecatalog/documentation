@@ -12,17 +12,19 @@
       <p id="cmp1">In <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
           />, customer subscriptions are managed by means of the <b>Subscription service</b>. When a customer <ph
           audience="aws">creates or terminates </ph><ph audience="os">creates or terminates </ph><ph audience="vmware"
-          >creates, modifies, or terminates </ph>a subscription for <ph audience="aws"
-          >an Amazon EC2 instance in AWS</ph><ph audience="os">a virtual system in OpenStack</ph><ph audience="vmware"
-          >a VM in vSphere</ph>, the Subscription service asynchronously triggers the corresponding actions in <ph
-          audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph audience="vmware"
-          >vSphere</ph> through the <b>Asynchronous Provisioning Platform (APP)</b> and the <ph audience="aws"
+          >creates, modifies, or terminates </ph><ph audience="azure">creates or terminates </ph>a subscription for <ph
+          audience="aws">an Amazon EC2 instance in AWS</ph><ph audience="os">a virtual system in OpenStack</ph><ph
+          audience="vmware">a VM in vSphere</ph><ph audience="azure"
+          >a virtual machine in Azure</ph>, the Subscription service asynchronously triggers the corresponding actions in <ph
+          audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph audience="vmware">vSphere</ph><ph audience="azure"
+          >Azure</ph> through the <b>Asynchronous Provisioning Platform (APP)</b> and the <ph audience="aws"
             ><b>AWS service controller</b></ph><ph audience="os"><b>OpenStack service controller</b></ph><ph
-          audience="vmware"><b>VMware service controller</b></ph>: <ph audience="aws">Virtual servers</ph><ph
-          audience="os">Virtual systems</ph><ph audience="vmware">VMs</ph> are <ph audience="aws"
-          >created or deleted </ph><ph audience="os">created or deleted </ph><ph audience="vmware"
-          >created, modified, or deleted </ph>in <ph audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph
-          audience="vmware">vSphere</ph>. </p>
+          audience="vmware"><b>VMware service controller</b></ph><ph audience="azure"
+          ><b>Azure service controller</b></ph>: <ph audience="aws"
+          >Virtual servers are created or deleted in AWS</ph><ph audience="os"
+          >Virtual systems are created or deleted in OpenStack</ph><ph audience="vmware"
+          >VMs are created, modified, or deleted in vSphere</ph><ph audience="azure"
+          >The virtual machine and - if requested - additional resources are created or deleted in Azure</ph>. </p>
       <p id="cmp2"
           >APP is a framework which provides a provisioning service, an operation service, as well as functions, data persistence, and notification features which are required for integrating applications with <ph
           conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"

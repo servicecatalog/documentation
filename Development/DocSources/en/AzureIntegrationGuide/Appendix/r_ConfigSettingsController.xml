@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2018 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<reference id="reference832" xml:lang="en-us">
+    <title>Controller Configuration Settings</title>
+    <refbody>
+        <section>
+            <p>This appendix describes the controller configuration settings as stored in the <codeph>bssapp</codeph> database. For details on how to update them, refer to <xref
+                    href="../Administrating/c_UpdateConfiguration.xml"/> and <xref
+                    href="../Administrating/c_ChangeOrg.xml"/>.</p>
+        </section>
+        <section>
+            <p>The following sections describe the technical service parameters and service operations which are supported by the OpenStack service controller. </p>
+            <p audience="os">You find several sample services on GitHub: <xref
+                    href="https://github.com/servicecatalog/oscm/tree/master/oscm-app-openstack/resources"
+                    scope="external"
+                        ><u>https://github.com/servicecatalog/oscm/tree/master/oscm-app-openstack/resources</u></xref>. </p>
+        </section>
+        <section>
+            <title>CONTROLLER_ID</title>
+            <p><codeph>CONTROLLER_ID=ess.azure</codeph></p>
+            <p>The identifier of the service controller. This setting cannot be changed.</p>
+        </section>
+        <section>
+            <title>BSS_ORGANIZATION_ID</title>
+            <p><codeph>BSS_ORGANIZATION_ID=&lt;organizationID></codeph></p>
+            <p>The ID of the organization in <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> responsible for the service controller. The organization must have the technology provider role. It is created and initially assigned to the Azure service controller by the platform operator.</p>
+        </section>
+        <section>
+            <title>BSS_USER_ID</title>
+            <p><codeph>BSS_USER_ID=&lt;userId></codeph>
+            </p>
+            <p>The identifier of the user specified in <codeph>BSS_USER_KEY</codeph> for accessing <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+        </section>
+        <section>
+            <title>BSS_USER_KEY</title>
+            <p><codeph>BSS_USER_KEY=&lt;userKey></codeph>
+            </p>
+            <p>The user key for accessing <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    />. You receive this key with the confirmation email for your user account. The user must have the technology manager role in <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> and belong to the technology provider organization responsible for the service controller. </p>
+            <p>It is recommended that the user account is used only for carrying out actions on behalf of the service controller in <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+        </section>
+        <section>
+            <title>BSS_USER_PWD</title>
+            <p><codeph>BSS_USER_PWD=_crypt:&lt;password></codeph></p>
+            <p>The password of the user for accessing <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+        </section>
+        <section>
+            <title>API_USER_NAME</title>
+            <p><codeph>API_USER_NAME=&lt;userName></codeph></p>
+            <p>The user name to be used to access the tenant for your organization in OpenStack. Once authenticated, this user is authorized to access the Heat API.</p>
+            <p>The user must have the necessary credentials to create and configure virtual systems for the tenant.  In FUJITSU Cloud Service K5, the <codeph>cpf_systemowner</codeph> role is required.</p>
+        </section>
+    </refbody>
+</reference>

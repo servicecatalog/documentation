@@ -10,6 +10,8 @@
  <prop action="exclude" att="audience" val="tps5"/>
  <prop action="include" att="audience" val="vmware"/>
  <prop action="exclude" att="audience" val="int"/>
+ <prop action="include" att="audience" val="doc"/>
+ <prop action="exclude" att="audience" val="azure"/>
  <prop action="exclude" att="product" val="oscm_ee"/>
  <prop action="include" att="product" val="oscm_ce"/>
  <prop action="include" att="product" val="sqa"/>
