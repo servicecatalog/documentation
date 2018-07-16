@@ -24,13 +24,8 @@
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> with the subscription service handling the provisioning tasks.</li>
                     <li>APP including the provisioning service, a database, a notification handler, and an API to enable the communication between the application instances and <ph
                                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</li>
-                    <li>A service controller for communication with the application. <!--li>A service controller must be implemented for each application. <p>To implement a service controller, you use the API provided with the integration package for asynchronous provisioning. Samples included in the package show how a service controller can be implemented. A detailed documentation for the API is provided as Javadoc.</p>
-                            </li-->
-                        <p>The following ready-to-use service controllers are available, registered, and initialized when deploying the <codeph>oscm-app</codeph> container: </p><p>
+                    <li>A service controller for communication with the application.  <p>The following ready-to-use service controllers are available, registered, and initialized when deploying the <codeph>oscm-app</codeph> container: </p><p>
                             <ul>
-                                <!--li><codeph>oscm-ror-install-pack.zip</codeph><p>Can be used for integrating FUJITSU ServerView Resource Orchestrator (ROR) with <ph
-                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                    />.</p></li-->
                                 <li>
                                     <p>AWS service controller: Can be used for integrating the Amazon Elastic Compute Cloud Web service with <ph
                                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
@@ -40,6 +35,16 @@
                                     <p>OpenStack service controller: Can be used for integrating OpenStack services with <ph
                                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                             />. Refer to the <i>OpenStack Integration</i> guide for details. </p>
+                                </li>
+                                <li>
+                                    <p>VMware service controller: Can be used for integrating VMware vSphere services and using virtual machines provisioned on a VMware vSphere server with <ph
+                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                            />. Refer to the <i>VMware vSphere Integration</i> guide for details.</p>
+                                </li>
+                                <li audience="azure">
+                                    <p>Azure service controller: Can be used for integrating Microsoft Azure services with <ph
+                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                            />. Refer to the <i>Microsoft Azure Integration</i> guide for details.</p>
                                 </li>
                             </ul>
                         </p></li>
