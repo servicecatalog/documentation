@@ -11,10 +11,10 @@
             <prodname/>
             <vrmlist>
                 <vrm
-            version="17.7.0"/>
+            version="18.0.0"/>
             </vrmlist>
             <brand/>
-            <prognum>17.7.0</prognum>
+            <prognum>18.0.0</prognum>
             <component/>
             <series>VMware vSphere Integration</series>
         </prodinfo>
@@ -23,15 +23,15 @@
             <prodname>Enterprise Service</prodname>
             <vrmlist>
                 <vrm
-            version="17.7"/>
+            version="18.0"/>
             </vrmlist>
             <brand>FUJITSU Software</brand>
-            <prognum>Catalog Manager V17.7</prognum>
+            <prognum>Catalog Manager V18.0</prognum>
             <component/>
             <series>VMware vSphere Integration</series>
         </prodinfo>
         <bookid>
-            <edition>July 2018 </edition>
+            <edition>October 2018 </edition>
             <!--booknumber product="oscm_ee">B1WS-1281-01</booknumber-->
         </bookid>
         <bookrights

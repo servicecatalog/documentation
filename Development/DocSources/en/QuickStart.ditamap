@@ -11,10 +11,10 @@
             <prodname/>
             <vrmlist>
                 <vrm
-            version="V17.7.0"/>
+            version="V18.0.0"/>
             </vrmlist>
             <brand/>
-            <prognum>V17.7.0</prognum>
+            <prognum>V18.0.0</prognum>
             <component/>
             <series>QuickStart Guide</series>
         </prodinfo>
@@ -23,15 +23,15 @@
             <prodname>Enterprise Service</prodname>
             <vrmlist>
                 <vrm
-            version="V17.7"/>
+            version="V18.0"/>
             </vrmlist>
             <brand>FUJITSU Software</brand>
-            <prognum>Catalog Manager V17.6</prognum>
+            <prognum>Catalog Manager V18.0</prognum>
             <component/>
             <series>QuickStart Guide</series>
         </prodinfo>
         <bookid>
-            <edition>July 2018 </edition>
+            <edition>October 2018 </edition>
             <!--booknumber product="oscm_ee">B1WS-1252-02</booknumber-->
         </bookid>
         <bookrights

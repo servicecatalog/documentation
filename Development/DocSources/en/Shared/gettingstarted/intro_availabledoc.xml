@@ -52,11 +52,15 @@
                                                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                                                 />.</ph></li-->
                                 <li><ph id="OS_Guide:_concept_conbody_section_ul_l"
-                                                        ><i>OpenStack Integration:</i> A PDF manual for operators describing how to offer and use virtual systems controlled by OpenStack through services in <ph
+                                                        ><i>Microsoft Azure Integration:</i> A PDF manual for operators describing how to offer and use virtual systems controlled by Microsoft Azure through services in <ph
                                                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                                                 />.</ph></li>
                                 <li><ph id="AWS_Guide:_concept_conbody_section_ul_l"
                                                         ><i>Amazon Web Services Integration:</i> A PDF manual for operators describing how to offer and use virtual servers controlled by the Amazon Elastic Compute Cloud Web service through services in <ph
+                                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                />.</ph></li>
+                                <li><ph id="OS_Guide:_concept_conbody_section_ul_l"
+                                                        ><i>OpenStack Integration:</i> A PDF manual for operators describing how to offer and use virtual systems controlled by OpenStack through services in <ph
                                                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                                                 />.</ph></li>
                                 <li><ph id="VMWARE_Guide:_concept_conbody_section_ul_l"
