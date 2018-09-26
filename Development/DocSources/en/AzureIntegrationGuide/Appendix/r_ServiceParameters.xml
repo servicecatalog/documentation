@@ -266,10 +266,11 @@
       <title>Service Operations</title>
       <p>The Azure service controller supports the service operations below for virtual machines. </p>
       <p>The <codeph>actionURL</codeph> for each operation is:</p>
-      <p><codeph>http://&lt;host>:&lt;port>/oscm-app/webservices/oscm-app/oscm-app/org.oscm.app.v2_0.service.AsynchronousOperationProxy?wsdl</codeph></p>
-      <p><codeph>&lt;host></codeph> and <codeph>&lt;port></codeph> are the server and port of the <codeph>app-domain</codeph> domain where the Azure integration software is deployed. </p>
-      <p>Example:</p>
-      <p><codeph>http://oscm-app:8880/oscm-app/webservices/oscm-app/oscm-app/org.oscm.app.v2_0.service.AsynchronousOperationProxy?wsdl</codeph></p>
+      <p>
+        <codeblock>http://oscm-app:8880/oscm-app/webservices/oscm-app/oscm-app
+         /org.oscm.app.v2_0.service.AsynchronousOperationProxy?wsdl</codeblock>
+      </p>
+      <p><codeph>&lt;oscm-app></codeph> and <codeph>&lt;8880></codeph> are the server and port of the container where the Azure service controller is deployed.</p>
       <p>
         <note>If you provision a virtual machine that does not support start and stop operations, make sure that you remove the service operations from the technical service definition. </note>
       </p>

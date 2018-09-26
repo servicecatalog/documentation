@@ -648,10 +648,10 @@
       <p>The VMware service controller supports the service operations below for VMs. </p>
       <p>The <codeph>actionURL</codeph> for each operation is:</p>
       <p>
-        <codeblock>https://oscm-app:8881/oscm-app/webservices/oscm-app/oscm-app
+        <codeblock>https://oscm-app:8880/oscm-app/webservices/oscm-app/oscm-app
          /org.oscm.app.v2_0.service.AsynchronousOperationProxy?wsdl</codeblock>
       </p>
-      <p><codeph>&lt;oscm-app></codeph> and <codeph>&lt;8881></codeph> are the server and port of the container where the VMware service controller is deployed.</p>
+      <p><codeph>&lt;oscm-app></codeph> and <codeph>&lt;8880></codeph> are the server and port of the container where the VMware service controller is deployed.</p>
       <table frame="top">
         <tgroup cols="1">
           <colspec colname="c1" colnum="1"/>

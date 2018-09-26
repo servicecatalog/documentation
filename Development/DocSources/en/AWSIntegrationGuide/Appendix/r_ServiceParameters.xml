@@ -36,10 +36,10 @@
           <tbody>
             <row>
               <entry>
-                <p><b>DISK_SIZE</b></p>
-                <p>Optional. The maximum disk size of the virtual server to be instantiated. The value is a number specifying the size in GB. If not specified, the default size for the selected type of server is used.</p>
-                <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers or, in case you specify more than one disk size, have fixed parameter options for selection.</p>
-                <p>Example: <codeph>3</codeph></p>
+                <p><b>INSTANCENAME_PATTERN</b></p>
+                <p>Mandatory. A regular expression specifying a pattern for the virtual server instance names entered by the users when they subscribe to a corresponding service. If the names do not match the pattern, the subscription is rejected.</p>
+                <p>The regular expression must be specified in the technical service definition.</p>
+                <p>Default: <codeph>aws([a-z0-9]){2,32}</codeph></p>
               </entry>
             </row>
           </tbody>
@@ -51,10 +51,10 @@
           <tbody>
             <row>
               <entry>
-                <p><b>IMAGE_NAME</b></p>
-                <p>Mandatory. Name of the AMI which is the basis for virtual servers. </p>
-                <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers or, in case you specify more than one image, have fixed parameter options for selection.</p>
-                <p>Example: <codeph>ami-0d77397e</codeph></p>
+                <p><b>INSTANCENAME_PREFIX</b></p>
+                <p>Optional. A string to be prepended to the virtual server instance names entered by the users when they subscribe to a corresponding service. </p>
+                <p>The string must be specified in the technical service definition.</p>
+                <p>Default: <codeph>aws</codeph></p>
               </entry>
             </row>
           </tbody>
@@ -81,10 +81,11 @@
           <tbody>
             <row>
               <entry>
-                <p><b>INSTANCENAME_PATTERN</b></p>
-                <p>Mandatory. A regular expression specifying a pattern for the virtual server instance names entered by the users when they subscribe to a corresponding service. If the names do not match the pattern, the subscription is rejected.</p>
-                <p>The regular expression must be specified in the technical service definition.</p>
-                <p>Example: <codeph>.*{1,255}</codeph></p>
+                <p><b>KEY_PAIR_NAME</b></p>
+                <p>Mandatory. The key pair name of the virtual server to be instantiated. </p>
+                <p>The key pair name must be specified by the customer when subscribing to an AWS service. To log in to the instance, the customer must enter the key pair name and the associated private key.</p>
+                <p>For details on creating key pairs, refer to the user documentation of Amazon Web Services.</p>
+                <p>Example: <codeph>my-key-pair</codeph></p>
               </entry>
             </row>
           </tbody>
@@ -96,10 +97,10 @@
           <tbody>
             <row>
               <entry>
-                <p><b>INSTANCENAME_PREFIX</b></p>
-                <p>Optional. A string to be prepended to the virtual server instance names entered by the users when they subscribe to a corresponding service. </p>
-                <p>The string must be specified in the technical service definition.</p>
-                <p>Example: <codeph>aws</codeph></p>
+                <p><b>IMAGE_NAME</b></p>
+                <p>Mandatory. Name of the AMI which is the basis for virtual servers. </p>
+                <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers or, in case you specify more than one image, have fixed parameter options for selection.</p>
+                <p>Example: <codeph>ami-0d77397e</codeph></p>
               </entry>
             </row>
           </tbody>
@@ -131,11 +132,17 @@
           <tbody>
             <row>
               <entry>
-                <p><b>KEY_PAIR_NAME</b></p>
-                <p>Mandatory. The key pair name of the virtual server to be instantiated. </p>
-                <p>The key pair name must be specified by the customer when subscribing to an AWS service. To log in to the instance, the customer must enter the key pair name and the associated private key.</p>
-                <p>For details on creating key pairs, refer to the user documentation of Amazon Web Services.</p>
-                <p>Example: <codeph>my-key-pair</codeph></p>
+                <p><b>REGION </b></p>
+                <p>Mandatory. The region where the data center hosting the virtual servers is located. Any valid region can be specified. In the sample technical service, the following regions are defined: </p>
+                <ul>
+                  <li><b>us-east-1</b> (US East (Northern Virginia) Region)</li>
+                  <li><b>us-west-1</b> (US West (Northern California) Region)</li>
+                  <li><b>us-west-2</b> (US West (Oregon) Region)</li>
+                  <li><b>eu-west-1</b> (EU (Ireland) Region)</li>
+                </ul>
+                <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers or, in case you specify more than one region, have fixed parameter options for selection.</p>
+                <p>Example: <codeph>us-east-1</codeph>
+                </p>
               </entry>
             </row>
           </tbody>
@@ -147,9 +154,26 @@
           <tbody>
             <row>
               <entry>
-                <p><b>MAIL_FOR_COMPLETION</b></p>
-                <p>Optional. The address to which emails are to be sent that describe manual steps required to complete an operation. If you specify this parameter, the service controller interrupts the processing of each operation before its completion and waits for a notification about the execution of a manual action. Omit this parameter if you do not want to interrupt the processing. </p>
-                <p>Example: <codeph>info@company.com</codeph></p>
+                <p><b>SUBNET</b></p>
+                <p>Optional. The subnet to which the virtual server is to be assigned. </p>
+                <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers or, in case you specify more than one subnet, have fixed parameter options for selection.</p>
+                <p>If you specify security groups, you also need to specify the corresponding subnet. If no subnet parameter is specified, the AWS service controller ignores any specified security groups, and the service instance is created in a default subnet and a default security group is assigned.</p>
+                <p>Example: <codeph>subnet-a77430d0</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>DISK_SIZE</b></p>
+                <p>Optional. The maximum disk size of the virtual server to be instantiated. The value is a number specifying the size in GB. If not specified, the default size for the selected type of server is used.</p>
+                <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers or, in case you specify more than one disk size, have fixed parameter options for selection.</p>
+                <p>Example: <codeph>3</codeph></p>
               </entry>
             </row>
           </tbody>
@@ -175,16 +199,9 @@
           <tbody>
             <row>
               <entry>
-                <p><b>REGION </b></p>
-                <p>Mandatory. The region where the data center hosting the virtual servers is located. Any valid region can be specified. In the sample technical service, the following regions are defined: </p>
-                <ul>
-                  <li><b>us-west-1</b> (US West (Northern California) Region)</li>
-                  <li><b>us-west-2</b> (US West (Oregon) Region)</li>
-                  <li><b>us-east-1</b> (US East (Northern Virginia) Region)</li>
-                </ul>
-                <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers or, in case you specify more than one region, have fixed parameter options for selection.</p>
-                <p>Example: <codeph>us-east-1</codeph>
-                </p>
+                <p><b>MAIL_FOR_COMPLETION</b></p>
+                <p>Optional. The address to which emails are to be sent that describe manual steps required to complete an operation. If you specify this parameter, the service controller interrupts the processing of each operation before its completion and waits for a notification about the execution of a manual action. Omit this parameter if you do not want to interrupt the processing. </p>
+                <p>Example: <codeph>info@company.com</codeph></p>
               </entry>
             </row>
           </tbody>
@@ -213,22 +230,6 @@
           <tbody>
             <row>
               <entry>
-                <p><b>SUBNET</b></p>
-                <p>Optional. The subnet to which the virtual server is to be assigned. </p>
-                <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers or, in case you specify more than one subnet, have fixed parameter options for selection.</p>
-                <p>If you specify security groups, you also need to specify the corresponding subnet. If no subnet parameter is specified, the AWS service controller ignores any specified security groups, and the service instance is created in a default subnet and a default security group is assigned.</p>
-                <p>Example: <codeph>subnet-a77430d0</codeph></p>
-              </entry>
-            </row>
-          </tbody>
-        </tgroup>
-      </table>
-      <table frame="top">
-        <tgroup cols="1">
-          <colspec colname="c1" colnum="1"/>
-          <tbody>
-            <row>
-              <entry>
                 <p><b>USERDATA_URL</b></p>
                 <p>Optional. URL to access the user data scripts or <codeph>cloud-init</codeph> directives for the automatic execution of user-specific configuration data. This URL must be accessible for APP.</p>
                 <p>Users should not be able to enter a value for this parameter. This means the parameter should not be configurable for customers or, in case you specify more than one URL, have fixed parameter options for selection.</p>
@@ -243,9 +244,9 @@
       <title>Service Operations for Virtual Servers</title>
       <p>The AWS service controller supports the service operations below for virtual servers. </p>
       <p>The <codeph>actionURL</codeph> for each operation is:</p>
-      <p><codeblock>https://oscm-app:8881/oscm-app/webservices/oscm-app/oscm-app
+      <p><codeblock>https://oscm-app:8880/oscm-app/webservices/oscm-app/oscm-app
          /org.oscm.app.v2_0.service.AsynchronousOperationProxy?wsdl</codeblock></p>
-      <p><codeph>&lt;oscm-app></codeph> and <codeph>&lt;8881></codeph> are the server and port of the container where the AWS integration software is deployed.</p>
+      <p><codeph>&lt;oscm-app></codeph> and <codeph>&lt;8880></codeph> are the server and port of the container where the AWS integration software is deployed.</p>
       <p>
         <note>If you provision a virtual server that does not support start and stop operations, make sure that you remove the service operations from the technical service definition. </note>
       </p>

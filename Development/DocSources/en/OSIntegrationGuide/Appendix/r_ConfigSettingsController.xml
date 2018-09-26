@@ -91,10 +91,10 @@
                 >In FUJITSU Cloud Service K5, the domain name corresponds to the contract number.</p>
             <p>The domain name can also be specified as a parameter in technical service definitions. The technical service parameter overrides the setting you specify here. </p>
         </section>
-        <!--section>
+        <section>
             <title>READY_TIMEOUT</title>
             <p><codeph>READY_TIMEOUT=300000</codeph></p>
             <p>The number of milliseconds to wait for the completion of an operation to start or stop the servers in a stack. If the operation is not completed within the given time, it is aborted with a timeout error. The administrators of the customer organization owning the subscription from which the operation was started are informed by email. After the problem has been sorted out, the start or stop operation can be repeated by the customer. This setting cannot be changed. </p>
-        </section-->
+        </section>
     </refbody>
 </reference>
