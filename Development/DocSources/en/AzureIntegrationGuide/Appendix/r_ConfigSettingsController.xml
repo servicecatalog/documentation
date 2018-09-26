@@ -11,15 +11,8 @@
                     href="../Administrating/c_ChangeOrg.xml"/>.</p>
         </section>
         <section>
-            <p>The following sections describe the technical service parameters and service operations which are supported by the OpenStack service controller. </p>
-            <p audience="os">You find several sample services on GitHub: <xref
-                    href="https://github.com/servicecatalog/oscm/tree/master/oscm-app-openstack/resources"
-                    scope="external"
-                        ><u>https://github.com/servicecatalog/oscm/tree/master/oscm-app-openstack/resources</u></xref>. </p>
-        </section>
-        <section>
             <title>CONTROLLER_ID</title>
-            <p><codeph>CONTROLLER_ID=ess.azure</codeph></p>
+            <p><codeph>CONTROLLER_ID=ess.azureARM</codeph></p>
             <p>The identifier of the service controller. This setting cannot be changed.</p>
         </section>
         <section>
@@ -51,12 +44,6 @@
             <p><codeph>BSS_USER_PWD=_crypt:&lt;password></codeph></p>
             <p>The password of the user for accessing <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
-        </section>
-        <section>
-            <title>API_USER_NAME</title>
-            <p><codeph>API_USER_NAME=&lt;userName></codeph></p>
-            <p>The user name to be used to access the tenant for your organization in OpenStack. Once authenticated, this user is authorized to access the Heat API.</p>
-            <p>The user must have the necessary credentials to create and configure virtual systems for the tenant.  In FUJITSU Cloud Service K5, the <codeph>cpf_systemowner</codeph> role is required.</p>
         </section>
     </refbody>
 </reference>

@@ -17,7 +17,9 @@
                     <li>
                         <p>Log in with the ID and password of the administrator of the technology provider organization specified by the  platform operator.</p>
                     </li>
-                    <li>Specify another technology provider organization for a service controller, <codeph>ess.aws</codeph>, <codeph>ess.openstack</codeph>,<ph audience="azure"> <codeph>ess.azure</codeph>, </ph>or <codeph>ess.vmware</codeph>).<p>Any technology manager registered for the technology provider organization you specified can log in to the graphical user interface for updating the controller configuration settings (see above). At least the ID and password of the user to be used for accessing <ph
+                    <li>Specify another technology provider organization for a service controller, <codeph>ess.aws</codeph>, <codeph>ess.openstack</codeph>,<ph
+                            audience="azure">
+                            <codeph>ess.azureARM</codeph>, </ph>or <codeph>ess.vmware</codeph>).<p>Any technology manager registered for the technology provider organization you specified can log in to the graphical user interface for updating the controller configuration settings (see above). At least the ID and password of the user to be used for accessing <ph
                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                             /> must be changed in the controller configuration settings.</p><p>
                             <note>When changing the password for a technology provider responsible for a service controller (<codeph>BSS_USER_PWD</codeph>), make sure to change it first in the APP Web interface before the technology provider changes it in the <ph
