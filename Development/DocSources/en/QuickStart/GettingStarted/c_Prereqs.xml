@@ -16,7 +16,7 @@
                 <li>Docker Compose</li>
             </ol>
         </p>
-        <p>This system is hereafter referred to a the <i>Docker host</i>. </p>
+        <p>This system is hereafter referred to as the <i>Docker host</i>. </p>
         <p>The following system resources are recommended for the Docker host: </p>
         <p>
             <ol>

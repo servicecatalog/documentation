@@ -58,7 +58,7 @@
                     </p></li>
                 <li audience="azure">
                     <p>Templates in JSON format for the ARM must exist in the environment of the Azure integration software. A template defines the virtual machines as well as other resources to be deployed and the dependencies between them. For each resource manager template, a corresponding parameter definition file in JSON format must exist. It is used to pass the parameter values a user specifies at subscription time to the resource manager template. </p>
-                    <p>### You can find sample resource manager templates and parameter definition files on <xref
+                    <p>You can find sample resource manager templates and parameter definition files on <xref
                             href="https://github.com/servicecatalog/oscm/tree/master/oscm-app-azure/resources"
                             scope="external"
                                 ><u>https://github.com/servicecatalog/oscm/tree/master/oscm-app-azure/resources</u></xref>. You can use these files as a basis and adapt them as required. Additional templates can be defined with ARM. For details, refer to the Microsoft documentation. </p>

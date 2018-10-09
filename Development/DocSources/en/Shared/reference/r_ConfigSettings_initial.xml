@@ -24,6 +24,7 @@
                         </ul>
                     </li>
                     <li>The base directory where data is persisted on your Docker host. The default directory is <codeph>/docker</codeph> as defined with the <codeph>DOCKER_PATH</codeph> configuration setting. </li>
+                    <li>HTTP timeout for Docker Compose. You need to adjust this value if you get timeout errors during high load or network congestion.</li>
                 </ul>
             </p>
         </section>
@@ -66,7 +67,7 @@
             <title>Settings for Connecting to the Service Controllers</title>
             <p>
                 <ul>
-                    <li><codeph>CONTROLLER_ID</codeph><p>The identifier of the service controller to be configured. Currently, the OpenStack, the AWS, <ph
+                    <li><codeph>CONTROLLER_ID</codeph> ###!!!<p>The identifier of the service controller to be configured. Currently, the OpenStack, the AWS, <ph
                                 audience="azure"
                                 >the Azure, </ph>and the VMware service controllers can be configured with the following identifiers: <codeph>ess.openstack</codeph>, <codeph>ess.aws</codeph>, <ph
                                 audience="azure"
@@ -129,7 +130,7 @@
             </p>
             <p>The following settings are used for the Docker engine environment which needs access to the Docker registry as well as for the <ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        > containers which access the Internet. They are used for the <codeph>oscm-app</codeph> container, meaning that each HTTP request made from APP is processed using these settings. </ph></p>
+                    /> containers which access the Internet. They are used for the <codeph>oscm-app</codeph> container, meaning that each HTTP request made from APP is processed using these settings.</p>
             <p>
                 <ul compact="no">
                     <li><codeph>PROXY_ENABLED</codeph><p>Defines whether the proxy is enabled in the container. Can be set to <codeph>true</codeph> or <codeph>false</codeph>.  </p></li>
