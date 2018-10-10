@@ -9,10 +9,10 @@
         <prodinfo product="oscm_ce">
             <prodname/>
             <vrmlist>
-                <vrm version="V18.0.0"/>
+                <vrm version="V17.7.0"/>
             </vrmlist>
             <brand/>
-        	<prognum>V18.0.0</prognum>
+        	<prognum>V17.7.0</prognum>
             <component/>
             <series>Broker's Guide</series>
         </prodinfo>
@@ -22,7 +22,7 @@
                 <vrm version="18.0"/>
             </vrmlist>
             <brand>FUJITSU Software</brand>
-            <prognum>Catalog Manager V18.0</prognum>
+            <prognum>Catalog Manager V17.7</prognum>
             <component/>
             <series>Broker's Guide</series>
         </prodinfo>

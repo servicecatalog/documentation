@@ -11,10 +11,10 @@
             <prodname/>
             <vrmlist>
                 <vrm
-            version="V18.0.0"/>
+            version="V17.7.0"/>
             </vrmlist>
             <brand/>
-            <prognum>V18.0.0</prognum>
+            <prognum>V17.7.0</prognum>
             <component/>
             <series>QuickStart Guide</series>
         </prodinfo>
@@ -23,10 +23,10 @@
             <prodname>Enterprise Service</prodname>
             <vrmlist>
                 <vrm
-            version="V18.0"/>
+            version="V17.7"/>
             </vrmlist>
             <brand>FUJITSU Software</brand>
-            <prognum>Catalog Manager V18.0</prognum>
+            <prognum>Catalog Manager V17.7</prognum>
             <component/>
             <series>QuickStart Guide</series>
         </prodinfo>
