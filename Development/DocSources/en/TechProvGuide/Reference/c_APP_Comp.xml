@@ -41,7 +41,7 @@
                                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                             />. Refer to the <i>VMware vSphere Integration</i> guide for details.</p>
                                 </li>
-                                <li audience="azure">
+                                <li>
                                     <p>Azure service controller: Can be used for integrating Microsoft Azure services with <ph
                                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                             />. Refer to the <i>Microsoft Azure Integration</i> guide for details.</p>

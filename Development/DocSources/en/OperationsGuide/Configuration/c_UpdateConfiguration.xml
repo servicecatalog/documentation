@@ -75,7 +75,7 @@ docker-compose -f docker-compose-initdb.yml up oscm-initdb-app
 docker-compose -f docker-compose-initdb.yml up oscm-initdb-controller-openstack
 docker-compose -f docker-compose-initdb.yml up oscm-initdb-controller-aws
 docker-compose -f docker-compose-initdb.yml up oscm-initdb-controller-vmware
-<ph audience="azure">docker-compose -f docker-compose-initdb.yml up oscm-initdb-controller-azure</ph> 
+docker-compose -f docker-compose-initdb.yml up oscm-initdb-controller-azure 
 docker-compose -f docker-compose-initdb.yml stop 
 docker-compose -f docker-compose-initdb.yml rm -f</codeblock>
                         </p></li>
