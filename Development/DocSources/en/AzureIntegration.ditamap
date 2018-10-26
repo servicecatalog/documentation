@@ -8,17 +8,17 @@
         <prodinfo product="oscm_ce">
             <prodname/>
             <vrmlist>
-                <vrm version="18.0.0"/>
+                <vrm version="17.8"/>
             </vrmlist>
             <brand/>
-            <prognum>18.0.0</prognum>
+            <prognum>17.8</prognum>
             <component/>
             <series>Microsoft Azure Integration</series>
         </prodinfo>
         <prodinfo product="oscm_ee">
             <prodname>Enterprise Service</prodname>
             <vrmlist>
-                <vrm version="18.0.0"/>
+                <vrm version="17.8"/>
             </vrmlist>
             <brand>FUJITSU Software</brand>
             <prognum>Catalog Manager V17.8</prognum>
