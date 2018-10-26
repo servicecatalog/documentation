@@ -12,6 +12,7 @@
     <tags name="vmware" color="00ff00"/>
     <tags name="doc" color="00ff00"/>
     <tags name="azure" color="00ff00"/>
+    <tags name="shell" color="00ff00"/>
   </tagGroups>
   <tagGroups name="product">
     <tags name="oscm_ee" color="00ff00"/>

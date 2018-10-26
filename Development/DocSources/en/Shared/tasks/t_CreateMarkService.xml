@@ -8,11 +8,12 @@
     <title>Creating and Publishing Marketable Services</title>
     <taskbody>
         <context>
-            <p>As soon as the technical services for the <ph audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph
-                    audience="vmware">vSphere</ph><ph audience="azure">Azure</ph> integration exist in <ph
-                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+            <p>As soon as the technical services for the <ph audience="shell">Shell</ph><ph audience="aws">AWS</ph><ph
+                    audience="os">OpenStack</ph><ph audience="vmware">vSphere</ph><ph audience="azure"
+                    >Azure</ph> integration exist in <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                     />, you can define and publish marketable services based on them. Your cost calculation for the services should include any external costs for operating <ph
-                    audience="aws">the virtual servers in Amazon EC2</ph><ph audience="os">the virtual systems</ph><ph
+                    audience="shell">the virtual systems</ph><ph audience="aws"
+                    >the virtual servers in Amazon EC2</ph><ph audience="os">the virtual systems</ph><ph
                     audience="vmware">the VMs</ph><ph audience="azure">the resources in Azure</ph>.</p>
             <p>Proceed as follows:</p>
         </context>
@@ -23,8 +24,8 @@
             </step>
             <step>
                 <cmd>Define one or more marketable services based on the technical services you created for <ph
-                        audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph audience="vmware">vSphere</ph><ph
-                        audience="azure">Azure</ph>.</cmd>
+                        audience="shell">the Shell</ph><ph audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph
+                        audience="vmware">vSphere</ph><ph audience="azure">Azure</ph>.</cmd>
             </step>
             <step>
                 <cmd>Define price models for your marketable services. </cmd>

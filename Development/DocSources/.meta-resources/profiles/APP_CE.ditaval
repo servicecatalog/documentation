@@ -12,12 +12,13 @@
  <prop action="exclude" att="audience" val="vmware"/>
  <prop action="include" att="audience" val="doc"/>
  <prop action="exclude" att="audience" val="azure"/>
+ <prop action="exclude" att="audience" val="shell"/>
  <prop action="exclude" att="platform" val="print"/>
- <prop action="include" att="platform" val="help"/>
- <prop action="include" att="product" val="sqa"/>
- <prop action="include" att="product" val="cs"/>
- <prop action="include" att="product" val="adm"/>
- <prop action="include" att="product" val="admee"/>
+ <prop action="exclude" att="platform" val="help"/>
+ <prop action="exclude" att="product" val="sqa"/>
+ <prop action="exclude" att="product" val="cs"/>
+ <prop action="exclude" att="product" val="adm"/>
+ <prop action="exclude" att="product" val="admee"/>
  <prop action="exclude" att="product" val="oscm_ee"/>
  <prop action="include" att="product" val="oscm_ce"/>
 </val>

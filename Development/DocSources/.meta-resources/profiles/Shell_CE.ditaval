@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <val>
- <prop action="include" att="audience" val="none"/>
+ <prop action="exclude" att="audience" val="none"/>
  <prop action="exclude" att="audience" val="detail"/>
  <prop action="exclude" att="audience" val="BSS"/>
- <prop action="exclude" att="audience" val="app"/>
+ <prop action="include" att="audience" val="app"/>
  <prop action="exclude" att="audience" val="ror"/>
- <prop action="include" att="audience" val="aws"/>
+ <prop action="exclude" att="audience" val="aws"/>
  <prop action="exclude" att="audience" val="os"/>
- <prop action="exclude" att="audience" val="int"/>
  <prop action="exclude" att="audience" val="tps5"/>
  <prop action="exclude" att="audience" val="vmware"/>
- <prop action="exclude" att="audience" val="shell"/>
  <prop action="include" att="audience" val="doc"/>
  <prop action="exclude" att="audience" val="azure"/>
- <prop action="include" att="platform" val="print"/>
- <prop action="exclude" att="platform" val="help"/>
+ <prop action="include" att="audience" val="shell"/>
+ <prop action="exclude" att="audience" val="int"/>
+ <prop action="exclude" att="product" val="oscm_ee"/>
+ <prop action="include" att="product" val="oscm_ce"/>
  <prop action="exclude" att="product" val="sqa"/>
  <prop action="exclude" att="product" val="cs"/>
  <prop action="exclude" att="product" val="adm"/>
  <prop action="exclude" att="product" val="admee"/>
- <prop action="exclude" att="product" val="oscm_ee"/>
- <prop action="include" att="product" val="oscm_ce"/>
+ <prop action="include" att="platform" val="print"/>
+ <prop action="exclude" att="platform" val="help"/>
 </val>

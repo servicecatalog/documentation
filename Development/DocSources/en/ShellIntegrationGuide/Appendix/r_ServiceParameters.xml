@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2018 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd" >
+<reference id="Service_Parameters_114">
+  <title>Service Parameters</title>
+  <refbody>
+    <section>
+      <p>The following section describes the technical service parameters which are supported by the Shell service controller. </p>
+      <p>You find a sample service on GitHub: <xref
+          href="https://github.com/servicecatalog/oscm/tree/master/oscm-app-shell/resources" scope="external"
+            ><u>https://github.com/servicecatalog/oscm/tree/master/oscm-app-shell/resources</u></xref>. </p>
+    </section>
+    <section>
+      <p>The Shell service controller supports the parameters below.</p>
+      <p>
+        <note>All parameters defined in the technical service definition must be one-time parameters, since the modification of parameters is not supported. Be sure to set their <codeph>modificationType</codeph> to <codeph>ONE_TIME</codeph>. </note>
+      </p>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>APP_CONTROLLER_ID</b></p>
+                <p>Mandatory. The ID of the service controller as defined in its implementation. The ID is set during the installation of the Shell integration software.</p>
+                <p>Default (must not be changed): <codeph>ess.shell</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>CONSOLE_FILE</b></p>
+                <p>Optional. The absolute file system path of the Shell configuration file. </p>
+                <p>The Shell will be executed with the <codeph>-PSConsoleFile</codeph> argument in case the file name is specified. </p>
+                <p>Example: <codeph>C:/TEMP/Console.psc1</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>PROVISIONING_SCRIPT</b></p>
+                <p>Mandatory. The absolute file system path or URL to a Shell script file. This script will be executed when a user subscribes to a service on the marketplace. </p>
+                <p>Example: <codeph>C:/TEMP/example_script.ps1</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>DEPROVISIONING_SCRIPT</b></p>
+                <p>Mandatory. The absolute file system path or URL to a Shell script file. This script will be executed when a user terminates the subscription. </p>
+                <p>Example: <codeph>C:/TEMP/example_script.ps1</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>UPDATE_SCRIPT</b></p>
+                <p>Mandatory. The absolute file system path or URL to a Shell script file. This script will be executed when a the configuration of an existing subscription is changed. </p>
+                <p>Example: <codeph>C:/TEMP/example_script.ps1</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>ASSIGN_USER_SCRIPT</b></p>
+                <p>Mandatory. The absolute file system path or URL to a Shell script file. This script will be executed when a user is assigned to a subscription.</p>
+                <p>Example: <codeph>C:/TEMP/example_script.ps1</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>DEASSIGN_USER_SCRIPT</b></p>
+                <p>Mandatory. The absolute file system path or URL to a Shell script file. This script will be executed when a user is removed from a subscription.</p>
+                <p>Example: <codeph>C:/TEMP/example_script.ps1</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>CHECK_STATUS_SCRIPT</b></p>
+                <p>Mandatory. The absolute file system path or URL to a Shell script file. This script will be executed when a user opens the Details view under My Subscriptions. It shows the status of the results of the provisioning script execution. </p>
+                <p>Example: <codeph>C:/TEMP/example_script.ps1</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>SCRIPT_TIMEOUT_SECONDS</b></p>
+                <p>Mandatory. The number of seconds until a running script will be canceled. </p>
+                <p>Example: <codeph>600</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>&lt;freely definable service parameter</b></p>
+                <p>Optional. Any number of parameters that are mapped from the parameters defined in the Shell script files. For each parameter in the script file, a corresponding parameter must be specified in the technical service definition.</p>
+                <p>All service parameters are patched into the script file at the top of the file. For example, a service parameter called <codeph>MY_PARAM</codeph> can be used as <codeph>$MY_PARAM</codeph> in the script file. </p>
+                <p>Example: <codeph>600</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+  </refbody>
+</reference>

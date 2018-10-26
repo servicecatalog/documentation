@@ -9,6 +9,7 @@
  <prop action="exclude" att="audience" val="os"/>
  <prop action="exclude" att="audience" val="tps5"/>
  <prop action="include" att="audience" val="vmware"/>
+ <prop action="exclude" att="audience" val="shell"/>
  <prop action="exclude" att="audience" val="int"/>
  <prop action="include" att="audience" val="doc"/>
  <prop action="exclude" att="audience" val="azure"/>

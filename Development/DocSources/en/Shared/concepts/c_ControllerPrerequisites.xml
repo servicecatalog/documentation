@@ -9,14 +9,39 @@
             <p>The following prerequisites must be fulfilled before you can create and publish services in <ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>:</p>
             <ul>
-                <li>To create technical services for the <ph audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph
-                        audience="vmware">vSphere</ph><ph audience="azure">Azure</ph> integration in <ph
-                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>, you must have access to <ph
-                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                <li>To create technical services for the <ph audience="shell">Shell integration</ph><ph audience="aws"
+                        >AWS</ph><ph audience="os">OpenStack</ph><ph audience="vmware">vSphere</ph><ph audience="azure"
+                        >Azure</ph> integration in <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        />, you must have access to <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                         /> as a technology manager. You must be a member of the technology provider organization responsible for the <ph
-                        audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph audience="vmware">VMware</ph><ph
-                        audience="azure"
+                        audience="shell">Shell</ph><ph audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph
+                        audience="vmware">VMware</ph><ph audience="azure"
                     >Azure</ph> service controller as specified in the configuration settings for the installation. </li>
+                <li audience="shell">Shell scripts must exist. They form the basis for the technical services in <ph
+                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>. Shell scripts can be provided in the following ways: <p>
+                        <ul>
+                            <li>The technology provider organization responsible for the Shell service controller provides them on an external host in a location whose URL can be reached from <ph
+                                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> via HTTP or HTTPS.</li>
+                            <li>The <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    /> operator provides them on an <ph
+                                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    /> host in a location whose URL can be reached from <ph
+                                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> via HTTP or HTTPS. </li>
+                            <li>The <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    /> operator provides them on the <ph
+                                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> host on the file system where they will be referenced by the absolute file path. </li>
+                        </ul>
+                    </p></li>
+                <li audience="shell">Shell Scripts used for provisioning are subject to the following restrictions: <p>
+                        <ul>
+                            <li>The Script must return the following command at the end of execution: <codeph>Write-Output "END_OF_SCRIPT"</codeph>. Otherwise the Script execution will run into a timeout. </li>
+                            <li>Terminate Scripts without calling <codeph>exit</codeph>. When calling <codeph>exit</codeph>, the Shell is no longer available for other Scripts and will be removed from the pool. This is not a problem, just an ineffective way of using the Shell pool.</li>
+                            <li>Interactive Scripts will cause a timeout. Remove all interactive command from the Script, such as <codeph>Out-GridView</codeph>, <codeph>Read-Host</codeph>, <codeph>ShowDialog</codeph>, <codeph>-Confirm</codeph>, <codeph>PromptForChoice</codeph>, and <codeph>Prompt</codeph>. </li>
+                        </ul>
+                    </p>
+                </li>
                 <li audience="aws"
                         >In AWS, appropriate AMIs for virtual servers must exist, to which the technical services in <ph
                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
@@ -64,13 +89,19 @@
                                 ><u>https://github.com/servicecatalog/oscm/tree/master/oscm-app-azure/resources</u></xref>. You can use these files as a basis and adapt them as required. Additional templates can be defined with ARM. For details, refer to the Microsoft documentation. </p>
                     <p>The templates and parameter definition files need to be available in a location that can be accessed from <ph
                             conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        /> and the Azure integration software by ### HTTP or HTTPS ### at runtime, for example: ### ?</p>
+                        /> and the Azure integration software by HTTP or HTTPS at runtime.</p>
+                    <p>It is important to end the base template URL with a slash (/) since the template file name is concatenated with this base URL. For example: </p>
+                    <p>Base URL: <codeph>https://github.com/servicecatalog/oscm/tree/master/oscm-app-azure/resources/</codeph></p>
+                    <p>Template file name: <codeph>SampleTemplate.json</codeph>
+                    </p>
+                    <p>Template parameters file name: <codeph>SampleTemplate.parameters.json</codeph>
+                    </p>
                 </li>
                 
-                <li>To create marketable services for the <ph audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph
-                        audience="vmware">vSphere</ph><ph audience="azure">Azure</ph> integration in <ph
-                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>, you must have access to <ph
-                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                <li>To create marketable services for the <ph audience="shell">Shell</ph><ph audience="aws">AWS</ph><ph
+                        audience="os">OpenStack</ph><ph audience="vmware">vSphere</ph><ph audience="azure"
+                        >Azure</ph> integration in <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        />, you must have access to <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> as a service manager of an organization with the supplier role. This may be the same organization as the technology provider organization or a different one.</li>
                 <li>To publish your marketable services, you must have access to an appropriate marketplace in <ph
                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> in your service manager role.</li>

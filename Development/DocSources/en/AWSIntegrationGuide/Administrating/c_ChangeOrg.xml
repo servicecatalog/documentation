@@ -8,16 +8,16 @@
                     xml:lang="en-us">
             <title>Changing the Responsible Organization</title>
             <conbody>
-        <section>You can change the technology provider organization responsible for the OpenStack service controller using the Web interface of APP: <ol
-                compact="no">
-                <li>In a Web browser, access the Web interface (base URL) of APP.<p>The access URL has the following format: </p><p><codeph>https://&lt;hostname.fqdn>:&lt;port>/oscm-app</codeph></p><p><codeph>&lt;hostname.fqdn></codeph> is the name and the fully qualified domain name of the machine where the <codeph>oscm-app</codeph> container has been deployed, <codeph>&lt;port></codeph> is the port to address the machine (default: <codeph>8881</codeph>), <codeph>oscm-app</codeph> is the default context root of APP and cannot be changed. </p></li>
-                <li>Log in with the ID and password of the user specified for <codeph>BSS_USER_KEY</codeph> in the configuration settings for APP or as another administrator of the same organization. </li>
-                <li>Specify the technology provider organization for the  AWS service controller, <codeph>ess.aws</codeph>.</li>
-                <li>Save the settings.</li>
-                <li audience="os"
+        <section>You can change the technology provider organization responsible for the AWS service controller using the Web interface of APP: <ol
+                                compact="no">
+                                <li>In a Web browser, access the Web interface (base URL) of APP.<p>The access URL has the following format: </p><p><codeph>https://&lt;hostname.fqdn>:&lt;port>/oscm-app</codeph></p><p><codeph>&lt;hostname.fqdn></codeph> is the name and the fully qualified domain name of the machine where the <codeph>oscm-app</codeph> container has been deployed, <codeph>&lt;port></codeph> is the port to address the machine (default: <codeph>8881</codeph>), <codeph>oscm-app</codeph> is the default context root of APP and cannot be changed. </p></li>
+                                <li>Log in with the ID and password of the user specified for <codeph>BSS_USER_KEY</codeph> in the configuration settings for APP or as another administrator of the same organization. </li>
+                                <li>Specify the technology provider organization for the AWS service controller, <codeph>ess.aws</codeph>.</li>
+                                <li>Save the settings.</li>
+                                <li
                                                         >Make sure that the configuration settings for the AWS service controller are updated. <p>Any technology manager registered for the technology provider organization you specified can log in to the graphical user interface for updating the controller configuration settings (see above). At least the ID and password of the user to be used for accessing <ph
                                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                                 /> must be changed in the controller configuration settings.</p></li>
-            </ol></section>
+                        </ol></section>
     </conbody>
 </concept>

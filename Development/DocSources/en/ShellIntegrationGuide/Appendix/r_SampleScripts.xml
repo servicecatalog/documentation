@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2018 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<reference id="reference832" xml:lang="en-us">
+    <title>Example Scripts</title>
+    <refbody>
+        <section>
+            <title>Citrix.XenApp.Sdk.psc1</title>
+            <codeblock>&lt;?xml version="1.0" encoding="utf-8"?>
+&lt;PSConsoleFile ConsoleSchemaVersion="1.0">
+  &lt;PSVersion>2.0&lt;/PSVersion>
+  &lt;PSSnapIns>
+    &lt;PSSnapIn Name="Citrix.Common.Commands" />
+    &lt;PSSnapIn Name="Citrix.XenApp.Commands" />
+    &lt;PSSnapIn Name="Citrix.Common.GroupPolicy" />
+  &lt;/PSSnapIns>
+&lt;/PSConsoleFile>
+</codeblock>
+        </section>
+        <section>
+            <title>Console.psc1</title>
+            <p>
+                <codeblock>&lt;?xml version="1.0" encoding="utf-8"?>
+&lt;PSConsoleFile ConsoleSchemaVersion="1.0">
+  &lt;PSVersion>5.1.15063.483&lt;/PSVersion>
+  &lt;PSSnapIns />
+&lt;/PSConsoleFile>
+</codeblock>
+            </p>
+        </section>
+        <section>
+            <title>example_script.ps1</title>
+            <p>
+                <codeblock>Write-Output "All Serviceparameters are patched into the script."
+Write-Output "$MY_SCRIPT_PARAM_1"
+sleep 2
+Write-Output "END_OF_SCRIPT"
+</codeblock>
+            </p>
+        </section>
+    </refbody>
+</reference>
