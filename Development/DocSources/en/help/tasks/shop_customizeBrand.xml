@@ -41,7 +41,7 @@
                 </info>
             </step>
             <step>
-                <cmd>Extract the ZIP file to any location in your environment. </cmd>
+                <cmd>Extract the ZIP file to any folder in your environment. </cmd>
             </step>
             <step>
                 <cmd>Adapt the style sheet as required. </cmd>
@@ -51,9 +51,9 @@
                 </info>
             </step>
             <step>
-                <cmd>Provide the customized style sheet and the referenced files, images, and fonts to the platform operator (as a ZIP or TAR archive), and ask him to load your changes into the system. </cmd>
+                <cmd>Create a ZIP file of the folder where you customized the style sheet together with reference files, images, and fonts, and provide this ZIP file to the platform operator, and ask him to load your changes into the system. </cmd>
                 <info>
-                    <p>The customized branding must be in the same structure as the <codeph>branding-package.zip</codeph> file. However, it must be provided as a <codeph>*.tar</codeph> archive.</p>
+                    <p>The customized branding must be in the same structure as the <codeph>branding-package.zip</codeph> file.</p>
                 </info>
             </step>
             <step>
@@ -67,9 +67,9 @@
             </step>
             <step>
                 <cmd>In the <uicontrol>Style sheet URL</uicontrol> field, enter the URL pointing to your customized style sheet. </cmd>
-                <info><p>By default, the URL is as follows:</p><p><codeph>https://&lt;hostname.fqdn>:8443/branding-package/css/mp.css</codeph></p>where <codeph>&lt;hostname.fqdn></codeph> is the name and the fully qualified domain name of the of the host used to access <ph
+                <info><p>By default, the URL is as follows:</p><p><codeph>https://&lt;hostname.fqdn>:8443/&lt;folder-name>/css/mp.css</codeph></p>where <codeph>&lt;hostname.fqdn></codeph> is the name and the fully qualified domain name of the of the host used to access <ph
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        />, and <codeph>branding-package</codeph> is the name of the <codeph>.tar.gz</codeph> file.</info>
+                        />, and <codeph>&lt;folder-name></codeph> is the name of the folder to which the platform operator extracted the customized files. </info>
             </step>
             <step>
                 <cmd>Click <uicontrol>Save</uicontrol> to make the new layout and branding of your marketplace available. </cmd>

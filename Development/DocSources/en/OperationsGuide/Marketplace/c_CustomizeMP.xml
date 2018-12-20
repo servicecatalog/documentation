@@ -11,29 +11,20 @@
             <p>After deployment, <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> provides a neutral branding for marketplaces. Marketplace owners can download the source files of this branding as a <codeph>branding-package.zip</codeph> file and use this as a basis for customizing the layout and branding of their marketplaces. This includes the colors, fonts, background images, and logos displayed to the marketplace visitors. </p>
             <p>Once a marketplace owner or you is finished with customizing the branding of a marketplace, you are responsible for uploading the changes to the <codeph>oscm-branding</codeph> container. In this way the customized layout is applied. </p>
-            <p>The customized branding must be in the same structure as the <codeph>branding-package.zip</codeph> file. However, it must be provided as a <codeph>*.tar</codeph> archive.</p>
+            <p>The customized branding must be in the same structure as the <codeph>branding-package.zip</codeph> file. Usually, the marketplace owner or you extracted the <codeph>branding-package.zip</codeph> to a folder of his/your choice, adapted the files, and created a new <codeph>&lt;folder-name.zip></codeph> file containing the customized branding.</p>
             <p>To apply changes to the marketplace layout, proceed as follows: </p>
             <p>
                 <ol>
                     <li>Log in to the Docker host as user root. </li>
-                    <li>Change the format of the archive file to <codeph>.tar.gz</codeph> using the <codeph>gzip</codeph> tool.</li>
-                    <li>Put the <codeph>.tar.gz</codeph> file into the following directory on your Docker host: <p><codeph><codeph>/docker/config/oscm-branding/brandings</codeph></codeph></p></li>
+                    <li>Extract the <codeph>&lt;folder-name>.zip</codeph> file to a folder on your Docker host. </li>
+                    <li>Put this into the following directory on your Docker host: <p><codeph><codeph>/docker/config/oscm-branding/brandings/</codeph></codeph></p></li>
                     <li>To load the customized layout: <ol>
-                            <li>Stop the <codeph>oscm-branding</codeph> container: <p>
-                                    <codeblock>docker stop oscm-branding</codeblock>
-                                </p></li>
-                            <li>Remove the <codeph>oscm-branding</codeph> container: <p>
-                                    <codeblock>docker-compose-oscm -f docker-compose.yml rm oscm-branding</codeblock>
-                                </p></li>
-                            <li>Recreate and restart the <codeph>oscm-branding</codeph> container:<p>
-                                    <codeblock>docker-compose-oscm -f docker-compose.yml up -d oscm-branding</codeblock>
-                                </p></li>
                             <li>Log in to the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                 /> administration portal. </li>
                             <li>Choose <b>Customize layout</b> from the <b>Marketplace</b> menu.</li>
-                            <li>Select the marketplace and enter the URL pointing to the location in the branding container where you deployed the custom stylesheet for the given marketplace. By default, the URL is as follows: <p><codeph>https://&lt;hostname.fqdn>:8443/branding-package/css/mp.css</codeph></p>where <codeph>&lt;hostname.fqdn></codeph> is the name and the fully qualified domain name of the of the host used to access <ph
+                            <li>Select the marketplace and enter the URL pointing to the location in the branding container where you deployed the custom stylesheet for the given marketplace. By default, the URL is as follows: <p><codeph>https://&lt;hostname.fqdn>:8443/&lt;new-folder-name>/css/mp.css</codeph></p>where <codeph>&lt;hostname.fqdn></codeph> is the name and the fully qualified domain name of the of the host used to access <ph
                                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                    />, and <codeph>branding-package</codeph> is the name of the <codeph>.tar.gz</codeph> file. </li>
+                                    />, and <codeph>&lt;new-folder-name></codeph> is the name of the folder containing the customized branding files. </li>
                             <li>To verify the branding, go to the respective marketplace and log in again. </li>
                         </ol></li>
                 </ol>
