@@ -8,22 +8,15 @@
                     <section>
    <p
     conref="../../Shared/concepts/c_WhatIsBES_Controller.xml#concept2311/is_a_set_of_services_which_concept_conbody_p_1"/>
-                              <p>The Shell integration allows users to install any software or execute any task in a Windows environment by running Shell scripts. </p>
+                              <p>The Shell integration allows users to install any software or execute any task in a UNIX environment by running Shell scripts. </p>
       <p>When integrating applications with <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
         />, the instance provisioning can be done in two provisioning modes: synchronous or asynchronous mode.</p>
       <p>Asynchronous provisioning is required if provisioning operations take a long time because long-running processes or manual steps are involved. This is the case, for example, when provisioning virtual machines on a virtual machine server. <ph
           conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
         /> supports the integration of such applications with its asynchronous provisioning platform (APP). This is a framework which provides a provisioning service as well as functions, data persistence, and notification features which are always required for integrating applications in asynchronous mode.</p>
-                              <p>The integration of Shell scripts with <ph
-          conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-          /> provides for an Infrastructure as a Service (IaaS) solution that leverages the features of both products: Through services, which are published on a marketplace in <ph
-          conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-          />, users can request and use Shell scripts. The usage costs can be calculated and charged by means of the <ph
-          conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> billing and payment services.</p>
       <p>When deploying the <codeph>oscm-app</codeph> container provided with <ph
           conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-          />, a Shell service controller is preconfigured and registered with the asynchronous provisioning platform (APP). This service controller can be used for executing Shell scripts with <ph
-          conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </p>
+        />, a Shell service controller is preconfigured and registered with the asynchronous provisioning platform (APP). </p>
                               <p>This manual describes how to create and use services for Shell scripts on an <ph
           conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> marketplace. </p>
                     </section>

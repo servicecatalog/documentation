@@ -70,7 +70,7 @@
         <topicref format="dita" href="Shared/Installation/c_Update.xml" type="concept"/>
     </chapter-->
     <chapter format="dita" href="ShellIntegrationGuide/Services/c_ServicesIntro.xml" type="concept">
-        <topicref format="dita" href="Shared/concepts/c_ControllerPrerequisites.xml" type="concept"/>
+        <topicref format="dita" href="ShellIntegrationGuide/Services/c_ControllerPrerequisites.xml" type="concept"/>
         <topicref format="dita" href="Shared/tasks/t_CreateTechService.xml" type="task"/>
         <topicref format="dita" href="Shared/tasks/t_CreateMarkService.xml" type="task"/>
     </chapter>

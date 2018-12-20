@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2018 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<task id="task_E68E2024B1F6403AAA1130A39B1D4DCD" xml:lang="en-us">
+    <title>Creating and Publishing Marketable Services</title>
+    <taskbody>
+        <context>
+            <p>As soon as the technical services for the <ph audience="shell">Shell</ph> integration exist in <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />, you can define and publish marketable services based on them. Your cost calculation for the services should include any external costs for operating virtual systems. </p>
+            <p>Proceed as follows:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Log in to the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> administration portal with your service manager account.</cmd>
+            </step>
+            <step>
+                <cmd>Define one or more marketable services based on the technical services you created for <ph
+                        audience="shell">the Shell</ph>.</cmd>
+            </step>
+            <step>
+                <cmd>Define price models for your marketable services. </cmd>
+            </step>
+            <step>
+                <cmd>Publish the services to a marketplace. </cmd>
+            </step>
+        </steps>
+        <result>For details on these steps, refer to the <i>Supplier's Guide</i> and to the online help of <ph
+                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</result>
+    </taskbody>
+</task>

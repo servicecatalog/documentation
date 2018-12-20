@@ -67,6 +67,10 @@
                                                         ><i>VMware vSphere Integration:</i> A PDF manual for operators describing how to offer and use virtual machines provisioned on a VMware vSphere server through services in <ph
                                                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                                                 />.</ph></li>
+                                <li><ph id="VMWARE_Guide:_concept_conbody_section_ul_l"
+                                                        ><i>Shell Integration:</i> A PDF manual for operators describing how to use Shell scripts through services in <ph
+                                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                />.</ph></li>
                                 <li><ph id="Online_Help:_concept_conbody_section_ul_l"
                                                         ><i>Online Help:</i> Online help pages describing how to work with the administration portal of <ph
                                                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"

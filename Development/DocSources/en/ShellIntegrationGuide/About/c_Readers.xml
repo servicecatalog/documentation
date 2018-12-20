@@ -9,7 +9,7 @@
     <title>Readers of this Manual</title>
     <conbody>
         <section>
-            <p>This manual is intended for operators who want to offer Shell services on a marketplace provided by <ph
+            <p>This manual is intended for operators who want to use Shell scripts for offering services on a marketplace provided by <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     />. It assumes that you have access to an existing <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"

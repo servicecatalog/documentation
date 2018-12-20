@@ -17,15 +17,14 @@
           audience="os"> for a virtual system in OpenStack</ph><ph audience="vmware"> for a VM in vSphere</ph><ph
           audience="azure"
           > for a virtual machine in Azure</ph>, the Subscription service asynchronously triggers the corresponding actions in <ph
-          audience="shell">Shell</ph><ph audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph audience="vmware"
+          audience="shell">a Shell</ph><ph audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph audience="vmware"
           >vSphere</ph><ph audience="azure"
           >Azure</ph> through the <b>Asynchronous Provisioning Platform (APP)</b> and the <ph audience="shell"
             ><b>Shell service controller</b></ph><ph audience="aws"><b>AWS service controller</b></ph><ph audience="os"
             ><b>OpenStack service controller</b></ph><ph audience="vmware"><b>VMware service controller</b></ph><ph
           audience="azure"><b>Azure service controller</b></ph>: <ph audience="shell"
-          >Scripts are executed in a Shell</ph><ph audience="aws"
-          >Virtual servers are created or deleted in AWS</ph><ph audience="os"
-          >Virtual systems are created or deleted in OpenStack</ph><ph audience="vmware"
+          >Scripts are executed in a Shell</ph><ph audience="aws">Virtual servers are created or deleted in AWS</ph><ph
+          audience="os">Virtual systems are created or deleted in OpenStack</ph><ph audience="vmware"
           >VMs are created, modified, or deleted in vSphere</ph><ph audience="azure"
           >The virtual machine and - if requested - additional resources are created or deleted in Azure</ph>. </p>
       <p id="cmp2"
