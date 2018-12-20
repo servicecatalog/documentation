@@ -11,10 +11,10 @@
             <prodname/>
             <vrmlist>
                 <vrm
-            version="18.0.0"/>
+            version="17.9.0"/>
             </vrmlist>
             <brand/>
-            <prognum>18.0.0</prognum>
+            <prognum>17.9.0</prognum>
             <component/>
             <series>VMware vSphere Integration</series>
         </prodinfo>
@@ -23,7 +23,7 @@
             <prodname>Enterprise Service</prodname>
             <vrmlist>
                 <vrm
-            version="18.0"/>
+            version="17.9"/>
             </vrmlist>
             <brand>FUJITSU Software</brand>
             <prognum>Catalog Manager V17.9</prognum>
