@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN"
                          "">
-<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2018 -->
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2019 -->
 <bookmap id="BESAppIntegrationGuide"
             xml:lang="en_US">
     <title>Operator's Guide</title>
@@ -31,7 +31,7 @@
             <series>Operator's Guide</series>
         </prodinfo>
         <bookid>
-            <edition>December 2018 </edition>
+            <edition>January 2019 </edition>
             <!--booknumber product="oscm_ee">B1WS-1252-02</booknumber-->
         </bookid>
         <bookrights

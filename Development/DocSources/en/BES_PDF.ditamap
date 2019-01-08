@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN"
                          "">
-<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2018 -->
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2019 -->
 
 <bookmap id="BSSUserGuide"
             xml:lang="en_US">
@@ -32,7 +32,7 @@
             <series>Online Help Topics</series>
         </prodinfo>
         <bookid>
-            <edition>December 2018 </edition>
+            <edition>January 2019 </edition>
             <booknumber/>
         </bookid>
         <bookrights

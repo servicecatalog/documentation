@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>  
-<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2018 -->
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2019 -->
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
                          "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
 ]>
@@ -53,17 +53,20 @@
                         <p>
                                 <codeblock>docker stop oscm-core</codeblock>
                         </p>
-                                <p>To <b>delete</b> a container:  </p>
+                                <p>To <b>delete</b> a container:</p>
                         <p>
-                                <codeblock>docker-compose -f docker-compose-oscm.yml &lt;container-name> rm</codeblock>
+                                <ol>
+                                        <li>Stop the container using the above command. </li>
+                                        <li>Remove the container: <codeblock>docker-compose -f docker-compose-oscm.yml rm &lt;container-name></codeblock></li>
+                                </ol>
                         </p>
                         <p>To <b>create and start</b> a container:  </p>
                         <p>
-                                <codeblock>docker-compose up -d docker-compose-oscm.yml &lt;container-name></codeblock>
+                                <codeblock>docker-compose -f docker-compose-oscm.yml up &lt;container-name></codeblock>
                         </p>
                         <p>To <b>restart</b> a container:  </p>
                         <p>
-                                <codeblock>docker-compose restart &lt;container-name></codeblock>
+                                <codeblock>docker-compose -f docker-compose-oscm.yml restart &lt;container-name></codeblock>
                         </p>
                         <p>When shutting down the containers, the <codeph>oscm-db</codeph> container must be the last one to be stopped. When starting or restarting the containers, make sure that the <codeph>oscm-db</codeph> container is first. </p>
                         </section>

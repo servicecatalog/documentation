@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN"
                          "">
-<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2018 -->
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2019 -->
 <bookmap id="APPManual"
             xml:lang="en_US">
     <title>Asynchronous Provisioning Platform</title>
@@ -11,10 +11,10 @@
             <prodname/>
             <vrmlist>
                 <vrm
-            version="V17.6.0"/>
+            version="V17.9.0"/>
             </vrmlist>
             <brand/>
-            <prognum>V17.6.0</prognum>
+            <prognum>V17.9.0</prognum>
             <component/>
             <series>APP Integration Guide</series>
         </prodinfo>
@@ -23,15 +23,15 @@
             <prodname>Enterprise Service</prodname>
             <vrmlist>
                 <vrm
-            version="V17.6.0"/>
+            version="V17.9.0"/>
             </vrmlist>
             <brand>FUJITSU Software</brand>
-            <prognum>Catalog Manager V17.6.0</prognum>
+            <prognum>Catalog Manager V17.9.0</prognum>
             <component/>
             <series>APP Integration Guide</series>
         </prodinfo>
         <bookid>
-            <edition>January 2018 </edition>
+            <edition>January 2019 </edition>
             
         </bookid>
         <bookrights

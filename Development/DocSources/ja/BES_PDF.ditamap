@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN"
                          "">
-<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2018 -->
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2019 -->
 
 <bookmap id="BSSUserGuide"
             xml:lang="ja_JP">
@@ -12,10 +12,10 @@
             <prodname/>
             <vrmlist>
                 <vrm
-            version="17.1.0"/>
+            version="17.9.0"/>
             </vrmlist>
             <brand/>
-        	<prognum>17.1.0</prognum>
+        	<prognum>17.9.0</prognum>
             <component/>
             <series>Online Help Topics</series>
         </prodinfo>
@@ -24,15 +24,15 @@
             <prodname>Enterprise Service</prodname>
             <vrmlist>
                 <vrm
-            version="17.1"/>
+            version="17.9"/>
             </vrmlist>
             <brand>FUJITSU Software</brand>
-            <prognum>Catalog Manager V17.1</prognum>
+            <prognum>Catalog Manager V17.9</prognum>
             <component/>
             <series>Online Help Topics</series>
         </prodinfo>
         <bookid>
-            <edition>June 2017 </edition>
+            <edition>January 2019 </edition>
             <booknumber/>
         </bookid>
         <bookrights

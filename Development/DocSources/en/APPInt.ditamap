@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN"
                      "">
-<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2018 -->
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2019 -->
 <map title="APP Integration Guide" xml:lang="en_US">
     <topicref format="dita" href="APPInt/APP/c_ImplAPP.xml" navtitle="" type="concept"/>
     <topicref format="dita" href="APPInt/APP/c_InstAPP.xml" type="concept"/>

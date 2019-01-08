@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>  
-<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2018 -->
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2019 -->
 <!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
                            "reference.dtd">
 <reference id="reference832" xml:lang="en-us">
@@ -67,11 +67,7 @@
             <title>Settings for Connecting to the Service Controllers</title>
             <p>
                 <ul>
-                    <li><codeph>CONTROLLER_ID</codeph> ###!!!<p>The identifier of the service controller to be configured. Currently, the OpenStack, the AWS, <ph
-                                audience="azure"
-                                >the Azure, </ph>and the VMware service controllers can be configured with the following identifiers: <codeph>ess.openstack</codeph>, <codeph>ess.aws</codeph>, <ph
-                                audience="azure"
-                            ><codeph>ess.azureARM</codeph>, </ph>or <codeph>ess.vmware</codeph>, respectively.</p></li>
+                    <li>docker-compose -f docker-compose-oscm</li>
                     <li><codeph>CONTROLLER_ORG_ID</codeph><p>The ID of the organization in <ph
                                 conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                             /> responsible for the service controller. The organization must have the technology provider role.</p><p>Before the first deployment, the setting's value must be set to <codeph><codeph>PLATFORM_OPERATOR</codeph></codeph>. The operator can then log in to the service controller and define the technology provider organization that is to be responsible. </p></li>
