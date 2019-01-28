@@ -50,29 +50,12 @@
         <topicref format="dita" href="ShellIntegrationGuide/Intro/c_Components.xml" type="concept"/>
         <topicref format="dita" href="ShellIntegrationGuide/Intro/c_Scenarios.xml" type="concept"/>
     </chapter>
-    <!--chapter format="dita" href="Shared/Installation/c_InstIntro.xml" type="concept">
-        <topicref format="dita" href="ShellIntegrationGuide/Installation/c_Preparation.xml" type="concept">
-            <topicref format="dita" href="Shared/Installation/c_PrepCTMG.xml" type="concept"/>
-            <topicref format="dita" href="Shared/Installation/c_PrepHardware.xml" type="concept"/>
-            <topicref format="dita" href="Shared/Installation/c_PrepJava.xml" type="concept"/>
-            <topicref format="dita" href="Shared/Installation/c_PrepAppServer.xml" type="concept"/>
-            <topicref format="dita" href="Shared/Installation/c_PrepDB.xml" type="concept"/>
-            <topicref format="dita" href="Shared/Installation/c_PrepMailServer.xml" type="concept"/>
-        </topicref>
-        <topicref format="dita" href="ShellIntegrationGuide/Installation/c_Installation.xml" type="concept">
-            <topicref format="dita" href="Shared/Installation/t_InstPreparing.xml" type="task"/>
-            <topicref format="dita" href="Shared/Installation/t_InstConfiguringController.xml" type="task"/>
-            <topicref format="dita" href="Shared/Installation/t_InstDB.xml" type="task"/>
-            <topicref format="dita" href="Shared/Installation/t_InstAppServer.xml" type="task"/>
-            <topicref format="dita" href="Shared/Installation/t_InstCertificate.xml" type="task"/>
-        </topicref>
-        <topicref format="dita" href="Shared/Installation/c_InstControllerInExistingAPP.xml" type="concept"/>
-        <topicref format="dita" href="Shared/Installation/c_Update.xml" type="concept"/>
-    </chapter-->
+    
     <chapter format="dita" href="ShellIntegrationGuide/Services/c_ServicesIntro.xml" type="concept">
         <topicref format="dita" href="ShellIntegrationGuide/Services/c_ControllerPrerequisites.xml" type="concept"/>
         <topicref format="dita" href="Shared/tasks/t_CreateTechService.xml" type="task"/>
         <topicref format="dita" href="Shared/tasks/t_CreateMarkService.xml" type="task"/>
+        <topicref format="dita" href="ShellIntegrationGuide/Services/c_ConfigureStatusPanel.xml" type="concept"/>
     </chapter>
     <!--chapter format="dita" href="ShellIntegrationGuide/Using/c_UsingIntro.xml" type="concept">
         <topicref format="dita" href="ShellIntegrationGuide/Using/t_Subscribe.xml" type="task"/>
@@ -82,12 +65,12 @@
     </chapter-->
     <chapter format="dita" href="ShellIntegrationGuide/Administrating/c_AdministratingIntro.xml" type="concept">
         <topicref format="dita" href="Shared/concepts/c_ControlExecution.xml" type="concept"/>
-        <topicref format="dita" href="Shared/concepts/c_ControllerHandleProblems.xml" type="concept"/>
+        <topicref format="dita" href="ShellIntegrationGuide/Administrating/c_ControllerHandleProblems.xml" type="concept"/>
         <!--topicref format="dita" href="Shared/concepts/c_ControllerHandleCommProblems.xml" type="concept"/-->
         <!--topicref format="dita" href="Shared/Installation/c_Backup.xml" type="concept"/-->
         <topicref format="dita" href="ShellIntegrationGuide/Administrating/c_UpdateConfiguration.xml" type="concept"/>
         <topicref format="dita" href="ShellIntegrationGuide/Administrating/c_ChangeOrg.xml" type="concept"/>
-        <!--topicref format="dita" href="Shared/reference/c_LogConfig.xml" type="concept"/-->
+        <topicref format="dita" href="ShellIntegrationGuide/Administrating/c_LogConfig.xml" type="concept"/>
     </chapter>
     <!--chapter format="dita" href="Shared/Installation/c_Uninstallation.xml" type="concept"/-->
     <appendix format="dita" href="ShellIntegrationGuide/Appendix/r_ConfigSettingsController.xml" type="reference"/>
@@ -98,6 +81,6 @@
 
     </appendix-->
     <appendix format="dita" href="ShellIntegrationGuide/Appendix/r_ServiceParameters.xml" type="reference"/>
-    <appendix format="dita" href="ShellIntegrationGuide/Appendix/r_SampleScripts.xml" type="reference"/>
+    <!--appendix format="dita" href="ShellIntegrationGuide/Appendix/r_SampleScripts.xml" type="reference"/-->
     <appendix format="dita" href="Shared/glossary/r_Glossary.xml" type="reference"/>
 </bookmap>

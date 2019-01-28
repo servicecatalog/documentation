@@ -63,6 +63,19 @@
                                 href="../../Shared/reference/r_ConfigSettings_APP.xml"
                                 />. For example: </p><p><codeph>TIMER_INTERVAL_SUBSCRIPTION_EXPIRATION=345600000</codeph></p></li>
                     <li>Save the <codeph>var.env</codeph> file to its original location: <p><codeph>/docker/var.env</codeph></p></li>
+                    <li>In the <codeph>docker-compose-initdb.yml</codeph> file, set the <codeph>OVERWRITE</codeph> flag to <codeph>true</codeph> (under the <codeph>environment</codeph> settings) for changing a setting in the desired database. <p>For example, for persistently updating a setting in the <codeph>bss</codeph> database, set the flag to <codeph>true</codeph> for <codeph>oscm-initdb-core</codeph>:</p><p>
+                            <codeblock>oscm-initdb-core:
+    image: ${IMAGE_INITDB}
+    container_name: oscm-initdb-core
+    env_file: var.env
+    environment:
+      - TARGET=CORE
+      - SOURCE=INIT
+      - OVERWRITE=<b>true</b>
+      - LOG_LEVEL=INFO
+    links:
+- oscm-db:oscm-db</codeblock>
+                        </p></li>
                     <li>Stop and remove all <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> containers:<p>
                             <codeblock>docker-compose -f docker-compose-oscm.yml stop
 docker-compose -f docker-compose-oscm.yml rm -f </codeblock>

@@ -9,15 +9,15 @@
       <p>The <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
         /> Shell integration supports the following usage scenarios: </p>
       <ul compact="no">
-        <li><b>Executing a Script for provisioning</b>: When a customer subscribes to a corresponding service on an <ph
+        <li><b>Provisioning script</b>: When a customer subscribes to a corresponding service on an <ph
             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-          /> marketplace, the Shell service controller triggers the execution of a Shell script. </li>
-        <li><b>Executing a Script for modifying a subscription</b>: When a customer reconfigures an existing subscription, the Shell service controller triggers the execution of a Shell script. </li>
-        <li><b>Executing a Script for deprovisioning</b>: When a customer terminates a subscription, the Shell service controller triggers the execution of a Shell script. The subscription is terminated in <ph
+          /> marketplace, the Shell service controller triggers the execution of a provisioning script. </li>
+        <li><b>Modification script</b>: When a customer reconfigures an existing subscription to a corresponding service, the Shell service controller triggers the execution of a modification script. </li>
+        <li><b>Deprovisioning script</b>: When a customer terminates a subscription, the Shell service controller triggers the execution of a deprovisioning script. The subscription is terminated in <ph
             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
           /> independent of whether the Script execution is successful.</li>
-        <li><b>Executing a Script for assigning users</b>: When a customer assigns users to a subscription, the Shell service controller triggers the execution of a Shell script.</li>
-        <li><b>Executing a Script for deassigning users</b>: When a customer removes users from a subscription, the Shell service controller triggers the execution of a Shell script.</li>
+        <li><b>Assign user script</b>: When a customer assigns users to a subscription, the Shell service controller triggers the execution of an assign user script.</li>
+        <li><b>Deassign users scripts</b>: When a customer removes users from a subscription, the Shell service controller triggers the execution of a deassign users script.</li>
       </ul>
     </section>
   </conbody>

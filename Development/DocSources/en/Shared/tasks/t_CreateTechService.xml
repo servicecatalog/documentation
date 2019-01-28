@@ -9,8 +9,9 @@
     <taskbody>
         <context>
             <p>The first step in providing <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> services for <ph audience="shell">Shell</ph><ph audience="aws">AWS</ph><ph audience="os"
-                    >OpenStack</ph><ph audience="vmware">vSphere</ph> is to create one or more technical services. </p>
+                    /> services for <ph audience="shell">Shell script execution</ph><ph audience="aws">AWS</ph><ph
+                    audience="os">OpenStack</ph><ph audience="vmware"
+                >vSphere</ph> is to create one or more technical services. </p>
             <p>Proceed as follows:</p>
         </context>
         <steps>
@@ -18,11 +19,13 @@
                 <cmd>Define one or more technical services in an XML file. </cmd>
                 <info>
                     <p audience="shell">As a basis, you can use the technical service sample provided on <xref
-                            href="https://github.com/servicecatalog/oscm/tree/master/oscm-app-shell/resources"
+                            href="https://github.com/servicecatalog/oscm-app-shell/tree/master/src/main/resources"
                             scope="external"
-                                ><u>https://github.com/servicecatalog/oscm/tree/master/oscm-app-shell/resources</u></xref>. </p>
+                        ><u>https://github.com/servicecatalog/oscm-app-shell/tree/master/src/main/resources</u></xref>. </p>
                     <p audience="shell"
-                        >A technical service specifies Shell scripts as parameter options. A sample script is also available. </p>
+                            >A technical service specifies Shell scripts as parameter options. Sample scripts are available <xref
+                            href="https://github.com/servicecatalog/oscm-app-shell/tree/master/src/test/resources/sample_scripts/advanced_scripts"
+                            scope="external"><u>here</u></xref>. </p>
                         <p audience="os">As a basis, you can use the technical services samples provided on <xref
                             href="https://github.com/servicecatalog/oscm/tree/master/oscm-app-openstack/resources"
                             scope="external"
@@ -47,7 +50,7 @@
                         <li audience="os">The direct access type </li>
                         <li audience="vmware">The direct access type </li>
                         <li audience="shell"
-                                >Service parameters which correspond to the parameters specified in the Shell Scripts. For details on the supported service parameters, refer to <xref
+                                >Service parameters which correspond to the parameters specified in the Shell scripts. For details on the supported service parameters, refer to <xref
                                 href="../../ShellIntegrationGuide/Appendix/r_ServiceParameters.xml"/>.</li>
                         <li audience="aws"
                                 >Service parameters which represent the AMIs defined in Amazon EC2. For details on the supported service parameters, refer to <xref

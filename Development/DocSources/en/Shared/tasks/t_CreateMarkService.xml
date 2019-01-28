@@ -12,7 +12,7 @@
                     audience="os">OpenStack</ph><ph audience="vmware">vSphere</ph><ph audience="azure"
                     >Azure</ph> integration exist in <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                     />, you can define and publish marketable services based on them. Your cost calculation for the services should include any external costs for operating <ph
-                    audience="shell">the virtual systems</ph><ph audience="aws"
+                    audience="shell">any provisioned system, etc.</ph><ph audience="aws"
                     >the virtual servers in Amazon EC2</ph><ph audience="os">the virtual systems</ph><ph
                     audience="vmware">the VMs</ph><ph audience="azure">the resources in Azure</ph>.</p>
             <p>Proceed as follows:</p>

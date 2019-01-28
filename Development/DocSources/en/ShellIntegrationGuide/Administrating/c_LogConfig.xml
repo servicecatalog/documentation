@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2019 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_1BCF5C425D7D4627AB1C66A085CF6E11"
+                    xml:lang="en-us">
+        <title>Logging</title>
+        <conbody>
+                <p>The Shell integration software records detailed information regarding script execution in the following log file inside the <codeph>oscm-app</codeph> container in the following folder:</p>
+                <p><codeph>/opt/apache-tomee/logs/app-shell.log</codeph>
+                </p>
+                <p>The logging is based on <codeph>log4j</codeph>. </p>
+                <p>
+                        <note>Be ware that this log file is available only if you set the <codeph>TOMEE_DEBUG</codeph> configuration setting in the <codeph>var.env</codeph> configuration file to <codeph>true</codeph>. </note>
+                </p>
+                <p>To view the log file, log into the <codeph>oscm-app</codeph> container as follows:  </p>
+                <p>
+                        <codeblock>docker exec -it oscm-app /bin/bash</codeblock>
+                </p>
+                <p>The default log level is <codeph>INFO</codeph>. </p>
+        </conbody>
+</concept>

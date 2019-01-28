@@ -35,8 +35,9 @@
                             <row>
                                 <entry colname="col2"><xref href="../Services/c_ServicesIntro.xml"/></entry>
                                 <entry colname="col3"
-                                        >Describes how to create and publish services for the Shell integration in <ph
-                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </entry>
+                                        >Describes how to prepare and provided Shell scripts, how to create and publish services for the Shell integration in <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    />, as well as how to configure a status information page for viewing details regarding script execution. </entry>
                             </row>
                             <row>
                                 <entry colname="col2"><xref href="../Administrating/c_AdministratingIntro.xml"/></entry>
@@ -52,11 +53,7 @@
                             <row>
                                 <entry colname="col2"><xref href="../Appendix/r_ServiceParameters.xml"/></entry>
                                 <entry colname="col3"
-                                    >Describes the technical service parameters which are supported by the Shell service controller.</entry>
-                            </row>
-                            <row>
-                                <entry colname="col2"><xref href="../Appendix/r_SampleScripts.xml"/></entry>
-                                <entry colname="col3">Provides some sample Shell scripts. </entry>
+                                    >Describes the technical service parameters and operations which are supported by the Shell service controller.</entry>
                             </row>
                         </tbody>
                     </tgroup>

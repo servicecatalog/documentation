@@ -6,10 +6,9 @@
     <title>Prerequisites and Preparation</title>
     <conbody>
         <p>The following prerequisites must be fulfilled before you can create and publish services in <ph
-                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>:</p>
+                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
         <section>
-            <title>Access Rights</title>
-            <ul>
+            <ul compact="no">
                 <li>To create technical services for the Shell integration in <ph
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                         />, you must have access to <ph
@@ -20,38 +19,46 @@
                         />, you must have access to <ph
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> as a service manager of an organization with the supplier role. This may be the same organization as the technology provider organization or a different one.</li>
-                <li>To publish your marketable services, you must have access to an appropriate marketplace in  in your service manager role.</li>
+                <li>To publish your marketable services, you must have access to an appropriate marketplace in in your service manager role.</li>
             </ul>
         </section>
         <section>
-            <title>Shell Scripts</title>
-            <ul>
+            <title>Preparing and Providing Shell Scripts</title>
+            <ul compact="no">
                 <li>Shell scripts must exist. They form the basis for the technical services in <ph
-                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>:<p>
-                        <ul>
-                            <li>The technology provider organization responsible for the Shell service controller prepares the scripts to be called by the Shell service controller, and stores them on a shared file system on the <ph
-                                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                /> host. The scripts can then be referenced by their absolute file path.</li>
-                            <li>The <codeph>oscm-app</codeph> container must have the shared file system mounted. </li>
-                            <li>The Shell service controller will run scripts stored on the shared file system as the same UNIX user who runs the <codeph>oscm-app</codeph> container: <p>
-                                    <fig>
-                                        <image href="../_images/RunningEnv.png" alt="RunningEnv.png" width="400"
-                                            height="171"/>
-                                    </fig>
-                                </p></li>
-                        </ul>
-                    </p><!--Shell scripts can be provided in the following ways: <ul><li>The technology provider organization responsible for the Shell service controller provides them on an external host in a location whose URL can be reached from <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> via HTTP or HTTPS.</li><li>The <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> operator provides them on an <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> host in a location whose URL can be reached from <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> via HTTP or HTTPS. </li><li>The <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> operator provides them on the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> host on the file system where they will be referenced by the absolute file path.</li></ul>--></li>
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </li>
+                <li>Sample scripts are available <xref
+                        href="https://github.com/servicecatalog/oscm-app-shell/tree/master/src/test/resources/sample_scripts/advanced_scripts"
+                        scope="external"><u>here</u></xref>.</li>
+                <li>The technology provider organization responsible for the Shell service controller prepares the scripts to be called by the Shell service controller. These scripts can be defined in marketable service parameters and then be reference as scripts located either inside or outside (external URL) the Docker host. <p>To reference a script located inside the Docker host, you need to provide it in the following directory on your Docker host: </p><p><codeph>/opt/scripts</codeph></p></li>
+                <li>The <codeph>oscm-app</codeph> container must have the shared file system mounted. </li>
+                <li>The Shell service controller will run scripts stored on the shared file system as the same UNIX user who runs the <codeph>oscm-app</codeph> container:<p>
+                        <fig>
+                            <image href="../_images/RunningEnv.png" alt="RunningEnv.png" width="400" height="171"/>
+                        </fig>
+                    </p></li>
             </ul>
         </section>
         <section>
             <title>Shell Script Syntax and Rules</title>
-            <p>Shell scripts are subject to the following rules: </p>
+            <p>Shell scripts to be executed properly are subject to the following rules: </p>
             <p>
-                <ul>
-                    <li>The Shell service controller calls a script as bash script on UNIX and each script file should be read-only. Script calls by the service controller follow the following syntax: <p><codeph># bash hoge.sh --ops --param1 "xxx" --param2 "yyy" --USER "foo" --INSTANCE "bar"</codeph></p><p>where</p><p><codeph>hoge.sh</codeph> is the script name together with its absolute file path. </p><p><codeph>--ops</codeph> is the ID of an operation. This parameter is only used by an Operations Script. For example, if the ID of an operation is <codeph>BOOTUP</codeph>, <codeph>--ops</codeph> is replaced by <codeph>--BOOTUP</codeph>.</p><p><codeph>--param1</codeph> and <codeph>--param2</codeph> etc. are replaced by the ID of a parameter or operation parameter. The values <codeph>"xxx"</codeph> and <codeph>"yyy"</codeph> are replaced by the actual values. For example, if the ID of a parameter is <codeph>NUM_OF_CPUS</codeph> and the value is <codeph>2</codeph>, the script call uses <codeph>--NUM_OF_CPUS 2</codeph> at the command line. </p><p><codeph>--USER</codeph> is the name of the user calling the script.</p><p><codeph>--INSTANCE</codeph> is ???</p><p>Examples: </p><p><codeph># bash provisioning_script.sh --NUM_OF_CPUS --MEMORY_SIZE 16 --NAME sample_vm1 --VM_TYPE windows 2016 --USER smith --INSTANCE 123456789</codeph></p><p><codeph># bash operation_script.sh --BOOTUP --USER miller --INSTANCE 2345678901</codeph></p></li>
-                    <li>Each script must return <codeph>"END_OF_SCRIPT"</codeph> to <codeph>stdout</codeph> at the end of execution: <codeph>"END_OF_SCRIPT"</codeph>. In this way, the Shell service controller can determine that a script has finished successfully. Otherwise the script execution will run into a timeout. </li>
+                <ul compact="no">
+                    <li>Each script must return a valid JSON object followed by an <codeph>"END_OF_SCRIPT"</codeph> string value. In this way, the Shell service controller can determine that a script has finished successfully. Otherwise the script execution will run into a timeout.</li>
+                    <li>Each script must return exactly one JSON object. </li>
+                    <li>The JSON result may contain the following JSON keywords:<p>
+                            <ul>
+                                <li><codeph>status</codeph> (mandatory) - allowed values: <codeph>"ok"</codeph> or <codeph>"error"</codeph></li>
+                                <li><codeph>message</codeph> (mandatory) - the message may contain, for example, information related to the script execution addressed to the user</li>
+                                <li><codeph>data</codeph> (optional) - may contain any data which can be output in the Status tab after the script has been executed, for example, access information, HTML data for the status script, etc. </li>
+                            </ul>
+                        </p>
+                    </li>
                     <li>Interactive Scripts will cause a timeout. Therefore, scripts must not contain any interactive commands, such as <codeph>Out-GridView</codeph>, <codeph>Read-Host</codeph>, <codeph>ShowDialog</codeph>, <codeph>-Confirm</codeph>, <codeph>PromptForChoice</codeph>, and <codeph>Prompt</codeph>.</li>
                     <li>In the scripts, the following characters must not be used: <p><codeph>|</codeph> (pipe), <codeph>"</codeph> (double quotes), <codeph>'</codeph> (single quotes), <codeph>&amp;</codeph> (escape), <codeph>> &lt;</codeph> (angle brackets, redirects)</p></li>
+                    <li>You find valid and invalid script samples <xref
+                            href="https://github.com/servicecatalog/oscm-app-shell/tree/master/src/test/resources/sample_scripts"
+                            scope="external"><u>here</u></xref>.</li>
                 </ul>
             </p>
         </section>

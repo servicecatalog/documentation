@@ -34,7 +34,7 @@
                                                 <li>Work as a technology manager of the technology provider organization responsible for the <ph
                         audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph audience="vmware">VMware</ph><ph
                         audience="azure">Azure</ph> service controller. </li>
-                <li>Invoke the instance status interface of APP for the service controller of the application by opening it's URL in a Web browser. <p>The access URL has the following format: </p><p><codeph>https://&lt;hostname.fqdn>:&lt;port>/oscm-app/controller/?controllerid=ess.<ph
+                <li>Invoke the instance status interface of APP for the service controller of the application by opening its URL in a Web browser. <p>The access URL has the following format: </p><p><codeph>https://&lt;hostname.fqdn>:&lt;port>/oscm-app/controller/?controllerid=ess.<ph
                                 audience="aws">aws</ph><ph audience="os">openstack</ph><ph audience="vmware"
                             >vmware</ph></codeph></p><p><codeph>&lt;hostname.fqdn></codeph> is the name and the fully qualified domain name of the machine where the <codeph>oscm-app</codeph> container has been deployed, <codeph>&lt;port></codeph> is the port to address the machine (default: <codeph>8881</codeph>), <codeph>oscm-app/controller/?controllerid=ess.<ph
                                 audience="aws">aws</ph><ph audience="os">openstack</ph><ph audience="vmware"

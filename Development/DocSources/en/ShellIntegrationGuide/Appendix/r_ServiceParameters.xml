@@ -2,13 +2,17 @@
 <!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2019 -->
 <!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd" >
 <reference id="Service_Parameters_114">
-  <title>Service Parameters</title>
+  <title>Service Parameters and Operations</title>
   <refbody>
     <section>
-      <p>The following section describes the technical service parameters which are supported by the Shell service controller. </p>
-      <p>You find a sample service on GitHub: <xref
-          href="https://github.com/servicecatalog/oscm/tree/master/oscm-app-shell/resources" scope="external"
-            ><u>https://github.com/servicecatalog/oscm/tree/master/oscm-app-shell/resources</u></xref>. </p>
+      <p>The following sections describe the technical service parameters and service operations which are supported by the Shell service controller. </p>
+    </section>
+    <section>
+      <title>Service Parameters</title>
+      <p>The Shell service controller supports the parameters below.</p>
+      <p>You find a sample service on GitHub:  <xref
+          href="https://github.com/servicecatalog/oscm-app-shell/tree/master/src/main/resources" scope="external"
+            ><u>https://github.com/servicecatalog/oscm-app-shell/tree/master/src/main/resources</u></xref>. </p>
     </section>
     <section>
       <p>The Shell service controller supports the parameters below.</p>
@@ -51,8 +55,8 @@
             <row>
               <entry>
                 <p><b>PROVISIONING_SCRIPT</b></p>
-                <p>Mandatory. The absolute file system path or URL to a Shell script file. This script will be executed when a user subscribes to a service on the marketplace. </p>
-                <p>Example: <codeph>C:/TEMP/example_script.ps1</codeph></p>
+                <p>Mandatory. The absolute file system path or URL to a Shell script file. The base folder is <codeph>/opt/scripts</codeph>. This script will be executed when a user subscribes to a service on the marketplace. </p>
+                <p>Example: <codeph>/provisioning.sh</codeph></p>
               </entry>
             </row>
           </tbody>
@@ -65,8 +69,8 @@
             <row>
               <entry>
                 <p><b>DEPROVISIONING_SCRIPT</b></p>
-                <p>Mandatory. The absolute file system path or URL to a Shell script file. This script will be executed when a user terminates the subscription. </p>
-                <p>Example: <codeph>C:/TEMP/example_script.ps1</codeph></p>
+                <p>Mandatory. The absolute file system path or URL to a Shell script file. The base folder is <codeph>/opt/scripts</codeph>. This script will be executed when a user terminates the subscription. </p>
+                <p>Example: <codeph>/deprovisioning.sh</codeph></p>
               </entry>
             </row>
           </tbody>
@@ -79,8 +83,8 @@
             <row>
               <entry>
                 <p><b>UPDATE_SCRIPT</b></p>
-                <p>Mandatory. The absolute file system path or URL to a Shell script file. This script will be executed when a the configuration of an existing subscription is changed. </p>
-                <p>Example: <codeph>C:/TEMP/example_script.ps1</codeph></p>
+                <p>Mandatory. The absolute file system path or URL to a Shell script file. The base folder is <codeph>/opt/scripts</codeph>. This script will be executed when a the configuration of an existing subscription is changed. </p>
+                <p>Example: <codeph>/update.sh</codeph></p>
               </entry>
             </row>
           </tbody>
@@ -93,8 +97,8 @@
             <row>
               <entry>
                 <p><b>ASSIGN_USER_SCRIPT</b></p>
-                <p>Mandatory. The absolute file system path or URL to a Shell script file. This script will be executed when a user is assigned to a subscription.</p>
-                <p>Example: <codeph>C:/TEMP/example_script.ps1</codeph></p>
+                <p>Mandatory. The absolute file system path or URL to a Shell script file. The base folder is <codeph>/opt/scripts</codeph>. This script will be executed when a user is assigned to a subscription.</p>
+                <p>Example: <codeph>/assign_user.sh</codeph></p>
               </entry>
             </row>
           </tbody>
@@ -107,8 +111,8 @@
             <row>
               <entry>
                 <p><b>DEASSIGN_USER_SCRIPT</b></p>
-                <p>Mandatory. The absolute file system path or URL to a Shell script file. This script will be executed when a user is removed from a subscription.</p>
-                <p>Example: <codeph>C:/TEMP/example_script.ps1</codeph></p>
+                <p>Mandatory. The absolute file system path or URL to a Shell script file. The base folder is <codeph>/opt/scripts</codeph>. This script will be executed when a user is removed from a subscription.</p>
+                <p>Example: <codeph>/deassign_user.sh</codeph></p>
               </entry>
             </row>
           </tbody>
@@ -121,8 +125,8 @@
             <row>
               <entry>
                 <p><b>CHECK_STATUS_SCRIPT</b></p>
-                <p>Mandatory. The absolute file system path or URL to a Shell script file. This script will be executed when a user opens the Details view under My Subscriptions. It shows the status of the results of the provisioning script execution. </p>
-                <p>Example: <codeph>C:/TEMP/example_script.ps1</codeph></p>
+                <p>Mandatory. The absolute file system path or URL to a Shell script file. The base folder is <codeph>/opt/scripts</codeph>. This script will be executed when a user opens the <b>Details</b> view under <b>My Subscriptions</b> and selects the <b>Status</b> tab. It retrieves the status of a provisioned instance. </p>
+                <p>Example: <codeph>/status.sh</codeph></p>
               </entry>
             </row>
           </tbody>
@@ -135,8 +139,8 @@
             <row>
               <entry>
                 <p><b>SCRIPT_TIMEOUT_SECONDS</b></p>
-                <p>Mandatory. The number of seconds until a running script will be canceled. </p>
-                <p>Example: <codeph>600</codeph></p>
+                <p>Mandatory. The number of seconds until the execution of a running script will be canceled. </p>
+                <p>Default: <codeph>600</codeph></p>
               </entry>
             </row>
           </tbody>
@@ -151,12 +155,65 @@
                 <p><b>&lt;freely definable service parameter</b></p>
                 <p>Optional. Any number of parameters that are mapped from the parameters defined in the Shell script files. For each parameter in the script file, a corresponding parameter must be specified in the technical service definition.</p>
                 <p>All service parameters are patched into the script file at the top of the file. For example, a service parameter called <codeph>MY_PARAM</codeph> can be used as <codeph>$MY_PARAM</codeph> in the script file. </p>
-                <p>Example: <codeph>600</codeph></p>
+                <p>Parameters are used for passing data for script execution, for example, number of allowed transactions, number of bookable CPUs, etc. </p>
               </entry>
             </row>
           </tbody>
         </tgroup>
       </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>OPERATIONS_SCRIPT</b></p>
+                <p>Optional. The absolute file system path or URL to a Shell script file defining operations that can be executed for a subscription, for example, starting or stopping a provisioned VM. The base folder is <codeph>/opt/scripts</codeph>. This script will be executed when a user selects an operation for his subscription. </p>
+                <p>Example: <codeph>/operation.sh</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>UPDATE_USER_SCRIPT</b></p>
+                <p>Optional. The absolute file system path or URL to a Shell script file. The base folder is <codeph>/opt/scripts</codeph>. This script will be executed when the data of a user is changed. </p>
+                <p>Example: <codeph>/update.sh</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>VERIFICATION_SCRIPT</b></p>
+                <p>Optional. The absolute file system path or URL to a Shell script file. The base folder is <codeph>/opt/scripts</codeph>. If specified, this script will be executed BEFORE any other script. This is useful, for example, for checking whether a specific instance already exists, whether parameters are passed correctely, etc.</p>
+                <p>Example: <codeph>/verification.sh</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>Service Operations for Instances Provisioned by a Shell Script</title>
+      <p>The Shell service controller supports the definition and execution of service operations for instances provisioned using a Shell script. </p>
+      <p>The <codeph>actionURL</codeph> for each operation is:</p>
+      <p>
+        <codeblock>http://oscm-app:8880/oscm-app/webservices/oscm-app/oscm-app
+         /org.oscm.app.v2_0.service.AsynchronousOperationProxy?wsdl</codeblock>
+      </p>
+      <p><codeph>&lt;oscm-app></codeph> and <codeph>&lt;8880></codeph> are the server and port of the container where the OpenStack service controller is deployed.</p>
+      <p><b>Examples: ???</b></p>
     </section>
   </refbody>
 </reference>

@@ -8,7 +8,7 @@
                     <section>
    <p
     conref="../../Shared/concepts/c_WhatIsBES_Controller.xml#concept2311/is_a_set_of_services_which_concept_conbody_p_1"/>
-                              <p>The Shell integration allows users to install any software or execute any task in a UNIX environment by running Shell scripts. </p>
+                              <p>The Shell integration software allows users to install any software or execute any task in a UNIX environment by running Shell scripts. </p>
       <p>When integrating applications with <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
         />, the instance provisioning can be done in two provisioning modes: synchronous or asynchronous mode.</p>
       <p>Asynchronous provisioning is required if provisioning operations take a long time because long-running processes or manual steps are involved. This is the case, for example, when provisioning virtual machines on a virtual machine server. <ph
