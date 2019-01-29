@@ -32,6 +32,11 @@
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                             />. Refer to the <i>Microsoft Azure Integration</i> guide for details.</p>
                 </li>
+                <li>
+                    <p>Shell service controller: Can be used for executing Shell scripts through services in <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            />. Refer to the <i>Shell Integration</i> guide for details.</p>
+                </li>
             </ul>
             <p>Before technology providers can use the service controllers, they must be entered as responsible organizations in APP as well as in the service controllers.</p>
             <p><b>To register an organization that is to be responsible for a service controller: </b></p>
