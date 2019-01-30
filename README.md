@@ -25,7 +25,7 @@ The following documentation is available:
 * [OpenStack Integration](Development/oscm-app-openstack/doc/en/OSIntegration.pdf): A PDF manual for operators describing how to offer and use virtual systems controlled by OpenStack through services in OSCM.
 * [Shell Integration](Development/oscm-app-shell/doc/en/ShellIntegration.pdf): A PDF manual for operators describing how to use Shell scripts through services in OSCM.
 * [VMware vSphere Integration](Development/oscm-app-vmware/doc/en/VMWareIntegration.pdf): A PDF manual for operators describing how to offer and use virtual systems controlled by VMware vSphere services in OSCM.
-* [Online Help](Development/oscm-doc-user/resources/help/en/helpcontent_webif.htm/): Online help pages describing how to work with the administration portal of OSCM. The online help is intended for and available to everybody working with the administration portal.
+* Online help pages describing how to work with the administration portal of OSCM. The online help is intended for and available to everybody working with the administration portal.
 
 The documents are updated every week.
 
