@@ -33,21 +33,7 @@
           </tbody>
         </tgroup>
       </table>
-      <table frame="top">
-        <tgroup cols="1">
-          <colspec colname="c1" colnum="1"/>
-          <tbody>
-            <row>
-              <entry>
-                <p><b>CONSOLE_FILE</b></p>
-                <p>Optional. The absolute file system path of the Shell configuration file. </p>
-                <p>The Shell will be executed with the <codeph>-PSConsoleFile</codeph> argument in case the file name is specified. </p>
-                <p>Example: <codeph>C:/TEMP/Console.psc1</codeph></p>
-              </entry>
-            </row>
-          </tbody>
-        </tgroup>
-      </table>
+      <!--<table frame="top"><tgroup cols="1"><colspec colname="c1" colnum="1"/><tbody><row><entry><p><b>CONSOLE_FILE</b></p><p>Optional. The absolute file system path of the Shell configuration file. </p><p>The Shell will be executed with the <codeph>-PSConsoleFile</codeph> argument in case the file name is specified. </p><p>Example: <codeph>C:/TEMP/Console.psc1</codeph></p></entry></row></tbody></tgroup></table>-->
       <table frame="top">
         <tgroup cols="1">
           <colspec colname="c1" colnum="1"/>

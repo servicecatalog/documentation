@@ -17,8 +17,17 @@
             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
           /> independent of whether the Script execution is successful.</li>
         <li><b>Assign user script</b>: When a customer assigns users to a subscription, the Shell service controller triggers the execution of an assign user script.</li>
-        <li><b>Deassign users scripts</b>: When a customer removes users from a subscription, the Shell service controller triggers the execution of a deassign users script.</li>
+        <li><b>Deassign users script</b>: When a customer removes users from a subscription, the Shell service controller triggers the execution of a deassign users script.</li>
+        <li><b>Status script</b>: When a customer opens the <b>Details</b> view of a subscription and then clicks the <b>Custom</b> tab (e.g. <b>Status</b> tab) that has been defined for the subscribed marketable service, the Shell service controller triggers the execution of a status script.  </li>
       </ul>
+      <p>Additional scripts can be used optionally: </p>
+      <p>
+        <ul compact="no">
+          <li><b>Operation script</b>: When a customer selects an operation for his subscription, the Shell service controller triggers the execution of an operation script. </li>
+          <li><b>Update user script</b>: When a customer updates the data of a user, the Shell service controller triggers the execution of an update user script. </li>
+          <li><b>Verification script</b>: When a customer subscribes to a corresponding service, the Shell service controller triggers the execution of a verification script, if defined and not empty. In case the verification script returns an error, the subscription process is aborted and the user is informed by a corresponding message.</li>
+        </ul>
+      </p>
     </section>
   </conbody>
 </concept>
