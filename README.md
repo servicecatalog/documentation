@@ -20,6 +20,7 @@ The complete documentation on ESCM consists of the following:
 * [Microsoft Azure Integration](Manuals/AzureIntegration.pdf): A PDF manual for operators describing how to offer and use virtual systems controlled by Microsoft Azure through services in ESCM.
 * [OpenStack Integration](Manuals/OSIntegration.pdf): A PDF manual for operators describing how to offer and use virtual systems controlled by OpenStack through services in ESCM.
 * [Shell Integration](Manuals/ShellIntegration.pdf): A PDF manual for operators describing how to use Shell scripts through services in ESCM.
+* [VMware vSphere Integration](Manuals/VMWareIntegration.pdf): A PDF manual for operators describing how to offer and use virtual systems controlled by VMware vSphere services in ESCM.
 * Online help pages describing how to work with the administration portal of ESCM. The online help is intended for and available to everybody working with the administration portal.
 
 
