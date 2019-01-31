@@ -5,7 +5,7 @@
 
 Welcome to the documentation of FUJITSU Software Enterprise Service Catalog Manager (ESCM)! 
 
-Look at our **[Getting Started](GettingStarted.md)** document to quickly access and test your ESCM installation. 
+Look at our [**QuickStart Guide**](Manuals/QuickStart.pdf) to quickly install, configure, access, and test ESCM.
 
 The complete documentation on ESCM consists of the following:
 
