@@ -30,7 +30,7 @@
                 <li>Sample scripts are available <xref
                         href="https://github.com/servicecatalog/oscm-app-shell/tree/master/src/test/resources/sample_scripts/advanced_scripts"
                         scope="external"><u>here</u></xref>.</li>
-                <li>The technology provider organization responsible for the Shell service controller prepares the scripts to be called by the Shell service controller. These scripts can be defined in marketable service parameters and then be reference as scripts located either inside or outside (external URL) the Docker host. <p>To reference a script located inside the Docker host, you need to provide it in the following directory on your Docker host: </p><p><codeph>/opt/scripts</codeph></p></li>
+                <li>The technology provider organization responsible for the Shell service controller prepares the scripts to be called by the Shell service controller. These scripts can be defined in marketable service parameters and then be referenced as scripts located either inside or outside (external URL) the Docker host. <p>To reference a script located inside the Docker host, you need to provide it in the following directory on your Docker host: </p><p><codeph>/opt/scripts</codeph></p><p>As soon as you provide new scripts or change existing ones, you must restart the <codeph>oscm-app</codeph> container. </p></li>
                 <li>After deployment, the <codeph>oscm-app</codeph> container has the above shared file system mounted. </li>
                 <li>The Shell service controller will run scripts stored on the shared file system as the same UNIX user who runs the <codeph>oscm-app</codeph> container:<p>
                         <fig>
@@ -46,20 +46,15 @@
                 <ul compact="no">
                     <li>Each script must return a valid JSON object followed by an <codeph>"END_OF_SCRIPT"</codeph> string value. In this way, the Shell service controller can determine that a script has finished successfully. Otherwise the script execution will run into a timeout.</li>
                     <li>Each script must return exactly one JSON object. </li>
-                    <li>The JSON result may contain the following JSON keywords:<p>
-                            <ul compact="no">
-                                <li><codeph>status</codeph> (mandatory) - allowed values: <codeph>"ok"</codeph> or <codeph>"error"</codeph></li>
-                                <li><codeph>message</codeph> (mandatory) - the message may contain, for example, information related to the script execution addressed to the user</li>
-                                <li><codeph>data</codeph> (optional) - may contain any data which can be output in the Status tab after the script has been executed. You can include the following JSON keywords in the <codeph>data</codeph> field: <p>
-                                        <ul compact="no">
-                                            <li><codeph>output</codeph> (optional) - may contain any data to be presented, for example, HTML data for the status script. </li>
-                                            <li><codeph>accessInfo</codeph> (optional) - may contain access information to be passed to the subscription details for display. </li>
-                                        </ul>
-                                    </p>
-                                </li>
-                            </ul>
-                        </p>
-                    </li>
+                    <li>The JSON result may contain the following JSON keywords:<ul compact="no">
+                            <li><codeph>status</codeph> (mandatory) - allowed values: <codeph>"ok"</codeph> or <codeph>"error"</codeph></li>
+                            <li><codeph>message</codeph> (mandatory) - the message may contain, for example, information related to the script execution addressed to the user</li>
+                            <li><codeph>data</codeph> (optional) - may contain any data which can be output in the Status tab after the script has been executed. You can include the following JSON keywords in the <codeph>data</codeph> field: <ul
+                                    compact="no">
+                                    <li><codeph>output</codeph> (optional) - may contain any data to be presented, for example, HTML data for the status script. </li>
+                                    <li><codeph>accessInfo</codeph> (optional) - may contain access information to be passed to the subscription details for display. </li>
+                                </ul></li>
+                        </ul></li>
                     <li>Special characters used in scripts must be properly escaped.</li>
                     <li>You find valid and invalid script samples <xref
                             href="https://github.com/servicecatalog/oscm-app-shell/tree/master/src/test/resources/sample_scripts"

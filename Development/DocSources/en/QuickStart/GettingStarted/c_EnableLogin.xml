@@ -24,14 +24,8 @@
                                 <li>Log out of the administration portal and log in again to enable the changes.</li>
                                 <li>Now you can log in to APP and change APP-specific settings: <p><codeph>https://&lt;hostname.fqdn>:8881/oscm-app/ </codeph></p><p>User name: <codeph>administrator</codeph>
                                         </p><p>Password: <codeph>admin123 </codeph></p></li>
-                                <li>You can also login to the instance status interface of each service controller: <p><codeph>https://&lt;hostname.fqdn>:8881/oscm-app-&lt;controller-name>/ </codeph></p><p>User name: <codeph>administrator</codeph>
-                                        </p><p>Password: <codeph>admin123 </codeph></p><p><codeph>&lt;controller-name></codeph> is either <codeph>openstack</codeph>, <codeph>aws</codeph>, or <codeph>vmware</codeph>. </p><p>For the VMware controller, for example, it is required to specify the following: </p><p>
-                                                <ul>
-                                                        <li><b>Connection URL</b>: The URL for accessing the vSphere API.</li>
-                                                        <li><b>User ID</b>: The ID of the technical user in vSphere for accessing the vSphere API.</li>
-                                                        <li><b>Password</b>: The password of the technical user in vSphere for accessing the vSphere API.</li>
-                                                </ul>
-                                        </p></li>
+                                <li>You can also login to the instance status interface of each service controller: <p><codeph>https://&lt;hostname.fqdn>:8881/oscm-app-&lt;controller-name>/ </codeph></p><p><codeph>&lt;controller-name></codeph> is either <codeph>openstack</codeph>, <codeph>aws</codeph>, <codeph>vmware</codeph>, <codeph>azureARM</codeph>, or <codeph>shell</codeph>. </p><p>User name: <codeph>administrator</codeph>
+                                        </p><p>Password: <codeph>admin123 </codeph></p></li>
                         </ol>
                         </section>
                 </conbody>

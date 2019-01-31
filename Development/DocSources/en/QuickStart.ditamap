@@ -79,17 +79,7 @@
             type="concept"/>
    </chapter>
     
-    <chapter
-        href="Shared/reference/c_Certificates.xml"
-            type="concept">
-		<topicref
-            href="Shared/reference/c_Importing_SSL_Key_pairs.xml"
-            type="concept"/>
-		<topicref
-            href="Shared/reference/c_Importing_Trusted_Certs.xml"
-        type="concept"/>
-		
-    </chapter>
+  
    
     <chapter
         href="QuickStart/GettingStarted/c_Usage.xml"
@@ -104,11 +94,22 @@
             href="QuickStart/GettingStarted/c_StartUsing.xml"
                 type="concept"/>
         </chapter>
+   
+     <chapter
+        href="Shared/reference/c_Certificates.xml"
+            type="concept">
+		<topicref
+            href="Shared/reference/c_Importing_SSL_Key_pairs.xml"
+            type="concept"/>
+		<topicref
+            href="Shared/reference/c_Importing_Trusted_Certs.xml"
+        type="concept"/>
+		
+    </chapter> 
     
     
-    
-    <appendix
+    <!--appendix
         href="Shared/reference/r_ConfigSettings_initial.xml"
             type="reference">
-    </appendix>
+    </appendix-->
 </bookmap>

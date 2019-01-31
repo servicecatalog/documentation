@@ -25,8 +25,13 @@
                         /> and APP, such as mail server, database and other settings.</li>
                 </ol>
             </p>
-            <p>Edit both files and adjust the configuration settings to your environment. The initial, mandatory settings are stored in the <codeph>bss</codeph> and <codeph>bssapp</codeph> databases. They are described in detail in <xref
-                    href="../../Shared/reference/r_ConfigSettings_initial.xml"/>.</p>
+            <p>Edit both files and adjust the configuration settings to your environment. 
+                The initial, mandatory settings are stored in the <codeph>bss</codeph> and <codeph>bssapp</codeph> databases. 
+                <ph product="oscm_ce">They are described in detail in the  
+                    <xref format="html" href="https://github.com/servicecatalog/documentation/blob/master/Development/oscm-doc-user/resources/manuals/installation+operation/en/Operation.pdf" scope="external"><u><i>Operator's Guide</i></u></xref></ph>
+                <ph product="oscm_ee">They are described in detail in the 
+                    <xref format="html" href="https://https://github.com/servicecatalog/documentation/tree/ESCM" scope="external"><u><i>Operator's Guide</i></u></xref></ph>.
+                </p>
         </section>
     </conbody>
 </concept>
