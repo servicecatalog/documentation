@@ -5,11 +5,10 @@
 
 Welcome to the documentation of FUJITSU Software Enterprise Service Catalog Manager (ESCM)! 
 
-Look at our [**QuickStart Guide**](Manuals/QuickStart.pdf) to quickly install, configure, access, and test ESCM.
-
 The complete documentation on ESCM consists of the following:
 
 * [Overview](Manuals/Overview.pdf): A PDF manual introducing ESCM. It is written for everybody interested in ESCM and does not require any special knowledge.
+* [QuickStart Guide](Manuals/QuickStart.pdf): A PDF manual for operators describing how to quickly install and setup OSCM using Docker and Docker Compose. 
 * [Operator's Guide](Manuals/Operation.pdf): A PDF manual for operators describing how to administrate and maintain ESCM.
 * [Technology Provider's Guide](Manuals/TechProv.pdf): A PDF manual for technology providers describing how to prepare applications for usage in a SaaS model and how to integrate them with ESCM.
 * [Supplier's Guide](Manuals/Supplier.pdf): A PDF manual for suppliers describing how to define and manage service offerings for applications that have been integrated with ESCM.
