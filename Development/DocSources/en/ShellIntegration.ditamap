@@ -64,7 +64,7 @@
         <topicref format="dita" href="ShellIntegrationGuide/Using/t_Terminate.xml" type="task"/>
     </chapter-->
     <chapter format="dita" href="ShellIntegrationGuide/Administrating/c_AdministratingIntro.xml" type="concept">
-        <topicref format="dita" href="Shared/concepts/c_ControlExecution.xml" type="concept"/>
+        <!--topicref format="dita" href="Shared/concepts/c_ControlExecution.xml" type="concept"/-->
         <topicref format="dita" href="ShellIntegrationGuide/Administrating/c_ControllerHandleProblems.xml" type="concept"/>
         <!--topicref format="dita" href="Shared/concepts/c_ControllerHandleCommProblems.xml" type="concept"/-->
         <!--topicref format="dita" href="Shared/Installation/c_Backup.xml" type="concept"/-->

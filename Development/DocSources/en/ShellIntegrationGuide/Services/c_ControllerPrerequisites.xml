@@ -48,11 +48,13 @@
                     <li>Each script must return exactly one JSON object. </li>
                     <li>The JSON result may contain the following JSON keywords:<ul compact="no">
                             <li><codeph>status</codeph> (mandatory) - allowed values: <codeph>"ok"</codeph> or <codeph>"error"</codeph></li>
-                            <li><codeph>message</codeph> (mandatory) - the message may contain, for example, information related to the script execution addressed to the user</li>
-                            <li><codeph>data</codeph> (optional) - may contain any data which can be output in the Status tab after the script has been executed. You can include the following JSON keywords in the <codeph>data</codeph> field: <ul
+                            <li><codeph>message</codeph> (mandatory) - may contain information related to the script execution addressed to the user.</li>
+                            <li><codeph>data</codeph> (optional) - may contain any data which can be output in the <b>Status</b> tab after the script has been executed. You can include the following JSON keywords in the <codeph>data</codeph> field: <ul
                                     compact="no">
                                     <li><codeph>output</codeph> (optional) - may contain any data to be presented, for example, HTML data for the status script. </li>
                                     <li><codeph>accessInfo</codeph> (optional) - may contain access information to be passed to the subscription details for display. </li>
+                                    <li><codeph>name</codeph> (optional) - may contain any temporary data.</li>
+                                    <li><codeph>id</codeph> (optional) - may contain any ID. </li>
                                 </ul></li>
                         </ul></li>
                     <li>Special characters used in scripts must be properly escaped.</li>

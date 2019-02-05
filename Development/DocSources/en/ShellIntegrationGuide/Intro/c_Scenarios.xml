@@ -12,12 +12,12 @@
         <li><b>Provisioning script</b>: When a customer subscribes to a corresponding service on an <ph
             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
           /> marketplace, the Shell service controller triggers the execution of a provisioning script. </li>
-        <li><b>Modification script</b>: When a customer reconfigures an existing subscription to a corresponding service, the Shell service controller triggers the execution of a modification script. </li>
         <li><b>Deprovisioning script</b>: When a customer terminates a subscription, the Shell service controller triggers the execution of a deprovisioning script. The subscription is terminated in <ph
             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
           /> independent of whether the Script execution is successful.</li>
         <li><b>Assign user script</b>: When a customer assigns users to a subscription, the Shell service controller triggers the execution of an assign user script.</li>
-        <li><b>Deassign users script</b>: When a customer removes users from a subscription, the Shell service controller triggers the execution of a deassign users script.</li>
+        <li><b>Deassign user script</b>: When a customer removes users from a subscription, the Shell service controller triggers the execution of a deassign users script.</li>
+        <li><b>Modification script</b>: When a customer reconfigures an existing subscription to a corresponding service, the Shell service controller triggers the execution of a modification script. </li>
         <li><b>Status script</b>: When a customer opens the <b>Details</b> view of a subscription and then clicks the <b>Custom</b> tab (e.g. <b>Status</b> tab) that has been defined for the subscribed marketable service, the Shell service controller triggers the execution of a status script.  </li>
       </ul>
       <p>Additional scripts can be used optionally: </p>
@@ -25,7 +25,8 @@
         <ul compact="no">
           <li><b>Operation script</b>: When a customer selects an operation for his subscription, the Shell service controller triggers the execution of an operation script. </li>
           <li><b>Update user script</b>: When a customer updates the data of a user, the Shell service controller triggers the execution of an update user script. </li>
-          <li><b>Verification script</b>: When a customer subscribes to a corresponding service, the Shell service controller triggers the execution of a verification script, if defined and not empty. In case the verification script returns an error, the subscription process is aborted and the user is informed by a corresponding message.</li>
+          <li><b>Verification script</b>: When a customer subscribes to a corresponding service, the Shell service controller triggers the execution of a verification script, if defined and not empty. In case the verification script returns an error, the subscription process is aborted and the user is informed by a corresponding message. Note that the execution of a verification script is executed in synchronous mode; all other scripts are executed asynchronously.</li>
+          <li><b>Start script</b>: When starting the <codeph>oscm-app</codeph> container, the operator can execute a script (<codeph>start.sh</codeph>), for example, for installing additional software such as Python or PowerShell for executing remote commands.</li>
         </ul>
       </p>
     </section>
