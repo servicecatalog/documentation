@@ -9,25 +9,25 @@
         <prodinfo product="oscm_ce">
             <prodname/>
             <vrmlist>
-                <vrm version="V17.9"/>
+                <vrm version="V17.10"/>
             </vrmlist>
             <brand/>
-        	<prognum>V17.9</prognum>
+        	<prognum>V17.10</prognum>
             <component/>
             <series>Supplier's Guide</series>
         </prodinfo>
         <prodinfo product="oscm_ee">
             <prodname>Enterprise Service</prodname>
             <vrmlist>
-                <vrm version="17.9"/>
+                <vrm version="17.10"/>
             </vrmlist>
             <brand>FUJITSU Software</brand>
-            <prognum>Catalog Manager V17.9</prognum>
+            <prognum>Catalog Manager V17.10</prognum>
             <component/>
             <series>Supplier's Guide</series>
         </prodinfo>
         <bookid>
-            <edition>January 2019 </edition>
+            <edition>February 2019 </edition>
             <!--booknumber product="oscm_ee">B1WS-1256-02</booknumber-->
         </bookid>
         <bookrights product="oscm_ce" >
