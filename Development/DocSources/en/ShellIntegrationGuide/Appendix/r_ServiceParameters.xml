@@ -69,7 +69,7 @@
             <row>
               <entry>
                 <p><b>UPDATE_SCRIPT</b></p>
-                <p>Mandatory. The absolute file system path or URL to a Shell script file. The base folder is <codeph>/opt/scripts</codeph>. This script will be executed when a the configuration of an existing subscription is changed. </p>
+                <p>Mandatory. The absolute file system path or URL to a Shell script file. The base folder is <codeph>/opt/scripts</codeph>. This script will be executed when the configuration of an existing subscription is changed. </p>
                 <p>Example: <codeph>/update.sh</codeph></p>
               </entry>
             </row>
@@ -111,7 +111,7 @@
             <row>
               <entry>
                 <p><b>CHECK_STATUS_SCRIPT</b></p>
-                <p>Mandatory. The absolute file system path or URL to a Shell script file. The base folder is <codeph>/opt/scripts</codeph>. This script will be executed when a user opens the <b>Details</b> view under <b>My Subscriptions</b> and selects the <b>Status</b> tab. It retrieves the status of a provisioned instance. </p>
+                <p>Optional. The absolute file system path or URL to a Shell script file. The base folder is <codeph>/opt/scripts</codeph>. This script will be executed when a user opens the <b>Details</b> view under <b>My Subscriptions</b> and selects the <b>Status</b> tab. It retrieves the status of a provisioned instance. </p>
                 <p>Example: <codeph>/status.sh</codeph></p>
               </entry>
             </row>
@@ -125,8 +125,36 @@
             <row>
               <entry>
                 <p><b>SCRIPT_TIMEOUT_SECONDS</b></p>
-                <p>Mandatory. The number of seconds until the execution of a running script will be canceled. </p>
+                <p>Optional. The number of seconds until the execution of a running script will be canceled. </p>
                 <p>Default: <codeph>600</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>USAGE_DATA_SCRIPT</b></p>
+                <p>Optional. The absolute file system path or URL to a Shell script file. The base folder is <codeph>/opt/scripts</codeph>. This script is automatically executed, by default, on a daily basis if the <codeph>APP_TIMER_REFRESH_USAGEDATA</codeph> parameter is set accordingly for APP. The script gathers the number of billable events defined in the technical service definition for calculating cloud usage costs.</p>
+                <p>Example: <codeph>/usage_data.sh</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>TECHNICAL_SERVICE_ID</b></p>
+                <p>Optional. The technical service identifier as defined in the current technical service definition in the <codeph>tns:TechnicalService</codeph> element. This ID is used for generating events for usage data collection. </p>
+                <p>Default: <codeph>Shell</codeph></p>
               </entry>
             </row>
           </tbody>
@@ -192,14 +220,13 @@
     </section>
     <section>
       <title>Service Operations for Instances Provisioned by a Shell Script</title>
-      <p>The Shell service controller supports the definition and execution of service operations for instances provisioned using a Shell script. </p>
+      <p>The Shell service controller supports the definition and execution of service operations for instances provisioned using a Shell script. The operations are defined in the script referenced by the <codeph>OPERATIONS_SCRIPT</codeph> service parameter. </p>
       <p>The <codeph>actionURL</codeph> for each operation is:</p>
       <p>
         <codeblock>http://oscm-app:8880/oscm-app/webservices/oscm-app/oscm-app
          /org.oscm.app.v2_0.service.AsynchronousOperationProxy?wsdl</codeblock>
       </p>
-      <p><codeph>&lt;oscm-app></codeph> and <codeph>&lt;8880></codeph> are the server and port of the container where the OpenStack service controller is deployed.</p>
-      <p><b>Examples: ???</b></p>
+      <p><codeph>&lt;oscm-app></codeph> and <codeph>&lt;8880></codeph> are the server and port of the container where the Shell service controller is deployed.</p>
     </section>
   </refbody>
 </reference>

@@ -23,9 +23,8 @@
                             scope="external"
                         ><u>https://github.com/servicecatalog/oscm-app-shell/tree/master/src/main/resources</u></xref>. </p>
                     <p audience="shell"
-                            >A technical service specifies Shell scripts as parameter options. Sample scripts are available <xref
-                            href="https://github.com/servicecatalog/oscm-app-shell/tree/master/src/test/resources/sample_scripts/advanced_scripts"
-                            scope="external"><u>here</u></xref>. </p>
+                            >A technical service specifies Shell scripts as parameter options. You need to make them available as described in <xref
+                            href="../../ShellIntegrationGuide/Services/c_ControllerPrerequisites.xml"/>.</p>
                         <p audience="os">As a basis, you can use the technical services samples provided on <xref
                             href="https://github.com/servicecatalog/oscm/tree/master/oscm-app-openstack/resources"
                             scope="external"

@@ -21,12 +21,12 @@
                         <p>There are the following types of <codeph>.csv</codeph> files: <ul>
                                         <li><codeph>vCenter</codeph>: Defines the URL and user credentials for accessing the vSphere server. For security reasons, it is recommended to delete the file as soon as you have successfully installed and configured the vSphere integration software. </li>
                                         <li><codeph>DataCenter</codeph>: Defines one or several data centers of the vSphere installation.</li>
-                                        <li><codeph>Cluster</codeph>: Defines one or several clusters managed by a data center. </li>
+                                        <li><codeph>Cluster</codeph>: Defines one or several clusters managed by a data center. For each vSphere cluster, a load balancing algorithm must be defined. </li>
                                         <li><codeph>VLAN</codeph>: Defines one or more VLANs for a cluster. </li>
                                         <li><codeph>IPPool</codeph>: Defines the list of IP addresses associated with a VLAN. </li>
                                 </ul></p>
                         <p audience="vmware">You find samples of the above files <xref
-                                        href="https://github.com/servicecatalog/oscm/tree/master/oscm-app-vmware/resources"
+                                        href="https://github.com/servicecatalog/oscm/tree/master/oscm-app-vmware/resources/csv"
                                         scope="external"><u>here</u></xref>. Refer to <xref
                                         href="../Appendix/r_CSVFormat.xml"
                                 /> for details on the content of the files.</p>

@@ -27,9 +27,6 @@
             <ul compact="no">
                 <li>Shell scripts must exist. They form the basis for the technical services in <ph
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </li>
-                <li>Sample scripts are available <xref
-                        href="https://github.com/servicecatalog/oscm-app-shell/tree/master/src/test/resources/sample_scripts/advanced_scripts"
-                        scope="external"><u>here</u></xref>.</li>
                 <li>The technology provider organization responsible for the Shell service controller prepares the scripts to be called by the Shell service controller. These scripts can be defined in marketable service parameters and then be referenced as scripts located either inside or outside (external URL) the Docker host. <p>To reference a script located inside the Docker host, you need to provide it in the following directory on your Docker host: </p><p><codeph>/docker/config/oscm-app/scripts</codeph></p><p>As soon as you provide new scripts or change existing ones, you must restart the <codeph>oscm-app</codeph> container. The scripts are automatically copied into the container into the <codeph>/opt/scripts</codeph> folder.</p></li>
                 <li>After deployment, the <codeph>oscm-app</codeph> container has the above shared file system mounted. </li>
                 <li>The Shell service controller will run scripts stored on the shared file system as the same UNIX user who runs the <codeph>oscm-app</codeph> container:<p>
@@ -49,19 +46,26 @@
                     <li>The JSON result may contain the following JSON keywords:<ul compact="no">
                             <li><codeph>status</codeph> (mandatory) - allowed values: <codeph>"ok"</codeph> or <codeph>"error"</codeph></li>
                             <li><codeph>message</codeph> (mandatory) - may contain information related to the script execution addressed to the user.</li>
+                            <li><codeph>usageData</codeph> (optional) - expected as a result of the execution of the usage data script. It contains the following JSON keywords:<ul
+                                    compact="no">
+                                    <li><codeph>eventId</codeph> - ID of the billable event as defined in the technical service definition. </li>
+                                    <li><codeph>multiplier</codeph> - specifies the number of occurrences of an event. Instead of recording the same event each time it occurs, you can record it only once and set the multiplier to the number of occurrences. The billing services consider the multiplier. For example, one event with a multiplier of 2 is handled in the same way as 2 events of the same type, if both events occur in the same billing period.</li>
+                                </ul></li>
                             <li><codeph>data</codeph> (optional) - may contain any data which can be output in the <b>Status</b> tab after the script has been executed. You can include the following JSON keywords in the <codeph>data</codeph> field: <ul
                                     compact="no">
-                                    <li><codeph>output</codeph> (optional) - may contain any data to be presented, for example, HTML data for the status script. </li>
-                                    <li><codeph>accessInfo</codeph> (optional) - may contain access information to be passed to the subscription details for display. </li>
-                                    <li><codeph>name</codeph> (optional) - may contain any temporary data.</li>
-                                    <li><codeph>id</codeph> (optional) - may contain any ID. </li>
+                                    <li><codeph>output</codeph> - may contain any data to be presented, for example, HTML data for the status script. </li>
+                                    <li><codeph>accessInfo</codeph> - may contain access information to be passed to the subscription details for display. </li>
+                                    <li><codeph>name</codeph> - may contain any temporary data.</li>
+                                    <li><codeph>id</codeph> - may contain any ID. </li>
                                 </ul></li>
                         </ul></li>
                     <li>Special characters used in scripts must be properly escaped.</li>
-                    <li>You find valid and invalid script samples <xref
-                            href="https://github.com/servicecatalog/oscm-app-shell/tree/master/src/test/resources/sample_scripts"
-                            scope="external"><u>here</u></xref>.</li>
-                </ul>
+                    <li>You find script samples on GitHub  
+                        <xref format="html" href="https://github.com/servicecatalog/oscm-app-shell/tree/master/src/main/resources/sample_scripts" scope="external"
+                            ><u><i>here</i></u></xref> and
+                        <xref format="html" href="https://github.com/servicecatalog/oscm-app-shell/tree/master/src/main/resources/sample_scripts/advanced_scripts" scope="external"
+                            ><u><i>here</i></u></xref>.</li>
+                        </ul>
             </p>
         </section>
     </conbody>

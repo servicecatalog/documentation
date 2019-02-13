@@ -9,9 +9,9 @@
             <conbody>
         <section>For checking the status of the results of a script execution, you can define a custom tab for the subscription details when defining a marketable service. In this way, you add a tab to the <b>Details</b> view for subscriptions on the marketplace: <p>
                 <ol compact="no">
-                    <li>Make sure that a script for checking the status of provisioned instances is available. Refer to this <xref
-                            href="https://github.com/servicecatalog/oscm-app-shell/tree/master/src/test/resources/sample_scripts/advanced_scripts/"
-                            scope="external"><u><codeph>sample script, status.sh</codeph></u></xref> for details. </li>
+                    <li>Make sure that a script for checking the status of provisioned instances is available. Refer to the sample script <xref
+                        href="https://github.com/servicecatalog/oscm-app-shell/tree/master/src/main/resources/sample_scripts/advanced_scripts"
+                            scope="external"><u><codeph>status.sh</codeph></u></xref> for details. </li>
                     <li>When creating or editing a marketable service definition for Shell script execution, specify a <b>URL of a custom tab</b>. This URL may point to a Web page or Web application the content of which will be retrieved and shown on the custom tab. Using a custom tab, you can provide the information needed for accessing, for example, provisioned instances, such as IP addresses, network information, or user credentials.<p>A predefined custom tab, <codeph>serverInformation.xhtml</codeph>, is available for viewing the output of a status script, e.g. <codeph>status.sh</codeph>.</p><p>You can set the URL for accessing the custom tab in the following format: </p><p><codeph>https://&lt;app-host-name>:8881/&lt;service controller name>/serverInformation.xhtml</codeph></p><p>For example: </p><p><codeph>https://oscm-app-host:8881/oscm-app-shell/serverInformation.xhtml</codeph></p>
                     </li>
                     <li>Enter a <b>Name of the custom tab</b>, for example, <codeph>Status</codeph>. Do not enter <codeph>Details</codeph> because the first tab is named that way. </li>

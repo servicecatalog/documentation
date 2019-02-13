@@ -26,12 +26,13 @@
             <p>There are the following types of <codeph>.csv</codeph> files. They map the hierarchy depicted above: <ul>
                     <li><codeph>vCenter</codeph>: Defines the URL and user credentials for accessing the vSphere server. For security reasons, it is recommended to delete the file as soon as you have successfully installed and configured the vSphere integration software. </li>
                     <li><codeph>DataCenter</codeph>: Defines one or several data centers of the vSphere installation.</li>
-                    <li><codeph>Cluster</codeph>: Defines one or several clusters managed by a data center. </li>
+                    <li><codeph>Cluster</codeph>: Defines one or several clusters managed by a data center. For each vSphere cluster, a load balancing algorithm must be defined. Refer to <xref
+                            href="c_LoadBalancing.xml"/> for details.</li>
                     <li><codeph>VLAN</codeph>: Defines one or more VLANs for a cluster. </li>
                     <li><codeph>IPPool</codeph>: Defines the list of IP addresses associated with a VLAN. </li>
                 </ul></p>
-            <p audience="vmware">You find samples of the above files <xref
-                    href="https://github.com/servicecatalog/oscm/tree/master/oscm-app-vmware/resources" scope="external"
+            <p>You find samples of the above files <xref
+                    href="https://github.com/servicecatalog/oscm/tree/master/oscm-app-vmware/resources/csv" scope="external"
                         ><u>here</u></xref>.</p>
             <p>You can upload the files to the <codeph>vmware</codeph> database using the instance status interface of APP for the VMware service controller:</p>
             <p><codeph>https://&lt;hostname.fqdn>:&lt;port>/oscm-app-vmware</codeph></p>
@@ -161,18 +162,45 @@ myvc1,datacenter2,2
                                 <entry colname="col2">Clustername</entry>
                                 <entry colname="col3">The name of the cluster. </entry>
                             </row>
+                            <row>
+                                <entry colname="col2">Load_balancer</entry>
+                                <entry colname="col3"
+                                        >Load balancer configuration in XML format without line breaks. You find a sample configuration on <xref
+                                        href="https://github.com/servicecatalog/oscm/tree/master/oscm-app-vmware/resources/xml"
+                                        scope="external"><u>GitHub</u></xref>.</entry>
+                            </row>
                         </tbody>
                     </tgroup>
                 </table>
             </p>
             <p><b>Example</b>:</p>
             <p>
-                <codeblock>VCenter,Datacenter,Clustername
-myvc1,datacenter1,cluster1
-myvc1,datacenter1,cluster2
-myvc1,datacenter2,cluster3
+                <codeblock>VCenter,Datacenter,Clustername,Load_balancer
+myvc1,datacenter1,cluster1,
+ &lt;?xml version="1.0" encoding="UTF-8" standalone="no"?>
+ &lt;ess:essvcenter xmlns:ess="http://oscm.org/xsd" 
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+     xsi:schemaLocation="http://oscm.org/xsd 
+         ../../oscm-app-vmware\\resources\\XSD\\Loadbalancer_schema.xsd">
+ &lt;balancer class=
+     "org.oscm.app.vmware.business.balancer.EquipartitionHostBalancer" 
+     cpuWeight="0.5" memoryWeight="1" vmWeight="1"/> 
+ &lt;host enabled="true" name="my.host1.com"> 
+ &lt;balancer class=
+     "org.oscm.app.vmware.business.balancer.EquipartitionStorageBalancer" 
+     storage="VMdev0,VMdev1"/> &lt;/host> 
+ &lt;host enabled="true" name="my.host2.com"> 
+ &lt;balancer class=
+     "org.oscm.app.vmware.business.balancer.EquipartitionStorageBalancer" 
+     storage="VMdev0,VMdev1"/> &lt;/host> 
+ &lt;storage enabled="true" limit="85%" name="VMdev0"/> 
+ &lt;storage enabled="true" limit="85%" name="VMdev1"/>&lt;/ess:essvcenter>
 </codeblock>
             </p>
+            <p>The above example is not complete, and it contains line breaks due to text formatting reasons. If you want to use several clusters, you need to specify additional values for each of them. A sample <codeph>cluster.csv</codeph> file is also available on <xref
+                    href="https://github.com/servicecatalog/oscm/tree/master/oscm-app-vmware/resources/csv/cluster.csv"
+                    scope="external"><u>GitHub</u></xref>.</p>
+            <p>Refer to <xref href="c_LoadBalancing.xml"/> for more details.</p>
         </section>
         <section>
             <title>VLAN</title>

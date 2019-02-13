@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2019 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_1BCF5C425D7D4627AB1C66A085CF6E11"
+                    xml:lang="en-us">
+        <title>Configuring Load Balancing</title>
+        <conbody>
+        <p>When importing a <codeph>cluster.csv</codeph> file for defining one or several clusters managed by a data center, you need to configure a load balancing algorithm for allowing to automatically choose the vSphere host and storage for a new VM when it is provisioned, based on memory, CPUs, disk space, and number of VMs running on the vSphere host. </p>
+        <p>Load balancing is defined per vSphere cluster.</p>
+        <note>The vSphere host as well as the storage can also be specified in technical service parameters: <codeph>TARGET_HOST</codeph> and <codeph>TARGET_STORAGE</codeph>. In this case, you do not make use of the vSphere load balancing. However, as soon as you import a <codeph>cluster.csv</codeph> file, these parameters are no longer evaluated. </note>
+        <p>The <codeph>cluster.csv</codeph> file must contain the load balancing configuration in XML format. The load balancing algorithm can take on the following options: </p>
+        <p>
+            <ul>
+                <li><b>Distribute VMs equally over all hosts (dynamically)</b>:<p>The hosts and storages are read from vSphere. The target host will be the one with the least VMs running on it. The target storage will be the one with the highest amount of available disk space.</p><p>Example: </p><p>
+                        <codeblock>&lt;?xml version="1.0" encoding="UTF-8" standalone="no"?>
+&lt;essvcenter>
+    &lt;balancer class="org.oscm.app.vmware.business.balancer.
+              DynamicEquipartitionHostBalancer"/>
+    &lt;balancer class="org.oscm.app.vmware.business.balancer.
+              DynamicEquipartitionStorageBalancer"/>
+&lt;/essvcenter></codeblock>
+                    </p><p>The above example contains line breaks due to text formatting reasons.</p></li>
+                <li><b>Distribute VMs equally over all hosts (static configuration)</b>:<p>The target host and the target storage are determined by the criteria that you specify: </p><ol>
+                        <li>Define the criteria for determining the host (memory, CPUs, and number of VMs that may be provisioned on the host). The weight determines the importance of a criterion in the calculation of the target host. The weight number is in the range of 0 to 1. A value of 0 turns off the evaluation of the parameter. </li>
+                        <li>For each host, define which storages are available and which criteria are used to determine the storage for a VM. You can select one of the following storage balancing algorithms: <p>
+                                <ul>
+                                    <li>Distribute VMs in the order of the configured storages</li>
+                                    <li>Distribute VMs equally over all storages</li>
+                                </ul>
+                            </p></li>
+                        <li>For each storage, define the upper limit of disk space that can be used. When this limit is reached, another storage is selected as target storage.</li>
+                    </ol><p>Example: </p><p>
+                        <codeblock>&lt;?xml version="1.0" encoding="UTF-8" standalone="no"?>
+&lt;essvcenter>
+    &lt;balancer class="org.oscm.app.vmware.business.balancer.
+              EquipartitionHostBalancer" 
+              cpuWeight="0.5" memoryWeight="1" vmWeight="1"/>
+    &lt;host enabled="true" name="vmwdev1.my.host.com">
+        &lt;balancer class="org.oscm.app.vmware.business.balancer.
+              EquipartitionStorageBalancer" storage="VMdev0,VMdev1"/>
+    &lt;/host>
+    &lt;host enabled="true" name="vmwdev2.my.host.com">
+        &lt;balancer class="org.oscm.app.vmware.business.balancer.
+              EquipartitionStorageBalancer" storage="VMdev0,VMdev1"/>
+    &lt;/host>
+    &lt;storage enabled="true" limit="85%" name="VMdev0"/>
+    &lt;storage enabled="true" limit="85%" name="VMdev1"/>
+&lt;/essvcenter></codeblock>
+                    </p><p>The above example contains line breaks due to text formatting reasons.</p></li>
+            </ul>
+        </p>
+        </conbody>
+</concept>

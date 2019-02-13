@@ -21,27 +21,6 @@
                                         <li>Custom attribute for customer. If defined, it overrules 1. and 2.</li>
                                         <li>Custom attribute for subscription. If defined, it overrules 1. and 2. and 3. </li>
                                 </ol>
-                        </p><p><b>To update the controller settings in the APP database:</b></p><p>
-                                <ol compact="no">
-                                        <li>Invoke the instance status interface of APP for the Shell service controller of the application by opening it's URL in a Web browser. <p>The access URL has the following format: </p><p><codeph>https://&lt;hostname.fqdn>:&lt;port>/oscm-app-shell</codeph></p><p><codeph>&lt;hostname.fqdn></codeph> is the name and the fully qualified domain name of the machine where the <codeph>oscm-app</codeph> container has been deployed, <codeph>&lt;port></codeph> is the port to address the machine (default: <codeph>8881</codeph>), <codeph>oscm-app-shell</codeph> is the default context root of the service controller and cannot be changed. </p></li>
-                                        <li>Log in with the ID and password of the user specified in the configuration settings for the Shell service controller by the platform operator in the <codeph>BSS_USER_ID</codeph> and <codeph>BSS_USER_PWD</codeph> configuration settings, or as another technology manager registered for the same organization.</li>
-                                        <li>The following settings can be changed:<p>
-                                                        <ul>
-                                                            <li><b>User ID</b>: The identifier of the user responsible for the Shell service controller.</li>
-                                                            <li><b>User Key</b>: The user key for accessing <ph
-                                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                                            />. You receive this key with the confirmation email for your user account. The user must have the technology manager role in <ph
-                                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                                            /> and belong to the technology provider organization responsible for the service controller. <p>It is recommended that the user account is used only for carrying out actions on behalf of the service controller in <ph
-                                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                                            />.</p></li>
-                                                            <li><b>Password</b>: The password of the user for accessing <ph
-                                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                                            />.</li>
-                                                        </ul>
-                                                </p></li>
-                                        <li>Save the settings.</li>
-                                </ol>
-                        </p></section>
+                        </p><p>To permanently update Shell service controller configuration settings in the database, the operator needs to change the <codeph>var.env</codeph> file accordingly and redeploy the <codeph>oscm-app</codeph> container.</p><!--<p><b>To update the controller settings in the APP database:</b></p><p><ol compact="no"><li>Invoke the instance status interface of APP for the Shell service controller of the application by opening it's URL in a Web browser. <p>The access URL has the following format: </p><p><codeph>https://&lt;hostname.fqdn>:&lt;port>/oscm-app-shell</codeph></p><p><codeph>&lt;hostname.fqdn></codeph> is the name and the fully qualified domain name of the machine where the <codeph>oscm-app</codeph> container has been deployed, <codeph>&lt;port></codeph> is the port to address the machine (default: <codeph>8881</codeph>), <codeph>oscm-app-shell</codeph> is the default context root of the service controller and cannot be changed. </p></li><li>Log in with the ID and password of the user specified in the configuration settings for the Shell service controller by the platform operator in the <codeph>BSS_USER_ID</codeph> and <codeph>BSS_USER_PWD</codeph> configuration settings, or as another technology manager registered for the same organization.</li><li>The following settings can be changed:<p><ul><li><b>User ID</b>: The identifier of the user responsible for the Shell service controller.</li><li><b>User Key</b>: The user key for accessing <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. You receive this key with the confirmation email for your user account. The user must have the technology manager role in <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> and belong to the technology provider organization responsible for the service controller. <p>It is recommended that the user account is used only for carrying out actions on behalf of the service controller in <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p></li><li><b>Password</b>: The password of the user for accessing <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</li></ul></p></li><li>Save the settings.</li></ol></p>--></section>
     </conbody>
 </concept>

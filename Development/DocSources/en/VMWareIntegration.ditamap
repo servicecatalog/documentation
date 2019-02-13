@@ -160,7 +160,9 @@
         type="reference"/>
     <appendix format="dita"
         href="VMWareIntegrationGuide/Appendix/r_CSVFormat.xml"
-        type="reference"/>
+        type="reference">
+        <topicref format="dita" href="VMWareIntegrationGuide/Appendix/c_LoadBalancing.xml" type="concept"/>
+        </appendix>
         <!--topicref format="dita" href="VMWareIntegrationGuide/Appendix/r_ConfigSettings_db.xml" type="reference"/>
         <topicref format="dita" href="APPInt/APP/r_ConfigSettings.xml" type="reference"/>
 	    <topicref format="dita" href="VMWareIntegrationGuide/Appendix/r_ConfigSettings_dbController.xml" type="reference"/>

@@ -28,6 +28,11 @@
             <p>Default: <codeph>86400000</codeph> (once a day).</p>
         </section>
         <section>
+            <title>APP_TIMER_REFRESH_USAGEDATA</title>
+            <p>The interval (in milliseconds) at which APP triggers the execution of a Shell script for collecting events that caused usage costs in the cloud. As prerequisites, a script defining which events are to be collected must exist, the technical service definition must contain the definition of these events, and specify the execution of the usage data script. </p>
+            <p>Default: <codeph>86400000</codeph> (once a day).</p>
+        </section>
+        <section>
             <title>APP_ADMIN_MAIL_ADDRESS</title>
             <p>The email address to which email notifications are sent. </p>
         </section>
