@@ -73,7 +73,7 @@
         <topicref format="dita" href="ShellIntegrationGuide/Administrating/c_LogConfig.xml" type="concept"/>
     </chapter>
     <!--chapter format="dita" href="Shared/Installation/c_Uninstallation.xml" type="concept"/-->
-    <appendix format="dita" href="ShellIntegrationGuide/Appendix/r_ConfigSettingsController.xml" type="reference"/>
+    <!--appendix format="dita" href="ShellIntegrationGuide/Appendix/r_ConfigSettingsController.xml" type="reference"/-->
         
         <!--topicref format="dita" href="Shared/reference/r_ConfigSettings_db.xml" type="reference"/>
         <topicref format="dita" href="APPInt/APP/r_ConfigSettings.xml" type="reference"/>

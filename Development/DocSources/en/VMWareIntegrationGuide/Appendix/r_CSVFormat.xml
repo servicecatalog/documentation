@@ -12,7 +12,9 @@
                     <li><codeph>VCENTER_NAME</codeph>: The name of the vCenter running on the vSphere server. </li>
                     <li><codeph>DATACENTER_NAME</codeph>: The name of data center managed by the vCenter specified above. </li>
                     <li><codeph>CLUSTER_NAME</codeph>: The name of the cluster where VMs are to be provisioned.</li>
-                    <li><codeph>LOADBALANCER_NAME</codeph>: The name of the load balancer used by vSphere. Usually, you can use the name of the VM Network in vSphere: <codeph>VM Network</codeph>.</li>
+                    <li><codeph>LOADBALANCER_NAME</codeph>: The name of the load balancer used by <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            />. Usually, you can use the name of the VM Network in vSphere: <codeph>VM Network</codeph>.</li>
                 </ul>
             </p>
             <p>In vSphere, several entities are distinguished. They form the following hierarchy:</p>
@@ -192,12 +194,13 @@ myvc1,datacenter1,cluster1,
  &lt;host enabled="true" name="my.host2.com"> 
  &lt;balancer class=
      "org.oscm.app.vmware.business.balancer.EquipartitionStorageBalancer" 
-     storage="VMdev0,VMdev1"/> &lt;/host> 
+     storage="VMdev0,VMdev1"/>
+ &lt;/host> 
  &lt;storage enabled="true" limit="85%" name="VMdev0"/> 
  &lt;storage enabled="true" limit="85%" name="VMdev1"/>&lt;/ess:essvcenter>
 </codeblock>
             </p>
-            <p>The above example is not complete, and it contains line breaks due to text formatting reasons. If you want to use several clusters, you need to specify additional values for each of them. A sample <codeph>cluster.csv</codeph> file is also available on <xref
+            <p>The above example is not complete, and it contains line breaks due to text formatting reasons. If you want to use several clusters, you can specify additional values for each of them. A sample <codeph>cluster.csv</codeph> file is also available on <xref
                     href="https://github.com/servicecatalog/oscm/tree/master/oscm-app-vmware/resources/csv/cluster.csv"
                     scope="external"><u>GitHub</u></xref>.</p>
             <p>Refer to <xref href="c_LoadBalancing.xml"/> for more details.</p>

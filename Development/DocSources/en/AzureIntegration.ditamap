@@ -94,7 +94,7 @@
         <topicref format="dita" href="APPInt/APP/r_ConfigSettings.xml" type="reference"/>
         <topicref format="dita" href="AzureIntegrationGuide/Appendix/r_ConfigSettingsController.xml" type="reference"/>
     </appendix-->
-    <appendix format="dita" href="AzureIntegrationGuide/Appendix/r_ConfigSettingsController.xml" type="reference"/>
+    <!--appendix format="dita" href="AzureIntegrationGuide/Appendix/r_ConfigSettingsController.xml" type="reference"/-->
     <appendix format="dita" href="AzureIntegrationGuide/Appendix/r_ServiceParameters.xml" type="reference"/>
     <appendix format="dita" href="Shared/glossary/r_Glossary.xml" type="reference"/>
 </bookmap>

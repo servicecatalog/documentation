@@ -10,41 +10,7 @@
                     href="../Administrating/c_UpdateConfiguration.xml"/> and <xref
                     href="../Administrating/c_ChangeOrg.xml"/>.</p>
         </section>
-        <section>
-            <title>CONTROLLER_ID</title>
-            <p><codeph>CONTROLLER_ID=ess.openstack</codeph></p>
-            <p>The identifier of the service controller. This setting cannot be changed.</p>
-        </section>
-        <section>
-            <title>BSS_ORGANIZATION_ID</title>
-            <p><codeph>BSS_ORGANIZATION_ID=&lt;organizationID></codeph></p>
-            <p>The ID of the organization in <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> responsible for the service controller. The organization must have the technology provider role. It is created and initially assigned to the OpenStack service controller by the platform operator.</p>
-        </section>
-        <section>
-            <title>BSS_USER_ID</title>
-            <p><codeph>BSS_USER_ID=&lt;userId></codeph>
-            </p>
-            <p>The identifier of the user specified in <codeph>BSS_USER_KEY</codeph> for accessing <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
-        </section>
-        <section>
-            <title>BSS_USER_KEY</title>
-            <p><codeph>BSS_USER_KEY=&lt;userKey></codeph>
-            </p>
-            <p>The user key for accessing <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    />. You receive this key with the confirmation email for your user account. The user must have the technology manager role in <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> and belong to the technology provider organization responsible for the service controller. </p>
-            <p>It is recommended that the user account is used only for carrying out actions on behalf of the service controller in <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
-        </section>
-        <section>
-            <title>BSS_USER_PWD</title>
-            <p><codeph>BSS_USER_PWD=_crypt:&lt;password></codeph></p>
-            <p>The password of the user for accessing <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
-        </section>
+        <!--<section><title>CONTROLLER_ID</title><p><codeph>CONTROLLER_ID=ess.openstack</codeph></p><p>The identifier of the service controller. This setting cannot be changed.</p></section><section><title>BSS_ORGANIZATION_ID</title><p><codeph>BSS_ORGANIZATION_ID=&lt;organizationID></codeph></p><p>The ID of the organization in <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> responsible for the service controller. The organization must have the technology provider role. It is created and initially assigned to the OpenStack service controller by the platform operator.</p></section><section><title>BSS_USER_ID</title><p><codeph>BSS_USER_ID=&lt;userId></codeph> </p><p>The identifier of the user specified in <codeph>BSS_USER_KEY</codeph> for accessing <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p></section><section><title>BSS_USER_KEY</title><p><codeph>BSS_USER_KEY=&lt;userKey></codeph> </p><p>The user key for accessing <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. You receive this key with the confirmation email for your user account. The user must have the technology manager role in <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> and belong to the technology provider organization responsible for the service controller. </p><p>It is recommended that the user account is used only for carrying out actions on behalf of the service controller in <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p></section><section><title>BSS_USER_PWD</title><p><codeph>BSS_USER_PWD=_crypt:&lt;password></codeph></p><p>The password of the user for accessing <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p></section>-->
         <section>
             <title>API_USER_NAME</title>
             <p><codeph>API_USER_NAME=&lt;userName></codeph></p>
