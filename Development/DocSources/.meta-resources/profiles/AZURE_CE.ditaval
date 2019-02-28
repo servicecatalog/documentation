@@ -11,7 +11,7 @@
  <prop action="exclude" att="audience" val="vmware"/>
  <prop action="include" att="audience" val="doc"/>
  <prop action="include" att="audience" val="azure"/>
- <prop action="include" att="audience" val="shell"/>
+ <prop action="exclude" att="audience" val="shell"/>
  <prop action="exclude" att="audience" val="int"/>
  <prop action="exclude" att="product" val="oscm_ee"/>
  <prop action="include" att="product" val="oscm_ce"/>

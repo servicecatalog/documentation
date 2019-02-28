@@ -75,7 +75,7 @@
                 <li audience="azure">In Azure, the following is required: <p>
                         <ul>
                             <li>A subscription on the account of which the virtual machines are to be created. </li>
-                            <li>An application (service principal) with at least Contributor permissions to the subscription if new resource groups are to be crate, or at least Contributor permissions for the resource groups to which new virtual machines are to be added. You need to know the ID of the Azure Active Directory (tenant ID) hosting the application and the application ID (client ID), and have a valid authentication key. For details on how to create and obtain these items, refer to the Microsoft documentation on <i>creating applications and service principles</i>.</li>
+                            <li>An application (service principal) with at least Contributor permissions to the subscription if new resource groups are to be created, or at least Contributor permissions for the resource groups to which new virtual machines are to be added. You need to know the ID of the Azure Active Directory (tenant ID) hosting the application and the application ID (client ID), and have a valid authentication key. For details on how to create and obtain these items, refer to the Microsoft documentation on <i>creating applications and service principles</i>.</li>
                             <li>Appropriate images for the virtual machines to be created. </li>
                             <li>Optionally, resource groups with network configuration to which virtual machines are to be added. </li>
                             <li>Optionally, storage accounts to be used with the virtual machines to be created. </li>

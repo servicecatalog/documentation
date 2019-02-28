@@ -10,7 +10,7 @@
         <context>
             <p>The first step in providing <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> services for <ph audience="shell">Shell script execution</ph><ph audience="aws">AWS</ph><ph
-                    audience="os">OpenStack</ph><ph audience="vmware"
+                    audience="azure">Azure</ph><ph audience="os">OpenStack</ph><ph audience="vmware"
                 >vSphere</ph> is to create one or more technical services. </p>
             <p>Proceed as follows:</p>
         </context>
@@ -36,6 +36,10 @@
                             href="https://github.com/servicecatalog/oscm/tree/master/oscm-app-aws/resources"
                             scope="external"
                                 ><u>https://github.com/servicecatalog/oscm/tree/master/oscm-app-aws/resources</u></xref>. </p>
+                    <p audience="azure">As a basis, you can use the technical service sample provided on <xref
+                            href="https://github.com/servicecatalog/oscm/tree/master/oscm-app-azure/resources"
+                            scope="external"
+                                ><u>https://github.com/servicecatalog/oscm/tree/master/oscm-app-azure/resources</u></xref>. </p>
                     
                     <p audience="vmware">As a basis, you can use the technical services samples provided on <xref
                             href="https://github.com/servicecatalog/oscm/tree/master/oscm-app-vmware/resources"

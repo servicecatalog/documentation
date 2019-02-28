@@ -35,11 +35,12 @@
                         audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph audience="vmware">VMware</ph><ph
                         audience="azure">Azure</ph> service controller. </li>
                 <li>Invoke the instance status interface of APP for the service controller of the application by opening its URL in a Web browser. <p>The access URL has the following format: </p><p><codeph>https://&lt;hostname.fqdn>:&lt;port>/oscm-app/controller/?controllerid=ess.<ph
-                                audience="aws">aws</ph><ph audience="os">openstack</ph><ph audience="vmware"
+                                audience="aws">aws</ph><ph audience="azure">azureARM</ph><ph audience="os"
+                                >openstack</ph><ph audience="vmware"
                             >vmware</ph></codeph></p><p><codeph>&lt;hostname.fqdn></codeph> is the name and the fully qualified domain name of the machine where the <codeph>oscm-app</codeph> container has been deployed, <codeph>&lt;port></codeph> is the port to address the machine (default: <codeph>8881</codeph>), <codeph>oscm-app/controller/?controllerid=ess.<ph
                                 audience="aws">aws</ph><ph audience="os">openstack</ph><ph audience="vmware"
                             >vmware</ph></codeph><ph audience="azure"
-                        ><codeph>azure</codeph></ph> is the default context root of the service controller and cannot be changed. </p><p>The Web page shows all subscriptions for the application, including detailed information such as the customer organization, the ID of the related application instance, and the provisioning status. </p></li>
+                        ><codeph>azureARM</codeph></ph> is the default context root of the service controller and cannot be changed. </p><p>The Web page shows all subscriptions for the application, including detailed information such as the customer organization, the ID of the related application instance, and the provisioning status. </p></li>
                                         <li>Find the subscription for which you solved the problem in the most recent <ph
                         audience="aws">provisioning or delete</ph><ph audience="os">provisioning or delete</ph><ph
                         audience="vmware">provisioning, modification, or delete</ph><ph audience="azure"
