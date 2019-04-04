@@ -1,18 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>  
-<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2019 -->
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
                       "task.dtd">
-<task id="task634" xml:lang="en-us">
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2019 -->
+<task id="task634"
+        xml:lang="en-us">
   <title>Managing sellers</title>
-  <taskbody id="On_the_task_taskbody">
+  <taskbody
+                    id="On_the_task_taskbody">
     <context>
       <p>
-        <ph conref="marketplace_manageSuppliers_notselected.xml#task634/On_the_task_taskbody_context_p_1_ph"/>
+        <ph
+                conref="marketplace.manageSuppliers_notselected.xml#task634/On_the_task_taskbody_context_p_1_ph"/>
       </p>
       <p>You have selected an open marketplace. This means that basically any supplier, broker, and reseller organization can publish services to it.</p>
       <p>As the marketplace owner, however, you can at any time explicitly exclude one or more sellers and add them to a blacklist. This might be required, for example, if a seller is in arrears with his payments. If the seller already published services to the marketplace, these services are automatically deactivated. Customers can no longer subscribe to them. Existing subscriptions are not affected. The <uicontrol>Manage sellers</uicontrol> page lists all sellers that are currently excluded.</p>
       <p
-        conref="marketplace_manageSuppliers_notselected.xml#task634/You_can_allow_a_supplier_who_task_taskbody_context_ul_li"/>
+                conref="marketplace.manageSuppliers_notselected.xml#task634/You_can_allow_a_supplier_who_task_taskbody_context_ul_li"/>
       <p>When you exclude a seller or when you allow an excluded seller to publish services again, the administrators of the seller organization are automatically notified by email.</p>
       <p><b>To exclude a seller from the selected marketplace</b>:</p>
     </context>

@@ -1,19 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>  
-<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2019 -->
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
                       "task.dtd">
-<task id="task634" xml:lang="en-us">
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2019 -->
+<task id="task634"
+        xml:lang="en-us">
   <title>Managing sellers</title>
-  <taskbody id="On_the_task_taskbody">
+  <taskbody
+                    id="On_the_task_taskbody">
     <context>
       <p>
-        <ph conref="marketplace_manageSuppliers_notselected.xml#task634/On_the_task_taskbody_context_p_1_ph"/>
+        <ph
+                    conref="marketplace.manageSuppliers_notselected.xml#task634/On_the_task_taskbody_context_p_1_ph"/>
       </p>
       <p>You have selected a marketplace for authorized sellers only. In this case, you have to admit one or more supplier, broker, or reseller organizations that are to be allowed to publish services to it. When the marketplace is created, the organization specified as the marketplace owner is automatically admitted, provided that it is assigned the supplier, broker, or reseller role. The page lists all sellers that are currently admitted.</p>
       <p>
         <ph
-          conref="marketplace_manageSuppliers_notselected.xml#task634/As_the_marketplace_owner_you_task_taskbody_context_ul_li"
-        />
+                    conref="marketplace.manageSuppliers_notselected.xml#task634/As_the_marketplace_owner_you_task_taskbody_context_ul_li"/>
       </p>
       <p>When you allow a seller to publish services or remove the authority for publishing, the administrators of the seller organization are automatically notified by email.</p>
       <p><b>To allow a seller to publish services to the selected marketplace</b>:</p>

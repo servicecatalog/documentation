@@ -425,7 +425,7 @@
             href="help/tasks/marketplace_manageAccess.xml"
             type="task"/>
         <topicref format="dita"
-            href="help/tasks/marketplace_manageSuppliers_notselected.xml"
+            href="help/tasks/marketplace.manageSuppliers_notselected.xml"
             type="task"/>
         <topicref format="dita"
             href="help/tasks/marketplace_manageSuppliers.xml"

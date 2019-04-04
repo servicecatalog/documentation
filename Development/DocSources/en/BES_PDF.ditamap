@@ -2,7 +2,6 @@
 <!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN"
                          "">
 <!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2019 -->
-
 <bookmap id="BSSUserGuide"
             xml:lang="en_US">
     <title>Catalog Manager Help</title>
@@ -86,7 +85,8 @@
             href="help/tasks/error_database_notAvailable.xml"/>
 		<topicref
             href="help/tasks/error_invalid_samlResponse.xml"/>
-        <topicref format="dita"
+        <topicref
+            format="dita"
             href="help/tasks/error_generating_authnrequest.xml"/>
 		<topicref
             href="help/tasks/error_login_samlsp.xml"/>
@@ -207,7 +207,7 @@
         <topicref
             href="help/tasks/techService_delete.xml"/>
         <topicref
-        href="help/tasks/techService_detail.xml"/>
+            href="help/tasks/techService_detail.xml"/>
         <topicref
         href="help/tasks/techService_viewBillingAdapters.xml"/>
     </chapter>
@@ -243,23 +243,29 @@
             navtitle="">
         <topicref
             href="help/tasks/priceModel_service.xml"/>
-       <topicref format="dita"
+       <topicref
+            format="dita"
             href="help/tasks/priceModel_service_nat.xml"/>
-        <topicref format="dita"
+        <topicref
+            format="dita"
             href="help/tasks/priceModel_service_ext.xml"/>
         <topicref
             href="help/tasks/priceModel_customer.xml"/>
-        <topicref format="dita"
+        <topicref
+            format="dita"
             href="help/tasks/priceModel_customer_nat.xml"/>
-        <topicref format="dita"
+        <topicref
+            format="dita"
             href="help/tasks/priceModel_customer_ext.xml"/>
         <topicref
             href="help/tasks/priceModel_customer_delete.xml"/>
         <topicref
             href="help/tasks/priceModel_subscription.xml"/>
-        <topicref format="dita"
+        <topicref
+            format="dita"
             href="help/tasks/priceModel_subscription_nat.xml"/>
-        <topicref format="dita"
+        <topicref
+            format="dita"
             href="help/tasks/priceModel_subscription_ext.xml"/>
         <topicref
             href="help/tasks/priceModel_localize.xml"/>
@@ -342,10 +348,15 @@
             type="reference"/>
 		<topicref
             href="help/tasks/operator_manageTenants.xml"/>
-		  <topicref href="Shared/reference/c_IdPInfo.xml" type="concept"/>
-		<topicref href="Shared/reference/c_IdPInfo2.xml" type="concept"/>
+		  <topicref
+            href="Shared/reference/c_IdPInfo.xml"
+            type="concept"/>
 		<topicref
-            href="help/tasks/operator_manageIndexes.xml" type="concept"/>
+            href="Shared/reference/c_IdPInfo2.xml"
+            type="concept"/>
+		<topicref
+            href="help/tasks/operator_manageIndexes.xml"
+            type="concept"/>
         <topicref
             href="Shared/reference/r_Audit_log.xml"/>
 			<topicref
@@ -365,7 +376,7 @@
         <topicref
             href="help/tasks/marketplace_manageAccess.xml"/>
         <topicref
-            href="help/tasks/marketplace_manageSuppliers_notselected.xml"/>
+            href="help/tasks/marketplace.manageSuppliers_notselected.xml"/>
         <topicref
             href="help/tasks/marketplace_manageSuppliers.xml"/>
         <topicref
