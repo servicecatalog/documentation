@@ -311,6 +311,21 @@
           </tbody>
         </tgroup>
       </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>IMPORT_EXISTING_VM</b></p>
+                <p>Mandatory. If set to <codeph>true</codeph>, the VMware service controller will search for a specified VM in a given vCenter cluster and assign it to the created subscription instance. A customer can, in this way, subscribe to a VM that has already been provisioned in vSphere by a service on an <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> marketplace. </p>
+                <p>Default: <codeph>false</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
     </section>
     <section>
       <title>VM Network Parameters</title>
