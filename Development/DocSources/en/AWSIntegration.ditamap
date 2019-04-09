@@ -9,25 +9,25 @@
         <prodinfo product="oscm_ce">
             <prodname/>
             <vrmlist>
-                <vrm version="V17.10"/>
+                <vrm version="V18.0"/>
             </vrmlist>
             <brand/>
-            <prognum>V17.10</prognum>
+            <prognum>V18.0</prognum>
             <component/>
             <series>Amazon Web Services Integration</series>
         </prodinfo>
         <prodinfo product="oscm_ee">
             <prodname>Enterprise Service</prodname>
             <vrmlist>
-                <vrm version="V17.10"/>
+                <vrm version="V18.0.0"/>
             </vrmlist>
             <brand>FUJITSU Software</brand>
-            <prognum>Catalog Manager V17.10</prognum>
+            <prognum>Catalog Manager V18.0.0</prognum>
             <component/>
             <series>Amazon Web Services Integration</series>
         </prodinfo>
         <bookid>
-            <edition>February 2019</edition>
+            <edition>April 2019</edition>
             <!--booknumber product="oscm_ee">B1WS-1263-02</booknumber-->
         </bookid>
         <bookrights product="oscm_ce">
