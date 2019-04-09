@@ -5,7 +5,7 @@
 
 Welcome to the documentation of FUJITSU Software Enterprise Service Catalog Manager (ESCM)! 
 
-Find the latest Release Notes * [here](Manuals/ReleaseNotes.pdf)
+Find the latest Release Notes [here](Manuals/ReleaseNotes.pdf)
 
 The complete documentation on ESCM consists of the following:
 
