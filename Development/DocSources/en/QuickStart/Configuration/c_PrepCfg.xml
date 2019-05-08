@@ -12,8 +12,9 @@
             <p>Use <codeph>-v</codeph> to mount the <codeph>/docker</codeph> directory to <codeph>/target</codeph> in the container: </p>
             <p>
                 <codeblock>docker run --name deployer1 --rm -v /docker:/
-    target servicecatalog/oscm-deployer</codeblock>
+    target ${REGISTRY}/oscm-deployer</codeblock>
             </p>
+            <p>where <codeph>${REGISTRY}</codeph> is the name of your local Docker registry or the DockerHub registry. </p>
             <p>This command creates two configuration files in the <codeph>/docker</codeph> directory:</p>
             <p>
                 <ol>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2019 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_3413BBD173324104B42FB714974CABE7" xml:lang="en-us">
+    <title>Importing  <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+        /> Docker Images into a Local Registry</title>
+    <conbody>
+        <section>
+            <p>
+                <note>This section is relevant only if you are installing the  <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> Docker images from <codeph>tar.gz</codeph> files, not directly from DockerHub. </note>
+            </p>
+            <p>In order to install Docker images from archive files, you need access to a local Docker registry: </p>
+            <p>Make sure you have command-line access with write permissions to the Docker registry server in your network. If this is not available, you may choose to install such a server in your target environment. Refer to the Docker documentation at 
+                <xref
+                    href="https://docs.docker.com/registry/deploying" 
+                    scope="external">
+                    <u>https://docs.docker.com/registry/deploying</u></xref>
+                for details on how to deploy a Docker registry server. </p>
+            <p>In the subsequent sections, this registry is referred to as <codeph>${REGISTRY}</codeph>.</p>
+            <p>
+                <note>The name of the default DockerHub registry is <codeph>servicecatalog</codeph>. </note>
+            </p>
+            <p>Proceed as follows: </p>
+            <p>
+                <ol compact="no">
+                    <li>On your Docker machine, copy the <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> Docker image archive files into the <codeph>/opt</codeph> folder. </li>
+                    <li>Import the images into your Docker registry using the following Docker command bash script: <p>
+                            <codeblock>#!/bin/bash
+
+export REGISTRY=&lt;docker registry service>
+
+docker login ${REGISTRY}
+
+for docker_image in \
+        oscm-deployer \
+        oscm-core \
+        oscm-app \
+        oscm-core \
+        oscm-birt \
+        oscm-db \
+        oscm-help \
+        oscm-initdb \
+; do
+
+       docker load –i /opt/${docker_image}.tar.gz
+
+       docker tag ${REGISTRY}/${docker_image}:v18
+
+       docker push ${REGISTRY}/${docker_image}:v18
+
+done
+</codeblock>
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </section>
+    </conbody>
+</concept>

@@ -69,6 +69,9 @@
         href="QuickStart/Configuration/c_Installation.xml"
             type="concept">
         <topicref
+            href="QuickStart/Configuration/c_InstallTar.xml"
+            type="concept"/>
+        <topicref
             href="QuickStart/Configuration/c_PrepDir.xml"
             type="concept"/>
         <topicref
