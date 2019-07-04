@@ -19,7 +19,6 @@
                             <li><codeph>IMAGE_BIRT</codeph>: image for the <codeph>oscm-birt</codeph> container</li>
                             <li><codeph>IMAGE_BRANDING</codeph>: image for the <codeph>oscm-branding</codeph> container</li>
                             <li><codeph>IMAGE_INITDB</codeph>: image for the temporary, stateless <codeph>oscm-initdb</codeph> container</li>
-                            <li><codeph>IMAGE_PROXY</codeph>: image for the <codeph>oscm-proxy</codeph> container</li>
                             <li><codeph>IMAGE_HELP</codeph>: image for the <codeph>oscm-help</codeph> container</li>
                         </ul>
                     </li>

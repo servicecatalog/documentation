@@ -7,8 +7,8 @@
     <section>
       <p>The following sections describe the technical service parameters and service operations which are supported by the Azure service controller. </p>
       <p audience="azure">You find a sample service on GitHub: <xref
-          href="https://github.com/servicecatalog/oscm/tree/master/oscm-app-azure/resources" scope="external"
-            ><u>https://github.com/servicecatalog/oscm/tree/master/oscm-app-azure/resources</u></xref>. </p>
+          href="https://github.com/servicecatalog/oscm-app/tree/master/oscm-app-azure/resources" scope="external"
+            ><u>https://github.com/servicecatalog/oscm-app/tree/master/oscm-app-azure/resources</u></xref>. </p>
     </section>
     <section>
       <title>Service Parameters</title>
@@ -225,7 +225,7 @@
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> by HTTP or HTTPS. </p>
                 <p>Users should not be able to enter a value for this parameter, i.e. it should not be configurable for customers.</p>
                 <p>Example: </p>
-                <p><codeph>https://github.com/servicecatalog/oscm/tree/master/oscm-app-azure/resources</codeph>
+                <p><codeph>https://github.com/servicecatalog/oscm-app/tree/master/oscm-app-azure/resources</codeph>
                 </p>
               </entry>
             </row>

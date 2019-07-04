@@ -7,8 +7,8 @@
     <section>
       <p>The following sections describe the technical service parameters and service operations which are supported by the AWS service controller. </p>
       <p audience="aws">You find a sample service on GitHub: <xref
-          href="https://github.com/servicecatalog/oscm/tree/master/oscm-app-aws/resources" scope="external"
-            ><u>https://github.com/servicecatalog/oscm/tree/master/oscm-app-aws/resources</u></xref>. </p>
+          href="https://github.com/servicecatalog/oscm-app/tree/master/oscm-app-aws/resources" scope="external"
+            ><u>https://github.com/servicecatalog/oscm-app/tree/master/oscm-app-aws/resources</u></xref>. </p>
     </section>
     <section>
       <title>Service Parameters</title>

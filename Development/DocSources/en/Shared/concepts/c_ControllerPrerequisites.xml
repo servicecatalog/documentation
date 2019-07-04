@@ -84,14 +84,14 @@
                 <li audience="azure">
                     <p>Templates in JSON format for the ARM must exist in the environment of the Azure integration software. A template defines the virtual machines as well as other resources to be deployed and the dependencies between them. For each resource manager template, a corresponding parameter definition file in JSON format must exist. It is used to pass the parameter values a user specifies at subscription time to the resource manager template. </p>
                     <p>You can find sample resource manager templates and parameter definition files on <xref
-                            href="https://github.com/servicecatalog/oscm/tree/master/oscm-app-azure/resources"
+                            href="https://github.com/servicecatalog/oscm-app/tree/master/oscm-app-azure/resources"
                             scope="external"
-                                ><u>https://github.com/servicecatalog/oscm/tree/master/oscm-app-azure/resources</u></xref>. You can use these files as a basis and adapt them as required. Additional templates can be defined with ARM. For details, refer to the Microsoft documentation. </p>
+                                ><u>https://github.com/servicecatalog/oscm-app/tree/master/oscm-app-azure/resources</u></xref>. You can use these files as a basis and adapt them as required. Additional templates can be defined with ARM. For details, refer to the Microsoft documentation. </p>
                     <p>The templates and parameter definition files need to be available in a location that can be accessed from <ph
                             conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                         /> and the Azure integration software by HTTP or HTTPS at runtime.</p>
                     <p>It is important to end the base template URL with a slash (/) since the template file name is concatenated with this base URL. For example: </p>
-                    <p>Base URL: <codeph>https://github.com/servicecatalog/oscm/tree/master/oscm-app-azure/resources/</codeph></p>
+                    <p>Base URL: <codeph>https://github.com/servicecatalog/oscm-app/tree/master/oscm-app-azure/resources/</codeph></p>
                     <p>Template file name: <codeph>SampleTemplate.json</codeph>
                     </p>
                     <p>Template parameters file name: <codeph>SampleTemplate.parameters.json</codeph>

@@ -26,25 +26,25 @@
                             >A technical service specifies Shell scripts as parameter options. You need to make them available as described in <xref
                             href="../../ShellIntegrationGuide/Services/c_ControllerPrerequisites.xml"/>.</p>
                         <p audience="os">As a basis, you can use the technical services samples provided on <xref
-                            href="https://github.com/servicecatalog/oscm/tree/master/oscm-app-openstack/resources"
+                            href="https://github.com/servicecatalog/oscm-app/tree/master/oscm-app-openstack/resources"
                             scope="external"
-                                ><u>https://github.com/servicecatalog/oscm/tree/master/oscm-app-openstack/resources</u></xref>. </p>
+                                ><u>https://github.com/servicecatalog/oscm-app/tree/master/oscm-app-openstack/resources</u></xref>. </p>
                     <p audience="os"
                             >The technical services specify sample templates as parameter options. You need to make them available as described in <xref
                             href="../../OSIntegrationGuide/Administrating/c_ImportTemplates.xml"/>. </p>
                     <p audience="aws">As a basis, you can use the technical service sample provided on <xref
-                            href="https://github.com/servicecatalog/oscm/tree/master/oscm-app-aws/resources"
+                            href="https://github.com/servicecatalog/oscm-app/tree/master/oscm-app-aws/resources"
                             scope="external"
-                                ><u>https://github.com/servicecatalog/oscm/tree/master/oscm-app-aws/resources</u></xref>. </p>
+                                ><u>https://github.com/servicecatalog/oscm-app/tree/master/oscm-app-aws/resources</u></xref>. </p>
                     <p audience="azure">As a basis, you can use the technical service sample provided on <xref
-                            href="https://github.com/servicecatalog/oscm/tree/master/oscm-app-azure/resources"
+                            href="https://github.com/servicecatalog/oscm-app/tree/master/oscm-app-azure/resources"
                             scope="external"
-                                ><u>https://github.com/servicecatalog/oscm/tree/master/oscm-app-azure/resources</u></xref>. </p>
+                                ><u>https://github.com/servicecatalog/oscm-app/tree/master/oscm-app-azure/resources</u></xref>. </p>
                     
                     <p audience="vmware">As a basis, you can use the technical services samples provided on <xref
-                            href="https://github.com/servicecatalog/oscm/tree/master/oscm-app-vmware/resources"
+                            href="https://github.com/servicecatalog/oscm-app/tree/master/oscm-app-vmware/resources"
                             scope="external"
-                                ><u>https://github.com/servicecatalog/oscm/tree/master/oscm-app-vmware/resources</u></xref>.</p>
+                                ><u>https://github.com/servicecatalog/oscm-app/tree/master/oscm-app-vmware/resources</u></xref>.</p>
                    <p>In the technical service definition, be sure to specify:</p>
                     <ul>
                         <li>The asynchronous provisioning type </li>

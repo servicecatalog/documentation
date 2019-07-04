@@ -7,8 +7,8 @@
     <section>
       <p>The following sections describe the technical service parameters and service operations which are supported by the VMware service controller. </p>
       <p audience="vmware">You find a sample service on GitHub: <xref
-          href="https://github.com/servicecatalog/oscm/tree/master/oscm-app-vmware/resources" scope="external"
-            ><u>https://github.com/servicecatalog/oscm/tree/master/oscm-app-vmware/resources</u></xref>.</p>
+          href="https://github.com/servicecatalog/oscm-app/tree/master/oscm-app-vmware/resources" scope="external"
+            ><u>https://github.com/servicecatalog/oscm-app/tree/master/oscm-app-vmware/resources</u></xref>.</p>
       <p>
         <note>All parameters defined in the technical service definition must be one-time parameters, since the modification of parameters is not supported. Be sure to set their <codeph>modificationType</codeph> to <codeph>ONE_TIME</codeph>. </note>
       </p>

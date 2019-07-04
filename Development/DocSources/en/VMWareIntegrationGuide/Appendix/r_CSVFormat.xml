@@ -34,7 +34,7 @@
                     <li><codeph>IPPool</codeph>: Defines the list of IP addresses associated with a VLAN. </li>
                 </ul></p>
             <p>You find samples of the above files <xref
-                    href="https://github.com/servicecatalog/oscm/tree/master/oscm-app-vmware/resources/csv" scope="external"
+                    href="https://github.com/servicecatalog/oscm-app/tree/master/oscm-app-vmware/resources/csv" scope="external"
                         ><u>here</u></xref>.</p>
             <p>You can upload the files to the <codeph>vmware</codeph> database using the instance status interface of APP for the VMware service controller:</p>
             <p><codeph>https://&lt;hostname.fqdn>:&lt;port>/oscm-app-vmware</codeph></p>
@@ -168,7 +168,7 @@ myvc1,datacenter2,2
                                 <entry colname="col2">Load_balancer</entry>
                                 <entry colname="col3"
                                         >Load balancer configuration in XML format without line breaks. You find a sample configuration on <xref
-                                        href="https://github.com/servicecatalog/oscm/tree/master/oscm-app-vmware/resources/xml"
+                                        href="https://github.com/servicecatalog/oscm-app/tree/master/oscm-app-vmware/resources/xml"
                                         scope="external"><u>GitHub</u></xref>.</entry>
                             </row>
                         </tbody>
@@ -201,7 +201,7 @@ myvc1,datacenter1,cluster1,
 </codeblock>
             </p>
             <p>The above example is not complete, and it contains line breaks due to text formatting reasons. If you want to use several clusters, you can specify additional values for each of them. A sample <codeph>cluster.csv</codeph> file is also available on <xref
-                    href="https://github.com/servicecatalog/oscm/tree/master/oscm-app-vmware/resources/csv/cluster.csv"
+                    href="https://github.com/servicecatalog/oscm-app/tree/master/oscm-app-vmware/resources/csv/cluster.csv"
                     scope="external"><u>GitHub</u></xref>.</p>
             <p>Refer to <xref href="c_LoadBalancing.xml"/> for more details.</p>
         </section>
