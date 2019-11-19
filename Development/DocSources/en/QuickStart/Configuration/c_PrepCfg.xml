@@ -8,31 +8,33 @@
     <title>Preparing Configuration Files</title>
     <conbody>
         <section>
-            <p>A deployment container is available which prepares configuration file templates where you can specify settings such as mail server, login information, etc. </p>
-            <p>Use <codeph>-v</codeph> to mount the <codeph>/docker</codeph> directory to <codeph>/target</codeph> in the container: </p>
+            <p>A deployment container and process is available which prepares templates and configuration files in the data directory on the Docker host, where you can then specify settings such as authentication and login information, mail server, etc. </p>
+            <p>Run the following process, using <codeph>-v</codeph> to mount the <codeph>/docker</codeph> data directory on the Docker host to the <codeph>/target</codeph> directory in the container: </p>
             <p>
-                <codeblock>docker run --name deployer1 --rm -v /docker:/
-    target ${REGISTRY}/oscm-deployer</codeblock>
+                <codeblock>docker run --name deployer1 --rm -v /docker:/target 
+    ${REGISTRY}/oscm-deployer</codeblock>
             </p>
-            <p>where <codeph>${REGISTRY}</codeph> is the name of your local Docker registry or the DockerHub registry. </p>
-            <p>This command creates two configuration files in the <codeph>/docker</codeph> directory:</p>
+            <p><codeph>${REGISTRY}</codeph> is the name of your local Docker registry or the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> registry on DockerHub. </p>
+            <p>This command creates the following configuration files in the <codeph>/docker</codeph> directory:</p>
             <p>
                 <ol>
                     <li>
-                        <p><codeph>.env</codeph>: Configuration settings for Docker, such as images and the base data directory (default: <codeph>/docker</codeph>)</p>
+                        <p><codeph>.env</codeph>: Configuration settings for Docker, such as images and the data directory on the Docker host.</p>
                     </li>
                     <li><codeph>var.env</codeph>: Configuration settings for <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        /> and APP, such as mail server, database and other settings.</li>
+                            /> and APP, such as authentication, mail server, database, and other settings. They will be stored in the <codeph>bss</codeph> and <codeph>bssapp</codeph> databases.</li>
+                    <li><codeph>config/oscm-identity/tenants/tenant-default.properties</codeph>: Only relevant, if you set <codeph>OIDC</codeph> as the authentication mode: the configuration of the default tenant.</li>
                 </ol>
             </p>
-            <p>Edit both files and adjust the configuration settings to your environment. 
-                The initial, mandatory settings are stored in the <codeph>bss</codeph> and <codeph>bssapp</codeph> databases. 
-                <ph product="oscm_ce">They are described in detail in the  
-                    <xref format="html" href="https://github.com/servicecatalog/documentation/blob/master/Development/oscm-doc-user/resources/manuals/installation+operation/en/Operation.pdf" scope="external"><u><i>Operator's Guide</i></u></xref></ph>
-                <ph product="oscm_ee">They are described in detail in the 
-                    <xref format="html" href="https://https://github.com/servicecatalog/documentation/tree/ESCM" scope="external"><u><i>Operator's Guide</i></u></xref></ph>.
-                </p>
+            <p>Edit these files and adjust the configuration settings to your environment. <ph product="oscm_ce"
+                        >The settings are described in detail in the <xref format="html"
+                        href="https://github.com/servicecatalog/documentation/blob/master/Development/oscm-doc-user/resources/manuals/installation+operation/en/Operation.pdf"
+                        scope="external"><u><i>Operator's Guide</i></u></xref></ph>
+                <ph product="oscm_ee">The settings are described in detail in the <xref format="html"
+                        href="https://https://github.com/servicecatalog/documentation/tree/ESCM" scope="external"
+                                ><u><i>Operator's Guide</i></u></xref></ph>.  </p>
         </section>
     </conbody>
 </concept>

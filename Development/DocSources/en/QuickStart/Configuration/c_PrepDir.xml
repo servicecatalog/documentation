@@ -5,10 +5,12 @@
 <!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2019 -->
 <concept id="concept_1BCF5C425D7D4627AB1C66A085CF6E11"
             xml:lang="en-us">
-    <title>Preparing the Installation Directory</title>
+    <title>Preparing the Data Directory</title>
     <conbody>
         <section>
-            <p>On the Docker host, you need to create a directory where the various data can be stored, such as persistent database data or configuration files. Hereafter, this directory is referred to as <codeph>/docker</codeph>. </p>
+            <p>On the Docker host, you need to create a directory where various <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> data can be stored, such as persistent database data or configuration files. In the following descriptions, this directory is referred to as <codeph>/docker</codeph>, but you can just as well use a subdirectory or another name. </p>
             <p>On the Docker host, execute the following command: </p>
             <p>
                 <codeblock>mkdir /docker</codeblock>

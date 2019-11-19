@@ -10,22 +10,26 @@
     </title>
     <conbody>
         <section>
-            <p>A second deployment container is available which you can run to do the following: </p>
+            <p>A second process in the deployment container is available which you need to run to do the following: </p>
             <p>
                 <ol>
-                    <li>Create the necessary Docker Compose files.</li>
-                    <li>Create the necessary subdirectories. </li>
+                    <li>Create the necessary Docker Compose files for running <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</li>
+                    <li>Create the necessary subdirectories in the Docker data directory. </li>
                     <li>Initialize the application databases. </li>
                     <li>Start the application containers. </li>
                 </ol>
             </p>
-            <p>Execute the following command on your Docker host: </p>
+            <p>Run the following process on your Docker host: </p>
             <p>
                 <codeblock>docker run --name deployer2 --rm -v /docker:/target
     -v /var/run/docker.sock:/var/run/docker.sock
     -e INITDB=true -e STARTUP=true <codeph>${REGISTRY}</codeph>/oscm-deployer</codeblock>
             </p>
-            <p>where <codeph>${REGISTRY}</codeph> is the name of your local Docker registry or the DockerHub registry.</p>
+            <p><codeph>${REGISTRY}</codeph> is the name of your local Docker registry or the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> registry on DockerHub. </p>
+            <p>After <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> has been deployed, it will take a few minutes to start up. The less power the Docker host has, the longer it will take. </p>
         </section>
     </conbody>
 </concept>

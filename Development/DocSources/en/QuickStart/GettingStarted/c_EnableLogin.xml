@@ -9,7 +9,7 @@
                 <title>Enable Login to APP and Service Controllers</title>
                 <conbody>
                         <section>
-                                <p>In order to be able to login to the Asynchronous Provisioning Platform (APP) and its service controllers, some settings have to be made in the administration portal: </p>
+                                <p>In order to be able to log in to the Asynchronous Provisioning Platform (APP) and its service controllers, some settings have to be made in the administration portal: </p>
                         <ol>
                                 <li>Choose <b>Manage organization</b> in the <b><b>Operation</b></b> menu. </li>
                                 <li>Enter <codeph>PLATFORM_OPERATOR</codeph> in the <b>Organization ID</b> field. </li>
@@ -17,15 +17,13 @@
                                 <li>Fill in the mandatory fields (red asterisks).</li>
                                 <li>Click <b>Save</b>.</li>
                                 <li>Go to the <b>Account</b> menu and choose <b>Manage users</b>.</li>
-                                <li>Click on <codeph>administrator</codeph>.</li>
+                                <li>Click the initial administrator account (<codeph>administrator</codeph> for <codeph>INTERNAL</codeph> authentication mode, or the administrator specified in the <codeph>ADMIN_USER_PWD</codeph> setting in the <codeph>var.env</codeph> configuration file for <codeph>OIDC</codeph> authentication mode).</li>
                                 <li>Enter your email address.</li>
                                 <li>Enable all user roles. </li>
                                 <li>Click <b><b>Save</b></b>.</li>
                                 <li>Log out of the administration portal and log in again to enable the changes.</li>
-                                <li>Now you can log in to APP and change APP-specific settings: <p><codeph>https://&lt;hostname.fqdn>:8881/oscm-app/ </codeph></p><p>User name: <codeph>administrator</codeph>
-                                        </p><p>Password: <codeph>admin123 </codeph></p></li>
-                                <li>You can also login to the instance status interface of each service controller: <p><codeph>https://&lt;hostname.fqdn>:8881/oscm-app-&lt;controller-name>/ </codeph></p><p><codeph>&lt;controller-name></codeph> is either <codeph>openstack</codeph>, <codeph>aws</codeph>, <codeph>vmware</codeph>, <codeph>azureARM</codeph>, or <codeph>shell</codeph>. </p><p>User name: <codeph>administrator</codeph>
-                                        </p><p>Password: <codeph>admin123 </codeph></p></li>
+                                <li>Now you can log in to APP and change APP-specific settings: <p><codeph>https://&lt;host_fqdn>:8881/oscm-app/ </codeph></p><p>User name: the initial administrator account </p><p>Password: the password of the initial administrator </p></li>
+                                <li>You can also log in to the instance status interface of each service controller: <p><codeph>https://&lt;host_fqdn>:8881/oscm-app-&lt;controller-name>/ </codeph></p><p><codeph>&lt;controller-name></codeph> is <codeph>openstack</codeph>, <codeph>aws</codeph>, <codeph>vmware</codeph>, <codeph>azureARM</codeph>, or <codeph>shell</codeph>. </p><p>User name: the initial administrator account  </p><p>Password: the password of the initial administrator </p></li>
                         </ol>
                         </section>
                 </conbody>
