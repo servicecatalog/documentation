@@ -25,7 +25,7 @@
                                 <li><codeph>INTERNAL</codeph> authentication mode:<p>User ID: <codeph>administrator </codeph></p><p>Password: <codeph>admin123</codeph></p><p>It is recommended that you change the initial password in the <ph
                                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                                         /> administration portal (<b>Change Password</b> page in the <b>Account</b> menu). </p></li>
-                                <li><codeph>OIDC</codeph> authentication mode:<p>User ID: The ID you specified in the <codeph>ADMIN_USER_ID</codeph> setting in the <codeph>var.env</codeph> configuration file </p><p>Password: The password you specified in the <codeph>ADMIN_USER_PWD</codeph> setting in the <codeph>var.env</codeph> configuration file. It must match the password in the external authorization system and can be changed in this system only. </p></li>
+                                <li><codeph>OIDC</codeph> authentication mode:<p>User ID: The ID you specified in the <codeph>ADMIN_USER_ID</codeph> setting in the <codeph>var.env</codeph> configuration file </p><p>Password: The password of the user as set in the external authorization system used for authentication. The password can be changed in this system only. </p></li>
                         </ul>
                         <p>After login, the operator functionality is available in the <b>Operation</b> menu.</p>
                 </section>
