@@ -8,6 +8,11 @@
     <context>
       <p id="On_the_task_taskbody_context_p_1"
         >On the <uicontrol>Create organization</uicontrol> page, you can create an organization and specify its role (technology provider, supplier, reseller, broker, or - implicitly - customer only). For every new organization, you must define a user who is to become its first administrator. This user can later register new users and assign roles to them.</p>
+      <p>OIDC!!!</p>
+      <p>If <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+          /> is operated in OIDC authentication mode, you need to select the tenant to be associated with the new organization. The user specified as the first administrator must exist in the OIDC provider system represented by the tenant and not yet be a member of a different organization related to the same tenant. Together with the organization in <ph
+          conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+        />, a corresponding group is created in the OIDC provider system and the user is assigned to it as a member.</p>
       <p>Depending on the role of the organization to be created, different fields are mandatory. For example, if you create a customer organization by specifying no role at all, this organization must be assigned a marketplace. The marketplace must already exist. For organizations with other roles, no marketplace assignment is required. </p>
       <p><b>User authentication and management</b>:</p>
       <p>Users are authenticated against the <b>platform</b>: User IDs and passwords of an organization are created and maintained in the platform or in an existing LDAP system of the organization.</p>

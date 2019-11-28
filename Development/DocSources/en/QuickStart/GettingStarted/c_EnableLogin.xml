@@ -17,7 +17,7 @@
                                 <li>Fill in the mandatory fields (red asterisks).</li>
                                 <li>Click <b>Save</b>.</li>
                                 <li>Go to the <b>Account</b> menu and choose <b>Manage users</b>.</li>
-                                <li>Click the initial administrator account (<codeph>administrator</codeph> for <codeph>INTERNAL</codeph> authentication mode, or the administrator specified in the <codeph>ADMIN_USER_PWD</codeph> setting in the <codeph>var.env</codeph> configuration file for <codeph>OIDC</codeph> authentication mode).</li>
+                                <li>Click the initial administrator account (<codeph>administrator</codeph> for <codeph>INTERNAL</codeph> authentication mode, or the administrator specified in the <codeph>ADMIN_USER_ID</codeph> setting in the <codeph>var.env</codeph> configuration file for <codeph>OIDC</codeph> authentication mode).</li>
                                 <li>Enter your email address.</li>
                                 <li>Enable all user roles. </li>
                                 <li>Click <b><b>Save</b></b>.</li>

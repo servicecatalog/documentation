@@ -25,11 +25,16 @@
         </section>
         <section>
             <title>AUTH_MODE</title>
-            <p>Specifies that <ph platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /></ph><ph platform="help"
-                    >the platform</ph> is used for user authentication. This configuration setting is evaluated at the first startup of <ph
-                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
-                    platform="help">the system</ph> and cannot be changed.</p>
+            <p>Specifies the way users are managed and authenticated. The value can be one of the following: </p>
+            <ul>
+                <li><codeph>INTERNAL</codeph>: Users are managed and authenticated by <ph platform="print"><ph
+                            conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                        >the platform</ph> or an existing LDAP system of an organization.</li>
+                <li><codeph>OIDC</codeph>: Users are managed and authenticated by an external provider such as Microsoft Azure Active Directory based on OpenID Connect.</li>
+            </ul>
+            <p>The authentication mode is evaluated at the first startup of <ph platform="print"><ph
+                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                    >the system</ph> and cannot be changed.</p>
             <p>Default: <codeph>INTERNAL</codeph>
             </p>
         </section>
@@ -40,9 +45,9 @@
                 >the platform</ph> does not require HTTPS for communication. If left empty, the <codeph>BASE_URL_HTTPS</codeph> setting is used. <p>Syntax: <codeph>http://&lt;host&gt;:&lt;port&gt;/&lt;context-root></codeph></p><p>The default for <codeph>&lt;context-root></codeph> is <codeph>oscm-portal</codeph>.</p><note>If the SSL/HTTPS port was changed, then this setting must also be updated.</note></section-->
         <section><title>BASE_URL_HTTPS</title>The base URL is used to access the <ph platform="print"><ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
-                    >platform's</ph> home page and to create the URL for accessing services via HTTPS. <p>Syntax: <codeph>https://&lt;hostname.fqdn>:&lt;port>/oscm-portal</codeph></p><p><codeph>&lt;hostname.fqdn></codeph> is the name and the fully qualified domain name of the machine where <ph
+                    >platform's</ph> home page and to create the URL for accessing services via HTTPS. <p>Syntax: <codeph>https://&lt;host_fqdn>:8081/oscm-portal</codeph></p><p><codeph>&lt;host_fqdn&gt;</codeph> is the FQDN or IP address of the host to access <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> has been deployed. <codeph>&lt;port></codeph> is the port to address the machine (default: <codeph>8081</codeph>), <codeph>oscm-portal</codeph> is the default context root of <ph
+                    />, <codeph>8081</codeph> is the port. <codeph>oscm-portal</codeph> is the context root of <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> and cannot be changed. </p><note>If the SSL/HTTPS port was changed, then this setting must also be updated.</note></section>
         <section>
@@ -131,13 +136,12 @@
                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
                     >the platform</ph> will not be able to generate any reports, since the Report Web service cannot be called correctly.</p>
             <p>The setting must be as follows:   </p>
-            <codeblock>https://${HOST_FQDN}:8681/birt/frameset?
+            <codeblock>https://&lt;host_fqdn>:8681/birt/frameset?
    __report=\${reportname}.rptdesign&amp;SessionId=\${sessionid}&amp;
    __locale=\${locale}&amp;WSDLURL=\${wsdlurl}&amp;SOAPEndPoint=\
    ${soapendpoint}&amp;wsname=Report&amp;wsport=ReportPort</codeblock>
-            <p>Replace <codeph>HOST_FQDN</codeph> with the fully qualified name of the Docker host where <ph
-                    platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /></ph> is deployed. </p>
+            <p><codeph>&lt;host_fqdn&gt;</codeph> is the FQDN or IP address of the host to access <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
         </section>
         <section><title>REPORT_SOAP_ENDPOINT</title>The SOAP end point of the Report Web service. All report data is retrieved via a call to the Report Web service. If you do not specify a correct value, <ph
                 platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
@@ -180,6 +184,9 @@
         <section><title>TIMER_INTERVAL_ORGANIZATION_OFFSET</title>Optional. The offset in milliseconds for the timer for organization-related tasks. <p>Allowed values: Any value between <codeph>0</codeph> and <codeph>9223372036854775807</codeph></p><p>Default: <codeph>0</codeph></p></section>
         <section><title>TIMER_INTERVAL_SUBSCRIPTION_EXPIRATION</title>Optional. The time interval in milliseconds at which a check for expired subscriptions is executed. This timer cannot be disabled, i.e. it cannot be set to 0. <p>Allowed values: Any value between <codeph>10000</codeph> (10 seconds) and <codeph>9223372036854775807</codeph></p><p>Default: <codeph>86400000</codeph>, i.e. 1 day</p></section>
         <section><title>TIMER_INTERVAL_SUBSCRIPTION_EXPIRATION_OFFSET</title>Optional. The offset in milliseconds for the timer for subscription expiration checks. <p>Allowed values: Any value between <codeph>0</codeph> and <codeph>9223372036854775807</codeph></p><p>Default: <codeph>0</codeph></p></section>
+        <section><title>TIMER_INTERVAL_SYNCHRONIZE_USERS_OFFSET</title>Optional and relevant of OIDC authentication mode only. The offset in milliseconds for the timer to synchronize <ph
+                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> users in organizations with users in the corresponding groups in the OIDC provider system. The timer interval is one day and cannot be changed. <p>Allowed values: Any value between <codeph>0</codeph> and <codeph>9223372036854775807</codeph></p><p>Default: <codeph>0</codeph></p></section>
         <section><title>TIMER_INTERVAL_TENANT_PROVISIONING_TIMEOUT</title>Optional. The time interval in milliseconds at which a check for timed-out subscriptions is executed. A value of 0 indicates that this timer is disabled.<p>Allowed values: <codeph>0</codeph> and any value between <codeph>10000</codeph> (10 seconds) and <codeph>9223372036854775807</codeph></p><p>Default: <codeph>0</codeph></p></section>
         <section><title>TIMER_INTERVAL_TENANT_PROVISIONING_TIMEOUT_OFFSET</title>Optional. The offset in milliseconds for the timer for pending subscription checks. <p>Allowed values: Any value between <codeph>0</codeph> and <codeph>9223372036854775807</codeph></p><p>Default: <codeph>0</codeph></p></section>
         <section>

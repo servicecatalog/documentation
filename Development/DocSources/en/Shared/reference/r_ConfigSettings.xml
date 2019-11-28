@@ -5,24 +5,25 @@
 <reference id="reference832" xml:lang="en-us">
     <title>Configuration Settings</title>
     <refbody>
-        <section>
-            <p>The <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> software as well as the Asynchronous Provisioning Platform (APP) require a number of settings for configuring their container runtime environment. The mandatory settings have already been specified in environment variables in Docker files before deploying the containers. Usually, you needed to adapt the initial settings to your environment, in particular server names, ports, paths, and user IDs.</p>
-            <p>After the deployment, you can update the configuration settings by editing the following configuration files in the <codeph>/docker</codeph> directory, where <codeph>/docker</codeph> is the directory on the Docker host where all <ph
+        <section><p>The <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> software as well as the Asynchronous Provisioning Platform (APP) require a number of settings for configuring their container runtime environment. The mandatory settings have already been specified in environment variables in Docker files before deploying the containers. Usually, you needed to adapt the initial settings to your environment, in particular server names, ports, paths, and user IDs.</p>Store the configuration file on the Docker host where <ph
+                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> is deployed:<p><codeph>&lt;docker>/config/oscm-identity/tenants/tenant-&lt;id>.properties</codeph></p><p><codeph>&lt;docker></codeph> is the <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                />- and APP-specific data is located:</p>
-            <p>
+                    /> data directory specified at installation time. <codeph>&lt;id></codeph> is the ID of the tenant created in <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    />.</p><p>After the deployment, you can update the configuration settings by editing the following configuration files in the <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> data directory on the Docker host: </p><p>
                 <ol>
                     <li>
-                        <p><codeph>.env</codeph>: Configuration settings for Docker, such as images and the base data directory (default: <codeph>/docker</codeph>)</p>
+                        <p><codeph>.env</codeph>: Configuration settings for Docker, such as images and the <ph
+                                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> data directory.</p>
                     </li>
                     <li><codeph>var.env</codeph>: Configuration settings for <ph audience="BSS"
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        /> and APP, such as mail server, database and other settings.</li>
+                        /> and APP, such as authentication, mail server, database and other settings.</li>
                 </ol>
-            </p>
-            <p>Refer to <xref href="../../OperationsGuide/Configuration/c_UpdateConfiguration.xml"/> for details.</p>
-            <p>This appendix describes all settings that can be specified in detail. </p>
-        </section>
+            </p><p>Refer to <xref href="../../OperationsGuide/Configuration/c_UpdateConfiguration.xml"
+                /> for details on updating configuration settings.</p><p>This appendix describes all settings that can be specified in detail. </p></section>
     </refbody>
 </reference>

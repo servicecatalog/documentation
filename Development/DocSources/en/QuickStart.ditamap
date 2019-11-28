@@ -8,7 +8,7 @@
         <prodinfo product="oscm_ce">
             <prodname/>
             <vrmlist>
-                <vrm version="V18.1"/>
+                <vrm version="V18.1.0"/>
             </vrmlist>
             <brand/>
             <prognum>V18.1</prognum>
@@ -18,7 +18,7 @@
         <prodinfo product="oscm_ee">
             <prodname>Enterprise Service</prodname>
             <vrmlist>
-                <vrm version="V18.1.0"/>
+                <vrm version="V18.1"/>
             </vrmlist>
             <brand>FUJITSU Software</brand>
             <prognum>Catalog Manager V18.1.0</prognum>
@@ -40,7 +40,9 @@
         <preface format="dita" href="QuickStart/About/c_About.xml" type="concept"/>
     </frontmatter>
     <chapter format="dita" href="Shared/gettingstarted/c_BESContainers.xml" type="concept"/>
-    <chapter format="dita" href="QuickStart/GettingStarted/c_Prereqs.xml" type="concept"/>
+    <chapter format="dita" href="QuickStart/GettingStarted/c_Prereqs.xml" type="concept">
+        <topicref format="dita" href="QuickStart/GettingStarted/c_Prereqs_OIDC.xml" type="concept"/>
+    </chapter>
     <chapter href="QuickStart/Configuration/c_Installation.xml" type="concept">
         <topicref format="dita" href="QuickStart/Configuration/c_InstallTar.xml" type="concept"/>
         <topicref format="dita" href="QuickStart/Configuration/c_PrepDir.xml" type="concept"/>
@@ -48,7 +50,7 @@
         <topicref href="QuickStart/Configuration/c_PrepDocker.xml" type="concept"/>
     </chapter>
     <chapter href="QuickStart/GettingStarted/c_Usage.xml" type="concept">
-        <topicref href="QuickStart/GettingStarted/c_Access.xml" type="concept"/>
+        <topicref href="Shared/gettingstarted/c_Access.xml" type="concept"/>
         <topicref format="dita" href="QuickStart/GettingStarted/c_EnableLogin.xml" type="concept"/>
         <topicref href="QuickStart/GettingStarted/c_StartUsing.xml" type="concept"/>
     </chapter>

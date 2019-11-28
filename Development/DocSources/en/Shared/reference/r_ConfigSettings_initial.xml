@@ -8,11 +8,10 @@
     <refbody>
         <section>
             <title>.env File</title>
-            <p platform="print"
-                >The configuration settings that must be set in the <codeph>.env</codeph> file are by default: </p>
+            <p platform="print">The following configuration settings must be set in the <codeph>.env</codeph> file: </p>
             <p platform="print">
                 <ul>
-                    <li>Which Docker images to use and from which registry they are to be fetched:<ul>
+                    <li>The Docker images to use and the registry from which they are to be fetched:<ul>
                             <li><codeph>IMAGE_DB</codeph>: image for the <codeph>oscm-db</codeph> container</li>
                             <li><codeph>IMAGE_CORE</codeph>: image for the <codeph>oscm-core</codeph> container</li>
                             <li><codeph>IMAGE_APP</codeph>: image for the <codeph>oscm-app</codeph> container</li>
@@ -20,9 +19,11 @@
                             <li><codeph>IMAGE_BRANDING</codeph>: image for the <codeph>oscm-branding</codeph> container</li>
                             <li><codeph>IMAGE_INITDB</codeph>: image for the temporary, stateless <codeph>oscm-initdb</codeph> container</li>
                             <li><codeph>IMAGE_HELP</codeph>: image for the <codeph>oscm-help</codeph> container</li>
+                            <li><codeph>IMAGE_IDENTITY</codeph>: image for the <codeph>oscm-identity</codeph> container</li>
                         </ul>
                     </li>
-                    <li>The base directory where data is persisted on your Docker host. The default directory is <codeph>/docker</codeph> as defined with the <codeph>DOCKER_PATH</codeph> configuration setting. </li>
+                    <li>The directory where <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> data is persisted on your Docker host. The default directory is <codeph>/docker</codeph> as defined with the <codeph>DOCKER_PATH</codeph> configuration setting. </li>
                     <li>HTTP timeout for Docker Compose. You need to adjust this value if you get timeout errors during high load or network congestion.</li>
                 </ul>
             </p>
@@ -30,7 +31,7 @@
         <section>
             <title>var.env File</title>
             <p platform="print"
-                >The configuration settings that must be set in the <codeph>var.env</codeph> file described in detail below.</p>
+                >The following configuration settings must be set in the <codeph>var.env</codeph> file:</p>
         </section>
         <section>
             <title>Settings for Connecting to the Databases</title>
@@ -39,11 +40,32 @@
                     <li><codeph>DB_PORT_CORE</codeph><p>The port of the PostgreSQL database (<codeph>bss</codeph>) where the configuration settings for the <codeph>oscm-core</codeph> container are stored. </p><p>Must be set to <codeph>5432</codeph>.</p></li>
                     <li><codeph>DB_PORT_JMS</codeph><p>The port of the PostgreSQL database (<codeph>bssjms</codeph>) where the JMS messages are stored. </p><p>Must be set to <codeph>5432</codeph>.</p></li>
                     <li><codeph>DB_PORT_APP</codeph><p>The port of the PostgreSQL database (<codeph>bssapp</codeph>) where the configuration settings for the <codeph>oscm-app</codeph> container are stored. </p><p>Must be set to <codeph>5432</codeph>.</p></li>
-                    <li><codeph>DB_PWD_CORE</codeph><p>Specify the password of the user to connect to the <codeph>bss</codeph> database. </p><p>Default: <codeph>bssuser</codeph></p></li>
-                    <li><codeph>DB_PWD_APP</codeph><p>Specify the password of the user to connect to the <codeph>bssapp</codeph> database. </p>Default: <codeph>bssappuser</codeph></li>
-                    <li><codeph>DB_SUPERPWD</codeph><p>Specify the password of the PostgreSQL database superuser.</p>Default: <codeph>postgres</codeph></li>
+                    <li><codeph>DB_PWD_CORE</codeph><p>The password of the user to connect to the <codeph>bss</codeph> database. </p><p>Default: <codeph>bssuser</codeph></p></li>
+                    <li><codeph>DB_PWD_APP</codeph><p>The password of the user to connect to the <codeph>bssapp</codeph> database. </p><p>Default: <codeph>bssappuser</codeph></p></li>
+                    <li><codeph>DB_SUPERPWD</codeph><p>The password of the PostgreSQL database superuser.</p><p>Default: <codeph>postgres</codeph></p></li>
                 </ul>
             </p>
+        </section>
+        <section>
+            <title>Setting for Authentication</title>
+            <ul compact="no">
+                <li>
+                    <p><codeph>AUTH_MODE</codeph></p>
+                    <p>The authentication mode. The value can be one of the following: </p>
+                    <ul>
+                        <li><codeph>INTERNAL</codeph>: Users are managed and authenticated by <ph
+                                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> or an existing LDAP system of an organization.</li>
+                        <li><codeph>OIDC</codeph>: Users are managed and authenticated by an external provider such as Microsoft Azure Active Directory based on OpenID Connect.</li>
+                    </ul>
+                    <p>The authentication mode cannot be changed after the first start-up of <ph
+                            conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+                </li>
+                <li><codeph>ADMIN_USER_ID</codeph><p>The initial administrator account, depending on the authentication mode:</p><ul>
+                        <li><codeph>INTERNAL</codeph>: <codeph>administrator</codeph></li>
+                        <li><codeph>OIDC</codeph>: A user existing in the OIDC provider system configured as the default tenant and assigned to the <codeph>OSCM_PLATFORM_OPERATOR</codeph> group in this system.</li>
+                    </ul></li>
+            </ul>
         </section>
         <section>
             <title>Settings for Connecting to the Mail Server</title>
@@ -63,20 +85,56 @@
             </p>
         </section>
         <section>
+            <title>Settings for Connecting with APP</title>
+            <ul>
+                <li><codeph>APP_USER_NAME</codeph><p>The user for accessing <ph
+                            conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> from APP. The user specified here must have the administrator role for a technology provider organization in <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            />. The user account is used for carrying out actions on behalf of APP in <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> and for registering service controllers.</p><p>For the first deployment of <ph
+                            conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            />, the value must be set as follows depending on the authentication mode (<codeph>AUTH_MODE</codeph> setting):</p><ul>
+                        <li><codeph>INTERNAL</codeph>: <codeph>administrator</codeph></li>
+                        <li><codeph>OIDC</codeph>: The initial administrator specified in the <codeph>ADMIN_USER_ID</codeph> setting</li>
+                    </ul></li>
+                <li><codeph>APP_USER_PWD</codeph><p>The password of the user specified in <codeph>APP_USER_NAME</codeph>. The password is encrypted when it is stored in the database. </p><p>For the first deployment of <ph
+                            conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            />, the value must be set as follows depending on the authentication mode (<codeph>AUTH_MODE</codeph> setting):</p><ul>
+                        <li><codeph>INTERNAL</codeph>: <codeph>admin123</codeph></li>
+                        <li><codeph>OIDC</codeph>: The password of the initial administrator specified in the <codeph>ADMIN_USER_ID</codeph> setting. It must be identical to the user's password in the OIDC provider system.</li>
+                    </ul></li>
+            </ul>
+        </section>
+        <section>
             <title>Settings for Connecting to the Service Controllers</title>
             <p>
                 <ul>
-                    <li>docker-compose -f docker-compose-oscm</li>
                     <li><codeph>CONTROLLER_ORG_ID</codeph><p>The ID of the organization in <ph
                                 conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            /> responsible for the service controller. The organization must have the technology provider role.</p><p>Before the first deployment, the setting's value must be set to <codeph><codeph>PLATFORM_OPERATOR</codeph></codeph>. The operator can then log in to the service controller and define the technology provider organization that is to be responsible. </p></li>
-                    <li><codeph>CONTROLLER_USER_KEY</codeph><p>The identifier of the user for accessing the service controller. </p><p>Before the first deployment, the setting's value must be set to <codeph><codeph>1000</codeph></codeph>.</p></li>
+                            /> responsible for the service controller. The organization must have the technology provider role.</p><p>For the first deployment of <ph
+                                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    />, the value must be set to <codeph><codeph>PLATFORM_OPERATOR</codeph></codeph>. The operator can then log in to the service controller and define the technology provider organization that is to be responsible. </p></li>
+                    <li><codeph>CONTROLLER_USER_KEY</codeph><p>The identifier of the user for accessing the service controller specified in <codeph>CONTROLLER_USER_NAME</codeph>. </p><p>For the first deployment of <ph
+                                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                    />, the value must be set to <codeph><codeph>1000</codeph></codeph>.</p></li>
                     <li><codeph>CONTROLLER_USER_NAME</codeph><p>The name of the user for accessing the service controller. The user specified here must have the technology manager role in <ph
                                 conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                                 /> and belong to the organization specified in the <codeph>CONTROLLER_ORG_ID</codeph> setting. It is recommended that the user account is used only for carrying out actions on behalf of the service controller in <ph
                                 conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                    />.</p><p>Before the first deployment, the setting's value must be set to <codeph><codeph>administrator</codeph></codeph>.</p></li>
-                    <li><codeph>CONTROLLER_USER_PASS</codeph><p>The password of the user for accessing the service controller. The password is encrypted when it is stored in the database. </p><p>Before the first deployment, the setting's value must be set to <codeph><codeph>admin123</codeph></codeph>.</p></li>
+                                />.</p><p>For the first deployment of <ph
+                                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                />, the value must be set as follows depending on the authentication mode (<codeph>AUTH_MODE</codeph> setting):</p><ul>
+                            <li><codeph>INTERNAL</codeph>: <codeph>administrator</codeph></li>
+                            <li><codeph>OIDC</codeph>: The initial administrator specified in the <codeph>ADMIN_USER_ID</codeph> setting</li>
+                        </ul></li>
+                    <li><codeph>CONTROLLER_USER_PASS</codeph><p>The password of the user for accessing the service controller. The password is encrypted when it is stored in the database. </p><p>For the first deployment of <ph
+                                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                />, the value must be set as follows depending on the authentication mode (<codeph>AUTH_MODE</codeph> setting):</p><ul>
+                            <li><codeph>INTERNAL</codeph>: <codeph>admin123</codeph></li>
+                            <li><codeph>OIDC</codeph>: The password of the initial administrator specified in the <codeph>ADMIN_USER_ID</codeph> setting. It must be identical to the user's password in the OIDC provider system.</li>
+                        </ul></li>
                 </ul>
             </p>
         </section>
@@ -89,14 +147,14 @@
                     <li><codeph>DATACENTER_NAME</codeph><p>The name of data center managed by the vCenter specified above. </p></li>
                     <li><codeph>CLUSTER_NAME</codeph><p>The name of the cluster where VMs are to be provisioned. </p></li>
                     <li><codeph>LOADBALANCER_NAME</codeph><p>The name of the load balancer used by vSphere. Usually, you can use the name of the VM Network in vSphere: <codeph>VM Network</codeph>. </p></li>
-                </ul><note>Be aware that the configuration of an entire vSphere environment including, for example, various data centers and clusters, requires the uploading of <codeph>.csv</codeph> files using the instance status interface of the VMware service controller. Refer to the <i>VMware vSphere Integration</i> guide for details. The initial configuration settings specified in the <codeph>var.env</codeph> file setup a connection to one vSphere vCenter, with one data center and one cluster only where the VMs will be provisioned.  </note></p>
+                </ul><note>Be aware that the configuration of an entire vSphere environment including, for example, various data centers and clusters, requires the uploading of <codeph>.csv</codeph> files using the instance status interface of the VMware service controller. Refer to the <i>VMware vSphere Integration</i> guide for details. The initial configuration settings specified in the <codeph>var.env</codeph> file set up a connection to one vSphere vCenter, with one data center and one cluster only where the VMs will be provisioned. </note></p>
         </section>
         <section>
             <title>Additional Settings</title>
             <p>
                 <ul>
                     <li><codeph>KEY_SECRET</codeph><p>A string which will be used in the <codeph>bss</codeph> database as a seed for encryption and decryption of service parameters with data type <codeph>PWD</codeph> and custom attributes marked for encryption. Make sure not to forget this string so that your database is persisted. </p><note>Be aware that you must use the same key when updating the database. Otherwise, encryption and decryption is no longer possible after an update. </note></li>
-                    <li><codeph>HOST_FQDN</codeph><p>The fully qualified domain name or the IP address of the host to be used to access <ph
+                    <li><codeph>HOST_FQDN</codeph><p>The fully qualified domain name or IP address of the host to be used to access <ph
                                 conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </p></li>
                     <li><codeph>REPORT_ENGINEURL</codeph><p>The URL of the report engine used to generate the <ph
                                 platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
@@ -104,10 +162,10 @@
                                 >platform's</ph> reports. If you do not specify a correct URL template, <ph
                                 platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                                 /></ph><ph platform="help"
-                            >the platform</ph> will not be able to generate any reports, since the Report Web service cannot be called correctly.</p><p>The setting must be as follows: </p><codeblock>https://&lt;HOST_FQDN>:8681/birt/frameset?
+                            >the platform</ph> will not be able to generate any reports, since the Report Web service cannot be called correctly.</p><p>The setting must be as follows: </p><codeblock>https://&lt;host_fqdn>:8681/birt/frameset?
    __report=\${reportname}.rptdesign&amp;SessionId=\${sessionid}&amp;
    __locale=\${locale}&amp;WSDLURL=\${wsdlurl}&amp;SOAPEndPoint=\
-   ${soapendpoint}&amp;wsname=Report&amp;wsport=ReportPort</codeblock><p>Replace <codeph>&lt;HOST_FQDN></codeph> with the value entered for the <codeph>HOST_FQDN</codeph> setting. The other values must not be changed. </p></li>
+   ${soapendpoint}&amp;wsname=Report&amp;wsport=ReportPort</codeblock><p>Replace <codeph>&lt;host_fqdn></codeph> with the value entered for the <codeph>HOST_FQDN</codeph> setting. The other values must not be changed. </p></li>
                     <li><codeph>TOMEE_DEBUG</codeph><p>Defines if the application server is to generate log files for <ph
                                 platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                                 /></ph><ph platform="help"
@@ -123,18 +181,18 @@
                     <li><codeph>CONTAINER_MAX_SIZE</codeph><p>The size of the instance pool for the stateless <codeph>init-db</codeph> container.</p><p>Default: <codeph>50</codeph></p></li>
                 </ul>
             </p>
-            <p>The following settings are used for the Docker engine environment which needs access to the Docker registry as well as for the <ph
+            <p>The following settings are used for the Docker environment, which needs access to the Docker registry, as well as for the <ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> containers which access the Internet. They are used for the <codeph>oscm-app</codeph> container, meaning that each HTTP request made from APP is processed using these settings.</p>
+                    /> containers which access the Internet. They are also used for the <codeph>oscm-app</codeph> container, which means that every HTTP request made by APP is processed using these settings.</p>
             <p>
                 <ul compact="no">
-                    <li><codeph>PROXY_ENABLED</codeph><p>Defines whether the proxy is enabled in the container. Can be set to <codeph>true</codeph> or <codeph>false</codeph>.  </p></li>
+                    <li><codeph>PROXY_ENABLED</codeph><p>Defines whether the proxy is enabled in the containers. Can be set to <codeph>true</codeph> or <codeph>false</codeph>. </p></li>
                     <li><codeph>PROXY_HTTP_HOST</codeph><p>Host of the proxy used for HTTP connections</p></li>
                     <li><codeph>PROXY_HTTP_PORT</codeph><p>Port of the proxy used for HTTP connections</p></li>
                     <li><codeph>PROXY_HTTPS_HOST</codeph><p>Host of the proxy used for HTTPS connections</p></li>
                     <li><codeph>PROXY_HTTPS_PORT</codeph><p>Port of the proxy used for HTTPS connections</p></li>
-                    <li><codeph>PROXY_NOPROXY</codeph><p>Pipe-separated list of hosts for which the proxy is to be bypassed. By default, this list already contains localhost, 127.0.0.1, and the floating IP address of the <ph
-                                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> instance.</p></li>
+                    <li><codeph>PROXY_NOPROXY</codeph><p>Pipe-separated list of hosts for which the proxy is to be bypassed. By default, this list already contains localhost, 127.0.0.1, and the IP address of the <ph
+                                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> installation.</p></li>
                 </ul>
             </p>
         </section>

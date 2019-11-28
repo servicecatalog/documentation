@@ -30,7 +30,7 @@
                                 <entry colname="col2"><xref href="../Introduction/c_Intro.xml"> </xref></entry>
                                 <entry colname="col3">Describes <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                    />, its containers and their communication, its architecture, its organizations, users, and roles.</entry>
+                                    />, its containers and their communication, its architecture, organizations, users, roles, and authentication modes.</entry>
                             </row>
                             <row>
                                 <entry colname="col2"><xref href="../GettingStarted/c_GettingStarted.xml"/></entry>
@@ -57,7 +57,11 @@
                             <row>
                                 <entry colname="col2"><xref href="../Organizations/c_Organizations.xml"/></entry>
                                 <entry colname="col3"
-                                    >Describes how to create and manage organizations and user accounts. </entry>
+                                    >Describes how to create and manage organizations, users, and OIDC tenants. </entry>
+                            </row>
+                            <row>
+                                <entry><xref href="../Marketplace/c_ManageMP.xml"/></entry>
+                                <entry>Describes how to create, update, delete, and customize marketplaces. </entry>
                             </row>
                             <row>
                                 <entry><xref href="../Reports/c_Reports.xml"/></entry>
@@ -75,14 +79,14 @@
                                     /> and applications integrated with it. </entry>
                             </row>
                             <row>
-                                <entry><xref href="../Marketplace/c_ManageMP.xml"/></entry>
-                                <entry>Describes how to create, update, delete, and customize marketplaces. </entry>
-                            </row>
-                            <row>
                                 <entry><xref href="../../Shared/reference/r_ConfigSettings.xml"/></entry>
                                 <entry>Describes the <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                     /> and APP configuration settings.</entry>
+                            </row>
+                            <row>
+                                <entry><xref href="../../Shared/reference/r_ConfigSettings_OIDC_Tenant.xml"/></entry>
+                                <entry>Describes the properties to be defined for configuring a tenant to connect to an OIDC provider system.</entry>
                             </row>
                             <row>
                                 <entry><xref href="../../Shared/reference/r_LDAP_SettingTypes.xml"/></entry>

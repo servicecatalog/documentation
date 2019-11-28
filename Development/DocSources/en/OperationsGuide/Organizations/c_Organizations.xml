@@ -14,7 +14,8 @@
                 <li>Maintain the address data of organizations.</li>
                 <li>Add a role to an organization.</li>
                 <li>Manage user accounts: lock and unlock user accounts, and reset the password for a user.</li>
-                <li>Register users for organizations.</li>
+                <li>Register multiple users for organizations.</li>
+                <li>Create and manage tenants connecting to OIDC providers.</li>
             </ul>
         </section>
     </conbody>

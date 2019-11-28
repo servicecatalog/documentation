@@ -8,8 +8,13 @@
         <title>Registering Multiple Users for Organizations</title>
         <conbody>
                 <section>
-                        <p>Users that are to work with an organization's subscriptions are usually registered by an organization's administrator. </p>
-                        <p>As an operator, you can also register multiple users on behalf of organizations that do not use an external system for user authentication. The data of the users must be specified in a user data file which can then be imported into <ph
+                        <note>This section is relevant only if <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        /> is installed in INTERNAL authentication mode. Refer to <xref
+                                        href="../Introduction/c_Authentication.xml"
+                                /> for details on authentication modes.</note>
+                        <p>Users who are to work for an organization are usually registered by the organization's administrator. </p>
+                        <p>As an operator, you can register multiple users on behalf of organizations that do not use an external system for user authentication. The data of the users must be specified in a user data file which can then be imported into <ph
                                         platform="print"><ph
                                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                         /></ph>. </p>

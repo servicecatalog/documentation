@@ -9,17 +9,19 @@
     <conbody>
         <section>
             <p>After deployment, <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> provides a neutral branding for marketplaces. Marketplace owners can download the source files of this branding as a <codeph>branding-package.zip</codeph> file and use this as a basis for customizing the layout and branding of their marketplaces. Once a marketplace owner is finished with any customizations, you are responsible for uploading the changes to the <codeph>oscm-branding</codeph> container. </p>
+                    /> provides a neutral branding for marketplaces. Marketplace owners can download the source files of this branding as a <codeph>branding-package.zip</codeph> file and use it as a basis for customizing the layout and branding of their marketplaces. Once a marketplace owner has finished his customizations, you are responsible for making the changes available in <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> in the <codeph>oscm-branding</codeph> container. </p>
             <p>To upload and deploy a customized branding, proceed as follows: </p>
-            <p>
-                <ol>
-                    <li>Log in to the Docker host as user root. </li>
-                    <li>Extract the archive file provided by the marketplace owner (<codeph>&lt;folder-name>.zip</codeph> file) to the following folder on your Docker host: <p><codeph>/docker/config/oscm-branding/brandings/</codeph></p></li>
-                    <li>Provide the URL pointing to the customized files to the respective marketplace owner. <p>By default, the URL is as follows: </p><p><codeph>https://&lt;hostname.fqdn>:8443/&lt;new-folder-name>/css/mp.css</codeph></p>where <codeph>&lt;hostname.fqdn></codeph> is the name and the fully qualified domain name of the host used to access <ph
+            <ol compact="no">
+                <li>Log in to the Docker host as a superuser. </li>
+                <li>Extract the archive file provided by the marketplace owner (<codeph>&lt;folder-name>.zip</codeph> file) to the following folder on your Docker host: <p><codeph>&lt;docker>/config/oscm-branding/brandings/</codeph></p><codeph>&lt;docker></codeph> is the <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> data directory specified at installation time.</li>
+                <li>Provide the URL pointing to the customized files to the respective marketplace owner. <p>The URL has the following format: </p><p><codeph>https://&lt;host_fqdn>:8443/&lt;new-folder-name>/css/mp.css</codeph></p><p><codeph>&lt;host_fqdn&gt;</codeph> is the FQDN or IP address of the host to access <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            />, and <codeph>&lt;new-folder-name></codeph> is the name of the folder containing the customized files. </li>
-                </ol>
-            </p>
+                            />, <codeph>8443</codeph> is the port. <codeph>&lt;new-folder-name></codeph> is the name of the folder containing the customized branding files. </p></li>
+            </ol>
         </section>
     </conbody>
 </concept>

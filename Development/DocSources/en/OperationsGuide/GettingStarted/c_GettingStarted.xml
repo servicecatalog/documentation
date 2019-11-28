@@ -9,40 +9,45 @@
                 <title>Getting Started</title>
                 <conbody>
                 <section>
-                        <title>Accessing <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                /></title>
-                        <p>After the deployment, you have access to the <ph
+                        <p>After having successfully deployed <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                /> administration portal where you can start with creating organizations, viewing and partially updating configuration settings, etc.</p>
-                        <p>Access the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                /> administration portal in a Web browser using an URL in the following format: </p>
-                        <p><codeph>https://&lt;hostname.fqdn>:&lt;port>/oscm-portal</codeph></p>
-                        <p><codeph>&lt;hostname.fqdn></codeph> is the name and the fully qualified domain name of the machine where <ph
+                                        />, databases have been created containing the initial configuration settings as well as a platform operator organization with the initial administrator. There are no other organizations, users, services, or marketplaces. In order to start working with <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                        /> has been deployed. <codeph>&lt;port></codeph> is the port to address the machine (default: <codeph>8081</codeph>), <codeph>oscm-portal</codeph> is the default context root of <ph
-                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                /> and cannot be changed. </p>
-                        <p>You are prompted for the user ID and password. The initial credentials are as follows: </p>
-                        <p>User ID: <codeph>administrator</codeph>
-                        </p>
-                        <p>Password: <codeph>admin123</codeph>
-                        </p>
-                        <p>It is recommended that you change the initial password in the <ph
-                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                        /> administration portal (<b>Change Password</b> page in the <b>Account</b> menu). </p>
-                        <p>After login, the operator functionality is available in the <b>Operation</b> menu.</p>
+                                />, you need to take some basic steps in the administration portal. </p>
+                        <p>The following sections describe how to:</p>
+                        <ul>
+                                <li>Access <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        /> by its administration portal</li>
+                                <li>Take the initial steps to get started</li>
+                                <li>Start and stop <ph
+                                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        /></li>
+                        </ul>
                 </section>
                 <section>
+                        <title>Accessing <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>
+                        </title>
+                </section>
+                <section
+                        conref="../../Shared/gettingstarted/c_Access.xml#concept_1BCF5C425D7D4627AB1C66A085CF6E11/The_administration_portal_is_concept_conbody_section"/>
+                <section>
                         <title>Next  Steps</title>
-                        <p>In order for a supplier to be able to define price models and for the rating and billing engine of <ph
-                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                        /> to be able to calculate usage costs, you need to add one or several currencies to the system. <ph
-                                        audience="doc"> For details, refer to <xref
-                                                href="../Configuration/c_AddCurrency.xml"/>.</ph></p>
-                        <p>In a next step, you can create technology provider and seller organizations (suppliers, resellers, brokers), and set up marketplaces so that services can be offered to customers.<ph
-                                        audience="doc"> For details, refer to <xref
-                                                href="../Organizations/c_Organizations.xml"/> and <xref
-                                                href="../Marketplace/c_ManageMP.xml"/>.</ph></p>
+                        <p>The next steps you should take are the following:</p>
+                        <ol compact="no">
+                                <li>Complete your personal profile using the <b>Edit profile</b> option in the <b>Account</b> menu.</li>
+                                <li>Add one or several currencies to the system for suppliers to define price models and the <ph
+                                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                /> rating and billing engine to calculate usage costs. <ph
+                                                audience="doc"> For details, refer to <xref
+                                                        href="../Configuration/c_AddCurrency.xml"/>.</ph></li>
+                                <li>Create technology provider and seller organizations (suppliers, resellers, brokers) who will provide and offer services in <ph
+                                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                />. <ph audience="doc">For details, refer to <xref
+                                                        href="../Organizations/c_Organizations.xml"/>.</ph></li>
+                                <li>Set up marketplaces so that services can be offered to customers. <ph audience="doc"
+                                                        >For details, refer to <xref
+                                                        href="../Marketplace/c_ManageMP.xml"/>.</ph></li>
+                        </ol>
                 </section>
                         <section>
                                 <title>Startup and Shutdown</title>

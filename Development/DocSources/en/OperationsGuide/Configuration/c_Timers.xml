@@ -32,6 +32,12 @@
                         <li><codeph>PERMITTED_PERIOD_UNCONFIRMED_ORGANIZATIONS</codeph>
                         </li>
                     </ul></li>
+                <li><codeph><b>SYNCHRONIZE_USERS</b></codeph>: Relevant of OIDC authentication mode only. Timer to synchronize users in <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> organizations with users in the corresponding groups in the OIDC provider system. The interval for this timer is one day and cannot be changed. <p>This timer requires the following configuration setting: </p><ul>
+                        <li><codeph>TIMER_INTERVAL_SYNCHRONIZE_USERS</codeph>
+                        </li>
+                    </ul></li>
                 <li><codeph><b>USER_NUM_CHECK</b></codeph>: Timer to check for the current amount of users registered with the platform. <p>This timer requires the following configuration setting: </p><ul>
                         <li><codeph>TIMER_INTERVAL_USER_COUNT</codeph>
                         </li>

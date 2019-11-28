@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2019 -->
+<concept id="concept_B32294CC9FA643A2A14A74B1DAA49C95"
+            xml:lang="en-us">
+    <title>Authentication Modes</title>
+    <conbody>
+        <section>
+            <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> can be installed in one of the following authentication modes:</p>
+            <ul>
+                <li>INTERNAL</li>
+                <li>OIDC</li>
+            </ul>
+            <p>The authentication mode determines how users and Web services are authenticated. It also determines the initial credentials of the first operator created by the installation. </p>
+        </section>
+        <section conref="../../Shared/concepts/c_AuthenticationMode.xml#Auth/auth_internal"/>
+        <section>
+            <table
+                colsep="1" frame="all"
+                    rowsep="1">
+                <tgroup cols="3">
+                    <colspec colname="c1" colnum="1"/>
+                    <colspec colname="c3" colnum="2"/>
+                    <colspec colname="newCol4" colnum="3"/>
+                    <thead>
+                        <row>
+                            <entry>What is accessed?</entry>
+                            <entry>Authentication by</entry>
+                            <entry>Initial credentials</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry>Administration portal</entry>
+                            <entry>User ID<p>Password</p></entry>
+                            <entry>
+                                <p>User ID: <codeph>administrator</codeph></p>
+                                <p>Password: <codeph>admin123</codeph></p>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>Web service by SOAP/WSDL</entry>
+                            <entry>User key<p>Password</p></entry>
+                            <entry>
+                                <p>User key: </p>
+                                <p><codeph>1000</codeph></p>
+                                <p>Password: </p>
+                                <p><codeph>admin123</codeph></p>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>Web service by REST API</entry>
+                            <entry>User ID<p>Password</p></entry>
+                            <entry>
+                                <p>User ID: <codeph>administrator</codeph></p>
+                                <p>Password: <codeph>admin123</codeph></p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <p>It is recommended that you change the initial password in the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> administration portal (<b>Change Password</b> page in the <uicontrol>Account</uicontrol> menu). </p>
+        </section>
+        <section conref="../../Shared/concepts/c_AuthenticationMode.xml#Auth/auth_oidc"/>
+        <section>
+            <p><b>Initial Operator Organization and Administrator</b></p>
+            <p>Before you can install <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> in OIDC authentication mode and create the first, default tenant, a number of prerequisites and preparations are necessary in the relevant OIDC provider system. One of these preparatory steps is to create an access group named <codeph>OSCM_PLATFORM_OPERATOR</codeph>, which will be mapped to the initial operator organization, <codeph>PLATFORM_OPERATOR</codeph>, in <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    />. The user who is to become the administrator of the initial operator organization must exist at the OIDC provider and be assigned to the <codeph>OSCM_PLATFORM_OPERATOR</codeph> group. At installation time, you specify this administrator in the <codeph>var.env</codeph> configuration file and configure the OIDC provider system as the default tenant.</p>
+        </section>
+    </conbody>
+</concept>

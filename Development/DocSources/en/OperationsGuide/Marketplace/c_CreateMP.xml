@@ -9,9 +9,10 @@
     <conbody>
         <section>
             <p>You are responsible for creating marketplaces for the organizations that want to authorize suppliers, brokers, and resellers to publish their services using the facilities of <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                />. Creating a marketplace includes defining the marketplace properties and assigning an organization as the owner of the marketplace. All administrators of the assigned owner organization automatically receive the marketplace manager role. The marketplace manager role enables them to administrate and customize the marketplace.</p>
-            <p>As a prerequisite for creating a marketplace, the organization to be assigned as the marketplace owner must already exist.</p>
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </p>
+            <p>Creating a marketplace includes defining the marketplace properties and assigning an organization as the owner of the marketplace. All administrators of the assigned owner organization automatically receive the marketplace manager role. The marketplace manager role enables them to administrate and customize the marketplace. As a prerequisite for creating a marketplace, the organization to be assigned as the marketplace owner must already exist.</p>
+            <p>If <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> is operated in OIDC authentication mode, you need to select the tenant to be associated with the new marketplace. Users logging in to the marketplace will be authenticated by the OIDC provider system represented by the tenant. </p>
         </section>
         <section>
             <p><b>To create a marketplace:</b></p>

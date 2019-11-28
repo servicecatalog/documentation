@@ -47,15 +47,17 @@
                                 </p></li>
                         </ul>
                     </p></li>
-                <li>Create a zipped archive file named <codeph>oscm-portal-help.tar.gz</codeph> containing the additional subdirectories for the new language, and copy this archive to the following directory on the Docker host: <p><codeph>/docker/config/oscm-help</codeph></p></li>
+                <li>Create a zipped archive file named <codeph>oscm-portal-help.tar.gz</codeph> containing the additional subdirectories for the new language, and copy this archive to the following directory on the Docker host: <p><codeph>&lt;docker>/config/oscm-help</codeph></p><p><codeph>&lt;docker></codeph> is the <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> data directory on the Docker host</p></li>
                 <li>Stop the <codeph>oscm-help</codeph> container: <p>
-                        <codeblock>docker stop oscm- help</codeblock>
+                        <codeblock>docker stop oscm-help</codeblock>
                     </p></li>
                 <li>Remove the <codeph>oscm-help</codeph> container: <p>
                         <codeblock>docker-compose -f docker-compose-oscm.yml rm oscm-help</codeblock>
                     </p></li>
                 <li>Recreate and restart the <codeph>oscm-help</codeph> container: <p>
-                        <codeblock>docker-compose -f docker-compose--oscm.yml up -d oscm-help</codeblock>
+                        <codeblock>docker-compose -f docker-compose-oscm.yml up -d oscm-help</codeblock>
                     </p><p>By the deployment, existing HTML files are overwritten. </p></li>
             </ol>
             <p>
