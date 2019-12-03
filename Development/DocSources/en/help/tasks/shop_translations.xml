@@ -55,7 +55,7 @@
                         <result>
                                     <p>Your imported changes are saved and instantly visible to visitors of your marketplace. To return to the default texts and undo your changes, you can click <uicontrol>Reset</uicontrol>.</p>
                                     <note><ph id="The_customized_texts_of_the_u_task_taskbody_result_note_ph"
-                                                            >The customized texts of the user interface are visible only in the context of the marketplace for which you have changed them. If you log in using the URL for managing a specific marketplace (<codeph>https://&lt;hostname.fqdn>:8081/oscm-portal?marketplaceId=&lt;mId&gt;</codeph>) you cannot see the texts you change for a different marketplace. If you log in without a marketplace context (<codeph>https://&lt;hostname.fqdn>:8081/oscm-portal</codeph>), you cannot see any customized texts at all.</ph></note>
+                                                            >The customized texts of the user interface are visible only in the context of the marketplace for which you have changed them. If you log in using the URL for managing a specific marketplace (<codeph>https://&lt;host_fqdn>:8081/oscm-portal?marketplaceId=&lt;mId&gt;</codeph>) you cannot see the texts you change for a different marketplace. If you log in without a marketplace context (<codeph>https://&lt;host_fqdn>:8081/oscm-portal</codeph>), you cannot see any customized texts at all.</ph></note>
                         </result>
                         <example><b>To enter or customize the privacy policy and the terms and conditions for a marketplace</b>: <ol
                                                 compact="no">

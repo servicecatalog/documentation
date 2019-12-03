@@ -5,7 +5,9 @@
   <title>Importing Trusted SSL Certificates</title>
   <conbody>
     <section>If you want <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-          /> or your applications to trust certain, possibly self-signed SSL certificates, put them in PEM format into the following directory on your Docker host: <p><codeph>&lt;docker>/config/certs</codeph></p><p><codeph>&lt;docker></codeph> is the base directory on the Docker host that you use for persisting data.</p><p>The <codeph>&lt;docker>/config/certs</codeph> directory is shared by all <ph
+          /> or your applications to trust certain, possibly self-signed SSL certificates, put them in PEM format into the following directory on your Docker host: <p><codeph>&lt;docker>/config/certs</codeph></p><p><codeph>&lt;docker></codeph> is the <ph
+          conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+        /> data directory on the Docker host specified at installation time.</p><p>The <codeph>&lt;docker>/config/certs</codeph> directory is shared by all <ph
           conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
         /> containers. However, you need to restart each container that is to use a new certificate you copy to the directory.</p>For example, if you want to use the VMware service controller, you need to export the vSphere certificate in PEM format and copy it to the <codeph>&lt;docker>/config/certs</codeph> directory. Since the VMware service controller is running in the <codeph>oscm-app</codeph> container, a restart of this container is required.</section>
 

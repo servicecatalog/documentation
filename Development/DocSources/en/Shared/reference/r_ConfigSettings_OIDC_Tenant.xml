@@ -21,7 +21,7 @@
         </section>
         <section>
             <title>oidc.provider</title>
-            <p>The implementation of the OIDC in <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+            <p>The implementation of OIDC in <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                     />. The value must be set to <codeph>default</codeph>.</p>
             <p>Example: </p>
             <p><codeph>oidc.provider=default</codeph></p>
@@ -48,7 +48,8 @@
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> sends single sign-on authentication requests.</p>
             <p>Azure AD example: </p>
-            <p><codeph>oidc.authUrl=https://login.microsoftonline.com/mydomain.onmicrosoft.com/oauth2/v2.0/authorizee</codeph></p>
+            <p><codeph>oidc.authUrl=https://login.microsoftonline.com/mydomain.onmicrosoft.com/oauth2/v2.0/authorize</codeph></p>
+            <p>In the URL, replace <codeph>mydomain</codeph> by the name of your domain.</p>
         </section>
         <section>
             <title>oidc.authUrlScope</title>
@@ -63,22 +64,15 @@
                 /> sends logout requests.</p>
             <p>Azure AD example: </p>
             <p><codeph>oidc.logoutUrl=https://login.microsoftonline.com/mydomain.onmicrosoft.com/oauth2/v2.0/logout</codeph></p>
-            <p>In the URL, replace <codeph>mydomain</codeph> by the name of your domain</p>
+            <p>In the URL, replace <codeph>mydomain</codeph> by the name of your domain.</p>
         </section>
         <section>
             <title>oidc.tokenUrl</title>
             <p>The endpoint at the OIDC provider to which <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> sends requests related to tokens, such as token retrieval, refreshment, or validation.</p>
             <p>Azure AD example: </p>
-            <p><codeph>oidc.tokenUrl=https://login.microsoftonline.com/mydomain.onmicrosoft.com/oauth2/v2.0/tokent</codeph></p>
-            <p>In the URL, replace <codeph>mydomain</codeph> by the name of your domain</p>
-        </section>
-        <section>
-            <title>oidc.uriAppId</title>
-            <p>???</p>
-            <p>Azure AD example: </p>
-            <p><codeph>oidc.uriAppId=https://mydomain.onmicrosoft.com/ef29bb22-369c-424d-9e72-6800ad24239e</codeph></p>
-            <p>In the URL, replace <codeph>mydomain</codeph> by the name of your domain</p>
+            <p><codeph>oidc.tokenUrl=https://login.microsoftonline.com/mydomain.onmicrosoft.com/oauth2/v2.0/token</codeph></p>
+            <p>In the URL, replace <codeph>mydomain</codeph> by the name of your domain.</p>
         </section>
         <section>
             <title>oidc.redirectUrl</title>
@@ -86,7 +80,7 @@
                 /> installation to which the OIDC provider sends its responses.</p>
             <p>Azure AD example: </p>
             <p><codeph>oidc.redirectUrl=https://myhost:9091/oscm-identity/callback</codeph></p>
-            <p>In the URL, replace <codeph>myhost</codeph> by the FQDN or IP address of your <ph
+            <p>In the URL, replace <codeph>myhost</codeph> by the FQDN or IP address of the host to access your <ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> installation.</p>
         </section>
         <section>
@@ -94,7 +88,7 @@
             <p>The URL of the OpenID layer configuration for your domain at the OIDC provider.</p>
             <p>Azure AD example: </p>
             <p><codeph>oidc.configurationUrl=https://login.microsoftonline.com/mydomain.onmicrosoft.com/v2.0/.well-known/openid-configuration</codeph></p>
-            <p>In the URL, replace <codeph>mydomain</codeph> by the name of your domain</p>
+            <p>In the URL, replace <codeph>mydomain</codeph> by the name of your domain.</p>
         </section>
         <section>
             <title>oidc.idpApiUri</title>

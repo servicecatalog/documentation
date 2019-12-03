@@ -21,7 +21,8 @@
           </p>
         </li>
       </ul>
-      <p><codeph>&lt;docker></codeph> is the base directory on the Docker host that you use for persisting data. <codeph>&lt;container-name></codeph> is the name of the relevant <ph
+      <p><codeph>&lt;docker></codeph> is the <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+          /> data directory on the Docker host specified at installation time. <codeph>&lt;container-name></codeph> is the name of the relevant <ph
           conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
           /> container, for example, <codeph>oscm-core</codeph> or <codeph>oscm-app</codeph>. </p>
       <p>The certificate must also be placed into the following directory shared by all containers so that a trusted relationship between the containers is established: </p>

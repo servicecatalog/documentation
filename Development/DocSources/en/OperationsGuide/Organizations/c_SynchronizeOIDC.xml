@@ -15,7 +15,7 @@
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                         /> organizations are synchronized automatically with the corresponding groups at the OIDC provider at daily intervals at the time specified by the <codeph>TIMER_INTERVAL_SYNCHRONIZE_USERS_OFFSET</codeph> configuration setting. As an operator, you can manually synchronize the organizations with the groups at any time.</p>
                         <p>The synchronization registers new group members at the OIDC provider as <ph
-                                        conref="../../../de/Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                         /> users, where they can be assigned roles as required. Obsolete members are removed from the <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                 /> organizations, if possible.</p>

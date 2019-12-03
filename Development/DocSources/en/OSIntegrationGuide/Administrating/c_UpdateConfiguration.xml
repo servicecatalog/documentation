@@ -23,7 +23,9 @@
                                 </ol>
                         </p><p audience="os"><b>To update the controller settings in the APP database:</b></p><p>
                                 <ol compact="no">
-                                        <li>Invoke the instance status interface of APP for the OpenStack service controller of the application by opening it's URL in a Web browser. <p>The access URL has the following format: </p><p><codeph>https://&lt;hostname.fqdn>:&lt;port>/oscm-app-openstack</codeph></p><p><codeph>&lt;hostname.fqdn></codeph> is the name and the fully qualified domain name of the machine where the <codeph>oscm-app</codeph> container has been deployed, <codeph>&lt;port></codeph> is the port to address the machine (default: <codeph>8881</codeph>), <codeph>oscm-app-openstack</codeph> is the default context root of the service controller and cannot be changed. </p></li>
+                                        <li>Invoke the instance status interface of APP for the OpenStack service controller of the application by opening it's URL in a Web browser. <p>The access URL has the following format: </p><p><codeph>https://&lt;host_fqdn>:8881/oscm-app-openstack</codeph></p><p><codeph>&lt;host_fqdn></codeph> is the fully qualified name or IP address of the host used to access <ph
+                                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                            />, <codeph>8881</codeph> is the port of APP. <codeph>oscm-app-openstack</codeph> is the default context root of the service controller and cannot be changed. </p></li>
                                         <li>Log in with the ID and password of the user specified in the configuration settings for the <ph
                                                         audience="os"
                                                         >OpenStack</ph> service controller by the platform operator in the <codeph>BSS_USER_ID</codeph> and <codeph>BSS_USER_PWD</codeph> configuration settings, or as another technology manager registered for the same organization.</li>

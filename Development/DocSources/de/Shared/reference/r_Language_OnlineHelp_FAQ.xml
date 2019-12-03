@@ -46,14 +46,14 @@
                                     </p></li>
                             </ul>
                         </p></li>
-                    <li>Erstellen Sie eine Archivdatei mit dem Namen <codeph>oscm-portal-help.tar.gz</codeph>, die die zusätzlichen Verzeichnisse für die neue Sprache enthält, und kopieren Sie diese Archivdatei in folgendes Verzeichnis auf dem Docker-Host:<p><codeph>/docker/config/oscm-help</codeph></p></li>
+                    <li>Erstellen Sie eine Archivdatei mit dem Namen <codeph>oscm-portal-help.tar.gz</codeph>, die die zusätzlichen Verzeichnisse für die neue Sprache enthält, und kopieren Sie diese Archivdatei in folgendes Verzeichnis auf dem Docker-Host:<p><codeph>&lt;docker>/config/oscm-help</codeph></p></li>
                     <li>Stoppen Sie den Container <codeph>oscm-help</codeph>: <p>
                             <codeblock>docker stop oscm- help</codeblock>
                         </p></li>
                     <li>Entfernen Sie den Container <codeph>oscm-help</codeph>: <p>
                             <codeblock>docker-compose -f docker-compose-oscm.yml rm oscm-help</codeblock>
                         </p></li>
-                    <li>Erstellen Sie den Container <codeph>oscm-help</codeph> erneute und starten Sie ihn: <p>
+                    <li>Erstellen Sie den Container <codeph>oscm-help</codeph> erneut und starten Sie ihn: <p>
                             <codeblock>docker-compose -f docker-compose--oscm.yml up -d oscm-help</codeblock>
                         </p><p>Beachten Sie, dass so bestehende HTML-Dateien überschrieben werden.</p></li>
                 </ol>

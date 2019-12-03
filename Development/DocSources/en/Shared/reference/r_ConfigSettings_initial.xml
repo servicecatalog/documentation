@@ -154,7 +154,7 @@
             <p>
                 <ul>
                     <li><codeph>KEY_SECRET</codeph><p>A string which will be used in the <codeph>bss</codeph> database as a seed for encryption and decryption of service parameters with data type <codeph>PWD</codeph> and custom attributes marked for encryption. Make sure not to forget this string so that your database is persisted. </p><note>Be aware that you must use the same key when updating the database. Otherwise, encryption and decryption is no longer possible after an update. </note></li>
-                    <li><codeph>HOST_FQDN</codeph><p>The fully qualified domain name or IP address of the host to be used to access <ph
+                    <li><codeph>HOST_FQDN</codeph><p>The fully qualified name or IP address of the host used to access <ph
                                 conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </p></li>
                     <li><codeph>REPORT_ENGINEURL</codeph><p>The URL of the report engine used to generate the <ph
                                 platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"

@@ -56,11 +56,12 @@
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> is assigned to a specific tenant when it is created. The initial operator organization is associated with the default tenant. Users trying to log in to a marketplace are authenticated by the OIDC provider of the tenant assigned to the marketplace. For access to the <ph
                 conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> administration portal, the tenant to be used for authentication must be specified in the URL unless it is the default tenant.</p>
             <p><b>Users and Organizations</b></p>
-            <p
-                    id="Every_user_who_is_to_work_in_concept_conbody_section_4_p">Every user who is to work in <ph
-                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> must exist in the respective OIDC provider system. When the operator creates an organization in <ph
-                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>, a corresponding group is automatically created at the given OIDC provider, and the user specified as organization administrator in <ph
-                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> is assigned to it as a member. </p>
+            <p id="Every_user_who_is_to_work_in_concept_conbody_section_4_p">Every user who is to work in <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> must exist in the respective OIDC provider system. When the operator creates an organization in <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    />, a corresponding group is automatically created at the given OIDC provider, and the user specified as the organization administrator in <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> is assigned to it as a member. </p>
             <p id="Additional_group_members_can_concept_conbody_section_4_p"><ph id="Additional_group_members_4_ph"
                         >Additional group members can be admitted or removed at any time at the OIDC provider. The <ph
                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"

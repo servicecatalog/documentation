@@ -36,8 +36,8 @@
                 <li>Register your <ph
                                 conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> installation as an application that connects to  the OIDC provider directory. <p><b>Azure AD example</b>: In the directory under <b>App registrations</b>, create a new registration with the following properties:</p><ul>
                         <li>A name and supported account types of your choice.</li>
-                        <li>Redirect URI: <codeph>https://&lt;host_fqdn&gt;:9091/oscm-identity/callback</codeph>, where <codeph>&lt;host_fqdn&gt;</codeph> is the FQDN or IP address to access your <ph
-                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> installation.</li>
+                        <li>Redirect URI: <codeph>https://&lt;host_fqdn&gt;:9091/oscm-identity/callback</codeph><p><codeph>&lt;host_fqdn&gt;</codeph> is the fully qualified name or IP address of the host to access your <ph
+                                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> installation. </p></li>
                     </ul></li>
                 <li>Copy the ID of the new application for later use in <ph
                                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>. <p><b>Azure AD example</b>: <codeph>ef29bb22-369c-424d-9e72-6800ad24239e</codeph></p></li>

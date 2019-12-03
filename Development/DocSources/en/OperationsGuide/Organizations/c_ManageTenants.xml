@@ -22,7 +22,7 @@
                                 <li>Create a tenant in the <ph
                                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                         /> administration portal.</li>
-                                <li>Download and fill in the template for the configuration file for the new tenant. For details on tenant configuration files, refer to <xref
+                                <li>Download and fill in the template of the configuration file for the new tenant. For details on tenant configuration files, refer to <xref
                                                 href="../../Shared/reference/r_ConfigSettings_OIDC_Tenant.xml"/>.</li>
                                 <li>Store the configuration file on the Docker host where <ph
                                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"

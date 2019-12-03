@@ -42,10 +42,10 @@
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> via email when the marketplace is created. </p>
             <p>The URL has the following format: </p>
-            <p><codeph>https://&lt;hostname.fqdn>:&lt;port>/oscm-portal?marketplaceId=&lt;mId></codeph></p>
-            <p><codeph>&lt;hostname.fqdn></codeph> is the name and the fully qualified domain name of the machine where <ph
+            <p><codeph>https://&lt;host_fqdn>:8081/oscm-portal?marketplaceId=&lt;mId></codeph></p>
+            <p><codeph>&lt;host_fqdn></codeph> is the fully qualified name or IP address of the host used to access <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> has been deployed. <codeph>&lt;port></codeph> is the port to address the machine (default: <codeph>8081</codeph>), <codeph>oscm-portal</codeph> is the default context root of <ph
+                    />, <codeph>8081</codeph> is the port. <codeph>oscm-portal</codeph> is the default context root of <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> and cannot be changed. <codeph>&lt;marketplaceId></codeph> is the ID of the marketplace.</p>
             <p>People who use the URL for accessing a marketplace can view all services that are marked as public. When subscribing to a service, they are either redirected to the registration Web page or they can log in to <ph
@@ -57,7 +57,7 @@
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 />. Registered customers can see all services, no matter whether they are marked as public or not. A registered customer is sent an email with the login data and an initial password to be used for the first login.</p>
             <p>The URL of the registration Web page has the following format: </p>
-            <p><codeph>https://&lt;hostname.fqdn>:&lt;port>/oscm-portal/marketplace/registration.jsf?marketplaceId=&lt;mId></codeph></p>
+            <p><codeph>https://&lt;host_fqdn>:8081/oscm-portal/marketplace/registration.jsf?marketplaceId=&lt;mId></codeph></p>
             <note>The marketplace owner may restrict the access to a marketplace to the users of specific organizations. <ph
                     conref="../../help/tasks/marketplace_manageAccess.xml#task634/When_a_marketplace_small2_ph"/></note>
         </section>

@@ -75,9 +75,13 @@
             </step>
             <step>
                 <cmd>In the <uicontrol>Style sheet URL</uicontrol> field, enter the URL provided by the platform operator pointing to your customized style sheet. </cmd>
-                <info><p>By default, the URL is as follows: </p><p><codeph>https://&lt;hostname.fqdn>:8443/&lt;new-folder-name>/css/mp.css</codeph></p>where <codeph>&lt;hostname.fqdn></codeph> is the name and the fully qualified domain name of the host used to access <ph
-                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        />, and <codeph>&lt;new-folder-name></codeph> is the name of the folder containing the customized files. </info>
+                <info>
+                    <p>By default, the URL is as follows: </p>
+                    <p><codeph>https://&lt;host_fqdn>:8443/&lt;new-folder-name>/css/mp.css</codeph></p>
+                    <p><codeph>&lt;host_fqdn></codeph> is the fully qualified name or IP address of the host used to access <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            />, <codeph>8443</codeph> is the port. <codeph>&lt;new-folder-name></codeph> is the name of the folder containing the customized files. </p>
+                </info>
             </step>
             <step>
                 <cmd>Click <uicontrol>Save</uicontrol> to make the new layout and branding of your marketplace available. </cmd>
