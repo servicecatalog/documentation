@@ -16,11 +16,11 @@
                             /> and the interfacing with a mail server.<p><ph
                             id="is_typically_operated_in_dat_concept_conbody_section_1_p"><ph
                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            /> is provided in Docker images that can be deployed in a container environment such as OpenStack or a Kubernetes cluster.</ph><ph
+                            /> is provided in Docker images that can be deployed in a container environment.</ph><ph
                             id="The_applications_integrated_w_concept_conbody_section_1_p"
                                 >The applications integrated with <ph
                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                /> and their data may be hosted in the Virtual Machine (VM) as <ph
+                                /> and their data may be hosted on the same system (Docker host) as <ph
                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                             /> or in different locations.</ph></p></li>
                 <li>Monitor <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
@@ -29,6 +29,7 @@
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> databases, configuration settings, and log files.</li>
                 <li>Create and manage organizations and users. This includes creating customer, technology provider, supplier, broker, and reseller organizations, importing users from data files provided by their organizations, locking and unlocking user accounts, and resetting the password of users.</li>
+                <li>Create and maintain tenants for user management and authentication in external provider systems.</li>
                 <li>Define revenue shares for marketplace owners, brokers, resellers, and the operator. </li>
                 <li>Create and manage marketplaces. This includes configuring marketplaces, assigning organizations as marketplace owners, and uploading customizations to marketplaces. </li>
                 <li>Add additional language support so that users can work in other languages than the default ones available after installation (English, German, Japanese). The operator can customize or translate the default user interface and email texts, platform objects such as event and parameter names, labels and texts used in reports, as well as the online help topics for the administration portal and the FAQs for the marketplaces.</li>
