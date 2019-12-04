@@ -48,8 +48,8 @@
                         </ul>
                     </p></li>
                 <li>Create a zipped archive file named <codeph>oscm-portal-help.tar.gz</codeph> containing the additional subdirectories for the new language, and copy this archive to the following directory on the Docker host: <p><codeph>&lt;docker>/config/oscm-help</codeph></p><p><codeph>&lt;docker></codeph> is the <ph
-                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        /> data directory specified at installation time.</p></li>
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"/><ph
+                            platform="help">platform's</ph> data directory specified at installation time.</p></li>
                 <li>Stop the <codeph>oscm-help</codeph> container: <p>
                         <codeblock>docker stop oscm-help</codeblock>
                     </p></li>

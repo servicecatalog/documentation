@@ -8,28 +8,34 @@
     <context>
       <p id="On_the_task_taskbody_context_p_1"
         >On the <uicontrol>Create organization</uicontrol> page, you can create an organization and specify its role (technology provider, supplier, reseller, broker, or - implicitly - customer only). For every new organization, you must define a user who is to become its first administrator. This user can later register new users and assign roles to them.</p>
-      <p>OIDC!!!</p>
-      <p>If <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-          /> is operated in OIDC authentication mode, you need to select the tenant to be associated with the new organization. The user specified as the first administrator must exist in the OIDC provider system represented by the tenant and not yet be a member of a different organization related to the same tenant. Together with the organization in <ph
-          conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-        />, a corresponding group is created in the OIDC provider system and the user is assigned to it as a member.</p>
       <p>Depending on the role of the organization to be created, different fields are mandatory. For example, if you create a customer organization by specifying no role at all, this organization must be assigned a marketplace. The marketplace must already exist. For organizations with other roles, no marketplace assignment is required. </p>
       <p><b>User authentication and management</b>:</p>
-      <p>Users are authenticated against the <b>platform</b>: User IDs and passwords of an organization are created and maintained in the platform or in an existing LDAP system of the organization.</p>
-      <p id="UserMgmt2"
-        >When maintained in the platform, the user data is stored in the platform's database. An organization's administrator can register new users, and, if required, request passwords to be reset by the operator. </p>
-      <p id="UserMgmt3"
-        >When using an LDAP system, an organization does not need to register its users manually with the platform. The organization's administrator can import the users from the LDAP system, thus automatically registering them with the platform. The users are managed in the LDAP system. The platform continuously synchronizes its information on the users. Connection settings have to be defined in a configuration file so that the platform can connect to the LDAP system.</p>
-      <p id="UserMgmt4"
-        >A mixture of maintaining users in the platform and in the LDAP system is not supported. In addition, the type of user management can no longer be changed once an organization has been created.</p>
-      <p id="UserMgmt5"
-        >The operator organization cannot use an external LDAP system. So you can always log in to the platform and change connection settings, for example if the LDAP system of an organization is not available and thus authentication against it is not possible.</p>
+      <p>The platform is running in one of  the following modes for authentication users:</p>
+      <ul compact="no">
+        <li>
+          <p><b>INTERNAL</b> mode - users are authenticated by the <b>platform</b>: The user IDs and passwords of an organization are created and maintained in the platform or in an existing LDAP system of the organization.</p>
+          <p id="UserMgmt2"
+            >When maintained in the platform, the user data is stored in the platform's database. An organization's administrator can register new users, and, if required, request passwords to be reset by the operator. </p>
+          <p id="UserMgmt3"
+            >When using an LDAP system, an organization does not need to register its users manually with the platform. The organization's administrator can import the users from the LDAP system, thus automatically registering them with the platform. The users are managed in the LDAP system. The platform continuously synchronizes its information on the users. Connection settings have to be defined in a configuration file so that the platform can connect to the LDAP system.</p>
+          <p id="UserMgmt4"
+            >A mixture of maintaining users in the platform and in the LDAP system is not supported. In addition, the type of user management can no longer be changed once an organization has been created.</p>
+          <p id="UserMgmt5"
+            >The operator organization cannot use an external LDAP system. So you can always log in to the platform and change connection settings, for example if the LDAP system of an organization is not available and thus authentication against it is not possible.</p>
+        </li>
+        <li>
+          <p><b>OIDC</b> mode - users are authenticated based on OpenID Connect against an <b>external provider</b> such as Microsoft Azure Active Directory: The user IDs and passwords of an organization are created and maintained in the OIDC provider system.</p>
+          <p>When creating an organization, you need to assign it to the tenant representing the OIDC provider to use. Be aware that you cannot change the tenant assignment later. The user specified as the first administrator must exist in the OIDC provider system. He is automatically registered with the platform.</p>
+          <p>Together with the organization, a corresponding group is created in the OIDC provider system and the user is assigned to it as a member. Additional group members can then be added at any time in the OIDC provider system. The organization on the platform is synchronized automatically with the corresponding group at the OIDC provider at daily intervals or manually by the operator. New group members are registered with the platform, where they can be assigned user roles as required. For platform operations to work correctly, a specific user can be assigned to exactly one organization and group at a given time. </p>
+        </li>
+      </ul>
       <p><b>To create a new organization</b>:</p>
     </context>
     <steps>
       <step>
-        <cmd>Enter the following user data for the first administrator of the new organization.</cmd>
+        <cmd>Enter the following user data for the first administrator of the new organization, depending on the authentication mode: </cmd>
         <info id="OrgAdmin">
+          <p><b>INTERNAL authentication mode</b>:</p>
           <ul compact="no">
             <li><uicontrol>Title</uicontrol>: Salutation, such as <codeph>MR</codeph> or <codeph>MS</codeph>
             </li>
@@ -37,11 +43,15 @@
             <li><uicontrol>Last name</uicontrol>: The administrator's last name.</li>
             <li><uicontrol>Email</uicontrol>: Email address of the organization's administrator. Notifications about the creation of the account and access information will be sent to this address. <p>The system checks whether the syntax of the given email address is valid, and whether the domain name corresponds to the standards as defined and maintained by the Internet Assigned Numbers Authority (IANA). </p><p>Examples: <codeph>user.name@domain.arpa</codeph>, <codeph>user.name@domain.org</codeph>, <codeph>user@mycompany.lan.uk</codeph></p></li>
             <li><uicontrol>Desired user ID</uicontrol>: User ID of the organization's administrator. User IDs are restricted to 100 characters and must not contain any of the following characters:<p><codeph>! " # $ % &amp; ' * + , / : ; &lt; = &gt; ? \ ^ `</codeph>
-              </p></li>
+              </p><p>If the organization uses an LDAP system for user authentication, the ID of the user to be registered must match an existing ID in this system. </p></li>
             <li><uicontrol>Language</uicontrol>: Language in which the administrator will work by default. The user interface, available documentation, and emails will be presented to the administrator in the language specified here. The list of available languages depends on the languages you registered and activated.<ph audience="doc"> Click <xref
                 href="operator_manageLanguages.xml">here</xref> for details.</ph> </li>
           </ul>
-          <note>If the platform is installed in INTERNAL authentication mode and you create an organization with LDAP-based user management, the user ID must match an existing ID in the external LDAP system. The organization's LDAP configuration determines which additional settings are required. All settings defined in the configuration must be mapped to corresponding values, for example first name, last name, email address, and language.</note>
+          <note>If you create an organization with LDAP-based user management, the user ID must match an existing ID in the external LDAP system. The organization's LDAP configuration determines which additional settings are required. All settings defined in the configuration must be mapped to corresponding values, for example first name, last name, email address, and language.</note>
+          <p><b>OIDC authentication mode</b>: </p>
+          <p>In the <b>Desired user ID</b> field, enter the ID of a user who exists in the OIDC provider system represented by the specified tenant and is not yet a member of a group associated with another organization on the platform. User IDs are restricted to 100 characters and must not contain any of the following characters:</p>
+          <p><codeph>! " # $ % &amp; ' * + , / : ; &lt; = &gt; ? \ ^ `</codeph>
+          </p>
         </info>
       </step>
       <step>
@@ -49,7 +59,7 @@
         <info>The reseller and broker roles cannot be combined with each other or with the technology provider or supplier role. </info>
       </step>
       <step>
-        <cmd>Enter the organization's additional data. Depending on the role of the organization to be created, different fields are available, and different entries are mandatory. </cmd>
+        <cmd>Enter the organization's additional data. Depending on the role of the organization to be created and the platform's authentication mode, different fields are available, and different entries are mandatory. </cmd>
         <info id="OrgUser">
           <p>
             <ul compact="no">
@@ -63,8 +73,9 @@
               <li id="desc"><uicontrol>Description</uicontrol>: Description of the organization, for example information from the company's profile. <p>
                   <note>Make sure to use only the controls provided in the editor for formatting your text. Manually entered HTML tags and references to external style sheets or content may result in errors in the page layout.</note>
                 </p></li>
+              <li>For OIDC authentication mode: The <b>Tenant</b> representing the OIDC provider system that is to be associated with the organization. You can select one of the tenants defined for the platform. Be aware that you cannot change the tenant assignment later. The emails sent to the users of the organization will contain the URL of a marketplace or an administration portal specific to the tenant. The user specified as the first organization administrator must exist in the OIDC provider system. Together with the organization, a corresponding group is created in the OIDC provider system and the user is assigned to it as a member. </li>
               <li id="mp"
-                ><uicontrol>Marketplace</uicontrol> to which users of this organization are to be directed. You can select one of the marketplaces to which you have been granted access by the marketplace owner.</li>
+                ><uicontrol>Marketplace</uicontrol> to which users of this organization are to be directed. With INTERNAL authentication mode, you can select one of the marketplaces to which you have been granted access by the marketplace owner. With OIDC authentication mode, the selection list contains the marketplaces associated with the specified tenant.</li>
               <li id="supp"
                   >For a supplier organization: <b>Default operator rev. share (%)</b>. This is the revenue share agreed between the operator and the supplier, which the operator is to receive from the supplier for selling services on the marketplaces managed on the operator's platform. The default operator revenue share applies to all services offered by the supplier as long as you do not define a service-specific revenue share using the <b>Manage operator revenue share</b> menu option in the <b>Operation</b> menu. It also applies irrespective of whether the supplier sells his services himself, or uses brokers or resellers for selling them. Discounts granted by a supplier to his customers are deducted from the revenue share. </li>
               <li id="other">For a technology provider, supplier, reseller, and/or broker organization:<p><uicontrol>Profile image</uicontrol>: Image used on a marketplace. The profile image is shown as soon as a customer requests details of a service provided by this organization. </p><p>Click in the <uicontrol>Upload image</uicontrol> field or click <uicontrol>Browse</uicontrol>, and select the file containing the desired image. Supported file formats are GIF, JPG, and PNG. The maximum size of the profile image is 154 x 154 pixels. The recommended size is 154 x 60 pixels. </p></li>
@@ -73,7 +84,7 @@
         </info>
       </step>
       <step>
-        <cmd>Define if the organization is to use LDAP-based user management by selecting the corresponding checkbox. </cmd>
+        <cmd>For INTERNAL authentication mode: Define if the organization is to use LDAP-based user management by selecting the corresponding checkbox. </cmd>
         <info>When enabled, a table with the LDAP settings defined for the platform is shown. You must then specify the LDAP configuration file containing the settings required for connecting with the organization's LDAP system:<p>Create an LDAP configuration file on your file system, and define the LDAP connection settings in the file. To load the configuration file, click the <uicontrol>LDAP settings</uicontrol> entry field or <uicontrol>Browse</uicontrol>, and select the file containing the settings. </p><p>Here is a sample configuration file: </p>
           <p id="LDAPSample">
             <codeblock>LDAP_BASE_DN=ou\=people,dc\=est,dc\=mycompany,dc\=de
@@ -92,21 +103,18 @@ LDAP_ATTR_REFERRAL=ignore</codeblock>
     </steps>
     <result>
       <p id="The_new_organization_is_creat_task_taskbody_result_p"
-        >The organization is created with the specified administrator account. The administrator is notified by email that his account has been created. The email contains the URL for accessing the platform or the marketplace, as well as a user ID and password for the first login. </p>
-      <p>If the administrator's organization uses an external authentication system:</p>
-      <p>
-        <ul>
-          <li>Passwords are managed in this system. Therefore, the administrator is sent an email without a password. The password stored in the external authentication system must be used for logging in.</li>
-          <li>If the user ID of the administrator already exists in the platform, his email address (e.g. <codeph>userSmith@organization.com</codeph>) is used as user ID for logging in to the system. If yet another organization is created and the user ID of the administrator is again identical, the new user ID is constructed using the existing ID followed by the "at" sign (@) and the ID of the administrator's  organization (e.g. <codeph>userSmith@abcdefg</codeph>). The administrator is sent an email with the respective user ID.</li>
-        </ul>
-      </p>
+        >The organization is created with the specified administrator account. The administrator is notified by email that his account has been created. The email contains the URL for accessing the platform or the marketplace as well as the credentials for logging in depending on the authentication mode:</p>
+      <ul compact="no">
+        <li>INTERNAL authentication mode: <p>If the users are managed by the platform, the credentials consist of the user ID and the password for the first login. </p><p>If the users are managed in an LDAP system, the credentials consist of the user ID only. The password set in the LDAP system must be used for logging in. </p><p>If the user ID of the administrator already exists in the platform, his email address (e.g. <codeph>userSmith@organization.com</codeph>) is used as the user ID for logging in. If yet another organization is created with the same administrator ID, a new user ID is constructed using the existing ID followed by the "at" sign (@) and the ID of the administrator's organization (e.g. <codeph>userSmith@abcdefg</codeph>). The administrator is sent an email with the respective user ID.</p></li>
+        <li>OIDC authentication mode:<p>The credentials consist of the user ID only. The password set in the OIDC provider system must be used for logging in.</p></li>
+      </ul>
       <p>The default organizational unit of the organization is also created. The administrator is the first member of this default unit. Any user who will be registered for the organization is automatically added to the default unit. Additional units can be created by the administrators of the organization.</p>
     </result>
   </taskbody>
   <related-links>
     <linklist>
       <title>Related topics</title>
-      <!--link href="../tasks/operator_manageTenants.xml"/-->
+      <link href="../tasks/operator_manageTenants.xml"/>
       <link href="../../Shared/reference/r_LDAP_SettingTypes.xml"/>
       <link href="../tasks/operator_manageLdapSettings.xml"/>
       <link href="operator_manageOperatorRevenueShare.xml"/>

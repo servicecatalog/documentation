@@ -68,6 +68,8 @@
                         /> organizations are synchronized automatically with the corresponding groups at the OIDC provider at daily intervals or manually by the operator. New group members are registered as <ph
                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> users, where they can be assigned user roles as required.</ph></p>
+            <p>For <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> operations to work correctly, a specific user can be assigned to exactly one organization and group at a given time. </p>
         </section>
         <section/>
     </conbody>

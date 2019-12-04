@@ -7,6 +7,7 @@
     <taskbody>
         <context>
             <p>On the <uicontrol>Register new users</uicontrol> page, you can register new users for your organization and define their user roles. You can also register multiple users with the administrator and/or manager roles in one operation by importing a user data file. This is possible, if your organization does not use LDAP for user authentication. If your organization uses LDAP for user authentication, you can import them from the LDAP system using the <b>Import users</b> option and thus register them. </p>
+            <note>You can register users even if your organization uses an external OIDC provider such as Microsoft Azure Active Directory for user management and authentication. Be aware, however, that the users will be removed again with the next synchronization with the external provider.</note>
             <p>The role of your organization determines which roles can be assigned to the users. The user roles control the actions a user is allowed to execute:<ul
                     compact="no">
                     <li><ph

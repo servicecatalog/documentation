@@ -8,7 +8,8 @@
     <refbody>
         <section>
             <p>Reports are generated in the language the user has set in his profile. The texts used in the reports are provided after installation in properties files contained in a separate archive file in the <codeph>oscm-birt</codeph> container. </p>
-            <p><codeph>oscm-reports.zip</codeph> ### true? ###</p>
+            <p><codeph>oscm-reports.zip</codeph>
+            </p>
             <p>It contains the following properties files: </p>
             <p>
                 <ul>

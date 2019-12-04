@@ -8,39 +8,46 @@
         <title>Prerequisites at the OIDC Provider</title>
         <conbody>
                 <section>
-            <p>Before you can install <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> in OIDC authentication mode and/or create a tenant, a number of prerequisites and preparations are required in the relevant OIDC provider system.</p>
+            <p>Before you can install <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"
+                    /><ph platform="help"
+                >the platform</ph> in OIDC authentication mode and/or create a tenant, a number of prerequisites and preparations are required in the relevant OIDC provider system.</p>
         </section>
         <section
                     id="The_prerequisites_are_specifi_concept_conbody_section_2">
             <p>The prerequisites are specific to the OIDC provider. The following descriptions use Microsoft Azure Active Directory (Azure AD) as an example. If you intend to work with a different OIDC provider, please contact your <ph
-                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> support organization for details. </p>
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"
+                /> support organization for details. </p>
             <p>The following prerequisites and preparations are required at the OIDC provider:</p>
             <ol
                         compact="no">
                 <li>An account and domain must exist to which you have access as an administrator. <p><b>Azure AD example</b>: domain <codeph>mydomain.onmicrosoft.com</codeph></p></li>
                 <li>A directory must exist in the domain, which contains at least all the users who are to work with <ph
-                                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>.<p><b>Azure AD example</b>: directory <codeph><ph
-                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>Org</codeph></p></li>
+                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"/><ph platform="help"
+                        >the platform</ph>.<p><b>Azure AD example</b>: directory <codeph><ph
+                                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>Org</codeph></p></li>
                 <li>Relevant only for the first deployment of <ph
-                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        />: Create an access group named <codeph>OSCM_PLATFORM_OPERATOR</codeph> in the directory, and add the user who is to become the initial <ph
-                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            /> administrator as a member to the group.<p><b>Azure AD example</b>: Create a security group, <codeph>OSCM_PLATFORM_OPERATOR</codeph>, in the directory <codeph><ph
+                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"/><ph platform="help"
+                        >the platform</ph>: Create an access group named <codeph>OSCM_PLATFORM_OPERATOR</codeph> in the directory, and add the user who is to become the initial <ph
+                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"/><ph platform="help"
+                        >platform</ph> administrator as a member to the group.<p><b>Azure AD example</b>: Create a security group, <codeph>OSCM_PLATFORM_OPERATOR</codeph>, in the directory <codeph><ph
                                 conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                             />Org</codeph>. Add the initial administrator, e.g. <codeph product="oscm_ce"
                             >oscmadmin@mydomain.onmicrosoft.com</codeph><codeph product="oscm_ee"
-                            >escmadmin@mydomain.onmicrosoft.com</codeph>, as a member.</p><note>Organizations in <ph
-                            conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        /> are mapped to groups at the OIDC provider. Each user can be a member of exactly one group only.</note></li>
-                <li>Register your <ph
-                                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> installation as an application that connects to  the OIDC provider directory. <p><b>Azure AD example</b>: In the directory under <b>App registrations</b>, create a new registration with the following properties:</p><ul>
+                            >escmadmin@mydomain.onmicrosoft.com</codeph>, as a member.</p><note>Organizations <ph
+                            platform="print">in <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                            platform="help"
+                        >on the platform</ph> are mapped to groups at the OIDC provider. Each user can be a member of exactly one group only.</note></li>
+                <li>Register your <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"/><ph
+                        platform="help"
+                            >platform</ph> installation as an application that connects to the OIDC provider directory. <p><b>Azure AD example</b>: In the directory under <b>App registrations</b>, create a new registration with the following properties:</p><ul>
                         <li>A name and supported account types of your choice.</li>
                         <li>Redirect URI: <codeph>https://&lt;host_fqdn&gt;:9091/oscm-identity/callback</codeph><p><codeph>&lt;host_fqdn&gt;</codeph> is the fully qualified name or IP address of the host to access your <ph
-                                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> installation. </p></li>
+                                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"/><ph
+                                    platform="help">platform</ph> installation. </p></li>
                     </ul></li>
-                <li>Copy the ID of the new application for later use in <ph
-                                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>. <p><b>Azure AD example</b>: <codeph>ef29bb22-369c-424d-9e72-6800ad24239e</codeph></p></li>
+                <li>Copy the ID of the new application for later use <ph platform="print">in <ph
+                            conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                        >on the platform</ph>. <p><b>Azure AD example</b>: <codeph>ef29bb22-369c-424d-9e72-6800ad24239e</codeph></p></li>
                 <li>Grant the application read and write permissions for the directory, users, and groups.<p><b>Azure AD example</b>: In the properties of the new app, under <b>API permissions</b>:</p><ol>
                         <li>
                             <p>Add the following permissions as both, <b>Delegated permissions</b> and <b>Application permissions</b>: <codeph>User.Read.All</codeph>, <codeph>Group.ReadWrite.All</codeph>, <codeph>Directory.ReadWrite.All</codeph>. </p>
@@ -52,15 +59,19 @@
                     </ol>
                 </li>
                 <li>Obtain a client certificate or secret string for <ph
-                            conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> to access the directory.<p><b>Azure AD example</b>: In the properties of the new app, under <b>Certificates and secrets</b>, add a new client secret. Copy the new secret for later use in <ph
-                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</p></li>
-                <li>Allow <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> to obtain tokens for authentication from the OIDC provider.<p><b>Azure AD example</b>: In the properties of the new app, under <b>Authentication</b>, enable <b>Access tokens</b> and <b>ID tokens</b> to be issued by the authorization endpoint. </p></li>
+                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"/><ph platform="help"
+                        >the platform</ph> to access the directory.<p><b>Azure AD example</b>: In the properties of the new app, under <b>Certificates and secrets</b>, add a new client secret. Copy the new secret for later use <ph
+                            platform="print">in <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                            platform="help">on the platform</ph>.</p></li>
+                <li>Allow <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"/><ph
+                        platform="help"
+                            >the platform</ph> to obtain tokens for authentication from the OIDC provider.<p><b>Azure AD example</b>: In the properties of the new app, under <b>Authentication</b>, enable <b>Access tokens</b> and <b>ID tokens</b> to be issued by the authorization endpoint. </p></li>
             </ol>
         </section>
         <section>
-            <p>You can now create and configure a tenant in <ph
-                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> based on the items and settings in the OIDC provider system.</p>
+            <p>You can now create and configure a tenant in <ph platform="print">in <ph
+                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                    >on the platform</ph> based on the items and settings in the OIDC provider system.</p>
         </section>
         </conbody>
 </concept>

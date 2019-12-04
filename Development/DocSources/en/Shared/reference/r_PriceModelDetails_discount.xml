@@ -11,8 +11,8 @@
             </p>
             <p><ph id="The_discount_is_defined_as_a_reference_refbody_section_p"
                     >The discount is defined as a percentage that is subtracted from the regular total price for a subscription. It is granted for all costs of a customer that incur in a billing period in which the discount is valid. It does not matter whether the discount is valid for the whole billing period or only a part of it.</ph></p>
-            <p id="A_discount_is_completely_inde_reference_refbody_section_p" platform="print"><ph
-                    id="A_discount_is_completely_inde_reference_refbody_section_p"
+            <p id="A_discount_is_completely_inde_reference_refbody_section_p"><ph
+                    id="A_discount_is_completely_inde_reference_ph"
                     >A discount is completely independent of what a customer might purchase.</ph> If a discount is changed, the new discount is valid the next time the billing data is generated. Usually, a discount is only changed in agreement with the relevant customer.</p>
             <p>Discounts can be granted to a supplier's direct customers. They are not supported for customers of resellers and brokers who offer and sell the supplier's services.</p>
             <p>Note that discounts are deducted from any agreed revenue shares.</p>

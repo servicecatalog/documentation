@@ -19,8 +19,12 @@
                                         /> users, where they can be assigned roles as required. Obsolete members are removed from the <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                 /> organizations, if possible.</p>
-                        <note>In <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                />, users can be manually added to or removed from organizations. However, such changes will be undone with the next synchronization with the OIDC provider system.</note>
+                        <note>
+                                <p>For <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        /> operations to work correctly, a specific user can be assigned to exactly one organization and group at a given time. </p>
+                                <p>In <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        />, users can be manually added to or removed from organizations. However, such changes will be undone with the next synchronization with the OIDC provider system.</p>
+                        </note>
                         <p><b>To manually synchronize <ph
                                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                         /> organizations with groups at the OIDC provider:</b></p>
