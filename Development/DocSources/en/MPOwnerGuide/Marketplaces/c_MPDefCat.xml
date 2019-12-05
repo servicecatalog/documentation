@@ -14,8 +14,8 @@
             <p><ph
                     conref="../../help/tasks/marketplace_manageCategories.xml#task634/As_a_marketplace_owner_you_c_task_taskbody_context_p_3_ph"
                 /></p>
-            <p>As a marketplace owner, you can decide to use the defined categories for grouping the services displayed on the marketplace home page.<ph audience="doc"> For details, refer to <xref
-                    href="../Marketplaces/c_MPDefFeatServ.xml"/>.</ph></p>
+            <p>As a marketplace owner, you can decide to use the defined categories for grouping the services displayed on the marketplace home page. For details, refer to <xref
+                    href="../Marketplaces/c_MPDefFeatServ.xml"/>.</p>
             <p><ph
                     conref="../../help/tasks/marketplace_manageCategories.xml#task634/A_category_can_be_provided_in_task_taskbody_context_p_4_ph"
                 />

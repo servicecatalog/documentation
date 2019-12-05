@@ -10,7 +10,7 @@
                     >On the <uicontrol>Customize layout</uicontrol> page, you can specify a style sheet that defines the branding and layout of a marketplace, i.e. the colors, fonts, background images, and logos. <ph
                     id="The_best_way_to_create_an_app_task_taskbody_context_p_1_ph"
                     >The best way to create an appropriate style sheet is to use the platform's default style sheet as a basis and adapt it as required. </ph></p>
-            <p id="On_the_task_taskbody_context_p_1"><ph id="The_best_way_to_create_an_app_task_taskbody_context_p_1_ph"
+            <p id="On_the_task_taskbody_context_p_1"><ph id="You_then_provide_task_taskbody_context_p_2_ph"
                         >You then provide the customized style sheet and the files it references to the platform operator so that he can make them available in the <codeph>oscm-branding</codeph> container. When the operator is finished, he can provide the URL to the style sheet that can then be specified <ph
                         platform="print">in <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                         /></ph><ph platform="help"
