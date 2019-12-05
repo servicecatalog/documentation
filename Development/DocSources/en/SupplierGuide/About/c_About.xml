@@ -64,11 +64,6 @@
                                     /> with an external process control system.</entry>
                             </row>
                             <row>
-                                <entry colname="col2"><xref href="../Reference/r_MenuOptions.xml"/></entry>
-                                <entry colname="col3"
-                                    >Gives an overview of the menu options relevant for suppliers.</entry>
-                            </row>
-                            <row>
                                 <entry colname="col2"><xref href="../../Shared/reference/r_LDAP_SettingTypes.xml"
                                     /></entry>
                                 <entry colname="col3"

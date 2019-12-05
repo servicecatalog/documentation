@@ -20,7 +20,7 @@
         </li>
         <li>
           <p><b>OIDC</b> mode - users are authenticated against an <b>external provider</b> such as Microsoft Azure Active Directory: The user IDs and passwords of an organization are created and maintained in the OIDC provider system.</p>
-          <p>When registering a customer and thus creating an organization, you need to specify a marketplace, which is associated with a specific OIDC provider. The user specified as the first administrator must exist in the OIDC provider system. He is automatically registered with the platform.</p>
+          <p>When registering a customer and thus creating an organization, you need to specify a marketplace, which is associated with a specific OIDC provider. The user entered as the first administrator must exist in the OIDC provider system. He is automatically registered with the platform.</p>
           <p>Together with the organization, a corresponding group is created in the OIDC provider system and the user is assigned to it as a member. Additional group members can then be added at any time in the OIDC provider system. The organization on the platform is synchronized automatically with the corresponding group at the OIDC provider.  </p>
         </li>
       </ul>

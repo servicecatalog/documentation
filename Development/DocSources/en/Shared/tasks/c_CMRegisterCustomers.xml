@@ -10,11 +10,33 @@
         <section id="You_can_register_your_custome_concept_conbody_section_1">
             <p>You can register customers with <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> so that they do not need to do this themselves. The new customer automatically receives the login information that enables him to access the given marketplace and subscribe to services.</p>
-            <p>Registering a customer includes entering the following user data for the first administrator of the new customer organization:</p>
+            <p>The information and steps required to register a new customer organization and its first administrator depend on how the <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> user authentication and management is configured:</p>
+            <ul compact="no">
+                <li>
+                    <p><b>INTERNAL</b> mode - users are authenticated by <ph
+                            conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            />: The user IDs and passwords of the customer organization are created and maintained in <ph
+                            conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> or in an existing LDAP system of the organization. The use of an LDAP system requires additional configuration steps described in <xref
+                            href="c_CMUseLDAP.xml"/>.</p>
+                </li>
+                <li>
+                    <p><b>OIDC</b> mode - users are authenticated against an external provider such as Microsoft Azure Active Directory: The user IDs and passwords of an organization are created and maintained in the OIDC provider system.</p>
+                    <p>When registering a customer organization, you need to select a marketplace which is associated with a specific OIDC provider. The user you specify as the first administrator must exist in the OIDC provider system. He is automatically registered as a user in <ph
+                            conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            />. Together with the customer organization, a corresponding group is created in the OIDC provider system and the user is assigned to it as a member. Additional group members need to be added in the OIDC provider system. The organization in <ph
+                            conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> is synchronized automatically with the group at the OIDC provider. </p>
+                </li>
+            </ul>
+            <p>If you need more details about user authentication and management, contact your platform operator.</p>
+            <p>Depending on the user authentication mode, registering a customer includes entering the following user data for the first administrator of the new customer organization:</p>
             <ul>
+                <li><b>User ID</b> of the administrator.</li>
                 <li><b>Title</b>, <b>first name</b>, and <b>last name</b> of the administrator.</li>
                 <li><b>Email address</b> that is used for notifying the customer about the registration.</li>
-                <li><b>User ID</b> to be used for the administrator.</li>
                 <li><b>Language</b> in which the user interface, available documentation, and emails are presented to the administrator.</li>
             </ul>
             <p>Registering a customer includes entering the data for the new organization:</p>

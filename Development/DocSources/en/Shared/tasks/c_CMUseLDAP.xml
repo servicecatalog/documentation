@@ -5,12 +5,12 @@
 ]>
 
 <concept id="concept_3413BBD173324104B42FB714974CABE7" xml:lang="en-us">
-        <title>Configuring an External User Authentication System</title>
+        <title>Configuring an LDAP System for User Authentication</title>
         <conbody>
                 <section>
-                        <p>Instead of maintaining user IDs and passwords in <ph
+                        <p>Depending on the configuration of <ph
                                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                        />, your customer may want to connect to his organization's own identity management system for user authentication. <ph
+                                        />, you can allow your customer to connect to his organization's own identity management system for user authentication. <ph
                                         conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                                 /> supports user authentication against remote LDAP systems via secure VPN connections.</p>
                         <p>When using an LDAP system, your customer does not need to register his users manually with <ph
