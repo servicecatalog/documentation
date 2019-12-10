@@ -12,7 +12,7 @@
             <p><b>To provide templates:</b></p>
             
                     <ol>
-                            <li>Invoke the instance status interface of APP for the Openstack service controller of the application by opening it's URL in a Web browser. <p>The access URL has the following format: </p><p><codeph>https://&lt;host_fqdn>:8881/oscm-app-openstack</codeph></p><p><codeph>&lt;host_fqdn></codeph> is the fully qualified name or IP address of the host used to access <ph
+                            <li>Invoke the instance status interface of APP for the Openstack service controller by opening it's URL in a Web browser. <p>The access URL has the following format: </p><p><codeph>https://&lt;host_fqdn>:8881/oscm-app-openstack</codeph></p><p><codeph>&lt;host_fqdn></codeph> is the fully qualified name or IP address of the host used to access <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                             />, <codeph>8881</codeph> is the port of APP. <codeph>oscm-app-openstack</codeph> is the default context root of the service controller and cannot be changed. </p></li>
                             <li>Log in with the ID and password of the user specified in the configuration settings for the OpenStack service controller (<codeph>BSS_USER_ID</codeph> and <codeph>BSS_USER_PWD</codeph>) or as another technology manager registered for the same organization.</li>

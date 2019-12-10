@@ -8,7 +8,7 @@
   <conbody>
     <section>
       <p><b>This topic is used for sharing parts for the IaaS controller implementations.</b>
-            </p>
+      </p>
       <p id="cmp1">In <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
           />, customer subscriptions are managed by means of the <b>Subscription service</b>. When a customer <ph
           audience="shell">creates or terminates </ph><ph audience="aws">creates or terminates </ph><ph audience="os"
@@ -32,9 +32,15 @@
           conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
           /> in asynchronous mode. The actual communication with the applications is carried out by service controllers. <ph
           audience="app"
-            >For each application, a specific and dedicated service controller is required. Refer to the <i>Technology Provider's Guide</i> for details on APP.</ph>
-      </p>
-     
+          >For each application, a specific and dedicated service controller is required. </ph>When APP is deployed (<codeph>oscm-app</codeph> container), <ph
+          audience="shell">a Shell service controller</ph><ph audience="aws">an AWS service controller</ph><ph
+          audience="os">an OpenStack service controller</ph><ph audience="vmware">a VMware service controller</ph><ph
+          audience="azure"
+          >an Azure service controller</ph> is also deployed and initialized. It is preconfigured and registered with APP. This service controller can be used for integrating <ph
+          audience="shell">a Shell</ph><ph audience="aws">AWS services</ph><ph audience="os">OpenStack services</ph><ph
+          audience="vmware">vSphere services</ph><ph audience="azure">Azure services</ph> with <ph
+          conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+          />. Refer to the <i>Technology Provider's Guide</i> for details on APP.</p>
     </section>
   </conbody>
 </concept>

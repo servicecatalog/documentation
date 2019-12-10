@@ -30,18 +30,6 @@
                             <entry>Infrastructure as a Service</entry>
                         </row>
                         <row>
-                            <entry><b>IdP</b></entry>
-                            <entry>SAML Identity Provider</entry>
-                        </row>
-                        <row>
-                            <entry><b>SAML</b></entry>
-                            <entry>Security Assertion Markup Language</entry>
-                        </row>
-                        <row>
-                            <entry><b>STS</b></entry>
-                            <entry>Security Token Service</entry>
-                        </row>
-                        <row>
                             <entry><b>VM</b></entry>
                             <entry>Virtual Machine</entry>
                         </row>

@@ -19,7 +19,7 @@
                                                         />. Usually, you can use the name of the VM Network in vSphere: <codeph>VM Network</codeph>.</li>
                                 </ul>
                         </p>
-                        <p>In addition, you can upload <codeph>.csv</codeph> files containing an entire vSphere configuration matching your environment, for example, if you want to use several databases or clusters for the provisioning of VMs, into the <codeph>vmware</codeph> database. Usually, you do not need to change these settings once they have been imported into the database. </p>
+                        <p>In addition, you can upload <codeph>.csv</codeph> files containing an entire vSphere configuration matching your environment  into the <codeph>vmware</codeph> database, for example, if you want to use several databases or clusters for the provisioning of VMs. Usually, you do not need to change these settings once they have been imported into the database. </p>
                         <p>There are the following types of <codeph>.csv</codeph> files: <ul>
                                         <li><codeph>vCenter</codeph>: Defines the URL and user credentials for accessing the vSphere server. For security reasons, it is recommended to delete the file as soon as you have successfully installed and configured the vSphere integration software. </li>
                                         <li><codeph>DataCenter</codeph>: Defines one or several data centers of the vSphere installation.</li>
@@ -39,7 +39,7 @@
                                         <li>Invoke the instance status interface of APP for the VMware service controller by opening its URL in a Web browser. <p>The access URL has the following format: </p><p><codeph>https://&lt;host_fqdn&gt;:8881/oscm-app-vmware</codeph></p><p><codeph>&lt;host_fqdn></codeph> is the fully qualified name or IP address of the host used to access <ph
                                                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                                             />, <codeph>8881</codeph> is the port of APP. <codeph>oscm-app-vmware</codeph> is the default context root of the service controller and cannot be changed. </p></li>
-                                        <li>Log in with the ID and password of the user specified in the configuration settings for the VMware service controller by the platform operator in the <codeph>BSS_USER_ID</codeph> and <codeph>BSS_USER_PWD</codeph> configuration settings, or as another technology manager registered for the same organization.</li>
+                                        <li>Log in with the ID and password of the user specified in the configuration settings for the VMware service controller (<codeph>BSS_USER_ID</codeph> and <codeph>BSS_USER_PWD</codeph>) or as another technology manager registered for the same organization.</li>
                                         <li>Set the following vSphere-specific settings: <p>
                                                         <ul>
                                                             <li><b><b>Connection URL</b></b>: The URL for accessing the vSphere API.</li>
@@ -59,7 +59,7 @@
                                         <li>Invoke the instance status interface of APP for the VMware service controller by opening its URL in a Web browser. <p>The access URL has the following format: </p><p><codeph>https://&lt;host_fqdn&gt;:8881/oscm-app-vmware</codeph></p><p><codeph>&lt;host_fqdn></codeph> is the fully qualified name or IP address of the host used to access <ph
                                                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                                             />, <codeph>8881</codeph> is the port of APP. <codeph>oscm-app-vmware</codeph> is the default context root of the service controller and cannot be changed. </p></li>
-                                        <li>Log in with the ID and password of the user specified in the configuration settings for the VMware service controller by the platform operator in the <codeph>BSS_USER_ID</codeph> and <codeph>BSS_USER_PWD</codeph> configuration settings, or as another technology manager registered for the same organization.</li>
+                                        <li>Log in with the ID and password of the user specified in the configuration settings for the VMWare service controller (<codeph>BSS_USER_ID</codeph> and <codeph>BSS_USER_PWD</codeph>) or as another technology manager registered for the same organization.</li>
                                         <li>In the vSphere-specific settings sections, click a cluster name. <p>You can now see the current cluster configuration, and, if defined, any VLANs together with the corresponding IPPool settings.</p></li>
                                 </ol>
                         </p>

@@ -18,14 +18,14 @@
                 /> need to be synchronized accordingly. You do this by triggering a corresponding action in the APP component. Proceed as follows:</p>
                                     <ol>
                                                 <li>Work as a technology manager of the technology provider organization responsible for the Shell service controller. </li>
-                <li>Invoke the instance status interface of APP for the service controller of the application by opening its URL in a Web browser. <p>The access URL has the following format: </p><p><codeph>https://&lt;host_fqdn>:8881/oscm-app/controller/?controllerid=ess.shell</codeph></p><p><codeph>&lt;host_fqdn></codeph> is the fully qualified name or IP address of the host used to access <ph
+                <li>Invoke the instance status interface of APP for the service controller by opening its URL in a Web browser. <p>The access URL has the following format: </p><p><codeph>https://&lt;host_fqdn>:8881/oscm-app/controller/?controllerid=ess.shell</codeph></p><p><codeph>&lt;host_fqdn></codeph> is the fully qualified name or IP address of the host used to access <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                             />, <codeph>8881</codeph> is the port of APP. <codeph>oscm-app/controller/?controllerid=ess.shell</codeph> is the default context root of the service controller and cannot be changed. </p><p>The Web page shows all subscriptions for the application, including detailed information such as the customer organization, the ID of the related application instance, and the provisioning status. </p></li>
                                         <li>Find the subscription for which you solved the problem in the most recent operation. </li>
                                                 <li>In the <b>Action</b> column, select the action for the Shell integration components to execute next. Possible actions are the following:<ul>
                         <li><codeph>RESUME</codeph> - to resume the processing of a provisioning operation in APP which was suspended.</li>
                         <li><codeph>SUSPEND</codeph> - to suspend the processing of a provisioning operation in APP, for example, when a Shell script does not respond. </li>
-                        <li><codeph>UNLOCK</codeph> - to remove the lock for an instance instance in APP.</li>
+                        <li><codeph>UNLOCK</codeph> - to remove the lock for an instance in APP.</li>
                         <li><codeph>DELETE</codeph> - to terminate the subscription in <ph
                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                             /> and remove the instance in APP, but keep a virtual system for later use. The service manager role is required for this action.</li>

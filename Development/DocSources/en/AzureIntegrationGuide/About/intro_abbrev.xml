@@ -34,10 +34,6 @@
                             <entry>Infrastructure as a Service</entry>
                         </row>
                         <row>
-                            <entry><b>IdP</b></entry>
-                            <entry>SAML Identity Provider</entry>
-                        </row>
-                        <row>
                             <entry><b>JSON</b></entry>
                             <entry>JavaScript Object Notation</entry>
                         </row>
@@ -45,14 +41,6 @@
                             <entry><b><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></b>
                             </entry>
                             <entry><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Name"/></entry>
-                        </row>
-                        <row>
-                            <entry><b>SAML</b></entry>
-                            <entry>Security Assertion Markup Language</entry>
-                        </row>
-                        <row>
-                            <entry><b>STS</b></entry>
-                            <entry>Security Token Service</entry>
                         </row>
                         <row>
                             <entry><b>WSDL</b></entry>

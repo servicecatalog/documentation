@@ -73,10 +73,6 @@
                             <entry>Software as a Service</entry>
                         </row>
                         <row>
-                            <entry><b>SAML</b></entry>
-                            <entry>Security Assertion Markup Language</entry>
-                        </row>
-                        <row>
                             <entry><b>SOAP</b>
                             </entry>
                             <entry>Simple Object Access Protocol</entry>

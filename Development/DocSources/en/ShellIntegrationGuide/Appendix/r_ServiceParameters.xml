@@ -166,7 +166,7 @@
           <tbody>
             <row>
               <entry>
-                <p><b>&lt;freely definable service parameter</b></p>
+                <p><b>&lt;freely definable service parameter></b></p>
                 <p>Optional. Any number of parameters that are mapped from the parameters defined in the Shell script files. For each parameter in the script file, a corresponding parameter must be specified in the technical service definition.</p>
                 <p>All service parameters are patched into the script file at the top of the file. For example, a service parameter called <codeph>MY_PARAM</codeph> can be used as <codeph>$MY_PARAM</codeph> in the script file. </p>
                 <p>Parameters are used for passing data for script execution, for example, number of allowed transactions, number of bookable CPUs, etc. </p>

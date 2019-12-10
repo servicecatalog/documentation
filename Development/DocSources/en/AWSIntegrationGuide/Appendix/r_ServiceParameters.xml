@@ -244,7 +244,7 @@
       <title>Service Operations for Virtual Servers</title>
       <p>The AWS service controller supports the service operations below for virtual servers. </p>
       <p>The <codeph>actionURL</codeph> for each operation is:</p>
-      <p><codeblock>https://oscm-app:8880/oscm-app/webservices/oscm-app/oscm-app
+      <p><codeblock>http://oscm-app:8880/oscm-app/webservices/oscm-app/oscm-app
          /org.oscm.app.v2_0.service.AsynchronousOperationProxy?wsdl</codeblock></p>
       <p><codeph>&lt;oscm-app></codeph> and <codeph>&lt;8880></codeph> are the server and port of the container where the AWS integration software is deployed.</p>
       <p>
