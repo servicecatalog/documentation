@@ -10,10 +10,13 @@
         <p>Certificates are required for <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> to allow for trusted communication between <ph
                 conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> and the Asynchronous Provisioning Platform (APP), or an application underlying a technical service . <!--ph>a payment service provider (PSP), an Identity Provider (IdP) or a Security Token Service (STS).</ph--> The <ph
+                /> and the Asynchronous Provisioning Platform (APP), an application underlying a technical service, or an external authorization server. <!--ph>a payment service provider (PSP).</ph--> The <ph
                 conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> deployer has already created a respective directory structure and a suitable Docker Compose configuration. In this way, default certificates have been inserted into the respective containers after deployment, thus communication between <ph
-                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> and APP is secured. </p>
-        <p>It is however possible to use custom SSL keypairs for the application listeners. They may be self-signed or official. Privacy Enhanced Mail (PEM) format is mandatory. This is a container format that may include just the public certificate, or may include an entire certificate chain including public key, private key, and root certificates. It is only necessary to place the respective certificate and/or key files in PEM format into the appropriate directories.</p>
+                /> deployment creates an appropriate directory structure and Docker Compose configuration, and inserts default certificates for the individual containers, thus allowing for secure communication between <ph
+                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+            /> and APP or standard authorization systems such as Microsoft Azure.</p>
+        <p>In addition, you can import individual certificates to the <ph
+                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+            /> containers or make use of custom SSL key pairs for the application listeners. All you need to do is place the certificates and/or key files into the appropriate directories on the Docker host as described in more detail below. The certificates may be self-signed or official. Privacy Enhanced Mail (PEM) format is mandatory. This is a container format that may include just a public certificate or an entire certificate chain with public key, private key, and root certificates. </p>
     </conbody>
 </concept>

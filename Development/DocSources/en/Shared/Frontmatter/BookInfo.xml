@@ -9,8 +9,8 @@
   <body>
     <table frame="none">
       <tgroup cols="2">
-        <colspec colnum="1" colname="col1" colwidth="1.00*"/>
-        <colspec colnum="2" colname="col2" colwidth="2.04*"/>
+        <colspec colnum="1" colname="col1" colwidth="1*"/>
+        <colspec colnum="2" colname="col2" colwidth="1.98*"/>
         <tbody valign="top">
           <row>
             <entry colname="col1"> </entry>
@@ -27,7 +27,7 @@
           <row>
             <entry colname="col1">Trademarks</entry>
             <entry colname="col2"
-                >LINUX is a registered trademark of Linus Torvalds. <p>Open Service Catalog Manager is a registered trademark of FUJITSU LIMITED. </p>The OpenStack Word Mark and OpenStack logo are registered trademarks/service marks or trademarks/service marks of the OpenStack Foundation in the United States and other countries.<p>Apache Tomcat, Tomcat, and Apache are trademarks of The Apache Software Foundation.</p><p>Java is a registered trademark of Oracle and/or its affiliates. </p><p>UNIX is a registered trademark of the Open Group in the United States and in other countries. </p><p>Other company names and product names are trademarks or registered trademarks of their respective owners. </p></entry>
+                >LINUX is a registered trademark of Linus Torvalds. <p>Microsoft, Active Directory, Azure, and Excel are either registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries.</p><p>Open Service Catalog Manager is a registered trademark of FUJITSU LIMITED. </p>The OpenStack Word Mark and OpenStack logo are registered trademarks/service marks or trademarks/service marks of the OpenStack Foundation in the United States and other countries.<p>Apache Tomcat, Tomcat, and Apache are trademarks of The Apache Software Foundation.</p><p>Java is a registered trademark of Oracle and/or its affiliates. </p><p>Other company and product names are trademarks or registered trademarks of their respective owners. </p></entry>
           </row>
           <row>
             <entry colname="col1"/>

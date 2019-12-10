@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2019 -->
+<reference id="reference832" xml:lang="en-us">
+    <title>OIDC Tenant Configurations</title>
+    <refbody>
+        <section>
+            <p>This section describes the settings for configuring a tenant to connect to a specific OIDC provider, for example, a specific domain and directory in Microsoft Azure Active Directory (Azure AD). </p>
+            <p>The settings are specific to the OIDC provider and require <xref href="c_Preparation_OIDC_Provider.xml"
+                    >preparations in the OIDC provider system</xref>. The following descriptions use Azure AD as an example. If you intend to work with a different OIDC provider, please contact your <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"
+                /> support organization for details. </p>
+            <p>When you define a tenant <ph platform="print">in <ph
+                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                    >on the platform</ph>, you can download a template with the settings. The final tenant configurations are stored in <codeph>.properties</codeph> files on the Docker host where <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"/><ph platform="help"
+                    >the platform</ph> is deployed:</p>
+            <p><codeph>&lt;docker>/config/oscm-identity/tenants/tenant-&lt;id>.properties</codeph></p>
+            <p><codeph>&lt;docker></codeph> is the <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    platform="print"/><ph platform="help"
+                    >platform's</ph> data directory specified at installation time. <codeph>&lt;id></codeph> is the ID of a tenant created <ph
+                    platform="print">in <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                    platform="help"
+                >on the platform</ph>, or <codeph>default</codeph> for the default tenant defined at installation time.</p>
+        </section>
+        <section>
+            <title>oidc.provider</title>
+            <p>The implementation of OIDC <ph platform="print">in <ph
+                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
+                    >on the platform</ph>. The value must be set to <codeph>default</codeph>.</p>
+            <p>Example: </p>
+            <p><codeph>oidc.provider=default</codeph></p>
+        </section>
+        <section>
+            <title>oidc.clientId</title>
+            <p>The identifier of the application by which your <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"/><ph platform="help"
+                    >platform</ph> installation is registered with the OIDC provider directory.</p>
+            <p>Azure AD example: </p>
+            <p><codeph>oidc.clientId=ef29bb22-369c-424d-9e72-6800ad24239e</codeph></p>
+        </section>
+        <section>
+            <title>oidc.clientSecret</title>
+            <p>The secret string generated at the OIDC provider that <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"/><ph platform="help"
+                    >the platform</ph> uses to prove its identity when requesting a token.</p>
+            <p>Azure AD example: </p>
+            <p><codeph>oidc.clientSecret=m2:bYmmlN6[Z:A:jqqO95nHi39.o0?pF</codeph></p>
+        </section>
+        <section>
+            <title>oidc.authUrl</title>
+            <p>The authorization endpoint at the OIDC provider to which <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"/><ph platform="help"
+                    >the platform</ph> sends single sign-on authentication requests.</p>
+            <p>Azure AD example: </p>
+            <p><codeph>oidc.authUrl=https://login.microsoftonline.com/mydomain.onmicrosoft.com/oauth2/v2.0/authorize</codeph></p>
+            <p>In the URL, replace <codeph>mydomain</codeph> by the name of your domain.</p>
+        </section>
+        <section>
+            <title>oidc.authUrlScope</title>
+            <p>The permissions set for the <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    platform="print"/><ph platform="help">platform's</ph> application at the OIDC provider.</p>
+            <p>Azure AD example: </p>
+            <p><codeph>oidc.authUrlScope=openid profile offline_access https://graph.microsoft.com/user.read.all https://graph.microsoft.com/directory.readwrite.all https://graph.microsoft.com/group.readwrite.all</codeph></p>
+        </section>
+        <section>
+            <title>oidc.logoutUrl</title>
+            <p>The endpoint at the OIDC provider to which <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    platform="print"/><ph platform="help">the platform</ph> sends logout requests.</p>
+            <p>Azure AD example: </p>
+            <p><codeph>oidc.logoutUrl=https://login.microsoftonline.com/mydomain.onmicrosoft.com/oauth2/v2.0/logout</codeph></p>
+            <p>In the URL, replace <codeph>mydomain</codeph> by the name of your domain.</p>
+        </section>
+        <section>
+            <title>oidc.tokenUrl</title>
+            <p>The endpoint at the OIDC provider to which <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    platform="print"/><ph platform="help"
+                >the platform</ph> sends requests related to tokens, such as token retrieval, refreshment, or validation.</p>
+            <p>Azure AD example: </p>
+            <p><codeph>oidc.tokenUrl=https://login.microsoftonline.com/mydomain.onmicrosoft.com/oauth2/v2.0/token</codeph></p>
+            <p>In the URL, replace <codeph>mydomain</codeph> by the name of your domain.</p>
+        </section>
+        <section>
+            <title>oidc.redirectUrl</title>
+            <p>The redirect URL of your <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"
+                    /><ph platform="help">platform</ph> installation to which the OIDC provider sends its responses.</p>
+            <p>Azure AD example: </p>
+            <p><codeph>oidc.redirectUrl=https://myhost:9091/oscm-identity/callback</codeph></p>
+            <p>In the URL, replace <codeph>myhost</codeph> by the FQDN or IP address of the host to access your <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"/><ph platform="help"
+                    >platform</ph> installation.</p>
+        </section>
+        <section>
+            <title>oidc.configurationUrl</title>
+            <p>The URL of the OpenID layer configuration for your domain at the OIDC provider.</p>
+            <p>Azure AD example: </p>
+            <p><codeph>oidc.configurationUrl=https://login.microsoftonline.com/mydomain.onmicrosoft.com/v2.0/ .well-known/openid-configuration</codeph></p>
+            <p>In the URL, replace <codeph>mydomain</codeph> by the name of your domain.</p>
+        </section>
+        <section>
+            <title>oidc.idpApiUri</title>
+            <p>The URL of the main entry point to the API of the OIDC provider. </p>
+            <p>Azure AD example: </p>
+            <p><codeph>oidc.idpApiUri=https://graph.microsoft.com</codeph></p>
+        </section>
+        <section>
+            <title>oidc.usersEndpoint</title>
+            <p>The entry point to the API for users at the OIDC provider.</p>
+            <p>Azure AD example: </p>
+            <p><codeph>oidc.usersEndpoint=https://graph.microsoft.com/v1.0/users</codeph></p>
+        </section>
+        <section>
+            <title>oidc.groupsEndpoint</title>
+            <p>The entry point to the API for groups at the OIDC provider.</p>
+            <p>Azure AD example: </p>
+            <p><codeph>oidc.groupsEndpoint=https://graph.microsoft.com/v1.0/groups</codeph></p>
+        </section>
+    </refbody>
+</reference>

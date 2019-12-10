@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2019 -->
+<concept id="concept_1BCF5C425D7D4627AB1C66A085CF6E11"
+                xml:lang="en-us">
+            <title>Changing the Responsible Organization</title>
+            <conbody>
+        <section>You can change the technology provider organization responsible for the <ph audience="aws">AWS</ph><ph
+                                audience="azure">Azure</ph><ph audience="os">OpenStack</ph><ph audience="shell"
+                                >Shell</ph><ph audience="vmware"
+                                >VMware</ph> service controller using the Web interface of APP: <ol compact="no">
+                                <li>In a Web browser, access the Web interface (base URL) of APP.<p>The access URL has the following format: </p><p><codeph>https://&lt;host_fqdn&gt;:8881/oscm-app</codeph></p><p><codeph>&lt;host_fqdn&gt;</codeph> is the fully qualified name or IP address of the host used to access <ph
+                                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                        />, <codeph>8881</codeph> is the port of APP. <codeph>oscm-app</codeph> is the default context root of APP and cannot be changed. </p></li>
+                                <li>Log in with the ID and password of the user specified for <codeph>BSS_USER_KEY</codeph> in the configuration settings for APP or as another administrator of the same organization. </li>
+                                <li>Specify the technology provider organization for the <ph audience="aws">AWS</ph><ph
+                                                audience="azure">Azure</ph><ph audience="os">OpenStack</ph><ph
+                                                audience="shell">Shell</ph><ph audience="vmware"
+                                                >VMware</ph> service controller, <ph audience="aws"
+                                                        ><codeph>ess.aws</codeph></ph><ph audience="azure"
+                                                        ><codeph>ess.azureARM</codeph></ph><ph audience="os"
+                                                        ><codeph>ess.openstack</codeph></ph><ph audience="shell"
+                                                        ><codeph>ess.shell</codeph></ph><ph audience="vmware"
+                                                        ><codeph>ess.vmware</codeph></ph>.</li>
+                                <li>Save the settings.</li>
+                                <li>Make sure that the configuration settings for the <ph audience="aws">AWS</ph><ph
+                                                audience="azure">Azure</ph><ph audience="os">OpenStack</ph><ph
+                                                audience="shell">Shell</ph><ph audience="vmware"
+                                                        >VMware</ph> service controller are updated. <p>Any technology manager registered for the technology provider organization you specified can log in to the graphical user interface for updating the controller configuration settings (see above). At least the ID and password of the user to be used for accessing <ph
+                                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                /> must be changed in the controller configuration settings.</p></li>
+                        </ol></section>
+    </conbody>
+</concept>

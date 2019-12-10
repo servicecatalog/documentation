@@ -20,8 +20,7 @@
       </p>
       <p conref="../../Shared/concepts/c_ControllerConcepts.xml#controller/cmp1"/>
       <p conref="../../Shared/concepts/c_ControllerConcepts.xml#controller/cmp2"/>
-      <p>In Azure, virtual machines as well as additional resources required for specific purposes can be deployed and managed with <b>Azure Resource Manager (ARM)</b>. Each virtual machine is based on a predefined <b>image</b>, which determines the operating system and other characteristics. Virtual machines and other resources that are to be managed together are organized in resource groups. Customers can define resource groups as required and control the resource deployment by means of <b>Resource Manager templates</b> in JavaScript Object Notation (JSON).</p>
-      <p>When APP is deployed, an Azure service controller is also deployed, registered, and initialized. </p>
+      <p>In Azure, virtual machines as well as additional resources required for specific purposes can be deployed and managed with <b>Azure Resource Manager (ARM)</b>. Each virtual machine is based on a predefined <b>image</b>, which determines the operating system and other characteristics. Virtual machines and other resources that are to be managed together are organized in resource groups. Customers can define resource groups as required and control the resource deployment by means of <b>Resource Manager templates</b> in JavaScript Object Notation (JSON). </p>
     </section>
   </conbody>
 </concept>

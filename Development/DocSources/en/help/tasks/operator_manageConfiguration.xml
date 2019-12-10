@@ -6,23 +6,37 @@
   <title>Updating configuration settings</title>
   <taskbody>
     <context>
-      <p>The <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-        /> software requires a number of settings for configuring its container runtime environment. The mandatory settings have already been specified in environment variables in Docker files before deploying the containers. </p>
-      <p>On the <uicontrol>Update configuration settings</uicontrol> page, you see a list of the current configuration settings for the platform as stored in the database. In the installation, you adapted the settings to your environment, in particular server names, ports, paths, and user IDs. You can update and edit the current settings as required.</p>
+      <p>The <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"/><ph
+          platform="help"
+        >platform</ph> software requires a number of settings for configuring its container runtime environment. The mandatory settings have been specified in environment variables in Docker files before deploying the containers. </p>
+      <p>On the <uicontrol>Update configuration settings</uicontrol> page, you see a list of the current configuration settings for the platform as stored in the database. During the installation, you adapted the settings to your environment, in particular server names, ports, paths, and user IDs. You can update and edit the current settings as required.</p>
       <p>
         <note>Be aware that changing the settings in the administration portal should only be used for testing purposes. Your changes will be lost as soon as the platform's containers are restarted. </note>
       </p>
       <p>If you want to persistently update configuration settings in the database, proceed as follows:</p>
       <p>
         <ol>
-          <li>On your Docker host, edit the <codeph>var.env</codeph> file located in the <codeph>/docker</codeph> directory as required. </li>
+          <li>On your Docker host, edit the <codeph>var.env</codeph> file located in the platform's data directory (<codeph>&lt;docker></codeph>) as required. </li>
           <li>If you want to change the default value of a configuration setting that is not included in the <codeph>var.env</codeph> file yet:<p>Add the key and the value the setting shall take on to the <codeph>var.env</codeph> file. </p><p>You can find the keys of the settings on the <b>Update configuration settings</b> page. For example: </p><p><codeph>TIMER_INTERVAL_SUBSCRIPTION_EXPIRATION=345600000</codeph></p></li>
-          <li>Save the <codeph>var.env</codeph> file to its original location: <p><codeph>/docker/var.env</codeph></p></li>
-          <li>Stop and remove all <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> containers:<p>
+          <li>Save the <codeph>var.env</codeph> file to its original location: <p><codeph>&lt;docker>/var.env</codeph></p></li>
+          <li>In the <codeph>docker-compose-initdb.yml</codeph> file in the same directory, set the <codeph>OVERWRITE</codeph> flag in the <codeph>environment</codeph> settings for <codeph>oscm-initdb-core</codeph> to <codeph>true</codeph> to change the configuration setting in the database. <p>
+              <codeblock>oscm-initdb-core:
+    image: ${IMAGE_INITDB}
+    container_name: oscm-initdb-core
+    env_file: var.env
+    environment:
+      - TARGET=CORE
+      - SOURCE=INIT
+      - OVERWRITE=<b>true</b>
+      - LOG_LEVEL=INFO
+    links:
+- oscm-db:oscm-db</codeblock>
+            </p></li>
+          <li>Stop and remove all containers:<p>
               <codeblock>docker-compose -f docker-compose-oscm.yml stop
 docker-compose -f docker-compose-oscm.yml rm -f </codeblock>
             </p></li>
-          <li>Start the container for initializing the database and delete the finished containers: <p>
+          <li>Start the container for initializing the databases, then stop and delete it again: <p>
               <codeblock>docker-compose -f docker-compose-initdb.yml up -d oscm-db 
 docker-compose -f docker-compose-initdb.yml up oscm-initdb-core 
 docker-compose -f docker-compose-initdb.yml up oscm-initdb-jms 
@@ -35,6 +49,7 @@ docker-compose -f docker-compose-initdb.yml rm -f</codeblock>
           <li>Restart all application containers:<p>
               <codeblock>docker-compose -f docker-compose-oscm.yml up -d</codeblock>
             </p></li>
+          <li>In the <codeph>docker-compose-initdb.yml</codeph> file, set the <codeph>OVERWRITE</codeph> flag back to <codeph>false</codeph>.</li>
         </ol>
       </p>
     </context>

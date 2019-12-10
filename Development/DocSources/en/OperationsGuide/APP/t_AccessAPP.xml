@@ -14,8 +14,10 @@
             <p>Proceed as follows: </p>
             <ol compact="no">
                 <li>Access the Web interface (base URL) of APP in the following format:<p>
-                        <codeph>https://&lt;hostname.fqdn&gt;:&lt;port&gt;/oscm-app</codeph>
-                    </p><p><codeph>&lt;hostname.fqdn&gt;</codeph> is the name and the fully qualified domain name of the machine where APP has been deployed. <codeph>&lt;port&gt;</codeph> is the port to address the machine (default: 8881), <codeph>oscm-app</codeph> is the default context root of APP and cannot be changed.</p></li>
+                        <codeph>https://&lt;host_fqdn&gt;:8881/oscm-app</codeph>
+                    </p><p><codeph>&lt;host_fqdn></codeph> is the fully qualified name or IP address of the host used to access <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            />, <codeph>8881</codeph> is the port of APP. <codeph>oscm-app</codeph> is the default context root of APP and cannot be changed.</p></li>
                 <li>Log in with the ID and password of the user which you received with the confirmation email for your user account or as another administrator of the same organization. </li>
                 <li>Specify the ID of the technology provider organization that is to be responsible for the respective service controller (<codeph>ess.openstack</codeph> or <codeph>ess.aws</codeph>).</li>
                 <li>Click <uicontrol>Save Configuration</uicontrol> to save the settings.</li>

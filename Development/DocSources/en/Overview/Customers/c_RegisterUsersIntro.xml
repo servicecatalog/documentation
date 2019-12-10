@@ -16,7 +16,7 @@
                         <ul>
                                 <li>The administrator of a customer organization can register the users manually.</li>
                                 <li>The administrator of a customer organization can import multiple users in one operation from a user data file he created before.</li>
-                                <li>Customer organizations can be allowed to use their own identity management system for user authentication. In this case, the administrator of the customer organization can import the users from the external system, thus registering them with <ph
+                                <li>Customer organizations may be allowed to use their own identity management system or an external provider for user management and authentication. In this case, the users are imported from the external system and registered with <ph
                                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                                 />.<ph audience="doc"> For details, refer to <xref format="dita"
                                                         href="../../Overview/All/c_AllUsersIntro.xml" type="concept"

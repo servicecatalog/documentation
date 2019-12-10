@@ -53,6 +53,9 @@
         <info>The reseller and broker roles cannot be combined with each other or with the technology provider or supplier role.</info>
       </step>
       <step>
+        <cmd>If the platform is running in OIDC authentication mode, the <b>Tenant</b> field shows the current tenant associated with the organization. You cannot change this assignment. </cmd>
+      </step>
+      <step>
         <cmd>In the <uicontrol>Distinguished name</uicontrol> field, enter the DN for the organization. </cmd>
         <info>The DN is defined in the organization's certificate and composed of the following elements: <ul id="DN">
             <li>CN (common name)</li>

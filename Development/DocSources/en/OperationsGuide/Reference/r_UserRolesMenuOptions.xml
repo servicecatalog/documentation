@@ -47,7 +47,7 @@
                         </row>
                         <row>
                             <entry colname="col1"
-                                    ><b>Register new users</b><p>(if the organization does not use LDAP-based user management)</p></entry>
+                                    ><b>Register new users</b><p>(if the organization does not use an external system for user management)</p></entry>
                             <entry>Any</entry>
                             <entry>Administrator</entry>
                         </row>
@@ -69,6 +69,11 @@
                             <entry>Administrator</entry>
                         </row>
                         <row>
+                            <entry><b>Process triggers</b></entry>
+                            <entry>Any</entry>
+                            <entry>Administrator</entry>
+                        </row>
+                        <row>
                             <entry colname="col1"><b>Manage suppliers</b>
                             </entry>
                             <entry>Technology provider</entry>
@@ -78,11 +83,6 @@
                             <entry><b>Manage custom attributes</b></entry>
                             <entry>Supplier</entry>
                             <entry>Service manager </entry>
-                        </row>
-                        <row>
-                            <entry><b>Process triggers</b></entry>
-                            <entry>Any</entry>
-                            <entry>Administrator</entry>
                         </row>
                         <row>
                             <entry><b>Manage processes</b><p>(if the organization is connected to an external process control system)</p></entry>
@@ -417,6 +417,11 @@
                             <entry>Operator</entry>
                         </row>
                         <row>
+                            <entry><b>Update search index</b></entry>
+                            <entry>Operator</entry>
+                            <entry>Operator </entry>
+                        </row>
+                        <row>
                             <entry><b>Billing data preview</b></entry>
                             <entry>Operator</entry>
                             <entry>Operator </entry>
@@ -436,12 +441,12 @@
                             <entry>Operator</entry>
                             <entry>Operator</entry>
                         </row>
-                        <row>
+<!--                        <row>
                             <entry><b>Manage billing systems</b></entry>
                             <entry>Operator</entry>
                             <entry>Operator</entry>
                         </row>
-                        <row>
+-->                        <row>
                             <entry><b>Manage tenants</b></entry>
                             <entry>Operator</entry>
                             <entry>Operator</entry>

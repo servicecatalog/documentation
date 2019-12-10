@@ -10,7 +10,7 @@
                     >On the <uicontrol>Customize layout</uicontrol> page, you can specify a style sheet that defines the branding and layout of a marketplace, i.e. the colors, fonts, background images, and logos. <ph
                     id="The_best_way_to_create_an_app_task_taskbody_context_p_1_ph"
                     >The best way to create an appropriate style sheet is to use the platform's default style sheet as a basis and adapt it as required. </ph></p>
-            <p id="On_the_task_taskbody_context_p_1"><ph id="The_best_way_to_create_an_app_task_taskbody_context_p_1_ph"
+            <p id="On_the_task_taskbody_context_p_1"><ph id="You_then_provide_task_taskbody_context_p_2_ph"
                         >You then provide the customized style sheet and the files it references to the platform operator so that he can make them available in the <codeph>oscm-branding</codeph> container. When the operator is finished, he can provide the URL to the style sheet that can then be specified <ph
                         platform="print">in <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                         /></ph><ph platform="help"
@@ -75,9 +75,11 @@
             </step>
             <step>
                 <cmd>In the <uicontrol>Style sheet URL</uicontrol> field, enter the URL provided by the platform operator pointing to your customized style sheet. </cmd>
-                <info><p>By default, the URL is as follows: </p><p><codeph>https://&lt;hostname.fqdn>:8443/&lt;new-folder-name>/css/mp.css</codeph></p>where <codeph>&lt;hostname.fqdn></codeph> is the name and the fully qualified domain name of the host used to access <ph
-                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        />, and <codeph>&lt;new-folder-name></codeph> is the name of the folder containing the customized files. </info>
+                <info>
+                    <p>By default, the URL is as follows: </p>
+                    <p><codeph>https://&lt;host_fqdn>:8443/&lt;new-folder-name>/css/mp.css</codeph></p>
+                    <p><codeph>&lt;host_fqdn></codeph> is the fully qualified name or IP address of the host used to access platform, <codeph>8443</codeph> is the port. <codeph>&lt;new-folder-name></codeph> is the name of the folder containing the customized files. </p>
+                </info>
             </step>
             <step>
                 <cmd>Click <uicontrol>Save</uicontrol> to make the new layout and branding of your marketplace available. </cmd>

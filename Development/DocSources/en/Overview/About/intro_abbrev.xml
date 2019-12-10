@@ -30,6 +30,10 @@
                             <entry><b>LDAP</b></entry>
                             <entry>Lightweight Directory Access Protocol</entry>
                         </row>
+                        <row>
+                            <entry><b>OIDC</b></entry>
+                            <entry>OpenID Connect</entry>
+                        </row>
                         <row product="oscm_ce">
                             <entry><b><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></b>
                             </entry>

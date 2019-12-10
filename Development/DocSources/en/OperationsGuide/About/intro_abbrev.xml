@@ -50,6 +50,10 @@
                             <entry><b>LDAP</b></entry>
                             <entry>Lightweight Directory Access Protocol</entry>
                         </row>
+                        <row>
+                            <entry><b>OIDC</b></entry>
+                            <entry>OpenID Connect</entry>
+                        </row>
                         <row product="oscm_ce">
                             <entry><b><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></b>
                             </entry>
@@ -69,13 +73,13 @@
                             <entry>Software as a Service</entry>
                         </row>
                         <row>
-                            <entry><b>SAML</b></entry>
-                            <entry>Security Assertion Markup Language</entry>
-                        </row>
-                        <row>
                             <entry><b>SOAP</b>
                             </entry>
                             <entry>Simple Object Access Protocol</entry>
+                        </row>
+                        <row>
+                            <entry><b>SSO</b></entry>
+                            <entry>Single Sign-on</entry>
                         </row>
                         <row>
                             <entry><b>STS</b></entry>

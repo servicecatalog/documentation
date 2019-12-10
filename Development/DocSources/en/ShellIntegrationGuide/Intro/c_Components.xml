@@ -20,7 +20,6 @@
       </p>
       <p conref="../../Shared/concepts/c_ControllerConcepts.xml#controller/cmp1"/>
       <p conref="../../Shared/concepts/c_ControllerConcepts.xml#controller/cmp2"/>
-      <p>When APP is deployed, a Shell service controller is also deployed, registered, and initialized. </p>
     </section>
   </conbody>
 </concept>

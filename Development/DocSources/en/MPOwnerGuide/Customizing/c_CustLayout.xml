@@ -29,9 +29,9 @@
                     <li>Provide this archive to the platform operator so that he can deploy your customized branding package to the relevant container. </li>
                     <li>Ask the platform operator for the URL of the customized style sheet once deployed. </li>
                     <li>To load the customized layout: <ol>
-                            <li>On the <uicontrol>Customize layout</uicontrol> page, select the marketplace and enter the URL pointing to the location in the branding container where the custom stylesheet has been deployed. If no URL is set, the default style sheet is used. <p>By default, the URL is as follows: </p><p><codeph>https://&lt;hostname.fqdn>:8443/&lt;new-folder-name>/css/mp.css</codeph></p>where <codeph>&lt;hostname.fqdn></codeph> is the name and the fully qualified domain name of the host used to access <ph
-                                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                    />, and <codeph>&lt;new-folder-name></codeph> is the name of the folder containing the customized files. </li>
+                            <li>On the <uicontrol>Customize layout</uicontrol> page, select the marketplace and enter the URL pointing to the location in the branding container where the custom stylesheet has been deployed. If no URL is set, the default style sheet is used. <p>By default, the URL is as follows: </p><p><codeph>https://&lt;host_fqdn>:8443/&lt;new-folder-name>/css/mp.css</codeph></p><p><codeph>&lt;host_fqdn></codeph> is the fully qualified name or IP address of the host used to access <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        />. <codeph>&lt;new-folder-name></codeph> is the name of the folder containing the customized files. </p></li>
                             <li>To verify the branding, go to the respective marketplace and log in again. </li>
                         </ol></li>
                 </ol>

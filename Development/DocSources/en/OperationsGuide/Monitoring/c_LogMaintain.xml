@@ -9,12 +9,17 @@
     <conbody>
         <section>
             <p>For each running container, <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> writes its logging information into a dedicated log file on the storage volume for each container. New messages are continually appended to the log file at runtime.</p>
-            <p>
-                <note>The <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            /> deployer creates empty log files in a dedicated directory on the Docker host: <p><codeph>/docker/logs/&lt;container_name>/&lt;container_name>.out.log</codeph></p>Log information is, however, only written to these files if you configure <codeph>docker-compose</codeph> and <codeph>syslog</codeph> on your Docker host to write the container logs to these files. By default, Docker uses the <codeph>json-file</codeph> driver to record the logs of your containers. The log output in JSON format can be found in <codeph>/var/lib/docker/containers/&lt;container-id>/&lt;container-id>-json.log.</codeph> For more information on log handling, refer to the Docker documentation.</note>
+                /> writes its logging information to a dedicated log file. New messages are continually appended to the log file at runtime.</p>
+            <p>By default, Docker uses the <codeph>json-file</codeph> driver to record the logs of your containers. The log output in JSON format can be found in the following files on the Docker host: </p>
+            <p><codeph>/var/lib/docker/containers/&lt;container-id>/&lt;container-id>-json.log</codeph>
             </p>
-            <p>To show all running containers, execute the following command on the VM where <ph
+            <p>In addition, the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> deployer creates empty log files for each container in the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> data directory on the Docker host:</p>
+            <p><codeph>&lt;docker>/logs/&lt;container_name>/&lt;container_name>.out.log</codeph></p>
+            <p>However, log information is output to these files only if you configure <codeph>docker-compose</codeph> and <codeph>syslog</codeph> on the Docker host to write the container logs to them. </p>
+            <p>To show all running containers, execute the following command on the Docker host where <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> has been deployed: </p>
             <p>
                 <codeblock>docker ps</codeblock>
@@ -24,12 +29,21 @@
                 <codeblock>docker logs -f &lt;container name></codeblock>
             </p><p>For example: </p><p>
                 <codeblock>docker logs -f oscm-core</codeblock>
-            </p><p>In addition to entries in the <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> log files, you can find application server-specific log entries by logging in to the individual containers. Be aware that these are available only if you set the <codeph>TOMEE_DEBUG</codeph> configuration setting in the <codeph>var.env</codeph> configuration file to <codeph>true</codeph>. To view the logs, log in to the respective container as follows: </p><p>
+            </p><p>For more information on log handling in Docker, refer to the Docker documentation.</p></section>
+        <section>
+            <title>Application Server Logs</title>
+            <p>In addition to entries in the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> log files on the Docker host, you can find application server-specific log entries by logging in to the individual containers. Be aware that these are available only if you set the <codeph>TOMEE_DEBUG</codeph> configuration setting in the <codeph>var.env</codeph> configuration file to <codeph>true</codeph>. </p>
+            <p>To view the logs, log in to the respective container as follows: </p>
+            <p>
                 <codeblock>docker exec -it &lt;container name> /bin/bash</codeblock>
-            </p><p>For example:</p><p>
+            </p>
+            <p>For example:</p>
+            <p>
                 <codeblock>docker exec -it oscm-core /bin/bash</codeblock>
-            </p><p>You find the logs in the following directory: </p><p><codeph>/opt/apache-tomee/logs</codeph></p></section>
+            </p>
+            <p>You can find the logs in the following directory: </p>
+            <p><codeph>/opt/apache-tomee/logs</codeph></p>
+        </section>
     </conbody>
 </concept>

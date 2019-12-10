@@ -66,6 +66,16 @@
             <p>A privileged user role within a marketplace owner organization. </p>
         </section>
         <section>
+            <title>OIDC</title>
+            <p>An authentication mode of <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> where users are managed and authenticated by means of OpenID Connect in an external system such as Microsoft Azure Active Directory, the so-called OIDC provider. </p>
+        </section>
+        <section>
+            <title>OIDC Tenant</title>
+            <p>An entity in <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> representing a configuration of settings and parameters required to connect to a specific tenant at an OIDC provider, for example, a specific domain and directory in Microsoft Azure Active Directory. </p>
+        </section>
+        <section>
             <title>Operator</title>
             <p>An organization or person responsible for maintaining and operating <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </p>

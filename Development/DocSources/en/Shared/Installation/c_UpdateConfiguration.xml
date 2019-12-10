@@ -18,7 +18,9 @@
                                     <p><b>To update the configuration settings for APP</b>, use the Web interface of APP:</p>
             <p>
                 <ol>
-                    <li>In a Web browser, access the Web interface (base URL) of APP.<p>The access URL has the following format: </p><p><codeph>https://&lt;hostname.fqdn>:&lt;port>/oscm-app</codeph></p><p><codeph>&lt;hostname.fqdn></codeph> is the name and the fully qualified domain name of the machine where the <codeph>oscm-app</codeph> container has been deployed, <codeph>&lt;port></codeph> is the port to address the machine (default <codeph>8881</codeph>), <codeph>oscm-app</codeph> is the default context root of APP and cannot be changed. </p></li>
+                    <li>In a Web browser, access the Web interface (base URL) of APP.<p>The access URL has the following format: </p><p><codeph>https://&lt;host_fqdn>:8881/oscm-app</codeph></p><p><codeph>&lt;host_fqdn></codeph> is the fully qualified name or IP address of the host used to access <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                />, <codeph>8881</codeph> is the port of APP. <codeph>oscm-app</codeph> is the default context root of APP and cannot be changed. </p></li>
                     <li>
                         <p>Log in with the ID and password of the administrator of the technology provider organization specified by the  platform operator.</p>
                     </li>
@@ -37,14 +39,15 @@
                 <ol compact="no">
                     <li>Invoke the instance status interface of APP for the <ph audience="aws">AWS </ph><ph
                             audience="os">OpenStack </ph><ph audience="vmware"
-                            >VMware </ph> service controller by opening it's URL in a Web browser. <p>The access URL has the following format: </p><p><codeph>https://&lt;hostname.fqdn>:&lt;port>/<ph
+                            >VMware </ph> service controller by opening it's URL in a Web browser. <p>The access URL has the following format: </p><p><codeph>https://&lt;host_fqdn>:8881/<ph
                                     audience="os">oscm-app-openstack</ph><ph audience="aws">oscm-app-aws</ph><ph
                                     audience="app"
-                                ><codeph>&lt;controller-id></codeph></ph></codeph></p><p><codeph>&lt;hostname.fqdn></codeph> is the name and the fully qualified domain name of the machine where the <codeph>oscm-app</codeph> container has been deployed, <codeph>&lt;port></codeph> is the port to address the machine (default <codeph>8881</codeph>), <ph
-                                audience="os"
-                                ><codeph>oscm-app-openstack</codeph>  is the default context root of the service controller and cannot be changed</ph><ph
+                                ><codeph>&lt;controller-id></codeph></ph></codeph></p><p><codeph>&lt;host_fqdn></codeph> is the fully qualified name or IP address of the host used to access <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                />, <codeph>8881</codeph> is the port of APP. <ph audience="os"
+                                    ><codeph>oscm-app-openstack</codeph> is the default context root of the service controller and cannot be changed</ph><ph
                                 audience="aws"
-                                ><codeph>oscm-app-aws</codeph>  is the default context root of the service controller and cannot be changed</ph><ph
+                                ><codeph>oscm-app-aws</codeph> is the default context root of the service controller and cannot be changed</ph><ph
                                 audience="app"
                                     ><codeph>&lt;controller-id></codeph> is the default context root of the service controller (<codeph>oscm-app-aws</codeph> or <codeph>oscm-app-openstack</codeph>)</ph>. </p></li>
                     <li>Log in with the ID and password of the user specified in the configuration settings for the <ph

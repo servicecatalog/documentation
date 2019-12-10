@@ -25,19 +25,23 @@
                 /> does not contain a password. </p>
             <p>To log in to the administration portal for managing your marketplace:</p>
             <ol>
-                <li>Click the link provided in the email, or type the access URL in your Web browser's address bar. <p>The access URL has the following format: </p><p><codeph>https://&lt;hostname.fqdn>:&lt;port>/oscm-portal</codeph></p><p><codeph>&lt;hostname.fqdn></codeph> is the name and the fully qualified domain name of the machine where <ph
+                <li>Click the link provided in the email, or type the access URL in your Web browser's address bar. <p>The access URL has the following format: </p><p><codeph>https://&lt;host_fqdn>:8081/oscm-portal</codeph></p><p><codeph>&lt;host_fqdn></codeph> is the fully qualified name or IP address of the host used to access <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            /> has been deployed. <codeph>&lt;port></codeph> is the port to address the machine (default: <codeph>8081</codeph>), <codeph>oscm-portal</codeph> is the default context root of <ph
+                            />, <codeph>8081</codeph> is the port. <codeph>oscm-portal</codeph> is the default context root of <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        /> and cannot be changed. </p></li>
-                <li>On the <uicontrol>Login</uicontrol> page, type your user ID and password.</li>
+                        /> and cannot be changed. </p><p>If your organization uses an external system for user management and authentication, the identifier of a corresponding tenant may be appended to the URL:</p><p><codeph>https://&lt;host_fqdn>:8081/oscm-portal/?tenantID=&lt;id></codeph></p></li>
+                <li>On the <uicontrol>Login</uicontrol> page, type your user ID and password.<p>Depending on the system used for user authentication, the <uicontrol>Login</uicontrol> page may be that of <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> or of an external provider like Microsoft Azure, or it may be skipped entirely if single sign-on is supported and you are already logged in.</p></li>
                 <li>Click <uicontrol>Login</uicontrol>, or press <uicontrol>Return</uicontrol>.</li>
             </ol>
             <p>To access the marketplace itself:</p>
             <ol>
-                <li>Click the link provided in the email, or type the access URL in your Web browser's address bar. <p>The access URL has the following format: </p><p><codeph>https://&lt;hostname.fqdn>:&lt;port>/oscm-portal?marketplaceId=&lt;mId></codeph></p><p><codeph>&lt;mId&gt;</codeph> is the ID of the marketplace.</p></li>
+                <li>Click the link provided in the email, or type the access URL in your Web browser's address bar. <p>The access URL has the following format: </p><p><codeph>https://&lt;host_fqdn>:&lt;port>/oscm-portal?marketplaceId=&lt;mId></codeph></p><p><codeph>&lt;mId&gt;</codeph> is the ID of the marketplace.</p></li>
                 <li>To log in, click <uicontrol>Login</uicontrol> at the top right of the marketplace. </li>
-                <li>On the <uicontrol>Login</uicontrol> page, type your user ID and password.</li>
+                <li>On the <uicontrol>Login</uicontrol> page, type your user ID and password.<p>Depending on the system used for user authentication, the <uicontrol>Login</uicontrol> page may be that of <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> or of an external provider like Microsoft Azure, or it may be skipped entirely if single sign-on is supported and you are already logged in.</p></li>
                 <li>Click <uicontrol>Login</uicontrol>, or press <uicontrol>Return</uicontrol>.</li>
             </ol>
             <p><ph

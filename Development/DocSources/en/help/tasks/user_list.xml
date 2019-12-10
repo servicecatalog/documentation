@@ -71,7 +71,7 @@
             </ul></li>
           <li>Click <uicontrol>Delete</uicontrol> and confirm the deletion.</li>
         </ol>
-      </p><p>The user is instantly deleted from the platform.</p></result>
+      </p><p>The user is instantly deleted from the platform.</p><note>You can delete users even if your organization uses an external OIDC provider such as Microsoft Azure Active Directory for user management and authentication. Be aware, however, that the users may be added again with the next synchronization with the external provider.</note></result>
   </taskbody>
   <related-links>
     <linklist>

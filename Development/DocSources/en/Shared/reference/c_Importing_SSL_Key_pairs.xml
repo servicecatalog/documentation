@@ -2,34 +2,32 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
                          "concept.dtd">
 <concept id="Importing_SSL_Key_pairs_277">
-  <title>Importing SSL Key Pairs for the Application Listeners</title>
+  <title>Importing SSL Key Pairs for Application Listeners</title>
   <conbody>
     <section>
-            <p>If you want to use your own SSL key pairs that your application is to use, replace the default key pair by your PEM files in the following directories on your Docker host: </p>
+            <p>If you want to use your own SSL key pairs for <ph
+          conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+        /> and your applications, replace the default key pairs by your PEM files in the following directories on your Docker host: </p>
       <ul>
         <li>
-          <p>Private key: <codeph>/docker/config/&lt;container-name>/ssl/privkey</codeph>
+          <p>Private key: <codeph>&lt;docker>/config/&lt;container-name>/ssl/privkey</codeph>
           </p>
         </li>
         <li>
-          <p>Public certificate: <codeph>/docker/config/&lt;container-name>/ssl/cert</codeph></p>
+          <p>Public certificate: <codeph>&lt;docker>/config/&lt;container-name>/ssl/cert</codeph></p>
         </li>
         <li>
-          <p>Intermediates / chain (optional): <codeph><codeph>/docker/config/&lt;container-name>/ssl/chain</codeph></codeph>
+          <p>Intermediates / chain (optional): <codeph><codeph>&lt;docker>/config/&lt;container-name>/ssl/chain</codeph></codeph>
           </p>
         </li>
       </ul>
-            <p>Replace <codeph>/docker</codeph> with the base directory on the Docker host that you use for persisting data, and <codeph>&lt;container-name></codeph> with the name of the respective <ph
+      <p><codeph>&lt;docker></codeph> is the <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+          /> data directory on the Docker host specified at installation time. <codeph>&lt;container-name></codeph> is the name of the relevant <ph
           conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
           /> container, for example, <codeph>oscm-core</codeph> or <codeph>oscm-app</codeph>. </p>
-      <p>The custom certificates must also be placed into the following trusted directory so that a trusted relationship between the containers is established: </p>
-      <ul>
-        <li>
-          <p><codeph>/docker/config/certs </codeph></p>
-        </li>
-      </ul>
-      <p>The <codeph>/docker/config/certs</codeph> directory is shared by all containers. By default, if you use your own SSL key pairs, you must also place all the public certificate files here. </p>
-      <p>For example, if you have a custom SSL keypair for the <codeph>oscm-core</codeph> container, you need to place the private key into the <codeph>/docker/config/oscm-core/ssl/privkey</codeph> directory, and the public certificate into the <codeph>/docker/config/oscm-core/ssl/cert</codeph> directory. Additionally, you need to place the public certificate into the <codeph>/docker/config/certs</codeph> directory on your Docker host. In this case, a restart of the <codeph>oscm-core</codeph> and <codeph>oscm-app</codeph> containers is required. </p>
+      <p>The certificate must also be placed into the following directory shared by all containers so that a trusted relationship between the containers is established: </p>
+      <p><codeph>&lt;docker>/config/certs </codeph></p>
+      <p>For example, if you have a custom SSL keypair for the <codeph>oscm-core</codeph> container, you need to place the private key into the <codeph>&lt;docker>/config/oscm-core/ssl/privkey</codeph> directory, and the public certificate into the <codeph>&lt;docker>/config/oscm-core/ssl/cert</codeph> directory. Additionally, you need to place the public certificate into the <codeph>&lt;docker>/config/certs</codeph> directory. In this case, a restart of the <codeph>oscm-core</codeph>, <codeph>oscm-app</codeph>, and <codeph>oscm-identity</codeph> containers is required. </p>
         </section>
 
   </conbody>

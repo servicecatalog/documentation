@@ -7,26 +7,24 @@
                 xml:lang="en-us">
         <title>Prequisites and Preparation</title>
         <conbody>
-                <p>For getting started with the setup of <ph
-                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-            />, a Linux system is required with the following software installed: </p>
-        <p>
-            <ol>
+        <section>
+            <p>For getting started with the setup of <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                />, a Linux system is required with the following software installed: </p>
+            <ul>
                 <li>Docker</li>
                 <li>Docker Compose</li>
-            </ol>
-        </p>
-        <p>This system is hereafter referred to as the <i>Docker host</i>. </p>
-        <p>The following system resources are recommended for the Docker host: </p>
-        <p>
-            <ol>
+            </ul>
+            <p>This system is referred to as the <b>Docker host</b>. </p>
+            <p>The following system resources are required for the Docker host: </p>
+            <ul>
                 <li>2 CPU cores</li>
                 <li>8 GB of RAM</li>
                 <li>20 GB of disk space</li>
-            </ol>
-        </p>
-        <p>
-            <note>This is a minimum configuration for testing purposes only. It is not suitable for production use. </note>
-        </p>
+            </ul>
+            <p>
+                <note>This is a minimum configuration for testing purposes only. It is not suitable for production use. </note>
+            </p>
+        </section>
         </conbody>
 </concept>

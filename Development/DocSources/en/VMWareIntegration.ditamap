@@ -2,82 +2,54 @@
 <!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN"
                          "">
 <!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2019 -->
-<bookmap id="BESVMWareIntegrationGuide"
-            xml:lang="en_US">
+<bookmap id="BESVMWareIntegrationGuide" xml:lang="en_US">
     <title>VMware vSphere Integration</title>
     <bookmeta>
-        <prodinfo
-                    product="oscm_ce">
+        <prodinfo product="oscm_ce">
             <prodname/>
             <vrmlist>
-                <vrm
-            version="18.0"/>
+                <vrm version="18.1"/>
             </vrmlist>
             <brand/>
-            <prognum>18.0</prognum>
+            <prognum>18.1</prognum>
             <component/>
             <series>VMware vSphere Integration</series>
         </prodinfo>
-        <prodinfo
-                    product="oscm_ee">
+        <prodinfo product="oscm_ee">
             <prodname>Enterprise Service</prodname>
             <vrmlist>
-                <vrm
-            version="18.0.0"/>
+                <vrm version="V18.1"/>
             </vrmlist>
             <brand>FUJITSU Software</brand>
-            <prognum>Catalog Manager V18.0.0</prognum>
+            <prognum>Catalog Manager V18.1</prognum>
             <component/>
             <series>VMware vSphere Integration</series>
         </prodinfo>
         <bookid>
-            <edition>April 2019 </edition>
-            <!--booknumber product="oscm_ee">B1WS-1281-01</booknumber-->
+            <edition>December 2019</edition>
         </bookid>
-        <bookrights
-                product="oscm_ce">
-            <bookowner
-            name="none"/>
+        <bookrights product="oscm_ce">
+            <bookowner name="none"/>
         </bookrights>
-        <bookrights
-                product="oscm_ee">
-            <bookowner
-            name="FUJITSU LIMITED"/>
+        <bookrights product="oscm_ee">
+            <bookowner name="FUJITSU LIMITED"/>
         </bookrights>
     </bookmeta>
     <frontmatter>
-        <notices
-            href="Shared/Frontmatter/BookInfo.xml"/>
-        <preface
-                href="VMWareIntegrationGuide/About/c_About.xml">
-            <topicref
-                href="VMWareIntegrationGuide/About/c_Readers.xml"
-                type="concept"/>
-            <topicref
-                href="Shared/gettingstarted/intro_convent.xml"
-                type="concept"/>
-            <topicref
-                href="VMWareIntegrationGuide/About/intro_abbrev.xml"
-                type="concept"/>
-            <topicref
-                href="Shared/gettingstarted/intro_availabledoc.xml"
-        type="concept"/>
+        <notices href="Shared/Frontmatter/BookInfo.xml"/>
+        <preface href="VMWareIntegrationGuide/About/c_About.xml">
+            <topicref href="VMWareIntegrationGuide/About/c_Readers.xml" type="concept"/>
+            <topicref href="Shared/gettingstarted/intro_convent.xml" type="concept"/>
+            <topicref href="VMWareIntegrationGuide/About/intro_abbrev.xml" type="concept"/>
+            <topicref href="Shared/gettingstarted/intro_availabledoc.xml" type="concept"/>
         </preface>
     </frontmatter>
-    <chapter
-        format="dita"
-        href="VMWareIntegrationGuide/Intro/c_Introduction.xml"
-            type="concept">
-        <topicref format="dita"
-            href="VMWareIntegrationGuide/Intro/c_Components.xml"
-            type="concept"/>
-        <topicref format="dita"
-            href="VMWareIntegrationGuide/Intro/c_Scenarios.xml"
-        type="concept"/>
+    <chapter format="dita" href="VMWareIntegrationGuide/Intro/c_Introduction.xml" type="concept">
+        <topicref format="dita" href="VMWareIntegrationGuide/Intro/c_Components.xml" type="concept"/>
+        <topicref format="dita" href="VMWareIntegrationGuide/Intro/c_Scenarios.xml" type="concept"/>
     </chapter>
-    <!--chapter format="dita" href="VMWareIntegrationGuide/Configuration/c_Configuration.xml" type="concept"/-->
-    
-    <!--chapter format="dita" href="Shared/Installation/c_InstIntro.xml" type="concept">
+    <!--chapter format="dita" href="VMWareIntegrationGuide/Configuration/c_Configuration.xml" type="concept"/
+chapter format="dita" href="Shared/Installation/c_InstIntro.xml" type="concept">
         <topicref format="dita" href="VMWareIntegrationGuide/Installation/c_Preparation.xml" type="concept">
             <topicref format="dita" href="Shared/Installation/c_PrepCTMG.xml" type="concept"/>
             <topicref format="dita" href="Shared/Installation/c_PrepHardware.xml" type="concept"/>
@@ -97,83 +69,37 @@
         <topicref format="dita" href="Shared/Installation/c_Update.xml" type="concept"/>
     </chapter-->
     <chapter format="dita" href="VMWareIntegrationGuide/Configuration/c_Configuration.xml" type="concept"/>
-    
-    <chapter
-        format="dita"
-        href="VMWareIntegrationGuide/Services/c_ServicesIntro.xml"
-            type="concept">
-        <topicref format="dita"
-            href="Shared/concepts/c_ControllerPrerequisites.xml"
-            type="concept"/>
-        <topicref format="dita"
-            href="Shared/tasks/t_CreateTechService.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="Shared/tasks/t_CreateMarkService.xml"
-        type="task"/>
+    <chapter format="dita" href="VMWareIntegrationGuide/Services/c_ServicesIntro.xml" type="concept">
+        <topicref format="dita" href="Shared/concepts/c_ControllerPrerequisites.xml" type="concept"/>
+        <topicref format="dita" href="Shared/tasks/t_CreateTechService.xml" type="task"/>
+        <topicref format="dita" href="Shared/tasks/t_CreateMarkService.xml" type="task"/>
     </chapter>
-    <chapter format="dita"
-        href="VMWareIntegrationGuide/Using/c_UsingIntro.xml"
-            type="concept">
-        <topicref format="dita"
-            href="VMWareIntegrationGuide/Using/t_Subscribe.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="VMWareIntegrationGuide/Using/t_Modify.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="VMWareIntegrationGuide/Using/t_ExecuteOperation.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="VMWareIntegrationGuide/Using/t_Terminate.xml"
-        type="task"/>
+    <chapter format="dita" href="VMWareIntegrationGuide/Using/c_UsingIntro.xml" type="concept">
+        <topicref format="dita" href="VMWareIntegrationGuide/Using/t_Subscribe.xml" type="task"/>
+        <topicref format="dita" href="VMWareIntegrationGuide/Using/t_Modify.xml" type="task"/>
+        <topicref format="dita" href="VMWareIntegrationGuide/Using/t_ExecuteOperation.xml" type="task"/>
+        <topicref format="dita" href="VMWareIntegrationGuide/Using/t_Terminate.xml" type="task"/>
     </chapter>
-    <chapter format="dita"
-        href="VMWareIntegrationGuide/Administrating/c_AdministratingIntro.xml"
-            type="concept">
-        <topicref format="dita"
-            href="Shared/concepts/c_ControlExecution.xml"
-            type="concept"/>
-        <topicref format="dita"
-            href="Shared/concepts/c_ControllerHandleProblems.xml"
-            type="concept"/>
-        <!--topicref format="dita" href="Shared/concepts/c_ControllerHandleCommProblems.xml" type="concept"/-->
-        <!--topicref format="dita" href="Shared/Installation/c_Backup.xml" type="concept"/-->
-        <topicref
-            format="dita"
-            href="VMWareIntegrationGuide/Administrating/c_UpdateConfiguration.xml"
-            type="concept"/>
-        <!--topicref format="dita" href="VMWareIntegrationGuide/Administrating/c_LoadBalancing.xml" type="concept"/-->
-		<!--topicref format="dita" href="Shared/reference/c_LogConfig.xml" type="concept"/-->
-		<topicref
-            format="dita"
-            href="VMWareIntegrationGuide/Administrating/c_ChangeOrg.xml"
-        type="concept"/>
-		
+    <chapter format="dita" href="VMWareIntegrationGuide/Administrating/c_AdministratingIntro.xml" type="concept">
+        <topicref format="dita" href="Shared/concepts/c_ControlExecution.xml" type="concept"/>
+        <topicref format="dita" href="Shared/concepts/c_ControllerHandleProblems.xml" type="concept"/>
+        <!--topicref format="dita" href="Shared/concepts/c_ControllerHandleCommProblems.xml" type="concept"/
+topicref format="dita" href="Shared/Installation/c_Backup.xml" type="concept"/-->
+        <topicref format="dita" href="VMWareIntegrationGuide/Administrating/c_UpdateConfiguration.xml" type="concept"/>
+        <topicref format="dita" href="Shared/concepts/c_ChangeOrg.xml" type="concept"/>
     </chapter>
     <!--chapter format="dita" href="Shared/Installation/c_Uninstallation.xml" type="concept"/-->
-    
-    
-    <appendix
-        format="dita"
-        href="VMWareIntegrationGuide/Appendix/r_ConfigSettingsController.xml"
-        type="reference"/>
-    <appendix format="dita"
-        href="VMWareIntegrationGuide/Appendix/r_CSVFormat.xml"
-        type="reference">
+    <appendix format="dita" href="VMWareIntegrationGuide/Appendix/r_ConfigSettingsController.xml" type="reference"/>
+    <appendix format="dita" href="VMWareIntegrationGuide/Appendix/r_CSVFormat.xml" type="reference">
         <topicref format="dita" href="VMWareIntegrationGuide/Appendix/c_LoadBalancing.xml" type="concept"/>
-        </appendix>
-        <!--topicref format="dita" href="VMWareIntegrationGuide/Appendix/r_ConfigSettings_db.xml" type="reference"/>
+    </appendix>
+    <!--topicref format="dita" href="VMWareIntegrationGuide/Appendix/r_ConfigSettings_db.xml" type="reference"/>
         <topicref format="dita" href="APPInt/APP/r_ConfigSettings.xml" type="reference"/>
 	    <topicref format="dita" href="VMWareIntegrationGuide/Appendix/r_ConfigSettings_dbController.xml" type="reference"/>
 		<topicref format="dita" href="VMWareIntegrationGuide/Appendix/r_CSVFormat.xml" type="reference"/>
         <topicref format="dita" href="VMWareIntegrationGuide/Appendix/r_ConfigSettingsController.xml" type="reference"/>
         		
     </appendix-->
-    <appendix
-        format="dita"
-        href="VMWareIntegrationGuide/Appendix/r_ServiceParameters.xml"
-        type="reference"/>
-    <appendix format="dita"
-        href="Shared/glossary/r_Glossary.xml" type="reference"/>
+    <appendix format="dita" href="VMWareIntegrationGuide/Appendix/r_ServiceParameters.xml" type="reference"/>
+    <appendix format="dita" href="Shared/glossary/r_Glossary.xml" type="reference"/>
 </bookmap>

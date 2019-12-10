@@ -1,43 +1,75 @@
-<?xml version="1.0" encoding="UTF-8"?>  
-<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2019 -->
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
                          "concept.dtd">
-<concept id="Auth" xml:lang="en-us">
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2019 -->
+<concept id="Auth"
+            xml:lang="en-us">
     <title>Authentication Mode</title>
     <conbody>
         <section>
             <p>This is a generic topic for sharing information on authentication. </p>
         </section>
-        <section id="auth_internal">
-            <p id="auth_internal1"><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> is installed as a platform for public access from anywhere in the Internet. Users are authenticated with <ph
+        <section
+                id="auth_internal">
+            <title>INTERNAL Authentication Mode</title>
+            <p
+                    id="auth_internal1"><ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> is installed as a platform for public access from anywhere in the Internet. Users are authenticated with <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> and can be managed in <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> or an existing LDAP system of an organization. Web service calls are authenticated in <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> either by providing a user key or ID and a password in their header, or by certificates.</p>
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> or an existing LDAP system of an organization. Web service calls are authenticated in <ph
+            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> either by providing a user key or ID and a password in their header, or by certificates.</p>
         </section>
-        <section id="auth_saml">
+        <section
+                id="auth_saml">
             <title>SAML_SP Authentication Mode</title>
-            <p id="auth_saml1"><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> is installed as a SAML 2.0 service provider. SAML (Security Assertion Markup Language) is an XML-based protocol that uses SAML assertions to pass information about a user between a SAML IdP and a SAML service provider (<ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                />). With SAML 2.0, Web browser single sign-on within a company is provided. </p>
-            <p id="auth_saml2"
-                    >All users and Web service calls are authenticated against the authentication system underlying the IdP, for example, OpenAM, Cloudminder, or Active Directory Federation Service (ADFS). The IdP provides a Web browser single sign-on profile (SSO profile) and a Security Token Service (STS). This is a Web service that issues security tokens as defined in the WS-Security/WS-Trust specification. A connection to the IdP is always established by the client (Web browser or Web service application), not by <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                />. The client sends a request for a SAML assertion. The IdP returns an assertion authenticating the calling user. </p>
-            <p id="When_a_user_logs_out_of_a_concept_conbody_section_3_p"
-                    >Single logout support can also be configured: When a user logs out of an <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> marketplace or the administration portal, a <codeph>logout</codeph> request is sent to the single logout service of the IdP system and the sessions in <ph
+            <p
+                    id="auth_saml1"><ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> is installed as a SAML 2.0 service provider. SAML (Security Assertion Markup Language) is an XML-based protocol that uses SAML assertions to pass information about a user between a SAML IdP and a SAML service provider (<ph
+                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>). With SAML 2.0, Web browser single sign-on within a company is provided. </p>
+            <p
+                    id="auth_saml2">All users and Web service calls are authenticated against the authentication system underlying the IdP, for example, OpenAM, Cloudminder, or Active Directory Federation Service (ADFS). The IdP provides a Web browser single sign-on profile (SSO profile) and a Security Token Service (STS). This is a Web service that issues security tokens as defined in the WS-Security/WS-Trust specification. A connection to the IdP is always established by the client (Web browser or Web service application), not by <ph
+                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. The client sends a request for a SAML assertion. The IdP returns an assertion authenticating the calling user. </p>
+            <p
+                    id="When_a_user_logs_out_of_a_concept_conbody_section_3_p">Single logout support can also be configured: When a user logs out of an <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> marketplace or the administration portal, a <codeph>logout</codeph> request is sent to the single logout service of the IdP system and the sessions in <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> and in the IdP system are invalidated. The user is directed to a Web page that depends on settings in the IdP system and in <ph
+                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>, and he can log in again. </p>
+            <p
+                    id="auth_saml3">The user data is managed in the IdP. Additionally, all users who are to work with <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> must be registered explicitly in <ph
+            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </p>
+        </section>
+        <section
+                    id="auth_oidc">
+            <title>OIDC Authentication Mode</title>
+            <p>OpenID Connect (OIDC) is a simple identity layer on top of the OAuth 2.0 protocol, which allows computing clients to verify the identity of a user based on the authentication performed by an authorization server, as well as to obtain basic profile information about the user. The users and their passwords and profiles are maintained at the OIDC provider, for example, Microsoft Azure Active Directory. </p>
+            <p>When installed in OIDC authentication mode,  <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> acts as an OIDC client. All users and Web services accessing <ph
+                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> are authenticated by the OIDC provider. Web-browser single sign-on (SSO) is supported; this means that a user once logged in and verified at the OIDC provider does not need to log in again to use different applications working with that same provider until he closes the browser session and/or logs out. </p>
+            <p><b>OIDC Tenants</b></p>
+            <p
+                    id="auth_saml2">An OIDC <b>tenant</b> in <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> represents a configuration with all the settings and parameters required to connect to a specific tenant at the OIDC provider, for example, a specific domain and directory in Microsoft Azure Active Directory. The first and <b>default tenant</b> is created when <ph
+                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> is installed. The platform operator can create additional tenants at any time, if required. </p>
+            <p
+                    id="auth_saml2">Each organization and marketplace in <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> is assigned to a specific tenant when it is created. The initial operator organization is associated with the default tenant. Users trying to log in to a marketplace are authenticated by the OIDC provider of the tenant assigned to the marketplace. For access to the <ph
+                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> administration portal, the tenant to be used for authentication must be specified in the URL unless it is the default tenant.</p>
+            <p><b>Users and Organizations</b></p>
+            <p id="Every_user_who_is_to_work_in_concept_conbody_section_4_p">Every user who is to work in <ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> and in the IdP system are invalidated. The user is directed to a Web page that depends on settings in the IdP system and in <ph
-                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>, and he can log in again. </p>
-            <p id="auth_saml3">The user data is managed in the IdP. Additionally, all users who are to work with <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> must be registered explicitly in <ph
-                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </p>
+                    /> must exist in the respective OIDC provider system. When the operator creates an organization in <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    />, a corresponding group is automatically created at the given OIDC provider, and the user specified as the organization administrator in <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> is assigned to it as a member. </p>
+            <p id="Additional_group_members_can_concept_conbody_section_4_p"><ph id="Additional_group_members_4_ph"
+                        >Additional group members can be admitted or removed at any time at the OIDC provider. The <ph
+                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> organizations are synchronized automatically with the corresponding groups at the OIDC provider at daily intervals or manually by the operator. New group members are registered as <ph
+                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> users, where they can be assigned user roles as required.</ph></p>
+            <p>For <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> operations to work correctly, a specific user can be assigned to exactly one organization and group at a given time. </p>
         </section>
         <section/>
     </conbody>

@@ -9,23 +9,42 @@
       <p>On the <uicontrol>Register customer</uicontrol> page, you can register customers so that they do not need to do this themselves.</p>
       <p>Registering a customer creates a new organization as well as an initial administrator account. All login information is automatically sent to this administrator by email. The default organizational unit is also created. The administrator is the first member of this default unit. Any user who will be registered for the organization is automatically added to the default unit. Additional units can be created by the administrators of the organization.</p>
       <p>As a prerequisite for registering a customer, the marketplace to which the new customer is to be directed must already exist.</p>
+      <p>The fields available for defining the new customer organization and its initial administrator depend on the user authentication and management mode used for the platform: </p>
+      <ul compact="no">
+        <li>
+          <p><b>INTERNAL</b> mode - users are authenticated by the <b>platform</b>: The user IDs and passwords of an organization are created and maintained in the platform or in an existing LDAP system of the organization.</p>
+          <p id="UserMgmt2"
+            >When maintained in the platform, the user data is stored in the platform's database. An organization's administrator can register new users, and, if required, request passwords to be reset by the operator. </p>
+          <p id="UserMgmt3"
+            >When using an LDAP system, an organization does not need to register its users manually with the platform. The organization's administrator can import the users from the LDAP system, thus automatically registering them with the platform. The users are managed in the LDAP system. The platform continuously synchronizes its information on the users. </p>
+        </li>
+        <li>
+          <p><b>OIDC</b> mode - users are authenticated against an <b>external provider</b> such as Microsoft Azure Active Directory: The user IDs and passwords of an organization are created and maintained in the OIDC provider system.</p>
+          <p>When registering a customer and thus creating an organization, you need to specify a marketplace, which is associated with a specific OIDC provider. The user entered as the first administrator must exist in the OIDC provider system. He is automatically registered with the platform.</p>
+          <p>Together with the organization, a corresponding group is created in the OIDC provider system and the user is assigned to it as a member. Additional group members can then be added at any time in the OIDC provider system. The organization on the platform is synchronized automatically with the corresponding group at the OIDC provider.  </p>
+        </li>
+      </ul>
       <p><b>To register new customers</b>:</p>
     </context>
     <steps>
       <step>
-        <cmd>Enter the following user data for the first administrator of the new customer organization.</cmd>
+        <cmd>Enter the following user data for the first administrator of the new customer organization, depending on the authentication mode:</cmd>
         <info>
+          <p><b>INTERNAL authentication mode</b>:</p>
           <ul compact="no">
             <li><uicontrol>Title</uicontrol>: Salutation, such as <codeph>MR</codeph> or <codeph>MS</codeph>
             </li>
             <li><uicontrol>First name</uicontrol>: The administrator's first name.</li>
             <li><uicontrol>Last name</uicontrol>: The administrator's last name.</li>
             <li><uicontrol>Email</uicontrol>: Email address of the organization's administrator. Notifications about the creation of the account and access information will be sent to this address. <p>The system checks whether the syntax of the given email address is valid, and whether the domain name corresponds to the standards as defined and maintained by the Internet Assigned Numbers Authority (IANA). </p><p>Examples: <codeph>user.name@domain.arpa</codeph>, <codeph>user.name@domain.org</codeph>, <codeph>user@mycompany.lan.uk</codeph></p></li>
-            <li><uicontrol>Desired user ID</uicontrol>: User ID of the organization's administrator. User IDs are restricted to 100 characters and must not contain any of the following characters:<p><codeph>! " # $ % &amp; ' * + , / : ; &lt; = > ? \ ^ `</codeph></p><p>
-                <note>If the customer's organization uses an external system for user authentication, the ID of the user to be registered must match an existing ID in the external system. </note>
-              </p></li>
+            <li><uicontrol>Desired user ID</uicontrol>: User ID of the organization's administrator. User IDs are restricted to 100 characters and must not contain any of the following characters:<p><codeph>! " # $ % &amp; ' * + , / : ; &lt; = > ? \ ^ `</codeph></p></li>
             <li><uicontrol>Language</uicontrol>: Language in which the administrator will work by default. The user interface, available documentation, and emails will be presented to the administrator in the language specified here. The administrator can change the language later. The list of available languages depends on the platform operator's definition of supported languages. </li>
           </ul>
+          <note>If you register a customer organization with LDAP-based user management, the user ID must match an existing ID in the external LDAP system. The organization's LDAP configuration determines which additional settings are required. All settings defined in the configuration must be mapped to corresponding values, for example first name, last name, email address, and language.</note>
+          <p><b>OIDC authentication mode</b>: </p>
+          <p>In the <b>Desired user ID</b> field, enter the ID of a user who exists in the OIDC provider system associated with the specified marketplace and is not yet a member of a group associated with another organization on the platform. User IDs are restricted to 100 characters and must not contain any of the following characters:</p>
+          <p><codeph>! " # $ % &amp; ' * + , / : ; &lt; = &gt; ? \ ^ `</codeph>
+          </p>
         </info>
       </step>
       <step>
@@ -54,10 +73,9 @@
         <info>The list contains all marketplaces to which you have been granted access by the marketplace owner.</info>
       </step>
       <step>
-        <cmd>If the customer is to use a remote LDAP system for user authentication, select the <uicontrol>Use LDAP-based authentication</uicontrol> check box. </cmd>
+        <cmd>For INTERNAL authentication mode: If the customer is to use an external LDAP system for user authentication, select the <uicontrol>Use LDAP-based authentication</uicontrol> check box. </cmd>
         <info>
           <p>Create an LDAP configuration file on your file system, and define the LDAP connection settings in the file. To load the configuration file, click the <uicontrol>LDAP settings</uicontrol> entry field or <uicontrol>Browse</uicontrol>, and select the file containing the settings. If you do not specify an organization-specific configuration file, the platform default settings for LDAP connections will be used. </p>
-          <p>When using an external LDAP system, your customer does not need to register his users manually. The administrator of the customer organization can import the users from the LDAP system, thus automatically registering basic information for them.</p>
           <p>Here is a sample configuration file: </p>
           <p conref="operator_createOrganization.xml#OrgCreate/LDAPSample"/>
           <p>The defaults shown in the sample are defined for <codeph>LDAP_CONTEXT_FACTORY</codeph> and <codeph>LDAP_ATTR_UID</codeph>, i.e. if you do not specify a value, these defaults apply when creating the organization unless the platform operator has defined different ones in the default LDAP settings for the platform.</p>
@@ -68,14 +86,11 @@
       </step>
     </steps>
     <result>
-      <p>After registering the customer, the administrator of the new customer organization is sent an email with the URL for accessing the selected marketplace and with the login data and an initial password to be used for the first login. </p>
-      <p>If the organization uses an external authentication system:</p>
-      <p>
-        <ul>
-          <li>Passwords are managed in this system. Therefore, the administrator is sent an email without a password. The password stored in the external authentication system must be used for logging in.</li>
-          <li>If the user ID of the administrator already exists in the platform, his email address (e.g. <codeph>userSmith@organization.com</codeph>) is used as user ID for logging in to the system. If yet another customer organization is registered and the user ID of the administrator is again identical, the new user ID is constructed using the existing ID followed by the "at" sign (@) and the ID of the customer organization (e.g. <codeph>userSmith@abcdefg</codeph>). The administrator is sent an email with the respective user ID.</li>
-        </ul>
-      </p>
+      <p>After registering the customer, the administrator of the new customer organization is sent an email with the URL for accessing the selected marketplace and with the credentials for logging in: </p>
+      <ul compact="no">
+        <li>If users are managed by the platform itself, the credentials consist of the user ID and the password for the first login. If the user ID of the administrator already exists in the platform, his email address (e.g. <codeph>userSmith@organization.com</codeph>) is used as the user ID for logging in. If yet another organization is created with the same administrator ID, a new user ID is constructed using the existing ID followed by the "at" sign (@) and the ID of the administrator's organization (e.g. <codeph>userSmith@abcdefg</codeph>). The administrator is sent an email with the respective user ID. </li>
+        <li>If the organization uses an external authentication system (LDAP system or OIDC provider), passwords are managed in this system. Therefore, the administrator is sent an email without a password. The password stored in the external authentication system must be used for logging in.</li>
+      </ul>
       <p>As a supplier or reseller, your next step is typically to specify the payment types available for the customer so that he can choose his preferred way of paying for his subscriptions. Payment types as well as billing addresses are relevant for services that are not free of charge. Even for these services, however, your operator may deactivate any possibilities for customers to enter such payment information. If this is the case, the definition of payment types is not possible.</p>
     </result>
   </taskbody>

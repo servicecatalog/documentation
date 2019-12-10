@@ -10,28 +10,25 @@
     <conbody>
         <section>
             <p>
-                <note>This section is relevant only if you are installing the  <ph
+                <note>This section is relevant only if you have received the <ph
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        /> Docker images from <codeph>tar.gz</codeph> files, not directly from DockerHub. </note>
+                        /> Docker images as <codeph>tar.gz</codeph> files, and do not install them directly from DockerHub. </note>
             </p>
-            <p>In order to install Docker images from archive files, you need access to a local Docker registry: </p>
-            <p>Make sure you have command-line access with write permissions to the Docker registry server in your network. If this is not available, you may choose to install such a server in your target environment. Refer to the Docker documentation at 
-                <xref
-                    href="https://docs.docker.com/registry/deploying" 
-                    scope="external">
-                    <u>https://docs.docker.com/registry/deploying</u></xref>
-                for details on how to deploy a Docker registry server. </p>
-            <p>In the subsequent sections, this registry is referred to as <codeph>${REGISTRY}</codeph>.</p>
-            <p>
-                <note>The name of the default DockerHub registry is <codeph>servicecatalog</codeph>. </note>
-            </p>
-            <p>Proceed as follows: </p>
+            <p>In order to install Docker images you received as archive files, you first need to import them into a local Docker registry.</p>
+            <p>Make sure you have command-line access with write permissions to the Docker registry server in your network. If this is not available, install a Docker registry server in your environment. Refer to the Docker documentation at <xref
+                    href="https://docs.docker.com/registry/deploying" scope="external"
+                        ><u>https://docs.docker.com/registry/deploying</u></xref> for details.</p>
+            <p>In the subsequent sections, the Docker registry is referred to as <codeph>${REGISTRY}</codeph>. The name of the <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> registry on DockerHub is <codeph>servicecatalog</codeph>. </p>
+            <p>Proceed as follows to import the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> Docker images into the local Docker registry: </p>
             <p>
                 <ol compact="no">
-                    <li>On your Docker machine, copy the <ph
+                    <li>On the Docker registry server, copy the <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                             /> Docker image archive files into the <codeph>/opt</codeph> folder. </li>
-                    <li>Import the images into your Docker registry using the following Docker command bash script: <p>
+                    <li>Import the images into the Docker registry using the following Docker command bash script: <p>
                             <codeblock>#!/bin/bash
 
 export REGISTRY=&lt;docker registry service>
@@ -41,19 +38,20 @@ docker login ${REGISTRY}
 for docker_image in \
         oscm-deployer \
         oscm-core \
-        oscm-app \
-        oscm-core \
-        oscm-birt \
         oscm-db \
+        oscm-identity
+        oscm-app \
+        oscm-birt \
+        oscm-branding \
         oscm-help \
         oscm-initdb \
 ; do
 
        docker load –i /opt/${docker_image}.tar.gz
 
-       docker tag ${REGISTRY}/${docker_image}:v18
+       docker tag ${REGISTRY}/${docker_image}:v18.1
 
-       docker push ${REGISTRY}/${docker_image}:v18
+       docker push ${REGISTRY}/${docker_image}:v18.1
 
 done
 </codeblock>

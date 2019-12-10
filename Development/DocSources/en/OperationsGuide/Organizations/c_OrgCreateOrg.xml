@@ -8,7 +8,15 @@
         <title>Creating an Organization</title>
         <conbody>
                 <section>
-                        <p>You can create an organization and specify its roles (technology provider, supplier, reseller, broker, or - implicitly - customer). For every new organization, you must define a user who is to become its first administrator. This user can later register new users and assign roles to them.</p>
+                        <p>You can create an organization and specify its roles (technology provider, supplier, reseller, broker, or - implicitly - customer). For every new organization, you must define a user who is to become its first administrator. This user can later register new users and/or assign roles to them.</p>
+                        <p>If <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        /> is operated in OIDC authentication mode, you need to select the tenant to be associated with the new organization. Be aware that you cannot change this assignment later. The user specified as the first administrator must exist in the OIDC provider system represented by the tenant. Together with the organization in <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        />, a corresponding group is created in the OIDC provider system and the user is assigned to it as a member. Additional group members can be added at any time in the OIDC provider system. The <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        /> organization is synchronized automatically with the corresponding group at the OIDC provider at daily intervals or manually by the operator. New group members are registered as <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> users, where they can be assigned user roles as required.</p>
                         <p><b>To create an organization:</b>
             </p>
             <p>In the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"

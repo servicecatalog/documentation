@@ -5,28 +5,45 @@
 ]>
 
 <concept id="concept_B32294CC9FA643A2A14A74B1DAA49C95" xml:lang="en-us">
-        <title>Managing Tenants and IdPs</title>
+        <title>Managing Tenants</title>
         <conbody>
                 <section>
-                        <p>Single sign-on (SSO) is supported by <ph
+                        <note>This section is relevant only if <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                /> when the system is installed in SAML_SP mode for user authentication. This authentication mode requires the definition of an Identity Provider (IdP) against which all platform users are authenticated when accessing a marketplace or the administration portal. User IDs and passwords of the organization are maintained in the IdP system, such as OpenAM or Active Directory Federation Service (ADFS). </p>
-                        <p>Any organization still needs to register its users with <ph
+                                        /> is installed in OIDC authentication mode. Refer to <xref
+                                        href="../Introduction/c_Authentication.xml"
+                                /> for details on authentication modes.</note>
+                        <p>When you install <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> in OIDC authentication mode, you define the first, default tenant to connect to a specific OIDC provider. The default tenant can be assigned to any number of organizations and marketplaces for authentication.</p>
+                        <p>As an operator, you can create additional tenants to use different OIDC provider systems for the users of individual organizations or marketplaces. To do so:</p>
+                        <ol>
+                                <li>Take the required preparations in the OIDC provider system. For details, refer to <xref
+                                                href="../../Shared/reference/c_Preparation_OIDC_Provider.xml"/>.</li>
+                                <li>Create a tenant in the <ph
+                                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        /> administration portal.</li>
+                                <li>Download and fill in the template of the configuration file for the new tenant. For details on tenant configuration files, refer to <xref
+                                                href="../../Shared/reference/r_ConfigSettings_OIDC_Tenant.xml"/>.</li>
+                                <li>Store the configuration file on the Docker host where <ph
+                                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                        /> is deployed:<p><codeph>&lt;docker>/config/oscm-identity/tenants/tenant-&lt;id>.properties</codeph></p><p><codeph>&lt;docker></codeph> is the <ph
+                                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                        /> data directory specified at installation time. <codeph>&lt;id></codeph> is the ID of the tenant created in <ph
+                                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                />.</p></li>
+                        </ol>
+                        <p>Users are authenticated against the OIDC provider of the tenant associated with the respective marketplace or administration portal. User names do not need to be unique in <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                />. The user credentials must match the ones maintained in the IdP system. Connection settings have to be defined in a configuration file so that the platform can connect to the IdP system.</p>
-                        <p>The initial IdP defined when installing the platform in SAML_SP mode is used platform-wide, i.e. for all users registered on the platform. This initial IdP is called "default IdP". In addition, the operator can define tenants and associate an IdP system with each tenant. Marketplaces and organizations can then be associated with a tenant. In this way, the users of an organization with access to such a marketplace are authenticated against the IdP system associated with this tenant when accessing the marketplace or the administration portal. </p>
-                        <p>Users are always authenticated against the IdP associated with the respective marketplace or administration portal. Users of the same or of different organizations are authenticated against a different IdP when accessing different marketplaces with different IdPs associated.</p>
-                        <p>User names must no longer be unique on the platform, but only within the scope of each tenant.</p>
+                                />, but only within the scope of each tenant. </p>
                         <p>
-                                <note>You as the platform operator are responsible for the correct configuration of tenants!<p>Be aware that although a marketplace can be associated with a tenant, the marketplace is, by default, still open for publishing and subscribing to services. To avoid this, configure the marketplace in a way that you restrict the access to it to specific sellers who can publish their services (authorized sellers only) and to specific customer organizations that can subscribe to services published on the marketplace (closed marketplace). To do so, you need to be the owner of the marketplace.</p></note>
+                                <note>As the platform operator, you are responsible for the correct configuration of tenants.<p>Be aware that although a marketplace is associated with a tenant, it is, by default, still open for publishing and subscribing to services. To avoid this, marketplace owners need to configure the marketplace in a way to restrict the access to it to specific sellers (authorized sellers only) and/or to specific customer organizations (closed marketplace). </p></note>
                         </p>
                 </section>
                 <section>
                         <p><b>To create a tenant, choose the following option:</b>
                         </p>
-                        <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                        /> administration portal - Choose <b>Manage tenants</b> in the <b>Operation</b> menu.</p>
-                        <p>For detailed step-by-step instructions, refer to the online help. </p>
+                        <p>In the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        /> administration portal, choose <b>Manage tenants</b> in the <b>Operation</b> menu. For detailed step-by-step instructions, refer to the online help. </p>
                 </section>
         </conbody>
 </concept>

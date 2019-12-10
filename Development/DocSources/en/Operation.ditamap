@@ -2,105 +2,61 @@
 <!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN"
                          "">
 <!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2019 -->
-<bookmap id="BESAppIntegrationGuide"
-            xml:lang="en_US">
+<bookmap id="BESAppIntegrationGuide" xml:lang="en_US">
     <title>Operator's Guide</title>
     <bookmeta>
-        <prodinfo
-                    product="oscm_ce">
+        <prodinfo product="oscm_ce">
             <prodname/>
             <vrmlist>
-                <vrm
-            version="V18.0"/>
+                <vrm version="V18.1"/>
             </vrmlist>
             <brand/>
-            <prognum>V18.0</prognum>
+            <prognum>V18.1</prognum>
             <component/>
             <series>Operator's Guide</series>
         </prodinfo>
-        <prodinfo
-                    product="oscm_ee">
+        <prodinfo product="oscm_ee">
             <prodname>Enterprise Service</prodname>
             <vrmlist>
-                <vrm
-            version="V18.0.0"/>
+                <vrm version="V18.1"/>
             </vrmlist>
             <brand>FUJITSU Software</brand>
-            <prognum>Catalog Manager V18.0.0</prognum>
+            <prognum>Catalog Manager V18.1</prognum>
             <component/>
             <series>Operator's Guide</series>
         </prodinfo>
         <bookid>
-            <edition>April 2019 </edition>
-            <!--booknumber product="oscm_ee">B1WS-1252-02</booknumber-->
+            <edition>December 2019</edition>
         </bookid>
-        <bookrights
-                product="oscm_ce">
-            <bookowner
-            name="none"/>
+        <bookrights product="oscm_ce">
+            <bookowner name="none"/>
         </bookrights>
-        <bookrights
-                product="oscm_ee">
-            <bookowner
-            name="FUJITSU LIMITED"/>
+        <bookrights product="oscm_ee">
+            <bookowner name="FUJITSU LIMITED"/>
         </bookrights>
     </bookmeta>
     <frontmatter>
-        <notices
-            href="Shared/Frontmatter/BookInfo.xml"/>
-        <preface
-            format="dita" href="OperationsGuide/About/c_About.xml"
-                type="concept">
-            <topicref format="dita"
-                href="OperationsGuide/About/c_Readers.xml"
-                type="concept"/>
-            <topicref format="dita"
-                href="Shared/gettingstarted/intro_convent.xml"
-                type="concept"/>
-            <topicref format="dita"
-                href="OperationsGuide/About/intro_abbrev.xml"
-                type="concept"/>
-            <topicref format="dita"
-                href="Shared/gettingstarted/intro_availabledoc.xml"
-        type="concept"/>
+        <notices href="Shared/Frontmatter/BookInfo.xml"/>
+        <preface format="dita" href="OperationsGuide/About/c_About.xml" type="concept">
+            <topicref format="dita" href="OperationsGuide/About/c_Readers.xml" type="concept"/>
+            <topicref format="dita" href="Shared/gettingstarted/intro_convent.xml" type="concept"/>
+            <topicref format="dita" href="OperationsGuide/About/intro_abbrev.xml" type="concept"/>
+            <topicref format="dita" href="Shared/gettingstarted/intro_availabledoc.xml" type="concept"/>
         </preface>
     </frontmatter>
-    <chapter
-            href="OperationsGuide/Introduction/c_Intro.xml">
-        <topicref
-            href="Shared/gettingstarted/c_BESContainers.xml"
-            type="concept"/>
-        <topicref
-            href="Shared/gettingstarted/c_BESArchitecture.xml"
-            type="concept"/>
-        <topicref format="dita"
-            href="Shared/concepts/c_OrgsRoles.xml"
-        type="concept"/>
+    <chapter href="OperationsGuide/Introduction/c_Intro.xml">
+        <topicref format="dita" href="Shared/gettingstarted/c_BESContainers.xml" type="concept"/>
+        <topicref href="Shared/gettingstarted/c_BESArchitecture.xml" type="concept"/>
+        <topicref format="dita" href="Shared/concepts/c_OrgsRoles.xml" type="concept"/>
+        <topicref format="dita" href="OperationsGuide/Introduction/c_Authentication.xml" type="concept"/>
     </chapter>
-    
-    <chapter
-        href="OperationsGuide/GettingStarted/c_GettingStarted.xml"
-        type="concept">
-        
-        <!--topicref href="OperationsGuide/GettingStarted/c_StartupShutdown.xml" type="concept"/-->
-    </chapter>
-    
-    <chapter
-        href="OperationsGuide/Configuration/c_Configuration.xml"
-            type="concept">
-        <topicref
-            href="OperationsGuide/Configuration/c_UpdateConfiguration.xml"
-            type="concept"/>
-        <topicref
-            href="OperationsGuide/Configuration/c_AddCurrency.xml"
-            type="concept"/>
-        <topicref
-            href="OperationsGuide/Configuration/c_AddLanguage.xml"
-            type="concept"/>
+    <chapter format="dita" href="OperationsGuide/GettingStarted/c_GettingStarted.xml" type="concept"/>
+    <chapter href="OperationsGuide/Configuration/c_Configuration.xml" type="concept">
+        <topicref href="OperationsGuide/Configuration/c_UpdateConfiguration.xml" type="concept"/>
+        <topicref href="OperationsGuide/Configuration/c_AddCurrency.xml" type="concept"/>
+        <topicref href="OperationsGuide/Configuration/c_AddLanguage.xml" type="concept"/>
         <!--topicref href="InstallationGuide/Installation/c_NumberOfRetries.xml" type="concept"/-->
-        <topicref
-            href="OperationsGuide/Configuration/c_Timers.xml"
-            type="concept"/>
+        <topicref href="OperationsGuide/Configuration/c_Timers.xml" type="concept"/>
         <!--topicref
             href="OperationsGuide/Configuration/r_ConfigSettings_glassfishFT.xml"
             type="reference"/
@@ -108,116 +64,67 @@ topicref href="OperationsGuide/Configuration/c_AddNode.xml" type="concept"/
 topicref href="OperationsGuide/Configuration/c_MoveDB.xml" type="concept"/
 topicref href="OperationsGuide/Configuration/c_MoveMasterIndexerDomain.xml" type="concept"/
 topicref href="OperationsGuide/Configuration/c_LoadBalancing.xml" type="concept"/-->
-        <topicref
-            href="OperationsGuide/Configuration/c_LDAPSettings.xml"
-            type="concept"/>
-        <topicref
-            href="OperationsGuide/Configuration/c_APP.xml"
-        type="concept"/>
-        
-        
+        <topicref href="OperationsGuide/Configuration/c_LDAPSettings.xml" type="concept"/>
+        <topicref href="OperationsGuide/Configuration/c_APP.xml" type="concept"/>
     </chapter>
-    
-    
-    <chapter
-        href="OperationsGuide/Monitoring/c_RegularIntro.xml"
-            type="concept">
-        <topicref
-            href="OperationsGuide/Monitoring/c_Monitoring.xml"
-                type="concept">
-        <topicref
-                href="OperationsGuide/Monitoring/c_LogMaintain.xml"
-                type="concept"/>
+    <chapter href="OperationsGuide/Monitoring/c_RegularIntro.xml" type="concept">
+        <topicref href="OperationsGuide/Monitoring/c_Monitoring.xml" type="concept">
+            <topicref href="OperationsGuide/Monitoring/c_LogMaintain.xml" type="concept"/>
             <!--topicref href="OperationsGuide/Monitoring/c_LogTypes.xml" type="concept"/-->
-            <topicref
-                href="OperationsGuide/Monitoring/c_LogLevel.xml"
-            type="concept"/>
-            <!--topicref href="OperationsGuide/Monitoring/c_LogContent.xml" type="concept"/-->
-            <!--topicref href="OperationsGuide/Monitoring/c_LogMaintain.xml" type="concept"/-->
+            <topicref href="OperationsGuide/Monitoring/c_LogLevel.xml" type="concept"/>
         </topicref>
-        <topicref
-            href="OperationsGuide/Monitoring/c_ExportUserOperationLog.xml"
-            type="concept"/>
-        <topicref
-            href="OperationsGuide/Monitoring/c_Backup.xml"
-            type="concept"/>
-        <topicref
-            href="OperationsGuide/Monitoring/c_CheckJMS.xml"
-        type="concept"/>
+        <topicref href="OperationsGuide/Monitoring/c_ExportUserOperationLog.xml" type="concept"/>
+        <topicref href="OperationsGuide/Monitoring/c_Backup.xml" type="concept"/>
+        <topicref href="OperationsGuide/Monitoring/c_CheckJMS.xml" type="concept"/>
     </chapter>
-    <chapter
-        href="OperationsGuide/Organizations/c_Organizations.xml"
-            type="concept">
-        <topicref
-            href="OperationsGuide/Organizations/c_OrgCreateOrg.xml"
-            type="concept"/>
-        <topicref
-            href="OperationsGuide/Organizations/c_OrgEditAddress.xml"
-            type="concept"/>
+    <chapter format="dita" href="OperationsGuide/Organizations/c_Organizations.xml" type="concept">
+        <topicref format="dita" href="OperationsGuide/Organizations/c_OrgCreateOrg.xml" type="concept"/>
+        <topicref href="OperationsGuide/Organizations/c_OrgEditAddress.xml" type="concept"/>
         <!--topicref href="OperationsGuide/Organizations/c_OrgManage.xml" type="concept"-->
-        <topicref
-            href="OperationsGuide/Organizations/c_OrgAddRole.xml"
-            type="concept"/>
-        <topicref
-            href="OperationsGuide/Organizations/c_ManageUsers.xml"
-            type="concept"/>
-        <topicref
-            href="OperationsGuide/Organizations/c_ImportUsers.xml"
-        type="concept"/>
-		<!--topicref href="OperationsGuide/Organizations/c_ManageTenants.xml" type="concept"-->
-		<!--topicref href="Shared/reference/c_IdPInfo.xml" type="concept"/-->
-		<!--topicref href="Shared/reference/c_IdPInfo2.xml" type="concept"/-->
-		<!--/topicref-->
-		
+        <topicref href="OperationsGuide/Organizations/c_OrgAddRole.xml" type="concept"/>
+        <topicref format="dita" href="OperationsGuide/Organizations/c_ManageUsers.xml" type="concept"/>
+        <topicref format="dita" href="OperationsGuide/Organizations/c_ImportUsers.xml" type="concept"/>
+        <topicref format="dita" href="OperationsGuide/Organizations/c_ManageTenants.xml" type="concept">
+            <topicref format="dita" href="Shared/reference/c_Preparation_OIDC_Provider.xml" type="concept"/>
+            <topicref format="dita" href="OperationsGuide/Organizations/c_SynchronizeOIDC.xml" type="concept"/>
+        </topicref>
     </chapter>
-    <chapter
-        href="OperationsGuide/Reports/c_Reports.xml"
-        type="concept"/>
-    <chapter format="dita"
-        href="OperationsGuide/Billing/c_BillingPayment.xml"
-            type="concept">
-        <topicref format="dita"
-            href="OperationsGuide/Billing/c_BillingRun.xml"
-            type="concept"/>
-        <topicref format="dita"
-            href="OperationsGuide/Billing/c_DefineRevenueShares.xml"
-            type="concept"/>
+    <chapter href="OperationsGuide/Marketplace/c_ManageMP.xml" type="concept">
+        <topicref href="OperationsGuide/Marketplace/c_CreateMP.xml" type="concept"/>
+        <topicref href="OperationsGuide/Marketplace/c_UpdateMP.xml" type="concept"/>
+        <topicref href="OperationsGuide/Marketplace/c_DeleteMP.xml" type="concept"/>
+        <topicref href="OperationsGuide/Marketplace/c_ConfigureMP.xml" type="concept"/>
+        <topicref href="OperationsGuide/Marketplace/c_CustomizeMP.xml" type="concept"/>
+    </chapter>
+    <chapter href="OperationsGuide/Reports/c_Reports.xml" type="concept"/>
+    <chapter format="dita" href="OperationsGuide/Billing/c_BillingPayment.xml" type="concept">
+        <topicref format="dita" href="OperationsGuide/Billing/c_BillingRun.xml" type="concept"/>
+        <topicref format="dita" href="OperationsGuide/Billing/c_DefineRevenueShares.xml" type="concept"/>
         <!--topicref format="dita" href="OperationsGuide/Billing/c_IntegrateBillingSystem.xml" type="concept">
             <topicref format="dita" href="OperationsGuide/Billing/c_ExtBillingPrereqs.xml" type="concept"/>
             <topicref format="dita" href="OperationsGuide/Billing/c_BillingRegisterSystem.xml" type="concept"/>
             <topicref format="dita" href="OperationsGuide/Billing/c_BillingSetDefaultSystem.xml" type="concept"/>
-        </topicref-->
-        <!--topicref href="OperationsGuide/Billing/c_IntegratePSPSupport.xml" type="concept">
+        </topicref
+topicref href="OperationsGuide/Billing/c_IntegratePSPSupport.xml" type="concept">
             <topicref href="OperationsGuide/Billing/c_BillingPrereqs.xml" type="concept"/>
             <topicref format="dita" href="OperationsGuide/Billing/c_BillingCreatePSP.xml" type="concept"/>
             <topicref href="OperationsGuide/Billing/c_BillingManagePSPs.xml" type="concept"/>
             <topicref href="PSPInt_Heidelpay/BuildConfigure/r_ConfigSettings_Heidelpay.xml" type="reference"/>
             <topicref href="OperationsGuide/Billing/c_BillingPSPID.xml" type="concept"/>
-        </topicref-->
-        <!--topicref
+        </topicref
+topicref
             href="OperationsGuide/Billing/c_BillingPaymentTypes.xml"
             type="concept"/-->
-        <topicref
-            href="OperationsGuide/Billing/c_BillingTasks.xml"
-                type="concept">
-            <topicref
-                href="OperationsGuide/Billing/c_StartBillingRun.xml"
-                type="concept"/>
+        <topicref href="OperationsGuide/Billing/c_BillingTasks.xml" type="concept">
+            <topicref href="OperationsGuide/Billing/c_StartBillingRun.xml" type="concept"/>
             <!--topicref href="OperationsGuide/Billing/c_StartPaymentProcessing.xml" type="concept"/-->
-            <topicref
-                href="OperationsGuide/Billing/c_RetryFailedPaymentProcesses.xml"
-                type="concept"/>
-            <topicref
-                href="OperationsGuide/Billing/c_BillingDataPreview.xml"
-                type="concept"/>
-            <topicref
-                href="OperationsGuide/Billing/c_BillingDataExport.xml"
-        type="concept"/>
+            <topicref href="OperationsGuide/Billing/c_RetryFailedPaymentProcesses.xml" type="concept"/>
+            <topicref href="OperationsGuide/Billing/c_BillingDataPreview.xml" type="concept"/>
+            <topicref href="OperationsGuide/Billing/c_BillingDataExport.xml" type="concept"/>
         </topicref>
     </chapter>
-    <chapter
-        href="Shared/reference/c_Certificates.xml"
-            type="concept">
+    <chapter href="Shared/reference/c_Certificates.xml" type="concept">
+        <topicref href="Shared/reference/c_Importing_Trusted_Certs.xml" type="concept"/>
         <!--topicref href="Shared/reference/c_CertIntro.xml" type="concept"/>
         <topicref href="Shared/reference/c_CertPrivate_Signing.xml" type="concept"/>
         <topicref href="Shared/reference/c_CertReqsFromBSS.xml" type="concept"/>
@@ -232,115 +139,42 @@ topicref href="OperationsGuide/Configuration/c_LoadBalancing.xml" type="concept"
             <topicref href="OperationsGuide/Certificates/c_Cert_SignTechProvCert.xml" type="concept"/>
             <topicref href="OperationsGuide/Certificates/c_Cert_SetDN.xml" type="concept"/>
         </topicref-->
-		<topicref
-            href="Shared/reference/c_Importing_SSL_Key_pairs.xml"
-            type="concept"/>
-		<topicref
-            href="Shared/reference/c_Importing_Trusted_Certs.xml"
-        type="concept"/>
-		
-    </chapter>
-    <chapter
-        href="OperationsGuide/Marketplace/c_ManageMP.xml"
-            type="concept">
-        <topicref
-            href="OperationsGuide/Marketplace/c_CreateMP.xml"
-            type="concept"/>
-        <topicref
-            href="OperationsGuide/Marketplace/c_UpdateMP.xml"
-            type="concept"/>
-        <topicref
-            href="OperationsGuide/Marketplace/c_DeleteMP.xml"
-            type="concept"/>
-        <topicref
-            href="OperationsGuide/Marketplace/c_ConfigureMP.xml"
-            type="concept"/>
-        <topicref
-            href="OperationsGuide/Marketplace/c_CustomizeMP.xml"
-        type="concept"/>
-        <!--topicref href="OperationsGuide/Marketplace/c_UpdateSearchIndex.xml" type="concept"/-->
+        <topicref href="Shared/reference/c_Importing_SSL_Key_pairs.xml" type="concept"/>
     </chapter>
     <!--appendix href="Shared/reference/r_AppServerResources.xml" type="reference">
         <topicref href="Shared/reference/r_AppServerResources_BSSDomain.xml" type="reference"/>
         <topicref href="Shared/reference/r_AppServerResources_IndexerDomain.xml" type="reference"/>
     </appendix-->
-    <appendix
-        href="Shared/reference/r_ConfigSettings.xml"
-            type="reference">
-        <!--topicref href="Shared/reference/r_ConfigSettings_SOP.xml" type="reference"/-->
-        <!--topicref href="Shared/reference/r_ConfigSettings_db.xml" type="reference"/-->
-        <!--topicref href="Shared/reference/r_ConfigSettings_config_properties.xml" type="reference"/-->
-        <topicref
-            href="Shared/reference/r_ConfigSettings_initial.xml"
-            type="reference"/>
-        <topicref
-            href="Shared/reference/r_ConfigSettings_UI.xml"
-            type="reference"/>
-        <topicref
-            href="Shared/reference/r_ConfigSettings_APP.xml"
-        type="reference"/>
-        
+    <appendix href="Shared/reference/r_ConfigSettings.xml" type="reference">
+        <!--topicref href="Shared/reference/r_ConfigSettings_SOP.xml" type="reference"/
+topicref href="Shared/reference/r_ConfigSettings_db.xml" type="reference"/
+topicref href="Shared/reference/r_ConfigSettings_config_properties.xml" type="reference"/-->
+        <topicref href="Shared/reference/r_ConfigSettings_initial.xml" type="reference"/>
+        <topicref href="Shared/reference/r_ConfigSettings_UI.xml" type="reference"/>
+        <topicref href="Shared/reference/r_ConfigSettings_APP.xml" type="reference"/>
     </appendix>
-    <appendix
-        href="Shared/reference/r_LDAP_SettingTypes.xml"
-        type="reference"/>
-    <appendix
-        href="Shared/reference/r_Audit_log.xml"
-            type="reference">
-        <topicref
-            href="Shared/reference/r_Audit_log_User.xml"
-            type="reference"/>
-        <topicref
-            href="Shared/reference/r_Audit_log_Admin.xml"
-            type="reference"/>
-        <topicref
-            href="Shared/reference/r_Audit_log_Supplier.xml"
-        type="reference"/>
+    <appendix format="dita" href="Shared/reference/r_ConfigSettings_OIDC_Tenant.xml" type="reference"/>
+    <appendix href="Shared/reference/r_LDAP_SettingTypes.xml" type="reference"/>
+    <appendix href="Shared/reference/r_Audit_log.xml" type="reference">
+        <topicref href="Shared/reference/r_Audit_log_User.xml" type="reference"/>
+        <topicref href="Shared/reference/r_Audit_log_Admin.xml" type="reference"/>
+        <topicref href="Shared/reference/r_Audit_log_Supplier.xml" type="reference"/>
     </appendix>
-    <appendix
-        href="OperationsGuide/Reference/r_LanguageResourceBundles.xml"
-            type="reference">
-        <topicref
-            href="Shared/reference/r_Language_Export_File.xml"
-            type="reference"/>
-        <topicref
-            href="Shared/reference/r_Language_OnlineHelp_FAQ.xml"
-            type="reference"/>
+    <appendix href="OperationsGuide/Reference/r_LanguageResourceBundles.xml" type="reference">
+        <topicref href="Shared/reference/r_Language_Export_File.xml" type="reference"/>
+        <topicref href="Shared/reference/r_Language_OnlineHelp_FAQ.xml" type="reference"/>
         <!--topicref href="Shared/reference/r_Language_ReportLabels.xml" type="reference"/-->
-        <topicref
-            href="Shared/reference/r_Language_Codes.xml"
-        type="reference"/>
+        <topicref href="Shared/reference/r_Language_Codes.xml" type="reference"/>
     </appendix>
-    <appendix
-        href="Shared/reference/r_FileFormat_ImportUsers.xml"
-        type="reference"/>
-    <appendix format="dita"
-        href="DevelopersGuide/Reference/r_BillingData.xml"
-        type="reference"/>
-    <appendix format="dita"
-        href="DevelopersGuide/Reference/r_RevenueShareIntro.xml"
-            type="reference">
-        <topicref format="dita"
-            href="DevelopersGuide/Reference/r_RevenueShareCommon.xml"
-            type="reference"/>
-        <topicref format="dita"
-            href="DevelopersGuide/Reference/r_BrokerRevenueShare.xml"
-            type="reference"/>
-        <topicref format="dita"
-            href="DevelopersGuide/Reference/r_ResellerRevenueShare.xml"
-            type="reference"/>
-        <topicref format="dita"
-            href="DevelopersGuide/Reference/r_MPOwnerRevenueShare.xml"
-            type="reference"/>
-        <topicref format="dita"
-            href="DevelopersGuide/Reference/r_SupplierRevenueShare.xml"
-        type="reference"/>
+    <appendix href="Shared/reference/r_FileFormat_ImportUsers.xml" type="reference"/>
+    <appendix format="dita" href="DevelopersGuide/Reference/r_BillingData.xml" type="reference"/>
+    <appendix format="dita" href="DevelopersGuide/Reference/r_RevenueShareIntro.xml" type="reference">
+        <topicref format="dita" href="DevelopersGuide/Reference/r_RevenueShareCommon.xml" type="reference"/>
+        <topicref format="dita" href="DevelopersGuide/Reference/r_BrokerRevenueShare.xml" type="reference"/>
+        <topicref format="dita" href="DevelopersGuide/Reference/r_ResellerRevenueShare.xml" type="reference"/>
+        <topicref format="dita" href="DevelopersGuide/Reference/r_MPOwnerRevenueShare.xml" type="reference"/>
+        <topicref format="dita" href="DevelopersGuide/Reference/r_SupplierRevenueShare.xml" type="reference"/>
     </appendix>
-    
-    <appendix
-        href="OperationsGuide/Reference/r_UserRolesMenuOptions.xml"
-        type="reference"/>
-        
-    <appendix
-        href="Shared/glossary/r_Glossary.xml" type="reference"/>
+    <appendix href="OperationsGuide/Reference/r_UserRolesMenuOptions.xml" type="reference"/>
+    <appendix href="Shared/glossary/r_Glossary.xml" type="reference"/>
 </bookmap>

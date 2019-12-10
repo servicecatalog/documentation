@@ -12,9 +12,9 @@
                 /> consists of the following main steps: </p>
             <p>
                 <ol>
-                    <li>If you have received <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        /> Docker images in archive files (tar.gz files), importing the Docker images into your local Docker registry. </li>
-                    <li>Preparing the installation directory on the Docker host. </li>
+                    <li>Importing the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> Docker images into the local Docker registry, if you have received them in archive files (<codeph>tar.gz</codeph> files). </li>
+                    <li>Preparing the data directory on the Docker host. </li>
                     <li>Preparing configuration files.</li>
                     <li>Preparing Docker Compose files and starting <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</li>

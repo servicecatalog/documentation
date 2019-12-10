@@ -21,56 +21,62 @@
                     >provisioning or delete</ph> operation in <ph audience="aws">AWS</ph><ph audience="os"
                     >OpenStack</ph><ph audience="vmware">vSphere</ph><ph audience="azure">Azure</ph>. </p>
                                     <p>You can then take the appropriate actions to solve the problem in <ph
-                    audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph audience="vmware"
-                    >vSphere</ph> or in the communication. For example, you could remove an incomplete <ph
+                    audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph audience="vmware">vSphere</ph><ph
+                    audience="azure">Azure</ph> or in the communication. For example, you could remove an incomplete <ph
                     audience="aws">virtual server</ph><ph audience="os">virtual system</ph><ph audience="vmware"
-                >VM</ph>, or you could restore a missing connection.</p>
+                    >VM</ph><ph audience="azure">resource</ph>, or you could restore a missing connection.</p>
                                     <p>After solving the problem, the <ph audience="aws">AWS</ph><ph audience="os"
-                    >OpenStack</ph><ph audience="vmware">vSphere</ph><ph audience="azure"
-                    >Azure</ph> integration components and <ph
+                    >OpenStack</ph><ph audience="vmware">vSphere</ph><ph audience="azure">Azure</ph><ph audience="shell"
+                    >Shell</ph> integration components and <ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> need to be synchronized accordingly. You do this by triggering a corresponding action in the APP component. Proceed as follows:</p>
                                     <ol>
                                                 <li>Work as a technology manager of the technology provider organization responsible for the <ph
                         audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph audience="vmware">VMware</ph><ph
-                        audience="azure">Azure</ph> service controller. </li>
-                <li>Invoke the instance status interface of APP for the service controller of the application by opening its URL in a Web browser. <p>The access URL has the following format: </p><p><codeph>https://&lt;hostname.fqdn>:&lt;port>/oscm-app/controller/?controllerid=ess.<ph
+                        audience="azure">Azure</ph><ph audience="shell">Shell</ph> service controller. </li>
+                <li>Invoke the instance status interface of APP for the service controller by opening its URL in a Web browser. <p>The access URL has the following format: </p><p><codeph>https://&lt;host_fqdn>:8881/oscm-app/controller/?controllerid=ess.<ph
                                 audience="aws">aws</ph><ph audience="azure">azureARM</ph><ph audience="os"
-                                >openstack</ph><ph audience="vmware"
-                            >vmware</ph></codeph></p><p><codeph>&lt;hostname.fqdn></codeph> is the name and the fully qualified domain name of the machine where the <codeph>oscm-app</codeph> container has been deployed, <codeph>&lt;port></codeph> is the port to address the machine (default: <codeph>8881</codeph>), <codeph>oscm-app/controller/?controllerid=ess.<ph
+                                >openstack</ph><ph audience="vmware">vmware</ph><ph audience="shell"
+                        >shell</ph></codeph></p><p><codeph>&lt;host_fqdn></codeph> is the fully qualified name or IP address of the host used to access <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            />, <codeph>8881</codeph> is the port of APP. <codeph>oscm-app/controller/?controllerid=ess.<ph
                                 audience="aws">aws</ph><ph audience="os">openstack</ph><ph audience="vmware"
-                            >vmware</ph></codeph><ph audience="azure"
-                        ><codeph>azureARM</codeph></ph> is the default context root of the service controller and cannot be changed. </p><p>The Web page shows all subscriptions for the application, including detailed information such as the customer organization, the ID of the related application instance, and the provisioning status. </p></li>
+                            >vmware</ph></codeph><ph audience="azure"><codeph>azureARM</codeph></ph><ph audience="shell"
+                                ><codeph>shell</codeph></ph> is the default context root of the service controller and cannot be changed. </p><p>The Web page shows all subscriptions for the application, including detailed information such as the customer organization, the ID of the related application instance, and the provisioning status. </p></li>
                                         <li>Find the subscription for which you solved the problem in the most recent <ph
-                        audience="aws">provisioning or delete</ph><ph audience="os">provisioning or delete</ph><ph
-                        audience="vmware">provisioning, modification, or delete</ph><ph audience="azure"
-                        >provisioning or delete</ph> operation. </li>
+                        audience="aws">provisioning or delete </ph><ph audience="os">provisioning or delete </ph><ph
+                        audience="vmware">provisioning, modification, or delete </ph><ph audience="azure"
+                        >provisioning or delete </ph>operation. </li>
                                                 <li>In the <b>Action</b> column, select the action for the <ph
                         audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph audience="vmware">vSphere</ph><ph
-                        audience="azure">Azure</ph> integration components to execute next. Possible actions are the following:<ul>
+                        audience="azure">Azure</ph><ph audience="shell">Shell</ph> integration components to execute next. Possible actions are the following:<ul>
                         <li><codeph>RESUME</codeph> - to resume the processing of a provisioning operation in APP which was suspended.</li>
                         <li><codeph>SUSPEND</codeph> - to suspend the processing of a provisioning operation in APP, for example when <ph
                                 audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph audience="vmware"
-                                >vSphere</ph><ph audience="azure">Azure</ph> does not respond. </li>
-                        <li><codeph>UNLOCK</codeph> - to remove the lock for <ph audience="aws">an AWS</ph><ph
-                                audience="os">an OpenStack</ph><ph audience="vmware">a VM</ph><ph audience="azure"
-                                >Azure</ph> instance in APP.</li>
+                                >vSphere</ph><ph audience="azure">Azure</ph><ph audience="shell"
+                            >a Shell script</ph> does not respond. </li>
+                        <li><codeph>UNLOCK</codeph> - to remove the lock for <ph audience="aws">an AWS instance</ph><ph
+                                audience="os">an OpenStack instance</ph><ph audience="vmware">a VM instance</ph><ph
+                                audience="azure">an Azure instance</ph><ph audience="shell"
+                            >an instance</ph> in APP.</li>
                         <li><codeph>DELETE</codeph> - to terminate the subscription in <ph
                                 conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                                 /> and remove the instance in APP, but keep the <ph audience="aws"
                                 >virtual server in AWS</ph><ph audience="os">virtual system in OpenStack</ph><ph
-                                audience="vmware">VM in vSphere</ph><ph audience="azure"
-                            >resources in Azure</ph> for later use. The service manager role is required for this action.</li>
+                                audience="vmware">VM in vSphere</ph><ph audience="azure">resources in Azure</ph><ph
+                                audience="shell"
+                            >virtual system</ph> for later use. The service manager role is required for this action.</li>
                         <li><codeph>DEPROVISION</codeph> - to terminate the subscription in <ph
                                 conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                                 />, remove the instance in APP, and delete the <ph audience="aws"
                                 >virtual server in AWS</ph><ph audience="os">virtual system in OpenStack</ph><ph
-                                audience="vmware">VM in vSphere</ph><ph audience="azure"
-                            >resources in Azure</ph>. The service manager role is required for this action.</li>
+                                audience="vmware">VM in vSphere</ph><ph audience="azure">resources in Azure</ph><ph
+                                audience="shell"
+                            >virtual system</ph>. The service manager role is required for this action.</li>
                         <li><codeph>ABORT_PENDING</codeph> - to abort a pending <ph audience="aws"
                                 >provisioning operation</ph><ph audience="os">provisioning operation</ph><ph
                                 audience="vmware">provisioning or modification operation</ph><ph audience="azure"
-                                >provisioning operation</ph> in <ph
+                                >provisioning operation</ph><ph audience="shell">operation</ph> in <ph
                                 conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>. <ph
                                 conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                                 /> is notified to roll back the changes made for the subscription and return it to its previous state. In <ph
