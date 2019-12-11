@@ -107,15 +107,15 @@
                 
             </li>
 <li class="stepexpand">
-                <span>Geben Sie optional die <strong>URL eines eigenen Tabs</strong> an. So können Sie einen zusätzlichen Tab zur Ansicht <strong>Details</strong> hinzufügen, der angezeigt wird, wenn ein Benutzer zu einem Abonnement weitere Informationen aufruft. Diese URL kann auf eine Web-Seite oder Web-Applikation leiten, deren Inhalt dann auf dem eigenen Tab angezeigt wird. Insbesondere Benutzer, die IaaS-Services nutzen, sind oftmals an Details zu einem abonnierten Service und dessen Betrieb interessiert. Über einen eigenen Tab können Sie Information, die für den Zugriff auf provisionierte Instanzen erforderlich sind, zur Verfügung stellen, zum Beispiel IP-Adressen, Netzwerkinformationen oder Zugangsdaten. </span>
+                <span>Geben Sie optional die <strong>URL eines eigenen Tabs</strong> an. So können Sie einen zusätzlichen Tab zur Ansicht <strong>Details</strong> hinzufügen, der angezeigt wird, wenn ein Benutzer auf dem Marktplatz zu einem Abonnement weitere Informationen aufruft. Diese URL kann auf eine Web-Seite oder Web-Applikation leiten, deren Inhalt dann auf dem eigenen Tab angezeigt wird. Insbesondere Benutzer, die IaaS-Services nutzen, sind oftmals an Details zu einem abonnierten Service und dessen Betrieb interessiert. Über einen eigenen Tab können Sie Information, die für den Zugriff auf provisionierte Instanzen erforderlich sind, zur Verfügung stellen, zum Beispiel IP-Adressen, Netzwerkinformationen oder Zugangsdaten. </span>
                  
                     <div class="p">
-                        <div class="note" id="task634__Achten_Sie_darauf_dass_die_U_task_taskbody_steps_step_6"><span class="notetitle">Hinweis:</span> Achten Sie darauf, dass die Web-Seite oder Web-Applikation keine Sicherheitslücken aufweist. Die Syntax und Semantik der URL werden von der Plattform nicht validiert.<p>Aus Sicherheitsgründen werden Requests zu der Web-Seite oder Web-Applikation von der Plattform signiert. Dazu sind bestimmte Konfigurationseinstellungen in der Plattform erforderlich. Außerdem muss sich zur Verifizierung der Signatur das entsprechende Zertifikat der Plattform im Truststore des Application Servers befinden, auf dem die Web-Seite oder Web-Applikation läuft. Falls Sie Unterstützung benötigen, wenden Sie sich bitte an Ihren Plattformbetreiber. </p>
+                        <div class="note" id="task634__Achten_Sie_darauf_dass_die_U_task_taskbody_steps_step_6"><span class="notetitle">Hinweis:</span> Achten Sie darauf, dass die Web-Seite oder Web-Applikation keine Sicherheitslücken aufweist. Die Syntax und Semantik der URL werden von der Plattform nicht validiert.<p>Aus Sicherheitsgründen werden Requests zu der Web-Seite oder Web-Applikation von der Plattform signiert. Dazu sind bestimmte Konfigurationseinstellungen in der Plattform erforderlich. Außerdem muss sich zur Verifizierung der Signatur das entsprechende Zertifikat der Plattform im Truststore des Application-Servers befinden, auf dem die Web-Seite oder Web-Applikation läuft. Falls Sie Unterstützung benötigen, wenden Sie sich bitte an Ihren Plattformbetreiber. </p>
 </div>
 
                     </div>
 
-                    <p>Sie können vordefinierte, eigene Tabs einrichten, die Details zu einem IaaS-Service wie beispielsweise OpenStack oder Amazon Web Services (AWS) zur Ansicht bringen. Auf den eigenen Tabs, werden zu den gebuchten Virtuellen Maschinen (VMs) folgende Informationen angezeit: </p>
+                    <p>Vordefinierte Tabs stehen zur Verfügung, die Details zu Abonnements von IaaS-Services wie beispielsweise OpenStack oder Amazon Web Services (AWS) zur Ansicht bringen. Auf den eigenen Tabs werden zu den gebuchten virtuellen Systemen folgende Informationen angezeigt: </p>
 
                     <div class="p">
                         <ul>
@@ -123,7 +123,7 @@
 
                             <li>Zugangsinformationen </li>
 
-                            <li>Zu jeder VM: <div class="p">
+                            <li>Informationen zu jedem virtuellen System, zum Beispiel: <div class="p">
                                     <ul>
                                         <li>Name der Instanz</li>
 
@@ -146,13 +146,15 @@
 
                     </div>
 
-                    <p>Die URL zum Zugriff auf einen solchen eigenen Tab muss im folgenden Format eingegeben werden: </p>
+                    <p>Beim Definieren eines eigenen Tabs mit diesen Informationen muss die URL im folgenden Format eingegeben werden: </p>
 
-                    <p><samp class="codeph">https://&lt;app-host-name&gt;:8881/&lt;service controller name&gt;/serverInformation.jsf</samp></p>
+                    <p><samp class="codeph">https://&lt;host_fqdn&gt;:8881/&lt;service controller name&gt;/serverInformation.jsf</samp></p>
+
+                    <p><samp class="codeph">&lt;host_fqdn&gt;</samp> ist der vollqualifizierte Name oder die IP-Adresse der Plattforminstallation, <samp class="codeph">8881</samp> der benötigte Port. <samp class="codeph">service controller name</samp> ist die Context-Root des betreffenden Service-Controllers und kann nicht gändert werden. </p>
 
                     <p>Beispiel: </p>
 
-                    <p><samp class="codeph">https://MyAPPHost:8881/oscm-app-openstack/serverInformation.jsf</samp></p>
+                    <p><samp class="codeph">https://myhost:8881/oscm-app-openstack/serverInformation.jsf</samp></p>
 
                     <p>Sobald ein Kunde die Ansicht <strong>Details</strong> zu einem Abo eines IaaS-Services aufruft, wird der Kontext des Abonnements an die URL des Tabs mit folgenden Informationen gesendet: </p>
 

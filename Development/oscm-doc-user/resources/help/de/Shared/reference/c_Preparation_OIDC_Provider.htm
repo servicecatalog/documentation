@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="de-de" lang="de-de">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="copyright" content="(C) Copyright 2005" />
+<meta name="DC.rights.owner" content="(C) Copyright 2005" />
+<meta content="concept" name="DC.Type" />
+<meta name="DC.Title" content="Voraussetzungen beim OIDC-Provider" />
+<meta content="XHTML" name="DC.Format" />
+<meta content="concept_B32294CC9FA643A2A14A74B1DAA49C95" name="DC.Identifier" />
+<meta content="de-de" name="DC.Language" />
+<link href="../../commonltr.css" type="text/css" rel="stylesheet" />
+<link href="../../book.css" type="text/css" rel="stylesheet" />
+<title>Voraussetzungen beim OIDC-Provider</title>
+</head>
+<body id="concept_B32294CC9FA643A2A14A74B1DAA49C95">
+
+
+        <h1 class="topictitle1">Voraussetzungen beim OIDC-Provider</h1>
+
+        <div>
+                <div class="section">
+            <p>Bevor Sie die Plattform im Authentifizierungsmodus OIDC installieren oder Mandanten anlegen können, müssen in dem betreffenden OIDC-Provider-System einige Vorbereitungen getroffen werden.</p>
+
+        </div>
+
+        <div class="section" id="concept_B32294CC9FA643A2A14A74B1DAA49C95__The_prerequisites_are_specifi_concept_conbody_section_2">
+            <p>Die Vorbereitungen sind abhängig vom OIDC-Provider. Die folgenden Beschreibungen verwenden Microsoft Azure Active Directory (Azure AD) als Beispiel. Falls Sie mit einem anderen OIDC-Provider arbeiten möchten, wenden Sie sich bitte an Ihre Supportorganisation. </p>
+
+            <p>Die folgenden Voraussetzungen und Vorbereitungen beim OIDC-Provider sind erforderlich:</p>
+
+            <ol>
+                <li class="liexpand">Ein Account und eine Domäne müssen existieren, und Sie müssen dafür Administratorrechte besitzen. <p><strong>Beispiel Azure AD</strong>: Domäne <samp class="codeph">mydomain.onmicrosoft.com</samp></p>
+</li>
+
+                <li class="liexpand">In der Domäne muss ein Verzeichnis existieren, das zumindest diejenigen Benutzer enthält, die mit der Plattform arbeiten sollen.<p><strong>Beispiel Azure AD</strong>: Verzeichnis <samp class="codeph"><span>OSCM</span>Org</samp></p>
+</li>
+
+                <li class="liexpand">Nur relevant für die Erstinstallation der Plattform: Legen Sie in dem Verzeichnis eine Gruppe <samp class="codeph">OSCM_PLATFORM_OPERATOR</samp> an und ordnen Sie ihr den Benutzer, der der erste Plattformadministrator werden soll, als Mitglied zu.<p><strong>Beispiel Azure AD</strong>: Legen Sie eine neue Gruppe <samp class="codeph">OSCM_PLATFORM_OPERATOR</samp> vom Typ Sicherheit im Verzeichnis <samp class="codeph"><span>OSCM</span>Org</samp> an. Ordnen Sie der Gruppe den ersten Administrator, z.B. <samp class="codeph">oscmadmin@mydomain.onmicrosoft.com</samp> als Mitglied zu. </p>
+<div class="note"><span class="notetitle">Hinweis:</span> Organisationen in der Plattform werden Gruppen beim OIDC-Provider zugeordnet. Jeder Benutzer darf Mitglied genau einer Gruppe sein. </div>
+</li>
+
+                <li class="liexpand">Registrieren Sie die Plattform als Anwendung im Verzeichnis des OIDC-Providers. <p><strong>Beispiel Azure AD</strong>: Legen Sie im Verzeichnis unter <strong>App-Registrierungen</strong> eine neue Registrierung mit folgenden Eigenschaften an:</p>
+<ul>
+                        <li>Name und unterstützte Kontotypen Ihrer Wahl</li>
+
+                        <li>Umleitungs-URI: <samp class="codeph">https://&lt;host_fqdn&gt;:9091/oscm-identity/callback</samp><p><samp class="codeph">&lt;host_fqdn&gt;</samp> ist der vollqualifizierte Host-Name oder die IP-Adresse der Plattforminstallation.</p>
+</li>
+
+                    </ul>
+</li>
+
+                <li class="liexpand">Kopieren Sie die ID der neuen Anwendung zur späteren Verwendung in der Plattform. <p><strong>Beispiel Azure AD</strong>: <samp class="codeph">ef29bb22-369c-424d-9e72-6800ad24239e</samp></p>
+</li>
+
+                <li class="liexpand">Geben Sie der Anwendung Lese- und Schreibzugriff auf das Verzeichnis, die Benutzer und die Gruppen.<p><strong>Beispiel Azure AD</strong>: In den Eigenschaften der neuen Anwendung, unter <strong>API-Berechtigungen</strong>: </p>
+<ol type="a">
+                        <li>
+                            <p>Fügen Sie folgende Berechtigungen für das Microsoft Graph API sowohl als <strong>Delegierte Berechtigungen</strong> als auch als <strong>Anwendungsberechtigungen</strong> hinzu: <samp class="codeph">User.Read.All</samp>, <samp class="codeph">Group.ReadWrite.All</samp>, <samp class="codeph">Directory.ReadWrite.All</samp>. </p>
+
+                        </li>
+
+                        <li>
+                            <p>Erteilen Sie <strong>Administratorzustimmung</strong> für Ihr Verzeihnis <samp class="codeph"><span>OSCM</span>Org</samp> für die neuen Berechtigungen.</p>
+
+                        </li>
+
+                    </ol>
+
+                </li>
+
+                <li class="liexpand">Erstellen Sie ein Client-Zertifikat oder einen Client-Schlüssel, mit dem die Plattform auf Ihr Verzeichnis zugreifen kann.<p><strong>Beispiel Azure AD</strong>: Fügen Sie in den Eigenschaften der neuen Anwendung unter <strong>Zertifikate &amp; Geheimnisse</strong> einen neuen geheimen Client-Schlüssel hinzu. Kopieren Sie den Schlüssel zur späteren Verwendung in der Plattform. </p>
+</li>
+
+                <li class="liexpand">Erlauben Sie der Plattform, Tokens für die Authentifizierung vom OIDC-Provider anzufordern. <p><strong>Beispiel Azure AD</strong>: Erlauben Sie in den Eigenschaften der neuen Anwendung unter <strong>Authentifizierung</strong> die Ausgabe von <strong>Zugriffstokens</strong> und <strong>ID-Tokens</strong> durch den Autorisierungsendpunkt. </p>
+</li>
+
+            </ol>
+
+        </div>
+
+        <div class="section">
+            <p>Basierend auf den Einstellungen im OIDC-Provider können Sie nun in der Plattform einen neuen Mandanten anlegen und konfigurieren.</p>
+
+        </div>
+
+        </div>
+
+
+</body>
+</html>

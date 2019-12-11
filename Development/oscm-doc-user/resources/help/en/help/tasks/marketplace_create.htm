@@ -8,6 +8,7 @@
 <meta name="DC.Title" content="Creating a marketplace" />
 <meta scheme="URI" name="DC.Relation" content="marketplace_update.htm" />
 <meta scheme="URI" name="DC.Relation" content="marketplace_delete.htm" />
+<meta scheme="URI" name="DC.Relation" content="operator_manageTenants.htm" />
 <meta content="XHTML" name="DC.Format" />
 <meta content="task634" name="DC.Identifier" />
 <meta content="en-us" name="DC.Language" />
@@ -27,6 +28,8 @@
       <p>Creating a marketplace includes defining the marketplace features and settings and assigning an organization as the owner. The organization you assign as the owner is automatically assigned the marketplace owner role. All administrators automatically receive the marketplace manager role. The marketplace manager role enables them to administrate and customize the marketplace.</p>
 
       <p>As a prerequisite for creating a marketplace, the organization to be assigned as the marketplace owner must already exist.</p>
+
+      <p>If the platform is operated in OIDC authentication mode, you can select the tenant to be associated with the new marketplace. Users logging in to the marketplace will be authenticated by the OIDC provider system represented by the tenant. </p>
 
       <p><strong>To create a marketplace</strong>:</p>
 
@@ -86,6 +89,10 @@
          The list contains all organizations managed on your platform.
       </li>
 <li class="stepexpand">
+        <span>If the platform is installed in OIDC authentication mode: Select the tenant representing the OIDC provider that is to be used for authenticating users accessing this marketplace. If you leave this field empty, the users are authenticated against the OIDC provider system represented by the default tenant specified during installation. </span>
+         The list contains all tenants managed on the platform.
+      </li>
+<li class="stepexpand">
         <span>To create the marketplace, click <span class="uicontrol">Save</span>. </span>
       </li>
 </ol>
@@ -103,7 +110,8 @@
 <div class="linklist"><strong>Related topics</strong><br />
 
 <div><a href="marketplace_update.htm">Updating a marketplace</a></div>
-<div><a href="marketplace_delete.htm">Deleting a marketplace</a></div></div>
+<div><a href="marketplace_delete.htm">Deleting a marketplace</a></div>
+<div><a href="operator_manageTenants.htm">Managing Tenants</a></div></div>
 </div>
 
 </body>

@@ -24,7 +24,7 @@
         <div class="section">
             <p id="task55550__On_the_task_taskbody_context_p_1">On the <span class="uicontrol">Customize layout</span> page, you can specify a style sheet that defines the branding and layout of a marketplace, i.e. the colors, fonts, background images, and logos. <span id="task55550__The_best_way_to_create_an_app_task_taskbody_context_p_1_ph">The best way to create an appropriate style sheet is to use the platform's default style sheet as a basis and adapt it as required. </span></p>
 
-            <p id="task55550__On_the_task_taskbody_context_p_1"><span id="task55550__The_best_way_to_create_an_app_task_taskbody_context_p_1_ph">You then provide the customized style sheet and the files it references to the platform operator so that he can make them available in the <samp class="codeph">oscm-branding</samp> container. When the operator is finished, he can provide the URL to the style sheet that can then be specified <span>on the <span class="uicontrol">Customize layout</span> page</span>. If no URL is set, the default style sheet is used.</span>
+            <p id="task55550__On_the_task_taskbody_context_p_1"><span id="task55550__You_then_provide_task_taskbody_context_p_2_ph">You then provide the customized style sheet and the files it references to the platform operator so that he can make them available in the <samp class="codeph">oscm-branding</samp> container. When the operator is finished, he can provide the URL to the style sheet that can then be specified <span>on the <span class="uicontrol">Customize layout</span> page</span>. If no URL is set, the default style sheet is used.</span>
             </p>
 
             <p id="task55550__The_platform_s_default_style_task_taskbody_context_p_2">The platform's default style sheet <span>(<samp class="codeph">mp.css</samp>)</span> and the files and images it references are provided in the branding package, a ZIP file which you can download <span>on the <span class="uicontrol">Customize layout</span> page</span>. The branding package also includes sample HTML pages of a marketplace. You can use these HTML pages to preview and test your customizations. In the style sheet, you can find comments and descriptions of the relevant elements of the HTML pages as well as information on which elements you must not customize in order to ensure that the page layout does not get broken.</p>
@@ -97,9 +97,14 @@
             </li>
 <li class="stepexpand">
                 <span>In the <span class="uicontrol">Style sheet URL</span> field, enter the URL provided by the platform operator pointing to your customized style sheet. </span>
-                 <p>By default, the URL is as follows: </p>
-<p><samp class="codeph">https://&lt;hostname.fqdn&gt;:8443/&lt;new-folder-name&gt;/css/mp.css</samp></p>
-where <samp class="codeph">&lt;hostname.fqdn&gt;</samp> is the name and the fully qualified domain name of the host used to access <span>OSCM</span>, and <samp class="codeph">&lt;new-folder-name&gt;</samp> is the name of the folder containing the customized files. 
+                 
+                    <p>By default, the URL is as follows: </p>
+
+                    <p><samp class="codeph">https://&lt;host_fqdn&gt;:8443/&lt;new-folder-name&gt;/css/mp.css</samp></p>
+
+                    <p><samp class="codeph">&lt;host_fqdn&gt;</samp> is the fully qualified name or IP address of the host used to access the platform, <samp class="codeph">8443</samp> is the port. <samp class="codeph">&lt;new-folder-name&gt;</samp> is the name of the folder containing the customized files. </p>
+
+                
             </li>
 <li class="stepexpand">
                 <span>Click <span class="uicontrol">Save</span> to make the new layout and branding of your marketplace available. </span>

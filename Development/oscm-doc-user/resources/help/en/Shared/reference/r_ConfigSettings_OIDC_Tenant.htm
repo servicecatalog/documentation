@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="copyright" content="(C) Copyright 2005" />
+<meta name="DC.rights.owner" content="(C) Copyright 2005" />
+<meta content="reference" name="DC.Type" />
+<meta name="DC.Title" content="OIDC Tenant Configurations" />
+<meta content="XHTML" name="DC.Format" />
+<meta content="reference832" name="DC.Identifier" />
+<meta content="en-us" name="DC.Language" />
+<link href="../../commonltr.css" type="text/css" rel="stylesheet" />
+<link href="../../book.css" type="text/css" rel="stylesheet" />
+<title>OIDC Tenant Configurations</title>
+</head>
+<body id="reference832">
+
+
+    <h1 class="topictitle1">OIDC Tenant Configurations</h1>
+
+    <div>
+        <div class="section">
+            <p>The following sections describe the settings for configuring a tenant to connect to a specific OIDC provider, for example, a specific domain and directory in Microsoft Azure Active Directory (Azure AD). </p>
+
+            <p>The settings are specific to the OIDC provider and require <a href="c_Preparation_OIDC_Provider.htm">preparations in the OIDC provider system</a>. The following descriptions use Azure AD as an example. If you intend to work with a different OIDC provider, please contact your  support organization for details. </p>
+
+            <p>When you define a tenant <span>on the platform</span>, you can download a template with the settings. The final tenant configurations are stored in <samp class="codeph">.properties</samp> files on the Docker host where <span>the platform</span> is deployed:</p>
+
+            <p><samp class="codeph">&lt;docker&gt;/config/oscm-identity/tenants/tenant-&lt;id&gt;.properties</samp></p>
+
+            <p><samp class="codeph">&lt;docker&gt;</samp> is the <span>platform's</span> data directory specified at installation time. <samp class="codeph">&lt;id&gt;</samp> is the ID of a tenant created <span>on the platform</span>, or <samp class="codeph">default</samp> for the default tenant defined at installation time.</p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">oidc.provider</h4>
+            
+            <p>The implementation of OIDC <span>on the platform</span>. The value must be set to <samp class="codeph">default</samp>.</p>
+
+            <p>Example: </p>
+
+            <p><samp class="codeph">oidc.provider=default</samp></p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">oidc.clientId</h4>
+            
+            <p>The identifier of the application by which your <span>platform</span> installation is registered with the OIDC provider directory.</p>
+
+            <p>Azure AD example: </p>
+
+            <p><samp class="codeph">oidc.clientId=ef29bb22-369c-424d-9e72-6800ad24239e</samp></p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">oidc.clientSecret</h4>
+            
+            <p>The secret string generated at the OIDC provider that <span>the platform</span> uses to prove its identity when requesting a token.</p>
+
+            <p>Azure AD example: </p>
+
+            <p><samp class="codeph">oidc.clientSecret=m2:bYmmlN6[Z:A:jqqO95nHi39.o0?pF</samp></p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">oidc.authUrl</h4>
+            
+            <p>The authorization endpoint at the OIDC provider to which <span>the platform</span> sends single sign-on authentication requests.</p>
+
+            <p>Azure AD example: </p>
+
+            <p><samp class="codeph">oidc.authUrl=https://login.microsoftonline.com/mydomain.onmicrosoft.com/oauth2/v2.0/authorize</samp></p>
+
+            <p>In the URL, replace <samp class="codeph">mydomain</samp> by the name of your domain.</p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">oidc.authUrlScope</h4>
+            
+            <p>The permissions set for the <span>platform's</span> application at the OIDC provider.</p>
+
+            <p>Azure AD example: </p>
+
+            <p><samp class="codeph">oidc.authUrlScope=openid profile offline_access https://graph.microsoft.com/user.read.all https://graph.microsoft.com/directory.readwrite.all https://graph.microsoft.com/group.readwrite.all</samp></p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">oidc.logoutUrl</h4>
+            
+            <p>The endpoint at the OIDC provider to which <span>the platform</span> sends logout requests.</p>
+
+            <p>Azure AD example: </p>
+
+            <p><samp class="codeph">oidc.logoutUrl=https://login.microsoftonline.com/mydomain.onmicrosoft.com/oauth2/v2.0/logout</samp></p>
+
+            <p>In the URL, replace <samp class="codeph">mydomain</samp> by the name of your domain.</p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">oidc.tokenUrl</h4>
+            
+            <p>The endpoint at the OIDC provider to which <span>the platform</span> sends requests related to tokens, such as token retrieval, refreshment, or validation.</p>
+
+            <p>Azure AD example: </p>
+
+            <p><samp class="codeph">oidc.tokenUrl=https://login.microsoftonline.com/mydomain.onmicrosoft.com/oauth2/v2.0/token</samp></p>
+
+            <p>In the URL, replace <samp class="codeph">mydomain</samp> by the name of your domain.</p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">oidc.redirectUrl</h4>
+            
+            <p>The redirect URL of your <span>platform</span> installation to which the OIDC provider sends its responses.</p>
+
+            <p>Azure AD example: </p>
+
+            <p><samp class="codeph">oidc.redirectUrl=https://myhost:9091/oscm-identity/callback</samp></p>
+
+            <p>In the URL, replace <samp class="codeph">myhost</samp> by the FQDN or IP address of the host to access your <span>platform</span> installation.</p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">oidc.configurationUrl</h4>
+            
+            <p>The URL of the OpenID layer configuration for your domain at the OIDC provider.</p>
+
+            <p>Azure AD example: </p>
+
+            <p><samp class="codeph">oidc.configurationUrl=https://login.microsoftonline.com/mydomain.onmicrosoft.com/v2.0/ .well-known/openid-configuration</samp></p>
+
+            <p>In the URL, replace <samp class="codeph">mydomain</samp> by the name of your domain.</p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">oidc.idpApiUri</h4>
+            
+            <p>The URL of the main entry point to the API of the OIDC provider. </p>
+
+            <p>Azure AD example: </p>
+
+            <p><samp class="codeph">oidc.idpApiUri=https://graph.microsoft.com</samp></p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">oidc.usersEndpoint</h4>
+            
+            <p>The entry point to the API for users at the OIDC provider.</p>
+
+            <p>Azure AD example: </p>
+
+            <p><samp class="codeph">oidc.usersEndpoint=https://graph.microsoft.com/v1.0/users</samp></p>
+
+        </div>
+
+        <div class="section"><h4 class="sectiontitle">oidc.groupsEndpoint</h4>
+            
+            <p>The entry point to the API for groups at the OIDC provider.</p>
+
+            <p>Azure AD example: </p>
+
+            <p><samp class="codeph">oidc.groupsEndpoint=https://graph.microsoft.com/v1.0/groups</samp></p>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>

@@ -79,7 +79,8 @@
                         </div>
 </li>
 
-                    <li class="liexpand">Erstellen Sie eine Archivdatei mit dem Namen <samp class="codeph">oscm-portal-help.tar.gz</samp>, die die zusätzlichen Verzeichnisse für die neue Sprache enthält, und kopieren Sie diese Archivdatei in folgendes Verzeichnis auf dem Docker-Host:<p><samp class="codeph">/docker/config/oscm-help</samp></p>
+                    <li class="liexpand">Erstellen Sie eine Archivdatei mit dem Namen <samp class="codeph">oscm-portal-help.tar.gz</samp>, die die zusätzlichen Verzeichnisse für die neue Sprache enthält, und kopieren Sie diese Archivdatei in folgendes Verzeichnis auf dem Docker-Host:<p><samp class="codeph">&lt;docker&gt;/config/oscm-help</samp></p>
+<p><samp class="codeph">&lt;docker&gt;</samp> ist das bei der Installation angegeben Datenverzeichnis der Plattform. </p>
 </li>
 
                     <li class="liexpand">Stoppen Sie den Container <samp class="codeph">oscm-help</samp>: <div class="p">
@@ -94,8 +95,8 @@
                         </div>
 </li>
 
-                    <li class="liexpand">Erstellen Sie den Container <samp class="codeph">oscm-help</samp> erneute und starten Sie ihn: <div class="p">
-                            <pre class="codeblock">docker-compose -f docker-compose--oscm.yml up -d oscm-help</pre>
+                    <li class="liexpand">Erstellen Sie den Container <samp class="codeph">oscm-help</samp> erneut und starten Sie ihn: <div class="p">
+                            <pre class="codeblock">docker-compose -f docker-compose-oscm.yml up -d oscm-help</pre>
 
                         </div>
 <p>Beachten Sie, dass so bestehende HTML-Dateien überschrieben werden.</p>

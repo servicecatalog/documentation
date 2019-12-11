@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-us" lang="en-us">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="copyright" content="(C) Copyright 2005" />
+<meta name="DC.rights.owner" content="(C) Copyright 2005" />
+<meta content="concept" name="DC.Type" />
+<meta name="DC.Title" content="Prerequisites at the OIDC Provider" />
+<meta content="XHTML" name="DC.Format" />
+<meta content="concept_B32294CC9FA643A2A14A74B1DAA49C95" name="DC.Identifier" />
+<meta content="en-us" name="DC.Language" />
+<link href="../../commonltr.css" type="text/css" rel="stylesheet" />
+<link href="../../book.css" type="text/css" rel="stylesheet" />
+<title>Prerequisites at the OIDC Provider</title>
+</head>
+<body id="concept_B32294CC9FA643A2A14A74B1DAA49C95">
+
+
+        <h1 class="topictitle1">Prerequisites at the OIDC Provider</h1>
+
+        <div>
+                <div class="section">
+            <p>Before you can install <span>the platform</span> in OIDC authentication mode and/or create a tenant, a number of prerequisites and preparations are required in the relevant OIDC provider system.</p>
+
+        </div>
+
+        <div class="section" id="concept_B32294CC9FA643A2A14A74B1DAA49C95__The_prerequisites_are_specifi_concept_conbody_section_2">
+            <p>The prerequisites are specific to the OIDC provider. The following descriptions use Microsoft Azure Active Directory (Azure AD) as an example. If you intend to work with a different OIDC provider, please contact your  support organization for details. </p>
+
+            <p>The following prerequisites and preparations are required at the OIDC provider:</p>
+
+            <ol>
+                <li class="liexpand">An account and domain must exist to which you have access as an administrator. <p><strong>Azure AD example</strong>: domain <samp class="codeph">mydomain.onmicrosoft.com</samp></p>
+</li>
+
+                <li class="liexpand">A directory must exist in the domain, which contains at least all the users who are to work with <span>the platform</span>.<p><strong>Azure AD example</strong>: directory <samp class="codeph"><span>OSCM</span>Org</samp></p>
+</li>
+
+                <li class="liexpand">Relevant only for the first deployment of <span>the platform</span>: Create an access group named <samp class="codeph">OSCM_PLATFORM_OPERATOR</samp> in the directory, and add the user who is to become the initial <span>platform</span> administrator as a member to the group.<p><strong>Azure AD example</strong>: Create a security group, <samp class="codeph">OSCM_PLATFORM_OPERATOR</samp>, in the directory <samp class="codeph"><span>OSCM</span>Org</samp>. Add the initial administrator, e.g. <samp class="codeph">oscmadmin@mydomain.onmicrosoft.com</samp>, as a member.</p>
+<div class="note"><span class="notetitle">Note:</span> Organizations <span>on the platform</span> are mapped to groups at the OIDC provider. Each user can be a member of exactly one group only.</div>
+</li>
+
+                <li class="liexpand">Register your <span>platform</span> installation as an application that connects to the OIDC provider directory. <p><strong>Azure AD example</strong>: In the directory under <strong>App registrations</strong>, create a new registration with the following properties:</p>
+<ul>
+                        <li>A name and supported account types of your choice.</li>
+
+                        <li>Redirect URI: <samp class="codeph">https://&lt;host_fqdn&gt;:9091/oscm-identity/callback</samp><p><samp class="codeph">&lt;host_fqdn&gt;</samp> is the fully qualified name or IP address of the host to access your <span>platform</span> installation. </p>
+</li>
+
+                    </ul>
+</li>
+
+                <li class="liexpand">Copy the ID of the new application for later use <span>on the platform</span>. <p><strong>Azure AD example</strong>: <samp class="codeph">ef29bb22-369c-424d-9e72-6800ad24239e</samp></p>
+</li>
+
+                <li class="liexpand">Grant the application read and write permissions for the directory, users, and groups.<p><strong>Azure AD example</strong>: In the properties of the new app, under <strong>API permissions</strong>:</p>
+<ol type="a">
+                        <li>
+                            <p>Add the following permissions for the Microsoft Graph API as both, <strong>Delegated permissions</strong> and <strong>Application permissions</strong>: <samp class="codeph">User.Read.All</samp>, <samp class="codeph">Group.ReadWrite.All</samp>, <samp class="codeph">Directory.ReadWrite.All</samp>. </p>
+
+                        </li>
+
+                        <li>
+                            <p><strong>Grant admin consent</strong> for the directory, <samp class="codeph"><span>OSCM</span>Org</samp>, for the new permissions.</p>
+
+                        </li>
+
+                    </ol>
+
+                </li>
+
+                <li class="liexpand">Obtain a client certificate or secret string for <span>the platform</span> to access the directory.<p><strong>Azure AD example</strong>: In the properties of the new app, under <strong>Certificates and secrets</strong>, add a new client secret. Copy the new secret for later use <span>on the platform</span>.</p>
+</li>
+
+                <li class="liexpand">Allow <span>the platform</span> to obtain tokens for authentication from the OIDC provider.<p><strong>Azure AD example</strong>: In the properties of the new app, under <strong>Authentication</strong>, enable <strong>Access tokens</strong> and <strong>ID tokens</strong> to be issued by the authorization endpoint. </p>
+</li>
+
+            </ol>
+
+        </div>
+
+        <div class="section">
+            <p>You can now create and configure a tenant in <span>on the platform</span> based on the items and settings in the OIDC provider system.</p>
+
+        </div>
+
+        </div>
+
+
+</body>
+</html>

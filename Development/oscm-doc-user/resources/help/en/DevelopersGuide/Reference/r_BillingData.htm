@@ -20,11 +20,11 @@
 
     <div>
         <div class="section">
-            <p>The charges for the usage of a service in <span>OSCM</span> are calculated based on the price model defined for the service, customer, or subscription. </p>
+            <p>The charges for the usage of a service are calculated based on the price model defined for the service, customer, or subscription. </p>
 
             <p id="reference_25043B5D1DED4B2F9D5E9B099A9AC69C__A_supplier_can_export_the_bil_reference_refbody_section_p">A supplier or reseller can export the billing data for one or several of his customers for a specific time. Suppliers also have access to the billing data of customers of broker organizations that sell their services. The exported data can be forwarded, for example, to an accounting system for further processing.</p>
 
-            <p>The result of the export is stored in an XML file, the customer billing data file. The billing data file conforms to the XML schema <samp class="codeph">BillingResult.xsd</samp>, which can be found in the <span>OSCM</span> integration package. </p>
+            <p>The result of the export is stored in an XML file, the customer billing data file. The billing data file conforms to the XML schema <samp class="codeph">BillingResult.xsd</samp>, which can be found in the <span>the platform's</span> integration package. </p>
 
             <p>The billing data file is named <samp class="codeph">&lt;date&gt;BillingData.xml</samp>, where <samp class="codeph">&lt;date&gt;</samp> represents the creation date.</p>
 
@@ -555,7 +555,7 @@
             
             <p>Specifies the costs for parameters defined for the service underlying the subscription. </p>
 
-            <p>A price model can define prices for service parameters and options. <span id="reference_25043B5D1DED4B2F9D5E9B099A9AC69C__NB0029">It depends on the implementation and integration of the underlying application whether and which parameters and options are available.</span>
+            <p>A price model can define prices for service parameters and options. <span id="reference_25043B5D1DED4B2F9D5E9B099A9AC69C__NA0029">It depends on the implementation and integration of the underlying application whether and which parameters and options are available.</span>
                                     </p>
 
             <p>A price can be defined for every parameter and option, and the price can be charged per subscription or per user assigned to the subscription. <span id="reference_25043B5D1DED4B2F9D5E9B099A9AC69C__and_specify_whether_this_pric_reference_refbody_section_1">Numeric parameters are a multiplier for the price. For boolean parameters, the multiplier is <samp class="codeph">1</samp> if the value is <samp class="codeph">true</samp>. In all other cases, the multiplier is <samp class="codeph">0</samp>.</span></p>
@@ -1025,7 +1025,8 @@
 
             <p><span>The discount is defined as a percentage that is subtracted from the regular total price for a subscription. It is granted for all costs of a customer that incur in a billing period in which the discount is valid. It does not matter whether the discount is valid for the whole billing period or only a part of it.</span></p>
 
-            
+            <p><span id="reference_25043B5D1DED4B2F9D5E9B099A9AC69C__NE003A">A discount is completely independent of what a customer might purchase.</span> If a discount is changed, the new discount is valid the next time the billing data is generated. Usually, a discount is only changed in agreement with the relevant customer.</p>
+
             <p>A <samp class="codeph">Discount</samp> element is contained in the <samp class="codeph">OverallCosts</samp> element.</p>
 
             <p>A <samp class="codeph">Discount</samp> element has the following attributes: </p>

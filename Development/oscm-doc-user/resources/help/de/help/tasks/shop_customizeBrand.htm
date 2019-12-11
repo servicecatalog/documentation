@@ -71,7 +71,7 @@
                         
                   </li>
 <li class="stepexpand">
-                        <span>Übermitteln Sie das angepasste Stylesheet und die darin referenzierten Dateien, Bilder und Schritarten an den Plattformbetreiber (als ZIP- oder TAR-Archiv) und bitten Sie ihn, diese Änderungen einzuspielen. </span>
+                        <span>Übermitteln Sie das angepasste Stylesheet und die darin referenzierten Dateien, Bilder und Schriftarten als Archiv (ZIP) an den Plattformbetreiber und bitten Sie ihn, diese Änderungen einzuspielen. </span>
                          
                               <p>Das Archiv mit den Änderungen muss genauso aufgebaut sein wie die Datei <samp class="codeph">branding-package.zip</samp>. </p>
 
@@ -89,9 +89,14 @@
                   </li>
 <li class="stepexpand">
                         <span>Geben Sie im Feld <span class="uicontrol">URL des Stylesheets</span> die URL Ihres angepassten Stylesheets an.</span>
-                         <p>Standardmäßig ist die URL wie folgt: </p>
-<p><samp class="codeph">https://&lt;hostname.fqdn&gt;:8443/branding-package/css/mp.css</samp></p>
-<samp class="codeph">&lt;hostname.fqdn&gt;</samp> ist ther Name und FQDN des Hosts, über den auf <span>OSCM</span> zugegriffen wird, und <samp class="codeph">branding-package</samp> ist der Name des Archivs mit den Änderungen.
+                         
+                              <p>Standardmäßig ist die URL wie folgt: </p>
+
+                              <p><samp class="codeph">https://&lt;host_fqdn&gt;:8443/&lt;branding-package&gt;/css/mp.css</samp></p>
+
+                              <p><samp class="codeph">&lt;host_fqdn&gt;</samp> ist der vollqualifizierte Host-Name oder die IP-Adresse der Plattforminstallation, <samp class="codeph">8443</samp> der benötigte Port. <samp class="codeph">&lt;branding-package&gt;</samp> ist der Name des Archivs mit den Änderungen.</p>
+
+                        
                   </li>
 <li class="stepexpand">
                         <span>Klicken Sie <span class="uicontrol">Speichern</span>, um das neue Layout und Branding auf dem Marktplatz zu aktivieren. </span>

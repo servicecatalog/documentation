@@ -8,6 +8,7 @@
 <meta name="DC.Title" content="Marktplatz anlegen" />
 <meta scheme="URI" name="DC.Relation" content="marketplace_update.htm" />
 <meta scheme="URI" name="DC.Relation" content="marketplace_delete.htm" />
+<meta scheme="URI" name="DC.Relation" content="operator_manageTenants.htm" />
 <meta content="XHTML" name="DC.Format" />
 <meta content="task634" name="DC.Identifier" />
 <meta content="de-de" name="DC.Language" />
@@ -27,6 +28,8 @@
       <p>Beim Anlegen eines Marktplatzes legen Sie dessen Funktionsumfang und Einstellungen fest und geben eine Organisation als Eigentümer an. Dieser Organisation wird automatisch die Rolle Marktplatzeigentümer zugewiesen. Alle Administratoren der Organisation erhalten die Rolle Marktplatz-Manager. Mit dieser Rolle können sie den Marktplatz verwalten und anpassen.</p>
 
       <p>Die Organisation, die Sie als Marktplatzeigentümer angeben, muss bereits existieren.</p>
+
+      <p>Wenn die Plattform im Authentifizierungsmodus OIDC installiert ist, können Sie dem Marktplatz einen Mandanten zuordnen. Der Mandant legt den OIDC-Provider fest, über den Benutzer authentifiziert werden, wenn sie auf den Marktplatz zugreifen.</p>
 
       <p><strong>So legen Sie einen Marktplatz an</strong>:</p>
 
@@ -76,6 +79,10 @@
         
       </li>
 <li class="stepexpand">
+        <span>Wenn die Plattform im Authentifizierungsmodus OIDC installiert ist: Wählen Sie den Mandanten für den OIDC-Provider, über den Benutzer authentifiziert werden sollen, die auf den Marktplatz zugreifen. Wenn Sie das Feld leer lassen, werden die Benutzer über den bei der Installation angegebenen Standard-Provider authentifiziert. </span>
+         Die Liste stellt alle auf Ihrer Plattform existierenden Mandanten zur Auswahl.
+      </li>
+<li class="stepexpand">
         <span>Legen Sie den Marktplatz mit <span class="uicontrol">Speichern</span> an.</span>
       </li>
 </ol>
@@ -93,7 +100,8 @@
 <div class="linklist"><strong>Weitere Themen</strong><br />
 
 <div><a href="marketplace_update.htm">Marktplatzeigenschaften ändern</a></div>
-<div><a href="marketplace_delete.htm">Marktplatz löschen</a></div></div>
+<div><a href="marketplace_delete.htm">Marktplatz löschen</a></div>
+<div><a href="operator_manageTenants.htm">Mandanten verwalten</a></div></div>
 </div>
 
 </body>

@@ -12,6 +12,7 @@
 <meta scheme="URI" name="DC.Relation" content="marketplace_manageSuppliers.htm" />
 <meta scheme="URI" name="DC.Relation" content="marketplace_manageCategories.htm" />
 <meta scheme="URI" name="DC.Relation" content="marketplace_customizeLandingpage.htm" />
+<meta scheme="URI" name="DC.Relation" content="operator_manageTenants.htm" />
 <meta content="XHTML" name="DC.Format" />
 <meta content="task634" name="DC.Identifier" />
 <meta content="de-de" name="DC.Language" />
@@ -31,6 +32,8 @@
       <div class="p">
         <ul>
           <li class="liexpand">Ändern des Marktplatzeigentümers. Hierzu müssen Sie Betreiber der Plattform sein.</li>
+
+          <li class="liexpand">Wenn die Plattform im Authentifizierungsmodus OIDC installiert ist: Ändern der Mandantenzuordnung, um einen anderen OIDC-Provider für die Authentifizierung von Benutzern zu verwenden. Hierzu müssen Sie Betreiber der Plattform sein. Beachten Sie, dass nach dem Ändern der Mandantenzuordnung kein Zugriff mehr auf bestehende Service-Abos auf dem Marktplatz besteht.</li>
 
           <li class="liexpand">Definieren von Umsatzbeteiligungen für den Marktplatz sowie für Vermittler und Wiederverkäufer. Hierzu müssen Sie Betreiber der Plattform sein. </li>
 
@@ -73,6 +76,19 @@
 </ol>
 
     <div class="section">
+      <p><strong>So ändern Sie die Mandantenzuordnung</strong> (nur Betreiber, wenn die Plattform im Authentifizierungsmodus OIDC installiert ist): </p>
+
+      <ol>
+        <li>Wählen Sie in der Liste <span class="uicontrol">Marktplatz</span> den Marktplatz, dessen Mandantenzuordnung Sie ändern möchten. <p>Die Liste stellt alle Marktplätze zur Auswahl, die auf Ihrer Plattform angelegt wurden.</p>
+</li>
+
+        <li>Wählen Sie im Feld <span class="uicontrol">Mandant</span> den Mandanten für den OIDC-Provider, über den Benutzer authentifiziert werden sollen, die auf den Marktplatz zugreifen. Wenn Sie das Feld leer lassen, werden die Benutzer über den bei der Installation angegebenen Standard-Provider authentifiziert. <div class="note"><span class="notetitle">Hinweis:</span> Wenn für den Marktplatz bereits Anbieter zugelassen wurden, wird dieses Recht zurückgenommen. Auf bestehende Abonnements für Services, die auf dem Marktplatz veröffentlicht wurden, kann nicht mehr zugegriffen werden. Deshalb sollten Sie die Mandantenzuordnung für einen Marktplatz nur bei der initialen Konfiguration ändern.</div>
+</li>
+
+        <li>Schließen Sie Ihre Änderungen mit Speichern ab.</li>
+
+      </ol>
+
       <p><strong>So definieren Sie Umsatzbeteiligungen</strong> (nur Betreiber):</p>
 
       <div class="p">
@@ -182,7 +198,8 @@
 <div><a href="operator_manageOperatorRevenueShare.htm">Umsatzbeteiligung des Betreibers verwalten</a></div>
 <div><a href="marketplace_manageSuppliers.htm">Anbieter verwalten</a></div>
 <div><a href="marketplace_manageCategories.htm">Kategorien verwalten</a></div>
-<div><a href="marketplace_customizeLandingpage.htm">Empfohlene Services festlegen</a></div></div>
+<div><a href="marketplace_customizeLandingpage.htm">Empfohlene Services festlegen</a></div>
+<div><a href="operator_manageTenants.htm">Mandanten verwalten</a></div></div>
 </div>
 
 </body>

@@ -21,26 +21,22 @@
   <div>
     <div class="section">
       <div class="p">Auf der Seite <span class="uicontrol">Benutzer verwalten</span> können Sie folgende Aufgaben durchführen: <ul>
-          <li>Das Konto eines Benutzers sperren. Dies ist beispielsweise erforderlich, wenn Sie unerlaubten Zugriff auf das System vermuten. </li>
+          <li class="liexpand">Das Konto eines Benutzers sperren. Dies ist beispielsweise erforderlich, wenn Sie unerlaubten Zugriff auf das System vermuten. </li>
 
-          <li>Das Konto eines Benutzer entsperren. Ein Benutzerkonto wird automatisch gesperrt, wenn der Benutzer mehrmals versucht, sich mit einem falschen Passwort anzumelden (Voreinstellung: dreimal).</li>
+          <li class="liexpand">Das Konto eines Benutzer entsperren, z.B. weil es automatisch gesperrt wurde, weil der Benutzer mehrmals versuchte, sich mit einem falschen Passwort anzumelden (Voreinstellung: dreimal).</li>
 
-          <li>Das Passwort eines Benutzers zurücksetzen. In diesem Fall wird ein neues Passwort generiert und dem Benutzer per E-Mail gesendet. </li>
+          <li class="liexpand">Wenn die Plattform im Authentifizierungsmodus INTERNAL läuft und kein LDAP-System zur Benutzerverwaltung verwendet wird: Das Passwort eines Benutzers zurücksetzen. In diesem Fall wird ein neues Passwort generiert und dem Benutzer per E-Mail gesendet. </li>
 
-          <li>Mehrere Benutzer auf einmal registrieren. Hierzu importieren Sie eine Datei mit Benutzerdaten. </li>
+          <li class="liexpand">Wenn die Plattform im Authentifizierungsmodus INTERNAL läuft: Mehrere Benutzer auf einmal registrieren. Hierzu importieren Sie eine Datei mit Benutzerdaten. </li>
 
-        
+          <li class="liexpand">Wenn die Plattform im Authentifizierungsmodus OIDC läuft: Die Organisationen und Benutzer in der Plattform mit den entsprechenden Gruppen bei den OIDC-Providern synchronisieren. </li>
+
         </ul>
 </div>
 
       <p>Im oberen Bereich der Seite wird die Anzahl der aktuell für die Plattform registrierten Benutzer und die maximale Anzahl der Benutzer angezeigt (Voreinstellung: 10). In regelmäßigen Abständen überprüft das System die Anzahl der registrierten Benutzer. Sie werden per Email informiert, sobald die maximale Anzahl registrierter Benutzer überschritten ist.</p>
 
-      <p>Alle Aufgaben, die auf der Seite <span class="uicontrol">Benutzer verwalten</span> erledigt werden können, führen Sie im Auftrag eines Administrators der Organisation durch, dessen Benutzer Sie verwalten sollen. Der Administrator muss Ihnen die jeweiligen Benutzernamen mitteilen.</p>
-
-      <div class="p">
-        <div class="note"><span class="notetitle">Hinweis:</span> Wenn eine Organisation ein externes LDAP-System zur Authentifizierung von Benutzern verwendet, können Eingaben nur in die Felder gemacht werden, die nicht auf Felder im LDAP-System abgebildet sind. Beispielweise können Passwörter nur im LDAP-System geändert werden. Das Registrieren mehrere Benutzer durch den Import einer Datei mit Benutzerdaten ist nicht möglich.</div>
-
-      </div>
+      <p />
 
       <p><strong>So setzen Sie ein Passwort zurück oder sperren/entsperren das Konto eines Benutzers</strong>:</p>
 
@@ -115,6 +111,19 @@ Wenn die Plattform bei der Validierung einen Fehler feststellt, wird eine Fehler
 </li>
 
         </ul>
+
+      </div>
+
+      <p><strong>So synchronisieren Sie Organisationen mit Gruppen bei den OIDC-Providern</strong>:</p>
+
+      <p>Klicken Sie <span class="uicontrol">Nachladen</span> im Abschnitt <span class="uicontrol">Benutzer vom OIDC-Provider</span> section.</p>
+
+      <p>Alle Organisationen in der Plattform werden mit den entsprechenden Gruppen in den OIDC-Provider-Systemen synchronisiert, die durch die den Organisationen zugeordneten Mandanten repräsentiert werden. Neue Gruppenmitglieder werden in der Plattform registriert und können Rollen zugewiesen werden. Überflüssige Benutzer werden, wenn möglich, aus den Organisationen entfernt. </p>
+
+      <div class="note"><span class="notetitle">Hinweis:</span> 
+        <p>Für einen problemlosen Betrieb kann ein Benutzer zu einem bestimmten Zeitpunkt genau einer Organisation und Gruppe angehören. </p>
+
+        <p>In der Plattform können Benutzer manuell einer Organisation hinzugefügt oder daraus entfernt werden. Solche Änderungen werden jedoch bei der nächsten Synchronisation mit dem OIDC-Provider rückgängig gemacht. </p>
 
       </div>
 

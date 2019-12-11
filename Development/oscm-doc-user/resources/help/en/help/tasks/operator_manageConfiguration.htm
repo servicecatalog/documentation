@@ -21,9 +21,9 @@
 
   <div>
     <div class="section">
-      <p>The <span>OSCM</span> software requires a number of settings for configuring its container runtime environment. The mandatory settings have already been specified in environment variables in Docker files before deploying the containers. </p>
+      <p>The <span>platform</span> software requires a number of settings for configuring its container runtime environment. The mandatory settings have been specified in environment variables in Docker files before deploying the containers. </p>
 
-      <p>On the <span class="uicontrol">Update configuration settings</span> page, you see a list of the current configuration settings for the platform as stored in the database. In the installation, you adapted the settings to your environment, in particular server names, ports, paths, and user IDs. You can update and edit the current settings as required.</p>
+      <p>On the <span class="uicontrol">Update configuration settings</span> page, you see a list of the current configuration settings for the platform as stored in the database. During the installation, you adapted the settings to your environment, in particular server names, ports, paths, and user IDs. You can update and edit the current settings as required.</p>
 
       <div class="p">
         <div class="note"><span class="notetitle">Note:</span> Be aware that changing the settings in the administration portal should only be used for testing purposes. Your changes will be lost as soon as the platform's containers are restarted. </div>
@@ -34,24 +34,40 @@
 
       <div class="p">
         <ol>
-          <li>On your Docker host, edit the <samp class="codeph">var.env</samp> file located in the <samp class="codeph">/docker</samp> directory as required. </li>
+          <li>On your Docker host, edit the <samp class="codeph">var.env</samp> file located in the platform's data directory (<samp class="codeph">&lt;docker&gt;</samp>) as required. </li>
 
           <li>If you want to change the default value of a configuration setting that is not included in the <samp class="codeph">var.env</samp> file yet:<p>Add the key and the value the setting shall take on to the <samp class="codeph">var.env</samp> file. </p>
 <p>You can find the keys of the settings on the <strong>Update configuration settings</strong> page. For example: </p>
 <p><samp class="codeph">TIMER_INTERVAL_SUBSCRIPTION_EXPIRATION=345600000</samp></p>
 </li>
 
-          <li>Save the <samp class="codeph">var.env</samp> file to its original location: <p><samp class="codeph">/docker/var.env</samp></p>
+          <li>Save the <samp class="codeph">var.env</samp> file to its original location: <p><samp class="codeph">&lt;docker&gt;/var.env</samp></p>
 </li>
 
-          <li>Stop and remove all <span>OSCM</span> containers:<div class="p">
+          <li>In the <samp class="codeph">docker-compose-initdb.yml</samp> file in the same directory, set the <samp class="codeph">OVERWRITE</samp> flag in the <samp class="codeph">environment</samp> settings for <samp class="codeph">oscm-initdb-core</samp> to <samp class="codeph">true</samp> to change the configuration setting in the database. <div class="p">
+              <pre class="codeblock">oscm-initdb-core:
+    image: ${IMAGE_INITDB}
+    container_name: oscm-initdb-core
+    env_file: var.env
+    environment:
+      - TARGET=CORE
+      - SOURCE=INIT
+      - OVERWRITE=<strong>true</strong>
+      - LOG_LEVEL=INFO
+    links:
+- oscm-db:oscm-db</pre>
+
+            </div>
+</li>
+
+          <li>Stop and remove all containers:<div class="p">
               <pre class="codeblock">docker-compose -f docker-compose-oscm.yml stop
 docker-compose -f docker-compose-oscm.yml rm -f </pre>
 
             </div>
 </li>
 
-          <li>Start the container for initializing the database and delete the finished containers: <div class="p">
+          <li>Start the container for initializing the databases, then stop and delete it again: <div class="p">
               <pre class="codeblock">docker-compose -f docker-compose-initdb.yml up -d oscm-db 
 docker-compose -f docker-compose-initdb.yml up oscm-initdb-core 
 docker-compose -f docker-compose-initdb.yml up oscm-initdb-jms 
@@ -69,6 +85,8 @@ docker-compose -f docker-compose-initdb.yml rm -f</pre>
 
             </div>
 </li>
+
+          <li>In the <samp class="codeph">docker-compose-initdb.yml</samp> file, set the <samp class="codeph">OVERWRITE</samp> flag back to <samp class="codeph">false</samp>.</li>
 
         </ol>
 

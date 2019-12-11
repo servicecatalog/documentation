@@ -78,11 +78,12 @@
                     </div>
 </li>
 
-                <li class="liexpand">Create a zipped archive file named <samp class="codeph">oscm-portal-help.tar.gz</samp> containing the additional subdirectories for the new language, and copy this archive to the following directory on the Docker host: <p><samp class="codeph">/docker/config/oscm-help</samp></p>
+                <li class="liexpand">Create a zipped archive file named <samp class="codeph">oscm-portal-help.tar.gz</samp> containing the additional subdirectories for the new language, and copy this archive to the following directory on the Docker host: <p><samp class="codeph">&lt;docker&gt;/config/oscm-help</samp></p>
+<p><samp class="codeph">&lt;docker&gt;</samp> is the <span>platform's</span> data directory specified at installation time.</p>
 </li>
 
                 <li class="liexpand">Stop the <samp class="codeph">oscm-help</samp> container: <div class="p">
-                        <pre class="codeblock">docker stop oscm- help</pre>
+                        <pre class="codeblock">docker stop oscm-help</pre>
 
                     </div>
 </li>
@@ -94,7 +95,7 @@
 </li>
 
                 <li class="liexpand">Recreate and restart the <samp class="codeph">oscm-help</samp> container: <div class="p">
-                        <pre class="codeblock">docker-compose -f docker-compose--oscm.yml up -d oscm-help</pre>
+                        <pre class="codeblock">docker-compose -f docker-compose-oscm.yml up -d oscm-help</pre>
 
                     </div>
 <p>By the deployment, existing HTML files are overwritten. </p>

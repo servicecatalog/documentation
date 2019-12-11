@@ -46,7 +46,16 @@
 
         <div class="section"><h4 class="sectiontitle">AUTH_MODE</h4>
             
-            <p>Specifies that <span>the platform</span> is used for user authentication. This configuration setting is evaluated at the first startup of <span>the system</span> and cannot be changed.</p>
+            <p>Specifies the way users are managed and authenticated. The value can be one of the following: </p>
+
+            <ul>
+                <li><samp class="codeph">INTERNAL</samp>: Users are managed and authenticated by <span>the platform</span> or an existing LDAP system of an organization.</li>
+
+                <li><samp class="codeph">OIDC</samp>: Users are managed and authenticated by an external provider such as Microsoft Azure Active Directory based on OpenID Connect.</li>
+
+            </ul>
+
+            <p>The authentication mode is evaluated at the first database initialization of <span>the platform</span> and cannot be changed.</p>
 
             <p>Default: <samp class="codeph">INTERNAL</samp>
             </p>
@@ -54,8 +63,8 @@
         </div>
 
         
-        <div class="section"><h4 class="sectiontitle">BASE_URL_HTTPS</h4>The base URL is used to access the <span>platform's</span> home page and to create the URL for accessing services via HTTPS. <p>Syntax: <samp class="codeph">https://&lt;hostname.fqdn&gt;:&lt;port&gt;/oscm-portal</samp></p>
-<p><samp class="codeph">&lt;hostname.fqdn&gt;</samp> is the name and the fully qualified domain name of the machine where <span>OSCM</span> has been deployed. <samp class="codeph">&lt;port&gt;</samp> is the port to address the machine (default: <samp class="codeph">8081</samp>), <samp class="codeph">oscm-portal</samp> is the default context root of <span>OSCM</span> and cannot be changed. </p>
+        <div class="section"><h4 class="sectiontitle">BASE_URL_HTTPS</h4>The base URL is used to access the <span>platform's</span> home page and to create the URL for accessing services via HTTPS. <p>Syntax: <samp class="codeph">https://&lt;host_fqdn&gt;:8081/oscm-portal</samp></p>
+<p><samp class="codeph">&lt;host_fqdn&gt;</samp> is the FQDN or IP address of the host to access <span>the platform</span>, <samp class="codeph">8081</samp> is the port. <samp class="codeph">oscm-portal</samp> is the context root of <span>the platform</span> and cannot be changed. </p>
 <div class="note"><span class="notetitle">Note:</span> If the SSL/HTTPS port was changed, then this setting must also be updated.</div>
 </div>
 
@@ -153,7 +162,7 @@
         <div class="section"><h4 class="sectiontitle">MAIL_JA_CHARSET</h4>Optional. Special character encoding for emails sent in Japanese.<p>Default: <samp class="codeph">UTF-8</samp></p>
 </div>
 
-        <div class="section"><h4 class="sectiontitle">MAX_NUMBER_ALLOWED_USERS</h4>The maximum number of users that can be registered within the  installation.<p>Allowed values: Any value between <samp class="codeph">1</samp> and <samp class="codeph">9223372036854775807</samp></p>
+        <div class="section"><h4 class="sectiontitle">MAX_NUMBER_ALLOWED_USERS</h4>The maximum number of users that can be registered within the <span>platform</span> installation.<p>Allowed values: Any value between <samp class="codeph">1</samp> and <samp class="codeph">9223372036854775807</samp></p>
 <p>Default: <samp class="codeph">1000</samp></p>
 </div>
 
@@ -180,12 +189,12 @@
 
             <p>The setting must be as follows:   </p>
 
-            <pre class="codeblock">https://${HOST_FQDN}:8681/birt/frameset?
+            <pre class="codeblock">https://&lt;host_fqdn&gt;:8681/birt/frameset?
    __report=\${reportname}.rptdesign&amp;SessionId=\${sessionid}&amp;
    __locale=\${locale}&amp;WSDLURL=\${wsdlurl}&amp;SOAPEndPoint=\
    ${soapendpoint}&amp;wsname=Report&amp;wsport=ReportPort</pre>
 
-            <p>Replace <samp class="codeph">HOST_FQDN</samp> with the fully qualified name of the Docker host where  is deployed. </p>
+            <p><samp class="codeph">&lt;host_fqdn&gt;</samp> is the FQDN or IP address of the host to access <span>the platform</span>.</p>
 
         </div>
 
@@ -276,6 +285,10 @@
 </div>
 
         <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_SUBSCRIPTION_EXPIRATION_OFFSET</h4>Optional. The offset in milliseconds for the timer for subscription expiration checks. <p>Allowed values: Any value between <samp class="codeph">0</samp> and <samp class="codeph">9223372036854775807</samp></p>
+<p>Default: <samp class="codeph">0</samp></p>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_SYNCHRONIZE_USERS_OFFSET</h4>Optional and relevant of OIDC authentication mode only. The offset in milliseconds for the timer to synchronize  users in organizations with users in the corresponding groups in the OIDC provider system. The timer interval is one day and cannot be changed. <p>Allowed values: Any value between <samp class="codeph">0</samp> and <samp class="codeph">9223372036854775807</samp></p>
 <p>Default: <samp class="codeph">0</samp></p>
 </div>
 

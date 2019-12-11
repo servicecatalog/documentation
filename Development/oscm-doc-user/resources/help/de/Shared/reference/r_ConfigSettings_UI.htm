@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xml:lang="en-us" lang="en-us">
+<html xml:lang="de-de" lang="de-de">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <meta name="copyright" content="(C) Copyright 2005" />
@@ -8,7 +8,7 @@
 <meta name="DC.Title" content="-Konfigurationseinstellungen" />
 <meta content="XHTML" name="DC.Format" />
 <meta content="reference832" name="DC.Identifier" />
-<meta content="en-us" name="DC.Language" />
+<meta content="de-de" name="DC.Language" />
 <link href="../../commonltr.css" type="text/css" rel="stylesheet" />
 <link href="../../book.css" type="text/css" rel="stylesheet" />
 <title>-Konfigurationseinstellungen</title>
@@ -47,16 +47,25 @@
 
         <div class="section"><h4 class="sectiontitle">AUTH_MODE</h4>
             
-            <p>Obligatorisch. Legt fest, dass die Plattform zur Benutzerauthentifizierung verwendet wird. Diese Einstellung wird beim ersten Starten des Systems ausgewertet. Sie kann nach dem ersten Starten des Systems nicht mehr geändert werden.</p>
+            <p>Obligatorisch. Legt fest, wie Benutzer verwaltet und authentifiziert werden. Folgende Werte sind möglich:</p>
 
-            <p>Erlaubter Werte: <samp class="codeph">INTERNAL</samp>
+            <ul>
+                <li><samp class="codeph">INTERNAL</samp>:  Benutzer werden in der Plattform oder in einem bestehenden LDAP-System der Organisation verwaltet und authentifiziert.</li>
+
+                <li><samp class="codeph">OIDC</samp>:  Benutzer werden basierend auf OpenID Connect bei einem externen Provider verwaltet und authentifiziert, z.B. Microsoft Azure Active Directory.</li>
+
+            </ul>
+
+            <p>Der Authentifizierungsmodus wird bei der ersten Datenbankinitialisierung der Plattform ausgewertet und kann nicht geändert werden. </p>
+
+            <p>Voreinstellung: <samp class="codeph">INTERNAL</samp>
             </p>
 
         </div>
 
         
-        <div class="section"><h4 class="sectiontitle">BASE_URL_HTTPS</h4>Obligatorisch. Diese URL führt zur Startseite der Plattform und dient zum Erstellen der URL, um auf Services über HTTPS zuzugreifen. <p>Syntax: <samp class="codeph">https://&lt;hostname.fqdn&gt;:8081/oscm-portal</samp></p>
-<p><samp class="codeph">&lt;hostname.fqdn&gt;</samp> ist der Name und FQDN des Servers, auf dem <span>OSCM</span> installiert wurde. <samp class="codeph">8081</samp> ist die Voreinstellung des Ports für HTTPS-Zugriffe, <samp class="codeph">oscm-portal</samp> ist die Voreinstellung für den Zugriff auf <span>OSCM</span>. Diese kann nicht geändert werden. </p>
+        <div class="section"><h4 class="sectiontitle">BASE_URL_HTTPS</h4>Obligatorisch. Diese URL führt zur Startseite der Plattform und dient zum Erstellen der URL, um auf Services über HTTPS zuzugreifen. <p>Syntax: <samp class="codeph">https://&lt;host_fqdn&gt;:8081/oscm-portal</samp></p>
+<p><samp class="codeph">&lt;host_fqdn&gt;</samp> ist der vollqualifizierte Host-Name oder die IP-Adresse der Plattforminstallation, <samp class="codeph">8081</samp> der benötigte Port. <samp class="codeph">oscm-portal</samp> ist die Context-Root der Plattform. Diese kann nicht geändert werden. </p>
 </div>
 
         <div class="section"><h4 class="sectiontitle">CUSTOMER_SELF_REGISTRATION_ENABLED</h4>
@@ -141,7 +150,7 @@
                 <li><samp class="codeph">navigation.marketplace</samp>: Menü <span class="uicontrol">Marktplatz</span></li>
 
             </ul>
-<div class="note"><span class="notetitle">Note:</span> Die Seite <span class="uicontrol">Konfiguration aktualisieren</span> im Menü <span class="uicontrol">Betrieb</span> wird dem Betreiber standardmäßig angezeigt, wenn er sich anmeldet. Wenn Sie die Seite oder das ganze Menü ausblenden, wird Ihnen die Seite trotzdem nach der nächsten Anmeldung angezeigt. Sie können notwendige Änderungen vornehmen.</div>
+<div class="note"><span class="notetitle">Hinweis:</span> Die Seite <span class="uicontrol">Konfiguration aktualisieren</span> im Menü <span class="uicontrol">Betrieb</span> wird dem Betreiber standardmäßig angezeigt, wenn er sich anmeldet. Wenn Sie die Seite oder das ganze Menü ausblenden, wird Ihnen die Seite trotzdem nach der nächsten Anmeldung angezeigt. Sie können notwendige Änderungen vornehmen.</div>
 </div>
 
         
@@ -184,12 +193,12 @@
 
             <p>Der Wert muss wie folgt angegeben sein: </p>
 
-            <pre class="codeblock">https://${HOST_FQDN}:8681/birt/frameset?
+            <pre class="codeblock">https://&lt;host_fqdn&gt;:8681/birt/frameset?
    __report=\${reportname}.rptdesign&amp;SessionId=\${sessionid}&amp;
    __locale=\${locale}&amp;WSDLURL=\${wsdlurl}&amp;SOAPEndPoint=\
    ${soapendpoint}&amp;wsname=Report&amp;wsport=ReportPort</pre>
 
-            <p>Ersetzen Sie <samp class="codeph">HOST_FQDN</samp> mit dem FQDN des Docker-Hosts, auf dem  installiert ist.</p>
+            <p>Ersetzen Sie <samp class="codeph">&lt;host_fqdn&gt;</samp> mit dem vollqualifizierten Host-Namen oder der IP-Adresse der Plattforminstallation</p>
 
         </div>
 
@@ -280,6 +289,10 @@
 </div>
 
         <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_SUBSCRIPTION_EXPIRATION_OFFSET</h4>Optional. Offset-Wert in Millisekunden für den Timer, der das System auf abgelaufene Abonnements überprüft.<p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">0</samp> und <samp class="codeph">9223372036854775807</samp></p>
+<p>Voreinstellung: <samp class="codeph">0</samp></p>
+</div>
+
+        <div class="section"><h4 class="sectiontitle">TIMER_INTERVAL_SYNCHRONIZE_USERS_OFFSET</h4>Optional und nur relevant bei Authentifizierungsmodus OIDC. Offset-Wert in Millisekunden für den Timer zur Synchronisation von  Benutzern in Organisationen mit den Benutzern in entsprechenden Gruppen beim OIDC-Provider. Der Wert des Timers ist ein Tag und kann nicht geändert werden. <p>Erlaubte Werte: Beliebiger Wert zwischen <samp class="codeph">0</samp> und <samp class="codeph">9223372036854775807</samp></p>
 <p>Voreinstellung: <samp class="codeph">0</samp></p>
 </div>
 

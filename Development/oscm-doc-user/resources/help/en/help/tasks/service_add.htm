@@ -114,7 +114,7 @@
 
           </div>
 
-          <p>Predefined custom tabs are available for viewing details on subscriptions to an IaaS service such as OpenStack or Amazon Web Services (AWS). On the custom tab, the booked Virtual Machines (VMs) are listed with the following information: </p>
+          <p>Predefined custom tabs are available for viewing details on subscriptions to an IaaS service such as OpenStack or Amazon Web Services (AWS). On the custom tab, the booked virtual systems are listed with the following information: </p>
 
           <div class="p">
             <ul>
@@ -122,23 +122,23 @@
 
               <li>Access information</li>
 
-              <li>For each booked VM: <div class="p">
-                <ul>
-                  <li>Instance name</li>
+              <li>Information like the following tor each booked virtual system: <div class="p">
+                  <ul>
+                    <li>Instance name</li>
 
-                  <li>Instance ID </li>
+                    <li>Instance ID </li>
 
-                  <li>Instance type </li>
+                    <li>Instance type </li>
 
-                  <li>Instance status </li>
+                    <li>Instance status </li>
 
-                  <li>Public IP address</li>
+                    <li>Public IP address</li>
 
-                  <li>Private IP addresses</li>
+                    <li>Private IP addresses</li>
 
-                </ul>
+                  </ul>
 
-              </div>
+                </div>
 </li>
 
             </ul>
@@ -147,11 +147,13 @@
 
           <p>You can set the URL for accessing the custom tab in the following format: </p>
 
-          <p><samp class="codeph">https://&lt;app-host-name&gt;:8881/&lt;service controller name&gt;/serverInformation.jsf</samp></p>
+          <p><samp class="codeph">https://&lt;host_fqdn&gt;:8881/&lt;service controller name&gt;/serverInformation.jsf</samp></p>
+
+          <p><samp class="codeph">&lt;host_fqdn&gt;</samp> is the fully qualified name or IP address of the host used to access <span>the platform</span>, <samp class="codeph">8881</samp> is the port of APP. <samp class="codeph">service controller name</samp> is the default context root of the relevant service controller and cannot be changed. </p>
 
           <p>For example: </p>
 
-          <p><samp class="codeph">https://oscm-app-host:8881/oscm-app-openstack/serverInformation.jsf</samp></p>
+          <p><samp class="codeph">https://myhost:8881/oscm-app-openstack/serverInformation.jsf</samp></p>
 
           <p>As soon as a customer opens the <strong>Details</strong> view for a subscription to an IaaS service, the context of the subscription is returned to the URL of the custom tab with the following information: </p>
 

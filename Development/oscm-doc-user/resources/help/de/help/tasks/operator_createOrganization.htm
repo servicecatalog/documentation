@@ -6,6 +6,7 @@
 <meta name="DC.rights.owner" content="(C) Copyright 2005" />
 <meta content="task" name="DC.Type" />
 <meta name="DC.Title" content="Organisation anlegen" />
+<meta scheme="URI" name="DC.Relation" content="operator_manageTenants.htm" />
 <meta scheme="URI" name="DC.Relation" content="../../Shared/reference/r_LDAP_SettingTypes.htm" />
 <meta scheme="URI" name="DC.Relation" content="operator_manageLdapSettings.htm" />
 <meta scheme="URI" name="DC.Relation" content="operator_manageOperatorRevenueShare.htm" />
@@ -29,25 +30,37 @@
 
             <p><strong>Benutzerverwaltung und -authentifizierung</strong>:</p>
 
-            <p>Benutzer werden in der <strong>Plattform</strong> authentifiziert: Benutzernamen und Passwörter einer Organisation können in der Plattform oder in einem bestehenden LDAP-System der Organisation verwaltet werden. </p>
+            <p>Die Plattform unterstützt folgende Arten der Authentifizierung:</p>
 
-            <p id="OrgCreate__UserMgmt2">Wenn sie in der Plattform verwaltet werden, werden die Benutzerdaten in der Datenbank der Plattform gespeichert. Der Administrator einer Organisation kann neue Benutzer registrieren und, falls erforderlich, durch den Betreiber Passwörter zurücksetzen lassen. </p>
+            <ul>
+                <li class="liexpand">
+                    <p><strong>INTERNAL</strong> - Benutzer werden in der <strong>Plattform</strong> authentifiziert: Benutzernamen und Passwörter einer Organisation können in der Plattform oder in einem bestehenden LDAP-System der Organisation verwaltet werden. </p>
 
-            <p id="OrgCreate__UserMgmt3">Wird ein LDAP-System verwendet, muss die Organisation ihre Benutzer nicht bei der Plattform registrieren. Der Administrator der Organisation kann Benutzer aus dem LDAP-System importieren, um sie automatisch bei der Plattform zu registrieren. Die Benutzer werden im LDAP-System verwaltet. Die Benutzerinformationen werden kontinuierlich mit der Plattform synchronisiert. Die für die Verbindung zum LDAP-System erforderlichen Einstellungen müssen in einer Konfigurationsdatei hinterlegt sein. </p>
+                    <p id="OrgCreate__UserMgmt2">Wenn sie in der Plattform verwaltet werden, werden die Benutzerdaten in der Datenbank der Plattform gespeichert. Der Administrator einer Organisation kann neue Benutzer registrieren und, falls erforderlich, durch den Betreiber Passwörter zurücksetzen lassen. </p>
 
-            <p id="OrgCreate__UserMgmt4">Benutzer können entweder in der Plattform oder im LDAP-System verwaltet werden. Eine Kombination ist nicht möglich. Die Art der Authentifizierung kann nach dem Anlegen einer Organisation nicht mehr geändert werden.</p>
+                    <p id="OrgCreate__UserMgmt3">Wird ein LDAP-System verwendet, muss die Organisation ihre Benutzer nicht bei der Plattform registrieren. Der Administrator der Organisation kann Benutzer aus dem LDAP-System importieren, um sie automatisch bei der Plattform zu registrieren. Die Benutzer werden im LDAP-System verwaltet. Die Benutzerinformationen werden kontinuierlich mit der Plattform synchronisiert. Die für die Verbindung zum LDAP-System erforderlichen Einstellungen müssen in einer Konfigurationsdatei hinterlegt sein. </p>
 
-            <p id="OrgCreate__UserMgmt5">Die Betreiberorganisation kann kein LDAP-System verwenden. Das bedeutet, dass Sie immer in der Plattform authentifiziert werden und sich somit immer am System anmelden können. Dies ist beispielsweise erforderlich, um Verbindungseinstellungen zu ändern, wenn das LDAP-System einer Organisation nicht verfügbar ist und somit ihre Benutzer nicht authentifiziert werden können.</p>
+                    <p id="OrgCreate__UserMgmt4">Benutzer können entweder in der Plattform oder im LDAP-System verwaltet werden. Eine Kombination ist nicht möglich. Die Art der Authentifizierung kann nach dem Anlegen einer Organisation nicht mehr geändert werden.</p>
 
-            <p id="OrgCreate__UserMgmt6">Über die Option <span class="uicontrol">LDAP-Einstellungen verwalten</span> können Sie systemweite, für die gesamte Plattform geltende, LDAP-Konfigurationseinstellungen festlegen. Die Einstellungen in der LDAP-Konfigurationsdatei einer Organisation ergänzen oder ersetzen die systemweiten Einstellungen. </p>
+                    <p id="OrgCreate__UserMgmt5">Die Betreiberorganisation kann kein LDAP-System verwenden. Das bedeutet, dass Sie immer in der Plattform authentifiziert werden und sich somit immer am System anmelden können. Dies ist beispielsweise erforderlich, um Verbindungseinstellungen zu ändern, wenn das LDAP-System einer Organisation nicht verfügbar ist und somit ihre Benutzer nicht authentifiziert werden können.</p>
+
+                </li>
+
+                <li class="liexpand"><strong>OIDC</strong> - Benutzer werden basierend auf OpenID Connect bei einem <strong>externen Provider</strong> authentifiziert, z.B. Microsoft Azure Active Directory: Benutzernamen und Passwörter einer Organisation werden im OIDC-Provider-System angelegt und verwaltet. <p>Beim Anlegen einer Organisation müssen Sie dieser einen Mandaten zuordnen, der den zu verwendenden OIDC-Provider repräsentiert. Beachten Sie, dass diese Zuordnung später nicht geändert werden kann. Der Benutzer, den Sie als ersten Administrator der Organisation angeben, muss im OIDC-Provider-System existieren. Er wird automatisch bei der Plattform registriert. </p>
+<p>Zusammen mit der Organisation wird eine entsprechende Gruppe im OIDC-Provider-System angelegt und der Benutzer als Mitglied zugeordnet. Weitere Gruppenmitglieder können danach jederzeit im OIDC-Provider-System hinzugefügt werden. Die Organisation in der Plattform wird täglich automatisch oder manuell vom Betreiber mit der Gruppe im OIDC-Provider-System synchronisiert. Neue Gruppenmitglieder werden bei der Plattform registriert und können den gewünschten Rollen zugeordnet werden. Für den problemlosen Betrieb kann ein bestimmter Benutzer zu einer bestimmten Zeit zu genau einer Organisation und Gruppe gehören. </p>
+</li>
+
+            </ul>
 
             <p><strong>So legen Sie eine Organisation an</strong>:</p>
 
         </div>
 
         <ol><li class="stepexpand">
-                <span>Geben Sie die <span class="uicontrol">Administratordaten</span> ein. </span>
+                <span>Geben Sie abhängig vom Authentifizierungsmodus die Daten für den ersten Administrator der Organisation ein: </span>
                  
+                    <p><strong>Authentifizierungmodus INTERNAL</strong>:</p>
+
                     <ul>
                         <li class="liexpand"><span class="uicontrol">Anrede</span>: Anrede oder Titel, zum Beispiel <samp class="codeph">Herr</samp> oder <samp class="codeph">Frau</samp>. </li>
 
@@ -72,6 +85,13 @@
 
                     </div>
 
+                    <p><strong>Authentifizierungsmodus OIDC</strong>:</p>
+
+                    <p>Geben Sie im Feld <span class="uicontrol">Gewünschter Benutzername</span> den Namen eines Benutzers ein, der in dem OIDC-Provider-System existiert, das von dem angegebenen Mandanten repräsentiert wird. Der Benutzer darf dort noch nicht Mitglied einer Gruppe sein, die zu einer anderen Organisation in der Plattform gehört. Benutzernamen dürfen aus maximal 100 Zeichen bestehen. Die folgenden Zeichen sind nicht erlaubt: </p>
+
+                    <p><samp class="codeph">! " # $ % &amp; ' * + , / : ; &lt; = &gt; ? \ ^ `</samp>
+                    </p>
+
                 
             </li>
 <li class="stepexpand">
@@ -79,7 +99,7 @@
                  Die Rollen Wiederverkäufer und Vermittler können nicht zusammen oder mit der Hersteller- oder Serviceanbieterrolle zugewiesen werden.
             </li>
 <li class="stepexpand">
-                <span>Geben Sie die weiteren Organisationsdaten ein. Die Organisationsrolle bestimmt, welche Felder angezeigt werden und welche ausgefüllt werden müssen.</span>
+                <span>Geben Sie die weiteren Organisationsdaten ein. Die Organisationsrolle und der Authentifizierungsmodus bestimmen, welche Felder angezeigt werden und welche ausgefüllt werden müssen.</span>
                  
                     <div class="p">
                         <ul>
@@ -102,7 +122,9 @@
                             <li class="liexpand"><span class="uicontrol">Beschreibung</span> der Organisation. Die Beschreibung kann beispielsweise Informationen aus dem Unternehmensprofil bereitstellen. <div class="note"><span class="notetitle">Hinweis:</span> <span>Verwenden Sie ausschließlich die Funktionen des Editors, um Textformatierungen vorzunehmen. Direkte HTML-Codierungen im Text sowie Verweise auf externe HTML-Stylesheets oder -Inhalte können zu Fehlern im Seitenlayout führen.</span></div>
 </li>
 
-                            <li class="liexpand"><span class="uicontrol">Marktplatz</span>, den der Kunde besuchen soll. Sie können einen der Marktplätze wählen, zu denen Sie Zugang vom jeweiligen Marktplatzeigentümer erhalten haben.</li>
+                            <li class="liexpand">Bei Authentifizierungsmodus OIDC: <span class="uicontrol">Mandant</span>, der den OIDC-Provider repräsentiert, der der Organisation zugeordnet werden soll. Sie können einen der Mandanten wählen, der in der Plattform definiert ist. Beachten Sie, dass Sie die Mandantenzuordnung später nicht ändern können. Die E-Mails, die an die Benutzer der Organisation geschickt werden, enthalten URLs für den Zugang zu einem Marktplatz und einem mandantenspezifischen Administrationsportal. Der als erster Administrator der Organisation angegebene Benutzer muss in dem OIDC-Provider-System existieren. Zusammen mit der Organisation wird eine entsprechende Gruppe im OIDC-Provider-System angelegt und der Benutzer als Mitglied zugeordnet.</li>
+
+                            <li class="liexpand"><span class="uicontrol">Marktplatz</span>, den die Benutzer der Organisation besuchen sollen. Bei Authentifizierungsmodus INTERNAL können Sie einen der Marktplätze wählen, zu denen Sie Zugang vom Marktplatzeigentümer erhalten haben. Bei Authentifizierungsmodus OIDC stehen die Marktplätze zur Auswahl, die dem angegebenen Mandanten zugeordnet sind. </li>
 
                             <li class="liexpand">Für eine Organisation mit der Rolle Serviceanbieter: <strong>Umsatzbeteiligung Betreiber</strong>. Diese zwischen Betreiber und Serviceanbieter vereinbarte Umsatzbeteiligung erhält der Betreiber vom Serviceanbieter dafür, dass Services über die vom Betreiber bereitgestellten Marktplätze verkauft werden können. Diese vereinbarte Beteiligung gilt für alle Services, die der Serviceanbieter anbietet, sofern Sie nicht eine Umsatzbeteiligung pro Service festlegen (einstellbar über die Menüoption <strong>Umsatzbeteilung des Betreibers verwalten</strong> im Menü <strong>Betrieb</strong>). Die Beteiligung ist auch unabhängig davon, ob der Serviceanbieter seine Services selbst verkauft oder die Dienstleistung von Vermittlern oder Wiederverkäufern in Anspruch nimmt. Rabatte, die ein Serviceanbieter mit seinen Kunden vereinbart, wirken sich auf die Umsatzbeteiligung aus.</li>
 
@@ -117,7 +139,7 @@
                 
             </li>
 <li class="stepexpand">
-                <span>Legen Sie über die entsprechende Option fest, ob die Organisation ein LDAP-System zur Benutzerverwaltung verwenden soll. </span>
+                <span>Bei Authentifizierungsmodus INTERNAL: Legen Sie über die entsprechende Option fest, ob die Organisation ein LDAP-System zur Benutzerverwaltung verwenden soll. </span>
                  
                     <p>Nach Markieren der Option wird eine Tabelle mit den systemweiten, für die Plattform definierten, LDAP-Einstellungen angezeigt. Sie müssen nun eine LDAP-Konfigurationsdatei anlegen mit den Einstellungen, die für die Verbindung zum LDAP-System erforderlich sind: </p>
 
@@ -147,19 +169,18 @@ LDAP_ATTR_REFERRAL=ignore</pre>
 </ol>
 
         <div class="section">
-            <p id="OrgCreate__The_new_organization_is_creat_task_taskbody_result_p">Die Organisation wird angelegt, und ein Benutzerkonto für den Administrator wird erstellt. Der Administrator wird per E-Mail benachrichtigt. Die E-Mail enthält die URL für den Zugriff auf das System sowie den Benutzernamen und ein Passwort für das erste Anmelden (bei Authentifizierung über die Plattform). </p>
+            <p id="OrgCreate__The_new_organization_is_creat_task_taskbody_result_p">Die Organisation wird angelegt, und ein Benutzerkonto für den Administrator wird erstellt. Der Administrator wird per E-Mail benachrichtigt. Die E-Mail enthält die URL für den Zugriff auf die Plattform bzw. den Marktplatz sowie die Daten für die erste Anmeldung abhängig vom Authentifizierungsmodus: </p>
 
-            <p id="OrgCreate__The_new_organization_is_creat_task_taskbody_result_p">Verwendet die Administratororganisation ein externes Authentifizierungssystem, beachten Sie folgendes: </p>
+            <ul>
+                <li class="liexpand">Authentifizierungsmodus INTERNAL:<p>Wenn die Benutzer von der Plattform verwaltet werden, bestehen die Daten aus Benutzername und Passwort für die erste Anmeldung.</p>
+<p>Werden die Benutzer in einem LDAP-System verwaltet, bestehen die Daten nur aus dem Benutzernamen. Für die Anmeldung muss das im LDAP-System gesetzte Passwort verwendet werden. </p>
+<p>Existiert der Benutzername des Administrators bereits im System, wird seine E-Mail-Adresse (z.B. <samp class="codeph">Schmitt@organisation.com</samp>) als Benutzername für die Anmeldung verwendet. Wird eine weitere Organisation mit demselben Administrator registriert, wird der neue Benutzername aus dem bestehenden Namen, gefolgt von einem "AT"-Zeichen (@) und der ID der Organisation zusammengesetzt (z.B. <samp class="codeph">Schmitt@abcdefg</samp>). Der Administrator erhält eine E-Mail mit dem entsprechenden Benutzernamen.</p>
+</li>
 
-            <div class="p">
-                <ul>
-                    <li>Passwörter werden in diesem System verwaltet. Daher enthält die E-Mail an den Administrator kein Passwort. Der Administrator muss für die Anmeldung das im externen System hinterlegte Passwort verwenden.</li>
+                <li class="liexpand">Authentifizierungsmodus OIDC:<p>Die Anmeldedaten bestehen nur aus dem Benutzernamen. Für die Anmeldung muss das beim OIDC-Provider gesetzte Passwort verwendet werden. </p>
+</li>
 
-                    <li>Existiert der Benutzername des Administrators bereits im System, wird seine E-Mail-Adresse (z.B. <samp class="codeph">Schmitt@organisation.com</samp>) als Benutzername verwendet, um sich am System anzumelden. Wird eine weitere Organisation registriert und der Benutzername des Administrators ist wiederum identisch, wird der neue Benutzername aus dem Benutzernamen, gefolgt vom "AT"-Zeichen (@) und der ID der Administratororganisation (z.B. <samp class="codeph">Schmitt@abcdefg</samp>)zusammengesetzt. Der Administrator erhält eine E-Mail mit dem entsprechenden Benutzernamen. </li>
-
-                </ul>
-
-            </div>
+            </ul>
 
             <p>Zusätzlich wird die Standard-Organisationseinheit für die Organisation angelegt. Der Administrator ist der erste Benutzer, der dieser Einheit zugeordnet ist. Jeder weitere Benutzer, der für die Organisation registriert wird, wird ihr automatisch zugeordnet. Administratoren der Organisation können weitere Organisationseinheiten anlegen.</p>
 
@@ -170,6 +191,7 @@ LDAP_ATTR_REFERRAL=ignore</pre>
     <div>
 <div class="linklist"><strong>Weitere Themen</strong><br />
 
+<div><a href="operator_manageTenants.htm">Mandanten verwalten</a></div>
 <div><a href="../../Shared/reference/r_LDAP_SettingTypes.htm">LDAP-Einstellungen</a></div>
 <div><a href="operator_manageLdapSettings.htm">LDAP-Einstellungen verwalten</a></div>
 <div><a href="operator_manageOperatorRevenueShare.htm">Umsatzbeteiligung des Betreibers verwalten</a></div></div>

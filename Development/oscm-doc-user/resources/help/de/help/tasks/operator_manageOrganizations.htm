@@ -76,7 +76,9 @@
                             <li class="liexpand"><span class="uicontrol">Beschreibung</span> der Organisation. Die Beschreibung kann beispielsweise Informationen aus dem Unternehmensprofil bereitstellen. <div class="note"><span class="notetitle">Hinweis:</span> <span>Verwenden Sie ausschließlich die Funktionen des Editors, um Textformatierungen vorzunehmen. Direkte HTML-Codierungen im Text sowie Verweise auf externe HTML-Stylesheets oder -Inhalte können zu Fehlern im Seitenlayout führen.</span></div>
 </li>
 
-                            <li class="liexpand"><span class="uicontrol">Marktplatz</span>, den der Kunde besuchen soll. Sie können einen der Marktplätze wählen, zu denen Sie Zugang vom jeweiligen Marktplatzeigentümer erhalten haben.</li>
+                            <li class="liexpand">Bei Authentifizierungsmodus OIDC: <span class="uicontrol">Mandant</span>, der den OIDC-Provider repräsentiert, der der Organisation zugeordnet werden soll. Sie können einen der Mandanten wählen, der in der Plattform definiert ist. Beachten Sie, dass Sie die Mandantenzuordnung später nicht ändern können. Die E-Mails, die an die Benutzer der Organisation geschickt werden, enthalten URLs für den Zugang zu einem Marktplatz und einem mandantenspezifischen Administrationsportal. Der als erster Administrator der Organisation angegebene Benutzer muss in dem OIDC-Provider-System existieren. Zusammen mit der Organisation wird eine entsprechende Gruppe im OIDC-Provider-System angelegt und der Benutzer als Mitglied zugeordnet.</li>
+
+                            <li class="liexpand"><span class="uicontrol">Marktplatz</span>, den die Benutzer der Organisation besuchen sollen. Bei Authentifizierungsmodus INTERNAL können Sie einen der Marktplätze wählen, zu denen Sie Zugang vom Marktplatzeigentümer erhalten haben. Bei Authentifizierungsmodus OIDC stehen die Marktplätze zur Auswahl, die dem angegebenen Mandanten zugeordnet sind. </li>
 
                             <li class="liexpand">Für eine Organisation mit der Rolle Serviceanbieter: <strong>Umsatzbeteiligung Betreiber</strong>. Diese zwischen Betreiber und Serviceanbieter vereinbarte Umsatzbeteiligung erhält der Betreiber vom Serviceanbieter dafür, dass Services über die vom Betreiber bereitgestellten Marktplätze verkauft werden können. Diese vereinbarte Beteiligung gilt für alle Services, die der Serviceanbieter anbietet, sofern Sie nicht eine Umsatzbeteiligung pro Service festlegen (einstellbar über die Menüoption <strong>Umsatzbeteilung des Betreibers verwalten</strong> im Menü <strong>Betrieb</strong>). Die Beteiligung ist auch unabhängig davon, ob der Serviceanbieter seine Services selbst verkauft oder die Dienstleistung von Vermittlern oder Wiederverkäufern in Anspruch nimmt. Rabatte, die ein Serviceanbieter mit seinen Kunden vereinbart, wirken sich auf die Umsatzbeteiligung aus.</li>
 
@@ -93,6 +95,9 @@
 <li class="stepexpand">
         <span>Wählen Sie im Bereich <span class="uicontrol">Organisationsrolle</span> eine neue Rolle, falls erforderlich. </span>
          Die Rollen Wiederverkäufer und Vermittler können nicht zusammen oder mit der Hersteller- oder Serviceanbieterrolle zugewiesen werden. 
+      </li>
+<li class="stepexpand">
+        <span>Wenn die Plattform im Authentifizierungsmodus OIDC installiert ist, zeit das Feld <span class="uicontrol">Mandant</span> den Mandanten, der der Organisation zugeordnet ist. Sie können diese Zuordnung nicht ändern.</span>
       </li>
 <li class="stepexpand">
         <span>Geben Sie den <strong>Distinguished Name</strong> der Organisation an. </span>

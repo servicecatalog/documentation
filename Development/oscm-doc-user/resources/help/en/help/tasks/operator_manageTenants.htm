@@ -18,77 +18,25 @@
   <h1 class="topictitle1">Managing Tenants</h1>
 
     <div>
-        <div class="section"><p>Single sign-on (SSO) is supported when the platform is installed in SAML_SP mode for user authentication. This authentication mode requires the definition of an Identity Provider (IdP) against which all platform users are authenticated when accessing a marketplace or the administration portal. User IDs and passwords of the organization are maintained in the IdP system, such as OpenAM or Active Directory Federation Service (ADFS). </p>
-<p>Any organization still needs to register its users with the platform. The user credentials must match the ones maintained in the IdP system. Connection settings have to be defined in a configuration file so that the platform can connect to the IdP system.</p>
-<p>The initial IdP defined when installing the platform in SAML_SP mode is used platform-wide, i.e. for all users registered on the platform. This initial IdP is called "default IdP". In addition, the operator can define tenants and associate an IdP system with each tenant. Marketplaces and organizations can then be associated with a tenant. In this way, the users of an organization with access to such a marketplace are authenticated against the IdP system associated with this tenant when accessing the marketplace or the administration portal. </p>
-<p>Users are always authenticated against the IdP associated with the respective marketplace or administration portal. Users of the same or of different organizations are authenticated against a different IdP when accessing different marketplaces with different IdPs associated.</p>
-<p>On the <span class="uicontrol">Manage tenants</span> page, you can define and manage tenants. For each tenant, you can define the connection settings to the IdP that is to be associated with the tenant. If no tenant is defined, users are authenticated against the default IdP specified when installing the platform in SAML_SP mode.</p>
-Before you start creating a tenant, make sure to have exchanged the required information with the IdP administrator.<span> Click <a href="../../Shared/reference/c_IdPInfo.htm">here</a> for information on what you need from the IdP administrator, and <a href="../../Shared/reference/c_IdPInfo2.htm">here</a> for information on what the IdP administrator needs from you.</span><div class="p">
-                <div class="note"><span class="notetitle">Note:</span> You as the platform operator are responsible for the correct configuration of tenants!<p>Be aware that although a marketplace can be associated with a tenant, the marketplace is, by default, still open for publishing and subscribing to services. To avoid this, configure the marketplace in a way that you restrict the access to it to specific sellers who can publish their services (authorized sellers only) and to specific customer organizations that can subscribe to services published on the marketplace (closed marketplace). To do so, you need to be the owner of the marketplace.</p>
-</div>
+        <div class="section">
+            <p>When the platform is installed and operated in OIDC authentication mode, users are managed and authenticated by means of OpenID Connect in an external provider system such as Microsoft Azure Active Directory. Web-browser single sign-on (SSO) is supported; this means that a user once logged in and verified at the OIDC provider does not need to log in again to use different applications working with that same provider until he closes the browser session and/or logs out.</p>
 
-            </div>
-<p><strong>To create a tenant</strong>:</p>
-</div>
+            <p>A tenant on the platform represents a configuration with all the settings and parameters required to connect to a specific tenant at the OIDC provider, for example, a specific domain and directory in Microsoft Azure Active Directory. The first and default tenant is created when the platform is installed. </p>
+
+            <p>Each organization and marketplace is assigned to a specific tenant when it is created. The initial operator organization is associated with the default tenant. Users trying to log in to a marketplace are authenticated by the OIDC provider of the tenant assigned to the marketplace. For access to the administration portal, the tenant to be used for authentication must be specified in the URL unless it is the default tenant.</p>
+
+            <p>On the <span class="uicontrol">Manage tenants</span> page, you can create and manage tenants. </p>
+
+            <p><strong>To create a tenant</strong>:</p>
+
+        </div>
 
         <ol><li class="stepexpand">
-                <span>Prepare an IdP configuration file on your file system, and define the IdP connection settings in the file. </span>
-                 In the file, the following parameters must be defined: <div class="p">
-                        <ul>
-                            <li><samp class="codeph"><strong>SSO_LOGOUT_URL</strong></samp><p>The URL of the endpoint of the IdP system's single logout service. Logout and invalidate session requests from <span>the platform</span> are sent to this address. </p>
-<p>For security and confidentiality reasons, it is recommended to use the HTTPS protocol.</p>
-<p>Syntax: <samp class="codeph">https://&lt;host&gt;:&lt;port&gt;/&lt;LogoutServiceEndpoint&gt;</samp></p>
-<div class="note"><span class="notetitle">Note:</span> In the IdP system, a URL must be specified to which the response to the logout request is sent and the user is redirected by the logout. If several tenants are associated with one and the same IdP system, the IdP administrator must define one relying party per tenant and communicate it to the platform operator. </div>
-</li>
-
-                            <li><samp class="codeph"><strong>SSO_IDP_URL</strong></samp><p>The SAML Redirect URL for the IdP service endpoint. This is the endpoint to which the authentication requests from <span>the platform</span> are sent.</p>
-<p>For security and confidentiality reasons, it is recommended to use the HTTPS protocol.</p>
-<p>Syntax: <samp class="codeph">https://&lt;host&gt;:&lt;port&gt;/&lt;RedirectServiceEndpoint&gt;</samp></p>
-<div class="p">
-                                    <div class="note"><span class="notetitle">Note:</span> If several tenants are associated with one and the same IdP system, the IdP administrator must define one relying party per tenant and communicate it to the platform operator. </div>
-
-                                </div>
-</li>
-
-                            <li><samp class="codeph"><strong>SSO_IDP_AUTHENTICATION_REQUEST_HTTP_METHOD</strong></samp><p>The method used for HTTP authentication requests. Depending on the IdP, <samp class="codeph">GET</samp> or <samp class="codeph">POST</samp> requests can be used. </p>
-<p>Default: <samp class="codeph">POST</samp></p>
-</li>
-
-                            <li><samp class="codeph"><strong>SSO_STS_METADATA_URL</strong></samp><p>The URL of the MEX address (Issuer Metadata Exchange) of the STS. This parameter is required for Security Token Service (STS) communication.</p>
-<p>For security and confidentiality reasons, it is recommended to use the HTTPS protocol.</p>
-<p>Syntax: <samp class="codeph">https://&lt;host&gt;:&lt;port&gt;/&lt;MEXAddress&gt;</samp></p>
-</li>
-
-                            <li><samp class="codeph"><strong>SSO_STS_URL</strong></samp><p>The URL of the STS endpoint. This parameter is required for Security Token Service (STS) communication.</p>
-<p>For security and confidentiality reasons, it is recommended to use the HTTPS protocol.</p>
-<p>Syntax: <samp class="codeph">https://&lt;host&gt;:&lt;port&gt;/&lt;ServiceEndpoint&gt;</samp></p>
-</li>
-
-                            <li><samp class="codeph"><strong>SSO_ISSUER_ID</strong></samp><p>A unique identifier of the tenant which issues authentication requests in a multi-tenancy environment. You can specify any alphanumeric string. The IdP uses this ID for identifying incoming SAML authentication requests.</p>
-</li>
-
-                            <li><samp class="codeph"><strong>SSO_STS_ENCKEY_LEN</strong></samp><p>The length of the encryption key as used by the IdP. This parameter is required for Security Token Service (STS) communication.</p>
-<p>Default: <samp class="codeph">128</samp></p>
-</li>
-
-                            <li><samp class="codeph"><strong>SSO_IDP_SAML_ASSERTION_ISSUER_ID</strong></samp><p>The entity ID of the IdP system. This ID is unique for the IdP system and has to be communicated between the platform operator and the IdP administrator. It is required so that the platform can ensure that the authentication information returned from the IdP system actually comes from the IdP system that is configured for authenticating users. </p>
-<p>The IdP administrator can find out the ID by retrieving the federation metadata on his IdP system. </p>
-<strong>Examples</strong>:<p>On the OpenAM server, the federation metadata can be retrieved in a Web browser as follows: </p>
-<p><samp class="codeph">https://&lt;OpenAM_server&gt;/openam/saml2/jsp/exportmetadata.jsp?entityid=</samp></p>
-<p>On the ADFS server, look for the following file: </p>
-<p><samp class="codeph">http://&lt;ADFShost&gt;/FederationMetadata/2007-06/FederationMetadata.xml</samp></p>
-<p>In the XML file, the issuer ID is known as <samp class="codeph">entityID</samp>, for example: </p>
-<p><samp class="codeph">entityID="http://example.adfs.com/adfs/services/trust"</samp>
-                                </p>
-</li>
-
-                        </ul>
-
-                    </div>
-
+                <span>Take the required preparations at the OIDC provider system. For details, click <a href="../../Shared/reference/c_Preparation_OIDC_Provider.htm">here</a>.</span>
+                 
             </li>
 <li class="stepexpand">
-                <span>On the <strong>Manage tenants</strong> page, click <strong>Add</strong>.</span>
+                <span>On the <span class="uicontrol">Manage tenants</span> page, click <span class="uicontrol">Add</span>.</span>
                  
             </li>
 <li class="stepexpand">
@@ -96,69 +44,69 @@ Before you start creating a tenant, make sure to have exchanged the required inf
                  
                     <div class="p">
                         <ul>
-                            <li><strong>Name</strong>. Name of the tenant, for example the type of IdP associated with it. The tenant name must be unique on the platform. It may consist of a maximum of 255 alphanumeric characters.</li>
+                            <li><span class="uicontrol">Name</span> of the tenant, for example, indicating the OIDC provider associated with it. The tenant name must be unique on the platform. It may consist of a maximum of 255 alphanumeric characters.</li>
 
-                            <li><strong>Description</strong>. Brief description for the tenant. <span id="id_276__The_length_of_the_short_descr_task_taskbody_steps_step_2">The length of the description is restricted to 40 characters. </span></li>
+                            <li><span class="uicontrol">Description</span> of the tenant. <span id="id_276__The_length_of_the_short_descr_task_taskbody_steps_step_2">The length of the description is restricted to 40 characters. </span></li>
 
                         </ul>
 
                     </div>
 
+                    <p>The unique identifier of the tenant is generated by the system and shown in the <span class="uicontrol">ID</span> field</p>
+
                 
             </li>
 <li class="stepexpand">
-                <span>Load the IdP connection settings for the tenant: Click the <span class="uicontrol">File name</span> entry field or <span class="uicontrol">Browse</span>, and select the properties file prepared in Step 1. </span>
+                <span>To save your entries, click <span class="uicontrol">Save</span>.</span>
             </li>
 <li class="stepexpand">
-                <span>Click <span class="uicontrol">Import</span>. </span>
-                 The unique identifier of the tenant is generated by the system and shown in the <strong>ID</strong> field. The URL of the IdP is retrieved from the IdP properties file and shown in the <strong>IdP</strong> field. Both fields cannot be edited manually.
+                <span>Click <span class="uicontrol">Download template</span> to obtain a template of the configuration file for the new tenant.</span>
+                 For details on tenant configuration files, click <a href="../../Shared/reference/r_ConfigSettings_OIDC_Tenant.htm">here</a>
+                
             </li>
 <li class="stepexpand">
-                <span>To create the tenant, click <span class="uicontrol">Save</span>.</span>
+                <span>Fill in the configuration file and store it on the Docker host where the platform is deployed:</span>
                  
+                    <p><samp class="codeph">&lt;docker&gt;/config/oscm-identity/tenants/tenant-&lt;id&gt;.properties</samp></p>
+
+                    <p><samp class="codeph">&lt;docker&gt;</samp> is the platform's data directory specified at installation time. <samp class="codeph">&lt;id&gt;</samp> is the ID of the tenant you created.</p>
+
+                
             </li>
 </ol>
 
         <div class="section">
-            <div class="p">
-                <div class="note"><span class="notetitle">Note:</span> If you create a tenant with invalid or no connection settings, the tenant will still be available for selection when an organization or marketplace is created. In this case, no user will be able to log in. You are responsible for defining the correct settings for all tenants you create. </div>
+            <p>You as the platform operator are responsible for the correct configuration of tenants! </p>
 
-            </div>
+            <p>If you create a tenant with an invalid configuration, the tenant will still be available for selection when an organization or marketplace is created. In this case, no user will be able to log in. </p>
 
-            <p><strong>To update the data of a tenant</strong>: </p>
+            <p><strong>To update a tenant</strong>: </p>
 
-            <div class="p">
-                <ol>
-                    <li>From the tenants list, select the tenant whose data you want to edit. You can sort the list by tenant name, description, ID, or URL of the IdP.</li>
+            <ol>
+                <li class="liexpand">From the tenants list, select the tenant whose data you want to edit. </li>
 
-                    <li>Edit the name and/or the description as desired. <p>Note that you cannot change the ID or the URL of the IdP.</p>
+                <li class="liexpand">Update the name and/or the description. You cannot change the tenant ID.</li>
+
+                <li class="liexpand">To save your entries, click <span class="uicontrol">Save</span>.</li>
+
+            </ol>
+
+            <p>In order to change the tenant configuration, you need to edit the corresponding file on the Docker host where the platform is deployed:</p>
+
+            <p><samp class="codeph">&lt;docker&gt;/config/oscm-identity/tenants/tenant-&lt;id&gt;.properties</samp></p>
+
+            <p><strong>To delete a tenant</strong>: </p>
+
+            <ol>
+                <li class="liexpand">From the tenants list, select the tenant you want to delete.  <p>You can only delete tenants which have not been assigned to any organization or marketplace. </p>
 </li>
 
-                    <li>To update the connection settings to the IdP:<div class="p">
-                            <ol type="a">
-                                <li>Click <strong>Export</strong>. </li>
+                <li class="liexpand">Click <span class="uicontrol">Delete</span> and confirm the deletion.</li>
 
-                                <li>Specify a file name and save the file. <p>The current connection settings are written to a properties file. </p>
+                <li class="liexpand">Delete the tenant configuration file on the Docker host: <p><samp class="codeph">&lt;docker&gt;/config/oscm-identity/tenants/tenant-&lt;id&gt;.properties</samp></p>
 </li>
 
-                                <li>Edit the file as desired, and import it again by clicking <strong>Import</strong>. </li>
-
-                                <li>Confirm that existing properties will be overwritten.</li>
-
-                            </ol>
-
-                        </div>
-</li>
-
-                    <li>To apply your changes, click <span class="uicontrol">Save</span>.</li>
-
-                </ol>
-
-            </div>
-
-            <p>Clicking <strong>Clear</strong> removes all properties of the selected tenant from the database. This button is only enabled when properties for the selected tenant have been loaded before.</p>
-
-            <p>Clicking <strong>Delete</strong> removes the selected tenant. A tenant can only be deleted if it is not yet associated with an organization or a marketplace. </p>
+            </ol>
 
         </div>
 
