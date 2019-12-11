@@ -9,23 +9,40 @@
             <p>Auf der Seite <uicontrol>Kunden registrieren</uicontrol> können Sie Ihre Kunden registrieren, so dass diese sich nicht selbst registrieren müssen.</p>
             <p>Durch die Registrierung eines Kunden wird eine neue Organisation und ein Benutzerkonto für den ersten Administrator des Kunden angelegt. Der Administrator erhält per E-Mail alle notwendigen Informationen zur Anmeldung. Zusätzlich wird die Standard-Organisationseinheit für die Organisation angelegt. Der Administrator ist der erste Benutzer, der dieser Einheit zugeordnet ist. Jeder weitere Benutzer, der für die Organisation registriert wird, wird ihr automatisch zugeordnet. Administratoren der Organisation können weitere Organisationseinheiten anlegen.</p>
             <p>Voraussetzung für das Registrieren eines Kunden ist, dass der Marktplatz, den der Kunde besuchen soll, bereits angelegt ist.</p>
+            <p>Die Felder, die zum Anlegen der neuen Kundenorganisation und des ersten Administrators zur Verfügung stehen, sind abhängig vom Benutzerauthentifizierungs- und -verwaltungsmodus der Plattform:</p>
+            <ul compact="no">
+                <li>
+                    <p>Modus <b>INTERNAL</b> - Benutzer werden in der <b>Plattform</b> authentifiziert: Benutzernamen und Passwörter einer Organisation können in der Plattform oder in einem bestehenden LDAP-System der Organisation verwaltet werden. </p>
+                    <p id="UserMgmt2"
+                        >Wenn sie in der Plattform verwaltet werden, werden die Benutzerdaten in der Datenbank der Plattform gespeichert. Der Administrator einer Organisation kann neue Benutzer registrieren und, falls erforderlich, durch den Betreiber Passwörter zurücksetzen lassen. </p>
+                    <p id="UserMgmt3"
+                        >Wird ein LDAP-System verwendet, muss die Organisation ihre Benutzer nicht bei der Plattform registrieren. Der Administrator der Organisation kann Benutzer aus dem LDAP-System importieren, um sie automatisch bei der Plattform zu registrieren. Die Benutzer werden im LDAP-System verwaltet. Die Benutzerinformationen werden kontinuierlich mit der Plattform synchronisiert. </p>
+                </li>
+                <li>Modus <b>OIDC</b> - Benutzer werden bei einem <b>externen Provider</b> authentifiziert, z.B. Microsoft Azure Active Directory: Benutzernamen und Passwörter einer Organisation werden im OIDC-Provider-System angelegt und verwaltet. <p>Beim Registrieren eines Kunden und seiner Organisation müssen Sie einen Marktplatz angeben, der mit einem bestimmten OIDC-Provider verknüpft ist. Der Benutzer, den Sie als ersten Administrator der Organisation angeben, muss im OIDC-Provider-System existieren. Er wird automatisch bei der Plattform registriert. </p><p>Zusammen mit der Organisation wird eine entsprechende Gruppe im OIDC-Provider-System angelegt und der Benutzer als Mitglied zugeordnet. Weitere Gruppenmitglieder können danach jederzeit im OIDC-Provider-System hinzugefügt werden. Die Organisation in der Plattform wird automatisch mit der Gruppe im OIDC-Provider-System synchronisiert. </p></li>
+            </ul>
             <p><b>So registrieren Sie neue Kunden</b>:</p>
         </context>
         <steps>
             <step>
-                <cmd>Geben Sie die folgenden Benutzerdaten für den ersten Administrator des Kunden ein. </cmd>
+                <cmd>Geben Sie abhängig vom Authentifizierungsmodus die folgenden Benutzerdaten für den ersten Administrator des Kunden ein. </cmd>
                 <info>
+                    <p><b>Authentifizierungmodus INTERNAL</b>:</p>
                     <ul compact="no">
                         <li><uicontrol>Anrede</uicontrol>: Anrede oder Titel, zum Beispiel <codeph>Herr</codeph> oder <codeph>Frau</codeph>.</li>
                         <li><uicontrol>Vorname</uicontrol> des Administrators.</li>
                         <li><uicontrol>Nachname</uicontrol> des Administrators.</li>
                         <li><uicontrol>E-Mail</uicontrol>: E-Mail-Adresse des Administrators. Sie wird verwendet, um den Administrator über die erfolgreiche Registrierung zu informieren.<p>Das System validiert, ob die Syntax der E-Mail-Adresse gültig ist und ob der Domain-Name den Standards der Internet Assigned Numbers Authority (IANA) entspricht. </p><p>Beispiele: <codeph>user.name@domain.arpa</codeph>, <codeph>user.name@domain.org</codeph>, <codeph>user@mycompany.lan.uk</codeph></p></li>
                         <li><uicontrol>Gewünschter Benutzername</uicontrol>: Name, mit dem sich der Administrator an der Plattform anmeldet. Benutzernamen dürfen aus maximal 100 Zeichen bestehen. Die folgenden Zeichen sind nicht erlaubt:<p><codeph>! " # $ % &amp; ' * + , / : ; &lt; = &gt; ? \ ^ `</codeph>
-                            </p><p>
-                                <note>Wenn der Kunde ein externes System zur Benutzerauthentifizierung verwendet, muss der Benutzername mit einem Benutzernamen im externen System übereinstimmen.</note>
                             </p></li>
                         <li><uicontrol>Sprache</uicontrol>: Sprache, in der der Administrator arbeitet. In dieser Sprache werden dem Administrator die Benutzeroberfläche, Dokumentation und E-Mails angezeigt. Der Administrator kann die Sprache später ändern. Der Plattform-Betreiber definiert, welche Sprachen unterstützt werden.</li>
                     </ul>
+                    <p>
+                        <note>Wenn Sie eine Organisation mit LDAP-basierter Benutzerverwaltung registrieren, muss der Benutzername mit dem Namen im externen LDAP-System übereinstimmen. Die LDAP-Konfigurationsdatei der Organisation legt fest, welche zusätzlichen Einstellungen erforderlich sind. Alle Einstellungen, die in der Konfigurationsdatei definiert werden, müssen auf entsprechende Werte abgebildet werden, beispielsweise Vorname, Nachname, E-Mail-Adresse und Sprache. </note>
+                    </p>
+                    <p><b>Authentifizierungsmodus OIDC</b>:</p>
+                    <p>Geben Sie im Feld <uicontrol>Gewünschter Benutzername</uicontrol> den Namen eines Benutzers ein, der in dem OIDC-Provider-System existiert, das dem angegebenen Marktplatz zugeordnet ist. Der Benutzer darf dort noch nicht Mitglied einer Gruppe sein, die zu einer anderen Organisation in der Plattform gehört. Benutzernamen dürfen aus maximal 100 Zeichen bestehen. Die folgenden Zeichen sind nicht erlaubt: </p>
+                    <p><codeph>! " # $ % &amp; ' * + , / : ; &lt; = > ? \ ^ `</codeph>
+                    </p>
                 </info>
             </step>
             <step>
@@ -49,10 +66,9 @@
                 <info>Die Liste stellt alle Marktplätze zur Auswahl, zu denen Sie Zugang vom jeweiligen Marktplatzeigentümer erhalten haben. </info>
             </step>
             <step>
-                <cmd>Markieren Sie <uicontrol>LDAP-basierte Nutzerverwaltung</uicontrol>, wenn der Kunde ein LDAP-System zur Benutzerauthentifizierung verwendet. </cmd>
+                <cmd>Bei Authentifizierungsmodus INTERNAL: Markieren Sie <uicontrol>LDAP-basierte Nutzerverwaltung</uicontrol>, wenn der Kunde ein LDAP-System zur Benutzerauthentifizierung verwendet. </cmd>
                 <info>
                     <p>Legen Sie eine LDAP-Konfigurationsdatei auf Ihrem Rechner an und definieren Sie die LDAP-Verbindungseinstellungen in dieser Datei. Um die Einstellungen zu laden, klicken Sie das Feld <uicontrol>LDAP-Einstellungen</uicontrol> oder <uicontrol>Durchsuchen</uicontrol> und wählen die Datei. Wenn Sie keine Konfigurationsdatei für den Kunden laden, werden die systemweiten LDAP-Konfigurationseinstellungen verwendet.</p>
-                    <p>Wenn ein LDAP-System verwendet wird, muss Ihr Kunde seine Benutzer nicht manuell auf der Plattform registrieren. Der Administrator des Kunden kann die Benutzer aus dem LDAP-System importieren und sie so automatisch auf der Plattform registrieren.</p>
                     <p>Nachfolgend sehen Sie ein Beispiel für eine LDAP-Konfigurationsdatei:</p>
                     <p conref="operator_createOrganization.xml#OrgCreate/LDAPSample"/>
                     <p>Die im Beispiel gezeigten Werte für <codeph>LDAP_CONTEXT_FACTORY</codeph> und <codeph>LDAP_ATTR_UID</codeph> sind vordefinierte Standardwerte. Das bedeutet, wenn Sie hier keinen Wert angeben, wird dieser Standardwert beim Anlegen der Organisation verwendet, sofern der Plattform-Betreiber keine anderen, systemweit geltenden Werte definiert hat.</p>
@@ -63,14 +79,13 @@
             </step>
         </steps>
         <result>
-            <p>Nach einer erfolgreichen Registrierung erhält der Administrator des Kunden eine E-Mail mit der Marktplatz-URL sowie seinen Anmeldedaten und einem Passwort für die erste Anmeldung. </p>
-            <p>Verwendet der Kunde ein externes Authentifizierungssystem, beachten Sie folgends: </p>
-            <p>
-                <ul>
-                    <li>Passwörter werden in diesem System verwaltet. Daher enthält die E-Mail an den Administrator kein Passwort. Der Administrator muss für die Anmeldung das im externen System hinterlegte Passwort verwenden.</li>
-                    <li>Existiert der Benutzername des Administrators bereits im System, wird seine E-Mail-Adresse (z.B. <codeph>Schmitt@organisation.com</codeph>) als Benutzername verwendet, um sich am System anzumelden. Wird eine weitere Kundenorganisation registriert und der Benutzername des Administrators ist wiederum identisch, wird der neue Benutzername aus dem Benutzernamen, gefolgt vom "AT"-Zeichen (@) und der ID der Kundenorganisation (z.B. <codeph>Schmitt@abcdefg</codeph>)zusammengesetzt. Der Administrator erhält eine E-Mail mit dem entsprechenden Benutzernamen.</li>
-                </ul>
-            </p>
+            <p>Nach einer erfolgreichen Registrierung erhält der Administrator des Kunden eine E-Mail mit der Marktplatz-URL sowie seinen Anmeldedaten für die erste Anmeldung. </p>
+            <ul compact="no">
+                <li>
+                    <p>Wenn die Benutzer von der Plattform verwaltet werden, bestehen die Daten aus Benutzername und Passwort für die erste Anmeldung. Existiert der Benutzername des Administrators bereits im System, wird seine E-Mail-Adresse (z.B. <codeph>Schmitt@organisation.com</codeph>) als Benutzername für die Anmeldung verwendet. Wird eine weitere Organisation mit demselben Administrator registriert, wird der neue Benutzername aus dem bestehenden Namen, gefolgt von einem "AT"-Zeichen (@) und der ID der Organisation zusammengesetzt (z.B. <codeph>Schmitt@abcdefg</codeph>). Der Administrator erhält eine E-Mail mit dem entsprechenden Benutzernamen.</p>
+                </li>
+                <li>Wenn die Organisation ein externes Authentifizierungssystem verwendet (LDAP-System oder OIDC-Provider), werden Passwörter in diesem System verwaltet. Daher enthält die E-Mail an den Administrator kein Passwort. Der Administrator muss für die Anmeldung das im externen System hinterlegte Passwort verwenden. </li>
+            </ul>
             <p>Als Serviceanbieter oder Wiederverkäufer legen Sie üblicherweise als nächstes die Zahlungsarten für den Kunden fest, damit er beim Abonnieren von Services eine Zahlungsart auswählen kann. Dies ist für Services notwendig, die kostenpflichtig sind. Selbst für diese Services kann der Plattform-Betreiber jedoch alle Möglichkeiten für den Kunden zum Angeben solcher Zahlungsinformationen deaktivieren. Falls dies der Fall ist, ist die Definition von Zahlungsarten ist nicht möglich.</p>
         </result>
     </taskbody>

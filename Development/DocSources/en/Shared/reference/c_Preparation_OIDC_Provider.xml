@@ -50,7 +50,7 @@
                         >on the platform</ph>. <p><b>Azure AD example</b>: <codeph>ef29bb22-369c-424d-9e72-6800ad24239e</codeph></p></li>
                 <li>Grant the application read and write permissions for the directory, users, and groups.<p><b>Azure AD example</b>: In the properties of the new app, under <b>API permissions</b>:</p><ol>
                         <li>
-                            <p>Add the following permissions as both, <b>Delegated permissions</b> and <b>Application permissions</b>: <codeph>User.Read.All</codeph>, <codeph>Group.ReadWrite.All</codeph>, <codeph>Directory.ReadWrite.All</codeph>. </p>
+                            <p>Add the following permissions for the Microsoft Graph API as both, <b>Delegated permissions</b> and <b>Application permissions</b>: <codeph>User.Read.All</codeph>, <codeph>Group.ReadWrite.All</codeph>, <codeph>Directory.ReadWrite.All</codeph>. </p>
                         </li>
                         <li>
                             <p><b>Grant admin consent</b> for the directory, <codeph><ph

@@ -6,7 +6,7 @@
     <title>OIDC Tenant Configurations</title>
     <refbody>
         <section>
-            <p>This section describes the settings for configuring a tenant to connect to a specific OIDC provider, for example, a specific domain and directory in Microsoft Azure Active Directory (Azure AD). </p>
+            <p>The following sections describe the settings for configuring a tenant to connect to a specific OIDC provider, for example, a specific domain and directory in Microsoft Azure Active Directory (Azure AD). </p>
             <p>The settings are specific to the OIDC provider and require <xref href="c_Preparation_OIDC_Provider.xml"
                     >preparations in the OIDC provider system</xref>. The following descriptions use Azure AD as an example. If you intend to work with a different OIDC provider, please contact your <ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"
