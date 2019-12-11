@@ -73,7 +73,7 @@
                         </ul></li>
                     <li>Klicken Sie <uicontrol>Löschen</uicontrol> und bestätigen Sie den Löschauftrag.</li>
                 </ol>
-            </p><p>Der Benutzer wird sofort von der Plattform gelöscht.</p></result>
+            </p><p>Der Benutzer wird sofort von der Plattform gelöscht.</p><note>Sie können Benutzer selbst dann löschen, wenn Ihre Organisation einen externen OIDC-Provider wie Microsoft Azure Active Directory zur Benutzerverwaltung und -authentifizierung verwendet. Jedoch werden diese Benutzer gegebenenfalls bei der nächsten Synchronisierung mit dem externen Provider wieder hinzugefügt.</note></result>
     </taskbody>
     <related-links>
         <linklist>

@@ -45,7 +45,7 @@
                         </info>
                   </step>
                   <step>
-                        <cmd>Übermitteln Sie das angepasste Stylesheet und die darin referenzierten Dateien, Bilder und Schritarten an den Plattformbetreiber (als ZIP- oder TAR-Archiv) und bitten Sie ihn, diese Änderungen einzuspielen. </cmd>
+                        <cmd>Übermitteln Sie das angepasste Stylesheet und die darin referenzierten Dateien, Bilder und Schriftarten als Archiv (ZIP) an den Plattformbetreiber und bitten Sie ihn, diese Änderungen einzuspielen. </cmd>
                         <info>
                               <p>Das Archiv mit den Änderungen muss genauso aufgebaut sein wie die Datei <codeph>branding-package.zip</codeph>. </p>
                         </info>
@@ -61,9 +61,11 @@
                   </step>
                   <step>
                         <cmd>Geben Sie im Feld <uicontrol>URL des Stylesheets</uicontrol> die URL Ihres angepassten Stylesheets an.</cmd>
-                        <info><p>Standardmäßig ist die URL wie folgt: </p><p><codeph>https://&lt;hostname.fqdn>:8443/branding-package/css/mp.css</codeph></p><codeph>&lt;hostname.fqdn></codeph> ist ther Name und FQDN des Hosts, über den auf <ph
-                                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                    /> zugegriffen wird, und <codeph>branding-package</codeph> ist der Name des Archivs mit den Änderungen.</info>
+                        <info>
+                              <p>Standardmäßig ist die URL wie folgt: </p>
+                              <p><codeph>https://&lt;host_fqdn>:8443/&lt;branding-package>/css/mp.css</codeph></p>
+                              <p><codeph>&lt;host_fqdn></codeph> ist der vollqualifizierte Host-Name oder die IP-Adresse der Plattforminstallation, <codeph>8443</codeph> der benötigte Port. <codeph>&lt;branding-package></codeph> ist der Name des Archivs mit den Änderungen.</p>
+                        </info>
                   </step>
                   <step>
                         <cmd>Klicken Sie <uicontrol>Speichern</uicontrol>, um das neue Layout und Branding auf dem Marktplatz zu aktivieren. </cmd>

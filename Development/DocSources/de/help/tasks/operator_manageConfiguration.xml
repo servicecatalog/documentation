@@ -14,14 +14,27 @@
       <p>Möchten Sie Konfigurationseinstellungen dauerhaft in der Datenbank ändern, gehen Sie wie folgt vor: </p>
       <p>
         <ol>
-          <li>Bearbeiten Sie die Datei <codeph>var.env</codeph> im Verzeichnis <codeph>/docker</codeph> auf Ihrem Docker-Host entsprechend.  </li>
-          <li>Wenn Sie den voreingestellten Wert einer Einstellung ändern möchten, die noch nicht in der Datei <codeph>var.env</codeph> enthalten ist: <p>Fügen Sie den Schlüssel und seinen Wert, den die Einstellung annehmen soll, zu der Datei <codeph>var.env</codeph> hinzu.</p><p>Die Schlüssel finden Sie auf der Seite <uicontrol>Konfiguration aktualisieren</uicontrol>. Beispiel: </p><p><codeph>TIMER_INTERVAL_SUBSCRIPTION_EXPIRATION=345600000</codeph></p></li>
-          <li>Speicher Sie die Datei <codeph>var.env</codeph> im ursprünglichen Verzeichnis:<p><codeph>/docker/var.env</codeph></p></li>
-          <li>Stoppen und löschen Sie alle <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>-Container:<p>
+          <li>Bearbeiten Sie die Datei <codeph>var.env</codeph> im Datenverzeichnis der Plattform (<codeph>&lt;docker></codeph>) auf dem Docker-Host entsprechend Ihrer Anforderungen. </li>
+          <li>Wenn Sie den voreingestellten Wert einer Einstellung ändern möchten, die noch nicht in der Datei <codeph>var.env</codeph> enthalten ist: <p>Fügen Sie den Schlüssel und den Wert der Einstellung in der Datei <codeph>var.env</codeph> hinzu.</p><p>Die Schlüssel finden Sie auf der Seite <uicontrol>Konfiguration aktualisieren</uicontrol>. Beispiel: </p><p><codeph>TIMER_INTERVAL_SUBSCRIPTION_EXPIRATION=345600000</codeph></p></li>
+          <li>Speicher Sie die Datei <codeph>var.env</codeph> im ursprünglichen Verzeichnis:<p><codeph>&lt;docker>/var.env</codeph></p></li>
+          <li>Setzen Sie in der Datei <codeph>docker-compose-initdb.yml</codeph> im selben Verzeichnis das Flag <codeph>OVERWRITE</codeph> im Abschnitt <codeph>environment</codeph> von <codeph>oscm-initdb-core</codeph> auf <codeph>true</codeph>, um die Einstellung in der Datenbank zu ändern. <p>
+              <codeblock>oscm-initdb-core:
+    image: ${IMAGE_INITDB}
+    container_name: oscm-initdb-core
+    env_file: var.env
+    environment:
+      - TARGET=CORE
+      - SOURCE=INIT
+      - OVERWRITE=<b>true</b>
+      - LOG_LEVEL=INFO
+    links:
+- oscm-db:oscm-db</codeblock>
+            </p></li>
+          <li>Stoppen und löschen Sie alle Container:<p>
               <codeblock>docker-compose -f docker-compose-oscm.yml stop
 docker-compose -f docker-compose-oscm.yml rm -f </codeblock>
             </p></li>
-          <li>Starten Sie den Container zur Datenbank-Initialisierung und löschen Sie die beendeten Container:<p>
+          <li>Starten Sie den Container zur Datenbank-Initialisierung, dann stoppen und löschen Sie ihn wieder:<p>
               <codeblock>docker-compose -f docker-compose-initdb.yml up -d oscm-db 
 docker-compose -f docker-compose-initdb.yml up oscm-initdb-core 
 docker-compose -f docker-compose-initdb.yml up oscm-initdb-jms 
@@ -34,6 +47,7 @@ docker-compose -f docker-compose-initdb.yml rm -f</codeblock>
           <li>Starten Sie alle Container der Anwenung neu:<p>
               <codeblock>docker-compose -f docker-compose-oscm.yml up -d</codeblock>
             </p></li>
+          <li>Setzen Sie in der Datei <codeph>docker-compose-initdb.yml</codeph>  das Flag <codeph>OVERWRITE</codeph> zurück auf <codeph>false</codeph>.</li>
         </ol>
       </p>
     </context>

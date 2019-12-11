@@ -42,7 +42,7 @@
             <p><b>To change the tenant of a marketplace</b> (operators only, if the platform is installed in OIDC mode):</p>
             <p>
                 <ol>
-                    <li>From the <uicontrol>Marketplace</uicontrol> list, select the marketplace for the tenant is to be changed. <p>The list contains all marketplaces that exist on your platform.</p></li>
+                    <li>From the <uicontrol>Marketplace</uicontrol> list, select the marketplace for which the tenant is to be changed. <p>The list contains all marketplaces that exist on your platform.</p></li>
                     <li>In the <uicontrol>Tenant ID</uicontrol> field, select the tenant representing the OIDC provider by which users accessing the marketplace are to be authenticated. Leave the field empty to select the default tenant and OIDC provider. <note>Authorized seller assignments will be cleared for the marketplace. Existing subscriptions to services published on the marketplace will no longer be accessible. For these reasons, it is recommended to change the tenant association only during the initial configuration of the marketplace. </note></li>
                     <li>To save the new tenant assignment, click <uicontrol>Save</uicontrol>.</li>
                 </ol>

@@ -78,7 +78,7 @@
                 <info>
                     <p>By default, the URL is as follows: </p>
                     <p><codeph>https://&lt;host_fqdn>:8443/&lt;new-folder-name>/css/mp.css</codeph></p>
-                    <p><codeph>&lt;host_fqdn></codeph> is the fully qualified name or IP address of the host used to access platform, <codeph>8443</codeph> is the port. <codeph>&lt;new-folder-name></codeph> is the name of the folder containing the customized files. </p>
+                    <p><codeph>&lt;host_fqdn></codeph> is the fully qualified name or IP address of the host used to access the platform, <codeph>8443</codeph> is the port. <codeph>&lt;new-folder-name></codeph> is the name of the folder containing the customized files. </p>
                 </info>
             </step>
             <step>

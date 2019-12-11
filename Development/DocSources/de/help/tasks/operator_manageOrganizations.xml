@@ -36,6 +36,9 @@
         <info>Die Rollen Wiederverkäufer und Vermittler können nicht zusammen oder mit der Hersteller- oder Serviceanbieterrolle zugewiesen werden. </info>
       </step>
       <step>
+        <cmd>Wenn die Plattform im Authentifizierungsmodus OIDC installiert ist, zeit das Feld <uicontrol>Mandant</uicontrol> den Mandanten, der der Organisation zugeordnet ist. Sie können diese Zuordnung nicht ändern.</cmd>
+      </step>
+      <step>
         <cmd>Geben Sie den <b>Distinguished Name</b> der Organisation an. </cmd>
         <info>
           <p>Der Distinguished Name ist im Zertifikat der Organisation definiert und besteht aus folgenden Elementen: </p>

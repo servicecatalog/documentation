@@ -85,28 +85,28 @@
                   platform="help"
                 >the platform</ph> in its truststore for verifying the signature. Contact your operator for support, if required.</p></note>
           </p>
-          <p>Predefined custom tabs are available for viewing details on subscriptions to an IaaS service such as OpenStack or Amazon Web Services (AWS). On the custom tab, the booked Virtual Machines (VMs) are listed with the following information: </p>
+          <p>Predefined custom tabs are available for viewing details on subscriptions to an IaaS service such as OpenStack or Amazon Web Services (AWS). On the custom tab, the booked virtual systems are listed with the following information: </p>
           <p>
             <ul>
               <li>Header with the name of the subscription</li>
               <li>Access information</li>
-              <li>For each booked VM: <p>
-                <ul>
-                  <li>Instance name</li>
-                  <li>Instance ID </li>
-                  <li>Instance type </li>
-                  <li>Instance status </li>
-                  <li>Public IP address</li>
-                  <li>Private IP addresses</li>
-                </ul>
-              </p></li>
+              <li>Information like the following tor each booked virtual system: <p>
+                  <ul>
+                    <li>Instance name</li>
+                    <li>Instance ID </li>
+                    <li>Instance type </li>
+                    <li>Instance status </li>
+                    <li>Public IP address</li>
+                    <li>Private IP addresses</li>
+                  </ul>
+                </p></li>
             </ul>
           </p>
           <p>You can set the URL for accessing the custom tab in the following format: </p>
           <p><codeph>https://&lt;host_fqdn>:8881/&lt;service controller name>/serverInformation.jsf</codeph></p>
           <p><codeph>&lt;host_fqdn></codeph> is the fully qualified name or IP address of the host used to access <ph
-              conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-              />, <codeph>8881</codeph> is the port of APP. <codeph>service controller name</codeph> is the default context root of the relevant service controller and cannot be changed. </p>
+              conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"/><ph platform="help"
+              >the platform</ph>, <codeph>8881</codeph> is the port of APP. <codeph>service controller name</codeph> is the default context root of the relevant service controller and cannot be changed. </p>
           <p>For example: </p>
           <p><codeph>https://myhost:8881/oscm-app-openstack/serverInformation.jsf</codeph></p>
           <p>As soon as a customer opens the <b>Details</b> view for a subscription to an IaaS service, the context of the subscription is returned to the URL of the custom tab with the following information: </p>

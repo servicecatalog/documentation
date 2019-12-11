@@ -7,6 +7,7 @@
     <taskbody>
         <context>
             <p>Auf der Seite <uicontrol>Benutzer registrieren</uicontrol> können Sie für Ihre Organisation neue Benutzer registrieren und deren Benutzerrolle festlegen. Durch den Import einer Datei mit Benutzerdaten können Sie auch mehrere Benutzer mit der Rolle eines Administrators oder eines Managers auf einmal registrieren. Dies ist nur möglich, wenn Ihre Organisation kein externes System zur Benutzerauthentifizierung verwendet. Wenn Ihre Organisation ein externes Authentifizierungssystem verwendet, können Sie die Benutzer aus dem externen System importieren und somit registrieren.</p>
+            <note>Sie können Benutzer selbst dann registrieren, wenn Ihre Organisation einen externen OIDC-Provider wie Microsoft Azure Active Directory zur Benutzerverwaltung und -authentifizierung verwendet. Jedoch werden diese Benutzer bei der nächsten Synchronisierung mit dem externen Provider wieder gelöscht.</note>
             <p>Die Rolle Ihrer Organisation bestimmt, welche Rollen Sie den neuen Benutzern zuordnen können. Die Benutzerrollen steuern, welche Optionen einem Benutzer an der Benutzeroberfläche zur Verfügung stehen:</p>
             <ul compact="no">
                 <li><ph

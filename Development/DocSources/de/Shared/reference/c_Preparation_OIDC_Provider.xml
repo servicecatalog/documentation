@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2019 -->
+<concept id="concept_B32294CC9FA643A2A14A74B1DAA49C95"
+    xml:lang="de-de">
+        <title>Voraussetzungen beim OIDC-Provider</title>
+        <conbody>
+                <section>
+            <p>Bevor Sie die Plattform im Authentifizierungsmodus OIDC installieren oder Mandanten anlegen können, müssen in dem betreffenden OIDC-Provider-System einige Vorbereitungen getroffen werden.</p>
+        </section>
+        <section
+                    id="The_prerequisites_are_specifi_concept_conbody_section_2">
+            <p>Die Vorbereitungen sind abhängig vom OIDC-Provider. Die folgenden Beschreibungen verwenden Microsoft Azure Active Directory (Azure AD) als Beispiel. Falls Sie mit einem anderen OIDC-Provider arbeiten möchten, wenden Sie sich bitte an Ihre Supportorganisation. </p>
+            <p>Die folgenden Voraussetzungen und Vorbereitungen beim OIDC-Provider sind erforderlich:</p>
+            <ol
+                        compact="no">
+                <li>Ein Account und eine Domäne müssen existieren, und Sie müssen dafür Administratorrechte besitzen. <p><b>Beispiel Azure AD</b>: Domäne <codeph>mydomain.onmicrosoft.com</codeph></p></li>
+                <li>In der Domäne muss ein Verzeichnis existieren, das zumindest diejenigen Benutzer enthält, die mit der Plattform arbeiten sollen.<p><b>Beispiel Azure AD</b>: Verzeichnis <codeph><ph
+                                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>Org</codeph></p></li>
+                <li>Nur relevant für die Erstinstallation der Plattform: Legen Sie in dem Verzeichnis eine Gruppe <codeph>OSCM_PLATFORM_OPERATOR</codeph> an und ordnen Sie ihr den Benutzer, der der erste Plattformadministrator werden soll, als Mitglied zu.<p><b>Beispiel Azure AD</b>: Legen Sie eine neue Gruppe <codeph>OSCM_PLATFORM_OPERATOR</codeph> vom Typ Sicherheit im Verzeichnis <codeph><ph
+                                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            />Org</codeph> an. Ordnen Sie der Gruppe den ersten Administrator, z.B. <codeph
+                            product="oscm_ce">oscmadmin@mydomain.onmicrosoft.com</codeph><codeph product="oscm_ee"
+                            >escmadmin@mydomain.onmicrosoft.com</codeph> als Mitglied zu. </p><note>Organisationen in der Plattform werden Gruppen beim OIDC-Provider zugeordnet. Jeder Benutzer darf Mitglied genau einer Gruppe sein. </note></li>
+                <li>Registrieren Sie die Plattform als Anwendung im Verzeichnis des OIDC-Providers. <p><b>Beispiel Azure AD</b>: Legen Sie im Verzeichnis unter <b>App-Registrierungen</b> eine neue Registrierung mit folgenden Eigenschaften an:</p><ul>
+                        <li>Name und unterstützte Kontotypen Ihrer Wahl</li>
+                        <li>Umleitungs-URI: <codeph>https://&lt;host_fqdn&gt;:9091/oscm-identity/callback</codeph><p><codeph>&lt;host_fqdn></codeph> ist der vollqualifizierte Host-Name oder die IP-Adresse der Plattforminstallation.</p></li>
+                    </ul></li>
+                <li>Kopieren Sie die ID der neuen Anwendung zur späteren Verwendung in der Plattform. <p><b>Beispiel Azure AD</b>: <codeph>ef29bb22-369c-424d-9e72-6800ad24239e</codeph></p></li>
+                <li>Geben Sie der Anwendung Lese- und Schreibzugriff auf das Verzeichnis, die Benutzer und die Gruppen.<p><b>Beispiel Azure AD</b>: In den Eigenschaften der neuen Anwendung, unter <b>API-Berechtigungen</b>: </p><ol>
+                        <li>
+                            <p>Fügen Sie folgende Berechtigungen für das Microsoft Graph API sowohl als <b>Delegierte Berechtigungen</b> als auch als <b>Anwendungsberechtigungen</b> hinzu: <codeph>User.Read.All</codeph>, <codeph>Group.ReadWrite.All</codeph>, <codeph>Directory.ReadWrite.All</codeph>. </p>
+                        </li>
+                        <li>
+                            <p>Erteilen Sie <b>Administratorzustimmung</b> für Ihr Verzeihnis <codeph><ph
+                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                />Org</codeph> für die neuen Berechtigungen.</p>
+                        </li>
+                    </ol>
+                </li>
+                <li>Erstellen Sie ein Client-Zertifikat oder einen Client-Schlüssel, mit dem die Plattform auf Ihr Verzeichnis zugreifen kann.<p><b>Beispiel Azure AD</b>: Fügen Sie in den Eigenschaften der neuen Anwendung unter <b>Zertifikate &amp; Geheimnisse</b> einen neuen geheimen Client-Schlüssel hinzu. Kopieren Sie den Schlüssel zur späteren Verwendung in der Plattform. </p></li>
+                <li>Erlauben Sie der Plattform, Tokens für die Authentifizierung vom OIDC-Provider anzufordern. <p><b>Beispiel Azure AD</b>: Erlauben Sie in den Eigenschaften der neuen Anwendung unter <b>Authentifizierung</b> die Ausgabe von <b>Zugriffstokens</b> und <b>ID-Tokens</b> durch den Autorisierungsendpunkt. </p></li>
+            </ol>
+        </section>
+        <section>
+            <p>Basierend auf den Einstellungen im OIDC-Provider können Sie nun in der Plattform einen neuen Mandanten anlegen und konfigurieren.</p>
+        </section>
+        </conbody>
+</concept>

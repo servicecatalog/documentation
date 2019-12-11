@@ -10,6 +10,7 @@
       <p>
         <ul compact="no">
           <li>Ändern des Marktplatzeigentümers. Hierzu müssen Sie Betreiber der Plattform sein.</li>
+          <li>Wenn die Plattform im Authentifizierungsmodus OIDC installiert ist: Ändern der Mandantenzuordnung, um einen anderen OIDC-Provider für die Authentifizierung von Benutzern zu verwenden. Hierzu müssen Sie Betreiber der Plattform sein. Beachten Sie, dass nach dem Ändern der Mandantenzuordnung kein Zugriff mehr auf bestehende Service-Abos auf dem Marktplatz besteht.</li>
           <li>Definieren von Umsatzbeteiligungen für den Marktplatz sowie für Vermittler und Wiederverkäufer. Hierzu müssen Sie Betreiber der Plattform sein. </li>
           <li>Umbenennen des Marktplatzes. Hierzu müssen Sie Marktplatz-Manager des Marktplatzeigentümers sein.</li>
           <li>Ändern des Funktionsumfangs und der Einstellungen für den Marktplatz. Hierzu müssen Sie Marktplatz-Manager des Marktplatzeigentümers sein.</li>
@@ -40,6 +41,12 @@
       </step>
     </steps>
     <result>
+      <p><b>So ändern Sie die Mandantenzuordnung</b> (nur Betreiber, wenn die Plattform im Authentifizierungsmodus OIDC installiert ist): </p>
+      <ol>
+        <li>Wählen Sie in der Liste <uicontrol>Marktplatz</uicontrol> den Marktplatz, dessen Mandantenzuordnung Sie ändern möchten. <p>Die Liste stellt alle Marktplätze zur Auswahl, die auf Ihrer Plattform angelegt wurden.</p></li>
+        <li>Wählen Sie im Feld <uicontrol>Mandant</uicontrol> den Mandanten für den OIDC-Provider, über den Benutzer authentifiziert werden sollen, die auf den Marktplatz zugreifen. Wenn Sie das Feld leer lassen, werden die Benutzer über den bei der Installation angegebenen Standard-Provider authentifiziert. <note>Wenn für den Marktplatz bereits Anbieter zugelassen wurden, wird dieses Recht zurückgenommen. Auf bestehende Abonnements für Services, die auf dem Marktplatz veröffentlicht wurden, kann nicht mehr zugegriffen werden. Deshalb sollten Sie die Mandantenzuordnung für einen Marktplatz nur bei der initialen Konfiguration ändern.</note></li>
+        <li>Schließen Sie Ihre Änderungen mit Speichern ab.</li>
+      </ol>
       <p><b>So definieren Sie Umsatzbeteiligungen</b> (nur Betreiber):</p>
       <p>
         <ol compact="no">
@@ -106,6 +113,7 @@
       <link href="marketplace_manageSuppliers.xml"/>
       <link href="marketplace_manageCategories.xml"/>
       <link href="marketplace_customizeLandingpage.xml"/>
+      <link href="operator_manageTenants.xml"/>
     </linklist>
   </related-links>
 </task>
