@@ -18,7 +18,7 @@
       </step>
       <step>
         <cmd>Enter the <b>WSDL URL</b>.</cmd>
-        <info>This URL must be a link to the WSDL file containing the definition of the Web service which provides methods for integrating the PSP with the platform. For details on implementing the PSP integration adapter, refer to the documentation shipped with the <codeph>oscm-psp-pack.zip</codeph> file. </info>
+        <info>This URL must be a link to the WSDL file containing the definition of the Web service which provides methods for integrating the PSP with the platform. For details on implementing the PSP integration adapter, refer to the documentation shipped with the PSP integration package. </info>
       </step>
       <step>
         <cmd>Enter the <b>Distinguished name</b> retrieved from the certificate of the Web server where the PSP integration adapter is deployed. </cmd>

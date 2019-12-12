@@ -4,13 +4,13 @@
                          "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
 ]>
 
-<concept id="searchIndex" xml:lang="en-us">
+<concept id="searchIndex" xml:lang="de-de">
     <title>Suchindex aktualisieren</title>
     <conbody>
         <p id="concept_SearchIndex"
             >Der Suchindex wird vom System automatisch in regelmäßigen Abständen erstellt. Er wird von Benutzern auf Marktplätzen genutzt, um nach Abonnements oder Services zu suchen. </p>
         <p id="concept_SearchIndex"
-                >Es kann Fälle geben, beispielsweise nach einer Datenbank-Wiederherstellung, dass der Suchindex nicht mehr konsistent ist. Um dies zu beheben, können Sie die Index-Dateien entweder manuall löschen und die entsprechende Domände des Application Servers neu starten, oder die Option <b>Suchindex aktualisieren</b> verwenden, um den Suchindex explizit neu zu generieren. Der Suchindex wird anhand der aktuellen Daten in der Datenbank erstellt. Existierende Index-Strukturen werden überschrieben. Der Index wird online neu erstellt, das heißt, sie müssen keine Domäne neu starten. </p>
-        <p>Auf der Seite <uicontrol>Suchindex aktualisieren</uicontrol> können Sie die Neuerstellung des Suchindex durch Klicken auf <uicontrol>Aktualisieren</uicontrol> starten.</p>
+                >Es kann Fälle geben, beispielsweise nach einer Datenbank-Wiederherstellung, in denen der Suchindex nicht mehr konsistent ist. Um dies zu beheben, können Sie die Option <b>Suchindex aktualisieren</b> verwenden, um den Suchindex explizit neu zu generieren. Der Suchindex wird anhand der aktuellen Daten in der Datenbank erstellt. Existierende Index-Strukturen werden überschrieben. </p>
+        <p>Die Neuerstellung des Suchindex starten Sie auf der Seite <uicontrol>Suchindex aktualisieren</uicontrol> durch Klicken von <uicontrol>Aktualisieren</uicontrol>.</p>
     </conbody>
 </concept>
