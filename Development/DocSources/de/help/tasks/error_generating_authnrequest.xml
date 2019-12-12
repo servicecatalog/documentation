@@ -6,7 +6,7 @@
   <title>Anmelden mit ungültiger Mandanten-ID</title>
   <taskbody>
     <context>
-      <p>Sie haben versucht, sich am Administrationsportal anzumelden über einen URL mit der ID eines nicht existierenden Mandanten. Ein Mandant legt das externe Authentifizierungssystem fest, über das Sie authentifiziert werden. Wenden Sie sich an Ihren Plattformbetreiber oder Administrator, damit dieser überprüft, ob das System richtig konfiguriert ist, oder um Ihnen die richtige Mandanten-ID mitzuteilen. </p>
+      <p>Sie haben versucht, sich am Administrationsportal mit der URL mit der ID eines nicht existierenden Mandanten anzumelden. Ein Mandant legt das externe Authentifizierungssystem fest, über das Sie authentifiziert werden. Wenden Sie sich an Ihren Plattformbetreiber oder Administrator, damit dieser überprüft, ob das System richtig konfiguriert ist, oder um Ihnen die richtige Mandanten-ID mitzuteilen. </p>
     </context>
   </taskbody>
 </task>

@@ -2,86 +2,35 @@
 <!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN"
                      "">
 <!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2019 -->
-<map title="Service Catalog Manager Help"
-        xml:lang="en_US">
-    <topichead
-        navtitle=""/>
+<map title="Service Catalog Manager Help" xml:lang="en_US">
+    <topichead navtitle=""/>
     <!--Final draft for Sales Launch-->
-    <topichead
-        linking="none" navtitle="Getting started">
-        <topicref
-            format="dita"
-            href="help/tasks/marketplace_gotoMarketplace.xml"
-            navtitle="" type="task"/>
-        <topicref format="dita"
-            href="help/tasks/public_registration.xml" navtitle=""
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/public_terms.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/public_privacypolicy.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/public_registrationok.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/public_confirm.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/public_login.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/public_pwd.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/public_recoverpassword.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/public_confirmpwdrecovery.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/public_changepassword.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/public_completepwdrecovery.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/error_user_locked.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/error_database_notAvailable.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/error_invalid_samlResponse.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/error_login_samlsp.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/public_slogout.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/public_serviceusage.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/error_subscription_parseKey.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/error_subscription_subscriptionNotFound.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/error_login_impossible.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/error_user_lockedNotConfirmed.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/error_accessToClosedMarketplace.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/error_loginToClosedMarketplace.xml"
-        type="task"/>
+    <topichead linking="none" navtitle="Getting started">
+        <topicref format="dita" href="help/tasks/marketplace_gotoMarketplace.xml" navtitle="" type="task"/>
+        <topicref format="dita" href="help/tasks/public_registration.xml" navtitle="" type="task"/>
+        <topicref format="dita" href="help/tasks/public_terms.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/public_privacypolicy.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/public_registrationok.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/public_confirm.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/public_login.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/public_pwd.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/public_recoverpassword.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/public_confirmpwdrecovery.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/public_changepassword.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/public_completepwdrecovery.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/error_user_locked.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/error_database_notAvailable.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/error_invalid_samlResponse.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/error_login_samlsp.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/error_generating_authnrequest.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/public_slogout.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/public_serviceusage.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/error_subscription_parseKey.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/error_subscription_subscriptionNotFound.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/error_login_impossible.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/error_user_lockedNotConfirmed.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/error_accessToClosedMarketplace.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/error_loginToClosedMarketplace.xml" type="task"/>
     </topichead>
     <!--    
     <topichead linking="none" navtitle="Customer gets started">
@@ -93,42 +42,18 @@
         <topicref href="help/tasks/subscription_priceModel_show.xml" navtitle="" type="reference"/>
     </topichead>
 -->
-    <topichead
-        linking="none"
-            navtitle="Account menu options">
-        <topicref
-            format="dita" href="help/tasks/organization_edit.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/user_pwd.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/user_add.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/user_import.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/user_list.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/organization_report.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/organization_manageSuppliers.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/organization_manageUdas.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/createCustomUda.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/updateCustomUda.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/organization_ldapSettings.xml"
-            type="task"/>
+    <topichead linking="none" navtitle="Account menu options">
+        <topicref format="dita" href="help/tasks/organization_edit.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/user_pwd.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/user_add.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/user_import.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/user_list.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/organization_report.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/organization_manageSuppliers.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/organization_manageUdas.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/createCustomUda.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/updateCustomUda.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/organization_ldapSettings.xml" type="task"/>
         <!--
         <topicref format="dita" href="help/tasks/organization_managePayments.xml" type="task"/>
         <topicref format="dita" href="help/tasks/billingContact_create.xml" type="task"/>
@@ -136,52 +61,22 @@
         <topicref format="dita" href="help/tasks/paymentInfo_create.xml" type="task"/>
         <topicref format="dita" href="help/tasks/paymentInfo_editName.xml" type="task"/>
 -->
-        <topicref
-            format="dita"
-            href="help/tasks/organization_manageTriggers.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/organization_manageTriggerDetails.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/triggerProcess_list.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/user_exportBillingData.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/user_manageBilling.xml"
-        type="task"/>
+        <topicref format="dita" href="help/tasks/organization_manageTriggers.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/organization_manageTriggerDetails.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/triggerProcess_list.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/user_exportBillingData.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/user_manageBilling.xml" type="task"/>
     </topichead>
-    <topichead linking="none"
-            navtitle="Customer menu options">
-        <topicref
-            format="dita" href="help/tasks/organization_addCustomer.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="Shared/reference/r_LDAP_SettingTypes.xml"
-            type="reference"/>
-        <topicref format="dita"
-            href="help/tasks/organization_editCustomer.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/organization_viewCustomer.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/organization_managePaymentEnablement.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/organization_manageVats.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/subscription_view.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/subscription_editUdas.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/subscription_terminate.xml"
-        type="task"/>
+    <topichead linking="none" navtitle="Customer menu options">
+        <topicref format="dita" href="help/tasks/organization_addCustomer.xml" type="task"/>
+        <topicref format="dita" href="Shared/reference/r_LDAP_SettingTypes.xml" type="reference"/>
+        <topicref format="dita" href="help/tasks/organization_editCustomer.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/organization_viewCustomer.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/organization_managePaymentEnablement.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/organization_manageVats.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/subscription_view.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/subscription_editUdas.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/subscription_terminate.xml" type="task"/>
     </topichead>
     <!--    
     <topichead linking="none" navtitle="Subscription menu options">
@@ -192,271 +87,104 @@
         <topicref format="dita" href="help/tasks/subscription_delete.xml" type="task"/>
     </topichead>
 -->
-    <topichead
-        linking="none"
-            navtitle="Technical Service menu options">
-        <topicref
-            format="dita" href="help/tasks/techService_add.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/techService_import.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/techService_edit.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/techService_export.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/techService_delete.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/techService_detail.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/techService_viewBillingAdapters.xml"
-        type="reference"/>
+    <topichead linking="none" navtitle="Technical Service menu options">
+        <topicref format="dita" href="help/tasks/techService_add.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/techService_import.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/techService_edit.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/techService_export.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/techService_delete.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/techService_detail.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/techService_viewBillingAdapters.xml" type="reference"/>
     </topichead>
-    <topichead
-        linking="none"
-            navtitle="Marketable service menu options">
-        <topicref
-            format="dita" href="help/tasks/service_add.xml"
-            type="task"/>
+    <topichead linking="none" navtitle="Marketable service menu options">
+        <topicref format="dita" href="help/tasks/service_add.xml" type="task"/>
         <!--    <topicref format="dita" href="help/tasks/service_importexport.xml" type="task"/> -->
-        <topicref
-            format="dita" href="help/tasks/service_edit.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/service_localize.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/service_copy.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/service_delete.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/service_upgradeOptions.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/service_view.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/service_manage.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/service_viewPMDetails.xml"
-            type="reference"/>
-        <topicref format="dita"
-            href="help/tasks/service_publish.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/service_activation.xml"
-        type="task"/>
+        <topicref format="dita" href="help/tasks/service_edit.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/service_localize.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/service_copy.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/service_delete.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/service_upgradeOptions.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/service_view.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/service_manage.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/service_viewPMDetails.xml" type="reference"/>
+        <topicref format="dita" href="help/tasks/service_publish.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/service_activation.xml" type="task"/>
     </topichead>
-    <topichead linking="none"
-            navtitle="Price model menu options">
-        <topicref
-            format="dita" href="help/tasks/priceModel_service.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/priceModel_service_nat.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/priceModel_service_ext.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/priceModel_customer.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/priceModel_customer_nat.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/priceModel_customer_ext.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/priceModel_customer_delete.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/priceModel_subscription.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/priceModel_subscription_nat.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/priceModel_subscription_ext.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/priceModel_localize.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/priceModel_roles.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/organization_manageVats.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/user_manageBilling.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="Shared/reference/r_PriceModelDetails.xml"
-            type="reference"/>
-        <topicref format="dita"
-            href="Shared/reference/r_PriceModelDetails_onetime.xml"
-            type="reference"/>
-        <topicref format="dita"
-            href="Shared/reference/r_PriceModelDetails_recurringForSub.xml"
-            type="reference"/>
-        <topicref format="dita"
-            href="Shared/reference/r_PriceModelDetails_recurringForUser.xml"
-            type="reference"/>
-        <topicref format="dita"
-            href="Shared/reference/r_PriceModelDetails_parameters.xml"
-            type="reference"/>
-        <topicref format="dita"
-            href="Shared/reference/r_PriceModelDetails_events.xml"
-            type="reference"/>
-        <topicref format="dita"
-            href="Shared/reference/r_PriceModelDetails_stepped.xml"
-            type="reference"/>
-        <topicref format="dita"
-            href="Shared/reference/r_PriceModelDetails_role.xml"
-            type="reference"/>
-        <topicref format="dita"
-            href="Shared/reference/r_PriceModelDetails_freeTrial.xml"
-            type="reference"/>
-        <topicref format="dita"
-            href="Shared/reference/r_PriceModelDetails_discount.xml"
-        type="reference"/>
+    <topichead linking="none" navtitle="Price model menu options">
+        <topicref format="dita" href="help/tasks/priceModel_service.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/priceModel_service_nat.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/priceModel_service_ext.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/priceModel_customer.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/priceModel_customer_nat.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/priceModel_customer_ext.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/priceModel_customer_delete.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/priceModel_subscription.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/priceModel_subscription_nat.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/priceModel_subscription_ext.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/priceModel_localize.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/priceModel_roles.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/organization_manageVats.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/user_manageBilling.xml" type="task"/>
+        <topicref format="dita" href="Shared/reference/r_PriceModelDetails.xml" type="reference"/>
+        <topicref format="dita" href="Shared/reference/r_PriceModelDetails_onetime.xml" type="reference"/>
+        <topicref format="dita" href="Shared/reference/r_PriceModelDetails_recurringForSub.xml" type="reference"/>
+        <topicref format="dita" href="Shared/reference/r_PriceModelDetails_recurringForUser.xml" type="reference"/>
+        <topicref format="dita" href="Shared/reference/r_PriceModelDetails_parameters.xml" type="reference"/>
+        <topicref format="dita" href="Shared/reference/r_PriceModelDetails_events.xml" type="reference"/>
+        <topicref format="dita" href="Shared/reference/r_PriceModelDetails_stepped.xml" type="reference"/>
+        <topicref format="dita" href="Shared/reference/r_PriceModelDetails_role.xml" type="reference"/>
+        <topicref format="dita" href="Shared/reference/r_PriceModelDetails_freeTrial.xml" type="reference"/>
+        <topicref format="dita" href="Shared/reference/r_PriceModelDetails_discount.xml" type="reference"/>
     </topichead>
-    <topichead
-        linking="none"
-            navtitle="Operation  menu options">
-        <topicref
-            format="dita" href="help/tasks/operator_manageUsers.xml"
-            type="task"/>
-        <topicref
-            href="Shared/reference/r_FileFormat_ImportUsers.xml"
-            type="reference"/>
-        <topicref format="dita"
-            href="help/tasks/operator_createOrganization.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/operator_manageOrganizations.xml"
-            type="task"/>
+    <topichead linking="none" navtitle="Operation  menu options">
+        <topicref format="dita" href="help/tasks/operator_manageUsers.xml" type="task"/>
+        <topicref href="Shared/reference/r_FileFormat_ImportUsers.xml" type="reference"/>
+        <topicref format="dita" href="help/tasks/operator_createOrganization.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/operator_manageOrganizations.xml" type="task"/>
         <!-- topicref format="dita" href="help/tasks/operator_manageRetiredOrganizations.xml" type="task"/-->
-        <topicref
-            format="dita" href="help/tasks/operator_manageTimers.xml"
-            type="concept"/>
-        <topicref format="dita"
-            href="help/tasks/operator_manageCurrencies.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/operator_manageLanguages.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/operator_manageBillingAdapters.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/operator_manageConfiguration.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/operator_manageLdapSettings.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/operator_exportBillingData.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/operator_executeBillingTasks.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/operator_exportAuditLogData.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/operator_createPSP.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/operator_managePSPs.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/psp_managePaymentTypes.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/organization_managePaymentTypes.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/operator_manageOperatorRevenueShare.xml"
-        type="task"/>
-		<topicref
-            format="dita"
-            href="Shared/reference/r_Language_Export_File.xml"
-            type="reference"/>
-		<topicref format="dita"
-            href="Shared/reference/r_Language_OnlineHelp_FAQ.xml"
-            type="reference"/>
-		<topicref format="dita"
-            href="Shared/reference/r_Language_ReportLabels.xml"
-            type="reference"/>
-		<topicref format="dita"
-            href="Shared/reference/r_Language_Codes.xml"
-            type="reference"/>
-		<topicref format="dita"
-            href="help/tasks/operator_manageTenants.xml"
-        type="task"/>
-		   <topicref href="Shared/reference/c_IdPInfo.xml" type="concept"/>
-		<topicref href="Shared/reference/c_IdPInfo2.xml" type="concept"/>
-		<topicref format="dita"
-            href="help/tasks/operator_manageIndexes.xml"
-        type="concept"/>
+        <topicref format="dita" href="help/tasks/operator_manageTimers.xml" type="concept"/>
+        <topicref format="dita" href="help/tasks/operator_manageCurrencies.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/operator_manageLanguages.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/operator_manageBillingAdapters.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/operator_manageConfiguration.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/operator_manageLdapSettings.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/operator_exportBillingData.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/operator_executeBillingTasks.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/operator_exportAuditLogData.xml" type="task"/>
+        <!--         <topicref format="dita" 
+             href="help/tasks/operator_createPSP.xml" 
+             type="task"/> 
+         <topicref format="dita" 
+             href="help/tasks/operator_managePSPs.xml" 
+             type="task"/> -->
+        <topicref format="dita" href="help/tasks/psp_managePaymentTypes.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/organization_managePaymentTypes.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/operator_manageOperatorRevenueShare.xml" type="task"/>
+        <topicref format="dita" href="Shared/reference/r_Language_Export_File.xml" type="reference"/>
+        <topicref format="dita" href="Shared/reference/r_Language_OnlineHelp_FAQ.xml" type="reference"/>
+        <topicref format="dita" href="Shared/reference/r_Language_ReportLabels.xml" type="reference"/>
+        <topicref format="dita" href="Shared/reference/r_Language_Codes.xml" type="reference"/>
+        <topicref format="dita" href="help/tasks/operator_manageTenants.xml" type="task"/>
+        <topicref format="dita" href="Shared/reference/c_Preparation_OIDC_Provider.xml" type="concept"/>
+        <topicref format="dita" href="Shared/reference/r_ConfigSettings_OIDC_Tenant.xml" type="reference"/>
     </topichead>
-    <topichead linking="none"
-            navtitle="Marketplace menu options">
-        <topicref
-            format="dita"
-            href="help/tasks/marketplace_manageCategories.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/marketplace_manageAccess.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/marketplace_manageSuppliers_notselected.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/marketplace_manageSuppliers.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/marketplace_manageSuppliers_open.xml"
-            type="task"/>
+    <topichead linking="none" navtitle="Marketplace menu options">
+        <topicref format="dita" href="help/tasks/marketplace_manageCategories.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/marketplace_manageAccess.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/marketplace_manageSuppliers_notselected.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/marketplace.manageSuppliers_notselected.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/marketplace_manageSuppliers.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/marketplace_manageSuppliers_open.xml" type="task"/>
         <!--    <topicref format="dita" href="help/tasks/service_manageCatalog.xml" type="task"/> -->
-        <topicref
-            format="dita" href="help/tasks/marketplace_create.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/marketplace_update.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/marketplace_delete.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/shop_trackingCode.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/marketplace_customizeLandingpage.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/shop_editStage.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/shop_customizeBrand.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/shop_translations.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/marketplace_manageBrokerRevenueShare.xml"
-            type="task"/>
-        <topicref format="dita"
-            href="help/tasks/marketplace_manageResellerRevenueShare.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/marketplace_create.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/marketplace_update.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/marketplace_delete.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/shop_trackingCode.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/marketplace_customizeLandingpage.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/shop_editStage.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/shop_customizeBrand.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/shop_translations.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/marketplace_manageBrokerRevenueShare.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/marketplace_manageResellerRevenueShare.xml" type="task"/>
     </topichead>
 </map>
