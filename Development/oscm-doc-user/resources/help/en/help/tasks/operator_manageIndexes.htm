@@ -19,11 +19,11 @@
     <h1 class="topictitle1">Updating the search index</h1>
 
     <div>
-        <p id="searchIndex__concept_SearchIndex">The search index is automatically and periodically created by the system. In some cases, for example, after a recovery of the database, the search index may become inconsistent. In order to make sure that the index becomes consistent again, you can either manually delete the index files and restart the respective application server domain, or use the <strong>Update search index</strong> menu option to explicitly re-create the search index at any time. The search index is re-built based on the current data in the database. The existing index structure is overwritten. The search index is re-created online, and you do not need to restart any application server domain. </p>
+        <p id="searchIndex__concept_SearchIndex">The search index is automatically and periodically created by the system. Users on marketplaces make use of the index when searching for subscriptions or services.</p>
 
-        <p>On the <span class="uicontrol">Update search index</span> page, you can start the re-creation of the search index by clicking <span class="uicontrol">Update</span>.</p>
+        <p id="searchIndex__concept_SearchIndex">In some cases, for example, after a recovery of the database, the search index may become inconsistent. In order to solve this problem, you can use the <strong>Update search index</strong> option to explicitly re-create the search index. The search index is re-built based on the current data in the database. The existing index structure is overwritten. </p>
 
-        <p id="searchIndex__concept_SearchIndex2">The search indexer application on the <samp class="codeph">master-indexer-domain</samp> is triggered, the old index structure is deleted, a new one is created, and the collection of the current indexing data from the <samp class="codeph">bss</samp> database is started. The time it takes to collect the data depends on the size of the database. When the collection is finished, the <samp class="codeph">hibernate.search.default.refresh</samp> configuration setting defined in the <samp class="codeph">glassfish.properties</samp> file located in <samp class="codeph">&lt;install_pack_dir&gt;/domains/indexer_domain</samp> is evaluated. The interval in seconds defined in this setting (default: 300 seconds) determines the additional time it will take until the new search index is available for users on marketplaces to search for subscriptions or services. </p>
+        <p>To start the re-creation of the search index, click <span class="uicontrol">Update</span> on the <span class="uicontrol">Update search index</span> page.</p>
 
     </div>
 
