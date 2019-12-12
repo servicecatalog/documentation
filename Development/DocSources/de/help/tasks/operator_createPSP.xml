@@ -18,7 +18,7 @@
       </step>
       <step>
         <cmd>Geben Sie die <b>WSDL-URL</b> ein.</cmd>
-        <info>Diese URL muss auf die WSDL-Datei zeigen, die die Definition des Web-Service zur Integration des Zahlungsdienstleisters enthält. Detaillierte Informationen zur Implementierung eines Adapters zur Integration eines Zahlungsdienstleisters finden Sie in der Dokumentation, die mit der Datei <codeph>oscm-psp-pack.zip</codeph> ausgeliefert wird.</info>
+        <info>Diese URL muss auf die WSDL-Datei zeigen, die die Definition des Web-Service zur Integration des Zahlungsdienstleisters enthält. Detaillierte Informationen zur Implementierung eines Adapters zur Integration eines Zahlungsdienstleisters finden Sie in der Dokumentation, die mit dem PSP-Integrationspaket ausgeliefert wird.</info>
       </step>
       <step>
         <cmd>Geben Sie den <b>Distinguished Name</b> aus dem Zertifikat des Web-Servers an, auf dem der Adapter zur Integration des Zahlungsdienstleisters installiert ist.</cmd>
