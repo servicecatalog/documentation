@@ -172,6 +172,7 @@ topicref format="dita"
     <topichead linking="none" navtitle="Marketplace menu options">
         <topicref format="dita" href="help/tasks/marketplace_manageCategories.xml" type="task"/>
         <topicref format="dita" href="help/tasks/marketplace_manageAccess.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/marketplace_manageSuppliers_notselected.xml" type="task"/>
         <topicref format="dita" href="help/tasks/marketplace.manageSuppliers_notselected.xml" type="task"/>
         <topicref format="dita" href="help/tasks/marketplace_manageSuppliers.xml" type="task"/>
         <topicref format="dita" href="help/tasks/marketplace_manageSuppliers_open.xml" type="task"/>

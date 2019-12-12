@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd">
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2019 -->
+<task id="task634"
+        xml:lang="en-us">
+  <title>Managing sellers</title>
+  <taskbody
+                    id="On_the_task_taskbody">
+    <context>
+      <p><ph
+                id="On_the_task_taskbody_context_p_1_ph">On the <uicontrol>Manage sellers</uicontrol> page, you can decide who is allowed to publish services to a marketplace.</ph> Depending on whether the marketplace you select is an open marketplace or a marketplace for authorized sellers only, different options are available:</p>
+      <ul
+                        compact="no">
+        <li><b>Marketplace for authorized sellers</b>: <ph
+                            id="If_the_marketplace_allows_onl_task_taskbody_context_ul_li">If the marketplace allows only authorized sellers, you have to admit one or more supplier, broker, or reseller organizations that are to be allowed to publish services to it. When the marketplace is created, the organization specified as the marketplace owner is automatically admitted, provided that it is assigned the supplier, broker, or reseller role.</ph><p><ph
+                        id="As_the_marketplace_owner_you_task_taskbody_context_ul_li">As the marketplace owner, you can revoke the publishing approval for a seller at any time, for example if he is in arrears with his payments. If the seller already published services to the marketplace, these services are automatically deactivated. Customers can no longer subscribe to them. Existing subscriptions are not affected.</ph></p></li>
+        <li><b>Open marketplace</b>: If the marketplace allows any supplier, broker, or reseller to publish services, you can explicitly exclude one or more sellers and add them to a blacklist. This might be required, for example, if a seller is in arrears with his payments. If the seller already published services to the marketplace, these services are automatically deactivated. Customers can no longer subscribe to them. Existing subscriptions are not affected.<p
+                        id="You_can_allow_a_supplier_who_task_taskbody_context_ul_li">You can allow a seller who has been excluded from the marketplace to publish services again at any time, for example if he is not in arrears with his payments any longer.</p></li>
+      </ul>
+      <p><b>To manage the sellers for a marketplace</b>:</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>From the <uicontrol>Marketplace</uicontrol> list, select the marketplace for which you want to manage sellers. </cmd>
+        <info>
+          <p>The list contains all marketplaces to which you have access as a marketplace manager.</p>
+          <p>The <uicontrol>Sellers</uicontrol> field shows whether the marketplace is open to any seller or whether it is for authorized sellers only.</p>
+        </info>
+      </step>
+      <step>
+        <cmd>Depending on the seller policy defined for the selected marketplace, proceed as follows:</cmd>
+        <info>
+          <ul
+                                compact="no">
+            <li>Marketplace for authorized sellers: Allow sellers to publish services or exclude sellers from publishing services.<ph
+                                    audience="doc"> Click <xref
+                                href="marketplace_manageSuppliers.xml">here</xref> for more details.</ph></li>
+            <li>Open marketplace: Exclude sellers from publishing services or allow excluded sellers to publish services again.<ph
+                                    audience="doc"> Click <xref href="marketplace_manageSuppliers_open.xml">here</xref> for more details.</ph></li>
+          </ul>
+        </info>
+      </step>
+    </steps>
+  </taskbody>
+</task>
