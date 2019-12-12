@@ -8,10 +8,10 @@
         <prodinfo product="oscm_ce">
             <prodname/>
             <vrmlist>
-                <vrm version="18.1"/>
+                <vrm version="V18.1"/>
             </vrmlist>
             <brand/>
-            <prognum>18.1</prognum>
+            <prognum>V18.1</prognum>
             <component/>
             <series>OpenStack Integration</series>
         </prodinfo>

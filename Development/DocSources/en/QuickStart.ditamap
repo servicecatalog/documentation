@@ -8,10 +8,10 @@
         <prodinfo product="oscm_ce">
             <prodname/>
             <vrmlist>
-                <vrm version="V18.1.0"/>
+                <vrm version="V18.1"/>
             </vrmlist>
             <brand/>
-            <prognum>V18.1.0</prognum>
+            <prognum>V18.1</prognum>
             <component/>
             <series>QuickStart Guide</series>
         </prodinfo>

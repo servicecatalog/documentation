@@ -11,10 +11,10 @@
             <prodname/>
             <vrmlist>
                 <vrm
-            version="V18.0"/>
+            version="V18.1"/>
             </vrmlist>
             <brand/>
-            <prognum>V18.0</prognum>
+            <prognum>V18.1</prognum>
             <component/>
             <series>APP Integration Guide</series>
         </prodinfo>
@@ -23,15 +23,15 @@
             <prodname>Enterprise Service</prodname>
             <vrmlist>
                 <vrm
-            version="V18.0.0"/>
+            version="V18.1"/>
             </vrmlist>
             <brand>FUJITSU Software</brand>
-            <prognum>Catalog Manager V18.0.0</prognum>
+            <prognum>Catalog Manager V18.1</prognum>
             <component/>
             <series>APP Integration Guide</series>
         </prodinfo>
         <bookid>
-            <edition>April 2019 </edition>
+            <edition>December 2019 </edition>
             
         </bookid>
         <bookrights

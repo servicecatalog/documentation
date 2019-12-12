@@ -19,7 +19,7 @@
         <prodinfo product="oscm_ee">
             <prodname>Enterprise Service</prodname>
             <vrmlist>
-                <vrm version="18.1"/>
+                <vrm version="V18.1"/>
             </vrmlist>
             <brand>FUJITSU Software</brand>
             <prognum>Catalog Manager V18.1</prognum>
