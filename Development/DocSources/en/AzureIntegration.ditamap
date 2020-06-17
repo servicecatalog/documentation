@@ -8,25 +8,25 @@
         <prodinfo product="oscm_ce">
             <prodname/>
             <vrmlist>
-                <vrm version="V18.1"/>
+                <vrm version="V19.0"/>
             </vrmlist>
             <brand/>
-            <prognum>V18.1</prognum>
+            <prognum>V19.0</prognum>
             <component/>
             <series>Microsoft Azure Integration</series>
         </prodinfo>
         <prodinfo product="oscm_ee">
             <prodname>Enterprise Service</prodname>
             <vrmlist>
-                <vrm version="V18.1"/>
+                <vrm version="V19.0"/>
             </vrmlist>
             <brand>FUJITSU Software</brand>
-            <prognum>Catalog Manager V18.1</prognum>
+            <prognum>Catalog Manager V19.0</prognum>
             <component/>
             <series>Microsoft Azure Integration</series>
         </prodinfo>
         <bookid>
-            <edition>December 2019</edition>
+            <edition>June 2020</edition>
         </bookid>
         <bookrights product="oscm_ce">
             <bookowner name="none"/>

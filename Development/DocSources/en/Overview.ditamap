@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN"
                          "">
-<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2019 -->
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2020 -->
 
 <bookmap id="BESOverview" xml:lang="en_US">
     <title>Overview</title>
@@ -9,25 +9,25 @@
         <prodinfo product="oscm_ce">
             <prodname/>
             <vrmlist>
-                <vrm version="V18.1"/>
+                <vrm version="V19.0"/>
             </vrmlist>
             <brand/>
-            <prognum>V18.1</prognum>
+            <prognum>V19.0</prognum>
             <component/>
             <series>Overview</series>
         </prodinfo>
         <prodinfo product="oscm_ee">
             <prodname>Enterprise Service</prodname>
             <vrmlist>
-                <vrm version="V18.1"/>
+                <vrm version="V19.0"/>
             </vrmlist>
             <brand>FUJITSU Software</brand>
-            <prognum>Catalog Manager V18.1</prognum>
+            <prognum>Catalog Manager V19.0</prognum>
             <component/>
             <series>Overview</series>
         </prodinfo>
         <bookid>
-            <edition>December 2019 </edition>
+            <edition>June 2020 </edition>
             <!--booknumber product="oscm_ee">B1WS-1250-02</booknumber-->
         </bookid>
         <bookrights product="oscm_ce">
