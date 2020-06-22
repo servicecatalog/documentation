@@ -25,11 +25,11 @@
                         /> administration portal. The branding package is provided as a ZIP file. </li>
                     <li>Extract the ZIP file to a local directory.</li>
                     <li>Adapt the files as desired. </li>
-                    <li>Create an archive (ZIP) containing your customized files. <p>The customized branding must be in the same structure as the <codeph>branding-package.zip</codeph> file. </p></li>
-                    <li>Provide this archive to the platform operator so that he can deploy your customized branding package to the relevant container. </li>
-                    <li>Ask the platform operator for the URL of the customized style sheet once deployed. </li>
+                    <li>Create an archive (ZIP) containing your customized files. <p>The customized branding must have the same structure as the original branding in the <codeph>branding-package.zip</codeph> file.</p></li>
+                    <li>Provide this archive to the platform operator so that he can deploy your customized branding package. </li>
+                    <li>Ask the platform operator for the URL of the deployed customized style sheet. </li>
                     <li>To load the customized layout: <ol>
-                            <li>On the <uicontrol>Customize layout</uicontrol> page, select the marketplace and enter the URL pointing to the location in the branding container where the custom stylesheet has been deployed. If no URL is set, the default style sheet is used. <p>By default, the URL is as follows: </p><p><codeph>https://&lt;host_fqdn>:8443/&lt;new-folder-name>/css/mp.css</codeph></p><p><codeph>&lt;host_fqdn></codeph> is the fully qualified name or IP address of the host used to access <ph
+                            <li>On the <uicontrol>Customize layout</uicontrol> page, select the marketplace and enter the URL provided by the platform operator pointing to your customized style sheet. If no URL is set, the default style sheet is used. <p>By default, the URL is as follows: </p><p><codeph>https://&lt;host_fqdn>:8443/&lt;new-folder-name>/css/mp.css</codeph></p><p><codeph>&lt;host_fqdn></codeph> is the fully qualified name or IP address of the host used to access <ph
                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                         />. <codeph>&lt;new-folder-name></codeph> is the name of the folder containing the customized files. </p></li>
                             <li>To verify the branding, go to the respective marketplace and log in again. </li>

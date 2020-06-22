@@ -147,7 +147,7 @@
         <topicref format="dita" href="help/tasks/operator_manageLanguages.xml" type="task"/>
         <topicref format="dita" href="help/tasks/operator_manageBillingAdapters.xml" type="task"/>
         <topicref format="dita" href="help/tasks/operator_manageConfiguration.xml" type="task"/>
-        <topicref format="dita" href="help/tasks/operator_manageIndexes.xml" type="task"/>
+        <topicref format="dita" href="help/tasks/operator_manageIndexes.xml" type="concept"/>
         <topicref format="dita" href="help/tasks/operator_manageLdapSettings.xml" type="task"/>
         <topicref format="dita" href="help/tasks/operator_exportBillingData.xml" type="task"/>
         <topicref format="dita" href="help/tasks/operator_executeBillingTasks.xml" type="task"/>
