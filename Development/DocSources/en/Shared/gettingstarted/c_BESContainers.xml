@@ -18,7 +18,8 @@
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> containers:</p>
             <ul>
                 <li><codeph>oscm-core</codeph>: The <ph
-                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> core application. </li>
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> core application, including the platform services and the REST API. </li>
                 <li><codeph>oscm-db</codeph>: Database SQL server providing the database schema for <ph
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> and APP. </li>
                 <li><codeph>oscm-identity</codeph>: Services for authenticating users against an external authorization server based on OpenID Connect (OIDC) and providing for Web browser single sign-on.</li>

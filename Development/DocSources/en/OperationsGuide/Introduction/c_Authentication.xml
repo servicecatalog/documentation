@@ -45,17 +45,15 @@
                             <entry>Web service by SOAP/WSDL</entry>
                             <entry>User key<p>Password</p></entry>
                             <entry>
-                                <p>User key: </p>
-                                <p><codeph>1000</codeph></p>
-                                <p>Password: </p>
-                                <p><codeph>admin123</codeph></p>
+                                <p>User key: <codeph>1000</codeph></p>
+                                <p>Password: <codeph>admin123</codeph></p>
                             </entry>
                         </row>
                         <row>
                             <entry>Web service by REST API</entry>
-                            <entry>User ID<p>Password</p></entry>
+                            <entry>User key<p>Password</p></entry>
                             <entry>
-                                <p>User ID: <codeph>administrator</codeph></p>
+                                <p>User key: <codeph>1000</codeph></p>
                                 <p>Password: <codeph>admin123</codeph></p>
                             </entry>
                         </row>

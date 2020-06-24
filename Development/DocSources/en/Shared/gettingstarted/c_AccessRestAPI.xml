@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2020 -->
+<concept id="concept_1BCF5C425D7D4627AB1C66A085CF6E11"
+            xml:lang="en-us">
+            <title>Accessing the REST API</title>
+            <conbody>
+        <section
+                    id="Accessing_the_concept_conbody_section">
+                        <title>Accessing the <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> REST API</title>
+                        <p><ph
+                                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> provides a REST (Representational State Transfer) API by which you can address and execute the most important functions of the platform services. The REST API and its documentation are accessible and useable in a Web browser by means of the Swagger toolkit: </p>
+                        <p>
+                                <ol>
+                                        <li>Type the following URL in your Web browser's address bar: <p><codeph>https://&lt;host_fqdn&gt;:8081/oscm-rest-api</codeph></p><p><codeph>&lt;host_fqdn&gt;</codeph> is the fully qualified name or IP address of the host used to access <ph
+                            conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>, <codeph>8081</codeph> is the port. </p></li>
+                                        <li>In the login dialog, enter the numeric key for your <ph
+                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> user ID and your password. </li>
+                                        <li>Confirm your entries.</li>
+                                </ol>
+                        </p>
+                        <p
+                    id="cfg">This opens the Swagger UI with the <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> REST API documentation. From the UI, you can try out and actually execute the individual methods, if you are authorized to do so or specify appropriate user credentials using the <b>Authorize</b> option. For more information about Swagger, refer to its documentation in the Internet.</p>
+                </section>
+    </conbody>
+</concept>

@@ -59,5 +59,7 @@
                 />
             </p>
         </section>
+        <section
+            conref="../../Shared/gettingstarted/c_AccessRestAPI.xml#concept_1BCF5C425D7D4627AB1C66A085CF6E11/Accessing_the_concept_conbody_section"/>
     </conbody>
 </concept>

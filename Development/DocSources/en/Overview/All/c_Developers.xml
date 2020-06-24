@@ -25,7 +25,7 @@
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> using provisioning services that work in asynchronous mode.</li>
             </ul>
-            <p>While the platform services and most of the APIs are based on SOAP (Simple Object Access Protocol) and WSDL (Web Services Description Language), some components provide a REST (Representational State Transfer) API in addition or a pure Java API. </p>
+            <p>While the platform services and most of the APIs are based on SOAP (Simple Object Access Protocol) and WSDL (Web Services Description Language), several components provide a REST (Representational State Transfer) API in addition or a pure Java API. The REST API and its documentation are accessible and useable by means of the Swagger toolkit.</p>
             <!--p>For a description of the basic concepts and usage of the public Web services, APIs, and additional resources and samples that are provided for developers, refer to the <i>Developer's Guide</i>. For a description of the resources for integrating a PSP, refer to the documentation shipped with the <codeph><xref format="html" href="https://github.com/servicecatalog/development/releases" scope="external"
                 ><u><i>oscm-integration-psp-pack.zip</i></u></xref></codeph> file. </p-->
         </section>
