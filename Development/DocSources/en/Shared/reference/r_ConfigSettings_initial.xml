@@ -20,6 +20,7 @@
                             <li><codeph>IMAGE_INITDB</codeph>: image for the temporary, stateless <codeph>oscm-initdb</codeph> container</li>
                             <li><codeph>IMAGE_HELP</codeph>: image for the <codeph>oscm-help</codeph> container</li>
                             <li><codeph>IMAGE_IDENTITY</codeph>: image for the <codeph>oscm-identity</codeph> container</li>
+                            <li><codeph>IMAGE_MAILDEV</codeph>: image for the <codeph>oscm-maildev</codeph> container</li>
                         </ul>
                     </li>
                     <li>The directory where <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
@@ -64,6 +65,10 @@
                 <li><codeph>ADMIN_USER_ID</codeph><p>The initial administrator account, depending on the authentication mode:</p><ul>
                         <li><codeph>INTERNAL</codeph>: <codeph>administrator</codeph></li>
                         <li><codeph>OIDC</codeph>: A user existing in the OIDC provider system configured as the default tenant and assigned to the <codeph>OSCM_PLATFORM_OPERATOR</codeph> group in this system.</li>
+                    </ul></li>
+                <li><codeph>ADMIN_USER_PWD</codeph><p>The password of the initial administrator specified in <codeph>ADMIN_USER_ID</codeph>, depending on the authentication mode: </p><ul>
+                        <li><codeph>INTERNAL</codeph>: <codeph>admin123</codeph></li>
+                        <li><codeph>OIDC</codeph>: The password of the initial administrator as set in the OIDC provider system.</li>
                     </ul></li>
             </ul>
         </section>
