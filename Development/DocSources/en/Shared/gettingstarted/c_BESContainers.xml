@@ -32,8 +32,12 @@
                 <li><codeph>oscm-help</codeph>: A static Web server providing the online help for the <ph
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> administration portal and marketplaces. </li>
+                <li><codeph>oscm-maildev</codeph>: A mail mock service for quick start-up and testing purposes when no real mail server is available.</li>
+                <li><codeph>oscm-proxy</codeph>: A proxy enabling access to all <ph
+                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> services and applications by the default HTTPS port (443). </li>
             </ul>
-            <p><image href="../_images/Containers.png" alt="Containers.png" width="400" height="195"/></p>
+            <p><image href="../_images/Containers.png" alt="Containers.png" width="400" height="204"/></p>
             <p><ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> and APP store their data in PostgreSQL databases. For the databases, a directory on the Docker host where <ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
@@ -44,10 +48,16 @@
                     /> data directory on the Docker host specified when <ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> is installed.</p>
         </section>
-        <section><title>Container Communication</title><p>The following figure provides an overview of the container communication on a Docker host:</p><p><image
-                    href="../_images/ContainerCommunication.png" alt="ContainerCommunication.png" width="400"
-                    height="213"
-                /></p><p>The internal communication between the Docker containers relies on the HTTP protocol, whereas calls from the outside are secured by HTTPS. The platform operator is responsible for opening the indicated ports. The containers can be addressed by their FQDN or their floating IP address. </p>To look inside a container:<p>
+        <section>
+            <title>Container Communication</title>
+            <p>The following figure provides an overview of the container communication on a Docker host:</p>
+            <p><image href="../_images/ContainerCommunication.png" alt="ContainerCommunication.png" width="400"
+                    height="211"/></p>
+            <p>The internal communication between the Docker containers relies on the HTTP protocol, whereas calls from the outside are secured by HTTPS. The platform operator is responsible for opening the indicated ports. The containers can be addressed by their FQDN or their IP address. </p>
+            <p>The optional <codeph>oscm-proxy</codeph> container can be activated as a proxy to enable access to the other containers by the default HTTPS port (443) instead of the ports indicated above.</p>
+            <p><image href="../_images/ContainersProxy.png" alt="ContainersProxy.png" width="200" height="137"/></p>
+        </section>
+        <section><title>Logging in to Containers</title>To look inside a container:<p>
                 <ol>
                     <li>List all containers (even stopped ones) to show the container names:<p>
                             <codeblock>docker ps -a </codeblock>
