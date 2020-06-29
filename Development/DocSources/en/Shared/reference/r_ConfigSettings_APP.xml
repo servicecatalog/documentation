@@ -14,7 +14,9 @@
             <p>Syntax: <codeph>https://&lt;host_fqdn>:8881/oscm-app</codeph></p>
             <p><codeph>&lt;host_fqdn&gt;</codeph> is the FQDN or IP address of the host to access <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    />, <codeph>8881</codeph> is the port. <codeph>oscm-app</codeph> is the context root of APP and cannot be changed. </p>
+                    />, <codeph>8881</codeph> is the port. Omit the port if <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> is operated with its proxy. <codeph>oscm-app</codeph> is the context root of APP and cannot be changed. </p>
         </section>
         <section>
             <title>APP_TIMER_INTERVAL</title>

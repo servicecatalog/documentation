@@ -44,7 +44,7 @@ docker-compose -f docker-compose-initdb.yml up oscm-initdb-controller-aws
 docker-compose -f docker-compose-initdb.yml stop 
 docker-compose -f docker-compose-initdb.yml rm -f</codeblock>
             </p></li>
-          <li>Starten Sie alle Container der Anwenung neu:<p>
+          <li>Starten Sie alle Container der Anwendung neu:<p>
               <codeblock>docker-compose -f docker-compose-oscm.yml up -d</codeblock>
             </p></li>
           <li>Setzen Sie in der Datei <codeph>docker-compose-initdb.yml</codeph>  das Flag <codeph>OVERWRITE</codeph> zurück auf <codeph>false</codeph>.</li>

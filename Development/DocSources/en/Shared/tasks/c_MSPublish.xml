@@ -45,7 +45,9 @@
             <p><codeph>https://&lt;host_fqdn>:8081/oscm-portal?marketplaceId=&lt;mId></codeph></p>
             <p><codeph>&lt;host_fqdn></codeph> is the fully qualified name or IP address of the host used to access <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    />, <codeph>8081</codeph> is the port. <codeph>oscm-portal</codeph> is the default context root of <ph
+                    />, <codeph>8081</codeph> is the port. Omit the port if <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> is operated with its proxy. <codeph>oscm-portal</codeph> is the default context root of <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> and cannot be changed. <codeph>&lt;marketplaceId></codeph> is the ID of the marketplace.</p>
             <p>People who use the URL for accessing a marketplace can view all services that are marked as public. When subscribing to a service, they are either redirected to the registration Web page or they can log in to <ph

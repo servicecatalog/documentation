@@ -39,19 +39,21 @@ for docker_image in \
         oscm-deployer \
         oscm-core \
         oscm-db \
-        oscm-identity
+        oscm-identity \
         oscm-app \
         oscm-birt \
         oscm-branding \
         oscm-help \
         oscm-initdb \
+        oscm-maildev \
+        oscm-proxy \
 ; do
 
        docker load –i /opt/${docker_image}.tar.gz
 
-       docker tag ${REGISTRY}/${docker_image}:v18.1
+       docker tag ${REGISTRY}/${docker_image}:v19.0
 
-       docker push ${REGISTRY}/${docker_image}:v18.1
+       docker push ${REGISTRY}/${docker_image}:v19.0
 
 done
 </codeblock>

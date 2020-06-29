@@ -38,6 +38,8 @@
                         ><u>here</u></xref>.</p>
             <p>You can upload the files to the <codeph>vmware</codeph> database using the instance status interface of APP for the VMware service controller:</p>
             <p><codeph>https://&lt;host_fqdn>:8881/oscm-app-vmware</codeph></p>
+            <p>Omit the port if <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> is operated with its proxy. </p>
             <p>The files must be UTF-8 encoded. </p>
             <p>Below you find a description of the headers in the individual files below which you need to enter the appropriate information. The individual entries must be separated by commas, and be placed into one line without line breaks. If the entries contain a comma or blanks, you need to enclose them in double quotes.</p>
         </section>

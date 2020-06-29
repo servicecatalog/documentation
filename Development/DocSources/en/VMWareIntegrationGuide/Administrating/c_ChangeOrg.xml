@@ -12,7 +12,9 @@
                                 compact="no">
                                 <li>In a Web browser, access the Web interface (base URL) of APP.<p>The access URL has the following format: </p><p><codeph>https://&lt;host_fqdn>:8881/oscm-app</codeph></p><p><codeph>&lt;host_fqdn></codeph> is the fully qualified name or IP address of the host used to access <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            />, <codeph>8881</codeph> is the port of APP. <codeph>oscm-app</codeph> is the default context root of APP and cannot be changed. </p></li>
+                            />, <codeph>8881</codeph> is the port of APP. Omit the port if <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> is operated with its proxy. <codeph>oscm-app</codeph> is the default context root of APP and cannot be changed. </p></li>
                                 <li>Log in with the ID and password of the user specified for <codeph>BSS_USER_KEY</codeph> in the configuration settings for APP or as another administrator of the same organization. </li>
                                 <li>Specify the technology provider organization for the VMware service controller, <codeph>ess.vmware</codeph>.</li>
                                 <li>Save the settings.</li>

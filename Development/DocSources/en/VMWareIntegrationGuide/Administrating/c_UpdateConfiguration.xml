@@ -21,8 +21,10 @@
                                 conref="../../Shared/tasks/c_UpdateConfiguration.xml#concept_1BCF5C425D7D4627AB1C66A085CF6E11/To_update_the_controller_sett_concept_conbody_section_p_6"/><p>
                                 <ol compact="no">
                                         <li>Invoke the instance status interface of APP for the VMware service controller by opening it's URL in a Web browser. <p>The access URL has the following format: </p><p><codeph>https://&lt;host_fqdn>:8881/oscm-app-vmware</codeph></p><p><codeph>&lt;host_fqdn></codeph> is the fully qualified name or IP address of the host used to access <ph
-                                                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                                            />, <codeph>8881</codeph> is the port of APP. <codeph>oscm-app-vmware</codeph> is the default context root of the service controller and cannot be changed. </p></li>
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                />, <codeph>8881</codeph> is the port of APP. Omit the port if <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> is operated with its proxy. <codeph>oscm-app-vmware</codeph> is the default context root of the service controller and cannot be changed. </p></li>
                     <li>Log in with the ID and password of the user specified in the configuration settings for the VMware service controller (<codeph>BSS_USER_ID</codeph> and <codeph>BSS_USER_PWD</codeph>) or as another technology manager registered for the same organization.</li>
                                         <li>The following <b>general controller settings</b> can be changed:<p>
                                                         <ul>

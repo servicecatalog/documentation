@@ -48,6 +48,7 @@
         <topicref format="dita" href="QuickStart/Configuration/c_PrepDir.xml" type="concept"/>
         <topicref format="dita" href="QuickStart/Configuration/c_PrepCfg.xml" type="concept"/>
         <topicref href="QuickStart/Configuration/c_PrepDocker.xml" type="concept"/>
+        <topicref format="dita" href="QuickStart/Configuration/c_UseProxy.xml" type="concept"/>
     </chapter>
     <chapter href="QuickStart/GettingStarted/c_Usage.xml" type="concept">
         <topicref href="Shared/gettingstarted/c_Access.xml" type="concept"/>

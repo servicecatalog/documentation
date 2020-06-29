@@ -39,7 +39,9 @@
                                 >openstack</ph><ph audience="vmware">vmware</ph><ph audience="shell"
                         >shell</ph></codeph></p><p><codeph>&lt;host_fqdn></codeph> is the fully qualified name or IP address of the host used to access <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            />, <codeph>8881</codeph> is the port of APP. <codeph>oscm-app/controller/?controllerid=ess.<ph
+                            />, <codeph>8881</codeph> is the port of APP. Omit the port if <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> is operated with its proxy. <codeph>oscm-app/controller/?controllerid=ess.<ph
                                 audience="aws">aws</ph><ph audience="os">openstack</ph><ph audience="vmware"
                             >vmware</ph></codeph><ph audience="azure"><codeph>azureARM</codeph></ph><ph audience="shell"
                                 ><codeph>shell</codeph></ph> is the default context root of the service controller and cannot be changed. </p><p>The Web page shows all subscriptions for the application, including detailed information such as the customer organization, the ID of the related application instance, and the provisioning status. </p></li>

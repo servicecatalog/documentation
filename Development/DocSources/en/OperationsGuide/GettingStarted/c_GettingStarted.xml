@@ -76,6 +76,19 @@
                                 <codeblock>docker-compose -f docker-compose-oscm.yml restart &lt;container-name></codeblock>
                         </p>
                         <p>When shutting down the containers, the <codeph>oscm-db</codeph> container must be the last one to be stopped. When starting or restarting the containers, make sure that the <codeph>oscm-db</codeph> container is first. </p>
+                        <p><b>Starting and Stopping the <ph
+                                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        /> Proxy</b></p>
+                        <p>The optional <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> proxy comes with its own Docker Compose file.</p>
+                        <p>To start the proxy:</p>
+                        <p>
+                                <codeblock>docker-compose -f docker-compose-proxy.yml up -d</codeblock>
+                        </p>
+                        <p>To stop the proxy:</p>
+                        <p>
+                                <codeblock>docker-compose -f docker-compose-proxy.yml down</codeblock>
+                        </p>
                         </section>
                 <section
                         conref="../../Shared/gettingstarted/c_AccessRestAPI.xml#concept_1BCF5C425D7D4627AB1C66A085CF6E11/Accessing_the_concept_conbody_section"/>

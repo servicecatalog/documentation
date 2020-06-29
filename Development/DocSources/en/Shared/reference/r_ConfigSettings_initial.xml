@@ -170,7 +170,10 @@
                             >the platform</ph> will not be able to generate any reports, since the Report Web service cannot be called correctly.</p><p>The setting must be as follows: </p><codeblock>https://&lt;host_fqdn>:8681/birt/frameset?
    __report=\${reportname}.rptdesign&amp;SessionId=\${sessionid}&amp;
    __locale=\${locale}&amp;WSDLURL=\${wsdlurl}&amp;SOAPEndPoint=\
-   ${soapendpoint}&amp;wsname=Report&amp;wsport=ReportPort</codeblock><p>Replace <codeph>&lt;host_fqdn></codeph> with the value entered for the <codeph>HOST_FQDN</codeph> setting. The other values must not be changed. </p></li>
+   ${soapendpoint}&amp;wsname=Report&amp;wsport=ReportPort</codeblock><p>Replace <codeph>&lt;host_fqdn></codeph> with the value entered for the <codeph>HOST_FQDN</codeph> setting. Omit the port if <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"
+                                /><ph platform="help"
+                            >the platform</ph> is operated with its proxy. The other values must not be changed. </p></li>
                     <li><codeph>TOMEE_DEBUG</codeph><p>Defines if the application server is to generate log files for <ph
                                 platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                                 /></ph><ph platform="help"

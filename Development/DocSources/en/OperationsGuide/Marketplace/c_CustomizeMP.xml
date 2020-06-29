@@ -20,7 +20,9 @@
                     /> data directory specified at installation time.</li>
                 <li>Provide the URL pointing to the customized files to the respective marketplace owner. <p>The URL has the following format: </p><p><codeph>https://&lt;host_fqdn>:8443/&lt;new-folder-name>/css/mp.css</codeph></p><p><codeph>&lt;host_fqdn&gt;</codeph> is the FQDN or IP address of the host to access <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            />, <codeph>8443</codeph> is the port. <codeph>&lt;new-folder-name></codeph> is the name of the folder containing the customized branding files. </p></li>
+                            />, <codeph>8443</codeph> is the port. Omit the port if <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> is operated with its proxy. <codeph>&lt;new-folder-name></codeph> is the name of the folder containing the customized branding files. </p></li>
             </ol>
         </section>
     </conbody>

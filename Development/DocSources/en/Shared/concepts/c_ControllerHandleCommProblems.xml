@@ -26,7 +26,9 @@
             <ol compact="no">
                 <li>In a Web browser, access the Web interface (base URL) of APP.<p>The access URL has the following format: </p><p><codeph>https://&lt;host_fqdn>:8881/oscm-app</codeph></p><p><codeph>&lt;host_fqdn></codeph> is the fully qualified name or IP address of the host used to access <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            />, <codeph>8881</codeph> is the port of APP. <codeph>oscm-app</codeph> is the default context root of APP and cannot be changed. </p></li>
+                            />, <codeph>8881</codeph> is the port of APP. Omit the port if <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> is operated with its proxy. <codeph>oscm-app</codeph> is the default context root of APP and cannot be changed. </p></li>
                 <li>Log in with the ID and password of the user and organization defined by the platform operator in the <codeph>BSS_USER_ID</codeph> and <codeph>BSS_USER_PWD</codeph> configuration settings.<p>A message is shown that APP has been suspended due to a communication problem with <ph
                             conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </p></li>
                 <li>Click <b>Restart</b>.<p>APP is restarted instantly. In the APP database, the <codeph>APP_SUSPEND</codeph> key is set to <codeph>false</codeph>. </p></li>

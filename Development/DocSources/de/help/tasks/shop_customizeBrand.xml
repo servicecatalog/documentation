@@ -64,7 +64,7 @@
                         <info>
                               <p>Standardmäßig ist die URL wie folgt: </p>
                               <p><codeph>https://&lt;host_fqdn>:8443/&lt;branding-package>/css/mp.css</codeph></p>
-                              <p><codeph>&lt;host_fqdn></codeph> ist der vollqualifizierte Host-Name oder die IP-Adresse der Plattforminstallation, <codeph>8443</codeph> der benötigte Port. <codeph>&lt;branding-package></codeph> ist der Name des Archivs mit den Änderungen.</p>
+                              <p><codeph>&lt;host_fqdn></codeph> ist der vollqualifizierte Host-Name oder die IP-Adresse der Plattforminstallation, <codeph>8443</codeph> der benötigte Port. Die Angabe des Ports entfällt, wenn die Plattform mit Proxy betrieben wird. <codeph>&lt;branding-package></codeph> ist der Name des Archivs mit den Änderungen.</p>
                         </info>
                   </step>
                   <step>
