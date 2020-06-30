@@ -74,6 +74,10 @@
         </section>
         <section>
             <title>Settings for Connecting to the Mail Server</title>
+            <p>For sending emails to the <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> users, a mail server is required. For quick start-up and testing purposes, <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> comes with a mail mock (<codeph>oscm-maildev</codeph> container), for which the initial mail settings are configured. Change these settings to a real mail server as soon as possible.</p>
             <p>
                 <ul>
                     <li><codeph>SMTP_HOST</codeph><p>The host name or IP address of your mail server used for notifications by <ph
@@ -191,7 +195,9 @@
             </p>
             <p>The following settings are used for the Docker environment, which needs access to the Docker registry, as well as for the <ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> containers which access the Internet. They are also used for the <codeph>oscm-app</codeph> container, which means that every HTTP request made by APP is processed using these settings.</p>
+                    /> containers which access the Internet. They are also used for the <codeph>oscm-app</codeph> container, which means that every HTTP request made by APP is processed using these settings. This is independent on whether you have activated the <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> proxy (<codeph>oscm-proxy</codeph> container).</p>
             <p>
                 <ul compact="no">
                     <li><codeph>PROXY_ENABLED</codeph><p>Defines whether the proxy is enabled in the containers. Can be set to <codeph>true</codeph> or <codeph>false</codeph>. </p></li>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2020 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_1BCF5C425D7D4627AB1C66A085CF6E11" xml:lang="en-us">
+
+                <title>Next Steps</title>
+                <conbody>
+                <section>
+                        <p>The next steps you should take are the following:</p>
+                        <ol compact="no">
+                                <li>Complete your personal profile using the <b>Edit profile</b> option in the <b>Account</b> menu.</li>
+                                <li>Add one or several currencies to the system for suppliers to define price models and the <ph
+                                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                /> rating and billing engine to calculate usage costs. <ph
+                                                audience="doc"> For details, refer to <xref
+                                                        href="../Configuration/c_AddCurrency.xml"/>.</ph></li>
+                                <li>Create technology provider and seller organizations (suppliers, resellers, brokers) who will provide and offer services in <ph
+                                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                                />. <ph audience="doc">For details, refer to <xref
+                                                        href="../Organizations/c_Organizations.xml"/>.</ph></li>
+                                <li>Set up marketplaces so that services can be offered to customers. <ph audience="doc"
+                                                        >For details, refer to <xref
+                                                        href="../Marketplace/c_ManageMP.xml"/>.</ph></li>
+                        </ol>
+                </section>
+                </conbody>
+        </concept>

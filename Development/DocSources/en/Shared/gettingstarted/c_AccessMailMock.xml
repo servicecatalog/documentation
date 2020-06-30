@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2020 -->
+<concept id="concept_1BCF5C425D7D4627AB1C66A085CF6E11"
+            xml:lang="en-us">
+            <title>Accessing the Mail Mock </title>
+            <conbody>
+        <section
+                    id="Accessing_the_concept_conbody_section">
+                        <p><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> comes with a mail mock (<codeph>oscm-maildev </codeph>container), which can be used for quick start-up and testing purposes until a real mail server is available. The mail mock is configured in the initial settings in the <codeph>var.env</codeph> configuration file (see <xref
+                    href="../reference/r_ConfigSettings_initial.xml"/> for details). </p>
+            <p>As long as this configuration is not changed, all <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                /> mails are collected in the mail mock. They are not forwarded to the specified receivers. </p>
+            <p>As the operator, you can access the mail mock with all the mails in the following way:</p>
+                        <p>
+                                <ol>
+                                        <li>Type the following URL in your Web browser's address bar: <p><codeph>http://&lt;host_fqdn&gt;:8082/</codeph></p><p><codeph>&lt;host_fqdn&gt;</codeph> is the fully qualified name or IP address of the host used to access <ph
+                                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                />, <codeph>8082</codeph> is the port. Make sure to use <codeph>http</codeph>, not <codeph>https</codeph>. </p><p>If you have activated the <ph
+                                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                            /> proxy, use the following address:</p><p><codeph>https://&lt;host_fqdn&gt;/mail/</codeph></p></li>
+                                        <li>In the login dialog, enter your <ph
+                            conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> user ID and password. </li>
+                                        <li>Confirm your entries.</li>
+                                </ol>
+                        </p>
+                        <p id="cfg"
+                >This opens the user interface of the mail mock with all the existing mails. You can view the mails as well as download and delete them.</p>
+                </section>
+    </conbody>
+</concept>

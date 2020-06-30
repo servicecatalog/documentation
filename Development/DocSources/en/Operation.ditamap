@@ -50,7 +50,13 @@
         <topicref format="dita" href="Shared/concepts/c_OrgsRoles.xml" type="concept"/>
         <topicref format="dita" href="OperationsGuide/Introduction/c_Authentication.xml" type="concept"/>
     </chapter>
-    <chapter format="dita" href="OperationsGuide/GettingStarted/c_GettingStarted.xml" type="concept"/>
+    <chapter format="dita" href="OperationsGuide/GettingStarted/c_GettingStarted.xml" type="concept">
+        <topicref format="dita" href="Shared/gettingstarted/c_Access.xml" type="concept"/>
+        <topicref format="dita" href="OperationsGuide/GettingStarted/c_NextSteps.xml" type="concept"/>
+        <topicref format="dita" href="OperationsGuide/GettingStarted/c_StartStop.xml" type="concept"/>
+        <topicref format="dita" href="Shared/gettingstarted/c_AccessMailMock.xml" type="concept"/>
+        <topicref format="dita" href="Shared/gettingstarted/c_AccessRestAPI.xml" type="concept"/>
+    </chapter>
     <chapter href="OperationsGuide/Configuration/c_Configuration.xml" type="concept">
         <topicref href="OperationsGuide/Configuration/c_UpdateConfiguration.xml" type="concept"/>
         <topicref href="OperationsGuide/Configuration/c_AddCurrency.xml" type="concept"/>

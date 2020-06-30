@@ -51,9 +51,9 @@ for docker_image in \
 
        docker load –i /opt/${docker_image}.tar.gz
 
-       docker tag ${REGISTRY}/${docker_image}:v19.0
+       docker tag ${REGISTRY}/${docker_image}:v19
 
-       docker push ${REGISTRY}/${docker_image}:v19.0
+       docker push ${REGISTRY}/${docker_image}:v19
 
 done
 </codeblock>

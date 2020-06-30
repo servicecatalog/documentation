@@ -23,74 +23,10 @@
                                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                         /></li>
                                 <li>Access the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        /> mail mock</li>
+                                <li>Access the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                         /> REST API</li>
                         </ul>
                 </section>
-                <section>
-                        <title>Accessing <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>
-                        </title>
-                </section>
-                <section
-                        conref="../../Shared/gettingstarted/c_Access.xml#concept_1BCF5C425D7D4627AB1C66A085CF6E11/The_administration_portal_is_concept_conbody_section"/>
-                <section>
-                        <title>Next  Steps</title>
-                        <p>The next steps you should take are the following:</p>
-                        <ol compact="no">
-                                <li>Complete your personal profile using the <b>Edit profile</b> option in the <b>Account</b> menu.</li>
-                                <li>Add one or several currencies to the system for suppliers to define price models and the <ph
-                                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                                /> rating and billing engine to calculate usage costs. <ph
-                                                audience="doc"> For details, refer to <xref
-                                                        href="../Configuration/c_AddCurrency.xml"/>.</ph></li>
-                                <li>Create technology provider and seller organizations (suppliers, resellers, brokers) who will provide and offer services in <ph
-                                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                                />. <ph audience="doc">For details, refer to <xref
-                                                        href="../Organizations/c_Organizations.xml"/>.</ph></li>
-                                <li>Set up marketplaces so that services can be offered to customers. <ph audience="doc"
-                                                        >For details, refer to <xref
-                                                        href="../Marketplace/c_ManageMP.xml"/>.</ph></li>
-                        </ol>
-                </section>
-                        <section>
-                                <title>Startup and Shutdown</title>
-                                <p>The <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                /> containers can be started, stopped, removed, and restarted using the standard utilities of Docker. </p>
-                                <p>To <b>stop</b> a container, use the following command on your Docker host:</p>
-                        <p><codeblock>docker stop &lt;container-name></codeblock> For example: </p>
-                        <p>
-                                <codeblock>docker stop oscm-core</codeblock>
-                        </p>
-                                <p>To <b>delete</b> a container:</p>
-                        <p>
-                                <ol>
-                                        <li>Stop the container using the above command. </li>
-                                        <li>Remove the container: <codeblock>docker-compose -f docker-compose-oscm.yml rm &lt;container-name></codeblock></li>
-                                </ol>
-                        </p>
-                        <p>To <b>create and start</b> a container:  </p>
-                        <p>
-                                <codeblock>docker-compose -f docker-compose-oscm.yml up &lt;container-name></codeblock>
-                        </p>
-                        <p>To <b>restart</b> a container:  </p>
-                        <p>
-                                <codeblock>docker-compose -f docker-compose-oscm.yml restart &lt;container-name></codeblock>
-                        </p>
-                        <p>When shutting down the containers, the <codeph>oscm-db</codeph> container must be the last one to be stopped. When starting or restarting the containers, make sure that the <codeph>oscm-db</codeph> container is first. </p>
-                        <p><b>Starting and Stopping the <ph
-                                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                        /> Proxy</b></p>
-                        <p>The optional <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                /> proxy comes with its own Docker Compose file.</p>
-                        <p>To start the proxy:</p>
-                        <p>
-                                <codeblock>docker-compose -f docker-compose-proxy.yml up -d</codeblock>
-                        </p>
-                        <p>To stop the proxy:</p>
-                        <p>
-                                <codeblock>docker-compose -f docker-compose-proxy.yml down</codeblock>
-                        </p>
-                        </section>
-                <section
-                        conref="../../Shared/gettingstarted/c_AccessRestAPI.xml#concept_1BCF5C425D7D4627AB1C66A085CF6E11/Accessing_the_concept_conbody_section"/>
                 </conbody>
         </concept>
