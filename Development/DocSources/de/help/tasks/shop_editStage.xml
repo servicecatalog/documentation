@@ -7,7 +7,7 @@
       <taskbody>
             <context>
                   <p>Auf der Seite <uicontrol>Werbebanner anpassen</uicontrol> können Sie den Bereich des Marktplatzes anpassen, auf dem zum Beispiel Werbung, Ihr Firmenlogo oder weitere Informationen angezeigt werden. </p>
-                  <p>Das Werbebanner kann als Bild zur Verfügung gestellt werden oder als HTML-Code, über den beispielsweise animierte Grafiken eingebunden werden. Sie können für jede unterstützte Sprache ein eigenes Werbebanner hinterlegen. Bevor Sie ein Werbebanner veröffentlichen, können Sie es testen und in einer Vorschau anzeigen lassen. Sobald Sie die Vorschau bestätigen, ist das Werbebanner öffentlich und für alle Besucher des Marktplatzes sichtbar. </p>
+                  <p>Das Werbebanner kann als Bild zur Verfügung gestellt werden oder als HTML-Code, über den beispielsweise animierte Grafiken eingebunden werden. Sie können für jede unterstützte Sprache je ein eigenes Werbebanner für Desktop- und mobile Geräte hinterlegen. Bevor Sie ein Werbebanner veröffentlichen, können Sie es testen und in einer Vorschau anzeigen lassen. Sobald Sie die Vorschau bestätigen, ist das Werbebanner öffentlich und für alle Besucher des Marktplatzes sichtbar. </p>
                   <p id="The_branding_of_a_marketplace_task_taskbody_context_p_4"
                               >Das Branding eines Marktplatzes umfasst auch das Layout (Farben, Schriften, Hintergrundbilder, Logos, usw.) und die verwendeten Texte (für Elemente der Benutzeroberfläche, E-Mails, usw.). Zum Anpassen des Layouts verwenden Sie die Option <uicontrol>Layout anpassen</uicontrol> im Menü <uicontrol>Marktplatz</uicontrol>. Die Texte können Sie über die Option <uicontrol>Texte anpassen</uicontrol> im Menü <uicontrol>Marktplatz</uicontrol> ändern.</p>
                   <p><b>So ändern Sie das Werbebanner eines Marktplatzes</b>:</p>
@@ -22,29 +22,32 @@
                   <step>
                         <cmd>Wählen Sie die <uicontrol>Sprache</uicontrol>, für die die Anpassung erfolgen soll.</cmd>
                         <info>
-                              <p>Sie können für jede unterstützte Sprache jeweils ein Werbebanner hinterlegen. </p>
+                              <p>Sie können für jede unterstützte Sprache Werbebanner hinterlegen. Wenn Sie für eine Sprache kein Banner angeben, wird das Banner der als Standard eingestellten Sprache verwendet. Wenn für diese ebenfalls kein Werbebanner angegeben ist, wird das Banner verwendet, das standardmäßig nach der Installation der Plattform zur Verfügung steht.</p>
                         </info>
                   </step>
                   <step>
-                        <cmd>Geben Sie den HTML-Code ein, der einen Verweis auf das Bild Ihres Werbebanners enthält. Wenn Sie für eine Sprache kein Bild angeben, wird das Werbebanner der als Standard eingestellten Sprache verwendet. Wenn für diese ebenfalls kein Bild angegeben ist, wird das Bild verwendet, das standardmäßig nach der Installation der Plattform zur Verfügung steht. </cmd>
+                        <cmd>Geben Sie den HTML-Code ein, der einen Verweis auf das Bild Ihres Werbebanners enthält. Zur optimalen Darstellung können Sie für Desktop-Geräte und mobile Geräte unterschiedliche Bilder verwenden. Das Bild für Desktop-Geräte wird verwendet, wenn die Display-Breite 768 Pixel überschreitet. Bei kleineren Breiten wird das Bild für mobile Geräte benutzt. </cmd>
                         <info>
-                              <p>Empfohlen wird eine Breite von 100% für das Werbebanner. Die Höhe sollte zwischen 200 und 300 Pixel liegen.</p>
-                              <p>Beispiel: <codeph>&lt;IFRAME FRAMEBORDER\="0" SRC\="IhrWerbebanner.htm" NAME\="stage" WIDTH\="100%" HEIGHT\="280px" SCROLLING\="no">&lt;/IFRAME></codeph>
-                              </p>
+                              <p>Wie für Werbebanner üblich muss das Bild für Desktop-Geräte eine Größe von 1600 x 500 Pixel oder ein Vielfaches davon mit demselben Seitenverhältnis haben. Für mobile Geräte gilt eine Größe von 768 x 940 Pixel oder ein Vielfaches davon mit demselben Seitenverhältnis. Empfohlen wird eine Breite von 100% für das Werbebanner. Die Höhe für Desktop-Geräte sollte zwischen 200 und 300 Pixel liegen, für mobile Geräte zwischen 680 und 720 Pixel.</p>
                               <p>Sie können den HTML-Code direkt eingeben oder einen eingebetteten Frame verwenden, um das gewünschte Werbebanner einzubinden.</p>
+                              <p>Beispiel: <codeph>&lt;IFRAME FRAMEBORDER="0" width="100%" height="290px" marginwidth="0" marginheight="0" SRC="IhrWerbebanner.htm" SCROLLING="no">&lt;/IFRAME></codeph>
+                              </p>
                               <p>
                                     <note>Es wird empfohlen, einen eingebetteten Frame zu verwenden. Wenn Sie keinen eingebetteten Frame verwenden, sollten Sie nur Snippets als HTML-Code angeben. Verwenden Sie keine vollständigen HTML-Seiten, die Elemente wie <codeph>&lt;html&gt;</codeph>, <codeph>&lt;head&gt;</codeph> oder <codeph>&lt;body&gt;</codeph> enthalten. Überprüfen Sie das Layout der Seite mit <uicontrol>Vorschau</uicontrol> (siehe nächster Schritt). Durch ein Snippet kann eventuell die Startseite des Marktplatzes, die Vorschau oder auch die Seite <uicontrol>Werbebanner anpassen</uicontrol> nicht mehr korrekt angezeigt werden, vor allem dann, wenn das Snippet Script enthält (z.B. JavaScript). <p>Beachten Sie, dass Sie für eine fehlerfreie Seitendarstellung verantwortlich sind. </p></note>
                               </p>
                         </info>
                   </step>
                   <step>
-                        <cmd>Testen Sie das geänderte Werbebanner mit <uicontrol>Vorschau</uicontrol>. </cmd>
+                        <cmd>Testen Sie ein geändertes Werbebanner mit <uicontrol>Vorschau</uicontrol>. </cmd>
                   </step>
                   <step>
                         <cmd>Sobald das neue Banner Ihren Vorstellungen entspricht, bestätigen Sie die Veröffentlichung der neuen Startseite des Marktplatzes mit <uicontrol>Ja</uicontrol>. Das neue Werbebanner wird sofort veröffentlicht und ist für die Benutzer beim nächsten Besuch des Marktplatzes sichtbar. </cmd>
                         <info>
                               <p>Mit <uicontrol>Nein</uicontrol> gelangen Sie wieder zur Seite <uicontrol>Werbebanner anpassen</uicontrol> und können weitere Änderungen vornehmen. Das existierende Werbebanner wird nicht geändert. </p>
                         </info>
+                  </step>
+                  <step>
+                        <cmd>Speichern Sie mit <uicontrol>Sichern</uicontrol> alle Änderungen, die Sie vorgenommen haben. Geänderte Werbebanner werden veröffentlicht und sind für die Benutzer beim nächsten Besuch des Marktplatzes sichtbar. </cmd>
                   </step>
             </steps>
       </taskbody>

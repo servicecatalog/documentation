@@ -19,7 +19,7 @@
             <p>Example:</p>
             <p
                 conref="../../help/tasks/shop_editStage.xml#task634/iframe_FRAMEBORDER_0_width_task_taskbody_steps_step_3"/>
-            <p>A preview function allows you to view the stage before it is published. As soon as you confirm the preview, the stage is published and visible to all visitors of the marketplace.</p>
+            <p>A preview function allows you to view a stage before it is published. As soon as you confirm the preview, the stage is published and visible to all visitors of the marketplace.</p>
             <p>To customize the marketplace stage, use the <uicontrol>Customize stage</uicontrol> menu option in the <uicontrol>Marketplace</uicontrol> menu of the <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> administration portal.</p>
         </section>
