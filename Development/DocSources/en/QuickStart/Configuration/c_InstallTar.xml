@@ -46,7 +46,7 @@ for docker_image in \
         oscm-help \
         oscm-initdb \
         oscm-maildev \
-        oscm-proxy \
+        oscm-proxy 
 ; do
 
        docker load –i /opt/${docker_image}.tar.gz

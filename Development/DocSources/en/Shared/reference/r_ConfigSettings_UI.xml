@@ -127,10 +127,10 @@
                     >the platform</ph>. If a user does not log in successfully with this number of attempts, his account is locked. <p>Allowed values: Any value between <codeph>1</codeph> and <codeph>9223372036854775807</codeph></p><p>Default: <codeph>3</codeph></p></section>
         <!--section><title>MP_ERROR_REDIRECT_HTTP</title>Optional. The URL of a Web page that is to be displayed in case a visitor tries to access a marketplace without a valid marketplace ID by HTTP. This Web page will be shown instead of the default error message. Note that this URL is used platform-wide.<p>Syntax: <codeph>http://&lt;your Web page></codeph></p><p>Make sure to specify a valid URL that does not exceed a maximum of 255 characters. </p></section-->
         <section><title>MP_ERROR_REDIRECT_HTTPS</title>Optional. The URL of a Web page that is to be displayed in case a visitor tries to access a marketplace without a valid marketplace ID by HTTPS. This Web page will be shown instead of the default error message. Note that this URL is used platform-wide. <p>Syntax: <codeph>https://&lt;your Web page></codeph></p><p>Make sure to specify a valid URL that does not exceed a maximum of 255 characters. </p></section>
-        <section><title>OIDC_REDIRECT_URL</title>Only required with OIDC authentication mode. The URL of the <ph
+        <section><title>OSCM_IDENTITY_SERVICE_URL</title>Only required with OIDC authentication mode. The URL of the <ph
                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"/><ph
                 platform="help"
-                    >platform's</ph> identity service. The URL is used for redirecting and forwarding requests to the OIDC provider.  <p>Syntax: <codeph>https://&lt;host_fqdn>:9091/oscm-identity</codeph></p><p><codeph>&lt;host_fqdn&gt;</codeph> is the FQDN or IP address of the host to access <ph
+                    >platform's</ph> identity service. The URL is used for redirecting and forwarding requests to the OIDC provider. <p>Syntax: <codeph>https://&lt;host_fqdn>:9091/oscm-identity</codeph></p><p><codeph>&lt;host_fqdn&gt;</codeph> is the FQDN or IP address of the host to access <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"/><ph
                     platform="help">the platform</ph>, <codeph>9091</codeph> is the port. Omit the port if <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"/><ph
