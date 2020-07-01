@@ -25,7 +25,9 @@
                                 <li>Now you can log in to APP and change APP-specific settings: <p><codeph>https://&lt;host_fqdn>:8881/oscm-app/ </codeph></p><p>Omit the port if <ph
                                                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                                 /> is operated with its proxy. </p><p>User name: the initial administrator account </p><p>Password: the password of the initial administrator </p></li>
-                                <li>You can also log in to the instance status interface of each service controller: <p><codeph>https://&lt;host_fqdn>:8881/oscm-app-&lt;controller-name>/ </codeph></p><p><codeph>&lt;controller-name></codeph> is <codeph>openstack</codeph>, <codeph>aws</codeph>, <codeph>vmware</codeph>, <codeph>azureARM</codeph>, or <codeph>shell</codeph>. </p><p>User name: the initial administrator account  </p><p>Password: the password of the initial administrator </p></li>
+                                <li>You can also log in to the instance status interface of each service controller: <p><codeph>https://&lt;host_fqdn>:8881/oscm-app-&lt;controller-name>/ </codeph></p><p><codeph>&lt;controller-name></codeph> is <codeph>openstack</codeph>, <codeph>aws</codeph>, <codeph>vmware</codeph>, <codeph>azureARM</codeph>, or <codeph>shell</codeph>. Omit the port if <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> is operated with its proxy.  </p><p>User name: the initial administrator account </p><p>Password: the password of the initial administrator </p></li>
                         </ol>
                         </section>
                 </conbody>

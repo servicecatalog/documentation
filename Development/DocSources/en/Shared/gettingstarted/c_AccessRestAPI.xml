@@ -16,7 +16,9 @@
                         <p>
                                 <ol>
                                         <li>Type the following URL in your Web browser's address bar: <p><codeph>https://&lt;host_fqdn&gt;:8081/oscm-rest-api</codeph></p><p><codeph>&lt;host_fqdn&gt;</codeph> is the fully qualified name or IP address of the host used to access <ph
-                            conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>, <codeph>8081</codeph> is the port. </p></li>
+                                            conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>, <codeph>8081</codeph> is the port. Omit the port if <ph
+                                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                            /> is operated with its proxy. </p></li>
                                         <li>In the login dialog, enter the numeric key for your <ph
                 conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> user ID and your password. </li>
                                         <li>Confirm your entries.</li>

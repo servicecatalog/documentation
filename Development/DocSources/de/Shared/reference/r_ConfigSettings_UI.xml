@@ -116,7 +116,7 @@
    __report=\${reportname}.rptdesign&amp;SessionId=\${sessionid}&amp;
    __locale=\${locale}&amp;WSDLURL=\${wsdlurl}&amp;SOAPEndPoint=\
    ${soapendpoint}&amp;wsname=Report&amp;wsport=ReportPort</codeblock>
-            <p>Ersetzen Sie <codeph>&lt;host_fqdn></codeph> mit dem vollqualifizierten Host-Namen oder der IP-Adresse der Plattforminstallation</p>
+            <p>Ersetzen Sie <codeph>&lt;host_fqdn></codeph> mit dem vollqualifizierten Host-Namen oder der IP-Adresse der Plattforminstallation. Die Angabe des Ports entfällt, wenn die Plattform mit Proxy betrieben wird. </p>
         </section>
         <section><title>REPORT_SOAP_ENDPOINT</title>SOAP-Endpunkt des Report Web-Service. Alle Daten für einen Bericht werden über einen Aufruf des Report Web-Service zusammengestellt. Wenn Sie keinen korrekten Wert angeben, kann die Plattform keine Berichte generieren, da der Report Web-Service nicht korrekt aufgerufen werden kann.  <p>Der Wert muss wie folgt angegeben sein: </p><p><codeph>https://oscm-core:8081/oscm-reporting/ReportingServiceBean</codeph></p><p>Diese Einstellung kann nicht geändert werden.</p></section>
         <section><title>REPORT_WSDLURL</title>URL der WSDL-Datei des Report Web-Service. Alle Daten für einen Bericht werden über einen Aufruf des Report Web-Service zusammengestellt. Wenn Sie keinen korrekten Wert angeben, kann die Plattform keine Berichte generieren, da der Report Web-Service nicht korrekt aufgerufen werden kann. <p>Der Wert muss wie folgt angegeben sein: </p><p><codeph>https://oscm-core:8081/oscm-reporting/ReportingServiceBean?wsdl</codeph></p><p>Diese Einstellung kann nicht geändert werden.</p></section>
