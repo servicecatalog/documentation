@@ -62,7 +62,7 @@
                                 >Service parameters which correspond to the parameters specified in the template defined in OpenStack. For details on the supported service parameters, refer to <xref
                                 href="../../OSIntegrationGuide/Appendix/r_ServiceParameters.xml"/>.</li>
                         <li audience="vmware"
-                                >Service parameters which represent the VM templates defined in vSphere as well as the naming, location, and sizing parameters for the VMs to be provisioned. Service parameters also define the network setup in vSphere and the configuration of the VMs. For details on the supported service parameters, refer to <xref
+                                >Service parameters which represent the VM templates defined in vSphere as well as the naming, location, and sizing parameters for the VMs to be provisioned. Service parameters also define the network setup in vSphere and the configuration of the VMs. In addition, you can specify service parameters and events for the collection of consumption data and billable events from VMware vSphere. For details on the supported service parameters, refer to <xref
                                 href="../../VMWareIntegrationGuide/Appendix/r_ServiceParameters.xml"/>.</li>
                         
                     </ul>
