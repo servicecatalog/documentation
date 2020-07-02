@@ -99,7 +99,7 @@
                     </p>
                     <p>Beim Definieren eines eigenen Tabs mit diesen Informationen muss die URL im folgenden Format eingegeben werden: </p>
                     <p><codeph>https://&lt;host_fqdn>:8881/&lt;service controller name>/serverInformation.jsf</codeph></p>
-                    <p><codeph>&lt;host_fqdn></codeph> ist der vollqualifizierte Name oder die IP-Adresse der Plattforminstallation, <codeph>8881</codeph> der benötigte Port. Die Angabe des Ports entfällt, wenn die Plattform mit Proxy betrieben wird. <codeph>service controller name</codeph> ist die Context-Root des betreffenden Service-Controllers und kann nicht gändert werden. </p>
+                    <p><codeph>&lt;host_fqdn></codeph> ist der vollqualifizierte Name oder die IP-Adresse der Plattforminstallation, <codeph>8881</codeph> der benötigte Port. Die Angabe des Ports entfällt, wenn die Plattform mit Proxy betrieben wird. <codeph>&lt;service controller name></codeph> ist die Context-Root des betreffenden Service-Controllers und kann nicht gändert werden. </p>
                     <p>Beispiel: </p>
                     <p><codeph>https://myhost:8881/oscm-app-openstack/serverInformation.jsf</codeph></p>
                     <p>Sobald ein Kunde die Ansicht <b>Details</b> zu einem Abo eines IaaS-Services aufruft, wird der Kontext des Abonnements an die URL des Tabs mit folgenden Informationen gesendet: </p>

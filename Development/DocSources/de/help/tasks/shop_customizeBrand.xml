@@ -9,7 +9,10 @@
                   <p id="On_the_task_taskbody_context_p_1"
                               >Auf der Seite <uicontrol>Layout anpassen</uicontrol> können Sie ein Stylesheet angeben, das das Branding und Layout eines Marktplatzes definiert, also die Farben, Schriften, Hintergrundbilder und Logos. <ph
                               id="The_best_way_to_create_an_app_task_taskbody_context_p_1_ph"
-                                    >Ein geeignetes Stylesheet erstellen Sie am besten, indem Sie das Standard-Stylesheet der Plattform als Basis verwenden und es Ihren Anforderungen entsprechend anpassen. Dann stellen Sie das angepasste Stylesheet und die darin referenzierten Dateien dem Plattformbetreiber zur Verfügung. Dieser kann die Änderungen dann in den Container <codeph>oscm-branding</codeph> einspielen. Wenn keine URL angegeben ist, wird das Standard-Stylesheet verwendet. </ph>
+                              >Ein geeignetes Stylesheet erstellen Sie am besten, indem Sie das Standard-Stylesheet der Plattform als Basis verwenden und es Ihren Anforderungen entsprechend anpassen. </ph></p>
+                  <p id="On_the_task_taskbody_context_p_1"><ph
+                              id="The_best_way_to_create_an_app_task_taskbody_context_p_1_ph"
+                                    >Dann stellen Sie das angepasste Stylesheet und die darin referenzierten Dateien dem Plattformbetreiber zur Verfügung. Dieser kann die Änderungen in den Container <codeph>oscm-branding</codeph> einspielen. Danach erhalten Sie vom Plattformbetreiber die URL des Styleheets, die Sie dann auf der Seite <uicontrol>Layout anpassen</uicontrol> angeben. Wenn Sie keine URL angeben, wird das Standard-Stylesheet verwendet. </ph>
                   </p>
                   <p id="The_platform_s_default_style_task_taskbody_context_p_2"
                               >Das Standard-Stylesheet der Plattform <ph platform="help"
