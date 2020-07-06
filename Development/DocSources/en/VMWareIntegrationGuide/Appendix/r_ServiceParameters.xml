@@ -660,7 +660,7 @@
     </section>
     <section>
       <title>Collection of Usage Data and Billable Events</title>
-      <p>The following optional service parameters and events are used to collect consumption data and billable events from VMware vSphere. Price models for marketable services may define prices for the events, which are taken into account in the billing and payment processing.</p>
+      <p>The following optional service parameters and events are used to collect consumption data for the VM instance in VMware vSphere and generate corresponding events. Price models for marketable services may define prices for the events, which are then taken into account in the billing and payment processing.</p>
       <p><b>Service Parameters:</b></p>
       <table frame="top">
         <tgroup cols="1">
@@ -683,7 +683,7 @@
             <row>
               <entry>
                 <p><b>LAST_USAGE_FETCH</b></p>
-                <p>The last date and time the usage data and events were retrieved from VMware vSphere. </p>
+                <p>The last date and time the usage data were retrieved from VMware vSphere. </p>
               </entry>
             </row>
           </tbody>

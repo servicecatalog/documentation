@@ -6,15 +6,11 @@
     <title>Texte in Berichten</title>
     <refbody>
         <section>
-            <p>Berichte werden in der Sprache generiert, die der Benutzer in seinem Profil eingestellt hat. Die in den Berichten verwendeten Texte werden 
-                <ph product="oscm_ee">nach der Installation in Konfigurationsdateien bereitgestellt, die in einer separaten <codeph>.war</codeph>-Datei im Installation Package (<codeph>oscm-install-pack.zip</codeph>) enthalten sind:</ph>
-                <ph product="oscm_ce">für jedes Release in Konfigurationsdateien in folgendem Archiv bereitgestellt:</ph>
-            </p>
-            <p product="oscm_ee"><codeph>&lt;install_pack_dir>/domains/bes_domain/birt.war</codeph>
-            </p>
+            <p>Berichte werden in der Sprache generiert, die der Benutzer in seinem Profil eingestellt hat. Die in den Berichten verwendeten Texte werden <ph
+                    product="oscm_ee"
+                        >nach der Installation in Konfigurationsdateien in einem eigenen Archiv im Container <codeph>oscm-birt</codeph> bereitgestellt.</ph></p>
             <p product="oscm_ce"><codeph>oscm-reports.zip</codeph> </p>
-            <p>Die Datei <ph product="oscm_ee"><codeph>birt.war</codeph></ph><ph product="oscm_ce"
-                        ><codeph>oscm-reports.zip</codeph></ph> enthält die folgenden Konfigurationsdateien: </p>
+            <p>Die Datei enthält die folgenden Konfigurationsdateien: </p>
             <p>
                 <ul>
                     <li><codeph>reportLabels.properties</codeph> (Standardsprache Englisch)</li>
@@ -26,8 +22,7 @@
             <p>Gehen Sie wie folgt vor, um Berichte in einer anderen Sprache generieren zu lassen:</p>
             <p>
                 <ol compact="no">
-                    <li>Extrahieren Sie die Datei <ph product="oscm_ee"><codeph>birt.war</codeph></ph><ph
-                            product="oscm_ce"><codeph>oscm-reports.zip</codeph></ph> in ein lokales Verzeichnis. </li>
+                    <li>Extrahieren Sie die Datei <codeph>oscm-reports.zip</codeph> in ein lokales Verzeichnis. </li>
                     <li>Wechseln Sie in das Unterverzeichnis <codeph>WEB-INF</codeph>. </li>
                     <li>Kopieren Sie die englische Konfigurationsdatei <codeph>reportLabels.properties</codeph> und benennen Sie sie wie folgt um: <codeph>reportLabels_<i>&lt;ISO-Code></i>.properties</codeph>.<p>Der ISO-Code benennt die Sprache, in der Sie Übersetzungen bereitstellen möchten. Legen Sie zum Beispiel im Unterverzeichnis <codeph>WEB-INF</codeph> eine Datei <codeph>reportLabels_cs.properties</codeph> an.</p></li>
                     <li>Öffnen Sie die neue Konfigurationsdatei in einem Texteditor.<p>Jede Zeile der Datei ist wie folgt aufgebaut:</p><p>

@@ -162,11 +162,17 @@
         <section><title>REPORT_SOAP_ENDPOINT</title>The SOAP end point of the Report Web service. All report data is retrieved via a call to the Report Web service. If you do not specify a correct value, <ph
                 platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
                 platform="help"
-                >the platform</ph> will not be able to generate any reports, since the Report Web service cannot be called correctly. <p>The required value is: </p><p><codeph>https://oscm-core:8081/oscm-reporting/ReportingServiceBean</codeph></p><p>This setting cannot be changed.</p></section>
+                >the platform</ph> will not be able to generate any reports, since the Report Web service cannot be called correctly. <p>The required value is: </p><p><codeph>https://oscm-core:8081/oscm-reporting/ReportingServiceBean</codeph></p><p>The port is omitted if <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"/><ph
+                    platform="help"
+            >the platform</ph> is operated with its proxy. This setting cannot be changed.</p></section>
         <section><title>REPORT_WSDLURL</title>URL of the WSDL file of the Report Web service. All report data is retrieved via a call to the Report Web service. If you do not specify a correct value, <ph
                 platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
                 platform="help"
-                >the platform</ph> will not be able to generate any reports, since the Report Web service cannot be called correctly. <p>The required value is: </p><p><codeph>https://oscm-core:8081/oscm-reporting/ReportingServiceBean?wsdl</codeph></p><p>This setting cannot be changed.</p></section>
+                >the platform</ph> will not be able to generate any reports, since the Report Web service cannot be called correctly. <p>The required value is: </p><p><codeph>https://oscm-core:8081/oscm-reporting/ReportingServiceBean?wsdl</codeph></p><p>The port is omitted if <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"/><ph
+                    platform="help"
+            >the platform</ph> is operated with its proxy. This setting cannot be changed.</p></section>
         <section><title>SSO_SIGNING_KEY_ALIAS</title>The alias of the private key of <ph platform="print"><ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
                 >the platform</ph> to be used for signing requests. <p>Requests are signed for the communication with Web pages or applications from custom tabs in subscriptions. The application server used for the Web page or Web application needs the corresponding certificate of <ph

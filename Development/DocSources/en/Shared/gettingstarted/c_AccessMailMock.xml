@@ -13,8 +13,8 @@
                     /> comes with a mail mock (<codeph>oscm-maildev </codeph>container), which can be used for quick start-up and testing purposes until a real mail server is available. The mail mock is configured in the initial settings in the <codeph>var.env</codeph> configuration file (see <xref
                     href="../reference/r_ConfigSettings_initial.xml"/> for details). </p>
             <p>As long as this configuration is not changed, all <ph
-                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                /> mails are collected in the mail mock. They are not forwarded to the specified receivers. </p>
+                                        conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> mails are collected in the mail mock. They are not forwarded to the specified receivers. Be aware that this also applies to mails containing user IDs and passwords, which needs to be considered from a security and data protection point of view even in staging environments</p>
             <p>As the operator, you can access the mail mock with all the mails in the following way:</p>
                         <p>
                                 <ol>
@@ -23,8 +23,7 @@
                                 />, <codeph>8082</codeph> is the port. Make sure to use <codeph>http</codeph>, not <codeph>https</codeph>. </p><p>If you have activated the <ph
                                 conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                             /> proxy, use the following address:</p><p><codeph>https://&lt;host_fqdn&gt;/mail/</codeph></p></li>
-                                        <li>In the login dialog, enter your <ph
-                            conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> user ID and password. </li>
+                                        <li>In the login dialog, enter the administrator ID and password as specified during installation in the <codeph>ADMIN_USER_ID</codeph> and <codeph>ADMIN_USER_PWD</codeph> settings in the <codeph>var.env</codeph> configuration file. </li>
                                         <li>Confirm your entries.</li>
                                 </ol>
                         </p>

@@ -18,7 +18,7 @@
                     <li><codeph>reportLabels_ja.properties</codeph> (Japanese)</li>
                 </ul>
             </p>
-            <p>You can also change the English, German, or Japanese strings if you want to customize the reports in these languages to your needs.</p>
+            <p>You can change the English, German, or Japanese strings if you want to customize the reports in these languages to your needs.</p>
             <p>Proceed as follows to have reports generated in another language: </p>
             <p>
                 <ol compact="no">

@@ -63,13 +63,6 @@
         <topicref href="OperationsGuide/Configuration/c_AddLanguage.xml" type="concept"/>
         <!--topicref href="InstallationGuide/Installation/c_NumberOfRetries.xml" type="concept"/-->
         <topicref href="OperationsGuide/Configuration/c_Timers.xml" type="concept"/>
-        <!--topicref
-            href="OperationsGuide/Configuration/r_ConfigSettings_glassfishFT.xml"
-            type="reference"/
-topicref href="OperationsGuide/Configuration/c_AddNode.xml" type="concept"/
-topicref href="OperationsGuide/Configuration/c_MoveDB.xml" type="concept"/
-topicref href="OperationsGuide/Configuration/c_MoveMasterIndexerDomain.xml" type="concept"/
-topicref href="OperationsGuide/Configuration/c_LoadBalancing.xml" type="concept"/-->
         <topicref href="OperationsGuide/Configuration/c_LDAPSettings.xml" type="concept"/>
         <topicref href="OperationsGuide/Configuration/c_APP.xml" type="concept"/>
     </chapter>

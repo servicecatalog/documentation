@@ -26,7 +26,7 @@
                             >escmadmin@mydomain.onmicrosoft.com</codeph> als Mitglied zu. </p><note>Organisationen in der Plattform werden Gruppen beim OIDC-Provider zugeordnet. Jeder Benutzer darf Mitglied genau einer Gruppe sein. </note></li>
                 <li>Registrieren Sie die Plattform als Anwendung im Verzeichnis des OIDC-Providers. <p><b>Beispiel Azure AD</b>: Legen Sie im Verzeichnis unter <b>App-Registrierungen</b> eine neue Registrierung mit folgenden Eigenschaften an:</p><ul>
                         <li>Name und unterstützte Kontotypen Ihrer Wahl</li>
-                        <li>Umleitungs-URI: <codeph>https://&lt;host_fqdn&gt;:9091/oscm-identity/callback</codeph><p><codeph>&lt;host_fqdn></codeph> ist der vollqualifizierte Host-Name oder die IP-Adresse der Plattforminstallation.</p></li>
+                        <li>Umleitungs-URI: <codeph>https://&lt;host_fqdn&gt;:9091/oscm-identity/callback</codeph><p><codeph>&lt;host_fqdn></codeph> ist der vollqualifizierte Host-Name oder die IP-Adresse der Plattforminstallation, <codeph>9091</codeph> der benötigte Port. Die Angabe des Ports entfällt, wenn die Plattform mit Proxy betrieben wird.</p></li>
                     </ul></li>
                 <li>Kopieren Sie die ID der neuen Anwendung zur späteren Verwendung in der Plattform. <p><b>Beispiel Azure AD</b>: <codeph>ef29bb22-369c-424d-9e72-6800ad24239e</codeph></p></li>
                 <li>Geben Sie der Anwendung Lese- und Schreibzugriff auf das Verzeichnis, die Benutzer und die Gruppen.<p><b>Beispiel Azure AD</b>: In den Eigenschaften der neuen Anwendung, unter <b>API-Berechtigungen</b>: </p><ol>

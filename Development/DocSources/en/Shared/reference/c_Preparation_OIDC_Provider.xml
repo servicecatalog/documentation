@@ -43,7 +43,10 @@
                         <li>A name and supported account types of your choice.</li>
                         <li>Redirect URI: <codeph>https://&lt;host_fqdn&gt;:9091/oscm-identity/callback</codeph><p><codeph>&lt;host_fqdn&gt;</codeph> is the fully qualified name or IP address of the host to access your <ph
                                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"/><ph
-                                    platform="help">platform</ph> installation. </p></li>
+                                    platform="help"
+                                    >platform</ph> installation, <codeph>9091</codeph> is the port. Omit the port if <ph
+                                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> is operated with its proxy. </p></li>
                     </ul></li>
                 <li>Copy the ID of the new application for later use <ph platform="print">in <ph
                             conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"

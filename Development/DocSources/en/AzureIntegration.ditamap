@@ -85,14 +85,6 @@
         <topicref format="dita" href="AzureIntegrationGuide/Administrating/c_UpdateConfiguration.xml" type="concept"/>
         <topicref format="dita" href="Shared/concepts/c_ChangeOrg.xml" type="concept"/>
     </chapter>
-    <!-- chapter format="dita" href="Shared/Installation/c_Uninstallation.xml" type="concept"/
-appendix format="dita" href="Shared/Installation/r_ConfigSettings.xml" type="reference">
-        <topicref format="dita" href="Shared/reference/r_ConfigSettings_glassfish_BESDomain.xml" type="reference"/>
-        <topicref format="dita" href="Shared/reference/r_ConfigSettings_db.xml" type="reference"/>
-        <topicref format="dita" href="APPInt/APP/r_ConfigSettings.xml" type="reference"/>
-        <topicref format="dita" href="AzureIntegrationGuide/Appendix/r_ConfigSettingsController.xml" type="reference"/>
-    </appendix
-appendix format="dita" href="AzureIntegrationGuide/Appendix/r_ConfigSettingsController.xml" type="reference"/-->
     <appendix format="dita" href="AzureIntegrationGuide/Appendix/r_ServiceParameters.xml" type="reference"/>
     <appendix format="dita" href="Shared/glossary/r_Glossary.xml" type="reference"/>
 </bookmap>
