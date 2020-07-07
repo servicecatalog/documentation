@@ -24,7 +24,7 @@
             <div class="section">
                   <p>On the <span class="uicontrol">Customize stage</span> page, you can customize the area of the marketplace home page where you can place, for example, advertisements, eye catchers, or further information.</p>
 
-                  <p>The marketplace stage can be provided as an image or as HTML code linking, for example, to animations. A separate stage can be used for each of the supported languages. A preview function allows you to view the stage before it is published. As soon as you confirm the preview, the stage is published and visible to all visitors of the marketplace.</p>
+                  <p>The marketplace stage can be provided as an image or as HTML code linking, for example, to animations. A separate stage can be used for desktop and mobile devices in each of the supported languages. A preview function allows you to view a stage before it is published. As soon as you confirm the preview, the stage is published and visible to all visitors of the marketplace.</p>
 
                   <p>The branding of a marketplace also comprises its layout (colors, fonts, background images, logos, etc.) and the texts (labels of user interface elements, email message texts, etc.). The layout can be customized using the <span class="uicontrol">Customize layout</span> menu option in the <span class="uicontrol">Marketplace</span> menu. The texts can be customized using the <span class="uicontrol">Customize texts</span> menu option in the <span class="uicontrol">Marketplace</span> menu.</p>
 
@@ -42,19 +42,21 @@
 <li class="stepexpand">
                         <span>Select the <span class="uicontrol">Language</span> for which you want to provide a customized stage. </span>
                          
-                              <p>You can provide a stage for all supported languages.</p>
+                              <p>You can provide stages for all supported languages. If you do not specify a stage for a certain language, the stage of the default language is used. If there is no customized stage for the default language, the initial stage as available after installation of the platform is used.</p>
 
                         
                   </li>
 <li class="stepexpand">
-                        <span>Enter the HTML code referencing the desired image. If you do not specify an image for a certain language, the stage of the default language is used. If there is no customized stage for the default language either, the default image as available after installation of the platform is used.</span>
+                        <span>Enter the HTML code referencing the desired stage image. For optimum display, you can specify different stage images for desktop and mobile devices. The stage image for desktop devices is used when the display is wider than 768 pixels. For smaller widths, the stage image for mobile devices is used.</span>
                          
-                              <p>The recommended width of the stage is 100%, the recommended height is between 200 and 300 pixels. </p>
-
-                              <p>Example: <samp class="codeph">&lt;IFRAME FRAMEBORDER\="0" SRC\="yourstage.htm" NAME\="stage" WIDTH\="100%" HEIGHT\="280px" SCROLLING\="no"&gt;&lt;/IFRAME&gt;</samp>
-                              </p>
+                              <p id="task634__As_common_with_website_banner_task_taskbody_steps_step_3">As common with website banners, the image for desktop devices should have a size of 1600 x 500 pixels or multiples thereof with the same aspect ratio. The image for mobile devices should have a size of 768 x 940 pixels or multiples thereof with the same aspect ratio. The recommended width of the stage is 100%. The recommended height is between 200 and 300 pixels for the desktop stage, and between 680 and 720 pixels for the mobile stage. </p>
 
                               <p>You can enter the HTML code directly, or you can use an inline frame for embedding the stage in the HTML code of the marketplace home page.</p>
+
+                              <p>Example: </p>
+
+                              <p id="task634__iframe_FRAMEBORDER_0_width_task_taskbody_steps_step_3"><samp class="codeph">&lt;iframe FRAMEBORDER="0" width="100%" height="290px" marginwidth="0" marginheight="0" SRC="mystage.htm" SCROLLING="no"&gt;&lt;/iframe&gt;</samp>
+                              </p>
 
                               <p><strong>Caution</strong>: It is recommended that you use an inline frame. If you do not use an inline frame, specify only snippets as HTML code. Do not use a fully featured HTML page that contains elements like <samp class="codeph">&lt;html&gt;</samp>, <samp class="codeph">&lt;head&gt;</samp>, or <samp class="codeph">&lt;body&gt;</samp>. Check the page layout with the preview function (see next step below). A snippet may break the layout of the marketplace home page, the preview dialog, or even the <span class="uicontrol">Customize stage</span> page, especially if the snippet contains scripts (e.g. JavaScripts). </p>
 
@@ -63,14 +65,17 @@
                         
                   </li>
 <li class="stepexpand">
-                        <span>Click <span class="uicontrol">Preview</span> to view the changed marketplace home page. </span>
+                        <span>Click <span class="uicontrol">Preview</span> to view the marketplace home page with the given stage. </span>
                   </li>
 <li class="stepexpand">
-                        <span>If you have reached the desired result, confirm the publishing of the new marketplace home page by clicking <span class="uicontrol">Yes</span>. The new stage is visible to visitors the next time they access your marketplace.</span>
+                        <span>If the result is as desired, confirm the publishing of the new marketplace home page by clicking <span class="uicontrol">Yes</span>. The new stage is visible to visitors the next time they access your marketplace.</span>
                          
                               <p>By clicking <span class="uicontrol">No</span>, you return to the <span class="uicontrol">Customize stage</span> page and can make additional changes. The existing stage is not changed. </p>
 
                         
+                  </li>
+<li class="stepexpand">
+                        <span>Click <span class="uicontrol">Save</span> to save all the changes you have made. Changed stages will be published and be visible to visitors the next time they access the marketplace.</span>
                   </li>
 </ol>
 

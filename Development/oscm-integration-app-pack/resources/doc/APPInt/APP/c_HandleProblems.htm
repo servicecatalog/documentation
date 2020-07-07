@@ -31,7 +31,7 @@
 
                                                 <li class="liexpand">Invoke the instance status interface of APP for the service controller by opening it's URL in a Web browser. <p>The access URL has the following format: </p>
 <p><samp class="codeph">https://&lt;host_fqdn&gt;:8881/oscm-app/controller/?controllerid=&lt;controller-ID&gt;</samp></p>
-<p><samp class="codeph">&lt;host_fqdn&gt;</samp> is the fully qualified name or IP address of the host used to access <span>OSCM</span>, <samp class="codeph">8881</samp> is the port of APP. <samp class="codeph">oscm-app/controller/?controllerid=&lt;controller-ID&gt;</samp> is the default context root of the service controller and cannot be changed. There are the following IDs: <samp class="codeph">ess.aws</samp>, <samp class="codeph">ess.openstack</samp>, <samp class="codeph">ess.vmware</samp>, <samp class="codeph">ess.azureARM</samp>.</p>
+<p><samp class="codeph">&lt;host_fqdn&gt;</samp> is the fully qualified name or IP address of the host used to access <span>OSCM</span>, <samp class="codeph">8881</samp> is the port of APP. Omit the port if <span>OSCM</span> is operated with its proxy. The  <samp class="codeph">oscm-app/controller/?controllerid=&lt;controller-ID&gt;</samp> is the default context root of the service controller and cannot be changed. There are the following IDs: <samp class="codeph">ess.aws</samp>, <samp class="codeph">ess.openstack</samp>, <samp class="codeph">ess.vmware</samp>, <samp class="codeph">ess.azureARM</samp>.</p>
 <p>The Web page shows all subscriptions for the application, including detailed information such as the customer organization, the ID of the related application instance, and the provisioning status. </p>
 </li>
 

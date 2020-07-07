@@ -22,7 +22,9 @@
 
       <div>
             <div class="section">
-                  <p id="task634__On_the_task_taskbody_context_p_1">Auf der Seite <span class="uicontrol">Layout anpassen</span> können Sie ein Stylesheet angeben, das das Branding und Layout eines Marktplatzes definiert, also die Farben, Schriften, Hintergrundbilder und Logos. <span id="task634__The_best_way_to_create_an_app_task_taskbody_context_p_1_ph">Ein geeignetes Stylesheet erstellen Sie am besten, indem Sie das Standard-Stylesheet der Plattform als Basis verwenden und es Ihren Anforderungen entsprechend anpassen. Dann stellen Sie das angepasste Stylesheet und die darin referenzierten Dateien dem Plattformbetreiber zur Verfügung. Dieser kann die Änderungen dann in den Container <samp class="codeph">oscm-branding</samp> einspielen. Wenn keine URL angegeben ist, wird das Standard-Stylesheet verwendet. </span>
+                  <p id="task634__On_the_task_taskbody_context_p_1">Auf der Seite <span class="uicontrol">Layout anpassen</span> können Sie ein Stylesheet angeben, das das Branding und Layout eines Marktplatzes definiert, also die Farben, Schriften, Hintergrundbilder und Logos. <span id="task634__The_best_way_to_create_an_app_task_taskbody_context_p_1_ph">Ein geeignetes Stylesheet erstellen Sie am besten, indem Sie das Standard-Stylesheet der Plattform als Basis verwenden und es Ihren Anforderungen entsprechend anpassen. </span></p>
+
+                  <p id="task634__On_the_task_taskbody_context_p_1"><span id="task634__The_best_way_to_create_an_app_task_taskbody_context_p_1_ph">Dann stellen Sie das angepasste Stylesheet und die darin referenzierten Dateien dem Plattformbetreiber zur Verfügung. Dieser kann die Änderungen in den Container <samp class="codeph">oscm-branding</samp> einspielen. Danach erhalten Sie vom Plattformbetreiber die URL des Styleheets, die Sie dann auf der Seite <span class="uicontrol">Layout anpassen</span> angeben. Wenn Sie keine URL angeben, wird das Standard-Stylesheet verwendet. </span>
                   </p>
 
                   <p id="task634__The_platform_s_default_style_task_taskbody_context_p_2">Das Standard-Stylesheet der Plattform <span>(<samp class="codeph">mp.css</samp>)</span> und die darin referenzierten Dateien und Bilder werden im Branding-Paket zur Verfügung gestellt. Dabei handelt es sich um eine ZIP-Datei, die Sie auf der Seite <span class="uicontrol">Layout anpassen</span> herunterladen können. Das Branding-Paket enthält auch einige HTML-Beispieldateien eines Marktplatzes. Diese können Sie benutzen, um Ihre Anpassungen vorab zu visualisieren und zu testen. Im Stylesheet finden Sie Kommentare und Beschreibungen der relevanten Elemente in den HTML-Dateien sowie Informationen darüber, welche Elemente im Hinblick auf ein fehlerfreies Seitenlayout nicht angepasst werden dürfen.</p>
@@ -94,7 +96,7 @@
 
                               <p><samp class="codeph">https://&lt;host_fqdn&gt;:8443/&lt;branding-package&gt;/css/mp.css</samp></p>
 
-                              <p><samp class="codeph">&lt;host_fqdn&gt;</samp> ist der vollqualifizierte Host-Name oder die IP-Adresse der Plattforminstallation, <samp class="codeph">8443</samp> der benötigte Port. <samp class="codeph">&lt;branding-package&gt;</samp> ist der Name des Archivs mit den Änderungen.</p>
+                              <p><samp class="codeph">&lt;host_fqdn&gt;</samp> ist der vollqualifizierte Host-Name oder die IP-Adresse der Plattforminstallation, <samp class="codeph">8443</samp> der benötigte Port. Die Angabe des Ports entfällt, wenn die Plattform mit Proxy betrieben wird. <samp class="codeph">&lt;branding-package&gt;</samp> ist der Name des Archivs mit den Änderungen.</p>
 
                         
                   </li>

@@ -64,8 +64,7 @@
 
         
         <div class="section"><h4 class="sectiontitle">BASE_URL_HTTPS</h4>The base URL is used to access the <span>platform's</span> home page and to create the URL for accessing services via HTTPS. <p>Syntax: <samp class="codeph">https://&lt;host_fqdn&gt;:8081/oscm-portal</samp></p>
-<p><samp class="codeph">&lt;host_fqdn&gt;</samp> is the FQDN or IP address of the host to access <span>the platform</span>, <samp class="codeph">8081</samp> is the port. <samp class="codeph">oscm-portal</samp> is the context root of <span>the platform</span> and cannot be changed. </p>
-<div class="note"><span class="notetitle">Note:</span> If the SSL/HTTPS port was changed, then this setting must also be updated.</div>
+<p><samp class="codeph">&lt;host_fqdn&gt;</samp> is the FQDN or IP address of the host to access <span>the platform</span>, <samp class="codeph">8081</samp> is the port. Omit the port if <span>the platform</span> is operated with its proxy. <samp class="codeph">oscm-portal</samp> is the context root of <span>the platform</span> and cannot be changed. </p>
 </div>
 
         <div class="section"><h4 class="sectiontitle">CUSTOMER_SELF_REGISTRATION_ENABLED</h4>
@@ -175,6 +174,10 @@
 <p>Make sure to specify a valid URL that does not exceed a maximum of 255 characters. </p>
 </div>
 
+        <div class="section"><h4 class="sectiontitle">OSCM_IDENTITY_SERVICE_URL</h4>Only required with OIDC authentication mode. The URL of the <span>platform's</span> identity service. The URL is used for redirecting and forwarding requests to the OIDC provider. <p>Syntax: <samp class="codeph">https://&lt;host_fqdn&gt;:9091/oscm-identity</samp></p>
+<p><samp class="codeph">&lt;host_fqdn&gt;</samp> is the FQDN or IP address of the host to access <span>the platform</span>, <samp class="codeph">9091</samp> is the port. Omit the port if <span>the platform</span> is operated with its proxy. <samp class="codeph">oscm-identity</samp> is the context root of the identity service and cannot be changed. </p>
+</div>
+
         <div class="section"><h4 class="sectiontitle">PERMITTED_PERIOD_INACTIVE_ON_BEHALF_USERS</h4>The time in milliseconds after which a user who logged in on behalf of a customer and was inactive will be removed from the system: <samp class="codeph">604800000</samp>,  i.e. 7 days.<p>This setting cannot be changed.</p>
 </div>
 
@@ -194,18 +197,18 @@
    __locale=\${locale}&amp;WSDLURL=\${wsdlurl}&amp;SOAPEndPoint=\
    ${soapendpoint}&amp;wsname=Report&amp;wsport=ReportPort</pre>
 
-            <p><samp class="codeph">&lt;host_fqdn&gt;</samp> is the FQDN or IP address of the host to access <span>the platform</span>.</p>
+            <p><samp class="codeph">&lt;host_fqdn&gt;</samp> is the FQDN or IP address of the host to access <span>the platform</span>. Omit the port if <span>the platform</span> is operated with its proxy.</p>
 
         </div>
 
         <div class="section"><h4 class="sectiontitle">REPORT_SOAP_ENDPOINT</h4>The SOAP end point of the Report Web service. All report data is retrieved via a call to the Report Web service. If you do not specify a correct value, <span>the platform</span> will not be able to generate any reports, since the Report Web service cannot be called correctly. <p>The required value is: </p>
 <p><samp class="codeph">https://oscm-core:8081/oscm-reporting/ReportingServiceBean</samp></p>
-<p>This setting cannot be changed.</p>
+<p>The port is omitted if <span>the platform</span> is operated with its proxy. This setting cannot be changed.</p>
 </div>
 
         <div class="section"><h4 class="sectiontitle">REPORT_WSDLURL</h4>URL of the WSDL file of the Report Web service. All report data is retrieved via a call to the Report Web service. If you do not specify a correct value, <span>the platform</span> will not be able to generate any reports, since the Report Web service cannot be called correctly. <p>The required value is: </p>
 <p><samp class="codeph">https://oscm-core:8081/oscm-reporting/ReportingServiceBean?wsdl</samp></p>
-<p>This setting cannot be changed.</p>
+<p>The port is omitted if <span>the platform</span> is operated with its proxy. This setting cannot be changed.</p>
 </div>
 
         <div class="section"><h4 class="sectiontitle">SSO_SIGNING_KEY_ALIAS</h4>The alias of the private key of <span>the platform</span> to be used for signing requests. <p>Requests are signed for the communication with Web pages or applications from custom tabs in subscriptions. The application server used for the Web page or Web application needs the corresponding certificate of <span>the platform</span> in its truststore for verifying the signature.</p>
