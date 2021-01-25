@@ -36,7 +36,7 @@
                                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                         /> Proxy</b></p>
                         <p>The optional <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                /> proxy comes with its own Docker Compose file.</p>
+                                        /> proxy comes with its own Docker Compose file in the <codeph>&lt;docker>/proxy</codeph> directory. </p>
                         <p>To start the proxy:</p>
                         <p>
                                 <codeblock>docker-compose -f docker-compose-proxy.yml up -d</codeblock>

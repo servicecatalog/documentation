@@ -13,7 +13,7 @@
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> services and applications by the default HTTPS port (443). </p>
             <p>The proxy is deployed with <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    />. In order to activate it, however, you need to explicitly start its container, <codeph>oscm-proxy</codeph>, using its own Docker Compose file in the <codeph>/docker</codeph> directory:</p>
+                    />. In order to activate it, however, you need to explicitly start its container, <codeph>oscm-proxy</codeph>, using its own Docker Compose file in the <codeph>/docker/proxy</codeph> directory:</p>
             <p>
                 <codeblock>docker-compose -f docker-compose-proxy.yml up -d</codeblock>
             </p>
