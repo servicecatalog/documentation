@@ -2,7 +2,7 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
                          "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
 ]>
-<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2020 -->
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2021 -->
 <concept id="concept_1BCF5C425D7D4627AB1C66A085CF6E11"
             xml:lang="en-us">
             <title>Accessing the Mail Mock </title>
