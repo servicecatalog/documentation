@@ -659,6 +659,27 @@
       </table>
     </section>
     <section>
+      <title>Custom Attributes</title>
+      <p>Optional service parameters can be added to set values of custom attributes in VMware vSphere. Custom attributes can be defined in VMWare vSphere as required, assigned to different objects like virtual machines and hosts, and used for purposes like searching or filtering. From <ph
+          conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+        />, the value of a vShpere custom attribute can be set by means of the default value of a service parameter or a corresponding custom attribute defined for a subscription.</p>
+      <p>Service parameters for vSphere custom attributes can be defined as follows:</p>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>VSPHERE_ATTRIBUTE_&lt;attribute_name></b></p>
+                <p><codeph>VSPHERE_ATTRIBUTE_</codeph> is a fixed string, followed by the name of the custom attribute as defined in VMware vSphere. The vSphere custom attribute must already exist. The service parameter's value type must match the one of the vSphere custom attribute.</p>
+                <p>Example: <codeph>VSPHERE_ATTRIBUTE_BACKUP</codeph> for a custom attribute named <codeph>BACKUP</codeph>. The value could be a string used for labelling backups. </p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
       <title>Collection of Usage Data and Billable Events</title>
       <p>The following optional service parameters and events are used to collect consumption data for the VM instance in VMware vSphere and generate corresponding events. Price models for marketable services may define prices for the events, which are then taken into account in the billing and payment processing.</p>
       <p><b>Service Parameters:</b></p>
