@@ -49,7 +49,10 @@
         <topicref format="dita" href="ShellIntegrationGuide/Intro/c_Scenarios.xml" type="concept"/>
     </chapter>
     <chapter format="dita" href="ShellIntegrationGuide/Services/c_ServicesIntro.xml" type="concept">
-        <topicref format="dita" href="ShellIntegrationGuide/Services/c_ControllerPrerequisites.xml" type="concept"/>
+        <topicref format="dita" href="ShellIntegrationGuide/Services/c_ControllerPrerequisites.xml" type="concept">
+            <topicref format="dita" href="ShellIntegrationGuide/Services/c_Prerequisites_Scripts.xml" type="concept"/>
+            <topicref format="dita" href="ShellIntegrationGuide/Services/c_Prerequisites_Azure.xml" type="concept"/>
+        </topicref>
         <topicref format="dita" href="Shared/tasks/t_CreateTechService.xml" type="task"/>
         <topicref format="dita" href="Shared/tasks/t_CreateMarkService.xml" type="task"/>
         <topicref format="dita" href="ShellIntegrationGuide/Services/c_ConfigureStatusPanel.xml" type="concept"/>

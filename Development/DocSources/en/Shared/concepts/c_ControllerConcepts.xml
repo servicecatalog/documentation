@@ -11,11 +11,11 @@
       </p>
       <p id="cmp1">In <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
           />, customer subscriptions are managed by means of the <b>Subscription service</b>. When a customer <ph
-          audience="shell">creates or terminates </ph><ph audience="aws">creates or terminates </ph><ph audience="os"
-          >creates or terminates </ph><ph audience="vmware">creates, modifies, or terminates </ph><ph audience="azure"
-          >creates or terminates </ph>a subscription<ph audience="aws"> for an Amazon EC2 instance in AWS</ph><ph
-          audience="os"> for a virtual system in OpenStack</ph><ph audience="vmware"> for a VM in vSphere</ph><ph
-          audience="azure"
+          audience="shell">creates, modifies, or terminates </ph><ph audience="aws">creates or terminates </ph><ph
+          audience="os">creates or terminates </ph><ph audience="vmware">creates, modifies, or terminates </ph><ph
+          audience="azure">creates or terminates </ph>a subscription<ph audience="aws"
+          > for an Amazon EC2 instance in AWS</ph><ph audience="os"> for a virtual system in OpenStack</ph><ph
+          audience="vmware"> for a VM in vSphere</ph><ph audience="azure"
           > for a virtual machine in Azure</ph>, the Subscription service asynchronously triggers the corresponding actions in <ph
           audience="shell">a Shell</ph><ph audience="aws">AWS</ph><ph audience="os">OpenStack</ph><ph audience="vmware"
           >vSphere</ph><ph audience="azure"
@@ -37,9 +37,9 @@
           audience="os">an OpenStack service controller</ph><ph audience="vmware">a VMware service controller</ph><ph
           audience="azure"
           >an Azure service controller</ph> is also deployed and initialized. It is preconfigured and registered with APP. This service controller can be used for integrating <ph
-          audience="shell">a Shell</ph><ph audience="aws">AWS services</ph><ph audience="os">OpenStack services</ph><ph
-          audience="vmware">vSphere services</ph><ph audience="azure">Azure services</ph> with <ph
-          conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+          audience="shell">Shell scripts</ph><ph audience="aws">AWS services</ph><ph audience="os"
+          >OpenStack services</ph><ph audience="vmware">vSphere services</ph><ph audience="azure"
+          >Azure services</ph> with <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
           />. Refer to the <i>Technology Provider's Guide</i> for details on APP.</p>
     </section>
   </conbody>
