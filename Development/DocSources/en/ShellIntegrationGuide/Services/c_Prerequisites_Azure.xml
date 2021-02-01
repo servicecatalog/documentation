@@ -28,32 +28,33 @@
                         <li>Directory (tenant) ID: <codeph>02d72930-3874-4119-80d4-54a4d7f31dfc</codeph></li>
                     </ul></li>
                 <li>Under <b>Certificates and secrets</b>, add a <b>new client secret</b> for the application. Copy the new secret for later use in <ph
-                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</li>
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    />. Be aware that the client secret is no longer accessible in Microsoft Azure once you close the page.</li>
                 <li>Select the Microsoft Azure subscription for which you created the application. From its properties, copy the <b>subscription ID</b> for later use in <ph
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                             />.<p>Example: </p><p>Subscription ID: <codeph>98e0f7ef-bb83-408d-9675-0e45f65a54f7</codeph></p></li>
-                <li>Under <b>Access control (IAM)</b> for the subscription, choose <b>Add role assignment</b> and add the <b>Contributor</b> role to the application you created. </li>
+                <li>Under <b>Access control (IAM)</b> for the subscription, choose <b>Add role assignment</b> and add the <b>Contributor</b> role to the application (service principal) you created. </li>
             </ol>
         </section>
         <section>
             <title>Preparations in <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/></title>
             <p>In <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                />, custom attributes need to be created for specifying the authentication information required to connect to Microsoft Azure. The customer administrators later need to provide values for these custom attributes in their organization's profile on the marketplace. </p>
+                />, custom attributes need to be created for specifying the authentication information required to connect to Microsoft Azure. The customer administrators later need to provide their values for these custom attributes in their organization's profile on the marketplace. </p>
             <p>Proceed as follows:</p>
             <ol compact="no">
                 <li>Log in to the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> administration portal with your service manager account.</li>
                 <li>Use <b>Manage custom attributes</b> in the <b>Account</b> menu to create custom attributes for customers with the following <b>attribute IDs</b>:<ul>
                         <li><codeph>AzureSubscriptionId</codeph> - the ID of the customer's Microsoft Azure subscription</li>
-                        <li><codeph>AzureTenantId</codeph> -  the customer's directory (tenant) ID in Microsoft Azure</li>
+                        <li><codeph>AzureTenantId</codeph> - the customer's directory (tenant) ID in Microsoft Azure</li>
                         <li><codeph>AzureApplicationId</codeph> - the ID of the application (service principal) created for <ph
                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                             /> in Microsoft Azure</li>
-                        <li><codeph>AzureSecret</codeph> - the client secret create for the application in Microsoft Azure</li>
-                    </ul><p>For each of the attributes, specify a name of your choice and <codeph>ess.shell</codeph> as the <b>controller ID</b>.</p></li>
+                        <li><codeph>AzureSecret</codeph> - the client secret created for the application in Microsoft Azure</li>
+                    </ul><p>For each of the attributes, specify a name of your choice as well as <codeph>ess.shell</codeph> as the <b>controller ID</b>.</p></li>
                 <li>Make sure that your customers specify the appropriate values for the custom attributes in their organization's profile on the marketplace.</li>
             </ol>
-            <p>The custom attributes are referenced by their ID in the PowerShell scripts to be executed in Microsoft Azure through the Shell controller. For examples, see <xref
+            <p>The custom attributes are referenced by their ID in the PowerShell scripts to be executed in Microsoft Azure through the Shell controller. Examples are available on GitHub under <xref
                     href="https://github.com/servicecatalog/oscm-app-shell/tree/master/src/main/resources/sample_scripts/powershell"
                     scope="external"
                     >https://github.com/servicecatalog/oscm-app-shell/tree/master/src/main/resources/sample_scripts/powershell</xref>.</p>

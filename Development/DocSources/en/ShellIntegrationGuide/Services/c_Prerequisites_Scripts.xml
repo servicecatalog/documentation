@@ -7,23 +7,23 @@
     <conbody>
         <section>
             <ul compact="no">
-                <li>The Shell scripts to be executed by the Shell service controller must exist. They are prepared by the technology provider organization responsible for the Shell service controller and referenced from marketable services defined by the supplier organization. </li>
+                <li>The Shell scripts to be executed by the Shell service controller must exist. They need to be prepared by the technology provider organization responsible for the Shell service controller and are referenced from the marketable services defined by the supplier organization. </li>
                 <li>The scripts may be located on the Docker host where <ph
                         conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                             /> is deployed, or on an external system (external URL). <p>Scripts located on the <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                         /> Docker host need to be provided in the following directory: </p><p><codeph>&lt;docker>/config/oscm-app/scripts</codeph></p><p><codeph>&lt;docker></codeph> is the <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        /> data directory (shared file system) specified at installation time.</p><p>Whenever you provide new scripts or change existing ones, you must restart the <codeph>oscm-app</codeph> container. This automatically makes the scripts available within the container in the <codeph>/opt/scripts</codeph> directory, which is mounted to the <codeph>&lt;docker>/config/oscm-app/scripts</codeph> directory. </p></li>
-                <li>The Shell service controller will execute the scripts stored on the shared file system as the same UNIX user who runs the <codeph>oscm-app</codeph> container:<p><image
+                        /> data directory (shared file system) specified at installation time.</p><p>Whenever you provide new scripts or change existing ones, you must restart the <codeph>oscm-app</codeph> container. This automatically makes the scripts available within the container in the <codeph>/opt/scripts</codeph> directory, which is mounted to the <codeph>&lt;docker>/config/oscm-app/scripts</codeph> directory. </p><p><image
                             href="../_images/RunningEnv.png" alt="RunningEnv.png" width="400" height="171"/></p></li>
+                <li>The Shell service controller will execute the scripts stored on the shared file system as the same UNIX user who runs the <codeph>oscm-app</codeph> container.</li>
             </ul>
         </section>
         <section>
             <title>Shell Script Syntax and Rules</title>
             <p>In order to execute properly, the Shell scripts must follow some rules. </p>
             <p><b>Script Types</b></p>
-            <p>The Shell controller supports standard UNIX shell (<codeph>.sh</codeph>)scripts as well as PowerShell scripts (<codeph>.ps1</codeph>) scripts.</p>
+            <p>The Shell controller supports standard UNIX shell (<codeph>.sh</codeph>) scripts as well as PowerShell scripts (<codeph>.ps1</codeph>) scripts.</p>
             <p><b>Return JSON Object</b></p>
             <p>Each script must return <b>exactly one JSON object</b> followed by an <codeph>"END_OF_SCRIPT"</codeph> string value. In this way, the Shell service controller can determine that a script has finished successfully. Otherwise the script execution will run into a timeout.</p>
             <p>The JSON result may contain the following <b>keywords and elements</b>:</p><ul compact="no">

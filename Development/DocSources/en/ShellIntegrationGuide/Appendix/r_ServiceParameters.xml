@@ -228,7 +228,7 @@
             <row>
               <entry>
                 <p><b>AzureAutomationAccountName</b></p>
-                <p>Optional. The name of the Azure Automation account to use. </p>
+                <p>Optional. The name of the Azure Automation account to be used. </p>
                 <p>Example: <codeph>MyAutoAccount</codeph></p>
               </entry>
             </row>
