@@ -10,26 +10,40 @@
     </title>
     <conbody>
         <section>
-            <p>A second process in the deployment container is available which you need to run to do the following: </p>
+            <p>A second process in the deployment container is available which you need to run to do the following:</p>
             <p>
                 <ol>
                     <li>Create the necessary Docker Compose files for running <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</li>
-                    <li>Create the necessary subdirectories in the Docker data directory. </li>
+                    <li>Create the necessary subdirectories in the <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> data directory. </li>
                     <li>Initialize the application databases. </li>
                     <li>Start the application containers. </li>
+                    <li>Activate the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> proxy. <p>Use of the <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> proxy is optional. If you prefer to work without it, omit <codeph>-e PROXY=true</codeph> in the command below. </p></li>
                 </ol>
             </p>
             <p>Run the following process on your Docker host: </p>
             <p>
                 <codeblock>docker run --name deployer2 --rm -v /docker:/target
-    -v /var/run/docker.sock:/var/run/docker.sock
-    -e INITDB=true -e STARTUP=true <codeph>${REGISTRY}</codeph>/oscm-deployer</codeblock>
+    -v /var/run/docker.sock:/var/run/docker.sock -e INITDB=true 
+    -e PROXY=true -e STARTUP=true <codeph>${REGISTRY}</codeph>/oscm-deployer</codeblock>
             </p>
             <p><codeph>${REGISTRY}</codeph> is the name of your local Docker registry or the <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> registry on DockerHub. </p>
             <p>After <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                 /> has been deployed, it will take a few minutes to start up. The less power the Docker host has, the longer it will take. </p>
+            <note>
+                <p>If you activate the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        /> proxy, it is configured to handle the ports of <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    />. You can also use it for additional services and applications by extending its configuration accordingly using NGINX syntax in the following file:</p>
+                <p><codeph>/docker/config/oscm-proxy/data/proxy.conf</codeph></p>
+                <p>Do not change any of the existing entries for <ph
+                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>!</p>
+            </note>
         </section>
     </conbody>
 </concept>

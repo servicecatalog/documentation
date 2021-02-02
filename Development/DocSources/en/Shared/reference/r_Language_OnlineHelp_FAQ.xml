@@ -53,6 +53,9 @@
                 <li>Stop the <codeph>oscm-help</codeph> container: <p>
                         <codeblock>docker stop oscm-help</codeblock>
                     </p></li>
+                <li>Change to the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        platform="print"/><ph platform="help"
+                        >platform's</ph> data directory (<codeph>&lt;docker></codeph>).</li>
                 <li>Remove the <codeph>oscm-help</codeph> container: <p>
                         <codeblock>docker-compose -f docker-compose-oscm.yml rm oscm-help</codeblock>
                     </p></li>

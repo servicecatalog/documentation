@@ -10,7 +10,8 @@
         <section>
             <p>On the Docker host, you need to create a directory where various <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /> data can be stored, such as persistent database data or configuration files. In the following descriptions, this directory is referred to as <codeph>/docker</codeph>, but you can just as well use a subdirectory or another name. </p>
+                /> data can be stored, such as persistent database data or configuration files. </p>
+            <p>The name of the directory must be <b><codeph>docker</codeph></b>. It may be located in the root directory or in any subdirectory. The following descriptions use <codeph>/docker</codeph> in the root directory.</p>
             <p>On the Docker host, execute the following command: </p>
             <p>
                 <codeblock>mkdir /docker</codeblock>

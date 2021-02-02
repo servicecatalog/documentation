@@ -16,7 +16,8 @@
       <p>If you want to persistently update configuration settings in the database, proceed as follows:</p>
       <p>
         <ol>
-          <li>On your Docker host, edit the <codeph>var.env</codeph> file located in the platform's data directory (<codeph>&lt;docker></codeph>) as required. </li>
+          <li>On your Docker host, change to the platform's data directory (<codeph>&lt;docker></codeph>) and execute the following steps from this location.</li>
+          <li>Edit the <codeph>var.env</codeph> file located in the data directory as required. </li>
           <li>If you want to change the default value of a configuration setting that is not included in the <codeph>var.env</codeph> file yet:<p>Add the key and the value the setting shall take on to the <codeph>var.env</codeph> file. </p><p>You can find the keys of the settings on the <b>Update configuration settings</b> page. For example: </p><p><codeph>TIMER_INTERVAL_SUBSCRIPTION_EXPIRATION=345600000</codeph></p></li>
           <li>Save the <codeph>var.env</codeph> file to its original location: <p><codeph>&lt;docker>/var.env</codeph></p></li>
           <li>In the <codeph>docker-compose-initdb.yml</codeph> file in the same directory, set the <codeph>OVERWRITE</codeph> flag in the <codeph>environment</codeph> settings for <codeph>oscm-initdb-core</codeph> to <codeph>true</codeph> to change the configuration setting in the database. <p>

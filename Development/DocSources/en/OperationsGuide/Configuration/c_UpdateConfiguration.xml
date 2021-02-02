@@ -59,9 +59,10 @@
             <p>If you want to persistently update configuration settings in the <codeph>bss</codeph> or <codeph>bssapp</codeph> database, proceed as follows:</p>
             <p>
                 <ol>
-                    <li>On the Docker host, edit the <codeph>.env</codeph> and <codeph>var.env</codeph> files located in the <ph
+                    <li>On your Docker host, change to the <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        /> data directory as required. </li>
+                            /> data directory (<codeph>&lt;docker></codeph>) and execute the following steps from this location.</li>
+                    <li>Edit the <codeph>.env</codeph> and <codeph>var.env</codeph> files located in the data directory as required. </li>
                     <li>If you want to change the default value of a configuration setting that is not included in the <codeph>var.env</codeph> file yet:<p>Add the key and the value the setting shall take on to the <codeph>var.env</codeph> file. </p><p>You can find the keys of the settings on the <b>Update configuration settings</b> page or in the APP Web interface. They are described in detail in <xref
                                 href="../../Shared/reference/r_ConfigSettings_UI.xml"/> and <xref
                                 href="../../Shared/reference/r_ConfigSettings_APP.xml"

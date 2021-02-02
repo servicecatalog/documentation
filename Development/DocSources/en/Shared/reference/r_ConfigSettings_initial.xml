@@ -23,8 +23,9 @@
                             <li><codeph>IMAGE_MAILDEV</codeph>: image for the <codeph>oscm-maildev</codeph> container</li>
                         </ul>
                     </li>
-                    <li>The directory where <ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            /> data is persisted on your Docker host. The default directory is <codeph>/docker</codeph> as defined with the <codeph>DOCKER_PATH</codeph> configuration setting. </li>
+                    <li>The directory, <codeph>DOCKER_PATH</codeph>, where <ph
+                            conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> data is persisted on your Docker host. The name of the directory must be <b><codeph>docker</codeph></b>. It may be located in the root directory or in any subdirectory. The default directory is <codeph>/docker</codeph>. </li>
                     <li>HTTP timeout for Docker Compose. You need to adjust this value if you get timeout errors during high load or network congestion.</li>
                 </ul>
             </p>
