@@ -24,7 +24,7 @@
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                         /> administration portal. The branding package is provided as a ZIP file. </li>
                     <li>Extract the ZIP file to a local directory.</li>
-                    <li>Adapt the files as desired. </li>
+                    <li>Adapt and compile the files as required. </li>
                     <li>Create an archive (ZIP) containing your customized files. <p>The customized branding must have the same structure as the original branding in the <codeph>branding-package.zip</codeph> file.</p></li>
                     <li>Provide this archive to the platform operator so that he can deploy your customized branding package. </li>
                     <li>Ask the platform operator for the URL of the deployed customized style sheet. </li>

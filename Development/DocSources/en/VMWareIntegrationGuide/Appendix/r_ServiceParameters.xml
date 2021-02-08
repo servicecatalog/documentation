@@ -660,7 +660,7 @@
     </section>
     <section>
       <title>Custom Attributes</title>
-      <p>Optional service parameters can be added to set values of custom attributes in VMware vSphere. Custom attributes can be defined in VMWare vSphere as required, assigned to different objects like virtual machines and hosts, and used for purposes like searching or filtering. From <ph
+      <p>Optional service parameters can be added to set values of custom attributes in VMware vSphere. Custom attributes can be defined in VMware vSphere as required, assigned to different objects like virtual machines and hosts, and used for purposes like searching or filtering. From <ph
           conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
         />, the value of a vShpere custom attribute can be set by means of the default value of a service parameter or a corresponding custom attribute defined for a subscription.</p>
       <p>Service parameters for vSphere custom attributes can be defined as follows:</p>
