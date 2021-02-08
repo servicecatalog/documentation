@@ -14,7 +14,7 @@
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                         /> Docker host need to be provided in the following directory: </p><p><codeph>&lt;docker>/config/oscm-app/scripts</codeph></p><p><codeph>&lt;docker></codeph> is the <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        /> data directory (shared file system) specified at installation time.</p><p>Whenever you provide new scripts or change existing ones, you must restart the <codeph>oscm-app</codeph> container. This automatically makes the scripts available within the container in the <codeph>/opt/scripts</codeph> directory, which is mounted to the <codeph>&lt;docker>/config/oscm-app/scripts</codeph> directory. </p><p><image
+                        /> data directory (shared file system) specified at installation time.</p><p>Whenever you provide new scripts or change existing ones, they are automatically made available within the <codeph>oscm-app</codeph> container in the <codeph>/opt/scripts</codeph> directory, which is mounted to the <codeph>&lt;docker>/config/oscm-app/scripts</codeph> directory. </p><p><image
                             href="../_images/RunningEnv.png" alt="RunningEnv.png" width="400" height="171"/></p></li>
                 <li>The Shell service controller will execute the scripts stored on the shared file system as the same UNIX user who runs the <codeph>oscm-app</codeph> container.</li>
             </ul>
