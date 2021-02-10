@@ -66,6 +66,7 @@
         
         <div class="section"><h4 class="sectiontitle">BASE_URL_HTTPS</h4>Obligatorisch. Diese URL führt zur Startseite der Plattform und dient zum Erstellen der URL, um auf Services über HTTPS zuzugreifen. <p>Syntax: <samp class="codeph">https://&lt;host_fqdn&gt;:8081/oscm-portal</samp></p>
 <p><samp class="codeph">&lt;host_fqdn&gt;</samp> ist der vollqualifizierte Host-Name oder die IP-Adresse der Plattforminstallation, <samp class="codeph">8081</samp> der benötigte Port. Die Angabe des Ports entfällt, wenn die Plattform mit Proxy betrieben wird. <samp class="codeph">oscm-portal</samp> ist die Context-Root der Plattform. Diese kann nicht geändert werden. </p>
+<p>Diese Konfigurationseinstellung entspricht der Einstellung <samp class="codeph">OSCM_CORE_URL</samp> in der Konfigurationsdatei <samp class="codeph">var.env</samp>.</p>
 </div>
 
         <div class="section"><h4 class="sectiontitle">CUSTOMER_SELF_REGISTRATION_ENABLED</h4>
@@ -181,6 +182,7 @@
 
         <div class="section"><h4 class="sectiontitle">OSCM_IDENTITY_SERVICE_URL</h4>Nur für Authentifizierungsmodus OIDC erforderlich. Die URL des Identity-Service der Plattform. Die URL dient der Um- und Weiterleitung von Requests an den OIDC-Provider. <p>Syntax: <samp class="codeph">https://&lt;host_fqdn&gt;:9091/oscm-identity</samp></p>
 <p><samp class="codeph">&lt;host_fqdn&gt;</samp> ist der vollqualifizierte Host-Name oder die IP-Adresse der Plattforminstallation, <samp class="codeph">9091</samp> der benötigte Port. Die Angabe des Ports entfällt, wenn die Plattform mit Proxy betrieben wird. <samp class="codeph">oscm-identity</samp> ist die Context-Root des Identity-Services. Diese kann nicht geändert werden. </p>
+<p>Diese Konfigurationseinstellung entspricht der Einstellung <samp class="codeph">OSCM_IDENTITY_URL</samp> in der Konfigurationsdatei <samp class="codeph">var.env</samp>.</p>
 </div>
 
         <div class="section"><h4 class="sectiontitle">PERMITTED_PERIOD_INACTIVE_ON_BEHALF_USERS</h4>Zeit in Millisekunden, nach der ein Benutzer, der sich im Namen eines Kunden angemeldet und keine Aktion mehr ausgeführt hat, aus dem System gelöscht wird: <samp class="codeph">604800000</samp> (7 Tage). <p>Diese Einstellung kann nicht geändert werden.</p>
@@ -203,6 +205,8 @@
    ${soapendpoint}&amp;wsname=Report&amp;wsport=ReportPort</pre>
 
             <p>Ersetzen Sie <samp class="codeph">&lt;host_fqdn&gt;</samp> mit dem vollqualifizierten Host-Namen oder der IP-Adresse der Plattforminstallation. Die Angabe des Ports entfällt, wenn die Plattform mit Proxy betrieben wird. </p>
+
+            <p>Diese Konfigurationseinstellung entspricht der Einstellung <samp class="codeph">OSCM_BIRT_URL</samp> in der Konfigurationsdatei <samp class="codeph">var.env</samp>.</p>
 
         </div>
 

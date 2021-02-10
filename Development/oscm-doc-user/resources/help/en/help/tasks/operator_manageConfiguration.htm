@@ -34,7 +34,9 @@
 
       <div class="p">
         <ol>
-          <li>On your Docker host, edit the <samp class="codeph">var.env</samp> file located in the platform's data directory (<samp class="codeph">&lt;docker&gt;</samp>) as required. </li>
+          <li>On your Docker host, change to the platform's data directory (<samp class="codeph">&lt;docker&gt;</samp>) and execute the following steps from this location.</li>
+
+          <li>Edit the <samp class="codeph">var.env</samp> file located in the data directory as required. </li>
 
           <li>If you want to change the default value of a configuration setting that is not included in the <samp class="codeph">var.env</samp> file yet:<p>Add the key and the value the setting shall take on to the <samp class="codeph">var.env</samp> file. </p>
 <p>You can find the keys of the settings on the <strong>Update configuration settings</strong> page. For example: </p>
@@ -42,6 +44,14 @@
 </li>
 
           <li>Save the <samp class="codeph">var.env</samp> file to its original location: <p><samp class="codeph">&lt;docker&gt;/var.env</samp></p>
+</li>
+
+          <li>Export the variables set in the <samp class="codeph">.env</samp> configuration file in the same directory:<div class="p">
+              <pre class="codeblock">set -a
+. ./.env
+set +a</pre>
+
+            </div>
 </li>
 
           <li>In the <samp class="codeph">docker-compose-initdb.yml</samp> file in the same directory, set the <samp class="codeph">OVERWRITE</samp> flag in the <samp class="codeph">environment</samp> settings for <samp class="codeph">oscm-initdb-core</samp> to <samp class="codeph">true</samp> to change the configuration setting in the database. <div class="p">

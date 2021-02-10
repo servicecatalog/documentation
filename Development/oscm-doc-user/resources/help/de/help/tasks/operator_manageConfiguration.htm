@@ -34,14 +34,24 @@
 
       <div class="p">
         <ol>
-          <li>Bearbeiten Sie die Datei <samp class="codeph">var.env</samp> im Datenverzeichnis der Plattform (<samp class="codeph">&lt;docker&gt;</samp>) auf dem Docker-Host entsprechend Ihrer Anforderungen. </li>
+          <li>Wechseln Sie auf dem Docker-Host in das Datenverzeichnis der Plattform (<samp class="codeph">&lt;docker&gt;</samp>) und führen Sie alle folgenden Schritte in diesem Verzeichnis aus.</li>
+
+          <li>Bearbeiten Sie die Datei <samp class="codeph">var.env</samp> in dem Verzeichnis entsprechend Ihrer Anforderungen. </li>
 
           <li>Wenn Sie den voreingestellten Wert einer Einstellung ändern möchten, die noch nicht in der Datei <samp class="codeph">var.env</samp> enthalten ist: <p>Fügen Sie den Schlüssel und den Wert der Einstellung in der Datei <samp class="codeph">var.env</samp> hinzu.</p>
 <p>Die Schlüssel finden Sie auf der Seite <span class="uicontrol">Konfiguration aktualisieren</span>. Beispiel: </p>
 <p><samp class="codeph">TIMER_INTERVAL_SUBSCRIPTION_EXPIRATION=345600000</samp></p>
 </li>
 
-          <li>Speicher Sie die Datei <samp class="codeph">var.env</samp> im ursprünglichen Verzeichnis:<p><samp class="codeph">&lt;docker&gt;/var.env</samp></p>
+          <li>Speichern Sie die Datei <samp class="codeph">var.env</samp> an ihrer ursprünglichen Stelle:<p><samp class="codeph">&lt;docker&gt;/var.env</samp></p>
+</li>
+
+          <li>Exportieren Sie die Variablen der Konfigurationsdatei <samp class="codeph">.env</samp> im selben Verzeichnis:<div class="p">
+              <pre class="codeblock">set -a
+. ./.env
+set +a</pre>
+
+            </div>
 </li>
 
           <li>Setzen Sie in der Datei <samp class="codeph">docker-compose-initdb.yml</samp> im selben Verzeichnis das Flag <samp class="codeph">OVERWRITE</samp> im Abschnitt <samp class="codeph">environment</samp> von <samp class="codeph">oscm-initdb-core</samp> auf <samp class="codeph">true</samp>, um die Einstellung in der Datenbank zu ändern. <div class="p">

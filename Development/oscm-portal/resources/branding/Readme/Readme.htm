@@ -24,7 +24,7 @@
 
                   <p>On the <span class="uicontrol">Customize layout</span> page, you can specify a style sheet that defines the branding and layout of a marketplace, i.e. the colors, fonts, background images, and logos. <span id="task55555__N5002A">The best way to create an appropriate style sheet is to use the platform's default style sheet as a basis and adapt it as required. </span></p>
 
-                  <p>The platform's default style sheet <span>(<samp class="codeph">mp.css</samp>)</span> and the files and images it references are provided in the branding package, a ZIP file which you can download <span>on the <span class="uicontrol">Customize layout</span> page</span>. The branding package also includes sample HTML pages of a marketplace. You can use these HTML pages to preview and test your customizations. In the style sheet, you can find comments and descriptions of the relevant elements of the HTML pages as well as information on which elements you must not customize in order to ensure that the page layout does not get broken.</p>
+                  <p>The layout and branding of marketplaces is based on the Bootstrap framework and Sass (Syntactically Awesome Stylesheets). The Sass sources of the platform's default style sheet and the referenced files and images are provided in the branding package, a ZIP file which you can download <span>on the <span class="uicontrol">Customize layout</span> page</span>. <span>For details on how to proceed to adapt the sources and achieve the desired layout and branding, refer to <a href="https://github.com/servicecatalog/oscm/blob/master/oscm-portal/WebContent/marketplace/customBootstrap/README.md" target="_blank">Marketplace Customization Guide with Bootstrap and Sass</a>. </span></p>
 
                   <p>Be aware of the following:</p>
 
@@ -53,7 +53,7 @@
             <ol><li class="stepexpand">
                 <span>Download the branding package by clicking the corresponding button. </span>
                  
-                    <p>The branding package (<samp class="codeph">branding-package.zip</samp>)  contains the platform's default style sheet (<samp class="codeph">mp.css</samp>), the files and images it references, as well as HTML pages for previewing and testing your adaptations to the style sheet. </p>
+                    <p>The branding package (<samp class="codeph">branding-package.zip</samp>) contains the Sass sources of the platform's default style sheet and the referenced files and images. </p>
 
                 
             </li>
@@ -61,10 +61,8 @@
                 <span>Extract the ZIP file to a local directory.</span>
             </li>
 <li class="stepexpand">
-                <span>Adapt the files as required. </span>
+                <span>Adapt the files as required. For details on how to proceed, refer to <a href="https://github.com/servicecatalog/oscm/blob/master/oscm-portal/WebContent/marketplace/customBootstrap/README.md" target="_blank">Marketplace Customization Guide with Bootstrap and Sass</a>.</span>
                  
-                    <p>To test your customizations, open one or several of the sample HTML pages. Refresh the browser content after any change you make. </p>
-
                     <p>Be aware that you are responsible for the correct page layout. This means that you should always thoroughly check the layout before providing the customized style sheet to the platform operator for publishing. </p>
 
                 
@@ -97,9 +95,9 @@
                  
                     <p>By default, the URL is as follows: </p>
 
-                    <p><samp class="codeph">https://&lt;host_fqdn&gt;:8443/&lt;new-folder-name&gt;/css/mp.css</samp></p>
+                    <p><samp class="codeph">https://&lt;host_fqdn&gt;:8443/&lt;folder-name&gt;/css/mp.css</samp></p>
 
-                    <p><samp class="codeph">&lt;host_fqdn&gt;</samp> is the fully qualified name or IP address of the host used to access the platform, <samp class="codeph">8443</samp> is the port. Omit the port if <span>the platform</span> is operated with its proxy. <samp class="codeph">&lt;new-folder-name&gt;</samp> is the name of the folder containing the customized files. </p>
+                    <p><samp class="codeph">&lt;host_fqdn&gt;</samp> is the fully qualified name or IP address of the host used to access the platform, <samp class="codeph">8443</samp> is the port. Omit the port if <span>the platform</span> is operated with its proxy. <samp class="codeph">&lt;folder-name&gt;</samp> is the name of the folder containing the customized files. </p>
 
                 
             </li>
@@ -118,7 +116,7 @@
 
 <div>
 <hr align="left" width="100%" />
-<p>Copyright FUJITSU LIMITED 2020</p>
+<p>Copyright FUJITSU LIMITED 2021</p>
 </div>
 </body>
 </html>

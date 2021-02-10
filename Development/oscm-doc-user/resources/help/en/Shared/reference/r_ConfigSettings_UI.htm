@@ -63,8 +63,9 @@
         </div>
 
         
-        <div class="section"><h4 class="sectiontitle">BASE_URL_HTTPS</h4>The base URL is used to access the <span>platform's</span> home page and to create the URL for accessing services via HTTPS. <p>Syntax: <samp class="codeph">https://&lt;host_fqdn&gt;:8081/oscm-portal</samp></p>
+        <div class="section"><h4 class="sectiontitle">BASE_URL_HTTPS</h4>The base URL is used to access <span>the platform</span> and to create the URL for accessing services via HTTPS. <p>Syntax: <samp class="codeph">https://&lt;host_fqdn&gt;:8081/oscm-portal</samp></p>
 <p><samp class="codeph">&lt;host_fqdn&gt;</samp> is the FQDN or IP address of the host to access <span>the platform</span>, <samp class="codeph">8081</samp> is the port. Omit the port if <span>the platform</span> is operated with its proxy. <samp class="codeph">oscm-portal</samp> is the context root of <span>the platform</span> and cannot be changed. </p>
+<p>This setting corresponds to the <samp class="codeph">OSCM_CORE_URL</samp> setting in the <samp class="codeph">var.env</samp> configuration file.</p>
 </div>
 
         <div class="section"><h4 class="sectiontitle">CUSTOMER_SELF_REGISTRATION_ENABLED</h4>
@@ -176,6 +177,7 @@
 
         <div class="section"><h4 class="sectiontitle">OSCM_IDENTITY_SERVICE_URL</h4>Only required with OIDC authentication mode. The URL of the <span>platform's</span> identity service. The URL is used for redirecting and forwarding requests to the OIDC provider. <p>Syntax: <samp class="codeph">https://&lt;host_fqdn&gt;:9091/oscm-identity</samp></p>
 <p><samp class="codeph">&lt;host_fqdn&gt;</samp> is the FQDN or IP address of the host to access <span>the platform</span>, <samp class="codeph">9091</samp> is the port. Omit the port if <span>the platform</span> is operated with its proxy. <samp class="codeph">oscm-identity</samp> is the context root of the identity service and cannot be changed. </p>
+<p>This setting corresponds to the <samp class="codeph">OSCM_IDENTITY_URL</samp> setting in the <samp class="codeph">var.env</samp> configuration file.</p>
 </div>
 
         <div class="section"><h4 class="sectiontitle">PERMITTED_PERIOD_INACTIVE_ON_BEHALF_USERS</h4>The time in milliseconds after which a user who logged in on behalf of a customer and was inactive will be removed from the system: <samp class="codeph">604800000</samp>,  i.e. 7 days.<p>This setting cannot be changed.</p>
@@ -198,6 +200,8 @@
    ${soapendpoint}&amp;wsname=Report&amp;wsport=ReportPort</pre>
 
             <p><samp class="codeph">&lt;host_fqdn&gt;</samp> is the FQDN or IP address of the host to access <span>the platform</span>. Omit the port if <span>the platform</span> is operated with its proxy.</p>
+
+            <p>This setting corresponds to the <samp class="codeph">OSCM_BIRT_URL</samp> setting in the <samp class="codeph">var.env</samp> configuration file.</p>
 
         </div>
 
