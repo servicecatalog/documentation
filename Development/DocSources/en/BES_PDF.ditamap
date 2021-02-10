@@ -365,8 +365,8 @@
             href="Shared/reference/r_Audit_log_Admin.xml"/>
 			<topicref
             href="Shared/reference/r_Audit_log_Supplier.xml"/>
-        <topicref
-        href="Shared/reference/r_ConfigSettings_config_properties.xml"/>
+<!--         <topicref -->
+<!--         href="Shared/reference/r_ConfigSettings_config_properties.xml"/> -->
     </chapter>
     <chapter
         href="Shared/concepts/c_Marketplace.xml"
