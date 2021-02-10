@@ -16,7 +16,7 @@
             </p>
             <p><codeph>&lt;host_fqdn></codeph> is the fully qualified name or IP address of the host used to access <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    />, for example, <codeph>host.mydomain.org</codeph>. The host specified here is written to the generated configuration files and default certificates (see <xref
+                    />, for example, <codeph>host.mydomain.org</codeph>. The host specified here is written to the <codeph>.env</codeph> configuration file (see below) and to the default certificates (see <xref
                     href="../../Shared/reference/c_Certificates.xml"/>).</p>
             <p><codeph>${REGISTRY}</codeph> is the name of your local Docker registry or the <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> registry on DockerHub. </p>
@@ -24,7 +24,9 @@
             <p>
                 <ol>
                     <li>
-                        <p><codeph>.env</codeph>: Configuration settings for Docker, such as images and the data directory on the Docker host.</p>
+                        <p><codeph>.env</codeph>: Configuration settings for Docker, such as images and the data directory on the Docker host, as well as the host used to access <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> (<codeph>HOST_FQDN</codeph>).</p>
                     </li>
                     <li><codeph>var.env</codeph>: Configuration settings for <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
@@ -37,8 +39,8 @@
                         href="https://github.com/servicecatalog/documentation/blob/master/Development/oscm-doc-user/resources/manuals/installation+operation/en/Operation.pdf"
                         scope="external"><u><i>Operator's Guide</i></u></xref></ph>
                 <ph product="oscm_ee">The settings are described in detail in the <xref format="html"
-                        href="https://https://github.com/servicecatalog/documentation/tree/ESCM" scope="external"
-                                ><u><i>Operator's Guide</i></u></xref></ph>.  </p>
+                        href="https://github.com/servicecatalog/documentation/blob/ESCM/Manuals/Operation.pdf"
+                        scope="external"><u><i>Operator's Guide</i></u></xref></ph>. </p>
         </section>
     </conbody>
 </concept>

@@ -16,8 +16,8 @@
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> data directory on the Docker host: </p><p>
                 <ol>
                     <li>
-                        <p><codeph>.env</codeph>: Configuration settings for Docker, such as images and the <ph
-                                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> data directory.</p>
+                        <p><codeph>.env</codeph>: Configuration settings for Docker, such as images and the data directory on the Docker host, as well as the fully qualified name (FQDN) or IP address of the host used to access <ph
+                                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></p>
                     </li>
                     <li><codeph>var.env</codeph>: Configuration settings for <ph audience="BSS"
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"

@@ -21,12 +21,16 @@
                             <li><codeph>IMAGE_HELP</codeph>: image for the <codeph>oscm-help</codeph> container</li>
                             <li><codeph>IMAGE_IDENTITY</codeph>: image for the <codeph>oscm-identity</codeph> container</li>
                             <li><codeph>IMAGE_MAILDEV</codeph>: image for the <codeph>oscm-maildev</codeph> container</li>
+                            <li><codeph>IMAGE_PROXY</codeph>: image for the <codeph>oscm-proxy</codeph> container</li>
                         </ul>
                     </li>
-                    <li>The directory, <codeph>DOCKER_PATH</codeph>, where <ph
-                            conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                /> data is persisted on your Docker host. The name of the directory must be <b><codeph>docker</codeph></b>. It may be located in the root directory or in any subdirectory. The default directory is <codeph>/docker</codeph>. </li>
-                    <li>HTTP timeout for Docker Compose. You need to adjust this value if you get timeout errors during high load or network congestion.</li>
+                    <li><codeph>DOCKER_PATH</codeph>: The directory where <ph platform="print"><ph
+                                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>
+                        </ph>data is persisted on your Docker host. The name of the directory must be <b><codeph>docker</codeph></b>. It may be located in the root directory or in any subdirectory. The default directory is <codeph>/docker</codeph>. </li>
+                    <li><codeph>HOST_FQDN</codeph>: The fully qualified name or IP address of the host used to access <ph
+                            platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph
+                            platform="help">the platform</ph>, for example, <codeph>host.mydomain.org</codeph>.</li>
+                    <li><codeph>COMPOSE_HTTP_TIMEOUT</codeph>: The HTTP timeout for Docker Compose. You need to adjust this value if you get timeout errors during high load or network congestion.</li>
                 </ul>
             </p>
         </section>
@@ -164,27 +168,62 @@
             <p>
                 <ul>
                     <li><codeph>KEY_SECRET</codeph><p>A string which will be used in the <codeph>bss</codeph> database as a seed for encryption and decryption of service parameters with data type <codeph>PWD</codeph> and custom attributes marked for encryption. Make sure not to forget this string so that your database is persisted. </p><note>Be aware that you must use the same key when updating the database. Otherwise, encryption and decryption is no longer possible after an update. </note></li>
-                    <li><codeph>HOST_FQDN</codeph><p>The fully qualified name or IP address of the host used to access <ph
-                                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </p></li>
-                    <li><codeph>REPORT_ENGINEURL</codeph><p>The URL of the report engine used to generate the <ph
-                                platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                /></ph><ph platform="help"
-                                >platform's</ph> reports. If you do not specify a correct URL template, <ph
-                                platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                /></ph><ph platform="help"
-                            >the platform</ph> will not be able to generate any reports, since the Report Web service cannot be called correctly.</p><p>The setting must be as follows: </p><codeblock>https://&lt;host_fqdn>:8681/birt/frameset?
-   __report=\${reportname}.rptdesign&amp;SessionId=\${sessionid}&amp;
-   __locale=\${locale}&amp;WSDLURL=\${wsdlurl}&amp;SOAPEndPoint=\
-   ${soapendpoint}&amp;wsname=Report&amp;wsport=ReportPort</codeblock><p>Replace <codeph>&lt;host_fqdn></codeph> with the value entered for the <codeph>HOST_FQDN</codeph> setting. Omit the port if <ph
-                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"
-                                /><ph platform="help"
-                            >the platform</ph> is operated with its proxy. The other values must not be changed. </p></li>
                     <li><codeph>TOMEE_DEBUG</codeph><p>Defines if the application server is to generate log files for <ph
                                 platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
                                 /></ph><ph platform="help"
                                 >the platform</ph>. Can be set to <codeph>true</codeph> or <codeph>false</codeph>. </p></li>
+                    <li><codeph>LOG_LEVEL</codeph><p>Specifies the log level for <ph
+                                conref="../Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"/><ph
+                                platform="help"
+                                >the platform</ph>. Allowed values are <codeph>ERROR</codeph>, <codeph>WARN</codeph>, <codeph>INFO</codeph>, and <codeph>DEBUG</codeph>.</p></li>
                 </ul>
             </p>
+        </section>
+        <section>
+            <title>Base URL Settings</title>
+            <p>The following settings provide base URLs for accessing <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"/><ph platform="help"
+                    >the platform</ph> and its components. If you are operating <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"/><ph platform="help"
+                    >the platform</ph> with its proxy, you do not need to change anything in these URLs. For working without the proxy, you must specify the appropriate port in each of the URLs following the string <codeph>${HOST_FQDN}</codeph> and separated by a colon, for example, <codeph>https://${HOST_FQDN}:8081/oscm-portal</codeph>.</p>
+            <p><b>IMPORTANT</b>: Do not change or remove the string <codeph>${HOST_FQDN}</codeph> in the URLs. It is automatically replaced by the value of the <codeph>HOST-FQDN</codeph> variable defined in the <codeph>.env</codeph> configuration file when the settings are written to the <codeph>bss</codeph> database.</p>
+            <ul compact="no">
+                <li><codeph>OSCM_CORE_URL</codeph><p>The base URL used to access <ph
+                            conref="../Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"/><ph
+                            platform="help"
+                        >the platform</ph> and to create the URLs for accessing services via HTTPS. </p><ul>
+                        <li>Without port: <codeph>https://${HOST_FQDN}/oscm-portal</codeph></li>
+                        <li>With port: <codeph>https://${HOST_FQDN}:8081/oscm-portal</codeph></li>
+                    </ul></li>
+                <li><codeph>OSCM_APP_URL</codeph><p>The URL used to access APP and its web interface. </p><ul>
+                        <li>Without port: <codeph>https://${HOST_FQDN}/oscm-app</codeph></li>
+                        <li>With port: <codeph>https://${HOST_FQDN}:8881/oscm-app</codeph></li>
+                    </ul></li>
+                <li><codeph>OSCM_IDENTITY_URL</codeph><p>Required with OIDC authentication mode. The URL of the <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"/><ph
+                            platform="help"
+                        >platform's</ph> identity service. The URL is used for redirecting and forwarding requests to the OIDC provider</p><ul>
+                        <li>Without port: <codeph>https://${HOST_FQDN}/oscm-identity</codeph></li>
+                        <li>With port: <codeph>https://${HOST_FQDN}:9091/oscm-identity</codeph></li>
+                    </ul></li>
+                <li><codeph>OSCM_BIRT_URL</codeph><p>The URL of the report engine used to generate the <ph
+                            conref="../Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"/><ph
+                            platform="help">platform's</ph> reports. If you do not specify a correct URL template, <ph
+                            conref="../Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"/><ph
+                            platform="help"
+                        >the platform</ph> will not be able to generate any reports, since the Report Web service cannot be called correctly.</p><ul>
+                        <li>Without port: <codeph>https://${HOST_FQDN}/frameset?__report=\${reportname}.rptdesign
+&amp;SessionId=\${sessionid}&amp;__locale=\${locale}&amp;WSDLURL=\${wsdlurl}
+&amp;SOAPEndPoint=\${soapendpoint}&amp;wsname=Report&amp;wsport=ReportPort</codeph></li>
+                        <li>With port: <codeph>https://${HOST_FQDN}:8681/frameset?__report=\${reportname}.</codeph>
+                            <codeph>rptdesign&amp;SessionId=\${sessionid}&amp;__locale=\${locale}&amp;WSDLURL=\${wsdlurl}
+&amp;SOAPEndPoint=\${soapendpoint} &amp;wsname=Report&amp;wsport=ReportPort</codeph></li>
+                    </ul></li>
+                <li><codeph>MP_ERROR_REDIRECT_HTTPS</codeph><p>The URL of a Web page that is to be displayed in case a visitor tries to access a marketplace without a valid marketplace ID. This Web page will be shown instead of the default error message. Note that this URL is used platform-wide. </p><p>The initial value in the configuration file is the URL of the first marketplace that is created.</p><ul>
+                        <li>Without port: <codeph>https://${HOST_FQDN}/oscm-portal/marketplace?mId=959c9bf7</codeph></li>
+                        <li>With port: <codeph>https://${HOST_FQDN}:8081/oscm-portal/marketplace?mId=959c9bf7</codeph></li>
+                    </ul></li>
+            </ul>
         </section>
         <section>
             <title>Application Server Settings</title>
