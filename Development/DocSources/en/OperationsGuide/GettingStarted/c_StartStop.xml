@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>  
-<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2020 -->
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2021 -->
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
                          "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
 ]>
@@ -9,42 +9,47 @@
                 <title>Startup and Shutdown</title>
                 <conbody>
                         <section>
-                                <p>The <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        <p>The <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                 /> containers can be started, stopped, removed, and restarted using the standard utilities of Docker. </p>
-                                <p>To <b>stop</b> a container, use the following command on your Docker host:</p>
+                        <p>In order to properly execute the <codeph>docker-compose*</codeph> commands below, change to the <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                        /> data directory (<codeph>&lt;docker></codeph>) specified at installation time.</p>
+                        <p>To <b>stop</b> a container, use the following command on your Docker host:</p>
                         <p><codeblock>docker stop &lt;container-name></codeblock> For example: </p>
                         <p>
                                 <codeblock>docker stop oscm-core</codeblock>
                         </p>
-                                <p>To <b>delete</b> a container:</p>
+                        <p>To <b>delete</b> a container:</p>
                         <p>
                                 <ol>
                                         <li>Stop the container using the above command. </li>
                                         <li>Remove the container: <codeblock>docker-compose -f docker-compose-oscm.yml rm &lt;container-name></codeblock></li>
                                 </ol>
                         </p>
-                        <p>To <b>create and start</b> a container:  </p>
+                        <p>To <b>create and start</b> a container: </p>
                         <p>
                                 <codeblock>docker-compose -f docker-compose-oscm.yml up &lt;container-name></codeblock>
                         </p>
-                        <p>To <b>restart</b> a container:  </p>
+                        <p>To <b>restart</b> a container: </p>
                         <p>
                                 <codeblock>docker-compose -f docker-compose-oscm.yml restart &lt;container-name></codeblock>
                         </p>
                         <p>When shutting down the containers, the <codeph>oscm-db</codeph> container must be the last one to be stopped. When starting or restarting the containers, make sure that the <codeph>oscm-db</codeph> container is first. </p>
-                        <p><b>Starting and Stopping the <ph
-                                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                        /> Proxy</b></p>
+                </section>
+                <section>
+                        <title>Starting and Stopping the <ph
+                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> Proxy</title>
                         <p>The optional <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                /> proxy comes with its own Docker Compose file.</p>
+                                        /> proxy comes with its own Docker Compose file in the <codeph>&lt;docker>/proxy</codeph> directory. </p>
                         <p>To start the proxy:</p>
                         <p>
-                                <codeblock>docker-compose -f docker-compose-proxy.yml up -d</codeblock>
+                                <codeblock>docker-compose -f proxy/docker-compose-proxy.yml up -d</codeblock>
                         </p>
                         <p>To stop the proxy:</p>
                         <p>
-                                <codeblock>docker-compose -f docker-compose-proxy.yml down</codeblock>
+                                <codeblock>docker-compose -f proxy/docker-compose-proxy.yml down</codeblock>
                         </p>
-                        </section>
+                </section>
                 </conbody>
         </concept>

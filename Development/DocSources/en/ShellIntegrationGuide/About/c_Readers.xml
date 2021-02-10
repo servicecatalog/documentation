@@ -1,5 +1,5 @@
 <?xml version="1.0"?> 
-<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2020 -->
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2021 -->
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd"
 [
 <!ENTITY % entities PUBLIC "-//XDOC//ENTITIES//FujitsuUserDoc" "entities.dtd">
@@ -9,7 +9,7 @@
     <title>Readers of this Manual</title>
     <conbody>
         <section>
-            <p>This manual is intended for operators who want to use Shell scripts for offering services on a marketplace provided by <ph
+            <p>This manual is intended for operators who want to execute Shell scripts from services on a marketplace provided by <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     />. It assumes that you have access to an existing <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>  
-<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2020 -->
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2021 -->
 <!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
                            "reference.dtd">
 <reference id="reference832" xml:lang="en-us">
@@ -43,16 +43,17 @@
                 >platform's</ph> home page if <ph platform="print"><ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
                 >the platform</ph> does not require HTTPS for communication. If left empty, the <codeph>BASE_URL_HTTPS</codeph> setting is used. <p>Syntax: <codeph>http://&lt;host&gt;:&lt;port&gt;/&lt;context-root></codeph></p><p>The default for <codeph>&lt;context-root></codeph> is <codeph>oscm-portal</codeph>.</p><note>If the SSL/HTTPS port was changed, then this setting must also be updated.</note></section-->
-        <section><title>BASE_URL_HTTPS</title>The base URL is used to access the <ph platform="print"><ph
+        <section><title>BASE_URL_HTTPS</title>The base URL is used to access <ph platform="print"><ph
                     conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph platform="help"
-                    >platform's</ph> home page and to create the URL for accessing services via HTTPS. <p>Syntax: <codeph>https://&lt;host_fqdn>:8081/oscm-portal</codeph></p><p><codeph>&lt;host_fqdn&gt;</codeph> is the FQDN or IP address of the host to access <ph
+                >the platform</ph> and to create the URL for accessing services via HTTPS. <p>Syntax: <codeph>https://&lt;host_fqdn>:8081/oscm-portal</codeph></p><p><codeph>&lt;host_fqdn&gt;</codeph> is the FQDN or IP address of the host to access <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"/><ph
                     platform="help">the platform</ph>, <codeph>8081</codeph> is the port. Omit the port if <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"/><ph
                     platform="help"
                     >the platform</ph> is operated with its proxy. <codeph>oscm-portal</codeph> is the context root of <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"/><ph
-                    platform="help">the platform</ph> and cannot be changed. </p></section>
+                    platform="help"
+                    >the platform</ph> and cannot be changed. </p><p>This setting corresponds to the <codeph>OSCM_CORE_URL</codeph> setting in the <codeph>var.env</codeph> configuration file.</p></section>
         <section>
             <title>CUSTOMER_SELF_REGISTRATION_ENABLED</title>
             <p>Optional. Specifies whether customer organizations can register on a marketplace. If set to <codeph>false</codeph>, the operator needs to create an organization for the customer who wants to register, or a seller (supplier, broker, reseller) needs to register the customer. </p>
@@ -135,7 +136,7 @@
                     platform="help">the platform</ph>, <codeph>9091</codeph> is the port. Omit the port if <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"/><ph
                     platform="help"
-                >the platform</ph> is operated with its proxy. <codeph>oscm-identity</codeph> is the context root of the identity service and cannot be changed. </p></section>
+                >the platform</ph> is operated with its proxy. <codeph>oscm-identity</codeph> is the context root of the identity service and cannot be changed. </p><p>This setting corresponds to the <codeph>OSCM_IDENTITY_URL</codeph> setting in the <codeph>var.env</codeph> configuration file.</p></section>
         <section><title>PERMITTED_PERIOD_INACTIVE_ON_BEHALF_USERS</title>The time in milliseconds after which a user who logged in on behalf of a customer and was inactive will be removed from the system: <codeph>604800000</codeph>,  i.e. 7 days.<p>This setting cannot be changed.</p><!--p>Allowed values: Any value between <codeph>1</codeph> and <codeph>9223372036854775807</codeph></p><p>Default: <codeph>604800000</codeph>, i.e. 7 days </p--></section>
         <section><title>PERMITTED_PERIOD_UNCONFIRMED_ORGANIZATIONS</title>Optional. The maximum time in milliseconds until an organization's initial administrative account must be confirmed. When this time has passed, the account is removed. <p>Allowed values: Any value between <codeph>1</codeph> and <codeph>9223372036854775807</codeph></p><p>Default: <codeph>604800000</codeph>, i.e. 7 days </p></section>
         <!--section><title>PSP_USAGE_ENABLED</title>Mandatory. Specifies whether PSP integration is used for the current environment.<p>Allowed values: <codeph>true</codeph>, <codeph>false</codeph></p><p>Default: <codeph>false</codeph></p><p>If you change this setting, you need to restart <ph
@@ -158,6 +159,7 @@
                     platform="help">the platform</ph>. Omit the port if <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"/><ph
                     platform="help">the platform</ph> is operated with its proxy.</p>
+            <p>This setting corresponds to the <codeph>OSCM_BIRT_URL</codeph> setting in the <codeph>var.env</codeph> configuration file.</p>
         </section>
         <section><title>REPORT_SOAP_ENDPOINT</title>The SOAP end point of the Report Web service. All report data is retrieved via a call to the Report Web service. If you do not specify a correct value, <ph
                 platform="print"><ph conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/></ph><ph

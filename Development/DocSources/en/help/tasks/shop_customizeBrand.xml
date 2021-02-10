@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>  
-<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2020 -->
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2021 -->
 <!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
                       "task.dtd">
 <task id="task55550" xml:lang="en-us">
@@ -10,18 +10,20 @@
                     >On the <uicontrol>Customize layout</uicontrol> page, you can specify a style sheet that defines the branding and layout of a marketplace, i.e. the colors, fonts, background images, and logos. <ph
                     id="The_best_way_to_create_an_app_task_taskbody_context_p_1_ph"
                     >The best way to create an appropriate style sheet is to use the platform's default style sheet as a basis and adapt it as required. </ph></p>
-            <p id="On_the_task_taskbody_context_p_1"><ph id="You_then_provide_task_taskbody_context_p_2_ph"
+            <p id="On_the_task_taskbody_context_p_2"><ph id="You_then_provide_task_taskbody_context_p_2_ph"
                         >You then provide the customized style sheet and the files it references to the platform operator so that he can make them available in the <codeph>oscm-branding</codeph> container. When the operator is finished, he will inform you about the URL to the style sheet, which you can then specify <ph
                         platform="print">in <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                         /></ph><ph platform="help"
                     >on the <uicontrol>Customize layout</uicontrol> page</ph>. If no URL is set, the default style sheet is used.</ph>
             </p>
-            <p id="The_platform_s_default_style_task_taskbody_context_p_2">The platform's default style sheet <ph
-                    platform="help"
-                    >(<codeph>mp.css</codeph>)</ph> and the files and images it references are provided in the branding package, a ZIP file which you can download <ph
+            <p id="The_platform_s_default_style_task_taskbody_context_p_2"
+                    >The layout and branding of marketplaces is based on the Bootstrap framework and Sass (Syntactically Awesome Stylesheets). The Sass sources of the platform's default style sheet and the referenced files and images are provided in the branding package, a ZIP file which you can download <ph
                     platform="print">from <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                    /></ph><ph platform="help"
-                >on the <uicontrol>Customize layout</uicontrol> page</ph>. The branding package also includes sample HTML pages of a marketplace. You can use these HTML pages to preview and test your customizations. In the style sheet, you can find comments and descriptions of the relevant elements of the HTML pages as well as information on which elements you must not customize in order to ensure that the page layout does not get broken.</p>
+                    /></ph><ph platform="help">on the <uicontrol>Customize layout</uicontrol> page</ph>. <ph
+                    platform="help"
+                        >For details on how to proceed to adapt the sources and achieve the desired layout and branding, refer to <xref
+                        href="https://github.com/servicecatalog/oscm/blob/master/oscm-portal/WebContent/marketplace/customBootstrap/README.md"
+                        scope="external">Marketplace Customization Guide with Bootstrap and Sass</xref>. </ph></p>
             <p id="Be_aware_of_the_following:_task_taskbody_context_p_3">Be aware of the following:</p>
             <ul compact="no" id="Your_organization_is_responsi_task_taskbody_context_ul">
                 <li>Your organization is responsible for providing the correct version of the customized style sheet and all referenced files to the platform operator. </li>
@@ -39,16 +41,17 @@
             <step>
                 <cmd>Download the branding package by clicking the corresponding button. </cmd>
                 <info>
-                    <p>The branding package (<codeph>branding-package.zip</codeph>)  contains the platform's default style sheet (<codeph>mp.css</codeph>), the files and images it references, as well as HTML pages for previewing and testing your adaptations to the style sheet. </p>
+                    <p>The branding package (<codeph>branding-package.zip</codeph>) contains the Sass sources of the platform's default style sheet and the referenced files and images. </p>
                 </info>
             </step>
             <step>
                 <cmd>Extract the ZIP file to a local directory.</cmd>
             </step>
             <step>
-                <cmd>Adapt the files as required. </cmd>
+                <cmd>Adapt the files as required. For details on how to proceed, refer to <xref
+                        href="https://github.com/servicecatalog/oscm/blob/master/oscm-portal/WebContent/marketplace/customBootstrap/README.md"
+                        scope="external">Marketplace Customization Guide with Bootstrap and Sass</xref>.</cmd>
                 <info>
-                    <p>To test your customizations, open one or several of the sample HTML pages. Refresh the browser content after any change you make. </p>
                     <p>Be aware that you are responsible for the correct page layout. This means that you should always thoroughly check the layout before providing the customized style sheet to the platform operator for publishing. </p>
                 </info>
             </step>
@@ -77,11 +80,11 @@
                 <cmd>In the <uicontrol>Style sheet URL</uicontrol> field, enter the URL provided by the platform operator pointing to your customized style sheet. </cmd>
                 <info>
                     <p>By default, the URL is as follows: </p>
-                    <p><codeph>https://&lt;host_fqdn>:8443/&lt;new-folder-name>/css/mp.css</codeph></p>
+                    <p><codeph>https://&lt;host_fqdn>:8443/&lt;folder-name>/css/mp.css</codeph></p>
                     <p><codeph>&lt;host_fqdn></codeph> is the fully qualified name or IP address of the host used to access the platform, <codeph>8443</codeph> is the port. Omit the port if <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr" platform="print"/><ph
                             platform="help"
-                            >the platform</ph> is operated with its proxy. <codeph>&lt;new-folder-name></codeph> is the name of the folder containing the customized files. </p>
+                            >the platform</ph> is operated with its proxy. <codeph>&lt;folder-name></codeph> is the name of the folder containing the customized files. </p>
                 </info>
             </step>
             <step>

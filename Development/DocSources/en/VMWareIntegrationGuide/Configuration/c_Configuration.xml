@@ -2,7 +2,7 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
                          "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
 ]>
-<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2020 -->
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2021 -->
 <concept id="concept_1BCF5C425D7D4627AB1C66A085CF6E11"
                 xml:lang="en-us">
             <title>Configuring the vSphere Integration Software</title>
@@ -63,7 +63,7 @@
                                         />, <codeph>8881</codeph> is the port of APP. Omit the port if <ph
                                                 conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                                         /> is operated with its proxy. <codeph>oscm-app-vmware</codeph> is the default context root of the service controller and cannot be changed. </p></li>
-                                        <li>Log in with the ID and password of the user specified in the configuration settings for the VMWare service controller (<codeph>BSS_USER_ID</codeph> and <codeph>BSS_USER_PWD</codeph>) or as another technology manager registered for the same organization.</li>
+                                        <li>Log in with the ID and password of the user specified in the configuration settings for the VMware service controller (<codeph>BSS_USER_ID</codeph> and <codeph>BSS_USER_PWD</codeph>) or as another technology manager registered for the same organization.</li>
                                         <li>In the vSphere-specific settings sections, click a cluster name. <p>You can now see the current cluster configuration, and, if defined, any VLANs together with the corresponding IPPool settings.</p></li>
                                 </ol>
                         </p>

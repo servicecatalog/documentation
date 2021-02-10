@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>  
-<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2020 -->
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2021 -->
 <!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
                            "reference.dtd">
 <reference id="reference832" xml:lang="en-us">
@@ -53,6 +53,9 @@
                 <li>Stop the <codeph>oscm-help</codeph> container: <p>
                         <codeblock>docker stop oscm-help</codeblock>
                     </p></li>
+                <li>Change to the <ph conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                        platform="print"/><ph platform="help"
+                        >platform's</ph> data directory (<codeph>&lt;docker></codeph>).</li>
                 <li>Remove the <codeph>oscm-help</codeph> container: <p>
                         <codeblock>docker-compose -f docker-compose-oscm.yml rm oscm-help</codeblock>
                     </p></li>

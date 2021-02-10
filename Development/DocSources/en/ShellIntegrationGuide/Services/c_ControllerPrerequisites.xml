@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>  
-<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2020 -->
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2021 -->
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
                          "concept.dtd">
 <concept id="Prerequisites_and_Preparation_59" xml:lang="en-us">
@@ -21,57 +21,6 @@
                     /> as a service manager of an organization with the supplier role. This may be the same organization as the technology provider organization or a different one.</li>
                 <li>To publish your marketable services, you must have access to an appropriate marketplace in your service manager role.</li>
             </ul>
-        </section>
-        <section>
-            <title>Preparing and Providing Shell Scripts</title>
-            <ul compact="no">
-                <li>Shell scripts must exist. They form the basis for the technical services in <ph
-                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>. </li>
-                <li>The technology provider organization responsible for the Shell service controller prepares the scripts to be called by the Shell service controller. These scripts can be defined in marketable service parameters and then be referenced as scripts located either inside or outside (external URL) the Docker host. <p>To reference a script located inside the Docker host, you need to provide it in the following directory on your Docker host: </p><p><codeph>&lt;docker>/config/oscm-app/scripts</codeph></p><p><codeph>&lt;docker></codeph> is the <ph
-                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        /> data directory specified at installation time.</p><p>As soon as you provide new scripts or change existing ones, you must restart the <codeph>oscm-app</codeph> container. The scripts are automatically copied into the container into the <codeph>/opt/scripts</codeph> folder.</p></li>
-                <li>After deployment, the <codeph>oscm-app</codeph> container has the above shared file system mounted. </li>
-                <li>The Shell service controller will run scripts stored on the shared file system as the same UNIX user who runs the <codeph>oscm-app</codeph> container:<p>
-                        <fig>
-                            <image href="../_images/RunningEnv.png" alt="RunningEnv.png" width="400" height="171"/>
-                        </fig>
-                    </p></li>
-            </ul>
-        </section>
-        <section>
-            <title>Shell Script Syntax and Rules</title>
-            <p>Shell scripts to be executed properly are subject to the following rules: </p>
-            <p>
-                <ul compact="no">
-                    <li>Each script must return a valid JSON object followed by an <codeph>"END_OF_SCRIPT"</codeph> string value. In this way, the Shell service controller can determine that a script has finished successfully. Otherwise the script execution will run into a timeout.</li>
-                    <li>Each script must return exactly one JSON object. </li>
-                    <li>The JSON result may contain the following JSON keywords:<ul compact="no">
-                            <li><codeph>status</codeph> (mandatory) - allowed values: <codeph>"ok"</codeph> or <codeph>"error"</codeph></li>
-                            <li><codeph>message</codeph> (mandatory) - may contain information related to the script execution addressed to the user.</li>
-                            <li><codeph>usageData</codeph> (optional) - expected as a result of the execution of the usage data script. It contains the following JSON keywords:<ul
-                                    compact="no">
-                                    <li><codeph>eventId</codeph> - ID of the billable event as defined in the technical service definition. You find a sample service definition with events on GitHub: <xref
-                                            href="https://github.com/servicecatalog/oscm-app-shell/tree/master/src/main/resources"
-                                            scope="external"
-                                                ><u>https://github.com/servicecatalog/oscm-app-shell/tree/master/src/main/resources</u></xref>.</li>
-                                    <li><codeph>multiplier</codeph> - specifies the number of occurrences of an event. Instead of recording the same event each time it occurs, you can record it only once and set the multiplier to the number of occurrences. The billing services consider the multiplier. For example, one event with a multiplier of 2 is handled in the same way as 2 events of the same type, if both events occur in the same billing period.</li>
-                                </ul></li>
-                            <li><codeph>data</codeph> (optional) - may contain any data which can be output in the <b>Status</b> tab after the script has been executed. You can include the following JSON keywords in the <codeph>data</codeph> field: <ul
-                                    compact="no">
-                                    <li><codeph>output</codeph> - may contain any data to be presented, for example, HTML data for the status script. </li>
-                                    <li><codeph>accessInfo</codeph> - may contain access information to be passed to the subscription details for display. </li>
-                                    <li><codeph>name</codeph> - may contain any temporary data.</li>
-                                    <li><codeph>id</codeph> - may contain any ID. </li>
-                                </ul></li>
-                        </ul></li>
-                    <li>Special characters used in scripts must be properly escaped.</li>
-                    <li>You find script samples on GitHub  
-                        <xref format="html" href="https://github.com/servicecatalog/oscm-app-shell/tree/master/src/main/resources/sample_scripts" scope="external"
-                            ><u><i>here</i></u></xref> and
-                        <xref format="html" href="https://github.com/servicecatalog/oscm-app-shell/tree/master/src/main/resources/sample_scripts/advanced_scripts" scope="external"
-                            ><u><i>here</i></u></xref>.</li>
-                        </ul>
-            </p>
         </section>
     </conbody>
 </concept>

@@ -2,7 +2,7 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
                          "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
 ]>
-<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2020 -->
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2021 -->
 <concept id="concept_1BCF5C425D7D4627AB1C66A085CF6E11"
             xml:lang="en-us">
 
@@ -16,11 +16,12 @@
                         <p>You can access the administration portal in your Web browser using a URL in the following format: </p>
                         <p><codeph>https://&lt;host_fqdn&gt;:8081/oscm-portal</codeph></p>
                         <p><codeph>&lt;host_fqdn&gt;</codeph> is the FQDN or IP address to access <ph
-                            conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> as specified in the <codeph>HOST_FQDN</codeph> setting in the <codeph>var.env</codeph> configuration file, <codeph>8081</codeph> is the port. Omit the port if <ph
-                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                            /> is operated with its proxy. <codeph>oscm-portal</codeph> is the default context root of <ph
-                            conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> and cannot be changed. </p>
-                        <p>You are prompted for the user ID and password. The login page and the initial credentials depend on the selected authentication mode (<codeph>AUTH_MODE</codeph> setting in the <codeph>var.env</codeph> configration file): </p>
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> as specified in the <codeph>HOST_FQDN</codeph> setting in the <codeph>.env</codeph> configuration file, <codeph>8081</codeph> is the port. Omit the port if <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> is operated with its proxy. <codeph>oscm-portal</codeph> is the default context root of <ph
+                    conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/> and cannot be changed. </p>
+                        <p>You are prompted for the user ID and password. The login page and the initial credentials depend on the selected authentication mode (<codeph>AUTH_MODE</codeph> setting in the <codeph>var.env</codeph> configuration file): </p>
                         <ul>
                                 <li><codeph>INTERNAL</codeph> authentication mode:<p>Login page of <ph
                             conref="../Product_Name.xml#ProductNameTopic/Product_Abbr"/>

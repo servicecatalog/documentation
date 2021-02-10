@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>  
-<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2020 -->
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2021 -->
 <!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
                            "reference.dtd">
 <reference id="reference832" xml:lang="de-de">
@@ -48,8 +48,9 @@
                         </p></li>
                     <li>Erstellen Sie eine Archivdatei mit dem Namen <codeph>oscm-portal-help.tar.gz</codeph>, die die zusätzlichen Verzeichnisse für die neue Sprache enthält, und kopieren Sie diese Archivdatei in folgendes Verzeichnis auf dem Docker-Host:<p><codeph>&lt;docker>/config/oscm-help</codeph></p><p><codeph>&lt;docker></codeph> ist das bei der Installation angegeben Datenverzeichnis der Plattform. </p></li>
                     <li>Stoppen Sie den Container <codeph>oscm-help</codeph>: <p>
-                            <codeblock>docker stop oscm- help</codeblock>
+                            <codeblock>docker stop oscm-help</codeblock>
                         </p></li>
+                    <li>Wechseln Sie in das Datenverzeichnis der Plattform (<codeph>&lt;docker></codeph>). </li>
                     <li>Entfernen Sie den Container <codeph>oscm-help</codeph>: <p>
                             <codeblock>docker-compose -f docker-compose-oscm.yml rm oscm-help</codeblock>
                         </p></li>

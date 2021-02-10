@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
                            "reference.dtd">
-<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2020 -->
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2021 -->
 <reference id="reference832" xml:lang="en-us">
     <title>APP Configuration Settings</title>
     <refbody>
@@ -17,6 +17,7 @@
                     />, <codeph>8881</codeph> is the port. Omit the port if <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                     /> is operated with its proxy. <codeph>oscm-app</codeph> is the context root of APP and cannot be changed. </p>
+            <p>This setting corresponds to the <codeph>OSCM_APP_URL</codeph> setting in the <codeph>var.env</codeph> configuration file.</p>
         </section>
         <section>
             <title>APP_TIMER_INTERVAL</title>

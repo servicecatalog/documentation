@@ -2,7 +2,7 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
                          "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
 ]>
-<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2020 -->
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2021 -->
 <concept id="concept_1BCF5C425D7D4627AB1C66A085CF6E11"
             xml:lang="en-us">
     <title>Preparing Configuration Files</title>
@@ -12,15 +12,21 @@
             <p>Run the following process, using <codeph>-v</codeph> to mount the <codeph>/docker</codeph> data directory on the Docker host to the <codeph>/target</codeph> directory in the container: </p>
             <p>
                 <codeblock>docker run --name deployer1 --rm -v /docker:/target 
-    ${REGISTRY}/oscm-deployer</codeblock>
+    -e HOST_FQDN=&lt;host_fqdn> ${REGISTRY}/oscm-deployer</codeblock>
             </p>
+            <p><codeph>&lt;host_fqdn></codeph> is the fully qualified name or IP address of the host used to access <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    />, for example, <codeph>host.mydomain.org</codeph>. The host specified here is written to the <codeph>.env</codeph> configuration file (see below) and to the default certificates (see <xref
+                    href="../../Shared/reference/c_Certificates.xml"/>).</p>
             <p><codeph>${REGISTRY}</codeph> is the name of your local Docker registry or the <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> registry on DockerHub. </p>
             <p>This command creates the following configuration files in the <codeph>/docker</codeph> directory:</p>
             <p>
                 <ol>
                     <li>
-                        <p><codeph>.env</codeph>: Configuration settings for Docker, such as images and the data directory on the Docker host.</p>
+                        <p><codeph>.env</codeph>: Configuration settings for Docker, such as images and the data directory on the Docker host, as well as the host used to access <ph
+                                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                                /> (<codeph>HOST_FQDN</codeph>).</p>
                     </li>
                     <li><codeph>var.env</codeph>: Configuration settings for <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
@@ -33,8 +39,8 @@
                         href="https://github.com/servicecatalog/documentation/blob/master/Development/oscm-doc-user/resources/manuals/installation+operation/en/Operation.pdf"
                         scope="external"><u><i>Operator's Guide</i></u></xref></ph>
                 <ph product="oscm_ee">The settings are described in detail in the <xref format="html"
-                        href="https://https://github.com/servicecatalog/documentation/tree/ESCM" scope="external"
-                                ><u><i>Operator's Guide</i></u></xref></ph>.  </p>
+                        href="https://github.com/servicecatalog/documentation/blob/ESCM/Manuals/Operation.pdf"
+                        scope="external"><u><i>Operator's Guide</i></u></xref></ph>. </p>
         </section>
     </conbody>
 </concept>

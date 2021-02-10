@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>  
-<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2020 -->
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2021 -->
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
                          "concept.dtd">
 <concept id="id_116">
@@ -9,10 +9,12 @@
    <p
     conref="../../Shared/concepts/c_WhatIsBES_Controller.xml#concept2311/is_a_set_of_services_which_concept_conbody_p_1"/>
                               <p>The Shell integration with <ph
-          conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-          /> provides for an Infrastructure as a Service (IaaS) solution that allows users to install any software or execute any task in a UNIX environment by running Shell scripts from services, which are published on a marketplace. For example, users can request and use scripts for provisioning virtual systems in the cloud. The cloud usage costs are calculated and charged by means of the <ph
-          conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> billing and payment services.</p>
-                              <p>This manual describes how to execute Shell scripts from services on an <ph
+     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+     /> allows users to install any software and execute any task by running Shell scripts from services which are published on a marketplace. For example, scripts may be used to provision virtual systems on a cloud platform, or connect <ph
+     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+     /> with Microsoft Azure accounts to schedule and execute Azure Automation runbooks built on PowerShell Workflow. The cloud usage costs are calculated and charged by means of the <ph
+     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> billing and payment services.</p>
+                              <p>This manual describes the environment and steps involved to execute Shell scripts from services on an <ph
      conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> marketplace. </p>
                     </section>
           </conbody>

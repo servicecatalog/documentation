@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>  
-<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2020 -->
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2021 -->
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
                          "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
 ]>
@@ -24,7 +24,9 @@
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                         /> administration portal. The branding package is provided as a ZIP file. </li>
                     <li>Extract the ZIP file to a local directory.</li>
-                    <li>Adapt the files as desired. </li>
+                    <li>Adapt the files as required. For details on how to proceed to achieve the desired layout and branding, refer to <xref
+                            href="https://github.com/servicecatalog/oscm/blob/master/oscm-portal/WebContent/marketplace/customBootstrap/README.md"
+                            scope="external">Marketplace Customization Guide with Bootstrap and Sass</xref>. </li>
                     <li>Create an archive (ZIP) containing your customized files. <p>The customized branding must have the same structure as the original branding in the <codeph>branding-package.zip</codeph> file.</p></li>
                     <li>Provide this archive to the platform operator so that he can deploy your customized branding package. </li>
                     <li>Ask the platform operator for the URL of the deployed customized style sheet. </li>

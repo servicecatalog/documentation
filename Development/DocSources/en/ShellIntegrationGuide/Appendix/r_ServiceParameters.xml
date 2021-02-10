@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>  
-<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2020 -->
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2021 -->
 <!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd" >
 <reference id="Service_Parameters_114">
   <title>Service Parameters and Operations</title>
   <refbody>
     <section>
       <p>The following sections describe the technical service parameters and service operations which are supported by the Shell service controller. </p>
-    </section>
-    <section>
-      <title>Service Parameters</title>
-      <p>The Shell service controller supports the parameters below.</p>
-      <p>You find a sample service on GitHub:  <xref
+      <p>You find sample services on GitHub under <xref
           href="https://github.com/servicecatalog/oscm-app-shell/tree/master/src/main/resources" scope="external"
             ><u>https://github.com/servicecatalog/oscm-app-shell/tree/master/src/main/resources</u></xref>. </p>
     </section>
     <section>
+      <title>Service Parameters</title>
       <p>The Shell service controller supports the parameters below.</p>
       <p>
         <note>All parameters defined in the technical service definition must be one-time parameters, since the modification of parameters is not supported. Be sure to set their <codeph>modificationType</codeph> to <codeph>ONE_TIME</codeph>. </note>
@@ -138,7 +135,7 @@
           <tbody>
             <row>
               <entry>
-                <p><b>USAGE_DATA_SCRIPT</b></p>
+                <p><b>USAGEDATA_SCRIPT</b></p>
                 <p>Optional. The absolute file system path or URL to a Shell script file. The base folder is <codeph>/opt/scripts</codeph>. This script is automatically executed, by default, on a daily basis if the <codeph>APP_TIMER_REFRESH_USAGEDATA</codeph> parameter is set accordingly for APP. The script gathers the number of billable events defined in the technical service definition for calculating cloud usage costs.</p>
                 <p>Example: <codeph>/usage_data.sh</codeph></p>
               </entry>
@@ -212,6 +209,55 @@
                 <p><b>VERIFICATION_SCRIPT</b></p>
                 <p>Optional. The absolute file system path or URL to a Shell script file. The base folder is <codeph>/opt/scripts</codeph>. If specified, this script will be executed BEFORE any other script. This is useful, for example, for checking whether a specific instance already exists, whether parameters are passed correctely, etc.</p>
                 <p>Example: <codeph>/verification.sh</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>Service Parameters for Microsoft Azure Integration</title>
+      <p>The following parameters can be defined in technical services used for connecting to Microsoft Azure and executing Azure Automation runbooks. The parameters can be referenced in the corresponding PowerShell scripts. Examples are available on GitHub under <xref
+          href="https://github.com/servicecatalog/oscm-app-shell/blob/master/src/main/resources/sample_scripts/powershell/"
+          scope="external"
+          >https://github.com/servicecatalog/oscm-app-shell/blob/master/src/main/resources/sample_scripts/powershell/</xref>.</p>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>AzureAutomationAccountName</b></p>
+                <p>Optional. The name of the Azure Automation account to be used. </p>
+                <p>Example: <codeph>MyAutoAccount</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>AzureResourceGroupName</b></p>
+                <p>Optional. The name of a resource group in Microsoft Azure to work with.</p>
+                <p>Example: <codeph>MyResourceGroup</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>AzureRunbookName</b></p>
+                <p>Optional. The name of the Azure Automation runbook to execute.</p>
+                <p>Example: <codeph>MyAzureRunbook</codeph></p>
               </entry>
             </row>
           </tbody>

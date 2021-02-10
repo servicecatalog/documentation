@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN"
                          "">
-<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2020 -->
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2021 -->
 <bookmap id="ShellIntegrationGuide" xml:lang="en_US">
     <title>Shell Integration</title>
     <bookmeta>
         <prodinfo product="oscm_ce">
             <prodname/>
             <vrmlist>
-                <vrm version="V19.0"/>
+                <vrm version="V19.1"/>
             </vrmlist>
             <brand/>
-            <prognum>V19.0</prognum>
+            <prognum>V19.1</prognum>
             <component/>
             <series>Shell Integration</series>
         </prodinfo>
         <prodinfo product="oscm_ee">
             <prodname>Enterprise Service</prodname>
             <vrmlist>
-                <vrm version="V19.0"/>
+                <vrm version="V19.1"/>
             </vrmlist>
             <brand>FUJITSU Software</brand>
-            <prognum>Catalog Manager V19.0</prognum>
+            <prognum>Catalog Manager V19.1</prognum>
             <component/>
             <series>Shell Integration</series>
         </prodinfo>
         <bookid>
-            <edition>July 2020</edition>
+            <edition>February 2021</edition>
         </bookid>
         <bookrights product="oscm_ce">
             <bookowner name="none"/>
@@ -49,7 +49,10 @@
         <topicref format="dita" href="ShellIntegrationGuide/Intro/c_Scenarios.xml" type="concept"/>
     </chapter>
     <chapter format="dita" href="ShellIntegrationGuide/Services/c_ServicesIntro.xml" type="concept">
-        <topicref format="dita" href="ShellIntegrationGuide/Services/c_ControllerPrerequisites.xml" type="concept"/>
+        <topicref format="dita" href="ShellIntegrationGuide/Services/c_ControllerPrerequisites.xml" type="concept">
+            <topicref format="dita" href="ShellIntegrationGuide/Services/c_Prerequisites_Scripts.xml" type="concept"/>
+            <topicref format="dita" href="ShellIntegrationGuide/Services/c_Prerequisites_Azure.xml" type="concept"/>
+        </topicref>
         <topicref format="dita" href="Shared/tasks/t_CreateTechService.xml" type="task"/>
         <topicref format="dita" href="Shared/tasks/t_CreateMarkService.xml" type="task"/>
         <topicref format="dita" href="ShellIntegrationGuide/Services/c_ConfigureStatusPanel.xml" type="concept"/>

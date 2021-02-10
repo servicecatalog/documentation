@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>  
-<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2020 -->
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2021 -->
 <!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd" >
 <reference id="Service_Parameters_114">
   <title>Service Parameters and Operations</title>
@@ -652,6 +652,27 @@
                 <p><b>SYSPREP_RUNONCE_COMMAND</b></p>
                 <p>Optional. The Microsoft Windows batch file that is executed by the Microsoft Windows system preparation script (<codeph>sysprep</codeph>) after the first boot. </p>
                 <p>Example: <codeph>cmd /c CALL \\server\share\file.bat</codeph></p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>Custom Attributes</title>
+      <p>Optional service parameters can be added to set values of custom attributes in VMware vSphere. Custom attributes can be defined in VMware vSphere as required, assigned to different objects like virtual machines and hosts, and used for purposes like searching or filtering. From <ph
+          conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+        />, the value of a vShpere custom attribute can be set by means of the default value of a service parameter or a corresponding custom attribute defined for a subscription.</p>
+      <p>Service parameters for vSphere custom attributes can be defined as follows:</p>
+      <table frame="top">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1"/>
+          <tbody>
+            <row>
+              <entry>
+                <p><b>VSPHERE_ATTRIBUTE_&lt;attribute_name></b></p>
+                <p><codeph>VSPHERE_ATTRIBUTE_</codeph> is a fixed string, followed by the name of the custom attribute as defined in VMware vSphere. The vSphere custom attribute must already exist. The service parameter's value type must match the one of the vSphere custom attribute.</p>
+                <p>Example: <codeph>VSPHERE_ATTRIBUTE_BACKUP</codeph> for a custom attribute named <codeph>BACKUP</codeph>. The value could be a string used for labelling backups. </p>
               </entry>
             </row>
           </tbody>

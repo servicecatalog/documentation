@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>  
-<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2020 -->
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2021 -->
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
                          "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
 ]>
@@ -35,9 +35,7 @@
                             <row>
                                 <entry colname="col2"><xref href="../Services/c_ServicesIntro.xml"/></entry>
                                 <entry colname="col3"
-                                        >Describes how to prepare and provided Shell scripts, how to create and publish services for the Shell integration in <ph
-                                        conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                                    />, as well as how to configure a status information page for viewing details regarding script execution. </entry>
+                                    >Describes how to prepare and provide Shell scripts, how to create and publish services for the Shell integration, as well as how to configure a status information page for viewing details regarding script execution. </entry>
                             </row>
                             <row>
                                 <entry colname="col2"><xref href="../Administrating/c_AdministratingIntro.xml"/></entry>

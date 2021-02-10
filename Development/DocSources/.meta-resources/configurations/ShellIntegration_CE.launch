@@ -21,7 +21,7 @@
 <mapEntry key="dita.temp.dir" value="${dita.temp.dir}"/>
 <mapEntry key="dita.xml.catalog" value="${dita.xml.catalog}"/>
 <mapEntry key="generate.copy.outer" value="2"/>
-<mapEntry key="output.dir" value="/DocSources/Output"/>
+<mapEntry key="output.dir" value="/DocSources/Output/CE/en/ShellIntegration"/>
 <mapEntry key="realtranstype" value="pdf"/>
 <mapEntry key="transtype" value="Fujitsu PDF"/>
 </mapAttribute>

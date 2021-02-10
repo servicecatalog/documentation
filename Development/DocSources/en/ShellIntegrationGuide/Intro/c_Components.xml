@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>  
-<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2020 -->
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2021 -->
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
                          "concept.dtd">
 <concept id="id_121">
@@ -8,16 +8,10 @@
     <section>
       <p>The following picture provides an overview of the main components involved in the integration of <ph
           conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> and Shell scripts:</p>
-      <p product="oscm_ce">
-        <fig>
-          <image href="../_images/Components_CE.png" alt="Components_CE.png" width="400" height="171"/>
-        </fig>
-      </p>
-      <p product="oscm_ee">
-        <fig>
-          <image href="../_images/Components_EE.png" alt="Components_EE.png" width="400" height="171"/>
-        </fig>
-      </p>
+      <p product="oscm_ce"><image href="../_images/Components_CE.png" alt="Components_CE.png" width="400" height="171"
+        /></p>
+      <p product="oscm_ee"><image href="../_images/Components_EE.png" alt="Components_EE.png" width="400" height="171"
+        /></p>
       <p conref="../../Shared/concepts/c_ControllerConcepts.xml#controller/cmp1"/>
       <p conref="../../Shared/concepts/c_ControllerConcepts.xml#controller/cmp2"/>
     </section>

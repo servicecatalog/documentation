@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>  
-<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2020 -->
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2021 -->
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
                          "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
 ]>
@@ -16,7 +16,8 @@
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/> and APP data is located:</p>
             <p>
                 <ol>
-                    <li><codeph>.env</codeph>: Configuration settings for Docker, such as images and the data directory on the Docker host.</li>
+                    <li><codeph>.env</codeph>: Configuration settings for Docker, such as images and the data directory on the Docker host, as well as the fully qualified name (FQDN) or IP address of the host used to access <ph
+                            conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"/>.</li>
                     <li><codeph>var.env</codeph>: Configuration settings for <ph audience="BSS"
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
                         /> and APP, such as authentication, mail server, database, and other settings.</li>
@@ -45,11 +46,11 @@
             <p>
                 <codeph>https://&lt;host_fqdn&gt;:8881/oscm-app</codeph>
             </p>
-            <p><codeph>&lt;host_fqdn></codeph> is the FQDN or IP address to access <ph
+            <p><codeph>&lt;host_fqdn></codeph> is the fully qualified name or IP address of the host used to access <ph
                     conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-            /> as specified in the <codeph>HOST_FQDN</codeph> setting in the <codeph>var.env</codeph> configuration file, <codeph>8881</codeph> is the port of APP. Omit the port if <ph
-                conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-            /> is operated with its proxy. <codeph>oscm-app</codeph> is the default context root of APP and cannot be changed.</p>
+                    /> as specified in the <codeph>HOST_FQDN</codeph> setting in the <codeph>.env</codeph> configuration file, <codeph>8881</codeph> is the port of APP. Omit the port if <ph
+                    conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
+                    /> is operated with its proxy. <codeph>oscm-app</codeph> is the default context root of APP and cannot be changed.</p>
             <p>The APP configuration settings are described in detail in <xref
                     href="../../Shared/reference/r_ConfigSettings_APP.xml"/>.</p>
         </section>
@@ -59,14 +60,20 @@
             <p>If you want to persistently update configuration settings in the <codeph>bss</codeph> or <codeph>bssapp</codeph> database, proceed as follows:</p>
             <p>
                 <ol>
-                    <li>On the Docker host, edit the <codeph>.env</codeph> and <codeph>var.env</codeph> files located in the <ph
+                    <li>On your Docker host, change to the <ph
                             conref="../../Shared/Product_Name.xml#ProductNameTopic/Product_Abbr"
-                        /> data directory as required. </li>
+                            /> data directory (<codeph>&lt;docker></codeph>) and execute the following steps from this location.</li>
+                    <li>Edit the <codeph>.env</codeph> and <codeph>var.env</codeph> files located in the data directory as required. </li>
                     <li>If you want to change the default value of a configuration setting that is not included in the <codeph>var.env</codeph> file yet:<p>Add the key and the value the setting shall take on to the <codeph>var.env</codeph> file. </p><p>You can find the keys of the settings on the <b>Update configuration settings</b> page or in the APP Web interface. They are described in detail in <xref
                                 href="../../Shared/reference/r_ConfigSettings_UI.xml"/> and <xref
                                 href="../../Shared/reference/r_ConfigSettings_APP.xml"
                                 />. For example: </p><p><codeph>TIMER_INTERVAL_SUBSCRIPTION_EXPIRATION=345600000</codeph></p></li>
                     <li>Save the <codeph>var.env</codeph> file to its original location: <p><codeph>&lt;docker>/var.env</codeph></p></li>
+                    <li>Export the variables set in the <codeph>.env</codeph> configuration file:<p>
+                            <codeblock>set -a
+. ./.env
+set +a</codeblock>
+                        </p></li>
                     <li>In the <codeph>docker-compose-initdb.yml</codeph> file in the same directory, set the <codeph>OVERWRITE</codeph> flag in the <codeph>environment</codeph> settings of the relevant section to <codeph>true</codeph> to change the configuration setting in the database. <p>For example, for persistently updating a setting in the <codeph>bss</codeph> database, set the flag to <codeph>true</codeph> for <codeph>oscm-initdb-core</codeph>:</p><p>
                             <codeblock>oscm-initdb-core:
     image: ${IMAGE_INITDB}

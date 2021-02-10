@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>  
-<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2020 -->
+<!-- Copyright FUJITSU ENABLING SOFTWARE TECHNOLOGY GMBH 2021 -->
 <!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
                       "task.dtd">
 <task id="task634" xml:lang="de-de">
@@ -15,8 +15,9 @@
                                     >Dann stellen Sie das angepasste Stylesheet und die darin referenzierten Dateien dem Plattformbetreiber zur Verfügung. Dieser kann die Änderungen in den Container <codeph>oscm-branding</codeph> einspielen. Danach erhalten Sie vom Plattformbetreiber die URL des Styleheets, die Sie dann auf der Seite <uicontrol>Layout anpassen</uicontrol> angeben. Wenn Sie keine URL angeben, wird das Standard-Stylesheet verwendet. </ph>
                   </p>
                   <p id="The_platform_s_default_style_task_taskbody_context_p_2"
-                              >Das Standard-Stylesheet der Plattform <ph platform="help"
-                              >(<codeph>mp.css</codeph>)</ph> und die darin referenzierten Dateien und Bilder werden im Branding-Paket zur Verfügung gestellt. Dabei handelt es sich um eine ZIP-Datei, die Sie auf der Seite <uicontrol>Layout anpassen</uicontrol> herunterladen können. Das Branding-Paket enthält auch einige HTML-Beispieldateien eines Marktplatzes. Diese können Sie benutzen, um Ihre Anpassungen vorab zu visualisieren und zu testen. Im Stylesheet finden Sie Kommentare und Beschreibungen der relevanten Elemente in den HTML-Dateien sowie Informationen darüber, welche Elemente im Hinblick auf ein fehlerfreies Seitenlayout nicht angepasst werden dürfen.</p>
+                              >Das Layout und Branding von Marktplätzen basiert auf dem Bootstrap-Framework und Sass (Syntactically Awesome Stylesheets). Die Sass-Quelldateien für das Standard-Stylesheet der Plattform und die darin referenzierten Dateien und Bilder werden im Branding-Paket zur Verfügung gestellt. Dabei handelt es sich um eine ZIP-Datei, die Sie auf der Seite <uicontrol>Layout anpassen</uicontrol> herunterladen können. Detaillierte Informationen zur Anpassung der Quelldateien und Erzielung des gewünschten Layouts finden Sie hier: <xref
+                              href="https://github.com/servicecatalog/oscm/blob/master/oscm-portal/WebContent/marketplace/customBootstrap/README.md"
+                              scope="external">Marketplace Customization Guide with Bootstrap and Sass</xref>.</p>
                   <p id="Be_aware_of_the_following:_task_taskbody_context_p_3">Beachten Sie folgendes:</p>
                   <ul compact="no" id="Your_organization_is_responsi_task_taskbody_context_ul">
                         <li>Ihre Organisation ist für die Bereitstellung der richtigen Version des angepassten Stylesheets und der darin referenzierten Dateien an den Plattformbetreiber verantwortlich. </li>
@@ -34,23 +35,25 @@
                   <step>
                         <cmd>Holen Sie sich das Branding-Paket durch Klicken von <uicontrol>Branding-Paket herunterladen</uicontrol> in Ihre lokale Umgebung.</cmd>
                         <info>
-                              <p>Das Branding-Paket ist eine ZIP-Datei. Es enthält das Standard-Stylesheet der Plattform (<codeph>mp.css</codeph>), die im Stylesheet referenzierten Dateien und Bilder sowie HTML-Dateien zum Visualisieren und Testen der Anpassungen im Stylesheet. </p>
+                              <p>Das Branding-Paket ist eine ZIP-Datei. Sie enthält die Sass-Quelldateien für das Standard-Stylesheet der Plattform und die darin referenzierten Dateien und Bilder.</p>
                         </info>
                   </step>
                   <step>
                         <cmd>Entpacken Sie die ZIP-Datei an einen beliebigen Ort in Ihrer Umgebung. </cmd>
                   </step>
                   <step>
-                        <cmd>Nehmen Sie im Stylesheet die gewünschten Anpassungen vor.</cmd>
+                        <cmd>Nehmen Sie im Stylesheet die gewünschten Anpassungen vor. Detaillierte Informationen zum Vorgehen finden Sie hier: <xref
+                                    href="https://github.com/servicecatalog/oscm/blob/master/oscm-portal/WebContent/marketplace/customBootstrap/README.md"
+                                    scope="external"
+                              >Marketplace Customization Guide with Bootstrap and Sass</xref>.</cmd>
                         <info>
-                              <p>Zum Testen Ihrer Anpassungen öffnen Sie eine oder mehrere der HTML-Beispieldateien. Aktualisieren Sie Ihr Browser-Fenster nach jeder vorgenommenen Änderung. </p>
                               <p>Beachten Sie, dass Sie für eine fehlerfreie Seitendarstellung verantwortlich sind. Sie sollten daher das Layout eingehend prüfen, bevor Sie ein angepasstes Stylesheet veröffentlichen. </p>
                         </info>
                   </step>
                   <step>
-                        <cmd>Übermitteln Sie das angepasste Stylesheet und die darin referenzierten Dateien, Bilder und Schriftarten als Archiv (ZIP) an den Plattformbetreiber und bitten Sie ihn, diese Änderungen einzuspielen. </cmd>
+                        <cmd>Übermitteln Sie Ihre Anpassungen als Archiv (ZIP) an den Plattformbetreiber und bitten Sie ihn, diese Änderungen einzuspielen. </cmd>
                         <info>
-                              <p>Das Archiv mit den Änderungen muss genauso aufgebaut sein wie die Datei <codeph>branding-package.zip</codeph>. </p>
+                              <p>Das Archiv mit den Anpassungen muss genauso aufgebaut sein wie die Datei <codeph>branding-package.zip</codeph>. </p>
                         </info>
                   </step>
                   <step>
